@@ -6,6 +6,7 @@ import { Adventure } from "@/types/adventure";
 import { adventures } from "@/data/adventures";
 
 export default function PequenasAventurasPage() {
+  const [selectedAdventure, setSelectedAdventure] = useState<Adventure | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredAdventures = adventures
@@ -42,32 +43,28 @@ export default function PequenasAventurasPage() {
 
         {/* Search */}
         <div className="mb-8">
-          <div className="flex gap-4">
-            <div className="flex-1">
-              <label className="block text-sm font-semibold text-purple-300 mb-2">
-                Buscar Aventura
-              </label>
-              <input
-                type="text"
-                placeholder="Digite o nome ou tema..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-4 py-2 bg-black/50 border border-purple-900/50 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all"
-              />
-            </div>
-          </div>
+          <label className="block text-sm font-semibold text-purple-300 mb-2">
+            Buscar Aventura
+          </label>
+          <input
+            type="text"
+            placeholder="Digite o nome ou tema..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="w-full px-4 py-2 bg-black/50 border border-purple-900/50 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all"
+          />
         </div>
 
         {/* Grid de Aventuras - Ordenado Alfabeticamente */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {filteredAdventures.map((adventure) => (
-            <Link
+            <div
               key={adventure.id}
-              href={`/pequenas-aventuras/${adventure.id}`}
-              className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-gray-900 to-black border border-purple-900/30 hover:border-pink-500/50 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(236,72,153,0.3)]"
+              onClick={() => setSelectedAdventure(adventure)}
+              className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-gray-900 to-black border border-pink-900/30 hover:border-pink-500/50 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(236,72,153,0.3)] cursor-pointer"
             >
               {/* Imagem de fundo */}
-              <div className="relative w-full h-48 bg-gradient-to-b from-purple-900/50 to-black overflow-hidden">
+              <div className="relative w-full h-48 bg-gradient-to-b from-pink-900/50 to-black overflow-hidden">
                 {adventure.image ? (
                   <img
                     src={adventure.image}
@@ -84,7 +81,7 @@ export default function PequenasAventurasPage() {
                 <h3 className="text-xl font-bold text-white group-hover:text-pink-300 transition-colors mb-2">
                   {adventure.name}
                 </h3>
-                <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase bg-purple-700/50 text-purple-200 border border-purple-500/50">
+                <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase bg-pink-700/50 text-pink-200 border border-pink-500/50">
                   {adventure.theme}
                 </span>
                 <p className="text-gray-400 text-sm mt-3 line-clamp-2">
@@ -99,7 +96,7 @@ export default function PequenasAventurasPage() {
                   <div className="absolute top-0 right-0 w-1 h-full bg-gradient-to-b from-transparent via-pink-500 to-transparent"></div>
                 </div>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
 
@@ -118,6 +115,86 @@ export default function PequenasAventurasPage() {
           </p>
         </div>
       </main>
+
+      {/* Modal de Detalhes */}
+      {selectedAdventure && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+          <div className="bg-gradient-to-b from-gray-900 to-black border border-pink-900/50 rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            {/* Botão de Fechar */}
+            <button
+              onClick={() => setSelectedAdventure(null)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-pink-400 transition-colors z-10"
+            >
+              <span className="text-3xl">✕</span>
+            </button>
+
+            {/* Imagem de Capa no Topo */}
+            {selectedAdventure.image && (
+              <div className="w-full h-64 overflow-hidden rounded-t-xl">
+                <img
+                  src={selectedAdventure.image}
+                  alt={selectedAdventure.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            )}
+
+            {/* Conteúdo do Modal */}
+            <div className="p-8">
+              {/* Título e Tema */}
+              <h2 className="text-4xl font-bold bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent mb-4">
+                {selectedAdventure.name}
+              </h2>
+              <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold uppercase bg-pink-700/50 text-pink-200 border border-pink-500/50 mb-6">
+                {selectedAdventure.theme}
+              </span>
+
+              {/* Resumo */}
+              <div className="mb-8 p-6 rounded-lg bg-pink-950/30 border border-pink-900/30">
+                <h3 className="text-xl font-bold text-pink-300 mb-3">Resumo</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  {selectedAdventure.summary}
+                </p>
+              </div>
+
+              {/* Conteúdo da Aventura */}
+              <div className="space-y-4">
+                {selectedAdventure.sections.map((section, index) => {
+                  if (section.type === "title") {
+                    return (
+                      <h3 key={index} className="text-2xl font-bold text-pink-400 mt-6 mb-3">
+                        {section.content}
+                      </h3>
+                    );
+                  }
+
+                  if (section.type === "subtitle") {
+                    return (
+                      <h4 key={index} className="text-xl font-bold text-purple-300 mt-4 mb-2">
+                        {section.content}
+                      </h4>
+                    );
+                  }
+
+                  if (section.type === "text") {
+                    return (
+                      <p key={index} className="text-gray-300 leading-relaxed">
+                        {section.content}
+                      </p>
+                    );
+                  }
+
+                  if (section.type === "break") {
+                    return <div key={index} className="h-4"></div>;
+                  }
+
+                  return null;
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Footer */}
       <footer className="mt-20 p-6 border-t border-purple-900/50 text-center text-gray-500 text-sm">
