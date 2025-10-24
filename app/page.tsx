@@ -5,6 +5,7 @@ export default function Home() {
     { id: "comidas", title: "Comidas", icon: "🍖", color: "from-purple-600 to-purple-800" },
     { id: "chefes", title: "Chefes", icon: "👹", color: "from-red-600 to-red-800" },
     { id: "itens", title: "Itens", icon: "⚔️", color: "from-red-600 to-pink-600" },
+    { id: "pequenas-aventuras", title: "Pequenas Aventuras", icon: "📖", color: "from-pink-700 to-purple-700" },
     { id: "personagens", title: "Personagens", icon: "🧙", color: "from-purple-700 to-pink-700" },
     { id: "locais", title: "Locais", icon: "🏰", color: "from-pink-600 to-purple-600" },
   ];
