@@ -15,7 +15,7 @@ export default function Home() {
       {/* Header */}
       <header className="p-6 border-b border-purple-900/50">
         <h1 className="text-5xl font-bold bg-gradient-to-r from-purple-500 via-purple-400 to-pink-500 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(168,85,247,0.5)]">
-          Tormenta
+          a-Tormenta
         </h1>
         <p className="text-gray-400 mt-2 text-sm">Seu compêndio de RPG organizado</p>
       </header>

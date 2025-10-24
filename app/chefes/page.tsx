@@ -72,7 +72,7 @@ export default function ChefesPage() {
                   <img
                     src={boss.image}
                     alt={boss.name}
-                    className="absolute inset-0 w-full h-full object-cover opacity-30"
+                    className="absolute inset-0 w-full h-full object-cover opacity-90"
                   />
                 ) : (
                 <div className="absolute inset-0 flex items-center justify-center text-gray-600 text-6xl">
