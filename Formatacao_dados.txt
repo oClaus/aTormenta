@@ -1,0 +1,20 @@
+------------------Raças-----------------------------
+{
+    id: "1",
+    name: "NomedaRaça",
+    origin: "tormenta20 - jogo do ano",
+    image: "/racas/anao.png",
+    description: "Os anões são uma raça robusta e resistente, conhecida por sua destreza em trabalhar com pedra e metal.\nSão guerreiros valentes e leais aos seus clãs, vivendo em grandes cidades subterrâneas.\nApesar de sua altura reduzida, possuem uma força impressionante e uma resistência incomparável.",
+    abilities: [
+      "Visão no Escuro: Enxerga perfeitamente no escuro até 18 metros",
+      "Resistência: Recebe +2 em testes de resistência contra veneno",
+      "Maestria com Machados: Recebe +1 em ataques com machados",
+      "Conhecimento de Pedra: Recebe +2 em testes de Conhecimento sobre construções de pedra"
+    ],
+    // Modificadores FIXOS para Anão
+    attributeModifiers: [
+      { attribute: "con", modifier: 2 },
+      { attribute: "sab", modifier: 1 },
+      { attribute: "des", modifier: -1 }
+    ]
+  },
