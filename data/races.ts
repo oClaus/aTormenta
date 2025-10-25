@@ -43,29 +43,24 @@ export const races: Race[] = [
     name: "Humano",
     origin: "tormenta20 - jogo do ano",
     image: "/racas/humano.png",
-    description: "Os humanos são uma raça versátil e adaptável, capazes de prosperar em qualquer ambiente.\nSão conhecidos por sua ambição, criatividade e capacidade de aprender rapidamente.\nEmbora vivam menos que outras raças, compensam com sua determinação e força de vontade.",
+    description: "Humanos são como uma praga: espalham-se por todo o mundo de Arton. \n Não interessa onde você olhe ou por onde passe. Nas Montanhas Sanguinárias, nas ilhas do Mar do Dragão-Rei, em alguma masmorra debaixo da terra, sempre haverá algum humano se metendo onde não deve, procurando alguma coisa. Não é à toa que são maioria. \n Aos quinze anos já se consideram adultos, andando por aí, sacudindo espadas e lançando feitiços malucos. \n Dizem que a culpa é de Valkaria. A deusa, que passou gerações presa em forma de estátua, hoje lidera todas as divindades e alimenta a ambição daqueles que chama de filhos. Faz com que queiram cada vez mais, não importa o que já tenham conseguido. Com exemplos como o arquimago Vectorius, que arrancou um pedaço enorme do chão para transformar em ilha voadora só por causa de uma aposta, ou Mestre Arsenal, que enfrentou o próprio Deus da Guerra para tomar seu lugar, é difícil convencê-los de que isso pode ser errado. Talvez nem seja. \n Humanos podem ter qualquer porte físico, cor de pele ou tipo de cabelo. São tão variados quanto suas ambições, tão diversos quanto as ideias que têm a cada instante. Suas tradições e modas vêm e vão rápido demais e eles fazem o que bem entendem. E embora a deusa criadora seja sua principal padroeira, humanos podem ser devotos de quais e quantos deuses desejarem. \n Ser humano é ter a liberdade e a conveniência de se tornar o que quiser, mesmo sem nem sempre compreender as responsabilidades que isso carrega. É ter o instinto aventureiro correndo no sangue. \n — Broktar Hellpipes, anão bardo \n\n O povo mais numeroso em Arton, humanos são considerados os escolhidos dos deuses, aqueles que governam o mundo. Em sua variedade e adaptabilidade, são encontrados em quase todos os pontos do continente — dos vales férteis do Reinado às vastidões áridas do Deserto da Perdição. São exploradores e desbravadores ambiciosos, sempre buscando algo além.",
     abilities: [
-      "Versatilidade: Recebe um talento adicional no 1º nível",
-      "Adaptabilidade: Recebe +1 em testes de Sobrevivência",
-      "Determinação: Uma vez por dia, pode repetir um teste que falhou",
-      "Ambição: Recebe experiência 10% mais rápido"
+      "Versátil: Você se torna treinado em duas perícias à sua escolha (não precisam ser da sua classe). Você pode trocar uma dessas perícias por um poder geral à sua escolha.",
     ],
-    // Modificadores FLEXÍVEIS para Humano (o player escolhe)
     attributeModifiers: [
       { description: "Escolha +1 em três atributos diferentes" }
     ]
   },
   {
     id: "4",
-    name: "Meia-Orc",
-    origin: "Dragão Brasil",
-    image: "/racas/meia-orc.png",
-    description: "As meias-orcs são guerreiras formidáveis, resultado da mistura entre orcs e humanos.\nPossuem uma força bruta incomparável e uma determinação feroz em combate.\nAmbém são capazes de grande compaixão e lealdade com aqueles que conquistam seu respeito.",
+    name: "Qunari",
+    origin: "Dragão Brasil - Dragon Age",
+    image: "/racas/qunari.png",
+    description: "Acredita-se que os Qunari vieram de além do mar, até pelo fato de costumarem ser os melhores navegadores de Thedas. Estabelecidos principalmente em Par Vollen e Seheron, os Qunari costumam ser vistos com suspeita pelo resto de Thedas. \n A cultura Qunari é muito fechada e existe variação nas nomenclaturas que são bem importantes. Apesar de existir a raça Qunari, você só é considerado um Qunari se seguir o Qun*, caso contrário é chamado de Tal-Vashoth, um termo para alguém que nasceu no Qun, mas o abandonou. Esse termo é considerado uma desonra. E alguém de outra raça que entre para o qun pode passar a ser chamado de qunari também. \n O Qun é o que rege a sociedade dos qunari, um conjunto de regras para manter a sociedade deles funcionando. Laços familiares não são tão fortes, e os qunari não são chamados pelos seus nomes normalmente, e sim pelo seu título. Por exemplo, o nome de Sten, em Dragon Age: Origins, é a função dele, mas nós tratamos como nome. Iron Bull, de Dragon Age: Inquisition, é uma exceção. O mais importante para o qunari é realizar a sua função e eles são regidos por três governantes, cada um responsável por uma área: Arishok (líder militar), Arigena (líder dos artesãos e trabalhadores braçais) e Ariqun (líder espiritual).",
     abilities: [
-      "Força Brutal: Recebe +2 em testes de Atletismo",
-      "Fúria Orc: Uma vez por combate, pode fazer um ataque adicional como ação livre",
-      "Visão no Escuro: Enxerga perfeitamente no escuro até 18 metros",
-      "Intimidação Natural: Recebe +2 em testes de Intimidação"
+      "Estatura Intimidadora: Qunari podem usar Força em vez de Carisma para testes de Intimidação.",
+      "Disciplina Militar: A forte disciplina militar que permeia a cultura qunari concede +2 em Iniciativa e Guerra.",
+      "Lógica do Qun: Repressão da individualidade e foco cultural no autocontrole dão aos qunari +2 em Vontade e Guerra.",
     ],
     // Modificadores FIXOS para Meia-Orc
     attributeModifiers: [
@@ -88,6 +83,8 @@ export const races: Race[] = [
     ],
     attributeModifiers: [
       { description: "Sabedoria +2, Escolha +1 em um atributo(Exceto Força)" }
-    ]
+    ],
+    longevidade: "Normal.",
+    devotos: "Tanna-Toh, Thyatis, Wynna.",
   },
 ];

@@ -4,9 +4,7 @@ export default function Home() {
   const themes = [
     { id: "comidas", title: "Comidas", icon: "🍖", color: "from-purple-600 to-purple-800" },
     { id: "chefes", title: "Chefes", icon: "👹", color: "from-red-600 to-red-800" },
-    { id: "itens", title: "Itens", icon: "⚔️", color: "from-red-600 to-pink-600" },
     { id: "pequenas-aventuras", title: "Pequenas Aventuras", icon: "📖", color: "from-pink-700 to-purple-700" },
-    { id: "personagens", title: "Personagens", icon: "🧙", color: "from-purple-700 to-pink-700" },
     { id: "racas", title: "Raças", icon: "🧝", color: "from-green-700 to-emerald-700" },
   ];
 
@@ -63,9 +61,7 @@ export default function Home() {
         <div className="mt-16 p-8 rounded-xl bg-gradient-to-br from-purple-950/30 to-black border border-purple-900/30">
           <h3 className="text-2xl font-bold text-purple-300 mb-4">Sobre o Compêndio</h3>
           <p className="text-gray-300 leading-relaxed">
-            Este é seu guia completo para o mundo de Tormenta. Aqui você encontrará informações 
-            organizadas sobre comidas, itens, personagens, locais e muito mais. Navegue pelas 
-            categorias acima para explorar todo o conteúdo disponível.
+            Este é seu guia completo para o mundo de Tormenta.Ainda estou desenvolvendo, então aceito sugestões.
           </p>
         </div>
       </main>

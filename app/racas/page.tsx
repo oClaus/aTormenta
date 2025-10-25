@@ -197,6 +197,24 @@ export default function RacasPage() {
                 </div>
               </div>
 
+              {/* Longevidade e Devoção*/ }
+              <div className="mb-8">
+                <div className="space-y-3">
+                  {selectedRace.longevidade && (
+                  <div className="p-3 bg-black/30 rounded-lg border border-green-500/50">
+                    <div className="text-xs text-green-300 font-semibold mb-1">Longevidade</div>
+                    <div className="text-white">{selectedRace.longevidade}</div>
+                  </div>
+                )}
+                {selectedRace.devotos && (
+                  <div className="p-3 bg-black/30 rounded-lg border border-green-500/50">
+                    <div className="text-xs text-green-300 font-semibold mb-1">Devoção a:</div>
+                    <div className="text-white">{selectedRace.devotos}</div>
+                  </div>
+                )}
+                </div>
+              </div>
+
               {/* Modificadores de Atributos */}
               <div className="mb-8">
                 <h3 className="text-2xl font-bold text-green-400 mb-4">📊 Modificadores de Atributos</h3>

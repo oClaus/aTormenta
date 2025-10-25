@@ -18,6 +18,8 @@ export interface Race {
   abilities: string[];
   // Pode ser um array de modificadores fixos OU um array com descrição flexível
   attributeModifiers: (AttributeModifier | FlexibleAttributeModifier)[];
+  longevidade?: string;
+  devotos?: string;
 }
 
 // Função auxiliar para verificar se é modificador fixo

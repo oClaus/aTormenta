@@ -17,4 +17,10 @@
       { attribute: "sab", modifier: 1 },
       { attribute: "des", modifier: -1 }
     ]
+    Ou
+    attributeModifiers: [
+      { description: "Escolha +1 em três atributos diferentes" }
+    ]
+    longevidade: "Normal.",
+    devotos: "Tanna-Toh, Thyatis, Wynna.",
   },
