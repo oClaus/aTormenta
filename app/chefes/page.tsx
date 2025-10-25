@@ -34,7 +34,7 @@ export default function ChefesPage() {
       </header>
 
       {/* Main Content */}
-      <main className="container mx-auto px-6 py-12">
+      <main className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-12">
         {/* Título e Descrição */}
         <div className="mb-8">
           <h2 className="text-4xl font-bold bg-gradient-to-r from-red-400 to-purple-400 bg-clip-text text-transparent mb-3">
@@ -60,7 +60,7 @@ export default function ChefesPage() {
         </div>
 
         {/* Grid de Chefes */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-6">
           {filteredBosses.map((boss) => (
             <div
               key={boss.id}

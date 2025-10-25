@@ -61,7 +61,7 @@ export default function RacasPage() {
       </header>
 
       {/* Main Content */}
-      <main className="container mx-auto px-6 py-12">
+      <main className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-12">
         <div className="mb-8">
           <h2 className="text-3xl font-bold text-green-400 mb-2">🧝 Raças</h2>
           <p className="text-gray-400">Escolha sua raça e descubra seus poderes únicos</p>
@@ -82,7 +82,7 @@ export default function RacasPage() {
         </div>
 
         {/* Grid de Raças - Ordenado Alfabeticamente */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-6">
           {filteredRaces.map((race) => (
             <div
               key={race.id}
@@ -152,17 +152,6 @@ export default function RacasPage() {
             >
               <span className="text-2xl">✕</span>
             </button>
-
-            {/* Imagem de Capa no Topo */}
-            {selectedRace.image && (
-              <div className="w-full h-64 overflow-hidden rounded-t-xl">
-                <img
-                  src={selectedRace.image}
-                  alt={selectedRace.name}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            )}
 
             {/* Conteúdo do Modal */}
             <div className="p-8">

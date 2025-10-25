@@ -35,7 +35,7 @@ export default function PequenasAventurasPage() {
       </header>
 
       {/* Main Content */}
-      <main className="container mx-auto px-6 py-12">
+      <main className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-12">
         <div className="mb-8">
           <h2 className="text-3xl font-bold text-pink-400 mb-2">📖 Pequenas Aventuras</h2>
           <p className="text-gray-400">Explore histórias épicas e desafios emocionantes</p>
@@ -56,7 +56,7 @@ export default function PequenasAventurasPage() {
         </div>
 
         {/* Grid de Aventuras - Ordenado Alfabeticamente */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-6">
           {filteredAdventures.map((adventure) => (
             <div
               key={adventure.id}

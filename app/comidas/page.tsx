@@ -54,7 +54,7 @@ export default function ComidasPage() {
       </header>
 
       {/* Main Content */}
-      <main className="container mx-auto px-6 py-12">
+      <main className="w-full px-6 py-12">
         {/* Título e Descrição */}
         <div className="mb-8">
           <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-3">
@@ -105,7 +105,7 @@ export default function ComidasPage() {
         </div>
 
         {/* Grid de Comidas */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {filteredFoods.map((food) => (
             <div
               key={food.id}

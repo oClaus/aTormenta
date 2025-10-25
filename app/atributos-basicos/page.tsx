@@ -21,7 +21,7 @@ export default function AtributosBasicosPage() {
       </header>
 
       {/* Main Content */}
-      <main className="container mx-auto px-6 py-12">
+      <main className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-12">
         {/* Título e Introdução */}
         <div className="mb-12">
           <h2 className="text-4xl font-bold text-blue-400 mb-4">Atributos Básicos</h2>

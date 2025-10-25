@@ -118,7 +118,7 @@ export const adventures: Adventure[] = [
   {
     id: "2",
     name: "A Peste",
-    theme: "Viagem no Tempo e Epidemia",
+    theme: "Aventura",
     image: "/aventuras/a_peste.png",
     summary: "Heróis trazem peste mágica, viajam no tempo para impedir tragédia.",
     sections: [
