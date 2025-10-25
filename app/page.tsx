@@ -6,6 +6,7 @@ export default function Home() {
     { id: "chefes", title: "Chefes", icon: "👹", color: "from-red-600 to-red-800" },
     { id: "pequenas-aventuras", title: "Pequenas Aventuras", icon: "📖", color: "from-pink-700 to-purple-700" },
     { id: "racas", title: "Raças", icon: "🧝", color: "from-green-700 to-emerald-700" },
+    { id: "atributos-basicos", title: "Atributos Básicos", icon: "📊", color: "from-blue-700 to-cyan-700" },
   ];
 
   return (
