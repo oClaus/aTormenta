@@ -2,11 +2,11 @@ import Link from "next/link";
 
 export default function Home() {
   const themes = [
-    { id: "comidas", title: "Comidas", icon: "🍖", color: "from-purple-600 to-purple-800" },
-    { id: "chefes", title: "Chefes", icon: "👹", color: "from-red-600 to-red-800" },
-    { id: "pequenas-aventuras", title: "Pequenas Aventuras", icon: "📖", color: "from-pink-700 to-purple-700" },
-    { id: "racas", title: "Raças", icon: "🧝", color: "from-green-700 to-emerald-700" },
-    { id: "atributos-basicos", title: "Atributos Básicos", icon: "📊", color: "from-blue-700 to-cyan-700" },
+    { id: "comidas", title: "Comidas", icon: "/temas/comidas.png", color: "from-purple-600 to-purple-800" },
+    { id: "chefes", title: "Chefes", icon: "/temas/chefes.png", color: "from-red-600 to-red-800" },
+    { id: "pequenas-aventuras", title: "Pequenas Aventuras", icon: "/temas/pequenas_aventuras.png", color: "from-pink-700 to-purple-700" },
+    { id: "racas", title: "Raças", icon: "/temas/racas.png", color: "from-green-700 to-emerald-700" },
+    { id: "atributos-basicos", title: "Atributos Básicos", icon: "/temas/atributos-basicos.png", color: "from-blue-700 to-cyan-700" },
   ];
 
   return (
@@ -34,13 +34,17 @@ export default function Home() {
             <Link
               key={theme.id}
               href={`/${theme.id}`}
-              className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-gray-900 to-black border border-purple-900/30 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(168,85,247,0.3)]"
+              className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-gray-900 to-black border border-purple-900/30 hover:border-purple-500/50 transition-all duration-300 hover:scale-100 hover:shadow-[0_0_30px_rgba(168,85,247,0.3)]"
             >
               <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-20 transition-opacity duration-300 ${theme.color}"></div>
               
               <div className="relative p-8 flex flex-col items-center justify-center min-h-[200px]">
                 <div className="text-6xl mb-4 transform group-hover:scale-110 transition-transform duration-300 drop-shadow-[0_0_10px_rgba(239,68,68,0.5)]">
-                  {theme.icon}
+                  <img
+    src={theme.icon}
+    alt={theme.title}
+    className="w-full h-full object-contain"
+  />
                 </div>
                 <h3 className="text-2xl font-bold text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                   {theme.title}
