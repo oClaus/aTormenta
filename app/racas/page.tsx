@@ -47,8 +47,8 @@ export default function RacasPage() {
       {/* Header */}
       <header className="p-6 border-b border-purple-900/50">
         <Link href="/" className="inline-block group">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-500 via-purple-400 to-pink-500 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(168,85,247,0.5)] group-hover:drop-shadow-[0_0_25px_rgba(168,85,247,0.7)] transition-all">
-            Tormenta
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-green-500 via-green-400 to-green-500 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(168,85,247,0.5)] group-hover:drop-shadow-[0_0_25px_rgba(168,85,247,0.7)] transition-all">
+            a-Tormenta
           </h1>
         </Link>
         <div className="flex items-center gap-2 mt-2">
@@ -63,8 +63,18 @@ export default function RacasPage() {
       {/* Main Content */}
       <main className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-12">
         <div className="mb-8">
-          <h2 className="text-3xl font-bold text-green-400 mb-2">🧝 Raças</h2>
-          <p className="text-gray-400">Escolha sua raça e descubra seus poderes únicos</p>
+          <h2 className="text-3xl font-bold text-green-400 mb-2">Raças</h2>
+          <p className="text-gray-400">As raças de Arton são muito variadas entre si. Na maior parte do mundo civilizado um personagem não será hostilizado por pertencer a qualquer raça. Contudo, alguns antros de vilania podem nutrir verdadeiro ódio por determinadas raças — a Supremacia Purista, por exemplo, despreza não humanos. A exceção a isso são os lefou. Tocados pela Tormenta, a maior ameaça deste mundo, os lefou atraem medo em todos os reinos.</p>
+          <p className="text-gray-400">Algumas raças são mais numerosas ou têm papel predominante na história de Arton — humanos, anões, dahllan, elfos, goblins, lefou, minotauros e qareen. O povo do continente está acostumado a ver membros dessas raças. Uma vila humana pode ter um ferreiro anão, por exemplo, e ninguém ficará surpreso.</p>
+          <p className="text-gray-400">Mas essas não são as únicas raças de Arton. Dentre toda a variedade dos seres deste mundo, há um grupo de raças mais raras: golens, hynne, kliren, medusas, osteon, sereias, sílfides, suraggel e trogs. A maioria das pessoas nunca viu um membro dessas raças. Pode considerar que são míticas, que foram extintas ou que jamais pisaram no continente. Um membro dessas raças pode atrair curiosidade, espanto ou até medo por onde passar. Em termos de jogo, essas raças possuem mecânicas mais avançadas e são indicadas para jogadores veteranos.</p>
+          <p className="text-gray-400">Quase todas as grandes sagas artonianas são sobre grupos de diferentes raças. Aventureiros aprendem a ver o melhor em cada indivíduo e, ao longo de uma vida de viagens e batalhas, acostumam-se até mesmo ao mais exótico companheiro.</p>
+          <h3 className="text-1xl font-bold text-green-400 mb-2">Escolhendo sua Raça</h3>
+          <p className="text-gray-400">Após definir seus atributos, é hora de escolher sua raça. Você pode escolher qualquer raça, mas dependendo do seu conceito de personagem, algumas são mais indicadas que outras.</p>
+          <p className="text-gray-400">Se você quiser um personagem bom de briga, por exemplo, minotauro é uma boa escolha. Se gosta de lançar magias, vá de elfo. Já se prefere resolver seus problemas na lábia, escolha qareen. Da mesma forma, algumas raças não são indicadas para certos conceitos. Um trog estudioso provavelmente não será muito competente, assim como um hynne brigão. Humanos são um caso especial — são a raça mais versátil, capazes de se destacar em qualquer carreira. Se estiver em dúvida, vá de humano.</p>
+          <p className="text-gray-400">Como dito acima, todas as raças funcionam para todos os tipos de personagem, e fazer combinações inusitadas pode ser muito divertido. Mas, se você for um jogador iniciante, prefira uma raça que forneça um bônus no atributo principal de sua classe.</p>
+          <h3 className="text-1xl font-bold text-green-400 mb-2">Características das Raças</h3>
+          <p className="text-gray-400">- Sua raça modifica seus atributos, podendo aumentá-los acima de 4 ou diminuí-los abaixo de –2.</p>
+          <p className="text-gray-400">- Você possui todas as habilidades de sua raça.</p>
         </div>
 
         {/* Search */}
@@ -95,7 +105,7 @@ export default function RacasPage() {
                   <img
                     src={race.image}
                     alt={race.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    className="w-full h-full object-contain bg-white"
                   />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center text-6xl">🧝</div>
@@ -131,12 +141,9 @@ export default function RacasPage() {
 
         {/* Seção de Informação */}
         <div className="mt-16 p-8 rounded-xl bg-gradient-to-br from-green-950/30 to-black border border-green-900/30">
-          <h3 className="text-2xl font-bold text-green-300 mb-4">📝 Adicionar Novas Raças</h3>
+          <h3 className="text-2xl font-bold text-green-300 mb-4">📝 Importante lembrar!</h3>
           <p className="text-gray-300 leading-relaxed">
-            Para adicionar novas raças, edite o arquivo <code className="bg-black/50 px-2 py-1 rounded text-green-400">data/races.ts</code> e adicione novos objetos ao array. 
-            Use <code className="bg-black/50 px-2 py-1 rounded text-green-400">\n</code> na descrição para quebras de linha. 
-            Para modificadores fixos, use <code className="bg-black/50 px-2 py-1 rounded text-green-400"></code>. 
-            Para modificadores flexíveis (como Humanos), use <code className="bg-black/50 px-2 py-1 rounded text-green-400">{ "Escolha +1 em..." }</code>.
+            Aqui temos raças oficiais dos livros e das edições da Dragão Brasil, além disso alguns crossovers de outras obras, para utilização, converse com mestre para encaixar(ou não) na mesa.
           </p>
         </div>
       </main>
