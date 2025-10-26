@@ -8,6 +8,7 @@ export default function Home() {
     { id: "racas", title: "Raças", icon: "/temas/racas.png", color: "from-green-700 to-emerald-700" },
     { id: "atributos-basicos", title: "Atributos Básicos", icon: "/temas/atributos-basicos.png", color: "from-blue-700 to-cyan-700" },
     { id: "classes", title: "Classes", icon: "/temas/classes.png", color: "from-orange-700 to-yellow-700" },
+    { id: "poderes", title: "Poderes", icon: "/temas/poderes.png", color: "from-orange-700 to-yellow-700"},
   ];
 
   return (

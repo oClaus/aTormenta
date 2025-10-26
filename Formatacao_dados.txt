@@ -24,3 +24,12 @@
     longevidade: "Normal.",
     devotos: "Tanna-Toh, Thyatis, Wynna.",
   },
+
+  -------------Poderes de AlgumaClasse -----------
+  {
+    id: "",
+    name: "",
+    description: "",
+    prerequisite: "",
+    origin: ""
+  },
