@@ -7,6 +7,7 @@ export default function Home() {
     { id: "pequenas-aventuras", title: "Pequenas Aventuras", icon: "/temas/pequenas_aventuras.png", color: "from-pink-700 to-purple-700" },
     { id: "racas", title: "Raças", icon: "/temas/racas.png", color: "from-green-700 to-emerald-700" },
     { id: "atributos-basicos", title: "Atributos Básicos", icon: "/temas/atributos-basicos.png", color: "from-blue-700 to-cyan-700" },
+    { id: "classes", title: "Classes", icon: "/temas/classes.png", color: "from-orange-700 to-yellow-700" },
   ];
 
   return (
