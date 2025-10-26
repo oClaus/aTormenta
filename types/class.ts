@@ -12,9 +12,15 @@ export interface ClassSkills {
   };
 }
 
+export interface SubAbility {
+  name: string; // Ex: "Bruxo"
+  description: string; // Descrição completa da sub-opção
+}
+
 export interface ClassAbility {
-  name: string;
-  description: string;
+  name: string; // Ex: "Caminho do Arcanista"
+  description?: string; // Descrição geral (opcional)
+  subAbilities?: SubAbility[]; // Sub-opções (opcional)
 }
 
 export interface ClassExtra {

@@ -255,22 +255,50 @@ export default function ClassesPage() {
               </div>
 
               {/* Habilidades */}
-              <div className="mb-8">
-                <h3 className="text-2xl font-bold text-orange-400 mb-4">✨ Habilidades da Classe</h3>
-                <div className="space-y-4">
-                  {selectedClass.abilities.map((ability, index) => (
-                    <div
-                      key={index}
-                      className="p-4 rounded-lg bg-orange-950/20 border border-orange-900/30"
-                    >
-                      <h4 className="text-orange-300 font-bold mb-2">{ability.name}</h4>
-                      <p className="text-gray-300 text-sm leading-relaxed">
-                        {ability.description}
-                      </p>
-                    </div>
-                  ))}
+                <div className="mb-8">
+                  <h3 className="text-2xl font-bold text-orange-400 mb-4">✨ Habilidades</h3>
+                  <div className="space-y-6">
+                    {selectedClass.abilities.map((ability, index) => (
+                      <div key={index} className="rounded-lg bg-orange-950/20 border border-orange-900/30 overflow-hidden">
+                        {/* Título da Habilidade */}
+                        <div className="p-4 bg-orange-950/40 border-b border-orange-900/30">
+                          <h4 className="text-xl font-bold text-orange-300">{ability.name}</h4>
+                        </div>
+
+                        {/* Conteúdo da Habilidade */}
+                        <div className="p-4">
+                          {/* Descrição Geral (se houver) */}
+                          {ability.description && (
+                            <p className="text-gray-300 mb-4 leading-relaxed whitespace-pre-wrap">
+                              {ability.description}
+                            </p>
+                          )}
+
+                          {/* Sub-Opções (se houver) */}
+                          {ability.subAbilities && ability.subAbilities.length > 0 && (
+                            <div className="space-y-4 mt-4">
+                              {ability.subAbilities.map((subAbility, subIndex) => (
+                                <div
+                                  key={subIndex}
+                                  className="p-4 rounded-lg "
+                                >
+                                  {/* Título da Sub-Opção */}
+                                  <h5 className="text-lg font-bold text-orange-200 mb-2">
+                                    • {subAbility.name}
+                                  </h5>
+                                  {/* Descrição da Sub-Opção */}
+                                  <p className="text-gray-300 text-sm leading-relaxed whitespace-pre-wrap">
+                                    {subAbility.description}
+                                  </p>
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
 
               {/* Extras (se houver) */}
               {selectedClass.extras && selectedClass.extras.length > 0 && (
