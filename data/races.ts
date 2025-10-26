@@ -120,4 +120,277 @@ export const races: Race[] = [
       { attribute: "car", modifier: -1 }
     ]
   },
+  {
+    id: "8",
+    name: "Lefou",
+    origin: "Tormenta20 - jogo do ano",
+    image: "/racas/lefou.png",
+    description: "Em minhas andanças, encontrei membros das mais variadas raças. De todas, a mais misteriosa é a dos lefou. De forma bem pouco lisonjeira, parcelas da sociedade os definem como pouco mais que filhos rejeitados da Tormenta. São considerados meios-demônios, como se a tempestade aberrante pudesse atacar um corpo e deixar suas marcas como faz com a própria Arton. Corrompendo de forma irreversível o que antes era puro. \n Pensando assim, até faz sentido. Um lefou pode surgir simplesmente porque os pais são aventureiros que tiveram contato com a Tormenta. Ou enfrentaram a tempestade rubra. Como uma doença, uma insidiosa vingança contra aqueles que a tentaram destruir, talvez? \n Em suas características, entretanto, um lefou não é distante de seus pais. Um filho de pais humanos parecerá humano. O mesmo é verdade para os lefou filhos de outras raças. Mas a cria carregará consigo sempre uma mácula. Algo diferente, uma deformidade ou característica que pode causar incômodo, embora lhe possa trazer alguma vantagem. Um par de antenas. Uma crosta sobre a pele. Garras. A marca indelével de que a Tormenta esteve ali e sempre estará. \n Claro, esta é uma versão preconceituosa. É verdade que, com a ascensão de Aharadak, os cultos se espalharam, e lefou têm sido procurados para assumir altas posições nas ordens de adoradores, mas muitos deles fazem exatamente o contrário. Aproveitam sua familiaridade com a maior ameaça de Arton para lutar contra ela. Estudam, treinam, dominam seus poderes para usá-los quando a tempestade rubra atacar. \n E o que é melhor do que ter ao seu lado alguém que conhece tão intimamente o inimigo? — Sir Porti, moreau do cão paladino de Thyatis \n\n Com a influência macabra da Tormenta permeando cada vez mais o mundo, surgiram os lefou. Estes meios-demônios de aparência grotesca passaram a nascer em famílias de outras raças, sendo logo sacrificados ou expulsos. Entre os que escapam, por sua facilidade em manifestar poderes aberrantes, muitos escolhem abraçar o mal, enquanto outros decidem combatê-lo.",
+    abilities: [
+      "Cria da Tormenta: Você é uma criatura do tipo monstro e recebe +5 em testes de resistência contra efeitos causados por lefeu e pela Tormenta.",
+      "Deformidade: Todo lefou possui defeitos físicos que, embora desagradáveis, conferem certas vantagens. Você recebe +2 em duas perícias à sua escolha. Cada um desses bônus conta como um poder da Tormenta (exceto para perda de Carisma). Você pode trocar um desses bônus por um poder da Tormenta à sua escolha (ele também não conta para perda de Carisma).",
+    ],
+    attributeModifiers: [
+      { description: "Escolha +1 em três atributos diferentes (Exceto Carisma)" },
+      { attribute: "car", modifier: -1 }
+    ]
+  },
+  {
+    id: "9",
+    name: "Minotauro",
+    origin: "Tormenta20 - jogo do ano",
+    image: "/racas/minotauro.png",
+    description: "Ah, os minotauros. Talvez o maior paradoxo de Arton atualmente. E talvez o maior retrato de como as coisas são mutáveis e, no fim, a roda gira. \n Com suas legiões de soldados e disciplina pétrea, tomaram o que puderam com a justificativa de que o forte deve sempre proteger o mais fraco, preceito de Tauron, o Deus da Força. Provaram-se vencedores, conquistadores. A seus próprios olhos, protetores. E acima de tudo, fortes. \n Mas nada permanece como é por muito tempo em Arton, e a derrocada veio. Numa tentativa de proteger seu povo do Lorde da Tormenta Aharadak, Tauron desceu dos céus e o enfrentou. Mas perdeu. \n Tauron morreu na luta contra a Tormenta. \n Seu gigantesco cadáver está estirado sobre Tiberus, a capital do Império de Tauron, domínio dos minotauros. Tiberus se encontra numa luta incessante contra as forças da Tormenta, e o corpo do deus é a lembrança de que mesmo o mais forte um dia pode ser derrotado. \n As legiões dos minotauros lutam dia e noite contra a tempestade rubra, mantendo aceso o espírito guerreiro da raça e tentando preservar o império fragmentado. Os orgulhosos minotauros já conhecem a derrota, o medo e a fraqueza. \n Por conta disso, minotauros hoje se espalham por Arton para provar que seus princípios ainda são verdadeiros, mesmo que sua divindade não exista mais. São disciplinados, normalmente sisudos e determinados. Sua pelagem tem cores variadas, seus chifres são seu orgulho. Sua força é seu maior trunfo. Ter um minotauro como companheiro é contar com proteção constante e garantida. — Masaru Yudai, lefou monge feiticeiro \n\n Povo guerreiro, orgulhoso e poderoso, criadores de uma civilização avançada, com a missão sagrada de proteger e governar os fracos — ou assim se enxergavam. Em seus tempos áureos, tomaram grande parte de Arton. Hoje, após a morte de sua divindade e a decadência de seu Império, os minotauros lutam para recuperar a glória perdida ou encontrar um novo papel no mundo.",
+    abilities: [
+      "Chifres: Você possui uma arma natural de chifres (dano 1d6, crítico x2, perfuração). Uma vez por rodada, quando usa a ação agredir para atacar com outra arma, pode gastar 1 PM para fazer um ataque corpo a corpo extra com os chifres.",
+      "Couro Rígido: Sua pele é dura como a de um touro. Você recebe +1 na Defesa.",
+      "Faro: Você tem olfato apurado. Contra inimigos em alcance curto que não possa ver, você não fica desprevenido e camuflagem total lhe causa apenas 20% de chance de falha.",
+      "Medo de Altura: Se estiver adjacente a uma queda de 3m ou mais de altura (como um buraco ou penhasco), você fica abalado.",
+    ],
+    attributeModifiers: [
+      { attribute: "for", modifier: 2 },
+      { attribute: "con", modifier: 1 },
+      { attribute: "sab", modifier: -1 },
+    ]
+  },
+  {
+    id: "10",
+    name: "Qareen",
+    origin: "Tormenta20 - jogo do ano",
+    image: "/racas/qareen.png",
+    description: "Embora lembrem humanos de aparência magnífica, qareen são seres mágicos. Não só no sentido de sua curiosidade e modo alegre de ver a vida, mas por serem uma mistura de mortais com gênios. Cada um deles carrega no corpo elaboradas tatuagens que são o símbolo de seu poder. Uma “marca de Wynna”, como eles mesmos chamam, que brilha sempre que uma de suas habilidades mágicas é utilizada. \n Os qareen são filhos de Wynna, a Deusa da Magia. Para eles, fazer mágica é tão natural quanto respirar e atender a desejos é um instinto primordial. Assim como sua deusa mãe, este povo é generoso, curioso e encantador. \n Os qareen têm o espírito desbravador inerente aos aventureiros, seja para satisfazer as próprias vontades, seja para auxiliar grupos de heróis mundanos. Carismáticos, atraem para si novos amigos assim como o calor de uma fogueira atrai um viajante perdido e enregelado. Concedem pequenos desejos, mágicos ou não, àqueles que abrem o coração e fazem um pedido. \n E, se você não acredita em receber um desejo sem dar algo em troca, é porque ainda não teve a felicidade de conhecer um qareen. — Nagard Wyrmslayer, humano guardião da realidade \n\n Descendentes de poderosos gênios, os qareen são otimistas, generosos e prestativos, sempre ansiosos por ajudar. Consideram-se abençoados pela Deusa da Magia, exibindo como evidência a marca de Wynna em seus corpos. Sua magia é mais poderosa quando usada para realizar desejos de outros.",
+    abilities: [
+      "Desejos: Se lançar uma magia que alguém tenha pedido desde seu último turno, o custo da magia diminui em –1 PM. Fazer um desejo ao qareen é uma ação livre.",
+      "Resistência Elemental: Conforme sua ascendência, você recebe redução 10 a um tipo de dano. Escolha uma: frio (qareen da água), eletricidade (do ar), fogo (do fogo), ácido (da terra), luz (da luz) ou trevas (qareen das trevas).",
+      "Tatuagem Mística: Você pode lançar uma magia de 1º círculo à sua escolha (atributo-chave Carisma). Caso aprenda novamente essa magia, seu custo diminui em –1 PM.",
+    ],
+    attributeModifiers: [
+      { attribute: "car", modifier: 2 },
+      { attribute: "int", modifier: 1 },
+      { attribute: "sab", modifier: -1 },
+    ]
+  },
+  {
+    id: "11",
+    name: "Golem",
+    origin: "Tormenta20 - jogo do ano",
+    image: "/racas/golem.png",
+    description: "Diz-se que estes seres são apenas construtos sem vida, criados não pelos deuses, mas por mortais. No entanto, são movidos por forças vivas — espíritos elementais selvagens, capturados e lacrados por meios mágicos em corpos de pedra e metal. Muitos conformam-se com seus papéis como trabalhadores e soldados, enquanto outros demonstram alta inteligência, personalidade e iniciativa. Podem fazer tudo que outras raças fazem, até mesmo conjurar magias. Será que têm alma? Será que encontrarão os deuses quando chegar sua hora?",
+    abilities: [
+      "Chassi: Seu corpo artificial é resistente, mas rígido. Seu deslocamento é 6m, mas não é reduzido por uso de armadura ou excesso de carga. Você recebe +2 na Defesa, mas possui penalidade de armadura –2. Você leva um dia para vestir ou remover uma armadura (pois precisa acoplar as peças dela a seu chassi). Por ser acoplada, sua armadura não conta no limite de itens que você pode usar (mas você continua só podendo usar uma armadura).",
+      "Criatura Artificial: Você é uma criatura do tipo construto. Recebe visão no escuro e imunidade a efeitos de cansaço, metabólicos e de veneno. Além disso, não precisa respirar, alimentar-se ou dormir, mas não se beneficia de cura mundana e de itens da categoria alimentação. Você precisa ficar inerte por oito horas por dia para recarregar sua fonte de energia. Se fizer isso, recupera PV e PM por descanso em condições normais (golens não são afetados por condições boas ou ruins de descanso). Por fim, a perícia Cura não funciona em você, mas Ofício (artesão) pode ser usada no lugar dela.",
+      "Fonte Elemental: Você possui um espírito elemental preso em seu corpo. Escolha entre água (frio), ar (eletricidade), fogo (fogo) e terra (ácido). Você é imune a dano desse tipo. Se fosse sofrer dano mágico desse tipo, em vez disso cura PV em quantidade igual à metade do dano. Por exemplo, se um golem com espírito elemental do fogo é atingido por uma Bola de Fogo que causa 30 pontos de dano, em vez de sofrer esse dano, ele recupera 15 PV.",
+      "Propósito de Criação: Você foi construído “pronto” para um propósito específico e não teve uma infância. Você não tem direito a escolher uma origem, mas recebe um poder geral à sua escolha.",
+    ],
+    attributeModifiers: [
+      { attribute: "for", modifier: 2 },
+      { attribute: "con", modifier: 1 },
+      { attribute: "car", modifier: -1 },
+    ]
+  },
+  {
+    id: "12",
+    name: "Hynne",
+    origin: "Tormenta20 - jogo do ano",
+    image: "/racas/hynne.png",
+    description: "Também conhecidos como halflings ou “pequeninos”, os hynne são apreciadores de boa comida e casas aconchegantes, raras vezes escolhendo sair pelo mundo em aventuras perigosas. Quando decidem fazê-lo, contudo, recorrem à agilidade e encanto naturais para ludibriar os inimigos — mais de um taverneiro ou miliciano deixou-se enganar por suas mãos ligeiras e sorrisos inocentes. Foram recentemente forçados a fugir de seu antigo reino natal, sendo então acolhidos pelas Repúblicas Livres de Sambúrdia, onde cultivam ervas e especiarias valiosas. Para espanto de todos, também se tornaram astutos mercadores, muitos ascendendo a príncipes mercantes.",
+    abilities: [
+      "Arremessador: Quando faz um ataque à distância com uma funda ou uma arma de arremesso, seu dano aumenta em um passo.",
+      "Pequeno e Rechonchudo: Seu tamanho é Pequeno e seu deslocamento é 6m. Você recebe +2 em Enganação e pode usar Destreza como atributo-chave de Atletismo (em vez de Força).",
+      "Sorte Salvadora: Quando faz um teste de resistência, você pode gastar 1 PM para rolar este teste novamente.",
+    ],
+    attributeModifiers: [
+      { attribute: "des", modifier: 2 },
+      { attribute: "car", modifier: 1 },
+      { attribute: "for", modifier: -1 },
+    ]
+  },
+  {
+    id: "13",
+    name: "Kliren",
+    origin: "Tormenta20 - jogo do ano",
+    image: "/racas/kliren.png",
+    description: "Estes visitantes de outro mundo seriam uma combinação entre humanos e gnomos — mas, afinal, o que são gnomos? São uma raça que talvez existisse em Arton, não fosse o envolvimento criminoso de seu deus Tilliann na criação da própria Tormenta. Seja como for, os kliren somam a alta inteligência gnômica e a curiosidade humana, resultando em seres de extrema engenhosidade, criatividade e talento com aparatos mecânicos. Seriam capazes de grandes feitos, talvez até dominar Arton, não fossem a impulsividade e imprudência que por vezes abreviam suas vidas...",
+    abilities: [
+      "Híbrido: Sua natureza multifacetada fez com que você aprendesse conhecimentos variados. Você se torna treinado em uma perícia à sua escolha (não precisa ser da sua classe).",
+      "Engenhosidade: Quando faz um teste de perícia, você pode gastar 2 PM para somar sua Inteligência no teste. Você não pode usar esta habilidade em testes de ataque. Caso receba esta habilidade novamente, seu custo é reduzido em –1 PM.",
+      "Ossos Frágeis: Você sofre 1 ponto de dano adicional por dado de dano de impacto. Por exemplo, se for atingido por uma clava (dano 1d6), sofre 1d6+1 pontos de dano. Se cair de 3m de altura (dano 2d6), sofre 2d6+2 pontos de dano.",
+      "Vanguardista: Você recebe proficiência em armas de fogo e +2 em Ofício (um qualquer, à sua escolha).",
+    ],
+    attributeModifiers: [
+      { attribute: "int", modifier: 2 },
+      { attribute: "car", modifier: 1 },
+      { attribute: "for", modifier: -1 },
+    ]
+  },
+  {
+    id: "14",
+    name: "Medusa",
+    origin: "Tormenta20 - jogo do ano",
+    image: "/racas/medusa.png",
+    description: "Ainda que estas criaturas reclusas sejam famosas por transformar suas vítimas em pedra com um simples olhar, apenas as mais antigas e poderosas o fazem. Jovens medusas por vezes rejeitam a solidão e crueldade racial, aventurando-se no Reinado, até mesmo fazendo amigos ou integrando equipes de heróis. Conseguem se fazer passar por mulheres humanas, quando escondem o cabelo feito de serpentes. O único povo que não teme medusas são os anões, que as consideram belas musas.",
+    abilities: [
+      "Cria de Megalokk: Você é uma criatura do tipo monstro e recebe visão no escuro.",
+      "Natureza Venenosa: Você recebe resistência a veneno +5 e pode gastar uma ação de movimento e 1 PM para envenenar uma arma que esteja usando. A arma causa perda de 1d12 pontos de vida. O veneno dura até você acertar um ataque ou até o fim da cena (o que acontecer primeiro). Veneno.",
+      "Olhar Atordoante: Você pode gastar uma ação de movimento e 1 PM para forçar uma criatura em alcance curto a fazer um teste de Fortitude (CD Car). Se a criatura falhar, fica atordoada por uma rodada (apenas uma vez por cena).",
+    ],
+    attributeModifiers: [
+      { attribute: "des", modifier: 2 },
+      { attribute: "car", modifier: 1 },
+    ]
+  },
+  {
+    id: "15",
+    name: "Osteon",
+    origin: "Tormenta20 - jogo do ano",
+    image: "/racas/osteon.png",
+    description: "Esqueletos sempre foram temidos como monstros profanos, movidos por puro rancor pelos vivos. Isso mudou; conhecidos como osteon, estes esqueletos demonstram a inteligência e a consciência das raças vivas, sendo capazes de adotar quaisquer de suas profissões e devoções. Alguns atribuem seu surgimento à queda de Ragnar, antigo Deus da Morte; outros dizem ser consequência da ascensão de Ferren Asloth como um poderoso lich, transformando a nação de Aslothia em um reino necromante.",
+    abilities: [
+      "Armadura Óssea: Você recebe redução de corte, frio e perfuração 5.",
+      "Memória Póstuma: Você se torna treinado em uma perícia (não precisa ser da sua classe) ou recebe um poder geral à sua escolha. Como alternativa, você pode ser um osteon de outra raça humanoide que não humano. Neste caso, você ganha uma habilidade dessa raça à sua escolha. Se a raça era de tamanho diferente de Médio, você também possui sua categoria de tamanho.",
+      "Natureza Esquelética: Você é uma criatura do tipo morto-vivo. Recebe visão no escuro e imunidade a efeitos de cansaço, metabólicos, de trevas e de veneno. Além disso, não precisa respirar, alimentar-se ou dormir. Por fim, efeitos mágicos de cura de luz causam dano a você e você não se beneficia de itens da categoria alimentação, mas dano de trevas recupera seus PV.",
+      "Preço da Não Vida: Você precisa passar oito horas sob a luz de estrelas ou no subterrâneo. Se fizer isso, recupera PV e PM por descanso em condições normais (osteon não são afetados por condições boas ou ruins de descanso). Caso contrário, sofre os efeitos de fome.",
+    ],
+    attributeModifiers: [
+      { description: "Escolha +1 em três atributos diferentes (Exceto Constituição)." },
+      { attribute: "con", modifier: -1 },
+    ]
+  },
+  {
+    id: "16",
+    name: "Sereia/Tritão",
+    origin: "Tormenta20 - jogo do ano",
+    image: "/racas/sereia.png",
+    description: "Sendo chamadas sereias quando femininas e tritões quando masculinos, os membros desta raça de torso humanoide e corpo de peixe podem adotar forma bípede para caminhar em terras emersas — algo que têm feito com cada vez mais frequência. Enquanto algumas sereias temem ou desprezam os humanos, outras enxergam Arton como um mundo misterioso, exótico, cheio de oportunidades e aventuras.",
+    abilities: [
+      "Canção dos Mares: Você pode lançar duas das magias a seguir: Amedrontar, Comando, Despedaçar, Enfeitiçar, Hipnotismo ou Sono (atributo-chave Carisma). Caso aprenda novamente uma dessas magias, seu custo diminui em –1 PM.",
+      "Mestre do Tridente: Para você, o tridente é uma arma simples. Além disso, você recebe +2 em rolagens de dano com azagaias, lanças e tridentes.",
+      "Transformação Anfíbia: Você pode respirar debaixo d’água e possui uma cauda que fornece deslocamento de natação 12m. Quando fora d’água, sua cauda desaparece e dá lugar a pernas (deslocamento 9m). Se permanecer mais de um dia sem contato com água, você não recupera PM com descanso até voltar para a água (ou, pelo menos, tomar um bom banho!).",
+    ],
+    attributeModifiers: [
+      { description: "Escolha +1 em três atributos diferentes." },
+    ]
+  },
+  {
+    id: "17",
+    name: "Sílfide",
+    origin: "Tormenta20 - jogo do ano",
+    image: "/racas/silfide.png",
+    description: "As mais numerosas fadas em Arton são estas criaturinhas (alguns diriam “pestes”) esvoaçantes, com suas delicadas asas de inseto e grandes olhos escuros. Curiosas e brincalhonas, parecem sempre à procura de alguma diversão, levando todos a subestimá-las quando o assunto exige seriedade. É verdade que seu entusiasmo e inocência podem causar problemas. Também é verdade que gostam de usar magias e ilusões para pregar peças. Pensando bem, ninguém até hoje encontrou um bom motivo para aceitar uma sílfide em um grupo de aventureiros...",
+    abilities: [
+      "Asas de Borboleta: Seu tamanho é Minúsculo. Você pode pairar a 1,5m do chão com deslocamento 9m. Isso permite que você ignore terreno difícil e o torna imune a dano por queda (a menos que esteja inconsciente). Você pode gastar 1 PM por rodada para voar com deslocamento de 12m.",
+      "Espírito da Natureza: Você é uma criatura do tipo espírito, recebe visão na penumbra e pode falar com animais livremente.",
+      "Magia das Fadas: Você pode lançar duas das magias a seguir (atributo-chave Carisma): Criar Ilusão, Enfeitiçar, Luz (como uma magia arcana) e Sono. Caso aprenda novamente uma dessas magias, seu custo diminui em –1 PM.",
+    ],
+    attributeModifiers: [
+      { attribute: "car", modifier: 2 },
+      { attribute: "des", modifier: 1 },
+      { attribute: "for", modifier: -1 }
+    ]
+  },
+  {
+    id: "18",
+    name: "Suraggel",
+    origin: "Tormenta20 - jogo do ano",
+    image: "/racas/suraggel.png",
+    description: "Descendentes de extraplanares divinos, esta raça é formada por seres com traços angelicais ou demoníacos — ou ambos. Por serem ligados às forças opostas da luz e trevas, suraggel têm traços diferentes quando orientados para seu lado celestial, sendo então conhecidos como aggelus; ou para o lado abissal, assim sendo chamados sulfure. Sua natureza em geral combina com a ascendência, lembrando habitantes dos Mundos dos Deuses, mas eles também podem ser surpreendentes e contraditórios: não se espante muito ao conhecer um aggelus ladino ou um sulfure paladino.",
+    abilities: [
+      "Herança Divina: Você é uma criatura do tipo espírito e recebe visão no escuro.",
+      "Luz Sagrada (Aggelus): Você recebe +2 em Diplomacia e Intuição. Além disso, pode lançar Luz (como uma magia divina; atributo-chave Carisma). Caso aprenda novamente essa magia, seu custo diminui em –1 PM.",
+      "Sombras Profanas (Sulfure): Você recebe +2 em Enganação e Furtividade. Além disso, pode lançar Escuridão (como uma magia divina; atributo-chave Inteligência). Caso aprenda novamente essa magia, seu custo diminui em –1 PM.",
+    ],
+    attributeModifiers: [
+      { description: "Sabedoria +2, Carisma +1 (Aggelus)" },
+      { description: "Destreza +2, Inteligência +1 (Sulfure)" }
+    ]
+  },
+  {
+    id: "19",
+    name: "Trog",
+    origin: "Tormenta20 - jogo do ano",
+    image: "/racas/trog.png",
+    description: "Trogloditas (ou “trogs”) são homens-lagarto primitivos e subterrâneos que odeiam todos os outros seres — especialmente os que sabem forjar aço, aquilo que mais cobiçam. Suas tribos tramam incursões contra povoados humanos, fazem emboscadas em estradas, atacam exploradores em masmorras. Uns poucos, no entanto, divergem da crueldade e selvageria inerentes à raça. Abandonam a tribo ou são expulsos. Escolhem caminhos surpreendentes, inesperados; tornam-se druidas, ou clérigos, ou bucaneiros, ou sabe-se lá o que mais. Enfim, acabam aceitos como colegas por aventureiros tão estranhos e deslocados quanto eles próprios.",
+    abilities: [
+      "Mau Cheiro: Você pode gastar uma ação padrão e 2 PM para expelir um gás fétido. Todas as criaturas (exceto trogs) em alcance curto devem passar em um teste de Fortitude contra veneno (CD Con) ou ficarão enjoadas durante 1d6 rodadas. Uma criatura que passe no teste de resistência fica imune a esta habilidade por um dia.",
+      "Mordida: Você possui uma arma natural de mordida (dano 1d6, crítico x2, perfuração). Uma vez por rodada, quando usa a ação agredir para atacar com outra arma, pode gastar 1 PM para fazer um ataque corpo a corpo extra com a mordida.",
+      "Reptiliano: Você é uma criatura do tipo monstro e recebe visão no escuro, +1 na Defesa e, se estiver sem armadura ou roupas pesadas, +5 em Furtividade.",
+      "Sangue Frio: Você sofre 1 ponto de dano adicional por dado de dano de frio.",
+    ],
+    attributeModifiers: [
+      { attribute: "con", modifier: 2 },
+      { attribute: "for", modifier: 1 },
+      { attribute: "int", modifier: -1 }
+    ]
+  },
+  {
+    id: "20",
+    name: "Jotunn",
+    origin: "Dragão Brasil - God of War Ragnarok",
+    image: "/racas/jotunn.png",
+    description: "Jötunheim, o Reino dos Gigantes de Gelo \n Lar das montanhas mais altas de todos os Nove Reinos, este Reino não possui mais nativos, todos mortos em uma campanha genocida feita por Thor e seu Mjölnir. Nem todos os Jötnar (Jötunn no singular, outro nome para os gigantes de gelo) eram realmente grandes em tamanho. Muitos tinham o tamanho de um humano comum, outros possuíam cabeças de animais ou até eram animais por completo, como a própria Serpente do Mundo, Jörmungandr. \n\n Muspelheim, o Reino dos Gigantes de Fogo \n Um dos Reinos mais primordiais da mitologia nórdica, este lugar é tomado de lava e fumaça vulcânica, completamente inabitável. Já foi habitada por gigantes, mas isso foi há muito tempo. Não se sabe o paradeiro de seu rei, Sutr — alguns supõem que esteja dormindo apenas esperando o Ragnarök. É um dos reinos mais avessos à vida humana, então aventureiros devem estar bem preparados se quiserem desbravá-lo. \n\n Os Jotunns \n As poderosas e ancestrais raças de gigantes nativas de Jötunheim e Muspelheim, antigamente abundante em Midgard, mas praticamente dizimada pelos Aesir por conta de seu medo e inveja. Apesar de sua alcunha, os jotnar variam muito de estatura, apresentando desde corpos enormes como montanhas até o tamanho de humanos comuns.",
+    abilities: [
+      "Escolha três poderes da lista a seguir:",
+      "Gigante: Seu tamanho é Grande e você recebe 3 espaços de inventário por ponto de Força, ao invés de 2.",
+      "Manipulação Elemental: Você aprende e pode lançar Explosão de chamas (fogo), Névoa (gelo) ou Transmutar objetos (rocha) (atributo-chave Força). Caso aprenda novamente essa magia, seu custo diminui em –1 PM.",
+      "Percepção Paracronal: Você tem visões sobre o futuro, vislumbrando eventos que não aconteceram ainda. Você aprende e pode lançar Augúrio, mas o tempo de execução da magia aumenta para 1 minuto.",
+      "Resistência Superior: Sua pele é um couro grosso feito de matéria elemental. Você recebe +2 na Defesa e redução 10 contra fogo (fogo), frio (gelo) ou ácido (rocha)",
+    ],
+    attributeModifiers: [
+      { description: "Jotunn de fogo: Força +2, Destreza +1, Sabedoria -1" },
+      { description: "Jotunn de gelo: Força +2, Inteligência +1, Carisma -1" },
+      { description: "Jotunn de rocha: Constituição +2, Força +1, Inteligência -1" }
+    ]
+  },
+  {
+    id: "21",
+    name: "Vanir",
+    origin: "Dragão Brasil - God of War Ragnarok",
+    image: "/racas/vanir.png",
+    description: "Vanaheim, o Reino dos Vanir \n Este reino tomado de selvas, criaturas perigosas e umidade já foi o lar dos deuses Vanir, inimigos derrotados dos Aesir. Poucas pessoas, além dos próprios Vanir, puderam pisar em Vanaheim nos últimos tempos, já que Odin também bloqueou a passagem para o Reino. Em meio às ruínas erguidas aos deuses Vanir, os últimos poucos membros de uma resistência tramam planos para enfrentar os Aesir novamente, enquanto impedem que os deuses asgardianos invadam e tomem Vanaheim de forma definitiva. \n Considerados divinos como os Aesir, os Vanir são uma raça escassa e desconfiada desde sua quase aniquilação e vivem escondidos dos Aesir, tramando sua vingança. Sua afinidade com as energias mágicas e com a magia antiga é um grande poder e uma grande maldição.",
+    abilities: [
+      "Afinidade Mágica: Você aprende e pode lançar três magias de 1º círculo, arcanas ou divinas, à sua escolha (atributo-chave Carisma). As magias são consideradas divinas para todos os efeitos e você pode aplicar aprimoramentos nessas magias como se fosse um Druida de mesmo nível que seu nível de personagem. Caso aprenda novamente essas magias, seu custo diminui em –1 PM.",
+      "Bênção da Magia Ancestral: Você pode lançar qualquer magia que conheça sobre outra criatura inteligente com que possa se comunicar. Ao invés de ser alvo dos efeitos normais da magia, essa criatura recebe a capacidade de lançar esta magia uma única vez até o fim da cena, com os mesmos efeitos mas sem custo em PM.",
+      "Elusivo: Você passou a vida escondendo sua origem e poderes para evadir seus perseguidores. Você recebe +2 em Enganação e Intuição.",
+    ],
+    attributeModifiers: [
+      { attribute: "sab", modifier: 2 },
+      { attribute: "car", modifier: 1 },
+      { attribute: "con", modifier: -1 }
+    ]
+  },
+  {
+    id: "22",
+    name: "Elfo de Elfheim",
+    origin: "Dragão Brasil - God of War Ragnarok",
+    image: "/racas/elfo_elfheim.png",
+    description: "Alfheim, o Reino dos Elfos \n Não fosse palco de uma longa guerra entre elfos luminosos e elfos negros, este Reino possuiria ares tranquilos com suas florestas densas e volumosas. O motivo para o conflito é a Luz de Alfheim, disputada pelos dois grupos de maneira ferrenha. Os céus do Reino sempre estão azuis quando os luminosos estão sob controle da Luz, mas logo o firmamento é tingido de vermelho quando os elfos negros tomam controle. \n Apesar de elfos negros serem vistos como cruéis e malignos por natureza quando comparados aos elfos luminosos, as coisas não são assim tão simples. Há mais tons de cinza nesse conflito do que qualquer analogia fácil entre luz e trevas. Duas raças ancestrais que dividem uma mesma origem, os elfos luminosos (Ljósálfar) são seres pálidos de pele quase translúcida e olhos brilhantes, enquanto os elfos negros (Dökkalfar) têm a pele variando em tons de grafite e características insetóides." ,
+    abilities: [
+      "Armamento das Sombras (Dökkalfar): Você pode gastar 1 PM para cobrir sua arma com energia das trevas. Sua próxima rolagem de dano com a arma nesta cena causa +1d6 pontos de dano de trevas.",
+      "Ser das Sombras (Dökkalfar): Você recebe visão no escuro, deslocamento de escalada 9m e redução de trevas 10.",
+      "Armas Luminosas (Ljósálfar): Você pode gastar uma ação de movimento e 1 PM para criar uma arma que saiba usar feita de luz sólida. A arma dura até o fim da cena ou até você soltá-la, é considerada mágica e fornece +1 em testes de ataque.",
+      "Filho da Luz (Ljósálfar): Você recebe +2 em Percepção, visão no escuro e imunidade às condições cego e ofuscado.",
+      "Voo: Enquanto a maioria dos elfos escuros têm asas insetóides, os elfos luminosos conseguem voar usando a bênção da Luz. Você pode gastar 1 PM por rodada para voar com deslocamento de 12m.",
+    ],
+    attributeModifiers: [
+      { description: "Ljósálfar: Destreza +2, Inteligência +1" },
+      { description: "Dökkalfar:  Força +2, Carisma +1" },
+    ]
+  },
+  {
+    id: "23",
+    name: "Anão de Svartalfheim",
+    origin: "Dragão Brasil - God of War Ragnarok",
+    image: "/racas/anao_svaltafheim.png",
+    description: "Svartalfheim, o Reino dos Anões \n Um Reino próspero, tranquilo, mas ao mesmo tempo apreensivo e temeroso da benevolência de seu patrono, Odin. Os anões são gênios da manufatura e da arquitetura, e trabalham para o Pai-de-Todos em troca de proteção. Não possuem permissão para falar com ninguém que não seja Aesir ou de Asgard. \n As terras de Svartalfheim são mais férteis, o clima também é mais ameno e agradável. A genialidade anã também oferece mais comodidades, como maquinário e sistemas de fornecimento de água. As riquezas naturais são exploradas pelos artesãos anões e por Asgard — seu aço é tão superior que é conhecido como “aço de Svartalfheim” em outros Reinos. \n Anões de Svartalfheim, os mais astutos e talentosos artesãos, alquimistas e cientistas dos Nove Reinos, responsáveis por construir e aperfeiçoar as armas que os deuses irão brandir no dia do Ragnarok.",
+    abilities: [
+      "Caminhar entre os Reinos: Você usa as fendas entre os reinos para se mover sem ser detectado. Você aprende e pode lançar a magia Salto Dimensional (atributo-chave Inteligência), mas só pode lançá-la sobre si mesmo. Caso aprenda novamente essa magia, seu custo diminui em –1 PM.",
+      "Pacifista: Violência é sempre o último recurso para um anão. Você recebe +5 em Diplomacia e Furtividade e sempre fica abalado durante o primeiro turno de um combate.",
+      "Tecelão do Improvável: Você é capaz de usar materiais “impossíveis” como o canto dos pássaros, o aroma do orvalho ou o choro de uma criança, como matéria-prima para fabricar itens. Para você, o custo de fabricação de qualquer item mundano é um quinto do preço, ao invés de um terço.",
+    ],
+    attributeModifiers: [
+      { attribute: "int", modifier: 2 },
+      { attribute: "con", modifier: 1 },
+      { attribute: "car", modifier: -1 }
+    ]
+  },
 ];
