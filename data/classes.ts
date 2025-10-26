@@ -6,11 +6,18 @@ export const classes: GameClass[] = [
   name: "Arcanista",
   origin: "tormenta20 - jogo do ano",
   image: "/classes/arcanista.png",
-  description: "O Arcanista é um mago que estuda a magia \n arcana através de rituais e fórmulas complexas.\nPossui grande poder mágico, mas é frágil em combate corpo a corpo.\nSeu conhecimento das artes arcanas o torna um aliado valioso em qualquer grupo.",
+  description: "A magia é a força mais poderosa de Arton. Está presente em todas as grandes maravilhas deste mundo, impregnada nas muralhas e torres dos maiores castelos e masmorras. Criaturas fantásticas são tocadas pela magia, armas e artefatos lendários são imbuídos de poder mágico. Mesmo assim, a magia permanece um mistério. Ninguém pode dizer que compreende totalmente esta força caprichosa, imprevisível, devastadora e deslumbrante. A magia esconde segredos infinitos, desde o truque de um ilusionista de rua até o poder de uma bola de fogo, desde o encanto para aprimorar uma espada até o segredo de cruzar dimensões. \n O arcanista é o grande mestre da magia. Muitos aventureiros aprendem algum rudimento das artes místicas, mas não têm noção de seu verdadeiro potencial e do perigo inerente a usá-las sem aprofundamento. Apenas um arcanista dedicado é capaz de dobrar a própria realidade. \n Este entendimento pode mexer com a mente de qualquer um. Alguns arcanistas se tornam arrogantes e distantes — como não se sentir superior possuindo poder para quebrar leis naturais? Os deuses podem comandar a Criação, mas os arcanistas conhecem as brechas no que eles criaram e sabem que nem todos os comandos divinos precisam ser seguidos. Outros arcanistas, vislumbrando algo tão maior que eles mesmos, tornam-se humildes, até mesmo niilistas. Prefeririam continuar na ignorância a ter noção do “outro lado” da realidade. Existem até mesmo arcanistas que enlouquecem na busca por poder e conhecimento. \n Esta busca é constante, pois a disciplina da magia exige dedicação total. Em início de carreira, os arcanistas costumam ser fracos, frágeis, quase indefesos. Contudo, à medida que sua experiência aumenta, logo se tornam oponentes formidáveis. Em vez de serem protegidos por seus aliados, tomam para si o papel de protetores e líderes. \n Nenhum arcanista é igual ao outro. Alguns encaram a magia como um conjunto de rituais e fórmulas que deve ser estudado e decorado. Outros têm forte ligação com um objeto de poder, através do qual canalizam seus feitiços. Outros ainda possuem capacidades arcanas brutas dentro de si desde o nascimento, apenas aprendendo a controlar e refinar este potencial. Seja como for, a magia nunca é banal, nunca é sutil e nunca é totalmente previsível. Mesmo em escolas mágicas como a Grande Academia Arcana, professores e alunos ficam fascinados com o que veem todos os dias. Mesmo o mais simples truque exige gestos, invocações, palavras secretas e grande concentração. Mesmo o feitiço mais codificado e esmiuçado esconde facetas que podem surpreender seu usuário. \n Descartando armaduras, armas e escudos em favor de robes, livros e varinhas, os arcanistas desafiam os perigos de Arton com seu intelecto, dedicação e personalidade. Abrindo mão de conhecimentos mundanos em troca de segredos obscuros, sabem pouco da vida cotidiana, mas muito sobre a natureza oculta do universo. Dedicando sua juventude ao estudo e aprimoramento, mais tarde se tornam poderosos, invencíveis ou até mesmo imortais.",
   famousExamples: [
-    "Merlim",
-    "Elara Lunastral",
-    "Theron o Sábio"
+    "Aylarianna Purpúrea",
+    "Gradda",
+    "Ichabod",
+    "Reynard",
+    "Ripp",
+    "Rufus Domat",
+    "Salini Alan",
+    "Talude",
+    "Vladislav Tpish",
+    "Vectorius",
   ],
   characteristics: {
     pvBase: "8 + Constituição",
@@ -18,36 +25,29 @@ export const classes: GameClass[] = [
     pmPerLevel: "6 PM por nível"
   },
   skills: {
-    mandatory: {
-      skills: [
-        "Misticismo (Int)",
-        "Vontade (Sab)"
-      ],
-      description: "Você começa com as seguintes perícias"
-    },
-    optional: {
-      skills: [
-        "Conhecimento (Int)",
-        "Diplomacia (Car)",
-        "Enganação (Car)",
-        "Guerra (Int)",
-        "Iniciativa (Des)",
-        "Intimidação (Car)",
-        "Intuição (Sab)",
-        "Investigação (Int)",
-        "Nobreza (Int)",
-        "Ofício (Int)",
-        "Percepção (Sab)"
-      ],
-      count: 2,
-      description: "Escolha mais 2 perícias"
+  mandatory: ["Misticismo (Int)", "Vontade (Sab)"],
+  optional: {
+    skills: [
+      "Conhecimento (Int)",
+      "Diplomacia (Car)",
+      "Enganação (Car)",
+      "Guerra (Int)",
+      "Iniciativa (Des)",
+      "Intimidação (Car)",
+      "Intuição (Sab)",
+      "Investigação (Int)",
+      "Nobreza (Int)",
+      "Ofício (Int)",
+      "Percepção (Sab)"
+    ],
+    count: 2
     }
   },
   proficiency: "Nenhuma",
   abilities: [
     {
       name: "Magia Arcana",
-      description: "Você pode lançar magias arcanas usando seus pontos de mana. Aprende novas magias ao subir de nível."
+      description: "Você pode lançar magias arcanas usando seus pontos de mana. Aprende novas magias ao subir de nível.",
     },
     {
       name: "Foco Arcano",
@@ -58,6 +58,28 @@ export const classes: GameClass[] = [
       description: "Uma vez por combate, você pode lançar uma magia como ação livre em vez de ação padrão."
     }
   ],
+  levelProgression: [
+    { level: 1, abilities: "Caminhos do arcanista, magias (1º círculo)" },
+    { level: 2, abilities: "Poder de arcanista" },
+    { level: 3, abilities: "Poder de arcanista" },
+    { level: 4, abilities: "Magias (2º círculo), poder de arcanista" },
+    { level: 5, abilities: "Poder de arcanista" },
+    { level: 6, abilities: "Poder de arcanista" },
+    { level: 7, abilities: "Magias (3º círculo), poder de arcanista" },
+    { level: 8, abilities: "Poder de arcanista" },
+    { level: 9, abilities: "Magias (4º círculo), poder de arcanista" },
+    { level: 10, abilities: "Poder de arcanista" },
+    { level: 11, abilities: "Poder de arcanista" },
+    { level: 12, abilities: "Magias (5º círculo), poder de arcanista" },
+    { level: 13, abilities: "Poder de arcanista" },
+    { level: 14, abilities: "Poder de arcanista" },
+    { level: 15, abilities: "Magias (6º círculo), poder de arcanista" },
+    { level: 16, abilities: "Poder de arcanista" },
+    { level: 17, abilities: "Magias (7º círculo), poder de arcanista" },
+    { level: 18, abilities: "Poder de arcanista" },
+    { level: 19, abilities: "Poder de arcanista" },
+    { level: 20, abilities: "Alta arcana, poder de arcanista" }
+  ],
   extras: [
     {
       title: "Familiares Arcanos",
@@ -65,58 +87,4 @@ export const classes: GameClass[] = [
     }
   ]
     },
-  {
-  id: "2",
-  name: "Guerreiro",
-  origin: "tormenta20 - jogo do ano",
-  image: "/classes/guerreiro.png",
-  description: "O Guerreiro é um combatente experiente, treinado em armas e armaduras.\nPossui grande resistência e força, sendo excelente em combate corpo a corpo.\nÉ o protetor do grupo, capaz de absorver dano e proteger seus aliados.",
-  famousExamples: [
-    "Conan, o Bárbaro",
-    "Aragorn",
-    "Brienne de Tarth"
-  ],
-  characteristics: {
-    pvBase: "12 + Constituição",
-    pvPerLevel: "4 + Constituição",
-    pmPerLevel: "0 PM por nível"
-  },
-  skills: {
-    mandatory: {
-      skills: [
-        "Atletismo (For)",
-        "Luta (For)"
-      ],
-      description: "Você começa com as seguintes perícias"
-    },
-    optional: {
-      skills: [
-        "Acrobacia (Des)",
-        "Cavalaria (Des)",
-        "Enganação (Car)",
-        "Furtividade (Des)",
-        "Guerra (Int)",
-        "Iniciativa (Des)",
-        "Intimidação (Car)",
-        "Intuição (Sab)",
-        "Investigação (Int)",
-        "Nobreza (Int)",
-        "Percepção (Sab)"
-      ],
-      count: 2,
-      description: "Escolha mais 2 perícias"
-    }
-  },
-  proficiency: "Todas as armas e armaduras",
-  abilities: [
-    {
-      name: "Ataque Extra",
-      description: "A partir do 5º nível, você pode fazer um ataque adicional por rodada."
-    },
-    {
-      name: "Defesa Inabalável",
-      description: "Você pode usar sua reação para reduzir o dano de um ataque em 1d6."
-    }
-  ]
-}
 ];

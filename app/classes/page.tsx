@@ -21,8 +21,8 @@ export default function ClassesPage() {
       {/* Header */}
       <header className="p-6 border-b border-purple-900/50">
         <Link href="/" className="inline-block group">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-500 via-purple-400 to-pink-500 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(168,85,247,0.5)] group-hover:drop-shadow-[0_0_25px_rgba(168,85,247,0.7)] transition-all">
-            Tormenta
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-yellow-500 via-orange-400 to-yellow-500 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(168,85,247,0.5)] group-hover:drop-shadow-[0_0_25px_rgba(168,85,247,0.7)] transition-all">
+            a-Tormenta
           </h1>
         </Link>
         <div className="flex items-center gap-2 mt-2">
@@ -37,18 +37,17 @@ export default function ClassesPage() {
       {/* Main Content */}
       <main className="w-full px-6 py-12">
         <div className="mb-8">
-          <h2 className="text-3xl font-bold text-orange-400 mb-2">🧙 Classes</h2>
-          <p className="text-gray-400">Escolha sua classe e domine suas habilidades únicas</p>
-        </div>
-
-        {/* Texto Introdutório com Regras */}
-        <div className="mb-8 p-6 rounded-xl bg-gradient-to-br from-orange-950/30 to-black border border-orange-900/30">
-          <h3 className="text-xl font-bold text-orange-300 mb-3">📖 Sobre as Classes</h3>
-          <p className="text-gray-300 leading-relaxed">
-            As classes definem o papel do seu personagem no mundo de Tormenta. Cada classe possui suas próprias habilidades, 
-            características e perícias. Escolha a classe que melhor se adequa ao seu estilo de jogo e ao conceito do seu personagem. 
-            Você pode aprender mais sobre cada classe clicando no card correspondente abaixo.
-          </p>
+          <h2 className="text-3xl font-bold text-orange-400 mb-2">Classes</h2>
+          <p className="text-gray-400">Uma classe é como uma profissão. Ela representa a forma que você escolheu para enfrentar os perigos do mundo e perseguir seus objetivos — com armas, perícias ou magias.</p>
+          <h2 className="text-1xl font-bold text-orange-400 mb-2">Escolhendo sua Classe</h2>
+          <p className="text-gray-400">A classe é a característica mais importante de um personagem e define que papel você terá no grupo de aventureiros. Tormenta20 contém quatorze classes. A tabela a seguir traz um resumo das classes, com uma descrição curta, sugestão de atributo principal, e PV, PM e perícias iniciais.</p>
+          <h3 className="text-1xl font-bold text-orange-400 mb-2">Características das Classes</h3>
+          <p className="text-gray-400"> Sua classe define seus pontos de vida e pontos de mana, quais perícias são treinadas e quais os tipos de armas e armaduras que você sabe usar (além de armas simples e armaduras leves, que todos os personagens sabem usar).</p>
+          <h3 className="text-1xl font-bold text-orange-400 mb-2">Habilidades e Poderes de Classes</h3>
+          <p className="text-gray-400">Você começa o jogo com todas as habilidades do 1º nível da sua classe. Todas as classes possuem uma habilidade “Poder” (Poder de Arcanista, Poder de Bárbaro, Poder de Bardo...) que permite que você escolha um poder de uma lista. Alguns poderes têm pré-requisitos. Para escolhê-los e usá-los, você deve possuir todos os requerimentos mencionados. Você pode escolher um poder no nível em que atinge seus pré-requisitos. A menos que especificado o contrário, você não pode escolher um mesmo poder mais de uma vez. Você sempre pode substituir um poder de classe por um poder geral. Para outros propósitos, poderes funcionam como habilidades. Poderes que aumentam o custo em PM de uma magia são poderes de aprimoramento.</p>
+          <h3 className="text-1xl font-bold text-orange-400 mb-2">Subindo de Nível</h3>
+          <p className="text-gray-400"> Quando acumula XP suficiente você sobe de nível. Quando isso acontece, você ganha três benefícios, seus PV e PM aumentam de acordo com a sua classe. Some sua Constituição aos PV que ganha por nível (mas você sempre ganha pelo menos 1 PV ao subir de nível). Você ganha todas as habilidades do nível alcançado. Consulte a página da sua classe para saber quais. E por fim, seu bônus em perícias é igual à metade do seu nível. Assim, a cada nível par (2º, 4º, 6º etc.) ele aumenta em +1. Isso representa o fato de que heróis experientes se tornam mais capazes. Você usa o número antes da barra para perícias treinadas e o número depois da barra para perícias não treinadas.</p>
+          <p className="text-gray-400">Mais informações, sobre Patamares e Multiclasses estão no final da página.</p>
         </div>
 
         {/* Search */}
@@ -74,12 +73,12 @@ export default function ClassesPage() {
               className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-gray-900 to-black border border-orange-900/30 hover:border-orange-500/50 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(234,88,12,0.3)] cursor-pointer"
             >
               {/* Imagem de fundo */}
-              <div className="relative w-full h-48 bg-gradient-to-b from-orange-900/50 to-black overflow-hidden">
+              <div className="relative w-full h-48 bg-gradient-to-b from-green-900/50 to-black overflow-hidden">
                 {cls.image ? (
                   <img
                     src={cls.image}
                     alt={cls.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    className="w-full h-full object-contain bg-white"
                   />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center text-6xl">🧙</div>
@@ -112,6 +111,29 @@ export default function ClassesPage() {
             <p className="text-gray-400 text-lg">Nenhuma classe encontrada</p>
           </div>
         )}
+
+      {/* Seção de Informação */}
+        <div className="mt-16 p-8 rounded-xl bg-gradient-to-br from-yellow-950/30 to-black border border-yellow-900/30">
+          <h3 className="text-2xl font-bold text-yellow-300 mb-4">Multiclasse</h3>
+          <p className="text-gray-300 leading-relaxed">
+          Quando sobe de nível, você pode escolher outra classe. Essa opção é conhecida como multiclasse e fornece mais versatilidade, em troca de poder bruto. O qareen Zaled Rayeder, um arcanista de 3º nível, encontra um propósito para seus dons mágicos selvagens na ordem de Khalmyr, o Deus da Justiça. Ao subir para o 4º nível, escolhe um nível de paladino, tornando-se um arcanista 3/paladino 1. Zaled terá as habilidades de um arcanista de 3º nível e de um paladino de 1º nível.</p>
+          <p> <span className="text-yellow-300"> Pontos de Vida: </span> <span className="text-gray-300 leading-relaxed">Quando você ganha o primeiro nível em uma nova classe, ganha os PV de um nível subsequente, não do primeiro. Zaled ganha 5 PV pelo primeiro nível de paladino, não 20.</span></p>
+          <p> <span className="text-yellow-300"> Pontos de Mana: </span> <span className="text-gray-300 leading-relaxed">Some os PM fornecidos por cada classe para determinar seu montante total.</span></p>
+          <p> <span className="text-yellow-300"> Perícias & Proficiências: </span> <span className="text-gray-300 leading-relaxed"> Quando você ganha o primeiro nível em uma nova classe, não ganha as perícias treinadas ou proficiências da nova classe.</span></p>
+          <p> <span className="text-yellow-300"> Níveis de Classe e de Personagem: </span> <span className="text-gray-300 leading-relaxed"> Nível de classe são níveis numa classe específica. Já seu nível de personagem é a soma dos níveis de todas as suas classes. Zaled é um arcanista de 3º nível, um paladino de 1º nível e um personagem de 4º nível (a soma dos dois).</span></p>
+
+          <h3 className="text-2xl font-bold text-yellow-300 mb-4">Patamares de Jogo</h3>
+          <p className="text-gray-300 leading-relaxed"> As classificações abaixo fornecem uma noção da escala de poder dos personagens e afetam certas habilidades.</p>
+          <p><span className="text-yellow-300">Iniciante (1º ao 4º nível):</span><span className="text-gray-300 leading-relaxed"> Aventureiro novato, envolvido em missões locais, como proteger vilas do ataque de bandidos e escoltar caravanas.</span></p>
+          <p><span className="text-yellow-300">Veterano (5º ao 10º nível):</span><span className="text-gray-300 leading-relaxed"> Neste patamar, o herói presta serviços importantes a nobres e líderes de guildas.</span></p>
+          <p><span className="text-yellow-300">Campeão (11º ao 16º nível):</span><span className="text-gray-300 leading-relaxed"> Já famoso por suas façanhas, o aventureiro trabalha para monarcas e enfrenta grandes vilões e monstros terríveis.</span></p>
+          <p><span className="text-yellow-300">Lenda (17º ao 20º nível):</span><span className="text-gray-300 leading-relaxed"> Entre os mais poderosos de Arton, o herói lida com perigos que ameaçam todo o mundo... Ou mesmo toda a realidade!</span></p>
+
+          <h3 className="text-2xl font-bold text-yellow-300 mb-4">Importante lembrar!</h3>
+          <p className="text-gray-300 leading-relaxed">
+            Aqui temos classes oficiais dos livros mas também da Dragão Brasil, podendo ou não ser disponibilizado em futuros complementos, para utilizar, conversar com mestre da mesa.
+          </p>
+        </div>
       </main>
 
       {/* Modal de Detalhes */}
@@ -125,17 +147,6 @@ export default function ClassesPage() {
             >
               <span className="text-2xl">✕</span>
             </button>
-
-            {/* Imagem de Capa no Topo */}
-            {selectedClass.image && (
-              <div className="w-full bg-black rounded-t-xl overflow-hidden flex items-center justify-center">
-                <img
-                  src={selectedClass.image}
-                  alt={selectedClass.name}
-                  className="max-w-full max-h-96 object-contain"
-                />
-              </div>
-            )}
 
             {/* Conteúdo do Modal */}
             <div className="p-8">
@@ -198,35 +209,41 @@ export default function ClassesPage() {
             
             {/* Perícias Obrigatórias */}
             <div className="mb-6">
-                <p className="text-gray-300 mb-3">
+              <p className="text-gray-300 mb-3">
                 <span className="font-semibold text-orange-300">
-                    {selectedClass.skills.mandatory.description}:
+                  Começa com as seguintes perícias:
                 </span>
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
-                {selectedClass.skills.mandatory.skills.map((skill, index) => (
-                    <div key={index} className="p-3 rounded-lg bg-orange-950/30 border border-orange-900/50">
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
+                {selectedClass.skills.mandatory.map((skill, index) => (
+                  <div 
+                    key={index} 
+                    className="p-3 rounded-lg bg-orange-950/30 border border-orange-900/50"
+                  >
                     <p className="text-gray-300 font-semibold text-orange-300">{skill}</p>
-                    </div>
+                  </div>
                 ))}
-                </div>
+              </div>
             </div>
 
             {/* Perícias Opcionais */}
             <div>
-                <p className="text-gray-300 mb-3">
+              <p className="text-gray-300 mb-3">
                 <span className="font-semibold text-orange-300">
-                    {selectedClass.skills.optional.description}:
+                  Escolha mais {selectedClass.skills.optional.count} entre:
                 </span>
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {selectedClass.skills.optional.skills.map((skill, index) => (
-                    <div key={index} className="p-3 rounded-lg bg-orange-950/20 border border-orange-900/30">
+                  <div 
+                    key={index} 
+                    className="p-3 rounded-lg bg-orange-950/20 border border-orange-900/30"
+                  >
                     <p className="text-gray-300">{skill}</p>
-                    </div>
+                  </div>
                 ))}
                 </div>
-            </div>
+              </div>
             </div>
 
               {/* Proficiência */}
@@ -274,6 +291,38 @@ export default function ClassesPage() {
                   </div>
                 </div>
               )}
+
+              {/* Tabela de Progressão de Níveis */}
+              <div className="mb-8">
+                <h3 className="text-2xl font-bold text-orange-400 mb-4">📈 Progressão por Nível</h3>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="border-b-2 border-orange-900/50">
+                        <th className="text-left p-3 text-orange-300 font-bold w-16">Nível</th>
+                        <th className="text-left p-3 text-orange-300 font-bold">Habilidades de Classe</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {selectedClass.levelProgression.map((progression, index) => (
+                        <tr
+                          key={index}
+                          className={`border-b border-orange-900/30 ${
+                            index % 2 === 0 ? 'bg-orange-950/10' : 'bg-transparent'
+                          } hover:bg-orange-950/20 transition-colors`}
+                        >
+                          <td className="p-3 text-orange-300 font-semibold text-center">
+                            {progression.level}º
+                          </td>
+                          <td className="p-3 text-gray-300">
+                            {progression.abilities}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
           </div>
         </div>
