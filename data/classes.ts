@@ -276,4 +276,86 @@ export const classes: GameClass[] = [
       { level: 20, abilities: "Realeza, poder de Nobre" }
     ],
     },
+    {
+    id: "4",
+    name: "Druida",
+    origin: "tormenta20 - jogo do ano",
+    image: "/classes/druida.png",
+    description: "No coração das florestas, nas partes mais remotas dos ermos inexplorados, existem mistérios. Clareiras sagradas onde os animais não caçam. Círculos de pedras erguidos por culturas ancestrais. Árvores gigantescas que emanam poder divino. Existe algo milagroso na vida selvagem, uma tradição secreta e antiga passada através dos séculos por mulheres e homens que cultuam, defendem e vivem a natureza. É o mundo místico dos druidas. \n O druida é um tipo específico de sacerdote. Devotado a Allihanna, a Deusa da Natureza; Megalokk, o Deus dos Monstros, ou Oceano, o Deus dos Mares, o druida é mais do que um líder religioso. É um guardião de tudo que é selvagem, vivo e puro, um devoto ligado a uma forma primordial de culto divino. Não tem uma congregação ou um templo: vive com os animais e as plantas, realiza suas cerimônias a céu aberto. Sua devoção tem menos a ver com palavras e ritos do que com sangue, seiva, terra, carne. O contato do druida com os deuses e o mundo natural é primitivo, bruto, incorrupto. Muitas vezes um druida nem mesmo reconhece seu deus padroeiro, conectando-se com as forças naturais cruas, sem rosto e sem nome. \n Embora haja tradições druídicas em Arton, transferindo conhecimento de mestre para aprendiz ao longo dos séculos, muitos druidas adquirem seus poderes sozinhos, pelo simples contato com a natureza. Isso acontece principalmente com pessoas criadas longe da civilização, mas o chamado selvagem pode surgir para qualquer um. De certa forma, alguém que se torna um druida sempre foi diferente ou especial: a conexão com as forças primitivas não pode ser aprendida numa escola. \n Druidas rejeitam boa parte da civilização e suas invenções. Não usam armaduras de metal, preferem dormir ao relento, não entendem autoridades arbitrárias do mundo artificial. Seus maiores companheiros costumam ser animais, não bípedes. Alguns nem usam roupas normais, preferindo se cobrir com folhas, couro cru ou trapos. Eles entendem o ciclo de vida e morte, mas não matam animais sem motivo. Preferem não interferir com a natureza, adaptando-se a ela e deixando que ela direcione sua existência. \n Até mesmo o corpo de um druida é modificado por sua ligação com o mundo natural. Druidas são capazes de se transformar em animais, plantas ou coisas mais exóticas. Druidas poderosos se tornam menos pessoas do que entidades ou espíritos dos ermos. \n Embora a maioria dos druidas adote uma postura pacífica, defendendo os ermos apenas quando a civilização os ameaça, outros são militantes quase fanáticos. Querem destruir a civilização, queimar cidades e derrubar castelos para devolver Arton a um estado mais puro. Não dão grande importância às mortes que isso causaria: para eles, todos os bípedes inteligentes são invasores numa terra que pertence aos animais e às plantas.\n Druidas sabem que a civilização é transitória. Antigamente não havia construções e um dia não haverá mais uma vez. O mundo é selvagem e criaturas inteligentes são meros hóspedes temporários.",
+    famousExamples: [
+      "Lisandra",
+      "Oihana",
+      "Shantall",
+      "Trebane",
+    ],
+    characteristics: {
+      pvBase: "16 + Constituição",
+      pvPerLevel: "4 + Constituição",
+      pmPerLevel: "4 PM por nível"
+    },
+    skills: {
+    mandatory: ["Sobrevivência (Sab)", "Vontade (Sab)"],
+    optional: {
+      skills: [    
+        "Adestramento (Car)", "Atletismo (For)", "Cavalgar (Des)", "Conhecimento (Int)", "Cura (Sab)", "Fortitude (Con)", "Iniciativa (Des)", "Intuição (Sab)", "Luta (For)", "Misticismo (Int)", "Ofício (Int)", "Percepção (Sab)",  "Religião (Sab)",
+      ],
+      count: 4
+      }
+    },
+    proficiency: "Escudos",
+    abilities: [
+      {
+      name: "Devoto Fiel",
+      description: "Você se torna devoto de um deus disponível para druidas (Allihanna, Megalokk ou Oceano). Veja as regras de devotos. Ao contrário de devotos normais, você recebe dois poderes concedidos por se tornar devoto, em vez de apenas um.",
+      },
+      {
+        name: "Empatia Selvagem",
+        description: "Você pode se comunicar com animais por meio de linguagem corporal e vocalizações. Você pode usar Adestramento com animais para mudar atitude e persuasão."
+      },
+      {
+        name: "Magias",
+        description: "Escolha três escolas de magia. Uma vez feita, essa escolha não pode ser mudada. Você pode lançar magias divinas de 1º círculo que pertençam a essas escolas. À medida que sobe de nível, pode lançar magias de círculos maiores (2º círculo no 6º nível, 3º círculo no 10º nível e 4º círculo no 14º nível). Você começa com duas magias de 1º círculo. A cada nível par (2º, 4º etc.), aprende uma magia de qualquer círculo e escola que possa lançar. Seu atributo-chave para lançar magias é Sabedoria e você soma sua Sabedoria no seu total de PM. "
+      },
+      {
+        name: "Poder de Druida",
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um dos poderes de Druida ou Gerais."
+      },
+      {
+        name: "Caminho dos Ermos",
+        description: "No 2º nível, você pode atravessar terrenos difíceis sem sofrer redução em seu deslocamento e a CD para rastreá-lo aumenta em +10. Esta habilidade só funciona em terrenos naturais."
+      },
+      {
+        name: "Força da Natureza.",
+        description: "No 20º nível, você diminui o custo de todas as suas magias em –2 PM e aumenta a CD delas em +2. Os bônus dobram (–4 PM e +4 na CD) se você estiver em terrenos naturais."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Devoto fiel, empatia selvagem, magias (1º círculo)" },
+      { level: 2, abilities: "Caminho dos ermos, poder de druida" },
+      { level: 3, abilities: "Poder de druida" },
+      { level: 4, abilities: "Poder de druida" },
+      { level: 5, abilities: "Poder de druida" },
+      { level: 6, abilities: "Magias (2º círculo), poder de druida" },
+      { level: 7, abilities: "Poder de druida" },
+      { level: 8, abilities: "Poder de druida" },
+      { level: 9, abilities: "Poder de druida" },
+      { level: 10, abilities: "Magias (3º círculo), poder de druida" },
+      { level: 11, abilities: "Poder de druida" },
+      { level: 12, abilities: "Poder de druida" },
+      { level: 13, abilities: "Poder de druida" },
+      { level: 14, abilities: "Magias (4º círculo), poder de druida" },
+      { level: 15, abilities: "Poder de druida" },
+      { level: 16, abilities: "Poder de druida" },
+      { level: 17, abilities: "Poder de druida" },
+      { level: 18, abilities: "Poder de druida" },
+      { level: 19, abilities: "Poder de druida" },
+      { level: 20, abilities: "Força da natureza, poder de druida" }
+    ],
+    extras: [
+    {
+      title: "Forma Selvagem",
+      description: "Você pode gastar uma ação completa e 3 PM para adquirir a forma de uma criatura selvagem. Em termos de jogo, quando usa esta habilidade você adquire os modificadores de uma das formas abaixo. Características não mencionadas não mudam. Na forma selvagem você não pode falar, empunhar itens ou lançar magias. Seu equipamento desaparece (mas você mantém os benefícios de quaisquer itens vestidos), ressurgindo quando você volta ao normal. Outras criaturas podem fazer um teste de Percepção oposto pelo seu teste de Enganação para perceber que você não é um animal comum (você recebe +10 neste teste). Cada transformação dura pelo tempo que você quiser, mas você reverte à forma normal se ficar inconsciente ou morrer.\n\n • Forma Ágil\n    ◦ Você recebe Destreza +2 e duas armas naturais que causam 1d6 pontos de dano e possuem margem de ameaça 19. Se atacar com ambas, sofre –2 em todos os testes de ataque até o seu próximo turno.\n    ◦ Aprimorada. Você recebe Destreza +4, deslocamento +3m e duas armas naturais (como acima, mas com dano de 1d8). Seu tamanho muda para Grande (–2 em Furtividade, +2 em testes de manobra).\n    ◦ Superior. Você recebe Destreza +6, deslocamento +6m e duas armas naturais (como acima, mas com dano de 1d10). Seu tamanho muda para Grande (–2 em Furtividade, +2 em testes de manobra).\n\n • Forma Feroz\n    ◦ Você recebe Força +3, +2 na Defesa e uma arma natural que causa 1d8 pontos de dano.\n    ◦ Aprimorada. Você recebe Força +5, +4 na Defesa e uma arma natural que causa 2d6 pontos de dano. Seu tamanho muda para Grande (–2 em Furtividade, +2 em testes de manobra).\n    ◦ Superior. Você recebe Força +10, +6 na Defesa e uma arma natural que causa 4d6 pontos de dano. Seu tamanho muda para Enorme (–5 em Furtividade, +5 em testes de manobra).\n\n • Forma Resistente\n    ◦ Você recebe +5 na Defesa, redução de dano 5 e uma arma natural que causa 1d6 pontos de dano.\n    ◦ Aprimorada. Você recebe Força +3, +8 na Defesa, redução de dano 8 e uma arma natural que causa 1d8 pontos de dano. Seu tamanho muda para Grande (–2 em Furtividade, +2 em testes de manobra).\n    ◦ Superior. Você recebe Força +5, +10 na Defesa, redução de dano 10 e uma arma natural que causa 2d6 pontos de dano. Seu tamanho muda para Enorme (–5 em Furtividade, +5 em testes de manobra).\n\n • Forma Sorrateira\n    ◦ Você recebe Destreza +2 e uma arma natural que causa 1d4 pontos de dano. Seu tamanho muda para Pequeno (+2 em Furtividade, –2 em testes de manobra).\n    ◦ Aprimorada. Você recebe Destreza +4. Seu tamanho muda para Minúsculo (+5 em Furtividade, –5 em testes de manobra).\n    ◦ Superior. Você recebe Destreza +6 e deslocamento de voo 18m. Seu tamanho muda para Minúsculo (+5 em Furtividade, –5 em testes de manobra).\n\n • Forma Veloz\n    ◦ Você recebe Destreza +2, uma arma natural que causa 1d6 pontos de dano e um dos benefícios a seguir: deslocamento 15m, deslocamento de escalada 9m ou deslocamento de natação 9m.\n    ◦ Aprimorada. Você recebe Destreza +4, uma arma natural que causa 1d6 pontos de dano e um dos benefícios a seguir: deslocamento 18m, deslocamento de escalada 12m ou deslocamento de natação 12m.\n    ◦ Superior. Você recebe Destreza +6, uma arma natural que causa 1d6 pontos de dano e um dos benefícios a seguir: deslocamento de natação 18m ou deslocamento de voo 24m."
+    },
+    ]
+    },
 ];
