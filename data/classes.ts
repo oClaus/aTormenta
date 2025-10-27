@@ -106,87 +106,174 @@ export const classes: GameClass[] = [
   ]
     },
     {
-  id: "2",
-  name: "Ladino",
-  origin: "tormenta20 - jogo do ano",
-  image: "/classes/ladino.png",
-  description: "A maior parte dos perigos pode ser evitada com um pouco de furtividade. A maior parte das dificuldades pode ser superada com um pouco de ouro subtraído de outra pessoa. A maior parte dos vilões pode ser vencida com uma boa mentira. E, quando nada disso dá certo, uma adaga nas costas resolve o problema. \n O ladino é o mais esperto, discreto, silencioso e malandro de todos os heróis. Um aventureiro que usa táticas que muitos consideram desleais, mas que para ele são apenas pragmáticas e lógicas. Ladinos se especializam em arrombar portas, esgueirar-se pelas sombras, desarmar armadilhas, roubar itens valiosos... Enfim, fazer tudo que “heróis de bem” nunca fariam. \n Isto não quer dizer que ladinos sejam traidores ou covardes. Pelo contrário: um ladino conhece bem o valor de um grupo coeso de aventureiros, em que cada um faz sua parte. Ele apenas sabe que, em qualquer grande missão, existe um lado sombrio que exige menos gritos de guerra e mais infiltrações silenciosas. \n Há ladinos que fazem parte de grandes guildas de criminosos, mas muitos são malandros solitários, confiando apenas em si mesmos e num pequeno grupo de amigos para sobreviver. \n Qualquer tipo de atividade escusa ou discreta atrai ladinos. Muitos são mesmo ladrões, furtando bolsas ou entrando em mansões à noite nas ruas escuras das metrópoles. Outros são espiões a serviço de grandes reinos ou mesmo igrejas. Também há muitos ladinos nas cortes, malandros que se especializam em espalhar boatos, descobrir segredos, seduzir alvos e, quando necessário, envenenar algum aristocrata inconveniente. Ladinos podem até mesmo ser assassinos: suas habilidades de furtividade e precisão podem ser mais mortais que a investida tresloucada de um brutamontes enfurecido. \n O típico ladino aventureiro tem um pouco de cada uma destas “profissões”. Um grupo de exploradores de masmorras dura pouco se não houver alguém para procurar armadilhas, escutar atrás de portas, abrir trancas e se esconder de guardas. Muitas vezes o ladino é o herói que realmente resolve a missão: enquanto o resto do grupo está enfrentando o dragão vermelho, o ladino encontra e surrupia o artefato que o monstro estava guardando. \n Ladinos podem ter qualquer tipo de personalidade, mas poucos são espalhafatosos ou arrogantes. A maioria dos ladinos prefere ficar na sombra dos outros heróis, sem grande reconhecimento, sendo subestimada pelos inimigos. Muitos ladinos adquirem suas habilidades por falta de opção: tendo crescido nas áreas mais pobres de uma cidade, precisaram aprender a roubar e fugir para sobreviver. Outros sempre tiveram vidas confortáveis e acham que a maneira mais fácil de preservá-las é se manter escondidos. Alguns foram treinados especificamente para isto por exércitos ou famílias criminosas. \n De qualquer forma, quase nenhum ladino consegue se manter do lado da lei por muito tempo. Mesmo que sua intenção seja boa, precisam cometer algum crime para atingir seus objetivos.",
-  famousExamples: [
-    "Andrus o Aranha",
-    "Ashlen Ironsmith, o Camaleão",
-    "Drikka",
-    "Leon Galtran",
-  ],
-  characteristics: {
-    pvBase: "12 + Constituição",
-    pvPerLevel: "3 + Constituição",
-    pmPerLevel: "4 PM por nível"
-  },
-  skills: {
-  mandatory: ["Ladinagem (Des)", "Relexos (Des)"],
-  optional: {
-    skills: [      
-      "Acrobacia (Des)", "Atletismo (For)", "Atuação (Car)", "Cavalgar (Des)", "Conhecimento (Int)", "Diplomacia (Car)", "Enganação (Car)", "Furtividade (Des)", "Iniciativa (Des)", "Intimidação (Car)", "Intuição (Sab)", "Investigação (Int)", "Jogatina (Car)", "Luta (For)", "Ofício (Int)", "Percepção (Sab)", "Pilotagem (Des)", "Pontaria (Des)"
+    id: "2",
+    name: "Ladino",
+    origin: "tormenta20 - jogo do ano",
+    image: "/classes/ladino.png",
+    description: "A maior parte dos perigos pode ser evitada com um pouco de furtividade. A maior parte das dificuldades pode ser superada com um pouco de ouro subtraído de outra pessoa. A maior parte dos vilões pode ser vencida com uma boa mentira. E, quando nada disso dá certo, uma adaga nas costas resolve o problema. \n O ladino é o mais esperto, discreto, silencioso e malandro de todos os heróis. Um aventureiro que usa táticas que muitos consideram desleais, mas que para ele são apenas pragmáticas e lógicas. Ladinos se especializam em arrombar portas, esgueirar-se pelas sombras, desarmar armadilhas, roubar itens valiosos... Enfim, fazer tudo que “heróis de bem” nunca fariam. \n Isto não quer dizer que ladinos sejam traidores ou covardes. Pelo contrário: um ladino conhece bem o valor de um grupo coeso de aventureiros, em que cada um faz sua parte. Ele apenas sabe que, em qualquer grande missão, existe um lado sombrio que exige menos gritos de guerra e mais infiltrações silenciosas. \n Há ladinos que fazem parte de grandes guildas de criminosos, mas muitos são malandros solitários, confiando apenas em si mesmos e num pequeno grupo de amigos para sobreviver. \n Qualquer tipo de atividade escusa ou discreta atrai ladinos. Muitos são mesmo ladrões, furtando bolsas ou entrando em mansões à noite nas ruas escuras das metrópoles. Outros são espiões a serviço de grandes reinos ou mesmo igrejas. Também há muitos ladinos nas cortes, malandros que se especializam em espalhar boatos, descobrir segredos, seduzir alvos e, quando necessário, envenenar algum aristocrata inconveniente. Ladinos podem até mesmo ser assassinos: suas habilidades de furtividade e precisão podem ser mais mortais que a investida tresloucada de um brutamontes enfurecido. \n O típico ladino aventureiro tem um pouco de cada uma destas “profissões”. Um grupo de exploradores de masmorras dura pouco se não houver alguém para procurar armadilhas, escutar atrás de portas, abrir trancas e se esconder de guardas. Muitas vezes o ladino é o herói que realmente resolve a missão: enquanto o resto do grupo está enfrentando o dragão vermelho, o ladino encontra e surrupia o artefato que o monstro estava guardando. \n Ladinos podem ter qualquer tipo de personalidade, mas poucos são espalhafatosos ou arrogantes. A maioria dos ladinos prefere ficar na sombra dos outros heróis, sem grande reconhecimento, sendo subestimada pelos inimigos. Muitos ladinos adquirem suas habilidades por falta de opção: tendo crescido nas áreas mais pobres de uma cidade, precisaram aprender a roubar e fugir para sobreviver. Outros sempre tiveram vidas confortáveis e acham que a maneira mais fácil de preservá-las é se manter escondidos. Alguns foram treinados especificamente para isto por exércitos ou famílias criminosas. \n De qualquer forma, quase nenhum ladino consegue se manter do lado da lei por muito tempo. Mesmo que sua intenção seja boa, precisam cometer algum crime para atingir seus objetivos.",
+    famousExamples: [
+      "Andrus o Aranha",
+      "Ashlen Ironsmith, o Camaleão",
+      "Drikka",
+      "Leon Galtran",
     ],
-    count: 8
-    }
-  },
-  proficiency: "Nenhuma",
-  abilities: [
-    {
-    name: "Ataque Furtivo",
-    description: "Você sabe atingir os pontos vitais de inimigos distraídos. Uma vez por rodada, quando atinge uma criatura desprevenida com um ataque corpo a corpo ou em alcance curto, ou uma criatura que esteja flanqueando, você causa 1d6 pontos de dano extra. A cada dois níveis, esse dano extra aumenta em +1d6. Uma criatura imune a acertos críticos também é imune a ataques furtivos.",
+    characteristics: {
+      pvBase: "12 + Constituição",
+      pvPerLevel: "3 + Constituição",
+      pmPerLevel: "4 PM por nível"
+    },
+    skills: {
+    mandatory: ["Ladinagem (Des)", "Relexos (Des)"],
+    optional: {
+      skills: [      
+        "Acrobacia (Des)", "Atletismo (For)", "Atuação (Car)", "Cavalgar (Des)", "Conhecimento (Int)", "Diplomacia (Car)", "Enganação (Car)", "Furtividade (Des)", "Iniciativa (Des)", "Intimidação (Car)", "Intuição (Sab)", "Investigação (Int)", "Jogatina (Car)", "Luta (For)", "Ofício (Int)", "Percepção (Sab)", "Pilotagem (Des)", "Pontaria (Des)"
+      ],
+      count: 8
+      }
+    },
+    proficiency: "Nenhuma",
+    abilities: [
+      {
+      name: "Ataque Furtivo",
+      description: "Você sabe atingir os pontos vitais de inimigos distraídos. Uma vez por rodada, quando atinge uma criatura desprevenida com um ataque corpo a corpo ou em alcance curto, ou uma criatura que esteja flanqueando, você causa 1d6 pontos de dano extra. A cada dois níveis, esse dano extra aumenta em +1d6. Uma criatura imune a acertos críticos também é imune a ataques furtivos.",
+      },
+      {
+        name: "Especialista",
+        description: "Escolha um número de perícias treinadas igual à sua Inteligência, exceto bônus temporários (mínimo 1). Ao fazer um teste de uma dessas perícias, você pode gastar 1 PM para dobrar seu bônus de treinamento. Você não pode usar esta habilidade em testes de ataque."
+      },
+      {
+        name: "Evasão",
+        description: "A partir do 2º nível, quando sofre um efeito que permite um teste de Reflexos para reduzir o dano à metade, você não sofre dano algum se passar. Você ainda sofre dano normal se falhar no teste de Reflexos. Esta habilidade exige liberdade de movimentos; você não pode usá-la se estiver de armadura pesada ou na condição imóvel."
+      },
+      {
+        name: "Poder de Ladino",
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um dos poderes de sua classe ou geral."
+      },
+      {
+        name: "Esquiva Sobrenatural",
+        description: "No 4º nível, seus instintos são tão apurados que você consegue reagir ao perigo antes que seus sentidos percebam. Você nunca fica surpreendido."
+      },
+      {
+        name: "Olhos nas Costas",
+        description: "A partir do 8º nível, você consegue lutar contra diversos inimigos como se fossem apenas um. Você não pode ser flanqueado."
+      },
+      {
+        name: "Evasão Aprimorada",
+        description: "No 10º nível, quando sofre um efeito que permite um teste de Reflexos para reduzir o dano à metade, você não sofre dano algum se passar e sofre apenas metade do dano se falhar. Esta habilidade exige liberdade de movimentos; você não pode usá-la se estiver de armadura pesada ou na condição imóvel."
+      },
+      {
+        name: "A Pessoa Certa para o Trabalho",
+        description: "No 20º nível, você se torna um mestre da ladinagem. Ao fazer um ataque furtivo ou usar uma perícia da lista de ladino, você pode gastar 5 PM para receber +10 no teste."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Ataque furtivo +1d6, especialista" },
+      { level: 2, abilities: "Evasão, poder de ladino" },
+      { level: 3, abilities: "Ataque furtivo +2d6, poder de ladino" },
+      { level: 4, abilities: "Esquiva sobrenatural, poder de ladino" },
+      { level: 5, abilities: "Ataque furtivo +3d6, poder de ladino" },
+      { level: 6, abilities: "Poder de ladino" },
+      { level: 7, abilities: "Ataque furtivo +4d6, poder de ladino" },
+      { level: 8, abilities: "Olho nas costas, poder de ladino" },
+      { level: 9, abilities: "Ataque furtivo +5d6, poder de ladino" },
+      { level: 10, abilities: "Evasão aprimorada, poder de ladino" },
+      { level: 11, abilities: "Ataque furtivo +6d6, poder de ladino" },
+      { level: 12, abilities: "Poder de ladino" },
+      { level: 13, abilities: "Ataque furtivo +7d6, poder de ladino" },
+      { level: 14, abilities: "Poder de ladino" },
+      { level: 15, abilities: "Ataque furtivo +8d6, poder de ladino" },
+      { level: 16, abilities: "Poder de ladino" },
+      { level: 17, abilities: "Ataque furtivo +9d6, poder de ladino" },
+      { level: 18, abilities: "Poder de ladino" },
+      { level: 19, abilities: "Ataque furtivo +10d6, poder de ladino" },
+      { level: 20, abilities: "A pessoa certa para o trabalho, poder de ladino" }
+    ],
     },
     {
-      name: "Especialista",
-      description: "Escolha um número de perícias treinadas igual à sua Inteligência, exceto bônus temporários (mínimo 1). Ao fazer um teste de uma dessas perícias, você pode gastar 1 PM para dobrar seu bônus de treinamento. Você não pode usar esta habilidade em testes de ataque."
+    id: "3",
+    name: "Nobre",
+    origin: "tormenta20 - jogo do ano",
+    image: "/classes/nobre.png",
+    description: "Todos precisam de um líder. Sem hierarquia, há anarquia. Sem uma ordem estabelecida, só o que existe é a lei do mais forte. Algumas dinastias tomam para si a responsabilidade e o privilégio de governar, servindo aos plebeus enquanto recebem deles obediência e tributo. \n O aventureiro nobre é mais do que alguém que nasceu nas circunstâncias certas. É um herói que reconhece o valor de um bom líder e se considera ligado à terra, ao povo, a seus aliados. Um burguês, um aventureiro ou mesmo um plebeu comum podem todos mudar de casa e de vida, ir atrás de suas próprias ambições. Mas o nobre não tem escolha. Se ele abandonar seu posto, toda uma sociedade pode ruir, pessoas vão ficar sem trabalho e sem destino, conquistadores inescrupulosos podem invadir. O nobre é rico, mas não é livre. \n Nem todo nobre é um aristocrata ou um governante por nascença. Muitos são donos ou herdeiros de grandes impérios mercantes, líderes de guildas poderosas, governadores eleitos, senadores ou mesmo diplomatas treinados em escolas especiais. O que une todos os nobres é sua capacidade de organizar os outros, dando ordens, conselhos e palavras de encorajamento. \n A posição do nobre pode não parecer muito adequada a uma vida de aventuras, mas muitas vezes o nobre é o único que tem verdadeira obrigação de se aventurar. Um destes heróis parte em grandes buscas e missões perigosas para combater os inimigos de sua terra, para encontrar artefatos que garantam a continuidade de sua linhagem, para defender o povo comum. Quando há uma ameaça, todos têm a opção de fugir, menos os soldados e os nobres. \n Muitos nobres aventureiros não têm grandes responsabilidades. Estão justamente tentando escapar de um destino que já foi decidido em seu nascimento, aventurando-se por rebeldia e sede de experiências. Contudo, mais cedo ou mais tarde todo nobre precisa encarar seu fardo. \n Nobres se destacam em situações sociais e como suporte para o resto do grupo. Contudo, muitas vezes precisam provar seu valor mais do que qualquer outro herói. Aventureiros mais humildes pensam que todo nobre é um almofadinha mimado, acostumado a que todos façam tudo por ele. Isto às vezes é verdade, mas esse tipo de desocupado raramente sobrevive a mais de uma ou duas aventuras. \n Nobres têm personalidades variadas, mas sempre marcadas por sua posição social e seus deveres. Alguns são extremamente sérios, nunca se permitindo um instante de descanso ou alegria. Outros têm um otimismo totalmente fantasioso, acreditando que tudo vai dar certo — porque, para eles, tudo sempre deu certo! Alguns ficam pasmos com pequenas realidades da vida dos plebeus, como a necessidade de economizar ou acordar cedo. Outros vivem cheios de culpa por sua posição privilegiada. \n De qualquer forma, nenhum nobre pode negar que é diferente dos plebeus. Para o bem ou para o mal, ele sempre será algo além de uma pessoa comum.",
+    famousExamples: [
+      "Arius Gorgonius Dubitatius",
+      "General Supremo Hermann Von Krauser",
+      "Lady Ayleth Karst, Rainha-Imperatriz Shivara",
+    ],
+    characteristics: {
+      pvBase: "16 + Constituição",
+      pvPerLevel: "4 + Constituição",
+      pmPerLevel: "4 PM por nível"
     },
-    {
-      name: "Evasão",
-      description: "A partir do 2º nível, quando sofre um efeito que permite um teste de Reflexos para reduzir o dano à metade, você não sofre dano algum se passar. Você ainda sofre dano normal se falhar no teste de Reflexos. Esta habilidade exige liberdade de movimentos; você não pode usá-la se estiver de armadura pesada ou na condição imóvel."
+    skills: {
+    mandatory: ["Diplomacia (Car) ou Intimidação (Car)", "Vontade (Sab)"],
+    optional: {
+      skills: [      
+        "Adestramento (Car)", "Atuação (Car)", "Cavalgar (Des)", "Conhecimento (Int)", "Diplomacia (Car)", "Enganação (Car)", "Fortitude (Con)", "Guerra (Int)", "Iniciativa (Des)", "Intimidação (Car)", "Intuição (Sab)", "Investigação (Int)", "Jogatina (Car)", "Luta (For)", "Nobreza (Int)", "Ofício (Int)", "Percepção (Sab)",  "Pontaria (Des)",
+      ],
+      count: 4
+      }
     },
-    {
-      name: "Poder de Ladino",
-      description: "No 2º nível, e a cada nível seguinte, você escolhe um dos poderes de sua classe ou geral."
-    },
-    {
-      name: "Esquiva Sobrenatural",
-      description: "No 4º nível, seus instintos são tão apurados que você consegue reagir ao perigo antes que seus sentidos percebam. Você nunca fica surpreendido."
-    },
-    {
-      name: "Olhos nas Costas",
-      description: "A partir do 8º nível, você consegue lutar contra diversos inimigos como se fossem apenas um. Você não pode ser flanqueado."
-    },
-    {
-      name: "Evasão Aprimorada",
-      description: "No 10º nível, quando sofre um efeito que permite um teste de Reflexos para reduzir o dano à metade, você não sofre dano algum se passar e sofre apenas metade do dano se falhar. Esta habilidade exige liberdade de movimentos; você não pode usá-la se estiver de armadura pesada ou na condição imóvel."
-    },
-    {
-      name: "A Pessoa Certa para o Trabalho",
-      description: "No 20º nível, você se torna um mestre da ladinagem. Ao fazer um ataque furtivo ou usar uma perícia da lista de ladino, você pode gastar 5 PM para receber +10 no teste."
-    },
-  ],
-  levelProgression: [
-    { level: 1, abilities: "Ataque furtivo +1d6, especialista" },
-    { level: 2, abilities: "Evasão, poder de ladino" },
-    { level: 3, abilities: "Ataque furtivo +2d6, poder de ladino" },
-    { level: 4, abilities: "Esquiva sobrenatural, poder de ladino" },
-    { level: 5, abilities: "Ataque furtivo +3d6, poder de ladino" },
-    { level: 6, abilities: "Poder de ladino" },
-    { level: 7, abilities: "Ataque furtivo +4d6, poder de ladino" },
-    { level: 8, abilities: "Olho nas costas, poder de ladino" },
-    { level: 9, abilities: "Ataque furtivo +5d6, poder de ladino" },
-    { level: 10, abilities: "Evasão aprimorada, poder de ladino" },
-    { level: 11, abilities: "Ataque furtivo +6d6, poder de ladino" },
-    { level: 12, abilities: "Poder de ladino" },
-    { level: 13, abilities: "Ataque furtivo +7d6, poder de ladino" },
-    { level: 14, abilities: "Poder de ladino" },
-    { level: 15, abilities: "Ataque furtivo +8d6, poder de ladino" },
-    { level: 16, abilities: "Poder de ladino" },
-    { level: 17, abilities: "Ataque furtivo +9d6, poder de ladino" },
-    { level: 18, abilities: "Poder de ladino" },
-    { level: 19, abilities: "Ataque furtivo +10d6, poder de ladino" },
-    { level: 20, abilities: "A pessoa certa para o trabalho, poder de ladino" }
-  ],
+    proficiency: "Armas marciais, armaduras pesadas e escudos.",
+    abilities: [
+      {
+      name: "Autoconfiança",
+      description: "Você pode usar seu Carisma em vez de Destreza na Defesa (mas continua não podendo somar um atributo na Defesa quando usa armadura pesada).",
+      },
+      {
+        name: "Espólio",
+        description: "Você recebe um item à sua escolha com preço de até T$ 2.000."
+      },
+      {
+        name: "Orgulho",
+        description: "Quando faz um teste de perícia, você pode gastar uma quantidade de PM à sua escolha (limitado pelo seu Carisma). Para cada PM que gastar, recebe +2 no teste."
+      },
+      {
+        name: "Poder de Nobre",
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um dos poderes de Nobre ou Poderes Gerais."
+      },
+      {
+        name: "Palavras Afiadas",
+        description: "No 2º nível, você pode gastar uma ação padrão e 1 PM para fazer um teste de Diplomacia ou Intimidação oposto ao teste de Vontade de uma criatura inteligente (Int –3 ou maior) em alcance curto. Se vencer, você causa 2d6 pontos de dano psíquico não letal à criatura. Se perder, causa metade deste dano. Se a criatura for reduzida a 0 ou menos PV, em vez de cair inconsciente, ela se rende (se você usou Diplomacia) ou fica apavorada e foge de você da maneira mais eficiente possível (se usou Intimidação). A cada quatro níveis, você pode gastar +1 PM para aumentar o dano (veja a tabela da classe)."
+      },
+      {
+        name: "Riqueza",
+        description: "No 3º nível, você passa a receber dinheiro de sua família, patrono ou negócios. Uma vez por aventura, pode fazer um teste de Carisma com um bônus igual ao seu nível de nobre. Você recebe um número de Tibares de ouro igual ao resultado do teste. Assim, um nobre de 5º nível com Carisma 4 que role 13 no dado recebe 22 TO. O uso desta habilidade é condicionado à sua relação com sua família, patrono ou negócios e a onde você está. Por exemplo, um nobre viajando pelos ermos, isolado da civilização, dificilmente teria como receber dinheiro."
+      },
+      {
+        name: "Gritar Ordens",
+        description: "A partir do 4º nível, você pode gastar uma quantidade de PM à sua escolha (limitado pelo seu Carisma). Até o início de seu próximo turno, todos os seus aliados em alcance curto recebem um bônus nos testes de perícia igual à quantidade de PM que você gastou."
+      },
+      {
+        name: "Presença Aristocrática",
+        description: "A partir do 5º nível, sempre que uma criatura inteligente tentar machucá-lo (causar dano com um ataque, magia ou habilidade) você pode gastar 2 PM. Se fizer isso, a criatura deve fazer um teste de Vontade (CD Car). Se falhar, não conseguirá machucá-lo e perderá a ação. Você só pode usar esta habilidade uma vez por cena contra cada criatura."
+      },
+      {
+        name: "Realeza",
+        description: "No 20º nível, a CD para resistir à sua Presença Aristocrática aumenta em +5 e uma criatura que falhe no teste de Vontade por 10 ou mais se arrepende tanto de ter tentado machucá-lo que passa a lutar ao seu lado (e seguir suas ordens, se puder entendê-lo) pelo resto da cena. Além disso, uma criatura que seja reduzida a 0 PV por Palavras Afiadas não sofre este dano; em vez disso, passa a lutar ao seu lado pelo resto da cena."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Autoconfiança, espólio, orgulho" },
+      { level: 2, abilities: "Palavra afiada (2d6), poder de Nobre" },
+      { level: 3, abilities: "Poder de Nobre, riqueza" },
+      { level: 4, abilities: "Gritar ordens, pode de Nobre" },
+      { level: 5, abilities: "Poder de Nobre, presença aristocrática" },
+      { level: 6, abilities: "Palavra afiada (4d6), poder de Nobre" },
+      { level: 7, abilities: "Poder de Nobre" },
+      { level: 8, abilities: "Poder de Nobre" },
+      { level: 9, abilities: "Poder de Nobre" },
+      { level: 10, abilities: "Palavra afiada (6d6), poder de Nobre" },
+      { level: 11, abilities: "Poder de Nobre" },
+      { level: 12, abilities: "Poder de Nobre" },
+      { level: 13, abilities: "Poder de Nobre" },
+      { level: 14, abilities: "Palavra afiada (8d6), poder de Nobre" },
+      { level: 15, abilities: "Poder de Nobre" },
+      { level: 16, abilities: "Poder de Nobre" },
+      { level: 17, abilities: "Poder de Nobre" },
+      { level: 18, abilities: "Palavra afiada (10d6), poder de Nobre" },
+      { level: 19, abilities: "Poder de Nobre" },
+      { level: 20, abilities: "Realeza, poder de Nobre" }
+    ],
     },
 ];

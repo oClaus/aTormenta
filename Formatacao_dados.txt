@@ -33,3 +33,91 @@
     prerequisite: "",
     origin: ""
   },
+
+------------------Origem-----------------------------
+
+  {
+    id: "2",
+    name: "",
+    description: "",
+    items: [
+      "",
+      "",
+    ],
+    benefits: [
+      " (perícias);",
+      " (poderes).",
+    ],
+    uniquePower: {
+      name: "",
+      description: ""
+    },
+    source: "Tormenta20 - Jogo do Ano"
+  },
+
+------------------Classe-----------------------------
+
+
+  {
+    id: "",
+    name: "",
+    origin: "tormenta20 - jogo do ano",
+    image: "/classes/ladino.png",
+    description: "",
+    famousExamples: [
+      "",
+    ],
+    characteristics: {
+      pvBase: "12 + Constituição",
+      pvPerLevel: "3 + Constituição",
+      pmPerLevel: "4 PM por nível"
+    },
+    skills: {
+    mandatory: ["", ""],
+    optional: {
+      skills: [      
+        "", "", "", "",
+      ],
+      count: 8
+      }
+    },
+    proficiency: "Nenhuma",
+    abilities: [
+      {
+      name: "",
+      description: "",
+      },
+      {
+        name: "",
+        description: ""
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "" },
+      { level: 2, abilities: "" },
+      { level: 3, abilities: "" },
+      { level: 4, abilities: "" },
+      { level: 5, abilities: "" },
+      { level: 6, abilities: "" },
+      { level: 7, abilities: "" },
+      { level: 8, abilities: "" },
+      { level: 9, abilities: "" },
+      { level: 10, abilities: "" },
+      { level: 11, abilities: "" },
+      { level: 12, abilities: "" },
+      { level: 13, abilities: "" },
+      { level: 14, abilities: "" },
+      { level: 15, abilities: "" },
+      { level: 16, abilities: "" },
+      { level: 17, abilities: "" },
+      { level: 18, abilities: "" },
+      { level: 19, abilities: "" },
+      { level: 20, abilities: "" }
+    ],
+    extras: [
+    {
+      title: "",
+      description: ""
+    },
+    ]
+    },
