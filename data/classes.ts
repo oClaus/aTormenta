@@ -105,4 +105,88 @@ export const classes: GameClass[] = [
     },
   ]
     },
+    {
+  id: "2",
+  name: "Ladino",
+  origin: "tormenta20 - jogo do ano",
+  image: "/classes/ladino.png",
+  description: "A maior parte dos perigos pode ser evitada com um pouco de furtividade. A maior parte das dificuldades pode ser superada com um pouco de ouro subtraído de outra pessoa. A maior parte dos vilões pode ser vencida com uma boa mentira. E, quando nada disso dá certo, uma adaga nas costas resolve o problema. \n O ladino é o mais esperto, discreto, silencioso e malandro de todos os heróis. Um aventureiro que usa táticas que muitos consideram desleais, mas que para ele são apenas pragmáticas e lógicas. Ladinos se especializam em arrombar portas, esgueirar-se pelas sombras, desarmar armadilhas, roubar itens valiosos... Enfim, fazer tudo que “heróis de bem” nunca fariam. \n Isto não quer dizer que ladinos sejam traidores ou covardes. Pelo contrário: um ladino conhece bem o valor de um grupo coeso de aventureiros, em que cada um faz sua parte. Ele apenas sabe que, em qualquer grande missão, existe um lado sombrio que exige menos gritos de guerra e mais infiltrações silenciosas. \n Há ladinos que fazem parte de grandes guildas de criminosos, mas muitos são malandros solitários, confiando apenas em si mesmos e num pequeno grupo de amigos para sobreviver. \n Qualquer tipo de atividade escusa ou discreta atrai ladinos. Muitos são mesmo ladrões, furtando bolsas ou entrando em mansões à noite nas ruas escuras das metrópoles. Outros são espiões a serviço de grandes reinos ou mesmo igrejas. Também há muitos ladinos nas cortes, malandros que se especializam em espalhar boatos, descobrir segredos, seduzir alvos e, quando necessário, envenenar algum aristocrata inconveniente. Ladinos podem até mesmo ser assassinos: suas habilidades de furtividade e precisão podem ser mais mortais que a investida tresloucada de um brutamontes enfurecido. \n O típico ladino aventureiro tem um pouco de cada uma destas “profissões”. Um grupo de exploradores de masmorras dura pouco se não houver alguém para procurar armadilhas, escutar atrás de portas, abrir trancas e se esconder de guardas. Muitas vezes o ladino é o herói que realmente resolve a missão: enquanto o resto do grupo está enfrentando o dragão vermelho, o ladino encontra e surrupia o artefato que o monstro estava guardando. \n Ladinos podem ter qualquer tipo de personalidade, mas poucos são espalhafatosos ou arrogantes. A maioria dos ladinos prefere ficar na sombra dos outros heróis, sem grande reconhecimento, sendo subestimada pelos inimigos. Muitos ladinos adquirem suas habilidades por falta de opção: tendo crescido nas áreas mais pobres de uma cidade, precisaram aprender a roubar e fugir para sobreviver. Outros sempre tiveram vidas confortáveis e acham que a maneira mais fácil de preservá-las é se manter escondidos. Alguns foram treinados especificamente para isto por exércitos ou famílias criminosas. \n De qualquer forma, quase nenhum ladino consegue se manter do lado da lei por muito tempo. Mesmo que sua intenção seja boa, precisam cometer algum crime para atingir seus objetivos.",
+  famousExamples: [
+    "Andrus o Aranha",
+    "Ashlen Ironsmith, o Camaleão",
+    "Drikka",
+    "Leon Galtran",
+  ],
+  characteristics: {
+    pvBase: "12 + Constituição",
+    pvPerLevel: "3 + Constituição",
+    pmPerLevel: "4 PM por nível"
+  },
+  skills: {
+  mandatory: ["Ladinagem (Des)", "Relexos (Des)"],
+  optional: {
+    skills: [      
+      "Acrobacia (Des)", "Atletismo (For)", "Atuação (Car)", "Cavalgar (Des)", "Conhecimento (Int)", "Diplomacia (Car)", "Enganação (Car)", "Furtividade (Des)", "Iniciativa (Des)", "Intimidação (Car)", "Intuição (Sab)", "Investigação (Int)", "Jogatina (Car)", "Luta (For)", "Ofício (Int)", "Percepção (Sab)", "Pilotagem (Des)", "Pontaria (Des)"
+    ],
+    count: 8
+    }
+  },
+  proficiency: "Nenhuma",
+  abilities: [
+    {
+    name: "Ataque Furtivo",
+    description: "Você sabe atingir os pontos vitais de inimigos distraídos. Uma vez por rodada, quando atinge uma criatura desprevenida com um ataque corpo a corpo ou em alcance curto, ou uma criatura que esteja flanqueando, você causa 1d6 pontos de dano extra. A cada dois níveis, esse dano extra aumenta em +1d6. Uma criatura imune a acertos críticos também é imune a ataques furtivos.",
+    },
+    {
+      name: "Especialista",
+      description: "Escolha um número de perícias treinadas igual à sua Inteligência, exceto bônus temporários (mínimo 1). Ao fazer um teste de uma dessas perícias, você pode gastar 1 PM para dobrar seu bônus de treinamento. Você não pode usar esta habilidade em testes de ataque."
+    },
+    {
+      name: "Evasão",
+      description: "A partir do 2º nível, quando sofre um efeito que permite um teste de Reflexos para reduzir o dano à metade, você não sofre dano algum se passar. Você ainda sofre dano normal se falhar no teste de Reflexos. Esta habilidade exige liberdade de movimentos; você não pode usá-la se estiver de armadura pesada ou na condição imóvel."
+    },
+    {
+      name: "Poder de Ladino",
+      description: "No 2º nível, e a cada nível seguinte, você escolhe um dos poderes de sua classe ou geral."
+    },
+    {
+      name: "Esquiva Sobrenatural",
+      description: "No 4º nível, seus instintos são tão apurados que você consegue reagir ao perigo antes que seus sentidos percebam. Você nunca fica surpreendido."
+    },
+    {
+      name: "Olhos nas Costas",
+      description: "A partir do 8º nível, você consegue lutar contra diversos inimigos como se fossem apenas um. Você não pode ser flanqueado."
+    },
+    {
+      name: "Evasão Aprimorada",
+      description: "No 10º nível, quando sofre um efeito que permite um teste de Reflexos para reduzir o dano à metade, você não sofre dano algum se passar e sofre apenas metade do dano se falhar. Esta habilidade exige liberdade de movimentos; você não pode usá-la se estiver de armadura pesada ou na condição imóvel."
+    },
+    {
+      name: "A Pessoa Certa para o Trabalho",
+      description: "No 20º nível, você se torna um mestre da ladinagem. Ao fazer um ataque furtivo ou usar uma perícia da lista de ladino, você pode gastar 5 PM para receber +10 no teste."
+    },
+  ],
+  levelProgression: [
+    { level: 1, abilities: "Ataque furtivo +1d6, especialista" },
+    { level: 2, abilities: "Evasão, poder de ladino" },
+    { level: 3, abilities: "Ataque furtivo +2d6, poder de ladino" },
+    { level: 4, abilities: "Esquiva sobrenatural, poder de ladino" },
+    { level: 5, abilities: "Ataque furtivo +3d6, poder de ladino" },
+    { level: 6, abilities: "Poder de ladino" },
+    { level: 7, abilities: "Ataque furtivo +4d6, poder de ladino" },
+    { level: 8, abilities: "Olho nas costas, poder de ladino" },
+    { level: 9, abilities: "Ataque furtivo +5d6, poder de ladino" },
+    { level: 10, abilities: "Evasão aprimorada, poder de ladino" },
+    { level: 11, abilities: "Ataque furtivo +6d6, poder de ladino" },
+    { level: 12, abilities: "Poder de ladino" },
+    { level: 13, abilities: "Ataque furtivo +7d6, poder de ladino" },
+    { level: 14, abilities: "Poder de ladino" },
+    { level: 15, abilities: "Ataque furtivo +8d6, poder de ladino" },
+    { level: 16, abilities: "Poder de ladino" },
+    { level: 17, abilities: "Ataque furtivo +9d6, poder de ladino" },
+    { level: 18, abilities: "Poder de ladino" },
+    { level: 19, abilities: "Ataque furtivo +10d6, poder de ladino" },
+    { level: 20, abilities: "A pessoa certa para o trabalho, poder de ladino" }
+  ],
+    },
 ];
