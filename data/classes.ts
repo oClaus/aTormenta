@@ -358,4 +358,230 @@ export const classes: GameClass[] = [
     },
     ]
     },
+    {
+    id: "5",
+    name: "Bárbaro",
+    origin: "tormenta20 - jogo do ano",
+    image: "/classes/barbaro.png",
+    description: "Arton não é civilizado. Mesmo com reinos, grandes cidades e política intrincada, este mundo possui vastas extensões de terra não mapeadas, onde nenhum nobre, soldado ou autoridade jamais pisou. Em grandes florestas escuras, em vastas cordilheiras aterrorizantes, em pradarias indomadas e ilhas remotas, Arton é governado pela força, pela selvageria, pela coragem e pela honra. É o território dos bárbaros. \n O bárbaro é um herói primitivo que ignora ou descarta as frivolidades da civilização. Um combatente terrível, o bárbaro luta por instinto, confiando menos em técnica e mais em puro frenesi de batalha. Em momentos de grande perigo, ou apenas frente a algo que desperte seu ódio, o bárbaro é tomado por uma fúria guerreira, ficando cego para tudo que não seja o combate e sendo imbuído de força e resistência animalescas. \n Bárbaros não se sentem confortáveis com todas as restrições da civilização. As paredes altas de um castelo parecem prisões, as ruas lotadas das cidades parecem labirintos fedorentos. Seu conhecimento é adquirido em forma de histórias e lições passadas oralmente por seus ancestrais, ou aprendido com observação do mundo natural. \n Podem ser apenas brutamontes monossilábicos, sem talento para nada além da violência. Contudo, também podem ser expoentes de culturas tão ricas e sábias quanto a “civilização”, bravos que rejeitam fingimentos e mentiras em favor da honestidade e simplicidade dos ermos. E mesmo aqueles que mal sabem falar muitas vezes são dotados de uma ingenuidade e bondade tocantes, tendo crescido num mundo em que família e amigos valem mais que ouro. \n As Montanhas Uivantes produzem bárbaros do gelo, acostumados a condições adversas, que bebem leite de mamute e seguem um código de honra estrito. Os Ermos Púrpuras produzem bárbaros das florestas, um povo ancestral e independente que se viu cada vez mais acuado enquanto suas terras foram roubadas por forasteiros. As Montanhas Sanguinárias produzem bárbaros que enfrentam monstros desde a infância e muitas vezes criam vínculos com essas criaturas. Também há bárbaros em todas as regiões ermas e remotas, além de habitantes das cidades que rejeitam a civilização e se entregam à selvageria, tornando-se bárbaros por escolha própria. \n Bárbaros não costumam usar armaduras pesadas e empunham armas rústicas e brutais, como tacapes e machados. Contudo, o que os define não é seu equipamento, mas seu anseio pela liberdade. Sua sede de sangue é enorme, mas sua lealdade é maior ainda. Livre de amarras, feroz, digno, honesto e forte, o bárbaro simboliza o passado selvagem e inspirador de Arton.",
+    famousExamples: [
+      "Alenn Toren Greenfeld",
+      "Andilla Dente-de-Ferro",
+      "Klunc, Galo Louco",
+    ],
+    characteristics: {
+      pvBase: "24 + Constituição",
+      pvPerLevel: "6 + Constituição",
+      pmPerLevel: "3 PM por nível"
+    },
+    skills: {
+    mandatory: ["Fortitude (Con)", "Luta (For)"],
+    optional: {
+      skills: [      
+        "Adestramento (Car)", "Atletismo (For)", "Cavalgar (Des)", "Iniciativa (Des)", "Intimidação (Car)", "Ofício (Int)", "Percepção (Sab)", "Pontaria (Des)", "Sobrevivência (Sab)", "Vontade (Sab)"
+      ],
+      count: 4
+      }
+    },
+    proficiency: "Armas marciais e escudos",
+    abilities: [
+      {
+      name: "Fúria",
+      description: "Você pode gastar 2 PM para invocar uma fúria selvagem. Você recebe +2 em testes de ataque e rolagens de dano corpo a corpo, mas não pode fazer nenhuma ação que exija calma e concentração (como usar a perícia Furtividade ou lançar magias). A cada cinco níveis, pode gastar +1 PM para aumentar os bônus em +1. A Fúria termina se, ao fim da rodada, você não tiver atacado nem sido alvo de um efeito (ataque, habilidade, magia...) hostil.",
+      },
+      {
+        name: "Poder de Bárbaro",
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um dos poderes de bárbaro ou geral."
+      },
+      {
+        name: "Instinto Selvagem",
+        description: "No 3º nível, você recebe +1 em rolagens de dano, Percepção e Reflexos. A cada seis níveis, esse bônus aumenta em +1."
+      },
+      {
+        name: "Redução de Dano",
+        description: "A partir do 5º nível, graças a seu vigor e força de vontade, você ignora parte de seus ferimentos. Você recebe redução de dano 2 (todo dano que sofre é reduzido em 2). A cada três níveis, sua RD aumenta em 2, até um máximo de RD 10 no 17º nível."
+      },
+      {
+        name: "Fúria Titânica",
+        description: "No 20º nível, o bônus que você recebe nos testes de ataque e rolagens de dano quando usa Fúria é dobrado. Por exemplo, se gastar 5 PM, em vez de um bônus de +5, recebe um bônus de +10."
+      },
+      
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Fúria +2" },
+      { level: 2, abilities: "Poder de bárbaro" },
+      { level: 3, abilities: "Instinto selvagem +1, poder de bárbaro" },
+      { level: 4, abilities: "Poder de bárbaro" },
+      { level: 5, abilities: "Poder de bárbaro, redução de dano 2" },
+      { level: 6, abilities: "Fúria +3, poder de bárbaro" },
+      { level: 7, abilities: "Poder de bárbaro" },
+      { level: 8, abilities: "Poder de bárbaro, redução de dano 4" },
+      { level: 9, abilities: "Instinto selvagem +2, poder de bárbaro" },
+      { level: 10, abilities: "Poder de bárbaro" },
+      { level: 11, abilities: "Fúria +4, poder de bárbaro, redução de dano 6" },
+      { level: 12, abilities: "Poder de bárbaro" },
+      { level: 13, abilities: "Poder de bárbaro" },
+      { level: 14, abilities: "Poder de bárbaro, redução de dano 8" },
+      { level: 15, abilities: "Instinto selvagem +3, poder de bárbaro" },
+      { level: 16, abilities: "Fúria +5, poder de bárbaro" },
+      { level: 17, abilities: "Poder de bárbaro, redução de dano 10" },
+      { level: 18, abilities: "Poder de bárbaro" },
+      { level: 19, abilities: "Poder de bárbaro" },
+      { level: 20, abilities: "Fúria titânica, poder de bárbaro" }
+    ],
+    },
+    {
+    id: "6",
+    name: "Bardo",
+    origin: "tormenta20 - jogo do ano",
+    image: "/classes/bardo.png",
+    description: "Num mundo de heróis, contar histórias épicas também é um ato de heroísmo. Os grandes menestréis não são apenas músicos ou poetas: são malandros que dominam as ruas e as cortes, sábios que possuem conhecimento obscuro sobre os mais variados assuntos, diplomatas que transformam inimigos jurados em companheiros leais após uma noite na taverna, arautos que inspiram seus aliados a grandes feitos no campo de batalha. Sua intimidade com a música é tão grande que através dela lançam magias. São versados em muitas habilidades, embora não sejam mestres em nenhuma. São os bardos. \n Bardos são contadores de histórias e músicos errantes que acompanham grupos de aventureiros em missões para depois narrar suas façanhas. Contudo, seu papel vai muito além disso. Enquanto muitos heróis se especializam em uma só área, os bardos são versáteis, pessoas do mundo, confortáveis ao lado de reis e de mendigos. Muitas vezes são a “face” do grupo, tomando a frente em negociações e sabendo usar palavras doces quando outros prefeririam apelar para as armas. Bardos têm amigos, inimigos, conhecidos, amantes e rivais em cada cidade e aldeia. Conhecem um fato importante sobre cada artefato misterioso. Tocam a música certa para inflamar as almas de seus companheiros a cada combate. \n Sendo em seu âmago artistas, os bardos costumam ser muito emotivos e entusiasmados, com personalidades fortes e maneiras únicas de encarar a vida. Alguns demonstram alegria incessante, vendo o lado positivo em tudo e sorrindo mesmo frente aos piores perigos. Outros são intensos, amargurados, românticos e apaixonados, sempre tomados por algum amor impossível ou uma memória melancólica. Outros ainda só querem se divertir, parecendo loucos em seu frenesi de acrobacias, imitações, piadas e absurdos. Outros são sedutores cínicos. Outros são tudo isso, mudando de personalidade como quem muda de camisa! \n Embora a maioria dos bardos utilize a música para canalizar sua magia e inspirar seus aliados, quase qualquer tipo de arte pode tomar este papel. Alguns bardos dançam, outros declamam poesia. Outros ainda apenas fazem discursos grandiosos ou mesmo se exibem em grandes demonstrações acrobáticas com armas. Alguns bardos mais parecem embaixadores sérios e pomposos, outros lembram cavaleiros aristocráticos saídos de alguma história. O importante é que a arte do bardo venha de suas emoções e toque os corações dos demais aventureiros. \n De fato, o estereótipo do “menestrel que acompanha o grupo” muitas vezes é só uma fachada ou nem mesmo se aplica. Alguns bardos fingem ser só contadores de histórias enquanto estão em alguma missão secreta. Outros querem ser os heróis de suas próprias histórias! \n Seja como for, o bardo é um herói que costuma atrair outras pessoas para si. Sua simpatia, magnetismo e capacidade de ajudar os outros fazem com que nunca esteja sozinho na masmorra ou na taverna. E quem acredita que ele é um mero bobo da corte logo pode se ver com um inimigo poderoso que tem contatos em todos os reinos.",
+    famousExamples: [
+      "Kir’zanaath “Kiki” Odello",
+      "Luigi Sortudo",
+      "Kadeen",
+      "Niele",
+      "Senomar",
+    ],
+    characteristics: {
+      pvBase: "12 + Constituição",
+      pvPerLevel: "3 + Constituição",
+      pmPerLevel: "4 PM por nível"
+    },
+    skills: {
+    mandatory: ["Atuação (Car)", "Reflexos (Des)"],
+    optional: {
+      skills: [    
+        'Acrobacia (Des)', 'Cavalgar (Des)', 'Conhecimento (Int)', 'Diplomacia (Car)', 'Enganação (Car)', 'Furtividade (Des)', 'Iniciativa (Des)', 'Intuição (Sab)', 'Investigação (Int)', 'Jogatina (Car)', 'Ladinagem (Des)', 'Luta (For)', 'Misticismo (Int)', 'Nobreza (Int)', 'Percepção (Sab)', 'Pontaria (Des)', 'Vontade (Sab)'  
+      ],
+      count: 6
+      }
+    },
+    proficiency: "Armas marciais",
+    abilities: [
+      {
+      name: "Inspiração",
+      description: "Você pode gastar uma ação padrão e 2 PM para inspirar as pessoas com sua arte. Você e todos os seus aliados em alcance curto ganham +1 em testes de perícia até o fim da cena. A cada quatro níveis, pode gastar +2 PM para aumentar o bônus em +1.",
+      },
+      {
+        name: "Magias",
+        description: "Escolha três escolas de magia. Uma vez feita, essa escolha não pode ser mudada. Você pode lançar magias arcanas de 1º círculo que pertençam a essas escolas. À medida que sobe de nível, pode lançar magias de círculos maiores (2º círculo no 6º nível, 3º círculo no 10º nível e 4º círculo no 14º nível). Você começa com duas magias de 1º círculo. A cada nível par (2º, 4º etc.), aprende uma magia de qualquer círculo e escola que possa lançar. Você pode lançar essas magias vestindo armaduras leves sem precisar de testes de Misticismo. Seu atributo-chave para lançar magias é Carisma e você soma seu Carisma no seu total de PM."
+      },
+      {
+        name: "Poder de Bardo",
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um poder"
+      },
+      {
+        name: "Eclético",
+        description: "A partir do 2º nível, você pode gastar 1 PM para receber todos os benefícios de ser treinado em uma perícia por um teste."
+      },
+      {
+        name: "Artista Completo",
+        description: "No 20º nível, você pode usar Inspiração como uma ação livre. Enquanto estiver sob efeito de sua Inspiração, suas habilidades de bardo (incluindo magias) têm seu custo em PM reduzido pela metade (após aplicar aprimoramentos e quaisquer outros efeitos que reduzam custo)."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Inspiração +1, magias (1º círculo)" },
+      { level: 2, abilities: "Poder de bardo, eclético" },
+      { level: 3, abilities: "Poder de bardo" },
+      { level: 4, abilities: "Poder de bardo" },
+      { level: 5, abilities: "Inspiração +2, poder de bardo" },
+      { level: 6, abilities: "Magias (2º círculo), poder de bardo" },
+      { level: 7, abilities: "Poder de bardo" },
+      { level: 8, abilities: "Poder de bardo" },
+      { level: 9, abilities: "Inspiração +3, poder de bardo" },
+      { level: 10, abilities: "Magias (3º círculo), poder de bardo" },
+      { level: 11, abilities: "Poder de bardo" },
+      { level: 12, abilities: "Poder de bardo" },
+      { level: 13, abilities: "Inspiração +4, poder de bardo" },
+      { level: 14, abilities: "Magias (4º círculo), poder de bardo" },
+      { level: 15, abilities: "Poder de bardo" },
+      { level: 16, abilities: "Poder de bardo" },
+      { level: 17, abilities: "Inspiração +5, poder de bardo" },
+      { level: 18, abilities: "Poder de bardo" },
+      { level: 19, abilities: "Poder de bardo" },
+      { level: 20, abilities: "Artista completo, poder de bardo" }
+    ],
+    },
+    {
+    id: "7",
+    name: "Bucaneiro",
+    origin: "tormenta20 - jogo do ano",
+    image: "/classes/bucaneiro.png",
+    description: "Os mares e rios são alguns dos terrenos mais selvagens e misteriosos de Arton. Sua vastidão esconde ilhas inexploradas, civilizações submersas, tempestades, dragões... E bucaneiros. \n Bucaneiros são aventureiros que singram as águas deste mundo, sempre metidos em missões, batalhas, buscas, patrulhas ou a simples luta pela sobrevivência. Muitos são verdadeiros piratas, fora da lei vivendo numa sociedade com suas próprias regras, em desafio aos reinos do continente. Essa irmandade é brutal, mas também pode parecer utópica: capitães piratas são eleitos por sua tripulação e podem ser removidos caso sejam tiranos. Piratas aceitam todo tipo de pessoas rejeitadas pelo “mundo seco” e podem ser a única família que resta a alguns párias. O preço dessa aceitação é uma vida de crime, perseguindo e roubando navios mercantes. \n Contudo, muitos bucaneiros seguem o caminho oposto: servindo na marinha de reinos poderosos, são marujos e capitães trabalhando para as grandes autoridades do mundo. Muitos combateram de qualquer um dos lados das Guerras Táuricas ou defenderam o Reinado contra a Supremacia Purista. Vários destes marinheiros militares também são caçadores de piratas, empreendendo sua própria guerra particular contra os saqueadores dos mares. \n Entre esses dois extremos estão os corsários: bucaneiros que recebem permissão especial de alguns reinos para atacar e roubar navios de reinos inimigos. São “piratas legalizados”, aproveitando a liberdade dos fora da lei e contando com o respaldo das autoridades. Contudo, muitas vezes são odiados por ambos. \n Vários bucaneiros, principalmente aqueles que operam nos grandes rios do continente, são meros contrabandistas e mercadores, interessados em levar suas mercadorias de um lado a outro enquanto se esquivam de monstros aquáticos. Muitos destes se especializam em levar refugiados, prisioneiros foragidos, espiões e aventureiros até locais seguros, fazendo o bem pelo preço certo. \n Numa tripulação, lealdade é tudo. Assim, muitos bucaneiros se sentem perfeitamente em casa num grupo de aventureiros, mesmo em terra firme. Bucaneiros sabem que dependem de seus aliados — não têm preguiça para fazer sua parte do trabalho, não são egoístas com as riquezas conquistadas e protegem os companheiros com a própria vida se for necessário. Ser bucaneiro é mais do que viajar e lutar num navio: é um estilo de vida, uma maneira de encarar os perigos de Arton com versatilidade, rebeldia e esperteza. \n Bucaneiros também não se apegam a regras e leis antiquadas. Nos mares, a única lei obrigatória é a da lealdade. Eles lutam sujo, usam armas proibidas no mundo seco e, durante um naufrágio inevitável, não ficam para afundar com o barco.",
+    famousExamples: [
+      "Nargom", "James K.", "Izzy Tarante", "John-de-Sangue",
+    ],
+    characteristics: {
+      pvBase: "16 + Constituição",
+      pvPerLevel: "4 + Constituição",
+      pmPerLevel: "3 PM por nível"
+    },
+    skills: {
+    mandatory: ["Luta (For) ou Pontaria (Des)", "Reflexos (Des)"],
+    optional: {
+      skills: [      
+        'Acrobacia (Des)', 'Atletismo (For)', 'Atuação (Car)', 'Enganação (Car)', 'Fortitude (Con)', 'Furtividade (Des)', 'Iniciativa (Des)', 'Intimidação (Car)', 'Jogatina (Car)', 'Luta (For)', 'Ofício (Int)', 'Percepção (Sab)', 'Pilotagem (Des)', 'Pontaria (Des)'
+      ],
+      count: 4
+      }
+    },
+    proficiency: "Armas marciais",
+    abilities: [
+      {
+      name: "Audácia",
+      description: "Quando faz um teste de perícia, você pode gastar 2 PM para somar seu Carisma no teste. Você não pode usar esta habilidade em testes de ataque.",
+      },
+      {
+        name: "Insolência",
+        description: "Você soma seu Carisma na Defesa, limitado pelo seu nível. Esta habilidade exige liberdade de movimentos; você não pode usá-la se estiver de armadura pesada ou na condição imóvel."
+      },
+      {
+        name: "Evasão",
+        description: "A partir do 2º nível, quando sofre um efeito que permite um teste de Reflexos para reduzir o dano à metade, você não sofre dano algum se passar. Você ainda sofre dano normal se falhar no teste de Reflexos. Esta habilidade exige liberdade de movimentos; você não pode usá-la se estiver de armadura pesada ou na condição imóvel."
+      },
+      {
+        name: "Poder de Bucaneiro",
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um Poder."
+      },
+      {
+        name: "Esquiva Sagaz",
+        description: "No 3º nível, você recebe +1 na Defesa e em Reflexos. Esse bônus aumenta em +1 a cada quatro níveis. Esta habilidade exige liberdade de movimentos; você não pode usá-la se estiver de armadura pesada ou na condição imóvel."
+      },
+      {
+        name: "Panache",
+        description: "A partir do 5º nível, sempre que faz um acerto crítico em combate ou reduz um inimigo a 0 PV, você recupera 1 PM."
+      },
+      {
+        name: "Evasão Aprimorada",
+        description: "A partir do 10º nível, quando sofre um efeito que permite um teste de Reflexos para reduzir o dano à metade, você não sofre dano algum se passar e sofre apenas metade do dano se falhar. Esta habilidade exige liberdade de movimentos; você não pode usá-la se estiver de armadura pesada ou na condição imóvel."
+      },
+      {
+        name: "Sorte de Nimb",
+        description: "No 20º nível, você encara os piores desafios e ri na cara deles — pois sabe que tem a sorte ao lado. Você pode gastar 5 PM para rolar novamente um teste recém realizado. Qualquer resultado 11 ou mais na segunda rolagem será considerado um 20 natural."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Audácia, Insolência" },
+      { level: 2, abilities: "Evasão, poder de bucaneiro" },
+      { level: 3, abilities: "Esquiva sagaz +1, poder de bucaneiro" },
+      { level: 4, abilities: "Poder de bucaneiro" },
+      { level: 5, abilities: "Panache, poder de bucaneiro" },
+      { level: 6, abilities: "Poder de bucaneiro" },
+      { level: 7, abilities: "Esquiva sagaz +2, poder de bucaneiro" },
+      { level: 8, abilities: "Poder de bucaneiro" },
+      { level: 9, abilities: "Poder de bucaneiro" },
+      { level: 10, abilities: "Evasão aprimorada, poder de bucaneiro" },
+      { level: 11, abilities: "Esquiva sagaz +3, poder de bucaneiro" },
+      { level: 12, abilities: "Poder de bucaneiro" },
+      { level: 13, abilities: "Poder de bucaneiro" },
+      { level: 14, abilities: "Poder de bucaneiro" },
+      { level: 15, abilities: "Esquiva sagaz +4, poder de bucaneiro" },
+      { level: 16, abilities: "Poder de bucaneiro" },
+      { level: 17, abilities: "Poder de bucaneiro" },
+      { level: 18, abilities: "Poder de bucaneiro" },
+      { level: 19, abilities: "Esquiva sagaz +5, poder de bucaneiro" },
+      { level: 20, abilities: "Poder de bucaneiro, Sorte de Nimb" }
+    ],
+    },
 ];

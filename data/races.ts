@@ -393,4 +393,25 @@ export const races: Race[] = [
       { attribute: "car", modifier: -1 }
     ]
   },
+  {
+    id: "24",
+    name: "Vampiro",
+    origin: "Dragão Brasil",
+    image: "/racas/vampiro.png",
+    description: "Vampiros são considerados monstros terríveis, predadores que espreitam à noite em busca do sangue de outras pessoas. E, embora essa descrição possa se aplicar à maioria dos vampiros, a verdade é que nem todos aqueles que sofrem a maldição do vampirismo sucumbem aos seus instintos ferais. Alguns, de fato, lutam contra sua nova natureza, apegando-se à sua humanidade e buscando uma existência o mais próximo possível de sua vida anterior. \n Personagens vampiros são indivíduos que foram transformados no início de suas carreiras ou que, por alguma razão, perderam suas memórias como parte de sua transformação. Alguns buscam uma vida de aventuras como forma de compensar os pecados causados por sua fome, ou como um caminho para dominar sua fera interior ou mesmo encontrar uma cura para sua condição. \n\n Tornando-se um Vampiro \n As regras para personagens vampiros assumem a criação de um vampiro jovem, em início de carreira. Entretanto, mesmo aventureiros veteranos podem ser transformados em vampiros — geralmente como resultado de um embate mal-sucedido contra uma dessas criaturas mais poderosas. \n Para transformar um personagem já existente em um vampiro, troque todas as características raciais do personagem (incluindo modificadores de atributos) pelas características de vampiro. Se o personagem não for humano, escolha uma das habilidades de sua raça original (aprovada pelo mestre) para sua habilidade Resquícios da Outra Vida. Por fim, para cada patamar do personagem, você pode substituir um de seus poderes de classe por um poder de Bênção Vampírica. Ao substituir esses poderes, tenha em mente poderes que são pré-requisitos de outros poderes do personagem. Você deve continuar cumprindo quaisquer pré-requisitos dos poderes restantes.",
+    abilities: [
+      "Bênçãos Vampíricas: Escolha um dos poderes na página da Classe. Você pode escolher outros desses poderes no lugar de poderes de classe quando subir de nível(Somente 1 vez por patamar).",
+      "Resquícios da Outra Vida: Você se torna treinado em uma perícia (não precisa ser da sua classe) ou recebe um poder geral a sua escolha. Como alternativa, você pode ser um vampiro de outra raça humanoide ou monstro que não humano. Neste caso, você ganha uma habilidade dessa raça a sua escolha (e aprovada pelo mestre). Se a raça era de tamanho diferente de Médio, você também possui sua categoria de tamanho.",
+      "Natureza Não Viva: Você é uma criatura do tipo morto-vivo. Recebe visão no escuro e imunidade a efeitos de cansaço, metabólicos, de trevas e de veneno. Além disso, não precisa respirar, alimentar-se ou dormir. Por fim, efeitos mágicos de cura de luz causam dano a você e você não se beneficia de itens da categoria alimentação, mas dano de trevas recupera seus PV.",
+      "Perda da Humanidade: Conforme seus poderes vampíricos crescem, sua humanidade vai sucumbindo à monstruosidade em seu interior. Você possui as fraquezas vampíricas descritas a seguir, que se tornam mais severas conforme você recebe novas bênçãos vampíricas.",
+      "Chamado das Trevas: Você precisa repousar por oito horas dentro da terra (no subterrâneo, em uma cova ou totalmente coberto de terra). Se fizer isso, recupera PV e PM por descanso em condições normais (vampiros não são afetados por condições boas ou ruins de descanso). Caso contrário, sofre uma penalidade em perícias de –1 por bênção vampírica que possuir. Essa penalidade desaparece após repousar na terra.",
+      "Sede de Sangue: Você precisa consumir pelo menos uma dose de sangue por semana (veja Dieta de Sangue na página de poderes). Se não fizer isso, sofre os efeitos de fome. Para cada bênção vampírica que possuir além da primeira, o intervalo entre suas refeições de sangue diminui em um dia (até um mínimo de uma dose por dia).",
+      "Sensibilidade ao Sol: Quando exposto à luz solar direta, você fica ofuscado e, a cada rodada, perde 1d6 PV por bênção vampírica que possuir.",
+    ],
+    attributeModifiers: [
+      { attribute: "car", modifier: 1 },
+      { attribute: "con", modifier: -1 },
+      { description: "Escolha +1 em dois atributos diferentes (exceto Constituição)" },
+    ],
+  },
 ];

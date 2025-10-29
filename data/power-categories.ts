@@ -22,4 +22,11 @@ export const powerCategories: PowerCategory[] = [
     description: "Poderes exclusivos de Ladino.",
     origin: "tormenta20 - jogo do ano"
   },
+  {
+    id: "4",
+    name: "Vampiro",
+    slug: "vampiro",
+    description: "Poderes exclusivos de Vampiros.",
+    origin: "Dragão Brasil"
+  },
 ];
