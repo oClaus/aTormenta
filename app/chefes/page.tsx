@@ -213,7 +213,7 @@ export default function ChefesPage() {
                 </div>
                 {selectedBoss.resistenciaDano && (
                   <div className="p-3 bg-black/30 rounded-lg border border-red-900/30">
-                    <div className="text-xs text-red-300 font-semibold mb-1">RESISTÊNCIA A DANO</div>
+                    <div className="text-xs text-red-300 font-semibold mb-1">Vantagens</div>
                     <div className="text-white">{selectedBoss.resistenciaDano}</div>
                   </div>
                 )}

@@ -122,3 +122,43 @@
     },
     ]
     },
+
+------------------Chefes-----------------------------
+
+
+    {
+    id: "",
+    name: "",
+    image: "/chefes/.jpg",
+    tipo: "",
+    nd: ,
+    historia: "",
+    dicas: "",
+    tamanho: "",
+    iniciativa: ,
+    percepcao: ,
+    defesa: ,
+    resistenciaDano: "",
+    fort: ,
+    ref: ,
+    von: ,
+    pv: ,
+    deslocamento: "",
+    pm: ,
+    ataqueCorpoACorpo: "",
+    ataqueDistancia: "",
+    habilidades: [
+      "",
+      "",
+      "",
+    ],
+    for: ,
+    des: ,
+    con: ,
+    int: ,
+    sab: ,
+    car: ,
+    pericias: ["", ""],
+    equipamentos: ["", ""],
+    tesouro: "."
+  },
