@@ -899,4 +899,341 @@ export const classes: GameClass[] = [
       { level: 20, abilities: "Campeão, poder de guerreiro" }
     ],
     },
+    {
+    id: "12",
+    name: "Inventor",
+    origin: "tormenta20 - jogo do ano",
+    image: "/classes/inventor.png",
+    description: "Mais cedo ou mais tarde, as tradições devem dar lugar a algo novo. Enquanto segredos mágicos estão ocultos em tomos empoeirados dentro de torres antigas e a bênção divina depende do favor de entidades caprichosas e imprevisíveis, a ciência está disponível para todos. Aos poucos, gênios espalham conhecimento e avanços por todo o mundo de Arton, por meio de alquimia, mecânica e engenharia. São os inventores. \n O inventor é um dos mais raros tipos de aventureiros. Enquanto outros se preocupam com glória, riquezas e missões divinas, o inventor almeja testar e aprimorar suas criações mirabolantes. Enquanto outros contam com força bruta, fé ou mistérios ancestrais, o inventor confia em si mesmo e olha para o futuro. Criatividade, otimismo, paciência e trabalho duro: estas são as armas do inventor. \n Poucas pessoas compreendem o papel da ciência na vida dos aventureiros ou no progresso de Arton, vendo os aparatos dos inventores como engenhocas perigosas e instáveis que podem se desmantelar ou explodir a qualquer momento. Nos lugares mais ignorantes, um inventor pode ser tratado como um herege ou um louco imprevisível. Mas mesmo os supersticiosos e desconfiados usam todos os dias as criações de inventores do passado: desde moinhos até armaduras de placas, tudo que hoje em dia é comum já foi uma inovação impressionante. \n A maioria dos inventores está sempre insatisfeita. Podem ser irritantes, pois não aceitam passivamente quase nada. Se a noite é escura, o inventor imagina um sistema de lampiões automáticos. Se um abismo é intransponível, o inventor idealiza uma máquina voadora. Se todos ficam velhos e morrem, o inventor especula se algum remédio mirabolante não pode reverter esse processo. Às vezes estes heróis tentam modificar ou aprimorar objetos comuns apenas por tédio ou porque podem: uma espada funciona bem do jeito como é, mas e se colocássemos algumas engrenagens e roldanas para torná-la mais dinâmica? Leis e dogmas que limitam o progresso não fazem sentido para os inventores — muitos deles trabalham com pólvora, dissecam cadáveres ou pesquisam sobre a Tormenta sem se importar com normas ditadas por aristocratas antiquados. \n Numa vida de aventuras, muitos inventores não têm tempo para estudar todos os campos científicos e precisam se focar em uma área. Contudo, um inventor veterano é um exemplo do triunfo do intelecto: capaz de imbuir objetos com energia arcana e construir inventos que vão modificar o mundo, facilmente escreve seu nome para sempre na história de Arton. \n Inventores são exploradores de lugares desconhecidos, cobaias de seus próprios testes e grandes ajudantes de seus aliados. Sua postura inconformada e temerária pode incomodar alguns, mas um inventor não se importa. Ele pertence ao futuro e sabe que nada detém o progresso.",
+    famousExamples: [
+      "Dok",
+      "Ingram Brassbones",
+      "Marlin",
+      "Lorde Niebling",
+    ],
+    characteristics: {
+      pvBase: "12 + Constituição",
+      pvPerLevel: "3 + Constituição",
+      pmPerLevel: "4 PM por nível"
+    },
+    skills: {
+    mandatory: ["Ofício (Int)", "Vontade (Sab)"],
+    optional: {
+      skills: [      
+        'Conhecimento (Int)', 'Cura (Sab)', 'Diplomacia (Car)', 'Fortitude (Con)', 'Iniciativa (Des)', 'Investigação (Int)', 'Luta (For)', 'Misticismo (Int)', 'Ofício (Int)', 'Pilotagem (Des)', 'Percepção (Sab)', 'Pontaria (Des)'
+      ],
+      count: 4
+      }
+    },
+    proficiency: "Nenhuma",
+    abilities: [
+      {
+        name: "Engenhosidade",
+        description: "Quando faz um teste de perícia, você pode gastar 2 PM para somar a sua Inteligência no teste. Você não pode usar esta habilidade em testes de ataque."
+      },
+      {
+        name: "Protótipo",
+        description: "Você começa o jogo com um item superior, ou com 10 itens alquímicos, com preço total de até T$ 500. Veja o Capítulo 3: Equipamento para a lista de itens."
+      },
+      {
+        name: "Fabricar Item Superior",
+        description: "No 2º nível, você recebe um item superior com preço de até T$ 2.000 e passa a poder fabricar itens superiores com uma melhoria. Nos níveis 5, 8 e 11, você pode substituir esse item por um item superior com duas, três e quatro melhorias, respectivamente, e passa a poder fabricar itens superiores com essa quantidade de melhorias. Considera-se que você estava trabalhando nos itens e você não gasta dinheiro ou tempo neles (mas gasta em itens que fabricar futuramente)."
+      },
+      {
+        name: "Poder de Inventor",
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um poder."
+      },
+      {
+        name: "Comerciante",
+        description: "No 3º nível, você pode vender itens 10% mais caro (não cumulativo com barganha)."
+      },
+      {
+        name: "Encontrar Fraqueza",
+        description: "A partir do 7º nível, você pode gastar uma ação de movimento e 2 PM para analisar um objeto em alcance curto. Se fizer isso, ignora a redução de dano dele. Você também pode usar esta habilidade para encontrar uma fraqueza em um inimigo. Se ele estiver de armadura ou for um construto, você recebe +2 em seus testes de ataque contra ele. Os benefícios desta habilidade duram até o fim da cena."
+      },
+      {
+        name: "Fabricar Item Mágico",
+        description: "No 9º nível, você recebe um item mágico menor e passa a poder fabricar itens mágicos menores. Veja o Capítulo 8: Recompensas para as regras de itens mágicos. Nos níveis 13 e 17, você pode substituir esse item por um item mágico médio e maior, respectivamente, e passa a poder fabricar itens mágicos dessas categorias. Considera-se que você estava trabalhando nos itens que recebe e você não gasta dinheiro, tempo ou PM nele."
+      },
+      {
+        name: "Olho do Dragão",
+        description: "A partir do 10º nível, você pode gastar uma ação completa para analisar um item. Você automaticamente descobre se o item é mágico, suas propriedades e como utilizá-las."
+      },
+      {
+        name: "Obra-Prima",
+        description: "No 20º nível, você fabrica sua obra-prima, aquela pela qual seu nome será lembrado em eras futuras. Você é livre para criar as regras do item, mas ele deve ser aprovado pelo mestre. Como linha geral, ele pode ter benefícios equivalentes a de um item com cinco melhorias e quatro encantos. Considera-se que você estava trabalhando no item e você não gasta dinheiro, tempo ou PM nele."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Engenhosidade, protótipo" },
+      { level: 2, abilities: "Fabricar item superior (1 melhoria), poder de inventor" },
+      { level: 3, abilities: "Comerciante, poder de inventor" },
+      { level: 4, abilities: "Poder de inventor" },
+      { level: 5, abilities: "Fabricar item superior (2 melhorias), poder de inventor" },
+      { level: 6, abilities: "Poder de inventor" },
+      { level: 7, abilities: "Encontrar fraqueza, poder de inventor" },
+      { level: 8, abilities: "Fabricar item superior (3 melhorias), poder de inventor" },
+      { level: 9, abilities: "Fabricar item mágico (menor), poder de inventor" },
+      { level: 10, abilities: "Olho do dragão, poder de inventor" },
+      { level: 11, abilities: "Fabricar item superior (4 melhorias), poder de inventor" },
+      { level: 12, abilities: "Poder de inventor" },
+      { level: 13, abilities: "Fabricar item mágico (médio), poder de inventor" },
+      { level: 14, abilities: "Poder de inventor" },
+      { level: 15, abilities: "Poder de inventor" },
+      { level: 16, abilities: "Poder de inventor" },
+      { level: 17, abilities: "Fabricar item mágico (maior), poder de inventor" },
+      { level: 18, abilities: "Poder de inventor" },
+      { level: 19, abilities: "Poder de inventor" },
+      { level: 20, abilities: "Obra-prima, poder de inventor" }
+    ],
+    },
+    {
+    id: "13",
+    name: "Lutador",
+    origin: "tormenta20 - jogo do ano",
+    image: "/classes/lutador.png",
+    description: "Perigo verdadeiro não é enfrentar a morte com segredos místicos, ou mesmo com armas e armaduras. Perigo verdadeiro é encarar a morte com as mãos nuas, sem proteção e sem treinamento. Apenas alguns heróis triunfam desta forma. São os lutadores. \n Lutadores são especialistas em todas as formas de combate desarmado, desde simples socos e chutes até complexas chaves e técnicas de chão. Alguns estudam com mestres, seguindo disciplinas codificadas ao longo de muitas gerações. Outros são apenas desesperados que precisaram aprender a brigar para ficar vivos nos becos escuros ou nos ermos selvagens. \n Algumas culturas artonianas têm tradições de combate desarmado: Tamu-ra é a mais famosa, mas os minotauros de Tapista também desenvolveram seus próprios métodos de luta esportiva. \n Embora pessoas de todo tipo comecem algum tipo de aprendizado em luta desarmada, quem avança no treinamento o suficiente para se tornar um herói costuma ter uma personalidade bem específica. Lutadores devem ser muito perseverantes e resistentes. Não há como dominar sua disciplina sem longas horas de repetição, prática e exercícios. Também não há como aprender a lutar sem ser derrotado inúmeras vezes, sem se ferir muito e conviver com dores todos os dias. Quase todos os lutadores são determinados e teimosos. Com outros lutadores ou com pessoas que precisaram se esforçar muito para triunfar, são humildes e amistosos. Contudo, podem ser vaidosos e arrogantes, principalmente com gente preguiçosa ou privilegiada. Lutadores acostumados a campeonatos e plateias costumam se tornar fanfarrões convencidos. \n É raro ver lutadores em cargos de prestígio ou refinamento. A maioria dos lutadores iniciantes se emprega como capanga, leão de chácara ou criminoso comum. Os mais corretos rejeitam usar sua força para intimidar, geralmente sofrendo por causa disso. Um dos únicos caminhos de glória para os lutadores é a competição em arenas. Muitos deles se tornam gladiadores ou competidores em rinhas obscuras e até mesmo ilegais. Nos buracos mais sinistros, esses jogos sangrentos podem envolver lutadores contra mortos-vivos, monstros e até mesmo demônios. \n A vida de aventuras é a maior saída da pobreza e do crime para os lutadores. Mesmo que não tenham estudo, fé ou um posto militar, eles têm poder de combate e coragem — coisas muito valorizadas por qualquer grupo de aventureiros. É raro o lutador que não esteja disposto a largar tudo num instante para embarcar em uma missão que possa render ouro e fama. Na verdade, alguns deles rondam tavernas movimentadas em cidades com tradição aventureira, esperando por grupos que precisem de um combatente a mais. A chance de conquistar riqueza através de batalhas e ao mesmo tempo fazer o bem parece um conto de fadas para muitos lutadores com origem miserável. \n Poucos heróis são tão focados, confiáveis e prestativos quanto os lutadores. Num campo de batalha sangrento, numa ruela imunda ou numa grande luta de arena, a nobre arte de socar e chutar sempre é útil. E um combatente acostumado a trabalhar duro e apanhar sem reclamar sempre é um companheiro bem-vindo.",
+    famousExamples: [
+      "Maquius, Rexthor, Syrion.",
+    ],
+    characteristics: {
+      pvBase: "20 + Constituição",
+      pvPerLevel: "5 + Constituição",
+      pmPerLevel: "3 PM por nível"
+    },
+    skills: {
+    mandatory: ["Fortitude (Con)", "Luta (For)"],
+    optional: {
+      skills: [      
+        'Acrobacia (Des)', 'Adestramento (Car)', 'Atletismo (For)', 'Enganação (Car)', 'Furtividade (Des)', 'Iniciativa (Des)', 'Intimidação (Car)', 'Ofício (Int)', 'Percepção (Sab)', 'Pontaria (Des)', 'Reflexos (Des)'
+      ],
+      count: 4
+      }
+    },
+    proficiency: "Nenhuma",
+    abilities: [
+      {
+        name: "Briga",
+        description: "Seus ataques desarmados causam $1d6$ pontos de dano e podem causar dano letal ou não letal (sem penalidades). A cada quatro níveis, seu dano desarmado aumenta, conforme a tabela. O dano na tabela é para criaturas Pequenas e Médias. Criaturas Minúsculas diminuem esse dano em um passo, Grandes e Enormes aumentam em um passo e Colossais aumentam em dois passos."
+      },
+      {
+        name: "Golpe Relâmpago",
+        description: "Quando usa a ação agredir para fazer um ataque desarmado, você pode gastar 1 PM para realizar um ataque desarmado adicional."
+      },
+      {
+        name: "Poder de Lutador",
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um poder."
+      },
+      {
+        name: "Casca Grossa",
+        description: "No 3º nível, você soma sua Constituição na Defesa, limitado pelo seu nível e apenas se não estiver usando armadura pesada. Além disso, no 7º nível, e a cada quatro níveis, você recebe +1 na Defesa."
+      },
+      {
+        name: "Golpe Cruel",
+        description: "No 5º nível, você acerta onde dói. Sua margem de ameaça com ataques desarmados aumenta em +1."
+      },
+      {
+        name: "Golpe Violento",
+        description: "No 9º nível, você bate com muita força. Seu multiplicador de crítico com ataques desarmados aumenta em +1."
+      },
+      {
+        name: "Dono da Rua",
+        description: "No 20º nível, seu dano desarmado aumenta para $2d10$ (para criaturas Médias). Além disso, quando usa a ação agredir para fazer um ataque desarmado, você pode fazer dois ataques, em vez de um (podendo usar Golpe Relâmpago para fazer um terceiro)."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Briga (1d6), golpe relâmpago" },
+      { level: 2, abilities: "Poder de lutador" },
+      { level: 3, abilities: "Casca grossa (Con), poder de lutador" },
+      { level: 4, abilities: "Poder de lutador" },
+      { level: 5, abilities: "Briga (1d8), golpe cruel, poder de lutador" },
+      { level: 6, abilities: "Poder de lutador" },
+      { level: 7, abilities: "Casca grossa (Con+1), poder de lutador" },
+      { level: 8, abilities: "Poder de lutador" },
+      { level: 9, abilities: "Briga (1d10), golpe violento, poder de lutador" },
+      { level: 10, abilities: "Poder de lutador" },
+      { level: 11, abilities: "Casca grossa (Con+2), poder de lutador" },
+      { level: 12, abilities: "Poder de lutador" },
+      { level: 13, abilities: "Briga (2d6), poder de lutador" },
+      { level: 14, abilities: "Poder de lutador" },
+      { level: 15, abilities: "Casca grossa (Con+3), poder de lutador" },
+      { level: 16, abilities: "Poder de lutador" },
+      { level: 17, abilities: "Briga (2d8), poder de lutador" },
+      { level: 18, abilities: "Poder de lutador" },
+      { level: 19, abilities: "Casca grossa (Con+4), poder de lutador" },
+      { level: 20, abilities: "Dono da rua (2d10), poder de lutador" }
+    ],
+    },
+    {
+    id: "14",
+    name: "Paladino",
+    origin: "tormenta20 - jogo do ano",
+    image: "/classes/paladino.png",
+    description: "As forças do mal são uma horda interminável de monstros e degenerados que não hesitam em causar sofrimento só porque é o caminho mais fácil. Enquanto isso, o bem conta com um pequeno número de campeões de elite, combatentes sagrados incansáveis que personificam tudo que um herói deve ser. São os paladinos. \n O paladino é um soldado a serviço do bem e da justiça. Não há meio-termo, não há desculpas: paladinos são falhos como todos os mortais, mas devem defender os inocentes, cumprir as leis, obedecer a seus superiores, servir de exemplo e resistir a todas as tentações. É um caminho de muito sacrifício e poucas recompensas, mas alguém deve trilhá-lo. \n Paladinos servem a um deus bondoso. Alguns não são devotos de uma divindade específica, mas da bondade divina como um todo. Embora muitos jovens sonhem em ser paladinos e treinem para isso, a maior parte desses heróis é escolhida pelos deuses. São mulheres e homens que lutam pelo bem espontaneamente, que combatem o mal apenas porque isto está em seu caráter e que um dia são iluminados com poderes e bênçãos. Algumas igrejas treinam soldados em estudos religiosos, esperando formar paladinos, mas poucos surgem desta forma. Um candidato a paladino deve fazer o bem sempre que possível e rezar para ser agraciado com o toque divino. \n Paladinos têm personalidades diversas, mas muitas vezes são bastante influenciados por seus deuses padroeiros. Podem variar em termos de humor, desejos, interesses etc., mas em certo nível são ferramentas da vontade do deus. Paladinos sentem um ímpeto natural de servir às divindades — assim, quase todos são vistos como certinhos demais. Mas, para um paladino, isso não é um insulto. \n Muitos desconfiam de paladinos. Afinal, algumas pessoas fundamentalmente egoístas e mesquinhas não conseguem aceitar a ideia de alguém que faça o bem só porque é o certo a fazer. Todo paladino deve aprender a lidar com esses ataques gratuitos. Um paladino não é intolerante, opressor ou hipócrita. Embora cumpra as leis, não exige que os outros tenham o mesmo comportamento estrito. Paladinos perdoam, ajudam, curam e conversam antes de julgar. E são eles mesmos os maiores alvos de seu próprio julgamento. \n A imagem clássica dos paladinos em Arton é a de um combatente montado, trajado em armadura completa. Embora muitos desses heróis sejam ligados a ordens de cavalaria, existem inúmeros paladinos de origem humilde, sem linhagem nobre. Às vezes, aldeias que nunca viram outro aventureiro contam com um paladino, um protetor escolhido pelos deuses para defender aquele povo simples. \n Todo paladino encontra algum grande dilema moral mais cedo ou mais tarde. Talvez precise escolher entre cumprir a lei ou fazer o bem. Talvez precise dar as costas a seus amigos para salvar um grande número de pessoas. Muitas vezes não há solução — o paladino deve conciliar os dois lados e rezar para tomar a decisão certa. Ele pode inclusive ser punido por seu deus, mesmo com a melhor das intenções. Mas o verdadeiro paladino continua em frente. Porque ele sabe que alguém precisa fazer o bem, custe o que custar.",
+    famousExamples: [
+      "Gregor Vahn, Ignis Crae, Lothar Algherulff, o Paladino de Jallar, Titus Lomatubarius",
+    ],
+    characteristics: {
+      pvBase: "20 + Constituição",
+      pvPerLevel: "5 + Constituição",
+      pmPerLevel: "3 PM por nível"
+    },
+    skills: {
+    mandatory: ["Luta (For)", "Vontade (Sab)"],
+    optional: {
+      skills: [      
+        'Adestramento (Car)', 'Atletismo (For)', 'Cavalgar (Des)', 'Cura (Sab)', 'Diplomacia (Car)', 'Fortitude (Con)', 'Guerra (Int)', 'Iniciativa (Des)', 'Intuição (Sab)', 'Nobreza (Int)', 'Percepção (Sab)', 'Religião (Sab)'
+      ],
+      count: 2
+      }
+    },
+    proficiency: "Armas marciais, armaduras pesadas e escudos",
+    abilities: [
+      {
+        name: "Abençoado",
+        description: "Você soma seu Carisma no seu total de pontos de mana no 1º nível. Além disso, torna-se devoto de um deus disponível para paladinos (Azgher, Khalmyr, Lena, Lin-Wu, Marah, Tanna-Toh, Thyatis, Valkaria). Veja as regras de devotos. Ao contrário de devotos normais, você recebe dois poderes concedidos por se tornar devoto, em vez de apenas um. Como alternativa, você pode cultuar o bem como um todo. Não recebe nenhum Poder Concedido, mas não precisa seguir nenhuma Obrigação & Restrição (além do Código do Herói, abaixo). Cultuar o bem conta como sua devoção."
+      },
+      {
+        name: "Código do Herói",
+        description: "Você deve sempre manter sua palavra e nunca pode recusar um pedido de ajuda de alguém inocente. Além disso, nunca pode mentir, trapacear ou roubar. Se violar o código, você perde todos os seus PM e só pode recuperá-los a partir do próximo dia."
+      },
+      {
+        name: "Golpe Divino. ",
+        description: "Quando faz um ataque corpo a corpo, você pode gastar 2 PM para desferir um golpe destruidor. Você soma seu Carisma no teste de ataque e +1d8 na rolagem de dano. A cada quatro níveis, pode gastar +1 PM para aumentar o dano em +1d8."
+      },
+      {
+        name: "Cura pelas Mãos",
+        description: "A partir do 2º nível, você pode gastar uma ação de movimento e 1 PM para curar 1d8+1 pontos de vida de um alvo em alcance corpo a corpo (incluindo você). A cada quatro níveis, você pode gastar +1 PM para aumentar os PV curados em +1d8+1. Esta habilidade pode causar dano de luz a mortos-vivos, exigindo um ataque desarmado. A partir do 6º nível, você pode gastar +1 PM quando usa Cura pelas Mãos para anular uma condição afetando o alvo, entre abalado, apavorado, atordoado, cego, doente, exausto, fatigado ou surdo."
+      },
+      {
+        name: "Poder de Paladino",
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um poder."
+      },
+      {
+        name: "Aura Sagrada",
+        description: "No 3º nível, você pode gastar 1 PM para gerar uma aura com 9m de raio a partir de você e duração sustentada. A aura emite uma luz dourada e agradável. Além disso, você e os aliados dentro da aura somam seu Carisma nos testes de resistência."
+      },
+      {
+    name: "Bênção da Justiça",
+    description: "No 5º nível, escolha entre égide sagrada e montaria sagrada. Uma vez feita, esta escolha não pode ser mudada.",
+    subAbilities: [
+      {
+        name: "Égide Sagrada",
+        description: "Você pode gastar uma ação de movimento e 2 PM para recobrir de energia seu escudo ou símbolo sagrado. Até o fim da cena, você e todos os aliados adjacentes recebem um bônus na Defesa igual ao seu Carisma. A partir do 11º nível, você pode gastar 5 PM para rolar novamente um teste de resistência contra uma magia recém lançada contra você. Se você passar no teste de resistência e a magia tiver você como único alvo, ela é revertida de volta ao conjurador (que se torna o novo alvo da magia; todas as demais características da magia, incluindo CD do teste de resistência, se mantêm)."
+      },
+      {
+        name: "Montaria Sagrada",
+        description: "Você pode gastar uma ação de movimento e 2 PM para invocar uma montaria sagrada. Veja ao fim da página para mais detalhes."
+      },
+    ]
+    },
+      {
+        name: "Vingador Sagrado",
+        description: "No 20º nível, você pode gastar uma ação completa e 10 PM para se cobrir de energia divina, assumindo a forma de um vingador sagrado até o fim da cena. Nesta forma, você recebe deslocamento de voo 18m e redução de dano 20. Além disso, seu Golpe Divino tem seu custo reduzido à metade e causa mais dois dados de dano."
+      },
+
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Abençoado, código do herói, golpe divino (+1d8)" },
+      { level: 2, abilities: "Cura pelas mãos (1d8+1 PV), poder de paladino" },
+      { level: 3, abilities: "Aura sagrada, poder de paladino" },
+      { level: 4, abilities: "Poder de paladino" },
+      { level: 5, abilities: "Bênção da justiça, golpe divino (+2d8), poder de paladino" },
+      { level: 6, abilities: "Cura pelas mãos (2d8+2 PV), poder de paladino" },
+      { level: 7, abilities: "Poder de paladino" },
+      { level: 8, abilities: "Poder de paladino" },
+      { level: 9, abilities: "Golpe divino (+3d8), poder de paladino" },
+      { level: 10, abilities: "Cura pelas mãos (3d8+3 PV), poder de paladino" },
+      { level: 11, abilities: "Poder de paladino" },
+      { level: 12, abilities: "Poder de paladino" },
+      { level: 13, abilities: "Golpe divino (+4d8), poder de paladino" },
+      { level: 14, abilities: "Cura pelas mãos (4d8+4 PV), poder de paladino" },
+      { level: 15, abilities: "Poder de paladino" },
+      { level: 16, abilities: "Poder de paladino" },
+      { level: 17, abilities: "Golpe divino (+5d8), poder de paladino" },
+      { level: 18, abilities: "Cura pelas mãos (5d8+5 PV), poder de paladino" },
+      { level: 19, abilities: "Poder de paladino" },
+      { level: 20, abilities: "Poder de paladino, vingador sagrado" }
+    ],
+    extras: [
+    {
+      title: "Montaria Sagrada",
+      description: "Um paladino de 5º nível pode receber uma montaria sagrada, designada pelos deuses. Este animal vai atuar como um fiel companheiro de batalhas. Normalmente será um cavalo de guerra para paladinos de tamanho Médio ou um pônei para Pequenos, mas suplementos futuros trarão outras opções de montarias. \n Para invocar sua montaria você gasta uma ação de movimento e 2 PM. Ela aparece com um brilho de luz dourada ao seu lado e fica até o fim da cena, quando desaparece de volta para o mundo divino de onde veio. \n Como opção para campanhas mais realistas, a montaria sagrada pode ser um animal mundano, em vez de invocado. Neste caso, você nunca precisa gastar uma ação ou PM para ter a montaria — que já estará com você. Por outro lado, o animal pode não ser capaz de acompanhá-lo em todos os lugares (um cavalo, por exemplo, não conseguirá entrar num túnel apertado ou escalar uma montanha). \n Você e sua montaria têm um vínculo mental, sendo sempre capazes de entender um ao outro (não é preciso fazer testes de Adestramento). Ela fornece os benefícios de um parceiro veterano de seu tipo. No 11º nível, passa a fornecer os benefícios de um parceiro mestre. Veja a lista de parceiros. Uma montaria cumpre qualquer ordem sua, mesmo que signifique arriscar a vida. Se a montaria sagrada morrer, você fica atordoado por uma rodada. Você pode invocar uma nova montaria após um dia de prece e meditação."
+    },
+    ]
+    },
+    {
+    id: "15",
+    name: "Samurai",
+    origin: "Dragão Brasil",
+    image: "/classes/samurai.png",
+    description: "Antes do Império, antes da grande unificação, havia os poderosos senhores da guerra — os xogum. Tamu-ra vivia em conflito, cada província tentando conquistar as demais, cada regente buscando a supremacia. Nos tempos em que os militares governavam, quando a própria aristocracia era formada por combatentes, surgiu o lendário guerreiro poeta. Surgiu o samurai. \n Nascidos na nobreza, treinados pelos melhores mestres, equipados com as mais finas armas e armaduras, até hoje os samurais são a elite guerreira de Tamu-ra. Exceto pelo próprio Imperador e seu círculo de conselheiros shugenja, não há homens e mulheres mais prestigiados. Ainda assim, apesar de sua elevada posição social, o samurai vive para servir — seu próprio nome significa “aquele que serve”. Sua espada e perícia pertencem a Lin-Wu, pertencem ao Império. Ele protege os plebeus que o reverenciam. E sem essa devoção, sem um senhor ou causa a quem servir, o samurai está perdido. \n Com a destruição da ilha, milhares de samurais perderam seus senhores, falharam em protegê-los. Para preservar a honra, muitos cometeram suicídio ritual. Outros, desonrados, vagaram sem rumo como ronin — samurais sem mestres. Hoje, o sol volta a nascer em Tamu-ra. A terra natal dos samurais pode ser recuperada. Assim como sua honra. \n O “exílio” imposto aos samurai pela Tormenta em Tamu-ra fez com que membros desta classe se espalhassem pelo mundo. Isso permitiu que diversos outros povos entrassem em contato com as técnicas e tradições desses guerreiros, fazendo surgir samurais entre membros de outras raças e culturas. Estes samurais não tamurianos trouxeram para este caminho também elementos de suas próprias vivências e costumes marciais. Alguns até romperam com a tradição da katana como arma símbolo, empunhando suas próprias armas típicas de forma igualmente honrada e tradicional.",
+    characteristics: {
+      pvBase: "20 + Constituição",
+      pvPerLevel: "5 + Constituição",
+      pmPerLevel: "3 PM por nível"
+    },
+    skills: {
+    mandatory: ["Luta (For)", "Vontade (Sab)"],
+    optional: {
+      skills: [      
+        'Acrobacia (Des)', 'Adestramento (Car)', 'Atletismo (For)', 'Cavalgar (Des)', 'Conhecimento (Int)', 'Diplomacia (Car)', 'Fortitude (Con)', 'Guerra (Int)', 'Iniciativa (Des)', 'Intimidação (Car)', 'Intuição (Sab)', 'Nobreza (Int)', 'Ofício (Int)', 'Percepção (Sab)', 'Pontaria (Des)'
+      ],
+      count: 2
+      }
+    },
+    proficiency: "Armas marciais e armaduras pesadas",
+    abilities: [
+      {
+        name: "Arma Ancestral",
+        description: "Você recebe proficiência em katana e começa o jogo com uma arma ancestral, uma katana superior com uma melhoria com preço total de até T$ 500. Nos níveis 4, 6 e 8, sua arma ancestral recebe uma nova melhoria à sua escolha. Nas mãos de qualquer outra pessoa, sua arma ancestral funciona como uma arma normal (sem benefícios por melhorias ou encantamentos). Se perder sua arma ancestral, você perde todos os seus PM e só pode recuperá-los no dia seguinte. Você pode reforjar uma arma ancestral perdida ou destruída com uma semana de trabalho e o gasto de tibares em valor igual ao preço básico da arma."
+      },
+      {
+        name: "Código do Samurai",
+        description: "Você deve sempre manter sua palavra e nunca pode recusar um pedido de ajuda de alguém inocente. Além disso, nunca pode mentir, trapacear ou roubar. Se violar o código, você perde todos os seus PM e só pode recuperá-los a partir do próximo dia."
+      },
+      {
+        name: "Grito de Kiai",
+        description: "Quando faz um ataque corpo a corpo, você pode gastar 2 PM para rolar dois dados e usar o melhor resultado. Se acertar esse ataque, você recebe $+1d4$ na rolagem de dano. Esse dano extra é multiplicado em caso de acerto crítico. A cada quatro níveis, o bônus de dano aumenta conforme indicado na tabela da classe."
+      },
+      {
+        name: "Poder de Samurai",
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um poder."
+      },
+      {
+        name: "Olhar Assustador",
+        description: "No 3º nível, você recebe +1 em Intimidação e Intuição. A cada seis níveis, esse bônus aumenta em +1."
+      },
+      {
+        name: "Arma Espiritual",
+        description: "No 10º nível, sua arma ancestral se torna uma arma mágica com um encanto à sua escolha. Nos níveis 12 e 14 ela recebe um novo encanto à sua escolha."
+      },
+      {
+        name: "Shogun",
+        description: "No 20º nível, o multiplicador de crítico da sua arma ancestral aumenta em dois. Além disso, recupera uma quantidade de pontos de vida igual a esse dano extra."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Arma ancestral (1 Melhoria), Código do samurai, Grito de kiai (+1d4)" },
+      { level: 2, abilities: "Poder de samurai" },
+      { level: 3, abilities: "Olhar assustador +1, Poder de samurai" },
+      { level: 4, abilities: "Arma ancestral (2 Melhorias), Poder de samurai" },
+      { level: 5, abilities: "Grito de kiai (+1d6), Poder de samurai" },
+      { level: 6, abilities: "Arma ancestral (3 Melhorias), Poder de samurai" },
+      { level: 7, abilities: "Poder de samurai" },
+      { level: 8, abilities: "Arma ancestral (4 Melhorias), Poder de samurai" },
+      { level: 9, abilities: "Grito de kiai (+1d8), Olhar assustador +2, Poder de samurai" },
+      { level: 10, abilities: "Arma espiritual (1 Encanto), Poder de samurai" },
+      { level: 11, abilities: "Poder de samurai" },
+      { level: 12, abilities: "Arma espiritual (2 Encantos), Poder de samurai" },
+      { level: 13, abilities: "Grito de kiai (+1d10), Poder de samurai" },
+      { level: 14, abilities: "Arma espiritual (3 Encantos), Poder de samurai" },
+      { level: 15, abilities: "Olhar assustador +3, Poder de samurai" },
+      { level: 16, abilities: "Poder de samurai" },
+      { level: 17, abilities: "Grito de kiai (+1d12), Poder de samurai" },
+      { level: 18, abilities: "Poder de samurai" },
+      { level: 19, abilities: "Poder de samurai" },
+      { level: 20, abilities: "Poder de samurai, Shogun" }
+    ],
+    },
 ];
