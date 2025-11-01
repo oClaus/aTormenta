@@ -584,4 +584,319 @@ export const classes: GameClass[] = [
       { level: 20, abilities: "Poder de bucaneiro, Sorte de Nimb" }
     ],
     },
+    {
+    id: "8",
+    name: "Caçador",
+    origin: "tormenta20 - jogo do ano",
+    image: "/classes/cacador.png",
+    description: "Monstros estão em toda parte. As pessoas de Arton podem tentar fugir deles, o que raramente dá certo. Podem rezar para que os deuses as protejam ou pagar para que aventureiros cuidem do problema. Ou podem caçá-los. \n O caçador é mais que um mateiro ou rastreador. É um especialista em sobrevivência nos terrenos mais selvagens e inóspitos, capaz de obter alimento e achar abrigo em qualquer lugar. É alguém que estuda, persegue e mata sua presa com paciência e astúcia. Mesmo que não pareça um sábio tradicional, o caçador é uma verdadeira enciclopédia de conhecimentos sobre os ermos. Sabe diferenciar veneno de comida, sabe evitar o território de animais mortíferos ou emboscá-los, sabe manter um grupo inteiro vivo longe da civilização. \n O estereótipo do caçador traja armadura de couro e usa arco e flecha. Realmente, equipamento leve se presta para andar silenciosamente nos ermos e armas de ataque à distância são ótimas para emboscadas. Contudo, caçadores são tão variados quanto a natureza. Podem ser furtivos, furiosos ou até mesmo covardes, dependendo de armadilhas e fugas para sobreviver. \n Muitos caçadores são verdadeiros inimigos dos monstros e criaturas que perseguem. Empreendem uma cruzada pessoal contra feras que ameaçam pessoas inocentes ou tentam se vingar da espécie que matou sua família e amigos. Outros caçadores, contudo, respeitam e até admiram os monstros que matam. Sabem seu lugar no ciclo natural de morte e nascimento, tentam consumir todas as partes da presa abatida e chegam a prestar homenagens a ela. \n Nem todos os caçadores perseguem monstros ou animais selvagens. Muitos caçam as mais letais presas: humanos, elfos, anões e outros povos civilizados. São caça-recompensas, justiceiros ou detetives a serviço de grandes cidades e reinos. Muitos caçadores experientes servem aos grandes exércitos de Arton, atuando como batedores e infiltrando-se em território inimigo para eliminar alvos importantes. Outros caçadores escolhem um caminho menos sangrento: em vez de matar, preservam a vida, guiando grupos de heróis ou de aristocratas por territórios que seriam intransponíveis sem eles. \n A maioria dos caçadores se sente mais em casa nos ermos do que nas cidades. Acostumam-se com o som dos animais e do vento entre as folhas em vez do burburinho constante das multidões. Tendem a ser solitários e excêntricos, até mesmo sinistros ou ameaçadores. Às vezes rejeitam os povos inteligentes a ponto de formar grandes amizades com animais, acreditando que são muito mais honestos e dignos que qualquer bípede. Outros caçadores, contudo, aproveitam todo o conforto que a civilização tem a oferecer antes de embarcar numa nova jornada pelos ermos. Muitas vezes logo precisam de uma nova missão porque já gastaram todo seu dinheiro na taverna! \n Existem caçadores que passam a vida inteira numa única região que conhecem intimamente, mas o típico caçador aventureiro é um explorador nato. Curioso, inquieto e audaz, este caçador gostaria de ver cada canto de Arton, descobrir os segredos dentro de cada floresta, nadar em cada rio ou lago. E, para ele, as paisagens deslumbrantes e o cheiro da mata são grandes tesouros por si só.",
+    famousExamples: [
+      "Crânio Negro",
+      "Ellisa Thorn",
+      "Enver",
+      "Fren",
+      "Matteo",
+      "Maryx Corta-Sangue",
+    ],
+    characteristics: {
+      pvBase: "16 + Constituição",
+      pvPerLevel: "4 + Constituição",
+      pmPerLevel: "4 PM por nível"
+    },
+    skills: {
+    mandatory: ["Luta (For) ou Pontaria (Des)", "Sobrevivência (Sab)"],
+    optional: {
+      skills: [      
+        'Adestramento (Car)', 'Atletismo (For)', 'Cavalgar (Des)', 'Cura (Sab)', 'Fortitude (Con)', 'Furtividade (Des)', 'Iniciativa (Des)', 'Investigação (Int)', 'Luta (For)', 'Ofício (Int)', 'Percepção (Sab)', 'Pontaria (Des)', 'Reflexos (Des)'
+      ],
+      count: 6
+      }
+    },
+    proficiency: "Armas marciais e escudos",
+    abilities: [
+      {
+      name: "Marca da Presa",
+      description: "Você pode gastar uma ação de movimento e 1 PM para analisar uma criatura em alcance curto. Até o fim da cena, você recebe +1d4 nas rolagens de dano contra essa criatura. A cada quatro níveis, você pode gastar +1 PM para aumentar o bônus de dano (veja a tabela da classe).",
+      },
+      {
+        name: "Rastreador",
+        description: "Você recebe +2 em Sobrevivência. Além disso, pode se mover com seu deslocamento normal enquanto rastreia sem sofrer penalidades no teste de Sobrevivência."
+      },
+      {
+        name: "Poder de Caçador",
+        description: "No 2º nível, e a cada nível seguinte, você recebe uma habilidade."
+      },
+      {
+        name: "Explorador",
+        description: "No 3º nível, escolha um tipo de terreno entre aquático, ártico, colina, deserto, floresta, montanha, pântano, planície, subterrâneo ou urbano. A partir do 11º nível, você também pode escolher área de Tormenta. Quando estiver no tipo de terreno escolhido, você soma sua Sabedoria (mínimo +1) na Defesa e nos testes de Acrobacia, Atletismo, Furtividade, Percepção e Sobrevivência. A cada quatro níveis, escolha outro tipo de terreno para receber o bônus ou aumente o bônus em um tipo de terreno já escolhido em +2."
+      },
+      {
+        name: "Caminho do Explorador",
+        description: "No 5º nível, você pode atravessar terrenos difíceis sem sofrer redução em seu deslocamento e a CD para rastrear você aumenta em +10. Esta habilidade só funciona em terrenos nos quais você tenha a habilidade Explorador."
+      },
+      {
+        name: "Mestre Caçador",
+        description: "No 20º nível, você pode usar a habilidade Marca da Presa como uma ação livre. Além disso, quando usa a habilidade, pode pagar 5 PM para aumentar sua margem de ameaça contra a criatura em +2. Se você reduz uma criatura contra a qual usou Marca da Presa a 0 pontos de vida, recupera 5 PM."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Marca da presa +1d4, rastreador" },
+      { level: 2, abilities: "Poder de caçador" },
+      { level: 3, abilities: "Explorador, poder de caçador" },
+      { level: 4, abilities: "Poder de caçador" },
+      { level: 5, abilities: "Caminho do explorador, marca da presa +1d8, poder de caçador" },
+      { level: 6, abilities: "Poder de caçador" },
+      { level: 7, abilities: "Explorador, poder de caçador" },
+      { level: 8, abilities: "Poder de caçador" },
+      { level: 9, abilities: "Marca da presa +1d12, poder de caçador" },
+      { level: 10, abilities: "Poder de caçador" },
+      { level: 11, abilities: "Explorador, poder de caçador" },
+      { level: 12, abilities: "Poder de caçador" },
+      { level: 13, abilities: "Marca da presa +2d8, poder de caçador" },
+      { level: 14, abilities: "Poder de caçador" },
+      { level: 15, abilities: "Explorador, poder de caçador" },
+      { level: 16, abilities: "Poder de caçador" },
+      { level: 17, abilities: "Marca da presa +2d10, poder de caçador" },
+      { level: 18, abilities: "Poder de caçador" },
+      { level: 19, abilities: "Explorador, poder de caçador" },
+      { level: 20, abilities: "Mestre caçador, poder de caçador" }
+    ],
+    },
+    {
+    id: "9",
+    name: "Cavaleiro",
+    origin: "tormenta20 - jogo do ano",
+    image: "/classes/cavaleiro.png",
+    description: " Desde que a civilização se estabeleceu em Arton, sempre houve a necessidade de combater ameaças e defender os inocentes. Antes que grandes escolas de magia formassem arcanos poderosos, antes que exércitos permanentes guardassem as fronteiras, antes mesmo que grupos de aventureiros fossem comuns, havia um tipo de herói que tomou para si a missão de travar essa luta incessante. Eles usavam as mais avançadas ferramentas disponíveis: cavalos, espadas, armaduras. Para se manter leais, faziam juramentos e se organizavam em ordens. Assim se formou a nobre tradição da cavalaria. \n O cavaleiro é parte de uma longa história de heroísmo. Às vezes considerados antiquados ou até anacrônicos, estes combatentes têm os mesmos ideais e usam as mesmas táticas que seus predecessores desenvolveram séculos atrás. Muitas vezes são formais e grandiosos, até mesmo arrogantes, pois carregam a responsabilidade de honrar muitas gerações de cavalaria. \n Cavaleiros costumam estar ligados à nobreza. Em sua forma mais básica, são pequenos nobres que fazem juramentos para proteger a ordem social existente. Portam o título sir e têm um posto acima do povo comum. Isto não significa opressão ou tirania — nos lugares mais tradicionais de Arton, os nobres têm o dever de ir à guerra e defender os plebeus, fazendo por merecer seus privilégios. Existem cavaleiros ligados apenas a um reino ou feudo, mas outros fazem parte de ordens específicas. Seja como for, cavaleiros não escondem suas lealdades: ostentam o brasão de seu senhor ou o símbolo de sua ordem com orgulho em seu escudo ou estandarte. \n Ninguém pode simplesmente decidir ser um cavaleiro. O processo de treinamento em geral envolve ser escudeiro de um cavaleiro mais experiente. O candidato então é sagrado por um nobre ou um cavaleiro mais antigo, através de uma cerimônia rápida que envolve algum tipo de promessa de fazer o bem e permanecer honrado. Contudo, muitos cavaleiros não dão grande importância a estes juramentos e usam seu título e suas armas para roubar, matar e dominar com mais facilidade. \n Algumas ordens de cavalaria estão infestadas de nobres que só desejam o título, sem nunca merecê-lo. Mesmo assim, todo cavaleiro espera ser tratado como um igual por outro cavaleiro, ainda que sejam inimigos. Uma luta entre dois cavaleiros é um duelo com regras e certa pompa, não uma simples briga entre brutamontes de armadura. \n Cavaleiros podem se achar superiores, mas o verdadeiro ideal da cavalaria envolve humildade e serviço. O cavaleiro deve estar sempre disponível para cumprir as ordens de seu senhor ou aceitar pedidos de ajuda dos indefesos. Alguns dos melhores cavaleiros do mundo têm origem pobre ou são naturais de reinos sem grande tradição de cavalaria. \n A Ordem da Luz, em Bielefeld, é a mais notória ordem de cavalaria do mundo conhecido, mas qualquer reino possui pelo menos uma ordem obscura ou uma família de cavaleiros. O ímpeto de trajar armadura pesada, empunhar a espada e cavalgar em direção à aventura sempre existirá em toda parte.",
+    famousExamples: [
+      "Alenn Toren Greenfeld",
+      "Bernard Branalon",
+      "Brigandine",
+      "Orion Drake",
+      "Pelvas",
+    ],
+    characteristics: {
+      pvBase: "20 + Constituição",
+      pvPerLevel: "5 + Constituição",
+      pmPerLevel: "3 PM por nível"
+    },
+    skills: {
+    mandatory: ["Fortitude (Con)", "Luta (For)"],
+    optional: {
+      skills: [      
+        'Adestramento (Car)', 'Atletismo (For)', 'Cavalgar (Des)', 'Diplomacia (Car)', 'Guerra (Int)', 'Iniciativa (Des)', 'Intimidação (Car)', 'Nobreza (Int)', 'Percepção (Sab)', 'Vontade (Sab)'
+      ],
+      count: 2
+      }
+    },
+    proficiency: "Armas marciais, armaduras pesadas e escudos.",
+    abilities: [
+      {
+        name: "Código de Honra",
+        description: "Cavaleiros distinguem-se de meros combatentes por seguir um código de conduta. Fazem isto para mostrar que estão acima dos mercenários e bandoleiros que infestam os campos de batalha. Você não pode atacar um oponente pelas costas (em termos de jogo, não pode se beneficiar do bônus de flanquear), caído, desprevenido ou incapaz de lutar. Se violar o código, você perde todos os seus PM e só pode recuperá-los a partir do próximo dia. Rebaixar-se ao nível dos covardes e desesperados abala a autoconfiança que eleva o cavaleiro."
+      },
+      {
+        name: "Baluarte",
+        description: "Quando sofre um ataque ou faz um teste de resistência, você pode gastar 1 PM para receber +2 na Defesa e nos testes de resistência até o início do seu próximo turno. A cada quatro níveis, pode gastar +1 PM para aumentar o bônus em +2. A partir do 7º nível, quando usa esta habilidade, você pode gastar 2 PM adicionais para fornecer o mesmo bônus a todos os aliados adjacentes. Por exemplo, pode gastar 4 PM ao todo para receber +4 na Defesa e nos testes de resistência e fornecer este mesmo bônus aos outros. A partir do 15º nível, você pode gastar 5 PM adicionais para fornecer o mesmo bônus a todos os aliados em alcance curto."
+      },
+      {
+        name: "Duelo",
+        description: "A partir do 2º nível, você pode gastar 2 PM para escolher um oponente em alcance curto e receber +2 em testes de ataque e rolagens de dano contra ele até o fim da cena. Se atacar outro oponente, o bônus termina. A cada cinco níveis, você pode gastar +1 PM para aumentar o bônus em +1."
+      },
+      {
+        name: "Poder de Cavaleiro",
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um dos poderes de cavaleiro ou geral."
+      },
+      {
+        name: "Caminho do Cavaleiro",
+        description: "No 5º nível, escolha entre Bastião ou Montaria.",
+        subAbilities: [
+          {
+            name: "Bastião",
+            description: "Se estiver usando armadura pesada, você recebe redução de dano 5 (cumulativa com a RD fornecida por Especialização em Armadura)."
+          },
+          {
+            name: "Montaria",
+            description: "Você recebe um cavalo de guerra com o qual possui +5 em testes de Adestramento e Cavalgar. Ele fornece os benefícios de um parceiro veterano de seu tipo. No 11º nível, passa a fornecer os benefícios de um parceiro mestre. De acordo com o mestre, você pode receber outro tipo de montaria. Veja a lista de montarias na página correta. Caso a montaria morra, você pode comprar outra pelo preço normal e treiná-la para receber os benefícios desta habilidade com uma semana de trabalho."
+          },
+        ]
+      },
+      {
+        name: "Resoluto",
+        description: "A partir do 11º nível, você pode gastar 1 PM para refazer um teste de resistência contra uma condição (como abalado, paralisado etc.) que esteja o afetando. O segundo teste recebe um bônus de +5 e, se você passar, cancela o efeito. Você só pode usar esta habilidade uma vez por efeito."
+      },
+      {
+        name: "Bravura Final",
+        description: "No 20º nível, sua virtude vence a morte. Se for reduzido a 0 ou menos PV, pode gastar 3 PM para continuar consciente e de pé. Esta habilidade tem duração sustentada. Quando se encerra, você sofre os efeitos de seus PV atuais, podendo cair inconsciente ou mesmo morrer."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Baluarte +2, código de honra" },
+      { level: 2, abilities: "Duelo +2, poder de cavaleiro" },
+      { level: 3, abilities: "Poder de cavaleiro" },
+      { level: 4, abilities: "Poder de cavaleiro" },
+      { level: 5, abilities: "Caminho do cavaleiro, baluarte +4, poder de cavaleiro" },
+      { level: 6, abilities: "Poder de cavaleiro" },
+      { level: 7, abilities: "Baluarte (aliados adjacentes), duelo +3, poder de cavaleiro" },
+      { level: 8, abilities: "Poder de cavaleiro" },
+      { level: 9, abilities: "Baluarte +6, poder de cavaleiro" },
+      { level: 10, abilities: "Poder de cavaleiro" },
+      { level: 11, abilities: "Poder de cavaleiro, resoluto" },
+      { level: 12, abilities: "Duelo +4, poder de cavaleiro" },
+      { level: 13, abilities: "Baluarte +8, poder de cavaleiro" },
+      { level: 14, abilities: "Poder de cavaleiro" },
+      { level: 15, abilities: "Baluarte (aliados em alcance curto), poder de cavaleiro" },
+      { level: 16, abilities: "Poder de cavaleiro" },
+      { level: 17, abilities: "Baluarte +10, duelo +5, poder de cavaleiro" },
+      { level: 18, abilities: "Poder de cavaleiro" },
+      { level: 19, abilities: "Poder de cavaleiro" },
+      { level: 20, abilities: "Bravura final, poder de cavaleiro" }
+    ],
+    extras: [
+    {
+      title: "As Ordens de Cavalaria de Arton",
+      description: "Ordens de cavalaria são organizações hierárquicas, criadas para unir indivíduos dispostos a viver e morrer em nome de sua retidão. Sob os ideais da honra, tornam seus integrantes mais fortes. Pétreos, eu diria. Cavaleiros e suas ordens são parte integral de Arton. É difícil imaginar como seria a história do mundo sem considerar o papel exercido por essas instituições.\n A primeira dessas organizações que vem à mente é a Ordem da Luz, com suas linhagens ancestrais e seus enormes castelos em Bielefeld. Liderados por Sir Alenn Toren Greenfeld, os Cavaleiros da Luz carregam seus estandartes em nome da honra, da justiça e da tradição. As normas de conduta da instituição servem de modelo a cidadãos do Reinado que buscam se comportar de forma correta não só por sua história, mas também por seu papel em conflitos como a batalha contra a Tormenta e a Guerra Artoniana. \n A Ordem da Luz é irmã da Ordem de Khalmyr, e ambas foram fundadas por dois amigos e companheiros de batalhas. Porém, as semelhanças param por aí. Escondida nos confins das Montanhas Lannestull, a Ordem de Khalmyr possui tradição monástica — seus membros não se importam com títulos ou honrarias, apenas em seguir os mandamentos do Deus da Justiça. Os irmãos da ordem são os cavaleiros mais puros de Arton... Ou tolos congelados num tempo em que a vida era mais simples. \n Entre essas duas, há uma miríade de ordens menores espalhadas pelo Reinado e além. Algumas preocupam-se com a segurança de um feudo ou reino específico; outras, em manter sua estirpe. É bom lembrar que nem tudo é pureza: ordem traz poder, poder traz glória, e a glória leva à corrupção. Alguns veem os Cavaleiros do Corvo como um exemplo dessa degradação. Apesar de terem tido papel fundamental na derrota da Tormenta em Tamu-ra, esses renegados da Ordem da Luz usam métodos questionáveis e são vistos com profunda desconfiança pelos tradicionalistas.\n Ordens de cavalaria são irmandades baseadas em honra e ideais. Cada uma é como uma família estendida, um reino próprio. Mas pertencer a uma delas não depende de nascimento — é uma recompensa que só os merecedores conquistam. \n — Sete Notas, moreau do gato, bardo."
+    },
+    ]
+    },
+    {
+    id: "10",
+    name: "Clérigo",
+    origin: "tormenta20 - jogo do ano",
+    image: "/classes/clerigo.png",
+    description: "Nada acontece em Arton sem o toque dos deuses. Quase todos os grandes momentos da história artoniana encontram reflexo em algum conflito ou estratagema divino: desde a Revolta dos Três até a queda de Lenórienn, a ascensão do Paladino e o surgimento da Flecha de Fogo, deuses transformam o destino do mundo. Os grandes representantes dos deuses na terra, seus arautos e servos em suas tramas celestiais, são os clérigos. \n Clérigos são sacerdotes cuja devoção é tão poderosa que os torna capazes de realizar milagres. De início são pequenas bênçãos, curas e pragas. Mas, à medida que um clérigo se torna mais experiente e digno, seus poderes se tornam assunto de lendas. Clérigos veteranos podem invocar anjos e demônios, comandar os elementos e até mesmo erguer os mortos. \n Apenas uma minoria de sacerdotes chega a desenvolver mesmo os mais singelos milagres. Em geral, o pároco ou madre de uma aldeia será apenas um líder espiritual, sem nenhum poder transcendente. O verdadeiro clérigo aventureiro é um escolhido dos deuses, alguém especial mesmo num mundo cheio de criaturas fantásticas e acontecimentos inacreditáveis. Afinal, ter a capacidade de curar ou ferir com um toque é ter domínio sobre a vida e a morte. \n A aparência e os maneirismos dos clérigos são extremamente variados. O clérigo “padrão” é devotado a divindades como Valkaria, a Deusa da Ambição; Khalmyr, o Deus da Justiça, ou Lena, a Deusa da Vida. São sacerdotes confiáveis e benevolentes que têm entre suas atribuições celebrar batismos, casamentos, funerais e outros ritos do cotidiano. Contudo, clérigos de deuses mais exóticos como Tenebra, a Deusa das Trevas; Arsenal, o Deus da Guerra, ou Aharadak, o Deus da Tormenta, são estranhos, sinistros e ameaçadores. Seus ritos são misteriosos e poucos plebeus desejam sua bênção. Um clérigo de Marah pode passar a vida ajudando órfãos carentes, enquanto um clérigo de Sszzaas pode liderar um culto obscuro que realiza sacrifícios! \n Embora muitos clérigos tenham seu rebanho e comandem um templo, a maioria dos clérigos aventureiros não tem residência fixa. Eles viajam em missões sagradas, sendo os agentes terrenos da vontade divina e combatendo servos de deuses inimigos. Alguns nem mesmo estão inseridos numa hierarquia eclesiástica: são profetas que atingiram a iluminação sozinhos e não respondem a nenhuma autoridade além do próprio deus. A relação entre padroeiros e devotos não é sempre de subserviência total — muitas vezes os deuses são desafiados e até vencidos. \n Além de realizar milagres, clérigos são treinados no uso de armaduras e escudos. A vocação divina raramente é pacífica ou tranquila. Sempre há fiéis a proteger, inimigos da fé e hereges a serem combatidos. E mesmo as missões mais mundanas e banais podem esconder algum desígnio no infinito plano das divindades.",
+    famousExamples: [
+      "Artorius",
+      "Aurora",
+      "Gwen",
+      "Khorr’benn An-ug’atz",
+      "Mestre Arsenal",
+      "Nichaela",
+      "Vanessa Drake",
+    ],
+    characteristics: {
+      pvBase: "16 + Constituição",
+      pvPerLevel: "4 + Constituição",
+      pmPerLevel: "5 PM por nível"
+    },
+    skills: {
+    mandatory: ["Religião (Sab)", "Vontade (Sab)"],
+    optional: {
+      skills: [      
+        'Conhecimento (Int)', 'Cura (Sab)', 'Diplomacia (Car)', 'Fortitude (Con)', 'Iniciativa (Des)', 'Intuição (Sab)', 'Luta (For)', 'Misticismo (Int)', 'Nobreza (Int)', 'Ofício (Int)', 'Percepção (Sab)'
+      ],
+      count: 2
+      }
+    },
+    proficiency: "Armaduras pesadas e escudos",
+    abilities: [
+      {
+        name: "Devoto Fiel",
+        description: "Você se torna devoto de um deus maior. Veja as regras de devotos. Ao contrário de devotos normais, você recebe dois poderes concedidos por se tornar devoto, em vez de apenas um. Como alternativa, você pode cultuar o Panteão como um todo. Não recebe nenhum Poder Concedido, mas sua única obrigação e restrição é não usar armas cortantes ou perfurantes (porque derramam sangue, algo que clérigos do Panteão consideram proibido). Sua arma preferida é a maça e você pode canalizar energia positiva ou negativa à sua escolha (uma vez feita, essa escolha não pode ser mudada). Cultuar o Panteão conta como sua devoção."
+      },
+      {
+        name: "Magias",
+        description: "Você pode lançar magias divinas de 1º círculo. A cada quatro níveis, pode lançar magias de um círculo maior (2º círculo no 5º nível, 3º círculo no 9º nível e assim por diante). Você começa com três magias de 1º círculo. A cada nível, aprende uma magia de qualquer círculo que possa lançar. Seu atributo-chave para lançar magias é Sabedoria e você soma sua Sabedoria no seu total de PM."
+      },
+      {
+        name: "Poder de Clérigo",
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um dos poderes de clérigo ou geral."
+      },
+      {
+        name: "Mão da Divindade",
+        description: "No 20º nível, você pode gastar uma ação completa e 15 PM para canalizar energia divina. Ao fazer isso, você lança três magias divinas quaisquer (de qualquer círculo, incluindo magias que você não conhece), como uma ação livre e sem gastar PM (mas ainda precisa pagar outros custos). Você pode aplicar aprimoramentos, mas precisa pagar por eles. Após usar esta habilidade, você fica atordoado por 1d4 rodadas (mesmo se for imune a esta condição). Corpos mortais não foram feitos para lidar com tanto poder."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Devoto fiel, magias (1º círculo)" },
+      { level: 2, abilities: "Poder de clérigo" },
+      { level: 3, abilities: "Poder de clérigo" },
+      { level: 4, abilities: "Poder de clérigo" },
+      { level: 5, abilities: "Magias (2º círculo), poder de clérigo" },
+      { level: 6, abilities: "Poder de clérigo" },
+      { level: 7, abilities: "Poder de clérigo" },
+      { level: 8, abilities: "Poder de clérigo" },
+      { level: 9, abilities: "Magias (3º círculo), poder de clérigo" },
+      { level: 10, abilities: "Poder de clérigo" },
+      { level: 11, abilities: "Poder de clérigo" },
+      { level: 12, abilities: "Poder de clérigo" },
+      { level: 13, abilities: "Magias (4º círculo), poder de clérigo" },
+      { level: 14, abilities: "Poder de clérigo" },
+      { level: 15, abilities: "Poder de clérigo" },
+      { level: 16, abilities: "Poder de clérigo" },
+      { level: 17, abilities: "Magias (5º círculo), poder de clérigo" },
+      { level: 18, abilities: "Poder de clérigo" },
+      { level: 19, abilities: "Poder de clérigo" },
+      { level: 20, abilities: "Mão da divindade, poder de clérigo" }
+    ],
+    },
+    {
+    id: "11",
+    name: "Guerreiro",
+    origin: "tormenta20 - jogo do ano",
+    image: "/classes/guerreiro.png",
+    description: "Quando a primeira criatura inteligente ficou de pé sobre duas pernas e procurou algo para comer ou uma caverna onde se abrigar, existiu uma certeza: havia outra criatura tentando matá-la. Onde há vida, há luta. Em qualquer lugar de Arton, todos sempre precisarão de guerreiros. \n O guerreiro é o mais simples, direto e comum dos aventureiros. Em muitos aspectos, também é o mais importante. Nenhum grupo está completo sem alguém especializado em combate, nenhum reino está seguro sem soldados. Nem mesmo uma aldeia tem chance de sobreviver sem alguns tipos corajosos dispostos a empunhar uma arma para defender seus conterrâneos. \n Mais cedo ou mais tarde, todos os conflitos acabarão em combate. Então não haverá esperteza, palavras bonitas ou mesmo truques mágicos que possam funcionar sem o bom e velho aço. \n Longe de ser apenas um capanga com uma arma, o guerreiro possui disciplina e força de vontade para treinar continuamente. Seu amplo conhecimento sobre armas e armaduras pode não parecer profundo ou filosófico, mas é fundamental e utilizado todos os dias. Guerreiros se dedicam à batalha, praticam técnicas para vencer seus inimigos acima de todo o resto. Não se iludem sobre a melhor maneira de derrotar o mal ou conquistar glória e riquezas: sempre será preciso combater. \n Existem guerreiros em toda parte. Muitos são soldados em exércitos ou guardas em grandes cidades. Outros são mercenários, gladiadores, senhores de terras, salteadores... Qualquer taverna em Arton tem pelo menos um ou dois guerreiros como fregueses ou atrás do balcão. Qualquer fazenda tem alguém que aprendeu a usar uma lança para afastar bandidos. Qualquer corte tem um instrutor de combate para os filhos da família nobre. Qualquer profissão ou estilo de vida pode atrair guerreiros. Até mesmo os mais sisudos eruditos podem ter aprendido a se defender. \n Guerreiros experientes muitas vezes se tornam generais, conselheiros de reis ou conquistadores. Contudo, muitos também preferem uma existência pacata em algum lugar tranquilo, deixando a espada enferrujar em algum baú esquecido. Alguns dizem que guerreiros nunca se aposentam — sempre há uma última batalha a ser travada e, se não houver, é porque o guerreiro morreu na batalha anterior. \n Não existe uma mentalidade ou personalidade comum à maioria dos guerreiros. É fácil encontrar neles a postura fatalista, bem-humorada e um pouco cínica dos soldados — acostumados a marchar sob sol e chuva durante semanas, ouvindo ordens de aristocratas mimados ou oficiais ambiciosos, muitos guerreiros sabem que é melhor rir dos absurdos de uma vida de batalhas. Contudo, também há incontáveis guerreiros idealistas e ingênuos, cruéis e frios, loucos e inconsequentes... \n Se existe uma característica comum a todos os guerreiros é a versatilidade. Eles sabem se virar com espadas, machados, arcos, porretes... Não se apegam a um só estilo, não valorizam uma doutrina acima das outras. Usam as técnicas, ferramentas e estratégias necessárias para sobreviver e lutar outro dia. Porque sempre haverá mais uma luta. Sempre alguém precisará de mais um guerreiro.",
+    famousExamples: [
+      'Christian Pryde', 'Katabrok', 'Ledd', 'Loriane', 'Vallen Allond', 'Sandro Galtran', 'Val', 'Verônica'
+    ],
+    characteristics: {
+      pvBase: "20 + Constituição",
+      pvPerLevel: "5 + Constituição",
+      pmPerLevel: "3 PM por nível"
+    },
+    skills: {
+    mandatory: ["Luta (For) ou Pontaria (Des)", "Fortitude (Con)"],
+    optional: {
+      skills: [      
+        'Adestramento (Car)', 'Atletismo (For)', 'Cavalgar (Des)', 'Guerra (Int)', 'Iniciativa (Des)', 'Intimidação (Car)', 'Luta (For)', 'Ofício (Int)', 'Percepção (Sab)', 'Pontaria (Des)', 'Reflexos (Des)'
+      ],
+      count: 2
+      }
+    },
+    proficiency: "Armas marciais, armaduras pesadas e escudos",
+    abilities: [
+      {
+        name: "Ataque Especial",
+        description: "Quando faz um ataque, você pode gastar 1 PM para receber +4 no teste de ataque ou na rolagem de dano. A cada quatro níveis, pode gastar +1 PM para aumentar o bônus em +4. Você pode dividir os bônus igualmente. Por exemplo, no 17º nível, pode gastar 5 PM para receber +20 no ataque, +20 no dano ou +10 no ataque e +10 no dano."
+      },
+      {
+        name: "Poder de Guerreiro",
+        description: " No 2º nível, e a cada nível seguinte, você escolhe um dos poderes de guerreiro ou geral."
+      },
+      {
+        name: "Durão",
+        description: "A partir do 3º nível, sua rijeza muscular permite que você absorva ferimentos. Sempre que sofre dano, você pode gastar 3 PM para reduzir esse dano à metade."
+      },
+      {
+        name: "Ataque Extra",
+        description: "A partir do 6º nível, quando usa a ação agredir, você pode gastar 2 PM para realizar um ataque adicional uma vez por rodada."
+      },
+      {
+        name: "Campeão",
+        description: "No 20º nível, o dano de todos os seus ataques aumenta em um passo. Além disso, sempre que você faz um Ataque Especial ou um Golpe Pessoal e acerta o ataque, recupera metade dos PM gastos nele. Por exemplo, se fizer um Ataque Especial gastando 5 PM para ganhar +20 nas rolagens de dano e acertar o ataque, recupera 2 PM."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Ataque especial +4" },
+      { level: 2, abilities: "Poder de guerreiro" },
+      { level: 3, abilities: "Durão, poder de guerreiro" },
+      { level: 4, abilities: "Poder de guerreiro" },
+      { level: 5, abilities: "Ataque especial +8, poder de guerreiro" },
+      { level: 6, abilities: "Ataque extra, poder de guerreiro" },
+      { level: 7, abilities: "Poder de guerreiro" },
+      { level: 8, abilities: "Poder de guerreiro" },
+      { level: 9, abilities: "Ataque especial +12, poder de guerreiro" },
+      { level: 10, abilities: "Poder de guerreiro" },
+      { level: 11, abilities: "Poder de guerreiro" },
+      { level: 12, abilities: "Poder de guerreiro" },
+      { level: 13, abilities: "Ataque especial +16, poder de guerreiro" },
+      { level: 14, abilities: "Poder de guerreiro" },
+      { level: 15, abilities: "Poder de guerreiro" },
+      { level: 16, abilities: "Poder de guerreiro" },
+      { level: 17, abilities: "Ataque especial +20, poder de guerreiro" },
+      { level: 18, abilities: "Poder de guerreiro" },
+      { level: 19, abilities: "Poder de guerreiro" },
+      { level: 20, abilities: "Campeão, poder de guerreiro" }
+    ],
+    },
 ];
