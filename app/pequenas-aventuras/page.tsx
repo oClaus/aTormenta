@@ -22,7 +22,7 @@ export default function PequenasAventurasPage() {
       <header className="p-6 border-b border-purple-900/50">
         <Link href="/" className="inline-block group">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-500 via-purple-400 to-pink-500 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(168,85,247,0.5)] group-hover:drop-shadow-[0_0_25px_rgba(168,85,247,0.7)] transition-all">
-            Tormenta
+            a-Tormenta
           </h1>
         </Link>
         <div className="flex items-center gap-2 mt-2">
@@ -37,7 +37,7 @@ export default function PequenasAventurasPage() {
       {/* Main Content */}
       <main className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-12">
         <div className="mb-8">
-          <h2 className="text-3xl font-bold text-pink-400 mb-2">📖 Pequenas Aventuras</h2>
+          <h2 className="text-3xl font-bold text-pink-400 mb-2">Pequenas Aventuras</h2>
           <p className="text-gray-400">Explore histórias épicas e desafios emocionantes</p>
         </div>
 
@@ -105,15 +105,6 @@ export default function PequenasAventurasPage() {
             <p className="text-gray-400 text-lg">Nenhuma aventura encontrada</p>
           </div>
         )}
-
-        {/* Seção de Informação */}
-        <div className="mt-16 p-8 rounded-xl bg-gradient-to-br from-pink-950/30 to-black border border-pink-900/30">
-          <h3 className="text-2xl font-bold text-pink-300 mb-4">📝 Adicionar Novas Aventuras</h3>
-          <p className="text-gray-300 leading-relaxed">
-            Para adicionar novas aventuras, edite o arquivo <code className="bg-black/50 px-2 py-1 rounded text-pink-400">data/adventures.ts</code> e adicione novos objetos ao array. 
-            Cada aventura pode ter uma estrutura diferente com títulos, subtítulos, textos e quebras de linha conforme necessário.
-          </p>
-        </div>
       </main>
 
       {/* Modal de Detalhes */}

@@ -36,4 +36,18 @@ export const powerCategories: PowerCategory[] = [
     description: "Poderes exclusivos de Bárbaros.",
     origin: "tormenta20 - jogo do ano"
   },
+  {
+    id: "6",
+    name: "Bardo",
+    slug: "bardo",
+    description: "Poderes exclusivos de Bardo.",
+    origin: "tormenta20 - jogo do ano"
+  },
+  {
+    id: "6",
+    name: "Bucaneiro",
+    slug: "bucaneiro",
+    description: "Poderes exclusivos de Bucaneiro.",
+    origin: "tormenta20 - jogo do ano"
+  },
 ];

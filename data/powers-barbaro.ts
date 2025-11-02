@@ -65,7 +65,7 @@ export const powersBarbaro: Power[] = [
   },
   {
     id: "10",
-    name: "Superstição.",
+    name: "Superstição",
     description: "Você odeia magia, o que faz com que seja mais resistente a ela. Você recebe resistência a magia +5.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
@@ -107,7 +107,7 @@ export const powersBarbaro: Power[] = [
   },
   {
     id: "16",
-    name: "Crítico Brutal. ",
+    name: "Crítico Brutal ",
     description: "Seu multiplicador de crítico com armas corpo a corpo e de arremesso aumenta em +1. Por exemplo, seu multiplicador com um machado de batalha (normalmente x3) será x4.",
     prerequisite: "6º nível de bárbaro.",
     origin: "Tormenta20 - Jogo do Ano"
@@ -121,14 +121,14 @@ export const powersBarbaro: Power[] = [
   },
   {
     id: "18",
-    name: "Golpe Poderoso. ",
+    name: "Golpe Poderoso ",
     description: "Ao acertar um ataque corpo a corpo ou com uma arma de arremesso, você pode gastar 1 PM para causar um dado extra de dano do mesmo tipo (por exemplo, com um montante, causa +1d6, para um dano total de 3d6; com um machado de guerra, causa +1d12, para um dano total de 2d12).",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   {
     id: "19",
-    name: "Pele de Ferro. ",
+    name: "Pele de Ferro ",
     description: "Você recebe +4 na Defesa, mas apenas se não estiver usando armadura pesada.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
