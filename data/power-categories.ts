@@ -57,4 +57,11 @@ export const powerCategories: PowerCategory[] = [
     description: "Poderes exclusivos de Caçador.",
     origin: "tormenta20 - jogo do ano"
   },
+  {
+    id: "9",
+    name: "Cavaleiro",
+    slug: "cavaleiro",
+    description: "Poderes exclusivos de Cavaleiro.",
+    origin: "tormenta20 - jogo do ano"
+  },
 ];
