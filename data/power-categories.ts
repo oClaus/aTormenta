@@ -44,10 +44,17 @@ export const powerCategories: PowerCategory[] = [
     origin: "tormenta20 - jogo do ano"
   },
   {
-    id: "6",
+    id: "7",
     name: "Bucaneiro",
     slug: "bucaneiro",
     description: "Poderes exclusivos de Bucaneiro.",
+    origin: "tormenta20 - jogo do ano"
+  },
+  {
+    id: "8",
+    name: "Caçador",
+    slug: "cacador",
+    description: "Poderes exclusivos de Caçador.",
     origin: "tormenta20 - jogo do ano"
   },
 ];
