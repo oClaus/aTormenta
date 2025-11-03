@@ -64,4 +64,25 @@ export const powerCategories: PowerCategory[] = [
     description: "Poderes exclusivos de Cavaleiro.",
     origin: "tormenta20 - jogo do ano"
   },
+  {
+    id: "10",
+    name: "Clérigo",
+    slug: "clerigo",
+    description: "Poderes exclusivos de Clerigo.",
+    origin: "tormenta20 - jogo do ano"
+  },
+  {
+    id: "11",
+    name: "Druida",
+    slug: "druida",
+    description: "Poderes exclusivos de Druida.",
+    origin: "tormenta20 - jogo do ano"
+  },
+  {
+    id: "12",
+    name: "Guerreiro",
+    slug: "guerreiro",
+    description: "Poderes exclusivos de Guerreiro.",
+    origin: "tormenta20 - jogo do ano"
+  },
 ];
