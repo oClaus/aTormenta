@@ -876,7 +876,7 @@ export const bosses: Boss[] = [
   {
     id: "25",
     name: "Harle - Chrono Cross",
-    image: "/chefes/harle.jpeg",
+    image: "/chefes/harle.jpg",
     tipo: "Monstro (dragão)",
     nd: 15,
     historia: "A misteriosa Harle acompanha o general Lynx durante a primeira metade de Chrono Cross. Sua verdadeira natureza, porém, só é descoberta ao longo do jogo — ela é o corpo físico do Deus Dragão, feita à semelhança da Princesa Schala. Seus objetivos são nebulosos e o mais surpreendente é como ela nunca assume sua forma verdadeira. \n Harle é uma dragoa muito diferente, passando o tempo todo em sua forma humana e talvez jamais revelando ao grupo suas intenções. Seus objetivos são muito específicos no game, mas uma versão artoniana pode ser uma dragoa que se devota a Tenebra enquanto tenta frustrar os planos de alguma outra organização, usando os personagens dos jogadores para atingir seus objetivos.",
