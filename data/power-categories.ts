@@ -85,4 +85,18 @@ export const powerCategories: PowerCategory[] = [
     description: "Poderes exclusivos de Guerreiro.",
     origin: "tormenta20 - jogo do ano"
   },
+  {
+    id: "13",
+    name: "Inventor",
+    slug: "inventor",
+    description: "Poderes exclusivos de Inventor.",
+    origin: "tormenta20 - jogo do ano"
+  },
+  {
+    id: "14",
+    name: "Lutador",
+    slug: "lutador",
+    description: "Poderes exclusivos de Lutador.",
+    origin: "tormenta20 - jogo do ano"
+  },
 ];
