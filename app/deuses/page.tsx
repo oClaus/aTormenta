@@ -2,11 +2,12 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { God } from "@/types/god";
 import { gods } from "@/data/gods";
 import { getStatusLabel, getStatusColor } from "@/types/god";
 
 export default function DeusesPage() {
-  const [selectedGod, setSelectedGod] = useState(null);
+  const [selectedGod, setSelectedGod] = useState<God | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredGods = gods
@@ -190,7 +191,7 @@ export default function DeusesPage() {
               <div>
                 <h3 className="text-2xl font-bold text-yellow-400 mb-3">💫 Poderes Concedidos</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {selectedGod.grantedPowers.map((power, index) => (
+                  {selectedGod.grantedPowers.map((power: string, index: number) =>  (
                     <div
                       key={index}
                       className="p-3 rounded-lg bg-yellow-900/20 border border-yellow-500/30 text-yellow-300"
