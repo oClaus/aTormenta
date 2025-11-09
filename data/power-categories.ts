@@ -99,4 +99,18 @@ export const powerCategories: PowerCategory[] = [
     description: "Poderes exclusivos de Lutador.",
     origin: "tormenta20 - jogo do ano"
   },
+  {
+    id: "15",
+    name: "Nobre",
+    slug: "nobre",
+    description: "Poderes exclusivos de Nobre.",
+    origin: "tormenta20 - jogo do ano"
+  },
+  {
+    id: "16",
+    name: "Paladino",
+    slug: "paladino",
+    description: "Poderes exclusivos de Paladino.",
+    origin: "tormenta20 - jogo do ano"
+  },
 ];
