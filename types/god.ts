@@ -3,7 +3,7 @@ export type GodStatus = "normal" | "caido" | "menor";
 export interface God {
   id: string;
   name: string;
-  image: string;
+  image: string; 
   status?: GodStatus; // "caido" ou "menor"
   history: string;
   beliefs: string;

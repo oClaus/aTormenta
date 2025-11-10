@@ -20,12 +20,21 @@ export default function DeusesPage() {
 
   return (
     <main className="w-full min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-black text-gray-100 px-6 py-12">
-      {/* Navegação */}
-      <div className="mb-8">
-        <Link href="/" className="text-yellow-400 hover:text-yellow-300 transition-colors">
-          ← Voltar ao Início
+      {/* Header */}
+      <header className="p-6 border-b border-purple-900/50">
+        <Link href="/" className="inline-block group">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-500 via-cyan-400 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(168,85,247,0.5)] group-hover:drop-shadow-[0_0_25px_rgba(168,85,247,0.7)] transition-all">
+            a-Tormenta
+          </h1>
         </Link>
-      </div>
+        <div className="flex items-center gap-2 mt-2">
+          <Link href="/" className="text-cyan-400 hover:text-purple-300 text-sm transition-colors">
+            Início
+          </Link>
+          <span className="text-gray-600">/</span>
+          <span className="text-gray-400 text-sm">Deuses</span>
+        </div>
+      </header>
 
       {/* Header */}
       <div className="mb-12">
@@ -130,14 +139,6 @@ export default function DeusesPage() {
 
             {/* Conteúdo do Modal */}
             <div className="p-6 space-y-6">
-              {/* Imagem */}
-              <div className="w-full rounded-lg overflow-hidden bg-gray-800 flex items-center justify-center">
-                <img
-                  src={selectedGod.image}
-                  alt={selectedGod.name}
-                  className="max-w-full max-h-96 object-contain"
-                />
-              </div>
 
               {/* História */}
               <div>
