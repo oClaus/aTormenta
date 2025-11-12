@@ -10,7 +10,8 @@ export default function Home() {
     { id: "classes", title: "Classes", icon: "/temas/classes.png", color: "from-orange-700 to-yellow-700" },
     { id: "poderes", title: "Poderes", icon: "/temas/poderes.png", color: "from-orange-700 to-yellow-700"},
     { id: "origem",  title: "Origem",  icon: "/temas/origem.png", color: "from-cyan-600 to-blue-600",  href: "/origem"},
-    { id: "deuses",  title: "Deuses",  icon: "/temas/deuses.png", color: "from-cyan-600 to-blue-600",  href: "/deuses"}
+    { id: "deuses",  title: "Deuses",  icon: "/temas/deuses.png", color: "from-cyan-600 to-blue-600",  href: "/deuses"},
+    { id: "caracteristicas", title: "Características",  icon: "📊",  color: "from-purple-600 to-pink-600",  href: "/caracteristicas"}
   ];
 
   return (
