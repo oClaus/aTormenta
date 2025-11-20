@@ -414,4 +414,24 @@ export const races: Race[] = [
       { description: "Escolha +1 em dois atributos diferentes (exceto Constituição)" },
     ],
   },
+  {
+    id: "25",
+    name: "Naidora",
+    origin: "Dragão Brasil",
+    image: "/racas/naidora.png",
+    description: "Descendentes de Hydora, Dragão-Rei dos Ventos, e da exploradora elfa Hana, os naidora (também conhecidos pelo nome completo nailanandora; ou elfos-do-céu, no linguajar mais simples) são elfos alados extremamente raros. São tidos como lendas, invenções exageradas dos bardos, na maior parte dos lugares. Mesmo Valkaria, a maior metrópole do mundo conhecido, só teve três desses seres como moradores em toda a sua história. Seus números reduzidos impedem que estabeleçam sociedades, por isso normalmente vivem sozinhos, como nômades. \n Os naidora ficam completamente à vontade no ar. Podem até mesmo dormir enquanto voam. Alguns, à imagem de seu ancestral dragão, jamais tocam o chão. Costumam ficar desconfortáveis em espaços fechados ou no subterrâneo, acostumados com a liberdade de singrar os céus com suas asas. \n Visualmente, são como elfos de pele azulada, com grandes asas plumadas, similares às de pássaros. Quando totalmente abertas, têm largura igual ao dobro da altura do elfo — sendo esse o espaço mínimo de que precisa para decolar e voar. Sua maior diferença do povo de Lenórienn é a distância em relação às tragédias sofridas; afastados dessa sociedade e do culto à Glórienn, a cicatriz da Infinita Guerra ou da traição da deusa não afetam a vida despreocupada desses elfos alados.",
+    abilities: [
+      "Alma das Nuvens: Você recebe resistência a encantamento +2.",
+      "Asas Emplumadas: Você pode gastar 1 PM por rodada para voar com deslocamento de 12m. Enquanto está voando dessa forma, você recebe +2 na Defesa e em Reflexos.",
+      "Sentidos Élficos: Você recebe visão na penumbra e +2 em Misticismo e Percepção.",
+    ],
+    // Modificadores FIXOS para Anão
+    attributeModifiers: [
+      { attribute: "des", modifier: 2 },
+      { attribute: "car", modifier: 1 },
+      { attribute: "con", modifier: -1 }
+    ],
+    longevidade: "x5.",
+    devotos: "Hyninn, Kallyadranoch, Nimb.",
+  },
 ];
