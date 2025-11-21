@@ -434,4 +434,40 @@ export const races: Race[] = [
     longevidade: "x5.",
     devotos: "Hyninn, Kallyadranoch, Nimb.",
   },
+  {
+    id: "26",
+    name: "Gorons",
+    origin: "Dragão Brasil - Zelda",
+    image: "/racas/gorons.png",
+    description: "Conhecidos como o povo das rochas, essas criaturas corpulentas e fortes vivem em regiões montanhosas, onde se alimentam de pedras e trabalham com mineração para sobreviver. Gorons costumam ser maiores que outras raças — alguns indivíduos lendários podem chegar ao tamanho de uma montanha! Por viverem em montanhas vulcânicas como a Death Mountain (“Montanha da Morte” em inglês), os gorons não são abalados pelo calor, fogo ou lava. Também são conhecidos por sua longa tradição na forja de armas e equipamentos.",
+    abilities: [
+      "Dieta Rochosa: Você só se alimenta de verdade ao comer pedras. Se não puder se alimentar de pedras por um dia inteiro, você deve fazer um teste de Fortitude.",
+      "Grande como a Montanha: Seu tamanho é Grande e seu deslocamento é 6m.",
+      "Filho da Montanha: Você é imune a dano de fogo e não precisa fazer testes de Fortitude para resistir ao calor.",
+      "Rolar como uma Pedra: Você pode gastar 2 PM para abraçar suas pernas com seus braços e assumir uma forma arredondada como um pedregulho por uma rodada. Nesta forma, seu deslocamento se torna 9m, você ignora terreno difícil não mágico e, se executar uma investida, não sofre a penalidade de –2 em Defesa."
+    ],
+    attributeModifiers: [
+      { attribute: "for", modifier: 2 },
+      { attribute: "con", modifier: 1 },
+      { attribute: "des", modifier: -1 }
+    ],
+  },
+  {
+    id: "27",
+    name: "Rito",
+    origin: "Dragão Brasil - Zelda",
+    image: "/racas/rito.png",
+    description: "Os rito são seres humanoides com feições de ave, bico, penas, asas no lugar dos braços e garras no lugar dos pés. Mesmo com as asas, possuem mãos nas extremidades dos braços e por isso são capazes de empunhar e segurar objetos. Rito agem como mensageiros entre os povos e entre o seu. Sua capacidade de voar foi capaz de conectar os diversos povos de Hyrule nos momentos de maior necessidade.",
+    abilities: [
+      "Habitante das Alturas: Você recebe +2 em Acrobacia e redução de frio 5.",
+      "Visão de Cima: Você tem visão na penumbra e, quando está voando, recebe +5 em testes de Percepção para observar.",
+      "Voo Veloz: Você pode gastar 1 PM por rodada para voar com deslocamento de 9m. Se não tiver mais PM para gastar em meio ao voo ou for derrubado por qualquer motivo, cai e sofre dano de queda normalmente.",
+    ],
+    // Modificadores FIXOS para Anão
+    attributeModifiers: [
+      { attribute: "des", modifier: 2 },
+      { attribute: "sab", modifier: 1 },
+      { attribute: "con", modifier: -1 }
+    ]
+  },
 ];

@@ -193,8 +193,8 @@
     id: "",
     name: "",
     attribute: "",
-    trainedOnly: true, //  só pode ser usada se for treinada
-    armorPenalty: true, // Sofre penalidade de armadura
+    trainedOnly: false, //  só pode ser usada se for treinada
+    armorPenalty: false, // Sofre penalidade de armadura
     description: "",
     functions: [
       {
