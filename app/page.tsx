@@ -12,7 +12,8 @@ export default function Home() {
     { id: "origem",  title: "Origem",  icon: "/temas/origem.png", color: "from-cyan-600 to-blue-600",  href: "/origem"},
     { id: "deuses",  title: "Deuses",  icon: "/temas/deuses.png", color: "from-cyan-600 to-blue-600",  href: "/deuses"},
     { id: "caracteristicas", title: "Características",  icon: "/temas/caracteristicas.png",  color: "from-purple-600 to-pink-600",  href: "/caracteristicas"},
-    { id: "pericias",  title: "Perícias",  icon: "/temas/pericias.png",  color: "from-purple-600 to-pink-600",  href: "/pericias"}
+    { id: "pericias",  title: "Perícias",  icon: "/temas/pericias.png",  color: "from-purple-600 to-pink-600",  href: "/pericias"},
+    { id: "equipamentos",  title: "Equipamentos",  icon: "💰",  color: "from-yellow-600 to-orange-600",  href: "/equipamentos"}
   ];
 
   return (
