@@ -35,15 +35,15 @@ export default function GeraisPodersPage() {
             Poderes
           </Link>
           <span className="text-gray-600">/</span>
-          <span className="text-gray-400 text-sm">Poderes Gerais</span>
+          <span className="text-gray-400 text-sm">Poderes Gerais - Combate</span>
         </div>
       </header>
 
       <div className="mb-12">
         <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 mb-4">
-          Poderes do Arcanista
+          Poderes Gerais - Combate
         </h1>
-        <p className="text-gray-400 text-lg">Poderes compartilhados de todas as classes:</p>
+      
       </div>
 
       {/* Busca */}
@@ -103,28 +103,12 @@ export default function GeraisPodersPage() {
       )}
 
       {/* Seção de Informação */}
-      <div className="mt-16 p-8 rounded-xl bg-gradient-to-br from-pink-950/30 to-black border border-yellow-900/30">
-        <h3 className="text-2xl font-bold text-purple-300 mb-4">Familiares Arcanos</h3>
-        <p className="text-gray-300 leading-relaxed">
-          Um familiar é uma criatura mágica. Em termos de jogo, é um parceiro especial com o qual você pode se comunicar telepaticamente em alcance longo. Ele obedece a suas ordens, mas ainda está limitado ao que uma criatura de sua espécie pode fazer. Se ele morrer, você fica atordoado por uma rodada. Você pode invocar um novo familiar com um ritual que exige um dia e T$ 100 em ingredientes.
-        </p>
-
-        <p><span className="text-purple-300">Borboleta </span><span className="text-gray-300 leading-relaxed">A CD dos testes de Vontade para resistir a suas magias aumenta em +1.</span></p>
-        <p><span className="text-purple-300">Cobra </span><span className="text-gray-300 leading-relaxed">A CD dos testes de Fortitude para resistir a suas magias aumenta em +1.</span></p>
-        <p><span className="text-purple-300">Coruja </span><span className="text-gray-300 leading-relaxed">Quando lança uma magia com alcance de toque, você pode pagar 1 PM para aumentar seu alcance para curto.</span></p>
-        <p><span className="text-purple-300">Corvo </span><span className="text-gray-300 leading-relaxed">Quando faz um teste de Misticismo ou Vontade, você pode pagar 1 PM para rolar dois dados e usar o melhor resultado.</span></p>
-        <p><span className="text-purple-300">Falcão </span><span className="text-gray-300 leading-relaxed">Você não pode ser surpreendido e nunca fica desprevenido.</span></p>
-        <p><span className="text-purple-300">Gato </span><span className="text-gray-300 leading-relaxed">Você recebe visão no escuro e +2 em Furtividade.</span></p>
-        <p><span className="text-purple-300">Lagarto </span><span className="text-gray-300 leading-relaxed">A CD dos testes de Reflexos para resistir a suas magias aumenta em +1.</span></p>
-        <p><span className="text-purple-300">Morcego </span><span className="text-gray-300 leading-relaxed">Você adquire percepção às cegas em alcance curto.</span></p>
-        <p><span className="text-purple-300">Rato </span><span className="text-gray-300 leading-relaxed">Você pode usar seu atributo-chave em Fortitude, no lugar de Constituição.</span></p>
-        <p><span className="text-purple-300">Sapo </span><span className="text-gray-300 leading-relaxed">Você soma seu atributo-chave ao seu total de pontos de vida (cumulativo).</span></p>
 
         <h3 className="text-2xl font-bold text-purple-300 mb-4">Importante lembrar!</h3>
         <p className="text-gray-300 leading-relaxed">
           Aqui temos poderes oficiais dos livros mas também da Dragão Brasil, podendo ou não ser disponibilizado em futuros complementos, para utilizar, conversar com mestre da mesa.
         </p>
-      </div>
+      
     </main>
   );
 }

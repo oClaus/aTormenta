@@ -10,7 +10,7 @@ export const powerCategories: PowerCategory[] = [
   },
   {
     id: "2",
-    name: "Gerais",
+    name: "Poderes Gerais de Combate ",
     slug: "poderes-gerais",
     description: "Poderes utilizados em todas classes.",
     origin: "tormenta20 - jogo do ano"

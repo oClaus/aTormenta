@@ -44,6 +44,34 @@ export default function PodersPage() {
         <p className="text-gray-400 text-lg">
           Explore poderes e habilidades especiais para suas classes. Cada categoria oferece poderes únicos que melhoram suas capacidades em combate.
         </p>
+        
+        <h3 className="text-xl font-semibold text-purple-400 mb-2">
+          Escolhendo Poderes Gerais
+        </h3>
+        <p className="text-gray-400 mb-4 leading-relaxed">
+          Poderes gerais podem ser escolhidos por qualquer personagem, independentemente de sua classe. Eles seguem todas as regras de habilidades. Poderes gerais fornecem mais opções, ao custo de um pouco de complexidade. Usá-los ou não é uma decisão de cada jogador. Algumas raças e origens fornecem poderes gerais. Além disso, sempre que você recebe um poder de classe, pode trocá-lo por um poder geral.
+        </p>
+
+        <h3 className="text-xl font-semibold text-purple-400 mb-2">
+          Grupos de Poderes
+        </h3>
+        <ul className="list-disc list-inside text-gray-400 space-y-1 ml-4">
+          <li>
+            <span className="font-semibold text-purple-300">Combate:</span> Poderes que melhoram características relacionadas a combate.
+          </li>
+          <li>
+            <span className="font-semibold text-purple-300">Destino:</span> Poderes que melhoram características não relacionadas a combate.
+          </li>
+          <li>
+            <span className="font-semibold text-purple-300">Magia:</span> Poderes ligados a magias e itens mágicos.
+          </li>
+          <li>
+            <span className="font-semibold text-purple-300">Concedidos:</span> Poderes recebidos por devotos.
+          </li>
+          <li>
+            <span className="font-semibold text-purple-300">Tormenta:</span> Poderes ligados à tempestade rubra.
+          </li>
+        </ul>
       </div>
 
       {/* Busca */}
