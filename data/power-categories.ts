@@ -113,4 +113,18 @@ export const powerCategories: PowerCategory[] = [
     description: "Poderes exclusivos de Paladino.",
     origin: "tormenta20 - jogo do ano"
   },
+  {
+    id: "17",
+    name: "Poderes Gerais de Destino",
+    slug: "poderes-gerais-destino",
+    description: "Poderes utilizados em todas classes.",
+    origin: "tormenta20 - jogo do ano"
+  },
+  {
+    id: "18",
+    name: "Poderes Gerais de Magia",
+    slug: "poderes-gerais-magia",
+    description: "Poderes utilizados em todas classes.",
+    origin: "tormenta20 - jogo do ano"
+  },
 ];

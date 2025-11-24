@@ -381,4 +381,22 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: "Valkaria odeia o conformismo. Seus devotos são proibidos de fixar moradia em um mesmo lugar, não podendo permanecer mais de $2d10+10$ dias na mesma cidade (ou vila, aldeia, povoado...) ou $1d4+2$ meses no mesmo reino. Devotos de Valkaria também são proibidos de se casar ou formar qualquer união estável."
   },
+  {
+    id: "21",
+    name: "Morte - Sandman",
+    image: "/deuses/morte.png",
+    status: "normal",
+    history: "A matéria apresenta novos elementos de jogo para aqueles que desejam usar personagens devotos inspirados pela mitologia de Sandman, mas é declaradamente uma adaptação com bastante licença poética. Um exercício de imaginação. A presença dos seres e artefatos apresentados NÃO é oficial em Arton. \n Dito isso, se crossovers não são sua praia, ou a mesa em que você joga usa alguns materiais de maneira mais estrita, converse com o grupo. É perfeitamente possível adaptar mecânicas ou conceitos apresentados aqui a outras divindades, ou aspectos da mitologia artoniana. Não é um material canônico. E sim herético. Use por sua conta e risco! Representando tanto o fim quanto o começo, dizem que essa perpétua era amada por todos em tempos antigos. Os mortais lembravam-se tanto da sua primeira visita: quando ela os insuflava com a centelha da vida, quanto de sua última e derradeira aparição. Mas com o passar dos séculos começaram a se esquecer disso e passaram a temê-la. Isso deixou a Morte cada vez mais ressentida e fria. Tudo mudou quando ela resolveu habitar um corpo mortal a cada cem anos, para entender sua perspectiva. Assim tornou-se a mais humana entre os perpétuos. A mais sábia até. Embora raramente demonstre, também é aquela de maior poder. Está destinada a testemunhar o fim de todas as coisas, quando apagará as luzes no céu e trancará os portões da existência atrás de si. É plenamente devotada a sua função, pois percebeu que um universo assolado pela imortalidade seria pior do que o fardo de ceifar almas. A morte trabalha em colaboração com outras divindades mortuárias, chamada por ela de “psicopompos”, que também têm função de coletar os espíritos e levá-los até seu descanso final. Em Arton, A Morte em Lamnor ainda é bastante associada ao hediondo deus Ragnar, uma divindade da extinção que sucumbiu durante os eventos da Flecha de Fogo. E no Reinado, a Leen, seu aspecto humano. Mas cultos da perpétua têm ganhado adesão para suprir essa ausência. Fala-se mesmo de um paladino que a representa, dado a partidas de xadrez com estranhos. Ex-sacerdotes de Leen também têm encontrado acolhimento nesse novo culto, embora sejam vistos com desconfiança e caçados pela maioria das outras ordens religiosas. Clérigos de Tenebra costumam hostilizar devotos da Morte, pois sentem que eles não compreendem as bênçãos da verdadeira mãe-noite, e consideram hipócritas aqueles que abraçam a imortalidade para caçar mortos-vivos. Ironicamente, o mesmo desprezo é demonstrado pelos devotos de Azgher, que os confundem com adoradores da noite, ou não aprovam seus métodos, tidos como profanos.",
+    beliefs: "Ajudar a celebrar ritos fúnebres e confortar pessoas passando por luto. Combater assombrações e outras entidades que tentem trapacear a morte, para manter o equilíbrio no universo, mesmo que para isso seja necessário se sujeitar a uma existência eterna. ",
+    sacredSymbol: "Ankh de prata.",
+    channelEnergy: "Qualquer",
+    preferredWeapon: "Gadanho.",
+    devotees: "Quaisquer. Cedo ou tarde, toda criatura contempla seu fim.",
+    grantedPowers: [
+      "Aparência Adaptável",
+      "Caçador de Imortais",
+      "Dom do Psicopompo",
+    ],
+    obligationsRestrictions: "Um devoto da Morte é proibido de saquear tumbas ou templos consagrados à patrona que servem e às demais divindades que cuidam dos mortos. Podem permitir que outras pessoas retirem objetos desses lugares, mas não podem partilhar do espólio. Em um combate, seu primeiro ato deve ser gastar uma ação de movimento em oração, dedicando as mortes que vierem a ocorrer durante a batalha à sua deusa."
+  },
 ];
