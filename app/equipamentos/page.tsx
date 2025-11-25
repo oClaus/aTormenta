@@ -31,9 +31,6 @@ const InitialMoneyTable = ({ data }: { data: InitialMoneyEntry[] }) => {
 
   return (
     <div className="shadow-lg rounded-xl border border-yellow-500/30 overflow-hidden">
-      <caption className="p-4 text-xl font-bold text-yellow-300 bg-yellow-900/50">
-        Tabela 3-1: Dinheiro Inicial
-      </caption>
       <div className="flex">
         {/* Coluna 1 */}
         <table className="min-w-1/2 divide-y divide-yellow-500/30 w-1/2">

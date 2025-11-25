@@ -127,4 +127,18 @@ export const powerCategories: PowerCategory[] = [
     description: "Poderes utilizados em todas classes.",
     origin: "tormenta20 - jogo do ano"
   },
+  {
+    id: "19",
+    name: "Poderes Gerais Condedidos",
+    slug: "poderes-gerais-concedidos",
+    description: "Poderes utilizados em todas classes.",
+    origin: "tormenta20 - jogo do ano"
+  },
+  {
+    id: "20",
+    name: "Poderes Gerais da Tormenta",
+    slug: "poderes-gerais-tormenta",
+    description: "Poderes utilizados em todas classes.",
+    origin: "tormenta20 - jogo do ano"
+  },
 ];
