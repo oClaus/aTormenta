@@ -169,7 +169,7 @@ const WeaponFilterableTable = ({ allWeapons }: { allWeapons: Weapon[] }) => {
           <thead className="bg-red-900/70 text-red-200">
             <tr>
               <th scope="col" className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Nome</th>
-              <th scope="col" className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Propósito</th> {/* NOVA COLUNA */}
+              <th scope="col" className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Propósito</th>
               <th scope="col" className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Preço</th>
               <th scope="col" className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Dano</th>
               <th scope="col" className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Crítico</th>
