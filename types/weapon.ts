@@ -1,8 +1,13 @@
+// types/weapon.ts
+
 // Tipos de Proficiência
-export type WeaponProficiency = "Simples" | "Marcial" | "Exótica" | "Fogo";
+export type WeaponProficiency = "Simples" | "Marcial" | "Exótica" | "Fogo" ;
 
 // Tipos de Empunhadura
 export type WeaponGrip = "Leve" | "Uma Mão" | "Duas Mãos";
+
+// Tipos de Propósito (Corpo a Corpo, Distância, Munição)
+export type WeaponPurpose = "Corpo a Corpo" | "Distância" | "Munição";
 
 // Tipos de Dano
 export type DamageType = "Corte" | "Perfuração" | "Impacto";
@@ -15,6 +20,7 @@ export interface DamageProgression {
 
 // Interface para a Tabela de Armas (Weapon Stats)
 export interface Weapon {
+  purpose: WeaponPurpose;
   id: string;
   name: string;
   description: string; // Descrição curta para o card (com \n para quebra de linha)

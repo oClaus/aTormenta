@@ -5,12 +5,12 @@ import Link from "next/link";
 import {
   damageProgressionTable,
   weapons,
-} from "@/data/weapons"; // weaponIntroText foi removido
-import { Weapon, DamageProgression, WeaponProficiency, WeaponGrip, DamageType } from "@/types/weapon";
+} from "@/data/weapons";
+import { Weapon, DamageProgression, WeaponProficiency, WeaponGrip, DamageType, WeaponPurpose } from "@/types/weapon";
 
 // --- Componentes Auxiliares ---
 
-// 1. Componente para renderizar a Tabela de Dano de Armas (Inalterado)
+// 1. Componente para renderizar a Tabela de Dano de Armas
 const DamageTable = ({ data }: { data: DamageProgression[][] }) => {
   const headers = data[0].map(d => d.step);
 
@@ -45,7 +45,7 @@ const DamageTable = ({ data }: { data: DamageProgression[][] }) => {
   );
 };
 
-// 2. Componente para o Card de Arma (Grid) - Inalterado
+// 2. Componente para o Card de Arma (Grid) - AGORA EXIBE O PROPÓSITO
 const WeaponCard = ({ weapon }: { weapon: Weapon }) => (
   <div
     className={`group relative rounded-xl overflow-hidden bg-gradient-to-br from-red-950/40 to-black border border-red-500/20 p-6 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/20 text-left`}
@@ -54,7 +54,7 @@ const WeaponCard = ({ weapon }: { weapon: Weapon }) => (
       {weapon.name}
     </h3>
     <div className="text-xs font-semibold text-gray-400 mb-3">
-      {weapon.proficiency} • {weapon.grip} • {weapon.type}
+      {weapon.proficiency} • {weapon.grip} • {weapon.type} • <span className="text-red-400">{weapon.purpose}</span>
     </div>
     <p className="text-gray-400 text-sm whitespace-pre-line">
       {weapon.description}
@@ -65,13 +65,14 @@ const WeaponCard = ({ weapon }: { weapon: Weapon }) => (
   </div>
 );
 
-// 3. Componente para a Tabela Filtrável de Armas (Inalterado)
+// 3. Componente para a Tabela Filtrável de Armas - AGORA COM FILTRO DE PROPÓSITO
 const WeaponFilterableTable = ({ allWeapons }: { allWeapons: Weapon[] }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [filters, setFilters] = useState({
     proficiency: [] as WeaponProficiency[],
     grip: [] as WeaponGrip[],
     type: [] as DamageType[],
+    purpose: [] as WeaponPurpose[], // NOVO FILTRO
   });
 
   const handleFilterChange = (key: keyof typeof filters, value: string) => {
@@ -109,12 +110,18 @@ const WeaponFilterableTable = ({ allWeapons }: { allWeapons: Weapon[] }) => {
       filtered = filtered.filter(w => filters.type.includes(w.type));
     }
 
+    // 5. Filtrar por Propósito (NOVO)
+    if (filters.purpose.length > 0) {
+      filtered = filtered.filter(w => filters.purpose.includes(w.purpose));
+    }
+
     return filtered.sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
   }, [allWeapons, searchTerm, filters]);
 
   const allProficiencies: WeaponProficiency[] = ["Simples", "Marcial", "Exótica", "Fogo"];
   const allGrips: WeaponGrip[] = ["Leve", "Uma Mão", "Duas Mãos"];
   const allDamageTypes: DamageType[] = ["Corte", "Perfuração", "Impacto"];
+  const allPurposes: WeaponPurpose[] = ["Corpo a Corpo", "Distância", "Munição"]; // NOVO
 
   const renderFilterGroup = (title: string, options: string[], key: keyof typeof filters) => (
     <div className="p-4 bg-gray-900/50 rounded-lg border border-red-500/20">
@@ -149,10 +156,11 @@ const WeaponFilterableTable = ({ allWeapons }: { allWeapons: Weapon[] }) => {
       />
 
       {/* Filtros */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         {renderFilterGroup("Proficiência", allProficiencies, "proficiency")}
         {renderFilterGroup("Empunhadura", allGrips, "grip")}
         {renderFilterGroup("Tipo de Dano", allDamageTypes, "type")}
+        {renderFilterGroup("Propósito", allPurposes, "purpose")} {/* NOVO FILTRO */}
       </div>
 
       {/* Tabela de Armas */}
@@ -161,6 +169,7 @@ const WeaponFilterableTable = ({ allWeapons }: { allWeapons: Weapon[] }) => {
           <thead className="bg-red-900/70 text-red-200">
             <tr>
               <th scope="col" className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Nome</th>
+              <th scope="col" className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Propósito</th> {/* NOVA COLUNA */}
               <th scope="col" className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Preço</th>
               <th scope="col" className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Dano</th>
               <th scope="col" className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Crítico</th>
@@ -176,6 +185,7 @@ const WeaponFilterableTable = ({ allWeapons }: { allWeapons: Weapon[] }) => {
                   {weapon.name}
                   <div className="text-xs text-gray-500">{weapon.proficiency} • {weapon.grip}</div>
                 </td>
+                <td className="px-4 py-2 whitespace-nowrap text-sm text-red-400">{weapon.purpose}</td> {/* NOVA CÉLULA */}
                 <td className="px-4 py-2 whitespace-nowrap text-sm text-gray-300">{weapon.price}</td>
                 <td className="px-4 py-2 whitespace-nowrap text-sm text-gray-300">{weapon.damage}</td>
                 <td className="px-4 py-2 whitespace-nowrap text-sm text-gray-300">{weapon.critical}</td>
@@ -238,7 +248,7 @@ export default function ArmasPage() {
         </p>
       </div>
 
-      {/* Seção de Texto Introdutório (AGORA DIRETO NO COMPONENTE) */}
+      {/* Seção de Texto Introdutório (DIRETO NO COMPONENTE) */}
       <section className="mb-12 p-6 bg-gray-900/50 rounded-xl border border-red-500/20">
         <div className="space-y-4 text-gray-300 leading-relaxed">
           <p>
@@ -260,6 +270,8 @@ export default function ArmasPage() {
           </p>
           <p>
             <strong>Penalidade por Não Proficiência.</strong> Se você atacar com uma arma com a qual não seja proficiente, sofre –5 nos testes de ataque.
+          </p>
+          <p>
             Todas as criaturas são proficientes em ataques desarmados e em suas armas naturais (veja quadro).
           </p>
 
@@ -268,16 +280,14 @@ export default function ArmasPage() {
             <strong>Corpo a Corpo.</strong> Podem ser usadas para atacar alvos adjacentes. Para atacar com uma arma de combate corpo a corpo, faça um teste de Luta. Quando você ataca com uma arma corpo a corpo, soma sua Força às rolagens de dano.
           </p>
           <p>
-            <strong>Ataque à Distância.</strong> Podem ser usadas para atacar alvos adjacentes ou à distância. Para atacar com uma arma de combate à distância, faça um teste de Pontaria. São subdivididas em de arremesso e de disparo.
+            <strong>Ataque à Distância.</strong> Podem ser usadas para atacar alvos adjacentes ou à distância. Para atacar com uma arma de combate à distância, faça um teste de Pontaria. Quando você ataca com uma arma de combate à distância, soma sua Destreza às rolagens de dano.
           </p>
-          <ul className="list-disc list-inside ml-4">
-            <li>
-              <strong>Arremesso.</strong> A própria arma é atirada, como uma adaga ou azagaia. Sacar uma arma de arremesso é uma ação de movimento. Quando você ataca com uma arma de arremesso, soma sua Força às rolagens de dano.
-            </li>
-            <li>
-              <strong>Disparo.</strong> A arma dispara um projétil, como um arco atira flechas. Sacar a munição de uma arma de disparo é uma ação livre. Recarregar uma arma de disparo exige as duas mãos. Quando ataca com uma arma de disparo, não soma nenhum valor de atributo às rolagens de dano.
-            </li>
-          </ul>
+          <p className="ml-4">
+            • <strong>Arremesso.</strong> A própria arma é atirada, como uma adaga ou azagaia. Sacar uma arma de arremesso é uma ação de movimento. Quando você ataca com uma arma de arremesso, soma sua Força às rolagens de dano.
+          </p>
+          <p className="ml-4">
+            • <strong>Disparo.</strong> A arma dispara um projétil, como um arco atira flechas. Sacar a munição de uma arma de disparo é uma ação livre. Recarregar uma arma de disparo exige as duas mãos. Quando ataca com uma arma de disparo, não soma nenhum valor de atributo às rolagens de dano.
+          </p>
 
           <h2 className="text-3xl font-bold text-red-400 pt-4">Empunhadura</h2>
           <p>
@@ -292,17 +302,16 @@ export default function ArmasPage() {
         </div>
       </section>
 
-      {/* Seção da Tabela de Dano de Armas */}
-      <section className="mb-12">
-        <h2 className="text-4xl font-bold text-red-400 mb-6">Tabela de Dano</h2>
+      {/* Tabela de Dano de Armas */}
+      <div className="mb-12">
         <DamageTable data={damageProgressionTable} />
-      </section>
+      </div>
 
-      {/* Grid de Cards de Armas (AGORA COM BUSCA E ORDENAÇÃO) */}
+      {/* Grid de Cards de Armas (Visualização Rápida) */}
       <section className="mb-12">
-        <h2 className="text-4xl font-bold text-red-400 mb-6">Visualização Rápida</h2>
+        <h2 className="text-3xl font-bold text-red-300 mb-6">Visualização Rápida</h2>
         
-        {/* Barra de Busca para o Grid */}
+        {/* Busca para o Grid */}
         <input
           type="text"
           placeholder="Buscar arma por nome ou descrição..."
@@ -311,22 +320,21 @@ export default function ArmasPage() {
           className="w-full px-6 py-3 mb-6 rounded-lg bg-gray-800 border border-red-500/30 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition-all"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredCards.map((weapon) => (
             <WeaponCard key={weapon.id} weapon={weapon} />
           ))}
         </div>
         {filteredCards.length === 0 && (
-          <div className="text-center py-8 text-gray-500 bg-gray-900/50 rounded-xl">Nenhuma arma encontrada com o termo de busca.</div>
+          <div className="text-center py-8 text-gray-500 bg-gray-900/50 rounded-xl">Nenhuma arma encontrada.</div>
         )}
       </section>
 
-      {/* Tabela Filtrável de Armas */}
-      <section className="mb-12">
-        <h2 className="text-4xl font-bold text-red-400 mb-6">Tabela Completa de Armas</h2>
+      {/* Tabela Completa e Filtrável */}
+      <section>
+        <h2 className="text-3xl font-bold text-red-300 mb-6">Tabela Completa de Armas</h2>
         <WeaponFilterableTable allWeapons={weapons} />
       </section>
-      
     </main>
   );
 }
