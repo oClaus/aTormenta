@@ -35,4 +35,12 @@ export const equipmentCategories: EquipmentCategory[] = [
     color: "from-red-600 to-red-900",
     href: "/equipamentos/armas",
   },
+  {
+    id: "armaduras",
+    title: "Armaduras",
+    description: "Espadas, machados, arcos e tudo que causa dano.",
+    icon: "🪖",
+    color: "from-blue-600 to-white-900",
+    href: "/equipamentos/armaduras",
+  },
 ];

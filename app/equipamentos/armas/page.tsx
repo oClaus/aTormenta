@@ -18,7 +18,7 @@ const DamageTable = ({ data }: { data: DamageProgression[][] }) => {
     <div className="overflow-x-auto shadow-lg rounded-xl border border-red-500/30">
       <table className="min-w-full divide-y divide-red-500/30">
         <caption className="p-4 text-xl font-bold text-red-300 bg-red-900/50 rounded-t-xl">
-          Tabela 3-2: Dano de Armas
+          Tabela Dano de Armas
         </caption>
         <thead className="bg-red-900/70 text-red-200">
           <tr>
@@ -120,7 +120,7 @@ const WeaponFilterableTable = ({ allWeapons }: { allWeapons: Weapon[] }) => {
 
   const allProficiencies: WeaponProficiency[] = ["Simples", "Marcial", "Exótica", "Fogo"];
   const allGrips: WeaponGrip[] = ["Leve", "Uma Mão", "Duas Mãos"];
-  const allDamageTypes: DamageType[] = ["Corte", "Perfuração", "Impacto"];
+  const allDamageTypes: DamageType[] = ["Corte", "Perfuração", "Impacto", "Corte/Perfuração"];
   const allPurposes: WeaponPurpose[] = ["Corpo a Corpo", "Distância", "Munição"]; // NOVO
 
   const renderFilterGroup = (title: string, options: string[], key: keyof typeof filters) => (
@@ -231,26 +231,33 @@ export default function ArmasPage() {
 
   return (
     <main className="w-full min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-black text-gray-100 px-6 py-12">
-      {/* Navegação */}
-      <div className="mb-8">
-        <Link href="/equipamentos" className="text-red-400 hover:text-red-300 transition-colors">
-          ← Voltar para Equipamentos
+       {/* Header */}
+      <header className="p-6 border-b border-purple-900/50">
+        <Link href="/" className="inline-block group">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-red-400 via-red-300 to-red-500 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(168,85,247,0.5)] group-hover:drop-shadow-[0_0_25px_rgba(168,85,247,0.7)] transition-all">
+            a-Tormenta
+          </h1>
         </Link>
-      </div>
+        <div className="flex items-center gap-2 mt-2">
+          <Link href="/" className="text-cyan-400 hover:text-purple-300 text-sm transition-colors">
+            Início
+          </Link>
+          <span className="text-gray-600">/</span>
+          <Link href="/equipamentos" className="text-cyan-400 hover:text-purple-300 text-sm transition-colors">
+            Equipamentos
+          </Link>
+          <span className="text-gray-600">/</span>
+          <span className="text-gray-400 text-sm">Armas</span>
+        </div>
+      </header>
+      
 
       {/* Header */}
-      <div className="mb-12">
-        <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-pink-400 to-red-400 mb-4">
-          ⚔️ Armas
-        </h1>
-        <p className="text-gray-400 text-lg">
-          Detalhes sobre proficiência, propósito, empunhadura e as estatísticas de combate de cada arma.
-        </p>
-      </div>
-
-      {/* Seção de Texto Introdutório (DIRETO NO COMPONENTE) */}
       <section className="mb-12 p-6 bg-gray-900/50 rounded-xl border border-red-500/20">
         <div className="space-y-4 text-gray-300 leading-relaxed">
+          <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-pink-400 to-red-400 mb-4">
+          Armas
+        </h1>
           <p>
             Armas são classificadas de acordo com a proficiência necessária para usá-la (simples, marciais, exóticas ou de fogo), propósito (ataque corpo a corpo ou à distância) e empunhadura (leve, uma mão ou duas mãos).
           </p>
@@ -280,7 +287,7 @@ export default function ArmasPage() {
             <strong>Corpo a Corpo.</strong> Podem ser usadas para atacar alvos adjacentes. Para atacar com uma arma de combate corpo a corpo, faça um teste de Luta. Quando você ataca com uma arma corpo a corpo, soma sua Força às rolagens de dano.
           </p>
           <p>
-            <strong>Ataque à Distância.</strong> Podem ser usadas para atacar alvos adjacentes ou à distância. Para atacar com uma arma de combate à distância, faça um teste de Pontaria. Quando você ataca com uma arma de combate à distância, soma sua Destreza às rolagens de dano.
+            <strong>Ataque à Distância.</strong> Podem ser usadas para atacar alvos adjacentes ou à distância. Para atacar com uma arma de combate à distância, faça um teste de Pontaria. São subdivididas em de arremesso e de disparo:
           </p>
           <p className="ml-4">
             • <strong>Arremesso.</strong> A própria arma é atirada, como uma adaga ou azagaia. Sacar uma arma de arremesso é uma ação de movimento. Quando você ataca com uma arma de arremesso, soma sua Força às rolagens de dano.
@@ -299,13 +306,85 @@ export default function ArmasPage() {
           <p>
             <strong>Duas mãos.</strong> Esta arma é usada com as duas mãos. Livrar uma mão é uma ação livre. Reempunhá-la é uma ação de movimento (ou livre, se você puder sacá-la dessa forma).
           </p>
-        </div>
-      </section>
 
-      {/* Tabela de Dano de Armas */}
+          <h2 className="text-3xl font-bold text-red-400 pt-4">Características das Armas</h2>
+          <p>
+    <strong>Preço.</strong> Inclui acessórios básicos, como bainhas para lâminas e aljavas para flechas.
+  </p>
+  <p>
+    <strong>Dano.</strong> Quando você acerta um ataque, rola o dano indicado (acrescente modificadores, se houver). O resultado é subtraído dos pontos de vida do alvo. O dano na tabela se refere a armas normais, para criaturas Pequenas e Médias. Veja a Tabela Dano de Armas para armas menores ou maiores.
+  </p>
+  <p>
+    <strong>Crítico.</strong> Quando você acerta um ataque rolando um 20 natural (ou seja, o dado mostra um 20), faz um acerto crítico. Neste caso, multiplique os dados de dano por 2. Bônus numéricos e dados extras (como pela habilidade Ataque Furtivo) não são multiplicados. Certas armas fazem críticos em margem maior que 20 ou multiplicam o dano por um valor maior que 2.
+    <p className="ml-4">
+      • <strong>19.</strong> A arma tem margem de ameaça 19 ou 20.
+    </p>
+    <p className="ml-4">
+      • <strong>18.</strong> A arma tem margem de ameaça 18, 19 ou 20.
+    </p>
+    <p className="ml-4">
+      • <strong>x2, x3, x4.</strong> A arma causa dano dobrado, triplicado ou quadruplicado em caso de acerto crítico.
+    </p>
+    <p className="ml-4">
+      • <strong>19/x3.</strong> A arma tem margem de ameaça 19 ou 20 e causa dano triplicado em caso de acerto crítico.
+    </p>
+  </p>
+  <p>
+    <strong>Alcance.</strong> Armas com alcance podem ser usadas para ataques à distância. As categorias de alcance são curto (9m), médio (30m) e longo (90m). Você pode atacar dentro do alcance sem sofrer penalidades. Você pode atacar até o dobro do alcance, mas sofre –5 no teste de ataque. Armas sem alcance podem ser arremessadas em alcance curto com –5 no teste de ataque.
+  </p>
+  <p>
+    <strong>Tipo.</strong> Armas tipicamente causam dano por corte (C), impacto (I) ou perfuração (P). Certas criaturas são resistentes ou imunes a certos tipos de dano.
+  </p>
+  <p>
+    <strong>Espaço.</strong> Quantos espaços a arma ocupa, importante para a capacidade de carga do personagem.
+  </p>
+
+  <h3 className="text-2xl font-bold text-red-400 pt-4">Habilidades de Armas</h3>
+  <p>
+    Algumas armas possuem uma ou mais das habilidades a seguir.
+  </p>
+  <ul>
+    <li>
+      <strong>Adaptável.</strong> Uma arma de uma mão com esta habilidade pode ser usada com as duas mãos para aumentar seu dano em um passo.
+    </li>
+    <li>
+      <strong>Ágil.</strong> Pode ser usada com Acuidade com Arma, mesmo não sendo uma arma leve.
+    </li>
+    <li>
+      <strong>Alongada.</strong> Dobra o alcance natural do atacante, mas não permite atacar um adversário adjacente.
+    </li>
+    <li>
+      <strong>Desbalanceada.</strong> Impõe uma penalidade de –2 em testes de ataque.
+    </li>
+    <li>
+      <strong>Dupla.</strong> Pode ser usada com Estilo de Duas Armas (e poderes similares) para fazer ataques adicionais, como se fosse uma arma de uma mão e uma arma leve. Cada “ponta” conta como uma arma separada.
+    </li>
+    <li>
+      <strong>Versátil.</strong> Fornece bônus em uma ou mais manobras (cumulativo com outros bônus de itens), conforme a arma.
+    </li>
+  </ul>
+
+  <h3 className="text-2xl font-bold text-red-400 pt-4">Passos de Dano</h3>
+  <p>
+    Alguns efeitos podem aumentar ou diminuir o dano da arma em um ou mais “passos”. Consulte a Tabela Dano de Armas.
+  </p>
+
+  {/* Tabela de Dano de Armas */}
       <div className="mb-12">
         <DamageTable data={damageProgressionTable} />
       </div>
+
+  <h3 className="text-2xl font-bold text-red-400 pt-4">Ataques Desarmados & Armas Naturais</h3>
+  <p>
+    Um ataque desarmado é um soco, chute ou qualquer outro golpe que use seu próprio corpo. Um ataque desarmado é considerado uma arma leve corpo a corpo que causa dano de impacto não letal ($1d3$ pontos de dano para criaturas Pequenas e Médias) e não é afetado por efeitos que mencionem especificamente objetos ou armas empunhadas. Uma criatura só possui um único ataque desarmado.
+  </p>
+  <p>
+    Armas naturais representam partes específicas do corpo de uma criatura que podem ser usadas para desferir ataques, como chifres, garras ou uma poderosa mordida. Armas naturais são consideradas armas leves corpo a corpo e, assim como ataques desarmados, não são afetadas por efeitos que afetem especificamente objetos ou que afetem armas que precisam ser empunhadas. A quantidade e tipo de dano de cada arma natural é apresentada em sua descrição.
+  </p>
+        </div>
+      </section>
+
+      
 
       {/* Grid de Cards de Armas (Visualização Rápida) */}
       <section className="mb-12">

@@ -79,12 +79,11 @@ export const damageProgressionTable: DamageProgression[][] = [
 
 // Tabela 3-3: Armas (Apenas Armas Simples e Marciais da imagem)
 export const weapons: Weapon[] = [
-  // --- ARMAS SIMPLES ---
-  // Corpo a Corpo - Leves
+
   {
     id: "adaga",
     name: "Adaga",
-    description: "Pequena e fácil de esconder. Pode ser usada como arma de arremesso.",
+    description: "Esta faca afiada é usada por muitos habitantes adultos do Reinado, embora seja favorita de ladrões e assassinos, por ser facilmente escondida (fornece +5 em testes de Ladinagem para ocultá-la). Quando ataca com uma adaga, você pode usar sua Destreza em vez de Força nos testes de ataque. Uma adaga pode ser arremessada.",
     origin: "Tormenta20 - Jogo do Ano",
     purpose: "Corpo a Corpo",
     proficiency: "Simples",
@@ -96,6 +95,37 @@ export const weapons: Weapon[] = [
     type: "Perfuração",
     spaces: 1,
   },
+  {
+    id: "Alabarda",
+    name: "Alabarda",
+    description: "Uma haste de madeira com 2m de comprimento e uma lâmina de machado na ponta. A alabarda é uma arma alongada.",
+    origin: "Tormenta20 - Jogo do Ano",
+    purpose: "Corpo a Corpo",
+    proficiency: "Marcial",
+    grip: "Duas Mãos",
+    price: "T$ 10",
+    damage: "1d10",
+    critical: "x3",
+    range: "—",
+    type: "Corte/Perfuração",
+    spaces: 2,
+  },
+  {
+    id: "Alfange",
+    name: "Alfange",
+    description: "Uma versão maior da cimitarra, esta espada de lâmina larga e curva é bastante usada por guerreiros do Deserto da Perdição.",
+    origin: "Tormenta20 - Jogo do Ano",
+    purpose: "Corpo a Corpo",
+    proficiency: "Marcial",
+    grip: "Duas Mãos",
+    price: "T$ 75",
+    damage: "2d4",
+    critical: "18",
+    range: "—",
+    type: "Corte",
+    spaces: 2,
+  },
+
   {
     id: "espada-curta",
     name: "Espada Curta",

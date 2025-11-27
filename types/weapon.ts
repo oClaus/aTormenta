@@ -10,7 +10,7 @@ export type WeaponGrip = "Leve" | "Uma Mão" | "Duas Mãos";
 export type WeaponPurpose = "Corpo a Corpo" | "Distância" | "Munição";
 
 // Tipos de Dano
-export type DamageType = "Corte" | "Perfuração" | "Impacto";
+export type DamageType = "Corte" | "Perfuração" | "Impacto" | "Corte/Perfuração" ;
 
 // Interface para a Tabela de Dano de Armas (Damage Progression)
 export interface DamageProgression {
