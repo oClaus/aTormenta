@@ -316,9 +316,7 @@ export default function ArmasPage() {
   </p>
   <p>
     <strong>Crítico.</strong> Quando você acerta um ataque rolando um 20 natural (ou seja, o dado mostra um 20), faz um acerto crítico. Neste caso, multiplique os dados de dano por 2. Bônus numéricos e dados extras (como pela habilidade Ataque Furtivo) não são multiplicados. Certas armas fazem críticos em margem maior que 20 ou multiplicam o dano por um valor maior que 2.
-    <p className="ml-4">
-      • <strong>19.</strong> A arma tem margem de ameaça 19 ou 20.
-    </p>
+    <p className="ml-4">      • <strong>19.</strong> A arma tem margem de ameaça 19 ou 20.    </p>
     <p className="ml-4">
       • <strong>18.</strong> A arma tem margem de ameaça 18, 19 ou 20.
     </p>
@@ -376,7 +374,7 @@ export default function ArmasPage() {
 
   <h3 className="text-2xl font-bold text-red-400 pt-4">Ataques Desarmados & Armas Naturais</h3>
   <p>
-    Um ataque desarmado é um soco, chute ou qualquer outro golpe que use seu próprio corpo. Um ataque desarmado é considerado uma arma leve corpo a corpo que causa dano de impacto não letal ($1d3$ pontos de dano para criaturas Pequenas e Médias) e não é afetado por efeitos que mencionem especificamente objetos ou armas empunhadas. Uma criatura só possui um único ataque desarmado.
+    Um ataque desarmado é um soco, chute ou qualquer outro golpe que use seu próprio corpo. Um ataque desarmado é considerado uma arma leve corpo a corpo que causa dano de impacto não letal (1d3 pontos de dano para criaturas Pequenas e Médias) e não é afetado por efeitos que mencionem especificamente objetos ou armas empunhadas. Uma criatura só possui um único ataque desarmado.
   </p>
   <p>
     Armas naturais representam partes específicas do corpo de uma criatura que podem ser usadas para desferir ataques, como chifres, garras ou uma poderosa mordida. Armas naturais são consideradas armas leves corpo a corpo e, assim como ataques desarmados, não são afetadas por efeitos que afetem especificamente objetos ou que afetem armas que precisam ser empunhadas. A quantidade e tipo de dano de cada arma natural é apresentada em sua descrição.

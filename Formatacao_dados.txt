@@ -207,3 +207,21 @@
       },
     ],
   },
+
+------------------armas-----------------------------
+
+  {
+    id: "",
+    name: "",
+    description: "",
+    origin: "Tormenta20 - Jogo do Ano",
+    purpose: "Corpo a Corpo",
+    proficiency: "Marcial",
+    grip: "Duas Mãos",
+    price: "T$ 18",
+    damage: "2d4",
+    critical: "x4",
+    range: "—",
+    type: "Corte",
+    spaces: 2,
+  },
