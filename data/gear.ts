@@ -1,5 +1,3 @@
-// data/gear.ts
-
 import { Gear } from "@/types/gear";
 
 // Texto Introdutório (Para ser inserido diretamente no page.tsx)
@@ -22,7 +20,7 @@ export const gear: Gear[] = [
   {
     id: "agua-benta",
     name: "Água benta",
-    description: "Água purificada por um ritual sagrado. Usada contra criaturas malignas.",
+    description: "Produzida com a magia Abençoar Alimentos, esta água sagrada é um poderoso recurso na luta contra o mal. Para usar a água benta, você gasta uma ação padrão e escolhe um morto-vivo, demônio ou diabo em alcance curto (a água benta é inofensiva contra outras criaturas). O alvo sofre 2d10 pontos de dano de luz (Reflexos CD Sab reduz à metade).",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 10",
     spaces: "0,5",
