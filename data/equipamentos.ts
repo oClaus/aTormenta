@@ -43,4 +43,12 @@ export const equipmentCategories: EquipmentCategory[] = [
     color: "from-blue-600 to-white-900",
     href: "/equipamentos/armaduras",
   },
+  {
+    id: "equipamentos",
+    title: "Equipamentos de Aventura",
+    description: "Utensílios úteis para exploradores de masmorras.",
+    icon: "🏕️",
+    color: "from-yellow-600 to-white-900",
+    href: "/equipamentos/aventura",
+  },
 ];

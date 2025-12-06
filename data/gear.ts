@@ -1,0 +1,158 @@
+// data/gear.ts
+
+import { Gear } from "@/types/gear";
+
+// Texto Introdutório (Para ser inserido diretamente no page.tsx)
+export const gearIntroText = {
+  title: "Equipamentos de Aventura",
+  sections: [
+    {
+      title: "Itens Essenciais",
+      content: `Estes são os itens básicos que todo aventureiro precisa para sobreviver em Arton. Eles variam desde ferramentas simples até suprimentos de emergência.`,
+    },
+    {
+      title: "Capacidade de Carga",
+      content: `Lembre-se que cada item ocupa um certo número de espaços. Gerenciar sua capacidade de carga é crucial para o sucesso de uma aventura.`,
+    },
+  ],
+};
+
+// Tabela de Equipamento de Aventura
+export const gear: Gear[] = [
+  {
+    id: "agua-benta",
+    name: "Água benta",
+    description: "Água purificada por um ritual sagrado. Usada contra criaturas malignas.",
+    origin: "Tormenta20 - Jogo do Ano",
+    price: "T$ 10",
+    spaces: "0,5",
+  },
+  {
+    id: "algemas",
+    name: "Algemas",
+    description: "Usadas para prender prisioneiros. Requerem um teste de Força (CD 25) para serem quebradas.",
+    origin: "Tormenta20 - Jogo do Ano",
+    price: "T$ 15",
+    spaces: "1",
+  },
+  {
+    id: "arpeu",
+    name: "Arpéu",
+    description: "Gancho de escalada, geralmente usado com uma corda.",
+    origin: "Tormenta20 - Jogo do Ano",
+    price: "T$ 5",
+    spaces: "1",
+  },
+  {
+    id: "bandoleira-de-pocoes",
+    name: "Bandoleira de poções",
+    description: "Permite guardar e sacar poções rapidamente.",
+    origin: "Tormenta20 - Jogo do Ano",
+    price: "T$ 20",
+    spaces: "1",
+  },
+  {
+    id: "barraca",
+    name: "Barraca",
+    description: "Abrigo portátil para descanso seguro.",
+    origin: "Tormenta20 - Jogo do Ano",
+    price: "T$ 10",
+    spaces: "1",
+  },
+  {
+    id: "corda",
+    name: "Corda (15m)",
+    description: "Corda de cânhamo de 15 metros. Essencial para escaladas e resgates.",
+    origin: "Tormenta20 - Jogo do Ano",
+    price: "T$ 1",
+    spaces: "1",
+  },
+  {
+    id: "espelho",
+    name: "Espelho (pequeno)",
+    description: "Usado para verificar cantos ou sinalizar.",
+    origin: "Tormenta20 - Jogo do Ano",
+    price: "T$ 10",
+    spaces: "1",
+  },
+  {
+    id: "lampiao",
+    name: "Lampião",
+    description: "Fonte de luz mais duradoura que tochas.",
+    origin: "Tormenta20 - Jogo do Ano",
+    price: "T$ 7",
+    spaces: "1",
+  },
+  {
+    id: "mochila",
+    name: "Mochila",
+    description: "Permite carregar itens de forma mais eficiente.",
+    origin: "Tormenta20 - Jogo do Ano",
+    price: "T$ 2",
+    spaces: "—",
+  },
+  {
+    id: "mochila-de-aventureiro",
+    name: "Mochila de aventureiro",
+    description: "Kit completo com itens essenciais para um aventureiro iniciante.",
+    origin: "Tormenta20 - Jogo do Ano",
+    price: "T$ 50",
+    spaces: "—",
+  },
+  {
+    id: "oleo",
+    name: "Óleo",
+    description: "Usado para lubrificar ou como combustível para lampiões.",
+    origin: "Tormenta20 - Jogo do Ano",
+    price: "T$ 0,1",
+    spaces: "0,5",
+  },
+  {
+    id: "organizador-de-pergaminhos",
+    name: "Organizador de pergaminhos",
+    description: "Protege pergaminhos de danos e umidade.",
+    origin: "Tormenta20 - Jogo do Ano",
+    price: "T$ 25",
+    spaces: "1",
+  },
+  {
+    id: "pe-de-cabra",
+    name: "Pé de cabra",
+    description: "Ferramenta para abrir portas e caixas trancadas.",
+    origin: "Tormenta20 - Jogo do Ano",
+    price: "T$ 2",
+    spaces: "1",
+  },
+  {
+    id: "saco-de-dormir",
+    name: "Saco de dormir",
+    description: "Essencial para um descanso confortável e seguro.",
+    origin: "Tormenta20 - Jogo do Ano",
+    price: "T$ 1",
+    spaces: "1",
+  },
+  {
+    id: "simbolo-sagrado",
+    name: "Símbolo sagrado",
+    description: "Item de foco para conjuradores divinos.",
+    origin: "Tormenta20 - Jogo do Ano",
+    price: "T$ 5",
+    spaces: "1",
+  },
+  {
+    id: "tocha",
+    name: "Tocha",
+    description: "Fonte de luz barata e temporária.",
+    origin: "Tormenta20 - Jogo do Ano",
+    price: "T$ 0,1",
+    spaces: "1",
+  },
+  {
+    id: "vara-de-madeira",
+    name: "Vara de madeira (3m)",
+    description: "Usada para testar armadilhas ou alcançar objetos.",
+    origin: "Tormenta20 - Jogo do Ano",
+    price: "T$ 0,2",
+    spaces: "1",
+  },
+];

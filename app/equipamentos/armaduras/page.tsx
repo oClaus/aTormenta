@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import { armors, armorIntroText } from "@/data/armors";
+import { armors, } from "@/data/armors";
 import { Armor, ArmorType } from "@/types/armors";
 
 // --- Componentes Auxiliares ---
@@ -21,7 +21,7 @@ const ArmorCard = ({ armor }: { armor: Armor }) => (
     <p className="text-gray-400 text-sm whitespace-pre-line">
       {armor.description}
     </p>
-    <div className="mt-4 text-xs text-pink-400">
+    <div className="mt-4 text-xs text-teal-400">
       Origem: {armor.origin}
     </div>
   </div>
@@ -64,13 +64,9 @@ const ArmorFilterableTable = ({ allArmors }: { allArmors: Armor[] }) => {
     }
 
     // Ordenação: Armaduras Leves, Pesadas, Escudos, e depois alfabética
-    return filtered.sort((a, b) => {
-      const order = { "Leve": 1, "Pesada": 2, "Escudo": 3 };
-      if (order[a.type] !== order[b.type]) {
-        return order[a.type] - order[b.type];
-      }
-      return a.name.localeCompare(b.name, "pt-BR");
-    });
+    return filtered.sort((a, b) => 
+      a.name.localeCompare(b.name, "pt-BR")
+    );
   }, [allArmors, searchTerm, filters]);
 
   const allTypes: ArmorType[] = ["Leve", "Pesada", "Escudo"];
@@ -158,19 +154,16 @@ export default function ArmadurasPage() {
     const lowerCaseSearch = cardSearchTerm.toLowerCase();
     
     // 1. Ordenação: Armaduras Leves, Pesadas, Escudos, e depois alfabética
-    let sorted = [...armors].sort((a, b) => {
-      const order = { "Leve": 1, "Pesada": 2, "Escudo": 3 };
-      if (order[a.type] !== order[b.type]) {
-        return order[a.type] - order[b.type];
-      }
-      return a.name.localeCompare(b.name, "pt-BR");
-    });
+    let sorted = [...armors].sort((a, b) => 
+    a.name.localeCompare(b.name, "pt-BR")
+    );
 
     // 2. Filtragem por Nome ou Descrição
     if (lowerCaseSearch) {
       sorted = sorted.filter(a => 
         a.name.toLowerCase().includes(lowerCaseSearch) ||
-        a.description.toLowerCase().includes(lowerCaseSearch)
+        a.description.toLowerCase().includes(lowerCaseSearch) ||
+        a.origin.toLowerCase().includes(lowerCaseSearch)
       );
     }
 
@@ -180,25 +173,32 @@ export default function ArmadurasPage() {
 
   return (
     <main className="w-full min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-black text-gray-100 px-6 py-12">
-      {/* Navegação */}
-      <div className="mb-8">
-        <Link href="/equipamentos" className="text-blue-400 hover:text-blue-300 transition-colors">
-          ← Voltar para Equipamentos
-        </Link>
-      </div>
 
       {/* Header */}
-      <div className="mb-12">
-        <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 mb-4">
-          🛡️ Armaduras & Escudos
-        </h1>
-        <p className="text-gray-400 text-lg">
-          Detalhes sobre proteção, penalidades e características de todas as armaduras e escudos.
-        </p>
-      </div>
+      <header className="p-6 border-b border-purple-900/50">
+        <Link href="/" className="inline-block group">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-400 via-cyan-300 to-teal-500 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(168,85,247,0.5)] group-hover:drop-shadow-[0_0_25px_rgba(168,85,247,0.7)] transition-all">
+            a-Tormenta
+          </h1>
+        </Link>
+        <div className="flex items-center gap-2 mt-2">
+          <Link href="/" className="text-cyan-400 hover:text-purple-300 text-sm transition-colors">
+            Início
+          </Link>
+          <span className="text-gray-600">/</span>
+          <Link href="/equipamentos" className="text-cyan-400 hover:text-purple-300 text-sm transition-colors">
+            Equipamentos
+          </Link>
+          <span className="text-gray-600">/</span>
+          <span className="text-gray-400 text-sm">Armaduras</span>
+        </div>
+      </header>
 
-      {/* Seção de Texto Introdutório (DIRETO NO COMPONENTE) */}
+      {/* Seção de Texto Introdutório */}
       <section className="mb-12 p-6 bg-gray-900/50 rounded-xl border border-blue-500/20">
+      <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 mb-4">
+          Armaduras & Escudos
+        </h1>
         <div className="space-y-4 text-gray-300 leading-relaxed">
           {/* Armaduras */}
           <h2 className="text-3xl font-bold text-blue-400 pt-4">Armaduras</h2>
@@ -207,13 +207,13 @@ export default function ArmadurasPage() {
           </p>
 
           {/* Armaduras Leves */}
-          <h3 className="text-2xl font-bold text-blue-300 pt-2">Armaduras Leves</h3>
+          <h3 className="text-1xl font-bold text-blue-300 pt-2">Armaduras Leves</h3>
           <p>
             Feitas de tecido, couro ou peles, oferecem pouca proteção, mas muita liberdade de movimentos. Vestir ou remover uma armadura leve é uma <strong>ação completa</strong>.
           </p>
 
           {/* Armaduras Pesadas */}
-          <h3 className="text-2xl font-bold text-blue-300 pt-2">Armaduras Pesadas</h3>
+          <h3 className="text-1xl font-bold text-blue-300 pt-2">Armaduras Pesadas</h3>
           <p>
             Feitas de cota de malha ou placas de aço. Oferecem maior proteção, mas restringem seus movimentos. Se usar uma armadura pesada, <strong>você não aplica sua Destreza na Defesa</strong> e tem seu <strong>deslocamento reduzido em 3m</strong>. Vestir ou remover uma armadura pesada <strong>demora cinco minutos</strong>. <strong>Dormir de armadura pesada deixa você fatigado pelo dia</strong>.
           </p>

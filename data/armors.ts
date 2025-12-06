@@ -1,53 +1,12 @@
 import { Armor, ArmorType } from "@/types/armors";
 
-// Texto Introdutório (Para ser inserido diretamente no page.tsx)
-export const armorIntroText = {
-  title: "Armaduras & Escudos",
-  sections: [
-    {
-      title: "Armaduras",
-      content: `Armaduras são classificadas em **leves e pesadas**, de acordo com a sua facilidade de uso e mobilidade.`,
-    },
-    {
-      title: "Armaduras Leves",
-      content: `Feitas de tecido, couro ou peles, oferecem pouca proteção, mas muita liberdade de movimentos. Vestir ou remover uma armadura leve é uma **ação completa**.`,
-    },
-    {
-      title: "Armaduras Pesadas",
-      content: `Feitas de cota de malha ou placas de aço. Oferecem maior proteção, mas restringem seus movimentos. Se usar uma armadura pesada, **você não aplica sua Destreza na Defesa** e tem seu **deslocamento reduzido em 3m**. Vestir ou remover uma armadura pesada **demora cinco minutos**. **Dormir de armadura pesada deixa você fatigado pelo dia**.`,
-    },
-    {
-      title: "Escudos",
-      content: `Existem escudos **leves** e **pesados**. Um personagem proficiente em escudo sabe usar ambos. Colocar ou tirar um escudo de qualquer tipo é uma **ação de movimento**.`,
-    },
-    {
-      title: "Ataque com Escudo",
-      content: `Caso possua proficiência em armas marciais, você pode usar um escudo para atacar, mas **perde seu bônus na Defesa até seu próximo turno** se fizer isso. Escudos leves causam 1d4 pontos de dano de impacto e escudos pesados causam 1d6 pontos de dano de impacto, ambos com crítico x2. Embora possam ser usados para atacar, escudos **não contam como armas**.`,
-    },
-    {
-      title: "Penalidade por Não Proficiência",
-      content: `Um personagem vestindo uma armadura ou empunhando escudo que não saiba usar aplica a **penalidade da armadura em todas as perícias baseadas em Força e Destreza**.`,
-    },
-    {
-      title: "Características das Armaduras e Escudos",
-      content: `
-        **Preço.** Este é o preço por armaduras completas — “partes” de armaduras não costumam ser vendidas separadamente e não fornecem proteção quando usadas de forma avulsa.
-        **Bônus na Defesa.** Cada armadura fornece um bônus na Defesa do usuário. Não se pode vestir uma armadura sobre outra. Pode-se usar armadura e escudo ao mesmo tempo (os bônus se acumulam), mas **não dois escudos**.
-        **Penalidade de Armadura.** Aplique a penalidade de armadura em testes de **Acrobacia, Furtividade e Ladinagem** (e em testes de **Atletismo para natação**). Penalidades de armaduras e escudos se acumulam.
-        **Espaço.** Quantos espaços a armadura ou escudo ocupa, importante para a capacidade de carga do personagem.
-      `,
-    },
-  ],
-};
-
-// Tabela 3-5: Armaduras & Escudos
 export const armors: Armor[] = [
   // --- Armaduras Leves ---
   {
     id: "armadura-acolchoada",
     name: "Armadura acolchoada",
     type: "Leve",
-    description: "A armadura mais básica, feita de tecido acolchoado. Oferece proteção mínima.",
+    description: "Uma túnica almofadada feita em linho ou lã. É a armadura mais leve, mas protege todo o corpo, fornecendo +2 em Fortitude.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 5",
     defenseBonus: 1,
@@ -58,7 +17,7 @@ export const armors: Armor[] = [
     id: "armadura-de-couro",
     name: "Armadura de couro",
     type: "Leve",
-    description: "Feita de couro curtido e endurecido. É a armadura leve mais comum.",
+    description: "O peitoral desta armadura é feito de couro curtido em óleo fervente, para ficar mais rígido, enquanto as demais partes são feitas de couro flexível.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 20",
     defenseBonus: 2,
@@ -69,7 +28,7 @@ export const armors: Armor[] = [
     id: "couro-batido",
     name: "Couro batido",
     type: "Leve",
-    description: "Couro fervido em cera ou óleo para maior rigidez. Boa proteção para armadura leve.",
+    description: "Versão mais pesada da armadura de couro, reforçada com rebites de metal.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 35",
     defenseBonus: 3,
@@ -80,7 +39,7 @@ export const armors: Armor[] = [
     id: "gibao-de-peles",
     name: "Gibão de peles",
     type: "Leve",
-    description: "Feito de peles grossas e couro. Oferece boa proteção, mas é um pouco mais restritivo.",
+    description: "Usada principalmente por bárbaros e selvagens, esta armadura é formada por várias camadas de peles e couro de animais.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 25",
     defenseBonus: 4,
@@ -91,19 +50,18 @@ export const armors: Armor[] = [
     id: "couraca",
     name: "Couraça",
     type: "Leve",
-    description: "Placa de metal que protege o tronco, com o resto em couro. O máximo em armadura leve.",
+    description: "A mais robusta das armaduras leves, formada por uma placa metálica que protege o peito e as costas, presa sobre um casaco de couro.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 500",
     defenseBonus: 5,
     armorPenalty: -4,
     spaces: 2,
   },
-  // --- Armaduras Pesadas ---
   {
     id: "brunea",
     name: "Brunea",
     type: "Pesada",
-    description: "Armadura de metal mais leve, feita de anéis costurados em couro.",
+    description: "Colete de couro coberto com plaquetas de metal sobrepostas, como escamas de um peixe. Por ser barata de produzir, é a armadura mais utilizada no Reinado por soldados de infantaria e guardas de castelo.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 50",
     defenseBonus: 5,
@@ -114,7 +72,7 @@ export const armors: Armor[] = [
     id: "cota-de-malha",
     name: "Cota de malha",
     type: "Pesada",
-    description: "Feita de milhares de anéis de metal interligados. Oferece excelente proteção.",
+    description: "Longa veste de anéis metálicos interligados, formando uma malha flexível e resistente, que vai até os joelhos.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 150",
     defenseBonus: 6,
@@ -125,7 +83,7 @@ export const armors: Armor[] = [
     id: "loriga-segmentada",
     name: "Loriga segmentada",
     type: "Pesada",
-    description: "Feita de tiras de metal sobrepostas. Boa proteção e flexibilidade relativa.",
+    description: "Composta por tiras horizontais de metal, esta armadura pesada é muito utilizada por legionários do Império de Tauron.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 250",
     defenseBonus: 7,
@@ -136,7 +94,7 @@ export const armors: Armor[] = [
     id: "meia-armadura",
     name: "Meia armadura",
     type: "Pesada",
-    description: "Combinação de cota de malha e placas de metal. Proteção superior.",
+    description: "Uma cota de malha reforçada com placas de metal.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 600",
     defenseBonus: 8,
@@ -147,19 +105,18 @@ export const armors: Armor[] = [
     id: "armadura-completa",
     name: "Armadura completa",
     type: "Pesada",
-    description: "O auge da proteção. Placas de metal cobrem o corpo inteiro.",
+    description: "A mais forte e pesada das armaduras, formada por placas de metal forjadas e encaixadas de modo a cobrir o corpo inteiro. Inclui uma túnica acolchoada para ser usada sob as placas. Correias e fivelas distribuem o peso da armadura pelo corpo inteiro. Esta armadura precisa ser feita sob medida para cada usuário; um ferreiro cobra T$ 200 para adaptar uma armadura completa a um novo usuário.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 3.000",
     defenseBonus: 10,
     armorPenalty: -5,
     spaces: 5,
   },
-  // --- Escudos ---
   {
     id: "escudo-leve",
     name: "Escudo leve",
     type: "Escudo",
-    description: "Pequeno e fácil de manusear. Pode ser usado com armas de uma mão.",
+    description: "Tipicamente feito de madeira, este escudo é amarrado no antebraço, deixando a mão livre. Você pode carregar um objeto na mão que empunha o escudo, mas não manusear uma arma.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 5",
     defenseBonus: 1,
@@ -170,7 +127,7 @@ export const armors: Armor[] = [
     id: "escudo-pesado",
     name: "Escudo pesado",
     type: "Escudo",
-    description: "Grande e robusto. Oferece mais proteção, mas é mais restritivo.",
+    description: "Normalmente feito de aço, este escudo é preso ao antebraço e também deve ser empunhado com firmeza, impedindo o usuário de usar aquela mão.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 15",
     defenseBonus: 2,

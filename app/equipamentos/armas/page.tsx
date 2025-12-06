@@ -45,7 +45,7 @@ const DamageTable = ({ data }: { data: DamageProgression[][] }) => {
   );
 };
 
-// 2. Componente para o Card de Arma (Grid) - AGORA EXIBE O PROPÓSITO
+// 2. Componente para o Card de Arma (Grid)
 const WeaponCard = ({ weapon }: { weapon: Weapon }) => (
   <div
     className={`group relative rounded-xl overflow-hidden bg-gradient-to-br from-red-950/40 to-black border border-red-500/20 p-6 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/20 text-left`}
@@ -121,7 +121,7 @@ const WeaponFilterableTable = ({ allWeapons }: { allWeapons: Weapon[] }) => {
   const allProficiencies: WeaponProficiency[] = ["Simples", "Marcial", "Exótica", "Fogo"];
   const allGrips: WeaponGrip[] = ["Leve", "Uma Mão", "Duas Mãos"];
   const allDamageTypes: DamageType[] = ["Corte", "Perfuração", "Impacto", "Corte/Perfuração"];
-  const allPurposes: WeaponPurpose[] = ["Corpo a Corpo", "Distância", "Munição"]; // NOVO
+  const allPurposes: WeaponPurpose[] = ["Corpo a Corpo", "Distância", "Munição"]; 
 
   const renderFilterGroup = (title: string, options: string[], key: keyof typeof filters) => (
     <div className="p-4 bg-gray-900/50 rounded-lg border border-red-500/20">
@@ -221,7 +221,8 @@ export default function ArmasPage() {
     if (lowerCaseSearch) {
       sorted = sorted.filter(w => 
         w.name.toLowerCase().includes(lowerCaseSearch) ||
-        w.description.toLowerCase().includes(lowerCaseSearch)
+        w.description.toLowerCase().includes(lowerCaseSearch) ||
+        w.origin.toLowerCase().includes(lowerCaseSearch)
       );
     }
 
@@ -290,10 +291,10 @@ export default function ArmasPage() {
             <strong>Ataque à Distância.</strong> Podem ser usadas para atacar alvos adjacentes ou à distância. Para atacar com uma arma de combate à distância, faça um teste de Pontaria. São subdivididas em de arremesso e de disparo:
           </p>
           <p className="ml-4">
-            • <strong>Arremesso.</strong> A própria arma é atirada, como uma adaga ou azagaia. Sacar uma arma de arremesso é uma ação de movimento. Quando você ataca com uma arma de arremesso, soma sua Força às rolagens de dano.
+            <strong>Arremesso.</strong> A própria arma é atirada, como uma adaga ou azagaia. Sacar uma arma de arremesso é uma ação de movimento. Quando você ataca com uma arma de arremesso, soma sua Força às rolagens de dano.
           </p>
           <p className="ml-4">
-            • <strong>Disparo.</strong> A arma dispara um projétil, como um arco atira flechas. Sacar a munição de uma arma de disparo é uma ação livre. Recarregar uma arma de disparo exige as duas mãos. Quando ataca com uma arma de disparo, não soma nenhum valor de atributo às rolagens de dano.
+            <strong>Disparo.</strong> A arma dispara um projétil, como um arco atira flechas. Sacar a munição de uma arma de disparo é uma ação livre. Recarregar uma arma de disparo exige as duas mãos. Quando ataca com uma arma de disparo, não soma nenhum valor de atributo às rolagens de dano.
           </p>
 
           <h2 className="text-3xl font-bold text-red-400 pt-4">Empunhadura</h2>
@@ -316,15 +317,15 @@ export default function ArmasPage() {
   </p>
   <p>
     <strong>Crítico.</strong> Quando você acerta um ataque rolando um 20 natural (ou seja, o dado mostra um 20), faz um acerto crítico. Neste caso, multiplique os dados de dano por 2. Bônus numéricos e dados extras (como pela habilidade Ataque Furtivo) não são multiplicados. Certas armas fazem críticos em margem maior que 20 ou multiplicam o dano por um valor maior que 2.
-    <p className="ml-4">      • <strong>19.</strong> A arma tem margem de ameaça 19 ou 20.    </p>
+    <p className="ml-4">      <strong>19.</strong> A arma tem margem de ameaça 19 ou 20.    </p>
     <p className="ml-4">
-      • <strong>18.</strong> A arma tem margem de ameaça 18, 19 ou 20.
+       <strong>18.</strong> A arma tem margem de ameaça 18, 19 ou 20.
     </p>
     <p className="ml-4">
-      • <strong>x2, x3, x4.</strong> A arma causa dano dobrado, triplicado ou quadruplicado em caso de acerto crítico.
+       <strong>x2, x3, x4.</strong> A arma causa dano dobrado, triplicado ou quadruplicado em caso de acerto crítico.
     </p>
     <p className="ml-4">
-      • <strong>19/x3.</strong> A arma tem margem de ameaça 19 ou 20 e causa dano triplicado em caso de acerto crítico.
+       <strong>19/x3.</strong> A arma tem margem de ameaça 19 ou 20 e causa dano triplicado em caso de acerto crítico.
     </p>
   </p>
   <p>
@@ -379,6 +380,15 @@ export default function ArmasPage() {
   <p>
     Armas naturais representam partes específicas do corpo de uma criatura que podem ser usadas para desferir ataques, como chifres, garras ou uma poderosa mordida. Armas naturais são consideradas armas leves corpo a corpo e, assim como ataques desarmados, não são afetadas por efeitos que afetem especificamente objetos ou que afetem armas que precisam ser empunhadas. A quantidade e tipo de dano de cada arma natural é apresentada em sua descrição.
   </p>
+
+  <h3 className="text-2xl font-bold text-red-400 pt-4">Munições</h3>
+  <p>
+    Projéteis usados em armas de disparo. Munição é vendida em pacotes com projéteis suficientes para 20 ataques. Sempre que você faz um ataque com uma arma de disparo, a munição é perdida, independentemente de o ataque acertar ou não.
+  </p>
+  <p>
+    Pacotes de munições podem receber melhorias e encantos como armas (mas efeitos de munições não acumulam com os da arma de disparo). O aumento no preço de um pacote de munição superior ou mágico é metade do aumento de uma arma (uma munição com uma melhoria, por exemplo, custa +T$ 150, em vez de +T$ 300).
+  </p>
+  
         </div>
       </section>
 

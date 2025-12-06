@@ -697,7 +697,7 @@ export const weapons: Weapon[] = [
     damage: "—",
     critical: "—",
     range: "—",
-    type: "Corte",
+    type: "—",
     spaces: 2,
   },
   {
