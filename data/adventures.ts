@@ -5688,4 +5688,102 @@ export const adventures: Adventure[] = [
     }
   ]
   },
+  {
+  id: "63",
+  name: "Oráculo",
+  theme: "Fantasia e Mistério Tecnológico",
+  image: "/aventuras/oraculo.png",
+  summary: "A voz de um oráculo silencia, levando os heróis a investigar o santuário interno. Eles descobrem que a entidade é, na verdade, uma máquina antiga que precisa de reparos, expondo um segredo guardado pelo clero.",
+  sections: [
+    {
+      type: "text",
+      content: "Esta miniaventura foi criada para RPGs de fantasia como Fabula Ultima e Tormenta20. É uma trama flexível, sem regras, adaptável às necessidades do seu grupo. Pode ser jogada como aventura avulsa ou início de uma campanha."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "ESTRANHA ENTIDADE"
+    },
+    {
+      type: "text",
+      content: "O oráculo de um templo — a voz de uma entidade chamada Aquele-que-Sussurra — está em silêncio há alguns dias. Segundo as crônicas, essa voz é um fragmento da própria entidade, encarnada em um sacerdote confinado no santuário interno. Por causa de seus votos, nenhum outro pode entrar ali, sob risco de maculá-lo."
+    },
+    {
+      type: "text",
+      content: "Agora, atrás da grade onde antes ecoavam as profecias, só se ouve um chiado constante, como o estalo de lenha queimando."
+    },
+    {
+      type: "text",
+      content: "Diante disso, uma alta-sacerdotisa convoca um grupo de aventureiros para investigar. Ela tem um motivo: os heróis ficaram conhecidos por resolver recentemente um problema grave na região. O curioso é que fizeram isso à distância, sem jamais terem estado no local da tragédia."
+    },
+    {
+      type: "text",
+      content: "Essa aventura passada não será jogada — os próprios jogadores devem inventá-la retrospectivamente. Quando a alta-sacerdotisa pede que recordem como resolveram a crise, um jogador, escolhido aleatoriamente, narra o início da história e define o problema. Pode começar dizendo, por exemplo: “Sim, eu me lembro, foi naquela vez em que nós…”. Ele tem até 2 minutos para falar. Ao final, outro jogador deve levantar uma objeção, como: “Mas como poderíamos ter feito isso, se estávamos a léguas daqui?”. O narrador precisa responder com alguma justificativa e então prosseguir com a história."
+    },
+    {
+      type: "text",
+      content: "Se toda mesa, incluindo o mestre, concordar que a narrativa criada foi coerente — ou interessante — os sacerdotes do templo colaboram com o grupo. Se não, os heróis serão considerados charlatões ou incompetentes. Nesse caso, embora a alta-sacerdotisa ainda mantenha o grupo no caso, o resto do clero será menos prestativo, e a dificuldade dos testes aumentará."
+    },
+    {
+      type: "text",
+      content: "Após descansarem da viagem pela manhã, durante a tarde o grupo pode descobrir:"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "text",
+      content: "O oráculo repetiu a frase “Akash en runa” por 3 vezes antes de silenciar. Personagens eruditos, ou que consultem a biblioteca do templo, podem descobrir que significa erro, em um idioma repleto de alegorias."
+    },
+    {
+      type: "text",
+      content: "A gema mágica verde que brilhava sobre a grade agora está opaca e vermelha."
+    },
+    {
+      type: "text",
+      content: "Superfícies aquosas (bacias, cálices, poças) vibram mesmo sem vento."
+    },
+    {
+      type: "text",
+      content: "Um dos corredores exala forte cheiro de ar queimado, semelhante ao deixado por um trovão."
+    },
+    {
+      type: "text",
+      content: "No museu do templo há um disco dourado de origem e função desconhecidas."
+    },
+    {
+      type: "text",
+      content: "Ao fim do dia, o grupo é convidado para um jantar com a alta-sacerdotisa, em que ela o motivo do chamado: que os aventureiros explorem os meandros labirínticos do santuário interno durante o resto da noite. Isso seria permitido, já que os personagens não fizeram votos, mas seria escandaloso se os fiéis descobrissem. Pelo sigilo, o grupo receberá uma recompensa adequada."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "O SANTUÁRIO INTERNO"
+    },
+    {
+      type: "text",
+      content: "O santuário é um labirinto de corredores estreitos. No centro da câmara principal repousa um orbe mágico, preso a uma estrutura metálica mais antiga que o templo. O cristal está apagado, coberto de teias, exalando um cheiro acre de queimado. Acima, uma fenda no teto deixou entrar um inseto gigante, preso nas teias."
+    },
+    {
+      type: "text",
+      content: "Se algum personagem tentar ativar o orbe de imediato, a esfera aquece em excesso: o metal range, uma fumaça densa se espalha e sufoca o ambiente. Em segundos, todos sofrem dano de fogo e asfixia, até que o sistema se apague sozinho. A única forma de religá-lo é limpar as teias que o bloqueiam, mas, ao fazê-lo, o inseto preso se agita. Sua carcaça ressecada se reanima como um morto-vivo e ataca o grupo. Use uma ficha de inseto gigante ou criatura semelhante, adaptando-a com poderes e fraquezas de morto-vivo!"
+    },
+    {
+      type: "text",
+      content: "Após derrotar o inimigo, os heróis purificam o orbe. Ao ser reativado, ele repete em voz metálica uma frase — que, adequadamente traduzida, significa “Memória corrompida. Restauração necessária”. A investigação indica que é preciso inserir um disco de ouro, encontrado no museu do templo, em um dos altares do oráculo. Feito isso, o orbe exige uma senha. A pergunta que faz, traduzida, significa “Qual a palavra mágica?”. A resposta correta é simplesmente “Por favor!”, mas o grupo precisa, de mesmo modo, traduzir tanto a pergunta quanto a resposta."
+    },
+    {
+      type: "text",
+      content: "Depois que o disco é inserido, luzes percorrem o metal e símbolos surgem no cristal, significando “Restauração iniciada”. Tudo indica que algo vasto está em curso. Mas o tempo passa e o processo nunca termina. Certa noite, a alta-sacerdotisa chama os aventureiros hospedados no templo. Ela agradece, paga a recompensa e declara abruptamente que a missão foi concluída."
+    },
+    {
+      type: "text",
+      content: "Se questionada quanto a isso, admite sem rodeios que a restauração pode levar anos ou jamais se completar. Ela sempre soube que o oráculo era uma máquina. Para sua crença, a promessa do “eterno retorno” do oráculo é acima de tudo, um excelente teste de fé para os novos iniciados."
+    }
+  ]
+}
 ];
