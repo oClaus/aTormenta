@@ -51,4 +51,20 @@ export const equipmentCategories: EquipmentCategory[] = [
     color: "from-yellow-600 to-white-900",
     href: "/equipamentos/aventura",
   },
+  {
+    id: "musicais",
+    title: "Instrumentos Musicais",
+    description: "Alguns itens da categoria ferramentas são instrumentos musicais. Tais itens são de grande importância para bardos.",
+    icon: "🎻",
+    color: "from-pink-600 to-white-900",
+    href: "/equipamentos/musicais",
+  },
+  {
+    id: "ferramentas",
+    title: "Ferramentas",
+    description: "Itens que afetam perícia, eliminando penalidades ou fornecendo bônus.",
+    icon: "🛠️",
+    color: "from-indigo-600 to-white-900",
+    href: "/equipamentos/ferramentas",
+  },
 ];

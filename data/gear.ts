@@ -1,20 +1,5 @@
 import { Gear } from "@/types/gear";
 
-// Texto Introdutório (Para ser inserido diretamente no page.tsx)
-export const gearIntroText = {
-  title: "Equipamentos de Aventura",
-  sections: [
-    {
-      title: "Itens Essenciais",
-      content: `Estes são os itens básicos que todo aventureiro precisa para sobreviver em Arton. Eles variam desde ferramentas simples até suprimentos de emergência.`,
-    },
-    {
-      title: "Capacidade de Carga",
-      content: `Lembre-se que cada item ocupa um certo número de espaços. Gerenciar sua capacidade de carga é crucial para o sucesso de uma aventura.`,
-    },
-  ],
-};
-
 // Tabela de Equipamento de Aventura
 export const gear: Gear[] = [
   {
@@ -28,7 +13,7 @@ export const gear: Gear[] = [
   {
     id: "algemas",
     name: "Algemas",
-    description: "Usadas para prender prisioneiros. Requerem um teste de Força (CD 25) para serem quebradas.",
+    description: "Um par de algemas para criaturas Médias. Prender uma criatura que não esteja indefesa exige empunhar a algema, agarrar o alvo (veja “Manobras de Combate”) e vencer um novo teste de agarrar contra ela. Você pode prender os dois pulsos da pessoa (–5 em testes que exijam o uso das mãos, impede conjuração) ou um dos pulsos dela em um objeto imóvel adjacente, caso haja, para impedir que ela se mova. Escapar das algemas exige uma ação completa e um teste de Acrobacia contra CD 30 ou de Força contra CD 25 — ou ter as chaves...",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 15",
     spaces: "1",
@@ -36,7 +21,7 @@ export const gear: Gear[] = [
   {
     id: "arpeu",
     name: "Arpéu",
-    description: "Gancho de escalada, geralmente usado com uma corda.",
+    description: "Um gancho de aço amarrado na ponta de uma corda para se fixar em muros, janelas, parapeitos de prédios... Prender um arpéu exige um teste de Pontaria (CD 15). Subir um muro com a ajuda de uma corda fornece +5 no teste de Atletismo.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 5",
     spaces: "1",
@@ -44,7 +29,7 @@ export const gear: Gear[] = [
   {
     id: "bandoleira-de-pocoes",
     name: "Bandoleira de poções",
-    description: "Permite guardar e sacar poções rapidamente.",
+    description: "Um cinto de couro com bolsos que comportam pequenos frascos. Se você estiver vestindo uma bandoleira, pode sacar itens alquímicos e poções como uma ação livre.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 20",
     spaces: "1",
@@ -52,23 +37,23 @@ export const gear: Gear[] = [
   {
     id: "barraca",
     name: "Barraca",
-    description: "Abrigo portátil para descanso seguro.",
+    description: "Esta barraca de lona conta como um saco de dormir para duas pessoas e fornece +2 em testes de Sobrevivência para acampar.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 10",
     spaces: "1",
   },
   {
     id: "corda",
-    name: "Corda (15m)",
-    description: "Corda de cânhamo de 15 metros. Essencial para escaladas e resgates.",
+    name: "Corda",
+    description: "Um rolo com 10 metros de corda de cânhamo, o mesmo tipo usado em navios. Possui diversas utilidades: pode ajudar a descer um buraco ou muro (+5 em testes de Atletismo nessas situações), amarrar pessoas etc. Dar um nó firme ou especial (por exemplo, capaz de deslizar, se desfazer com um puxão etc.) exige um teste de Destreza (CD 15). Arrebentar a corda exige 2 pontos de dano de corte ou uma ação padrão e um teste de Força (CD 20).",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 1",
     spaces: "1",
   },
   {
     id: "espelho",
-    name: "Espelho (pequeno)",
-    description: "Usado para verificar cantos ou sinalizar.",
+    name: "Espelho",
+    description: "Este pequeno espelho possui diversas utilidades: observar cantos, fazer sinais de luz e, claro, garantir que você esteja apresentável.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 10",
     spaces: "1",
@@ -76,7 +61,7 @@ export const gear: Gear[] = [
   {
     id: "lampiao",
     name: "Lampião",
-    description: "Fonte de luz mais duradoura que tochas.",
+    description: "Um cilindro com uma alça e duas portinholas. Uma chama alimentada por óleo é acesa dentro do cilindro e uma das portinholas aberta deixa a luz sair. Acender um lampião é uma ação padrão e sua luz ilumina um raio com 15m. Carregar um lampião com óleo é uma ação padrão e ele dura uma cena.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 7",
     spaces: "1",
@@ -84,7 +69,7 @@ export const gear: Gear[] = [
   {
     id: "mochila",
     name: "Mochila",
-    description: "Permite carregar itens de forma mais eficiente.",
+    description: "Uma bolsa de lona com tiras para ser carregada nas costas. Não conta como item vestido.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 2",
     spaces: "—",
@@ -92,7 +77,7 @@ export const gear: Gear[] = [
   {
     id: "mochila-de-aventureiro",
     name: "Mochila de aventureiro",
-    description: "Kit completo com itens essenciais para um aventureiro iniciante.",
+    description: "Feita de couro resistente, esta mochila é repleta de bolsos para prender equipamento. Vestir uma mochila de aventureiro aumenta sua capacidade de carga em 2 espaços (ela própria não gasta um espaço).",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 50",
     spaces: "—",
@@ -100,7 +85,7 @@ export const gear: Gear[] = [
   {
     id: "oleo",
     name: "Óleo",
-    description: "Usado para lubrificar ou como combustível para lampiões.",
+    description: "Um frasco com óleo inflamável para lampião. Você pode atirar o frasco em uma criatura em alcance curto com uma ação padrão. Se ela sofrer dano de fogo até o fim do seu próximo turno, sofre 1d6 pontos de dano extra e fica em chamas.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 0,1",
     spaces: "0,5",
@@ -108,7 +93,7 @@ export const gear: Gear[] = [
   {
     id: "organizador-de-pergaminhos",
     name: "Organizador de pergaminhos",
-    description: "Protege pergaminhos de danos e umidade.",
+    description: "Um estojo de madeira ou couro rígido. Se você estiver vestindo um organizador de pergaminhos, pode sacar pergaminhos como uma ação livre.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 25",
     spaces: "1",
@@ -116,7 +101,7 @@ export const gear: Gear[] = [
   {
     id: "pe-de-cabra",
     name: "Pé de cabra",
-    description: "Ferramenta para abrir portas e caixas trancadas.",
+    description: "Esta barra de ferro fornece +5 em testes de Força para abrir portas, janelas e baús fechados. Um pé de cabra pode ser usado como arma, com as estatísticas de uma clava.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 2",
     spaces: "1",
@@ -124,7 +109,7 @@ export const gear: Gear[] = [
   {
     id: "saco-de-dormir",
     name: "Saco de dormir",
-    description: "Essencial para um descanso confortável e seguro.",
+    description: "Um colchão com uma coberta fina o bastante para ser enrolada e amarrada, é especialmente útil para aventureiros, que nunca sabem onde vão passar a noite. Dormir ao relento sem um acampamento e um saco de dormir diminui sua recuperação de PV e PM.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 1",
     spaces: "1",
@@ -132,7 +117,7 @@ export const gear: Gear[] = [
   {
     id: "simbolo-sagrado",
     name: "Símbolo sagrado",
-    description: "Item de foco para conjuradores divinos.",
+    description: "Um medalhão de madeira ou metal com o símbolo de uma divindade. Se você estiver vestindo (normalmente com uma corrente ao redor do pescoço) ou empunhando o símbolo sagrado de um deus do qual é devoto, recebe +1 em testes de resistência.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 5",
     spaces: "1",
@@ -140,15 +125,15 @@ export const gear: Gear[] = [
   {
     id: "tocha",
     name: "Tocha",
-    description: "Fonte de luz barata e temporária.",
+    description: "Um bastão de madeira com algum combustível na ponta (geralmente trapos embebidos em parafina). Acender uma tocha é uma ação padrão. Ela ilumina um raio de 9m e dura uma cena. Pode ser usada como uma arma simples leve (dano 1d4 de impacto mais 1 de fogo, crítico x2).",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 0,1",
     spaces: "1",
   },
   {
     id: "vara-de-madeira",
-    name: "Vara de madeira (3m)",
-    description: "Usada para testar armadilhas ou alcançar objetos.",
+    name: "Vara de madeira",
+    description: " Uma haste com 3m de comprimento. Útil para alcançar pontos distantes, mas frágil demais para servir como arma.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 0,2",
     spaces: "1",
