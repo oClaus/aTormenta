@@ -5,6 +5,12 @@ import Link from "next/link";
 import { alchemy, } from "@/data/alchemys";
 import { Alchemy, AlchemyType } from "@/types/alchemy";
 
+const typeColorMap = {
+  "Preparados": "text-yellow-500",
+  "Catalisadores": "text-blue-600",  
+  "Venenos": "text-lime-500",  
+};
+
 
 // 2. Componente para a Tabela Filtrável de Armaduras e Escudos
 const AlchemyFilterableTable = ({ allAlchemys }: { allAlchemys: Alchemy[] }) => {
@@ -70,7 +76,7 @@ const AlchemyFilterableTable = ({ allAlchemys }: { allAlchemys: Alchemy[] }) => 
       {/* Barra de Busca */}
       <input
         type="text"
-        placeholder="Buscar armadura ou escudo por nome..."
+        placeholder="Buscar alquímicos..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         className="w-full px-6 py-3 rounded-lg bg-gray-800 border border-green-500/30 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-500/20 transition-all"
@@ -94,11 +100,11 @@ const AlchemyFilterableTable = ({ allAlchemys }: { allAlchemys: Alchemy[] }) => 
           <tbody className="divide-y divide-green-500/20">
             {filteredArmors.map((alchemy, index) => (
               <tr key={alchemy.id} className={index % 2 === 0 ? "bg-gray-800/50" : "bg-gray-900/50 hover:bg-gray-700/50 transition-colors"}>
-                <td className="px-4 py-2 text-sm font-medium text-green-300">
+                <td className="px-4 py-2 text-sm font-medium text-green-100">
                   {alchemy.name}
                   <div className="text-xs text-gray-300 break-words">{alchemy.description}</div>
-                  <div className="mt-1 text-xs text-gray-500">{alchemy.type}</div>
-                  <div className="mt-1 text-xs text-zinc-400">Origem: {alchemy.origin}</div>
+                  <div className="mt-1 text-xs">  <div className={typeColorMap[alchemy.type]}> {alchemy.type}</div></div>
+                  <div className="mt-1 text-xs text-zinc-100">Origem: {alchemy.origin}</div>
                 </td>
                 <td className="w-24 px-4 pr-4 py-2 text-right text-sm text-gray-300">{alchemy.price}</td>
                 <td className="w-20 px-4 pr-4 py-2 text-center text-sm text-gray-300">{alchemy.spaces}</td>
@@ -107,7 +113,7 @@ const AlchemyFilterableTable = ({ allAlchemys }: { allAlchemys: Alchemy[] }) => 
           </tbody>
         </table>
         {filteredArmors.length === 0 && (
-          <div className="text-center py-8 text-gray-500 bg-gray-900/50">Nenhuma armadura ou escudo encontrado com os filtros aplicados.</div>
+          <div className="text-center py-8 text-gray-500 bg-gray-900/50">Nenhuma alquímico com os filtros aplicados.</div>
         )}
       </div>
     </div>

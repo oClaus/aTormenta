@@ -317,16 +317,10 @@ export default function ArmasPage() {
   </p>
   <p>
     <strong>Crítico.</strong> Quando você acerta um ataque rolando um 20 natural (ou seja, o dado mostra um 20), faz um acerto crítico. Neste caso, multiplique os dados de dano por 2. Bônus numéricos e dados extras (como pela habilidade Ataque Furtivo) não são multiplicados. Certas armas fazem críticos em margem maior que 20 ou multiplicam o dano por um valor maior que 2.
-    <p className="ml-4">      <strong>19.</strong> A arma tem margem de ameaça 19 ou 20.    </p>
-    <p className="ml-4">
-       <strong>18.</strong> A arma tem margem de ameaça 18, 19 ou 20.
-    </p>
-    <p className="ml-4">
-       <strong>x2, x3, x4.</strong> A arma causa dano dobrado, triplicado ou quadruplicado em caso de acerto crítico.
-    </p>
-    <p className="ml-4">
-       <strong>19/x3.</strong> A arma tem margem de ameaça 19 ou 20 e causa dano triplicado em caso de acerto crítico.
-    </p>
+    <p className="ml-4"><strong>19.</strong> A arma tem margem de ameaça 19 ou 20.</p>
+    <p className="ml-4"><strong>18.</strong> A arma tem margem de ameaça 18, 19 ou 20.</p>
+    <p className="ml-4"><strong>x2, x3, x4.</strong> A arma causa dano dobrado, triplicado ou quadruplicado em caso de acerto crítico.</p>
+    <p className="ml-4"><strong>19/x3.</strong> A arma tem margem de ameaça 19 ou 20 e causa dano triplicado em caso de acerto crítico.</p>
   </p>
   <p>
     <strong>Alcance.</strong> Armas com alcance podem ser usadas para ataques à distância. As categorias de alcance são curto (9m), médio (30m) e longo (90m). Você pode atacar dentro do alcance sem sofrer penalidades. Você pode atacar até o dobro do alcance, mas sofre –5 no teste de ataque. Armas sem alcance podem ser arremessadas em alcance curto com –5 no teste de ataque.

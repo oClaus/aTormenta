@@ -7,5 +7,5 @@ export interface Alchemy {
   description: string; // Para o card de visualização rápida
   origin: string; // Ex: "Tormenta20 - Jogo do Ano"
   price: string; // Ex: "T$ 5"
-  spaces: number; // Ex: 2
+  spaces: string; // Ex: 2
 }
