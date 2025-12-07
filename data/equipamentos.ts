@@ -67,4 +67,28 @@ export const equipmentCategories: EquipmentCategory[] = [
     color: "from-indigo-600 to-white-900",
     href: "/equipamentos/ferramentas",
   },
+  {
+    id: "vestuario",
+    title: "Vestuário",
+    description: "Todos os itens desta seção precisam ser vestidos para fornecerem seus benefícios. ",
+    icon: "🎩",
+    color: "from-zinc-600 to-white-900",
+    href: "/equipamentos/vestuario",
+  },
+  {
+    id: "esotericos",
+    title: "Esotéricos",
+    description: "Itens utilizados por conjuradores para lançar magias de forma mais eficiente. ",
+    icon: "🪄",
+    color: "from-rose-600 to-white-900",
+    href: "/equipamentos/esotericos",
+  },
+  {
+    id: "alquimicos",
+    title: "Alquímicos",
+    description: "Inclui preparados, catalisadores e venenos",
+    icon: "☠️",
+    color: "from-green-600 to-white-900",
+    href: "/equipamentos/alquimicos",
+  },
 ];
