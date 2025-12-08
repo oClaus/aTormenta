@@ -65,14 +65,15 @@ const WeaponCard = ({ weapon }: { weapon: Weapon }) => (
   </div>
 );
 
-// 3. Componente para a Tabela Filtrável de Armas - AGORA COM FILTRO DE PROPÓSITO
+// 3. Componente para a Tabela Filtrável de Armas - DESCRIÇÃO INCLUÍDA NA COLUNA NOME
+
 const WeaponFilterableTable = ({ allWeapons }: { allWeapons: Weapon[] }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [filters, setFilters] = useState({
     proficiency: [] as WeaponProficiency[],
     grip: [] as WeaponGrip[],
     type: [] as DamageType[],
-    purpose: [] as WeaponPurpose[], // NOVO FILTRO
+    purpose: [] as WeaponPurpose[],
   });
 
   const handleFilterChange = (key: keyof typeof filters, value: string) => {
@@ -102,17 +103,17 @@ const WeaponFilterableTable = ({ allWeapons }: { allWeapons: Weapon[] }) => {
 
     // 3. Filtrar por Empunhadura
     if (filters.grip.length > 0) {
-      filtered = filtered.filter(w => filters.grip.includes(w.grip));
+        filtered = filtered.filter(w => filters.grip.includes(w.grip));
     }
 
     // 4. Filtrar por Tipo de Dano
     if (filters.type.length > 0) {
-      filtered = filtered.filter(w => filters.type.includes(w.type));
+        filtered = filtered.filter(w => filters.type.includes(w.type));
     }
 
-    // 5. Filtrar por Propósito (NOVO)
+    // 5. Filtrar por Propósito
     if (filters.purpose.length > 0) {
-      filtered = filtered.filter(w => filters.purpose.includes(w.purpose));
+        filtered = filtered.filter(w => filters.purpose.includes(w.purpose));
     }
 
     return filtered.sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
@@ -160,38 +161,59 @@ const WeaponFilterableTable = ({ allWeapons }: { allWeapons: Weapon[] }) => {
         {renderFilterGroup("Proficiência", allProficiencies, "proficiency")}
         {renderFilterGroup("Empunhadura", allGrips, "grip")}
         {renderFilterGroup("Tipo de Dano", allDamageTypes, "type")}
-        {renderFilterGroup("Propósito", allPurposes, "purpose")} {/* NOVO FILTRO */}
+        {renderFilterGroup("Propósito", allPurposes, "purpose")}
       </div>
 
       {/* Tabela de Armas */}
       <div className="overflow-x-auto shadow-lg rounded-xl border border-red-500/30">
-        <table className="min-w-full divide-y divide-red-500/30">
+        {/* Adiciona table-fixed para respeitar as larguras definidas */}
+        <table className="min-w-full divide-y divide-red-500/30 table-fixed">
           <thead className="bg-red-900/70 text-red-200">
             <tr>
-              <th scope="col" className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Nome</th>
-              <th scope="col" className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Propósito</th>
-              <th scope="col" className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Preço</th>
-              <th scope="col" className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Dano</th>
-              <th scope="col" className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Crítico</th>
-              <th scope="col" className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Alcance</th>
-              <th scope="col" className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Tipo</th>
-              <th scope="col" className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Espaços</th>
+              {/* Ajuste das larguras: Nome/Descrição agora tem 40% */}
+              <th scope="col" className="w-[40%] px-3 py-3 text-left text-xs font-medium uppercase tracking-wider">Nome & Detalhes</th>
+              <th scope="col" className="w-[10%] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider">Propósito</th>
+              <th scope="col" className="w-[8%] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider">Preço</th>
+              <th scope="col" className="w-[8%] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider">Dano</th>
+              <th scope="col" className="w-[9%] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider">Crítico</th>
+              <th scope="col" className="w-[9%] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider">Alcance</th>
+              <th scope="col" className="w-[11%] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider">Tipo</th>
+              <th scope="col" className="w-[5%] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider">Espaços</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-red-500/20">
             {filteredWeapons.map((weapon, index) => (
               <tr key={weapon.id} className={index % 2 === 0 ? "bg-gray-800/50" : "bg-gray-900/50 hover:bg-gray-700/50 transition-colors"}>
-                <td className="px-4 py-2 whitespace-nowrap text-sm font-medium text-red-300">
-                  {weapon.name}
-                  <div className="text-xs text-gray-500">{weapon.proficiency} • {weapon.grip}</div>
+                
+                {/* Coluna Nome/Descrição/Detalhes */}
+                <td className="px-3 py-2 text-sm font-medium text-red-300 align-top">
+                  {/* Nome (Maior destaque) */}
+                  <div className="font-bold">{weapon.name}</div>
+                  
+                  {/* Descrição (Abaixo do nome, menor e com quebra de linha) */}
+                  <p className="text-gray-400 text-xs mt-1 whitespace-pre-line">
+                      {weapon.description}
+                  </p>
+
+                  {/* Proficiência/Empunhadura (Separador visual) */}
+                  <div className="text-xs text-gray-500 mt-1">
+                      {weapon.proficiency} • {weapon.grip}
+                  </div>
+                  
+                  {/* Origem (Se for útil) */}
+                  <div className="text-xs text-pink-400 mt-0.5">
+                      Origem: {weapon.origin}
+                  </div>
                 </td>
-                <td className="px-4 py-2 whitespace-nowrap text-sm text-red-400">{weapon.purpose}</td> {/* NOVA CÉLULA */}
-                <td className="px-4 py-2 whitespace-nowrap text-sm text-gray-300">{weapon.price}</td>
-                <td className="px-4 py-2 whitespace-nowrap text-sm text-gray-300">{weapon.damage}</td>
-                <td className="px-4 py-2 whitespace-nowrap text-sm text-gray-300">{weapon.critical}</td>
-                <td className="px-4 py-2 whitespace-nowrap text-sm text-gray-300">{weapon.range}</td>
-                <td className="px-4 py-2 whitespace-nowrap text-sm text-gray-300">{weapon.type}</td>
-                <td className="px-4 py-2 whitespace-nowrap text-sm text-gray-300">{weapon.spaces}</td>
+                
+                {/* Outras Células (Centralizadas e Alinhadas ao Meio) */}
+                <td className="px-3 py-2 text-sm text-red-400 text-center align-middle">{weapon.purpose}</td>
+                <td className="px-3 py-2 text-sm text-gray-300 text-center align-middle">{weapon.price}</td>
+                <td className="px-3 py-2 text-sm text-gray-300 text-center align-middle">{weapon.damage}</td>
+                <td className="px-3 py-2 text-sm text-gray-300 text-center align-middle">{weapon.critical}</td>
+                <td className="px-3 py-2 text-sm text-gray-300 text-center align-middle">{weapon.range}</td>
+                <td className="px-3 py-2 text-sm text-gray-300 text-center align-middle">{weapon.type}</td>
+                <td className="px-3 py-2 text-sm text-gray-300 text-center align-middle">{weapon.spaces}</td>
               </tr>
             ))}
           </tbody>
