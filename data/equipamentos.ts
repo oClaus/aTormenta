@@ -99,4 +99,12 @@ export const equipmentCategories: EquipmentCategory[] = [
     color: "from-orange-600 to-white-900",
     href: "/equipamentos/alimentos",
   },
+  {
+    id: "animais",
+    title: "Animais",
+    description: "Animais e itens para melhorar animais.",
+    icon: "🐎",
+    color: "from-slate-800 to-white-900",
+    href: "/equipamentos/animais",
+  },
 ];

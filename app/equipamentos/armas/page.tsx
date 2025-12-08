@@ -159,13 +159,18 @@ const WeaponFilterableTable = ({ allWeapons }: { allWeapons: Weapon[] }) => {
             <tr>
               {/* Ajuste das larguras. Nome agora tem 20% para caber no mobile */}
               <th scope="col" className="w-[20%] px-3 py-3 text-left text-xs font-medium uppercase tracking-wider">Nome</th>
-              <th scope="col" className="w-[10%] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider">Propósito</th>
-              <th scope="col" className="w-[8%] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider">Preço</th>
+              <th scope="col" className="w-[10%] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider"><span className="hidden sm:inline">Propósito</span>
+                <span className="sm:hidden">Prop.</span></th>
+              <th scope="col" className="w-[8%] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider"><span className="hidden sm:inline">Preço</span>
+                <span className="sm:hidden">T$</span></th>
               <th scope="col" className="w-[8%] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider">Dano</th>
-              <th scope="col" className="w-[9%] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider">Crítico</th>
-              <th scope="col" className="w-[10%] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider">Alcance</th>
+              <th scope="col" className="w-[9%] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider"><span className="hidden sm:inline">Crítico</span>
+                <span className="sm:hidden">Crit.</span></th>
+              <th scope="col" className="w-[10%] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider"><span className="hidden sm:inline">Alcance</span>
+                <span className="sm:hidden">Alc.</span></th>
               <th scope="col" className="w-[15%] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider">Tipo</th>
-              <th scope="col" className="w-[5%] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider">Espaços</th>
+              <th scope="col" className="w-[5%] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider"><span className="hidden sm:inline">Espaços</span>
+                <span className="sm:hidden">Esp.</span></th>
             </tr>
           </thead>
           <tbody className="divide-y divide-red-500/20">
