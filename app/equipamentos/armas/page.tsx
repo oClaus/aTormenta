@@ -45,27 +45,9 @@ const DamageTable = ({ data }: { data: DamageProgression[][] }) => {
   );
 };
 
-// 2. Componente para o Card de Arma (Grid)
-const WeaponCard = ({ weapon }: { weapon: Weapon }) => (
-  <div
-    className={`group relative rounded-xl overflow-hidden bg-gradient-to-br from-red-950/40 to-black border border-red-500/20 p-6 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/20 text-left`}
-  >
-    <h3 className="text-2xl font-bold text-red-300 mb-2 group-hover:text-red-200 transition-colors">
-      {weapon.name}
-    </h3>
-    <div className="text-xs font-semibold text-gray-400 mb-3">
-      {weapon.proficiency} • {weapon.grip} • {weapon.type} • <span className="text-red-400">{weapon.purpose}</span>
-    </div>
-    <p className="text-gray-400 text-sm whitespace-pre-line">
-      {weapon.description}
-    </p>
-    <div className="mt-4 text-xs text-pink-400">
-      Origem: {weapon.origin}
-    </div>
-  </div>
-);
+// **Componente WeaponCard REMOVIDO**
 
-// 3. Componente para a Tabela Filtrável de Armas - DESCRIÇÃO EM LINHA PRÓPRIA (Melhor para Mobile)
+// 2. Componente para a Tabela Filtrável de Armas - DESCRIÇÃO EM LINHA PRÓPRIA (Melhor para Mobile)
 
 const WeaponFilterableTable = ({ allWeapons }: { allWeapons: Weapon[] }) => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -93,7 +75,10 @@ const WeaponFilterableTable = ({ allWeapons }: { allWeapons: Weapon[] }) => {
 
     // 1. Filtrar por Nome
     if (lowerCaseSearch) {
-      filtered = filtered.filter(w => w.name.toLowerCase().includes(lowerCaseSearch));
+      filtered = filtered.filter(w => w.name.toLowerCase().includes(lowerCaseSearch) ||
+        w.description.toLowerCase().includes(lowerCaseSearch) || 
+        w.origin.toLowerCase().includes(lowerCaseSearch) 
+        );
     }
 
     // 2. Filtrar por Proficiência
@@ -219,7 +204,7 @@ const WeaponFilterableTable = ({ allWeapons }: { allWeapons: Weapon[] }) => {
                         </p>
                         {/* Origem */}
                         <div className="text-xs text-pink-400">
-                            Origem: {weapon.origin}
+                          {weapon.origin}
                         </div>
                     </td>
                 </tr>
@@ -239,27 +224,7 @@ const WeaponFilterableTable = ({ allWeapons }: { allWeapons: Weapon[] }) => {
 // --- Página Principal ---
 
 export default function ArmasPage() {
-  // NOVO ESTADO E LÓGICA DE BUSCA PARA O GRID DE CARDS
-  const [cardSearchTerm, setCardSearchTerm] = useState("");
-
-  const filteredCards = useMemo(() => {
-    const lowerCaseSearch = cardSearchTerm.toLowerCase();
-    
-    // 1. Ordenação Alfabética
-    let sorted = [...weapons].sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
-
-    // 2. Filtragem por Nome ou Descrição
-    if (lowerCaseSearch) {
-      sorted = sorted.filter(w => 
-        w.name.toLowerCase().includes(lowerCaseSearch) ||
-        w.description.toLowerCase().includes(lowerCaseSearch) ||
-        w.origin.toLowerCase().includes(lowerCaseSearch)
-      );
-    }
-
-    return sorted;
-  }, [cardSearchTerm]);
-
+  // **Estado e Lógica de Busca para o Card REMOVIDOS**
 
   return (
     <main className="w-full min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-black text-gray-100 px-6 py-12">
@@ -341,107 +306,84 @@ export default function ArmasPage() {
 
           <h2 className="text-3xl font-bold text-red-400 pt-4">Características das Armas</h2>
           <p>
-    <strong>Preço.</strong> Inclui acessórios básicos, como bainhas para lâminas e aljavas para flechas.
-  </p>
-  <p>
-    <strong>Dano.</strong> Quando você acerta um ataque, rola o dano indicado (acrescente modificadores, se houver). O resultado é subtraído dos pontos de vida do alvo. O dano na tabela se refere a armas normais, para criaturas Pequenas e Médias. Veja a Tabela Dano de Armas para armas menores ou maiores.
-  </p>
-  <p>
-    <strong>Crítico.</strong> Quando você acerta um ataque rolando um 20 natural (ou seja, o dado mostra um 20), faz um acerto crítico. Neste caso, multiplique os dados de dano por 2. Bônus numéricos e dados extras (como pela habilidade Ataque Furtivo) não são multiplicados. Certas armas fazem críticos em margem maior que 20 ou multiplicam o dano por um valor maior que 2.
-    <p className="ml-4"><strong>19.</strong> A arma tem margem de ameaça 19 ou 20.</p>
-    <p className="ml-4"><strong>18.</strong> A arma tem margem de ameaça 18, 19 ou 20.</p>
-    <p className="ml-4"><strong>x2, x3, x4.</strong> A arma causa dano dobrado, triplicado ou quadruplicado em caso de acerto crítico.</p>
-    <p className="ml-4"><strong>19/x3.</strong> A arma tem margem de ameaça 19 ou 20 e causa dano triplicado em caso de acerto crítico.</p>
-  </p>
-  <p>
-    <strong>Alcance.</strong> Armas com alcance podem ser usadas para ataques à distância. As categorias de alcance são curto (9m), médio (30m) e longo (90m). Você pode atacar dentro do alcance sem sofrer penalidades. Você pode atacar até o dobro do alcance, mas sofre –5 no teste de ataque. Armas sem alcance podem ser arremessadas em alcance curto com –5 no teste de ataque.
-  </p>
-  <p>
-    <strong>Tipo.</strong> Armas tipicamente causam dano por corte (C), impacto (I) ou perfuração (P). Certas criaturas são resistentes ou imunes a certos tipos de dano.
-  </p>
-  <p>
-    <strong>Espaço.</strong> Quantos espaços a arma ocupa, importante para a capacidade de carga do personagem.
-  </p>
+            <strong>Preço.</strong> Inclui acessórios básicos, como bainhas para lâminas e aljavas para flechas.
+          </p>
+          <p>
+            <strong>Dano.</strong> Quando você acerta um ataque, rola o dano indicado (acrescente modificadores, se houver). O resultado é subtraído dos pontos de vida do alvo. O dano na tabela se refere a armas normais, para criaturas Pequenas e Médias. Veja a Tabela Dano de Armas para armas menores ou maiores.
+          </p>
+          <p>
+            <strong>Crítico.</strong> Quando você acerta um ataque rolando um 20 natural (ou seja, o dado mostra um 20), faz um acerto crítico. Neste caso, multiplique os dados de dano por 2. Bônus numéricos e dados extras (como pela habilidade Ataque Furtivo) não são multiplicados. Certas armas fazem críticos em margem maior que 20 ou multiplicam o dano por um valor maior que 2.
+            <p className="ml-4"><strong>19.</strong> A arma tem margem de ameaça 19 ou 20.</p>
+            <p className="ml-4"><strong>18.</strong> A arma tem margem de ameaça 18, 19 ou 20.</p>
+            <p className="ml-4"><strong>x2, x3, x4.</strong> A arma causa dano dobrado, triplicado ou quadruplicado em caso de acerto crítico.</p>
+            <p className="ml-4"><strong>19/x3.</strong> A arma tem margem de ameaça 19 ou 20 e causa dano triplicado em caso de acerto crítico.</p>
+          </p>
+          <p>
+            <strong>Alcance.</strong> Armas com alcance podem ser usadas para ataques à distância. As categorias de alcance são curto (9m), médio (30m) e longo (90m). Você pode atacar dentro do alcance sem sofrer penalidades. Você pode atacar até o dobro do alcance, mas sofre –5 no teste de ataque. Armas sem alcance podem ser arremessadas em alcance curto com –5 no teste de ataque.
+          </p>
+          <p>
+            <strong>Tipo.</strong> Armas tipicamente causam dano por corte (C), impacto (I) ou perfuração (P). Certas criaturas são resistentes ou imunes a certos tipos de dano.
+          </p>
+          <p>
+            <strong>Espaço.</strong> Quantos espaços a arma ocupa, importante para a capacidade de carga do personagem.
+          </p>
 
-  <h3 className="text-2xl font-bold text-red-400 pt-4">Habilidades de Armas</h3>
-  <p>
-    Algumas armas possuem uma ou mais das habilidades a seguir.
-  </p>
-  <ul>
-    <li>
-      <strong>Adaptável.</strong> Uma arma de uma mão com esta habilidade pode ser usada com as duas mãos para aumentar seu dano em um passo.
-    </li>
-    <li>
-      <strong>Ágil.</strong> Pode ser usada com Acuidade com Arma, mesmo não sendo uma arma leve.
-    </li>
-    <li>
-      <strong>Alongada.</strong> Dobra o alcance natural do atacante, mas não permite atacar um adversário adjacente.
-    </li>
-    <li>
-      <strong>Desbalanceada.</strong> Impõe uma penalidade de –2 em testes de ataque.
-    </li>
-    <li>
-      <strong>Dupla.</strong> Pode ser usada com Estilo de Duas Armas (e poderes similares) para fazer ataques adicionais, como se fosse uma arma de uma mão e uma arma leve. Cada “ponta” conta como uma arma separada.
-    </li>
-    <li>
-      <strong>Versátil.</strong> Fornece bônus em uma ou mais manobras (cumulativo com outros bônus de itens), conforme a arma.
-    </li>
-  </ul>
+          <h3 className="text-2xl font-bold text-red-400 pt-4">Habilidades de Armas</h3>
+          <p>
+            Algumas armas possuem uma ou mais das habilidades a seguir.
+          </p>
+          <ul>
+            <li>
+              <strong>Adaptável.</strong> Uma arma de uma mão com esta habilidade pode ser usada com as duas mãos para aumentar seu dano em um passo.
+            </li>
+            <li>
+              <strong>Ágil.</strong> Pode ser usada com Acuidade com Arma, mesmo não sendo uma arma leve.
+            </li>
+            <li>
+              <strong>Alongada.</strong> Dobra o alcance natural do atacante, mas não permite atacar um adversário adjacente.
+            </li>
+            <li>
+              <strong>Desbalanceada.</strong> Impõe uma penalidade de –2 em testes de ataque.
+            </li>
+            <li>
+              <strong>Dupla.</strong> Pode ser usada com Estilo de Duas Armas (e poderes similares) para fazer ataques adicionais, como se fosse uma arma de uma mão e uma arma leve. Cada “ponta” conta como uma arma separada.
+            </li>
+            <li>
+              <strong>Versátil.</strong> Fornece bônus em uma ou mais manobras (cumulativo com outros bônus de itens), conforme a arma.
+            </li>
+          </ul>
 
-  <h3 className="text-2xl font-bold text-red-400 pt-4">Passos de Dano</h3>
-  <p>
-    Alguns efeitos podem aumentar ou diminuir o dano da arma em um ou mais “passos”. Consulte a Tabela Dano de Armas.
-  </p>
+          <h3 className="text-2xl font-bold text-red-400 pt-4">Passos de Dano</h3>
+          <p>
+            Alguns efeitos podem aumentar ou diminuir o dano da arma em um ou mais “passos”. Consulte a Tabela Dano de Armas.
+          </p>
 
-  {/* Tabela de Dano de Armas */}
-      <div className="mb-12">
-        <DamageTable data={damageProgressionTable} />
-      </div>
+          {/* Tabela de Dano de Armas */}
+          <div className="mb-12">
+            <DamageTable data={damageProgressionTable} />
+          </div>
 
-  <h3 className="text-2xl font-bold text-red-400 pt-4">Ataques Desarmados & Armas Naturais</h3>
-  <p>
-    Um ataque desarmado é um soco, chute ou qualquer outro golpe que use seu próprio corpo. Um ataque desarmado é considerado uma arma leve corpo a corpo que causa dano de impacto não letal (1d3 pontos de dano para criaturas Pequenas e Médias) e não é afetado por efeitos que mencionem especificamente objetos ou armas empunhadas. Uma criatura só possui um único ataque desarmado.
-  </p>
-  <p>
-    Armas naturais representam partes específicas do corpo de uma criatura que podem ser usadas para desferir ataques, como chifres, garras ou uma poderosa mordida. Armas naturais são consideradas armas leves corpo a corpo e, assim como ataques desarmados, não são afetadas por efeitos que afetem especificamente objetos ou que afetem armas que precisam ser empunhadas. A quantidade e tipo de dano de cada arma natural é apresentada em sua descrição.
-  </p>
+          <h3 className="text-2xl font-bold text-red-400 pt-4">Ataques Desarmados & Armas Naturais</h3>
+          <p>
+            Um ataque desarmado é um soco, chute ou qualquer outro golpe que use seu próprio corpo. Um ataque desarmado é considerado uma arma leve corpo a corpo que causa dano de impacto não letal (1d3 pontos de dano para criaturas Pequenas e Médias) e não é afetado por efeitos que mencionem especificamente objetos ou armas empunhadas. Uma criatura só possui um único ataque desarmado.
+          </p>
+          <p>
+            Armas naturais representam partes específicas do corpo de uma criatura que podem ser usadas para desferir ataques, como chifres, garras ou uma poderosa mordida. Armas naturais são consideradas armas leves corpo a corpo e, assim como ataques desarmados, não são afetadas por efeitos que afetem especificamente objetos ou que afetem armas que precisam ser empunhadas. A quantidade e tipo de dano de cada arma natural é apresentada em sua descrição.
+          </p>
 
-  <h3 className="text-2xl font-bold text-red-400 pt-4">Munições</h3>
-  <p>
-    Projéteis usados em armas de disparo. Munição é vendida em pacotes com projéteis suficientes para 20 ataques. Sempre que você faz um ataque com uma arma de disparo, a munição é perdida, independentemente de o ataque acertar ou não.
-  </p>
-  <p>
-    Pacotes de munições podem receber melhorias e encantos como armas (mas efeitos de munições não acumulam com os da arma de disparo). O aumento no preço de um pacote de munição superior ou mágico é metade do aumento de uma arma (uma munição com uma melhoria, por exemplo, custa +T$ 150, em vez de +T$ 300).
-  </p>
-  
+          <h3 className="text-2xl font-bold text-red-400 pt-4">Munições</h3>
+          <p>
+            Projéteis usados em armas de disparo. Munição é vendida em pacotes com projéteis suficientes para 20 ataques. Sempre que você faz um ataque com uma arma de disparo, a munição é perdida, independentemente de o ataque acertar ou não.
+          </p>
+          <p>
+            Pacotes de munições podem receber melhorias e encantos como armas (mas efeitos de munições não acumulam com os da arma de disparo). O aumento no preço de um pacote de munição superior ou mágico é metade do aumento de uma arma (uma munição com uma melhoria, por exemplo, custa +T$ 150, em vez de +T$ 300).
+          </p>
+          
         </div>
       </section>
 
+      {/* **Grid de Cards de Armas (Visualização Rápida) REMOVIDO** */}
       
-
-      {/* Grid de Cards de Armas (Visualização Rápida) */}
-      <section className="mb-12">
-        <h2 className="text-3xl font-bold text-red-300 mb-6">Visualização Rápida</h2>
-        
-        {/* Busca para o Grid */}
-        <input
-          type="text"
-          placeholder="Buscar arma por nome ou descrição..."
-          value={cardSearchTerm}
-          onChange={(e) => setCardSearchTerm(e.target.value)}
-          className="w-full px-6 py-3 mb-6 rounded-lg bg-gray-800 border border-red-500/30 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition-all"
-        />
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredCards.map((weapon) => (
-            <WeaponCard key={weapon.id} weapon={weapon} />
-          ))}
-        </div>
-        {filteredCards.length === 0 && (
-          <div className="text-center py-8 text-gray-500 bg-gray-900/50 rounded-xl">Nenhuma arma encontrada.</div>
-        )}
-      </section>
-
       {/* Tabela Completa e Filtrável */}
       <section>
         <h2 className="text-3xl font-bold text-red-300 mb-6">Tabela Completa de Armas</h2>
