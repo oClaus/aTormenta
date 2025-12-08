@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import React, { useState, useMemo } from "react";
 import Link from "next/link";
 import {
   damageProgressionTable,
@@ -65,7 +65,7 @@ const WeaponCard = ({ weapon }: { weapon: Weapon }) => (
   </div>
 );
 
-// 3. Componente para a Tabela Filtrável de Armas - DESCRIÇÃO INCLUÍDA NA COLUNA NOME
+// 3. Componente para a Tabela Filtrável de Armas - DESCRIÇÃO EM LINHA PRÓPRIA (Melhor para Mobile)
 
 const WeaponFilterableTable = ({ allWeapons }: { allWeapons: Weapon[] }) => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -123,6 +123,9 @@ const WeaponFilterableTable = ({ allWeapons }: { allWeapons: Weapon[] }) => {
   const allGrips: WeaponGrip[] = ["Leve", "Uma Mão", "Duas Mãos"];
   const allDamageTypes: DamageType[] = ["Corte", "Perfuração", "Impacto", "Corte/Perfuração"];
   const allPurposes: WeaponPurpose[] = ["Corpo a Corpo", "Distância", "Munição"]; 
+  
+  // O número de colunas totais na tabela é 8.
+  const totalColumns = 8; 
 
   const renderFilterGroup = (title: string, options: string[], key: keyof typeof filters) => (
     <div className="p-4 bg-gray-900/50 rounded-lg border border-red-500/20">
@@ -166,55 +169,61 @@ const WeaponFilterableTable = ({ allWeapons }: { allWeapons: Weapon[] }) => {
 
       {/* Tabela de Armas */}
       <div className="overflow-x-auto shadow-lg rounded-xl border border-red-500/30">
-        {/* Adiciona table-fixed para respeitar as larguras definidas */}
         <table className="min-w-full divide-y divide-red-500/30 table-fixed">
           <thead className="bg-red-900/70 text-red-200">
             <tr>
-              {/* Ajuste das larguras: Nome/Descrição agora tem 40% */}
-              <th scope="col" className="w-[40%] px-3 py-3 text-left text-xs font-medium uppercase tracking-wider">Nome & Detalhes</th>
+              {/* Ajuste das larguras. Nome agora tem 20% para caber no mobile */}
+              <th scope="col" className="w-[20%] px-3 py-3 text-left text-xs font-medium uppercase tracking-wider">Nome</th>
               <th scope="col" className="w-[10%] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider">Propósito</th>
               <th scope="col" className="w-[8%] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider">Preço</th>
               <th scope="col" className="w-[8%] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider">Dano</th>
               <th scope="col" className="w-[9%] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider">Crítico</th>
-              <th scope="col" className="w-[9%] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider">Alcance</th>
-              <th scope="col" className="w-[11%] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider">Tipo</th>
+              <th scope="col" className="w-[10%] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider">Alcance</th>
+              <th scope="col" className="w-[15%] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider">Tipo</th>
               <th scope="col" className="w-[5%] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider">Espaços</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-red-500/20">
             {filteredWeapons.map((weapon, index) => (
-              <tr key={weapon.id} className={index % 2 === 0 ? "bg-gray-800/50" : "bg-gray-900/50 hover:bg-gray-700/50 transition-colors"}>
-                
-                {/* Coluna Nome/Descrição/Detalhes */}
-                <td className="px-3 py-2 text-sm font-medium text-red-300 align-top">
-                  {/* Nome (Maior destaque) */}
-                  <div className="font-bold">{weapon.name}</div>
+              <React.Fragment key={weapon.id}>
+                {/* LINHA 1: Dados Principais */}
+                <tr className={index % 2 === 0 ? "bg-gray-800/50" : "bg-gray-900/50 hover:bg-gray-700/50 transition-colors"}>
                   
-                  {/* Descrição (Abaixo do nome, menor e com quebra de linha) */}
-                  <p className="text-gray-400 text-xs mt-1 whitespace-pre-line">
-                      {weapon.description}
-                  </p>
+                  {/* Nome e Detalhes Curta (Alinhado à esquerda) */}
+                  <td className="px-3 py-2 text-sm font-medium text-red-300 align-top">
+                    {/* Nome em destaque */}
+                    <div className="font-bold">{weapon.name}</div>
+                    
+                    {/* Proficiência/Empunhadura */}
+                    <div className="text-xs text-gray-500 mt-0.5">
+                        {weapon.proficiency} • {weapon.grip}
+                    </div>
+                  </td>
+                  
+                  {/* Outras Células (Centralizadas e Alinhadas ao Meio) */}
+                  <td className="px-3 py-2 text-sm text-red-400 text-center align-middle">{weapon.purpose}</td>
+                  <td className="px-3 py-2 text-sm text-gray-300 text-center align-middle">{weapon.price}</td>
+                  <td className="px-3 py-2 text-sm text-gray-300 text-center align-middle">{weapon.damage}</td>
+                  <td className="px-3 py-2 text-sm text-gray-300 text-center align-middle">{weapon.critical}</td>
+                  <td className="px-3 py-2 text-sm text-gray-300 text-center align-middle">{weapon.range}</td>
+                  <td className="px-3 py-2 text-sm text-gray-300 text-center align-middle">{weapon.type}</td>
+                  <td className="px-3 py-2 text-sm text-gray-300 text-center align-middle">{weapon.spaces}</td>
+                </tr>
 
-                  {/* Proficiência/Empunhadura (Separador visual) */}
-                  <div className="text-xs text-gray-500 mt-1">
-                      {weapon.proficiency} • {weapon.grip}
-                  </div>
-                  
-                  {/* Origem (Se for útil) */}
-                  <div className="text-xs text-pink-400 mt-0.5">
-                      Origem: {weapon.origin}
-                  </div>
-                </td>
-                
-                {/* Outras Células (Centralizadas e Alinhadas ao Meio) */}
-                <td className="px-3 py-2 text-sm text-red-400 text-center align-middle">{weapon.purpose}</td>
-                <td className="px-3 py-2 text-sm text-gray-300 text-center align-middle">{weapon.price}</td>
-                <td className="px-3 py-2 text-sm text-gray-300 text-center align-middle">{weapon.damage}</td>
-                <td className="px-3 py-2 text-sm text-gray-300 text-center align-middle">{weapon.critical}</td>
-                <td className="px-3 py-2 text-sm text-gray-300 text-center align-middle">{weapon.range}</td>
-                <td className="px-3 py-2 text-sm text-gray-300 text-center align-middle">{weapon.type}</td>
-                <td className="px-3 py-2 text-sm text-gray-300 text-center align-middle">{weapon.spaces}</td>
-              </tr>
+                {/* LINHA 2: Descrição e Origem (Expandida) */}
+                <tr className={index % 2 === 0 ? "bg-gray-800/50" : "bg-gray-900/50 hover:bg-gray-700/50 transition-colors"}>
+                    <td colSpan={totalColumns} className="px-3 py-2 text-sm align-top border-t border-red-500/10">
+                        {/* Descrição */}
+                        <p className="text-gray-300 text-xs whitespace-pre-line mb-1">
+                          {weapon.description}
+                        </p>
+                        {/* Origem */}
+                        <div className="text-xs text-pink-400">
+                            Origem: {weapon.origin}
+                        </div>
+                    </td>
+                </tr>
+              </React.Fragment>
             ))}
           </tbody>
         </table>
