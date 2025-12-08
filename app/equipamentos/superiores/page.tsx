@@ -413,6 +413,11 @@ export default function SuperiorItemsPage() {
         {/* Tabela de Preço Adicional de Materiais Especiais */}
         <MaterialPriceTable allPrices={materialPrices} />
 
+        <h2 className="text-3xl font-bold text-cyan-300 mb-6">Fabricando Itens Superiores</h2>
+        <p>Itens superiores só podem ser fabricados por personagens com a habilidade Fabricar Item Superior. A fabricação deles segue a mesma regra de itens normais, porém, de acordo com o número de melhorias, o preço e a CD do teste de Ofício aumentam.</p>
+        <p>Por exemplo, o preço de uma couraça é T$ 500. Fabricá-la exige um gasto de T$ 166 (um terço do preço) e um teste de Ofício contra CD 15. Já o preço de uma couraça com duas melhorias é T$ 3.500 (T$ 500 + T$ 3.000 das duas melhorias). Fabricá-la exige um gasto de T$ 1.166 (um terço do preço) e um teste de Ofício contra CD 25 (15 da CD base + 10 das duas melhorias).</p>
+        <p>É possível adicionar melhorias a um item. Você paga a diferença de acordo com o novo número de melhorias. Por exemplo, para adicionar a terceira melhoria a um item que já possui duas, você precisa pagar mais T$ 2.000 (um terço da diferença de três para duas melhorias). Além disso, deve fazer um teste de Ofício contra a CD do número de melhorias que o item passará a ter e, se falhar por 5 ou mais, estraga o item.</p>
+
         </section>
     </main>
   );
