@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import { animals } from "@/data/animals";
+import { services } from "@/data/services";
 import { Gear } from "@/types/gear";
 
 // --- Componentes Auxiliares ---
@@ -36,14 +36,14 @@ const GearFilterableTable = ({ allGear }: { allGear: Gear[] }) => {
         placeholder="Buscar equipamento por nome ou descrição..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        // MUDANÇA: slate - foco: slate-500, ring: slate-500/20
-        className="w-full px-6 py-3 rounded-lg bg-gray-800 border border-zinc-500/30 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-slate-500 focus:ring-2 focus:ring-slate-500/20 transition-all"
+        // MUDANÇA: fuchsia - foco: fuchsia-500, ring: fuchsia-500/20
+        className="w-full px-6 py-3 rounded-lg bg-gray-800 border border-zinc-500/30 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-fuchsia-500 focus:ring-2 focus:ring-fuchsia-500/20 transition-all"
       />
 
       {/* Tabela de Equipamentos */}
-      <div className="overflow-x-auto shadow-lg rounded-xl border border-slate-500/30">
+      <div className="overflow-x-auto shadow-lg rounded-xl border border-fuchsia-500/30">
         <table className="min-w-full divide-y divide-zinc-500/30">
-          <thead className="bg-slate-900/70 text-slate-200">
+          <thead className="bg-fuchsia-900/70 text-fuchsia-200">
             <tr>
               <th scope="col" className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Item</th>
               <th scope="col" className="w-24 px-4 pr-4 py-3 text-right text-xs font-medium uppercase tracking-wider">Preço</th>
@@ -53,10 +53,10 @@ const GearFilterableTable = ({ allGear }: { allGear: Gear[] }) => {
           <tbody className="divide-y divide-zinc-500/20">
             {filteredGear.map((item, index) => (
               <tr key={item.id} className={index % 2 === 0 ? "bg-gray-800/50" : "bg-gray-900/50 hover:bg-gray-700/50 transition-colors"}>
-                <td className="px-4 py-2 text-sm font-medium text-orange-100">
+                <td className="px-4 py-2 text-sm font-medium text-fuchsia-100">
                   {item.name}
                   <div className="text-xs text-gray-300 break-words">{item.description}</div>
-                  <div className="mt-1 text-xs text-stone-400">{item.origin}</div>
+                  <div className="mt-1 text-xs text-fuchsia-400">{item.origin}</div>
                 </td>
                 <td className="w-24 px-4 pr-4 py-2 text-right text-sm text-gray-300">{item.price}</td>
                 <td className="w-20 px-4 pr-4 py-2 text-center text-sm text-gray-300">{item.spaces}</td>
@@ -80,50 +80,47 @@ export default function GearPage() {
     <main className="w-full min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-black text-gray-100 px-6 py-12">
 
       {/* Header */}
-      {/* MUDANÇA: slate - borda do header: slate-900/50 */}
-      <header className="p-6 border-b border-slate-900/50">
+      {/* MUDANÇA: fuchsia - borda do header: fuchsia-900/50 */}
+      <header className="p-6 border-b border-fuchsia-900/50">
         <Link href="/" className="inline-block group">
-          {/* MUDANÇA: slate - Título principal: slate-400/fuchsia-300/slate-500 */}
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-slate-400 via-stone-300 to-slate-500 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(244,114,182,0.5)] group-hover:drop-shadow-[0_0_25px_rgba(244,114,182,0.7)] transition-all">
+          {/* MUDANÇA: fuchsia - Título principal: fuchsia-400/fuchsia-300/fuchsia-500 */}
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-fuchsia-400 via-stone-300 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(244,114,182,0.5)] group-hover:drop-shadow-[0_0_25px_rgba(244,114,182,0.7)] transition-all">
             a-Tormenta
           </h1>
         </Link>
         <div className="flex items-center gap-2 mt-2">
-          {/* MUDANÇA: slate - links: text-slate-400 */}
-          <Link href="/" className="text-slate-400 hover:text-fuchsia-300 text-sm transition-colors">
+          {/* MUDANÇA: fuchsia - links: text-fuchsia-400 */}
+          <Link href="/" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm transition-colors">
             Início
           </Link>
           <span className="text-gray-600">/</span>
-          {/* MUDANÇA: slate - links: text-slate-400 */}
-          <Link href="/equipamentos" className="text-slate-400 hover:text-fuchsia-300 text-sm transition-colors">
+          {/* MUDANÇA: fuchsia - links: text-fuchsia-400 */}
+          <Link href="/equipamentos" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm transition-colors">
             Equipamentos
           </Link>
           <span className="text-gray-600">/</span>
-          <span className="text-gray-400 text-sm">Animais</span>
+          <span className="text-gray-400 text-sm">Serviços</span>
         </div>
       </header>
 
       {/* Seção de Texto Introdutório */}
-      {/* MUDANÇA: slate - borda: slate-500/20 */}
-      <section className="mb-12 p-6 bg-gray-900/50 rounded-xl border border-slate-500/20">
+      {/* MUDANÇA: fuchsia - borda: fuchsia-500/20 */}
+      <section className="mb-12 p-6 bg-gray-900/50 rounded-xl border border-fuchsia-500/20">
       
         <div className="space-y-4 text-white-300 leading-relaxed">
-          {/* MUDANÇA: slate - Título da seção: slate-400/fuchsia-400/slate-400 */}
-          <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-slate-500 via-stone-700 to-slate-400 mb-4">
-            Animais
+          {/* MUDANÇA: fuchsia - Título da seção: fuchsia-400/fuchsia-400/fuchsia-400 */}
+          <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-200 via-stone-700 to-fuchsia-300 mb-4">
+            Serviços
           </h1>
-        <p>
-         Animais funcionam como parceiros. Animais comprados são parceiros iniciantes. Para parceiros de maior nível, você precisa adquiri-los através de uma habilidade.
-        </p>
 
         </div>
       </section>
 
       {/* Tabela Completa e Filtrável */}
       <section>
-        {/* MUDANÇA: slate - título da tabela: text-slate-300 */}
-        <h2 className="text-3xl font-bold text-slate-500 mb-6">Tabela Completa de Animais</h2>
-        <GearFilterableTable allGear={animals} />
+        {/* MUDANÇA: fuchsia - título da tabela: text-fuchsia-300 */}
+        <h2 className="text-3xl font-bold text-fuchsia-200 mb-6">Tabela Completa de Serviços</h2>
+        <GearFilterableTable allGear={services} />
       </section>
     </main>
   );

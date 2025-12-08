@@ -107,4 +107,21 @@ export const equipmentCategories: EquipmentCategory[] = [
     color: "from-slate-800 to-white-900",
     href: "/equipamentos/animais",
   },
+  {
+    id: "veiculos",
+    title: "Veículos",
+    description: "Formas de movimentação por Arton.",
+    icon: "🛞",
+    color: "from-lime-200 to-white-900",
+    href: "/equipamentos/veiculos",
+  },
+  {
+    id: "servicos",
+    title: "Serviços",
+    description: "Contratar serviços para jogadores.",
+    icon: "🔧",
+    color: "from-fuchsia-200 to-white-900",
+    href: "/equipamentos/servicos",
+  },
+  
 ];
