@@ -2,7 +2,6 @@ import Link from "next/link";
 
 export default function Home() {
   const themes = [
-    { id: "comidas", title: "Comidas", icon: "/temas/comidas.png", color: "from-purple-600 to-purple-800" },
     { id: "chefes", title: "Chefes", icon: "/temas/chefes.png", color: "from-red-600 to-red-800" },
     { id: "pequenas-aventuras", title: "Pequenas Aventuras", icon: "/temas/pequenas_aventuras.png", color: "from-pink-700 to-purple-700" },
     { id: "racas", title: "Raças", icon: "/temas/racas.png", color: "from-green-700 to-emerald-700" },

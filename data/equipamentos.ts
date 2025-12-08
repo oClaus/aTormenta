@@ -38,7 +38,7 @@ export const equipmentCategories: EquipmentCategory[] = [
   {
     id: "armaduras",
     title: "Armaduras",
-    description: "Espadas, machados, arcos e tudo que causa dano.",
+    description: "Itens feitos para proteger.",
     icon: "🪖",
     color: "from-blue-600 to-white-900",
     href: "/equipamentos/armaduras",
@@ -86,9 +86,17 @@ export const equipmentCategories: EquipmentCategory[] = [
   {
     id: "alquimicos",
     title: "Alquímicos",
-    description: "Inclui preparados, catalisadores e venenos",
+    description: "Inclui preparados, catalisadores e venenos.",
     icon: "☠️",
     color: "from-green-600 to-white-900",
     href: "/equipamentos/alquimicos",
+  },
+  {
+    id: "alimentos",
+    title: "Alimentação",
+    description: "Pratos especiais, bônus especiais.",
+    icon: "🍛",
+    color: "from-orange-600 to-white-900",
+    href: "/equipamentos/alimentos",
   },
 ];
