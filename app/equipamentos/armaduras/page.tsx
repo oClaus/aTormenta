@@ -1,33 +1,15 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import React, { useState, useMemo } from "react";
 import Link from "next/link";
 import { armors, } from "@/data/armors";
 import { Armor, ArmorType } from "@/types/armors";
 
 // --- Componentes Auxiliares ---
 
-// 1. Componente para o Card de Armadura/Escudo (Grid)
-const ArmorCard = ({ armor }: { armor: Armor }) => (
-  <div
-    className={`group relative rounded-xl overflow-hidden bg-gradient-to-br from-blue-950/40 to-black border border-blue-500/20 p-6 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 text-left`}
-  >
-    <h3 className="text-2xl font-bold text-blue-300 mb-2 group-hover:text-blue-200 transition-colors">
-      {armor.name}
-    </h3>
-    <div className="text-xs font-semibold text-gray-400 mb-3">
-      <span className="text-blue-400">{armor.type}</span> • Defesa: +{armor.defenseBonus} • Penalidade: {armor.armorPenalty}
-    </div>
-    <p className="text-gray-400 text-sm whitespace-pre-line">
-      {armor.description}
-    </p>
-    <div className="mt-4 text-xs text-teal-400">
-      Origem: {armor.origin}
-    </div>
-  </div>
-);
+// 1. Componente ArmorCard REMOVIDO
 
-// 2. Componente para a Tabela Filtrável de Armaduras e Escudos
+// 2. Componente para a Tabela Filtrável de Armaduras e Escudos (REVISADO PARA MOBILE)
 const ArmorFilterableTable = ({ allArmors }: { allArmors: Armor[] }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [filters, setFilters] = useState({
@@ -35,27 +17,28 @@ const ArmorFilterableTable = ({ allArmors }: { allArmors: Armor[] }) => {
   });
 
   const handleFilterChange = (key: keyof typeof filters, value: ArmorType) => { 
-  setFilters(prev => {
-    // A tipagem já é conhecida como ArmorType[]
-    const current = prev[key]; 
-    
-    if (current.includes(value)) {
-      // Retorna ArmorType[]
-      return { ...prev, [key]: current.filter(v => v !== value) as ArmorType[] };
-    } else {
-      // Retorna ArmorType[]
-      return { ...prev, [key]: [...current, value] };
-    }
-  });
-};
+    setFilters(prev => {
+      const current = prev[key]; 
+      
+      if (current.includes(value)) {
+        return { ...prev, [key]: current.filter(v => v !== value) as ArmorType[] };
+      } else {
+        return { ...prev, [key]: [...current, value] };
+      }
+    });
+  };
 
   const filteredArmors = useMemo(() => {
     let filtered = allArmors;
     const lowerCaseSearch = searchTerm.toLowerCase();
 
-    // 1. Filtrar por Nome
+    // 1. Filtrar por Nome, Descrição e Origem (CORRIGIDO)
     if (lowerCaseSearch) {
-      filtered = filtered.filter(a => a.name.toLowerCase().includes(lowerCaseSearch));
+      filtered = filtered.filter(a => 
+        a.name.toLowerCase().includes(lowerCaseSearch) ||
+        a.description.toLowerCase().includes(lowerCaseSearch) || // <- ADICIONADO
+        a.origin.toLowerCase().includes(lowerCaseSearch) // <- ADICIONADO
+      );
     }
 
     // 2. Filtrar por Tipo (Leve, Pesada, Escudo)
@@ -70,6 +53,8 @@ const ArmorFilterableTable = ({ allArmors }: { allArmors: Armor[] }) => {
   }, [allArmors, searchTerm, filters]);
 
   const allTypes: ArmorType[] = ["Leve", "Pesada", "Escudo"];
+  // Total de colunas na tabela é 5
+  const totalColumns = 5; 
 
   const renderFilterGroup = (title: string, options: string[], key: keyof typeof filters) => (
     <div className="p-4 bg-gray-900/50 rounded-lg border border-blue-500/20">
@@ -94,10 +79,10 @@ const ArmorFilterableTable = ({ allArmors }: { allArmors: Armor[] }) => {
 
   return (
     <div className="space-y-6">
-      {/* Barra de Busca */}
+      {/* Barra de Busca (Placeholder Atualizado) */}
       <input
         type="text"
-        placeholder="Buscar armadura ou escudo por nome..."
+        placeholder="Buscar armadura, escudo por nome, descrição ou origem..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         className="w-full px-6 py-3 rounded-lg bg-gray-800 border border-blue-500/30 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
@@ -110,28 +95,51 @@ const ArmorFilterableTable = ({ allArmors }: { allArmors: Armor[] }) => {
 
       {/* Tabela de Armaduras */}
       <div className="overflow-x-auto shadow-lg rounded-xl border border-blue-500/30">
-        <table className="min-w-full divide-y divide-blue-500/30">
+        {/* Adiciona table-fixed para controlar melhor as larguras */}
+        <table className="min-w-full divide-y divide-blue-500/30 table-fixed">
           <thead className="bg-blue-900/70 text-blue-200">
             <tr>
-              <th scope="col" className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Armaduras e Escudos</th>
-              <th scope="col" className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Preço</th>
-              <th scope="col" className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Bônus na Defesa</th>
-              <th scope="col" className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Penalidade de Armadura</th>
-              <th scope="col" className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Espaços</th>
+              {/* Ajuste as larguras percentuais para a tabela fixa */}
+              <th scope="col" className="w-[20%] px-3 py-3 text-left text-xs font-medium uppercase tracking-wider">Armadura / Escudo</th>
+              <th scope="col" className="w-[10%] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider">Preço</th>
+              <th scope="col" className="w-[15%] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider">Bônus Defesa</th>
+              <th scope="col" className="w-[15%] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider">Penalidade</th>
+              <th scope="col" className="w-[10%] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider">Espaços</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-blue-500/20">
             {filteredArmors.map((armor, index) => (
-              <tr key={armor.id} className={index % 2 === 0 ? "bg-gray-800/50" : "bg-gray-900/50 hover:bg-gray-700/50 transition-colors"}>
-                <td className="px-4 py-2 whitespace-nowrap text-sm font-medium text-blue-300">
-                  {armor.name}
-                  <div className="text-xs text-gray-500">{armor.type}</div>
-                </td>
-                <td className="px-4 py-2 whitespace-nowrap text-sm text-gray-300">{armor.price}</td>
-                <td className="px-4 py-2 whitespace-nowrap text-sm text-gray-300">+{armor.defenseBonus}</td>
-                <td className="px-4 py-2 whitespace-nowrap text-sm text-gray-300">{armor.armorPenalty}</td>
-                <td className="px-4 py-2 whitespace-nowrap text-sm text-gray-300">{armor.spaces}</td>
-              </tr>
+              <React.Fragment key={armor.id}>
+                {/* LINHA 1: Dados Principais */}
+                <tr className={index % 2 === 0 ? "bg-gray-800/50" : "bg-gray-900/50 hover:bg-gray-700/50 transition-colors"}>
+                  
+                  {/* Nome e Tipo (Alinhado à esquerda) */}
+                  <td className="px-3 py-2 text-sm font-medium text-blue-300 align-top">
+                    <div className="font-bold">{armor.name}</div>
+                    <div className="text-xs text-blue-700">{armor.type}</div>
+                  </td>
+                  
+                  {/* Outras Células (Centralizadas e Alinhadas ao Meio) */}
+                  <td className="px-3 py-2 text-sm text-gray-300 text-center align-middle">{armor.price}</td>
+                  <td className="px-3 py-2 text-sm text-gray-300 text-center align-middle">+{armor.defenseBonus}</td>
+                  <td className="px-3 py-2 text-sm text-gray-300 text-center align-middle">{armor.armorPenalty}</td>
+                  <td className="px-3 py-2 text-sm text-gray-300 text-center align-middle">{armor.spaces}</td>
+                </tr>
+
+                {/* LINHA 2: Descrição e Origem (Expandida) */}
+                <tr className={index % 2 === 0 ? "bg-gray-800/50" : "bg-gray-900/50 hover:bg-gray-700/50 transition-colors"}>
+                    <td colSpan={totalColumns} className="px-3 py-2 text-sm align-top border-t border-blue-500/10">
+                        {/* Descrição */}
+                        <p className="text-gray-300 text-xs whitespace-pre-line mb-1">
+                          {armor.description}
+                        </p>
+                        {/* Origem */}
+                        <div className="text-xs text-teal-400">
+                          Origem: {armor.origin}
+                        </div>
+                    </td>
+                </tr>
+              </React.Fragment>
             ))}
           </tbody>
         </table>
@@ -147,29 +155,9 @@ const ArmorFilterableTable = ({ allArmors }: { allArmors: Armor[] }) => {
 // --- Página Principal ---
 
 export default function ArmadurasPage() {
-  // NOVO ESTADO E LÓGICA DE BUSCA PARA O GRID DE CARDS
-  const [cardSearchTerm, setCardSearchTerm] = useState("");
-
-  const filteredCards = useMemo(() => {
-    const lowerCaseSearch = cardSearchTerm.toLowerCase();
-    
-    // 1. Ordenação: Armaduras Leves, Pesadas, Escudos, e depois alfabética
-    let sorted = [...armors].sort((a, b) => 
-    a.name.localeCompare(b.name, "pt-BR")
-    );
-
-    // 2. Filtragem por Nome ou Descrição
-    if (lowerCaseSearch) {
-      sorted = sorted.filter(a => 
-        a.name.toLowerCase().includes(lowerCaseSearch) ||
-        a.description.toLowerCase().includes(lowerCaseSearch) ||
-        a.origin.toLowerCase().includes(lowerCaseSearch)
-      );
-    }
-
-    return sorted;
-  }, [cardSearchTerm]);
-
+  // Lógica de busca para o Grid REMOVIDA
+  // const [cardSearchTerm, setCardSearchTerm] = useState("");
+  // const filteredCards = useMemo(() => { ... }, [cardSearchTerm]);
 
   return (
     <main className="w-full min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-black text-gray-100 px-6 py-12">
@@ -255,28 +243,7 @@ export default function ArmadurasPage() {
         </div>
       </section>
 
-      {/* Grid de Cards de Armaduras (Visualização Rápida) */}
-      <section className="mb-12">
-        <h2 className="text-3xl font-bold text-blue-300 mb-6">Visualização Rápida</h2>
-        
-        {/* Busca para o Grid */}
-        <input
-          type="text"
-          placeholder="Buscar armadura ou escudo por nome..."
-          value={cardSearchTerm}
-          onChange={(e) => setCardSearchTerm(e.target.value)}
-          className="w-full px-6 py-3 mb-6 rounded-lg bg-gray-800 border border-blue-500/30 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
-        />
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredCards.map((armor) => (
-            <ArmorCard key={armor.id} armor={armor} />
-          ))}
-        </div>
-        {filteredCards.length === 0 && (
-          <div className="text-center py-8 text-gray-500 bg-gray-900/50 rounded-xl">Nenhuma armadura ou escudo encontrado.</div>
-        )}
-      </section>
+      {/* Grid de Cards de Armaduras (Visualização Rápida) - REMOVIDO */}
 
       {/* Tabela Completa e Filtrável */}
       <section>
