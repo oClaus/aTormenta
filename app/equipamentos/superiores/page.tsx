@@ -6,35 +6,24 @@ import {
   priceImprovements,
   improvements,
   materialPrices,
-  specialMaterialsText,
 } from "@/data/superior_items";
 import {
   Improvement,
   PriceImprovement,
   ItemCategory,
-  MaterialPrice,
+  MaterialPriceRow,
   MaterialType,
+  MaterialItemCategory
 } from "@/types/superior_item";
 
 // --- Componentes Auxiliares ---
-
-// Função auxiliar para renderizar o texto com negrito (Mantida)
-const renderTextWithBold = (text: string) => {
-  const parts = text.split(/(\*\*.*?\*\*)/g);
-  return parts.map((part, index) => {
-    if (part.startsWith('**') && part.endsWith('**')) {
-      return <strong key={index} className="text-cyan-300">{part.slice(2, -2)}</strong>;
-    }
-    return part;
-  });
-};
 
 // 1. Tabela de Preço de Melhorias (Tabela 3-7) - Sem alteração
 const PriceTable = ({ data }: { data: PriceImprovement[] }) => (
   <div className="overflow-x-auto shadow-lg rounded-xl border border-cyan-500/30">
     <table className="min-w-full divide-y divide-cyan-500/30">
       <caption className="p-4 text-xl font-bold text-cyan-300 bg-cyan-900/50 rounded-t-xl">
-        Tabela 3-7: Preço de Melhorias
+        Preço de Melhorias
       </caption>
       <thead className="bg-cyan-900/70 text-cyan-200">
         <tr>
@@ -93,7 +82,9 @@ const ImprovementTable = ({ allImprovements }: { allImprovements: Improvement[] 
     if (lowerCaseSearch) {
       filtered = filtered.filter(imp => 
         imp.name.toLowerCase().includes(lowerCaseSearch) ||
-        imp.effect.toLowerCase().includes(lowerCaseSearch)
+        imp.effect.toLowerCase().includes(lowerCaseSearch) ||
+        imp.description.toLowerCase().includes(lowerCaseSearch) ||
+        imp.origin?.toLowerCase().includes(lowerCaseSearch)
       );
     }
 
@@ -106,7 +97,7 @@ const ImprovementTable = ({ allImprovements }: { allImprovements: Improvement[] 
   return (
     <div className="space-y-6">
         {/* Filtros */}
-      <div className="p-4 bg-gray-900/50 rounded-lg border border-yellow-500/20">
+      <div className="p-4 bg-gray-900/50 rounded-lg border border-cyan-500/20">
         <h4 className="text-sm font-bold text-cyan-300 mb-2">Filtrar por Categoria de Item</h4>
         <div className="flex flex-wrap gap-2">
           <button
@@ -137,10 +128,10 @@ const ImprovementTable = ({ allImprovements }: { allImprovements: Improvement[] 
 
       {/* Barra de Busca */}
       <input type="text"
-        placeholder="Buscar melhoria por nome ou efeito..."
+        placeholder="Buscar melhoria por nome, efeito, descrição ou origem..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        className="w-full px-6 py-3 rounded-lg bg-gray-800 border border-cyan-500/30 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-yellow-500/20 transition-all"/>
+        className="w-full px-6 py-3 rounded-lg bg-gray-800 border border-cyan-500/30 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all"/>
       {/* ... Filtros e Busca (Mantidos) ... */}
 
       <div className="overflow-x-auto shadow-lg rounded-xl border border-cyan-500/30">
@@ -205,79 +196,159 @@ const ImprovementTable = ({ allImprovements }: { allImprovements: Improvement[] 
   );
 };
 
-// 3. Tabela de Preço Adicional de Materiais Especiais (Tabela 3-9) - Filtrável (Mantida a lógica de filtragem)
-const MaterialPriceTable = ({ allPrices }: { allPrices: MaterialPrice[] }) => {
-  const [selectedMaterial, setSelectedMaterial] = useState<MaterialType | "Todos">("Todos");
+// 3. Tabela de Preço Adicional de Materiais Especiais (Tabela 3-9) - NOVO COMPONENTE
+const MaterialPriceTable = ({ allPrices }: { allPrices: MaterialPriceRow[] }) => {
+  const [selectedItemCategory, setSelectedItemCategory] = useState<MaterialItemCategory | "Todos">("Todos");
+  const [searchTerm, setSearchTerm] = useState("");
 
-  const allMaterials: MaterialType[] = [
-    "Aço-Rubi",
-    "Adamante",
-    "Gelo Eterno",
-    "Madeira Tollon",
-    "Matéria Vermelha",
-    "Mitral",
-  ];
+  // As categorias de item são as chaves da interface, exceto 'material' e 'description'
+  const itemCategories: MaterialItemCategory[] = ["Arma", "Armadura Leve", "Armadura Pesada", "Escudo", "Esotéricos"];
 
-  const materialsToShow = selectedMaterial === "Todos" ? allMaterials : [selectedMaterial];
+  // Filtro de Colunas (Itens)
+  const columnsToShow = useMemo(() => {
+    if (selectedItemCategory === "Todos") {
+      return itemCategories;
+    }
+    return [selectedItemCategory];
+  }, [selectedItemCategory]);
+  
+  // O número de colunas na tabela é a coluna "Material" + as colunas dinâmicas.
+  // Será usado para o colSpan da linha de descrição.
+  const totalColumns = 1 + columnsToShow.length; 
+
+  const filteredPrices = useMemo(() => {
+    const lowerCaseSearch = searchTerm.toLowerCase();
+    
+    if (!lowerCaseSearch) {
+      return allPrices;
+    }
+
+    return allPrices.filter(priceRow => {
+      // 1. Busca no Nome do Material
+      if (priceRow.material.toLowerCase().includes(lowerCaseSearch)) return true;
+      
+      // 2. Busca na Descrição Principal
+      if (priceRow.description.toLowerCase().includes(lowerCaseSearch)) return true;
+      
+      // 3. Busca na Origem (Se existir e tiver o campo)
+      if (priceRow.origin?.toLowerCase().includes(lowerCaseSearch)) return true;
+
+      // Opcional: Busca nas descrições específicas de item
+      if (priceRow.description_arma?.toLowerCase().includes(lowerCaseSearch)) return true;
+      if (priceRow.description_armadura?.toLowerCase().includes(lowerCaseSearch)) return true;
+      if (priceRow.description_escudo?.toLowerCase().includes(lowerCaseSearch)) return true;
+      if (priceRow.description_esoterico?.toLowerCase().includes(lowerCaseSearch)) return true;
+      
+      return false;
+    });
+  }, [allPrices, searchTerm]);
 
   return (
     <div className="space-y-6">
       {/* Filtros */}
       <div className="p-4 bg-gray-900/50 rounded-lg border border-cyan-500/20">
-        <h4 className="text-sm font-bold text-cyan-300 mb-2">Filtrar por Material</h4>
+        <h4 className="text-sm font-bold text-cyan-300 mb-2">Filtrar por Categoria de Item</h4>
         <div className="flex flex-wrap gap-2">
           <button
-            onClick={() => setSelectedMaterial("Todos")}
+            onClick={() => setSelectedItemCategory("Todos")}
             className={`px-3 py-1 text-xs rounded-full transition-colors ${
-              selectedMaterial === "Todos"
+              selectedItemCategory === "Todos"
                 ? "bg-cyan-600 text-white shadow-md"
                 : "bg-gray-700 text-gray-300 hover:bg-gray-600"
             }`}
           >
             Todos
           </button>
-          {allMaterials.map(material => (
+          {itemCategories.map(category => (
             <button
-              key={material}
-              onClick={() => setSelectedMaterial(material)}
+              key={category}
+              onClick={() => setSelectedItemCategory(category)}
               className={`px-3 py-1 text-xs rounded-full transition-colors ${
-                selectedMaterial === material
+                selectedItemCategory === category
                   ? "bg-cyan-600 text-white shadow-md"
                   : "bg-gray-700 text-gray-300 hover:bg-gray-600"
               }`}
             >
-              {material}
+              {category}
             </button>
           ))}
         </div>
       </div>
 
+      {/* Barra de Busca (NOVA) */}
+      <input type="text"
+        placeholder="Buscar material por nome, descrição ou origem..."
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        className="w-full px-6 py-3 rounded-lg bg-gray-800 border border-cyan-500/30 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-cyan-500 focus:ring-2       focus:ring-cyan-500/20 transition-all"/>
+
       {/* Tabela de Preços de Materiais */}
       <div className="overflow-x-auto shadow-lg rounded-xl border border-cyan-500/30">
         <table className="min-w-full divide-y divide-cyan-500/30">
           <caption className="p-4 text-xl font-bold text-cyan-300 bg-cyan-900/50 rounded-t-xl">
-            Tabela 3-9: Preço Adicional de Materiais Especiais
+            Preço Adicional de Materiais Especiais
           </caption>
           <thead className="bg-cyan-900/70 text-cyan-200">
             <tr>
-              <th scope="col" className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Item</th>
-              {materialsToShow.map(material => (
-                <th key={material} scope="col" className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">
-                  {material}
+              <th scope="col" className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Material</th>
+              {columnsToShow.map(category => (
+                <th key={category} scope="col" className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">
+                  {category}
                 </th>
               ))}
             </tr>
           </thead>
           <tbody className="divide-y divide-cyan-500/20">
-            {allPrices.map((price, index) => (
-              <tr key={price.itemCategory} className={index % 2 === 0 ? "bg-gray-800/50" : "bg-gray-900/50 hover:bg-gray-700/50 transition-colors"}>
-                <td className="px-4 py-2 whitespace-nowrap text-sm font-medium text-cyan-300">{price.itemCategory}</td>
-                {materialsToShow.map(material => (
-                  <td key={material} className="px-4 py-2 whitespace-nowrap text-sm text-gray-300">
-                    {price[material as keyof MaterialPrice]}
+            {filteredPrices.map((priceRow, index) => (
+              <React.Fragment key={priceRow.material}>
+                {/* LINHA 1: Dados Principais */}
+                <tr className={index % 2 === 0 ? "bg-gray-800/50" : "bg-gray-900/50 hover:bg-gray-700/50 transition-colors"}>
+                  {/* Nome do Material */}
+                  <td className="px-4 py-2 whitespace-nowrap text-sm font-medium text-cyan-300 align-top">
+                    <div className="font-bold">{priceRow.material}</div>
                   </td>
-                ))}
-              </tr>
+                  {/* Preços Adicionais */}
+                  {columnsToShow.map(category => (
+                    <td key={category} className="px-4 py-2 whitespace-nowrap text-sm text-gray-300 align-top">
+                      {priceRow[category as keyof MaterialPriceRow]}
+                    </td>
+                  ))}
+                </tr>
+
+                {/* LINHA 2: Descrição Detalhada (Expandida) */}
+                <tr className={index % 2 === 0 ? "bg-gray-800/50" : "bg-gray-900/50 hover:bg-gray-700/50 transition-colors"}>
+                  <td colSpan={totalColumns} className="px-5 py-2 text-xs align-top border-t border-cyan-500/10">
+                    <p className="text-gray-200 whitespace-pre-line"> 
+                      {priceRow.description}
+                    </p>
+                    {priceRow.description_arma && (
+                    <p className="text-gray-200 whitespace-pre-line">
+                        <span className="font-semibold text-cyan-400 mr-1">Armas: </span> 
+                        {priceRow.description_arma}
+                    </p>
+                        )}
+                    {priceRow.description_armadura && (
+                    <p className="text-gray-200 whitespace-pre-line">
+                        <span className="font-semibold text-cyan-400 mr-1">Armaduras & Escudos: </span> 
+                        {priceRow.description_armadura}
+                    </p>
+                        )}
+                    {priceRow.description_escudo && (
+                    <p className="text-gray-200 whitespace-pre-line">
+                        <span className="font-semibold text-cyan-400 mr-1">Escudos: </span> 
+                        {priceRow.description_escudo}
+                    </p>
+                        )}    
+                    {priceRow.description_esoterico && (
+                    <p className="text-gray-200 whitespace-pre-line">
+                        <span className="font-semibold text-cyan-400 mr-1">Esotéricos: </span> 
+                        {priceRow.description_esoterico}
+                    </p>
+                         )}
+                    <div className="mt-1 text-xs text-blue-400">{priceRow.origin}</div>
+                  </td>
+                </tr>
+              </React.Fragment>
             ))}
           </tbody>
         </table>
@@ -335,29 +406,14 @@ export default function SuperiorItemsPage() {
         <h2 className="text-3xl font-bold text-cyan-300 mb-6">Tabela de Melhorias </h2>
         <ImprovementTable allImprovements={improvements} />
       
-        {/* Sessão dos materiais especiais */}
         <h2 className="text-3xl font-bold text-cyan-300 mb-6">Materiais Especiais</h2>
 
-        </section>
-
-      
-
-      <section className="mb-12">
-
-        <div className="space-y-8 p-6 bg-gray-900/50 rounded-xl border border-cyan-500/20 mb-12">
-          {specialMaterialsText.map((material, index) => (
-            <div key={index}>
-              <h3 className="text-2xl font-bold text-cyan-400 mb-2">{material.name}</h3>
-              <p className="text-gray-300 leading-relaxed whitespace-pre-line">
-                {renderTextWithBold(material.content)}
-              </p>
-            </div>
-          ))}
-        </div>
+        <p>Armas, armaduras, escudos e esotéricos podem ser feitos ou banhados de um material especial. Para isso, o item precisa ter a melhoria material especial e você precisa pagar o preço extra do material escolhido, conforme a tabela:</p>
 
         {/* Tabela de Preço Adicional de Materiais Especiais */}
         <MaterialPriceTable allPrices={materialPrices} />
-      </section>
+
+        </section>
     </main>
   );
 }

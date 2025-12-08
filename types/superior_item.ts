@@ -26,14 +26,20 @@ export type MaterialItemCategory =
   "Escudo" | 
   "Esotéricos";
 
-export interface MaterialPrice {
-  itemCategory: MaterialItemCategory;
-  "Aço-Rubi": string;
-  "Adamante": string;
-  "Gelo Eterno": string;
-  "Madeira Tollon": string;
-  "Matéria Vermelha": string;
-  "Mitral": string;
+export interface MaterialPriceRow {
+  material: MaterialType;
+  Arma: string;
+  "Armadura Leve": string;
+  "Armadura Pesada": string;
+  Escudo: string;
+  Esotéricos: string;
+  description: string;
+  description_arma?: string;
+  description_armadura?: string;
+  description_esoterico?: string;
+  description_municao?: string;
+  description_escudo?: string;
+  origin?: string;
 }
 
 // Tabela 3-7: Preço de Melhorias

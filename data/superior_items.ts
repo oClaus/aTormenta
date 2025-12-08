@@ -1,6 +1,6 @@
 // data/superior_items.ts
 
-import { Improvement, ItemCategory, PriceImprovement, MaterialPrice, MaterialItemCategory } from "@/types/superior_item";
+import { Improvement, ItemCategory, PriceImprovement, MaterialPriceRow, MaterialItemCategory, MaterialType } from "@/types/superior_item";
 
 // Tabela 3-7: Preço de Melhorias
 export const priceImprovements: PriceImprovement[] = [
@@ -11,106 +11,78 @@ export const priceImprovements: PriceImprovement[] = [
 ];
 
 // Tabela 3-9: Preço Adicional de Materiais Especiais
-export const materialPrices: MaterialPrice[] = [
-  {
-    itemCategory: "Arma",
-    "Aço-Rubi": "+ T$ 6.000",
-    "Adamante": "+ T$ 3.000",
-    "Gelo Eterno": "+ T$ 600",
-    "Madeira Tollon": "+ T$ 1.500",
-    "Matéria Vermelha": "+ T$ 1.500",
-    "Mitral": "+ T$ 1.500",
+export const materialPrices: MaterialPriceRow[] = [
+  { material: "Aço-Rubi",
+    Arma: "+ T$ 6.000",
+    "Armadura Leve": "+ T$ 6.000",
+    "Armadura Pesada": "+ T$ 6.000",
+    Escudo: "+ T$ 3.000",
+    Esotéricos: "+ T$ 6.000",
+    description: "Este metal tem a aparência de vidro avermelhado, mas é duro como aço. Aço-rubi é caríssimo e comercializado apenas por uma guilda de ferreiros de Doherimm. Os anões mantém a origem deste material em segredo, mas suspeita-se de que ele seja minerado das profundezas de uma área de Tormenta.",
+    description_arma: "A arma ignora 10 pontos de redução de dano, além de ignorar a imunidade a crítico de lefeu.",
+    description_armadura: "Fornece uma chance de ignorar o dano extra de acertos críticos e ataques furtivos: armaduras leves e escudos, 25% (1 em 1d4); armaduras pesadas, 50% (qualquer valor par em qualquer dado), cumulativas entre si.",
+    description_esoterico: "Quando lança uma magia que causa dano, ela ignora 10 pontos de redução de dano, além de ignorar as imunidades a dano de lefeu.",
+    origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    itemCategory: "Armadura Leve",
-    "Aço-Rubi": "+ T$ 6.000",
-    "Adamante": "+ T$ 3.000",
-    "Gelo Eterno": "+ T$ 1.500",
-    "Madeira Tollon": "—",
-    "Matéria Vermelha": "+ T$ 1.500",
-    "Mitral": "+ T$ 1.500",
+  { material: "Adamante",
+    Arma: "+ T$ 3.000",
+    "Armadura Leve": "+ T$ 3.000",
+    "Armadura Pesada": "+ T$ 18.000",
+    Escudo: "+ T$ 3.000",
+    Esotéricos: "+ T$ 3.000",
+    description: "Encontrado apenas em meteoritos (e por isso também chamado de “ferro-meteórico”), o adamante é um metal escuro, fosco e mais denso que o aço.",
+    description_arma: "Aumenta o dano em um passo",
+    description_armadura: " Fornece redução de dano: armaduras leves e escudos, RD 2; armaduras pesadas, RD 5.",
+    description_esoterico: "Quando lança uma magia que causa dano, você pode pagar +1 PM para rolar novamente qualquer resultado 1 na rolagem de dano dela.",
+    origin: "Tormenta20 - Jogo do Ano",
   },
-  {
-    itemCategory: "Armadura Pesada",
-    "Aço-Rubi": "+ T$ 6.000",
-    "Adamante": "+ T$ 18.000",
-    "Gelo Eterno": "+ T$ 3.000",
-    "Madeira Tollon": "—",
-    "Matéria Vermelha": "+ T$ 3.000",
-    "Mitral": "+ T$ 12.000",
+  { material: "Gelo Eterno",
+    Arma: "+ T$ 600",
+    "Armadura Leve": "+ T$ 1.500",
+    "Armadura Pesada": "+ T$ 3.000",
+    Escudo: "+ T$ 1.500",
+    Esotéricos: "+ T$ 3.000",
+    description: "As gélidas Montanhas Uivantes produzem gelo que nunca derrete. Expedições de aventureiros exploram essa região glacial perigosa à caça deste material fantástico.",
+    description_arma: "Causa +2 pontos de dano por frio.",
+    description_armadura: "Fornece redução de fogo: armaduras leves e escudos, redução 5; armaduras pesadas, redução 10.",
+    description_esoterico: "Quando lança uma magia de frio que causa dano, você pode rolar novamente qualquer resultado 1 na rolagem de dano dela.",
+    origin: "Tormenta20 - Jogo do Ano",
   },
-  {
-    itemCategory: "Escudo",
-    "Aço-Rubi": "+ T$ 3.000",
-    "Adamante": "+ T$ 3.000",
-    "Gelo Eterno": "+ T$ 1.500",
-    "Madeira Tollon": "+ T$ 1.500",
-    "Matéria Vermelha": "+ T$ 1.500",
-    "Mitral": "+ T$ 1.500",
+  { material: "Madeira Tollon",
+    Arma: "+ T$ 1.500",
+    "Armadura Leve": "—",
+    "Armadura Pesada": "—",
+    Escudo: "+ T$ 1.500",
+    Esotéricos: "+ T$ 3.000",
+    description: "A Floresta de Tollon produz um tipo de madeira negra, dura como aço e dotada de propriedades mágicas. Apenas armas de madeira — arcos, bordões, clavas, lanças, piques e tacapes —, escudos leves e esotéricos podem ser feitos com madeira Tollon.",
+    description_arma: "Conta como mágica para vencer redução de dano. Além disso, habilidades ativadas ao se fazer um ataque ou usar a ação agredir têm seu custo em PM reduzido em –1.",
+    description_esoterico: "Fornece resistência a magia +2",
+    description_escudo: "Fornece resistência a magia +2",
+    origin: "Tormenta20 - Jogo do Ano",
   },
-  {
-    itemCategory: "Esotéricos",
-    "Aço-Rubi": "+ T$ 6.000",
-    "Adamante": "+ T$ 3.000",
-    "Gelo Eterno": "+ T$ 3.000",
-    "Madeira Tollon": "+ T$ 3.000",
-    "Matéria Vermelha": "+ T$ 3.000",
-    "Mitral": "+ T$ 3.000",
+  { material: "Matéria Vermelha",
+    Arma: "+ T$ 1.500",
+    "Armadura Leve": "+ T$ 1.500",
+    "Armadura Pesada": "+ T$ 3.000",
+    Escudo: "+ T$ 1.500",
+    Esotéricos: "+ T$ 3.000",
+    description: "Qualquer material de origem lefeu — desde suas garras e carapaças, até minérios e partes de estruturas encontradas em áreas de Tormenta — apresenta propriedades parecidas, sendo conhecido como “matéria vermelha”. Estes itens assustadores impõem ao usuário penalidade de –2 em perícias baseadas em Carisma (exceto Intimidação).",
+    description_arma: "Causa +1d6 de dano extra. Porém, sempre que você acerta um ataque com a arma, perde 1 ponto de vida. Lefou e lefeu são imunes tanto ao dano extra de matéria vermelha quanto à perda de vida por usar armas desse material.",
+    description_armadura: "Por sua aparência “borrada”, fornecem chance de falha para cada ataque: 10% para escudos e armaduras leves, 25% para armaduras pesadas (cumulativas entre si). Lefeu ignoram este efeito.",
+    description_esoterico: "Você e todos os seus inimigos em alcance curto sofrem –2 em testes de resistência contra efeitos mágicos.",
+    origin: "Tormenta20 - Jogo do Ano",
   },
-];
-
-// Texto Detalhado dos Materiais Especiais (Mantido no data, pois é conteúdo estático complexo)
-export const specialMaterialsText = [
-  {
-    name: "MATERIAIS ESPECIAIS",
-    content: `Armas, armaduras, escudos e esotéricos podem ser feitos ou banhados em um material especial. Para isso, o item precisa ter a melhoria material especial e você precisa pagar o preço extra do material escolhido, conforme a TABELA 3-9.`,
-  },
-  {
-    name: "AÇO-RUBI",
-    content: `Este metal tem a aparência de vidro avermelhado, mas é duro como aço. Aço-rubi é caríssimo e comercializado apenas por uma guilda de ferreiros de Doherimm. Os anões mantêm a origem deste material em segredo, mas suspeita-se de que ele seja minerado das profundezas de uma área de Tormenta.
-      
-      **ARMA:** A arma ignora 10 pontos de redução de dano, além de ignorar a imunidade a crítico de lefeu.
-      **ARMADURA E ESCUDO:** Fornece uma chance de ignorar o dano extra de acertos críticos e ataques furtivos: armaduras leves e escudos, 25% (1 em 1d4); armaduras pesadas, 50% (qualquer valor par em qualquer dado), cumulativas entre si.
-      **ESOTÉRICO:** Quando lança uma magia que causa dano, ela ignora 10 pontos de redução de dano, além de ignorar as imunidades a dano de lefeu.`,
-  },
-  {
-    name: "ADAMANTE",
-    content: `Encontrado apenas em meteoritos (e por isso também chamado de “ferro-meteórico”), o adamante é um metal escuro, fosco e mais denso que o aço.
-      
-      **ARMA:** Aumenta o dano em um passo.
-      **ARMADURA E ESCUDO:** Fornece redução de dano: armaduras leves e escudos, RD 2; armaduras pesadas, RD 5.
-      **ESOTÉRICO:** Quando lança uma magia que causa dano, você pode pagar +1 PM para rolar novamente qualquer resultado 1 na rolagem de dano dela.`,
-  },
-  {
-    name: "GELO ETERNO",
-    content: `As gélidas Montanhas Uivantes produzem gelo que nunca derrete. Expedições de aventureiros exploram essa região glacial perigosa à caça deste material fantástico.
-      
-      **ARMA:** Causa +2 pontos de dano por frio.
-      **ARMADURA E ESCUDO:** Fornece redução de fogo: armaduras leves e escudos, redução 5; armaduras pesadas, redução 10.
-      **ESOTÉRICO:** Quando lança uma magia que causa dano, você pode rolar novamente qualquer resultado 1 na rolagem de dano dela.`,
-  },
-  {
-    name: "MADEIRA TOLLON",
-    content: `A Floresta de Tollon produz um tipo de madeira negra, dura como aço e dotada de propriedades mágicas. Apenas armas de madeira — arcos, bordões, clavas, lanças, piques e tacapes — escudos leves e esotéricos podem ser feitos com madeira Tollon.
-      
-      **ARMA:** Conta como mágica para vencer redução de dano. Além disso, habilidades ativadas ao fazer um ataque ou usar a ação agredir têm seu custo em PM reduzido em –1.
-      **ESCUDO E ESOTÉRICO:** Fornece resistência à magia +2.`,
-  },
-  {
-    name: "MATÉRIA VERMELHA",
-    content: `Qualquer material de origem lefeu — desde suas garras e carapaças, até minérios e partes de estruturas encontradas em áreas de Tormenta — apresenta propriedades parecidas, sendo conhecido como “matéria vermelha”. Estes itens assustadores impõem ao usuário penalidade de –2 em perícias baseadas em Carisma (exceto Intimidação).
-      
-      **ARMA:** Causa +1d6 de dano extra. Porém, sempre que você acerta um ataque com a arma, perde 1 ponto de vida. Lefou e lefeu são imunes tanto ao dano extra de matéria vermelha quanto à perda de vida por usar armas desse material.
-      **ARMADURA E ESCUDO:** Por sua aparência “borrada”, fornecem chance de falha para cada ataque: 10% para escudos e armaduras leves, 25% para armaduras pesadas (cumulativas entre si). Lefou ignoram este efeito.
-      **ESOTÉRICO:** Você e todos os seus inimigos em alcance curto sofrem –2 em testes de resistência contra efeitos mágicos.`,
-  },
-  {
-    name: "MITRAL",
-    content: `Metal raro e valioso, o mitral é prateado, brilhante e mais leve que aço. Itens de mitral ocupam –1 espaço (mínimo 1).
-      
-      **ARMA:** Aumenta sua margem de ameaça em 1. Por exemplo, uma espada longa de mitral tem margem de ameaça 18–20.
-      **ARMADURA E ESCUDO:** Tem sua penalidade de armadura diminuída em 2. Armaduras pesadas de mitral permitem que você aplique até dois pontos de sua Destreza na Defesa.
-      **ESOTÉRICO:** Permite que você pague +2 PM ao lançar uma magia para aumentar a CD dela em +2.`,
+  { material: "Mitral",
+    Arma: "+ T$ 1.500",
+    "Armadura Leve": "+ T$ 1.500",
+    "Armadura Pesada": "+ T$ 12.000",
+    Escudo: "+ T$ 1.500",
+    Esotéricos: "+ T$ 3.000",
+    description: "Metal raro e valioso, o mitral é prateado, brilhante e mais leve que aço. Itens de mitral ocupam –1 espaço (mínimo 1).",
+    description_arma: "Aumenta sua margem de ameaça em 1. Por exemplo, uma espada longa de mitral tem margem de ameaça 18-20.",
+    description_armadura: "Tem sua penalidade de armadura diminuída em 2. Armaduras pesadas de mitral permitem que você aplique até dois pontos de sua Destreza na Defesa.",
+    description_esoterico: "Permite que você pague +2 PM ao lançar uma magia para aumentar a CD dela em +2.",
+    origin: "Tormenta20 - Jogo do Ano",
   },
 ];
 
