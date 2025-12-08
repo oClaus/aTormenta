@@ -123,5 +123,13 @@ export const equipmentCategories: EquipmentCategory[] = [
     color: "from-fuchsia-200 to-white-900",
     href: "/equipamentos/servicos",
   },
+   {
+    id: "superiores",
+    title: "Itens Superiores",
+    description: "Equipamentos de alta qualidade, fabricados com as melhores técnicas e matérias-primas.",
+    icon: "⬆️",
+    color: "from-cyan-400 to-white-900",
+    href: "/equipamentos/superiores",
+  },
   
 ];
