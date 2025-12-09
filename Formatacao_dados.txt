@@ -225,3 +225,25 @@
     type: "Corte",
     spaces: 2,
   },
+
+------------------Magias-----------------------------
+
+
+  { id: "",
+    name: "",
+    type: "",
+    school: "",
+    circle: ,
+    execution: "Padrão",
+    range: "",
+    target: "",
+    duration: "",
+    resistance: "Nenhuma",
+    description: "",
+    origin: "Tormenta20 - Jogo do Ano",
+    enhancements: [
+      { cost: "", effect: "" },
+      { cost: "", effect: "" },
+      { cost: "", effect: "" },
+    ],
+  },
