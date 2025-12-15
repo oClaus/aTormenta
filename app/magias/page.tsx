@@ -46,14 +46,14 @@ const SpellCard = ({ spell }: { spell: Spell }) => {
           <span className={`px-2 py-0.5 rounded-full text-xs font-semibold text-white ${typeColor}`}>
             {spell.type}
           </span>
-          <span className="text-gray-400">
+          <span className="text-gray-200">
             {spell.school}
           </span>
         </div>
       </div>
 
       {/* Detalhes Principais */}
-      <div className="text-sm text-gray-400 space-y-1 mb-3">
+      <div className="text-sm text-gray-300 space-y-1 mb-3">
         <p><strong className={circleColor}> {spell.circle}° Círculo</strong></p>
         <p><strong>Execução:</strong> {spell.execution}</p>
         <p><strong>Alcance:</strong> {spell.range}</p>
@@ -83,7 +83,7 @@ const SpellCard = ({ spell }: { spell: Spell }) => {
 
       {/* Origem */}
       <div className="mt-3 pt-2 border-t border-cyan-500/20 text-right">
-        <span className="text-xs text-gray-500 italic">Origem: {spell.origin}</span>
+        <span className="text-xs text-white-500 italic">Origem: {spell.origin}</span>
       </div>
     </div>
   );
