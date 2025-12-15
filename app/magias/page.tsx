@@ -95,8 +95,20 @@ const SpellCard = ({ spell }: { spell: Spell }) => {
 export default function MagiasPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedType, setSelectedType] = useState<SpellType | "Todos">("Todos");
-  const [selectedSchool, setSelectedSchool] = useState<SpellSchool | "Todas">("Todas");
+  const [selectedSchools, setSelectedSchools] = useState<SpellSchool[]>([]);
   const [selectedCircle, setSelectedCircle] = useState<number | "Todos">("Todos");
+
+  const toggleSchool = (school: SpellSchool) => {
+    setSelectedSchools(prevSchools => {
+      if (prevSchools.includes(school)) {
+        // Remove a escola se já estiver selecionada
+        return prevSchools.filter(s => s !== school);
+      } else {
+        // Adiciona a escola
+        return [...prevSchools, school];
+      }
+    });
+  };
 
   const filteredSpells = useMemo(() => {
     let filtered = spells;
@@ -108,8 +120,8 @@ export default function MagiasPage() {
     }
 
     // 2. Filtrar por Escola
-    if (selectedSchool !== "Todas") {
-      filtered = filtered.filter(spell => spell.school === selectedSchool);
+    if (selectedSchools.length > 0) {
+      filtered = filtered.filter(spell => selectedSchools.includes(spell.school));
     }
 
     // 3. Filtrar por Círculo
@@ -140,7 +152,7 @@ export default function MagiasPage() {
       }
       return a.name.localeCompare(b.name, "pt-BR");
     });
-  }, [searchTerm, selectedType, selectedSchool, selectedCircle]);
+  }, [searchTerm, selectedType, selectedSchools, selectedCircle]);
 
   return (
     <main className="w-full min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-black text-gray-100 px-6 py-12">
@@ -342,9 +354,9 @@ export default function MagiasPage() {
             <h4 className="text-sm font-bold text-cyan-300 mb-2">Escola de Magia</h4>
             <div className="flex flex-wrap gap-2">
               <button
-                onClick={() => setSelectedSchool("Todas")}
+                onClick={() => setSelectedSchools([])}
                 className={`px-3 py-1 text-xs rounded-full transition-colors ${
-                  selectedSchool === "Todas"
+                  selectedSchools.length === 0
                     ? "bg-cyan-600 text-white shadow-md"
                     : "bg-gray-700 text-gray-300 hover:bg-gray-600"
                 }`}
@@ -354,9 +366,9 @@ export default function MagiasPage() {
               {ALL_SPELL_SCHOOLS.map(school => (
                 <button
                   key={school}
-                  onClick={() => setSelectedSchool(school)}
+                  onClick={() => toggleSchool(school)}
                   className={`px-3 py-1 text-xs rounded-full transition-colors ${
-                    selectedSchool === school
+                    selectedSchools.includes(school)
                       ? "bg-cyan-600 text-white shadow-md"
                       : "bg-gray-700 text-gray-300 hover:bg-gray-600"
                   }`}
