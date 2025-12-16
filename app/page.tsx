@@ -13,7 +13,8 @@ export default function Home() {
     { id: "caracteristicas", title: "Características",  icon: "/temas/caracteristicas.png",  color: "from-purple-600 to-pink-600",  href: "/caracteristicas"},
     { id: "pericias",  title: "Perícias",  icon: "/temas/pericias.png",  color: "from-purple-600 to-pink-600",  href: "/pericias"},
     { id: "equipamentos",  title: "Equipamentos",  icon: "/temas/equipamentos.png",  color: "from-yellow-600 to-orange-600",  href: "/equipamentos"},
-     { id: "magias",  title: "Magias",  icon: "/temas/magias.png",  color: "from-yellow-600 to-orange-600",  href: "/magias"}
+    { id: "magias",  title: "Magias",  icon: "/temas/magias.png",  color: "from-yellow-600 to-orange-600",  href: "/magias"},
+    { id: "regras",  title: "Regras do Jogo",  icon: "🎲",  color: "from-red-600 to-pink-600",  href: "/regras"}
   ];
 
   return (

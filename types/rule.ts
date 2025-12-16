@@ -1,0 +1,18 @@
+// types/rule.ts
+
+import React from 'react'; // Adicionado import
+
+// 1. Estrutura para a Tabela de Dificuldades (Tabela 5-1)
+export interface Difficulty {
+  task: string; // Ex: Fácil, Média, Difícil
+  cd: number | string; // Ex: 5, 10, 15, 40
+  example: string; // Ex: Saber uma encosta íngreme (Atletismo)
+}
+
+// 2. Estrutura para as Seções de Regras (Acordeão)
+export interface RuleSection {
+  id: string;
+  title: string; // Ex: TESTES, TESTES DE ATRIBUTO, TESTES COMUNS
+  // Tipo alterado para aceitar JSX em vez de string Markdown
+  content: React.ReactNode; 
+}
