@@ -16,3 +16,9 @@ export interface RuleSection {
   // Tipo alterado para aceitar JSX em vez de string Markdown
   content: React.ReactNode; 
 }
+
+export interface ExtendedTest {
+  successes: number;
+  complexity: string;
+  example: string;
+}
