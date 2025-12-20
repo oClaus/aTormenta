@@ -238,7 +238,7 @@ export default function RegrasPage() {
     const lowerCaseSearch = searchTerm.toLowerCase();
     if (!lowerCaseSearch) return ruleSections;
     return ruleSections.filter(section => 
-      section.title.toLowerCase().includes(lowerCaseSearch)
+      section.title.toLowerCase().includes(lowerCaseSearch) 
     );
   }, [searchTerm]);
 
@@ -246,16 +246,26 @@ export default function RegrasPage() {
     <main className="w-full min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-black text-gray-100 px-4 md:px-8 py-12">
       {/* Container centralizador para telas grandes */}
       <div className="w-full max-w-none px-4 md:px-8 lg:px-12">
-        
-        <div className="mb-8">
-          <Link href="/" className="text-red-400 hover:text-red-300 transition-colors">
-            ← Voltar para o Início
+
+        {/* Header */}
+      <header className="p-6 border-b border-purple-900/50">
+        <Link href="/" className="inline-block group">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-red-500 via-pink-400 to-red-500 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(168,85,247,0.5)] group-hover:drop-shadow-[0_0_25px_rgba(168,85,247,0.7)] transition-all">
+            a-Tormenta
+          </h1>
+        </Link>
+        <div className="flex items-center gap-2 mt-2">
+          <Link href="/" className="text-purple-400 hover:text-purple-300 text-sm transition-colors">
+            Início
           </Link>
+          <span className="text-gray-600">/</span>
+          <span className="text-gray-400 text-sm">Regras do Jogo</span>
         </div>
+      </header>
 
         <div className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-pink-400 to-red-400 mb-4">
-            🎲 Regras do Jogo
+          <h1 className="text-2xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-pink-400 to-red-400 mb-4">
+           Regras do Jogo
           </h1>
           <p className="text-gray-400 text-lg">
             Consulta rápida e detalhada das regras básicas de testes, dificuldades e condições.
@@ -271,6 +281,7 @@ export default function RegrasPage() {
         />
 
         <div className="space-y-4">
+          
           {filteredSections.map((section) => (
             <RuleAccordionItem key={section.id} section={section} />
           ))}
