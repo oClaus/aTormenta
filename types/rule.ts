@@ -22,3 +22,16 @@ export interface ExtendedTest {
   complexity: string;
   example: string;
 }
+
+export interface SpecialSituation {
+  condition: string;
+  modifier: string;
+}
+
+export interface ObjectStat {
+  example: string;
+  size: string;
+  def: number;
+  rd: number;
+  pv: number;
+}

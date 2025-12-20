@@ -4,8 +4,8 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 
 // IMPORTAÇÃO
-import { difficulties, difficultiesNote, ruleSections, extendedTests } from "@/data/rules";
-import { RuleSection, Difficulty, ExtendedTest } from "@/types/rule";
+import { difficulties, difficultiesNote, ruleSections, extendedTests, specialSituations, objectStats } from "@/data/rules";
+import { RuleSection, Difficulty, ExtendedTest, SpecialSituation, ObjectStat } from "@/types/rule";
 
 // --- Componentes Auxiliares ---
 
@@ -13,7 +13,7 @@ const DifficultyTable = ({ data }: { data: Difficulty[] }) => (
   <div className="overflow-x-auto shadow-lg rounded-xl border border-red-500/30 mt-4">
     <table className="min-w-full divide-y divide-red-500/30">
       <caption className="p-4 text-xl font-bold text-red-300 bg-red-900/50 rounded-t-xl">
-        Tabela 5-1: Dificuldades
+        Tabela: Dificuldades
       </caption>
       <thead className="bg-red-900/70 text-red-200">
         <tr>
@@ -63,6 +63,80 @@ const ExtendedTestTable = ({ data }: { data: ExtendedTest[] }) => (
   </div>
 );
 
+const SpecialSituationsTable = ({ data }: { data: typeof specialSituations }) => (
+  <div className="overflow-x-auto shadow-lg rounded-xl border border-red-500/30 mt-4">
+    <table className="min-w-full divide-y divide-red-500/30">
+      <caption className="p-4 text-xl font-bold text-red-300 bg-red-900/50">
+        Tabela: Situações Especiais
+      </caption>
+      <thead className="bg-red-900/70 text-red-200">
+        <tr>
+          <th className="px-4 py-3 text-left text-xs font-medium uppercase">Condição</th>
+          <th className="px-4 py-3 text-left text-xs font-medium uppercase">Modificador</th>
+        </tr>
+      </thead>
+      <tbody className="divide-y divide-red-500/20 bg-gray-900/50">
+        <tr className="bg-red-900/20"><td colSpan={2} className="px-4 py-2 text-xs font-bold text-red-400">O ATACANTE ESTÁ... (no ataque)</td></tr>
+        {data.attacker.map((item) => (
+          <tr key={item.condition} className="hover:bg-gray-700/50">
+            <td className="px-4 py-2 text-sm text-red-300 font-medium">{item.condition}</td>
+            <td className="px-4 py-2 text-sm text-gray-300">{item.modifier}</td>
+          </tr>
+        ))}
+        <tr className="bg-red-900/20"><td colSpan={2} className="px-4 py-2 text-xs font-bold text-red-400">O ALVO ESTÁ... (na defesa)</td></tr>
+        {data.target.map((item) => (
+          <tr key={item.condition} className="hover:bg-gray-700/50">
+            <td className="px-4 py-2 text-sm text-red-300 font-medium">{item.condition}</td>
+            <td className="px-4 py-2 text-sm text-gray-300">{item.modifier}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+);
+
+const ObjectStatsTable = ({ data }: { data: typeof objectStats }) => (
+  <div className="overflow-x-auto shadow-lg rounded-xl border border-red-500/30 mt-4">
+    <table className="min-w-full divide-y divide-red-500/30">
+      <caption className="p-4 text-xl font-bold text-red-300 bg-red-900/50">
+        Tabela: Estatísticas de Objetos
+      </caption>
+      <thead className="bg-red-900/70 text-red-200">
+        <tr>
+          <th className="px-4 py-3 text-left text-xs font-medium uppercase">Exemplo</th>
+          <th className="px-4 py-3 text-left text-xs font-medium uppercase">Tam.</th>
+          <th className="px-4 py-3 text-left text-xs font-medium uppercase">Def</th>
+          <th className="px-4 py-3 text-left text-xs font-medium uppercase">RD</th>
+          <th className="px-4 py-3 text-left text-xs font-medium uppercase">PV</th>
+        </tr>
+      </thead>
+      <tbody className="divide-y divide-red-500/20 bg-gray-900/50 text-sm">
+        <tr className="bg-red-900/20"><td colSpan={5} className="px-4 py-2 font-bold text-red-400">OBJETOS GERAIS</td></tr>
+        {data.geral.map((obj) => (
+          <tr key={obj.example} className="hover:bg-gray-700/50 transition-colors">
+            <td className="px-4 py-2 text-red-300">{obj.example}</td>
+            <td className="px-4 py-2 text-gray-300">{obj.size}</td>
+            <td className="px-4 py-2 text-gray-300">{obj.def}</td>
+            <td className="px-4 py-2 text-gray-300">{obj.rd}</td>
+            <td className="px-4 py-2 text-gray-300">{obj.pv}</td>
+          </tr>
+        ))}
+        <tr className="bg-red-900/20"><td colSpan={5} className="px-4 py-2 font-bold text-red-400">ARMAS, ARMADURAS E ESCUDOS*</td></tr>
+        {data.equipamento.map((item) => (
+          <tr key={item.example} className="hover:bg-gray-700/50 transition-colors">
+            <td colSpan={3} className="px-4 py-2 text-red-300">{item.example}</td>
+            <td className="px-4 py-2 text-gray-300">{item.rd}</td>
+            <td className="px-4 py-2 text-gray-300">{item.pv}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+    <div className="p-4 text-xs text-gray-400 bg-red-900/50 rounded-b-xl italic">
+      *Divida por 2 para itens reduzidos, multiplique por 2 para aumentados e por 5 para gigantes.
+    </div>
+  </div>
+);
+
 const RuleAccordionItem = ({ section }: { section: RuleSection }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -85,6 +159,16 @@ const RuleAccordionItem = ({ section }: { section: RuleSection }) => {
       );
     }
 
+    if (section.id === "situacoes-especiais") {
+    return (
+      <>
+        <div className="markdown-content">{section.content}</div>
+        <SpecialSituationsTable data={specialSituations} />
+      </>
+    );
+  }
+    
+
     if (section.id === "alvos-areas") {
       return (
         <>
@@ -106,6 +190,15 @@ const RuleAccordionItem = ({ section }: { section: RuleSection }) => {
         </>
       );
     }
+
+    if (section.id === "quebrando-objetos") {
+    return (
+      <>
+        <div className="markdown-content">{section.content}</div>
+        <ObjectStatsTable data={objectStats} />
+      </>
+    );
+  }
 
     return <div className="markdown-content">{section.content}</div>;
   };
