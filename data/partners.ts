@@ -78,4 +78,59 @@ export const partners: Partner[] = [
       mestre: "Como acima, mas você também pode gastar 5 PM para curar 6d8+6 PV.",
     },
   },
+  {
+    id: "Adepto",
+    name: "Adepto",
+    description: "Um conjurador capaz de ajudá-lo a lançar suas magias.",
+    origin: "Tormenta20 - Jogo do Ano",
+    benefits: {
+      iniciante: "O custo para lançar suas magias de 1º círculo diminui –1 PM.",
+      veterano: "Como acima, mas também reduz o custo de suas magias de 2º círculo.",
+      mestre: "Como acima, e esta redução se torna cumulativa com outras reduções.",
+    },
+  },
+  {
+    id: "Ajudante",
+    name: "Ajudante",
+    description: "Um bardo, nobre ou sábio que ajuda com palavras firmes ou encorajadoras. Um ajudante não pode fornecer bônus em Luta ou Pontaria.",
+    origin: "Tormenta20 - Jogo do Ano",
+    benefits: {
+      iniciante: "Você recebe +2 em duas perícias. ",
+      veterano: "Muda para +2 em três perícias. ",
+      mestre: "Muda para +4 em três perícias. As perícias são definidas pelo parceiro. ",
+    },
+  },
+  {
+    id: "Assassino",
+    name: "Assassino",
+    description: "Um ladino ou outro tipo furtivo e letal. Note que, além de fornecer +2 em testes de ataque corpo a corpo, o bônus por flanquear facilita que o personagem use seu Ataque Furtivo.",
+    origin: "Tormenta20 - Jogo do Ano",
+    benefits: {
+      iniciante: "Você pode usar a habilidade Ataque Furtivo +1d6. Se já possui a habilidade, o bônus é cumulativo. ",
+      veterano: "Além do Ataque Furtivo, fornece bônus por flanquear contra um inimigo por rodada. ",
+      mestre: "Muda o dano do Ataque Furtivo para +2d6.",
+    },
+  },
+  {
+    id: "Perseguidor",
+    name: "Perseguidor",
+    description: "Um caçador, animal farejador ou outro especialista em localizar alvos.",
+    origin: "Tormenta20 - Jogo do Ano",
+    benefits: {
+      iniciante: "+2 em Percepção e Sobrevivência. ",
+      veterano: "Você pode usar Sentidos Aguçados.",
+      mestre: "Você pode usar Percepção às Cegas.",
+    },
+  },
+  {
+    id: "Vigilante",
+    name: "Vigilante",
+    description: "Um vigia ou animal de guarda, sempre atento aos arredores.",
+    origin: "Tormenta20 - Jogo do Ano",
+    benefits: {
+      iniciante: "+2 em Percepção e Iniciativa.",
+      veterano: "Você pode usar Esquiva Sobrenatural.",
+      mestre: "Você pode usar Olhos nas Costas.",
+    },
+  },
 ];

@@ -247,3 +247,32 @@
       { cost: "", effect: "" },
     ],
   },
+
+------------------Parceiros-----------------------------
+
+  {
+    id: "",
+    name: "",
+    description: "",
+    origin: "Tormenta20 - Jogo do Ano",
+    benefits: {
+      iniciante: "",
+      veterano: "",
+      mestre: "",
+    },
+  },
+
+------------------Montarias-----------------------------
+
+  {
+    id: "",
+    name: "",
+    size: "",
+    description: "",
+    origin: "Tormenta20 - Jogo do Ano",
+    benefits: {
+      iniciante: "",
+      veterano: "",
+      mestre: "",
+    },
+  },

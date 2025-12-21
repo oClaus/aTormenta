@@ -15,7 +15,8 @@ export default function Home() {
     { id: "equipamentos", title: "Equipamentos", icon: "/temas/equipamentos.png", color: "from-yellow-600 to-orange-600" },
     { id: "magias", title: "Magias", icon: "/temas/magias.png", color: "from-yellow-600 to-orange-600" },
     { id: "regras", title: "Regras do Jogo", icon: "/temas/regras.png", color: "from-red-600 to-pink-600" },
-    { id: "parceiros", title: "Parceiros", icon: "/temas/parceiros.png", color: "from-green-600 to-lime-600" }
+    { id: "parceiros", title: "Parceiros", icon: "/temas/parceiros.png", color: "from-green-600 to-lime-600" },
+    { id: "montarias", title: "Montarias", icon: "/temas/montarias.png", color: "from-fuschia-600 to-lime-600" }
   ];
 
   return (
