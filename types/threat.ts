@@ -15,6 +15,7 @@ export interface Threat {
   percepcao: number;
   defesa: number;
   pv: number;        // Pontos de Vida
+  pm?: number;
   deslocamento: string;
   
   // Resistências

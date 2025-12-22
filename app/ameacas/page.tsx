@@ -397,120 +397,68 @@ export default function AmeacasPage() {
 
 
               {/* Resistências (Fort, Ref, Von) */}
-
               <section className="mb-6">
-
                 <h3 className="text-xl font-bold text-red-300 mb-3">🛡️ Resistências</h3>
-
                 <div className="grid grid-cols-3 gap-3 mb-3">
-
                   <div className="p-3 bg-black/30 rounded-lg border border-red-900/30 text-center">
-
                     <div className="text-xs text-red-300 font-semibold mb-1">FORT</div>
-
                     <div className="text-xl font-bold text-white">
-
                       {selectedThreat.fort >= 0 ? "+" : ""}{selectedThreat.fort}
-
                     </div>
-
                   </div>
-
                   <div className="p-3 bg-black/30 rounded-lg border border-red-900/30 text-center">
-
                     <div className="text-xs text-red-300 font-semibold mb-1">REF</div>
-
                     <div className="text-xl font-bold text-white">
-
                       {selectedThreat.ref >= 0 ? "+" : ""}{selectedThreat.ref}
-
                     </div>
-
                   </div>
-
                   <div className="p-3 bg-black/30 rounded-lg border border-red-900/30 text-center">
-
                     <div className="text-xs text-red-300 font-semibold mb-1">VON</div>
-
                     <div className="text-xl font-bold text-white">
-
                       {selectedThreat.von >= 0 ? "+" : ""}{selectedThreat.von}
-
                     </div>
-
                   </div>
-
                 </div>
-
                 {selectedThreat.resistenciaDano && (
-
                   <div className="p-3 bg-black/30 rounded-lg border border-red-900/30">
-
                     <span className="text-red-300 font-semibold text-sm mr-2">Vantagens/RD:</span>
-
                     <span className="text-white">{selectedThreat.resistenciaDano}</span>
-
                   </div>
-
                 )}
-
               </section>
-
-
 
               {/* Movimento e Mana */}
-
               <section className="mb-6">
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-
+                <div className={`grid gap-3 ${selectedThreat.pm != null ? 'grid-cols-2' : 'grid-cols-1'}`}>
                   <div className="p-3 bg-black/30 rounded-lg border border-red-900/30">
-
                     <div className="text-xs text-red-300 font-semibold mb-1">DESLOCAMENTO</div>
-
                     <div className="text-white">{selectedThreat.deslocamento}</div>
-
                   </div>
-
+                  {selectedThreat.pm != null && (
+                    <div className="p-3 bg-black/30 rounded-lg border border-red-900/30">
+                      <div className="text-xs text-red-300 font-semibold mb-1">PM</div>
+                      <div className="text-white">{selectedThreat.pm}</div>
+                    </div>
+                  )}
                 </div>
-
               </section>
-
-
 
               {/* Ataques */}
-
               <section className="mb-6">
-
                 <h3 className="text-xl font-bold text-red-300 mb-3">⚡ Ataques</h3>
-
                 {selectedThreat.ataqueCorpoACorpo && (
-
                   <div className="p-3 bg-black/30 rounded-lg border border-red-900/30 mb-3">
-
                     <div className="text-xs text-red-300 font-semibold mb-1">CORPO A CORPO</div>
-
                     <div className="text-white">{selectedThreat.ataqueCorpoACorpo}</div>
-
                   </div>
-
                 )}
-
                 {selectedThreat.ataqueDistancia && (
-
                   <div className="p-3 bg-black/30 rounded-lg border border-red-900/30">
-
                     <div className="text-xs text-red-300 font-semibold mb-1">À DISTÂNCIA</div>
-
                     <div className="text-white">{selectedThreat.ataqueDistancia}</div>
-
                   </div>
-
                 )}
-
               </section>
-
-
 
               {/* Habilidades Especiais */}
 
