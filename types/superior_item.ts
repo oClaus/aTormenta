@@ -17,6 +17,7 @@ export type MaterialType =
   "Gelo Eterno" | 
   "Madeira Tollon" | 
   "Matéria Vermelha" | 
+  "Couro de Dragão" | 
   "Mitral";
 
 export type MaterialItemCategory = 

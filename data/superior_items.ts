@@ -84,6 +84,18 @@ export const materialPrices: MaterialPriceRow[] = [
     description_esoterico: "Permite que você pague +2 PM ao lançar uma magia para aumentar a CD dela em +2.",
     origin: "Tormenta20 - Jogo do Ano",
   },
+  { material: "Couro de Dragão",
+    Arma: "—",
+    "Armadura Leve": "—",
+    "Armadura Pesada": "—",
+    Escudo: "—",
+    Esotéricos: "—",
+    description: "Cobiçado por artesãos em toda Arton, o couro escamado de um dragão verdadeiro é um material especial que pode ser empregado para fabricar certos itens superiores. Tanto o couro bruto quanto itens de couro de dragão não existem à venda; a única maneira de obter esse material é derrotar um dragão.",
+    description_armadura: "Armaduras leves e escudos (exigem uma peça): Defesa +1, RD 10 contra o tipo de dano do sopro do dragão e resistência a magia +2. Armaduras pesadas (exigem três peças): Defesa +2, redução de dano 20 contra o tipo de dano do sopro do dragão e resistência a magia +5.",
+    description_escudo: "Armaduras leves e escudos (exigem uma peça): Defesa +1, RD 10 contra o tipo de dano do sopro do dragão e resistência a magia +2. Armaduras pesadas (exigem três peças): Defesa +2, redução de dano 20 contra o tipo de dano do sopro do dragão e resistência a magia +5.",
+    description_esoterico: "Quando lança uma magia que cause dano do mesmo tipo do sopro do dragão, você pode gastar 1 PM para aumentar o dano da magia em +1 por dado.",
+    origin: "Tormenta20 - Jogo do Ano",
+  },
 ];
 
 // Tabela 3-8: Melhorias
