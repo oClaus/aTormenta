@@ -312,3 +312,18 @@
     equipamentos: [""],
     tesouro: "Nenhum."
  },
+
+------------------Encantamentos-----------------------------
+
+ {  id: "",
+    name: "",
+    description: "",
+    origin: "Tormenta20 - Jogo do Ano",
+  },
+
+  { id: "",
+    name: "",
+    description: "",
+    price: "",
+    origin: "Tormenta20 - Jogo do Ano",
+  },

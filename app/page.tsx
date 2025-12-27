@@ -19,6 +19,7 @@ export default function Home() {
     { id: "montarias", title: "Montarias", icon: "/temas/montarias.png", color: "from-fuschia-600 to-lime-600" },
     { id: "ameacas",  title: "Ameaças",  icon: "/temas/ameacas.png",  color: "from-red-600 to-orange-600",  href: "/ameacas"},
     { id: "perigos",  title: "Perigos",  icon: "/temas/perigos.png",  color: "from-red-600 to-orange-600",  href: "/perigos"},
+    { id: "itens-magicos",  title: "Itens Mágicos",  icon: "/temas/itens-magicos.png",  color: "from-red-600 to-orange-600",  href: "/itens-magicos"},
   ];
 
   return (
