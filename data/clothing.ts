@@ -170,14 +170,6 @@ export const clothing: Gear[] = [
     price: "T$ 25",
     spaces: "1",
   },
-  {
-    id: "Coroa da Encoratriz",
-    name: "Coroa da Encoratriz",
-    description: "Essa bela coroa ornamentada tem dimensões exageradas, fazendo seu usuário parecer muito mais alto. Parece ser feita de madeira, mas o tipo de madeira muda a partir dos ângulos — pode ser mogno claro, a madeira tollon mais escura ou alguma árvore multicolorida nativa apenas de Al-Gazara. Se há qualquer música ambiente, a coroa parece tremer com vontade de ser usada, “dançando” sozinha se deixada em uma superfície. Dizem que a alma do humanoide transformado em encoratriz reside na coroa. A Coroa da Encoratriz concede Carisma +1 e treinamento em Atuação, mas seu usuário passa a sofrer os efeitos das obrigações e restrições de Nimb. Caso já seja um devoto de Nimb, fica confuso com um resultado de 1 ou 2 no d6 (em vez de apenas 1).",
-    origin: "Dragão Brasil",
-    price: "T$ 9000",
-    spaces: "2",
-  },
 
  
 ];
