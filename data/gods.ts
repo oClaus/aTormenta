@@ -298,7 +298,7 @@ export const gods: God[] = [
     preferredWeapon: "Cimitarra.",
     devotees: "Aggelus, qareen, arcanistas, bárbaros, caçadores, cavaleiros, guerreiros, nobres, paladinos.",
     grantedPowers: [
-      "Espada Solar,",
+      "Espada Solar",
       "Fulgor Solar",
       "Habitante do Deserto",
       "Inimigo de Tenebra"

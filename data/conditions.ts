@@ -236,5 +236,5 @@ export const conditions: Condition[] = [
     name: "Vulnerável",
     description: "O personagem sofre –2 na Defesa.",
     origin: "Tormenta20 - Jogo do Ano"
-  }
+  },
 ];
