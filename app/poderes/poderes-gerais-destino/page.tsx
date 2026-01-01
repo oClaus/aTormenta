@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { powersGeraisDestino } from "@/data/powers-gerais-destino"; // Verifique se este caminho está correto no seu projeto
-import { formatOrigin } from "@/types/power"; // Verifique se este caminho está correto
+import { powersGeraisDestino } from "@/data/powers-gerais-destino";
+import { formatOrigin } from "@/types/power";
 
-// Dados extraídos da imagem
+// Dados extraídos da imagem (Mantidos e tipados implicitamente)
 const progressionData = [
   { level: "6º", benefit: "+2 em uma perícia" },
   { level: "7º", benefit: "+1 na Defesa" },
@@ -34,119 +34,146 @@ export default function GeraisPodersPage() {
     .sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
 
   return (
-    <main className="w-full min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-black text-gray-100 px-6 py-12">
-      {/* Header */}
-      <header className="p-6 border-b border-purple-900/50 mb-12">
-        <Link href="/" className="inline-block group">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-500 via-purple-400 to-pink-500 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(168,85,247,0.5)] group-hover:drop-shadow-[0_0_25px_rgba(168,85,247,0.7)] transition-all">
-            a-Tormenta
-          </h1>
-        </Link>
-        <div className="flex items-center gap-2 mt-2">
-          <Link href="/" className="text-purple-400 hover:text-purple-300 text-sm transition-colors">
-            Início
-          </Link>
-          <span className="text-gray-600">/</span>
-          <Link href="/poderes" className="text-purple-400 hover:text-purple-300 text-sm transition-colors">
-            Poderes
-          </Link>
-          <span className="text-gray-600">/</span>
-          <span className="text-gray-400 text-sm">Poderes Gerais - Destino</span>
+    <div className="min-h-screen bg-stone-950 text-stone-200 font-serif selection:bg-red-900 selection:text-white relative overflow-x-hidden">
+      
+      {/* Background Effect */}
+      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.8)_100%)]" />
+
+      {/* Header Responsivo (Logo Esquerda, Menu Direita) */}
+      <header className="relative z-10 w-full p-6 border-b-2 border-stone-800 bg-stone-950/90 backdrop-blur-md shadow-lg mb-8 md:mb-12">
+        <div className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            
+            <Link href="/" className="inline-block group self-start md:self-auto">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-wider uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-500 via-red-600 to-red-900 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 0 10px rgba(220, 38, 38, 0.3)' }}>
+                    a-Tormenta
+                </h1>
+            </Link>
+            
+            <div className="flex items-center gap-2 flex-wrap text-xs sm:text-sm font-bold tracking-wide uppercase self-end md:self-auto">
+                <Link href="/" className="text-stone-500 hover:text-indigo-600 transition-colors whitespace-nowrap">
+                  Início
+                </Link>
+                <span className="text-stone-700">/</span>
+                <Link href="/poderes" className="text-stone-500 hover:text-indigo-600 transition-colors">
+                  Poderes
+                </Link>
+                <span className="text-stone-700">/</span>
+                <span className="text-red-700">Poderes Gerais - Destino</span>
+            </div>
         </div>
       </header>
 
-      <div className="mb-12">
-        <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 mb-4">
-          Poderes Gerais - Destino
-        </h1>
-      </div>
+      {/* Main Content */}
+      <div className="relative z-10 w-full px-4 sm:px-8 md:px-12 pb-12">
 
-      {/* Busca */}
-      <div className="mb-8">
-        <input
-          type="text"
-          placeholder="Buscar por nome, descrição ou origem..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full px-6 py-3 rounded-lg bg-gray-800 border border-purple-500/30 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all"
-        />
-      </div>
+        {/* Intro */}
+        <div className="mb-12 p-8 bg-stone-900/50 rounded border border-stone-800 w-full">
+            <h1 className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-violet-500 to-indigo-500 mb-6 drop-shadow-md">
+            Poderes Gerais - Destino
+            </h1>
+            <p className="text-stone-300 text-lg font-serif">
+              Poderes ligados à sorte, determinação e ao próprio tecido da realidade.
+            </p>
+        </div>
 
-      {/* Grid de Poderes */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 items-stretch mb-16">
-        {filteredPowers.map((power) => (
-          <div
-            key={power.id}
-            className="rounded-lg bg-gradient-to-br from-purple-950/20 to-black border border-purple-500/20 p-6 hover:border-purple-500/60 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 flex flex-col h-full"
-          >
-            <h3 className="text-xl font-bold text-purple-300 mb-3">{power.name}</h3>
-
-            <div className="flex-1 mb-4">
-              <p className="text-gray-400 text-sm leading-relaxed">
-                {power.description}
-              </p>
-            </div>
-
-            <div className="mt-auto">
-              {power.prerequisite && (
-                <div className="mb-4 pt-4 border-t border-purple-500/20">
-                  <p className="text-xs text-purple-400">
-                    <span className="font-semibold">Pré-requisito:</span> {power.prerequisite}
-                  </p>
+        {/* Busca - ESTILO CAIXA */}
+        <div className="mb-8 p-6 rounded bg-stone-900 border border-stone-800 shadow-inner w-full">
+            <label className="block text-sm font-bold text-stone-400 mb-3 uppercase tracking-wider font-serif">
+                Buscar Poder
+            </label>
+            <div className="relative">
+                <input
+                type="text"
+                placeholder="Buscar por nome, descrição ou origem..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full px-5 py-3 bg-stone-950 border border-stone-700 rounded text-stone-200 placeholder-stone-600 focus:outline-none focus:border-indigo-600 focus:ring-1 focus:ring-indigo-900 transition-all font-serif"
+                />
+                <div className="absolute right-4 top-1/2 -translate-y-1/2 text-stone-600">
+                    🔍
                 </div>
-              )}
-
-              <div className="flex items-center justify-between pt-4 border-t border-purple-500/20">
-                <span className="text-xs px-3 py-1 rounded-full bg-purple-900/30 border border-purple-500/30 text-purple-300">
-                  {formatOrigin(power.origin)}
-                </span>
-              </div>
             </div>
-          </div>
-        ))}
+        </div>
+
+        {/* Grid de Poderes */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 items-stretch mb-16">
+            {filteredPowers.map((power) => (
+            <div
+                key={power.id}
+                className="rounded-xl bg-stone-900 border border-stone-800 p-6 hover:border-indigo-900/50 hover:shadow-[0_0_20px_rgba(99,102,241,0.15)] transition-all duration-300 flex flex-col h-full group hover:-translate-y-1"
+            >
+                {/* Nome do Poder */}
+                <h3 className="text-xl font-bold text-indigo-500 mb-3 group-hover:text-indigo-400 transition-colors font-serif">
+                {power.name}
+                </h3>
+
+                {/* Descrição */}
+                <div className="flex-1 mb-4">
+                <p className="text-stone-400 text-sm leading-relaxed font-serif group-hover:text-stone-300">
+                    {power.description}
+                </p>
+                </div>
+
+                {/* Rodapé do Card */}
+                <div className="mt-auto">
+                {/* Pré-requisito */}
+                {power.prerequisite && (
+                    <div className="mb-4 pt-4 border-t border-stone-800 group-hover:border-stone-700 transition-colors">
+                    <p className="text-xs text-stone-500 font-serif">
+                        <span className="font-bold text-indigo-700 uppercase tracking-wide">Pré-requisito:</span> {power.prerequisite}
+                    </p>
+                    </div>
+                )}
+
+                {/* Origem */}
+                <div className="flex items-center justify-end pt-4 border-t border-stone-800 group-hover:border-stone-700 transition-colors">
+                    <span className="text-[10px] px-2 py-0.5 rounded bg-stone-950 border border-stone-700 text-stone-500 font-serif uppercase tracking-widest">
+                    {formatOrigin(power.origin)}
+                    </span>
+                </div>
+                </div>
+            </div>
+            ))}
+        </div>
+
+        {filteredPowers.length === 0 && (
+            <div className="text-center py-12 text-stone-500 italic border border-dashed border-stone-800 rounded-xl font-serif">
+            <p className="text-lg">Nenhum poder encontrado.</p>
+            </div>
+        )}
+
+        {/* --- INÍCIO DA TABELA DE PROGRESSÃO --- */}
+        <section className="mb-12 max-w-3xl mx-auto">
+            <h3 className="text-2xl font-bold text-indigo-500 mb-6 text-center font-serif uppercase tracking-wide border-b border-stone-800 pb-2">
+                Tabela de Benefícios - Ao Sabor do Destino
+            </h3>
+            
+            <div className="overflow-hidden rounded-xl border border-stone-800 shadow-xl bg-stone-900">
+                <table className="w-full text-left text-sm font-serif">
+                    <thead className="bg-stone-950 text-indigo-400 uppercase font-bold tracking-wider border-b border-stone-800">
+                        <tr>
+                            <th className="px-6 py-4">Nível</th>
+                            <th className="px-6 py-4">Benefício</th>
+                        </tr>
+                    </thead>
+                    <tbody className="divide-y divide-stone-800 bg-stone-900">
+                        {progressionData.map((row, index) => (
+                            <tr key={index} className={`transition-colors hover:bg-stone-800 ${index % 2 === 0 ? 'bg-stone-900' : 'bg-stone-900/50'}`}>
+                                <td className="px-6 py-3 font-bold text-indigo-500">{row.level}</td>
+                                <td className="px-6 py-3 text-stone-300">{row.benefit}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+        </section>
       </div>
 
-      {filteredPowers.length === 0 && (
-        <div className="text-center py-12">
-          <p className="text-gray-500 text-lg">Nenhum poder encontrado.</p>
-        </div>
-      )}
-
-      {/* --- INÍCIO DA TABELA DE PROGRESSÃO --- */}
-      <section className="mb-12 max-w-2xl mx-auto">
-        <h3 className="text-2xl font-bold text-purple-300 mb-6 text-center">Tabela de Benefícios - Ao Sabor do Destino</h3>
-        
-        <div className="overflow-hidden rounded-xl border border-purple-500/30 shadow-lg shadow-purple-900/10">
-          <table className="w-full text-left text-sm">
-            <thead className="bg-purple-900/40 text-purple-200 uppercase font-bold tracking-wider">
-              <tr>
-                <th className="px-6 py-4 border-b border-purple-500/20">Nível</th>
-                <th className="px-6 py-4 border-b border-purple-500/20">Benefício</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-purple-500/10 bg-gray-900/50">
-              {progressionData.map((row, index) => (
-                <tr 
-                  key={index} 
-                  className={`transition-colors hover:bg-purple-500/10 ${index % 2 === 0 ? 'bg-purple-900/5' : 'bg-transparent'}`}
-                >
-                  <td className="px-6 py-3 font-semibold text-purple-300">{row.level}</td>
-                  <td className="px-6 py-3 text-gray-300">{row.benefit}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-      {/* --- FIM DA TABELA DE PROGRESSÃO --- */}
-
-      {/* Seção de Informação */}
-      <div className="bg-gray-900/50 p-6 rounded-lg border border-gray-800">
-        <h3 className="text-2xl font-bold text-purple-300 mb-4">Importante lembrar!</h3>
-        <p className="text-gray-300 leading-relaxed">
-          Aqui temos poderes oficiais dos livros mas também da Dragão Brasil, podendo ou não ser disponibilizado em futuros complementos, para utilizar, conversar com mestre da mesa.
-        </p>
-      </div>
-    </main>
+      {/* Footer */}
+      <footer className="mt-12 py-8 border-t border-stone-900 bg-black text-center text-stone-600 text-sm relative z-10 font-serif">
+        <p>Compêndio Tormenta RPG © 2025 • Feito por um fã para fãs</p>
+        <p>Tormenta 20 pertence a Jambo Editora. Todos os direitos são reservados a editora.</p>
+      </footer>
+    </div>
   );
 }
