@@ -631,7 +631,7 @@ export const bosses: Boss[] = [
     id: "18",
     name: "Aogami - Shin Megami Tensei V",
     image: "/chefes/aogami.webp",
-    tipo: "Espitiro (demônio)",
+    tipo: "Espirito (demônio)",
     nd: 6,
     historia: "Aogami é um homem alto com cabelo azul e olhos dourados, coberto por uma armadura prateada e vermelha que parece estar fundida à sua carne. Sua aparência e maneirismos, um tanto robóticos em comparação com outros demônios, são resultado de seu método de invocação artificial como um proto-demônio.",
     dicas: "Sem muita história, utilize conforme precisar.",
