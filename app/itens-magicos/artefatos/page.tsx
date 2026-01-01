@@ -5,30 +5,29 @@ import Link from "next/link";
 import { artifacts } from "@/data/artifacts";
 import { Artifact } from "@/types/artifact";
 
-// --- 1. Formatação de Texto (Melhorada para Leitura) ---
+// --- 1. Formatação de Texto (Estilo Stone/Grimório) ---
 const formatTextWithBreaks = (text: string) => {
   const lines = text.split('\\n');
 
   return lines.map((line, index) => {
     let formattedLine = line
-      // Negrito agora é Branco Gelo para alto contraste
-      .replace(/\*\*\*(.*?)\*\*\*/g, '<em class="text-white drop-shadow-sm"><strong>$1</strong></em>')
-      .replace(/\*\*(.*?)\*\*/g, '<strong class="text-indigo-100">$1</strong>')
-      // Itálico agora é um azul claro suave
-      .replace(/\*(.*?)\*/g, '<em class="text-slate-400">$1</em>')
-      // Listas com ícone azul ciano
-      .replace(/- (.*?)\./g, '<p class="mt-1 ml-2 md:ml-4 text-sm"><span class="font-bold text-cyan-500">❖</span> $1.</p>')
-      // Citações com fundo azulado sutil
-      .replace(/> (.*)/g, '<blockquote class="border-l-4 border-indigo-500 pl-3 md:pl-4 py-2 my-3 text-sm italic text-slate-300 bg-indigo-950/30 rounded-r-lg shadow-inner">$1</blockquote>');
+      // Negrito -> Stone Claro
+      .replace(/\*\*\*(.*?)\*\*\*/g, '<em class="text-stone-100 drop-shadow-sm font-serif"><strong>$1</strong></em>')
+      .replace(/\*\*(.*?)\*\*/g, '<strong class="text-stone-200 font-serif">$1</strong>')
+      // Itálico -> Stone Médio
+      .replace(/\*(.*?)\*/g, '<em class="text-stone-400 font-serif">$1</em>')
+      // Listas -> Âmbar
+      .replace(/- (.*?)\./g, '<p class="mt-1 ml-2 md:ml-4 text-sm font-serif"><span class="font-bold text-amber-600">❖</span> $1.</p>')
+      // Citações -> Borda Âmbar e Fundo Stone
+      .replace(/> (.*)/g, '<blockquote class="border-l-4 border-amber-700 pl-3 md:pl-4 py-2 my-3 text-sm italic text-stone-400 bg-stone-900/50 rounded-r-lg shadow-inner font-serif">$1</blockquote>');
 
     return (
-      // O texto padrão agora é slate-300 (mais claro que o antigo cinza)
-      <div key={index} dangerouslySetInnerHTML={{ __html: formattedLine }} className="mb-2 last:mb-0 text-sm md:text-base leading-relaxed text-slate-300" />
+      <div key={index} dangerouslySetInnerHTML={{ __html: formattedLine }} className="mb-2 last:mb-0 text-sm md:text-base leading-relaxed text-stone-300 font-serif" />
     );
   });
 };
 
-// --- Componente: Modal de Imagem (Lightbox) ---
+// --- Componente: Modal de Imagem (Lightbox - Estilo Stone) ---
 const ImageModal = ({ src, alt, onClose }: { src: string, alt: string, onClose: () => void }) => {
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
@@ -40,7 +39,7 @@ const ImageModal = ({ src, alt, onClose }: { src: string, alt: string, onClose: 
 
   return (
     <div 
-      className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-md animate-in fade-in duration-200"
+      className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/95 backdrop-blur-md animate-in fade-in duration-200"
       onClick={onClose}
     >
       <div 
@@ -49,7 +48,7 @@ const ImageModal = ({ src, alt, onClose }: { src: string, alt: string, onClose: 
       >
         <button 
           onClick={onClose}
-          className="absolute -top-12 right-0 text-slate-400 hover:text-white transition-colors p-2 bg-slate-800/50 rounded-full hover:bg-red-500/20"
+          className="absolute -top-12 right-0 text-stone-400 hover:text-white transition-colors p-2 bg-stone-900/80 rounded-full border border-stone-700 hover:bg-red-900/50 hover:border-red-700"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         </button>
@@ -57,14 +56,14 @@ const ImageModal = ({ src, alt, onClose }: { src: string, alt: string, onClose: 
         <img 
           src={src} 
           alt={alt} 
-          className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-[0_0_60px_rgba(79,70,229,0.3)] border border-indigo-500/30"
+          className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-[0_0_60px_rgba(180,83,9,0.3)] border border-amber-900/30"
         />
       </div>
     </div>
   );
 };
 
-// --- 2. Card de Artefato (Tema Midnight Blue) ---
+// --- 2. Card de Artefato (Tema Grimório/Âmbar) ---
 const SpecificWeaponCard = ({ weapon }: { weapon: Artifact }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const hasImage = !!weapon.image;
@@ -74,37 +73,38 @@ const SpecificWeaponCard = ({ weapon }: { weapon: Artifact }) => {
       <div className="
         group relative p-5 md:p-6 rounded-2xl h-full flex flex-col text-left transition-all duration-300
         
-        /* Fundo Midnight: Gradiente sutil de Azul Escuro para Preto Azulado */
-        bg-gradient-to-br from-slate-900/90 via-[#0f172a]/95 to-indigo-950/90 
-        backdrop-blur-md
+        /* Fundo: Stone Escuro */
+        bg-stone-950
         
-        /* Bordas: Azul Indigo sutil que brilha no hover */
-        border border-indigo-500/20 
-        hover:border-indigo-400/50 
+        /* Bordas: Stone com brilho Âmbar no hover */
+        border border-stone-800 
+        hover:border-amber-900/50 
         
         /* Sombras e Efeitos de Hover */
         shadow-[0_4px_20px_rgba(0,0,0,0.5)]
-        hover:shadow-[0_0_30px_rgba(99,102,241,0.15)] 
+        hover:shadow-[0_0_30px_rgba(180,83,9,0.15)] 
         hover:-translate-y-1
       ">
+        {/* Efeito de brilho superior no hover (Âmbar) */}
+        <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-amber-700/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
         
         {/* Cabeçalho do Card */}
-        <div className="mb-4 pb-3 border-b border-indigo-500/20 group-hover:border-indigo-400/40 transition-colors flex justify-between items-start gap-3">
-          {/* Título mais claro e com leve tom azulado */}
-          <h3 className="text-xl md:text-2xl font-bold text-indigo-100 group-hover:text-white transition-all break-words tracking-tight">
+        <div className="mb-4 pb-3 border-b border-stone-800 group-hover:border-amber-900/30 transition-colors flex justify-between items-start gap-3">
+          {/* Título */}
+          <h3 className="text-xl md:text-2xl font-bold text-stone-200 group-hover:text-amber-500 transition-all break-words tracking-tight font-serif">
             {weapon.name}
           </h3>
 
-          {/* Botão Ver Arte (Estilo Pílula Neon Suave) */}
+          {/* Botão Ver Arte (Estilo Pílula Stone/Âmbar) */}
           {hasImage && (
             <button
               onClick={() => setIsModalOpen(true)}
               className="
                 flex items-center gap-2 px-3 py-1.5 rounded-full 
-                bg-indigo-950/50 hover:bg-indigo-600/20 
-                border border-indigo-500/30 hover:border-indigo-400 
-                text-xs font-medium text-indigo-300 hover:text-indigo-100 
-                transition-all shrink-0 cursor-pointer shadow-lg shadow-black/20
+                bg-stone-900 hover:bg-stone-800 
+                border border-stone-700 hover:border-amber-700 
+                text-xs font-medium text-stone-400 hover:text-amber-500 
+                transition-all shrink-0 cursor-pointer shadow-lg font-serif
               "
               title="Visualizar ilustração"
             >
@@ -118,16 +118,16 @@ const SpecificWeaponCard = ({ weapon }: { weapon: Artifact }) => {
           )}
         </div>
       
-        {/* Descrição (Cor ajustada na função helper) */}
-        <div className="text-sm md:text-base pt-1 text-slate-300/90 flex-grow leading-relaxed font-light">
+        {/* Descrição */}
+        <div className="text-sm md:text-base pt-1 text-stone-400 flex-grow leading-relaxed font-serif group-hover:text-stone-300 transition-colors">
           {formatTextWithBreaks(weapon.description)}
         </div>
         
         {/* Rodapé */}
-        <div className="mt-5 pt-3 border-t border-indigo-500/20 flex justify-end items-center">
-          <span className="text-xs text-indigo-400/70 italic flex items-center gap-1">
-            <span className="w-1.5 h-1.5 rounded-full bg-indigo-500/50 inline-block"></span>
-            Origem: <span className="text-indigo-300">{weapon.origin}</span>
+        <div className="mt-5 pt-3 border-t border-stone-800 flex justify-end items-center">
+          <span className="text-xs text-stone-500 italic flex items-center gap-1 font-serif">
+            <span className="w-1.5 h-1.5 rounded-full bg-amber-700/50 inline-block"></span>
+            Origem: <span className="text-amber-800 font-bold uppercase tracking-wider group-hover:text-amber-700">{weapon.origin}</span>
           </span>
         </div>
       </div>
@@ -160,71 +160,88 @@ export default function ArmasMagicasPage() {
   }, [weaponSearch, sizeFilter]);
 
   return (
-    // Fundo da página ajustado para combinar (Azul Profundo)
-    <main className="w-full min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-900 via-[#050b14] to-black text-slate-200 px-4 sm:px-8 md:px-12 py-8 md:py-12 selection:bg-indigo-500 selection:text-white overflow-x-hidden">
+    // Fundo da página Stone Escuro
+    <div className="min-h-screen bg-stone-950 text-stone-200 font-serif selection:bg-red-900 selection:text-white relative overflow-x-hidden">
       
-      {/* Header */}
-      <header className="w-full p-4 md:p-6 border-b border-indigo-900/30 backdrop-blur-md sticky top-0 z-50 bg-slate-950/80 -mx-4 sm:-mx-8 md:-mx-12 px-4 sm:px-8 md:px-12 mb-8 md:mb-12 shadow-lg shadow-indigo-900/10">
-        <div className="w-full flex flex-col xl:flex-row justify-between xl:items-center gap-4">
-            <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
-                <Link href="/" className="inline-block group">
-                  <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-indigo-200 via-white to-indigo-300 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(99,102,241,0.5)] transition-all duration-500">
+      {/* Background Effect */}
+      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.8)_100%)]" />
+
+      {/* Header Responsivo (CORRIGIDO: Logo Esquerda, Menu Direita) */}
+      <header className="relative z-10 w-full p-6 border-b-2 border-stone-800 bg-stone-950/90 backdrop-blur-md shadow-lg mb-8 md:mb-12">
+        <div className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            
+            {/* Esquerda: Logo */}
+            <Link href="/" className="inline-block group self-start md:self-auto">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-wider uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-500 via-red-600 to-red-900 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 0 10px rgba(220, 38, 38, 0.3)' }}>
                     a-Tormenta
-                  </h1>
+                </h1>
+            </Link>
+            
+            {/* Direita: Menu */}
+            <div className="flex items-center gap-2 flex-wrap text-xs sm:text-sm font-bold tracking-wide uppercase self-end md:self-auto">
+                <Link href="/" className="text-stone-500 hover:text-amber-600 transition-colors whitespace-nowrap">
+                  Início
                 </Link>
-                
-                <div className="flex items-center gap-2 flex-wrap text-xs sm:text-sm font-medium">
-                    <Link href="/" className="text-indigo-400 hover:text-indigo-200 transition-colors whitespace-nowrap">
-                      Início
-                    </Link>
-                    <span className="text-indigo-700">/</span>
-                    <Link href="/itens-magicos" className="text-indigo-400 hover:text-indigo-200 transition-colors whitespace-nowrap">
-                      Itens Mágicos
-                    </Link>
-                    <span className="text-indigo-700">/</span>
-                    <span className="text-indigo-200">Acessórios</span>
-                </div>
+                <span className="text-stone-700">/</span>
+                <Link href="/itens-magicos" className="text-stone-500 hover:text-amber-600 transition-colors whitespace-nowrap">
+                  Itens Mágicos
+                </Link>
+                <span className="text-stone-700">/</span>
+                <span className="text-red-700">Artefatos</span>
             </div>
         </div>
       </header>
 
-      <div className="w-full"> 
+      <div className="relative z-10 w-full px-4 sm:px-8 md:px-12 pb-12"> 
+        {/* Título da Página */}
         <div className="mb-10 md:mb-16 text-center px-2">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-white via-indigo-100 to-indigo-300 mb-4 md:mb-6 drop-shadow-[0_0_15px_rgba(79,70,229,0.4)] leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-amber-600 to-red-500 mb-4 md:mb-6 drop-shadow-lg leading-tight">
             Artefatos
           </h1>
         </div>
-        <div><p className="text-indigo-200/70 text-lg font-light">
+        
+        {/* Texto Introdutório */}
+        <div className="bg-stone-900/50 p-8 rounded border border-stone-800 mb-12">
+            <p className="text-stone-300 text-lg font-serif mb-4 leading-relaxed">
                 Um artefato é um item mágico único extremamente poderoso. Normalmente, apenas divindades maiores têm poder para criar estas peças, e elas sempre são forjadas com um propósito específico. Os deuses cuidam para que artefatos caiam nas mãos de seus servos mais poderosos, mas às vezes o destino leva essas peças até aventureiros menores.
-              </p>
-              <p className="text-indigo-200/70 text-lg font-light">Artefatos não são simplesmente “outro tipo de item mágico”. São relíquias fabulosas, lendárias. A busca para recuperar ou destruir um deles pode ser a base para uma campanha inteira. Não há tabelas para geração aleatória de artefatos, nem custo para fabricá-los. Esses itens devem entrar em uma campanha apenas por decisão deliberada do mestre.</p></div>
+            </p>
+            <p className="text-stone-300 text-lg font-serif leading-relaxed">
+                Artefatos não são simplesmente “outro tipo de item mágico”. São relíquias fabulosas, lendárias. A busca para recuperar ou destruir um deles pode ser a base para uma campanha inteira. Não há tabelas para geração aleatória de artefatos, nem custo para fabricá-los. Esses itens devem entrar em uma campanha apenas por decisão deliberada do mestre.
+            </p>
+        </div>
 
         <section id="specific-weapons-section" className="w-full pt-4 md:pt-8 pb-12 md:pb-20">
+          
+          {/* Título da Seção */}
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 md:mb-8 gap-4">
-            
             <div className="flex flex-col gap-4 max-w-3xl">
-              <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-indigo-100">
-                  <span className="w-1.5 md:w-2 h-6 md:h-8 bg-indigo-500 rounded-full shadow-[0_0_15px_rgba(99,102,241,0.8)]"></span>
+              <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-amber-700 font-serif">
+                  <span className="w-1.5 md:w-2 h-6 md:h-8 bg-amber-800 rounded-full shadow-[0_0_10px_rgba(180,83,9,0.5)]"></span>
                   Relíquias & Artefatos
               </h2>
             </div>
-            
-            <div className="relative group w-full md:w-auto">
-               <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                <svg className="w-4 h-4 text-indigo-400 group-focus-within:text-indigo-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-                </svg>
-              </div>
-              <input
+          </div>
+
+          {/* Busca - ESTILO CAIXA (Âmbar/Vermelho) */}
+          <div className="mb-8 p-6 rounded bg-stone-900 border border-stone-800 shadow-inner w-full">
+            <label className="block text-sm font-bold text-stone-400 mb-3 uppercase tracking-wider font-serif">
+                Buscar Artefato
+            </label>
+            <div className="relative">
+                <input
                 type="text"
-                placeholder="Buscar artefato..."
+                placeholder="Nome ou descrição..."
                 value={weaponSearch}
                 onChange={(e) => setWeaponSearch(e.target.value)}
-                className="w-full md:w-80 pl-10 pr-4 py-2.5 rounded-xl bg-slate-900/50 border border-indigo-500/30 text-indigo-100 placeholder-indigo-500/50 focus:outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 transition-all shadow-inner text-sm md:text-base"
-              />
+                className="w-full px-5 py-3 bg-stone-950 border border-stone-700 rounded text-stone-200 placeholder-stone-600 focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-900 transition-all font-serif"
+                />
+                <div className="absolute right-4 top-1/2 -translate-y-1/2 text-stone-600">
+                    🔍
+                </div>
             </div>
           </div>
 
+          {/* Grid de Cards */}
           {filteredSpecificWeapons.length > 0 ? (
             <div className="grid grid-cols-1 gap-5 md:gap-8 w-full">
               {filteredSpecificWeapons.map((weapon) => (
@@ -232,12 +249,18 @@ export default function ArmasMagicasPage() {
               ))}
             </div>
           ) : (
-            <div className="text-center py-12 text-indigo-400/60 italic border border-dashed border-indigo-900/50 bg-indigo-950/10 rounded-xl text-lg">
+            <div className="text-center py-12 text-stone-500 italic border border-dashed border-stone-800 bg-stone-900/50 rounded-xl text-lg font-serif">
               Nenhum artefato encontrado com "{weaponSearch}".
             </div>
           )}
         </section>
       </div>
-    </main>
+
+      {/* Footer */}
+      <footer className="mt-12 py-8 border-t border-stone-900 bg-black text-center text-stone-600 text-sm relative z-10 font-serif">
+        <p>Compêndio Tormenta RPG © 2025 • Feito por um fã para fãs</p>
+        <p>Tormenta 20 pertence a Jambo Editora. Todos os direitos são reservados a editora.</p>
+      </footer>
+    </div>
   );
 }
