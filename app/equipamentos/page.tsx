@@ -66,24 +66,36 @@ const InitialMoneyTable = ({ data }: { data: InitialMoneyEntry[] }) => {
 };
 
 // Componente para o Card de Categoria (Grid)
-const CategoryCard = ({ category }: { category: EquipmentCategory }) => (
-  <Link
-    href={category.href}
-    className={`group relative rounded bg-stone-900 border border-stone-800 p-6 hover:border-amber-700/50 transition-all duration-300 hover:shadow-[0_4px_20px_rgba(0,0,0,0.6)] text-left hover:-translate-y-1`}
-  >
-    <div className="text-4xl mb-3 text-stone-400 group-hover:text-amber-500 transition-colors">{category.icon}</div>
-    <h3 className="text-2xl font-bold text-stone-200 mb-2 group-hover:text-amber-500 transition-colors font-serif">
-      {category.title}
-    </h3>
-    <p className="text-stone-400 text-sm line-clamp-3 font-serif leading-relaxed">
-      {category.description}
-    </p>
-    
-    {/* Detalhes de Canto */}
-    <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-stone-700 opacity-0 group-hover:border-amber-600 group-hover:opacity-100 transition-all"></div>
-    <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-stone-700 opacity-0 group-hover:border-amber-600 group-hover:opacity-100 transition-all"></div>
-  </Link>
-);
+const CategoryCard = ({ category }: { category: EquipmentCategory }) => {
+  const IconComponent = category.icon;
+
+  return (
+    <Link
+      href={category.href}
+      className="group relative flex flex-col items-start p-6 rounded bg-stone-900 border border-stone-800 transition-all duration-300 hover:border-amber-700/50 hover:bg-stone-900/80 hover:-translate-y-1 hover:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.5)]"
+    >
+      {/* Container do Ícone com Efeito de Glow */}
+      <div className={`mb-4 p-3 rounded-lg bg-stone-950 border border-stone-800 group-hover:border-amber-900/50 transition-colors shadow-inner`}>
+        <IconComponent 
+          className={`w-8 h-8 md:w-10 md:h-10 text-stone-500 group-hover:text-amber-500 transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(245,158,11,0.5)]`} 
+          strokeWidth={1.5}
+        />
+      </div>
+
+      <h3 className="text-xl md:text-2xl font-bold text-stone-200 mb-2 group-hover:text-amber-500 transition-colors font-serif tracking-wide">
+        {category.title}
+      </h3>
+      
+      <p className="text-stone-400 text-sm font-serif leading-relaxed line-clamp-3 group-hover:text-stone-300 transition-colors">
+        {category.description}
+      </p>
+      
+      {/* Detalhes de Canto (Cantoneiras) */}
+      <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-stone-800 opacity-50 group-hover:border-amber-700 group-hover:opacity-100 transition-all"></div>
+      <div className="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-stone-800 opacity-50 group-hover:border-amber-700 group-hover:opacity-100 transition-all"></div>
+    </Link>
+  );
+};
 
 
 export default function EquipamentosPage() {

@@ -29,46 +29,47 @@ const GearFilterableTable = ({ allGear }: { allGear: Gear[] }) => {
   }, [allGear, searchTerm]);
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 w-full">
       {/* Barra de Busca */}
-      <input
-        type="text"
-        placeholder="Buscar equipamento por nome ou descrição..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        // MUDANÇA: ROSE - foco: rose-500, ring: rose-500/20
-        className="w-full px-6 py-3 rounded-lg bg-gray-800 border border-zinc-500/30 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-rose-500 focus:ring-2 focus:ring-rose-500/20 transition-all"
-      />
+      <div className="relative">
+        <input
+          type="text"
+          placeholder="Buscar equipamento por nome ou descrição..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="w-full px-5 py-3 bg-stone-950 border border-stone-700 rounded text-stone-200 placeholder-stone-600 focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-900 transition-all font-serif"
+        />
+        <div className="absolute right-4 top-1/2 -translate-y-1/2 text-stone-600">
+            🔍
+        </div>
+      </div>
 
       {/* Tabela de Equipamentos */}
-      {/* MUDANÇA: ROSE - borda: rose-500/30 */}
-      <div className="overflow-x-auto shadow-lg rounded-xl border border-rose-500/30">
-        <table className="min-w-full divide-y divide-zinc-500/30">
-          {/* MUDANÇA: ROSE - cabeçalho: bg-rose-900/70, texto: text-rose-200 */}
-          <thead className="bg-rose-900/70 text-rose-200">
+      <div className="overflow-x-auto shadow-2xl rounded border border-stone-800 w-full">
+        <table className="min-w-full divide-y divide-stone-800">
+          <thead className="bg-stone-900 text-amber-700">
             <tr>
-              <th scope="col" className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Item</th>
-              <th scope="col" className="w-24 px-4 pr-4 py-3 text-right text-xs font-medium uppercase tracking-wider">Preço</th>
-              <th scope="col" className="w-20 px-4 pr-4 py-3 text-center text-xs font-medium uppercase tracking-wider">Espaços</th>
+              <th scope="col" className="px-4 py-3 text-left text-xs font-bold uppercase tracking-wider border-r border-stone-800">Item</th>
+              <th scope="col" className="w-24 px-4 pr-4 py-3 text-right text-xs font-bold uppercase tracking-wider border-r border-stone-800">Preço</th>
+              <th scope="col" className="w-20 px-4 pr-4 py-3 text-center text-xs font-bold uppercase tracking-wider">Espaços</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-zinc-500/20">
+          <tbody className="divide-y divide-stone-800">
             {filteredGear.map((item, index) => (
-              <tr key={item.id} className={index % 2 === 0 ? "bg-gray-800/50" : "bg-gray-900/50 hover:bg-gray-700/50 transition-colors"}>
-                {/* MUDANÇA: ROSE - nome do item: text-rose-300 */}
-                <td className="px-4 py-2 text-sm font-medium text-rose-300">
-                  {item.name}
-                  <div className="text-xs text-gray-300 break-words">{item.description}</div>
-                  <div className="mt-1 text-xs text-zinc-400">Origem: {item.origin}</div>
+              <tr key={item.id} className={index % 2 === 0 ? "bg-stone-900/30" : "bg-stone-900/60 hover:bg-amber-900/10 transition-colors"}>
+                <td className="px-4 py-3 text-sm font-medium text-stone-200 border-r border-stone-800/50 align-top">
+                  <div className="font-bold text-amber-600 font-serif text-lg">{item.name}</div>
+                  <div className="text-sm text-stone-400 break-words font-serif italic mt-1">{item.description}</div>
+                  <div className="mt-2 text-xs text-amber-800 font-bold uppercase tracking-widest">Origem: {item.origin}</div>
                 </td>
-                <td className="w-24 px-4 pr-4 py-2 text-right text-sm text-gray-300">{item.price}</td>
-                <td className="w-20 px-4 pr-4 py-2 text-center text-sm text-gray-300">{item.spaces}</td>
+                <td className="w-24 px-4 pr-4 py-3 text-right text-sm text-stone-300 font-serif align-top border-r border-stone-800/50">{item.price}</td>
+                <td className="w-20 px-4 pr-4 py-3 text-center text-sm text-stone-300 font-serif align-top">{item.spaces}</td>
               </tr>
             ))}
           </tbody>
         </table>
         {filteredGear.length === 0 && (
-          <div className="text-center py-8 text-gray-500 bg-gray-900/50">Nenhum equipamento encontrado com os filtros aplicados.</div>
+          <div className="text-center py-12 text-stone-500 bg-stone-900 border-t border-stone-800 italic">Nenhum equipamento encontrado com os filtros aplicados.</div>
         )}
       </div>
     </div>
@@ -80,54 +81,61 @@ const GearFilterableTable = ({ allGear }: { allGear: Gear[] }) => {
 
 export default function GearPage() {
   return (
-    <main className="w-full min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-black text-gray-100 px-6 py-12">
+    <div className="min-h-screen bg-stone-950 text-stone-200 font-serif selection:bg-red-900 selection:text-white relative overflow-x-hidden">
+
+      {/* Background Effect */}
+      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.8)_100%)]" />
 
       {/* Header */}
-      {/* MUDANÇA: ROSE - borda do header: rose-900/50 */}
-      <header className="p-6 border-b border-rose-900/50">
-        <Link href="/" className="inline-block group">
-          {/* MUDANÇA: ROSE - Título principal: rose-400/fuchsia-300/rose-500 */}
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-rose-400 via-fuchsia-300 to-rose-500 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(244,114,182,0.5)] group-hover:drop-shadow-[0_0_25px_rgba(244,114,182,0.7)] transition-all">
-            a-Tormenta
-          </h1>
-        </Link>
-        <div className="flex items-center gap-2 mt-2">
-          {/* MUDANÇA: ROSE - links: text-rose-400 */}
-          <Link href="/" className="text-rose-400 hover:text-fuchsia-300 text-sm transition-colors">
-            Início
-          </Link>
-          <span className="text-gray-600">/</span>
-          {/* MUDANÇA: ROSE - links: text-rose-400 */}
-          <Link href="/equipamentos" className="text-rose-400 hover:text-fuchsia-300 text-sm transition-colors">
-            Equipamentos
-          </Link>
-          <span className="text-gray-600">/</span>
-          <span className="text-gray-400 text-sm">Esotéricos</span>
+      <header className="relative z-10 w-full p-6 border-b-2 border-stone-800 bg-stone-950/90 backdrop-blur-md shadow-lg">
+        <div className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <Link href="/" className="inline-block group">
+                <h1 className="text-4xl font-bold tracking-wider uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-500 via-red-600 to-red-900 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 0 10px rgba(220, 38, 38, 0.3)' }}>
+                    a-Tormenta
+                </h1>
+            </Link>
+            <div className="flex items-center gap-3 text-sm font-bold tracking-wide uppercase">
+                <Link href="/" className="text-stone-500 hover:text-amber-600 transition-colors">
+                    Início
+                </Link>
+                <span className="text-stone-700">/</span>
+                <Link href="/equipamentos" className="text-stone-500 hover:text-amber-600 transition-colors">
+                    Equipamentos
+                </Link>
+                <span className="text-stone-700">/</span>
+                <span className="text-red-700">Esotéricos</span>
+            </div>
         </div>
       </header>
 
-      {/* Seção de Texto Introdutório */}
-      {/* MUDANÇA: ROSE - borda: rose-500/20 */}
-      <section className="mb-12 p-6 bg-gray-900/50 rounded-xl border border-rose-500/20">
+      {/* Main Content */}
+      <main className="relative z-10 w-full px-6 py-12">
+
+        {/* Seção de Texto Introdutório */}
+        <section className="mb-12 p-8 bg-stone-900/50 rounded border border-stone-800 w-full">
       
-        <div className="space-y-4 text-white-300 leading-relaxed">
-          {/* MUDANÇA: ROSE - Título da seção: rose-400/fuchsia-400/rose-400 */}
-          <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-fuchsia-400 to-rose-400 mb-4">
+        <div className="space-y-4 text-stone-300 leading-relaxed font-serif">
+          <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-amber-600 to-red-500 mb-4 drop-shadow-md">
             Esotéricos
           </h1>
-        <p>
-          Itens utilizados por conjuradores para lançar magias de forma mais eficiente. Para usar um esotérico, você precisa empunhá-lo com a mão que usará para gesticular ao lançar a magia. Uma magia só pode receber os benefícios de um esotérico por vez. A CD para fabricar qualquer esotérico é 20 e para fabricá-lo você deve ser treinado em Misticismo.
+        <p className="text-stone-400 text-lg">
+            Itens utilizados por conjuradores para lançar magias de forma mais eficiente. Para usar um esotérico, você precisa empunhá-lo com a mão que usará para gesticular ao lançar a magia. Uma magia só pode receber os benefícios de um esotérico por vez. A CD para fabricar qualquer esotérico é 20 e para fabricá-lo você deve ser treinado em Misticismo.
         </p>
 
         </div>
       </section>
 
       {/* Tabela Completa e Filtrável */}
-      <section>
-        {/* MUDANÇA: ROSE - título da tabela: text-rose-300 */}
-        <h2 className="text-3xl font-bold text-rose-300 mb-6">Tabela Completa de Esotéricos</h2>
+      <section className="w-full">
+        <h2 className="text-3xl font-bold text-amber-700 mb-6 border-b border-stone-800 pb-2">Tabela Completa de Esotéricos</h2>
         <GearFilterableTable allGear={esoteric} />
       </section>
     </main>
+    {/* Footer */}
+    <footer className="mt-12 py-8 border-t border-stone-900 bg-black text-center text-stone-600 text-sm relative z-10">
+        <p>Compêndio Tormenta RPG © 2025 • Feito por um fã para fãs</p>
+        <p>Tormenta 20 pertence a Jambo Editora. Todos os direitos são reservados a editora.</p>
+    </footer>
+    </div>
   );
 }

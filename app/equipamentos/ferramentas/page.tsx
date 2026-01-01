@@ -29,48 +29,47 @@ const GearFilterableTable = ({ allGear }: { allGear: Gear[] }) => {
   }, [allGear, searchTerm]);
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 w-full">
       {/* Barra de Busca */}
-      <input
-        type="text"
-        placeholder="Buscar equipamento por nome ou descrição..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        // MODIFICADO: yellow-500/30 -> indigo-500/30, amber-500 -> purple-500, ring-amber-500/20 -> ring-purple-500/20
-        className="w-full px-6 py-3 rounded-lg bg-gray-800 border border-indigo-500/30 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all"
-      />
+      <div className="relative">
+        <input
+          type="text"
+          placeholder="Buscar equipamento por nome ou descrição..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="w-full px-5 py-3 bg-stone-950 border border-stone-700 rounded text-stone-200 placeholder-stone-600 focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-900 transition-all font-serif"
+        />
+        <div className="absolute right-4 top-1/2 -translate-y-1/2 text-stone-600">
+            🔍
+        </div>
+      </div>
 
       {/* Tabela de Equipamentos */}
-      <div className="overflow-x-auto shadow-lg rounded-xl border border-purple-500/30">
-        {/* MODIFICADO: yellow-500/30 -> indigo-500/30 */}
-        <table className="min-w-full divide-y divide-indigo-500/30">
-          {/* MODIFICADO: yellow-900/70 -> purple-900/70, yellow-200 -> indigo-200 */}
-          <thead className="bg-purple-900/70 text-indigo-200">
+      <div className="overflow-x-auto shadow-2xl rounded border border-stone-800 w-full">
+        <table className="min-w-full divide-y divide-stone-800">
+          <thead className="bg-stone-900 text-amber-700">
             <tr>
-              <th scope="col" className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Item</th>
-              <th scope="col" className="w-24 px-4 pr-4 py-3 text-right text-xs font-medium uppercase tracking-wider">Preço</th>
-              <th scope="col" className="w-20 px-4 pr-4 py-3 text-center text-xs font-medium uppercase tracking-wider">Espaços</th>
+              <th scope="col" className="px-4 py-3 text-left text-xs font-bold uppercase tracking-wider border-r border-stone-800">Item</th>
+              <th scope="col" className="w-24 px-4 pr-4 py-3 text-right text-xs font-bold uppercase tracking-wider border-r border-stone-800">Preço</th>
+              <th scope="col" className="w-20 px-4 pr-4 py-3 text-center text-xs font-bold uppercase tracking-wider">Espaços</th>
             </tr>
           </thead>
-          {/* MODIFICADO: yellow-500/20 -> indigo-500/20 */}
-          <tbody className="divide-y divide-indigo-500/20">
+          <tbody className="divide-y divide-stone-800">
             {filteredGear.map((item, index) => (
-              <tr key={item.id} className={index % 2 === 0 ? "bg-gray-800/50" : "bg-gray-900/50 hover:bg-gray-700/50 transition-colors"}>
-                {/* MODIFICADO: text-yellow-300 -> text-indigo-300 */}
-                <td className="px-4 py-2 text-sm font-medium text-indigo-300">
-                  {item.name}
-                  <div className="text-xs text-gray-300 break-words">{item.description}</div>
-                  {/* MODIFICADO: text-amber-400 -> text-violet-400 */}
-                  <div className="mt-1 text-xs text-violet-400">Origem: {item.origin}</div>
+              <tr key={item.id} className={index % 2 === 0 ? "bg-stone-900/30" : "bg-stone-900/60 hover:bg-amber-900/10 transition-colors"}>
+                <td className="px-4 py-3 text-sm font-medium text-stone-200 border-r border-stone-800/50 align-top">
+                  <div className="font-bold text-amber-600 font-serif text-lg">{item.name}</div>
+                  <div className="text-sm text-stone-400 break-words font-serif italic mt-1">{item.description}</div>
+                  <div className="mt-2 text-xs text-amber-800 font-bold uppercase tracking-widest">Origem: {item.origin}</div>
                 </td>
-                <td className="w-24 px-4 pr-4 py-2 text-right text-sm text-gray-300">{item.price}</td>
-                <td className="w-20 px-4 pr-4 py-2 text-center text-sm text-gray-300">{item.spaces}</td>
+                <td className="w-24 px-4 pr-4 py-3 text-right text-sm text-stone-300 font-serif align-top border-r border-stone-800/50">{item.price}</td>
+                <td className="w-20 px-4 pr-4 py-3 text-center text-sm text-stone-300 font-serif align-top">{item.spaces}</td>
               </tr>
             ))}
           </tbody>
         </table>
         {filteredGear.length === 0 && (
-          <div className="text-center py-8 text-gray-500 bg-gray-900/50">Nenhum equipamento encontrado com os filtros aplicados.</div>
+          <div className="text-center py-12 text-stone-500 bg-stone-900 border-t border-stone-800 italic">Nenhum equipamento encontrado com os filtros aplicados.</div>
         )}
       </div>
     </div>
@@ -82,41 +81,44 @@ const GearFilterableTable = ({ allGear }: { allGear: Gear[] }) => {
 
 export default function GearPage() {
   return (
-    <main className="w-full min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-black text-gray-100 px-6 py-12">
+    <div className="min-h-screen bg-stone-950 text-stone-200 font-serif selection:bg-red-900 selection:text-white relative overflow-x-hidden">
+
+      {/* Background Effect */}
+      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.8)_100%)]" />
 
       {/* Header */}
-      <header className="p-6 border-b border-teal-900/50">
-        <Link href="/" className="inline-block group">
-          {/* MODIFICADO: yellow-400/orange-300/yellow-500 -> indigo-400/purple-300/indigo-500 */}
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-indigo-400 via-purple-300 to-indigo-500 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(168,85,247,0.5)] group-hover:drop-shadow-[0_0_25px_rgba(168,85,247,0.7)] transition-all">
-            a-Tormenta
-          </h1>
-        </Link>
-        <div className="flex items-center gap-2 mt-2">
-          {/* MODIFICADO: text-cyan-400 -> text-violet-400 */}
-          <Link href="/" className="text-violet-400 hover:text-purple-300 text-sm transition-colors">
-            Início
-          </Link>
-          <span className="text-gray-600">/</span>
-          {/* MODIFICADO: text-cyan-400 -> text-violet-400 */}
-          <Link href="/equipamentos" className="text-violet-400 hover:text-purple-300 text-sm transition-colors">
-            Equipamentos
-          </Link>
-          <span className="text-gray-600">/</span>
-          <span className="text-gray-400 text-sm">Ferramentas</span>
+      <header className="relative z-10 w-full p-6 border-b-2 border-stone-800 bg-stone-950/90 backdrop-blur-md shadow-lg">
+        <div className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <Link href="/" className="inline-block group">
+                <h1 className="text-4xl font-bold tracking-wider uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-500 via-red-600 to-red-900 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 0 10px rgba(220, 38, 38, 0.3)' }}>
+                    a-Tormenta
+                </h1>
+            </Link>
+            <div className="flex items-center gap-3 text-sm font-bold tracking-wide uppercase">
+                <Link href="/" className="text-stone-500 hover:text-amber-600 transition-colors">
+                    Início
+                </Link>
+                <span className="text-stone-700">/</span>
+                <Link href="/equipamentos" className="text-stone-500 hover:text-amber-600 transition-colors">
+                    Equipamentos
+                </Link>
+                <span className="text-stone-700">/</span>
+                <span className="text-red-700">Ferramentas</span>
+            </div>
         </div>
       </header>
 
-      {/* Seção de Texto Introdutório */}
-      {/* MODIFICADO: border-yellow-500/20 -> border-indigo-500/20 */}
-      <section className="mb-12 p-6 bg-gray-900/50 rounded-xl border border-indigo-500/20">
+      {/* Main Content */}
+      <main className="relative z-10 w-full px-6 py-12">
+
+        {/* Seção de Texto Introdutório */}
+        <section className="mb-12 p-8 bg-stone-900/50 rounded border border-stone-800 w-full">
       
-        <div className="space-y-4 text-white-300 leading-relaxed">
-          {/* MODIFICADO: yellow-400/amber-400/yellow-400 -> indigo-400/purple-400/indigo-400 */}
-          <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-400 mb-4">
+        <div className="space-y-4 text-stone-300 leading-relaxed font-serif">
+          <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-amber-600 to-red-500 mb-4 drop-shadow-md">
             Ferramentas
           </h1>
-        <p>
+        <p className="text-stone-400 text-lg">
           Itens desta categoria afetam testes de perícia, eliminando penalidades ou fornecendo bônus. A CD para fabricar qualquer ferramenta é 20.
         </p>
 
@@ -124,11 +126,16 @@ export default function GearPage() {
       </section>
 
       {/* Tabela Completa e Filtrável */}
-      <section>
-        {/* MODIFICADO: text-yellow-300 -> text-indigo-300 */}
-        <h2 className="text-3xl font-bold text-indigo-300 mb-6">Tabela Completa de Ferramentas</h2>
+      <section className="w-full">
+        <h2 className="text-3xl font-bold text-amber-700 mb-6 border-b border-stone-800 pb-2">Tabela Completa de Ferramentas</h2>
         <GearFilterableTable allGear={tool} />
       </section>
     </main>
+    {/* Footer */}
+    <footer className="mt-12 py-8 border-t border-stone-900 bg-black text-center text-stone-600 text-sm relative z-10">
+        <p>Compêndio Tormenta RPG © 2025 • Feito por um fã para fãs</p>
+        <p>Tormenta 20 pertence a Jambo Editora. Todos os direitos são reservados a editora.</p>
+    </footer>
+    </div>
   );
 }
