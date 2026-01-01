@@ -26,8 +26,7 @@
   },
 
   -------------Poderes de AlgumaClasse -----------
-  {
-    id: "",
+  { id: "",
     name: "",
     description: "",
     prerequisite: "",
@@ -210,8 +209,7 @@
 
 ------------------armas-----------------------------
 
-  {
-    id: "",
+  { id: "",
     name: "",
     description: "",
     origin: "Tormenta20 - Jogo do Ano",

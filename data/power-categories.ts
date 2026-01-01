@@ -141,4 +141,11 @@ export const powerCategories: PowerCategory[] = [
     description: "Poderes utilizados em todas classes.",
     origin: "tormenta20 - jogo do ano"
   },
+  {
+    id: "Samurai",
+    name: "Samurai",
+    slug: "samurai",
+    description: "Poderes exclusivos de Samurai.",
+    origin: "Dragão Brasil"
+  },
 ];
