@@ -5785,5 +5785,107 @@ export const adventures: Adventure[] = [
       content: "Se questionada quanto a isso, admite sem rodeios que a restauração pode levar anos ou jamais se completar. Ela sempre soube que o oráculo era uma máquina. Para sua crença, a promessa do “eterno retorno” do oráculo é acima de tudo, um excelente teste de fé para os novos iniciados."
     }
   ]
+},
+{ id: "Cem",
+  name: "Cem",
+  theme: "Drama, Mistério e Meta-RPG",
+  image: "/aventuras/cem.png",
+  summary: "Amigos de infância se reúnem no funeral de seu Mestre de RPG exatamente 100 meses após a última sessão, quando um monstro de sua imaginação invade a realidade.",
+  sections: [
+    {
+      type: "text",
+      content: "Esta miniaventura foi criada para RPGs como Kids on Bikes, Ordem Paranormal e Tales from the Loop. É uma trama flexível, sem regras, adaptável às necessidades do seu grupo. Pode ser jogada como aventura avulsa ou início de uma campanha"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "PASSADO"
+    },
+    {
+      type: "text",
+      content: "Os personagens começam como crianças em uma cidadezinha onde nada perigoso acontece, exceto em suas imaginações. O que os une é seu ritual semanal: se juntar em volta de uma mesa e jogar o RPG Tormenta. Escola e família ficam em segundo plano quando é dia de rolar os dados! Na sua campanha, eles são heróis que vagam pelas terras de um antigo reino, combatendo demônios aberrantes trazidos pela tempestade sobrenatural que dá nome ao jogo."
+    },
+    {
+      type: "text",
+      content: "Quem faz o papel de mestre e narra as histórias é outra criança da vizinhança, uma brilhante contadora de histórias de mente hiperativa, mas com uma vida tumultuada. O grupo cria tal NPC de maneira conjunta: nome, aparência, histórico, personalidade e os problemas que vem passando."
+    },
+    {
+      type: "text",
+      content: "A aventura começa com os jovens personagens jogando uma sessão memorável, em que seus heróis entram em uma ruína tomada pelos horrores da tempestade rubra. Em uma caverna, eles encontram um ovo de simbionte, a relíquia viva conhecida como o Tesouro de Trebuck. O ovo emana um calor antinatural e se mexe como uma larva viscosa. A descrição do ovo acaba sendo excessivamente vívida, como se o mestre já tivesse visto isso antes e personagens mais sensíveis podem reagir diante disso. O mestre se desculpa pelo excesso narrativo e quando segue a história o grupo precisa decidir o que fazer com o ovo. As decisões mais prováveis são:"
+    },
+    {
+      type: "text",
+      content: "Destrui-lo."
+    },
+    {
+      type: "text",
+      content: "Escondê-lo."
+    },
+    {
+      type: "text",
+      content: "Vendê-lo."
+    },
+    {
+      type: "text",
+      content: "Ficar com ele e estudá-lo."
+    },
+    {
+      type: "text",
+      content: "Logo em seguida, alguém liga para o mestre e a sessão precisa terminar. Ela se encerra com o NPC narrando um dramático teaser do futuro da campanha."
+    },
+    {
+      type: "text",
+      content: "— Em 100 meses o ovo se abrirá! — comunica, antes de se despedir."
+    },
+    {
+      type: "text",
+      content: "Há um breve silêncio. Então o momento passa, e chega a hora de arrumar mochilas e correr para casa antes dos postes de luz acenderem. Fica a promessa do que acontecerá na próxima aventura, e mesmo o personagem mais cínico sente uma ponta de curiosidade, mas tudo muda depois daquela noite. O mestre para de aparecer regularmente na escola ou vizinhança. Espalham-se boatos de que está com problemas em casa. Um dia, ele some. Transcorre uma semana. Depois, um mês. Por fim, a campanha morre. Nenhum personagem tinha como saber, mas aquela era a última vez que jogariam juntos."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "PRESENTE"
+    },
+    {
+      type: "text",
+      content: "Quase uma década se passa. Os personagens agora são adultos, afastados pela rotina, pelas responsabilidades e pela marcha inexorável do tempo. Eles só se veem novamente porque estão no mesmo funeral. Cada jogador precisa descrever quem seu personagem se tornou durante o interlúdio: como está, como age e como sua vida anda e quem se tornou."
+    },
+    {
+      type: "text",
+      content: "Só então é revelado que quem está sendo velado é mestre! Após uma cena em que todos os personagens podem interagir e têm a chance de se despedir do NPC, algum deles nota uma coincidência perturbadora: cem meses se passaram desde que jogaram a última sessão…"
+    },
+    {
+      type: "text",
+      content: "Logo após, nuvens vermelhas e relâmpagos roxos tomam o céu. Chove sangue. Algo estranho é avistado no centro da cidade: aquele ovo, agora se manifestando na realidade. A criatura não será vencida no plano da imaginação, mas sim no mundo em que os personagens existem (use a ficha de ameaça que preferir para representá-la!)."
+    },
+    {
+      type: "text",
+      content: "Dependendo da decisão que o grupo tomou na infância, algo diferente acontece:"
+    },
+    {
+      type: "text",
+      content: "Se destruíu o ovo: a entidade surge mais fraca, porém, persegue os personagens não importa para onde fujam."
+    },
+    {
+      type: "text",
+      content: "Se escondeu: a entidade surge mesclada a características do local onde foi escondida, acompanhada por uma horda dos habitantes transformados em aberrantes. No final, a cidadezinha onde os personagens cresceram está destruída. O grupo perde seu lar assim como essas pessoas."
+    },
+    {
+      type: "text",
+      content: "Se vendeu: a criatura surge junto do verdadeiro comprador, um antigo vilão da campanha, que deve também ser criado coletivamente. O NPC tentou usar a criatura para seus planos, resistiu à sua tentativa de dominação mental, mas perdeu o controle dela. O grupo pode barganhar com ele por uma aliança contra a entidade, mas agora uma ameaça adicional existe em seu mundo."
+    },
+    {
+      type: "text",
+      content: "Se ficou com ele: a tempestade cessa, mas a criatura começa a caçar os personagens dentro de seus sonhos à noite, tentando corrompê-los aos poucos."
+    },
+    {
+      type: "text",
+      content: "Outras soluções podem ter desfechos similares. Contudo, não importa a escolha, algo é revelado: a entidade contém a essência do falecido mestre! De alguma forma, ele voltou à vida, mas foi aprisionado dentro do ser e corrompido pela tempestade profana."
+    }
+  ]
 }
 ];

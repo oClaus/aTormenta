@@ -1,8 +1,7 @@
 import { GameClass } from "@/types/class";
 
 export const classes: GameClass[] = [
-  {
-  id: "1",
+    { id: "Arcanista",
   name: "Arcanista",
   origin: "tormenta20 - jogo do ano",
   image: "/classes/arcanista.png",
@@ -105,8 +104,7 @@ export const classes: GameClass[] = [
     },
   ]
     },
-    {
-    id: "2",
+    { id: "Ladino",
     name: "Ladino",
     origin: "tormenta20 - jogo do ano",
     image: "/classes/ladino.png",
@@ -189,8 +187,7 @@ export const classes: GameClass[] = [
       { level: 20, abilities: "A pessoa certa para o trabalho, poder de ladino" }
     ],
     },
-    {
-    id: "3",
+    { id: "Nobre",
     name: "Nobre",
     origin: "tormenta20 - jogo do ano",
     image: "/classes/nobre.png",
@@ -276,8 +273,7 @@ export const classes: GameClass[] = [
       { level: 20, abilities: "Realeza, poder de Nobre" }
     ],
     },
-    {
-    id: "4",
+    { id: "Druida",
     name: "Druida",
     origin: "tormenta20 - jogo do ano",
     image: "/classes/druida.png",
@@ -352,8 +348,7 @@ export const classes: GameClass[] = [
       { level: 20, abilities: "Força da natureza, poder de druida" }
     ],
     },
-    {
-    id: "5",
+    { id: "Bárbaro",
     name: "Bárbaro",
     origin: "tormenta20 - jogo do ano",
     image: "/classes/barbaro.png",
@@ -424,8 +419,7 @@ export const classes: GameClass[] = [
       { level: 20, abilities: "Fúria titânica, poder de bárbaro" }
     ],
     },
-    {
-    id: "6",
+    { id: "Bardo",
     name: "Bardo",
     origin: "tormenta20 - jogo do ano",
     image: "/classes/bardo.png",
@@ -497,8 +491,7 @@ export const classes: GameClass[] = [
       { level: 20, abilities: "Artista completo, poder de bardo" }
     ],
     },
-    {
-    id: "7",
+    { id: "Bucaneiro",
     name: "Bucaneiro",
     origin: "tormenta20 - jogo do ano",
     image: "/classes/bucaneiro.png",
@@ -578,8 +571,7 @@ export const classes: GameClass[] = [
       { level: 20, abilities: "Poder de bucaneiro, Sorte de Nimb" }
     ],
     },
-    {
-    id: "8",
+    { id: "Caçador",
     name: "Caçador",
     origin: "tormenta20 - jogo do ano",
     image: "/classes/cacador.png",
@@ -656,8 +648,7 @@ export const classes: GameClass[] = [
       { level: 20, abilities: "Mestre caçador, poder de caçador" }
     ],
     },
-    {
-    id: "9",
+    { id: "Cavaleiro",
     name: "Cavaleiro",
     origin: "tormenta20 - jogo do ano",
     image: "/classes/cavaleiro.png",
@@ -753,8 +744,7 @@ export const classes: GameClass[] = [
     },
     ]
     },
-    {
-    id: "10",
+    { id: "Clérigo",
     name: "Clérigo",
     origin: "tormenta20 - jogo do ano",
     image: "/classes/clerigo.png",
@@ -824,8 +814,7 @@ export const classes: GameClass[] = [
       { level: 20, abilities: "Mão da divindade, poder de clérigo" }
     ],
     },
-    {
-    id: "11",
+    { id: "Guerreiro",
     name: "Guerreiro",
     origin: "tormenta20 - jogo do ano",
     image: "/classes/guerreiro.png",
@@ -893,8 +882,7 @@ export const classes: GameClass[] = [
       { level: 20, abilities: "Campeão, poder de guerreiro" }
     ],
     },
-    {
-    id: "12",
+    { id: "Inventor",
     name: "Inventor",
     origin: "tormenta20 - jogo do ano",
     image: "/classes/inventor.png",
@@ -981,8 +969,7 @@ export const classes: GameClass[] = [
       { level: 20, abilities: "Obra-prima, poder de inventor" }
     ],
     },
-    {
-    id: "13",
+    { id: "Lutador",
     name: "Lutador",
     origin: "tormenta20 - jogo do ano",
     image: "/classes/lutador.png",
@@ -1058,8 +1045,7 @@ export const classes: GameClass[] = [
       { level: 20, abilities: "Dono da rua (2d10), poder de lutador" }
     ],
     },
-    {
-    id: "14",
+    { id: "Paladino",
     name: "Paladino",
     origin: "tormenta20 - jogo do ano",
     image: "/classes/paladino.png",
@@ -1156,8 +1142,7 @@ export const classes: GameClass[] = [
     },
     ]
     },
-    {
-    id: "15",
+    { id: "Samurai",
     name: "Samurai",
     origin: "Dragão Brasil",
     image: "/classes/samurai.png",
@@ -1228,6 +1213,202 @@ export const classes: GameClass[] = [
       { level: 18, abilities: "Poder de samurai" },
       { level: 19, abilities: "Poder de samurai" },
       { level: 20, abilities: "Poder de samurai, Shogun" }
+    ],
+    },
+    { id: "Comandante (Nobre)",
+    name: "Comandante (Nobre)",
+    origin: "Dragão Brasil",
+    image: "/classes/comandante.png",
+    description: "O comandante é o tipo de líder que não conhece o luxo de mandar à distância. Enquanto muitos nobres preferem discursos inflamados ou estratégias elaboradas, o comandante ergue o escudo, ajusta a espada e avança ao lado dos companheiros. Sua autoridade nasce do exemplo, não da linhagem.\nApesar de herdar o carisma e a capacidade de inspirar aliados típicas dos nobres, o comandante os aplica de forma direta e marcial. É a voz firme no calor da batalha, o braço que ampara o escudeiro ferido, o grito que devolve coragem a quem já pensava em recuar. Para o comandante, cada aliado é uma peça crucial. A formação de um comandante depende da convivência com tropas, milícias ou guardas urbanos. Pode ser um herdeiro criado entre veteranos endurecidos, ou um plebeu que ascendeu pelo puro respeito conquistado entre soldados. Seja como for, comandantes são conhecidos por tomar decisões difíceis e manter a disciplina acima de tudo.\nAlguns comandantes têm fama de serem rígidos demais, incapazes de relaxar ou aceitar improvisos. Outros são lembrados como heróis inesquecíveis, que transformaram grupos dispersos em forças imparáveis. Em comum, todos carregam o peso da responsabilidade; e a vontade incansável de levar seus aliados à vitória.",
+    famousExamples: [],
+    characteristics: {
+      pvBase: "16 + Constituição",
+      pvPerLevel: "4 + Constituição",
+      pmPerLevel: "4 PM por nível"
+    },
+    skills: {
+    mandatory: ["Intimidação (Car)", "Guerra (Int)", "Vontade (Sab)"],
+    optional: {
+      skills: [      
+        'Adestramento (Car)', 'Atuação (Car)', 'Cavalgar (Des)', 'Conhecimento (Int)', 'Diplomacia (Car)', 'Enganação (Car)', 'Fortitude (Con)', 'Iniciativa (Des)', 'Intimidação (Car)', 'Intuição (Sab)', 'Investigação (Int)', 'Jogatina (Car)', 'Luta (For)', 'Nobreza (Int)', 'Ofício (Int)', 'Percepção (Sab)', 'Pontaria (Des)'
+      ],
+      count: 3
+      }
+    },
+    proficiency: "Armas marciais, armaduras pesadas e escudos.",
+    abilities: [
+      {
+      name: "Autoconfiança",
+      description: "Você pode usar seu Carisma em vez de Destreza na Defesa (mas continua não podendo somar um atributo na Defesa quando usa armadura pesada).",
+      },
+      {
+        name: "Coordenar",
+        description: "No início de um combate, role 1d20 por patamar (1d20 para iniciante, 2d20 para veterano e assim por diante) e anote os resultados. Uma vez por rodada, você pode gastar 1 PM para substituir a rolagem do teste de um aliado em alcance curto por um desses seus resultados. Após substituir uma rolagem, o resultado é perdido. Além disso, você aprende e pode lançar Comando (atributo-chave Carisma). Esta não é uma habilidade mágica e provém de sua capacidade de impor suas vontades em outras criaturas."
+      },
+      {
+      name: "Direcionar",
+      description: "Você pode gastar a ação do direcionamento e 1 PM para fazer um teste de Guerra (CD 15). Se passar, você usa um direcionamento em um aliado em alcance curto. Para cada 10 pontos acima da CD, você afeta um alvo adicional. Você começa com 2 direcionamentos (veja a seguir). A cada quatro níveis, aprende um direcionamento adicional à sua escolha.",
+      subAbilities: [
+        {
+        name: "Aguenta Firme! (padrão)",
+        description: "Você encoraja seus aliados a continuar lutando. Os alvos recebem pontos de vida temporários iguais ao seu nível + seu Carisma.",
+        },
+        {
+        name: "Carga! (completa)",
+        description: "Você coordena seus aliados em um avanço conjunto. Faça uma investida. Se acertar e causar dano, alvos deste direcionamento podem usar uma reação para movimentar-se o equivalente a uma ação de movimento, mas devem terminar este movimento em uma posição mais próxima da criatura atingida pela sua investida.",
+        },
+        {
+        name: "Em Frente! (reação)",
+        description: "Você sabe liderar seus aliados em combates. Após os testes de Iniciativa, mas antes do primeiro turno do combate, você pode usar este direcionamento para deslocar os alvos em até 6m.",
+        },
+        {
+        name: "Encontrem Eles! (movimento)",
+        description: "Você alerta seus companheiros sobre ameaças nas sombras. Até o fim do seu próximo turno, os alvos recebem +2 em testes de Percepção e Intuição.",
+        },
+        {
+        name: "Lutem! (padrão)",
+        description: "Você incentiva seus aliados ao ataque. Alvos deste direcionamento podem usar uma reação para fazer um ataque contra um inimigo. O inimigo precisa estar dentro do alcance do aliado afetado por este poder.",
+        },
+        {
+        name: "Parede de Escudos! (reação)",
+        description: "Você reúne seus aliados em uma barreira protetora de escudos. Quando um aliado adjacente sofrer um ataque, você pode usar este direcionamento para coordenar os alvos para protegê-lo, concedendo um bônus na Defesa do aliado protegido igual a 1 + a quantidade de alvos deste direcionamento.",
+        },
+        {
+        name: "Peguem-no Vivo! (movimento)",
+        description: "Você pede que seus aliados derrubem os inimigos sem matá-los. Até o fim do seu próximo turno, você e os alvos deste direcionamento não sofrem a penalidade de –5 em testes de ataque para causar dano não letal.",
+        },
+        {
+        name: "Para o Chão! (reação)",
+        description: "Você avisa seus aliados de um perigo iminente. Até o início do seu próximo turno, os alvos recebem um bônus em testes de resistência igual ao seu Carisma.",
+        },
+        {
+        name: "Saiam Dessa! (movimento)",
+        description: "Você dá um grito rápido, torcendo para dispersar a névoa que nubla os pensamentos dos seus aliados. Este direcionamento remove uma condição mental que estava afetando os alvos. Para cada 10 pontos acima da CD, você pode, em vez de afetar um alvo adicional, remover uma condição adicional.",
+        },
+        {
+        name: "Vão, vão, vão! (padrão)",
+        description: "Você lidera seu grupo para atacar uma ameaça em comum. Escolha um inimigo em alcance curto. Até o fim do seu próximo turno, você e os alvos deste direcionamento recebem +2 em testes de ataque e rolagens de dano contra este inimigo.",
+        },
+      ],
+      },
+      {
+        name: "Palavras Afiadas",
+        description: "No 2º nível, você pode gastar uma ação padrão e 1 PM para fazer um teste de Diplomacia ou Intimidação oposto ao teste de Vontade de uma criatura inteligente (Int –3 ou maior) em alcance curto. Se vencer, você causa 2d6 pontos de dano psíquico não letal à criatura. Se perder, causa metade deste dano. Se a criatura for reduzida a 0 ou menos PV, em vez de cair inconsciente, ela se rende (se você usou Diplomacia) ou fica apavorada e foge de você da maneira mais eficiente possível (se usou Intimidação). A cada quatro níveis, você pode gastar +1 PM para aumentar o dano (veja a tabela da classe)."
+      },
+      {
+        name: "Poder de Nobre",
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um dos poderes de Nobre ou Poderes Gerais."
+      },
+      {
+        name: "Replanejar",
+        description: "No 3º nível, você consegue reorganizar seus planos e aliados caso tudo dê errado. Uma vez por cena, quando um oponente em alcance curto acerta um ataque em um de seus aliados, ou quando um de seus aliados falhar em um teste de resistência, você pode gastar 2 PM para fazer o oponente repetir o teste de ataque (escolhendo o pior entre os dois resultados) ou para fazer o aliado repetir o teste de resistência (escolhendo o melhor entre os dois resultados)."
+      },
+      {
+        name: "Gritar Ordens",
+        description: "A partir do 4º nível, você pode gastar uma quantidade de PM à sua escolha (limitado pelo seu Carisma). Até o início de seu próximo turno, todos os seus aliados em alcance curto recebem um bônus nos testes de perícia igual à quantidade de PM que você gastou."
+      },
+      {
+        name: "Presença de Liderança",
+        description: "A partir do 5º nível, você pode gastar 1 PM para seus aliados em alcance curto receberem +2 em testes de perícias baseadas em Carisma até o fim da cena. Além disso, você recebe +2 em testes de Intimidação."
+      },
+      {
+        name: "Líder Nato",
+        description: "No 20º nível, você já liderou seu grupo por tanto tempo que aprendeu a comandá-lo com um aceno, uma única palavra ou com o menor gesto de mão. Uma vez por rodada, você pode usar Direcionar como ação livre, sem precisar fazer um teste e sem custo em PM. Além disso, uma criatura que seja reduzida a 0 PV por Palavras Afiadas não sofre este dano; em vez disso, passa a lutar ao seu lado pelo resto da cena."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Autoconfiança, coordenar, direcionar" },
+      { level: 2, abilities: "Palavras afiadas (2d6), poder de nobre" },
+      { level: 3, abilities: "Replanejar, poder de nobre" },
+      { level: 4, abilities: "Gritar ordens, poder de nobre" },
+      { level: 5, abilities: "Poder de nobre, presença de liderança" },
+      { level: 6, abilities: "Palavras afiadas (4d6), poder de nobre" },
+      { level: 7, abilities: "Poder de nobre" },
+      { level: 8, abilities: "Poder de nobre" },
+      { level: 9, abilities: "Poder de nobre" },
+      { level: 10, abilities: "Palavras afiadas (6d6), poder de nobre" },
+      { level: 11, abilities: "Poder de nobre" },
+      { level: 12, abilities: "Poder de nobre" },
+      { level: 13, abilities: "Poder de nobre" },
+      { level: 14, abilities: "Palavras afiadas (8d6), poder de nobre" },
+      { level: 15, abilities: "Poder de nobre" },
+      { level: 16, abilities: "Poder de nobre" },
+      { level: 17, abilities: "Poder de nobre" },
+      { level: 18, abilities: "Palavras afiadas (10d6), poder de nobre" },
+      { level: 19, abilities: "Poder de nobre" },
+      { level: 20, abilities: "Líder nato, poder de nobre" }
+    ]
+    },
+    { id: "Sentinela (Arcanista)",
+    name: "Sentinela (Arcanista)",
+    origin: "Dragão Brasil",
+    image: "/classes/sentinela.png",
+    description: "Sentinelas são o ponto onde espada e feitiçaria se encontram, um arcanista que se recusa a escolher entre o poder das palavras antigas e a força absoluta da disciplina marcial. Em um mundo onde muitos magos preferem a distância segura da retaguarda, o sentinela avança pelo campo de batalha como um vendaval de mana e aço.\nUm sentinela é treinado para manter o controle absoluto da situação. Usa magia para reforçar defesas, manipular movimentos inimigos e abrir brechas cirúrgicas para sua lâmina. Sua postura é firme, quase militar, mas seu estilo de combate muda a cada batida do coração — ora canalizando poder arcano, ora revertendo o fluxo de um duelo com um único golpe bem posicionado.\nNão raro, sentinelas surgem em academias militares como as de Wynlla que também ministram o estudo das artes arcanas, ou entre magos que se cansaram de fugir dos bandidos comuns com armas afiadas. Alguns os enxergam como um “meio-termo” entre guerreiro e mago — o que só prova que não entenderam nada. Ser um sentinela é uma vocação completa por si só, com doutrina própria e métodos que chocam tanto soldados quanto estudiosos.\nOnde quer que estejam, sentinelas são respeitados e temidos. Para aliados, são muralhas que conjuram. Para inimigos, enigmas que cortam. E para todos, um lembrete de que a magia, quando guiada por mãos firmes, pode marchar à frente de qualquer batalha.",
+    characteristics: {
+      pvBase: "12 + Constituição",
+      pvPerLevel: "4 + Constituição",
+      pmPerLevel: "5 PM por nível"
+    },
+    skills: {
+    mandatory: ["Luta (For)", "Misticismo (Int)"],
+    optional: {
+      skills: [      
+        'Conhecimento (Int)', 'Diplomacia (Car)', 'Enganação (Car)', 'Guerra (Int)', 'Iniciativa (Des)', 'Intimidação (Car)', 'Intuição (Sab)', 'Investigação (Int)', 'Nobreza (Int)', 'Ofício (Int)', 'Percepção (Sab)', 'Vontade (Sab)'      ],
+      count: 2
+      }
+    },
+    proficiency: "Armas marciais",
+    abilities: [
+      {
+        name: "Caminho do Sentinela",
+        description: "Você lança magias misturando combate e feitiçaria. Para lançar uma magia em combate, você deve empunhar uma arma com a qual seja proficiente com uma mão (e gesticular com a outra) ou fazer um teste de Misticismo (CD 20 + o custo em PM da magia; se falhar, a magia não funciona, mas você gasta os PM mesmo assim). Fora de combate, deve pelo menos estar com uma das mãos sobre esta arma (por exemplo: segurando no cabo de uma espada embainhada) ou precisa fazer o mesmo teste. Você não precisa fazer testes de Misticismo para lançar magias arcanas se estiver usando uma armadura leve, e também recebe uma armadura leve como seu equipamento inicial no 1º nível. Seu atributo-chave para lançar magias é Inteligência."
+      },
+      {
+        name: "Gladiomancia",
+        description: "Você pode gastar uma ação de movimento e 2 PM para evocar palavras de poder mágico e imbuir essência arcana em uma arma corpo a corpo leve ou ágil que esteja empunhando. Enquanto empunhar esta arma ou até o fim da cena (o que acontecer primeiro), você pode somar sua Inteligência em vez de Destreza na Defesa. Além disso, você usa Inteligência em testes de Luta, em vez de Força, e pode somar sua Inteligência em rolagens de dano usando esta arma (limitado pelo seu nível)."
+      },
+      {
+      name: "Magias",
+      description: "Você pode lançar magias arcanas de 1º círculo. A cada quatro níveis, pode lançar magias de um círculo maior (2º círculo no 5º nível, 3º círculo no 9º nível e assim por diante). Você começa com três magias de 1º círculo. A cada nível, aprende uma magia de qualquer círculo que possa lançar. Seu atributo-chave para lançar magias é definido pelo seu Caminho (veja acima) e você soma seu atributo-chave no seu total de PM. Veja o Capítulo 4 para as regras de magia."
+    },
+    {
+      name: "Poder de Arcanista",
+      description: "No 2º nível, e a cada nível seguinte, você escolhe um dos poderes de Arcanista ou Poder Geral."
+    },
+      {
+        name: "Mago de Combate",
+        description: "Quando faz um ataque usando uma arma sob efeito de Gladiomancia, você soma o círculo máximo de magias que pode lançar à rolagem de dano. Além disso, a mão da arma é considerada livre para lançar magias."
+      },
+      {
+        name: "Ataque Extra",
+        description: "A partir do 8º nível, quando usa a ação agredir, você pode gastar 2 PM para realizar um ataque adicional uma vez por rodada."
+      },
+      {
+        name: "Mestre Arcano-combatente",
+        description: "No 20º nível, você pode usar Gladiomancia como ação livre. Enquanto empunhar uma arma sob o efeito de Gladiomancia, suas habilidades de sentinela (incluindo magias) têm seu custo em PM reduzido pela metade (após aplicar aprimoramentos e quaisquer outros efeitos que reduzam custo)."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Caminho do sentinela, gladiomancia, magias (1º círculo)" },
+      { level: 2, abilities: "Poder de arcanista" },
+      { level: 3, abilities: "Mago de combate, poder de arcanista" },
+      { level: 4, abilities: "Poder de arcanista" },
+      { level: 5, abilities: "Magias (2º círculo), poder de arcanista" },
+      { level: 6, abilities: "Poder de arcanista" },
+      { level: 7, abilities: "Poder de arcanista" },
+      { level: 8, abilities: "Ataque extra, poder de arcanista" },
+      { level: 9, abilities: "Magias (3º círculo), poder de arcanista" },
+      { level: 10, abilities: "Poder de arcanista" },
+      { level: 11, abilities: "Poder de arcanista" },
+      { level: 12, abilities: "Poder de arcanista" },
+      { level: 13, abilities: "Magias (4º círculo), poder de arcanista" },
+      { level: 14, abilities: "Poder de arcanista" },
+      { level: 15, abilities: "Poder de arcanista" },
+      { level: 16, abilities: "Poder de arcanista" },
+      { level: 17, abilities: "Magias (5º círculo), poder de arcanista" },
+      { level: 18, abilities: "Poder de arcanista" },
+      { level: 19, abilities: "Poder de arcanista" },
+      { level: 20, abilities: "Mestre arcano-combatente, poder de arcanista" }
     ],
     },
 ];

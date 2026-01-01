@@ -33,6 +33,14 @@ export const equipmentCategories: EquipmentCategory[] = [
     color: "from-red-600 to-red-900",
     href: "/itens-magicos/acessorios",
   },
+  {
+    id: "Artefatos",
+    title: "Artefatos",
+    description: "Relíquias fabulosas, lendárias.",
+    icon: "📿",
+    color: "from-red-600 to-red-900",
+    href: "/itens-magicos/artefatos",
+  },
   
   
 ];

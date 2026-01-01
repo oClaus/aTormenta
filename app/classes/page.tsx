@@ -16,6 +16,15 @@ export default function ClassesPage() {
     )
     .sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
 
+  // --- NOVA FUNÇÃO: Fecha o modal se clicar no fundo escuro ---
+  const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    // e.target é o elemento clicado
+    // e.currentTarget é o elemento que tem o evento (o fundo escuro)
+    if (e.target === e.currentTarget) {
+      setSelectedClass(null);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Header */}
@@ -112,11 +121,11 @@ export default function ClassesPage() {
           </div>
         )}
 
-      {/* Seção de Informação */}
+        {/* Seção de Informação */}
         <div className="mt-16 p-8 rounded-xl bg-gradient-to-br from-yellow-950/30 to-black border border-yellow-900/30">
           <h3 className="text-2xl font-bold text-yellow-300 mb-4">Multiclasse</h3>
           <p className="text-gray-300 leading-relaxed">
-          Quando sobe de nível, você pode escolher outra classe. Essa opção é conhecida como multiclasse e fornece mais versatilidade, em troca de poder bruto. O qareen Zaled Rayeder, um arcanista de 3º nível, encontra um propósito para seus dons mágicos selvagens na ordem de Khalmyr, o Deus da Justiça. Ao subir para o 4º nível, escolhe um nível de paladino, tornando-se um arcanista 3/paladino 1. Zaled terá as habilidades de um arcanista de 3º nível e de um paladino de 1º nível.</p>
+            Quando sobe de nível, você pode escolher outra classe. Essa opção é conhecida como multiclasse e fornece mais versatilidade, em troca de poder bruto. O qareen Zaled Rayeder, um arcanista de 3º nível, encontra um propósito para seus dons mágicos selvagens na ordem de Khalmyr, o Deus da Justiça. Ao subir para o 4º nível, escolhe um nível de paladino, tornando-se um arcanista 3/paladino 1. Zaled terá as habilidades de um arcanista de 3º nível e de um paladino de 1º nível.</p>
           <p> <span className="text-yellow-300"> Pontos de Vida: </span> <span className="text-gray-300 leading-relaxed">Quando você ganha o primeiro nível em uma nova classe, ganha os PV de um nível subsequente, não do primeiro. Zaled ganha 5 PV pelo primeiro nível de paladino, não 20.</span></p>
           <p> <span className="text-yellow-300"> Pontos de Mana: </span> <span className="text-gray-300 leading-relaxed">Some os PM fornecidos por cada classe para determinar seu montante total.</span></p>
           <p> <span className="text-yellow-300"> Perícias & Proficiências: </span> <span className="text-gray-300 leading-relaxed"> Quando você ganha o primeiro nível em uma nova classe, não ganha as perícias treinadas ou proficiências da nova classe.</span></p>
@@ -138,8 +147,12 @@ export default function ClassesPage() {
 
       {/* Modal de Detalhes */}
       {selectedClass && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-          <div className="bg-gradient-to-b from-gray-900 to-black border border-orange-900/50 rounded-xl max-w-3xl w-full max-h-[90vh] overflow-y-auto">
+        <div
+          onClick={handleBackdropClick} // 1. Adicionado evento aqui
+          className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4"
+        >
+          {/* Adicionei 'relative' abaixo para o botão absolute funcionar corretamente */}
+          <div className="bg-gradient-to-b from-gray-900 to-black border border-orange-900/50 rounded-xl max-w-3xl w-full max-h-[90vh] overflow-y-auto relative">
             {/* Botão de Fechar */}
             <button
               onClick={() => setSelectedClass(null)}
@@ -168,14 +181,14 @@ export default function ClassesPage() {
 
               {/* Famosos (se houver) */}
               {selectedClass.famousExamples && selectedClass.famousExamples.length > 0 && (
-              <div className="mb-8">
-                <h3 className="text-2xl font-bold text-orange-400 mb-4">🌟 {selectedClass.name}s Famosos</h3>
-                <div className="p-4 rounded-lg bg-orange-950/20 border border-orange-900/30">
-                <p className="text-gray-300">
-                    {selectedClass.famousExamples.join(", ")}
-                </p>
+                <div className="mb-8">
+                  <h3 className="text-2xl font-bold text-orange-400 mb-4">🌟 {selectedClass.name}s Famosos</h3>
+                  <div className="p-4 rounded-lg bg-orange-950/20 border border-orange-900/30">
+                    <p className="text-gray-300">
+                      {selectedClass.famousExamples.join(", ")}
+                    </p>
+                  </div>
                 </div>
-              </div>
               )}
 
               {/* Características */}
@@ -204,47 +217,47 @@ export default function ClassesPage() {
               </div>
 
               {/* Perícias */}
-            <div className="mb-8">
-            <h3 className="text-2xl font-bold text-orange-400 mb-4">🎯 Perícias</h3>
-            
-            {/* Perícias Obrigatórias */}
-            <div className="mb-6">
-              <p className="text-gray-300 mb-3">
-                <span className="font-semibold text-orange-300">
-                  Começa com as seguintes perícias:
-                </span>
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
-                {selectedClass.skills.mandatory.map((skill, index) => (
-                  <div 
-                    key={index} 
-                    className="p-3 rounded-lg bg-orange-950/30 border border-orange-900/50"
-                  >
-                    <p className="text-gray-300 font-semibold text-orange-300">{skill}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+              <div className="mb-8">
+                <h3 className="text-2xl font-bold text-orange-400 mb-4">🎯 Perícias</h3>
 
-            {/* Perícias Opcionais */}
-            <div>
-              <p className="text-gray-300 mb-3">
-                <span className="font-semibold text-orange-300">
-                  Escolha mais {selectedClass.skills.optional.count} entre:
-                </span>
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {selectedClass.skills.optional.skills.map((skill, index) => (
-                  <div 
-                    key={index} 
-                    className="p-3 rounded-lg bg-orange-950/20 border border-orange-900/30"
-                  >
-                    <p className="text-gray-300">{skill}</p>
+                {/* Perícias Obrigatórias */}
+                <div className="mb-6">
+                  <p className="text-gray-300 mb-3">
+                    <span className="font-semibold text-orange-300">
+                      Começa com as seguintes perícias:
+                    </span>
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
+                    {selectedClass.skills.mandatory.map((skill, index) => (
+                      <div
+                        key={index}
+                        className="p-3 rounded-lg bg-orange-950/30 border border-orange-900/50"
+                      >
+                        <p className="text-gray-300 font-semibold text-orange-300">{skill}</p>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
+
+                {/* Perícias Opcionais */}
+                <div>
+                  <p className="text-gray-300 mb-3">
+                    <span className="font-semibold text-orange-300">
+                      Escolha mais {selectedClass.skills.optional.count} entre:
+                    </span>
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {selectedClass.skills.optional.skills.map((skill, index) => (
+                      <div
+                        key={index}
+                        className="p-3 rounded-lg bg-orange-950/20 border border-orange-900/30"
+                      >
+                        <p className="text-gray-300">{skill}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
 
               {/* Proficiência */}
               <div className="mb-8">
@@ -255,50 +268,50 @@ export default function ClassesPage() {
               </div>
 
               {/* Habilidades */}
-                <div className="mb-8">
-                  <h3 className="text-2xl font-bold text-orange-400 mb-4">✨ Habilidades</h3>
-                  <div className="space-y-6">
-                    {selectedClass.abilities.map((ability, index) => (
-                      <div key={index} className="rounded-lg bg-orange-950/20 border border-orange-900/30 overflow-hidden">
-                        {/* Título da Habilidade */}
-                        <div className="p-4 bg-orange-950/40 border-b border-orange-900/30">
-                          <h4 className="text-xl font-bold text-orange-300">{ability.name}</h4>
-                        </div>
-
-                        {/* Conteúdo da Habilidade */}
-                        <div className="p-4">
-                          {/* Descrição Geral (se houver) */}
-                          {ability.description && (
-                            <p className="text-gray-300 mb-4 leading-relaxed whitespace-pre-wrap">
-                              {ability.description}
-                            </p>
-                          )}
-
-                          {/* Sub-Opções (se houver) */}
-                          {ability.subAbilities && ability.subAbilities.length > 0 && (
-                            <div className="space-y-4 mt-4">
-                              {ability.subAbilities.map((subAbility, subIndex) => (
-                                <div
-                                  key={subIndex}
-                                  className="p-4 rounded-lg "
-                                >
-                                  {/* Título da Sub-Opção */}
-                                  <h5 className="text-lg font-bold text-orange-200 mb-2">
-                                    • {subAbility.name}
-                                  </h5>
-                                  {/* Descrição da Sub-Opção */}
-                                  <p className="text-gray-300 text-sm leading-relaxed whitespace-pre-wrap">
-                                    {subAbility.description}
-                                  </p>
-                                </div>
-                              ))}
-                            </div>
-                          )}
-                        </div>
+              <div className="mb-8">
+                <h3 className="text-2xl font-bold text-orange-400 mb-4">✨ Habilidades</h3>
+                <div className="space-y-6">
+                  {selectedClass.abilities.map((ability, index) => (
+                    <div key={index} className="rounded-lg bg-orange-950/20 border border-orange-900/30 overflow-hidden">
+                      {/* Título da Habilidade */}
+                      <div className="p-4 bg-orange-950/40 border-b border-orange-900/30">
+                        <h4 className="text-xl font-bold text-orange-300">{ability.name}</h4>
                       </div>
-                    ))}
-                  </div>
+
+                      {/* Conteúdo da Habilidade */}
+                      <div className="p-4">
+                        {/* Descrição Geral (se houver) */}
+                        {ability.description && (
+                          <p className="text-gray-300 mb-4 leading-relaxed whitespace-pre-wrap">
+                            {ability.description}
+                          </p>
+                        )}
+
+                        {/* Sub-Opções (se houver) */}
+                        {ability.subAbilities && ability.subAbilities.length > 0 && (
+                          <div className="space-y-4 mt-4">
+                            {ability.subAbilities.map((subAbility, subIndex) => (
+                              <div
+                                key={subIndex}
+                                className="p-4 rounded-lg "
+                              >
+                                {/* Título da Sub-Opção */}
+                                <h5 className="text-lg font-bold text-orange-200 mb-2">
+                                  • {subAbility.name}
+                                </h5>
+                                {/* Descrição da Sub-Opção */}
+                                <p className="text-gray-300 text-sm leading-relaxed whitespace-pre-wrap">
+                                  {subAbility.description}
+                                </p>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  ))}
                 </div>
+              </div>
 
               {/* Extras (se houver) */}
               {selectedClass.extras && selectedClass.extras.length > 0 && (
@@ -335,9 +348,8 @@ export default function ClassesPage() {
                       {selectedClass.levelProgression.map((progression, index) => (
                         <tr
                           key={index}
-                          className={`border-b border-orange-900/30 ${
-                            index % 2 === 0 ? 'bg-orange-950/10' : 'bg-transparent'
-                          } hover:bg-orange-950/20 transition-colors`}
+                          className={`border-b border-orange-900/30 ${index % 2 === 0 ? 'bg-orange-950/10' : 'bg-transparent'
+                            } hover:bg-orange-950/20 transition-colors`}
                         >
                           <td className="p-3 text-orange-300 font-semibold text-center">
                             {progression.level}º
