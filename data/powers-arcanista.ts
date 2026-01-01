@@ -82,7 +82,7 @@ export const powersArcanista: Power[] = [
     id: "12",
     name: "Poder Mágico",
     description: "Você recebe +1 ponto de mana por nível de arcanista. Quando sobe de nível, os PM. Por exemplo, se escolher este poder no 4º nível, recebe 4 PM. Quando subir para o 5º nível, recebe +1 PM e assim por diante.",
-    prerequisite: "Nenhnum",
+    prerequisite: "Nenhum",
     origin: "Tormenta20 - jogo do ano"
   },
   {

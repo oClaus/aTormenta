@@ -18,111 +18,139 @@ export default function BarbaroPodersPage() {
     .sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
 
   return (
-    <main className="w-full min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-black text-gray-100 px-6 py-12">
-      {/* Header */}
-      <header className="p-6 border-b border-purple-900/50">
-        <Link href="/" className="inline-block group">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-500 via-purple-400 to-pink-500 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(168,85,247,0.5)] group-hover:drop-shadow-[0_0_25px_rgba(168,85,247,0.7)] transition-all">
-            a-Tormenta
-          </h1>
-        </Link>
-        <div className="flex items-center gap-2 mt-2">
-          <Link href="/" className="text-purple-400 hover:text-purple-300 text-sm transition-colors">
-            Início
-          </Link>
-          <span className="text-gray-600">/</span>
-          <Link href="/poderes" className="text-purple-400 hover:text-purple-300 text-sm transition-colors">
-            Poderes
-          </Link>
-          <span className="text-gray-600">/</span>
-          <span className="text-gray-400 text-sm">Poderes Gerais</span>
+    <div className="min-h-screen bg-stone-950 text-stone-200 font-serif selection:bg-red-900 selection:text-white relative overflow-x-hidden">
+      
+      {/* Background Effect */}
+      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.8)_100%)]" />
+
+      {/* Header Responsivo (Logo Esquerda, Menu Direita) */}
+      <header className="relative z-10 w-full p-6 border-b-2 border-stone-800 bg-stone-950/90 backdrop-blur-md shadow-lg mb-8 md:mb-12">
+        <div className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            
+            <Link href="/" className="inline-block group self-start md:self-auto">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-wider uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-500 via-red-600 to-red-900 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 0 10px rgba(220, 38, 38, 0.3)' }}>
+                    a-Tormenta
+                </h1>
+            </Link>
+            
+            <div className="flex items-center gap-2 flex-wrap text-xs sm:text-sm font-bold tracking-wide uppercase self-end md:self-auto">
+                <Link href="/" className="text-stone-500 hover:text-red-600 transition-colors whitespace-nowrap">
+                  Início
+                </Link>
+                <span className="text-stone-700">/</span>
+                <Link href="/poderes" className="text-stone-500 hover:text-red-600 transition-colors">
+                  Poderes
+                </Link>
+                <span className="text-stone-700">/</span>
+                <span className="text-red-700">Poderes de Bárbaro</span>
+            </div>
         </div>
       </header>
 
-      <div className="mb-12">
-        <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 mb-4">
-          Poderes de Bárbaro
-        </h1>
-        <p className="text-gray-400 text-lg">Poderes dos bárbaros:</p>
-      </div>
+      {/* Main Content */}
+      <div className="relative z-10 w-full px-4 sm:px-8 md:px-12 pb-12">
 
-      {/* Busca */}
-      <div className="mb-8">
-        <input
-          type="text"
-          placeholder="Buscar por nome, descrição ou origem..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full px-6 py-3 rounded-lg bg-gray-800 border border-purple-500/30 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all"
-        />
-      </div>
-
-      {/* Grid de Poderes - items-stretch para garantir que cards tenham mesma altura */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 items-stretch">
-        {filteredPowers.map((power) => (
-          <div
-            key={power.id}
-            className="rounded-lg bg-gradient-to-br from-purple-950/20 to-black border border-purple-500/20 p-6 hover:border-purple-500/60 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 flex flex-col h-full"
-          >
-            {/* Nome do Poder */}
-            <h3 className="text-xl font-bold text-purple-300 mb-3">{power.name}</h3>
-
-            {/* Descrição: wrapper flex-1 para ocupar espaço e empurrar o footer */}
-            <div className="flex-1 mb-4">
-              <p className="text-gray-400 text-sm leading-relaxed">
-                {power.description}
-              </p>
-            </div>
-
-            {/* Rodapé com mt-auto para ficar sempre no final do card */}
-            <div className="mt-auto">
-              {/* Pré-requisito (se houver) */}
-              {power.prerequisite && (
-                <div className="mb-4 pt-4 border-t border-purple-500/20">
-                  <p className="text-xs text-purple-400">
-                    <span className="font-semibold">Pré-requisito:</span> {power.prerequisite}
-                  </p>
-                </div>
-              )}
-
-              {/* Origem */}
-              <div className="flex items-center justify-between pt-4 border-t border-purple-500/20">
-                <span className="text-xs px-3 py-1 rounded-full bg-purple-900/30 border border-purple-500/30 text-purple-300">
-                  {formatOrigin(power.origin)}
-                </span>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {filteredPowers.length === 0 && (
-        <div className="text-center py-12">
-          <p className="text-gray-500 text-lg">Nenhum poder encontrado.</p>
+        {/* Intro */}
+        <div className="mb-12 p-8 bg-stone-900/50 rounded border border-stone-800 w-full">
+            <h1 className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-orange-500 to-red-500 mb-6 drop-shadow-md">
+            Poderes de Bárbaro
+            </h1>
+            <p className="text-stone-300 text-lg font-serif">Poderes dos bárbaros:</p>
         </div>
-      )}
 
-      {/* Seção de Informação */}
-      <div className="mt-16 p-8 rounded-xl bg-gradient-to-br from-pink-950/30 to-black border border-yellow-900/30">
-        <h3 className="text-2xl font-bold text-purple-300 mb-4">Animais Totêmicos</h3>
-        <p className="text-gray-300 leading-relaxed">
-          A seguir está uma lista de animais venerados por tribos bárbaras de Arton.
-        </p>
+        {/* Busca - ESTILO CAIXA */}
+        <div className="mb-8 p-6 rounded bg-stone-900 border border-stone-800 shadow-inner w-full">
+            <label className="block text-sm font-bold text-stone-400 mb-3 uppercase tracking-wider font-serif">
+                Buscar Poder
+            </label>
+            <div className="relative">
+                <input
+                type="text"
+                placeholder="Buscar por nome, descrição ou origem..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full px-5 py-3 bg-stone-950 border border-stone-700 rounded text-stone-200 placeholder-stone-600 focus:outline-none focus:border-red-600 focus:ring-1 focus:ring-red-900 transition-all font-serif"
+                />
+                <div className="absolute right-4 top-1/2 -translate-y-1/2 text-stone-600">
+                    🔍
+                </div>
+            </div>
+        </div>
 
-        <p><span className="text-purple-300">Coruja</span><span className="text-gray-300 leading-relaxed"> A sábia coruja guia seus discípulos. Você pode lançar Orientação. </span></p>
-        <p><span className="text-purple-300">Corvo</span><span className="text-gray-300 leading-relaxed"> Um seguidor do corvo enxerga além do véu. Você pode lançar Visão Mística.</span></p>
-        <p><span className="text-purple-300">Falcão </span><span className="text-gray-300 leading-relaxed">Sempre atento, o falcão permite que você lance Detectar Ameaças.</span></p>
-        <p><span className="text-purple-300">Grifo </span><span className="text-gray-300 leading-relaxed">O mais veloz dos animais, o grifo permite que você lance Primor Atlético.</span></p>
-        <p><span className="text-purple-300">Lobo </span><span className="text-gray-300 leading-relaxed">O lobo é feroz e letal. Você pode lançar Concentração de Combate.</span></p>
-        <p><span className="text-purple-300">Raposa </span><span className="text-gray-300 leading-relaxed">A sagaz raposa nunca está onde se espera. Você pode lançar Imagem Espelhada.</span></p>
-        <p><span className="text-purple-300">Tartaruga </span><span className="text-gray-300 leading-relaxed">A tartaruga protege os seus. Você pode lançar Armadura Arcana.</span></p>
-        <p><span className="text-purple-300">Urso </span><span className="text-gray-300 leading-relaxed">O vigoroso urso permite que você lance Vitalidade Fantasma e possa usar seus aprimoramentos como se tivesse acesso aos mesmos círculos de magia que um druida de seu nível.</span></p>
+        {/* Grid de Poderes */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 items-stretch">
+            {filteredPowers.map((power) => (
+            <div
+                key={power.id}
+                className="rounded-xl bg-stone-900 border border-stone-800 p-6 hover:border-red-900/50 hover:shadow-[0_0_20px_rgba(220,38,38,0.15)] transition-all duration-300 flex flex-col h-full group hover:-translate-y-1"
+            >
+                {/* Nome do Poder */}
+                <h3 className="text-xl font-bold text-red-500 mb-3 group-hover:text-red-400 transition-colors font-serif">
+                {power.name}
+                </h3>
 
-        <h3 className="text-2xl font-bold text-purple-300 mb-4">Importante lembrar!</h3>
-        <p className="text-gray-300 leading-relaxed">
-          Aqui temos poderes oficiais dos livros mas também da Dragão Brasil, podendo ou não ser disponibilizado em futuros complementos, para utilizar, conversar com mestre da mesa.
-        </p>
+                {/* Descrição */}
+                <div className="flex-1 mb-4">
+                <p className="text-stone-400 text-sm leading-relaxed font-serif group-hover:text-stone-300">
+                    {power.description}
+                </p>
+                </div>
+
+                {/* Rodapé do Card */}
+                <div className="mt-auto">
+                {/* Pré-requisito */}
+                {power.prerequisite && (
+                    <div className="mb-4 pt-4 border-t border-stone-800 group-hover:border-stone-700 transition-colors">
+                    <p className="text-xs text-stone-500 font-serif">
+                        <span className="font-bold text-red-700 uppercase tracking-wide">Pré-requisito:</span> {power.prerequisite}
+                    </p>
+                    </div>
+                )}
+
+                {/* Origem */}
+                <div className="flex items-center justify-end pt-4 border-t border-stone-800 group-hover:border-stone-700 transition-colors">
+                    <span className="text-[10px] px-2 py-0.5 rounded bg-stone-950 border border-stone-700 text-stone-500 font-serif uppercase tracking-widest">
+                    {formatOrigin(power.origin)}
+                    </span>
+                </div>
+                </div>
+            </div>
+            ))}
+        </div>
+
+        {filteredPowers.length === 0 && (
+            <div className="text-center py-12 text-stone-500 italic border border-dashed border-stone-800 rounded-xl font-serif">
+            <p className="text-lg">Nenhum poder encontrado.</p>
+            </div>
+        )}
+
+        {/* Seção de Informação (Animais Totêmicos) */}
+        <div className="mt-16 p-8 rounded bg-stone-900/50 border border-stone-800 w-full space-y-6">
+            <div>
+                <h3 className="text-2xl font-bold text-red-500 mb-4 font-serif">Animais Totêmicos</h3>
+                <p className="text-stone-300 leading-relaxed font-serif">
+                A seguir está uma lista de animais venerados por tribos bárbaras de Arton.
+                </p>
+            </div>
+
+            <div className="space-y-2 text-stone-400 font-serif">
+                <p><span className="text-red-400 font-bold">Coruja</span><span className="text-stone-300 leading-relaxed"> A sábia coruja guia seus discípulos. Você pode lançar Orientação. </span></p>
+                <p><span className="text-red-400 font-bold">Corvo</span><span className="text-stone-300 leading-relaxed"> Um seguidor do corvo enxerga além do véu. Você pode lançar Visão Mística.</span></p>
+                <p><span className="text-red-400 font-bold">Falcão </span><span className="text-stone-300 leading-relaxed">Sempre atento, o falcão permite que você lance Detectar Ameaças.</span></p>
+                <p><span className="text-red-400 font-bold">Grifo </span><span className="text-stone-300 leading-relaxed">O mais veloz dos animais, o grifo permite que você lance Primor Atlético.</span></p>
+                <p><span className="text-red-400 font-bold">Lobo </span><span className="text-stone-300 leading-relaxed">O lobo é feroz e letal. Você pode lançar Concentração de Combate.</span></p>
+                <p><span className="text-red-400 font-bold">Raposa </span><span className="text-stone-300 leading-relaxed">A sagaz raposa nunca está onde se espera. Você pode lançar Imagem Espelhada.</span></p>
+                <p><span className="text-red-400 font-bold">Tartaruga </span><span className="text-stone-300 leading-relaxed">A tartaruga protege os seus. Você pode lançar Armadura Arcana.</span></p>
+                <p><span className="text-red-400 font-bold">Urso </span><span className="text-stone-300 leading-relaxed">O vigoroso urso permite que você lance Vitalidade Fantasma e possa usar seus aprimoramentos como se tivesse acesso aos mesmos círculos de magia que um druida de seu nível.</span></p>
+            </div>
+        </div>
       </div>
-    </main>
+
+      {/* Footer */}
+      <footer className="mt-12 py-8 border-t border-stone-900 bg-black text-center text-stone-600 text-sm relative z-10 font-serif">
+        <p>Compêndio Tormenta RPG © 2025 • Feito por um fã para fãs</p>
+        <p>Tormenta 20 pertence a Jambo Editora. Todos os direitos são reservados a editora.</p>
+      </footer>
+    </div>
   );
 }

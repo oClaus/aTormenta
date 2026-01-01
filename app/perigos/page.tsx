@@ -5,7 +5,7 @@ import Link from "next/link";
 import { dangers } from "@/data/dangers";
 import { DangerItem } from "@/types/danger";
 
-// --- Componente Auxiliar: Formatação de Texto ---
+// --- Componente Auxiliar: Formatação de Texto (Estilo Stone) ---
 const formatTextWithBreaks = (text: string) => {
   if (!text) return null;
 
@@ -19,48 +19,46 @@ const formatTextWithBreaks = (text: string) => {
 
     let formattedLine = line
       // Negrito e Itálico
-      .replace(/\*\*\*(.*?)\*\*\*/g, '<em><strong>$1</strong></em>')
+      .replace(/\*\*\*(.*?)\*\*\*/g, '<em class="text-stone-200 font-serif"><strong>$1</strong></em>')
       // Negrito
-      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*\*(.*?)\*\*/g, '<strong class="text-stone-200 font-serif">$1</strong>')
       // Itálico
-      .replace(/\*(.*?)\*/g, '<em>$1</em>')
-      // Subtítulos
-      .replace(/### (.*)/g, '<h3 class="text-xl font-bold text-red-400 mt-4 mb-2">$1</h3>')
+      .replace(/\*(.*?)\*/g, '<em class="text-stone-400 font-serif">$1</em>')
+      // Subtítulos (Red)
+      .replace(/### (.*)/g, '<h3 class="text-xl font-bold text-red-700 mt-4 mb-2 font-serif">$1</h3>')
       
       // --- CORREÇÃO AQUI ---
-      // Trocamos <p> por <div> para evitar erro de aninhamento (Hydration Error)
-      // Se houver um blockquote na mesma linha, o <div> aceita, o <p> não.
-      .replace(/- (.*?):/g, '<div class="mt-2 inline-block"><span class="font-bold text-red-300">$1:</span>')
+      // Div para evitar Hydration Error com blockquote
+      .replace(/- (.*?):/g, '<div class="mt-2 inline-block"><span class="font-bold text-red-600 font-serif">$1:</span>')
       
-      // Blockquote
-      .replace(/> (.*)/g, '<blockquote class="border-l-4 border-purple-500 pl-4 py-2 my-3 text-sm italic text-gray-400">$1</blockquote>');
+      // Blockquote (Stone/Red)
+      .replace(/> (.*)/g, '<blockquote class="border-l-4 border-red-800 pl-4 py-2 my-3 text-sm italic text-stone-400 bg-stone-900/50 rounded-r-md font-serif">$1</blockquote>');
 
     return (
       <div 
         key={index} 
         dangerouslySetInnerHTML={{ __html: formattedLine }} 
-        className="mb-1 last:mb-0 text-base leading-relaxed" 
+        className="mb-1 last:mb-0 text-base leading-relaxed text-stone-300 font-serif" 
       />
     );
   });
 };
 
-// --- Componente Principal: Acordeão de Perigos ---
+// --- Componente Principal: Acordeão de Perigos (Estilo Stone/Red) ---
 
 const DangerAccordion = ({ danger }: { danger: DangerItem }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    // Mantido o mb-3 original para espaçamento padrão
-    // Adicionado w-full para garantir largura total
-    <div className="border border-purple-700/50 rounded-lg shadow-lg mb-3 overflow-hidden w-full">
+    // Estilo Stone Box
+    <div className="border border-stone-800 rounded-lg shadow-lg mb-3 overflow-hidden w-full bg-stone-900 hover:border-red-900/50 transition-colors">
       {/* Cabeçalho do Acordeão */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full text-left p-4 bg-gray-800 hover:bg-gray-700 transition-colors flex justify-between items-center"
+        className="w-full text-left p-5 bg-stone-900 hover:bg-stone-800 transition-colors flex justify-between items-center border-b border-stone-800/50"
       >
-        <span className="text-xl font-semibold text-purple-300">{danger.name}</span>
-        <span className="text-purple-400 text-2xl transform transition-transform duration-300">
+        <span className="text-xl font-bold text-red-700 font-serif">{danger.name}</span>
+        <span className="text-red-800 text-2xl transform transition-transform duration-300 font-serif">
           {isOpen ? "−" : "+"}
         </span>
       </button>
@@ -68,14 +66,14 @@ const DangerAccordion = ({ danger }: { danger: DangerItem }) => {
       {/* Conteúdo do Acordeão */}
       <div
         className={`transition-all duration-500 ease-in-out ${
-          isOpen ? "max-h-[5000px] opacity-100 p-4" : "max-h-0 opacity-0 p-0"
-        } bg-gray-900/80`}
+          isOpen ? "max-h-[5000px] opacity-100 p-5" : "max-h-0 opacity-0 p-0"
+        } bg-stone-950/30`}
       >
-        <div className="text-gray-300 pt-2">
+        <div className="text-stone-300 pt-2 font-serif">
           {formatTextWithBreaks(danger.content)}
         </div>
-        <div className="mt-4 pt-2 border-t border-purple-700/30 text-right">
-          <span className="text-xs text-gray-500 italic">Categoria: {danger.category}</span>
+        <div className="mt-4 pt-2 border-t border-stone-800 text-right">
+          <span className="text-xs text-stone-500 italic font-serif uppercase tracking-wider">Categoria: {danger.category}</span>
         </div>
       </div>
     </div>
@@ -111,64 +109,92 @@ export default function PerigosPage() {
   }, [searchTerm]);
 
   return (
-    <main className="w-full min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-black text-gray-100 px-6 py-12">
-      <header className="p-6 border-b border-purple-900/50 mb-12">
-        <Link href="/" className="inline-block group">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-500 via-purple-400 to-pink-500 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(168,85,247,0.5)] group-hover:drop-shadow-[0_0_25px_rgba(168,85,247,0.7)] transition-all">
-            a-Tormenta
-          </h1>
-        </Link>
-        <div className="flex items-center gap-2 mt-2">
-          <Link href="/" className="text-purple-400 hover:text-purple-300 text-sm transition-colors">
-            Início
-          </Link>
-          <span className="text-gray-600">/</span>
-          <span className="text-gray-400 text-sm">Perigos</span>
+    <div className="min-h-screen bg-stone-950 text-stone-200 font-serif selection:bg-red-900 selection:text-white relative overflow-x-hidden">
+      
+      {/* Background Effect */}
+      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.8)_100%)]" />
+
+      {/* Header Responsivo (Logo Esquerda, Menu Direita) */}
+      <header className="relative z-10 w-full p-6 border-b-2 border-stone-800 bg-stone-950/90 backdrop-blur-md shadow-lg mb-8 md:mb-12">
+        <div className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            
+            <Link href="/" className="inline-block group self-start md:self-auto">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-wider uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-500 via-red-600 to-red-900 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 0 10px rgba(220, 38, 38, 0.3)' }}>
+                    a-Tormenta
+                </h1>
+            </Link>
+            
+            <div className="flex items-center gap-2 flex-wrap text-xs sm:text-sm font-bold tracking-wide uppercase self-end md:self-auto">
+                <Link href="/" className="text-stone-500 hover:text-red-600 transition-colors whitespace-nowrap">
+                  Início
+                </Link>
+                <span className="text-stone-700">/</span>
+                <span className="text-red-700">Perigos</span>
+            </div>
         </div>
       </header>
 
-      <div className="mb-12">
-        <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-red-400 to-purple-400 mb-4">
-        Perigos
-        </h1>
-        <p className="text-gray-400 text-lg">
-          Aventureiros não precisam se preocupar apenas com monstros e inimigos — Arton é um mundo de problemas!
-        </p>
-      </div>
+      <div className="relative z-10 w-full px-4 sm:px-8 md:px-12 pb-12">
 
-      <input
-        type="text"
-        placeholder="Buscar por nome ou conteúdo..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        className="w-full px-6 py-3 mb-8 rounded-lg bg-gray-800 border border-purple-700/30 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all"
-      />
+        {/* Intro */}
+        <div className="mb-12 p-8 bg-stone-900/50 rounded border border-stone-800 w-full">
+            <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-red-700 to-red-500 mb-4 drop-shadow-md">
+            Perigos
+            </h1>
+            <p className="text-stone-300 text-lg font-serif">
+            Aventureiros não precisam se preocupar apenas com monstros e inimigos — Arton é um mundo de problemas!
+            </p>
+        </div>
 
-      {/* Container Principal: Mantém w-full para 100% de largura em telas grandes */}
-      <div className="w-full">
-        {filteredAndGroupedDangers.length === 0 && (
-          <div className="text-center py-12 text-gray-500 bg-gray-900/50 rounded-xl border border-purple-700/20">
-            Nenhum perigo encontrado com o termo de busca aplicado.
-          </div>
-        )}
-
-        {filteredAndGroupedDangers.map((categoryGroup) => (
-          <div key={categoryGroup.name} className="mb-8 w-full">
-            <h2 className="text-3xl font-bold text-red-400 mb-4 border-b-2 border-red-700/50 pb-2">
-              {categoryGroup.name}
-            </h2>
-            
-            {/* CORREÇÃO AQUI: Removi o "flex flex-col gap-3". 
-                Agora os itens usam apenas a margem interna do componente (mb-3), 
-                comportando-se como no original. */}
-            <div>
-              {categoryGroup.items.map((danger) => (
-                <DangerAccordion key={danger.id} danger={danger} />
-              ))}
+        {/* Busca - ESTILO CAIXA */}
+        <div className="mb-8 p-6 rounded bg-stone-900 border border-stone-800 shadow-inner w-full">
+            <label className="block text-sm font-bold text-stone-400 mb-3 uppercase tracking-wider font-serif">
+                Buscar Perigo
+            </label>
+            <div className="relative">
+                <input
+                type="text"
+                placeholder="Buscar por nome ou conteúdo..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full px-5 py-3 bg-stone-950 border border-stone-700 rounded text-stone-200 placeholder-stone-600 focus:outline-none focus:border-red-600 focus:ring-1 focus:ring-red-900 transition-all font-serif"
+                />
+                <div className="absolute right-4 top-1/2 -translate-y-1/2 text-stone-600">
+                    🔍
+                </div>
             </div>
-          </div>
-        ))}
+        </div>
+
+        {/* Container Principal */}
+        <div className="w-full">
+            {filteredAndGroupedDangers.length === 0 && (
+            <div className="text-center py-12 text-stone-500 italic bg-stone-900 border border-stone-800 rounded-xl font-serif">
+                Nenhum perigo encontrado com o termo de busca aplicado.
+            </div>
+            )}
+
+            {filteredAndGroupedDangers.map((categoryGroup) => (
+            <div key={categoryGroup.name} className="mb-12 w-full">
+                <h2 className="text-3xl font-bold text-red-700 mb-6 border-b border-stone-800 pb-2 font-serif uppercase tracking-wide flex items-center gap-3">
+                  <span className="w-2 h-2 bg-red-800 rounded-full"></span>
+                  {categoryGroup.name}
+                </h2>
+                
+                <div>
+                {categoryGroup.items.map((danger) => (
+                    <DangerAccordion key={danger.id} danger={danger} />
+                ))}
+                </div>
+            </div>
+            ))}
+        </div>
       </div>
-    </main>
+
+      {/* Footer */}
+      <footer className="mt-12 py-8 border-t border-stone-900 bg-black text-center text-stone-600 text-sm relative z-10 font-serif">
+        <p>Compêndio Tormenta RPG © 2025 • Feito por um fã para fãs</p>
+        <p>Tormenta 20 pertence a Jambo Editora. Todos os direitos são reservados a editora.</p>
+      </footer>
+    </div>
   );
 }
