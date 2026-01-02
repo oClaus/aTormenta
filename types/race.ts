@@ -20,6 +20,7 @@ export interface Race {
   attributeModifiers: (AttributeModifier | FlexibleAttributeModifier)[];
   longevidade?: string;
   devotos?: string;
+  extra?: string;
 }
 
 // Função auxiliar para verificar se é modificador fixo

@@ -102,8 +102,7 @@ export const races: Race[] = [
       { attribute: "int", modifier: -1 }
     ]
   },
-  {
-    id: "7",
+  { id: "Goblin",
     name: "Goblin",
     origin: "Tormenta20 - jogo do ano",
     image: "/racas/goblin.png",
@@ -120,8 +119,7 @@ export const races: Race[] = [
       { attribute: "car", modifier: -1 }
     ]
   },
-  {
-    id: "8",
+  { id: "Lefou",
     name: "Lefou",
     origin: "Tormenta20 - jogo do ano",
     image: "/racas/lefou.png",
@@ -341,8 +339,7 @@ export const races: Race[] = [
       { description: "Jotunn de rocha: Constituição +2, Força +1, Inteligência -1" }
     ]
   },
-  {
-    id: "21",
+  { id: "Vanir",
     name: "Vanir",
     origin: "Dragão Brasil - God of War Ragnarok",
     image: "/racas/vanir.png",
@@ -358,8 +355,7 @@ export const races: Race[] = [
       { attribute: "con", modifier: -1 }
     ]
   },
-  {
-    id: "22",
+  { id: "Elfo de Elfheim",
     name: "Elfo de Elfheim",
     origin: "Dragão Brasil - God of War Ragnarok",
     image: "/racas/elfo_elfheim.png",
@@ -376,8 +372,7 @@ export const races: Race[] = [
       { description: "Dökkalfar:  Força +2, Carisma +1" },
     ]
   },
-  {
-    id: "23",
+  { id: "Anão de Svartalfheim",
     name: "Anão de Svartalfheim",
     origin: "Dragão Brasil - God of War Ragnarok",
     image: "/racas/anao_svaltafheim.png",
@@ -393,8 +388,7 @@ export const races: Race[] = [
       { attribute: "car", modifier: -1 }
     ]
   },
-  {
-    id: "24",
+  { id: "Vampiro",
     name: "Vampiro",
     origin: "Dragão Brasil",
     image: "/racas/vampiro.png",
@@ -414,8 +408,7 @@ export const races: Race[] = [
       { description: "Escolha +1 em dois atributos diferentes (exceto Constituição)" },
     ],
   },
-  {
-    id: "25",
+  { id: "Naidora",
     name: "Naidora",
     origin: "Dragão Brasil",
     image: "/racas/naidora.png",
@@ -434,8 +427,7 @@ export const races: Race[] = [
     longevidade: "x5.",
     devotos: "Hyninn, Kallyadranoch, Nimb.",
   },
-  {
-    id: "26",
+  { id: "Gorons",
     name: "Gorons",
     origin: "Dragão Brasil - Zelda",
     image: "/racas/gorons.png",
@@ -452,8 +444,7 @@ export const races: Race[] = [
       { attribute: "des", modifier: -1 }
     ],
   },
-  {
-    id: "27",
+  { id: "Rito",
     name: "Rito",
     origin: "Dragão Brasil - Zelda",
     image: "/racas/rito.png",
@@ -470,4 +461,117 @@ export const races: Race[] = [
       { attribute: "con", modifier: -1 }
     ]
   },
+  { id: "Duende",
+    name: "Duende",
+    origin: "Herois de Arton",
+    image: "/racas/duende.png",
+    description: "Embora as fadas mais comuns no Reinado sejam as diminutas sílfides, nas profundezas das florestas de Arton há seres féericos com tamanhos, formas e aparências tão diversas quanto o humor de sua rainha. Essas fadas são chamadas de duendes… E nenhuma é igual à outra!\nUm duende pode ser um enorme ovo, com braços e pernas muito finos, enquanto outro é similar a um mordomo esguio e pomposo de pele azulada e roupas aristocráticas. Sua aparência física não segue nenhum padrão, sendo quase impossível identificá-los como uma única raça. Como único traço em comum, todos lembram personagens de histórias infantis, até mesmo tolos aos olhos de adultos.\nDuendes costumam se entregar a tarefas que parecem bobas e sem sentido para outros povos, mas que são muito importantes para eles próprios — coisas como levar um raio de sol a um pardal ou vigiar um riacho para evitar que alguém o roube. Como outras fadas, duendes podem ser apenas brincalhões ou então maléficos: alguns realizam trabalhos domésticos em troca de leite e biscoitos, outros pregam peças perigosas e comem carne crua. Duendes levam suas “tarefas” muito a sério.\nTodo duende tem um tabu, um ato que ele nunca pode fazer — ou deixar de fazer. Pode ser algo inofensivo como sempre entrar de costas em uma casa, ou sério como matar o filho primogênito de qualquer pessoa que lhe faça uma pergunta. Tabus de duendes podem ser complexos ou cheios de regras arbitrárias: um duende pode ser seu amigo desde que você nunca olhe em seu rosto, exceto no equinócio de inverno, quando deixar de olhar em seu rosto é uma ofensa punida com pobreza eterna. Um duende nunca diz qual é seu tabu. Quando é impedido de cumpri-lo, um duende morre em poucos dias.\nDuendes não vivem em sociedade, exceto na Pondsmânia; nenhum tipo de grupo ou organização formada por duendes consegue durar mais que alguns momentos. Quando surgem em cidades, sua incapacidade de seguir qualquer regra ou padrão torna impossível sua permanência. Uns poucos conseguem encontrar lugar em grupos de aventureiros, quando esses têm mente aberta e paciência — muita paciência — com suas atitudes imprevisíveis.\nDuendes aventureiros, de alguma forma, conseguem se adaptar às táticas de suas classes escolhidas — existe dentro deles algum tipo de lógica misteriosa governando tais habilidades. Um duende guerreiro usará bem suas armas, talvez de formas esquisitas, mas com os mesmos resultados. Um duende bardo vai entoar canções estranhas em estilos não existentes, um clérigo vai falar com sua divindade de formas chocantes, um druida mudará para formas selvagens que parecem desenhadas por crianças e assim por diante.",
+    abilities: [
+      "Nenhum conjunto pré-determinado de habilidades poderia representar os diferentes membros desta raça. Assim, para criar um duende, você precisará fazer algumas escolhas.",
+      "Passo 1: Natureza:\n Você é uma criatura do tipo espírito. Além disso, escolha se você será animal, vegetal ou mineral.\n\nAnimal: Você é feito de carne e osso. Seu corpo é humanoide, mas sua aparência varia: pode ser algo similar a um elfo ou sílfide, um animal que anda sobre duas patas ou uma mistura dessas possibilidades. Você recebe +1 em um atributo a sua escolha.\n\nVegetal: Você é feito de folhas, vinhas, cortiça ou madeira. Você recebe as habilidades Natureza Vegetal (é imune a atordoamento e metamorfose, mas é afetado por efeitos que afetam plantas monstruosas — se o efeito não tiver um teste de resistência, você tem direito a um teste de Fortitude) e Florescer Feérico (uma vez por rodada, pode gastar uma quantidade de PM limitada pela sua Constituição para curar 2d8 PV por PM gasto no início do seu próximo turno).\n\nMineral: Você é feito de material inorgânico, como argila, rocha, cristal ou vidro. Você recebe imunidade a efeitos de metabolismo e redução de corte, fogo e perfuração 5, mas não se beneficia de itens da categoria alimentação.",
+      "Passo 2: Tamanho: \nEscolha seu tamanho, entre Minúsculo, Pequeno, Médio ou Grande.\n\nMinúsculo: Você é miudinho e fofinho. Pode ser uma caneca falante, um gato de monóculo ou um corvo com cara de velho (é, talvez não seja tão fofo assim). Você é Minúsculo (+5 em testes de Furtividade, –5 em testes de manobras de combate, usa armas reduzidas), possui deslocamento base 6m e sofre –1 em Força.\n\nPequeno: Você tem o tamanho de um hynne, de uma criança, de um cachorro ou de um barril. Talvez você seja um barril! Você é Pequeno (+2 em testes de Furtividade, –2 em testes de manobra) e possui deslocamento base 6m.\n\nMédio.: Você é Médio (sem modificadores por tamanho) e possui deslocamento base 9m. Blé!\n\nGrande: Agora sim! Meta medo em qualquer um que achar que fadas são fracotes. Você é Grande (–2 em testes de Furtividade, +2 em testes de manobra, usa armas aumentadas), possui deslocamento base 9m e sofre –1 em Destreza. ",
+      "Passo 3: Dons: \nEscolha dois atributos diferentes. Você recebe +1 em cada atributo escolhido. Não, não pode ser +2 em um único atributo. Xô, larga disso! Porém, se você for animal, pode adicionar um desses +1 no mesmo atributo que aumentou pela natureza. Se você estiver criando seu duende de forma aleatória, a rolagem de 2d6 determina os atributos nos quais você receberá +1, sendo uma rolagem 1 = Força, 2 = Destreza, 3 = Constituição e assim por diante.",
+      "Passo 4: Presentes de Magia e de Caos: \nDuendes não só são esquisitos: eles também conseguem fazer coisas esquisitas. Escolha três poderes da lista abaixo. Todos eles são mágicos. No caso de habilidades que permitam teste de resistência, a CD é Car, a menos que especificado em contrário. Uma vez por patamar, você pode escolher um presente no lugar de um poder de classe. \n\nAfinidade Elemental. Você possui ligação com um tipo de elemento do mundo natural, entre água, fogo ou vegetação (escolha uma quando adquirir este presente). Seu atributo-chave para as magias a seguir é Carisma. Caso aprenda novamente qualquer uma delas, seu custo diminui em –1 PM.\n- Água: Você é ligado a lagos e rios. Provavelmente tem a pele e/ou os cabelos azulados. Você recebe deslocamento de natação igual ao seu deslocamento base e pode lançar as magias Criar Elementos (apenas água) e Névoa\n- Fogo: Você é ligado a calor e chamas. Provavelmente tem a pele e/ou os cabelos avermelhados. Você recebe redução de fogo 5 e pode lançar as magias Criar Elementos (apenas fogo) e Explosão de Chamas.\n- Vegetação. Você é ligado a bosques e florestas. Provavelmente tem a pele e/ou os cabelos esverdeados. Você pode atravessar terrenos difíceis naturais sem sofrer redução em seu deslocamento e pode lançar as magias Armamento da Natureza e Controlar Plantas.\n\nEncantar Objetos: Você pode gastar uma ação de movimento e 3 PM para tocar um item e colocar nele um encanto pertinente a sua escolha (por exemplo, se tocar uma arma, pode colocar um encanto de arma nela). O encanto não pode ter pré-requisitos e dura até o fim da cena ou até você usar este poder novamente.\n\nEnfeitiçar: Suas feições feéricas podem deslumbrar outros seres. Você pode lançar Enfeitiçar e usar seus aprimoramentos como se tivesse acesso aos mesmos círculos de magia que um arcanista de seu nível.\n\nInvisibilidade: Um poder comum entre duendes e responsável por boa parte do folclore confuso sobre eles (“Como assim você não viu aquela tartaruga alada falante que estava aqui agora há pouco?”). Você pode lançar Invisibilidade e usar seus aprimoramentos como se tivesse acesso aos mesmos círculos de magia que um arcanista de seu nível.\n\nLíngua da Natureza: Você recebe +2 em Adestramento e Sobrevivência, e pode falar com animais e plantas (como o efeito da magia Voz Divina).\n\nMaldição: Nem todos os poderes feéricos são fofos ou engraçados… Você pode gastar uma ação padrão e 3 PM para amaldiçoar uma criatura em alcance curto. A criatura tem direito a um teste de resistência. Se falhar, sofre o efeito da maldição. Se passar, fica imune a este presente por um dia. Para construir sua maldição, escolha qual resistência ela permite (entre Fortitude ou Vontade) e seu efeito (da lista abaixo). Uma vez feitas, essas escolhas não podem ser mudadas. A maldição é permanente, mas você pode cancelá-la como uma ação livre, e ela pode ser curada por Purificação com o aprimoramento de +7 PM. Além disso, você só pode manter uma maldição por vez (se quiser amaldiçoar uma nova criatura, precisa cancelar a maldição anterior). Com a permissão do mestre, você pode criar uma maldição personalizada, usando os efeitos abaixo como referência.\n- Apatia Profunda. A criatura fica alquebrada e frustrada.\n-Coração de Geleia. A criatura fica abalada e, na primeira vez que tentar fazer uma ação hostil em cada cena, deve repetir o teste de resistência. Se falhar, não consegue e perde sua ação.\n-Envelhecimento Súbito. A criatura fica fraca e lenta.\n-Loucura do Verão. No início de cada cena, a criatura deve repetir o teste de resistência. Se falhar, fica confusa.\n-Mil Verrugas. A vítima sofre –2 em Carisma e, na primeira vez em cada cena que outra criatura inicie seu turno em alcance curto dela, essa segunda criatura deve fazer um teste de Vontade. Se falhar, a atitude dela em relação à criatura amaldiçoada piora em uma categoria. Ser feio pode matar!\n-Ruína do Corpo. A criatura fica fatigada e vulnerável.\n\nMais Lá do que Aqui: Você pode gastar uma ação padrão e 2 PM para fazer seu corpo, exceto por uma parte (como a cabeça ou uma cauda), desaparecer pela cena. Nesse estado, recebe camuflagem leve e +5 em Furtividade.\n\nMetamorfose Animal: Você pode se transformar em um tipo de animal. Escolha uma forma selvagem do druida, como ágil ou veloz. Você pode gastar uma ação completa e 3 PM para assumir essa forma, recebendo todos seus modificadores. Ao contrário de um druida, você pode falar e lançar magias mesmo em sua forma selvagem. Porém, você pode assumir apenas a forma escolhida, e apenas em sua versão básica.\n\nSonhos Proféticos: Uma vez por cena, você pode gastar 3 PM para ter uma visão que, graças a sua natureza feérica, provavelmente se concretizará. Role 1d20. Até o fim da cena, você pode substituir o resultado do d20 de um teste realizado por uma criatura em alcance curto pelo resultado do dado que você rolou ao usar este presente.\n\nVelocidade do Pensamento: Em seu primeiro turno em cada cena, você pode gastar 2 PM para realizar uma ação padrão adicional. Se fizer isso, você pula seu turno na segunda rodada.\n\nVisão Feérica: Você recebe visão na penumbra e está permanentemente sob efeito da magia Visão Mística com o aprimoramento de enxergar criaturas e objetos invisíveis.\n\nVoo: Você possui asas ou alguma fonte de voo mágico. Consegue flutuar 1,5m acima do nível do chão com deslocamento igual ao seu deslocamento base +3m, o que permite que ignore terreno difícil e torna-o imune a dano por queda (a menos que esteja inconsciente). Você também pode voar, mas isso é cansativo: você gasta 1 PM por rodada para voar com deslocamento igual ao seu deslocamento base +6m.",
+      "Passo 5: Limitações:\nA natureza mágica e caótica dos duendes faz com que eles sejam poderosos — mas também lhes impõe várias limitações. Você recebe as habilidades a seguir.\n\n- Aversão a Ferro: Um material rígido e inflexível, o ferro é nocivo a duendes. Você sofre 1 ponto de dano adicional por dado de dano de ataques com armas de ferro e sofre 1d6 pontos de dano por rodada se estiver empunhando ou vestindo um item de ferro. Isso também se aplica a aço, que inclui ferro em sua composição. Na prática, duendes usam apenas armas de madeira ou de materiais especiais, como mitral.\n\n- Aversão a Sinos: O badalar de um sino representa ordem e devoção, algo que faz mal a duendes. Se você escutar esse som, fica alquebrado e esmorecido até o fim da cena. No início de qualquer cena em um ambiente urbano no qual haja uma ou mais igrejas ou templos (o que inclui praticamente todas as aldeias e cidades do Reinado!), role 1d6. Em um resultado 1, você escutará um sino badalando em algum lugar.\n\n- Tabu: Você possui um tabu — algo que nunca pode fazer (ou deixar de fazer). Crie seu tabu junto com o mestre. Em termos de regras, a esquisitice de seu tabu impõe uma penalidade de –5 em Diplomacia, Iniciativa, Luta ou Percepção, a sua escolha (um tabu que afete seu comportamento, por exemplo, impõe –5 em Diplomacia). Se você desrespeitar seu tabu, fica fatigado por um dia (mesmo que seja imune a essa condição). Nenhum efeito pode curar essa condição. Se no dia seguinte continuar desrespeitando o tabu, você fica exausto. Se no terceiro dia não mudar seu comportamento, você morre."
+    ],
+    attributeModifiers: [
+      { description: "Conforme escolhas" }
+    ],
+    longevidade: " Duendes não seguem o ciclo natural. Sua longevidade varia de duende para duende.",
+    devotos: "Allihanna, Hyninn, Nimb, Wynna.",
+    extra: "Sonhos Malucos: \nSabe quando você tem um sonho maluco, no qual nada faz sentido? Alguns duendes são exatamente assim. O que não é de se estranhar — afinal, Nimb tem um dedo na criação das fadas. Se quiser emular essa esquisitice toda, você pode criar seu duende de forma aleatória. Para isso, role 1d3, 1d4, 2d6 e 3d12, todos ao mesmo tempo. Esses dados irão definir, respectivamente, sua natureza, tamanho, dois bônus de atributos e três poderes (se você rolar bônus de atributos ou poderes repetidos, role novamente). Você ainda recebe as três limitações de todos os duendes (veja o passo 5) e ainda precisa definir seu tabu junto com o mestre. Se criar seu duende de forma aleatória, você começa o jogo com +2 PM — um presente do Deus do Caos por sua ousadia.\n\nTabus de Duendes\nEm teoria, duendes podem ter qualquer tipo de tabu. Na prática, apenas os comportamentos mais esquisitos, absurdos e desprovidos de sentido surgem como tabus para esta raça peculiar. Aqui vão alguns exemplos.\n\n- Sempre remenda as roupas de qualquer mortal que esteja dormindo sob o mesmo teto que ele.\n- Come apenas carne crua.\n- Nunca pode ouvir um agradecimento.\n- Sempre entra em qualquer lugar de costas.\n- Não revela o próprio nome.\n- Compõe um pequeno poema para todos que encontra, descrevendo a morte de cada um.\n- Não pode ver crianças em noites de lua cheia.\n- Nunca senta em cadeiras.\n- Carrega sempre consigo um pote fechado. Diz que ali dentro está seu coração.\n- Usa sapatos muito pequenos e reclama de dor nos pés o tempo todo. Fica enfurecido se alguém sugerir ou oferecer sapatos diferentes.\n- Age como se estivesse paralisado se qualquer quantidade de sal tocar sua pele.\n- Um dia por semana, atende por um nome diferente e demonstra personalidade um pouco diferente. Diz não lembrar de seu outro nome.\n- Varre qualquer cômodo onde esteja.\n- Tem pavor do próprio reflexo.\n- Nunca pode aceitar um favor sem pagar pelo menos uma moeda.\n- Ao passar na frente de qualquer templo, cobre os olhos com uma venda.\n- Rouba um garfo de qualquer casa na qual entre.\n- Precisa atravessar todos os espinheiros que encontra em seu caminho.\n- Sempre responde uma pergunta com outra pergunta.\n- Não pode falar a verdade durante um dia inteiro por mês. Esse dia varia a cada mês. Não pode avisar ninguém sobre a chegada desse dia, ou sobre este tabu.\n- Em intervalos de tempo aleatórios, lembra-se de que está atrasado para um compromisso importante e corre para longe, sumindo por algumas horas.\n- Não pode olhar pessoas feridas nos olhos."
+  },
+  { id: "Eiradaan",
+    name: "Eiradaan",
+    origin: "Herois de Arton",
+    image: "/racas/eiradaan.png",
+    description: "Seres féericos ancestrais, os eiradaan foram criados pelo Panteão para proteger Vitalia, o Reino de Lena, de todo o mal da Criação, e chegaram a Arton após um evento que trouxe grande tristeza à Deusa da Vida. Não há registros acurados sobre o que teria exatamente acontecido; sabe-se apenas que os eiradaan falharam em sua tarefa sagrada, sendo expulsos de seu lar divino.\nEm Arton, os eiradaan se refugiaram nas florestas mais densas e profundas. Lendas dizem que, nesses locais secretos, ergueram reinos mágicos que governam conforme seus caprichos. De fato, muitos nobres na corte de Thantalla-Dhaedelin, a Rainha da Pondsmânia, são eiradaan.\nFisicamente, o eiradaan lembra um elfo, com as mesmas orelhas pontiagudas, olhos amendoados e traços delicados. Mas seu corpo ostenta a exuberância do mundo natural, com galhadas ramificando-se na cabeça. Nos olhos, exibe grande inteligência, mas também certo resquício de tristeza profunda.\nEiradaan entregam-se a longos períodos de melancolia, ou então buscam se manter ocupados para afastar a tristeza (mas nunca se dedicam a um mesmo projeto por muito tempo). Apesar de seu poder mágico fenomenal, eiradaan ainda são fadas: vulneráveis a emoções fortes, tornando-se perigosos quando algo desperta sua antiga mágoa.\nEntre os eiradaan, muitos são arcanistas, mas também há nobres e cavaleiros — em sua maioria, atuam como guardiões e soldados de elite da Rainha das Fadas. Esses são especialmente imponentes e dignos, vivendo conforme códigos e tabus de honra e glória, duelando (entre si ou com mortais) e protegendo locais sagrados. Suas montarias são grandes gamos celestiais presenteados por Allihanna; dizem que a deusa, às vezes, também oferta essas montarias sagradas a outros devotos valorosos.\nAlguns eiradaan aceitam acompanhar grupos de aventureiros, seja para aplacar a melancolia ancestral, seja para procurar pistas sobre o mistério de seu banimento divino.",
+    abilities: [
+      "Essência Feérica: Você é uma criatura do tipo espírito, recebe visão na penumbra e pode falar com animais livremente.",
+      "Magia Instintiva: Você pode usar Sabedoria no lugar de seu atributo-chave de magias arcanas e Misticismo. Além disso, quando lança uma magia, você recebe +1 PM para gastar em seus aprimoramentos (não cumulativo com outros efeitos que fornecem PM para aprimoramentos, como bolsa de pó).",
+      "Sentidos Místicos: Você está sempre sob o efeito básico da magia Visão Mística.",
+      "Canção da Melancolia: Quando faz um teste de Vontade contra efeitos mentais, você rola dois dados e usa o pior resultado."
+    ],
+    attributeModifiers: [
+      { attribute: "sab", modifier: 2 },
+      { attribute: "car", modifier: 1 },
+      { attribute: "for", modifier: -1 }
+    ],
+    longevidade: "x5.",
+    devotos: "Allihanna, Lena, Thyatis, Wynna.",
+  },
+  { id: "Galokk",
+    name: "Galokk",
+    origin: "Herois de Arton",
+    image: "/racas/galokk.png",
+    description: "A Era de Megalokk foi um período de violência e carnificina, dominado por feras colossais. Khalmyr, então líder do Panteão, pôs fim a essa época terrível confinando essas criaturas medonhas a lugares remotos, permitindo à vida natural florescer. Enfurecido pelo domínio dos povos civilizados, o Deus dos Monstros criou os gigantes, raças humanoides, mas monstruosas, que assolam Arton.\nGigantes são os humanos de Megalokk. São opostos aos filhos de Valkaria por serem estagnados: não buscam, não evoluem, não ambicionam. A Deusa da Ambição os despreza, não teve nenhuma participação em sua gênese. Ou teve? Xamãs do Deus dos Monstros provocam, gargalham que ele derrotou a deusa em um combate brutal e a forçou a partilhar a humanidade com Megalokk. Devotos de Valkaria renegam tal absurdo, mas a existência dos galokk pode ser evidência de que a Deusa da Ambição teve, sim, algum envolvimento na origem desses monstros.\nTambém chamados de meios-gigantes, galokk não são uma raça ou um povo. Não surgem de cruzamentos entre humanos e gigantes, mas de formas não naturais: nascem em famílias humanas, mas crescem muito mais do que o normal. Outros são devotos de Megalokk, recompensados e transformados por aprazê-lo. Outros ainda são vítimas de acidentes alquímicos ou maldições.\nApós a manifestação do poder de Megalokk, os galokk podem chegar a três metros de altura, grandes como ogros. Diferente desses, contudo, seus corpos têm proporções humanas, mas são duros feito rocha.\nMeios-gigantes raramente encontram lugar em cidades feitas para seres menores. Também não existem em número suficiente para formar suas próprias comunidades. Muitos acabam como capangas, guarda-costas, gladiadores ou soldados. Mas existem aqueles que desafiam suas naturezas e adotam carreiras inesperadas como arcanistas, bardos e inventores. Afinal, galokk são gigantes… mas também humanos.",
+    abilities: [
+      "Força dos Titãs: Quando acerta um ataque corpo a corpo ou de arremesso, você pode gastar 1 PM. Se fizer isso, sempre que rolar o resultado máximo em um dado de dano da arma, role um dado extra, até um limite de dados extras igual à sua Força.",
+      "Meio-Gigante: Você é uma criatura do tipo humanoide (gigante). Seu tamanho é Grande e você pode usar Força como atributo-chave de Intimidação.",
+      "Infância entre os Pequenos: Você se torna treinado em uma perícia a sua escolha.",
+    ],
+    // Modificadores FIXOS para Anão
+    attributeModifiers: [
+      { attribute: "for", modifier: 1 },
+      { attribute: "con", modifier: 1 },
+      { description: "Escolha +1 em um atributo" },
+      { attribute: "car", modifier: -1 }
+    ],
+    longevidade: "Normal.",
+    devotos: "Allihanna, Arsenal, Megalokk.",
+  },
+  { id: "Meio-Elfo",
+    name: "Meio-Elfo",
+    origin: "Herois de Arton",
+    image: "/racas/Meio-Elfo.png",
+    description: "Após a queda de Lenórienn e a dispersão dos elfos por Arton, muitos deles se viram obrigados a conviver nos reinos humanos e se misturar com outras raças. O orgulho e a arrogância ancestrais deram lugar a uma nova realidade, em que tais sentimentos foram esquecidos, enterrados ou, pelo menos, disfarçados.\nA interação com outras raças despertou nos elfos uma gama diversa de sentimentos. Alguns nutrem ódio profundo em seus corações. Outros descobriram nos humanos um povo apaixonante, intenso, que vive cada momento. E há aqueles que, como servos ou escravos, foram silenciados e obrigados a ocultar suas emoções. Assim, por amor ou resignação, humanos e elfos cruzam seus destinos, dando origem aos meios-elfos.\nÉ possível que existam meios-elfos desde a chegada dos próprios elfos a Arton, mais de um milênio atrás. Contudo, ficaram mais comuns apenas nas últimas décadas. Atualmente já estão se tornando mais numerosos que os elfos “puros”, sendo agora a norma, não a exceção.\nEmbora elfos e humanos sejam parecidos fisicamente, os meios-elfos são um meio-termo. Têm a mesma altura e peso dos humanos, mas também olhos amendoados, orelhas pontudas e traços delicados. Sua cor de pele pode variar do escuro ao albino, passando por todos os intermediários. São mais robustos que os elfos e, como seus pais humanos, podem desenvolver barba.\nTolerantes por natureza, meios-elfos convivem bem com indivíduos de todas as raças, embora às vezes enfrentem o preconceito, principalmente por parte de elfos puros, que veem neles um sinal de decadência. São mais bem recebidos entre os humanos, devido a sua beleza e natureza amigável.\nMuitos, no entanto, não se sentem à vontade com nenhum povo. Assim, aventuram-se — não em busca de tesouros, fama ou renome, mas de sua própria identidade e seu lugar em Arton. Muitos abraçam as artes e se tornam bardos, viajando e coletando histórias. Bucaneiros, clérigos, druidas, guerreiros e ladinos também são comuns. E vários acabam como arcanistas, devido à natureza mágica de seus parentes élficos.",
+    abilities: [
+      "Ambição Herdada: Você recebe um poder geral ou poder único de origem a sua escolha.",
+      "Entre Dois Mundos: Você recebe +1 em perícias baseadas em Carisma.",
+      "Sangue Élfico: Você recebe visão na penumbra e +1 ponto de mana a cada nível ímpar (incluindo o 1º). Além disso, é considerado um elfo para efeitos relacionados a raça.",
+    ],
+    // Modificadores FIXOS para Anão
+    attributeModifiers: [
+      { attribute: "int", modifier: 1 },
+      { description: "Escolha +1 em dois atributos exceto constituição" }
+    ],
+    longevidade: "x2",
+    devotos: "Qualquer",
+  },
+  { id: "Sátiro",
+    name: "Sátiro",
+    origin: "Herois de Arton",
+    image: "/racas/Sátiro.png",
+    description: "Sátiros são humanoides feéricos de baixa estatura com tronco, cabeça e braços humanos, mas também chifres recurvados, pele coberta de pelagem castanha e pernas de bode, com cascos. Muitos carregam um arco às costas e uma aljava de flechas na cintura, sendo essa a arma preferida da raça. Quase todos usam cavanhaque e trazem no rosto um sorriso divertido, mas também selvagem.\nDiferente de outras fadas, sátiros costumam ter aparência masculina — embora existam exceções. São bem-humorados, joviais, apreciadores dos prazeres da vida: comida, bebida, dança e romance… especialmente romance. Parecem motivados puramente pela busca da próxima diversão, assim que descansam da anterior. E, infelizmente para os demais povos, nem todas as diversões de um sátiro são inofensivas.\nSátiros costumam ser arqueiros exímios, apreciando caçar por esporte; muitos se contentam apenas com pássaros ou coelhos, enquanto os mais devassos flecham humanos e outras raças, para seu prazer perverso. Felizmente para a vítima perseguida, existe uma chance certa de escapar: basta evitar o caçador até que ele fique cansado e perca o interesse. Preguiçosos, sátiros nunca se esforçam muito para alcançar coisa alguma.\nAssim, quando indispostos a caçadas cansativas, sátiros muitas vezes preferem enfeitiçar suas vítimas com música de flauta ou harpa — que eles utilizam para seduzir interesses românticos ou fazer adormecer viajantes para roubar seus pertences. Com seus sentidos aguçados e sua agilidade natural, é simples para um sátiro se aproximar sem ser percebido.\nQuando forçados a lutar, sátiros usam arco e flechas; em combate corpo a corpo, podem contar com a cabeçada poderosa. Mas é possível negociar com sátiros: eles conhecem bem as regiões onde vivem, podendo apontar o caminho para qualquer lugar. Contudo, só aceitam fazer isso quando são derrotados em alguma disputa, ou subornados com algo que apreciem.\nO sátiro que escolhe viver em uma comunidade humana é extremamente raro — seus modos desordeiros não combinam com a vida em sociedade. Mas há aqueles que moderam (um pouco) seu comportamento indisciplinado e acabam unidos a grupos de aventureiros, considerando cada aventura uma grande diversão. Quase todos os sátiros se tornam caçadores ou ladinos, embora outros insistam em seguir os caminhos mais inesperados ou impróprios, como clérigos, inventores, paladinos e até nobres.",
+    abilities: [
+      "Festeiro Feérico: Você é uma criatura do tipo espírito, recebe visão na penumbra e +2 em Atuação e Fortitude.",
+      "Instrumentista Mágico: Se estiver empunhando um instrumento musical, você pode lançar as magias Amedrontar, Enfeitiçar, Hipnotismo e Sono (atributo-chave Carisma). Caso aprenda novamente uma dessas magias, seu custo diminui em –1 PM.",
+      "Marrada: Você possui uma arma natural de marrada (dano 1d6, crítico x2, impacto). Uma vez por rodada, quando usa a ação agredir para atacar com outra arma, pode gastar 1 PM para fazer um ataque corpo a corpo extra com a marrada.",
+      "Pernas Caprinas: Seu deslocamento é 12m e você pode usar Destreza como atributo-chave de Atletismo (em vez de Força)."
+    ],
+    attributeModifiers: [
+      { attribute: "car", modifier: 2 },
+      { attribute: "des", modifier: 1 },
+      { attribute: "sab", modifier: -1 }
+    ],
+    longevidade: "Normal.",
+    devotos: "Allihanna, Hyninn, Marah, Nimb, Wynna.",
+  },
+  { id: "Zora",
+    name: "Zora",
+    origin: "Dragão Brasil - Zelda",
+    image: "/racas/Zora.png",
+    description: "Este povo é composto por pessoas humanoides com características aquáticas e anfíbias. Possuem guelras e uma cauda em sua cabeça, além de um corpo escamoso e úmido, que varia entre as cores branca, azul, vermelho e cinza. Costumam viver em lagos, rios e mares, especialmente nas partes submersas, e por isso são considerados os guardiões das águas. Sua cultura é conhecida pela grande admiração pela música e suas canções curativas e restauradoras. Apesar disso, ao longo das eras de Hyrule, muitos zora rescindiram a hábitos mais animalescos e irracionais, tornando-se inimigos da família real e do herói.",
+    abilities: [
+      "Melodias do Povo Zora: Você pode conjurar duas das seguintes magias: Área Escorregadia, Curar Ferimentos, Orientação, Primor Atlético ou Suporte Ambiental (atributo-chave Sabedoria). Caso aprenda novamente uma dessas magias, seu custo diminui em –1 PM.",
+      "Um com a Água: Você tem deslocamento de natação de 9m e pode falar (e lançar magias) debaixo d'água.",
+    ],
+    // Modificadores FIXOS para Anão
+    attributeModifiers: [
+      { attribute: "sab", modifier: 2 },
+      { attribute: "des", modifier: 1 },
+      { attribute: "int", modifier: -1 }
+    ],
+  },
+  
 ];

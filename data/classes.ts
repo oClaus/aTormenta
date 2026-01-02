@@ -1411,4 +1411,5 @@ export const classes: GameClass[] = [
       { level: 20, abilities: "Mestre arcano-combatente, poder de arcanista" }
     ],
     },
+    
 ];

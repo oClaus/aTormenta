@@ -228,7 +228,7 @@ export default function RacasPage() {
                       key={index}
                       className="p-5 bg-stone-950/50 rounded border border-stone-800 hover:border-emerald-800/30 transition-colors"
                     >
-                      <p className="text-stone-300 text-lg leading-relaxed">{ability}</p>
+                      <p className="text-stone-300 text-lg leading-relaxed whitespace-pre-line">{ability}</p>
                     </div>
                   ))}
                 </div>
@@ -282,7 +282,7 @@ export default function RacasPage() {
                           className="p-5 rounded bg-stone-950 border border-emerald-900/30"
                         >
                           <p className="text-emerald-400 leading-relaxed text-lg">
-                            <span className="font-bold uppercase tracking-wide text-emerald-600 mr-2">⚡ Flexível:</span>
+                            <span className="font-bold uppercase tracking-wide text-emerald-600 mr-2"></span>
                             {mod.description}
                           </p>
                         </div>
@@ -293,6 +293,17 @@ export default function RacasPage() {
                   })}
                 </div>
               </div>
+
+              {/* Extra */}
+              <div className="mb-10 grid grid-cols-1 sm:grid-cols-1 gap-6">
+                {selectedRace.extra && (
+                  <div className="p-5 bg-stone-950 rounded border border-stone-800">
+                    <div className="text-xs text-emerald-600 font-bold uppercase tracking-widest mb-2">Conteúdo Extra</div>
+                    <div className="text-stone-300 text-lg leading-relaxed whitespace-pre-line">{selectedRace.extra}</div>
+                  </div>
+                )}
+              </div>
+
               
               {/* Fim do Modal - Decoração */}
               <div className="mt-12 flex items-center justify-center gap-4 opacity-50">
