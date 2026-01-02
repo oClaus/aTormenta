@@ -318,6 +318,28 @@ export default function ClassesPage() {
                   </div>
               </div>
 
+              {/* Botão para Página de Poderes (SÓ APARECE SE TIVER LINK NO DATA) */}
+              {selectedClass.powersUrl && (
+                <div className="mb-12 flex justify-center">
+                  <Link 
+                    href={selectedClass.powersUrl} // Puxa direto do seu JSON/Data
+                    className="group relative inline-flex items-center justify-center px-10 py-5 overflow-hidden font-serif font-bold text-white transition-all duration-300 bg-stone-950 border border-stone-700 hover:border-amber-600 hover:bg-stone-900 shadow-lg hover:shadow-[0_0_30px_rgba(217,119,6,0.2)]"
+                  >
+                    {/* Textura de fundo */}
+                    <span className="absolute inset-0 w-full h-full bg-[url('/noise.png')] opacity-20"></span>
+                    
+                    {/* Conteúdo do Botão */}
+                    <span className="relative text-lg uppercase tracking-[0.25em] text-stone-400 group-hover:text-amber-500 transition-colors flex items-center gap-4">
+                      <span className="text-amber-800 group-hover:text-amber-500 transition-colors">❖</span> 
+                      
+                      Ver Poderes de {selectedClass.name}
+                      
+                      <span className="text-amber-800 group-hover:text-amber-500 transition-colors">❖</span>
+                    </span>
+                  </Link>
+                </div>
+              )}
+
               {/* Habilidades de Classe */}
               <div className="mb-12">
                 <h3 className="text-3xl font-bold text-amber-800 mb-8 text-center border-b border-stone-800 pb-2">✨ Habilidades de Classe</h3>
@@ -368,18 +390,56 @@ export default function ClassesPage() {
               {selectedClass.extras && selectedClass.extras.length > 0 && (
                 <div className="mb-12 p-6 bg-purple-950/10 rounded border border-purple-900/30">
                   <h3 className="text-2xl font-bold text-purple-400 mb-6 flex items-center gap-3">
-                      <span>⭐</span> Regras Especiais & Notas
+                    <span>⭐</span> Regras Especiais & Notas
                   </h3>
-                  <div className="space-y-6">
+                  
+                  <div className="space-y-8"> {/* Aumentei o espaçamento entre extras */}
                     {selectedClass.extras.map((extra, index) => (
                       <div
                         key={index}
-                        className="pb-4 border-b border-purple-900/20 last:border-0"
+                        className="pb-6 border-b border-purple-900/20 last:border-0"
                       >
-                        <h4 className="text-purple-300 font-bold text-lg mb-2">{extra.title}</h4>
-                        <p className="text-stone-400 text-base leading-relaxed whitespace-pre-line">
-                          {extra.description}
-                        </p>
+                        {/* Título do Extra Principal */}
+                        <h4 className="text-purple-300 font-bold text-xl mb-3">{extra.title}</h4>
+                        
+                        {/* Descrição Principal */}
+                        {extra.description && (
+                          <p className="text-stone-400 text-base leading-relaxed whitespace-pre-line mb-6">
+                            {extra.description}
+                          </p>
+                        )}
+
+                        {/* RENDERIZAÇÃO DAS NOVAS SEÇÕES (Características, Tipos, Truques) */}
+                        {extra.sections && (
+                          <div className="space-y-6 mt-4 pl-4 border-l-2 border-purple-900/20">
+                            {extra.sections.map((section, sIndex) => (
+                              <div key={sIndex} className="bg-stone-900/30 p-4 rounded">
+                                <h5 className="text-amber-600 font-bold text-lg mb-2 uppercase tracking-wide">
+                                  {section.title}
+                                </h5>
+                                
+                                {section.intro && (
+                                  <p className="text-stone-500 italic mb-4 text-sm">
+                                    {section.intro}
+                                  </p>
+                                )}
+
+                                <dl className="space-y-3">
+                                  {section.content.map((item, cIndex) => (
+                                    <div key={cIndex} className="group">
+                                      <dt className="text-stone-200 font-bold inline text-base">
+                                        {item.name}:
+                                      </dt>
+                                      <dd className="text-stone-400 inline ml-2 text-base leading-relaxed">
+                                        {item.description}
+                                      </dd>
+                                    </div>
+                                  ))}
+                                </dl>
+                              </div>
+                            ))}
+                          </div>
+                        )}
                       </div>
                     ))}
                   </div>

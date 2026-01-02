@@ -1,0 +1,130 @@
+import { Power } from "@/types/power";
+
+export const powersTreinador: Power[] = [
+  { id: "Amigo Divino",
+    name: "Amigo Divino",
+    description: "Seu melhor amigo vive em um mundo divino, mas você pode gastar uma ação de movimento e 2 PM para invocá-lo a Arton. Ele surge em um espaço desocupado em alcance curto e permanece até o fim da cena ou até você enviá-lo de volta (uma ação livre). Enquanto estiver no mundo divino e com menos da metade de seus PV, o melhor amigo tem Cura Acelerada 10.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Asas Aliadas",
+    name: "Asas Aliadas",
+    description: "Uma vez por rodada, se você estiver em alcance curto de seu melhor amigo e ele usar deslocamento de voo, você pode pagar 1 PM para ser alçado aos céus. Se fizer isso, você se desloca para um quadrado desocupado no trajeto do amigo. Além disso, seu próximo ataque nesse turno conta como uma investida.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Aumento de Atributo",
+    name: "Aumento de Atributo",
+    description: "Você recebe +1 em um atributo. Você pode escolher este poder várias vezes, mas apenas uma vez por patamar para um mesmo atributo.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Bom Garoto",
+    name: "Bom Garoto",
+    description: "Uma vez por rodada, quando seu melhor amigo faz um acerto crítico em combate ou reduz um inimigo a 0 PV em seu turno, você recebe uma ação padrão que só pode usar consigo mesmo.",
+    prerequisite: "11º nível de treinador",
+    origin: "Herois de Arton"
+  },
+  { id: "Comando Defensivo",
+    name: "Comando Defensivo",
+    description: "Quando seu melhor amigo sofre dano, você pode gastar 2 PM para fazer um teste de Adestramento e reduzir o resultado do teste desse dano. Você pode usar esta habilidade uma vez por rodada para cada melhor amigo.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Comandos Distantes",
+    name: "Comandos Distantes",
+    description: "O alcance de suas habilidades de treinador aumenta em uma categoria (de curto para médio, de médio para longo).",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Convocar Enxame",
+    name: "Convocar Enxame",
+    description: "Você aprende e pode lançar Enxame de Pestes (atributo-chave Carisma) e pode usar seus aprimoramentos como se tivesse acesso aos mesmos círculos de magia que um clérigo de seu nível. Esta não é uma habilidade mágica e provém de sua capacidade de atrair criaturas.",
+    prerequisite: "5º nível de treinador.",
+    origin: "Herois de Arton"
+  },
+  { id: "Coração Grande",
+    name: "Coração Grande",
+    description: " Seu limite de parceiros aumenta em +1. No 11º nível, esse limite aumenta em +1.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Direcionamento Marcial",
+    name: "Direcionamento Marcial",
+    description: "Quando usa Direcionar em um teste de ataque, você também soma seu Carisma na rolagem de dano desse ataque.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Domador Cativante",
+    name: "Domador Cativante",
+    description: "Você soma seu Carisma no dano de Domar Criatura, e os dados de dano dessa habilidade aumentam para d10.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Domador Lendário",
+    name: "Domador Lendário",
+    description: "Quando usa Domar Criatura, você pode gastar +2 PM para mudar os dados de dano para d12 e atingir todos os alvos dentro do alcance. ",
+    prerequisite: "Domador Cativante, 17º nível de treinador.",
+    origin: "Herois de Arton"
+  },
+  { id: "Ensinar Truque",
+    name: "Ensinar Truque",
+    description: "Um de seus melhores amigos aprende um truque adicional. Você pode escolher este poder uma vez por patamar por amigo.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Investida Conjunta",
+    name: "Investida Conjunta",
+    description: "Uma vez por rodada, quando um melhor amigo no qual você está montado faz uma investida, você pode gastar 2 PM para fazer um ataque corpo a corpo (que também conta como uma investida).",
+    prerequisite: "melhor amigo montaria.",
+    origin: "Herois de Arton"
+  },
+  { id: "Líder da Matilha",
+    name: "Líder da Matilha",
+    description: "Quando usa Direcionar, você pode aplicar o bônus ao próximo teste de perícia de outros melhores amigos com a mesma ação ao custo de +1 PM por amigo adicional. O bônus só afeta o teste se ele for feito até o fim do seu turno. ",
+    prerequisite: "Conquistar pelos Números.",
+    origin: "Herois de Arton"
+  },
+  { id: "Língua das Criaturas",
+    name: "Língua das Criaturas",
+    description: "ocê pode se comunicar com criaturas não inteligentes (Int –4 ou –5) por meio de linguagem corporal e vocalizações. Você pode usar Adestramento com essas criaturas para mudar atitude e persuasão.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Mascote",
+    name: "Mascote",
+    description: "Você tem um mascote (veja logo a baixo). Você pode escolher este poder várias vezes para mascotes diferentes.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Petisco Merecido",
+    name: "Petisco Merecido",
+    description: "Você pode gastar 2 PM para conceder +2 em Força e Destreza a um melhor amigo em alcance curto até o fim da cena.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Proteção Fraterna",
+    name: "Proteção Fraterna",
+    description: "Quando você e/ou seu melhor amigo sofre um efeito que permite um teste de resistência, se ele estiver em alcance curto, você pode gastar 2 PM para coordenar seus esforços. Os dois fazem o teste de resistência, mas ambos usam o melhor resultado. Se um de vocês tiver uma habilidade que modifica o efeito por passar no teste de resistência (como Evasão), ambos são afetados por ela.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Trabalho em Equipe",
+    name: "Trabalho em Equipe",
+    description: "Uma vez por rodada, quando você faz uma ação de movimento, seus melhores amigos recebem uma ação de movimento. ",
+    prerequisite: "5º nível de treinador.",
+    origin: "Herois de Arton"
+  },
+  { id: "Treinador Eclético",
+    name: "Treinador Eclético",
+    description: "Seus melhores amigos usam seu nível de personagem, em vez de seu nível de treinador, para calcular seus PV, modificadores de perícias e Defesa. ",
+    prerequisite: "6º nível de treinador.",
+    origin: "Herois de Arton"
+  },
+  { id: "Veterinário de Campo",
+    name: "Veterinário de Campo",
+    description: "Você pode gastar uma ação completa para fazer um teste de Adestramento em um melhor amigo adjacente. Ele recupera uma quantidade de PV igual ao resultado do teste. Você só pode usar este poder uma vez por dia num mesmo alvo.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+];

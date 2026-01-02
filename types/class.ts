@@ -12,6 +12,17 @@ export interface ClassSkills {
   };
 }
 
+export interface ClassExtraSectionContent {
+  name: string;
+  description: string;
+}
+
+export interface ClassExtraSection {
+  title: string;
+  intro?: string; // Para textos introdutórios antes da lista (ex: "Escolha entre...")
+  content: ClassExtraSectionContent[];
+}
+
 export interface SubAbility {
   name: string; // Ex: "Bruxo"
   description: string; // Descrição completa da sub-opção
@@ -25,7 +36,8 @@ export interface ClassAbility {
 
 export interface ClassExtra {
   title: string;
-  description: string; // Use \n para quebras de linha
+  description?: string; // Agora opcional, pois pode ter apenas sections
+  sections?: ClassExtraSection[]; // Nova propriedade para conteúdo complexo
 }
 
 export interface FamousExample {
@@ -51,4 +63,5 @@ export interface GameClass {
   abilities: ClassAbility[];
   levelProgression: LevelProgression[];
   extras?: ClassExtra[];
+  powersUrl?: string;
 }

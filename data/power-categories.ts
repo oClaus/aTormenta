@@ -148,4 +148,11 @@ export const powerCategories: PowerCategory[] = [
     description: "Poderes exclusivos de Samurai.",
     origin: "Dragão Brasil"
   },
+  {
+    id: "Treinador",
+    name: "Treinador",
+    slug: "treinador",
+    description: "Poderes exclusivos de Treinador.",
+    origin: "Herois de Arton"
+  },
 ];
