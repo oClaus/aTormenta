@@ -1008,7 +1008,7 @@ export const classes: GameClass[] = [
     abilities: [
       {
         name: "Briga",
-        description: "Seus ataques desarmados causam $1d6$ pontos de dano e podem causar dano letal ou não letal (sem penalidades). A cada quatro níveis, seu dano desarmado aumenta, conforme a tabela. O dano na tabela é para criaturas Pequenas e Médias. Criaturas Minúsculas diminuem esse dano em um passo, Grandes e Enormes aumentam em um passo e Colossais aumentam em dois passos."
+        description: "Seus ataques desarmados causam 1d6 pontos de dano e podem causar dano letal ou não letal (sem penalidades). A cada quatro níveis, seu dano desarmado aumenta, conforme a tabela. O dano na tabela é para criaturas Pequenas e Médias. Criaturas Minúsculas diminuem esse dano em um passo, Grandes e Enormes aumentam em um passo e Colossais aumentam em dois passos."
       },
       {
         name: "Golpe Relâmpago",
@@ -1016,7 +1016,7 @@ export const classes: GameClass[] = [
       },
       {
         name: "Poder de Lutador",
-        description: "No 2º nível, e a cada nível seguinte, você escolhe um poder."
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um poder de Lutador ou Geral."
       },
       {
         name: "Casca Grossa",
@@ -1032,7 +1032,7 @@ export const classes: GameClass[] = [
       },
       {
         name: "Dono da Rua",
-        description: "No 20º nível, seu dano desarmado aumenta para $2d10$ (para criaturas Médias). Além disso, quando usa a ação agredir para fazer um ataque desarmado, você pode fazer dois ataques, em vez de um (podendo usar Golpe Relâmpago para fazer um terceiro)."
+        description: "No 20º nível, seu dano desarmado aumenta para 2d10 (para criaturas Médias). Além disso, quando usa a ação agredir para fazer um ataque desarmado, você pode fazer dois ataques, em vez de um (podendo usar Golpe Relâmpago para fazer um terceiro)."
       },
     ],
     levelProgression: [
@@ -1663,6 +1663,170 @@ export const classes: GameClass[] = [
       description: "Uma emulsão é um óleo que concede propriedades mágicas a um item. Usá-la é uma ação padrão e fornece um ou mais encantos para um item até o fim da cena. Conceder um encanto através de uma emulsão não tem custo adicional (além do gasto do óleo) e conta no limite de encantos do item.\nExistem emulsões com um, dois e três encantos. Se um encanto contido em uma emulsão tiver outro como pré-requisito, a emulsão deve incluir também esse pré-requisito. Fabricar uma emulsão segue as mesmas regras para itens alquímicos, mas o custo e a CD dependem da quantidade de encantos contidos no óleo.\n1 Encantamento / T$ 250 / CD 25\n2 Encantamentos / T$ 750 / CD 30\n3 Encantamentos / T$ 1.500 / CD 35\nPor sua volatilidade, que exige do criador manutenção constante, além da necessidade de supervisão em sua aplicação, emulsões não são comercializadas.",
     },
     ]
+    },
+    { id: "Atleta (Lutador)",
+    name: "Atleta (Lutador)",
+    powersUrl: "/poderes/lutador",
+    origin: "Herois de Arton",
+    image: "/classes/atleta.png",
+    description: "Embora quase toda aventura em Arton envolva alguma batalha, nem todos os aventureiros estão interessados em combate. Curiosamente, alguns desses são lutadores.\nO atleta é um aventureiro que cultiva seu corpo ao limite, sendo capaz de correr mais rápido, saltar mais alto, nadar por mais tempo que qualquer outro. Não treina técnicas de luta, mas é capaz de erguer pesos impressionantes, tem fôlego para marchar por semanas e realiza acrobacias incríveis. Suas façanhas às vezes parecem não ter objetivo além de provar que ele é capaz de cumpri-las... Mas mais de um atleta já salvou seu grupo ao segurar um teto que desabava, correr por um dia inteiro para pedir reforços ou dobrar as barras da cela onde todos estavam presos.\nAtletas podem ser vaidosos, esculpindo o próprio corpo com a justificativa de aumentar sua força ou resistência. Contudo, também podem ser os aventureiros mais próximos do artoniano médio. Enquanto outros falam de matar e morrer com naturalidade, para o atleta a violência é estranha. Melhor é evitá-la, talvez correndo mais que o inimigo... Ou decidindo qualquer desavença com uma competição amigável.",
+    characteristics: {
+      pvBase: "20 + Constituição",
+      pvPerLevel: "5 + Constituição",
+      pmPerLevel: "3 PM por nível"
+    },
+    skills: {
+    mandatory: ["Atletismo (For)", "Luta (For)"],
+    optional: {
+      skills: ['Acrobacia (Des)', 'Adestramento (Car)', 'Cavalgar (Des)', 'Cura (Sab)', 'Fortitude (Con)', 'Iniciativa (Des)', 'Intimidação (Car)', 'Ofício (Int)', 'Percepção (Sab)', 'Pilotagem (Des)', 'Pontaria (Des)', 'Reflexos (Des)' ],
+      count: 4
+      }
+    },
+    proficiency: "Nenhuma",
+    abilities: [
+      {
+        name: "Briga",
+        description: "Seus ataques desarmados causam 1d6 pontos de dano e podem causar dano letal ou não letal (sem penalidades). A cada quatro níveis, seu dano desarmado aumenta, conforme a tabela. O dano na tabela é para criaturas Pequenas e Médias. Criaturas Minúsculas diminuem esse dano em um passo, Grandes e Enormes aumentam em um passo e Colossais aumentam em dois passos."
+      },
+      {
+        name: "Façanha Atlética",
+        description: "Quando faz um teste de perícia, você pode gastar uma quantidade de PM a sua escolha (limitada pela sua Força). Para cada PM que gastar, recebe +2 no teste."
+      },
+      {
+        name: "Arremesso Atlético",
+        description: "No 2º nível, o alcance de seus ataques com armas de arremesso aumenta em um passo (de curto para médio e de médio para longo). Além disso, quando ataca com uma dessas armas, você pode usar o dano da habilidade Briga no lugar do dano básico da arma. A partir do 10º nível, seus ataques com armas de arremesso contam como ataques desarmados para efeito de suas habilidades de lutador."
+      },
+      {
+        name: "Poder de Lutador",
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um poder de Lutador ou Geral."
+      },
+      {
+        name: "Poderio Muscular",
+        description: "No 2º nível, você aprende e pode lançar Primor Atlético, mas apenas em si mesmo. Esta não é uma habilidade mágica e provém de seu extenso treinamento físico"
+      },
+      {
+        name: "Casca Grossa",
+        description: "No 3º nível, você soma sua Constituição na Defesa, limitado pelo seu nível e apenas se não estiver usando armadura pesada. Além disso, no 7º nível, e a cada quatro níveis, você recebe +1 na Defesa."
+      },
+      {
+        name: "Mais Alto e Mais Rápido",
+        description: "No 5º nível, seu deslocamento aumenta em +3m. Além disso, você recebe deslocamento de escalada e natação igual à metade de seu deslocamento normal (se já os possui, em vez disso eles aumentam em +3m). Ao contrário do normal, esse deslocamento de natação não fornece a capacidade de respirar debaixo d’água, mas você soma seu nível de atleta no total de rodadas para prender sua respiração."
+      },
+      {
+        name: "Disciplina Atlética",
+        description: "A partir do 9º nível, quando falha em um teste de resistência, você pode gastar 2 PM para rolar esse teste novamente, usando Atletismo no lugar da perícia original."
+      },
+      {
+        name: "Corpo Ideal",
+        description: "No 20º nível, você atinge o ápice físico de um corpo mortal. Você recebe imunidade a cansaço, condições de metabolismo e veneno, redução de dano 10 e seu dano desarmado e com armas de arremesso aumenta para 2d10 (criaturas Médias)."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Briga (1d6), façanha atlética" },
+      { level: 2, abilities: "Arremesso atlético, poder de lutador, poderio muscular" },
+      { level: 3, abilities: "Casca grossa (Con), poder de lutador" },
+      { level: 4, abilities: "Poder de lutador" },
+      { level: 5, abilities: "Briga (1d8), mais alto e mais rápido, poder de lutador" },
+      { level: 6, abilities: "Poder de lutador" },
+      { level: 7, abilities: "Casca grossa (Con+1), poder de lutador" },
+      { level: 8, abilities: "Poder de lutador" },
+      { level: 9, abilities: "Briga (1d10), disciplina atlética, poder de lutador" },
+      { level: 10, abilities: "Poder de lutador" },
+      { level: 11, abilities: "Casca grossa (Con+2), poder de lutador" },
+      { level: 12, abilities: "Poder de lutador" },
+      { level: 13, abilities: "Briga (2d6), poder de lutador" },
+      { level: 14, abilities: "Poder de lutador" },
+      { level: 15, abilities: "Casca grossa (Con+3), poder de lutador" },
+      { level: 16, abilities: "Poder de lutador" },
+      { level: 17, abilities: "Briga (2d8), poder de lutador" },
+      { level: 18, abilities: "Poder de lutador" },
+      { level: 19, abilities: "Casca grossa (Con+4), poder de lutador" },
+      { level: 20, abilities: "Corpo Ideal (2d10), poder de lutador" }
+    ],
+    },
+    { id: "Burguês (Nobre)",
+    name: "Burguês (Nobre)",
+    powersUrl: "/poderes/nobre",
+    origin: "Herois de Arton",
+    image: "/classes/burgues.png",
+    description: "Em muitos lugares de Arton, a estrutura feudal de nobreza e plebe ainda impera. Contudo, nas cidades, o ouro fala mais alto. Esse é o domínio do burguês.\nO burguês é um aventureiro que, assim como o nobre, usa sua posição social para inspirar, liderar e auxiliar seus companheiros. No entanto, não faz isso através de discursos ou brasões — sabe que tudo pode ser comprado, até mesmo a vitória.\nBurgueses são plebeus que ascenderam através de comércio ou de um ofício. Em vez de habitar um castelo, a família do burguês compartilha dos mesmos espaços que cidadãos comuns — talvez morando em uma mansão, mas ainda trabalhando todos os dias. Em vez de uma linhagem que se estende por séculos, o burguês fala sobre seus antepassados que viviam na miséria. Em vez de exigir favores ou serviços, o burguês sabe negociar para conseguir o que deseja.\nQuase todos os burgueses são obcecados com trabalho e medem tudo pelo lucro que pode gerar. Isso porque sabem que apenas seu esforço (e seu dinheiro) os separam da pobreza. Muitos tipos altruístas criticam o burguês por essa postura... Mas talvez uma espada nova ou uma noitada na taverna os convençam do contrário?",
+    characteristics: {
+      pvBase: "12 + Constituição",
+      pvPerLevel: "3 + Constituição",
+      pmPerLevel: "4 PM por nível"
+    },
+    skills: {
+    mandatory: ["Diplomacia (Car)", "Vontade (Sab)"],
+    optional: {
+      skills: ['Adestramento (Car)', 'Atuação (Car)', 'Cavalgar (Des)', 'Conhecimento (Int)', 'Diplomacia (Car)', 'Enganação (Car)', 'Fortitude (Con)', 'Guerra (Int)', 'Iniciativa (Des)', 'Intimidação (Car)', 'Intuição (Sab)', 'Investigação (Int)', 'Jogatina (Car)', 'Luta (For)', 'Nobreza (Int)', 'Ofício (Int)', 'Percepção (Sab)', 'Pontaria (Des)'],
+      count: 6
+      }
+    },
+    proficiency: "Nenhuma",
+    abilities: [
+      {
+      name: "Meios de Produção",
+      description: "No início de cada aventura, você recebe T$ 100 em dinheiro, itens mundanos ou poções a sua escolha. Esse valor aumenta para T$ 300 no patamar veterano, T$ 600 no campeão e T$ 1.000 no lenda.",
+      },
+      {
+        name: "Orgulho",
+        description: "Quando faz um teste de perícia, você pode gastar uma quantidade de PM à sua escolha (limitado pelo seu Carisma). Para cada PM que gastar, recebe +2 no teste."
+      },
+      {
+        name: "Poder Monetário",
+        description: "Quando usa uma habilidade com um custo em PM, você pode consumir uma quantidade de tibares de ouro (limitada pelo seu Carisma). Cada TO consumido dessa forma paga 1 PM do custo da habilidade. Você pode consumir um número de TO por dia igual ao seu nível. No 5º nível, este limite aumenta para o dobro do seu nível."
+      },
+      {
+        name: "Desmoralizar",
+        description: "No 2º nível, você aprende e pode lançar Perdição, e pode usar seus aprimoramentos como se tivesse acesso aos mesmos círculos de magia que um clérigo de seu nível. Entretanto, pode lançá-la apenas em criaturas inteligentes (Int –3 ou maior). Esta não é uma habilidade mágica e provém da sua capacidade de abalar a autoconfiança de outras pessoas. Mental."
+      },
+      {
+        name: "Poder de Nobre",
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um dos poderes de Nobre ou Poderes Gerais."
+      },
+      {
+        name: "Negociante Nato",
+        description: "No 3º nível, quando chega em uma nova comunidade, você pode gastar 1 dia fazendo contatos com o comércio local para fazer um teste de Diplomacia (CD 20). Se passar, pode vender itens nessa comunidade por 60% do seu preço (em vez de 50%). Para cada 10 pontos pelos quais o resultado do teste exceder a CD, você aumenta o preço de venda em +10% (até o máximo de 100%). Esta habilidade não se acumula com barganha, e NPCs ainda estão limitados a comprar somente o que desejam, com o dinheiro que possuem."
+      },
+      {
+        name: "Suborno",
+        description: "No 4º nível, você aprende e pode lançar Enfeitiçar (atributo-chave Carisma). Esta não é uma habilidade mágica e provém de sua capacidade de instigar os outros com promessas de enriquecimento. A CD para resistir a essa magia aumenta em +2 se você tiver consumido pelo menos 1 tibar de ouro para pagar seu custo."
+      },
+      {
+        name: "Ostentação",
+        description: "A partir do 5º nível, você pode se beneficiar de um item vestido adicional. Além disso, a CD para resistir às suas habilidades de burguês aumenta em +1 se você possuir um item banhado a ouro, cravejado de gemas ou de mitral. Esse aumento é cumulativo; possuir três itens diferentes com as três modificações aumenta a CD em +3."
+      },
+      {
+        name: "Novo Rico",
+        description: "No 9º nível, para cada item mágico que você estiver vestindo, você recebe +1 PM por nível de poder do item (somente após 1 dia de uso)."
+      },
+      {
+        name: "Magnata",
+        description: "No 20º nível, quando você usa Desmoralizar, a penalidade em testes de ataque também se aplica à CD das habilidades das criaturas afetadas. Além disso, sempre que consome um tibar de ouro para pagar o custo em PM de uma habilidade, você recebe 10 PV temporários cumulativos, que duram até o fim da cena."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Meios de produção, orgulho, poder monetário" },
+      { level: 2, abilities: "Desmoralizar -1, poder de nobre" },
+      { level: 3, abilities: "Negociante nato, poder de nobre" },
+      { level: 4, abilities: "Poder de nobre, suborno" },
+      { level: 5, abilities: "Ostentação, poder de nobre" },
+      { level: 6, abilities: "Desmoralizar -2, poder de nobre" },
+      { level: 7, abilities: "Poder de nobre" },
+      { level: 8, abilities: "Poder de nobre" },
+      { level: 9, abilities: "Novo rico, poder de nobre" },
+      { level: 10, abilities: "Desmoralizar -3, poder de nobre" },
+      { level: 11, abilities: "Poder de nobre" },
+      { level: 12, abilities: "Poder de nobre" },
+      { level: 13, abilities: "Poder de nobre" },
+      { level: 14, abilities: "Desmoralizar -4, poder de nobre" },
+      { level: 15, abilities: "Poder de nobre" },
+      { level: 16, abilities: "Poder de nobre" },
+      { level: 17, abilities: "Poder de nobre" },
+      { level: 18, abilities: "Desmoralizar -5, poder de nobre" },
+      { level: 19, abilities: "Poder de nobre" },
+      { level: 20, abilities: "Magnata" }
+    ],
     },
     
 ];
