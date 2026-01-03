@@ -181,6 +181,14 @@ export default function ClassesPage() {
                     <p className="p-2 bg-stone-950 rounded border border-stone-800"><span className="text-purple-500 font-bold">Lenda (17º ao 20º nível):</span><span className="text-stone-400"> Entre os mais poderosos de Arton, o herói lida com perigos que ameaçam todo o mundo... Ou mesmo toda a realidade!</span></p>
                 </div>
             </div>
+
+            <div>
+                <h3 className="text-3xl font-bold text-amber-700 mb-4 border-b border-stone-800 pb-2">Classes Variantes</h3>
+                <p className="text-stone-300 mb-6"> As classes de Tormenta20 são versáteis, típicas e abrangentes. Representam a grande maioria dos aventureiros de Arton — são classes básicas.</p>
+                <p className="text-stone-300 mb-6"> Contudo, existem outros tipos de aventureiros. Heróis que se dedicam a um aspecto específico de seu caminho, abrindo mão de conhecimentos, habilidades e poderes genéricos. Suas personalidades não se adaptam ao treinamento “comum”. Eles procuram se concentrar em áreas e tarefas específicas. Adotam classes variantes.</p>
+                <p className="text-stone-300 mb-6"> Classes variantes são modificações de suas versões básicas; as características e habilidades descritas aqui substituem as da classe básica (aquelas não listadas não fazem parte da variante). Exceto por isso, a classe variante funciona como sua contraparte básica: usa a mesma lista de poderes e serve para cumprir quaisquer pré-requisitos que exijam a classe básica. Não é possível fazer multiclasse entre uma classe básica e uma de suas variantes — para todos os efeitos, ambas são a mesma classe.</p>
+                <p className="text-stone-300 mb-6"> A escolha por uma classe variante deve ser feita na criação do personagem ou ao alcançar o 1º nível da classe. Uma vez feita, não pode ser mudada. Nesta página, serão as classes representadas por "Nome da Classe (Classe Base)"</p>
+            </div>
         </div>
       </main>
 

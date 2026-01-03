@@ -58,6 +58,7 @@
 
   { id: "",
     name: "",
+    powersUrl: "/poderes/",
     origin: "tormenta20 - jogo do ano",
     image: "/classes/ladino.png",
     description: "",

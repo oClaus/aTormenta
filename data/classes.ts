@@ -1565,5 +1565,104 @@ export const classes: GameClass[] = [
   }
 ]
     },
+    { id: "Alquimista (Inventor)",
+    name: "Alquimista (Inventor)",
+    origin: "Herois de Arton",
+    image: "/classes/alquimista.png",
+    description: "Inventores são artesãos versáteis, capazes de fabricar, consertar e aprimorar vários tipos de itens. Contudo, alguns pensam que os únicos itens que merecem tamanho esmero são aqueles que elevam Arton de forma física e espiritual. O único ofício verdadeiramente transcendente é a alquimia.\nO alquimista é um inventor que busca mais do que criar objetos mundanos: cada preparado teria um componente místico, afetando a alma de quem o usa. Assim, ácido não seria apenas uma maneira de causar dano, mas um modo de destruir o que é velho, para que possa ser substituído pelo novo. Essência de mana não seria apenas um elixir de ervas, mas energia materializada, capaz de elevar a mente. Para o alquimista, o verdadeiro ofício é compreender como Arton está conectada a outras dimensões, outros mundos, outros realidades — e imbuir seus preparados com essa compreensão transcendental.\nUm ditado comum entre alquimistas é “Assim acima como abaixo”: todo ato em Arton teria um reflexo nos reinos dos deuses e todo item alquímico seria uma metáfora para algum processo de transformação espiritual. Dizem que os maiores alquimistas podem transformar chumbo em ouro... Mas apenas os aprendizes pensam que isso é sobre riqueza.",
+    characteristics: {
+      pvBase: "12 + Constituição",
+      pvPerLevel: "3 + Constituição",
+      pmPerLevel: "4 PM por nível"
+    },
+    skills: {
+    mandatory: ["Ofício Alquimista (Int)", "Vontade (Sab)"],
+    optional: {
+      skills: [      
+        'Conhecimento (Int)', 'Cura (Sab)', 'Diplomacia (Car)', 'Fortitude (Con)', 'Iniciativa (Des)', 'Investigação (Int)', 'Luta (For)', 'Misticismo (Int)', 'Ofício (Int)', 'Pilotagem (Des)', 'Percepção (Sab)', 'Pontaria (Des)'
+      ],
+      count: 4
+      }
+    },
+    proficiency: "Nenhuma",
+    abilities: [
+      {
+        name: "Engenhosidade",
+        description: "Quando faz um teste de perícia, você pode gastar 2 PM para somar a sua Inteligência no teste. Você não pode usar esta habilidade em testes de ataque."
+      },
+      {
+        name: "Laboratório Pessoal",
+        description: "Você começa o jogo com instrumentos de alquimista aprimorados e 10 itens alquímicos com preço total de até T$ 300."
+      },
+      {
+        name: "Alquimista Iniciado",
+        description: "No 2º nível, você recebe o poder Alquimista Iniciado"
+      },
+      {
+        name: "Poder de Inventor",
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um poder de Inventor ou Geral."
+      },
+      {
+        name: "Mistura Básica",
+        description: "A partir do 3º nível, você pode usar catalisadores em itens alquímicos como se fossem magias."
+      },
+      {
+        name: "Aplicação Rápida",
+        description: "No 5º nível, você pode gastar uma ação completa e 2 PM para usar dois preparados alquímicos ao mesmo tempo. Você precisa ter ambos em suas mãos ou ser capaz de sacá-los como ação livre."
+      },
+      {
+        name: "Magia Engarrafada",
+        description: "No 7º nível, você pode usar Mistura Básica e Aplicação Rápida em poções."
+      },
+      {
+        name: "Odores Alquímicos",
+        description: "A partir do 8º nível, você pode gastar uma ação completa para detectar a presença de itens alquímicos e poções em alcance médio. No caso de itens alquímicos, você descobre seu tipo (preparado, veneno etc.) e uso geral (curar, fornecer bônus etc.). Para poções, você identifica qual magia ela emula e com quantos pontos de mana foi fabricada."
+      },
+      {
+        name: "Fabricar Emulsão",
+        description: "No 9º nível, você aprende a fabricar emulsões com um encanto (veja abaixo). Nos níveis 13 e 17, você aprende a fabricar emulsões com respectivamente dois e três encantos."
+      },
+      {
+        name: "Mestre Alquimista",
+        description: "No 10º nível, você recebe o poder Mestre Alquimista"
+      },
+      {
+        name: "Bombardeio Eficiente",
+        description: "A partir do 11º nível, quando usa um preparado alquímico ou uma poção que causa dano, você pode gastar 1 PM para que esse item ignore 10 pontos da redução de dano das criaturas atingidas."
+      },
+      {
+        name: "Pedra Filosofal",
+        description: "No 20º nível, você recebe uma pedra filosofal, um material que combina alquimia, magia e sua própria energia vital em uma fórmula única. Enquanto estiver de posse de sua pedra filosofal, você tem Cura Acelerada 10 e, quando faz um teste de Fortitude, rola dois dados e usa o melhor resultado. Além disso, se você ou um aliado em alcance curto for reduzido a 0 PV ou morrer, você pode sacrificar sua pedra filosofal para salvar essa criatura. A pedra se estilhaça em uma explosão de energia positiva que fornece ao alvo o efeito básico da magia Segunda Chance (com o efeito adicional de reconstruir o corpo do alvo, caso tenha sido destruído ou desintegrado). Você só pode ter uma pedra filosofal por vez; se perdê-la, pode fabricar outra com uma semana de trabalho e o gasto de T$ 18.000."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Engenhosidade, laboratório pessoal" },
+      { level: 2, abilities: "Alquimista iniciado, poder de inventor" },
+      { level: 3, abilities: "Mistura básica, poder de inventor" },
+      { level: 4, abilities: "Poder de inventor" },
+      { level: 5, abilities: "Aplicação rápida, poder de inventor" },
+      { level: 6, abilities: "Poder de inventor" },
+      { level: 7, abilities: "Magia engarrafada, poder de inventor" },
+      { level: 8, abilities: "Odores alquímicos, poder de inventor" },
+      { level: 9, abilities: "Fabricar emulsão (1 encanto), poder de inventor" },
+      { level: 10, abilities: "Mestre alquimista, poder de inventor" },
+      { level: 11, abilities: "Bombardeio eficiente, poder de inventor" },
+      { level: 12, abilities: "Poder de inventor" },
+      { level: 13, abilities: "Fabricar emulsão (2 encantos), poder de inventor" },
+      { level: 14, abilities: "Poder de inventor" },
+      { level: 15, abilities: "Poder de inventor" },
+      { level: 16, abilities: "Poder de inventor" },
+      { level: 17, abilities: "Fabricar emulsão (3 encantos), poder de inventor" },
+      { level: 18, abilities: "Poder de inventor" },
+      { level: 19, abilities: "Poder de inventor" },
+      { level: 20, abilities: "Pedra filosofal, poder de inventor" }
+    ],
+    extras: [
+    {
+      title: "Emulsões",
+      description: "Uma emulsão é um óleo que concede propriedades mágicas a um item. Usá-la é uma ação padrão e fornece um ou mais encantos para um item até o fim da cena. Conceder um encanto através de uma emulsão não tem custo adicional (além do gasto do óleo) e conta no limite de encantos do item.\nExistem emulsões com um, dois e três encantos. Se um encanto contido em uma emulsão tiver outro como pré-requisito, a emulsão deve incluir também esse pré-requisito. Fabricar uma emulsão segue as mesmas regras para itens alquímicos, mas o custo e a CD dependem da quantidade de encantos contidos no óleo.\n1 Encantamento / T$ 250 / CD 25\n2 Encantamentos / T$ 750 / CD 30\n3 Encantamentos / T$ 1.500 / CD 35\nPor sua volatilidade, que exige do criador manutenção constante, além da necessidade de supervisão em sua aplicação, emulsões não são comercializadas.",
+    },
+    ]
+    },
     
 ];
