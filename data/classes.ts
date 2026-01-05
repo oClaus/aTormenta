@@ -1,4 +1,5 @@
 import { GameClass } from "@/types/class";
+import { title } from "process";
 
 export const classes: GameClass[] = [
     { id: "Arcanista",
@@ -385,7 +386,7 @@ export const classes: GameClass[] = [
       },
       {
         name: "Poder de Bárbaro",
-        description: "No 2º nível, e a cada nível seguinte, você escolhe um dos poderes de bárbaro ou geral."
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um dos poderes de bárbaro ou gerais."
       },
       {
         name: "Instinto Selvagem",
@@ -536,7 +537,7 @@ export const classes: GameClass[] = [
       },
       {
         name: "Poder de Bucaneiro",
-        description: "No 2º nível, e a cada nível seguinte, você escolhe um Poder."
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um Poder de Bucaneiro ou Geral"
       },
       {
         name: "Esquiva Sagaz",
@@ -618,7 +619,7 @@ export const classes: GameClass[] = [
       },
       {
         name: "Poder de Caçador",
-        description: "No 2º nível, e a cada nível seguinte, você recebe uma habilidade."
+        description: "No 2º nível, e a cada nível seguinte, você recebe uma habilidade de caçador ou Geral."
       },
       {
         name: "Explorador",
@@ -1101,7 +1102,7 @@ export const classes: GameClass[] = [
       },
       {
         name: "Poder de Paladino",
-        description: "No 2º nível, e a cada nível seguinte, você escolhe um poder."
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um poder de Paladino ou Gerais."
       },
       {
         name: "Aura Sagrada",
@@ -1828,5 +1829,1136 @@ export const classes: GameClass[] = [
       { level: 20, abilities: "Magnata" }
     ],
     },
+    { id: "Duelista (Bucaneiro)",
+    name: "Duelista (Bucaneiro)",
+    powersUrl: "/poderes/bucaneiro",
+    origin: "Herois de Arton",
+    image: "/classes/duelista.png",
+    description: "O duelista é o mais austero e dedicado dos bucaneiros, um esgrimista orgulhoso e honrado, sempre pronto para dedicar sua vida a grandes causas. Um paladino (ou algoz) entre os fanfarrões, está sempre procurando problemas, mas por um ideal maior. Quando ouve alguém falar mal da Rainha-Imperatriz numa taverna, logo chama o biltre para um duelo. Quando nota um guarda intimidando um aldeão, intercede sem pensar duas vezes. Quando há alguém em perigo, corre para socorrê-lo. Ou então, como um vilão megalomaníaco, viaja pelos reinos, derrotando os melhores espadachins de cada local apenas para espalhar sua fama.\nDe qualquer forma, o duelista é qualquer coisa, menos avoado. Para ele, tudo é exagerado e muito sério: apaixona-se perdidamente por alguém que viu de relance numa festa. Toma porres épicos, durante os quais jura embarcar em alguma missão heroica... E cumpre o juramento! Odeia seus inimigos com fervor apavorante e faz questão de enfrentá-los de frente, para que os poltrões vejam a justiça chegando.\nDuelistas muitas vezes não têm grande relação com o mar. Seu terreno são os salões de baile, as ruelas de capitais, os corredores de palácios imponentes. Nesses lugares, sua honra espalhafatosa pode brilhar.",
+    characteristics: {
+      pvBase: "16 + Constituição",
+      pvPerLevel: "4 + Constituição",
+      pmPerLevel: "3 PM por nível"
+    },
+    skills: {
+    mandatory: ["Luta (For) ou Pontaria (Des)", "Reflexos (Des)"],
+    optional: {
+      skills: ['Acrobacia (Des)', 'Atletismo (For)', 'Atuação (Car)', 'Diplomacia (Car)', 'Fortitude (Con)', 'Iniciativa (Des)', 'Intimidação (Car)', 'Luta (For)', 'Ofício (Int)', 'Percepção (Sab)', 'Pilotagem (Des)', 'Pontaria (Des)'],
+      count: 2
+      }
+    },
+    proficiency: "Armas marciais",
+    abilities: [
+      {
+      name: "Duelo",
+      description: "Você pode gastar 2 PM para escolher um oponente em alcance curto e receber +2 em testes de ataque e rolagens de dano contra ele até o fim da cena. Se atacar outro oponente, o bônus termina. A cada cinco níveis, você pode gastar +1 PM para aumentar o bônus em +1.",
+      },
+      {
+        name: "Insolência",
+        description: "Você soma seu Carisma na Defesa, limitado pelo seu nível. Esta habilidade exige liberdade de movimentos; você não pode usá-la se estiver de armadura pesada ou na condição imóvel."
+      },
+      {
+        name: "Escola de Duelo",
+        description: "No 2º nível, escolha uma escola de duelo entre as seguintes. Uma vez feita, essa escolha não pode ser mudada.",
+        subAbilities: [
+          {
+            name: "Escola Ambidestra",
+            description: "Se estiver empunhando duas armas (e pelo menos uma delas for leve), você recebe +2 na Defesa e em Reflexos.",
+          },
+          {
+            name: "Escola Clássica",
+            description: "Se estiver usando uma arma corpo a corpo em uma das mãos e nada na outra, você recebe +2 em rolagens de dano com essa arma.",
+          },
+          {
+            name: "Escola de Tiro",
+            description: "Você recebe proficiência com armas de fogo leves e de uma mão. Caso receba essa proficiência novamente, com essas armas você pode usar suas habilidades de bucaneiro normalmente usadas com armas corpo a corpo leves ou ágeis.",
+          },
+        ]
+      },
+      {
+        name: "Poder de Bucaneiro",
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um Poder de Bucaneiro ou Geral"
+      },
+      {
+        name: "Esquiva Sagaz",
+        description: "No 3º nível, você recebe esta habilidade como o bucaneiro básico."
+      },
+      {
+        name: "Truques de Capa.",
+        description: "A partir do 4º nível, se estiver usando uma capa esvoaçante (ou outro item semelhante aprovado pelo mestre), você pode gastar 2 PM e a ação indicada para gerar um dos efeitos a seguir.",
+        subAbilities: [
+          {
+            name: "Capa Inoportuna (Livre)",
+            description: "Reduz a ação necessária para fintar em um passo até o fim do seu turno.",
+          },
+          {
+            name: "Distração Oportuna (Reação)",
+            description: "Quando faz um teste de Reflexos ou Vontade, você recebe +5 nesse teste.",
+          },
+          {
+            name: "Efeito Dramático (Livre)",
+            description: "Você recebe +5 em um teste de perícia baseada em Carisma feito nesse turno.",
+          },
+          {
+            name: "Impulso (Livre)",
+            description: "Você recebe deslocamento +9m e +5 em Acrobacia e Atletismo por 1 rodada.",
+          },
+          {
+            name: "Paraquedas (Reação)",
+            description: "Quando cai, você reduz o dano da queda em 6d6.",
+          },
+          {
+            name: "Rasgar a Capa (Reação)",
+            description: "Quando sofre dano, você reduz esse dano à metade. Fazer isso destrói a capa.",
+          },
+        ]
+      },
+      {
+        name: "Técnica Avançada",
+        description: "No 10º nível, você aprende uma técnica de combate conforme sua escola de duelo. Você só pode usar esta habilidade se estiver usando sua escola.",
+        subAbilities: [
+          {
+            name: "Escola Ambidestra",
+            description: "Uma vez por rodada, se uma criatura atacá-lo e errar, você pode gastar 1 PM para fazer um ataque corpo a corpo contra essa criatura (desde que ela esteja em seu alcance).",
+          },
+          {
+            name: "Escola Clássica",
+            description: "O dano de sua escola aumenta para +5. Além disso, uma vez por rodada, quando usa a ação agredir, você pode gastar 1 PM. Se fizer isso e pelo menos um de seus ataques for um acerto crítico, você pode fazer um ataque adicional nessa ação.",
+          },
+          {
+            name: "Escola de Tiro",
+            description: "Seu dano com armas de fogo aumenta em um passo e seu alcance com essas armas aumenta em uma categoria (de curto para médio, de médio para longo).",
+          },
+          
+        ]
+      },
+      {
+        name: "Duelista Lendário",
+        description: "No 20º nível, seu domínio de sua escola atinge o ápice. Quando faz um ataque utilizando sua escola de duelo, você pode gastar 1 PM para rolá-lo novamente. Quando um oponente o ataca enquanto você está usando sua escola de duelo, você pode gastar 1 PM para forçá-lo a rolar o teste novamente (apenas uma vez por ataque)."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Duelo +2, insolência" },
+      { level: 2, abilities: "Escola de duelo, poder de bucaneiro" },
+      { level: 3, abilities: "Esquiva sagaz +1, poder de bucaneiro" },
+      { level: 4, abilities: "Poder de bucaneiro, truques de capa" },
+      { level: 5, abilities: "Poder de bucaneiro" },
+      { level: 6, abilities: "Duelo +3, poder de bucaneiro" },
+      { level: 7, abilities: "Esquiva sagaz +2, poder de bucaneiro" },
+      { level: 8, abilities: "Poder de bucaneiro" },
+      { level: 9, abilities: "Poder de bucaneiro" },
+      { level: 10, abilities: "Poder de bucaneiro, técnica avançada" },
+      { level: 11, abilities: "Duelo +4, esquiva sagaz +3, poder de bucaneiro" },
+      { level: 12, abilities: "Poder de bucaneiro" },
+      { level: 13, abilities: "Poder de bucaneiro" },
+      { level: 14, abilities: "Poder de bucaneiro" },
+      { level: 15, abilities: "Esquiva sagaz +4, poder de bucaneiro" },
+      { level: 16, abilities: "Duelo +5, poder de bucaneiro" },
+      { level: 17, abilities: "Poder de bucaneiro" },
+      { level: 18, abilities: "Poder de bucaneiro" },
+      { level: 19, abilities: "Esquiva sagaz +5, poder de bucaneiro" },
+      { level: 20, abilities: "Duelista lendário, poder de bucaneiro" }
+    ],
+    extras: [
+    {
+      title: "",
+      description: ""
+    },
+    ]
+    },
+    { id: "Ermitão (Druida)",
+    name: "Ermitão (Druida)",
+    powersUrl: "/poderes/druida",
+    origin: "Herois de Arton",
+    image: "/classes/ermitao.png",
+    description: "A maioria dos druidas é reclusa, preferindo a companhia de animais e plantas à de outros seres inteligentes. Contudo, o ermitão leva isso ao extremo. Sem nenhuma preocupação com a sociedade formal ou mesmo com os outros habitantes dos ermos, os ermitões são quase animais em forma bípede.\nFicam longos anos sem falar com ninguém, descartam completamente a higiene e o asseio. Mal usam roupas, deixam suas barbas e cabelos crescer até que estejam se arrastando no chão. Em seus corpos vivem fungos, plantas e até mesmo pequenos animais. Estes servos da natureza não se importam com insetos compartilhando de seu sangue, ou mesmo com pássaros fazendo ninhos em sua cabeça.\nContudo, não é só a aparência e os hábitos de um druida ermitão que o diferenciam — também seus poderes e responsabilidades. O ermitão toma conta de um local específico, como um bosque, uma montanha ou um vale. Prefere ficar por lá, embora saia para se aventurar quando esse local e a natureza em geral são ameaçados. De qualquer forma, o ermitão é o mais radical dos druidas. Não vê nenhum tipo de urbanização com bons olhos e não faz nenhuma concessão a “manias idiotas” como vestir roupas ou tomar banho…",
+    characteristics: {
+      pvBase: "12 + Constituição",
+      pvPerLevel: "3 + Constituição",
+      pmPerLevel: "4 PM por nível"
+    },
+    skills: {
+    mandatory: ["Sobrevivência (Sab)", "Vontade (Sab)"],
+    optional: {
+      skills: [      
+        'Adestramento (Car)', 'Atletismo (For)', 'Cavalgar (Des)', 'Conhecimento (Int)', 'Cura (Sab)', 'Fortitude (Con)', 'Iniciativa (Des)', 'Intuição (Sab)', 'Luta (For)', 'Misticismo (Int)', 'Ofício (Int)', 'Percepção (Sab)', 'Religião (Sab)'
+      ],
+      count: 2
+      }
+    },
+    proficiency: "Nenhuma",
+    abilities: [
+      {
+      name: "Devoto Fiel",
+      description: "Você se torna devoto de um deus disponível para druidas (Allihanna, Megalokk ou Oceano). Veja as regras de devotos. Ao contrário de devotos normais, você recebe dois poderes concedidos por se tornar devoto, em vez de apenas um.",
+      },
+      {
+        name: "Empatia Selvagem",
+        description: "Você pode se comunicar com animais, criaturas vegetais não inteligentes (Int –4 ou –5) e espíritos, por meio de linguagem corporal e vocalizações. Você pode usar Adestramento com eles para mudar atitude e persuasão."
+      },
+      {
+        name: "Magias",
+        description: "Escolha três escolas de magia. Uma vez feita, essa escolha não pode ser mudada. Você pode lançar magias divinas de 1º círculo que pertençam a essas escolas. À medida que sobe de nível, pode lançar magias de círculos maiores (2º círculo no 6º nível, 3º círculo no 10º nível e 4º círculo no 14º nível). Você começa com duas magias de 1º círculo. A cada nível par (2º, 4º etc.), aprende uma magia de qualquer círculo e escola que possa lançar. Seu atributo-chave para lançar magias é Sabedoria e você soma sua Sabedoria no seu total de PM. "
+      },
+      {
+        name: "Poder de Druida",
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um dos poderes de Druida ou Gerais.Não pode escolher o poder Forma Selvagem ou poderes que o tenham como pré-requisito."
+      },
+      {
+        name: "Sítio Sagrado",
+        description: "No 3º nível, você assume um local sagrado para sua divindade (veja abaixo)."
+      },
+      {
+        name: "Vínculo com a Terra",
+        description: "No 5º nível, quando você estiver em um terreno de um dos tipos de seu sítio sagrado, suas magias custam –1 PM (cumulativo com outras reduções)."
+      },
+      {
+        name: "Temperado pelo Clima",
+        description: "No 11º nível, você recebe RD 5 contra dano dos tipos correspondentes aos terrenos associados ao seu sítio sagrado: aquático (eletricidade), ártico (frio), colina (impacto), deserto (fogo), floresta (corte), montanha (perfuração), pântano (ácido), planície (luz) e subterrâneo (trevas)."
+      },
+      {
+        name: "Eixo de Pedras",
+        description: "No 20º nível, você cria um eixo de pedras ritualísticas em seu sítio sagrado. Uma vez por aventura, você pode lançar no eixo de pedras uma quantidade de magias cujo custo em PM total somado seja igual ao seu nível + sua Sabedoria. Essas magias devem ter execução de movimento, padrão ou completa. Até o fim da aventura, se estiver em um terreno de um dos tipos associados ao seu sítio sagrado, uma vez por rodada você pode descarregar uma dessas magias como ação livre sem pagar seu custo."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Devoto fiel, empatia selvagem, magias (1º círculo)" },
+      { level: 2, abilities: "Poder de druida" },
+      { level: 3, abilities: "Poder de druida, sítio sagrado" },
+      { level: 4, abilities: "Poder de druida" },
+      { level: 5, abilities: "Poder de druida, vínculo com a terra" },
+      { level: 6, abilities: "Magias (2º círculo), poder de druida" },
+      { level: 7, abilities: "Poder de druida" },
+      { level: 8, abilities: "Poder de druida" },
+      { level: 9, abilities: "Poder de druida" },
+      { level: 10, abilities: "Magias (3º círculo), poder de druida" },
+      { level: 11, abilities: "Poder de druida, temperado pelo clima" },
+      { level: 12, abilities: "Poder de druida" },
+      { level: 13, abilities: "Poder de druida" },
+      { level: 14, abilities: "Magias (4º círculo), poder de druida" },
+      { level: 15, abilities: "Poder de druida" },
+      { level: 16, abilities: "Poder de druida" },
+      { level: 17, abilities: "Poder de druida" },
+      { level: 18, abilities: "Poder de druida" },
+      { level: 19, abilities: "Poder de druida" },
+      { level: 20, abilities: "Eixo de pedras, poder de druida" }
+    ],
+    extras: [
+    {
+      title: "O Sítio Sagrado",
+      description: "Uma área erma com 5 km de raio, o sítio sagrado é um refúgio para o ermitão e fornece diversas habilidades a ele, algumas das quais o acompanham para além das fronteiras deste local. Caso o sítio sagrado seja destruído, você perde todos os seus PM e só pode recuperá-los ao criar um novo sítio. Fazer isso ocupa um tempo entre aventuras.",
+      sections: [
+      { title: "Características Base",
+        content: [
+          { name: "Aliados da Natureza", description: " Dentro do sítio, criaturas não inteligentes (Int –4 ou –5) têm atitude melhor com você, conforme seu tipo: no 7º nível, animais são amistosos e espíritos e monstros, indiferentes. No 15º nível suas categorias de atitude melhoram um passo. Você pode comandar criaturas prestativas para lutar ao seu lado e ajudar a defender o sítio sagrado, mas elas não irão segui-lo para fora dele. O mestre decide quais criaturas estão presentes no sítio (de forma geral, a qualquer momento há um número de criaturas com ND total somado igual ao seu nível)." },
+          { name: "Terreno Associado", description: " Ao receber seu sítio sagrado, escolha um terreno entre aquático, ártico, colina, deserto, floresta, montanha, pântano, planície ou subterrâneo. Esse será o tipo de terreno associado ao seu sítio sagrado. Sempre que estiver em um terreno desse tipo, você soma sua Sabedoria (mínimo +1) em Furtividade, Percepção, Misticismo, Religião e Sobrevivência. No 7º nível, e a cada quatro níveis subsequentes, escolha mais um tipo de terreno para associar ao seu sítio ou aumente o bônus de perícias de um tipo de terreno já escolhido em +2. Você também é capaz de atingir uma conexão mais forte com sua divindade dentro do sítio sagrado. Dentro dele, seu redutor de PM por Vínculo com a Terra muda para –2." },
+          { name: "Caminhos Sagrados", description: " Quando está em um terreno de um tipo associado ao seu sítio, você não sofre redução de deslocamento por terreno difícil natural e a CD para rastreá-lo aumenta em +10." },
+          { name: "Base", description: " O sítio sagrado conta como uma base básica. Você paga apenas a metade do custo para aumentar o porte dessa base e para construir cômodos nela." },
+        ]
+      },      
+      ]
+    },
+    ]
+    },
+    { id: "Inovador (Guerreiro)",
+    name: "Inovador (Guerreiro)",
+    powersUrl: "/poderes/guerreiro",
+    origin: "Herois de Arton",
+    image: "/classes/inovador.png",
+    description: "Elfos arqueiros. Anões com machados. Cavaleiros com armaduras pesadas. Arton é repleta desses tipos. O guerreiro inovador está determinado a não ser um deles.\nMuito mais uma filosofia de vida do que uma forma de combater, o estilo inovador não é ensinado em academias ou exércitos, ou mesmo passado de mestre a discípulo. Cada guerreiro inovador desenvolve o estilo por si só, rejeitando o que já existe e procurando se destacar. Inovadores usam armas esquisitas, exibem manobras complicadas, vestem armaduras chamativas... Nada é simples, direto ou comum — o inovador é o mestre do inédito, o centro das atenções na batalha. Alguns adotam este estilo por simples vontade de se mostrar. Outros, porque sua imprevisibilidade é uma grande vantagem em combate — qualquer um está pronto para enfrentar um guerreiro usando espada e escudo, mas ninguém está preparado para o inovador.\nInovadores costumam ser jovens. Quando os veteranos veem sua forma de lutar, balançam a cabeça e suspiram de desaprovação, lembrando dos velhos tempos. É raro ver um guerreiro inovador de mais idade. Com o tempo, suas inovações são copiadas por outros e se tornam comuns. Esse é o maior medo de muitos inovadores: ver sua fama transformar seu estilo em clichê.",
+    characteristics: {
+      pvBase: "20 + Constituição",
+      pvPerLevel: "5 + Constituição",
+      pmPerLevel: "3 PM por nível"
+    },
+    skills: {
+    mandatory: ["Luta (For) ou Pontaria (Des)", "Acrobacia (Des)"],
+    optional: {
+      skills: [      
+        'Adestramento (Car)', 'Atletismo (For)', 'Conhecimento (Int)', 'Fortitude (Con)', 'Guerra (Int)', 'Iniciativa (Des)', 'Intimidação (Car)', 'Investigação (Int)', 'Luta (For)', 'Ofício (Int)', 'Pontaria (Des)', 'Reflexos (Des)'
+      ],
+      count: 2
+      }
+    },
+    proficiency: "Armas marciais, armaduras pesadas e escudos",
+    abilities: [
+      {
+      name: "Do Bom e do Melhor",
+      description: "Você começa o jogo com uma arma, armadura ou escudo superior a sua escolha, de até T$ 500. Entretanto, você é considerado não proficiente em qualquer arma, armadura ou escudo que não seja superior ou mágico.",
+      },
+      {
+        name: "Sequência Especial",
+        description: "Você pode gastar 2 PM para iniciar uma sequência de movimentos inovadores. Quando faz isso, a cada vez que ataca com uma arma que ainda não tenha usado nessa sequência, você recebe um bônus de +1 em testes de ataque e rolagens de dano (cumulativo até +2). A cada 4 níveis, você pode gastar +1 PM para aumentar o limite desses bônus em +2. A sequência termina ao fim da cena ou se você ficar 1 rodada sem trocar pelo menos uma arma."
+      },
+      {
+        name: "Bombardeio Sequencial",
+        description: "No 2º nível, você pode usar sua Sequência Especial ao usar itens alquímicos ou poções (nesse caso, aplica o bônus de ataque acumulado à CD para resistir ao item)."
+      },
+      {
+        name: "Poder de Guerreiro",
+        description: " No 2º nível, e a cada nível seguinte, você escolhe um dos poderes de guerreiro ou geral."
+      },
+      {
+        name: "Acrobacia Defensiva",
+        description: "A partir do 3º nível, quando sofre dano, você pode gastar 2 PM para executar uma pirueta defensiva. Você faz um teste de Acrobacia e subtrai o resultado desse teste do dano sofrido."
+      },
+      {
+        name: "Domínio Excêntrico",
+        description: "A partir do 4° nível, sempre que passar pelo menos uma semana carregando uma arma exótica ou de fogo superior ou mágica, você recebe proficiência nela."
+      },
+      {
+        name: "Técnica Revolucionária",
+        description: "A partir do 7° nível, você pode gastar 2 PM para, até o fim do combate, usar armas que esteja empunhando como se elas tivessem uma das seguintes habilidades de arma, a sua escolha: adaptável, ágil, alongada, dupla (use as estatísticas da arma em ambas as pontas) ou versátil (para uma manobra escolhida ao usar esta habilidade). Esse efeito termina se você ativar sua Técnica Revolucionária novamente."
+      },
+      {
+        name: "Estilo Único",
+        description: "No 20º nível, você consolida seu próprio estilo de combate. Escolha dois poderes de guerreiro ou de combate que possua. Para esses poderes, você ignora todos os requisitos e restrições relacionados a armas, incluindo propósito, empunhadura, características e habilidades das armas. Por exemplo, você pode usar Estilo de Duas Mãos com armas leves, Estilo de Arremesso com uma arma de duas mãos ou até Esgrimista com pistolas! O mestre tem a palavra final sobre como os poderes interagem entre si."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Do bom e do melhor, sequência especial +2" },
+      { level: 2, abilities: "Bombardeio sequencial, poder de guerreiro" },
+      { level: 3, abilities: "Acrobacia defensiva, poder de guerreiro" },
+      { level: 4, abilities: "Domínio excêntrico, poder de guerreiro" },
+      { level: 5, abilities: "Poder de guerreiro, sequência especial +4" },
+      { level: 6, abilities: "Poder de guerreiro" },
+      { level: 7, abilities: "Poder de guerreiro, técnica excêntrica" },
+      { level: 8, abilities: "Poder de guerreiro" },
+      { level: 9, abilities: "Poder de guerreiro, sequência especial +6" },
+      { level: 10, abilities: "Poder de guerreiro" },
+      { level: 11, abilities: "Poder de guerreiro" },
+      { level: 12, abilities: "Poder de guerreiro" },
+      { level: 13, abilities: "Poder de guerreiro, sequência especial +8" },
+      { level: 14, abilities: "Poder de guerreiro" },
+      { level: 15, abilities: "Poder de guerreiro" },
+      { level: 16, abilities: "Poder de guerreiro" },
+      { level: 17, abilities: "Poder de guerreiro, sequência especial +10" },
+      { level: 18, abilities: "Poder de guerreiro" },
+      { level: 19, abilities: "Poder de guerreiro" },
+      { level: 20, abilities: "Estilo único, poder de guerreiro" }
+    ],
+    },
+    { id: "Machado de Pedra (Bárbaro)",
+    name: "Machado de Pedra (Bárbaro)",
+    powersUrl: "/poderes/barbaro",
+    origin: "Herois de Arton",
+    image: "/classes/machadodepedra.png",
+    description: "Os bárbaros do machado de pedra são os mais primitivos de Arton. Pertencem a comunidades que nunca tiveram contato com forasteiros — não dominam qualquer idioma, não sabem forjar metal, não plantam ou criam animais. A maioria vive em cavernas ou ao relento, viajando constantemente dentro de uma pequena região. Os mais avançados chegam a construir ocas de barro que não resistem à primeira chuva forte.\nEmbora seja extremamente rústico, o bárbaro do machado de pedra não é menos inteligente do que um membro de qualquer outra comunidade — apenas não possui certos conhecimentos. Além disso, é um combatente temível. Incapaz de usar armas “modernas”, confia em implementos de pedra e osso, além da pura força bruta. Sem as amarras da sociedade, sua fúria é suprema. Sua pele coberta de cicatrizes parece couro, sendo capaz de resistir a golpes que matariam outros.\nQuando um bárbaro do machado de pedra deixa sua comunidade para se aventurar, torna-se o mais leal e aguerrido dos companheiros. Nem pensa em traição, pois foi acostumado a depender de aliados para sobreviver. Não conhece a ganância e muitas vezes nem mesmo exige tesouro — estando alimentado e em segurança, o bárbaro do machado de pedra está feliz.",
+    characteristics: {
+      pvBase: "24 + Constituição",
+      pvPerLevel: "6 + Constituição",
+      pmPerLevel: "3 PM por nível"
+    },
+    skills: {
+    mandatory: ["Fortitude (Con)", "Luta (For)"],
+    optional: {
+      skills: [      
+        'Adestramento (Car)', 'Atletismo (For)', 'Cavalgar (Des)', 'Iniciativa (Des)', 'Intimidação (Car)', 'Ofício (Int)', 'Percepção (Sab)', 'Pontaria (Des)', 'Sobrevivência (Sab)', 'Vontade (Sab)'
+      ],
+      count: 2
+      }
+    },
+    proficiency: "Escudos",
+    abilities: [
+      {
+      name: "Fúria",
+      description: "Você pode gastar 2 PM para invocar uma fúria selvagem. Você recebe +2 em testes de ataque e rolagens de dano corpo a corpo, mas não pode fazer nenhuma ação que exija calma e concentração (como usar a perícia Furtividade ou lançar magias). A cada cinco níveis, pode gastar +1 PM para aumentar os bônus em +1. A Fúria termina se, ao fim da rodada, você não tiver atacado nem sido alvo de um efeito (ataque, habilidade, magia...) hostil.",
+      },
+      {
+        name: "Grunhidos",
+        description: "Você conhece apenas o idioma rústico da pequena comunidade onde viveu e nenhum outro. Você não só é incapaz de compreender outros dialetos como não se importa com isso, comunicando-se com grunhidos e sons simples. Contudo, você conhece uma palavra no idioma valkar (o mais comum de Arton) por nível de machado de pedra."
+      },
+      {
+        name: "Machado de Pedra",
+        description: "Você não recebe proficiência com armas simples. Você sabe usar apenas adaga, azagaia, clava, funda, lança, machadinha e tacape. No 9° nível, aprende a usar uma arma simples ou marcial a sua escolha. Entretanto, quando ataca com uma arma natural, um ataque desarmado ou uma dessas armas, você recebe +1 no teste de ataque e na rolagem de dano."
+      },
+      {
+        name: "Tanga de Peles",
+        description: "Você não recebe proficiência com armaduras leves. Entretanto, se não estiver usando armadura, você soma sua Constituição na Defesa. Além disso, no 3º nível, e a cada quatro níveis seguintes, você recebe +1 na Defesa."
+      },
+      {
+        name: "Fúria Primitiva",
+        description: "A partir do 2º nível, se não estiver usando armadura e estiver empunhando uma das armas de sua habilidade Machado de Pedra, o custo de sua Fúria é reduzido em –1 PM. Além disso, uma vez por cena, quando entra em fúria, você recebe uma quantidade de PV temporários igual ao seu nível + sua Constituição."
+      },
+      {
+        name: "Poder de Bárbaro",
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um dos poderes de bárbaro ou gerais."
+      },
+      {
+        name: "Instinto Selvagem",
+        description: "No 3º nível, você recebe +1 em rolagens de dano, Percepção e Reflexos. A cada seis níveis, esse bônus aumenta em +1."
+      },
+      {
+        name: "Resiliência Primal",
+        description: "A partir do 5º nível, graças a seu vigor e força de vontade, você ignora parte de seus ferimentos. Você recebe redução de dano 3. A cada três níveis, sua RD aumenta em 3, até um máximo de RD 15 no 17º nível."
+      },
+      {
+        name: "Fúria Rústica",
+        description: "No 20º nível, quando entra em fúria, você pode gastar 5 PM. Se fizer isso, durante a fúria você recebe Cura Acelerada 10 (cumulativo com outras Curas Aceleradas) e, quando faz a ação agredir, pode fazer um ataque desarmado adicional."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Fúria +2, grunhidos, machado de pedra, tanga de peles (Con)" },
+      { level: 2, abilities: "Fúria primitiva, poder de bárbaro" },
+      { level: 3, abilities: "Instinto selvagem +1, poder de bárbaro, tanga de peles (Def +1)" },
+      { level: 4, abilities: "Poder de bárbaro" },
+      { level: 5, abilities: "Poder de bárbaro, resiliência primal 3" },
+      { level: 6, abilities: "Fúria +3, poder de bárbaro" },
+      { level: 7, abilities: "Poder de bárbaro, tanga de peles (Def +2)" },
+      { level: 8, abilities: "Poder de bárbaro, resiliência primal 6" },
+      { level: 9, abilities: "Instinto selvagem +2, poder de bárbaro" },
+      { level: 10, abilities: "Poder de bárbaro" },
+      { level: 11, abilities: "Fúria +4, poder de bárbaro, resiliência primal 9, tanga de peles (Def +3)" },
+      { level: 12, abilities: "Poder de bárbaro" },
+      { level: 13, abilities: "Poder de bárbaro" },
+      { level: 14, abilities: "Poder de bárbaro, resiliência primal 12" },
+      { level: 15, abilities: "Instinto selvagem +3, poder de bárbaro, tanga de peles (Def +4)" },
+      { level: 16, abilities: "Fúria +5, poder de bárbaro" },
+      { level: 17, abilities: "Poder de bárbaro, resiliência primal 15" },
+      { level: 18, abilities: "Poder de bárbaro" },
+      { level: 19, abilities: "Poder de bárbaro, tanga de peles (Def +5)" },
+      { level: 20, abilities: "Fúria rústica, poder de bárbaro" }
+    ],
+    },
+    { id: "Magimarcialista (Bardo)",
+    name: "Magimarcialista (Bardo)",
+    powersUrl: "/poderes/bardo",
+    origin: "Herois de Arton",
+    image: "/classes/magimarcialista.png",
+    description: "Os bardos magimarcialistas abandonam quase todas as funções tradicionais do bardo, abrindo mão de seu repertório de lendas e histórias, ignorando talento musical, negando-se a inspirar companheiros, desprezando furtividade e habilidades sociais para se concentrar em apenas uma coisa: combate. O bardo magimarcialista une desde cedo treinamento com armas e magia destrutiva, tornando-se um especialista em ambos. Também é capaz de curar seus companheiros de maneira eficaz e estratégica.\nEm vez de acompanhar heróis para registrar seus feitos, os bardos magimarcialistas desejam ser eles mesmos os heróis! As canções serão compostas sobre eles e serão seus nomes que ficarão na história. São tipos espalhafatosos, cheios de truques e pose. Costumam vestir roupas chamativas, de cores fortes como vermelho ou roxo, com grandes capas coloridas e chapelões emplumados. São instruídos, mas não exatamente sábios — em vez de aprender história, conhecem fórmulas e segredos de combate.\nA maioria dos bardos típicos torce o nariz para os magimarcialistas. Dizem que eles estão subvertendo uma tradição honrada, mantendo apenas suas partes mais superficiais e utilitárias. Mas os bardos magimarcialistas riem disso, enquanto se preparam para o próximo combate, aventura ou explosão exuberante.",
+    characteristics: {
+      pvBase: "16 + Constituição",
+      pvPerLevel: "4 + Constituição",
+      pmPerLevel: "4 PM por nível"
+    },
+    skills: {
+    mandatory: ["Atuação (Car)", "Luta (For)"],
+    optional: {
+      skills: [      
+        'Acrobacia (Des)', 'Atletismo (For)', 'Cavalgar (Des)', 'Conhecimento (Int)', 'Diplomacia (Car)', 'Enganação (Car)', 'Fortitude (Con)', 'Guerra (Int)', 'Iniciativa (Des)', 'Jogatina (Car)', 'Misticismo (Int)', 'Reflexos (Des)'
+      ],
+      count: 6
+      }
+    },
+    proficiency: "Armas marciais",
+    abilities: [
+      {
+      name: "Cadência Magimarcial",
+      description: "Sempre que lança uma magia de bardo você recebe uma carga arcana e, sempre que faz a ação agredir, recebe uma carga marcial. Você pode acumular um máximo de cargas de cada tipo igual ao seu Carisma e elas duram até o fim da cena.",
+      },
+      {
+        name: "Magias",
+        description: "Escolha três escolas de magia. Uma vez feita, essa escolha não pode ser mudada. Você pode lançar magias arcanas de 1º círculo que pertençam a essas escolas. À medida que sobe de nível, pode lançar magias de círculos maiores (2º círculo no 6º nível, 3º círculo no 10º nível e 4º círculo no 14º nível). Você começa com duas magias de 1º círculo. A cada nível par (2º, 4º etc.), aprende uma magia de qualquer círculo e escola que possa lançar. Você pode lançar essas magias vestindo armaduras leves sem precisar de testes de Misticismo. Seu atributo-chave para lançar magias é Carisma e você soma seu Carisma no seu total de PM."
+      },
+      {
+        name: "Magificação",
+        description: "Se tiver pelo menos 1 carga arcana e 1 carga marcial, você recebe +2 em testes de ataque e rolagens de dano e é considerado sob Inspiração para efeitos baseados nisso. A cada cinco níveis, esses bônus aumentam em +1."
+      },
+      {
+        name: "Bravado Magimarcial",
+        description: "No 2º nível, quando lança uma magia, você pode gastar 1 carga marcial para reduzir seu custo em –1 PM (cumulativo com outras reduções) e, quando faz um ataque, pode gastar 1 carga arcana para receber +1d6 na rolagem de dano."
+      },
+      {
+        name: "Poder de Bardo",
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um poder"
+      },
+      {
+        name: "Dança Defensiva",
+        description: "No 3º nível, quando faz um teste de resistência, você pode gastar 1 carga marcial para receber +5 nesse teste e, quando sofre dano, pode gastar 1 carga arcana para receber redução de dano 10 contra esse dano."
+      },
+      {
+        name: "Arte Sublime",
+        description: "A partir do 7º nível, quando usa Bravado Magimarcial ou Dança Defensiva, você pode gastar uma carga adicional do tipo exigido para dobrar seu efeito."
+      },
+      {
+        name: "Crescendo Vitorioso",
+        description: "No 20° nível, no início de cada combate, você recebe 1 carga arcana e 1 carga marcial. Além disso, você soma seu total de cargas marciais na CD para resistir às suas habilidades de bardo e o total de suas cargas arcanas em seus testes de ataque e rolagens de dano."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Cadência magimarcial, magnificação +2, magias (1º círculo)" },
+      { level: 2, abilities: "Bravado magimarcial, poder de bardo" },
+      { level: 3, abilities: "Dança defensiva, poder de bardo" },
+      { level: 4, abilities: "Poder de bardo" },
+      { level: 5, abilities: "Poder de bardo" },
+      { level: 6, abilities: "Magias (2º círculo), magnificação +3, poder de bardo" },
+      { level: 7, abilities: "Arte sublime, poder de bardo" },
+      { level: 8, abilities: "Poder de bardo" },
+      { level: 9, abilities: "Poder de bardo" },
+      { level: 10, abilities: "Magias (3º círculo), poder de bardo" },
+      { level: 11, abilities: "Magnificação +4, poder de bardo" },
+      { level: 12, abilities: "Poder de bardo" },
+      { level: 13, abilities: "Poder de bardo" },
+      { level: 14, abilities: "Magias (4º círculo), poder de bardo" },
+      { level: 15, abilities: "Poder de bardo" },
+      { level: 16, abilities: "Magnificação +5, poder de bardo" },
+      { level: 17, abilities: "Poder de bardo" },
+      { level: 18, abilities: "Poder de bardo" },
+      { level: 19, abilities: "Poder de bardo" },
+      { level: 20, abilities: "Crescendo vitorioso, poder de bardo" }
+    ],
+    },
+    { id: "Necromante (Arcanista)",
+    name: "Necromante (Arcanista)",
+    powersUrl: "/poderes/arcanista",
+    origin: "Herois de Arton",
+    image: "/classes/necromante.png",
+    description: "Necromantes são arcanistas que estudam a vida, a morte e todos os estados intermediários. São frequentemente associados à vilania, pois não costumam deixar ética e consciência refrearem sua sede de poder.\nContudo, a necromancia não é inerentemente maligna; apenas lida com tabus e assuntos que repugnam os leigos. O necromante é um estudioso do proibido, um pesquisador que não permite que nada interfira com seu conhecimento. Para um necromante, mortos-vivos são naturais e a morte faz parte do cotidiano. E se ele precisa matar para obter novos dados... Bem, sacrifícios são inevitáveis, não?\nNecromantes desprezam magias que afetam as emoções dos vivos — enxergando-os como criaturas imperfeitas em constante decadência, os necromantes não se dedicam a controlá-los e manipulá-los. Embora seja frequentemente um tipo sinistro e sombrio (algo que afasta curiosos), o necromante também pode ser otimista e fortemente apegado àqueles que ama. Não se conforma com a perda de amigos e familiares, procura preservar todos como mortos-vivos.\nInfelizmente, mesmo os necromantes que não são vilões veem-se como alvos de pretensos heróis e precisam se defender. Isso às vezes os leva ao caminho da vilania real.",
+    characteristics: {
+    pvBase: "8 + Constituição",
+    pvPerLevel: "2 + Constituição",
+    pmPerLevel: "6 PM por nível"
+  },
+    skills: {
+    mandatory: [" Misticismo (Int)", "Vontade (Sab)"],
+    optional: {
+      skills: [      
+        'Conhecimento (Int)', 'Cura (Sab)', 'Diplomacia (Car)', 'Enganação (Car)', 'Fortitude (Con)', 'Iniciativa (Des)', 'Intimidação (Car)', 'Intuição (Sab)', 'Investigação (Int)', 'Nobreza (Int)', 'Ofício (Int)', 'Percepção (Sab)'
+      ],
+      count: 2
+      }
+    },
+    proficiency: "Nenhuma",
+    abilities: [
+      {
+      name: "Caminho do Necromante",
+      description: "Você lança magias por meio de uma conexão com a morte. Você pode aprender magias de necromancia divinas como se fossem arcanas, mas não pode aprender magias de encantamento e pelo menos metade das magias que aprender devem ser de necromancia. Além disso, para lançar suas magias você precisa primeiro acessar sua conexão com a morte. Para isso, você deve gastar uma quantidade de PV igual ao círculo máximo de magias que deseja usar (limitado pelo círculo máximo a que tem acesso). Uma vez ativada, a conexão se mantém até o fim da cena. Seu atributo-chave para magias é Inteligência."
+      },
+      {
+        name: "Falar com Mortos",
+        description: "Você pode se comunicar com mortos-vivos por meio de seus poderes arcanos. Você pode usar Misticismo com mortos-vivos para mudar atitude e persuasão. A partir do 3º nível, você pode gastar uma ação padrão e 1 PM para conversar com um cadáver em alcance curto. Esta habilidade funciona como a magia Voz Divina, com o aprimoramento de conceder um pouco de vida a um cadáver."
+      },
+      {
+      name: "Magias",
+      description: "Você pode lançar magias arcanas de 1º círculo. A cada quatro níveis, pode lançar magias de um círculo maior (2º círculo no 5º nível, 3º círculo no 9º nível e assim por diante). Você começa com três magias de 1º círculo. A cada nível, aprende uma magia de qualquer círculo que possa lançar. Seu atributo-chave para lançar magias é definido pelo seu Caminho (veja acima) e você soma seu atributo-chave no seu total de PM. Veja o Capítulo 4 para as regras de magia."
+    },
+    {
+      name: "Poder de Arcanista",
+      description: "No 2º nível, e a cada nível seguinte, você escolhe um dos poderes de Arcanista ou Poder Geral."
+    },
+      {
+        name: "Animar Cadáver",
+        description: "No 2º nível, você pode gastar uma ação completa e 3 PM para animar o cadáver de uma criatura Pequena, Média ou Grande em alcance curto. O cadáver se torna um parceiro iniciante de um tipo a sua escolha, adequado ao seu tamanho e anatomia, que não conta em seu limite de parceiros (mas você só pode ter um parceiro cadáver por vez). Quando sofre dano, você pode sacrificar o parceiro cadáver para reduzir esse dano à metade. Cadáveres sacrificados não podem ser reanimados. A partir do 7º nível, quando você usa esta habilidade, pode gastar 6 PM para criar um parceiro veterano e, a partir do 11º nível, pode gastar 9 PM para criar um parceiro mestre."
+      },
+      {
+        name: "Necrologia",
+        description: "No 3º nível, você recebe +2 em Cura, Fortitude e na CD para resistir às suas magias de necromancia. A cada cinco níveis, esse bônus aumenta em +1."
+      },
+      {
+        name: "Distorção Necrótica",
+        description: "No 4º nível, escolha uma de suas magias conhecidas de 1º círculo que não seja de necromancia. A escola dessa magia muda para necromancia. Essa mudança não tem efeitos mecânicos (além da troca de escola), mas altera a aparência e natureza de seu efeito (por exemplo, uma Armadura Arcana de necromancia cria uma armadura de ossos ou de sombras, enquanto uma magia Concentração de Combate manifesta espíritos dos mortos que o aconselham durante a luta)."
+      },
+      {
+        name: "Necropotência",
+        description: "No 5º nível, quando estabelece sua conexão com a morte, você pode gastar o dobro de PV. Se fizer isso, sempre que reduzir um ou mais inimigos vivos a 0 PV ou menos com uma magia de necromancia, você recebe 2 PM temporários. Você pode ganhar um máximo de PM temporários por cena igual ao seu nível. Esses pontos temporários desaparecem no fim da cena."
+      },
+      {
+        name: "Domínio Sobre a Morte",
+        description: "No 20° nível, você domina as fronteiras da vida e da morte. O custo em PM de suas magias de necromancia é reduzido à metade (após aplicar aprimoramentos e quaisquer outros efeitos que reduzam custo). Além disso, quando você mata uma criatura viva com uma magia de necromancia, pode gastar 2 PM para erguer seu cadáver como um morto-vivo sob seu controle. Isso funciona como a magia Servo Morto-Vivo, mas você escolhe o tipo de parceiro entre quaisquer aprimoramentos da magia e não precisa pagar seu componente material. Mortos-vivos erguidos dessa forma não contam em seu limite de parceiros durante a cena em que são criados (ao fim da cena, mortos-vivos excedentes, a sua escolha, voltar a ser apenas cadáveres)."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Caminho do necromante, falar com mortos, magias (1º círculo)" },
+      { level: 2, abilities: "Animar cadáver, poder de arcanista" },
+      { level: 3, abilities: "Necrologia +2, poder de arcanista" },
+      { level: 4, abilities: "Distorção necrótica, poder de arcanista" },
+      { level: 5, abilities: "Magias (2º círculo), necropotência, poder de arcanista" },
+      { level: 6, abilities: "Poder de arcanista" },
+      { level: 7, abilities: "Poder de arcanista" },
+      { level: 8, abilities: "Necrologia +3, poder de arcanista" },
+      { level: 9, abilities: "Magias (3º círculo), poder de arcanista" },
+      { level: 10, abilities: "Poder de arcanista" },
+      { level: 11, abilities: "Poder de arcanista" },
+      { level: 12, abilities: "Poder de arcanista" },
+      { level: 13, abilities: "Magias (4º círculo), necrologia +4, poder de arcanista" },
+      { level: 14, abilities: "Poder de arcanista" },
+      { level: 15, abilities: "Poder de arcanista" },
+      { level: 16, abilities: "Poder de arcanista" },
+      { level: 17, abilities: "Magias (5º círculo), poder de arcanista" },
+      { level: 18, abilities: "Necrologia +5, poder de arcanista" },
+      { level: 19, abilities: "Poder de arcanista" },
+      { level: 20, abilities: "Domínio sobre a morte, poder de arcanista" }
+    ],
+    extras: [
+      {
+    title: "Além da Vida e da Morte",
+    description: "Para muitos necromantes, o objetivo final de sua arte não deveria ser outro que não alcançar a eternidade por meio da conquista da morte. Para esses, a melhor (ou talvez única) forma de alcançar esse objetivo é a transformação em um poderoso morto-vivo. Um lich! O conhecimento sobre o ritual necessário para esta transformação é representado por um poder de classe exclusivo: Ritual do Lich.",
+    sections: [
+      {
+        title: "O Poder Necessário",
+        content: [
+          {
+            name: "Ritual do Lich",
+            description: "Você aprendeu o Ritual do Lich e pode executar seus passos (veja a seção abaixo). Pré-requisitos: Celebrar Ritual, Escrever Pergaminho, Preparar Poção, 17º nível de necromante."
+          }
+        ]
+      },
+      {
+        title: "O Ritual do Lich",
+        intro: "O Ritual do Lich representa o auge do conhecimento mágico de um necromante. É o resultado de anos de estudos, pesquisas e experimentos, sendo conhecido por poucos. Os passos deste ritual são descritos a seguir.",
+        content: [
+          {
+            name: "Passo 1: O Filactério",
+            description: "“Para viver para sempre, a alma não pode ser destruída”. Baseado nesse princípio, o candidato a lich deve possuir um filactério, um local seguro no qual poderá guardar sua alma. O filactério típico é uma caixa de metal selada, repleta de tiras de pergaminhos com escritos mágicos, mas pode ser quase qualquer objeto. Independente de sua forma, o filactério custa T$ 20.000. Com este item em mãos, você deve lançar as seguintes magias, nessa ordem: Profanar (com o aprimoramento que torna permanente), Ligação Sombria (como parte do ritual, pode ser lançada tendo como alvo o filactério), Roubar a Alma (em si mesmo) e Tranca Arcana (no filactério). As magias não surtem efeito imediatamente, apenas no fim do ritual."
+          },
+          {
+            name: "Passo 2: A Poção do Sono Eterno",
+            description: "Com um receptáculo em mãos, você deve se concentrar no próximo passo: morrer. Mas não de qualquer maneira — apenas através da poção do sono eterno. Esta poção especial contém vários tipos de venenos: beladona, cicuta, essência de sombra e pó de lich (uma dose de cada), que são usados como matéria-prima, e fabricá-la exige um teste de Ofício (alquimista) contra CD 35. Com a poção em mãos, você deve lançar as seguintes magias, nessa ordem: Erupção Glacial, Rogar Maldição e Servo Morto-Vivo. Você deve esperar uma noite de lua minguante para beber a poção, pois esta é uma etapa que não pode ser testemunhada por Lena."
+          },
+          {
+            name: "Passo 3: O Mago Imortal",
+            description: "Para você, a poção do sono eterno é letal. Após sua morte, seu corpo fica inerte e sua alma é sugada para o filactério (assim, um candidato que não tenha realizado o primeiro passo do ritual simplesmente morre). Sem um corpo físico, sua consciência vaga pelos reinos dos deuses. Depois de uma semana, sua mente retorna para seu corpo — mas o tempo já cobrou seu preço. Seu corpo está seco, enrugado, com olhos vazios e ossos salientes. Você não respira mais e não tem sangue, tendo se tornado um morto-vivo. Este é um ritual complexo e a preparação e execução dele provavelmente terá tomado boa parte de seu tempo de vida. Mas isso não é um problema: agora você é um lich e não precisa mais se preocupar nem com tempo, nem com vida."
+          }
+        ]
+      },
+      {
+        title: "Características da Forma de Lich",
+        intro: "Em termos de regras, ao completar o ritual, você adquire as características a seguir:",
+        content: [
+          {
+            name: "Atributos",
+            description: "Inteligência +1, Sabedoria +1, Carisma +1, Constituição –1."
+          },
+          {
+            name: "Morto-Vivo",
+            description: "Seu tipo muda para morto-vivo. Você recebe visão no escuro e imunidade a efeitos de cansaço e metabólicos, eletricidade, frio, metamorfose, trevas e veneno. Além disso, não precisa respirar, alimentar-se ou dormir. Por fim, efeitos mágicos de cura de luz causam dano a você e você não se beneficia de itens da categoria alimentação, mas dano de trevas recupera seus PV."
+          },
+          {
+            name: "Cadáver Resiliente",
+            description: "Você recebe +5 na Defesa e redução de dano 10/mágico."
+          },
+          {
+            name: "Aura de Medo",
+            description: "Você recebe este poder (Tormenta20, p. 132, mas ele não é um poder concedido). Se já o possui, a CD para resistir a ele aumenta em +2."
+          },
+          {
+            name: "Toque Gélido",
+            description: "Quando faz um ataque desarmado, você pode gastar 3 PM para envolver sua mão em frio sobrenatural. Se fizer isso e acertar o ataque, em vez do dano normal você causa 6d6+6 pontos de dano de frio e a vítima fica paralisada por 1 rodada (apenas uma vez por cena, Fort CD Int evita)."
+          },
+          {
+            name: "Filactério",
+            description: "Se for morto, você retorna completamente recuperado em 1d10 dias. A única forma de derrotá-lo permanentemente é destruir seu filactério. Você pode deixar o filactério em qualquer lugar, mas você e ele precisam estar no mesmo Plano. O filactério possui RD 30 e PV iguais aos seus. Se for danificado, é totalmente restaurado na próxima vez que você recuperar seus PM por descanso."
+          },
+          {
+            name: "Preço da Não Vida",
+            description: "Você precisa passar 8 horas sob a luz de estrelas ou no subterrâneo. Se fizer isso, recupera PV e PM por descanso em condições normais (você não é afetado por condições boas ou ruins de descanso). Caso contrário, sofre os efeitos de fome."
+          }
+        ]
+      }
+    ]
+  }
+]
+    },
+    { id: "Santo (Paladino)",
+    name: "Santo (Paladino)",
+    powersUrl: "/poderes/paladino",
+    origin: "Herois de Arton",
+    image: "/classes/santo.png",
+    description: "Paladinos são campeões do bem, mas ainda são pessoas. Têm ambições, desejos e fraquezas. Às vezes escorregam. Têm vontade própria e opiniões individuais.\nExceto o paladino santo.\nO santo é o mais altruísta dos paladinos. É menos uma pessoa e mais um veículo para a vontade de seu deus, abrindo mão de boa parte de seu livre arbítrio. Não hesita em sacrificar a própria vida para cumprir uma única ordem divina, mesmo que não a compreenda. O santo não quer nada, não realmente, e acha um pouco confusa a necessidade que as outras pessoas têm de bens materiais e satisfação mundana. Para o santo, Arton é apenas um estágio, o local onde ele cumpre seu dever, antes de partir para a próxima missão, nos reinos dos deuses.\nÀs vezes, o santo parece estar seguindo um roteiro, agindo como se sempre soubesse o que fazer. Não hesita, é seguro de si mesmo e tem fé cega na divindade. Isso pode ser irritante. Contudo, se souber que está irritando os outros, o santo faz de tudo para deixar de ser um incômodo.\nSim, o santo parece perfeito. E sim, isso pode ser odioso. Mas ele é a melhor arma de seu deus.",
+    characteristics: {
+      pvBase: "20 + Constituição",
+      pvPerLevel: "5 + Constituição",
+      pmPerLevel: "4 PM por nível"
+    },
+    skills: {
+    mandatory: ["Religião (Sab)", "Vontade (Sab)"],
+    optional: {
+      skills: [      
+        'Adestramento (Car)', 'Atletismo (For)', 'Conhecimento (Int)', 'Cura (Sab)', 'Diplomacia (Car)', 'Fortitude (Con)', 'Guerra (Int)', 'Iniciativa (Des)', 'Intuição (Sab)', 'Luta (For)', 'Ofício (Int)', 'Percepção (Sab)'
+      ],
+      count: 2
+      }
+    },
+    proficiency: "Armas marciais, armaduras pesadas e escudos",
+    abilities: [
+      {
+        name: "Abençoado",
+        description: "Você soma seu Carisma no seu total de pontos de mana no 1º nível. Além disso, torna-se devoto de um deus disponível para paladinos (Azgher, Khalmyr, Lena, Lin-Wu, Marah, Tanna-Toh, Thyatis, Valkaria). Veja as regras de devotos. Ao contrário de devotos normais, você recebe dois poderes concedidos por se tornar devoto, em vez de apenas um. Como alternativa, você pode cultuar o bem como um todo. Não recebe nenhum Poder Concedido, mas não precisa seguir nenhuma Obrigação & Restrição (além do Código do Herói, abaixo). Cultuar o bem conta como sua devoção.(Mas você não pode escolher ser um santo do bem)"
+      },
+      {
+        name: "Código do Herói",
+        description: "Você deve sempre manter sua palavra e nunca pode recusar um pedido de ajuda de alguém inocente. Além disso, nunca pode mentir, trapacear ou roubar. Se violar o código, você perde todos os seus PM e só pode recuperá-los a partir do próximo dia."
+      },
+      {
+        name: "Ladainha de Combate",
+        description: " Você pode gastar uma ação padrão e 2 PM para gerar uma aura de 9m de raio com duração sustentada. Você e os aliados dentro da aura recebem +1 em testes de ataque, rolagens de dano e na Defesa. A cada quatro níveis, você pode gastar +2 PM para aumentar esses bônus em +1. Sua ladainha conta como Aura Sagrada para pré-requisitos e efeitos de poderes de paladino.",
+        subAbilities: [
+          {
+            name: "No 5º nível",
+            description: "Você e os aliados dentro da aura causam +1d8 pontos de dano de luz com ataques contra devotos de deuses que canalizam apenas energia negativa e criaturas malignas (a critério do mestre).",
+          },
+          {
+            name: "No 9º nível",
+            description: "Suas armas e as dos aliados dentro da aura recebem o encanto veloz.",
+          },
+        ]
+      },
+      {
+        name: "Poder de Paladino",
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um poder de Paladino ou Gerais."
+      },
+      {
+        name: "Santo Curandeiro",
+        description: "A partir do 2º nível, você pode gastar uma ação de movimento e uma quantidade de PM a sua escolha (limitada pelo seu Carisma). Para cada PM que você gastar, o aliado em alcance médio com a maior redução em seus PV (por dano ou perda de vida) recupera 2d8 pontos de vida por luz. A partir do 6º nível, quando usa Santo Curandeiro, você também pode remover uma condição do alvo entre abalado, apavorado, atordoado, cego, doente, exausto, fatigado ou surdo."
+      },
+      {
+        name: "Vaso do Espírito",
+        description: "A partir do 3º nível, quando faz um teste de resistência, você pode gastar 1 PM para somar seu Carisma nesse teste."
+      },
+      {
+        name: "Mártir",
+        description: "A partir do 6º nível, quando um aliado em alcance médio faz um teste de resistência, você pode gastar 1 PM para conceder a ele um bônus nesse teste igual ao seu próprio Carisma. A partir do 12º nível, uma vez por cena, se ele ainda assim falhar, você pode sofrer o efeito no lugar dele (mas você é afetado mesmo que seja imune ao efeito)."
+      },
+      {
+        name: "Pira Santa",
+        description: "No 8º nível, enquanto estiver sob efeito de Ladainha de Combate, você pode gastar uma ação de movimento e uma quantidade de PM a sua escolha (limitada pelo seu Carisma). Para cada PM que gastar, o inimigo de maior ND em alcance médio sofre 2d8 pontos de dano de luz e fica ofuscado por 1 rodada (Fort CD Car reduz à metade)."
+      },
+      {
+        name: "Vingador Santificado",
+        description: "No 20º nível, quando usa Ladainha de Combate, você pode gastar +5 PM. Se fizer isso, os bônus numéricos fornecidos por sua Ladainha dobram e você e os aliados dentro da aura recebem imunidade a acertos críticos e RD igual a 5 + seu Carisma."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Abençoado, código do herói, ladainha de combate (+1)" },
+      { level: 2, abilities: "Poder de paladino, santo curandeiro" },
+      { level: 3, abilities: "Poder de paladino, vaso sagrado" },
+      { level: 4, abilities: "Poder de paladino" },
+      { level: 5, abilities: "Ladainha de combate (+2, sacra), poder de paladino" },
+      { level: 6, abilities: "Mártir, poder de paladino" },
+      { level: 7, abilities: "Poder de paladino" },
+      { level: 8, abilities: "Pira santa, poder de paladino" },
+      { level: 9, abilities: "Ladainha de combate (+3, veloz), poder de paladino" },
+      { level: 10, abilities: "Poder de paladino" },
+      { level: 11, abilities: "Poder de paladino" },
+      { level: 12, abilities: "Poder de paladino" },
+      { level: 13, abilities: "Ladainha de combate (+4), poder de paladino" },
+      { level: 14, abilities: "Poder de paladino" },
+      { level: 15, abilities: "Poder de paladino" },
+      { level: 16, abilities: "Poder de paladino" },
+      { level: 17, abilities: "Ladainha de combate (+5), poder de paladino" },
+      { level: 18, abilities: "Poder de paladino" },
+      { level: 19, abilities: "Poder de paladino" },
+      { level: 20, abilities: "Poder de paladino, vingador santificado" }
+    ],
+    },
+    { id: "Seteiro (Caçador)",
+    name: "Seteiro (Caçador)",
+    powersUrl: "/poderes/cacador",
+    origin: "Herois de Arton",
+    image: "/classes/seteiro.png",
+    description: "O seteiro é um caçador apenas em nome... A menos que se fale de caçar seres inteligentes. É o franco-atirador que mata alvos importantes no exército inimigo. O acrobata que dispara de ângulos e posições que outros nem conseguem compreender. O aventureiro semeia o pânico nas hordas de capangas — ou mata vilões do outro lado da sala final da masmorra.\nO seteiro faz do arco seu modo de vida. Alguns são solitários e amargos: combatendo de longe, percebem como é fácil matar. Têm dificuldade de se relacionar com outras pessoas, enxergando-as como meros alvos. Contudo, outros seteiros valorizam seus amigos e familiares justamente por notar a fragilidade da vida. Quando tudo pode acabar com a puxada da corda de um arco, é bom aproveitar o tempo que se tem. De qualquer forma, seteiros levam o caminho do arco como um modo de vida: localizam um objetivo e seguem em linha reta até ele, como a flecha. São pessoas diretas e resolutas, sem paciência para indecisão.\nSeteiros têm pouca ligação emocional com os ermos. É mais provável que trabalhem em grandes exércitos ou companhias mercenárias. Muitos são combatentes de confiança de seus lordes, vivendo em um castelo até que um novo alvo precise ser eliminado.",
+    characteristics: {
+      pvBase: "16 + Constituição",
+      pvPerLevel: "4 + Constituição",
+      pmPerLevel: "4 PM por nível"
+    },
+    skills: {
+    mandatory: ["Pontaria (Des)", "Sobrevivência (Sab)"],
+    optional: {
+      skills: [      
+        'Adestramento (Car)', 'Atletismo (For)', 'Cavalgar (Des)', 'Cura (Sab)', 'Fortitude (Con)', 'Furtividade (Des)', 'Iniciativa (Des)', 'Investigação (Int)', 'Luta (For)', 'Ofício (Int)', 'Percepção (Sab)', 'Reflexos (Des)'
+      ],
+      count: 6
+      }
+    },
+    proficiency: "Armas marciais",
+    abilities: [
+      {
+      name: "Caminho do Atirador",
+      description: "Você abriu mão do treinamento convencional de um caçador para abraçar o caminho do atirador. Suas habilidades de seteiro relacionadas a ataques e armas só funcionam com arcos e bestas.",
+      },
+      {
+      name: "Marca da Presa",
+      description: "Você pode gastar uma ação de movimento e 1 PM para analisar uma criatura em alcance curto. Até o fim da cena, você recebe +1d4 nas rolagens de dano contra essa criatura. A cada quatro níveis, você pode gastar +1 PM para aumentar o bônus de dano (veja a tabela da classe).",
+      },
+      {
+        name: "Tiro de Supressão",
+        description: "Sempre que você causa dano com um arco ou besta em uma criatura que esteja sob efeito de sua Marca da Presa, essa criatura sofre uma penalidade cumulativa de –1 em rolagens de dano, até um valor igual à quantidade de PM gasta em Marca da Presa, até o fim da cena."
+      },
+      {
+        name: "Poder de Caçador",
+        description: "No 2º nível, e a cada nível seguinte, você recebe uma habilidade de caçador ou Geral."
+      },
+      {
+        name: "Evasão",
+        description: "A partir do 3° nível, quando sofre um efeito que permite um teste de Reflexos para reduzir o dano à metade, você não sofre dano algum se passar. Você ainda sofre dano normal se falhar no teste de Reflexos. Esta habilidade exige liberdade de movimentos; você não pode usá-la se estiver de armadura pesada ou na condição imóvel."
+      },
+      {
+        name: "Disparo Constritor",
+        description: "No 5° nível, quando usa a ação mirar, você pode pagar 2 PM. Se fizer isso, pode executar uma manobra entre desarmar, empurrar ou quebrar com um de seus ataques à distância feitos até o fim desse turno."
+      },
+      {
+        name: "Rajada de Flechas",
+        description: "A partir do 10° nível, você pode gastar uma ação completa e 2 PM para alvejar uma área com seus disparos. Escolha um ponto no alcance de sua arma, então faça um ataque à distância e compare-o com a Defesa de cada inimigo num raio de 3m dele. Então faça uma rolagem de dano, com um bônus cumulativo de +2 para cada acerto, e aplique-a em cada inimigo atingido. Você gasta apenas uma munição, independente de quantos inimigos atacou."
+      },
+      {
+        name: "Evasão Aprimorada",
+        description: "No 13º nível, quando sofre um efeito que permite um teste de Reflexos para reduzir o dano à metade, você não sofre dano algum se passar e sofre apenas metade do dano se falhar. Esta habilidade exige liberdade de movimentos; você não pode usá-la se estiver de armadura pesada ou na condição imóvel."
+      },
+      {
+        name: "Sentinela",
+        description: "No 15° nível, uma vez por rodada, quando uma criatura sob efeito de sua Marca da Presa acerta um ataque contra um aliado, você pode gastar 1 PM para fazer um ataque contra essa criatura."
+      },
+      {
+        name: "Mestre do Disparo",
+        description: "No 20° nível, você pode usar sua Marca da Presa como uma ação livre. Além disso, uma vez por rodada, quando faz um ataque com um arco ou besta contra um alvo de sua Marca da Presa, você pode fazer um ataque adicional contra ele."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Caminho do atirador, marca da presa +1d4, tiro de supressão" },
+      { level: 2, abilities: "Poder de caçador" },
+      { level: 3, abilities: "Evasão, poder de caçador" },
+      { level: 4, abilities: "Poder de caçador" },
+      { level: 5, abilities: "Disparo constritor, marca da presa +1d8, poder de caçador" },
+      { level: 6, abilities: "Poder de caçador" },
+      { level: 7, abilities: "Poder de caçador" },
+      { level: 8, abilities: "Poder de caçador" },
+      { level: 9, abilities: "Marca da presa +1d12, poder de caçador" },
+      { level: 10, abilities: "Poder de caçador, rajada de flechas" },
+      { level: 11, abilities: "Poder de caçador" },
+      { level: 12, abilities: "Poder de caçador" },
+      { level: 13, abilities: "Evasão aprimorada, marca da presa +2d8, poder de caçador" },
+      { level: 14, abilities: "Poder de caçador" },
+      { level: 15, abilities: "Poder de caçador, sentinela" },
+      { level: 16, abilities: "Poder de caçador" },
+      { level: 17, abilities: "Marca da presa +2d10, poder de caçador" },
+      { level: 18, abilities: "Poder de caçador" },
+      { level: 19, abilities: "Poder de caçador" },
+      { level: 20, abilities: "Poder de caçador, mestre do disparo" }
+    ],
+    },
+    { id: "Usurpador (Clérigo)",
+    name: "Usurpador (Clérigo)",
+    powersUrl: "/poderes/clerigo",
+    origin: "Herois de Arton",
+    image: "/classes/usurpador.png",
+    description: "Usurpadores não são clérigos. Na verdade, pode-se pensar neles como o oposto de clérigos. Não são ordenados, não rezam ou servem aos deuses. Bem pelo contrário.\nUsurpadores são hereges que aprenderam o segredo de roubar o poder milagroso dos deuses, utilizando-o sem devoção. Eles não seguem dogmas, não espalham a palavra de uma divindade, não protegem fiéis. Não têm funções sacerdotais, muito menos o respeito da sociedade. Para os usurpadores, a magia divina é apenas uma ferramenta poderosa, a ser usada e descartada como qualquer outra.\nUsurpadores aprendem seus segredos com outros usurpadores, numa tradição clandestina, ou em raros cultos heréticos. É um grande risco fazer parte de uma verdadeira congregação de usurpadores: se isso existe em algum lugar de Arton, é um grande alvo para paladinos e clérigos fanáticos. Na verdade, combater essa apostasia pode ser uma das únicas coisas capazes de unir devotos de todas as divindades — talvez até de Aharadak! Outros usurpadores aprendem sozinhos, em pergaminhos esquecidos ou através de seus próprios experimentos.\nDe qualquer forma, o caminho do usurpador é feito de desafio aos deuses e desprezo pela devoção. O usurpador não se curva a ninguém, mas espera que os deuses se curvem a ele.",
+    characteristics: {
+      pvBase: "16 + Constituição",
+      pvPerLevel: "4 + Constituição",
+      pmPerLevel: "5 PM por nível"
+    },
+    skills: {
+    mandatory: ["Enganação (Car)", "Vontade (Sab)"],
+    optional: {
+      skills: [      
+        'Atuação (Car)', 'Conhecimento (Int)', 'Cura (Sab)', 'Diplomacia (Car)', 'Furtividade (Des)', 'Iniciativa (Des)', 'Intimidação (Car)', 'Intuição (Sab)', 'Misticismo (Int)', 'Nobreza (Int)', 'Ofício (Int)', 'Percepção (Sab)', 'Reflexos (Des)', 'Religião (Sab)'
+      ],
+      count: 2
+      }
+    },
+    proficiency: "Nenhuma",
+    abilities: [
+      {
+      name: "Inimigo dos Deuses",
+      description: "Por roubar o poder de todos os deuses, o usurpador não é aceito por nenhum. Você não pode ter nenhuma devoção.",
+      },
+      {
+        name: "Magias",
+        description: "Você pode lançar magias divinas de 1º círculo. A cada quatro níveis, pode lançar magias de um círculo maior (2º círculo no 5º nível, 3º círculo no 9º nível e assim por diante). Você não começa com nenhuma magia e não aprende magias automaticamente como um clérigo faria (mas veja Usurpar, a seguir). Seu atributo-chave para lançar magias é Carisma e você soma seu Carisma no seu total de PM."
+      },
+      {
+        name: "Usurpar",
+        description: "Você pode lançar qualquer magia divina de um círculo a que tenha acesso. Para lançar uma magia dessa forma, deve passar em um teste de Enganação (CD 15 + custo em PM da magia). Se falhar, a magia é perdida, mas os PM são gastos mesmo assim. Você não pode escolher 10 nesse teste, mesmo que possua uma habilidade que permita isso, e sofre penalidade de armadura nele. Além disso, sofre uma penalidade de –5 se estiver em um local contendo um símbolo sagrado visível."
+      },
+      {
+        name: "Canalização Falsa",
+        description: "No 2º nível, você pode canalizar tanto energia positiva quanto negativa."
+      },
+      {
+        name: "Poder de Clérigo",
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um dos poderes de clérigo ou geral(mas não pode escolher Conhecimento Mágico). Você substitui Sabedoria por Carisma em todos os poderes de clérigo e concedidos com efeito baseado nesse atributo."
+      },
+      {
+        name: "Discrição Divina",
+        description: "No 3º nível, você recebe +1 em Furtividade e testes de resistência. A cada seis níveis, esse bônus aumenta em +1."
+      },
+      {
+        name: "Poder Capturado",
+        description: "No 4º nível, você rouba o poder que os deuses concedem a seus devotos. Escolha um deus maior por nível e um poder concedido desse deus (você deve cumprir seus pré-requisitos e não pode escolher poderes exclusivos de qualquer classe, inclusive clérigo). Você pode gastar uma hora e fazer um teste de Enganação (CD é 20 +5 para cada uso adicional no mesmo dia). Se passar, você é considerado um devoto desse deus para efeitos de habilidades e itens, e pode usar o poder concedido escolhido, mas não precisa seguir as Obrigações e Restrições. Se falhar, você perde 3 PM. Este efeito dura até o fim do dia ou até você usá-lo novamente."
+      },
+      {
+        name: "Roubo Divino",
+        description: "No 20º nível, você é capaz de roubar a própria essência divina. Quando lança uma magia com Usurpar, para cada 10 pontos no resultado do teste de Enganação, o total de PM que você gasta nessa magia é reduzido em –1 (cumulativo com outras reduções) e a CD para resistir a ela aumenta em +1."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Inimigo dos deuses, magias (1º círculo), usurpar" },
+      { level: 2, abilities: "Canalização falsa, poder de clérigo" },
+      { level: 3, abilities: "Discrição divina +1, poder de clérigo" },
+      { level: 4, abilities: "Poder capturado, poder de clérigo" },
+      { level: 5, abilities: "Magias (2º círculo), poder de clérigo" },
+      { level: 6, abilities: "Poder de clérigo" },
+      { level: 7, abilities: "Poder de clérigo" },
+      { level: 8, abilities: "Poder de clérigo" },
+      { level: 9, abilities: "Discrição divina +2, magias (3º círculo), poder de clérigo" },
+      { level: 10, abilities: "Poder de clérigo" },
+      { level: 11, abilities: "Poder de clérigo" },
+      { level: 12, abilities: "Poder de clérigo" },
+      { level: 13, abilities: "Magias (4º círculo), poder de clérigo" },
+      { level: 14, abilities: "Poder de clérigo" },
+      { level: 15, abilities: "Discrição divina +3, poder de clérigo" },
+      { level: 16, abilities: "Poder de clérigo" },
+      { level: 17, abilities: "Magias (5º círculo), poder de clérigo" },
+      { level: 18, abilities: "Poder de clérigo" },
+      { level: 19, abilities: "Poder de clérigo" },
+      { level: 20, abilities: "Poder de clérigo, roubo divino" }
+    ],
+    },
+    { id: "Vassalo (Cavaleiro)",
+    name: "Vassalo (Cavaleiro)",
+    powersUrl: "/poderes/cavaleiro",
+    origin: "Herois de Arton",
+    image: "/classes/vassalo.png",
+    description: "O cavaleiro vassalo é um servo por natureza. Ao contrário de outros aventureiros, que levam vidas de liberdade e independência, o vassalo possui um lorde, um nobre a quem deve obedecer, e faz parte de uma estrutura social rígida. Esse senhor é sempre um aristocrata tradicional, alguém que vive segundo os costumes mais antigos da sociedade artoniana.\nÀ medida que adquire experiência, o vassalo recebe responsabilidades e posições de prestígio em seu reino, feudo ou domínio. Seu início é humilde, como um mero pajem, mas ele acaba sua carreira como um grande senhor de terras, responsável por uma população numerosa.\nExiste muita variedade e diversidade em Arton, mas o vassalo escolhe um caminho convencional e até mesmo antiquado. Ele vê grande valor na hierarquia nobiliárquica, tem orgulho de ostentar títulos de nobreza e erguer o estandarte de seu senhor.\nContudo, não é um mero burocrata, nem tem sede de poder: o vassalo personifica o lado heroico da nobreza, vendo como seu dever proteger a plebe. Derrama seu sangue tanto por seu senhor quanto por seus próprios súditos. É uma vida de servidão e deveres. Mas recompensada pela satisfação de fazer o que é certo — e pelo luxo da aristocracia.",
+    characteristics: {
+      pvBase: "20 + Constituição",
+      pvPerLevel: "5 + Constituição",
+      pmPerLevel: "3 PM por nível"
+    },
+    skills: {
+    mandatory: ["Fortitude (Con)", "Luta (For)"],
+    optional: {
+      skills: [      
+        'Adestramento (Car)', 'Atletismo (For)', 'Cavalgar (Des)', 'Diplomacia (Car)', 'Guerra (Int)', 'Iniciativa (Des)', 'Intimidação (Car)', 'Nobreza (Int)', 'Percepção (Sab)', 'Vontade (Sab)'
+      ],
+      count: 2
+      }
+    },
+    proficiency: "Armas marciais e escudos.",
+    abilities: [
+      {
+        name: "Código de Honra",
+        description: "Cavaleiros distinguem-se de meros combatentes por seguir um código de conduta. Fazem isto para mostrar que estão acima dos mercenários e bandoleiros que infestam os campos de batalha. Você não pode atacar um oponente pelas costas (em termos de jogo, não pode se beneficiar do bônus de flanquear), caído, desprevenido ou incapaz de lutar. Se violar o código, você perde todos os seus PM e só pode recuperá-los a partir do próximo dia. Rebaixar-se ao nível dos covardes e desesperados abala a autoconfiança que eleva o cavaleiro."
+      },
+      {
+        name: "Baluarte",
+        description: "Quando sofre um ataque ou faz um teste de resistência, você pode gastar 1 PM para receber +2 na Defesa e nos testes de resistência até o início do seu próximo turno. A cada quatro níveis, pode gastar +1 PM para aumentar o bônus em +2. A partir do 7º nível, quando usa esta habilidade, você pode gastar 2 PM adicionais para fornecer o mesmo bônus a todos os aliados adjacentes. Por exemplo, pode gastar 4 PM ao todo para receber +4 na Defesa e nos testes de resistência e fornecer este mesmo bônus aos outros. A partir do 15º nível, você pode gastar 5 PM adicionais para fornecer o mesmo bônus a todos os aliados em alcance curto."
+      },
+      {
+        name: "Jovem Pajem",
+        description: "Você inicia sua carreira como um pajem, servindo a um sir ou dame mais experiente. Você se torna treinado em Adestramento ou Ofício (armeiro)."
+      },
+      {
+        name: "Suserano",
+        description: "Escolha um membro da nobreza aprovado pelo mestre. Você serve a esse nobre, sendo oficialmente reconhecido como parte de sua corte. Os efeitos de seu status ficam a cargo do mestre mas, como regra geral, você recebe +5 em testes de Diplomacia e Intimidação ao lidar com vassalos de seu suserano de nível inferior ao seu e, nas terras dele, pode obter alojamento e alimentação sem custo. Se deixar de servir a seu suserano por qualquer motivo, você perde todos os seus PM e só pode recuperá-los após ser aceito por outro suserano."
+      },
+      {
+        name: "Valete",
+        description: "A partir do 2º nível, você já acompanha seu senhor na corte e nos salões nobres. Você se torna treinado em Diplomacia ou Nobreza e recebe um poder de cavaleiro a sua escolha."
+      },
+      {
+        name: "Escudeiro Aprendiz",
+        description: "A partir do 3º nível, você ajuda seu senhor na batalha. Você se torna treinado em Cavalgar e recebe proficiência com armaduras pesadas. Se já tiver proficiência com armaduras pesadas, recebe +2 na Defesa enquanto usa uma armadura pesada."
+      },
+      {
+        name: "Guarda do Castelo",
+        description: "No 4º nível, você já patrulha as muralhas do castelo sozinho. Você se torna treinado em Intuição e recebe um poder de cavaleiro a sua escolha."
+      },
+      {
+        name: "Vigilante de Estradas",
+        description: "A partir do 5º nível, você expande suas responsabilidades para além do castelo. Você recebe a habilidade Montaria e se torna treinado em Percepção."
+      },
+      {
+        name: "Cavaleiro do Reino",
+        description: "No 6º nível, você recebe o título de sir ou dame e atinge o grau mais baixo da nobreza. Você recebe uma arma, armadura ou escudo superior com duas melhorias a sua escolha e recebe um poder de cavaleiro a sua escolha."
+      },
+      {
+        name: "Sargento do Reino",
+        description: "No 7º nível, você adquire uma posição no exército do reino. Você recebe um poder de cavaleiro ou de guerreiro a sua escolha (como um guerreiro de nível igual ao seu para propósitos de pré-requisitos)."
+      },
+      {
+        name: "Capitão do Reino",
+        description: "No 8º nível, você se torna um oficial no exército, respeitado e prestigiado por militares, nobres e plebeus. Você recebe o poder Escudeiro e a habilidade Golpe Divino, como um paladino de nível igual ao seu. Esta não é uma habilidade mágica e provém de seu senso de justiça e determinação em combate."
+      },
+      {
+        name: "Lorde",
+        description: "No 9º nível você ascende dentro da nobreza, recebendo um feudo — e muitas responsabilidades. Você recebe o poder Autoridade Feudal. Se já possui esse poder, as pessoas convocadas passam a contar como um parceiro veterano. Além disso, escolha um dos caminhos a seguir:",
+        subAbilities: [
+          {
+            name: "Caminho do Soldado",
+            description: "Você recebe um poder de guerreiro (como um guerreiro de nível igual ao seu) a sua escolha."
+          },
+          {
+            name: "Caminho do Governante",
+            description: "Você recebe um poder de nobre (como um nobre de nível igual ao seu) a sua escolha."
+          },
+        ]
+      },
+      {
+        name: "Barão",
+        description: "No 10º nível, você ascende dentro da nobreza e passa a receber impostos de seus plebeus. Você recebe o poder Título e um domínio de nível 1. Se já tiver um domínio, em vez disso ele recebe uma construção gratuita (cujos pré-requisitos seu domínio cumpra)."
+      },
+      {
+        name: "Visconde",
+        description: "No 11º nível, você adquire um título mais alto. Se escolheu o Caminho do Soldado, recebe +1 PV por nível de vassalo. Se escolheu o Caminho do Governante, recebe +1 em Inteligência."
+      },
+      {
+        name: "Conde",
+        description: "A partir do 12º nível, você é um alto nobre e tem acesso a equipamentos poderosos. No início de cada aventura, você recebe um “orçamento” de T$ 30.000 que pode gastar em itens mágicos. Esses itens devem ser devolvidos ou reembolsados no fim da aventura. Além disso, recebe um poder de cavaleiro ou geral a sua escolha."
+      },
+      {
+        name: "Marquês",
+        description: "No 13º nível, seus feitos alçam-no a um título ainda mais alto. Se escolheu o Caminho do Soldado, você recebe redução de dano 5 e +2 na Defesa. Se escolheu o Caminho do Governante, você passa a somar seu Carisma em seus testes de resistência."
+      },
+      {
+        name: "Duque",
+        description: "No 14º nível, você se tornou um dos mais altos nobres do reino. Quando você usa Autoridade Feudal, o nível do parceiro convocado aumenta em um passo. Além disso, você recebe um poder de cavaleiro a sua escolha."
+      },
+      {
+        name: "Arquiduque",
+        description: "No 15º nível você atinge o mais alto grau da nobreza, possuindo uma aura que o distingue das pessoas normais e o torna quase intocável. Uma vez por rodada, quando uma criatura inteligente lhe causar dano, você pode gastar 5 PM para reduzir esse dano a 0."
+      },
+      {
+        name: "Conselheiro Real",
+        description: "A partir do 16º nível, você se torna um dos conselheiros do rei e passa a partilhar do poder de Sua Majestade. Você recebe um poder de cavaleiro a sua escolha e aprende e pode lançar uma magia divina de até 4º círculo a sua escolha (atributo-chave Carisma)."
+      },
+      {
+        name: "Rei Mercenário",
+        description: "No 17º nível, você dá seus primeiros passos rumo à majestade, e a terra responde às suas aspirações. Se escolheu o Caminho do Soldado, você recebe 3 pontos de atributo para distribuir como quiser em Força, Destreza e Constituição. Se escolheu o Caminho do Governante, recebe 3 pontos de atributo para distribuir como quiser em Inteligência, Sabedoria e Carisma."
+      },
+      {
+        name: "Rei",
+        description: "No 18º nível, seu reino já não precisa mais do apoio de seu antigo lorde — mas vocês ainda são aliados. Você recebe +1 em Carisma e um poder de cavaleiro a sua escolha."
+      },
+      {
+        name: "Alto Rei",
+        description: "No 19º nível, você se torna um alto rei, senhor de seu reino e do antigo reino de seu lorde. Tem a sua disposição seguidores e riquezas sem fim — seu “orçamento” de itens mágicos aumenta para T$ 100.000 e seu limite de parceiros aumenta em 2."
+      },
+      {
+        name: "Imperador",
+        description: "No 20º nível, você chegou ao ápice político de Arton. Talvez tenha colonizado um continente desconhecido. Talvez tenha conquistado o Império de Tauron ou o Reinado. De qualquer forma, você agora é um grande imperador, respeitado e temido por todos. Sua fama não tem limites e as pessoas atribuem a você os mais variados poderes. Você recebe +1 em dois atributos diferentes a sua escolha e aprende e pode lançar uma magia divina de até 5º círculo a sua escolha (atributo-chave Carisma). Você pode começar a pensar em dar terras a seu antigo escudeiro, formando mais um rei e continuando o nobre ciclo do cavaleiro vassalo."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Baluarte +2, código de honra, jovem pajem, suserano" },
+      { level: 2, abilities: "Valete" },
+      { level: 3, abilities: "Escudeiro aprendiz" },
+      { level: 4, abilities: "Guarda do castelo" },
+      { level: 5, abilities: "Baluarte +4, vigilante das estradas" },
+      { level: 6, abilities: "Cavaleiro do reino" },
+      { level: 7, abilities: "Sargento do reino" },
+      { level: 8, abilities: "Capitão do reino" },
+      { level: 9, abilities: "Baluarte +6, lorde" },
+      { level: 10, abilities: "Barão" },
+      { level: 11, abilities: "Visconde" },
+      { level: 12, abilities: "Conde" },
+      { level: 13, abilities: "Baluarte +8, marquês" },
+      { level: 14, abilities: "Duque" },
+      { level: 15, abilities: "Arquiduque" },
+      { level: 16, abilities: "Conselheiro real" },
+      { level: 17, abilities: "Baluarte +10, rei mercenário" },
+      { level: 18, abilities: "Rei" },
+      { level: 19, abilities: "Alto rei" },
+      { level: 20, abilities: "Imperador" }
+    ],
+    extras: [
+    {
+      title: "Vassalo em Campanha",
+      description: "O vassalo é uma classe diferente. Em vez de oferecer muitos poderes abertos, que podem ser escolhidos pelo jogador, tem uma lista em grande parte fixa e imutável. Em vez de se encaixar em quase qualquer campanha, exige uma progressão narrativa para o personagem — determinando parcialmente os rumos da história. Como lidar com toda essa esquisitice?\nAntes de escolher um vassalo, o jogador deve conversar com o mestre, garantindo que essa variante tem espaço na campanha. Por sua vez, o mestre deve trabalhar com o jogador para que sua ascensão na aristocracia aconteça em jogo.\nSimulando o lado mais tradicional e até antiquado da nobreza de Arton, o vassalo também é uma variante mais estanque em termos de regras. Empurra o personagem e a campanha como um todo para um certo lado. Por isso, todos precisam estar de acordo para que ele funcione. Se você prefere um personagem mais solto, que tenha mais opções de poderes e liberdade na campanha, talvez um cavaleiro ou um nobre se encaixem mais com seu conceito.\nPara um exemplo de como um personagem vassalo funciona na mesa, você pode assistir à Guilda do Macaco — na campanha, Lothar Algherulff seguiu essa variante do 1º ao 17º nível. O sistema de jogo era outro, mas a classe era parecida e os ajustes necessários na campanha não dependeram de regras, mas de história."
+    },
+    {
+      title: "O Treinamento de um Vassalo",
+      description: "Ao longo de sua carreira, o vassalo se torna treinado em diversas perícias. Sempre que receber um desses treinamentos por uma habilidade de vassalo, se já for treinado na perícia, em vez disso você recebe +2 nela."
+    },
+    ]
+    },
+    { id: "Ventanista (Ladino)",
+    name: "Ventanista (Ladino)",
+    powersUrl: "/poderes/ladino",
+    origin: "Herois de Arton",
+    image: "/classes/ventanista.png",
+    description: "O ladino que usa suas habilidades para lutar deveria ser guerreiro. Tudo que vale a pena ser feito exige sutileza e graça, incluindo roubar. Isso é o que pensa o ladino ventanista.\nA palavra designa um ladrão que entra pela janela, furtando sem usar violência. Assim, o ventanista é o mais silencioso, furtivo e galante dos ladinos. Para ele, força física não é só desnecessária — é uma desvantagem. O que importa é ter passos leves e mãos rápidas, entrar e sair sem ser visto, executar cada ardil com precisão milimétrica.\nO ventanista pode ser um verdadeiro “ladrão de casaca”, participando da alta sociedade e encantando os nobres com seu charme, ou uma figura misteriosa, oculta nas sombras. Muitos enriquecem e não largam a vida de crime, roubando por esporte ou concentrando-se em obras de arte e outros tesouros que nunca irão vender. Muitos ventanistas têm alcunhas ou identidades secretas, deixando pequenos objetos como sua marca registrada na cena do crime. É um prazer testemunhar a confusão do conde ao ver que seu colar de safiras mágicas foi trocado por um cisne de cerâmica, cortesia do misterioso Cisne Azul…\nEsse é o ventanista: um mão-leve. Um gatuno. Um vivaz.",
+    characteristics: {
+      pvBase: "12 + Constituição",
+      pvPerLevel: "3 + Constituição",
+      pmPerLevel: "4 PM por nível"
+    },
+    skills: {
+    mandatory: ["Ladinagem (Des)", "Reflexos (Des)"],
+    optional: {
+      skills: [      
+       'Acrobacia (Des)', 'Atletismo (For)', 'Atuação (Car)', 'Cavalgar (Des)', 'Conhecimento (Int)', 'Diplomacia (Car)', 'Enganação (Car)', 'Furtividade (Des)', 'Iniciativa (Des)', 'Intimidação (Car)', 'Intuição (Sab)', 'Investigação (Int)', 'Jogatina (Car)', 'Nobreza (Int)', 'Ofício (Int)', 'Percepção (Sab)', 'Pilotagem (Des)'
+      ],
+      count: 8
+      }
+    },
+    proficiency: "Nenhuma",
+    abilities: [
+      {
+      name: "Charme",
+      description: "Você soma seu Carisma em seu total de PM. Quando faz um teste de perícia (exceto testes de ataque), você pode gastar uma quantidade de PM a sua escolha (limitada pelo seu Carisma). Para cada PM que gastar, recebe +2 no teste.",
+      },
+      {
+        name: "Truques do Ofício",
+        description: "Você pode lançar magias arcanas de 1º círculo, mas apenas de encantamento e ilusão. Esta não é uma habilidade mágica e provém da sua capacidade de enganar outras pessoas . À medida que sobe de nível, pode lançar magias de círculos maiores (2º círculo no 6º nível, 3º círculo no 10º nível e 4º círculo no 14º nível). Você começa com duas magias de 1º círculo. A cada nível par (2º, 4º etc.), aprende uma magia de qualquer círculo que possa lançar. Você pode lançar essas magias vestindo armaduras leves sem precisar de testes de Misticismo. Seu atributo-chave para lançar magias é Inteligência."
+      },
+      {
+        name: "Evasão",
+        description: "A partir do 2º nível, quando sofre um efeito que permite um teste de Reflexos para reduzir o dano à metade, você não sofre dano algum se passar. Você ainda sofre dano normal se falhar no teste de Reflexos. Esta habilidade exige liberdade de movimentos; você não pode usá-la se estiver de armadura pesada ou na condição imóvel."
+      },
+      {
+        name: "Poder de Ladino",
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um dos poderes de sua classe ou geral."
+      },
+      {
+        name: "Disfarce Elaborado",
+        description: "No 3º nível, você aprende a simular habilidades práticas úteis para seus disfarces. Sempre que fizer um teste de Enganação para disfarce (Tormenta20, p. 118), você pode escolher um poder (exceto poderes da Tormenta) cujos pré-requisitos cumpra e que esteja relacionado a esse disfarce. Enquanto estiver disfarçado dessa forma, você sofre uma penalidade de –3 PM e pode usar o poder escolhido. A cada seis níveis, você pode assumir uma penalidade adicional de –3 PM ao se disfarçar para escolher um poder adicional."
+      },
+      {
+        name: "Esquiva Sobrenatural",
+        description: "No 4º nível, seus instintos são tão apurados que você consegue reagir ao perigo antes que seus sentidos percebam. Você nunca fica surpreendido."
+      },
+      {
+        name: "Virar a Casaca",
+        description: "No 7º nível, se estiver disfarçado, você pode gastar 1 PM para remover seu disfarce. Quando faz isso, você pode fazer um teste de esconder-se usando Enganação no lugar de Furtividade, mesmo sem camuflagem ou cobertura disponível."
+      },
+      {
+        name: "Olhos nas Costas",
+        description: "A partir do 8º nível, você consegue lutar contra diversos inimigos como se fossem apenas um. Você não pode ser flanqueado."
+      },
+      {
+        name: "Evasão Aprimorada",
+        description: "No 10º nível, quando sofre um efeito que permite um teste de Reflexos para reduzir o dano à metade, você não sofre dano algum se passar e sofre apenas metade do dano se falhar. Esta habilidade exige liberdade de movimentos; você não pode usá-la se estiver de armadura pesada ou na condição imóvel."
+      },
+      {
+        name: "Provocação Ousada",
+        description: "A partir do 11º nível, em seu primeiro turno em cada cena, você pode gastar uma ação completa para provocar seus inimigos. Você pode deixar um cartão de visitas visível, declarar seu plano ou fazer outra ação que alerte seus inimigos de sua presença e de suas intenções. Até o fim da cena, seus inimigos recebem +2 em testes de Percepção, Sobrevivência e Vontade contra você. Entretanto, no início de seus turnos você recupera 2 PM. Esta habilidade só tem efeito se houver um risco associado a declarar suas ações (a critério do mestre) e recupera um máximo de PM por cena igual ao seu nível."
+      },
+      {
+        name: "O Grande Golpe",
+        description: "No 20º nível, no início de cada aventura, você pode escolher uma quantidade de magias, arcanas ou divinas, igual à sua Inteligência (você pode escolher a mesma magia mais de uma vez). Para cada escolha feita, defina um tipo de cena entre ação, exploração e interpretação (Tormenta20, p. 252). Até o fim da aventura, para cada vez que uma magia foi escolhida, se estiver em uma cena do tipo definido para ela, você pode lançá-la sem gastar PM (limite de PM 20, atributo-chave Inteligência). Esta não é uma habilidade mágica e provém da sua capacidade de enganar outras pessoas."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Charme, truques do ofício" },
+      { level: 2, abilities: "Evasão, poder de ladino" },
+      { level: 3, abilities: "Disfarce elaborado (1 poder), poder de ladino" },
+      { level: 4, abilities: "Esquiva sobrenatural, poder de ladino" },
+      { level: 5, abilities: "Poder de ladino" },
+      { level: 6, abilities: "Poder de ladino" },
+      { level: 7, abilities: "Poder de ladino, virar a casaca" },
+      { level: 8, abilities: "Olhos nas costas, poder de ladino" },
+      { level: 9, abilities: "Disfarce elaborado (2 poderes), poder de ladino" },
+      { level: 10, abilities: "Evasão aprimorada, poder de ladino" },
+      { level: 11, abilities: "Poder de ladino, provocação ousada" },
+      { level: 12, abilities: "Poder de ladino" },
+      { level: 13, abilities: "Poder de ladino" },
+      { level: 14, abilities: "Poder de ladino" },
+      { level: 15, abilities: "Disfarce elaborado (3 poderes), poder de ladino" },
+      { level: 16, abilities: "Poder de ladino" },
+      { level: 17, abilities: "Poder de ladino" },
+      { level: 18, abilities: "Poder de ladino" },
+      { level: 19, abilities: "Poder de ladino" },
+      { level: 20, abilities: "O grande golpe, poder de ladino" }
+    ],
+    extras: [
+    {
+      title: "Magias Simuladas",
+      description: "Uma magia simulada é uma habilidade não mágica que reproduz os efeitos de uma magia, como os poderes Flagelo dos Mares e Truque de Mágica (Tormenta20, pp. 48 e 89). Magias simuladas seguem as mesmas regras de magias normais, exceto por não serem habilidades mágicas e não contarem como magias (não se beneficiam de efeitos que afetam magias, como itens esotéricos e catalisadores, e não exigem testes de concentração). Entretanto, elas não se acumulam com outras magias (simuladas ou não)."
+    },
+    ]
+    },
+    
     
 ];
