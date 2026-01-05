@@ -34,8 +34,7 @@
 
 ------------------Origem-----------------------------
 
-  {
-    id: "",
+  { id: "",
     name: "",
     description: "",
     items: [
@@ -50,7 +49,7 @@
       name: "",
       description: ""
     },
-    source: "Tormenta20 - Jogo do Ano"
+    source: "Herois de Arton"
   },
 
 ------------------Classe-----------------------------

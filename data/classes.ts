@@ -1881,7 +1881,7 @@ export const classes: GameClass[] = [
       },
       {
         name: "Esquiva Sagaz",
-        description: "No 3º nível, você recebe esta habilidade como o bucaneiro básico."
+        description: "No 3º nível, você recebe +1 na Defesa e em Reflexos. Esse bônus aumenta em +1 a cada quatro níveis. Esta habilidade exige liberdade de movimentos; você não pode usá-la se estiver de armadura pesada ou na condição imóvel."
       },
       {
         name: "Truques de Capa.",
@@ -1959,12 +1959,6 @@ export const classes: GameClass[] = [
       { level: 19, abilities: "Esquiva sagaz +5, poder de bucaneiro" },
       { level: 20, abilities: "Duelista lendário, poder de bucaneiro" }
     ],
-    extras: [
-    {
-      title: "",
-      description: ""
-    },
-    ]
     },
     { id: "Ermitão (Druida)",
     name: "Ermitão (Druida)",
