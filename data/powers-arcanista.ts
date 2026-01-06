@@ -1,152 +1,251 @@
 import { Power } from "@/types/power";
 
 export const powersArcanista: Power[] = [
-  {
-    id: "1",
+  { id: "Arcano de Batalha",
     name: "Arcano de Batalha",
     description: "Quando lança uma magia, você soma seu atributo-chave na rolagem de dano.",
     prerequisite: "Nenhum",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "2",
+  { id: "Aumento de Atributo",
     name: "Aumento de Atributo",
     description: "Você recebe +1 em um atributo. Você pode escolher este poder várias vezes, mas apenas uma vez por patamar para um mesmo atributo.",
     prerequisite: "Nenhum",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "3",
+  { id: "Fluxo de Mana",
     name: "Fluxo de Mana",
     description: "Você pode manter dois efeitos sustentados ativos simultaneamente com apenas uma ação livre, pagando o custo de cada efeito separadamente.",
     prerequisite: "10º nível de arcanista.",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "4",
+  { id: "Foco Vital",
     name: "Foco Vital",
     description: "Se você estiver segurando seu foco e sofrer dano que o levaria a 0 PV ou menos, você fica com 1 PV e o foco perde PV igual ao valor excedente ou até ser destruído (se o foco for destruído, você sofre o dano excedente).",
     prerequisite: "Bruxo.",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "5",
+  { id: "Mestre em Escola",
     name: "Mestre em Escola",
     description: "Escolha uma escola de magia. O custo para lançar magias dessa escola diminui em –1 PM. ",
     prerequisite: "Especialista em Escola com a escola escolhida, 8º nível de arcanista.",
     origin: "Tormenta20 - jogo do ano"
   },
-  {
-    id: "6",
+  { id: "Raio Poderoso",
     name: "Raio Poderoso",
     description: "Os dados de dano do seu Raio Arcano aumentam para d12 e o alcance dele aumenta para médio.",
     prerequisite: "Raio Arcano.",
     origin: "Tormenta20 - jogo do ano"
   },
-  {
-    id: "7",
+  { id: "Especialista em Escola",
     name: "Especialista em Escola",
     description: "Escolha uma escola de magia. A CD para resistir a suas magias dessa escola aumenta em +2.",
     prerequisite: "Bruxo ou Mago.",
     origin: "Tormenta20 - jogo do ano"
   },
-  {
-    id: "8",
+  { id: "Caldeirão do Bruxo",
     name: "Caldeirão do Bruxo",
     description: "Você pode criar poções, como se tivesse o poder geral Preparar Poção. Se tiver ambos, pode criar poções de até 5º círculo.",
     prerequisite: "Bruxo, treinado em Ofício (alquimista).",
     origin: "Tormenta20 - jogo do ano"
   },
-  {
-    id: "9",
+  { id: "Conhecimento Mágico",
     name: "Conhecimento Mágico",
     description: "Você aprende duas magias de qualquer círculo que possa lançar. Você pode escolher este poder quantas vezes quiser.",
     prerequisite: "Nenhum",
     origin: "Tormenta20 - jogo do ano"
   },
-  {
-    id: "10",
+  { id: "Fortalecimento Arcano",
     name: "Fortalecimento Arcano",
     description: "A CD para resistir a suas magias aumenta em +1. Se você puder lançar magias de 4º círculo, em vez disso ela aumenta em +2.",
     prerequisite: "5º nível de arcanista.",
     origin: "Tormenta20 - jogo do ano"
   },
-  {
-    id: "11",
+  { id: "Herança Superior",
     name: "Herança Superior",
     description: "Você recebe a herança superior de sua linhagem sobrenatural.",
     prerequisite: "Herança Aprimorada, 11º nível de arcanista.",
     origin: "Tormenta20 - jogo do ano"
   },
-  {
-    id: "12",
+  { id: "Poder Mágico",
     name: "Poder Mágico",
     description: "Você recebe +1 ponto de mana por nível de arcanista. Quando sobe de nível, os PM. Por exemplo, se escolher este poder no 4º nível, recebe 4 PM. Quando subir para o 5º nível, recebe +1 PM e assim por diante.",
     prerequisite: "Nenhum",
     origin: "Tormenta20 - jogo do ano"
   },
-  {
-    id: "13",
+  { id: "Raio Elemental",
     name: "Raio Elemental",
     description: "Quando usa Raio Arcano, você pode pagar 1 PM para que ele cause dano de ácido, eletricidade, fogo, frio ou trevas, à sua escolha. Se o alvo falhar no teste de Reflexos, sofre uma condição, de acordo com o tipo de dano (veja a descrição das condições). Ácido: vulnerável por 1 rodada. Eletricidade: ofuscado por 1 rodada. Fogo: fica em chamas. Frio: lento por 1 rodada. Trevas: não pode curar PV por 1 rodada.",
     prerequisite: "Raio Arcano.",
     origin: "Tormenta20 - jogo do ano"
   },
-  {
-    id: "14",
+  { id: "Contramágica Aprimorada",
     name: "Contramágica Aprimorada",
     description: "Uma vez por rodada, você pode fazer uma contramágica como uma reação.",
     prerequisite: "Dissipar Magia.",
     origin: "Tormenta20 - jogo do ano"
   },
-  {
-    id: "15",
+  { id: "Envolto em Mistério",
     name: "Envolto em Mistério",
     description: "Sua aparência e postura assombrosas o permitem manipular e assustar pessoas ignorantes ou supersticiosas. O mestre define o que exatamente você pode fazer e quem se encaixa nessa descrição. Como regra geral, você recebe +5 em Enganação e Intimidação contra pessoas não treinadas em Conhecimento ou Misticismo.",
     prerequisite: "Nenhum",
     origin: "Tormenta20 - jogo do ano"
   },
-  {
-    id: "16",
+  { id: "Herança Aprimorada",
     name: "Herança Aprimorada",
     description: "Você recebe a herança aprimorada de sua linhagem sobrenatural.",
     prerequisite: "Feiticeiro, 6º nível de arcanista.",
     origin: "Tormenta20 - jogo do ano"
   },
-  {
-    id: "17",
+  { id: "Magia Pungente",
     name: "Magia Pungente",
     description: "Quando lança uma magia, você pode pagar 1 PM para aumentar em +2 a CD para resistir a ela.",
     prerequisite: "Nenhum.",
     origin: "Tormenta20 - jogo do ano"
   },
-  {
-    id: "18",
+  { id: "Raio Arcano",
     name: "Raio Arcano",
     description: "Você pode gastar uma ação padrão para causar 1d8 pontos de dano de essência num alvo em alcance curto. Esse dano aumenta em +1d8 para cada círculo de magia acima do 1º que você puder lançar. O alvo pode fazer um teste de Reflexos (CD atributo-chave) para reduzir o dano à metade. O raio arcano conta como uma magia para efeitos de habilidades e itens que beneficiem suas magias.",
     prerequisite: "Nenhum.",
     origin: "Tormenta20 - jogo do ano"
   },
-  {
-    id: "19",
+  { id: "Tinta do Mago",
     name: "Tinta do Mago",
     description: "Você pode criar pergaminhos, como se tivesse o poder Escrever Pergaminho. Se tiver ambos, seu custo para criar pergaminhos é reduzido à metade.",
     prerequisite: "Mago, treinado em Ofício (escriba).",
     origin: "Tormenta20 - jogo do ano"
   },
-  {
-    id: "20",
+  { id: "Escriba Arcano",
     name: "Escriba Arcano",
     description: "Você pode aprender magias copiando os textos de pergaminhos e grimórios de outros magos. Aprender uma magia dessa forma exige um dia de trabalho e T$ 250 em matérias-primas por PM necessário para lançar a magia. Assim, aprender uma magia de 3º círculo (6 PM) exige 6 dias de trabalho e o gasto de T$ 1.500.",
     prerequisite: "Mago, treinado em Ofício (escriba).",
     origin: "Tormenta20 - jogo do ano"
   },
-  {
-    id: "21",
+  { id: "Familiar",
     name: "Familiar",
     description: "Você possui um animal de estimação mágico. Veja ao final da página sobre.",
     prerequisite: "Nenhum.",
     origin: "Tormenta20 - jogo do ano"
+  },
+  { id: "Agrilhoar os Caídos",
+    name: "Agrilhoar os Caídos",
+    description: "Quando uma de suas magias de necromancia reduz os PV de um inimigo vivo a 0 ou menos, você pode aprisionar uma parte de seu espírito, que então fica flutuando ao seu redor. Para cada espírito, você recebe +2 na Defesa e em testes de resistência. Quando lança uma magia de dano, você pode libertar um espírito para causar +2d6 pontos de dano de trevas. Você pode acumular um máximo de espíritos simultâneos igual ao seu atributo-chave e eles permanecem ao seu redor até serem libertados ou até o fim do dia.",
+    prerequisite: "3º nível de arcanista",
+    origin: "Herois de Arton"
+  },
+  { id: "Alquimia Arcana",
+    name: "Alquimia Arcana",
+    description: "A CD para resistir aos preparados alquímicos e poções que você usa aumenta em +1 para cada círculo de magia a que você tiver acesso. ",
+    prerequisite: "treinado em Ofício (alquimista)",
+    origin: "Herois de Arton"
+  },
+  { id: "Apoteose Celestial",
+    name: "Apoteose Celestial",
+    description: "Sua conexão com o divino se torna ainda mais profunda, às custas de uma fração de sua mortalidade. Você recebe +1 em Sabedoria e aprende uma magia divina de cada círculo a que tenha acesso. Entretanto, sua Constituição diminui em –1. ",
+    prerequisite: "Herança Superior (linhagem celestial), 17° nível de arcanista",
+    origin: "Herois de Arton"
+  },
+  { id: "Apoteose Dracônica",
+    name: "Apoteose Dracônica",
+    description: "A influência de sua magia dracônica se torna cada vez mais evidente, tornando-o mais e mais próximo dos dragões. As magias do seu elemento escolhido causam +1 ponto de dano por dado e, contra criaturas imunes a esse elemento, ainda causam metade do dano. Contudo, você não pode mais lançar magias do tipo oposto ao seu elemento escolhido (fogo para frio e ácido para eletricidade). ",
+    prerequisite: "Herança Superior (linhagem dracônica), 17° nível de arcanista",
+    origin: "Herois de Arton"
+  },
+  { id: "Apoteose Feérica",
+    name: "Apoteose Feérica",
+    description: "Sua natureza feérica se acentua, mas isso o afasta do mundo dos mortais. Sempre que um ou mais inimigos falharem em um teste de Vontade contra uma de suas magias, você recebe 1 PM temporário cumulativo que dura até o fim da cena. Se a magia é de encantamento ou ilusão, em vez disso você recebe 2 PM temporários. Em ambos os casos, o ganho é limitado pelo total de PM gasto na magia. Contudo, você não pode mais lançar magias de convocação e necromancia. ",
+    prerequisite: "Herança Superior (linhagem feérica), 17° nível de arcanista",
+    origin: "Herois de Arton"
+  },
+  { id: "Apoteose Rubra",
+    name: "Apoteose Rubra",
+    description: "Você acolheu a corrupção rubra em seu ser — uma escolha que pode ser percebida por todos ao redor. Escolha uma magia que cause dano de cada círculo a que tem acesso. O tipo de dano dessas magias muda para psíquico. Além disso, quando lança uma magia de dano psíquico, você soma seu total de poderes da Tormenta na rolagem de dano. Este poder conta como um poder da Tormenta (exceto para perda de Carisma).",
+    prerequisite: "Herança Superior (linhagem rubra), 17° nível de arcanista",
+    origin: "Herois de Arton"
+  },
+  { id: "Arcanista de Linha de Frente",
+    name: "Arcanista de Linha de Frente",
+    description: "Quando você lança uma magia, criaturas adjacentes sofrem –2 em seus testes de resistência contra ela e, se ela causar dano, causa um dado extra do mesmo tipo.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Asas de Sapo",
+    name: "Asas de Sapo",
+    description: "Você pode empunhar dois catalisadores diferentes em uma mão ao mesmo tempo e, quando lança uma magia, pode gastar ambos para aplicar seus efeitos. ",
+    prerequisite: "treinado em Ofício (alquimista)",
+    origin: "Herois de Arton"
+  },
+  { id: "Contingência Arcana",
+    name: "Contingência Arcana",
+    description: "Quando lança Runa de Proteção com o aprimoramento que muda o alvo para “você”, você pode substituir o componente material da magia por uma penalidade em PM igual ao círculo da magia inscrita na runa.",
+    prerequisite: "Runa de Proteção",
+    origin: "Herois de Arton"
+  },
+  { id: "Contramágica Superior",
+    name: "Contramágica Superior",
+    description: "Quando anula uma magia com uma contramágica, você recebe uma quantidade de PM temporários igual ao círculo da magia anulada (limitada pelos PM que gastou para anular).",
+    prerequisite: "Contramágica Aprimorada, 9º nível de arcanista",
+    origin: "Herois de Arton"
+  },
+  { id: "Especialista em Invocações",
+    name: "Especialista em Invocações",
+    description: "Você soma seu atributo-chave na Defesa de suas criaturas conjuradas por habilidades mágicas (incluindo capangas) e a ação necessária para comandá-las diminui em um passo (de padrão para movimento e de movimento para livre). Contudo, cada comando só pode ser executado uma vez por rodada.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Familiar Aprimorado",
+    name: "Familiar Aprimorado",
+    description: "Seu familiar pode falar e passa a fornecer um segundo benefício, escolhido entre os tipos comuns de familiares. ",
+    prerequisite: "Familiar, 5º nível de arcanista",
+    origin: "Herois de Arton"
+  },
+  { id: "Ingrediente Especial",
+    name: "Ingrediente Especial",
+    description: "Quando usa uma poção, você pode usar um catalisador e aplicar seus efeitos a ela.",
+    prerequisite: "Caldeirão do Bruxo, 5º nível de arcanista",
+    origin: "Herois de Arton"
+  },
+  { id: "Magia Performática",
+    name: "Magia Performática",
+    description: "Quando lança uma magia diante de uma ou mais criaturas inteligentes (Int –3 ou mais), você pode fazer um teste de Atuação (CD 20 + custo em PM da magia) para lançá-la de forma impressionante. Se você passar, a CD da magia aumenta em +1. Esse bônus aumenta em +1 para cada 10 pontos pelos quais o teste passar da CD. Se falhar, a magia não funciona. ",
+    prerequisite: "Car 1, treinado em Atuação",
+    origin: "Herois de Arton"
+  },
+  { id: "Memória Súbita",
+    name: "Memória Súbita",
+    description: "Escolha uma de suas magias que não esteja memorizada. Você pode gastar uma ação de movimento para memorizar essa magia até o fim da cena. Se fizer isso, uma de suas outras magias memorizadas, a sua escolha, deixa de estar memorizada.",
+    prerequisite: "Mago",
+    origin: "Herois de Arton"
+  },
+  { id: "O Próprio Sangue",
+    name: "O Próprio Sangue",
+    description: "Se você aprender novamente como feiticeiro uma magia que já possa lançar por uma habilidade qualquer (como uma habilidade de raça ou um poder concedido), a CD para resistir a ela aumenta em +2. ",
+    prerequisite: "Feiticeiro",
+    origin: "Herois de Arton"
+  },
+  { id: "Raio Dividido",
+    name: "Raio Dividido",
+    description: "Você pode usar Raio Arcano como uma ação completa, em vez de padrão. Se fizer isso, ele afeta um número de alvos igual ao seu atributo-chave. ",
+    prerequisite: "Raio Arcano, 5º nível de arcanista",
+    origin: "Herois de Arton"
+  },
+  { id: "Sifão de Mana",
+    name: "Sifão de Mana",
+    description: "Quando você lança uma magia e pelo menos um inimigo falha no teste de resistência contra ela, você recupera uma quantidade de pontos de mana igual ao círculo da magia (limitada pelo total de PM gastos nela). ",
+    prerequisite: "17° nível de arcanista",
+    origin: "Herois de Arton"
+  },
+  { id: "Trama Célere",
+    name: "Trama Célere",
+    description: "Uma vez por rodada, quando usa uma ação padrão para lançar uma magia, você pode gastar 2 PM para fazer uma conjuração dupla. Isso permite que você lance uma segunda magia de 1º círculo como ação livre, pagando seu custo em PM como normal.",
+    prerequisite: "9º nível de arcanista",
+    origin: "Herois de Arton"
+  },
+  { id: "Transliteração Impossível",
+    name: "Transliteração Impossível",
+    description: "Quando usa um pergaminho de uma magia que conheça, você recebe +2 PM para gastar em aprimoramentos e a magia não pode ser anulada por contramágica. ",
+    prerequisite: "Escriba Arcano",
+    origin: "Herois de Arton"
   },
 
 
