@@ -124,20 +124,73 @@ export default function BucaneiroPodersPage() {
             </div>
         )}
 
-        {/* Seção de Informação (Bravatas) */}
-        <div className="mt-16 p-8 rounded bg-stone-900/50 border border-stone-800 w-full space-y-6">
-            <div>
-                <h3 className="text-2xl font-bold text-cyan-500 mb-4 font-serif">Bravatas</h3>
-                <p className="text-stone-300 leading-relaxed font-serif">
-                Audazes e imprudentes, bucaneiros têm o costume da bravata — a promessa pública de realizar uma façanha, às vezes atrelada a uma restrição, como “Navegarei até Galrasia com um barco furado!”. Todas as Bravatas compartilham as seguintes regras:
-                </p>
+        {/* Seção de Informação (Bravatas & Tabela) */}
+        <div className="mt-16 p-8 rounded bg-stone-900/50 border border-stone-800 w-full space-y-8">
+            
+            {/* Texto das Bravatas */}
+            <div className="space-y-6">
+                <div>
+                    <h3 className="text-2xl font-bold text-cyan-500 mb-4 font-serif">Bravatas</h3>
+                    <p className="text-stone-300 leading-relaxed font-serif">
+                    Audazes e imprudentes, bucaneiros têm o costume da bravata — a promessa pública de realizar uma façanha, às vezes atrelada a uma restrição, como “Navegarei até Galrasia com um barco furado!”. Todas as Bravatas compartilham as seguintes regras:
+                    </p>
+                </div>
+
+                <div className="space-y-2 text-stone-400 font-serif border-l-2 border-stone-800 pl-4">
+                    <p className="text-stone-300 leading-relaxed"><span className="text-cyan-700 font-bold">•</span> Uma Bravata deve envolver um desafio real. Em termos de jogo, deve ser uma ação com ND igual ou maior que o nível do bucaneiro.</p>
+                    <p className="text-stone-300 leading-relaxed"><span className="text-cyan-700 font-bold">•</span> Você só pode ter uma Bravata de cada tipo ativa por vez. Caso falhe em uma Bravata ou desista dela, você perde todos os seus PM e só pode recuperá-los a partir do próximo dia.</p>
+                    <p className="text-stone-300 leading-relaxed"><span className="text-cyan-700 font-bold">•</span> Quando você cumpre uma Bravata, recebe um benefício que dura até o fim da aventura. De acordo com o mestre, caso isso aconteça perto do fim da aventura, o benefício pode se estender até a próxima.</p>
+                </div>
             </div>
 
-            <div className="space-y-2 text-stone-400 font-serif">
-                <p className="text-stone-300 leading-relaxed">- Uma Bravata deve envolver um desafio real. Em termos de jogo, deve ser uma ação com ND igual ou maior que o nível do bucaneiro.</p>
-                <p className="text-stone-300 leading-relaxed">- Você só pode ter uma Bravata de cada tipo ativa por vez. Caso falhe em uma Bravata ou desista dela, você perde todos os seus PM e só pode recuperá-los a partir do próximo dia.</p>
-                <p className="text-stone-300 leading-relaxed">- Quando você cumpre uma Bravata, recebe um benefício que dura até o fim da aventura. De acordo com o mestre, caso isso aconteça perto do fim da aventura, o benefício pode se estender até a próxima.</p>
+            <div className="border-t border-stone-800 my-8"></div>
+
+            {/* TABELA 1-17: INTRODUÇÃO CALOROSA */}
+            <div>
+                <h4 className="text-lg font-bold text-center text-stone-200 uppercase tracking-widest mb-4 font-serif">
+                    Tabela Introdução Calorosa
+                </h4>
+                
+                <div className="overflow-x-auto rounded border border-stone-800 shadow-md">
+                    <table className="w-full text-left border-collapse text-sm">
+                        <thead className="bg-stone-950 text-cyan-500 uppercase tracking-wider text-xs">
+                            <tr>
+                                <th className="p-4 font-bold border-b border-stone-800">Apresentação</th>
+                                <th className="p-4 font-bold border-b border-stone-800">Ação</th>
+                                <th className="p-4 font-bold border-b border-stone-800">Benefício</th>
+                                <th className="p-4 font-bold border-b border-stone-800">Exemplo</th>
+                            </tr>
+                        </thead>
+                        <tbody className="divide-y divide-stone-800 bg-stone-900/30 font-serif text-stone-300">
+                            <tr className="hover:bg-stone-800/50 transition-colors">
+                                <td className="p-4 font-medium text-stone-200">Saudação educada</td>
+                                <td className="p-4">Livre</td>
+                                <td className="p-4">1 PM temporário</td>
+                                <td className="p-4 italic text-stone-400">“Olá!”</td>
+                            </tr>
+                            <tr className="hover:bg-stone-800/50 transition-colors bg-stone-900/50">
+                                <td className="p-4 font-medium text-stone-200">Apresentar o próprio nome</td>
+                                <td className="p-4">Movimento</td>
+                                <td className="p-4">+2 em perícias baseadas em Carisma</td>
+                                <td className="p-4 italic text-stone-400">“Meu nome é Lorthan.”</td>
+                            </tr>
+                            <tr className="hover:bg-stone-800/50 transition-colors">
+                                <td className="p-4 font-medium text-stone-200">Declarar uma ligação pessoal</td>
+                                <td className="p-4">Padrão</td>
+                                <td className="p-4">+2 em rolagens de dano</td>
+                                <td className="p-4 italic text-stone-400">“Vocês roubaram a colheita dos camponeses.”</td>
+                            </tr>
+                            <tr className="hover:bg-stone-800/50 transition-colors bg-stone-900/50">
+                                <td className="p-4 font-medium text-stone-200">Revelar seu objetivo na cena</td>
+                                <td className="p-4">Completa</td>
+                                <td className="p-4">Pode rolar novamente um único teste de perícia recém-feito</td>
+                                <td className="p-4 italic text-stone-400">“Eu vim aqui para puni-los!”</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
+
         </div>
       </div>
 
