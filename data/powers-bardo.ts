@@ -1,145 +1,245 @@
 import { Power } from "@/types/power";
 
 export const powersBardo: Power[] = [
-  {
-    id: "1",
+  { id: "Arte Mágica",
     name: "Arte Mágica",
     description: "Enquanto você estiver sob efeito de sua Inspiração, a CD para resistir a suas habilidades de bardo aumenta em +2.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "2",
+  { id: "Aumentar Repertório",
     name: "Aumentar Repertório",
     description: "Você aprende duas magias de qualquer círculo que possa lançar. Elas devem pertencer às escolas que você sabe usar, mas podem ser arcanas ou divinas. Você pode escolher este poder quantas vezes quiser.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "3",
+  { id: "Aumento de Atributo",
     name: "Aumento de Atributo",
     description: "Você recebe +1 em um atributo. Você pode escolher este poder várias vezes, mas apenas uma vez por patamar para um mesmo atributo.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "4",
+  { id: "Dança das Lâminas",
     name: "Dança das Lâminas",
     description: "Quando você lança uma magia com execução de uma ação padrão, pode gastar 1 PM para fazer um ataque corpo a corpo como uma ação livre. ",
     prerequisite: "Esgrima Mágica, 10º nível de bardo.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "5",
+  { id: "Esgrima Mágica",
     name: "Esgrima Mágica",
     description: "Sua arte mescla esgrima e magia, transformando dança em golpes. Se estiver sob efeito de Inspiração, você pode substituir testes de Luta por testes de Atuação, mas apenas para ataques com armas corpo a corpo leves ou de uma mão.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "6",
+  { id: "Estrelato",
     name: "Estrelato",
     description: "Suas apresentações o tornaram famoso, fazendo com que você seja reconhecido e bem tratado por aqueles que apreciam a arte. Por outro lado, pode ser difícil passar despercebido, especialmente em grandes cidades. Quando usa Atuação para impressionar uma plateia, o bônus recebido em perícias baseadas em Carisma aumenta para +5. ",
     prerequisite: "6º nível de bardo.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "7",
+  { id: "Fascinar em Massa",
     name: "Fascinar em Massa",
     description: "Quando usa Música: Balada Fascinante, você pode gastar +2 PM. Se fizer isso, afeta todas as criaturas à sua escolha no alcance da música (você faz um único teste de Atuação, oposto pelo teste de Vontade de cada criatura).",
     prerequisite: "Música: Balada Fascinante",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "8",
+  { id: "Golpe Elemental",
     name: "Golpe Elemental",
     description: "Enquanto estiver sob efeito de Inspiração, sempre que você acertar um ataque corpo a corpo, pode gastar 1 PM para causar 1d6 de dano extra de ácido, eletricidade, fogo ou frio, à sua escolha. Para cada quatro níveis que possuir, pode gastar +1 PM para aumentar o dano em +1d6.",
     prerequisite: "Golpe Mágico",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "9",
+  { id: "Golpe Mágico",
     name: "Golpe Mágico",
     description: "Enquanto estiver sob efeito de Inspiração, sempre que você acertar um ataque corpo a corpo em um inimigo, recebe 2 PM temporários cumulativos. Você pode ganhar um máximo de PM temporários por cena igual ao seu nível. Esses pontos temporários desaparecem no final da cena.",
     prerequisite: "Esgrima Mágica",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "10",
+  { id: "Inspiração Marcial",
     name: "Inspiração Marcial",
     description: "Quando você usa Inspiração, você e seus aliados aplicam o bônus recebido em rolagens de dano (além de testes de perícia).",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "11",
+  { id: "Lendas e Histórias",
     name: "Lendas e Histórias",
     description: "Você é um arquivo vivo de relatos, canções e folclore. Além de outros benefícios a critério do mestre, pode gastar 1 PM para rolar novamente um teste recém realizado de Conhecimento, Misticismo, Nobreza ou Religião para informação, identificar criaturas ou identificar itens mágicos.",
     prerequisite: "Int 1.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "12",
+  { id: "Manipular",
     name: "Manipular",
     description: "Você pode gastar 1 PM para fazer uma criatura fascinada por você ficar enfeitiçada até o fim da cena (Von CD Car anula). Se a criatura passar, fica imune a este efeito por um dia. Usar esta habilidade não conta como ameaça à criatura fascinada.",
     prerequisite: "Música: Balada Fascinante.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "13",
+  { id: "Manipular em Massa",
     name: "Manipular em Massa",
     description: "Quando usa Manipular, você pode gastar +2 PM. Se fizer isso, afeta todas as criaturas à sua escolha em alcance curto.",
     prerequisite: "Fascinar em Massa, Manipular, 10º nível de bardo.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "14",
+  { id: "Música: Balada Fascinante",
     name: "Música: Balada Fascinante",
     description: "Faça um teste de Atuação oposto pelo teste de Vontade de uma criatura no alcance. Se você passar, ela fica fascinada enquanto você se concentrar (uma ação padrão por rodada). Um alvo hostil ou envolvido em combate recebe +5 no teste de resistência e tem direito a um novo teste sempre que você se concentrar. Se a criatura passar, fica imune a este efeito por um dia.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "15",
+  { id: "Música: Canção Assustadora",
     name: "Música: Canção Assustadora",
     description: "Faça um teste de Atuação oposto pelo teste de Vontade de cada criatura à sua escolha dentro do alcance (você faz um único teste). Alvos que falhem ficam abalados até o fim da cena. Alvos que passem ficam imunes a este efeito por um dia",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "16",
+  { id: "Música: Melodia Curativa",
     name: "Música: Melodia Curativa",
     description: "Criaturas à sua escolha no alcance recuperam $1d6$ PV. Quando usa esta habilidade, você pode gastar mais pontos de mana. Para cada PM extra, aumente a cura em +1d6 PV.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "17",
+  { id: "Melodia Restauradora",
     name: "Melodia Restauradora",
     description: "Quando você usa Música: Melodia Curativa, pode gastar +2 PM. Se fizer isso, escolha uma das condições a seguir: abalado, alquebrado, apavorado, atordoado, cego, confuso, enfeitiçado, esmorecido, exausto, fatigado, frustrado, pasmo ou surdo. Você remove a condição escolhida das criaturas afetadas pela música.",
     prerequisite: "Música: Melodia Curativa.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "18",
+  { id: "Mestre dos Sussurros",
     name: "Mestre dos Sussurros",
     description: "Você é dissimulado, atento para rumores e ótimo em espalhar fofocas. Quando faz um teste de Investigação para interrogar ou um teste de Enganação para intriga, você rola dois dados e usa o melhor resultado. Além disso, pode fazer esses testes em ambientes sociais (taverna, festival, corte...) sem custo e em apenas uma hora (em vez de um dia).",
     prerequisite: "Car 1, treinado em Enganação e Investigação.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "19",
+  { id: "Paródia",
     name: "Paródia",
     description: "Uma vez por rodada, quando vê outra criatura lançando uma magia em alcance médio, você pode pagar 1 PM e fazer um teste de Atuação (CD 15 + custo em PM da magia). Se passar, até o final de seu próximo turno você pode lançar essa magia.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "20",
+  { id: "Prestidigitação",
     name: "Prestidigitação",
     description: "Quando faz uma ação padrão, você pode aproveitar seus gestos para lançar uma magia com execução de ação completa ou menor. Faça um teste de Atuação (CD 15 + custo em PM da magia). Se passar, você lança a magia como uma ação livre. Se falhar, a magia não funciona, mas você gasta os PM mesmo assim. Outros personagens só percebem que você lançou uma magia com um teste de Misticismo (CD 20).",
     prerequisite: "6º nível de bardo.",
     origin: "Tormenta20 - Jogo do Ano"
+  },
+  { id: "Acorde Místico",
+    name: "Acorde Místico",
+    description: "Se estiver empunhando um instrumento musical, você pode gastar uma ação padrão para fazer um teste de Atuação oposto ao teste de Vontade de uma criatura em alcance curto. Se você vencer, a criatura sofre 1d6 pontos de dano de essência e fica vulnerável por 1 rodada. Esse dano aumenta em +1d6 para cada círculo de magia acima do 1º que você puder lançar. Quando faz um ataque como parte da execução de uma magia (como pelo aprimoramento de Toque Chocante), você pode usar este poder no lugar do ataque.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Acorde Poderoso",
+    name: "Acorde Poderoso",
+    description: "Os dados de dano do seu Acorde Místico aumentam para d10, o alcance dele aumenta para médio e, se você vencer o teste oposto, a vítima fica desprevenida, em vez de vulnerável. ",
+    prerequisite: "Acorde Místico",
+    origin: "Herois de Arton"
+  },
+  { id: "Adereço Musical",
+    name: "Adereço Musical",
+    description: "Você pode gastar 10 minutos para acoplar (ou desacoplar) um item esotérico a um instrumento musical. Isso permite empunhar o esotérico com a mesma mão que empunha o instrumento e usar seu efeito em Acorde Místico, como se esse poder fosse uma magia. Cada instrumento musical só pode ter um esotérico acoplado.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Apresentação Impactante",
+    name: "Apresentação Impactante",
+    description: "Quando usa Inspiração, você impacta também os inimigos dentro do alcance. Na próxima vez que um inimigo fizer um teste de ataque ou de resistência nessa cena, ele rola dois dados e usa o pior resultado (apenas uma vez por cena).",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Balada do Atirador",
+    name: "Balada do Atirador",
+    description: "Você pode usar Esgrima Mágica, e qualquer poder de bardo que o tenha como pré-requisito, com armas de ataque à distância leves ou de uma mão. Quando faz isso, você pode substituir testes de Pontaria por Atuação. ",
+    prerequisite: "Esgrima Mágica",
+    origin: "Herois de Arton"
+  },
+  { id: "Celebridade Artoniana",
+    name: "Celebridade Artoniana",
+    description: "No início de cada cena, você pode gastar 3 PM para fazer um teste de Atuação oposto pelo teste de Vontade de uma criatura inteligente (Int –3 ou maior) que possa ver. Se você vencer, a criatura se revela sua fã. Você recebe +5 em todos os testes de perícia contra ela e ela sofre –5 em todos os testes dela contra você até o fim da aventura. Quem vai querer agredir seu ídolo? ",
+    prerequisite: "Estrelato, 17º nível de bardo",
+    origin: "Herois de Arton"
+  },
+  { id: "Dança Acrobática",
+    name: "Dança Acrobática",
+    description: "Você pode substituir testes de Acrobacia por Atuação. Quando você faz isso para passar por um inimigo, ele só pode usar Acrobacia ou Iniciativa no teste oposto.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Espada Encantada",
+    name: "Espada Encantada",
+    description: "Quando você causa dano com seu Golpe Elemental, o alvo sofre uma condição conforme o tipo de dano escolhido. Ácido: vulnerável por 1 rodada. Eletricidade: ofuscado por 1 rodada. Fogo: em chamas. Frio: lento por 1 rodada.",
+    prerequisite: "Golpe Elemental",
+    origin: "Herois de Arton"
+  },
+  { id: "História de Acampamento",
+    name: "História de Acampamento",
+    description: "Você pode gastar 1 hora para entreter um número de pessoas igual ao seu nível com histórias e canções. A recuperação de PM por descanso dessas pessoas aumenta em +1 por nível nesse dia.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Inspiração Espirituosa",
+    name: "Inspiração Espirituosa",
+    description: "Na primeira vez que você usa Inspiração em cada combate, você e seus aliados recebem uma quantidade de PM temporários igual ao bônus fornecido por essa habilidade.",
+    prerequisite: "11º nível de bardo",
+    origin: "Herois de Arton"
+  },
+  { id: "Inspiração Resoluta",
+    name: "Inspiração Resoluta",
+    description: "Quando você usa Inspiração, você e seus aliados aplicam o bônus recebido na Defesa (além de testes de perícia).",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Inspiração Revigorante",
+    name: "Inspiração Revigorante",
+    description: "Quando você usa Inspiração, você e seus aliados recebem uma quantidade de PV temporários igual a 5 vezes o bônus fornecido.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Magia Performática",
+    name: "Magia Performática",
+    description: "Quando lança uma magia diante de uma ou mais criaturas inteligentes (Int –3 ou mais), você pode fazer um teste de Atuação (CD 20 + custo em PM da magia) para lançá-la de forma impressionante. Se você passar, a CD da magia aumenta em +1. Esse bônus aumenta em +1 para cada 10 pontos pelos quais o teste passar da CD. Se falhar, a magia não funciona.",
+    prerequisite: "Car 1, treinado em Atuação",
+    origin: "Herois de Arton"
+  },
+  { id: "Mago Vermelho",
+    name: "Mago Vermelho",
+    description: "Se estiver empunhando uma arma leve ou ágil, você soma o círculo máximo de magias que pode lançar nos testes de ataque e nas rolagens de dano com ela. Além disso, a mão da arma é considerada livre para lançar magias. ",
+    prerequisite: "treinado em Misticismo",
+    origin: "Herois de Arton"
+  },
+  { id: "Música: Marcha Vitoriosa",
+    name: "Música: Marcha Vitoriosa",
+    description: "Faça um teste de Atuação. Para cada 10 pontos no resultado desse teste, seus aliados dentro do alcance recebem +1 em rolagens de dano por 1 rodada.",
+    prerequisite: "Inspiração Marcial, 5º nível de bardo",
+    origin: "Herois de Arton"
+  },
+  { id: "Música: Réquiem Sombrio",
+    name: "Música: Réquiem Sombrio",
+    description: "Um cadáver de uma criatura Média ou menor dentro do alcance se ergue como um morto-vivo sob seu comando. Ele é um parceiro iniciante de um tipo a sua escolha aprovado pelo mestre que não conta em seu limite de parceiros. Você pode animar um máximo de cadáveres simultâneos igual ao seu Carisma. Os cadáveres se decompõem no fim da cena. ",
+    prerequisite: "necromancia como uma de suas escolas de magia",
+    origin: "Herois de Arton"
+  },
+  { id: "Música: Sonata da Distração",
+    name: "Música: Sonata da Distração",
+    description: "Faça um teste de Atuação oposto pela Vontade de cada criatura a sua escolha dentro do alcance (você faz um único teste). Alvos que falharem ficam desprevenidos por 1 rodada. Alvos que passarem ficam imunes a este efeito por 1 dia. Mental.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Portas da Fama",
+    name: "Portas da Fama",
+    description: "Você recebe +10 em testes de Diplomacia, Enganação e Furtividade para entrar em lugares proibidos — as pessoas simplesmente presumem que você tem acesso a tudo! ",
+    prerequisite: "Estrelato",
+    origin: "Herois de Arton"
+  },
+  { id: "Ressoar",
+    name: "Ressoar",
+    description: "Quando lança uma magia que tenha apenas você como alvo, você pode gastar 2 PM e fazer um teste de Atuação (CD 15 + custo em PM da magia). Se você passar, um aliado em alcance curto que esteja sob efeito de sua Inspiração é afetado pelo efeito básico da magia como se você a tivesse lançado nele. ",
+    prerequisite: "17º nível de bardo",
+    origin: "Herois de Arton"
+  },
+  { id: "Triunfo do Amor",
+    name: "Triunfo do Amor",
+    description: "Se você “conquistar” romanticamente um NPC, seus PM aumentam em +1 por nível até o fim da aventura. O mestre define exatamente o que você precisa fazer, de acordo com o NPC. Por padrão, isso envolve aumentar a atitude dele em relação a você para prestativo e então passar em um teste de Atuação, Diplomacia ou Enganação oposto pela Vontade do NPC +10. Você pode receber esse benefício até duas vezes por aventura (ou seja, pode conquistar até duas pessoas por aventura para ganhar +2 PM por nível).",
+    prerequisite: "",
+    origin: "Herois de Arton"
   },
 
   

@@ -5,7 +5,7 @@ export const powerCategories: PowerCategory[] = [
     id: "1",
     name: "Arcanista",
     slug: "arcanista",
-    description: "Poderes exclusivos de Arcanista",
+    description: "Poderes exclusivos de Arcanista.",
     origin: "tormenta20 - jogo do ano"
   },
   {
@@ -26,14 +26,14 @@ export const powerCategories: PowerCategory[] = [
     id: "4",
     name: "Vampiro",
     slug: "vampiro",
-    description: "Poderes exclusivos de Vampiros.",
+    description: "Poderes exclusivos de Vampiro.",
     origin: "Dragão Brasil"
   },
   {
     id: "5",
-    name: "Barbaro",
+    name: "Bárbaro",
     slug: "barbaro",
-    description: "Poderes exclusivos de Bárbaros.",
+    description: "Poderes exclusivos de Bárbaros",
     origin: "tormenta20 - jogo do ano"
   },
   {

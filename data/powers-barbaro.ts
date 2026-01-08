@@ -1,144 +1,244 @@
 import { Power } from "@/types/power";
 
 export const powersBarbaro: Power[] = [
-  {
-    id: "1",
+  { id: "Alma de Bronze",
     name: "Alma de Bronze ",
     description: "Quando entra em fúria, você recebe uma quantidade de pontos de vida temporários igual a seu nível + sua Força.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "2",
+  { id: "Destruidor",
     name: "Destruidor",
     description: "Quando causa dano com uma arma corpo a corpo de duas mãos, você pode rolar novamente qualquer resultado 1 ou 2 das rolagens de dano da arma. ",
     prerequisite: "For 1.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "3",
+  { id: "Frenesi",
     name: "Frenesi",
     description: "Uma vez por rodada, se estiver em fúria e usar a ação agredir para fazer um ataque corpo a corpo ou com uma arma de arremesso, você pode gastar 2 PM para fazer um ataque adicional.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "4",
+  { id: "Ímpeto",
     name: "Ímpeto",
     description: "Você pode gastar 1 PM para aumentar seu deslocamento em +6m por uma rodada.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "5",
+  { id: "Sangue dos Inimigos",
     name: "Sangue dos Inimigos",
     description: "Enquanto está em fúria, quando faz um acerto crítico ou reduz um inimigo a 0 PV, você recebe um bônus cumulativo de +1 em testes de ataque e rolagens de dano, limitado pelo seu nível, até o fim da cena.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "6",
+  { id: "Aumento de Atributo",
     name: "Aumento de Atributo",
     description: "Você recebe +1 em um atributo. Você pode escolher este poder várias vezes, mas apenas uma vez por patamar para um mesmo atributo.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "7",
+  { id: "Espírito Inquebrável",
     name: "Espírito Inquebrável",
     description: "Enquanto está em fúria, você não fica inconsciente por estar com 0 PV ou menos (você ainda morre se chegar em um valor negativo igual à metade de seus pontos de vida máximos).",
     prerequisite: "Alma de Bronze",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "8",
+  { id: "Fúria da Savana",
     name: "Fúria da Savana",
     description: "Seu deslocamento aumenta em $+3m$. Quando usa Fúria, você aplica o bônus em ataque e dano também a armas de arremesso.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "9",
+  { id: "Investida Imprudente",
     name: "Investida Imprudente",
     description: "Quando faz uma investida, você pode aumentar sua penalidade na Defesa pela investida para –5 para receber um bônus de +1d12 na rolagem de dano deste ataque.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "10",
+  { id: "Superstição",
     name: "Superstição",
     description: "Você odeia magia, o que faz com que seja mais resistente a ela. Você recebe resistência a magia +5.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "11",
+  { id: "Brado Assustador",
     name: "Brado Assustador",
     description: "Você pode gastar uma ação de movimento e 1 PM para soltar um berro feroz. Todos os inimigos em alcance curto ficam vulneráveis até o fim da cena.",
     prerequisite: "Treinado em Intimidação. Medo.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "12",
+  { id: "Esquiva Sobrenatural",
     name: "Esquiva Sobrenatural",
     description: "Seus instintos são tão apurados que você consegue reagir ao perigo antes que seus sentidos o percebam. Você nunca fica surpreendido.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "13",
+  { id: "Fúria Raivosa",
     name: "Fúria Raivosa",
     description: "Se sua Fúria for terminar por você não ter atacado nem sido alvo de um efeito hostil, você pode pagar 1 PM para continuar em fúria nesta rodada. Se você atacar ou for atacado na rodada seguinte, sua fúria continua normalmente.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "14",
+  { id: "Pele de Aço",
     name: "Pele de Aço",
     description: "O bônus de Pele de Ferro aumenta para +8.",
     prerequisite: "Pele de Ferro, 8º nível de bárbaro.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "15",
+  { id: "Totem Espiritual",
     name: "Totem Espiritual",
     description: "Você soma sua Sabedoria no seu total de pontos de mana. Escolha um animal totêmico (veja descrição ao fim da página). Você aprende e pode lançar uma magia definida pelo animal escolhido (atributo-chave Sabedoria) e pode lançá-la mesmo em fúria.",
     prerequisite: "Sab 1, 4º nível de bárbaro",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "16",
+  { id: "Crítico Brutal",
     name: "Crítico Brutal ",
     description: "Seu multiplicador de crítico com armas corpo a corpo e de arremesso aumenta em +1. Por exemplo, seu multiplicador com um machado de batalha (normalmente x3) será x4.",
     prerequisite: "6º nível de bárbaro.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "17",
+  { id: "Força Indomável",
     name: "Força Indomável",
     description: "Você pode gastar 1 PM para somar seu nível em um teste de Força ou Atletismo. Você pode usar esta habilidade depois de rolar o dado, mas deve usá-la antes de o mestre dizer se você passou ou não.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "18",
+  { id: "Golpe Poderoso",
     name: "Golpe Poderoso ",
     description: "Ao acertar um ataque corpo a corpo ou com uma arma de arremesso, você pode gastar 1 PM para causar um dado extra de dano do mesmo tipo (por exemplo, com um montante, causa +1d6, para um dano total de 3d6; com um machado de guerra, causa +1d12, para um dano total de 2d12).",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "19",
+  { id: "Pele de Ferro",
     name: "Pele de Ferro ",
     description: "Você recebe +4 na Defesa, mas apenas se não estiver usando armadura pesada.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "20",
+  { id: "Vigor Primal",
     name: "Vigor Primal",
     description: "Você pode gastar uma ação de movimento e uma quantidade de PM limitada por sua Constituição. Para cada PM que gastar, você recupera 1d12 pontos de vida.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
+  },
+  { id: "Alma Inabalável",
+    name: "Alma Inabalável",
+    description: "Quando faz um teste de resistência, você pode gastar 1 PM para substituir a perícia normal por Intimidação. Se você passar no teste e a fonte do efeito for uma criatura, ela fica abalada por 1d4 rodadas (Vontade CD igual ao resultado do teste de Intimidação evita). ",
+    prerequisite: "treinado em Intimidação",
+    origin: "Herois de Arton"
+  },
+  { id: "Ampliar Brado",
+    name: "Ampliar Brado",
+    description: "O alcance de seus brados aumenta para médio e a CD para resistir a eles aumenta em +2.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Arremesso Violento",
+    name: "Arremesso Violento",
+    description: "Enquanto você está em fúria, o dano e o alcance de suas armas de arremesso aumenta em um passo (de curto para médio e de médio para longo) e a penalidade em ataques que você sofre por arremessar armas sem alcance diminui para –2. ",
+    prerequisite: "Fúria da Savana",
+    origin: "Herois de Arton"
+  },
+  { id: "Beberrão Selvagem",
+    name: "Beberrão Selvagem",
+    description: "Você pode gastar uma ação de movimento para ingerir um preparado alquímico que cause dano e tenha uma criatura como alvo. Se fizer isso, armazena o equivalente a 3 cargas do preparado em sua boca. Até o fim da cena, sempre que acerta um ataque corpo a corpo, você pode gastar uma carga para que o ataque cause dano adicional igual ao do preparado. ",
+    prerequisite: "Con 3",
+    origin: "Herois de Arton"
+  },
+  { id: "Brado: Assombroso",
+    name: "Brado: Assombroso",
+    description: "Você pode gastar uma quantidade de PM limitada pela sua Constituição. Para cada PM que gastar, você causa 1d6 pontos de dano psíquico em todos os inimigos no alcance do brado (Von CD Con reduz à metade). Medo. ",
+    prerequisite: "Brado Assustador",
+    origin: "Herois de Arton"
+  },
+  { id: "Brado: Retardante",
+    name: "Brado: Retardante",
+    description: "Você dá um berro que faz seus inimigos hesitarem. Criaturas a sua escolha no alcance do brado ficam lentas por 1 rodada. Medo.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Brado: Sísmico",
+    name: "Brado: Sísmico",
+    description: "Você emite um brado que faz o chão tremer. Criaturas no alcance do brado ficam vulneráveis por 1d4 rodadas e caídas (Fort CD For reduz para vulneráveis por 1 rodada). Criaturas que já estavam vulneráveis, inclusive por este efeito, ficam desprevenidas pelo mesmo tempo.",
+    prerequisite: "outro poder de brado",
+    origin: "Herois de Arton"
+  },
+  { id: "Brado Vitorioso",
+    name: "Brado Vitorioso",
+    description: "Quando faz um acerto crítico ou reduz um inimigo a 0 ou menos PV enquanto está em fúria, você pode usar um dos seus poderes de brado como ação livre. ",
+    prerequisite: "Brado Assustador, Sangue dos Inimigos",
+    origin: "Herois de Arton"
+  },
+  { id: "Enigma do Aço",
+    name: "Enigma do Aço",
+    description: "Após tantas lutas e matanças, você descobriu que a verdadeira força não reside na arma, mas na mão de quem a empunha. Se estiver empunhando uma arma mundana, você recebe +5 em testes de ataque e causa dois dados extras de dano do mesmo tipo. ",
+    prerequisite: "17º nível de bárbaro",
+    origin: "Herois de Arton"
+  },
+  { id: "Espiritualista",
+    name: "Espiritualista",
+    description: "Você recebe +1 PM a cada nível ímpar. Além disso, aprende e pode lançar uma magia adicional definida pelo seu animal totêmico (atributo-chave Sabedoria) e pode lançá-la e sustentá-la mesmo em fúria. As magias são: Coruja (Augúrio), Corvo (Voz Divina), Falcão (Mapear), Grifo (Físico Divino), Lobo (Localização), Raposa (Camuflagem Ilusória), Tartaruga (Vestimenta da Fé), Urso (Soco de Arsenal). ",
+    prerequisite: "Sab 2, Totem Espiritual, 6º nível de bárbaro",
+    origin: "Herois de Arton"
+  },
+  { id: "Fúria Bestial",
+    name: "Fúria Bestial",
+    description: "Enquanto você está em fúria, o dano das suas armas naturais aumenta em dois passos e o multiplicador de crítico delas aumenta em +1.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Fúria Elemental",
+    name: "Fúria Elemental",
+    description: "Escolha um elemento entre ácido, eletricidade, fogo ou frio. Uma vez feita, essa escolha não pode ser mudada. Enquanto está em fúria e faz um ataque em que aplique seus benefícios, você causa +1d12 pontos de dano do tipo escolhido.",
+    prerequisite: "Totem Espiritual, 11º nível de bárbaro",
+    origin: "Herois de Arton"
+  },
+  { id: "Impiedoso",
+    name: "Impiedoso",
+    description: "Você recebe +2 em testes de ataque, rolagens de dano e na CD de suas habilidades contra criaturas vulneráveis.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Invocar os Ancestrais",
+    name: "Invocar os Ancestrais",
+    description: "Você pode gastar uma ação completa e 2 PM para invocar 1d4+1 ancestrais capangas em espaços desocupados em alcance curto. Eles têm Defesa igual à sua, 1 PV, são incorpóreos e falham automaticamente em qualquer teste de resistência ou oposto. Você pode gastar uma ação de movimento para fazê-los se mover (deslocamento 9m). Cada ancestral fornece um bônus cumulativo de +2 em rolagens de dano a um personagem adjacente e, uma vez por rodada, quando faz a ação agredir, você pode gastar um ancestral pra fazer um ataque adicional. ",
+    prerequisite: "Totem Espiritual, 11º nível de bárbaro",
+    origin: "Herois de Arton"
+  },
+  { id: "Manifestar Totem",
+    name: "Manifestar Totem",
+    description: "Escolha um tipo de parceiro entre assassino, atirador, combatente, fortão, guardião, perseguidor ou montaria. Uma vez feita, essa escolha não pode ser mudada. Você pode gastar 3 PM e uma ação de movimento para invocar uma manifestação espiritual de seu animal totêmico até o fim da cena. Ele é um parceiro veterano do tipo escolhido. ",
+    prerequisite: "Totem Espiritual, 7º nível de bárbaro",
+    origin: "Herois de Arton"
+  },
+  { id: "Recuperação Gutural",
+    name: "Recuperação Gutural",
+    description: "Quando usa um brado enquanto está em fúria, você recebe uma quantidade de PV temporários igual à metade do seu nível + sua Força. ",
+    prerequisite: "Alma de Bronze, um poder de brado",
+    origin: "Herois de Arton"
+  },
+  { id: "Regeneração Sobrenatural",
+    name: "Regeneração Sobrenatural",
+    description: "Enquanto está em fúria e com menos da metade de seus PV máximos, você tem Cura Acelerada 5. ",
+    prerequisite: "Con 5, Vigor Primal, 5º nível de bárbaro",
+    origin: "Herois de Arton"
+  },
+  { id: "Revide",
+    name: "Revide",
+    description: "Uma vez por rodada, quando sofre dano de um ataque corpo a corpo enquanto está em fúria, você pode gastar 2 PM para fazer um ataque corpo a corpo contra a criatura que o atacou, desde que ela esteja em seu alcance. ",
+    prerequisite: "Frenesi, 11º nível de bárbaro",
+    origin: "Herois de Arton"
+  },
+  { id: "Rigidez Selvagem",
+    name: "Rigidez Selvagem",
+    description: "Enquanto está em fúria, você soma o bônus da fúria na Defesa, em Fortitude e em RD.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Sede Sanguinária",
+    name: "Sede Sanguinária",
+    description: "Enquanto está em fúria, quando faz um acerto crítico ou reduz um inimigo a 0 PV ou menos, você recupera 10 PV e 2 PM. ",
+    prerequisite: "Sangue dos Inimigos, 5º nível de bárbaro",
+    origin: "Herois de Arton"
   },
 
   

@@ -144,6 +144,23 @@ export default function BarbaroPodersPage() {
                 <p><span className="text-red-400 font-bold">Urso </span><span className="text-stone-300 leading-relaxed">O vigoroso urso permite que você lance Vitalidade Fantasma e possa usar seus aprimoramentos como se tivesse acesso aos mesmos círculos de magia que um druida de seu nível.</span></p>
             </div>
         </div>
+
+        <div className="mt-16 p-8 rounded bg-stone-900/50 border border-stone-800 w-full space-y-6">
+            <div>
+                <h3 className="text-2xl font-bold text-red-500 mb-4 font-serif">Poderes de Brado</h3>
+                <p className="text-stone-300 leading-relaxed font-serif">
+                Poderes de brado compartilham as seguintes regras:
+                </p>
+            </div>
+
+            <div className="space-y-2 text-stone-400 font-serif">
+                <p><span className="text-red-400 font-bold">•</span><span className="text-stone-300 leading-relaxed"> Emitir um brado gasta uma ação de movimento e 1 PM, a menos que a descrição diga o contrário.</span></p>
+                <p><span className="text-red-400 font-bold">•</span><span className="text-stone-300 leading-relaxed"> Brados têm alcance curto.</span></p>
+                <p className="text-stone-300 leading-relaxed font-serif">
+                A critério do mestre, habilidades raciais baseadas em gritos, como o Rugido Imponente do moreau do leão, podem ser consideradas poderes de brado para um bárbaro.
+                </p>
+            </div>
+        </div>
       </div>
 
       {/* Footer */}
