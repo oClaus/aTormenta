@@ -124,7 +124,7 @@ export default function CavaleiroPodersPage() {
             </div>
         )}
 
-        {/* Seção de Informação (Posturas) */}
+        {/* Seção de Informação: Posturas de Combate */}
         <div className="mt-16 p-8 rounded bg-stone-900/50 border border-stone-800 w-full space-y-6">
             <div>
                 <h3 className="text-2xl font-bold text-blue-500 mb-4 font-serif">Posturas de Combate</h3>
@@ -133,12 +133,62 @@ export default function CavaleiroPodersPage() {
                 </p>
             </div>
 
-            <div className="space-y-2 text-stone-400 font-serif">
-                <p className="text-stone-300 leading-relaxed">- Assumir uma postura gasta uma ação de movimento e 2 PM.</p>
-                <p className="text-stone-300 leading-relaxed">- Os efeitos de uma postura duram até o final da cena, a menos que sua descrição diga o contrário.</p>
-                <p className="text-stone-300 leading-relaxed">- Você só pode manter uma postura por vez.</p>
+            <div className="space-y-2 text-stone-400 font-serif border-l-2 border-stone-800 pl-4">
+                <p className="text-stone-300 leading-relaxed"><span className="text-blue-700 font-bold">•</span> Assumir uma postura gasta uma ação de movimento e 2 PM.</p>
+                <p className="text-stone-300 leading-relaxed"><span className="text-blue-700 font-bold">•</span> Os efeitos de uma postura duram até o final da cena, a menos que sua descrição diga o contrário.</p>
+                <p className="text-stone-300 leading-relaxed"><span className="text-blue-700 font-bold">•</span> Você só pode manter uma postura por vez.</p>
             </div>
         </div>
+
+        {/* Seção de Informação: Poderes de Paixão */}
+        <div className="mt-8 p-8 rounded bg-stone-900/50 border border-stone-800 w-full space-y-8">
+            
+            {/* Introdução e Regras das Paixões */}
+            <div className="space-y-6">
+                <div>
+                    <h3 className="text-2xl font-bold text-blue-500 mb-4 font-serif">Poderes de Paixão</h3>
+                    <p className="text-stone-300 leading-relaxed font-serif">
+                    Paixões são aspectos da vida de um cavaleiro aos quais ele se entrega com dedicação total. São crenças tão importantes que, em nome delas, ele é capaz de se inspirar e sobrepujar quaisquer limitações. Contudo, se um cavaleiro é derrotado enquanto está inspirado por sua Paixão, a vergonha pode abalá-lo profundamente. Esses poderes compartilham as seguintes regras:
+                    </p>
+                </div>
+
+                <div className="space-y-3 text-stone-400 font-serif border-l-2 border-stone-800 pl-4">
+                    <p className="text-stone-300 leading-relaxed"><span className="text-blue-700 font-bold">•</span> Evocar uma Paixão é uma ação livre.</p>
+                    <p className="text-stone-300 leading-relaxed"><span className="text-blue-700 font-bold">•</span> Quando evoca uma Paixão, você faz um teste de Carisma (CD 10 +5 por teste dessa Paixão na mesma aventura). Se passar, recebe o benefício da Paixão. Se falhar, não pode mais usá-la até o fim da aventura.</p>
+                    <p className="text-stone-300 leading-relaxed"><span className="text-blue-700 font-bold">•</span> Paixões que não têm um efeito instantâneo duram até o fim da cena.</p>
+                    <p className="text-stone-300 leading-relaxed"><span className="text-blue-700 font-bold">•</span> Sempre que rola 20 natural em um teste de Paixão, ou obtém uma vitória significativa em uma cena em que usou uma Paixão com sucesso, você recebe um bônus permanente e cumulativo de +1 nos testes de atributo para ativá-la.</p>
+                    <p className="text-stone-300 leading-relaxed"><span className="text-blue-700 font-bold">•</span> Sempre que rola 1 natural em um teste de Paixão, ou sofre uma falha significativa em uma cena em que usou uma Paixão com sucesso, você recebe uma penalidade permanente e cumulativa de –1 nos testes de atributo para ativá-la.</p>
+                </div>
+
+                <p className="text-stone-400 italic text-sm">Lista de Paixões: (Verifique os poderes acima)</p>
+            </div>
+
+            <div className="border-t border-stone-800 my-8"></div>
+
+            {/* Box Explicativo: Significados */}
+            <div className="bg-stone-950/50 p-6 sm:p-8 rounded border border-stone-800/60 shadow-inner">
+                <h4 className="text-lg font-bold text-stone-200 mb-4 uppercase tracking-widest border-b border-stone-800 pb-2">
+                    Paixões e Resultados Significativos
+                </h4>
+                
+                <div className="space-y-4 text-stone-400 text-sm leading-relaxed font-serif text-justify">
+                    <p>
+                        Sempre que o cavaleiro evoca uma Paixão, está colocando à prova um sentimento que faz parte das fundações de sua alma. Nenhum cavaleiro que tenha uma Paixão ousa tratá-la como uma mera ferramenta, nem espera que o objeto de sua Paixão o defenda. Pelo contrário: ele está disposto a entregar a vida pelo objeto da Paixão.
+                    </p>
+                    <p>
+                        Assim, uma <span className="text-stone-200 font-bold">“vitória significativa”</span> ao usar uma Paixão nunca se refere ao próprio cavaleiro. Para que uma vitória seja significativa, deve beneficiar diretamente o alvo da Paixão e não pode servir a interesses pessoais ou egoístas do cavaleiro. Por exemplo, uma cavaleira que tenha Paixão: Amor (sua esposa) pode obter uma vitória significativa ao salvá-la de um vilão, mas não ao derrotar esse mesmo vilão se ela não estiver sendo ameaçada por ele. Se a mesma cavaleira tiver Paixão: Lealdade (a Ordem da Luz), pode obter uma vitória significativa ao defender o Castelo da Luz contra uma invasão, mas não ao vencer os mesmos inimigos em uma circunstância na qual a Ordem não esteja ameaçada.
+                    </p>
+                    <p>
+                        Da mesma forma, uma <span className="text-stone-200 font-bold">“falha significativa”</span> é uma circunstância em que o cavaleiro não consegue proteger o alvo de sua Paixão e, por omissão ou incompetência, permite que ele seja prejudicado. A mesma cavaleira teria uma falha significativa se sua esposa fosse aprisionada e levada embora pelo vilão, ou se o Castelo da Luz fosse invadido.
+                    </p>
+                    <p className="border-t border-stone-800/50 pt-4 mt-4 italic text-stone-500">
+                        O mestre tem a palavra final sobre o que é uma vitória ou uma falha significativas no uso de uma Paixão. Como regra geral, o jogador deve se esforçar ao máximo para proteger e beneficiar o alvo da Paixão. Se negligenciá-la ou colocá-la em segundo plano, atrás de coisas como sua própria segurança, uma recompensa ou o grupo de aventureiros, pode sofrer uma penalidade, como se tivesse rolado 1 natural em um teste de Paixão.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
       </div>
 
       {/* Footer */}
