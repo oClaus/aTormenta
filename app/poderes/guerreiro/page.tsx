@@ -215,6 +215,36 @@ export default function GuerreiroPodersPage() {
                     <span className="text-red-400 font-bold">(Dragão Brasil) Paralisante (+2 PM)</span>
                     <span className="text-stone-300 leading-relaxed ml-2"> Uma criatura que sofra dano do ataque fica Paralisada por uma rodada (Fortitude CD For anula).</span>
                 </p>
+
+
+                <p>
+                    <span className="text-red-400 font-bold">Avanço (+1 PM)</span>
+                    <span className="text-stone-300 leading-relaxed ml-2"> Você pode percorrer até o seu deslocamento em linha reta antes de desferir o golpe.</span>
+                </p>
+                <p>
+                    <span className="text-red-400 font-bold">Brando (+0 PM)</span>
+                    <span className="text-stone-300 leading-relaxed ml-2"> Seu golpe causa dano não letal.</span>
+                </p>
+                <p>
+                    <span className="text-red-400 font-bold">Carregado (+1 PM)</span>
+                    <span className="text-stone-300 leading-relaxed ml-2"> Você pode gastar uma ação padrão para energizar seu ataque. Se você fizer isso e atacar até a próxima rodada, seu ataque causa +2d8 pontos de dano.</span>
+                </p>
+                <p>
+                    <span className="text-red-400 font-bold">Sequencial (+2 PM)</span>
+                    <span className="text-stone-300 leading-relaxed ml-2"> Seu golpe causa +1d6 pontos de dano. A cada vez que você acerta o golpe na mesma cena, esse bônus aumenta em um passo.</span>
+                </p>
+                <p>
+                    <span className="text-red-400 font-bold">Sifão (+2 PM)</span>
+                    <span className="text-stone-300 leading-relaxed ml-2"> Você recebe 1 PM temporário para cada 10 pontos da rolagem de dano. Você pode receber um máximo de PM temporários por cena igual ao seu nível e eles desaparecem no fim da cena.</span>
+                </p>
+                <p>
+                    <span className="text-red-400 font-bold">Golpe de Abertura (–2 PM)</span>
+                    <span className="text-stone-300 leading-relaxed ml-2"> Seu golpe só pode ser usado em seu primeiro turno do combate.</span>
+                </p>
+                <p>
+                    <span className="text-red-400 font-bold">Truque Secreto (–2 PM)</span>
+                    <span className="text-stone-300 leading-relaxed ml-2"> Seu golpe só pode ser usado uma vez contra cada alvo por cena.</span>
+                </p>
             </div>
         </div>
       </div>

@@ -1,138 +1,245 @@
 import { Power } from "@/types/power";
 
 export const powersGuerreiro: Power[] = [
-  {
-    id: "1",
+  { id: "Ambidestria",
     name: "Ambidestria",
     description: "Se estiver empunhando duas armas (e pelo menos uma delas for leve) e fizer a ação agredir, você pode fazer dois ataques, um com cada arma. Se fizer isso, sofre –2 em todos os testes de ataque até o seu próximo turno.",
     prerequisite: "Des 2.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "2",
+  { id: "Arqueiro",
     name: "Arqueiro",
     description: "Se estiver usando uma arma de ataque à distância, você soma sua Sabedoria em rolagens de dano (limitado pelo seu nível).",
     prerequisite: "Sab 1.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "3",
+  { id: "Ataque Reflexo",
     name: "Ataque Reflexo",
     description: "Se um alvo em alcance de seus ataques corpo a corpo ficar desprevenido ou se mover voluntariamente para fora do seu alcance, você pode gastar 1 PM para fazer um ataque corpo a corpo contra esse alvo (apenas uma vez por alvo a cada rodada).",
     prerequisite: "Des 1.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "4",
+  { id: "Aumento de Atributo",
     name: "Aumento de Atributo",
     description: "Você recebe +1 em um atributo. Você pode escolher este poder várias vezes, mas apenas uma vez por patamar para um mesmo atributo.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "5",
+  { id: "Bater e Correr",
     name: "Bater e Correr",
     description: "Quando faz uma investida, você pode continuar se movendo após o ataque, até o limite de seu deslocamento. Se gastar 2 PM, pode fazer uma investida sobre terreno difícil e sem sofrer a penalidade de Defesa.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "6",
+  { id: "Destruidor",
     name: "Destruidor",
     description: "Quando causa dano com uma arma corpo a corpo de duas mãos, você pode rolar novamente qualquer resultado 1 ou 2 da rolagem de dano da arma.",
     prerequisite: "For 1.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "7",
+  { id: "Esgrimista",
     name: "Esgrimista",
     description: "Quando usa uma arma corpo a corpo leve ou ágil, você soma sua Inteligência em rolagens de dano (limitado pelo seu nível).",
     prerequisite: "Int 1.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "8",
+  { id: "Especialização em Arma",
     name: "Especialização em Arma",
     description: "Escolha uma arma. Você recebe +2 em rolagens de dano com essa arma. Você pode escolher este poder outras vezes para armas diferentes.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "9",
+  { id: "Especialização em Armadura",
     name: "Especialização em Armadura",
     description: "Você recebe redução de dano 5 se estiver usando uma armadura pesada.",
     prerequisite: "12º nível de guerreiro.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "10",
+  { id: "Golpe de Raspão",
     name: "Golpe de Raspão",
     description: "Uma vez por rodada, quando erra um ataque, você pode gastar 2 PM. Se fizer isso, causa metade do dano que causaria (ignorando efeitos que se aplicariam caso o ataque acertasse).",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "11",
+  { id: "Golpe Demolidor",
     name: "Golpe Demolidor",
     description: "Quando usa a manobra quebrar ou ataca um objeto, você pode gastar 2 PM para ignorar a redução de dano dele.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "12",
+  { id: "Golpe Pessoal",
     name: "Golpe Pessoal",
     description: "Quando faz um ataque, você pode desferir seu Golpe Pessoal, uma técnica única, com efeitos determinados por você. Você constrói seu Golpe Pessoal escolhendo efeitos da lista ao final da página. Cada efeito possui um custo; a soma deles será o custo do Golpe Pessoal (mínimo 1 PM). O Golpe Pessoal só pode ser usado com uma arma específica (por exemplo, apenas espadas longas). Quando sobe de nível, você pode reconstruir seu Golpe Pessoal e alterar a arma que ele usa. Você pode escolher este poder outras vezes para golpes diferentes e não pode gastar mais PM em golpes pessoais em uma mesma rodada do que seu limite de PM.",
     prerequisite: "5º nível de guerreiro.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "13",
+  { id: "Ímpeto",
     name: "Ímpeto",
     description: "Você pode gastar 1 PM para aumentar seu deslocamento em +6m por uma rodada.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "14",
+  { id: "Mestre em Arma",
     name: "Mestre em Arma",
     description: "Escolha uma arma. Com esta arma, seu dano aumenta em um passo e você pode gastar 2 PM para rolar novamente um teste de ataque recém realizado.",
     prerequisite: "Especialização em Arma com a arma escolhida, 12º nível de guerreiro.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "15",
+  { id: "Planejamento Marcial",
     name: "Planejamento Marcial",
     description: "Uma vez por dia, você pode gastar uma hora e 3 PM para escolher um poder de guerreiro ou de combate cujos pré-requisitos cumpra. Você recebe os benefícios desse poder até o próximo dia.",
     prerequisite: "treinado em Guerra, 10º nível de guerreiro.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "16",
+  { id: "Romper Resistências",
     name: "Romper Resistências",
     description: "Quando faz um Ataque Especial, você pode gastar 1 PM adicional para ignorar 10 pontos de redução de dano.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "17",
+  { id: "Solidez",
     name: "Solidez",
     description: "Se estiver usando um escudo, você aplica o bônus na Defesa recebido pelo escudo em testes de resistência.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "18",
+  { id: "Tornado de Dor",
     name: "Tornado de Dor",
     description: "Você pode gastar uma ação padrão e 2 PM para desferir uma série de golpes giratórios. Faça um ataque corpo a corpo e compare-o com a Defesa de cada inimigo em seu alcance natural. Então faça uma rolagem de dano com um bônus cumulativo de +2 para cada acerto e aplique-a em cada inimigo atingido.",
     prerequisite: "6º nível de guerreiro.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "19",
+  { id: "Valentão",
     name: "Valentão",
     description: "Você recebe +2 em testes de ataque e rolagens de dano contra oponentes caídos, desprevenidos, flanqueados ou indefesos.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
+  },
+  { id: "Análise Tática",
+    name: "Análise Tática",
+    description: "Você recebe +2 em Guerra e pode fazer testes dessa perícia para identificar criatura contra humanoides. ",
+    prerequisite: "treinado em Guerra",
+    origin: "Herois de Arton"
+  },
+  { id: "Arremesso de Investida",
+    name: "Arremesso de Investida",
+    description: "Quando faz uma investida, você pode gastar 1 PM para realizar um ataque à distância adicional com uma arma de arremesso contra o alvo da investida.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Bloqueio Brutal",
+    name: "Bloqueio Brutal",
+    description: "Uma vez por rodada, quando é atingido por um ataque, você pode gastar 2 PM para fazer uma rolagem de dano corpo a corpo e subtrair o resultado dessa rolagem do dano causado pelo ataque. ",
+    prerequisite: "For 5",
+    origin: "Herois de Arton"
+  },
+  { id: "Corte Ágil",
+    name: "Corte Ágil",
+    description: "Uma vez por rodada, quando faz um ataque com uma arma ágil ou leve, você pode gastar 1 PM para se mover até metade do seu deslocamento antes ou depois de fazer o ataque. Esse movimento não ativa reações dos inimigos (como de Ataque Reflexo).",
+    prerequisite: "Des 1",
+    origin: "Herois de Arton"
+  },
+  { id: "Criar Oportunidade",
+    name: "Criar Oportunidade",
+    description: "Quando você ou um aliado em alcance curto atacar uma criatura sob efeito do seu Xadrez de Batalha, você pode gastar 1 PM para que esse ataque cause +1d10 pontos de dano. ",
+    prerequisite: "Xadrez de Batalha",
+    origin: "Herois de Arton"
+  },
+  { id: "Defesa Estratégica",
+    name: "Defesa Estratégica",
+    description: "Você soma sua Inteligência na Defesa, limitada pelo seu nível. ",
+    prerequisite: "Int 1",
+    origin: "Herois de Arton"
+  },
+  { id: "Determinação Inabalável",
+    name: "Determinação Inabalável",
+    description: "Enquanto estiver com metade dos seus pontos de vida ou menos, você recebe +2 em testes de resistência e o custo de sua habilidade Durão diminui em –1 PM. ",
+    prerequisite: "11º nível de guerreiro",
+    origin: "Herois de Arton"
+  },
+  { id: "Estrategista Inspirador",
+    name: "Estrategista Inspirador",
+    description: "Em seu primeiro turno de um combate, você pode gastar uma ação padrão e fazer um teste de Guerra. Se fizer isso, para cada 10 pontos no resultado do teste, você e seus aliados em alcance curto recebem 1 PM temporário. Esses PM temporários desaparecem no fim da cena. ",
+    prerequisite: "treinado em Guerra",
+    origin: "Herois de Arton"
+  },
+  { id: "Executor",
+    name: "Executor",
+    description: "Você recebe +1d6 nas rolagens de dano contra criaturas que estejam com menos da metade dos pontos de vida. A cada quatro níveis além do 1º, esse dano extra aumenta em um passo.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Fender Defesas",
+    name: "Fender Defesas",
+    description: "Quando você acerta um ataque usando Ataque Especial, a criatura sofre uma penalidade na Defesa igual ao total de PM gastos nessa habilidade por 1 rodada.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Inércia do Aço",
+    name: "Inércia do Aço",
+    description: "Quando acerta um ataque com uma arma de duas mãos em uma criatura, você pode gastar 3 PM para causar metade do dano desse ataque a cada inimigo adjacente a essa criatura. ",
+    prerequisite: "5º nível de guerreiro",
+    origin: "Herois de Arton"
+  },
+  { id: "Investida Ricochete",
+    name: "Investida Ricochete",
+    description: "Uma vez por rodada, quando faz uma investida e acerta o ataque, você pode gastar 2 PM para atacar outra criatura que você consiga alcançar como parte dessa investida. ",
+    prerequisite: "Bater e Correr, 5º nível de guerreiro",
+    origin: "Herois de Arton"
+  },
+  { id: "Manobra Dupla",
+    name: "Manobra Dupla",
+    description: "Uma vez por rodada, quando faz uma manobra de combate usando uma arma versátil, você pode pagar 1 PM para executar uma manobra diferente extra.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Mente Disciplinada",
+    name: "Mente Disciplinada",
+    description: "Sempre que você é afetado por uma habilidade de um aliado que fornece um bônus numérico em testes de perícia, rolagens de dano ou na Defesa, para você esse bônus aumenta em +1. ",
+    prerequisite: "6º nível de guerreiro",
+    origin: "Herois de Arton"
+  },
+  { id: "Operações Combinadas",
+    name: "Operações Combinadas",
+    description: "Quando usa Ordens de Engajamento, você pode gastar +3 PM. Se fizer isso, pode atacar junto do aliado e, se um de vocês usar habilidades com custo em PM que forneçam bônus a esse ataque ou a seu dano, o outro também é afetado (apenas se isso for aplicável ao ataque). ",
+    prerequisite: "Ordens de Engajamento, 14º nível de guerreiro",
+    origin: "Herois de Arton"
+  },
+  { id: "Ordens de Engajamento",
+    name: "Ordens de Engajamento",
+    description: "Uma vez por rodada, quando acerta um ataque em uma criatura sob efeito do seu Xadrez de Batalha, você pode gastar 2 PM para que um aliado em alcance curto possa fazer um ataque contra essa criatura. ",
+    prerequisite: "Criar Oportunidade, Xadrez de Batalha, 11º nível de guerreiro",
+    origin: "Herois de Arton"
+  },
+  { id: "Recuperar Fôlego",
+    name: "Recuperar Fôlego",
+    description: "Uma vez por cena, se estiver com 0 PM, você pode gastar uma ação de movimento para recuperar 1d8 PM.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Resiliência Marcial",
+    name: "Resiliência Marcial",
+    description: "Sempre que sofrer dano letal, você recebe redução de dano 1 cumulativa (limitada pelo seu nível). Esse efeito dura até o fim da cena ou até você recuperar pontos de vida de qualquer forma. ",
+    prerequisite: "4º nível de guerreiro",
+    origin: "Herois de Arton"
+  },
+  { id: "Soldado de Infantaria",
+    name: "Soldado de Infantaria",
+    description: "Você recebe +3m em seu deslocamento e seu limite de carga aumenta em 6 espaços.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Velho de Guerra",
+    name: "Velho de Guerra",
+    description: "Seus olhos já viram muito e você não se abala facilmente. Você recebe +5 em Intimidação e imunidade a medo. Além disso, uma vez por cena pode gastar 5 PM para evitar completamente um efeito qualquer (ataque, magia etc.) usado contra você por outra criatura. Se o efeito for de área ou tiver outros alvos, continua funcionando normalmente contra eles. ",
+    prerequisite: "17º nível de guerreiro",
+    origin: "Herois de Arton"
+  },
+  { id: "Xadrez de Batalha",
+    name: "Xadrez de Batalha",
+    description: "Você pode gastar uma ação de movimento e 1 PM para analisar um oponente em alcance curto. Se fizer isso, você recebe +2 na Defesa e em testes de Reflexos contra essa criatura até o fim da cena. Esse bônus aumenta em +1 para cada outro poder que você possua que tenha Xadrez de Batalha como pré-requisito. ",
+    prerequisite: "treinado em Guerra",
+    origin: "Herois de Arton"
   },
 
 ];

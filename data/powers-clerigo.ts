@@ -1,130 +1,232 @@
 import { Power } from "@/types/power";
 
 export const powersClerigo: Power[] = [
-  {
-    id: "1",
+  { id: "Abençoar Arma",
     name: "Abençoar Arma",
     description: "Você se torna proficiente na arma preferida de sua divindade. Se estiver empunhando essa arma, pode gastar uma ação de movimento e 3 PM para infundi-la com poder divino. Até o final da cena, a arma é considerada mágica e emite luz dourada ou púrpura (como uma tocha). Além disso, o dano da arma aumenta em um passo e você pode usar sua Sabedoria em testes de ataque e rolagens de dano com ela, em vez do atributo padrão (não cumulativo com efeitos que somam este atributo).",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "2",
+  { id: "Aumento de Atributo",
     name: "Aumento de Atributo",
     description: "Você recebe +1 em um atributo. Você pode escolher este poder várias vezes, mas apenas uma vez por patamar para um mesmo atributo.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "3",
+  { id: "Autoridade Eclesiástica",
     name: "Autoridade Eclesiástica",
     description: "Você possui uma posição formal em uma igreja reconhecida pelos outros membros de sua fé. Os efeitos deste poder variam de acordo com a igreja e o deus — clérigos de Khalmyr, por exemplo, possuem autoridade como juízes no Reinado — e ficam a cargo do mestre. Como regra geral, você recebe +5 em testes de Diplomacia ou Intimidação ao lidar com devotos de sua divindade e paga metade do preço de itens alquímicos, poções e serviços em templos de sua divindade.",
     prerequisite: "5º nível de clérigo, devoto de um deus maior.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "4",
+  { id: "Canalizar Energia Positiva/Negativa",
     name: "Canalizar Energia Positiva/Negativa",
     description: "Você pode gastar uma ação padrão e PM para liberar uma onda de luz (se sua divindade canaliza energia positiva) ou trevas (se canaliza energia negativa) que afeta criaturas à sua escolha em alcance curto. Para cada PM que gastar, luz cura 1d6 PV em criaturas vivas e causa 1d6 pontos de dano de luz em mortos-vivos (Vontade CD Sab reduz o dano à metade). Trevas tem o efeito inverso — causa dano de trevas a criaturas vivas e cura mortos-vivos.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "5",
+  { id: "Canalizar Amplo",
     name: "Canalizar Amplo",
     description: "Quando você usa a habilidade Canalizar Energia, pode gastar +2 PM para aumentar o alcance dela para médio.",
     prerequisite: "Canalizar Energia Positiva ou Negativa.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "6",
+  { id: "Comunhão Vital",
     name: "Comunhão Vital",
     description: "Quando lança uma magia que cure uma criatura, você pode pagar +2 PM para que outra criatura em alcance curto (incluindo você mesmo) recupere uma quantidade de pontos de vida igual à metade dos PV da cura original.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "7",
+  { id: "Conhecimento Mágico",
     name: "Conhecimento Mágico",
     description: "Você aprende duas magias divinas de qualquer círculo que possa lançar. Você pode escolher este poder quantas vezes quiser.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "8",
+  { id: "Expulsar/Comandar Mortos-Vivos",
     name: "Expulsar/Comandar Mortos-Vivos",
     description: "Você pode gastar uma ação padrão e 3 PM para expulsar (se sua divindade canaliza energia positiva) ou comandar (se canaliza energia negativa) todos os mortos-vivos em alcance curto. Mortos-vivos expulsos ficam apavorados por 1d6 rodadas. Mortos-vivos comandados não inteligentes (Int –4 ou menor) ficam sob suas ordens por um dia (até um limite de ND somados igual a seu nível +3; dar uma ordem a todos eles é uma ação de movimento) e mortos-vivos comandados inteligentes ficam fascinados por uma rodada. Mortos-vivos têm direito a um teste de Vontade (CD Sab) para evitar qualquer destes efeitos.",
     prerequisite: " Canalizar Energia Positiva ou Negativa",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "9",
+  { id: "Liturgia Mágica",
     name: "Liturgia Mágica",
     description: "Você pode gastar uma ação de movimento para executar uma breve liturgia de sua fé. Se fizer isso, a CD para resistir à sua próxima habilidade de clérigo (desde que usada até o final de seu próximo turno) aumenta em +2.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "10",
+  { id: "Magia Sagrada/Profana",
     name: "Magia Sagrada/Profana",
     description: "Quando lança uma magia divina que causa dano, você pode gastar +1 PM. Se fizer isso, muda o tipo de dano da magia para luz (se sua divindade canaliza energia positiva) ou trevas (se canaliza energia negativa).",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "11",
+  { id: "Mestre Celebrante",
     name: "Mestre Celebrante",
     description: "O número de pessoas que você afeta com uma missa aumenta em dez vezes e os benefícios que elas recebem dobram.",
     prerequisite: "qualquer poder de Missa, 12º nível de clérigo.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "12",
+  { id: "Missa: Bênção da Vida",
     name: "Missa: Bênção da Vida",
     description: "Os participantes recebem pontos de vida temporários em um valor igual ao seu nível + sua Sabedoria.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "13",
+  { id: "Missa: Chamado às Armas",
     name: "Missa: Chamado às Armas",
     description: "Os participantes recebem +1 em testes de ataque e rolagens de dano.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "14",
+  { id: "Missa: Elevação do Espírito",
     name: "Missa: Elevação do Espírito",
     description: "Os participantes recebem pontos de mana temporários em um valor igual à sua Sabedoria.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "15",
+  { id: "Missa: Escudo Divino",
     name: "Missa: Escudo Divino",
     description: "Os participantes recebem +1 na Defesa e testes de resistência.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "16",
+  { id: "Missa: Superar as Limitações",
     name: "Missa: Superar as Limitações",
     description: "Cada participante recebe +1d6 num único teste à sua escolha e pode usá-lo mesmo após rolar o dado.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "17",
+  { id: "Prece de Combate",
     name: "Prece de Combate",
     description: "Quando lança uma magia divina com tempo de conjuração de uma ação padrão em si mesmo, você pode gastar +2 PM para lançá-la como uma ação de movimento.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "18",
+  { id: "Símbolo Sagrado Energizado",
     name: "Símbolo Sagrado Energizado",
     description: "Você pode gastar uma ação de movimento e 1 PM para fazer uma prece e energizar seu símbolo sagrado até o fim da cena. Um símbolo sagrado energizado emite uma luz dourada ou prateada (se sua divindade canaliza energia positiva) ou púrpura ou avermelhada (se canaliza energia negativa) que ilumina como uma tocha. Enquanto você estiver empunhando um símbolo sagrado energizado, o custo em PM para lançar suas magias divinas diminui em 1.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
+  },
+  { id: "Acólito Escudeiro",
+    name: "Acólito Escudeiro",
+    description: "Você recebe os serviços de um acólito escudeiro, um parceiro especial que não conta em seu limite de parceiros. Você recebe +2 em Religião e o custo de uma de suas magias de 1º círculo, escolhida ao você receber este poder, diminui em –1 PM. Além disso, você pode gastar 1 PM para receber os efeitos de um esotérico ou catalisador em seu inventário, mesmo que não o esteja empunhando. Caso perca seu acólito, você pode treinar outro com uma semana de trabalho. ",
+    prerequisite: "Autoridade Eclesiástica",
+    origin: "Herois de Arton"
+  },
+  { id: "Arma Divina",
+    name: "Arma Divina",
+    description: "Quando você usa Abençoar Arma, além dos efeitos normais, a sua arma adquire os efeitos do encanto sagrado (se você canalizar energia positiva) ou do encanto profano (se você canalizar energia negativa).",
+    prerequisite: "Abençoar Arma, 7º nível de clérigo",
+    origin: "Herois de Arton"
+  },
+  { id: "Bênção de Batalha",
+    name: "Bênção de Batalha",
+    description: "Bênção passa a afetar também você (em vez de apenas seus aliados). Além disso, na primeira rodada de combate, você pode lançar essa magia como ação de movimento (em vez de padrão). ",
+    prerequisite: "Bênção",
+    origin: "Herois de Arton"
+  },
+  { id: "Canalizar Abençoado",
+    name: "Canalizar Abençoado",
+    description: "Quando você usa Canalizar Energia Positiva, pode gastar 1 PM. Se fizer isso, além do normal, as criaturas afetadas recebem 10 PV temporários. ",
+    prerequisite: "Canalizar Energia Positiva, 11° nível de clérigo",
+    origin: "Herois de Arton"
+  },
+  { id: "Canalizar Concentrado",
+    name: "Canalizar Concentrado",
+    description: "Quando usa Canalizar Energia, você pode afetar apenas uma criatura no alcance (em vez de todas). Se fizer isso, a cura ou o dano da habilidade aumenta em +1 por dado e a CD aumenta em +2. ",
+    prerequisite: "Canalizar Energia, 11° nível de clérigo",
+    origin: "Herois de Arton"
+  },
+  { id: "Canalizar Profanado",
+    name: "Canalizar Profanado",
+    description: "Quando você usa Canalizar Energia Negativa, pode gastar 1 PM. Se fizer isso, além do normal, criaturas que falhem na resistência não podem recuperar PV por 1 rodada. ",
+    prerequisite: "Canalizar Energia Negativa, 11° nível de clérigo",
+    origin: "Herois de Arton"
+  },
+  { id: "Canalizar Poderoso",
+    name: "Canalizar Poderoso",
+    description: "Os dados de seu Canalizar Energia mudam para d10. ",
+    prerequisite: "Canalizar Amplo, 9° nível de clérigo",
+    origin: "Herois de Arton"
+  },
+  { id: "Conversão de Fé",
+    name: "Conversão de Fé",
+    description: "Uma vez por cena, você pode gastar uma ação completa e 3 PM para pregar sua fé a uma criatura inteligente (Int –3 ou maior) do tipo lacaio em alcance curto. Faça um teste de Religião oposto ao teste de Vontade da criatura (você recebe +5 no teste com devotos de seu deus, mas sofre –5 com devotos de outros deuses). Se você vencer, até o fim da cena a atitude da criatura se torna prestativa com relação a você e ela passa a atuar como um parceiro iniciante de um tipo à escolha do mestre, que não conta no seu limite de parceiros. ",
+    prerequisite: "Autoridade Eclesiástica",
+    origin: "Herois de Arton"
+  },
+  { id: "Dizimar Infiéis",
+    name: "Dizimar Infiéis",
+    description: "Se estiver usando uma arma afetada por Abençoar Arma, você pode gastar uma ação padrão e 2 PM para canalizar a punição divina! Faça um ataque corpo a corpo e compare o resultado com a Defesa de cada criatura em alcance curto. Então faça uma rolagem de dano e aplique-a em cada criatura atingida. Cada inimigo atingido fica ofuscado (se você canaliza energia positiva) ou vulnerável (se canaliza energia negativa) por 1 rodada. ",
+    prerequisite: "Abençoar Arma, 5º nível de clérigo",
+    origin: "Herois de Arton"
+  },
+  { id: "Égide da Fé",
+    name: "Égide da Fé",
+    description: "Quando você lança Escudo da Fé, a magia também fornece 5 PV temporários para cada +1 na Defesa. Esses PV temporários duram até o fim da cena. ",
+    prerequisite: "Escudo da Fé",
+    origin: "Herois de Arton"
+  },
+  { id: "Força da Devoção",
+    name: "Força da Devoção",
+    description: "Quando você lança uma magia de clérigo, sua CD aumenta em +1 para cada dois poderes concedidos de sua divindade que você possui. ",
+    prerequisite: "6º nível de clérigo",
+    origin: "Herois de Arton"
+  },
+  { id: "Liturgia Marcial",
+    name: "Liturgia Marcial",
+    description: "Você pode gastar uma ação de movimento para executar uma breve liturgia de sua fé. Se fizer isso, você recebe +2 no teste de ataque e na rolagem de dano de seu próximo ataque corpo a corpo nesse turno.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Missa: Compartilhar Milagre",
+    name: "Missa: Compartilhar Milagre",
+    description: "Escolha um dos seus poderes concedidos. Até o fim do dia, cada participante desta Missa pode usar esse poder durante 1 rodada, como se fosse devoto da sua divindade (os demais pré-requisitos do poder ainda devem ser cumpridos). ",
+    prerequisite: "17° nível de clérigo",
+    origin: "Herois de Arton"
+  },
+  { id: "Missa: Imposição da Vontade",
+    name: "Missa: Imposição da Vontade",
+    description: "A CD para resistir às habilidades dos participantes aumenta em +1.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Missa: Mente Abençoada",
+    name: "Missa: Mente Abençoada",
+    description: "Os participantes recebem +2 em testes de perícias baseadas em Sabedoria.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Presente dos Deuses",
+    name: "Presente dos Deuses",
+    description: "Você recebe uma arma superior e mágica, com duas melhorias e um encanto a sua escolha. Normalmente, será a arma preferida de seu deus, mas pode ser outra, de acordo com o mestre. A cada quatro níveis, a arma ganha mais uma melhoria e um encanto a sua escolha. Nas mãos de uma pessoa que não seja devota de sua divindade, a arma se comporta como um item mundano. Se a arma for perdida ou destruída, você pode receber outra fazendo uma penitência (como se tivesse descumprido as Obrigações & Restrições de sua divindade). ",
+    prerequisite: "9º nível de clérigo",
+    origin: "Herois de Arton"
+  },
+  { id: "Punição Divina",
+    name: "Punição Divina",
+    description: "Uma vez por rodada, quando lança uma magia divina com tempo de execução de ação de movimento em si mesmo, você pode gastar +2 PM fazer um ataque como ação livre. ",
+    prerequisite: "Prece de Combate",
+    origin: "Herois de Arton"
+  },
+  { id: "Representante Divino",
+    name: "Representante Divino",
+    description: "Você fala com a autoridade de seu deus. Escolha uma magia divina que possa lançar com tempo de execução de ação padrão ou completa. Você pode lançar essa magia como uma ação de movimento, sem precisar gesticular ou se concentrar (mas ainda precisa falar). ",
+    prerequisite: "17º nível de clérigo",
+    origin: "Herois de Arton"
+  },
+  { id: "Solo Profanado",
+    name: "Solo Profanado",
+    description: "Quando você lança uma magia de dano de trevas dentro de uma área de Profanar, criaturas que falhem no teste de resistência da magia não podem curar PV por um número de rodadas igual ao círculo da magia. ",
+    prerequisite: "Profanar",
+    origin: "Herois de Arton"
+  },
+  { id: "Solo Sagrado",
+    name: "Solo Sagrado",
+    description: "Quando você lança uma magia de luz dentro de uma área de Consagrar, criaturas a sua escolha nessa área recebem RD igual ao dobro do círculo da magia contra o próximo dano que sofrerem até o início do seu próximo turno. ",
+    prerequisite: "Consagrar",
+    origin: "Herois de Arton"
   },
 ];

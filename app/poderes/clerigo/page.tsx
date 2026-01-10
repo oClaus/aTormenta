@@ -134,11 +134,34 @@ export default function ClerigoPodersPage() {
             </div>
 
             <div className="space-y-2 text-stone-400 font-serif">
-                <p className="text-stone-300 leading-relaxed">- Rezar uma Missa exige uma hora e o gasto de materiais especiais (como velas, incensos, água benta...) no valor de T$ 25. Um mesmo celebrante pode aplicar mais de um poder de Missa na mesma celebração. Cada poder adicional aumenta o custo da Missa em T$ 25.</p>
-                <p className="text-stone-300 leading-relaxed">- Uma Missa afeta um número máximo de pessoas igual a 1 + sua Sabedoria. Todas as pessoas precisam estar presentes durante toda a Missa.</p>
-                <p className="text-stone-300 leading-relaxed">- Os efeitos de uma Missa duram um dia. Uma mesma criatura só pode receber os benefícios da mesma Missa uma vez por dia.</p>
+                <p className="text-stone-300 leading-relaxed"><span className="text-yellow-700 font-bold">•</span> Rezar uma Missa exige uma hora e o gasto de materiais especiais (como velas, incensos, água benta...) no valor de T$ 25. Um mesmo celebrante pode aplicar mais de um poder de Missa na mesma celebração. Cada poder adicional aumenta o custo da Missa em T$ 25.</p>
+                <p className="text-stone-300 leading-relaxed"><span className="text-yellow-700 font-bold">•</span> Uma Missa afeta um número máximo de pessoas igual a 1 + sua Sabedoria. Todas as pessoas precisam estar presentes durante toda a Missa.</p>
+                <p className="text-stone-300 leading-relaxed"><span className="text-yellow-700 font-bold">•</span> Os efeitos de uma Missa duram um dia. Uma mesma criatura só pode receber os benefícios da mesma Missa uma vez por dia.</p>
             </div>
         </div>
+
+        {/* Seção Mestre Celebrante */}
+        <div className="mt-8 p-6 sm:p-8 rounded bg-stone-950/50 border border-stone-800/60 shadow-inner w-full">
+            <h4 className="text-xl font-bold text-yellow-500 mb-4 font-serif flex items-center gap-2">
+               ✨ Mestre Celebrante
+            </h4>
+            <p className="text-stone-300 leading-relaxed font-serif mb-4">
+                O poder <span className="text-stone-200 font-semibold">Mestre Celebrante</span> dobra os benefícios de Missas celebradas pelo personagem. Abaixo detalhamos como isso se aplica às novas missas:
+            </p>
+            
+            <div className="space-y-3 text-stone-400 font-serif border-l-2 border-stone-800 pl-4">
+                <p className="text-stone-300 leading-relaxed">
+                    <span className="text-yellow-700 font-bold">•</span> Se a Missa fornece um bônus numérico que se aplica por toda sua duração, como o de <span className="italic text-stone-500">Mente Abençoada</span>, esse bônus é dobrado.
+                </p>
+                <p className="text-stone-300 leading-relaxed">
+                    <span className="text-yellow-700 font-bold">•</span> Se fornece uma quantidade de PV ou PM, como <span className="italic text-stone-500">Elevação do Espírito</span>, essa quantidade é dobrada.
+                </p>
+                <p className="text-stone-300 leading-relaxed">
+                    <span className="text-yellow-700 font-bold">•</span> Se permite usar uma habilidade ou receber um benefício uma vez, como <span className="italic text-stone-500">Compartilhar Milagre</span>, esse efeito pode ser usado uma vez adicional pela duração da Missa.
+                </p>
+            </div>
+        </div>
+
       </div>
 
       {/* Footer */}

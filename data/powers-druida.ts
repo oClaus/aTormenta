@@ -1,159 +1,269 @@
 import { Power } from "@/types/power";
 
 export const powersDruida: Power[] = [
-  {
-    id: "1",
+  { id: "Aspecto do Inverno",
     name: "Aspecto do Inverno",
     description: "Você aprende e pode lançar uma magia de convocação ou evocação, arcana ou divina, de qualquer círculo que possa lançar. Além disso, recebe redução de frio 5 e suas magias que causam dano de frio causam +1 ponto de dano por dado.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "2",
+  { id: "Aspecto do Outono",
     name: "Aspecto do Outono",
     description: "Você aprende e pode lançar uma magia de necromancia, arcana ou divina, de qualquer círculo que possa lançar. Além disso, pode gastar 1 PM para impor uma penalidade de –2 nos testes de resistência de todos os inimigos em alcance curto até o início do seu próximo turno.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "3",
+  { id: "Aspecto da Primavera",
     name: "Aspecto da Primavera",
     description: "Você aprende e pode lançar uma magia de encantamento ou ilusão, arcana ou divina, de qualquer círculo que possa lançar. Além disso, escolha uma quantidade de magias igual ao seu Carisma (mínimo 1). O custo dessas magias é reduzido em −1 PM.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "4",
+  { id: "Aspecto do Verão",
     name: "Aspecto do Verão",
     description: "Você aprende e pode lançar uma magia de transmutação, arcana ou divina, de qualquer círculo que possa lançar. Além disso, pode gastar 1 PM para cobrir uma de suas armas com chamas até o fim da cena. A arma causa +1d6 pontos de dano de fogo. Sempre que você acertar um ataque com ela, recebe 1 PM temporário. Você pode ganhar um máximo de PM temporários por cena igual ao seu nível e eles desaparecem no final da cena.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "5",
+  { id: "Aumento de Atributo",
     name: "Aumento de Atributo",
     description: "Você recebe +1 em um atributo. Você pode escolher este poder várias vezes, mas apenas uma vez por patamar para um mesmo atributo.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "6",
+  { id: "Companheiro Animal",
     name: "Companheiro Animal",
     description: "Você recebe um companheiro animal. Veja o quadro para detalhes. Você pode escolher este poder quantas vezes quiser, mas deve escolher companheiros diferentes e ainda está sujeito ao limite de parceiros que pode ter.",
     prerequisite: "Car 1, treinado em Adestramento.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "7",
+  { id: "Companheiro Animal Aprimorado",
     name: "Companheiro Animal Aprimorado",
     description: "Escolha um de seus companheiros animais. Ele recebe um segundo tipo, ganhando os bônus de seu nível. Por exemplo, se você tiver um companheiro guardião veterano, pode adicionar o tipo fortão a ele, tornando-o um guardião fortão veterano que concede +3 na Defesa e +1d12 em uma rolagem de dano corpo a corpo.",
     prerequisite: "Companheiro Animal, 6º nível de druida.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "8",
+  { id: "Companheiro Animal Lendário",
     name: "Companheiro Animal Lendário",
     description: "Escolha um de seus companheiros animais. Esse animal passa a dobrar os bônus concedidos de seu tipo original.",
     prerequisite: "Companheiro Animal, 18º nível de druida.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "9",
+  { id: "Companheiro Animal Mágico",
     name: "Companheiro Animal Mágico",
     description: "Escolha um de seus companheiros animais. Ele recebe um segundo tipo diferente, entre adepto, destruidor, magivocador ou médico, ganhando os bônus de seu nível. ",
     prerequisite: "Companheiro Animal, 8º nível de druida.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "10",
+  { id: "Coração da Selva",
     name: "Coração da Selva",
     description: "A CD para resistir a seus efeitos de veneno aumenta em +2 e estes efeitos causam +1 de perda de vida por dado.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "11",
+  { id: "Espírito dos Equinócios",
     name: "Espírito dos Equinócios",
     description: "Você pode gastar 4 PM para ficar em equilíbrio com o mundo. Até o final da cena, quando rola um dado, pode rolar novamente qualquer resultado 1.",
     prerequisite: "Aspecto da Primavera, Aspecto do Outono, 10º nível de druida.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "12",
+  { id: "Espírito dos Solstícios",
     name: "Espírito dos Solstícios",
     description: "Você transita entre os extremos do mundo natural. Quando lança uma magia, pode gastar +4 PM para maximizar os efeitos numéricos variáveis dela. Por exemplo, uma magia Curar Ferimentos aprimorada para curar 5d8+5 PV irá curar automaticamente 45 PV, sem a necessidade de rolar dados. Uma magia sem efeitos variáveis não pode ser afetada por este poder.",
     prerequisite: "Aspecto do Inverno, Aspecto do Verão, 10º nível de druida.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "13",
+  { id: "Força dos Penhascos",
     name: "Força dos Penhascos",
     description: "Você recebe +2 em Fortitude. Quando sofre dano enquanto em contato com o solo ou uma superfície de pedra, pode gastar uma quantidade de PM limitada por sua Sabedoria. Para cada PM gasto, reduz esse dano em 10.",
     prerequisite: " 4º nível de druida.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "14",
+  { id: "Forma Primal",
     name: "Forma Primal",
     description: "Quando usa Forma Selvagem, você pode se transformar em uma fera primal. Você recebe os benefícios de dois tipos de animais (bônus iguais não se acumulam; use o que você quiser de cada tipo).",
     prerequisite: "18º nível de druida.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "15",
+  { id: "Forma Selvagem",
     name: "Forma Selvagem",
     description: "Você pode se transformar em animais (veja a seguir).",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "16",
+  { id: "Forma Selvagem Aprimorada",
     name: "Forma Selvagem Aprimorada",
     description: "Quando usa Forma Selvagem, você pode gastar 6 PM ao todo para assumir uma forma aprimorada.",
     prerequisite: "Forma Selvagem, 6º nível de druida.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "17",
+  { id: "Forma Selvagem Superior",
     name: "Forma Selvagem Superior",
     description: "Quando usa Forma Selvagem, você pode gastar 10 PM ao todo para assumir uma forma superior.",
     prerequisite: "Forma Selvagem Aprimorada, 12º nível de druida.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "18",
+  { id: "Liberdade da Pradaria",
     name: "Liberdade da Pradaria",
     description: "Você recebe +2 em Reflexos. Se estiver ao ar livre, sempre que lança uma magia, pode gastar 1 PM para aumentar o alcance dela em um passo (de toque para curto, de curto para médio ou de médio para longo).",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "19",
+  { id: "Magia Natural",
     name: "Magia Natural",
     description: "Em forma selvagem, você pode lançar magias e empunhar catalisadores e esotéricos.",
     prerequisite: "Forma Selvagem.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "20",
+  { id: "Presas Afiadas",
     name: "Presas Afiadas",
     description: "A margem de ameaça de suas armas naturais aumenta em +2.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "21",
+  { id: "Segredos da Natureza",
     name: "Segredos da Natureza",
     description: "Você aprende duas magias de qualquer círculo que possa lançar. Elas devem pertencer às escolas que você sabe usar, mas podem ser arcanas ou divinas. Você pode escolher este poder quantas vezes quiser.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "22",
+  { id: "Tranquilidade dos Lagos",
     name: "Tranquilidade dos Lagos",
     description: "Você recebe +2 em Vontade. Se estiver portando um recipiente com água (não precisa estar empunhando), uma vez por rodada, quando faz um teste de resistência, pode pagar 1 PM para refazer a rolagem.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
+  },
+  { id: "Arma Tradicional",
+    name: "Arma Tradicional",
+    description: "Quando faz um ataque com uma foice, você pode gastar 2 PM para lançar uma magia de ácido, eletricidade, fogo ou frio com execução de movimento, padrão ou completa como ação livre. Considere que a mão da arma está livre para lançar essa magia. ",
+    prerequisite: "druida de Arton, 5º nível de druida",
+    origin: "Herois de Arton"
+  },
+  { id: "Auspício do Crepúsculo",
+    name: "Auspício do Crepúsculo",
+    description: "Você pode gastar 1 PM para cobrir uma de suas armas com sombras até o fim da cena. A arma causa +1d6 pontos de dano de trevas. Se você estiver sob efeito de escuridão, sempre que acertar um ataque com ela em combate, recebe 5 PV temporários cumulativos. ",
+    prerequisite: "druida de Tenebra",
+    origin: "Herois de Arton"
+  },
+  { id: "Auspício da Madrugada",
+    name: "Auspício da Madrugada",
+    description: "Você pode gastar 1 PM para impor uma penalidade de –1 em testes de perícia e na CD de habilidades de criaturas a sua escolha em alcance curto por 1 rodada. Se você estiver sob efeito de escuridão, a penalidade se torna –2. ",
+    prerequisite: "druida de Tenebra",
+    origin: "Herois de Arton"
+  },
+  { id: "Auspício da Meia-Noite",
+    name: "Auspício da Meia-Noite",
+    description: "Você pode gastar uma ação de movimento e 2 PM para aumentar a CD das suas habilidades de druida em +1 até o fim da cena. Se você usar este poder sob efeito de escuridão, o bônus na CD se torna +2. ",
+    prerequisite: "druida de Tenebra",
+    origin: "Herois de Arton"
+  },
+  { id: "Banquete Selvagem",
+    name: "Banquete Selvagem",
+    description: "Se você estiver em forma selvagem e gastar uma ação padrão para devorar um pedaço de uma criatura inconsciente que esteja com 0 PV ou menos (exceto construtos e seres incorpóreos), recebe +2 em Força, +5 em Intimidação e 2 PV temporários por nível até o fim da cena. Se a criatura é do tipo lacaio, ela morre. ",
+    prerequisite: "druida de Megalokk, Forma Selvagem",
+    origin: "Herois de Arton"
+  },
+  { id: "Ciclo da Vida",
+    name: "Ciclo da Vida",
+    description: "Uma vez por cena, você pode gastar uma ação padrão para fazer um cadáver em alcance curto se decompor instantaneamente. Se fizer isso, você recebe +2 pontos de mana por ND que a criatura tinha em vida. Esses PM adicionais duram até o fim do dia.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Companheiro Aberrante",
+    name: "Companheiro Aberrante",
+    description: "Escolha um de seus companheiros animais. Ele recebe o tipo aberrante, ganhando os bônus de seu nível. Um parceiro aberrante fornece os benefícios a seguir: Iniciante: uma vez por rodada, você pode gastar 1 PM para disparar um pulso mental contra uma criatura em alcance curto; ela sofre 2d6 pontos de dano psíquico ou perde 1d4 PM, a sua escolha. Veterano: você também pode gastar 2 PM para causar 4d6 pontos de dano ou fazer a criatura perder 2d4 PM. Mestre: você também pode gastar 4 PM para causar 6d6 pontos de dano ou fazer a criatura perder 3d4 PM. ",
+    prerequisite: "druida de Aharadak, Companheiro Animal, 6º nível de druida",
+    origin: "Herois de Arton"
+  },
+  { id: "Companheiro Elemental",
+    name: "Companheiro Elemental",
+    description: "Escolha um de seus companheiros animais. Ele recebe o tipo destruidor, ganhando os bônus de seu nível. Se você possuir o suplemento Ameaças de Arton, em vez disso ele pode se tornar também um parceiro aquin’ne, t’peel, pakk ou terrier (também ganhando o bônus de seu nível). ",
+    prerequisite: "druida de Arton, Companheiro Animal",
+    origin: "Herois de Arton"
+  },
+  { id: "Erupção Elemental",
+    name: "Erupção Elemental",
+    description: "Se você estiver em forma elemental, pode gastar uma ação de movimento e 2 PM. Se fizer isso, seu próximo ataque com uma arma natural realizado nessa cena afeta todas as criaturas em um cone de 6m (faça um único ataque corpo a corpo e compare o resultado com a Defesa de cada criatura na área) e causa dois dados de dano extras. ",
+    prerequisite: "Forma Elemental",
+    origin: "Herois de Arton"
+  },
+  { id: "Força da Natureza",
+    name: "Força da Natureza",
+    description: "Se estiver em forma selvagem, você pode gastar 4 PM para se cobrir de terra e raízes, como um elemental da própria terra, até o fim da cena. Nesse estado, você recebe +4 em um atributo a sua escolha. ",
+    prerequisite: "Forma Selvagem Superior, 17º nível de druida",
+    origin: "Herois de Arton"
+  },
+  { id: "Forma Aberrante",
+    name: "Forma Aberrante",
+    description: "Quando usa Forma Selvagem, você pode gastar +2 PM para assumir uma forma aberrante. Nessa forma, você conta como se tivesse dois poderes da Tormenta adicionais (exceto para perda de Carisma). ",
+    prerequisite: "druida de Aharadak, Forma Selvagem",
+    origin: "Herois de Arton"
+  },
+  { id: "Forma de Cardume",
+    name: "Forma de Cardume",
+    description: "Quando usa Forma Selvagem, você pode gastar +1 PM para assumir a forma de um cardume de criaturas anfíbias com duração sustentada. Você recebe imunidade a manobras de combate, sofre apenas metade do dano de armas, pode entrar nos espaços ocupados por inimigos e criaturas no mesmo espaço que você ficam em condição ruim para lançar magias. ",
+    prerequisite: "druida de Oceano, Forma Selvagem",
+    origin: "Herois de Arton"
+  },
+  { id: "Forma Elemental",
+    name: "Forma Elemental",
+    description: "Quando usa Forma Selvagem, você pode gastar +2 PM para assumir uma forma elemental. Escolha entre ácido, eletricidade, fogo ou frio. Você recebe imunidade ao tipo de dano escolhido e vulnerabilidade ao tipo oposto. Além disso, o alcance de suas armas naturais aumenta em +1,5m e elas causam dano do tipo escolhido (em vez de seu dano normal). ",
+    prerequisite: "druida de Arton, Forma Selvagem",
+    origin: "Herois de Arton"
+  },
+  { id: "Forma Esquelética",
+    name: "Forma Esquelética",
+    description: "Quando usa Forma Selvagem, você pode gastar +2 PM para assumir uma forma esquelética. Seu tipo muda para morto-vivo e você recebe redução de corte, frio e perfuração 5 e imunidade a efeitos de cansaço, metabólicos e de veneno. Por fim, você sofre dano por efeitos mágicos de cura de luz (Vontade CD do efeito reduz à metade) e recupera PV com dano de trevas.",
+    prerequisite: "druida de Tenebra, Forma Selvagem",
+    origin: "Herois de Arton"
+  },
+  { id: "Forma Vegetal",
+    name: "Forma Vegetal",
+    description: "Quando usa Forma Selvagem, você pode gastar +2 PM para assumir uma forma vegetal. Você recebe RD 5/corte ou fogo e Natureza Vegetal (fica imune a atordoamento e metamorfose, mas é afetado por efeitos que afetem plantas monstruosas — se o efeito não tiver um teste de resistência, você tem direito a um teste de Fortitude). ",
+    prerequisite: "druida de Allihanna, Forma Selvagem",
+    origin: "Herois de Arton"
+  },
+  { id: "Instinto Venenoso",
+    name: "Instinto Venenoso",
+    description: "Você pode usar Sab como atributo-chave de venenos (em vez de Int). Além disso, em Forma Selvagem, pode aplicar venenos de contato em suas armas naturais como ação livre. ",
+    prerequisite: "Coração da Selva",
+    origin: "Herois de Arton"
+  },
+  { id: "Metamorfose Instantânea",
+    name: "Metamorfose Instantânea",
+    description: "Uma vez por rodada, quando usa Forma Selvagem, você pode gastar +2 PM para usar essa habilidade como ação livre. ",
+    prerequisite: "Forma Selvagem, 11º nível de druida",
+    origin: "Herois de Arton"
+  },
+  { id: "Oráculo da Natureza",
+    name: "Oráculo da Natureza",
+    description: "Você pode gastar uma ação de movimento para se conectar com as energias naturais do mundo. Enquanto você permanecer no mesmo lugar, a CD para resistir a suas magias aumenta em +2 e, sempre que você lança uma magia, recebe 2 PM para gastar em aprimoramentos. Se você estiver em um ambiente urbano, a ação necessária para usar este poder muda para completa. ",
+    prerequisite: "Xamã Místico, 11º nível de druida",
+    origin: "Herois de Arton"
+  },
+  { id: "Orador dos Elementos",
+    name: "Orador dos Elementos",
+    description: "Você aprende e pode lançar uma magia de dano de ácido, eletricidade, fogo ou frio, arcana ou divina, de qualquer círculo que possa lançar. Além disso, você pode aprender magias arcanas de ácido, eletricidade, fogo ou frio como se fossem divinas.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Proteção Fúngica",
+    name: "Proteção Fúngica",
+    description: "Você pode gastar 1 PM para cobrir seu corpo de esporos com duração sustentada. Nesse estado, sempre que você sofrer um ataque corpo a corpo de uma criatura adjacente, ela perde 1d8 PV. A cada quatro níveis acima do 1º, você pode gastar +1 PM quando usa este poder para aumentar a perda de vida em +1d8. Veneno. ",
+    prerequisite: "Coração da Selva",
+    origin: "Herois de Arton"
+  },
+  { id: "Transformação Repugnante",
+    name: "Transformação Repugnante",
+    description: "Quando usa Forma Selvagem, você pode gastar +2 PM. Se fizer isso, inimigos em alcance curto sofrem 1d6 pontos de dano psíquico para cada poder da Tormenta que você possui e ficam alquebrados e frustrados (Vontade CD Sab reduz à metade e evita as condições). ",
+    prerequisite: "Forma Aberrante",
+    origin: "Herois de Arton"
+  },
+  { id: "Xamã Místico",
+    name: "Xamã Místico",
+    description: "Você recebe +1 PM por nível de druida, pode aprender e lançar magias de uma escola adicional e a CD para resistir a suas magias aumenta em +1. ",
+    prerequisite: "não possuir Forma Selvagem",
+    origin: "Herois de Arton"
   },
 
   
