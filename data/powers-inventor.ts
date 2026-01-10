@@ -1,215 +1,304 @@
 import { Power } from "@/types/power";
 
 export const powersInventor: Power[] = [
-  {
-    id: "1",
+  { id: "Agite Antes de Usar",
     name: "Agite Antes de Usar",
     description: "Quando usa um preparado alquímico que cause dano, você pode gastar uma quantidade de PM à sua escolha (limitado por sua Inteligência). Para cada PM que gastar, o item causa um dado extra de dano do mesmo tipo.",
     prerequisite: "treinado em Ofício (alquimista).",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "2",
+  { id: "Ajuste de Mira",
     name: "Ajuste de Mira",
     description: " Você pode gastar uma ação padrão e uma quantidade de PM à sua escolha (limitado pela sua Inteligência) para aprimorar uma arma de ataque à distância. Para cada PM que gastar, você recebe +1 em rolagens de dano com a arma até o final da cena.",
     prerequisite: "Balística.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "3",
+  { id: "Alquimista de Batalha",
     name: "Alquimista de Batalha",
     description: "Quando usa um preparado alquímico ou poção que cause dano, você soma sua Inteligência na rolagem de dano.",
     prerequisite: "Alquimista Iniciado.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "4",
+  { id: "Alquimista Iniciado",
     name: "Alquimista Iniciado",
     description: "Você recebe um livro de fórmulas e pode fabricar poções com fórmulas que conheça de 1º e 2º círculos. Veja as regras de poções. ",
     prerequisite: "Int 1, Sab 1, treinado em Ofício (alquimista).",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "5",
+  { id: "Armeiro",
     name: "Armeiro",
     description: "Você recebe proficiência com armas marciais corpo a corpo. Quando empunha uma arma corpo a corpo, pode usar sua Inteligência em vez de Força nos testes de ataque e rolagens de dano.",
     prerequisite: "treinado em Luta e Ofício (armeiro).",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "6",
+  { id: "Ativação Rápida",
     name: "Ativação Rápida",
     description: "Ao ativar uma engenhoca com ação padrão, você pode pagar 2 PM para ativá-la com uma ação de movimento, em vez disto.",
     prerequisite: "Engenhoqueiro, 7º nível de inventor.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "7",
+  { id: "Aumento de Atributo",
     name: "Aumento de Atributo",
     description: "Você recebe +1 em um atributo. Você pode escolher este poder várias vezes, mas apenas uma vez por patamar para um mesmo atributo.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "8",
+  { id: "Autômato",
     name: "Autômato",
     description: "Você fabrica um autômato, um construto que obedece a seus comandos. Ele é um parceiro iniciante de um tipo à sua escolha entre ajudante, assassino, atirador, combatente, guardião, montaria ou vigilante. No 7º nível, ele muda para veterano e, no 15º nível, para mestre. Se o autômato for destruído, você pode fabricar um novo com uma semana de trabalho e T$ 100.",
     prerequisite: "Engenhoqueiro.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "9",
+  { id: "Autômato Prototipado",
     name: "Autômato Prototipado",
     description: "Você pode gastar uma ação padrão e 2 PM para ativar uma melhoria experimental em seu autômato. Role $1d6$. Em um resultado 2 a 6, você aumenta o nível de parceiro do autômato em um passo (até mestre), ou concede a ele a habilidade iniciante de outro de seus tipos, até o fim da cena. Em um resultado 1, o autômato enguiça como uma engenhoca. ",
     prerequisite: "Autômato.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "10",
+  { id: "Balística",
     name: "Balística",
     description: "Você recebe proficiência com armas marciais de ataque à distância ou com armas de fogo. Quando usa uma arma de ataque à distância, pode usar sua Inteligência em vez de Destreza nos testes de ataque (e, caso possua o poder Estilo de Disparo, nas rolagens de dano). ",
     prerequisite: "treinado em Pontaria e Ofício (armeiro).",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "11",
+  { id: "Blindagem",
     name: "Blindagem",
     description: "Você pode usar sua Inteligência na Defesa quando usa armadura pesada. Se fizer isso, não pode somar sua Destreza, mesmo que outras habilidades ou efeitos permitam isso.",
     prerequisite: "Couraceiro, 8º nível de inventor.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "12",
+  { id: "Cano Raiado",
     name: "Cano Raiado",
     description: "Quando usa uma arma de disparo feita por você mesmo, ela recebe +1 na margem de ameaça.",
     prerequisite: "Balística, 5º nível de inventor.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "13",
+  { id: "Catalisador Instável",
     name: "Catalisador Instável",
     description: " Você pode gastar uma ação completa e 3 PM para fabricar um preparado alquímico ou poção cuja fórmula conheça instantaneamente. O custo do item é reduzido à metade e você não precisa fazer o teste de Ofício (alquimista), mas ele só dura até o fim da cena.",
     prerequisite: "Alquimista Iniciado.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "14",
+  { id: "Chutes e Palavrões",
     name: "Chutes e Palavrões",
     description: "Uma vez por rodada, você pode pagar 1 PM para repetir um teste de Ofício (engenhoqueiro) recém realizado para ativar uma engenhoca.",
     prerequisite: "Engenhoqueiro.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "15",
+  { id: "Conhecimento de Fórmulas",
     name: "Conhecimento de Fórmulas",
     description: "Você aprende três fórmulas de quaisquer círculos que possa aprender. Você pode escolher este poder quantas vezes quiser.",
     prerequisite: "Alquimista Iniciado.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "16",
+  { id: "Couraceiro",
     name: "Couraceiro",
     description: "Você recebe proficiência com armaduras pesadas e escudos. Quando usa armadura, pode usar sua Inteligência em vez de Destreza na Defesa (mas continua não podendo somar um atributo na Defesa quando usa armadura pesada).",
     prerequisite: "treinado em Ofício (armeiro).",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "17",
+  { id: "Engenhoqueiro",
     name: "Engenhoqueiro",
     description: "Você pode fabricar engenhocas. Veja as regras para isso. ",
     prerequisite: "Int 3, treinado em Ofício (engenhoqueiro).",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "18",
+  { id: "Farmacêutico",
     name: "Farmacêutico",
     description: "Quando usa um item alquímico que cure pontos de vida, você pode gastar uma quantidade de PM à sua escolha (limitado por sua Inteligência). Para cada PM que gastar, o item causa um dado extra de dano do mesmo tipo.",
     prerequisite: "Sab 1, treinado em Ofício (alquimista).",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "19",
+  { id: "Ferreiro",
     name: "Ferreiro",
     description: "Quando usa uma arma corpo a corpo feita por você mesmo, o dano dela aumenta em um passo.",
     prerequisite: "Armeiro, 5º nível de inventor.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "20",
+  { id: "Granadeiro",
     name: "Granadeiro",
     description: "Você pode arremessar itens alquímicos e poções em alcance médio. Você pode usar sua Inteligência em vez de Destreza para calcular a CD do teste de resistência desses itens.",
     prerequisite: "Alquimista de Batalha.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "21",
+  { id: "Homúnculo",
     name: "Homúnculo",
     description: "Você possui um homúnculo, uma criatura Minúscula feita de alquimia. Vocês podem se comunicar telepaticamente em alcance longo e ele obedece a suas ordens, mas ainda está limitado ao que uma criatura de seu tamanho pode fazer. Um homúnculo é um parceiro ajudante iniciante. Você pode perder $1d6$ pontos de vida para seu homúnculo assumir uma forma capaz de protegê-lo e se tornar também um parceiro guardião iniciante até o fim da cena.",
     prerequisite: "Alquimista Iniciado.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "22",
+  { id: "Invenção Potente",
     name: "Invenção Potente",
     description: "Quando usa um item ou engenhoca fabricado por você mesmo, você pode pagar 1 PM para aumentar em +2 a CD para resistir a ele.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "23",
+  { id: "Maestria em Perícia",
     name: "Maestria em Perícia",
     description: "Escolha um número de perícias treinadas igual à sua Inteligência, exceto bônus temporários. Com essas perícias, você pode gastar 1 PM para escolher 10 em qualquer situação, exceto testes de ataque.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "24",
+  { id: "Manutenção Eficiente",
     name: "Manutenção Eficiente",
     description: "A quantidade de engenhocas que você pode manter aumenta em +3. Além disso, cada engenhoca passa a ocupar meio espaço.",
     prerequisite: "Engenhoqueiro, 5º nível de inventor.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "25",
+  { id: "Mestre Alquimista",
     name: "Mestre Alquimista",
     description: "Você pode fabricar poções com fórmulas que conheça de qualquer círculo.",
     prerequisite: "Int 3, Sab 3, Alquimista Iniciado, 10º nível de inventor.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "26",
+  { id: "Mestre Cuca",
     name: "Mestre Cuca",
     description: "Todas as comidas que você cozinha têm seu bônus numérico aumentado em +1.",
     prerequisite: "treinado em Ofício (cozinheiro).",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "27",
+  { id: "Mistura Fervilhante",
     name: "Mistura Fervilhante",
     description: "Quando usa um item alquímico ou poção, você pode gastar 2 PM para dobrar a área de efeito dele. ",
     prerequisite: "Alquimista Iniciado, 5º nível de inventor.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "28",
+  { id: "Oficina de Campo",
     name: "Oficina de Campo",
     description: "Você pode gastar uma hora e 2 PM para fazer a manutenção do equipamento de seu grupo. Cada membro do grupo escolhe uma arma, armadura ou escudo para manutenção. Armas recebem +1 em testes de ataque, armaduras e escudos aumentam seu bônus na Defesa em +1. Os benefícios duram um dia.",
     prerequisite: "treinado em Ofício (armeiro).",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "29",
+  { id: "Pedra de Amolar",
     name: "Pedra de Amolar",
     description: "Você pode gastar uma ação de movimento e uma quantidade de PM à sua escolha (limitado por sua Inteligência) para aprimorar uma arma corpo a corpo que esteja empunhando. Para cada PM que gastar, você recebe +1 em rolagens de dano com a arma até o final da cena.",
     prerequisite: "Armeiro.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "30",
+  { id: "Síntese Rápida",
     name: "Síntese Rápida",
     description: "Quando fabrica um item alquímico ou poção, você pode fabricar o dobro de doses no mesmo tempo (pagando o custo de matéria-prima de cada uma).",
     prerequisite: "Alquimista Iniciado.",
     origin: "Tormenta20 - Jogo do Ano"
-  }
-
+  },
+  { id: "Alquimista Exímio",
+    name: "Alquimista Exímio",
+    description: "Quando você usa um preparado alquímico ou uma poção, a CD para resistir a ele aumenta em +2 e, se ele causar dano ou recuperar PV ou PM, esse efeito aumenta em +1 por dado. ",
+    prerequisite: "Alquimista Iniciado",
+    origin: "Herois de Arton"
+  },
+  { id: "Alterar Programação",
+    name: "Alterar Programação",
+    description: "Você pode gastar uma ação completa e 3 PM para alterar a programação de um construto não inteligente (Int –4 ou menor) adjacente. Faça um teste de Ofício (artesão) oposto ao teste de Vontade do construto. Se você vencer, ele fica confuso por 1 rodada e vulnerável. Se for um lacaio, em vez disso fica sob seu controle até o fim da aventura (veja Domar Criatura, p. 17). Você só pode controlar um construto dessa forma por vez e cada construto só pode ser alvo deste poder uma vez por cena.",
+    prerequisite: "treinado em Ofício (artesão)",
+    origin: "Herois de Arton"
+  },
+  { id: "Aparato Personalizado",
+    name: "Aparato Personalizado",
+    description: "O primeiro aparato de cada uma de suas engenhocas não aumenta a CD para ativá-la. ",
+    prerequisite: "Engenhoqueiro",
+    origin: "Herois de Arton"
+  },
+  { id: "Armadura Avançada",
+    name: "Armadura Avançada",
+    description: "Quando ativa uma engenhoca acoplada, você recebe um bônus no teste de ativação igual ao número de melhorias da armadura. Além disso, você pode gastar 4 PM para ativar uma engenhoca acoplada como ação livre (apenas se sua ativação for ação de movimento, padrão ou completa).",
+    prerequisite: "Armadura Mecanizada, 7º nível de inventor",
+    origin: "Herois de Arton"
+  },
+  { id: "Armadura Mecanizada",
+    name: "Armadura Mecanizada",
+    description: "Você pode gastar T$ 100 e 1 dia de trabalho para acoplar uma engenhoca em sua armadura. Armaduras leves podem ter uma engenhoca acoplada e armaduras pesadas podem ter até três. Uma engenhoca acoplada não conta em seu limite de itens vestidos e não precisa ser empunhada. ",
+    prerequisite: "Engenhoqueiro",
+    origin: "Herois de Arton"
+  },
+  { id: "Artesão Criativo",
+    name: "Artesão Criativo",
+    description: "Você pode usar Ofício (artesão) no lugar de qualquer outro Ofício para qualquer fim (como pré-requisitos, por exemplo). ",
+    prerequisite: "treinado em Ofício (artesão)",
+    origin: "Herois de Arton"
+  },
+  { id: "Autômato Alquímico",
+    name: "Autômato Alquímico",
+    description: "Seu autômato pode armazenar itens alquímicos e poções, com uma capacidade de carga igual à sua Inteligência. Além disso, uma vez por rodada, você pode gastar 1 PM para usar um desses itens como uma ação livre. ",
+    prerequisite: "Autômato",
+    origin: "Herois de Arton"
+  },
+  { id: "Autômato Engenhocado",
+    name: "Autômato Engenhocado",
+    description: "Você pode gastar T$ 100 e 1 dia de trabalho para acoplar em seu autômato uma engenhoca que simule uma magia de 1º círculo com alvo 1 criatura ou objeto, ou que afete uma área. Uma vez por rodada, se o autômato estiver em alcance curto, você pode gastar +2 PM para ativar essa engenhoca como uma ação de movimento, tendo como origem o autômato.",
+    prerequisite: "Autômato Prototipado",
+    origin: "Herois de Arton"
+  },
+  { id: "Catalisador Experimental",
+    name: "Catalisador Experimental",
+    description: "Quando ativa uma engenhoca, você pode usar um catalisador e aplicar seus efeitos a ela. ",
+    prerequisite: "Engenhoqueiro, 5º nível de inventor",
+    origin: "Herois de Arton"
+  },
+  { id: "Estilista",
+    name: "Estilista",
+    description: "Se estiver vestindo um item de vestuário feito por você mesmo, o bônus em perícias fornecido por ele aumenta em +1 e se aplica também a testes de Diplomacia e Enganação com criaturas inteligentes (Int –3 ou maior). ",
+    prerequisite: "Car 1, treinado em Ofício (alfaiate)",
+    origin: "Herois de Arton"
+  },
+  { id: "Explicação Científica",
+    name: "Explicação Científica",
+    description: "Você pode gastar uma ação de movimento e uma quantidade de PM limitada pela sua Inteligência para receber resistência a magia igual aos PM gastos até o fim da cena. ",
+    prerequisite: "5º nível de inventor",
+    origin: "Herois de Arton"
+  },
+  { id: "Explorar Fraqueza",
+    name: "Explorar Fraqueza",
+    description: "Quando usa Encontrar Fraqueza em um inimigo, você também ignora 5 pontos da redução de dano dele até o fim da cena. ",
+    prerequisite: "Encontrar Fraqueza",
+    origin: "Herois de Arton"
+  },
+  { id: "Farmácia Mágica",
+    name: "Farmácia Mágica",
+    description: "Você pode usar Farmacêutico em poções de cura. ",
+    prerequisite: "Alquimista Iniciado, Farmacêutico",
+    origin: "Herois de Arton"
+  },
+  { id: "Forçar a Calibragem",
+    name: "Forçar a Calibragem",
+    description: "Quando faz um teste para ativar uma engenhoca, você pode sofrer uma penalidade de –5 nesse teste para aumentar a CD para resistir à engenhoca em +2. ",
+    prerequisite: "Engenhoqueiro",
+    origin: "Herois de Arton"
+  },
+  { id: "Galvanização",
+    name: "Galvanização",
+    description: "Você pode gastar uma ação padrão para adicionar um material especial a um item adequado (isso não conta no limite de melhorias do item e se acumula com outros materiais especiais). O preço do material é reduzido a 5% do normal e você não precisa fazer o teste de Ofício para aplicá-lo, mas ele só dura até o fim da cena. ",
+    prerequisite: "treinado em Ofício (artesão)",
+    origin: "Herois de Arton"
+  },
+  { id: "Gênio Inovador",
+    name: "Gênio Inovador",
+    description: "Você entende o mundo de forma diferente, e sua capacidade de inovar é quase ilimitada. Você pode usar Inteligência como atributo-chave de até duas perícias a sua escolha (em vez do atributo normal). Além disso, quando fabrica um item superior, você pode adicionar uma melhoria extra gratuita, que não conta no limite (por exemplo, por T$ +6.000, adiciona cinco melhorias, em vez de quatro). Por fim, os itens que você fabrica podem ter dois materiais especiais diferentes (em vez de apenas um). ",
+    prerequisite: "17º nível de inventor",
+    origin: "Herois de Arton"
+  },
+  { id: "Golpe de Gênio",
+    name: "Golpe de Gênio",
+    description: "Uma vez por aventura (ou uma vez por mês, de acordo com o mestre), você pode usar Engenhosidade duas vezes em um mesmo teste, ou pode fabricar um item superior ou mágico com uma semana de trabalho (em vez de um mês). ",
+    prerequisite: "11º nível de inventor",
+    origin: "Herois de Arton"
+  },
+  { id: "Infusão Distante",
+    name: "Infusão Distante",
+    description: "Quando usa um item alquímico ou uma poção que normalmente afetaria apenas um alvo adjacente, você pode gastar 1 PM para afetar um alvo em alcance curto. Se tiver o poder Granadeiro, em vez disso você afeta um alvo em alcance médio. ",
+    prerequisite: "Alquimista Iniciado",
+    origin: "Herois de Arton"
+  },
+  { id: "Oficina Esotérica",
+    name: "Oficina Esotérica",
+    description: "Você pode usar Oficina de Campo em itens esotéricos, poções e pergaminhos. Itens esotéricos aumentam o limite de PM para magias em +1, poções rendem duas doses (a segunda dose deve ser consumida até o fim do dia) e pergaminhos permitem gastar +1 PM em aprimoramentos (mesmo que o usuário não conheça a magia). ",
+    prerequisite: "treinado em Misticismo, Oficina de Campo",
+    origin: "Herois de Arton"
+  },
+  { id: "Saraivada Alquímica",
+    name: "Saraivada Alquímica",
+    description: "Quando usa um preparado alquímico ou uma poção de dano, você pode gastar 2 PM e uma dose extra do mesmo item para aumentar o dano causado em 50%. ",
+    prerequisite: "Granadeiro, 7º nível de inventor",
+    origin: "Herois de Arton"
+  },
 ];

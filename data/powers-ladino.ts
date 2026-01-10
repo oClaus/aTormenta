@@ -1,144 +1,244 @@
 import { Power } from "@/types/power";
 
 export const powersLadino: Power[] = [
-  {
-    id: "1",
+  { id: "Assassinar",
     name: "Assassinar",
     description: "Você pode gastar uma ação de movimento e 3 PM para analisar uma criatura em alcance curto. Até o fim de seu próximo turno, seu primeiro Ataque Furtivo que causar dano a ela tem seus dados de dano extras dessa habilidade dobrados",
     prerequisite: "5º nível de ladino",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "2",
+  { id: "Aumento de Atributo",
     name: "Aumento de Atributo",
     description: "Você recebe +1 em um atributo. Você pode escolher este poder várias vezes, mas apenas uma vez por patamar para um mesmo atributo.",
     prerequisite: "Nenhum",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "3",
+  { id: "Contatos no Submundo",
     name: "Contatos no Submundo",
     description: "Quando chega em uma comunidade equivalente a uma vila ou maior, você pode gastar 2 PM para fazer um teste de Carisma (CD 10). Se passar, enquanto estiver nessa comunidade, recebe +5 em testes de Investigação para interrogar, pode comprar itens mundanos, poções e pergaminhos com 20% de desconto (não cumulativo com barganha e outros descontos) e, de acordo com o mestre, tem acesso a itens e serviços proibidos (como armas de pólvora e venenos).",
     prerequisite: "Nenhum",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "4",
+  { id: "Emboscar",
     name: "Emboscar",
     description: "Na primeira rodada de cada combate, você pode gastar 2 PM para executar uma ação padrão adicional em seu turno.",
     prerequisite: "Treinado em Furtividade.",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "5",
+  { id: "Escapista",
     name: "Escapista",
     description: "Você recebe +5 em testes de Acrobacia para escapar, passar por espaço apertado e passar por inimigo e em testes para resistir a efeitos de movimento.",
     prerequisite: "Nenhum",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "6",
+  { id: "Fuga Formidável",
     name: "Fuga Formidável",
     description: "Você pode gastar uma ação completa e 1 PM para analisar o lugar no qual está (um castelo, um porto, a praça de uma cidade...). Até o fim da cena, recebe $+3m$ em seu deslocamento, +5 em Acrobacia e Atletismo e ignora penalidades em movimento por terreno difícil. Você perde esses benefícios se fizer uma ação que não seja diretamente relacionada a fugir. Por exemplo, você só pode atacar um inimigo se ele estiver bloqueando seu caminho, agarrando-o etc. Você pode fazer ações para ajudar seus aliados, mas apenas se eles estiverem tentando escapar.",
     prerequisite: "Int 1",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "7",
+  { id: "Gatuno",
     name: "Gatuno",
     description: "Você recebe +2 em Atletismo. Quando escala, não fica desprevenido e avança seu deslocamento normal, em vez de metade dele.",
     prerequisite: "Nenhum",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "8",
+  { id: "Ladrão Arcano",
     name: "Ladrão Arcano",
     description: "Quando causa dano com um ataque furtivo em uma criatura capaz de lançar magias, você pode “roubar” uma magia que já a tenha visto lançar. Você precisa pagar 1 PM por círculo da magia e pode roubar magias de até 4º círculo. Até o fim da cena, você pode lançar a magia roubada (atributo-chave Inteligência).",
     prerequisite: "Roubo de Mana, 13º nível de ladino.",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "9",
+  { id: "Mão na Boca",
     name: "Mão na Boca",
     description: "Você recebe +2 em testes de agarrar. Quando acerta um ataque furtivo contra uma criatura desprevenida, você pode fazer um teste de agarrar como uma ação livre. Se agarrar a criatura, ela não poderá falar enquanto estiver agarrada",
     prerequisite: "Treinado em Luta.",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "10",
+  { id: "Mãos Rápidas",
     name: "Mãos Rápidas",
     description: "Uma vez por rodada, ao fazer um teste de Ladinagem para abrir fechaduras, ocultar item, punga ou sabotar, você pode pagar 1 PM para fazê-lo como uma ação livre.",
     prerequisite: "Des 2, treinado em Ladinagem.",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "11",
+  { id: "Mente Criminosa",
     name: "Mente Criminosa",
     description: "Você soma sua Inteligência em Ladinagem e Furtividade.",
     prerequisite: "Int 1",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "12",
+  { id: "Oportunismo",
     name: "Oportunismo",
     description: "Uma vez por rodada, quando um inimigo adjacente sofre dano de um de seus aliados, você pode gastar 2 PM para fazer um ataque corpo a corpo contra este inimigo.",
     prerequisite: "6º nível de ladino.",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "13",
+  { id: "Rolamento Defensivo",
     name: "Rolamento Defensivo",
     description: "Sempre que sofre dano, você pode gastar 2 PM para reduzir esse dano à metade. Após usar este poder, você fica caído.",
     prerequisite: "treinado em Reflexos",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "14",
+  { id: "Roubo de Mana",
     name: "Roubo de Mana",
     description: "Quando você causa dano com um ataque furtivo, para cada $1d6$ de dano de seu ataque furtivo, você recebe 1 PM temporário e a criatura perde 1 ponto de mana (se tiver). Você só pode usar este poder uma vez por cena contra uma mesma criatura.",
     prerequisite: "Truque Mágico, 7º nível de ladino.",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "15",
+  { id: "Saqueador de Tumbas",
     name: "Saqueador de Tumbas",
     description: "Você recebe +5 em testes de Investigação para encontrar armadilhas e em testes de resistência contra elas. Além disso, gasta uma ação padrão para desabilitar mecanismos, em vez de 1d4 rodadas (veja a perícia Ladinagem).",
     prerequisite: "Nenhum",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "16",
+  { id: "Sombra",
     name: "Sombra",
     description: "Você recebe +2 em Furtividade, não sofre penalidade em testes de Furtividade por se mover no seu deslocamento normal e reduz a penalidade por atacar e fazer outras ações chamativas para –10.",
     prerequisite: " treinado em Furtividade.",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "17",
+  { id: "Truque Mágico",
     name: "Truque Mágico",
     description: "Você aprende e pode lançar uma magia arcana de 1º círculo à sua escolha, pagando seu custo normal em PM. Seu atributo-chave para esta magia é Inteligência. Você pode escolher este poder quantas vezes quiser.",
     prerequisite: "Int 1.",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "18",
+  { id: "Velocidade Ladina",
     name: "Velocidade Ladina",
     description: "Uma vez por rodada, você pode gastar 2 PM para realizar uma ação de movimento adicional em seu turno.",
     prerequisite: "Des 2, treinado em Iniciativa.",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "19",
+  { id: "Veneno Persistente",
     name: "Veneno Persistente",
     description: "Quando aplica uma dose de veneno a uma arma, este veneno dura por três ataques (em vez de apenas um)",
     prerequisite: "Veneno Potente, 8º nível de ladino.",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "20",
+  { id: "Veneno Potente",
     name: "Veneno Potente",
     description: "A CD para resistir aos venenos que você usa aumenta em +5.",
     prerequisite: "treinado em Ofício (alquimista).",
     origin: "tormenta20 - jogo do ano"
+  },
+  { id: "Ameaça Brutal",
+    name: "Ameaça Brutal",
+    description: "Se fizer um teste de Intimidação para assustar uma criatura na qual tenha causado dano desde a última rodada, você recebe +5 no teste e ela fica apavorada se você passar por 5 ou mais (em vez de 10 ou mais).",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Assassino em Série",
+    name: "Assassino em Série",
+    description: "Você pode gastar 2 PM para usar Ataque Furtivo uma segunda vez na rodada.",
+    prerequisite: "11º nível de ladino",
+    origin: "Herois de Arton"
+  },
+  { id: "Ataque Furtivo Letal",
+    name: "Ataque Furtivo Letal",
+    description: "Quando você faz um ataque furtivo, sempre que rolar o resultado máximo ou um ponto abaixo em um dado da habilidade (por exemplo, um 5 ou 6 ao rolar 1d6), role um dado extra. ",
+    prerequisite: "5º nível de ladino",
+    origin: "Herois de Arton"
+  },
+  { id: "Bombardeiro Furtivo",
+    name: "Bombardeiro Furtivo",
+    description: "Você pode usar Ataque Furtivo ao utilizar preparados alquímicos de dano. ",
+    prerequisite: "treinado em Ofício (alquimista)",
+    origin: "Herois de Arton"
+  },
+  { id: "Chefe de Gangue",
+    name: "Chefe de Gangue",
+    description: "Seus capangas podem usar Ataque Furtivo +1d6 e Evasão, e podem fazer testes de Reflexos usando o seu valor nessa perícia. ",
+    prerequisite: "5º nível de ladino",
+    origin: "Herois de Arton"
+  },
+  { id: "Conhecimento Anatômico",
+    name: "Conhecimento Anatômico",
+    description: "Contra humanoides, os dados do seu Ataque Furtivo aumentam em um passo. ",
+    prerequisite: "treinado em Cura",
+    origin: "Herois de Arton"
+  },
+  { id: "Enganar os Olhos",
+    name: "Enganar os Olhos",
+    description: "Quando você faz um teste de Acrobacia para passar por inimigo, a criatura o considera invisível por 1 rodada (Reflexos CD Des evita).",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Finta Acrobática",
+    name: "Finta Acrobática",
+    description: "Você soma sua Destreza em testes de Enganação para fintar. ",
+    prerequisite: "treinado em Acrobacia e Enganação",
+    origin: "Herois de Arton"
+  },
+  { id: "Improvisação Arcana",
+    name: "Improvisação Arcana",
+    description: "Quando passa em um teste de Misticismo para lançar uma magia arcana que não conhece de um pergaminho, para cada 2 pontos pelos quais seu teste superar a CD, você pode gastar 1 PM em aprimoramentos da magia. ",
+    prerequisite: "treinado em Misticismo",
+    origin: "Herois de Arton"
+  },
+  { id: "Investida Rasteira",
+    name: "Investida Rasteira",
+    description: "Se você acertar um ataque corpo a corpo contra uma criatura que sofreu uma investida desde a última rodada, ela fica desprevenida por 1 rodada e caída (Reflexos CD Des evita).",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Mestre Assassino",
+    name: "Mestre Assassino",
+    description: "Quando usa Assassinar, você pode gastar +2 PM para: 1) Usar esse poder como uma ação livre. 2) Rolar dois dados no teste de ataque contra a criatura analisada e usar o melhor resultado. 3) Ignorar a imunidade a acertos críticos da criatura analisada. (Você pode usar quantos desses modificadores quiser (desde que pague por eles!). Assim, se gastar +6 PM, você usa Assassinar como ação livre, rola dois dados no teste de ataque e afeta criaturas imunes. )",
+    prerequisite: "treinado em Cura e Percepção, Assassinar, Ataque Furtivo Letal, 11º nível de ladino",
+    origin: "Herois de Arton"
+  },
+  { id: "Mestre Envenenador",
+    name: "Mestre Envenenador",
+    description: "Quando afeta uma criatura com um veneno, você pode gastar +2 PM para: 1) Aumentar quaisquer efeitos do veneno em mais um dado do mesmo tipo. 2) Aumentar a CD para resistir ao veneno em +5. 3) Ignorar a imunidade a venenos da criatura. (Você pode usar quantos desses modificadores quiser. )",
+    prerequisite: "treinado em Cura, Veneno Persistente, 11º nível de ladino",
+    origin: "Herois de Arton"
+  },
+  { id: "Papo Furado",
+    name: "Papo Furado",
+    description: "Quando você passa em um teste de Diplomacia contra uma criatura, se passar também em um teste de Enganação contra ela até o fim do seu próximo turno, a atitude da criatura em relação a você melhora em uma categoria. ",
+    prerequisite: "treinado em Diplomacia e Enganação",
+    origin: "Herois de Arton"
+  },
+  { id: "Precisão Furtiva",
+    name: "Precisão Furtiva",
+    description: "O alcance do seu Ataque Furtivo aumenta em uma categoria (de curto para médio e de médio para longo). Além disso, quando você ataca uma criatura desprevenida ou que você esteja flanqueando, sua margem de ameaça aumenta em +2. ",
+    prerequisite: "treinado em Pontaria, Ataque Furtivo",
+    origin: "Herois de Arton"
+  },
+  { id: "Rei do Crime",
+    name: "Rei do Crime",
+    description: "Você é uma lenda dos becos e das tavernas, e todos querem lhe servir para ter uma chance de progredir no submundo. Uma vez por cena, você pode gastar 6 PM para invocar 2d4+2 assassinos capangas em espaços desocupados em alcance curto. Os assassinos possuem deslocamento 9m, Defesa 17, dano 1d6+5 de corte cada e Ataque Furtivo +4d6. Uma vez por rodada, quando você é alvo de um efeito, pode sacrificar um capanga adjacente para ignorar o efeito.",
+    prerequisite: "Chefe de Gangue, Contatos no Submundo, Mente Criminosa, 17º nível de ladino",
+    origin: "Herois de Arton"
+  },
+  { id: "Sabotagem Corrosiva",
+    name: "Sabotagem Corrosiva",
+    description: "Quando faz um teste de Ladinagem para abrir fechaduras ou sabotar, você pode gastar um ácido para receber um bônus de +5 nesse teste. Além disso, pode gastar uma ação de movimento e um ácido para fazer um teste de Ladinagem oposto ao teste de Reflexos de uma criatura em alcance curto. Se você vencer o teste oposto, a criatura fica desprevenida e sofre –5 em testes de ataque por 1 rodada.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Senhor do Submundo",
+    name: "Senhor do Submundo",
+    description: "Você é uma figura sombria e sua mera presença incita medo e respeito. Você recebe +5 em Intimidação e imunidade a medo. Além disso, quando você fica adjacente a outra criatura (independente de quem tenha se movido), você pode deixá-la apavorada e desprevenida por 1 rodada. Uma mesma criatura só pode ser afetada por este poder uma vez por cena. ",
+    prerequisite: "treinado em Intimidação, 17º nível de ladino",
+    origin: "Herois de Arton"
+  },
+  { id: "Truque de Palco",
+    name: "Truque de Palco",
+    description: "Escolha três magias arcanas de 1º círculo que possuam o aprimoramento truque. Você aprende e pode lançar essas magias (atributo-chave Inteligência), mas apenas com esse aprimoramento. Esta não é uma habilidade mágica — os efeitos provêm de prestidigitação. ",
+    prerequisite: "treinado em Atuação",
+    origin: "Herois de Arton"
+  },
+  { id: "Truque do Chapéu",
+    name: "Truque do Chapéu",
+    description: "Uma vez por rodada, você pode gastar uma ação de movimento para tirar e arremessar um item que esteja vestindo em uma criatura em alcance curto. Se fizer isso, você pode fazer um ataque com uma arma de arremesso, ou arremessar um preparado alquímico ou poção contra ela como parte dessa ação. ",
+    prerequisite: "treinado em Enganação",
+    origin: "Herois de Arton"
+  },
+  { id: "Vestido Para a Ocasião",
+    name: "Vestido Para a Ocasião",
+    description: "Se estiver usando um traje da corte ou de viajante, você pode gastar uma ação completa e 1 PM para transformar esse item em outro item de vestuário mundano até o fim da cena. Isso fornece +5 em testes de Enganação para disfarce, além dos benefícios do novo item. ",
+    prerequisite: "treinado em Enganação",
+    origin: "Herois de Arton"
   },
 ];
