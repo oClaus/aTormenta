@@ -1,0 +1,155 @@
+import { Power } from "@/types/power";
+
+export const powersGeraisRaca: Power[] = [
+  { id: "Ajudante Nato",
+    name: "Ajudante Nato",
+    description: "Quando você passa em um teste para ajudar, o bônus fornecido aumenta em +1. Além disso, se você estiver flanqueando um inimigo, o bônus que seus aliados recebem em testes de ataque contra esse inimigo por flanquear aumenta em +1 (para um total de +3). ",
+    prerequisite: "Qareen",
+    origin: "Herois de Arton"
+  },
+  { id: "Amo",
+    name: "Amo",
+    description: "Escolha um personagem (jogador ou NPC). Você adotou esse personagem como seu amo. Quando usa a habilidade Desejos a pedido do seu amo, o custo da magia diminui em –2 PM (em vez de apenas –1). Contudo, sempre que seu amo estiver presente em uma situação de perigo (como um combate) ou sob efeito de uma condição, você sofre –2 em testes de perícias. Se o amo morrer, essa penalidade permanece até o fim da aventura (quando então você pode escolher um novo amo). ",
+    prerequisite: "Qareen",
+    origin: "Herois de Arton"
+  },
+  { id: "Arma Amada",
+    name: "Arma Amada",
+    description: "Escolha uma arma. Com essa arma, você recebe +2 em rolagens de dano e +5 em testes de manobra para resistir a desarmar e quebrar.",
+    prerequisite: "Anão, Hobgoblin",
+    origin: "Herois de Arton"
+  },
+  { id: "Arma Natural Aprimorada",
+    name: "Arma Natural Aprimorada",
+    description: "Escolha uma de suas armas naturais fornecidas por raça. O dano dessa arma aumenta em um passo e sua margem de ameaça aumenta em +1. Você pode escolher este poder outras vezes para armas naturais diferentes. ",
+    prerequisite: "arma natural fornecida por uma habilidade de raça",
+    origin: "Herois de Arton"
+  },
+  { id: "Arma Natural Hábil",
+    name: "Arma Natural Hábil",
+    description: "Escolha uma arma natural fornecida por raça com a qual você possa gastar 1 PM para fazer um ataque corpo a corpo extra quando faz a ação agredir. Você não precisa gastar pontos de mana para isso. Você continua só podendo fazer isso uma vez por rodada. ",
+    prerequisite: "arma natural fornecida por uma habilidade de raça",
+    origin: "Herois de Arton"
+  },
+  { id: "Arquearia Élfica",
+    name: "Arquearia Élfica",
+    description: "Para você, todos os arcos são armas simples. Além disso, você recebe +2 nas rolagens de dano com arcos. ",
+    prerequisite: "Elfo",
+    origin: "Herois de Arton"
+  },
+  { id: "Arsenal de Lisandra",
+    name: "Arsenal de Lisandra",
+    description: "Você aprende e pode lançar Armamento da Natureza. Caso aprenda novamente essa magia, seu custo diminui em –1 PM. Além disso, ao usar sua habilidade Armadura de Allihanna, você recebe um bônus na Defesa adicional de +1 por patamar (ou seja, Defesa +3 no patamar iniciante, +4 no veterano e assim por diante). ",
+    prerequisite: "Dahllan",
+    origin: "Herois de Arton"
+  },
+  { id: "Asas de Aço",
+    name: "Asas de Aço",
+    description: "Suas asas são sobrenaturalmente resistentes. Elas fornecem +2 na Defesa e podem ser usadas como armas naturais (dano 2d4, crítico x2, impacto). Uma vez por rodada, quando usa a ação agredir para atacar com outra arma, você pode gastar 1 PM para fazer um ataque corpo a corpo extra com as asas (exceto se as estiver usando para voar). ",
+    prerequisite: "possuir asas (Harpia, Kallyanach, Pteros, Suraggel)",
+    origin: "Herois de Arton"
+  },
+  { id: "Asas Extraplanares",
+    name: "Asas Extraplanares",
+    description: "Você desenvolve um par de asas adequado à sua herança planar — normalmente, emplumadas se você for um aggelus ou coriáceas se você for um sulfure, embora isso possa mudar. Você pode gastar 1 PM por rodada para voar com deslocamento de 12m. Enquanto estiver voando dessa forma, você fica vulnerável. ",
+    prerequisite: "Suraggel",
+    origin: "Herois de Arton"
+  },
+  { id: "Atração pela Pólvora",
+    name: "Atração pela Pólvora",
+    description: "Entre seu povo, existem aqueles que amam a pólvora. Você é um deles! Você recebe +1 em testes de ataque e +2 em rolagens de dano com armas de fogo. Com bombas e itens similares baseados em pólvora, você causa +1 de dano por dado de dano.",
+    prerequisite: "treinado em Ofício (alquimista) e Anão, Goblin, Hobgoblin ou Kliren",
+    origin: "Herois de Arton"
+  },
+  { id: "Camuflagem Mimética",
+    name: "Camuflagem Mimética",
+    description: " Você pode mudar sua cor e textura a ponto de ficar quase invisível. Você pode gastar uma ação de movimento e 2 PM para receber um bônus em Furtividade até o fim da cena. O bônus varia conforme o que você estiver vestindo: +10 se estiver sem armadura e com no máximo um item vestido, +5 se estiver de armadura leve e/ou com até dois itens vestidos, +2 se estiver de armadura pesada e/ou com mais de dois itens vestidos.",
+    prerequisite: "Sereia/Tritão ou Trog",
+    origin: "Herois de Arton"
+  },
+  { id: "Canto da Sereia",
+    name: "Canto da Sereia",
+    description: "Sua voz é melodiosa e encantadora, capaz de fascinar até as pessoas mais cruéis. Você recebe +2 em Atuação. Além disso, o alcance das magias adquiridas por sua Canção dos Mares aumenta em um passo (de curto para médio e de médio para longo) e a CD para resistir a elas aumenta em +2. ",
+    prerequisite: "Sereia/Tritão",
+    origin: "Herois de Arton"
+  },
+  { id: "Cascos Poderosos",
+    name: "Cascos Poderosos",
+    description: "Quando faz um ataque desarmado, você pode gastar 1 PM para desferir esse ataque usando seus cascos. Se fizer isso, causa +1 dado de dano do mesmo tipo, mas não pode escolher causar dano não letal. ",
+    prerequisite: "Centauro, Minotauro ou Sátiro",
+    origin: "Herois de Arton"
+  },
+  { id: "Chassi Gracioso",
+    name: "Chassi Gracioso",
+    description: "Seu corpo artificial foi feito com materiais leves e belos. Você recebe +2 em Diplomacia e não possui a penalidade de armadura da habilidade Chassi. ",
+    prerequisite: "Golem",
+    origin: "Herois de Arton"
+  },
+  { id: "Citadino",
+    name: "Citadino",
+    description: "Você foi criado em uma metrópole, onde se acostumou a lidar com várias pessoas — mas também às facilidades da civilização. Você recebe +2 em testes de perícias baseadas em Carisma (exceto Adestramento). ",
+    prerequisite: "Humano, Hynne, Kliren ou Meio-Elfo",
+    origin: "Herois de Arton"
+  },
+  { id: "Comandar Aprimorado",
+    name: "Comandar Aprimorado",
+    description: "Quando usa Comandar, você pode gastar +2 PM para aumentar o bônus fornecido pelo poder em +1. ",
+    prerequisite: "Car 2, Comandar (Humano)",
+    origin: "Herois de Arton"
+  },
+  { id: "Conforto do Aço",
+    name: "Conforto do Aço",
+    description: "Seu povo veste metal como se fosse algodão. Você não sofre penalidade de armadura por usar armaduras (mas ainda sofre por escudos). Além disso, se estiver usando armadura pesada, recebe +2 na Defesa. ",
+    prerequisite: "Anão",
+    origin: "Herois de Arton"
+  },
+  { id: "Constrição Atroz",
+    name: "Constrição Atroz",
+    description: "Você pode gastar uma ação de movimento e 1 PM para expelir gavinhas de seu corpo. No início de cada um de seus turnos, qualquer inimigo em alcance curto deve fazer um teste de Reflexos (CD Sab). Se falhar, fica enredado. Um inimigo enredado pode escapar gastando uma ação padrão e passando em um teste de Acrobacia ou Atletismo (CD Sab), ou afastando-se 9m de você. Este poder tem duração sustentada. ",
+    prerequisite: "Dahllan",
+    origin: "Herois de Arton"
+  },
+  { id: "Coração de Pedra",
+    name: "Coração de Pedra",
+    description: "Você recebe +1 PV por nível e imunidade a petrificação.",
+    prerequisite: "Anão ou Medusa",
+    origin: "Herois de Arton"
+  },
+  { id: "Coro Sibilante",
+    name: "Coro Sibilante",
+    description: "Você pode gastar 1 PM para fazer suas serpentes ecoarem suas palavras. Até o fim da cena, você recebe +2 em testes de perícias originalmente baseadas em Carisma (exceto testes de ataque). ",
+    prerequisite: "Medusa",
+    origin: "Herois de Arton"
+  },
+  { id: "Crescimento Feérico",
+    name: "Crescimento Feérico",
+    description: "Você pode gastar uma ação de movimento e 1 PM para aumentar uma categoria de tamanho e receber +1 em Força (máximo Grande). A partir do patamar veterano, você também pode gastar 3 PM para aumentar duas categorias de tamanho; nesse caso, recebe +2 em Força (máximo Enorme). Seu equipamento muda com você. A transformação dura pelo tempo que você quiser, mas você reverte ao tamanho normal se ficar inconsciente ou morrer. Voltar ao seu tamanho original é uma ação livre. ",
+    prerequisite: "Duende ou Sílfide",
+    origin: "Herois de Arton"
+  },
+  { id: "Criança da Luz",
+    name: "Criança da Luz",
+    description: "O sangue extraplanar é mais forte em você. Seu bônus racial em Diplomacia e Intuição aumenta para +5 e você recebe redução de eletricidade e frio 5. ",
+    prerequisite: "Aggelus",
+    origin: "Herois de Arton"
+  },
+  { id: "Criança das Trevas",
+    name: "Criança das Trevas",
+    description: "O sangue extraplanar é mais forte em você. Seu bônus racial em Enganação e Furtividade aumenta para +5 e você recebe redução de fogo e trevas 5.",
+    prerequisite: "Sulfure",
+    origin: "Herois de Arton"
+  },
+  { id: "Devoção Iluminada",
+    name: "Devoção Iluminada",
+    description: "Você recebe +2 em Vontade, perde a sensibilidade a luz causada por sua raça e não pode mais ser ofuscado.",
+    prerequisite: "sensibilidade a luz como habilidade racial, devoto de uma divindade que canalize energia positiva",
+    origin: "Herois de Arton"
+  },
+  { id: "Duas Cabeças",
+    name: "Duas Cabeças",
+    description: "Você nasceu com duas cabeças, ou então uma segunda cabeça brotou de seu corpo em determinado momento. Elas podem ser iguais ou não (por exemplo, uma pode ser menor ou atrofiada) e podem ter personalidades compatíveis ou não — fique à vontade para interpretar diálogos entre elas. Sempre que fizer um teste de Vontade, você pode gastar 1 PM para rolar dois dados e usar o melhor resultado. Além disso, se você tem uma arma natural de mordida, recebe uma arma natural extra do mesmo tipo e com as mesmas estatísticas (se você pode fazer um ataque extra com sua mordida original gastando 1 PM, agora poderá fazer um ataque com cada mordida gastando 2 PM). Se um efeito modificar uma de suas mordidas, escolha qual é afetada. ",
+    prerequisite: "Gnoll, Kaijin, Lefou, Orc ou Trog",
+    origin: "Herois de Arton"
+  },
+
+];

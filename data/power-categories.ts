@@ -155,4 +155,11 @@ export const powerCategories: PowerCategory[] = [
     description: "Poderes exclusivos de Treinador.",
     origin: "Herois de Arton"
   },
+  {
+    id: "raça",
+    name: "Poderes Gerais de Raça",
+    slug: "poderes-gerais-raca",
+    description: "Poderes utilizados em raças específicas.",
+    origin: "Herois de Arton"
+  },
 ];

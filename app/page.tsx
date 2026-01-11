@@ -21,6 +21,7 @@ export default function Home() {
     { id: "perigos",  title: "Perigos",  icon: "/temas/perigos.png",  color: "from-orange-600 to-red-800",  href: "/perigos"},
     { id: "itens-magicos",  title: "Itens Mágicos",  icon: "/temas/itens-magicos.png",  color: "from-purple-500 to-amber-600",  href: "/itens-magicos"},
     { id: "condicoes",  title: "Condições",  icon: "/temas/condicoes.png",  color: "from-rose-600 to-red-800",  href: "/condicoes"},
+    { id: "distincoes",  title: "Distinções",  icon: "/temas/distincoes.png",  color: "from-rose-600 to-red-800",  href: "/distincoes"},
   ];
 
   return (

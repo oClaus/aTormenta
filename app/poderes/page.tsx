@@ -82,6 +82,9 @@ export default function PodersPage() {
                 <li className="flex gap-2 items-center">
                     <span className="font-bold text-amber-600 uppercase tracking-wide text-sm">Tormenta:</span> Poderes ligados à tempestade rubra.
                 </li>
+                <li className="flex gap-2 items-center">
+                    <span className="font-bold text-amber-600 uppercase tracking-wide text-sm">Raça:</span> São caracterizados por possuírem como pré-requisito pertencer a uma raça específica.
+                </li>
             </ul>
         </section>
 
