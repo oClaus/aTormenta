@@ -1,158 +1,268 @@
 import { Power } from "@/types/power";
 
 export const powersPaladino: Power[] = [
-  {
-    id: "1",
+  { id: "Arma Sagrada",
     name: "Arma Sagrada",
     description: "Quando usa Golpe Divino para atacar com a arma preferida de sua divindade, o dado de dano que você rola por Golpe Divino aumenta para d12.",
     prerequisite: "devoto de uma divindade (exceto Lena e Marah).",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "2",
+  { id: "Aumento de Atributo",
     name: "Aumento de Atributo",
     description: "Você recebe +1 em um atributo. Você pode escolher este poder várias vezes, mas apenas uma vez por patamar para um mesmo atributo.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "3",
+  { id: "Aura Antimagia",
     name: "Aura Antimagia",
     description: "Enquanto sua aura estiver ativa, você e os aliados dentro da aura podem rolar novamente qualquer teste de resistência contra magia recém realizado.",
     prerequisite: "14º nível de paladino.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "4",
+  { id: "Aura Ardente",
     name: "Aura Ardente",
     description: "Enquanto sua aura estiver ativa, no início de cada um de seus turnos, espíritos e mortos-vivos à sua escolha dentro dela sofrem dano de luz igual a 5 + seu Carisma. ",
     prerequisite: "10º nível de paladino.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "5",
+  { id: "Aura de Cura",
     name: "Aura de Cura",
     description: "Enquanto sua aura estiver ativa, no início de seus turnos, você e os aliados à sua escolha dentro dela curam um número de PV igual a 5 + seu Carisma.",
     prerequisite: "6º nível de paladino.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "6",
+  { id: "Aura de Invencibilidade",
     name: "Aura de Invencibilidade",
     description: "Enquanto sua aura estiver ativa, você ignora o primeiro dano que sofrer na cena. O mesmo se aplica a seus aliados dentro da aura.",
     prerequisite: "18º nível de paladino.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "7",
+  { id: "Aura Poderosa",
     name: "Aura Poderosa",
     description: "O raio da sua aura aumenta para 30m.",
     prerequisite: "6º nível de paladino.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "8",
+  { id: "Fulgor Divino",
     name: "Fulgor Divino",
     description: "Quando usa Golpe Divino, todos os inimigos em alcance curto ficam ofuscados até o início do seu próximo turno.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "9",
+  { id: "Julgamento Divino: Arrependimento",
     name: "Julgamento Divino: Arrependimento",
     description: "Você pode gastar 2 PM para marcar um inimigo em alcance curto. Na próxima vez que esse inimigo acertar um ataque em você ou em um de seus aliados, deve fazer um teste de Vontade (CD Car). Se falhar, fica atordoado no próximo turno dele (apenas uma vez por cena).",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "10",
+  { id: "Julgamento Divino: Autoridade",
     name: "Julgamento Divino: Autoridade",
     description: "Você pode gastar 1 PM para comandar uma criatura em alcance curto. Faça um teste de Diplomacia oposto pelo teste de Vontade do alvo. Se você vencer, ele obedece a um comando simples, como “pare” ou “largue a arma” (apenas uma vez por cena). Mental.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "11",
+  { id: "Julgamento Divino: Iluminação",
     name: "Julgamento Divino: Iluminação",
     description: "Você pode marcar um inimigo em alcance curto. Quando acerta um ataque corpo a corpo nesse inimigo, você recebe 2 PM temporários. Você só pode proferir este julgamento uma vez por cena.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "12",
+  { id: "Julgamento Divino: Justiça",
     name: "Julgamento Divino: Justiça",
     description: "Você pode gastar 2 PM para marcar um inimigo em alcance curto. A próxima vez que esse inimigo causar dano em você ou em um de seus aliados, deve fazer um teste de Vontade (CD Car). Se falhar, sofre dano de luz igual à metade do dano que causou.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "13",
+  { id: "Julgamento Divino: Libertação",
     name: "Julgamento Divino: Libertação",
     description: "Você pode gastar 5 PM para cancelar uma condição negativa qualquer (como abalado, paralisado etc.) que esteja afetando uma criatura em alcance curto.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "14",
+  { id: "Julgamento Divino: Salvação",
     name: "Julgamento Divino: Salvação",
     description: "Você pode gastar 2 PM para marcar um inimigo em alcance curto. Até o fim da cena, quando você acerta um ataque corpo a corpo nesse inimigo, recupera 5 pontos de vida.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "15",
+  { id: "Julgamento Divino: Vindicação",
     name: "Julgamento Divino: Vindicação",
     description: "Você pode gastar 2 PM para marcar um inimigo que tenha causado dano a você ou a seus aliados na cena. Você recebe +1 em testes de ataque e +1d8 em rolagens de dano contra o inimigo escolhido, mas sofre –5 em testes de ataque contra quaisquer outros alvos. No 5º nível, e a cada cinco níveis seguintes, você pode pagar +1 PM para aumentar o bônus de ataque em +1 e o bônus de dano em +1d8. O efeito termina caso o alvo fique inconsciente.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "16",
+  { id: "Julgamento Divino: Zelo",
     name: "Julgamento Divino: Zelo",
     description: "Você pode gastar 1 PM para marcar um alvo em alcance longo. Pelo restante da cena, sempre que se mover na direção desse alvo, você se move com o dobro de seu deslocamento.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "17",
+  { id: "Orar",
     name: "Orar",
     description: "Você aprende e pode lançar uma magia divina de 1º círculo à sua escolha. Seu atributo-chave para esta magia é Sabedoria. Você pode escolher este poder quantas vezes quiser.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "18",
+  { id: "Virtude Paladinesca: Caridade",
     name: "Virtude Paladinesca: Caridade",
     description: "O custo de suas habilidades de paladino que tenham um aliado como alvo é reduzido em –1 PM.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "19",
+  { id: "Virtude Paladinesca: Castidade",
     name: "Virtude Paladinesca: Castidade",
     description: "Você se torna imune a efeitos de encantamento e recebe +5 em testes de Intuição para perceber blefes.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "20",
+  { id: "Virtude Paladinesca: Compaixão",
     name: "Virtude Paladinesca: Compaixão",
     description: "Você pode usar Cura pelas Mãos em alcance curto e, para cada PM que gastar, cura 2d6+1 (em vez de 1d8+1).",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "21",
+  { id: "Virtude Paladinesca: Humildade",
     name: "Virtude Paladinesca: Humildade",
     description: "Na primeira rodada de um combate, você pode gastar uma ação completa para rezar e pedir orientação. Você recebe uma quantidade de PM temporários igual ao seu Carisma (duram até o fim da cena).",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "22",
+  { id: "Virtude Paladinesca: Temperança",
     name: "Virtude Paladinesca: Temperança",
     description: "Quando ingere um alimento, item alquímico ou poção, você consome apenas metade do item. Na prática, cada item desses rende duas “doses” para você.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
+  },
+  { id: "Arma Juramentada",
+    name: "Arma Juramentada",
+    description: "Se você estiver empunhando a arma preferida de sua divindade, ela recebe uma fração do poder divino. Em suas mãos, ela é considerada mágica e recebe os benefícios de uma melhoria (escolhido ao receber este poder, exceto material especial), cujos pré-requisitos ela cumpra. Essa melhoria não conta no limite da arma. Se você descumprir as Obrigações & Restrições da divindade, este efeito deixa de funcionar até você recuperar seus PM. ",
+    prerequisite: "devoto de uma divindade",
+    origin: "Herois de Arton"
+  },
+  { id: "Arma Sacramentada",
+    name: "Arma Sacramentada",
+    description: "A conexão de sua arma com sua divindade se torna mais forte. Em suas mãos, a arma também recebe os benefícios de um encanto (escolhido ao receber este poder) cujos pré-requisitos ela cumpra. Esse encanto não conta no limite da arma e também deixa de funcionar se você descumprir suas Obrigações & Restrições. ",
+    prerequisite: "Arma Juramentada, 11º nível de paladino",
+    origin: "Herois de Arton"
+  },
+  { id: "Aura Vingadora",
+    name: "Aura Vingadora",
+    description: "Enquanto sua aura estiver ativa, você e cada aliado dentro dela recebem +1d6 de luz em uma rolagem de dano corpo a corpo uma vez por rodada. ",
+    prerequisite: "8º nível de paladino",
+    origin: "Herois de Arton"
+  },
+  { id: "Bloqueio Divino",
+    name: "Bloqueio Divino",
+    description: "Quando sofre um ataque, se estiver empunhando um escudo, você pode gastar 2 PM para receber +5 na Defesa contra esse ataque. ",
+    prerequisite: "proficiência com escudos",
+    origin: "Herois de Arton"
+  },
+  { id: "Convicção Heroica",
+    name: "Convicção Heroica",
+    description: "Uma vez por cena, quando seus pontos de vida forem reduzidos a 0 ou menos, você pode gastar 5 PM para curar 50 PV. ",
+    prerequisite: "11º nível de paladino",
+    origin: "Herois de Arton"
+  },
+  { id: "Expurgo Sagrado",
+    name: "Expurgo Sagrado",
+    description: "Quando você usa Golpe Divino contra um abissal ou um morto-vivo, seu custo diminui em –1 PM (cumulativo com outras reduções) e o bônus de dano da habilidade aumenta em mais um dado.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Escudo Fraterno",
+    name: "Escudo Fraterno",
+    description: "Se você estiver empunhando um escudo, sua Égide Sagrada afeta aliados até 9m (em vez de apenas adjacentes). ",
+    prerequisite: "Égide Sagrada",
+    origin: "Herois de Arton"
+  },
+  { id: "Escudo Sagrado",
+    name: "Escudo Sagrado",
+    description: "Se estiver empunhando um escudo, você pode gastar uma ação de movimento e 1 PM para criar uma barreira sagrada com duração sustentada a partir dele. Você recebe redução de dano igual ao seu Carisma. ",
+    prerequisite: "Bloqueio Divino, 7º nível de paladino",
+    origin: "Herois de Arton"
+  },
+  { id: "Fulgor Ardente",
+    name: "Fulgor Ardente",
+    description: "Quando usa Golpe Divino, você pode gastar +1 PM. Se fizer isso e acertar o ataque, todos os inimigos a até 6m do alvo do ataque sofrem dano de luz igual ao dano extra causado por essa habilidade. ",
+    prerequisite: "Fulgor Divino",
+    origin: "Herois de Arton"
+  },
+  { id: "Guardião Celestial",
+    name: "Guardião Celestial",
+    description: "Você pode gastar uma ação padrão e 10 PM para convocar um espírito para lutar ao seu lado. O guardião celestial flutua ao seu redor, é incorpóreo e imune a dano e possui 100 pontos de luz. Uma vez por rodada, quando você sofre dano, pode fazer o espírito absorver esse dano. Ele perde pontos de luz igual ao dano que você sofreria, e desaparece se seus pontos de luz forem reduzidos a 0. Além disso, uma vez por rodada, você pode gastar 2 PM para fazer o espírito atacar uma criatura em alcance curto (ataque igual a sua Religião com um bônus adicional de +10, dano 4d8 mais seu Carisma de luz, crítico 18/x3). ",
+    prerequisite: "17º nível de paladino",
+    origin: "Herois de Arton"
+  },
+  { id: "Investida Sagrada",
+    name: "Investida Sagrada",
+    description: "Quando faz uma investida montada, você pode pagar 1 PM para receber deslocamento de voo igual ao seu deslocamento base até o fim do seu turno e causar +1d8 pontos de dano. ",
+    prerequisite: "Montaria Sagrada, 10º nível de paladino",
+    origin: "Herois de Arton"
+  },
+  { id: "Julgamento Divino: Desafio",
+    name: "Julgamento Divino: Desafio",
+    description: "Você pode gastar 2 PM para marcar um inimigo em alcance curto. Sempre que esse inimigo ataca um de seus aliados, ele recebe uma penalidade cumulativa de –1 em testes de ataque (limitado pelo seu Carisma). Essa penalidade acaba se ele atacar você ou se você terminar seu turno além do alcance corpo a corpo dele.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Julgamento Divino: Proteção",
+    name: "Julgamento Divino: Proteção",
+    description: "Você pode gastar 2 PM para conceder 10 PV temporários e +2 na Defesa para uma criatura em alcance curto.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Julgamento Divino: Redenção",
+    name: "Julgamento Divino: Redenção",
+    description: "Você é capaz de criar um vínculo espiritual com um aliado. Você pode lançar Escudo da Fé, mas apenas com o aprimoramento que divide o dano entre o alvo e você (mas não precisa cumprir seu requisito de círculo).",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Julgamento Divino: Retribuição",
+    name: "Julgamento Divino: Retribuição",
+    description: "Você pode marcar um inimigo em alcance curto. Na próxima vez em que esse inimigo causar dano em você, você pode gastar 2 PM para fazer um ataque corpo a corpo contra ele (desde que ele esteja em seu alcance).",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Luz Purificadora",
+    name: "Luz Purificadora",
+    description: "Quando usa Golpe Divino, você pode gastar +1 PM para converter todo o dano causado para luz e ignorar 10 pontos de redução de dano do alvo.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Manto de Batalha",
+    name: "Manto de Batalha",
+    description: "Você aprende e pode lançar Vestimenta da Fé, e pode usar seus aprimoramentos como se tivesse acesso aos mesmos círculos de magia que um clérigo de seu nível. ",
+    prerequisite: "5º nível de paladino",
+    origin: "Herois de Arton"
+  },
+  { id: "Paladino do Reino",
+    name: "Paladino do Reino",
+    description: "Você recebe um poder de cavaleiro cujos pré-requisitos cumpra, usando seu nível como nível de cavaleiro. ",
+    prerequisite: "treinado em Nobreza",
+    origin: "Herois de Arton"
+  },
+  { id: "Rajada Divina",
+    name: "Rajada Divina",
+    description: "Quando faz um Golpe Divino com Luz Purificadora, você pode gastar +1 PM para aumentar o alcance desse ataque para curto (ele ainda conta como um ataque corpo a corpo).",
+    prerequisite: "Luz Purificadora",
+    origin: "Herois de Arton"
+  },
+  { id: "Sacrifício",
+    name: "Sacrifício",
+    description: "Uma vez por rodada, quando faz um ataque corpo a corpo, você pode sacrificar 5 PV por patamar para aumentar o dano desse ataque em +1d10 por patamar. Por exemplo, se você for um personagem de 5º nível, pode perder 10 PV para causar +2d10 pontos de dano.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Sentença Dobrada",
+    name: "Sentença Dobrada",
+    description: "Quando profere um julgamento, você pode gastar +1 PM para proferir um segundo julgamento com a mesma ação (pagando o custo de ambos).",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Virtude Paladinesca: Paciência",
+    name: "Virtude Paladinesca: Paciência",
+    description: "Em combate, você pode ficar uma rodada inteira em meditação, sem fazer ações (exceto reações), para receber +2 em testes de perícia e na Defesa até o fim da cena.",
+    prerequisite: "",
+    origin: "Herois de Arton"
   },
 ];

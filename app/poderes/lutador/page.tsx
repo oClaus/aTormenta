@@ -123,6 +123,23 @@ export default function LutadorPodersPage() {
             <p className="text-lg">Nenhum poder encontrado.</p>
             </div>
         )}
+
+        {/* Seção de Informação: Combinações Desarmadas */}
+        <div className="mt-16 p-8 rounded bg-stone-900/50 border border-stone-800 w-full space-y-6">
+            <div>
+                <h3 className="text-2xl font-bold text-orange-500 mb-4 font-serif">Combinações Desarmadas</h3>
+                <p className="text-stone-300 leading-relaxed font-serif">
+                Poderes de Combinação representam golpes que se aproveitam dos efeitos de ataques anteriores sobre seu oponente. Eles compartilham as seguintes regras:
+                </p>
+            </div>
+
+            <div className="space-y-3 text-stone-400 font-serif border-l-2 border-stone-800 pl-4">
+                <p className="text-stone-300 leading-relaxed"><span className="text-orange-700 font-bold">•</span> Combinações só podem ser usadas com ataques desarmados.</p>
+                <p className="text-stone-300 leading-relaxed"><span className="text-orange-700 font-bold">•</span> Cada Combinação só pode ser usada uma vez por rodada, e apenas uma Combinação pode ser usada por ataque.</p>
+                <p className="text-stone-300 leading-relaxed"><span className="text-orange-700 font-bold">•</span> Quando acerta um ataque usando um poder de Combinação, você começa uma contagem (individual por oponente). O próximo ataque de Combinação recebe um bônus de contagem (descrito em cada poder). A contagem zera se você passar uma rodada sem acertar um ataque usando um poder de combinação.</p>
+            </div>
+        </div>
+
       </div>
 
       {/* Footer */}

@@ -1,286 +1,396 @@
 import { Power } from "@/types/power";
 
 export const powersGerais: Power[] = [
-  {
-    id: "1",
+  { id: "Acuidade com Arma",
     name: "Acuidade com Arma",
     description: "Quando usa uma arma corpo a corpo leve ou uma arma de arremesso, você pode usar sua Destreza em vez de Força nos testes de ataque e rolagens de dano.",
     prerequisite: "Des 1",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "2",
+  { id: "Arma Secundária Grande",
     name: "Arma Secundária Grande",
     description: "Você pode empunhar duas armas de uma mão com o poder Estilo de Duas Armas.",
     prerequisite: "Estilo de Duas Armas.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "3",
+  { id: "Arremesso Potente",
     name: "Arremesso Potente",
     description: "Quando usa uma arma de arremesso, você pode usar sua Força em vez de Destreza nos testes de ataque. Se você possuir o poder Ataque Poderoso, poderá usá-lo com armas de arremesso.",
     prerequisite: "For 1, Estilo de Arremesso",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "4",
+  { id: "Arremesso Múltiplo",
     name: "Arremesso Múltiplo",
     description: "Uma vez por rodada, quando faz um ataque com uma arma de arremesso, você pode gastar 1 PM para fazer um ataque adicional contra o mesmo alvo, arremessando outra arma de arremesso.",
     prerequisite: " Des 1, Estilo de Arremesso.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "5",
+  { id: "Ataque com Escudo",
     name: "Ataque com Escudo",
     description: "Uma vez por rodada, se estiver empunhando um escudo e fizer a ação agredir, você pode gastar 1 PM para fazer um ataque corpo a corpo extra com o escudo. Este ataque não faz você perder o bônus do escudo na Defesa.",
     prerequisite: "Estilo de Arma e Escudo",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "6",
+  { id: "Ataque Pesado",
     name: "Ataque Pesado",
     description: "Quando faz um ataque corpo a corpo com uma arma de duas mãos, você pode pagar 1 PM. Se fizer isso e acertar o ataque, além do dano você faz uma manobra derrubar ou empurrar contra o alvo como uma ação livre (use o resultado do ataque como o teste de manobra).",
     prerequisite: "Estilo de Duas Mãos.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "7",
+  { id: "Ataque Poderoso",
     name: "Ataque Poderoso",
     description: "Sempre que faz um ataque corpo a corpo, você pode sofrer –2 no teste de ataque para receber +5 na rolagem de dano.",
     prerequisite: "For 1.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "8",
+  { id: "Ataque Preciso",
     name: "Ataque Preciso",
     description: "Se estiver empunhando uma arma corpo a corpo em uma das mãos e nada na outra, você recebe +2 na margem de ameaça e +1 no multiplicador de crítico.",
     prerequisite: "Estilo de Uma Arma.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "9",
+  { id: "Bloqueio com Escudo",
     name: "Bloqueio com Escudo",
     description: "Quando sofre dano, você pode gastar 1 PM para receber redução de dano igual ao bônus na Defesa que seu escudo fornece contra este dano. Você só pode usar este poder se estiver usando um escudo.",
     prerequisite: "Estilo de Arma e Escudo.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "10",
+  { id: "Carga de Cavalaria",
     name: "Carga de Cavalaria",
     description: "Quando faz uma investida montada, você causa +2d8 pontos de dano. Além disso, pode continuar se movendo depois do ataque. Você deve se mover em linha reta e seu movimento máximo ainda é o dobro do seu deslocamento.",
     prerequisite: "Ginete",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "11",
+  { id: "Combate Defensivo",
     name: "Combate Defensivo",
     description: "Quando usa a ação agredir, você pode usar este poder. Se fizer isso, até seu próximo turno, sofre –2 em todos os testes de ataque, mas recebe +5 na Defesa.",
     prerequisite: "Int 1.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "12",
+  { id: "Derrubar Aprimorado",
     name: "Derrubar Aprimorado",
     description: "Você recebe +2 em testes de ataque para derrubar. Quando derruba uma criatura com essa manobra, pode gastar 1 PM para fazer um ataque extra contra ela.",
     prerequisite: "Combate Defensivo",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "13",
+  { id: "Desarmar Aprimorado",
     name: "Desarmar Aprimorado",
     description: "Você recebe +2 em testes de ataque para desarmar. Quando desarma uma criatura, pode gastar 1 PM para arremessar a arma dela para longe. Para definir onde a arma cai, role 1d8 para a direção (sendo “1” diretamente à sua frente, “2” à frente e à direita e assim por diante) e 1d6 para a distância (medida em quadrados de 1,5m a partir da criatura desarmada).",
     prerequisite: "Combate Defensivo",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "14",
+  { id: "Disparo Preciso",
     name: "Disparo Preciso",
     description: "Você pode fazer ataques à distância contra oponentes envolvidos em combate corpo a corpo sem sofrer a penalidade de –5 no teste de ataque.",
     prerequisite: "Estilo de Disparo ou Estilo de Arremesso.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "15",
+  { id: "Disparo Rápido",
     name: "Disparo Rápido",
     description: "Se estiver empunhando uma arma de disparo que possa recarregar como ação livre e gastar uma ação completa para agredir, pode fazer um ataque adicional com ela. Se fizer isso, sofre –2 em todos os testes de ataque até o seu próximo turno.",
     prerequisite: "Des 1, Estilo de Disparo.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "16",
+  { id: "Empunhadura Poderosa",
     name: "Empunhadura Poderosa",
     description: "Ao usar uma arma feita para uma categoria de tamanho maior que a sua, a penalidade que você sofre nos testes de ataque diminui para –2 (normalmente, usar uma arma de uma categoria de tamanho maior impõe –5 nos testes de ataque).",
     prerequisite: "For 3.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "17",
+  { id: "Encouraçado",
     name: "Encouraçado",
     description: "Se estiver usando uma armadura pesada, você recebe +2 na Defesa. Esse bônus aumenta em +2 para cada outro poder que você possua que tenha Encouraçado como pré-requisito.",
     prerequisite: "proficiência com armaduras pesadas.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "18",
+  { id: "Esquiva",
     name: "Esquiva",
     description: "Você recebe +2 na Defesa e Reflexos.",
     prerequisite: "Des 1.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "19",
+  { id: "Estilo de Arma e Escudo",
     name: "Estilo de Arma e Escudo",
     description: "Se você estiver usando um escudo, o bônus na Defesa que ele fornece aumenta em +2.",
     prerequisite: "treinado em Luta, proficiência com escudos.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "20",
+  { id: "Estilo de Arma Longa",
     name: "Estilo de Arma Longa",
     description: "Você recebe +2 em testes de ataque com armas alongadas e pode atacar alvos adjacentes com essas armas.",
     prerequisite: "For 1, treinado em Luta.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "21",
+  { id: "Estilo de Arremesso",
     name: "Estilo de Arremesso",
     description: "Você pode sacar armas de arremesso como uma ação livre e recebe +2 nas rolagens de dano com elas. Se também possuir o poder Saque Rápido, também recebe +2 nos testes de ataque com essas armas.",
     prerequisite: "treinado em Pontaria.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "22",
+  { id: "Estilo de Disparo",
     name: "Estilo de Disparo",
     description: "Se estiver usando uma arma de disparo, você soma sua Destreza nas rolagens de dano.",
     prerequisite: "treinado em Pontaria.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "23",
+  { id: "Estilo de Duas Armas",
     name: "Estilo de Duas Armas",
     description: "Se estiver empunhando duas armas (e pelo menos uma delas for leve) e fizer a ação agredir, você pode fazer dois ataques, um com cada arma. Se fizer isso, sofre –2 em todos os testes de ataque até o seu próximo turno. Se possuir Ambidestria, em vez disso não sofre penalidade para usá-lo.",
     prerequisite: "Des 2, treinado em Luta.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "24",
+  { id: "Estilo de Duas Mãos",
     name: "Estilo de Duas Mãos",
     description: "Se estiver usando uma arma corpo a corpo com as duas mãos, você recebe +5 nas rolagens de dano. Este poder não pode ser usado com armas leves.",
     prerequisite: "For 2, Treinado em Luta.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "25",
+  { id: "Estilo de Uma Arma",
     name: "Estilo de Uma Arma",
     description: "Se estiver usando uma arma corpo a corpo em uma das mãos e nada na outra, você recebe +2 na Defesa e nos testes de ataque com essa arma (exceto ataques desarmados).",
     prerequisite: "treinado em Luta.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "26",
+  { id: "Estilo Desarmado",
     name: "Estilo Desarmado",
     description: "Seus ataques desarmados causam $1d6$ pontos de dano e podem causar dano letal ou não letal (sem penalidades).",
     prerequisite: "treinado em Luta.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "27",
+  { id: "Fanático",
     name: "Fanático",
     description: "Seu deslocamento não é reduzido por usar armaduras pesadas.",
     prerequisite: "12º nível de personagem, Encouraçado.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "28",
+  { id: "Finta Aprimorada",
     name: "Finta Aprimorada",
     description: "Você recebe +2 em testes de Enganação para fintar e pode fintar como uma ação de movimento.",
     prerequisite: "treinado em Enganação.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "29",
+  { id: "Foco em Arma",
     name: "Foco em Arma",
     description: "Escolha uma arma. Você recebe +2 em testes de ataque com essa arma. Você pode escolher este poder outras vezes para armas diferentes.",
     prerequisite: "proficiência com a arma.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "30",
+  { id: "Ginete",
     name: "Ginete",
     description: "Você passa automaticamente em testes de Cavalgar para não cair da montaria quando sofre dano. Além disso, não sofre penalidades para atacar à distância ou lançar magias quando montado.",
     prerequisite: "treinado em Cavalgar.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "31",
+  { id: "Inexpugnável",
     name: "Inexpugnável",
     description: "Se estiver usando uma armadura pesada, você recebe +2 em todos os testes de resistência.",
     prerequisite: "Encouraçado, 6º nível de personagem.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "32",
+  { id: "Mira Apurada",
     name: "Mira Apurada",
     description: "Quando usa a ação mirar, você recebe +2 em testes de ataque e na margem de ameaça com ataques à distância até o fim do turno.",
     prerequisite: "Sab 1, Disparo Preciso.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "33",
+  { id: "Piqueiro",
     name: "Piqueiro",
     description: "Uma vez por rodada, se estiver empunhando uma arma alongada e um inimigo entrar voluntariamente em seu alcance corpo a corpo, você pode gastar 1 PM para fazer um ataque corpo a corpo contra este oponente com esta arma. Se o oponente tiver se aproximado fazendo uma investida, seu ataque causa dois dados de dano extra do mesmo tipo.",
     prerequisite: "Estilo de Arma Longa.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "34",
+  { id: "Presença Aterradora",
     name: "Presença Aterradora",
     description: "Você pode gastar uma ação padrão e 1 PM para assustar todas as criaturas à sua escolha em alcance curto. Veja a perícia Intimidação para as regras de assustar.",
     prerequisite: "treinado em Intimidação.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "35",
+  { id: "Proficiência",
     name: "Proficiência",
     description: "Escolha uma proficiência: armas marciais, armas de fogo, armaduras pesadas ou escudos (se for proficiente em armas marciais, você também pode escolher armas exóticas). Você recebe essa proficiência. Você pode escolher este poder outras vezes para proficiências diferentes.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "36",
+  { id: "Quebrar Aprimorado",
     name: "Quebrar Aprimorado",
     description: "Você recebe +2 em testes de ataque para quebrar. Quando reduz os PV de uma arma para 0 ou menos, você pode gastar 1 PM para realizar um ataque extra contra o usuário dela. O ataque adicional usa os mesmos valores de ataque e dano, mas os dados devem ser rolados novamente.",
     prerequisite: "Ataque Poderoso.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "37",
+  { id: "Reflexos de Combate",
     name: "Reflexos de Combate",
     description: "Você ganha uma ação de movimento extra no seu primeiro turno de cada combate.",
     prerequisite: "Des 1.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "38",
+  { id: "Saque Rápido",
     name: "Saque Rápido",
     description: "Você recebe +2 em Iniciativa e pode sacar ou guardar itens como uma ação livre (em vez de ação de movimento). Além disso, a ação que você gasta para recarregar armas de disparo diminui em uma categoria (ação completa para padrão, padrão para movimento, movimento para livre).",
     prerequisite: "treinado em Iniciativa.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "39",
+  { id: "Trespassar",
     name: "Trespassar",
     description: "Quando você faz um ataque corpo a corpo e reduz os pontos de vida do alvo para 0 ou menos, pode gastar 1 PM para fazer um ataque adicional contra outra criatura dentro do seu alcance.",
     prerequisite: "Ataque Poderoso.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "40",
+  { id: "Vitalidade",
     name: "Vitalidade",
     description: "Você recebe +1 PV por nível de personagem e +2 em Fortitude.",
     prerequisite: "Con 1.",
     origin: "Tormenta20 - Jogo do Ano"
-  }
+  },
+  { id: "Arremesso Devastador",
+    name: "Arremesso Devastador",
+    description: "Quando faz um ataque à distância com uma arma de arremesso, você pode gastar 1 PM. Se fizer isso e acertar o ataque, além do dano você faz uma manobra derrubar ou empurrar contra o alvo, usando o resultado do ataque como o teste de manobra. ",
+    prerequisite: "Arremesso Potente",
+    origin: "Herois de Arton"
+  },
+  { id: "Ataque com o Cabo",
+    name: "Ataque com o Cabo",
+    description: "Uma vez por rodada, quando usa a ação agredir enquanto empunha uma arma alongada, você pode gastar 1 PM. Se fizer isso, pode fazer um ataque extra com o cabo da arma. Você usa as mesmas estatísticas de um ataque normal da arma, mas seu dano básico se torna 1d6 (impacto) e seu crítico se torna x2. ",
+    prerequisite: "Estilo de Arma Longa",
+    origin: "Herois de Arton"
+  },
+  { id: "Ataque em Arco",
+    name: "Ataque em Arco",
+    description: "Quando faz um ataque corpo a corpo, você pode gastar 2 PM. Se fizer isso, seu ataque pode acertar até três criaturas adjacentes entre si que estejam em seu alcance (faça um único teste de ataque e compare-o com a Defesa de cada criatura). Se você estiver atacando um bando, em vez disso seu ataque causa 50% a mais de dano. ",
+    prerequisite: "treinado em Luta, 4º nível de personagem",
+    origin: "Herois de Arton"
+  },
+  { id: "Bravura Indômita",
+    name: "Bravura Indômita",
+    description: "Se estiver adjacente a dois ou mais inimigos aptos a atacá-lo, você recebe +2 em testes de ataque e na margem de ameaça. ",
+    prerequisite: "treinado em Vontade",
+    origin: "Herois de Arton"
+  },
+  { id: "Briga de Rua",
+    name: "Briga de Rua",
+    description: "Você sabe chutar áreas sensíveis dos inimigos e usar outros truques sujos. Uma vez por rodada, quando faz uma finta, você pode gastar 1 PM. Se fizer isso e vencer o teste oposto da finta, além dos efeitos de fintar, você pode fazer um ataque desarmado contra o alvo como uma ação livre. Se acertar esse ataque, causa +2d6 pontos de dano. ",
+    prerequisite: "Briga ou Estilo Desarmado",
+    origin: "Herois de Arton"
+  },
+  { id: "Catafractário",
+    name: "Catafractário",
+    description: "Antigos guerreiros montados de Lamnor, os catafractários eram famosos por suas táticas defensivas. Embora suas unidades não existam mais, suas técnicas perduraram. Se estiver montado e vestindo armadura pesada, você recebe +1 na Defesa por nível de parceiro de sua montaria. ",
+    prerequisite: "Encouraçado, Ginete",
+    origin: "Herois de Arton"
+  },
+  { id: "Chuva de Golpes",
+    name: "Chuva de Golpes",
+    description: "Quando ataca com duas armas empunhadas usando o poder Estilo de Duas Armas, você pode fazer um ataque desarmado adicional. ",
+    prerequisite: "Briga ou Estilo Desarmado, Estilo de Duas Armas",
+    origin: "Herois de Arton"
+  },
+  { id: "Contra-Ataque",
+    name: "Contra-Ataque",
+    description: "Uma vez por rodada, se uma criatura atacá-lo e errar, você pode gastar 2 PM para fazer um ataque corpo a corpo contra essa criatura. ",
+    prerequisite: "Combate Defensivo",
+    origin: "Herois de Arton"
+  },
+  { id: "Coragem Aguerrida",
+    name: "Coragem Aguerrida",
+    description: "Quando estiver com metade ou menos de seus PV totais, você recebe +2 em testes de perícia e na Defesa. ",
+    prerequisite: "treinado em Vontade",
+    origin: "Herois de Arton"
+  },
+  { id: "Corte Lacerante",
+    name: "Corte Lacerante",
+    description: "Quando ataca com uma arma corpo a corpo de corte, você pode gastar 2 PM. Se acertar o ataque, você causa +1d10 pontos de dano e o alvo fica sangrando. ",
+    prerequisite: "treinado em Luta",
+    origin: "Herois de Arton"
+  },
+  { id: "Defesa Armada",
+    name: "Defesa Armada",
+    description: "Sua arma é tão grande que funciona como um escudo, protegendo-o dos ataques de seus inimigos! Se estiver usando uma arma corpo a corpo de duas mãos, você recebe +2 na Defesa e em Fortitude. ",
+    prerequisite: "Estilo de Duas Mãos",
+    origin: "Herois de Arton"
+  },
+  { id: "Encastelado",
+    name: "Encastelado",
+    description: "Se estiver usando uma armadura pesada, você recebe redução de dano 2. Essa RD aumenta em +1 para cada outro poder que você possua que tenha Encouraçado como pré-requisito. ",
+    prerequisite: "Encouraçado, 5º nível de personagem",
+    origin: "Herois de Arton"
+  },
+  { id: "Escudo Heroico",
+    name: "Escudo Heroico",
+    description: "Você pode empunhar e soltar seu escudo como ação livre e, quando ataca com ele, pode tratá-lo como uma arma de arremesso com alcance curto. Sempre que arremessa o escudo, você pode gastar 1 PM. Se fizer isso e acertar o ataque, você pode fazer com que ele retorne à sua mão (pegá-lo é uma reação) ou ricocheteie contra outro alvo; nesse caso, você faz um novo ataque à distância com uma penalidade cumulativa de –5. Você pode continuar atacando novos alvos até recuperar o escudo ou errar um ataque.",
+    prerequisite: "Ataque com Escudo",
+    origin: "Herois de Arton"
+  },
+  { id: "Estocada Pungente",
+    name: "Estocada Pungente",
+    description: "Quando ataca com uma arma corpo a corpo de perfuração, você pode gastar 2 PM. Se acertar, o alvo sofre –5 em rolagens de dano por 1 rodada. ",
+    prerequisite: "treinado em Luta",
+    origin: "Herois de Arton"
+  },
+  { id: "Estudar o Adversário",
+    name: "Estudar o Adversário",
+    description: "Na primeira vez na rodada em que erra um ataque, você recebe um bônus cumulativo de +2 em testes de ataque contra o mesmo alvo até o fim da cena. ",
+    prerequisite: "Int 1",
+    origin: "Herois de Arton"
+  },
+  { id: "Firula Inspiradora",
+    name: "Firula Inspiradora",
+    description: "Você pode gastar uma ação de movimento e 1 PM para realizar uma firula qualquer (girar sua arma, fazer uma dancinha…). Faça um teste de Atuação (CD 10). Se passar, você recebe +1 em testes de perícia e na Defesa, +1 adicional para cada 10 pontos pelos quais o resultado do teste exceder a CD, até o início do seu próximo turno.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Matador de Monstros",
+    name: "Matador de Monstros",
+    description: "Você recebe +1d10 nas rolagens de dano contra criaturas de tamanho Grande ou maior, e essas criaturas não recebem bônus por tamanho em testes de manobras de combate contra você. ",
+    prerequisite: "5º nível de personagem",
+    origin: "Herois de Arton"
+  },
+  { id: "Mobilidade",
+    name: "Mobilidade",
+    description: "Quando usa a ação movimentar-se e percorre pelo menos 6m, você recebe +2 em testes de ataque e na Defesa até o início do seu próximo turno.",
+    prerequisite: "Esquiva",
+    origin: "Herois de Arton"
+  },
+  { id: "Na Mosca",
+    name: "Na Mosca",
+    description: "Se fizer um ataque à distância, você pode gastar 1 PM. Se acertar o ataque, você causa um dado extra de dano do mesmo tipo (por exemplo, com uma besta pesada, causa +1d12). ",
+    prerequisite: "Estilo de Arremesso ou Estilo de Disparo",
+    origin: "Herois de Arton"
+  },
+  { id: "Pancada Estonteante",
+    name: "Pancada Estonteante",
+    description: "Quando ataca com uma arma corpo a corpo de impacto, você pode gastar 2 PM. Se você acertar o ataque, o alvo fica desprevenido por uma rodada (ou seja, até o fim do seu próximo turno).",
+    prerequisite: "treinado em Luta",
+    origin: "Herois de Arton"
+  },
+  { id: "Precisão Letal",
+    name: "Precisão Letal",
+    description: "A margem de ameaça de seus ataques aumenta em +1. ",
+    prerequisite: "11º nível de personagem",
+    origin: "Herois de Arton"
+  },
+  { id: "Sanguinário",
+    name: "Sanguinário",
+    description: "Sempre que você causar 10 ou mais pontos de dano em um ou mais inimigos, recebe um bônus cumulativo de +1 em rolagens de dano até o fim da cena (limitado pela sua Força).",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Sentinela Implacável",
+    name: "Sentinela Implacável",
+    description: "Uma vez por rodada, se você estiver empunhando uma arma de disparo carregada e um inimigo se mover dentro do alcance da arma, você pode gastar 2 PM para fazer um ataque contra essa criatura usando essa arma.",
+    prerequisite: "Sab 1, treinado em Iniciativa e Percepção, Estilo de Disparo",
+    origin: "Herois de Arton"
+  },
+  { id: "Sequência de Golpes",
+    name: "Sequência de Golpes",
+    description: "Você desfere uma tempestade de golpes, usando a força de um movimento para impulsionar o outro, sem dar chance para sua vítima reagir. Quando você acerta um ataque corpo a corpo em uma criatura, recebe um bônus cumulativo de +1 em testes de ataque e rolagens de dano contra a mesma criatura nesse turno (limitado pela sua Força).",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Truque da Mão Lesta",
+    name: "Truque da Mão Lesta",
+    description: "Se estiver usando uma arma corpo a corpo em uma mão e nada na outra, você pode trocar a arma de mãos rapidamente para confundir um inimigo adjacente. Esse inimigo fica desprevenido até o fim do seu turno e, se você acertá-lo nesse turno, seu dano com a arma aumenta em dois passos. Você pode usar este poder uma vez por inimigo em cada cena. ",
+    prerequisite: "Estilo de Uma Arma",
+    origin: "Herois de Arton"
+  },
   
 
 ];

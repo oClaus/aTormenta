@@ -1,165 +1,262 @@
 import { Power } from "@/types/power";
 
 export const powersLutador: Power[] = [
-  {
-    id: "1",
+  { id: "Arma Improvisada",
     name: "Arma Improvisada",
     description: "Para você, atacar com armas improvisadas conta como fazer um ataque desarmado, mas seu dano aumenta em um passo. Você pode gastar uma ação de movimento para procurar uma pedra, cadeira, garrafa ou qualquer coisa que possa usar como arma. Faça um teste de Percepção (CD 20). Se você passar, encontra uma arma improvisada. Armas improvisadas são frágeis; se você errar um ataque e o resultado do d20 for um número ímpar, a arma quebra.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "2",
+  { id: "Até Acertar",
     name: "Até Acertar",
     description: "Se você errar um ataque desarmado, recebe um bônus cumulativo de +2 em testes de ataque e rolagens de dano desarmado contra o mesmo oponente. Os bônus terminam quando você acertar um ataque ou no fim da cena, o que acontecer primeiro.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "3",
+  { id: "Aumento de Atributo",
     name: "Aumento de Atributo",
     description: "Você recebe +1 em um atributo. Você pode escolher este poder várias vezes, mas apenas uma vez por patamar para um mesmo atributo.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "4",
+  { id: "Braços Calejados",
     name: "Braços Calejados",
     description: "Se você não estiver usando armadura, soma sua Força na Defesa, limitado pelo seu nível.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "5",
+  { id: "Chave",
     name: "Chave",
     description: "Se estiver agarrando uma criatura e fizer um teste de manobra contra ela para causar dano, o dano desarmado aumenta em um passo. ",
     prerequisite: "Int 1, Lutador de Chão, 4º nível de lutador.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "6",
+  { id: "Cabeçada",
     name: "Cabeçada",
     description: "Quando faz um ataque desarmado, você pode gastar 2 PM. Se fizer isso, o oponente fica desprevenido contra este ataque. Você só pode usar este poder uma vez por cena contra um mesmo alvo.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "7",
+  { id: "Confiança dos Ringues",
     name: "Confiança dos Ringues",
     description: "Quando um inimigo erra um ataque corpo a corpo contra você, você recebe 2 PM temporários (cumulativos). Você pode ganhar um máximo de PM temporários por cena igual ao seu nível. Esses pontos temporários desaparecem no final da cena.",
     prerequisite: "8º nível de lutador.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "8",
+  { id: "Convencido",
     name: "Convencido",
     description: "Acostumado a contar apenas com seus músculos, você adquiriu certo desdém por artes mais sofisticadas. Você recebe resistência a medo e mental +5.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "9",
+  { id: "Golpe Baixo",
     name: "Golpe Baixo",
     description: "Quando faz um ataque desarmado, você pode gastar 2 PM. Se fizer isso e acertar o ataque, o oponente deve fazer um teste de Fortitude (CD For). Se ele falhar, fica atordoado por uma rodada (apenas uma vez por cena).",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "10",
+  { id: "Golpe Imprudente",
     name: "Golpe Imprudente",
     description: "Quando usa Golpe Relâmpago, você pode atacar de forma impulsiva. Se fizer isso, seus ataques desarmados recebem um dado de dano extra do mesmo tipo (por exemplo, se o seu dano é 2d6, você causa 3d6), mas você sofre –5 na Defesa até o início de seu próximo turno.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "11",
+  { id: "Imobilização",
     name: "Imobilização",
     description: "Se estiver agarrando uma criatura, você pode gastar uma ação completa para imobilizá-la. Faça um teste de manobra contra ela. Se você passar, imobiliza a criatura — ela fica indefesa e não pode realizar nenhuma ação, exceto tentar se soltar (o que exige um teste de manobra). Se a criatura se soltar da imobilização, ainda fica agarrada. Enquanto estiver imobilizando uma criatura, você sofre as penalidades de agarrar.",
     prerequisite: "Chave, 8º nível de lutador.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "12",
+  { id: "Língua dos Becos",
     name: "Língua dos Becos",
     description: "Você pode pagar 1 PM para usar sua Força no lugar de Carisma em um teste de perícia baseada em Carisma.",
     prerequisite: "For 1, treinado em Intimidação.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "13",
+  { id: "Lutador de Chão",
     name: "Lutador de Chão",
     description: "Você recebe +2 em testes de ataque para agarrar e derrubar. Quando agarra uma criatura, pode gastar 1 PM para fazer uma manobra derrubar contra ela como uma ação livre.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "14",
+  { id: "Nome na Arena",
     name: "Nome na Arena",
     description: "Você construiu uma reputação no circuito de lutas de Arton. Uma vez por cena, pode gastar uma ação completa para fazer um teste de Luta (CD 10) e impressionar os presentes. Se passar, você recebe +2 em todos os seus testes de perícias originalmente baseadas em Carisma até o fim da cena e a atitude de qualquer pessoa que seja fã de lutas aumenta em uma categoria em relação a você. Esse bônus aumenta em +2 para cada 10 pontos pelos quais o resultado do teste exceder a CD (+4 para um resultado 20, +6 para 30 e assim por diante).",
     prerequisite: "11º nível de lutador.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "15",
+  { id: "Punhos de Adamante",
     name: "Punhos de Adamante",
     description: "Seus ataques desarmados ignoram 10 pontos de redução de dano do alvo, se houver. ",
     prerequisite: "8º nível de lutador.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "16",
+  { id: "Rasteira",
     name: "Rasteira",
     description: "Quando faz um ataque desarmado contra uma criatura até uma categoria de tamanho maior que a sua, você pode gastar 2 PM. Se fizer isso e acertar o ataque, a criatura fica caída.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "17",
+  { id: "Sarado",
     name: "Sarado",
     description: "Você soma sua Força no seu total de pontos de vida e em Fortitude. Você pode usar Força em vez de Carisma em testes de Diplomacia com pessoas que se atraiam por físicos bem definidos.",
     prerequisite: " For 3.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "18",
+  { id: "Sequência Destruidora",
     name: "Sequência Destruidora",
     description: "No início do seu turno, você pode gastar 2 PM para dizer um número (no mínimo 2). Se fizer e acertar uma quantidade de ataques igual ao número dito, o último recebe um bônus cumulativo de +4 na rolagem de dano por ataque feito. Por exemplo, se você falar “três” e fizer e acertar três ataques, o último ataque (o terceiro) receberá +12 na rolagem de dano.",
     prerequisite: "Trocação, 12º nível de lutador.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "19",
+  { id: "Trincado",
     name: "Trincado",
     description: "Esculpido à exaustão, seu corpo se tornou uma máquina. Você soma sua Constituição nas rolagens de dano desarmado.",
     prerequisite: "Con 3, Sarado, 10º nível de lutador.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "20",
+  { id: "Trocação",
     name: "Trocação",
     description: "Quando você começa a bater, não para mais. Ao acertar um ataque desarmado, pode fazer outro ataque desarmado contra o mesmo alvo, pagando uma quantidade de PM igual à quantidade de ataques já realizados no turno. Ou seja, pode fazer o primeiro ataque extra gastando 1 PM, um segundo ataque extra gastando mais 2 PM e assim por diante, até errar um ataque ou não ter mais pontos de mana.",
     prerequisite: "6º nível de lutador.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "21",
+  { id: "Trocação Tumultuosa",
     name: "Trocação Tumultuosa",
     description: "Quando usa a ação agredir para fazer um ataque desarmado, você pode gastar 2 PM para atingir todas as criaturas adjacentes — incluindo aliados! Você deve usar este poder antes de rolar o ataque e compara o resultado de seu teste contra a Defesa de cada criatura.",
     prerequisite: "Trocação, 8º nível de lutador.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "22",
+  { id: "Valentão",
     name: "Valentão",
     description: "Você recebe +2 em testes de ataque e rolagens de dano contra oponentes caídos, desprevenidos, flanqueados ou indefesos.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "23",
+  { id: "Voadora",
     name: "Voadora",
     description: "Quando faz uma investida desarmada, você pode gastar 2 PM. Se fizer isso, recebe $+1d6$ no dano para cada 3m que se deslocar até chegar ao oponente, limitado pelo seu nível.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
+  },
+  { id: "Aquecimento",
+    name: "Aquecimento",
+    description: "Em seu primeiro turno de um combate, você pode gastar uma ação completa para aquecer seus músculos. Você soma sua Constituição em seus testes de ataque desarmado (limitada pelo seu nível) e recebe uma quantidade de PV temporários igual a sua Constituição + seu nível. Ambos os bônus duram até o fim da cena.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Caminhar pelas Paredes",
+    name: "Caminhar pelas Paredes",
+    description: "Você recebe +10 em testes de Atletismo para saltar e pode se deslocar por paredes e tetos. Contudo, se terminar seu movimento enquanto se desloca em uma parede, você cai (e sofre os efeitos normais de uma queda). ",
+    prerequisite: "treinado em Atletismo",
+    origin: "Herois de Arton"
+  },
+  { id: "Caminho Suave",
+    name: "Caminho Suave",
+    description: "Quando faz um teste de manobra com um ataque desarmado, você pode gastar uma quantidade de PM a sua escolha (limitada pela sua Sabedoria). Para cada PM que gastar, você recebe +2 no teste. ",
+    prerequisite: "Sab 1",
+    origin: "Herois de Arton"
+  },
+  { id: "Combinação: Boca do Estômago",
+    name: "Combinação: Boca do Estômago",
+    description: "Quando faz um ataque, você pode gastar 1 PM para que seu golpe seja debilitante. Se acertar, você recebe um bônus na rolagem de dano igual à sua contagem de combinações e o oponente fica enjoado até o fim do seu próximo turno.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Combinação: Chute Circular",
+    name: "Combinação: Chute Circular",
+    description: "Quando faz um ataque, você pode gastar 2 PM para que seu golpe seja giratório. Se acertar, para cada ponto em sua contagem de combinações você causa +1d6 pontos de dano. Além disso, você pode fazer uma manobra empurrar contra o mesmo oponente como uma ação livre (use o resultado do ataque como o teste de manobra). ",
+    prerequisite: "outro poder de Combinação",
+    origin: "Herois de Arton"
+  },
+  { id: "Combinação: Chute no Joelho",
+    name: "Combinação: Chute no Joelho",
+    description: "Quando faz um ataque, você pode gastar 1 PM para que seu golpe seja um chute baixo cruel. Se acertar, até o fim do seu próximo turno o oponente fica lento e sofre uma penalidade em testes de ataque e rolagens de dano igual à sua contagem de combinações.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Combinação: Esquiva Técnica",
+    name: "Combinação: Esquiva Técnica",
+    description: "Uma vez por rodada, quando sofre um ataque corpo a corpo, você pode gastar 2 PM para fazer um teste de Reflexos oposto ao teste de Percepção do atacante. Você recebe um bônus nesse teste igual à sua contagem de combinações. Se vencer o teste oposto, você evita o ataque e recebe +5 em seu próximo teste de ataque desarmado contra o atacante nessa rodada. ",
+    prerequisite: "um poder de Combinação",
+    origin: "Herois de Arton"
+  },
+  { id: "Combinação: Quebra-guarda",
+    name: "Combinação: Quebra-guarda",
+    description: "Quando faz um ataque, você pode gastar 1 PM para que seu golpe supere defesas. Se fizer isso, recebe um bônus no teste de ataque igual à sua contagem de combinações. Se acertar, o oponente não pode usar habilidades para reduzir o dano do ataque ou receber RD adicional contra ele. Além disso, o oponente fica vulnerável até o fim do seu próximo turno.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Combinação: Técnica de Sacrifício",
+    name: "Combinação: Técnica de Sacrifício",
+    description: "Quando faz um ataque, você pode gastar 1 PM para que ele seja um movimento de projeção. Para isso, faça uma manobra agarrar com um bônus igual à sua contagem de combinações. Se vencer o teste de manobra, além de agarrar o oponente, você se joga no chão com ele. Ambos ficam caídos, mas ele sofre dano como se você tivesse acertado um ataque desarmado.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Combinação: Um-Dois",
+    name: "Combinação: Um-Dois",
+    description: "Quando faz um ataque, você pode gastar 1 PM para atacar de vários lados. Se fizer isso, você não precisa de um aliado para flanquear o oponente (faz isso sozinho). Além disso, se acertar, recebe um bônus na Defesa igual à sua contagem de combinações até o fim do seu próximo turno.",
+    prerequisite: "Jogo de Pernas",
+    origin: "Herois de Arton"
+  },
+  { id: "Corpo Fechado",
+    name: "Corpo Fechado",
+    description: "Quando faz um teste de resistência, você pode gastar 1 PM para somar sua Constituição no teste.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Dança Marcial",
+    name: "Dança Marcial",
+    description: "Você pode gastar uma ação de movimento e 2 PM para receber +2 na Defesa, em Acrobacia e em testes de Enganação para fintar. A partir do 6º nível, e a cada cinco níveis seguintes (11º e 16º), você pode gastar +1 PM para aumentar esses bônus em +1. Os bônus duram até o fim da cena ou até você ficar atordoado ou sob alguma condição de movimento. ",
+    prerequisite: "treinado em Acrobacia e Atuação",
+    origin: "Herois de Arton"
+  },
+  { id: "Gingado Elusivo",
+    name: "Gingado Elusivo",
+    description: "Se estiver sob efeito de sua Dança Marcial, uma vez por rodada, quando sofre um efeito hostil, você pode gastar 2 PM para receber +5 na Defesa e em testes de Reflexos contra ele. Após a resolução do efeito, você salta para um espaço adjacente desocupado. ",
+    prerequisite: "Dança Marcial, 7º nível de lutador",
+    origin: "Herois de Arton"
+  },
+  { id: "Invencível",
+    name: "Invencível",
+    description: "Você é um campeão de incontáveis embates, famoso e endurecido por isso. Quando faz um teste de perícia baseada em Carisma, você pode gastar 2 PM para somar a sua Força no teste. Além disso, sempre que é reduzido a 0 ou menos pontos de vida, pode gastar 5 PM para recuperar PV igual à metade dos seus PV máximos. ",
+    prerequisite: "Nome na Arena, 17º nível de lutador",
+    origin: "Herois de Arton"
+  },
+  { id: "Jogo de Pernas",
+    name: "Jogo de Pernas",
+    description: "Uma vez por rodada, quando faz um ataque corpo a corpo, você pode se mover 1,5m em qualquer direção, antes ou depois do ataque. Esse movimento não ativa reações de seus inimigos (como de Ataque Reflexo). ",
+    prerequisite: "Des 1",
+    origin: "Herois de Arton"
+  },
+  { id: "Mestre das Combinações",
+    name: "Mestre das Combinações",
+    description: "Sua contagem de combinações aumenta em +2 (em vez de +1) para cada ataque de Combinação diferente com o qual você acertar o oponente. ",
+    prerequisite: "dois poderes de Combinação",
+    origin: "Herois de Arton"
+  },
+  { id: "Rilhar os Dentes",
+    name: "Rilhar os Dentes",
+    description: "Quando sofre dano de um ataque corpo a corpo, você pode gastar 1 PM para receber RD igual a 5 + sua Constituição contra esse dano.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Rolamento Escapatório",
+    name: "Rolamento Escapatório",
+    description: "Quando falha em um teste para evitar uma condição de movimento (como o teste oposto para evitar ser agarrado), você pode gastar 2 PM para rolá-lo novamente usando Acrobacia. ",
+    prerequisite: "treinado em Acrobacia",
+    origin: "Herois de Arton"
+  },
+  { id: "Ruas Furiosas",
+    name: "Ruas Furiosas",
+    description: "Quando destrói um objeto empunhado por um inimigo com a manobra quebrar, você recebe uma quantidade de PV temporários igual a 1d6 x sua Constituição.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Sequência Defensiva",
+    name: "Sequência Defensiva",
+    description: "Quando acerta um ataque desarmado em uma criatura, você recebe um bônus cumulativo de +2 na Defesa contra essa criatura até o início do seu próximo turno.",
+    prerequisite: "",
+    origin: "Herois de Arton"
   },
 ];

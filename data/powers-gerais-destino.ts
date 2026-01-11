@@ -1,145 +1,203 @@
 import { Power } from "@/types/power";
 
 export const powersGeraisDestino: Power[] = [
-  {
-    id: "1",
+  { id: "Acrobático",
     name: "Acrobático",
     description: "Você pode usar sua Destreza em vez de Força em testes de Atletismo. Além disso, terreno difícil não reduz seu deslocamento nem o impede de realizar investidas. ",
     prerequisite: "Des 2.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "2",
+  { id: "Ao Sabor do Destino",
     name: "Ao Sabor do Destino",
     description: "Confiando em suas próprias habilidades (ou em sua própria sorte), você abre mão de usar itens mágicos. Sua autoconfiança fornece diversos benefícios, de acordo com seu nível de personagem e a tabela no final da página. Os bônus não são cumulativos (os bônus em atributos e perícias devem ser aplicados num atributo ou perícia diferente a cada vez). Se você utilizar voluntariamente qualquer item mágico (exceto poções), perde o benefício deste poder até o fim da aventura. Você ainda pode lançar magias, receber magias benéficas ou beneficiar-se de itens usados por outros — por exemplo, pode “ir de carona” em um tapete voador, mas não pode você mesmo conduzi-lo. ",
     prerequisite: "6º nível de personagem.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "3",
+  { id: "Aparência Inofensiva",
     name: "Aparência Inofensiva",
     description: "A primeira criatura inteligente (Int –3 ou maior) que atacar você em uma cena deve fazer um teste de Vontade (CD Car). Se falhar, perderá sua ação. Este poder só funciona uma vez por cena; independentemente de a criatura falhar ou não no teste, poderá atacá-lo nas rodadas seguintes.",
     prerequisite: "Car 1.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "4",
+  { id: "Atlético",
     name: "Atlético",
     description: "Você recebe +2 em Atletismo e +3m em seu deslocamento.",
     prerequisite: "For 2.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "5",
+  { id: "Atraente",
     name: "Atraente",
     description: "Você recebe +2 em testes de perícias baseadas em Carisma contra criaturas que possam se sentir fisicamente atraídas por você.",
     prerequisite: "Car 1.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "6",
+  { id: "Comandar",
     name: "Comandar",
     description: "Você pode gastar uma ação de movimento e 1 PM para gritar ordens para seus aliados em alcance médio. Eles recebem +1 em testes de perícia até o fim da cena.",
     prerequisite: "Car 1.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "7",
+  { id: "Costas Largas",
     name: "Costas Largas",
     description: "Seu limite de carga aumenta em 5 espaços e você pode se beneficiar de um item vestido adicional.",
     prerequisite: "Con 1, For 1.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "8",
+  { id: "Foco em Perícia",
     name: "Foco em Perícia",
     description: "Escolha uma perícia. Quando faz um teste dessa perícia, você pode gastar 1 PM para rolar dois dados e usar o melhor resultado. Você pode escolher este poder outras vezes para perícias diferentes. Este poder não pode ser aplicado em Luta e Pontaria (mas veja Foco em Arma).",
     prerequisite: " treinado na perícia escolhida.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "9",
+  { id: "Inventário Organizado",
     name: "Inventário Organizado",
     description: "Você soma sua Inteligência no limite de espaços que pode carregar. Para você, itens muito leves ou pequenos, que normalmente ocupam meio espaço, em vez disso ocupam 1/4 de espaço.",
     prerequisite: "Int 1.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "10",
+  { id: "Investigador",
     name: "Investigador",
     description: "Você recebe +2 em Investigação e soma sua Inteligência em Intuição.",
     prerequisite: "Int 1.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "11",
+  { id: "Lobo Solitário",
     name: "Lobo Solitário",
     description: "Você recebe +1 em testes de perícia e Defesa se estiver sem nenhum aliado em alcance curto. Você não sofre penalidade por usar Cura em si mesmo.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "12",
+  { id: "Medicina",
     name: "Medicina",
     description: "Você pode gastar uma ação completa para fazer um teste de Cura (CD 15) em uma criatura. Se você passar, ela recupera 1d6 PV, mais 1d6 para cada 5 pontos pelos quais o resultado do teste exceder a CD (2d6 com um resultado 20, 3d6 com um resultado 25 e assim por diante). Você só pode usar este poder uma vez por dia numa mesma criatura. ",
     prerequisite: "Sab 1, treinado em Cura.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "13",
+  { id: "Parceiro",
     name: "Parceiro",
     description: "Você possui um parceiro animal ou humanoide que o acompanha em aventuras. Em termos de jogo, é um parceiro iniciante de um tipo à sua escolha (veja página de parceiros). O parceiro obedece às suas ordens e se arrisca para ajudá-lo, mas, se for maltratado, pode parar de segui-lo (de acordo com o mestre). Se perder seu parceiro, você recebe outro no início da próxima aventura.",
     prerequisite: "treinado em Adestramento (parceiro animal) ou Diplomacia (parceiro humanoide), 5º nível de personagem.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "14",
+  { id: "Sentidos Aguçados",
     name: "Sentidos Aguçados",
     description: "Você recebe +2 em Percepção, não fica desprevenido contra inimigos que não possa ver e, sempre que erra um ataque devido a camuflagem, pode rolar mais uma vez o dado da chance de falha. ",
     prerequisite: "Sab 1, treinado em Percepção.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "15",
+  { id: "Sortudo",
     name: "Sortudo",
     description: "Você pode gastar 3 PM para rolar novamente um teste recém realizado (apenas uma vez por teste).",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "16",
+  { id: "Surto Heroico",
     name: "Surto Heroico",
     description: "Uma vez por rodada, você pode gastar 5 PM para realizar uma ação padrão ou de movimento adicional.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "17",
+  { id: "Torcida",
     name: "Torcida",
     description: "Você recebe +2 em testes de perícia e Defesa quando tem a torcida a seu favor. Entenda-se por “torcida” qualquer número de criaturas inteligentes em alcance médio que não esteja realizando nenhuma ação além de torcer por você. ",
     prerequisite: "Car 1.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "18",
+  { id: "Treinamento em Perícia",
     name: "Treinamento em Perícia",
     description: "Você se torna treinado em uma perícia à sua escolha. Você pode escolher este poder outras vezes para perícias diferentes.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "19",
+  { id: "Venefício",
     name: "Venefício",
     description: "Quando usa um veneno, você não corre risco de se envenenar acidentalmente. Além disso, a CD para resistir aos seus venenos aumenta em +2.",
     prerequisite: "treinado em Ofício (alquimista).",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "20",
+  { id: "Vontade de Ferro",
     name: "Vontade de Ferro",
     description: "Você recebe +1 PM para cada dois níveis de personagem e +2 em Vontade. ",
     prerequisite: "Sab 1.",
     origin: "Tormenta20 - Jogo do Ano"
-  }
+  },
+  { id: "Alma Livre",
+    name: "Alma Livre",
+    description: "Arton tem muitas maravilhas a serem exploradas, muitos caminhos a serem percorridos — e você não é louco de se prender a um só. Escolha uma classe. Você pode escolher um poder dessa classe como se pertencesse a ela (para efeitos de nível na classe desse poder, considere seu nível de personagem −4). Note que você não recebe o poder, apenas o direito de escolhê-lo mais tarde.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Andarilho Urbano",
+    name: "Andarilho Urbano",
+    description: "Nas tavernas mais sujas e nos becos mais escuros... você está em casa. Se estiver em uma cidade, você recebe +2 na Defesa, em Enganação e em Investigação.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Carícias Revigorantes",
+    name: "Carícias Revigorantes",
+    description: "Você sabe como aliviar as dores e tristezas de uma pessoa. Você pode gastar 1 minuto e 2 PM para recuperar 2d4 PM de uma criatura adjacente. Uma mesma criatura só pode receber os benefícios deste poder uma vez por dia.",
+    prerequisite: "Car 2, Sedução Lasciva",
+    origin: "Herois de Arton"
+  },
+  { id: "Diligente",
+    name: "Diligente",
+    description: "Você pode gastar uma ação de movimento para se concentrar na tarefa à frente. Se fizer isso, recebe +2 em um teste de perícia (exceto testes de ataque) que exija no máximo uma ação completa para ser realizado e que seja realizado até o fim do seu próximo turno.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Foco em Habilidade",
+    name: "Foco em Habilidade",
+    description: "Escolha uma habilidade. A CD para resistir a essa habilidade aumenta em +2. Você pode escolher este poder outras vezes para habilidades diferentes. Este poder não pode ser aplicado a magias (mas veja Foco em Magia e Especialização em Magia).",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Grandão",
+    name: "Grandão",
+    description: "Você conta como uma categoria de tamanho maior para propósitos do modificador de Furtividade e manobras, espaço ocupado e alcance natural. Além disso, sua capacidade de carga aumenta em 5 espaços. ",
+    prerequisite: "Con 2",
+    origin: "Herois de Arton"
+  },
+  { id: "Herói dos Sete Instrumentos",
+    name: "Herói dos Sete Instrumentos",
+    description: "Você aprendeu de tudo um pouco e um pouco de tudo. Você recebe um bônus de +1 em testes de perícias nas quais não é treinado. No 7º nível esse bônus aumenta para +2 e, no 15º nível, aumenta para +3.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Impostor",
+    name: "Impostor",
+    description: "Graças a seu extremo charme e autoconfiança, você consegue convencer outras pessoas — e você mesmo! — de que tem certas habilidades que, na verdade, não possui. Uma vez por cena, quando faz um teste de perícia que exija no máximo uma ação completa para ser realizado, você pode gastar 2 PM para usar Enganação no lugar dessa perícia. ",
+    prerequisite: "Car 3, Foco em Perícia (Enganação)",
+    origin: "Herois de Arton"
+  },
+  { id: "Liderança Inspiradora",
+    name: "Liderança Inspiradora",
+    description: "Seu magnetismo pessoal deixa seus seguidores ávidos para ajudá-lo. Você gasta uma ação padrão (em vez de completa) para posicionar seus capangas em combate. Além disso, uma vez por rodada, pode gastar uma ação livre para fazê-los movimentar-se ou causar dano (mas continua só podendo fazê-los causar dano uma vez por rodada. ",
+    prerequisite: "Car 1",
+    origin: "Herois de Arton"
+  },
+  { id: "Meditação Autoafirmativa",
+    name: "Meditação Autoafirmativa",
+    description: "Você pode entrar em um transe hipnótico no qual convence a si mesmo de que possui certas habilidades. Para usar este poder, você deve escolher um benefício da tabela abaixo e meditar por 1 dia. No fim do dia, faça um teste de Carisma (CD conforme o benefício escolhido). Se passar, você adquire esse benefício por uma semana ou até usar este poder novamente. Enquanto medita, você fica fascinado. Você pode meditar por mais de um dia; nesse caso, cada dia fornece um bônus de +1 no teste de Carisma, até um máximo de +7 para uma semana. Mestres malvados podem exigir testes de Fortitude para personagens que passem vários dias sem se alimentar",
+    prerequisite: "Sab 1, Car 1, 5º nível de personagem",
+    origin: "Herois de Arton"
+  },
+  { id: "Pose Assustadora",
+    name: "Pose Assustadora",
+    description: "Você recebe +2 em Intimidação e pode gastar 1 PM para assustar como uma ação de movimento.",
+    prerequisite: "Car 1, treinado em Intimidação",
+    origin: "Herois de Arton"
+  },
+  { id: "Sedução Lasciva",
+    name: "Sedução Lasciva",
+    description: "Você pode seduzir pessoas com olhares, palavras, dança… Faça um teste de Enganação oposto pelo teste de Vontade de seu alvo. Se você vencer, o alvo fica enfeitiçado por 1 dia (se voce falhar, não pode mais tentar com esse alvo nessa cena). Usar este poder gasta alguns minutos de interação e 3 PM. ",
+    prerequisite: "Car 1, treinado em Enganação",
+    origin: "Herois de Arton"
+  },
+  { id: "Ventriloquismo",
+    name: "Ventriloquismo",
+    description: "Você pode gastar 1 PM para fazer sua voz parecer vir de outro lugar (como de outra criatura, de uma estátua, de trás de uma porta, do fim de um corredor...) por 1 rodada. De acordo com o mestre, se um uso deste poder gerar uma situação muito suspeita, você precisará fazer um teste de Enganação oposto pela Intuição de quem está tentando enganar. Se a criatura vencê-lo, percebe que o som vem de você.",
+    prerequisite: "treinado em Atuação e Enganação",
+    origin: "Herois de Arton"
+  },
 
 ];

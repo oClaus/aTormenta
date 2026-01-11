@@ -1,130 +1,232 @@
 import { Power } from "@/types/power";
 
 export const powersNobre: Power[] = [
-  {
-    id: "1",
+  { id: "Armadura Brilhante",
     name: "Armadura Brilhante",
     description: "Você pode usar seu Carisma na Defesa quando usa armadura pesada. Se fizer isso, não pode somar sua Destreza, mesmo que outras habilidades ou efeitos permitam isso.",
     prerequisite: "8º nível de nobre.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "2",
+  { id: "Aumento de Atributo",
     name: "Aumento de Atributo",
     description: "Você recebe +1 em um atributo. Você pode escolher este poder várias vezes, mas apenas uma vez por patamar para um mesmo atributo.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "3",
+  { id: "Autoridade Feudal",
     name: "Autoridade Feudal",
     description: "Você pode gastar uma hora e 2 PM para conclamar o povo a ajudá-lo (qualquer pessoa sem um título de nobreza ou uma posição numa igreja reconhecida pelo seu reino). Em termos de jogo, essas pessoas contam como um parceiro iniciante de um tipo à sua escolha (aprovado pelo mestre) que lhe acompanha até o fim da aventura. Esta habilidade só pode ser usada em locais onde sua posição carregue alguma influência (a critério do mestre).",
     prerequisite: "6º nível de nobre.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "4",
+  { id: "Educação Privilegiada",
     name: "Educação Privilegiada",
     description: "Você se torna treinado em duas perícias de nobre à sua escolha.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "5",
+  { id: "Estrategista",
     name: "Estrategista",
     description: "Você pode direcionar aliados em alcance curto. Gaste uma ação padrão e 1 PM por aliado que quiser direcionar (limitado pelo seu Carisma). No próximo turno do aliado, ele ganha uma ação de movimento.",
     prerequisite: "Int 1, treinado em Guerra, 6º nível de nobre.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "6",
+  { id: "Favor",
     name: "Favor",
     description: "Você pode usar sua influência para pedir favores a pessoas poderosas. Isso gasta 5 PM e uma hora de conversa e bajulação, ou mais, de acordo com o mestre, e funciona como o uso persuasão de Diplomacia. Porém, você pode pedir favores ainda mais caros, difíceis ou perigosos — um convite para uma festa particular, uma carona de barco até Galrasia ou mesmo acesso aos planos militares do reino. Se você falhar, não pode pedir o mesmo favor por pelo menos uma semana.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "7",
+  { id: "General",
     name: "General",
     description: "Quando você usa o poder Estrategista, aliados direcionados recebem $1d4$ PM temporários. Esses PM duram até o fim do turno do aliado e não podem ser usados em efeitos que concedam PM.",
     prerequisite: "Estrategista, 12º nível de nobre.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "8",
+  { id: "Grito Tirânico",
     name: "Grito Tirânico",
     description: "Você pode usar Palavras Afiadas como uma ação completa, em vez de padrão. Se fizer isso, seus dados de dano aumentam para d8 e você atinge todos os inimigos em alcance curto.",
     prerequisite: "8º nível de nobre.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "9",
+  { id: "Inspirar Confiança",
     name: "Inspirar Confiança",
     description: "Sua presença faz as pessoas darem o melhor de si. Quando um aliado em alcance curto faz um teste, você pode gastar 2 PM para fazer com que ele possa rolar esse teste novamente.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "10",
+  { id: "Inspirar Glória",
     name: "Inspirar Glória",
     description: "A presença de um nobre motiva as pessoas a realizarem grandes façanhas. Uma vez por rodada, você pode gastar 5 PM para fazer um aliado em alcance curto ganhar uma ação padrão adicional no próximo turno dele. Você só pode usar esta habilidade uma vez por cena em cada aliado.",
     prerequisite: "Inspirar Confiança, 8º nível de nobre.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "11",
+  { id: "Jogo da Corte",
     name: "Jogo da Corte",
     description: "Você pode gastar 1 PM para rolar novamente um teste recém realizado de Diplomacia, Intuição ou Nobreza.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "12",
+  { id: "Liderar pelo Exemplo",
     name: "Liderar pelo Exemplo",
     description: "Você pode gastar 2 PM para servir de inspiração. Até o início de seu próximo turno, sempre que você passar em um teste de perícia, aliados em alcance curto que fizerem um teste da mesma perícia podem usar o resultado do seu teste em vez de fazer o seu próprio.",
     prerequisite: "6º nível de nobre.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "13",
+  { id: "Língua de Ouro",
     name: "Língua de Ouro",
     description: "Você pode gastar uma ação padrão e 4 PM para gerar o efeito da magia Enfeitiçar com os aprimoramentos de sugerir ação e afetar todas as criaturas dentro do alcance (CD Car). Esta não é uma habilidade mágica e provém de sua capacidade de influenciar outras pessoas.",
     prerequisite: "Língua de Prata, 8º nível de nobre.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "14",
+  { id: "Língua de Prata",
     name: "Língua de Prata",
     description: "Quando faz um teste de perícia baseada em Carisma, você pode gastar 2 PM para receber um bônus no teste igual à metade do seu nível.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "15",
+  { id: "Língua Rápida",
     name: "Língua Rápida",
     description: "Quando faz um teste de Diplomacia para mudar atitude como uma ação completa, você sofre uma penalidade de –5, em vez de –10.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "16",
+  { id: "Presença Majestosa",
     name: "Presença Majestosa",
     description: "Sua Presença Aristocrática passa a funcionar contra qualquer criatura com valor de Inteligência (passa a afetar até mesmo animais, embora continue não funcionando contra criaturas sem Int). Além disso, você pode usá-la mais de uma vez contra uma mesma criatura na mesma cena.",
     prerequisite: "16º nível de nobre.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "17",
+  { id: "Título",
     name: "Título",
     description: "Você adquire um título de nobreza. Converse com o mestre para definir os benefícios exatos de seu título. Como regra geral, no início de cada aventura você recebe 20 TO por nível de nobre (rendimentos dos impostos) ou a ajuda de um parceiro veterano (um membro de sua corte).",
     prerequisite: "Autoridade Feudal, 10º nível de nobre, ter conquistado terras ou realizado um serviço para um nobre que possa se tornar seu suserano.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "18",
+  { id: "Voz Poderosa",
     name: "Voz Poderosa",
     description: "Você recebe +2 em Diplomacia e Intimidação. Suas habilidades de nobre com alcance curto passam para alcance médio.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
+  },
+  { id: "Agente de Elite",
+    name: "Agente de Elite",
+    description: "Você recebe um agente especial, um parceiro veterano que fornece os benefícios de um parceiro a sua escolha (Tormenta20, p. 260) ou um poder de outra classe, cujos pré-requisitos você cumpra (para efeitos de nível na classe desse poder, considere seu nível de nobre −4). No início de cada aventura, você pode trocar seu agente.",
+    prerequisite: "Título, 11º nível de nobre",
+    origin: "Herois de Arton"
+  },
+  { id: "Comandante de Campo",
+    name: "Comandante de Campo",
+    description: "Seus capangas recebem +2 nas rolagens de dano e um bônus na Defesa igual ao seu Carisma. Além disso, quando contrata ou recebe capangas por qualquer motivo, você recebe um capanga adicional do mesmo tipo. ",
+    prerequisite: "5º nível de nobre",
+    origin: "Herois de Arton"
+  },
+  { id: "Comitiva",
+    name: "Comitiva",
+    description: "Seu limite de parceiros aumenta em +1. A partir do 11º nível, esse limite aumenta em +1 adicional. ",
+    prerequisite: "5º nível de nobre",
+    origin: "Herois de Arton"
+  },
+  { id: "Discurso de Batalha",
+    name: "Discurso de Batalha",
+    description: "Em seu primeiro turno de um combate, você pode gastar uma ação completa e fazer um teste de Diplomacia ou Intimidação. Se fizer isso, para cada 10 pontos no resultado do teste, você e seus aliados em alcance curto recebem 2 PM temporários. Esses PM temporários desaparecem no fim da cena.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Fofocas da Corte",
+    name: "Fofocas da Corte",
+    description: "Quando chega em um ambiente social (taverna, acampamento militar, praça de vila, salão de castelo etc.), você pode gastar 1 hora para se inteirar das “novidades”. A critério do mestre, você recebe uma informação útil sobre os habitantes ou acontecimentos locais. Além disso, recebe 4d6 dados de auxílio. Sempre que faz um teste de perícia baseada em Carisma nesse ambiente, você pode gastar um desses dados e adicionar como um bônus no teste. ",
+    prerequisite: "treinado em Intuição e Investigação",
+    origin: "Herois de Arton"
+  },
+  { id: "Guarda Pessoal",
+    name: "Guarda Pessoal",
+    description: "Você recebe um pelotão de infantaria veterano que atua como seu guarda-costas. No 11º nível, o pelotão se torna um parceiro mestre. Se perder seu pelotão de infantaria, você pode arregimentar outro após uma semana. ",
+    prerequisite: "5º nível de nobre",
+    origin: "Herois de Arton"
+  },
+  { id: "Hedonismo Aristocrático",
+    name: "Hedonismo Aristocrático",
+    description: "Uma vez por dia, você pode gastar 1 hora e um valor a sua escolha entre T$ 100, T$ 500 e T$ 2.000 em luxos como comida, bebida e apresentações artísticas. Se tiver gastado T$ 100, você recebe 4 PM temporários por patamar, que duram até o fim do dia. Se tiver gastado T$ 500, o ganho aumenta para 5 PM por patamar e, se tiver gastado T$ 2.000, para 6 PM por patamar.",
+    prerequisite: "",
+    origin: "Herois de Arton"
+  },
+  { id: "Instigar Violência",
+    name: "Instigar Violência",
+    description: "Uma vez por rodada por aliado, quando um aliado em alcance curto faz um acerto crítico em um inimigo, você pode gastar 3 PM para que esse aliado faça mais um ataque contra o mesmo inimigo.",
+    prerequisite: "treinado em Guerra, 11º nível de nobre",
+    origin: "Herois de Arton"
+  },
+  { id: "Insuflar Investida",
+    name: "Insuflar Investida",
+    description: "Quando faz uma investida, você pode gastar 1 PM por aliado a sua escolha em alcance curto. Se fizer isso, a próxima investida que cada um desses aliados fizer até o início do seu próximo turno causa +2d8 pontos de dano. ",
+    prerequisite: "Estrategista",
+    origin: "Herois de Arton"
+  },
+  { id: "Legado Mágico",
+    name: "Legado Mágico",
+    description: "Você recebe um item mágico menor a sua escolha, como um presente ou uma herança de família. No início de cada aventura, você pode substituir esse item por outro. A partir do 14º nível, quando substitui o item pode escolher um item mágico médio e, a partir do 17º nível, um item mágico maior. ",
+    prerequisite: "11º nível de nobre",
+    origin: "Herois de Arton"
+  },
+  { id: "Líder Enérgico",
+    name: "Líder Enérgico",
+    description: "Você soma seu Carisma em Iniciativa. Além disso, se for o primeiro na iniciativa, em seu primeiro turno você pode usar uma habilidade de nobre com execução de ação de movimento ou padrão como ação livre.",
+    prerequisite: "treinado em Iniciativa",
+    origin: "Herois de Arton"
+  },
+  { id: "Líder Impiedoso",
+    name: "Líder Impiedoso",
+    description: "Sempre que um aliado sob efeito da sua habilidade Gritar Ordens fizer um acerto crítico ou reduzir um inimigo para 0 PV ou menos, você recupera 1 PM. ",
+    prerequisite: "5º nível de nobre",
+    origin: "Herois de Arton"
+  },
+  { id: "Linhagem Distinta",
+    name: "Linhagem Distinta",
+    description: "Você descende de uma família ilustre — ou, por suas ações, tornou sua família ilustre. Seja como for, o nome de sua família o inspira a grandes feitos. Quando você usa Orgulho, o custo da habilidade diminui em –1 PM. Além disso, uma vez por cena, quando usa Orgulho, você pode gastar +5 PM. Se fizer isso, o bônus fornecido pela habilidade dobra e, ao fazer o teste de perícia afetado por ela, você rola dois dados e usa o melhor resultado. ",
+    prerequisite: "17º nível de nobre",
+    origin: "Herois de Arton"
+  },
+  { id: "Ordens Agressivas",
+    name: "Ordens Agressivas",
+    description: "Quando você usa Gritar Ordens, a habilidade também soma seu bônus na primeira rolagem de dano dos aliados até o início do seu próximo turno. ",
+    prerequisite: "5º nível de nobre",
+    origin: "Herois de Arton"
+  },
+  { id: "Ordens Encorajadoras",
+    name: "Ordens Encorajadoras",
+    description: "Quando você usa Gritar Ordens, a habilidade também fornece 10 PV temporários cumulativos. Esses pontos desaparecem no fim da cena. ",
+    prerequisite: "5º nível de nobre",
+    origin: "Herois de Arton"
+  },
+  { id: "Palavras de Efeito",
+    name: "Palavras de Efeito",
+    description: "Você soma seu Carisma no dano de sua habilidade Palavras Afiadas e a ação necessária para usá-la diminui em um passo (de completa para padrão, de padrão para movimento). ",
+    prerequisite: "5º nível de nobre",
+    origin: "Herois de Arton"
+  },
+  { id: "Palavras Ressonantes",
+    name: "Palavras Ressonantes",
+    description: "Quando você usa Palavras Afiadas, sempre que rola o resultado máximo ou um ponto abaixo do máximo em um dado da habilidade (por exemplo, um 5 ou 6 ao rolar 1d6), role um dado extra. ",
+    prerequisite: "5º nível de nobre",
+    origin: "Herois de Arton"
+  },
+  { id: "Protocolo Impecável",
+    name: "Protocolo Impecável",
+    description: "Quando chega em um ambiente social (veja Fofocas da Corte), você pode gastar 2 PM e fazer um teste de Nobreza (CD 20). Se passar, porta-se da maneira ideal para a situação, o que melhora a atitude de todas as criaturas em relação a você em uma categoria. Se passar por 10 ou mais, a critério do mestre você pode receber possibilidades de interação que normalmente não teria — por exemplo, ao chegar em um acampamento militar ou castelo, pode ser convidado para falar com o general ou o nobre comandante. ",
+    prerequisite: "treinado em Nobreza, Jogo da Corte",
+    origin: "Herois de Arton"
+  },
+  { id: "Senescal",
+    name: "Senescal",
+    description: "Você recebe +1 por patamar em testes de perícia para resolver ações de base, domínio ou negócio e, uma vez por turno dessas estruturas, pode executar uma ação de estrutura adicional. ",
+    prerequisite: "5º nível de nobre",
+    origin: "Herois de Arton"
+  },
+  { id: "Voz Límpida",
+    name: "Voz Límpida",
+    description: "Quando você usa uma habilidade de nobre que afete um ou mais aliados, o custo dessa habilidade diminui em –1 PM (isso não reduz efeitos baseados no custo em PM pago).",
+    prerequisite: "",
+    origin: "Herois de Arton"
   },
 ];
