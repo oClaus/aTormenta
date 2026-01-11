@@ -5,7 +5,7 @@ import Link from "next/link";
 import { powersGeraisDestino } from "@/data/powers-gerais-destino";
 import { formatOrigin } from "@/types/power";
 
-// Dados extraídos da imagem (Mantidos e tipados implicitamente)
+// Dados da Tabela existente (Ao Sabor do Destino)
 const progressionData = [
   { level: "6º", benefit: "+2 em uma perícia" },
   { level: "7º", benefit: "+1 na Defesa" },
@@ -19,6 +19,17 @@ const progressionData = [
   { level: "17º", benefit: "+3 na Defesa" },
   { level: "18º", benefit: "+3 nas rolagens de dano" },
   { level: "19º", benefit: "+1 em um atributo" },
+];
+
+// Dados da NOVA Tabela (Bravata) extraídos da imagem
+const bravataData = [
+  { benefit: '“Eu sei lutar.” +1 em testes de ataque', cd: "15" },
+  { benefit: '“Eu sei lutar muito bem.” +2 em testes de ataque', cd: "20" },
+  { benefit: '“Por Anilatir, como eu luto bem!” +3 em testes de ataque', cd: "25" },
+  { benefit: '“Ninguém toca em mim.” +2 na Defesa', cd: "20" },
+  { benefit: '“Nada me afeta.” +5 em testes de resistência', cd: "20" },
+  { benefit: '“Eu sei fazer isso.” Torna-se treinado em uma perícia', cd: "17" },
+  { benefit: '“Eu sou bom demais!” Pode usar um poder cujos pré-requisitos você cumpra', cd: "22" },
 ];
 
 export default function GeraisPodersPage() {
@@ -39,7 +50,7 @@ export default function GeraisPodersPage() {
       {/* Background Effect */}
       <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.8)_100%)]" />
 
-      {/* Header Responsivo (Logo Esquerda, Menu Direita) */}
+      {/* Header Responsivo */}
       <header className="relative z-10 w-full p-6 border-b-2 border-stone-800 bg-stone-950/90 backdrop-blur-md shadow-lg mb-8 md:mb-12">
         <div className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4">
             
@@ -76,7 +87,7 @@ export default function GeraisPodersPage() {
             </p>
         </div>
 
-        {/* Busca - ESTILO CAIXA */}
+        {/* Busca */}
         <div className="mb-8 p-6 rounded bg-stone-900 border border-stone-800 shadow-inner w-full">
             <label className="block text-sm font-bold text-stone-400 mb-3 uppercase tracking-wider font-serif">
                 Buscar Poder
@@ -102,21 +113,17 @@ export default function GeraisPodersPage() {
                 key={power.id}
                 className="rounded-xl bg-stone-900 border border-stone-800 p-6 hover:border-indigo-900/50 hover:shadow-[0_0_20px_rgba(99,102,241,0.15)] transition-all duration-300 flex flex-col h-full group hover:-translate-y-1"
             >
-                {/* Nome do Poder */}
                 <h3 className="text-xl font-bold text-indigo-500 mb-3 group-hover:text-indigo-400 transition-colors font-serif">
                 {power.name}
                 </h3>
 
-                {/* Descrição */}
                 <div className="flex-1 mb-4">
                 <p className="text-stone-400 text-sm leading-relaxed font-serif group-hover:text-stone-300">
                     {power.description}
                 </p>
                 </div>
 
-                {/* Rodapé do Card */}
                 <div className="mt-auto">
-                {/* Pré-requisito */}
                 {power.prerequisite && (
                     <div className="mb-4 pt-4 border-t border-stone-800 group-hover:border-stone-700 transition-colors">
                     <p className="text-xs text-stone-500 font-serif">
@@ -125,7 +132,6 @@ export default function GeraisPodersPage() {
                     </div>
                 )}
 
-                {/* Origem */}
                 <div className="flex items-center justify-end pt-4 border-t border-stone-800 group-hover:border-stone-700 transition-colors">
                     <span className="text-[10px] px-2 py-0.5 rounded bg-stone-950 border border-stone-700 text-stone-500 font-serif uppercase tracking-widest">
                     {formatOrigin(power.origin)}
@@ -142,7 +148,7 @@ export default function GeraisPodersPage() {
             </div>
         )}
 
-        {/* --- INÍCIO DA TABELA DE PROGRESSÃO --- */}
+        {/* TABELA 1: Ao Sabor do Destino */}
         <section className="mb-12 max-w-3xl mx-auto">
             <h3 className="text-2xl font-bold text-indigo-500 mb-6 text-center font-serif uppercase tracking-wide border-b border-stone-800 pb-2">
                 Tabela de Benefícios - Ao Sabor do Destino
@@ -161,6 +167,32 @@ export default function GeraisPodersPage() {
                             <tr key={index} className={`transition-colors hover:bg-stone-800 ${index % 2 === 0 ? 'bg-stone-900' : 'bg-stone-900/50'}`}>
                                 <td className="px-6 py-3 font-bold text-indigo-500">{row.level}</td>
                                 <td className="px-6 py-3 text-stone-300">{row.benefit}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        {/* TABELA 2: Bravata (ADICIONADA) */}
+        <section className="mb-12 max-w-3xl mx-auto">
+            <h3 className="text-2xl font-bold text-indigo-500 mb-6 text-center font-serif uppercase tracking-wide border-b border-stone-800 pb-2">
+                Tabela: Meditação Autoafirmativa
+            </h3>
+            
+            <div className="overflow-hidden rounded-xl border border-stone-800 shadow-xl bg-stone-900">
+                <table className="w-full text-left text-sm font-serif">
+                    <thead className="bg-stone-950 text-indigo-400 uppercase font-bold tracking-wider border-b border-stone-800">
+                        <tr>
+                            <th className="px-6 py-4 w-3/4">Benefício</th>
+                            <th className="px-6 py-4 text-center">CD</th>
+                        </tr>
+                    </thead>
+                    <tbody className="divide-y divide-stone-800 bg-stone-900">
+                        {bravataData.map((row, index) => (
+                            <tr key={index} className={`transition-colors hover:bg-stone-800 ${index % 2 === 0 ? 'bg-stone-900' : 'bg-stone-900/50'}`}>
+                                <td className="px-6 py-3 text-stone-300 italic">{row.benefit}</td>
+                                <td className="px-6 py-3 font-bold text-indigo-500 text-center">{row.cd}</td>
                             </tr>
                         ))}
                     </tbody>
