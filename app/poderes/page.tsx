@@ -85,6 +85,9 @@ export default function PodersPage() {
                 <li className="flex gap-2 items-center">
                     <span className="font-bold text-amber-600 uppercase tracking-wide text-sm">Raça:</span> São caracterizados por possuírem como pré-requisito pertencer a uma raça específica.
                 </li>
+                <li className="flex gap-2 items-center">
+                    <span className="font-bold text-amber-600 uppercase tracking-wide text-sm">Grupo:</span> Poderes de grupo fornecem bônus maiores que outros poderes; contudo, só funcionam se houver outro personagem com o mesmo poder na cena. 
+                </li>
             </ul>
         </section>
 

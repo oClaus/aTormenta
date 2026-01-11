@@ -162,4 +162,11 @@ export const powerCategories: PowerCategory[] = [
     description: "Poderes utilizados em raças específicas.",
     origin: "Herois de Arton"
   },
+  {
+    id: "grupo",
+    name: "Poderes Gerais de Grupo",
+    slug: "poderes-gerais-grupo",
+    description: "Poderes que somente funcionam em grupo.",
+    origin: "Herois de Arton"
+  },
 ];
