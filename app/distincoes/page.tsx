@@ -345,22 +345,27 @@ export default function DistincoesPage() {
   const filteredDistinctions = useMemo(() => {
     const lowerCaseSearch = searchTerm.toLowerCase();
 
-    if (!lowerCaseSearch) {
-      return distinctions;
+    // 1. Define a lista base: ou todas as distinções ou as filtradas
+    let result = distinctions;
+
+    if (lowerCaseSearch) {
+      result = distinctions.filter(distinction => 
+        distinction.name.toLowerCase().includes(lowerCaseSearch) ||
+        distinction.origin.toLowerCase().includes(lowerCaseSearch) ||
+        distinction.introduction.toLowerCase().includes(lowerCaseSearch) ||
+        distinction.admission.toLowerCase().includes(lowerCaseSearch) ||
+        distinction.mark.toLowerCase().includes(lowerCaseSearch) ||
+        distinction.powers.some(power => 
+          power.name.toLowerCase().includes(lowerCaseSearch) || 
+          power.description.toLowerCase().includes(lowerCaseSearch)
+        ) ||
+        (distinction.extras && distinction.extras.toLowerCase().includes(lowerCaseSearch))
+      );
     }
 
-    return distinctions.filter(distinction => 
-      distinction.name.toLowerCase().includes(lowerCaseSearch) ||
-      distinction.origin.toLowerCase().includes(lowerCaseSearch) ||
-      distinction.introduction.toLowerCase().includes(lowerCaseSearch) ||
-      distinction.admission.toLowerCase().includes(lowerCaseSearch) ||
-      distinction.mark.toLowerCase().includes(lowerCaseSearch) ||
-      distinction.powers.some(power => 
-        power.name.toLowerCase().includes(lowerCaseSearch) || 
-        power.description.toLowerCase().includes(lowerCaseSearch)
-      ) ||
-      (distinction.extras && distinction.extras.toLowerCase().includes(lowerCaseSearch))
-    );
+    // 2. Retorna uma cópia ordenada alfabeticamente pelo nome
+    return [...result].sort((a, b) => a.name.localeCompare(b.name));
+
   }, [searchTerm]);
 
   return (
