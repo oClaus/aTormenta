@@ -1936,7 +1936,7 @@ export const bosses: Boss[] = [
   tesouro: "Nenhum"
 },
 { id: "jaguadarte",
-  name: "Jaguadarte",
+  name: "Jaguadarte - Alice no País das Maravilhas",
   image: "/chefes/jaguadarte.jpg",
   tipo: "Monstro (dragão), Enorme",
   nd: 12,
