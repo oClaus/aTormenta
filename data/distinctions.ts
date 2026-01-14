@@ -1391,7 +1391,7 @@ Os materiais especiais que podem ser empregados em ornitópteros, bem como seu c
     },
     {
       name: "Música: Nota Azul",
-      description: `É um risco se deixar levar pela música de um menestrel maldito. Os acordes hipnóticos podem não apenas conquistar sua atenção, mas também consumir sua mente e levar à morte. \nFaça um teste de Atuação oposto pelo teste de Vontade de cada criatura à sua escolha dentro do alcance (você faz um único teste). Alvos que falhem sofrem $1d8$ pontos de dano mental (ou $1d12$, se estiverem sofrendo alguma condição mental). Para cada outro poder de menestrel maldito que você possui, o dano de sua Nota Azul aumenta em $+1d8$ ou $+1d12$, conforme apropriado. \nPré-requisito: Técnica Endiabrada.`,
+      description: `É um risco se deixar levar pela música de um menestrel maldito. Os acordes hipnóticos podem não apenas conquistar sua atenção, mas também consumir sua mente e levar à morte. \nFaça um teste de Atuação oposto pelo teste de Vontade de cada criatura à sua escolha dentro do alcance (você faz um único teste). Alvos que falhem sofrem 1d8 pontos de dano mental (ou 1d12, se estiverem sofrendo alguma condição mental). Para cada outro poder de menestrel maldito que você possui, o dano de sua Nota Azul aumenta em +1d8 ou +1d12, conforme apropriado. \nPré-requisito: Técnica Endiabrada.`,
     },
   ],
   },
