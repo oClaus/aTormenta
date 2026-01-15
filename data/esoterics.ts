@@ -82,6 +82,38 @@ export const esoteric: Gear[] = [
     price: "T$ 100",
     spaces: "1",
   },
+  {
+    id: "compasso-mistico",
+    name: "Compasso Místico",
+    description: "Este compasso ostenta marcações geométricas combinadas com símbolos arcanos. Quando lança uma magia com efeito em área, você pode excluir um alvo da área afetada.",
+    origin: "Herois de Arton",
+    price: "T$ 600",
+    spaces: "1"
+  },
+  {
+    id: "flauta-convocadora",
+    name: "Flauta Convocadora",
+    description: "Esta réplica de flauta é esculpida em um único pedaço de cristal. Quando lança uma magia que conjura capangas, você conjura um capanga adicional do mesmo tipo.",
+    origin: "Herois de Arton",
+    price: "T$ 300",
+    spaces: "1"
+  },
+  {
+    id: "mandala-onirica",
+    name: "Mandala Onírica",
+    description: "Esta mandala é feita de delicados fios metálicos entrelaçados. Quando ao menos um inimigo falha no teste de Vontade de uma de suas magias, você recebe 1 PM temporário (limitado pelo total de PM gasto na magia).",
+    origin: "Herois de Arton",
+    price: "T$ 300",
+    spaces: "1"
+  },
+  {
+    id: "varinha-armamentista",
+    name: "Varinha Armamentista",
+    description: "Feita de metal ou marfim, esta varinha canaliza seu poder pessoal para a energia da magia. Aumenta o bônus de dano fornecido pelo poder Arcano de Batalha em +2.",
+    origin: "Herois de Arton",
+    price: "T$ 600",
+    spaces: "1"
+  }
 
  
 ];

@@ -2,140 +2,323 @@ import { Gear } from "@/types/gear";
 
 // Tabela de Equipamento de Aventura
 export const gear: Gear[] = [
-  {
-    id: "agua-benta",
+  { id: "agua-benta",
     name: "Água benta",
     description: "Produzida com a magia Abençoar Alimentos, esta água sagrada é um poderoso recurso na luta contra o mal. Para usar a água benta, você gasta uma ação padrão e escolhe um morto-vivo, demônio ou diabo em alcance curto (a água benta é inofensiva contra outras criaturas). O alvo sofre 2d10 pontos de dano de luz (Reflexos CD Sab reduz à metade).",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 10",
     spaces: "0,5",
   },
-  {
-    id: "algemas",
+  { id: "algemas",
     name: "Algemas",
     description: "Um par de algemas para criaturas Médias. Prender uma criatura que não esteja indefesa exige empunhar a algema, agarrar o alvo (veja “Manobras de Combate”) e vencer um novo teste de agarrar contra ela. Você pode prender os dois pulsos da pessoa (–5 em testes que exijam o uso das mãos, impede conjuração) ou um dos pulsos dela em um objeto imóvel adjacente, caso haja, para impedir que ela se mova. Escapar das algemas exige uma ação completa e um teste de Acrobacia contra CD 30 ou de Força contra CD 25 — ou ter as chaves...",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 15",
     spaces: "1",
   },
-  {
-    id: "arpeu",
+  { id: "arpeu",
     name: "Arpéu",
     description: "Um gancho de aço amarrado na ponta de uma corda para se fixar em muros, janelas, parapeitos de prédios... Prender um arpéu exige um teste de Pontaria (CD 15). Subir um muro com a ajuda de uma corda fornece +5 no teste de Atletismo.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 5",
     spaces: "1",
   },
-  {
-    id: "bandoleira-de-pocoes",
+  { id: "bandoleira-de-pocoes",
     name: "Bandoleira de poções",
     description: "Um cinto de couro com bolsos que comportam pequenos frascos. Se você estiver vestindo uma bandoleira, pode sacar itens alquímicos e poções como uma ação livre.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 20",
     spaces: "1",
   },
-  {
-    id: "barraca",
+  { id: "barraca",
     name: "Barraca",
     description: "Esta barraca de lona conta como um saco de dormir para duas pessoas e fornece +2 em testes de Sobrevivência para acampar.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 10",
     spaces: "1",
   },
-  {
-    id: "corda",
+  { id: "corda",
     name: "Corda",
     description: "Um rolo com 10 metros de corda de cânhamo, o mesmo tipo usado em navios. Possui diversas utilidades: pode ajudar a descer um buraco ou muro (+5 em testes de Atletismo nessas situações), amarrar pessoas etc. Dar um nó firme ou especial (por exemplo, capaz de deslizar, se desfazer com um puxão etc.) exige um teste de Destreza (CD 15). Arrebentar a corda exige 2 pontos de dano de corte ou uma ação padrão e um teste de Força (CD 20).",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 1",
     spaces: "1",
   },
-  {
-    id: "espelho",
+  { id: "espelho",
     name: "Espelho",
     description: "Este pequeno espelho possui diversas utilidades: observar cantos, fazer sinais de luz e, claro, garantir que você esteja apresentável.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 10",
     spaces: "1",
   },
-  {
-    id: "lampiao",
+  { id: "lampiao",
     name: "Lampião",
     description: "Um cilindro com uma alça e duas portinholas. Uma chama alimentada por óleo é acesa dentro do cilindro e uma das portinholas aberta deixa a luz sair. Acender um lampião é uma ação padrão e sua luz ilumina um raio com 15m. Carregar um lampião com óleo é uma ação padrão e ele dura uma cena.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 7",
     spaces: "1",
   },
-  {
-    id: "mochila",
+  { id: "mochila",
     name: "Mochila",
     description: "Uma bolsa de lona com tiras para ser carregada nas costas. Não conta como item vestido.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 2",
     spaces: "—",
   },
-  {
-    id: "mochila-de-aventureiro",
+  { id: "mochila-de-aventureiro",
     name: "Mochila de aventureiro",
     description: "Feita de couro resistente, esta mochila é repleta de bolsos para prender equipamento. Vestir uma mochila de aventureiro aumenta sua capacidade de carga em 2 espaços (ela própria não gasta um espaço).",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 50",
     spaces: "—",
   },
-  {
-    id: "oleo",
+  { id: "oleo",
     name: "Óleo",
     description: "Um frasco com óleo inflamável para lampião. Você pode atirar o frasco em uma criatura em alcance curto com uma ação padrão. Se ela sofrer dano de fogo até o fim do seu próximo turno, sofre 1d6 pontos de dano extra e fica em chamas.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 0,1",
     spaces: "0,5",
   },
-  {
-    id: "organizador-de-pergaminhos",
+  { id: "organizador-de-pergaminhos",
     name: "Organizador de pergaminhos",
     description: "Um estojo de madeira ou couro rígido. Se você estiver vestindo um organizador de pergaminhos, pode sacar pergaminhos como uma ação livre.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 25",
     spaces: "1",
   },
-  {
-    id: "pe-de-cabra",
+  { id: "pe-de-cabra",
     name: "Pé de cabra",
     description: "Esta barra de ferro fornece +5 em testes de Força para abrir portas, janelas e baús fechados. Um pé de cabra pode ser usado como arma, com as estatísticas de uma clava.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 2",
     spaces: "1",
   },
-  {
-    id: "saco-de-dormir",
+  { id: "saco-de-dormir",
     name: "Saco de dormir",
     description: "Um colchão com uma coberta fina o bastante para ser enrolada e amarrada, é especialmente útil para aventureiros, que nunca sabem onde vão passar a noite. Dormir ao relento sem um acampamento e um saco de dormir diminui sua recuperação de PV e PM.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 1",
     spaces: "1",
   },
-  {
-    id: "simbolo-sagrado",
+  { id: "simbolo-sagrado",
     name: "Símbolo sagrado",
     description: "Um medalhão de madeira ou metal com o símbolo de uma divindade. Se você estiver vestindo (normalmente com uma corrente ao redor do pescoço) ou empunhando o símbolo sagrado de um deus do qual é devoto, recebe +1 em testes de resistência.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 5",
     spaces: "1",
   },
-  {
-    id: "tocha",
+  { id: "tocha",
     name: "Tocha",
     description: "Um bastão de madeira com algum combustível na ponta (geralmente trapos embebidos em parafina). Acender uma tocha é uma ação padrão. Ela ilumina um raio de 9m e dura uma cena. Pode ser usada como uma arma simples leve (dano 1d4 de impacto mais 1 de fogo, crítico x2).",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 0,1",
     spaces: "1",
   },
-  {
-    id: "vara-de-madeira",
+  { id: "vara-de-madeira",
     name: "Vara de madeira",
     description: " Uma haste com 3m de comprimento. Útil para alcançar pontos distantes, mas frágil demais para servir como arma.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 0,2",
     spaces: "1",
   },
+  {
+    id: "abaco",
+    name: "Ábaco",
+    description: "Este instrumento desenvolvido pelos sábios sar-allan fornece a seu usuário a capacidade de fazer operações matemáticas complexas em pouco tempo. Muito útil para determinar custos e margens de lucro! Para usar um ábaco você precisa ser treinado em Conhecimento. Se você fizer um teste de Ofício para sustento, recebe TO, em vez de T$. Além disso, se possuir Poder Monetário, o limite de TO que você pode gastar por dia aumenta em +2.",
+    origin: "Herois de Arton",
+    price: "T$ 45",
+    spaces: "1"
+  },
+  {
+    id: "ampulheta",
+    name: "Ampulheta",
+    description: "Um objeto delicado, usado para medir o tempo. Um ciclo da ampulheta normalmente equivale a uma hora. Usada por nobres para manter controle de seus compromissos e por alquimistas para medir o tempo de certas reações. Quando escolhe 10 em um teste de Ofício (alquimista), você considera o resultado do d20 como um 12 automático.",
+    origin: "Herois de Arton",
+    price: "T$ 45",
+    spaces: "1"
+  },
+  {
+    id: "aparelho-de-cha",
+    name: "Aparelho de Chá",
+    description: "Um conjunto de xícaras delicadas, pires e um bule. Qualquer um que se depare com um aparelho de chá fica automaticamente mais predisposto a conversar. Uma vez por cena, você recebe +1d4 em um teste de Diplomacia ou Enganação feito com alguém que esteja tomando chá com você.",
+    origin: "Herois de Arton",
+    price: "T$ 30",
+    spaces: "1"
+  },
+  {
+    id: "astrolabio",
+    name: "Astrolábio",
+    description: "Um avançado instrumento de navegação, que usa a posição relativa das estrelas para guiar seu usuário. Sua complexidade, no entanto, limita seu uso a pessoas que receberam educação avançada. Você pode usar Conhecimento no lugar de Sobrevivência para orientar-se.",
+    origin: "Herois de Arton",
+    price: "T$ 90",
+    spaces: "1"
+  },
+  {
+    id: "armacao-para-mochila",
+    name: "Armação para Mochila",
+    description: "Uma armação para mochila é uma estrutura de metal amarrada aos ombros, tórax e cintura do usuário. A mochila de aventureiro então é encaixada nessa estrutura, garantindo que o peso seja mais bem distribuído, diminuindo a fadiga. Com uma armação, uma mochila de aventureiro passa a aumentar sua capacidade de carga em 6 espaços (em vez de 2). Entretanto, a ação necessária para sacar seus itens aumenta em um passo (de livre para movimento, de movimento para padrão e de padrão para completa).",
+    origin: "Herois de Arton",
+    price: "T$ 50",
+    spaces: "—"
+  },
+  {
+    id: "asas-do-texugo",
+    name: "Asas do Texugo",
+    description: "Criada por uma serelepe tribo de kobolds, este implemento deixou inúmeros engenhoqueiros goblins se perguntando: “Por que não pensei nisso antes?”. Consiste em uma mochila vestida às costas, da qual se projetam duas asas retráteis. Pedais, manivelas e roldanas permitem o “bater” das asas, sustentando um voo um tanto irregular, mas controlável. Para voar com as asas do texugo, é necessário gastar uma ação de movimento para estender as asas (quando não estão em uso, elas ficam dobradas dentro da “mochila”). Isso faz com que você passe a ocupar o espaço de uma criatura uma categoria de tamanho maior que a sua. Para sair do chão é necessário fazer um teste de Atletismo para saltar (CD 15) para pegar impulso. Se passar, você recebe deslocamento de voo 12m por 1 rodada, +1 rodada para cada 5 pontos pelos quais o resultado superar a CD. Saltar de um ponto elevado, como do telhado de um celeiro, fornece +5 nesse teste. Ao fim do tempo de voo, você plana rumo ao chão (como no efeito básico da magia Queda Suave). Enquanto está voando, você fica vulnerável e em condição ruim para lançar magias (você ignora essas penalidades se for treinado em Pilotagem).",
+    origin: "Herois de Arton",
+    price: "T$ 200",
+    spaces: "2"
+  },
+  {
+    id: "bainha-adornada",
+    name: "Bainha Adornada",
+    description: "Coberta de fios de ouro, gemas e outros ornamentos, esta bainha permite que você use armas como parte de um traje da corte (Tormenta20, p. 159). Com isso você pode participar de bailes, festas e encontros da nobreza devidamente armado, sem chamar atenção.",
+    origin: "Herois de Arton",
+    price: "T$ 100",
+    spaces: "1"
+  },
+  {
+    id: "bussola",
+    name: "Bússola",
+    description: "Este avançadíssimo instrumento de navegação funciona por princípios simples, mas depende de materiais raros. Por meio de um ímã, a bússola sempre aponta para o norte. Quando faz um teste de Sobrevivência para orientar-se, você rola dois dados e usa o melhor resultado.",
+    origin: "Herois de Arton",
+    price: "T$ 45",
+    spaces: "1"
+  },
+  {
+    id: "cinto-de-utilidades",
+    name: "Cinto de Utilidades",
+    description: "Um cinturão de couro cheio de bolsos e fivelas, com espaço para os vários equipamentos esquisitos de um inventor. Se você estiver vestindo um cinto de utilidades, pode sacar e guardar engenhocas como uma ação livre.",
+    origin: "Herois de Arton",
+    price: "T$ 50",
+    spaces: "1"
+  },
+  {
+    id: "condecoracao-militar",
+    name: "Condecoração Militar",
+    description: "Condecorações não são compradas, são conquistadas! Uma condecoração militar é concedida por um reino ou igreja após uma missão bem-sucedida. Se estiver ostentando sua condecoração, no início de cada combate, você recebe uma quantidade de PV temporários, cumulativos com outros bônus de itens e com outras condecorações, igual a 3x o patamar em que a condecoração foi conquistada (por exemplo, 6 PV para uma condecoração obtida em patamar veterano).",
+    origin: "Herois de Arton",
+    price: "—",
+    spaces: "1"
+  },
+  {
+    id: "dente-falso",
+    name: "Dente Falso",
+    description: "Um minúsculo frasco disfarçado como um dente, dentro de sua boca. Permite que você carregue um preparado alquímico consumível ou uma poção sem ocupar espaços. Além disso, permite ingerir esse item como uma ação de movimento. É preciso quebrar o dente falso para ingerir seu conteúdo: uma vez que você faça isso, o dente falso é perdido. Você só pode ter um dente falso instalado em sua boca por vez (a menos que, de alguma forma, possua mais de uma boca…).",
+    origin: "Herois de Arton",
+    price: "T$ 300",
+    spaces: "—"
+  },
+  {
+    id: "diagrama-anatomico",
+    name: "Diagrama Anatômico",
+    description: "Este pergaminho com esquemas detalhados do corpo das principais raças humanoides à primeira vista parece feito para auxiliar curandeiros... No entanto, basta um olhar mais atento para perceber que ele mostra as regiões mais vulneráveis desses corpos, além de explicar as melhores maneiras de atacá-las. Quando usa Ataque Furtivo, você recebe +1 na margem de ameaça.",
+    origin: "Herois de Arton",
+    price: "T$ 75",
+    spaces: "1"
+  },
+  {
+    id: "espelho-refletor",
+    name: "Espelho Refletor",
+    description: "Este pequeno espelho pode ser usado para refletir qualquer luz nos olhos de um inimigo, cegando-o temporariamente. Você pode gastar uma ação de movimento para fazer um teste de Ladinagem oposto a um teste de Reflexos de uma criatura em alcance curto. Se você vencer o teste oposto, ela fica desprevenida contra seu próximo ataque realizado até o fim do seu próximo turno. Pode ser usado apenas uma vez por cena — após isso, os inimigos sabem que devem se proteger contra o truque.",
+    origin: "Herois de Arton",
+    price: "T$ 45",
+    spaces: "1"
+  },
+  {
+    id: "estetoscopio",
+    name: "Estetoscópio",
+    description: "Médicos de Salistick usam este aparato sofisticado para auscultar o coração de pacientes. No entanto, criminosos costumam usá-lo para ouvir os movimentos de mecanismos internos de fechaduras e armadilhas, facilitando seu trabalho ardiloso. Você pode gastar uma ação padrão para fazer um teste de Investigação para ajudar a si mesmo e aplicar o bônus a um teste de Cura, ou de Ladinagem para abrir fechadura ou sabotar, que você realize até o fim do seu próximo turno.",
+    origin: "Herois de Arton",
+    price: "T$ 60",
+    spaces: "1"
+  },
+  {
+    id: "estrepes",
+    name: "Estrepes",
+    description: "Pequenas peças de metal com pontas afiadas. Você pode gastar uma ação padrão para cobrir com estrepes um quadrado de até 3m de lado adjacente a você. Eles causam 1d4 pontos de dano de perfuração em qualquer criatura que pise na área. Uma criatura que sofra dano dos estrepes fica lenta até o fim do próximo turno dela.",
+    origin: "Herois de Arton",
+    price: "T$ 5",
+    spaces: "1"
+  },
+  {
+    id: "favor-da-pessoa-amada",
+    name: "Favor da Pessoa Amada",
+    description: "Este item não pode ser comprado nem fabricado, apenas conquistado por meio de interpretação — deve ser dado espontaneamente para que tenha efeito em regras. O favor da pessoa amada é uma mecha de cabelo, lenço perfumado, bilhete de amor, flor seca ou outro item pessoal (mas sem valor monetário) que alguém muito querido dá a um herói. Em geral, é mantido preso sob a armadura ou roupa, em contato com o corpo. Fornece +2 PM, cumulativo com bônus de outros itens. Se você e sua pessoa amada tiverem uma desavença ou decepcionarem um ao outro de alguma forma, este item para de funcionar.",
+    origin: "Herois de Arton",
+    price: "—",
+    spaces: "1"
+  },
+  {
+    id: "lampiao-de-foco",
+    name: "Lampião de Foco",
+    description: "Esta lanterna sofisticada funciona como um lampião, mas possui uma cobertura e pequenos espelhos que concentram a luz em um cone de 24m.",
+    origin: "Herois de Arton",
+    price: "T$ 15",
+    spaces: "1"
+  },
+  {
+    id: "leque",
+    name: "Leque",
+    description: "Permite que damas e cavalheiros se abanem ou escondam a boca, para fofocar em paz. Muitos usuários se abanam como uma verdadeira mania, principalmente após ouvir algo ultrajante. Uma vez por cena, quando faz um teste de Vontade, você pode se abanar para usar seu Carisma em vez de Sabedoria nesse teste.",
+    origin: "Herois de Arton",
+    price: "T$ 3",
+    spaces: "1"
+  },
+  {
+    id: "livro-de-metodos-anti-nimb",
+    name: "Livro de Métodos Anti-Nimb",
+    description: "Jogos de azar recebem esse nome porque dependem do acaso. Os melhores jogadores são capazes de usar seu magnetismo natural, frieza e capacidade de blefar para garantir vitória em quase qualquer mesa. Este livro, contudo, contém métodos que permitem trocar toda essa aleatoriedade e malandragem por racionalidade: cálculos de estatísticas e probabilidades, truques para contar cartas, gráficos com projeções de ganhos e perdas... Você pode gastar 1 minuto consultando o livro e 1 PM para substituir testes de Jogatina por testes de Conhecimento até o fim da cena. Certos cassinos, tavernas e grupos de jogadores que notem alguém consultando um destes livros podem bani-lo do jogo (ou fazer coisa bem pior).",
+    origin: "Herois de Arton",
+    price: "T$ 100",
+    spaces: "1"
+  },
+  {
+    id: "lupa",
+    name: "Lupa",
+    description: "Uma lente de aumento em uma armação metálica, com cabo de madeira. Equipamento indispensável para detetives. Quando faz um teste de Investigação para procurar usando uma lupa, você pode rolar dois dados e usar o melhor resultado.",
+    origin: "Herois de Arton",
+    price: "T$ 30",
+    spaces: "1"
+  },
+  {
+    id: "mapa",
+    name: "Mapa",
+    description: "Um mapa de uma região (determinada pelo mestre ao ser adquirido). Fornece +5 em testes de Sobrevivência para orientar-se nessa região.",
+    origin: "Herois de Arton",
+    price: "T$ 30",
+    spaces: "1"
+  },
+  {
+    id: "mecanismo-de-mola",
+    name: "Mecanismo de Mola",
+    description: "Esta estrutura de metal com molas é presa ao antebraço e fica engatilhada até que seja ativada, com um movimento do pulso do usuário. Você pode manter uma arma leve com a qualidade ocultável no mecanismo de mola. Ao ativá-lo, saca essa arma como uma ação livre e ela recebe a qualidade surpreendente para esse ataque.",
+    origin: "Herois de Arton",
+    price: "T$ 25",
+    spaces: "1"
+  },
+  {
+    id: "mochila-discreta",
+    name: "Mochila Discreta",
+    description: "Como uma mochila normal, mas tem um compartimento oculto onde o usuário pode esconder objetos equivalentes a 1 espaço. Esses itens contam em sua capacidade de carga, mas você recebe +5 em testes de Ladinagem para ocultá-los (cumulativo com qualquer bônus concedido pelo próprio item). Uma mochila discreta deve ser vestida, mas não ocupa espaço de carga do personagem.",
+    origin: "Herois de Arton",
+    price: "T$ 20",
+    spaces: "1"
+  },
+  {
+    id: "prancheta",
+    name: "Prancheta",
+    description: "Uma simples tabuleta de madeira com um pergaminho, no qual o usuário pode fingir escrever alguma coisa. Alguém que carrega uma prancheta é imediatamente identificado como uma figura de autoridade — talvez um inspetor de alguma guilda, ou um enviado de um nobre. Você pode fazer testes de Nobreza para etiqueta mesmo sem ser treinado.",
+    origin: "Herois de Arton",
+    price: "T$ 5",
+    spaces: "1"
+  },
+  {
+    id: "sinete",
+    name: "Sinete",
+    description: "Um estojo de madeira ou metal contendo cera, papéis e um anel ou carimbo com o símbolo pessoal do usuário. Reduz em –1 PM o custo das habilidades Autoridade Feudal e Favor e de outras habilidades em que, a critério do mestre, seu símbolo pessoal tenha algum peso.",
+    origin: "Herois de Arton",
+    price: "T$ 50",
+    spaces: "1"
+  }
 ];
