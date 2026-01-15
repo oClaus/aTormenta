@@ -209,7 +209,7 @@
   { id: "",
     name: "",
     description: "",
-    origin: "Tormenta20 - Jogo do Ano",
+    origin: "Herois de Arton",
     purpose: "Corpo a Corpo",
     proficiency: "Marcial",
     grip: "Duas Mãos",

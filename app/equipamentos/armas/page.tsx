@@ -104,7 +104,7 @@ const WeaponFilterableTable = ({ allWeapons }: { allWeapons: Weapon[] }) => {
 
   const allProficiencies: WeaponProficiency[] = ["Simples", "Marcial", "Exótica", "Fogo"];
   const allGrips: WeaponGrip[] = ["Leve", "Uma Mão", "Duas Mãos"];
-  const allDamageTypes: DamageType[] = ["Corte", "Perfuração", "Impacto", "Corte/Perfuração"];
+  const allDamageTypes: DamageType[] = ["Corte", "Perfuração", "Impacto", "Corte/Perfuração", "Impacto/Perfuração", "Ácido"];
   const allPurposes: WeaponPurpose[] = ["Corpo a Corpo", "Distância", "Munição"]; 
   
   const totalColumns = 8; 
@@ -362,6 +362,12 @@ export default function ArmasPage() {
                     </li>
                     <li>
                     <strong className="text-stone-100">Versátil.</strong> Fornece bônus em uma ou mais manobras (cumulativo com outros bônus de itens), conforme a arma.
+                    </li>
+                    <li>
+                    <strong className="text-stone-100">Ocultável.</strong> O tamanho e/ou formato da arma tornam mais fácil escondê-la. Ela fornece +5 em testes de Ladinagem para ocultá-la. A adaga é uma arma ocultável.
+                    </li>
+                    <li>
+                    <strong className="text-stone-100">Surpreendente.</strong> Uma vez por cena, se você sacar a arma como ação livre e usá-la para atacar no mesmo turno, o oponente fica desprevenido contra esse ataque.
                     </li>
                 </ul>
 
