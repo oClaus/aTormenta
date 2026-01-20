@@ -311,4 +311,100 @@ export const improvements: Improvement[] = [
     description: "Uma munição de ponta muito afiada, pensada para penetrar entre as frestas de placas ou através de malhas resistentes. Ignora 5 pontos de redução de dano.",
     origin: "Dragão Brasil"
    },
+   {
+    id: "farpada",
+    name: "Farpada",
+    effect: "Acertos críticos provocam sangramento",
+    category: ["Arma"],
+    description: "A arma possui farpas ou espinhos que aumentam a gravidade de seus golpes. Uma criatura atingida por um acerto crítico da arma fica sangrando e sofre –5 em testes de Constituição para remover essa condição até o fim da cena. Só pode ser aplicada em armas de corte ou perfuração. Pré-requisito: cruel.",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "fosforo",
+    name: "Fósforo",
+    effect: "Munição ofusca o alvo",
+    category: ["Munição"],
+    description: "Esta melhoria só pode ser aplicada em munições. A munição possui uma pequena carga de pó incandescente que a deixa mais leve (seu dano diminui em um passo). Entretanto, quando atinge o alvo, ela irrompe em um lampejo luminoso momentâneo que o deixa ofuscado por 1 rodada.",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "guarda",
+    name: "Guarda",
+    effect: "+1 na Defesa e em testes contra manobras",
+    category: ["Arma"],
+    description: "A arma possui uma proteção elaborada próxima a sua empunhadura, que fornece +1 na Defesa e em testes contra manobras. Só pode ser aplicada em armas corpo a corpo.",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "incendiaria",
+    name: "Incendiária",
+    effect: "Munição causa dano por fogo e pode deixar em chamas",
+    category: ["Munição"],
+    description: "Esta melhoria só pode ser aplicada em munições. A munição causa +1 ponto de dano de fogo e, se acertar por 5 ou mais, deixa o alvo em chamas.",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "pressurizada",
+    name: "Pressurizada",
+    effect: "+2 em ataque e dano ao acionar mecanismo",
+    category: ["Arma"],
+    description: "A arma possui um mecanismo articulado em seu interior, formado por um pistão e uma câmara de ar. Você pode gastar uma ação completa para puxar o pistão e pressurizar a câmara. Quando faz um ataque com a arma, se ela estiver pressurizada, você pode descarregar a pressão para aumentar o impacto do golpe. Se fizer isso, você recebe +2 no teste de ataque e na rolagem de dano. Esta melhoria só pode ser aplicada a armas corpo a corpo de impacto e armas de fogo.",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "balistico",
+    name: "Balístico",
+    effect: "Ataques com escudo podem causar dano adicional",
+    category: ["Escudo"],
+    description: "O escudo possui um mecanismo que usa a energia de balas de armas de fogo para aumentar o impacto de seus golpes. Quando faz um ataque com o escudo, você pode ativar o mecanismo e gastar uma bala para aumentar o dano do escudo em +2d6. Esta melhoria só pode ser aplicada em escudos. Ela tem espaço para 2 balas e recarregá-la exige uma ação completa e o gasto das balas. Pré-requisito: reforçado.",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "injetora",
+    name: "Injetora",
+    effect: "Usa um efeito de preparado ou poção",
+    category: ["Armadura"],
+    description: "Um minúsculo frasco de cerâmica ou vidro é inserido dentro da armadura, junto a um mecanismo injetor ativado com um gesto específico. Você pode gastar uma ação de movimento para acionar o mecanismo e ingerir uma dose de um preparado ou poção. A melhoria tem espaço para 1 dose. Carregá-la exige uma ação completa e o gasto da dose.",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "prudente",
+    name: "Prudente",
+    effect: "Atenua uma falha crítica",
+    category: ["Armadura"],
+    description: "Alguns aventureiros temem mais seus próprios erros do que os golpes dos adversários. Para eles existe esta melhoria, que pode ser aplicada a qualquer armadura. Representa dezenas de pequenos e grandes ajustes feitos para minimizar a chance de que um descuido do usuário cause sua ruína: grevas são equipadas com suportes para dificultar escorregões, elmos são abertos em pontos estratégicos para melhorar a audição e a visão, manoplas recebem cobertura aderente para impedir que armas sejam derrubadas... Se estiver usando a regra opcional Falhas Críticas (p. 300), uma vez por dia você pode rolar duas vezes na Tabela 4-6 e escolher o resultado que preferir.",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "potencializador",
+    name: "Potencializador",
+    effect: "+2 no limite de PM",
+    category: ["Esotérico"],
+    description: "O esotérico possui duas gemas místicas que, combinadas, permitem que você canalize mais mana do que normalmente seria capaz. O máximo de PM que você pode gastar em magias aumenta em +2. Pré-requisito: canalizador.",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "brasonado",
+    name: "Brasonado",
+    effect: "Usa a perícia do item para mudar atitude",
+    category: ["Ferramenta", "Vestuário"],
+    description: "Esta melhoria também é conhecida como “de grife”. O item é estampado com o brasão da guilda, loja ou casa comercial famosa que o fabricou ou vendeu, de forma muito proeminente, quase como um anúncio. Por exemplo, traz o brasão da alfaiataria Legrasse & Legrasse, de Valkaria, ou da Guilda Comercial Joia do Poente, de Halak-Tûr. Quando faz seu primeiro teste de de Diplomacia para mudar atitude em uma cena, você pode substituí-lo por um teste de outra perícia na qual o item forneça bônus (mas apenas com pessoas que admiram ostentação, a critério do mestre). Um item não pode ser brasonado e discreto.",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "usado",
+    name: "Usado",
+    effect: "Pode rolar novamente 1 natural",
+    category: ["Ferramenta", "Vestuário"],
+    description: "O item não foi comprado assim que foi fabricado — já está gasto e mostra marcas de uso, tendo passado pelas mãos de vários aventureiros, plebeus, nobres, bandidos... Em compensação, está “amaciado”, ajustando-se melhor do que qualquer peça recém-feita e ainda não testada. Uma vez por dia, você pode rolar novamente um resultado 1 natural em um teste de perícia com o item. Esta melhoria não pode ser aplicada por um artesão, apenas adquirida quando o item é comprado de segunda mão.",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "deslumbrante",
+    name: "Deslumbrante",
+    effect: "+1 na CD de habilidades baseadas em Carisma",
+    category: ["Armadura", "Vestuário"],
+    description: "O item não é apenas decorado com metais ou pedras preciosas, ele é um ícone de ostentação dourada e brilhante, uma verdadeira pilha de luxo e exagero. A CD para resistir às suas habilidades baseadas em Carisma aumenta em +1. Só pode ser aplicada em armaduras e vestuários. Pré-requisito: banhado a ouro ou cravejado de gemas.",
+    origin: "Herois de Arton"
+  }
 ];

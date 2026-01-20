@@ -36,7 +36,11 @@ const AlchemyFilterableTable = ({ allAlchemys }: { allAlchemys: Alchemy[] }) => 
     const lowerCaseSearch = searchTerm.toLowerCase();
 
     if (lowerCaseSearch) {
-      filtered = filtered.filter(a => a.name.toLowerCase().includes(lowerCaseSearch));
+      filtered = filtered.filter(a => 
+        a.name.toLowerCase().includes(lowerCaseSearch) ||
+        a.description.toLowerCase().includes(lowerCaseSearch) ||
+        a.origin.toLowerCase().includes(lowerCaseSearch) // <--- Aqui está a busca por origem
+      );
     }
 
     if (filters.type.length > 0) {

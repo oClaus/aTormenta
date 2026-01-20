@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import { food } from "@/data/food";
+import { aparatos } from "@/data/aparatos";
 import { Gear } from "@/types/gear";
 
 // --- Componentes Auxiliares ---
@@ -37,7 +37,7 @@ const GearFilterableTable = ({ allGear }: { allGear: Gear[] }) => {
           placeholder="Buscar equipamento por nome ou descrição..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full px-5 py-3 bg-stone-950 border border-stone-700 rounded text-stone-200 placeholder-stone-600 focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-900 transition-all font-serif"
+          className="w-full px-5 py-3 bg-stone-950 border border-stone-700 rounded text-stone-200 placeholder-stone-600 focus:outline-none focus:border-sky-600 focus:ring-1 focus:ring-sky-900 transition-all font-serif"
         />
         <div className="absolute right-4 top-1/2 -translate-y-1/2 text-stone-600">
             🔍
@@ -47,7 +47,7 @@ const GearFilterableTable = ({ allGear }: { allGear: Gear[] }) => {
       {/* Tabela de Equipamentos */}
       <div className="overflow-x-auto shadow-2xl rounded border border-stone-800 w-full">
         <table className="min-w-full divide-y divide-stone-800">
-          <thead className="bg-stone-900 text-amber-700">
+          <thead className="bg-stone-900 text-sky-700">
             <tr>
               <th scope="col" className="px-4 py-3 text-left text-xs font-bold uppercase tracking-wider border-r border-stone-800">Item</th>
               <th scope="col" className="w-24 px-4 pr-4 py-3 text-right text-xs font-bold uppercase tracking-wider border-r border-stone-800">Preço</th>
@@ -56,11 +56,11 @@ const GearFilterableTable = ({ allGear }: { allGear: Gear[] }) => {
           </thead>
           <tbody className="divide-y divide-stone-800">
             {filteredGear.map((item, index) => (
-              <tr key={item.id} className={index % 2 === 0 ? "bg-stone-900/30" : "bg-stone-900/60 hover:bg-amber-900/10 transition-colors"}>
+              <tr key={item.id} className={index % 2 === 0 ? "bg-stone-900/30" : "bg-stone-900/60 hover:bg-sky-900/10 transition-colors"}>
                 <td className="px-4 py-3 text-sm font-medium text-stone-200 border-r border-stone-800/50 align-top">
-                  <div className="font-bold text-amber-600 font-serif text-lg">{item.name}</div>
+                  <div className="font-bold text-sky-600 font-serif text-lg">{item.name}</div>
                   <div className="text-sm text-stone-400 break-words font-serif italic mt-1">{item.description}</div>
-                  <div className="mt-2 text-xs text-amber-800 font-bold uppercase tracking-widest">{item.origin}</div>
+                  <div className="mt-2 text-xs text-sky-800 font-bold uppercase tracking-widest">{item.origin}</div>
                 </td>
                 <td className="w-24 px-4 pr-4 py-3 text-right text-sm text-stone-300 font-serif align-top border-r border-stone-800/50">{item.price}</td>
                 <td className="w-20 px-4 pr-4 py-3 text-center text-sm text-stone-300 font-serif align-top">{item.spaces}</td>
@@ -95,15 +95,15 @@ export default function GearPage() {
                 </h1>
             </Link>
             <div className="flex items-center gap-3 text-sm font-bold tracking-wide uppercase">
-                <Link href="/" className="text-stone-500 hover:text-amber-600 transition-colors">
+                <Link href="/" className="text-stone-500 hover:text-sky-600 transition-colors">
                     Início
                 </Link>
                 <span className="text-stone-700">/</span>
-                <Link href="/equipamentos" className="text-stone-500 hover:text-amber-600 transition-colors">
+                <Link href="/equipamentos" className="text-stone-500 hover:text-sky-600 transition-colors">
                     Equipamentos
                 </Link>
                 <span className="text-stone-700">/</span>
-                <span className="text-red-700">Alimentação</span>
+                <span className="text-red-700">Aparatos</span>
             </div>
         </div>
       </header>
@@ -115,39 +115,20 @@ export default function GearPage() {
         <section className="mb-12 p-8 bg-stone-900/50 rounded border border-stone-800 w-full">
       
         <div className="space-y-4 text-stone-300 leading-relaxed font-serif">
-          <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-amber-600 to-red-500 mb-4 drop-shadow-md">
-            Alimentação
+          <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-blue-600 to-sky-500 mb-4 drop-shadow-md">
+            Aparatos
           </h1>
-        <p className="text-stone-400 text-lg">
-          Um prato especial deve ser consumido assim que é comprado ou fabricado. O bônus que ele oferece dura um dia, e você só pode receber um bônus de alimentação por dia.
+          <p className="text-stone-400 text-lg">
+           Aparatos são itens utilizados por inventores para modificar o funcionamento de suas engenhocas. Um aparato é acoplado a uma engenhoca e, enquanto estiver acoplado, não ocupa espaços. Cada engenhoca pode ter até dois aparatos diferentes. Usar um aparato aumenta a CD para ativar a engenhoca em +2. Usar dois aparatos aumenta em +5. Certos aparatos podem ser acoplados a mais de uma engenhoca. Nesses casos, você paga o custo de um único aparato, mas ele conta no limite (e no modificador da CD de ativação) de cada uma das engenhocas às quais estiver acoplado. Acoplar ou remover um aparato exige 1 hora de trabalho. Aparatos são fabricados com Ofício (engenhoqueiro) e a CD para fabricá-los é 20.
         </p>
-        <p className="text-stone-400">Para fabricar um prato especial, você precisa de 1 hora e deve realizar um teste de Ofício (cozinheiro) contra CD 15. Você pode optar por sofrer uma penalidade de –5 no teste para fabricar até cinco pratos de uma vez (pagando o custo de todos, claro).</p>
 
         </div>
       </section>
 
       {/* Tabela Completa e Filtrável */}
       <section className="w-full">
-        <h2 className="text-3xl font-bold text-amber-700 mb-6 border-b border-stone-800 pb-2">Tabela Completa de Alimentos</h2>
-        <GearFilterableTable allGear={food} />
-      </section>
-
-       <section className="mb-12 mt-12 p-8 bg-stone-900/50 rounded border border-stone-800 w-full">
-      
-        <div className="space-y-4 text-stone-300 leading-relaxed font-serif">
-          <h1 className="text-3xl font-bold text-amber-700 mb-4 border-b border-stone-800 pb-2">Mais informações</h1>
-          <h1 className="text-xl font-bold text-amber-600 mb-2">Culinária Sckharjagar</h1>
-          <p className="text-stone-400">As receitas dos pratos com "Culinária Sckharjagar" são conhecidas apenas em Sckharshantallas.</p>
-          <p className="text-stone-400">Dizem até que ensinar um estrangeiro a cozinhá-las seria um crime! Isso não passa de boato, mas incentiva muitos cozinheiros a guardarem suas receitas com todas as forças. Um personagem treinado em Ofício (cozinheiro) pode aprender a fabricar esses pratos ouvindo as instruções, lendo uma receita ou observando sua preparação.</p>
-
-          <h1 className="text-xl font-bold text-amber-600 mb-2">Eu Bebo Sim</h1>
-          <p className="text-stone-400">Fabricar uma bebida exige um teste de Ofício (cozinheiro) com CD 20 e segue as regras normais de fabricação de itens consumíveis (com 1 dia você faz uma bebida, ou duas se aceitar uma penalidade de –5 no teste).</p>
-          <p className="text-stone-400">Consumir uma bebida leva alguns minutos — embora seja possível tomar alguns goles rapidamente, para receber os benefícios dela você precisa ingeri-la com calma! Benefícios de bebida duram 1 dia e se acumulam com outros benefícios de alimentação (incluindo de bebidas diferentes).</p>
-          <p className="text-stone-400">Quando você ingere uma bebida alcoólica, deve fazer um teste de Fortitude (CD indicada no item; cada dose adicional no mesmo dia aumenta a CD em +5). Se falhar, fica embriagado (–2 em testes baseados em Destreza e Carisma). Se já estava embriagado, fica bebum (desprevenido, –5 em testes baseados em Destreza e Carisma). Por fim, se já estava bebum, cai inconsciente. Todas as condições duram até o fim do dia.</p>
-          <p className="text-stone-400">Efeitos que evitem penalidades impostas por bebidas também anulam seus benefícios, pois eles andam lado a lado. Afinal, um personagem só recebe redução de dano ou bônus em perícias sociais ao beber por estar levemente embriagado! Um personagem com imunidade a efeitos prejudiciais de itens ingeríveis (como pelo poder Vida Rústica) pode abrir mão dessa imunidade ao beber para receber os benefícios da bebida. Nesse caso, ele recebe +5 em seu teste de Fortitude.</p>
-          <p className="text-stone-400">Use estas regras apenas se todos os membros do grupo forem maiores de idade. E, por mais que tavernas e bebidas alcoólicas sejam comuns em obras de fantasia, não custa lembrar: na vida real, consuma com moderação!</p>
-
-        </div>
+        <h2 className="text-3xl font-bold text-sky-700 mb-6 border-b border-stone-800 pb-2">Tabela Completa de Aparatos</h2>
+        <GearFilterableTable allGear={aparatos} />
       </section>
     </main>
     {/* Footer */}

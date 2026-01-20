@@ -65,5 +65,53 @@ export const animals: Gear[] = [
     price: "T$ 30",
     spaces: "—",
   },
+  {
+    id: "armadura-de-montaria-leve",
+    name: "Armadura de Montaria Leve",
+    description: "Esta armadura permite que a montaria se exponha mais e, consequentemente, auxilie seu cavaleiro com mais eficiência. Deve ser vestida pela montaria e aumenta um bônus numérico fornecido por ela em +1 (se for fixo) ou em um passo (se for um bônus rolado).",
+    origin: "Herois de Arton",
+    price: "T$ 600", //
+    spaces: "2" //
+  },
+  {
+    id: "armadura-de-montaria-pesada",
+    name: "Armadura de Montaria Pesada",
+    description: "Como a armadura de montaria leve, mas aumenta o bônus em +2 ou em dois passos. Contudo, diminui o deslocamento da montaria em –3m. Montarias voadoras não podem usar armaduras pesadas.",
+    origin: "Herois de Arton",
+    price: "T$ 3.000", //
+    spaces: "5" //
+  },
+  {
+    id: "arreios-namalkahnianos",
+    name: "Arreios Namalkahnianos",
+    description: "Feitos de couro com nós e fivelas que permitem ajustes precisos, estes arreios permitem que um animal de tração puxe um veículo da forma mais confortável e eficiente possível. Contam como um item vestido do animal e aumentam o deslocamento de um veículo de tração animal em +3m.",
+    origin: "Herois de Arton",
+    price: "T$ 50", //
+    spaces: "1" //
+  },
+  {
+    id: "caparazao",
+    name: "Caparazão",
+    description: "Uma espécie de “roupa” para montarias, o caparazão é uma cobertura de tecido finamente decorado que adorna e protege o corpo do animal. Uma montaria vestindo um caparazão fornece +1 em Diplomacia e Intimidação (além de seus benefícios usuais).",
+    origin: "Herois de Arton",
+    price: "T$ 75", //
+    spaces: "1" //
+  },
+  {
+    id: "estribos",
+    name: "Estribos",
+    description: "Estes apoios para os pés fazem parte do equipamento básico de um ginete. Parecem simples, mas representam uma enorme inovação na tecnologia artoniana, possibilitando várias táticas de cavalaria que não eram viáveis anteriormente. Deve ser vestido pela montaria. Quando você faz uma investida montada, causa +1d8 pontos de dano.",
+    origin: "Herois de Arton",
+    price: "T$ 60", //
+    spaces: "1" //
+  },
+  {
+    id: "ornamento",
+    name: "Ornamento",
+    description: "Muito usado em desfiles, justas e outras ocasiões em que uma montaria precisa se mostrar garbosa. Uma vez por cena, se você estiver montado e for treinado em Cavalgar, pode se exibir com sua montaria para receber +1d4 em um teste de perícia baseada em Carisma.",
+    origin: "Herois de Arton",
+    price: "T$ 50", //
+    spaces: "1" //
+  }
   
 ];

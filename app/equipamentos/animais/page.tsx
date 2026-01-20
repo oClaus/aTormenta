@@ -130,6 +130,16 @@ export default function GearPage() {
         <h2 className="text-3xl font-bold text-amber-700 mb-6 border-b border-stone-800 pb-2">Tabela Completa de Animais</h2>
         <GearFilterableTable allGear={animals} />
       </section>
+
+      <section className="mb-12 mt-12 p-8 bg-stone-900/50 rounded border border-stone-800 w-full">
+      
+        <div className="space-y-4 text-stone-300 leading-relaxed font-serif">
+          <h1 className="text-3xl font-bold text-amber-700 mb-4 border-b border-stone-800 pb-2">Mais informações</h1>
+          <h1 className="text-xl font-bold text-amber-600 mb-2">Nova Regra: Montarias e Itens Vestidos</h1>
+          <p className="text-stone-400">A menos que algo seja especificado em contrário em sua descrição, uma montaria pode ser equipada com dois itens vestidos, como uma sela ou um alforje ou outro dos itens para animais descritos aqui.</p>
+
+        </div>
+      </section>
     </main>
     {/* Footer */}
     <footer className="mt-12 py-8 border-t border-stone-900 bg-black text-center text-stone-600 text-sm relative z-10">

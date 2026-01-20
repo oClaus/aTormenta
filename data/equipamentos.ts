@@ -12,7 +12,8 @@ import {
   PawPrint, 
   Ship, 
   HandCoins,
-  Crown 
+  Crown, 
+  Unplug
 } from "lucide-react";
 
 
@@ -145,6 +146,14 @@ export const equipmentCategories: EquipmentCategory[] = [
     icon: Crown,
     color: "text-amber-400",
     href: "/equipamentos/superiores",
+  },
+  {
+    id: "aparatos",
+    title: "Aparatos",
+    description: "Itens utilizados por inventores.",
+    icon: Unplug,
+    color: "text-amber-400",
+    href: "/equipamentos/aparatos",
   },
   
 ];

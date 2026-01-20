@@ -217,5 +217,119 @@ export const food: Gear[] = [
     price: "T$ 10",
     spaces: "0,5",
   },
+  {
+    id: "baga-celeste-cozida",
+    name: "Baga Celeste Cozida",
+    description: "Encontradas originalmente nas encostas invertidas de Vectora, estas bagas se espalharam por toda Arton. Preparadas adequadamente, fornecem qualidades místicas de flutuação. Todo dano de queda que você sofre é reduzido em −1d6.",
+    origin: "Herois de Arton",
+    price: "T$ 15",
+    spaces: "—"
+  },
+  {
+    id: "cozido-de-pimenta",
+    name: "Cozido de Pimenta",
+    description: "Um prato forte, capaz de trazer lágrimas aos olhos do mais resistente dos comensais. Fornece +1 em Fortitude (cumulativo com bônus de outros itens).",
+    origin: "Herois de Arton",
+    price: "T$ 10",
+    spaces: "—"
+  },
+  {
+    id: "manjar-de-sombras",
+    name: "Manjar de Sombras",
+    description: "A origem da receita original deste prato se perdeu, mas sua essência se manteve inalterada. Consiste em um manjar com ingredientes cultivados em terras próximas de cemitérios, que protege o corpo contra energias sombrias. Você ignora os próximos 10 pontos de dano de trevas que sofrer.",
+    origin: "Herois de Arton",
+    price: "T$ 20",
+    spaces: "—"
+  },
+  
+  // Bebidas
+  {
+    id: "baba-de-troll",
+    name: "Baba de Troll",
+    description: "Uma bebida sem álcool, à base de leite, castanhas, nozes e mel. Fornece +1d4 em um teste a sua escolha até o fim do dia. Não é alcoólica e não exige teste de Fortitude. - Bebida",
+    origin: "Herois de Arton",
+    price: "T$ 30",
+    spaces: "0,5"
+  },
+  {
+    id: "barba-queimada",
+    name: "Barba Queimada",
+    description: "Forte e amarga, esta cerveja anã fortalece o corpo e o espírito. Fornece redução de dano 2. CD 20. - Bebida",
+    origin: "Herois de Arton",
+    price: "T$ 45",
+    spaces: "0,5"
+  },
+  {
+    id: "cerveja-deheoni",
+    name: "Cerveja Deheoni",
+    description: "A bebida mais comum nas tavernas do Reinado. Fornece +1 em testes de resistência. CD 15. - Bebida",
+    origin: "Herois de Arton",
+    price: "T$ 15",
+    spaces: "0,5"
+  },
+  {
+    id: "dilinio",
+    name: "Dilínio",
+    description: "Destilado de Mortenstenn, antigo reino de Lamnor, feito com um cereal que só cresce no continente sul. A receita se perdeu após as invasões duyshidakk e poucos barris chegaram ao Reinado, o que explica seu altíssimo preço. Seu limite de gasto de PM aumenta em +1. CD 20. Não é possível fabricar este item. - Bebida",
+    origin: "Herois de Arton",
+    price: "T$ 600",
+    spaces: "0,5"
+  },
+  {
+    id: "grogue-negro",
+    name: "Grogue Negro",
+    description: "Rum misturado com especiarias. Seu nome não vem de sua coloração (a bebida tem um tom dourado claro), mas de sua origem — a receita foi criada por piratas do Conclave, que atuam no Mar Negro. Quando você usa Audácia, o bônus fornecido pelo poder aumenta em +1. CD 15. - Bebida",
+    origin: "Herois de Arton",
+    price: "T$ 15",
+    spaces: "0,5"
+  },
+  {
+    id: "grogue-rubro",
+    name: "Grogue Rubro",
+    description: "Uma variação do grogue negro, com especiarias picantes que fazem a bebida adquirir uma coloração avermelhada — e quem a bebe, certa inclinação para a violência. Você pode usar Audácia para testes de ataque. CD 20. - Bebida",
+    origin: "Herois de Arton",
+    price: "T$ 45",
+    spaces: "0,5"
+  },
+  {
+    id: "hidromel-uivante",
+    name: "Hidromel Uivante",
+    description: "Fabricada nas montanhas geladas, esta bebida aquece e incita. Fornece +2 em rolagens de dano corpo a corpo. CD 20. - Bebida",
+    origin: "Herois de Arton",
+    price: "T$ 21",
+    spaces: "0,5"
+  },
+  {
+    id: "licor-feerico",
+    name: "Licor Feérico",
+    description: "De aparência enevoada, esta bebida tem gosto adocicado, difícil de descrever. Dizem que é feito na Pondsmânia e trazido para o resto do Reinado com muita dificuldade. Alguns duvidam; dizem que isso é invenção dos taverneiros para cobrar mais caro! Mas, depois de experimentar uma dose, não duvidam mais. Escolha uma habilidade. O custo para ativar essa habilidade diminui em –1 PM. CD 25. - Bebida",
+    origin: "Herois de Arton",
+    price: "T$ 450",
+    spaces: "0,5"
+  },
+  {
+    id: "sidra-ahleniense",
+    name: "Sidra Ahleniense",
+    description: "Esta bebida doce deixa qualquer um mais falante, fornecendo +2 em testes de perícias originalmente baseadas em Carisma. CD 15. - Bebida",
+    origin: "Herois de Arton",
+    price: "T$ 45",
+    spaces: "0,5"
+  },
+  {
+    id: "vinho-pruss",
+    name: "Vinho Pruss",
+    description: "Batizado em homenagem ao antigo Rei-Imperador Thormy — dizem que era o favorito do monarca. Fornece 3 PM temporários. CD 15. - Bebida",
+    origin: "Herois de Arton",
+    price: "T$ 60",
+    spaces: "0,5"
+  },
+  {
+    id: "vinho-elfico",
+    name: "Vinho Élfico",
+    description: "De sabor complexo, aguça a mente, fornecendo +1 na CD para resistir a suas habilidades. CD 20. - Bebida",
+    origin: "Herois de Arton",
+    price: "T$ 90",
+    spaces: "0,5"
+  }
  
 ];
