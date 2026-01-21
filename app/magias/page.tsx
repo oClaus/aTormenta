@@ -144,6 +144,7 @@ export default function MagiasPage() {
       filtered = filtered.filter(spell => 
         spell.name.toLowerCase().includes(lowerCaseSearch) ||
         spell.description.toLowerCase().includes(lowerCaseSearch) ||
+        spell.origin.toLowerCase().includes(lowerCaseSearch) ||
         spell.school.toLowerCase().includes(lowerCaseSearch) ||
         spell.type.toLowerCase().includes(lowerCaseSearch) ||
         spell.execution.toLowerCase().includes(lowerCaseSearch) ||
