@@ -19,7 +19,7 @@ export const partners: Partner[] = [
     origin: "Tormenta20 - Jogo do Ano",
     benefits: {
       iniciante: "+2 em testes de ataque.",
-      veterano: "Muda para +3 em testes de ataque. Mestre: muda para +4 em testes de ataque e, uma vez por rodada, você pode gastar 5 PM para fazer um ataque extra.",
+      veterano: "Muda para +3 em testes de ataque.",
       mestre: "Muda para +4 em testes de ataque e, uma vez por rodada, você pode gastar 5 PM para fazer um ataque extra.",
     },
   },

@@ -379,7 +379,7 @@ export const gods: God[] = [
       "Coragem Total",
       "Liberdade Divina"
     ],
-    obligationsRestrictions: "Valkaria odeia o conformismo. Seus devotos são proibidos de fixar moradia em um mesmo lugar, não podendo permanecer mais de $2d10+10$ dias na mesma cidade (ou vila, aldeia, povoado...) ou $1d4+2$ meses no mesmo reino. Devotos de Valkaria também são proibidos de se casar ou formar qualquer união estável."
+    obligationsRestrictions: "Valkaria odeia o conformismo. Seus devotos são proibidos de fixar moradia em um mesmo lugar, não podendo permanecer mais de $2d10+10$ dias na mesma cidade (ou vila, aldeia, povoado...) ou 1d4+2 meses no mesmo reino. Devotos de Valkaria também são proibidos de se casar ou formar qualquer união estável."
   },
   {
     id: "21",
