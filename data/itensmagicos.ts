@@ -4,7 +4,8 @@ import {
   Shield, 
   ScrollText, 
   Gem, 
-  Flame 
+  Flame,
+  Sparkle
 } from "lucide-react";
 
 export const equipmentCategories: EquipmentCategory[] = [
@@ -47,5 +48,13 @@ export const equipmentCategories: EquipmentCategory[] = [
     icon: Flame, // Flame combina com a temática da Tormenta/Rubi
     color: "from-amber-600 to-amber-900",
     href: "/itens-magicos/artefatos",
+  },
+  {
+    id: "esotericos",
+    title: "Esotéricos",
+    description: "Similar as Armas Mágicas.",
+    icon: Sparkle,
+    color: "from-amber-600 to-amber-900",
+    href: "/itens-magicos/esotericos",
   },
 ];

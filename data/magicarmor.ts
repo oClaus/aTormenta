@@ -126,6 +126,126 @@ export const enchantments: Enchantment[] = [
     description: "Uma vez por rodada, se um aliado adjacente for alvo de um ataque, você pode gastar 1 PM para se tornar o alvo do ataque, que então é resolvido normalmente.",
     origin: "Tormenta20 - Jogo do Ano",
   },
+  {
+    id: "abissal",
+    name: "Abissal",
+    description: "O item possui gravuras de demônios e tentáculos. Você recebe redução de ácido e fogo 10 e, uma vez por rodada, pode gastar 1 PM para causar 2d6 pontos de dano de ácido ou fogo a uma criatura adjacente.",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "ancorada",
+    name: "Ancorada",
+    description: "Esta armadura permite que você se fixe em superfícies. Você recebe +5 em testes de Atletismo para escalar e pode gastar 1 PM para receber deslocamento de escalada 12m com duração sustentada.",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "anulador",
+    name: "Anulador",
+    description: "Uma vez por rodada, quando é alvo de uma magia, você pode gastar 3 PM por círculo da magia para anulá-la. Pré-requisito: abascanto.",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "arboreo",
+    name: "Arbóreo",
+    description: "Você recebe resistência a magia divina +5. Além disso, pode lançar a magia Controlar Plantas (CD Sab). Caso já conheça essa magia, o custo para lançá-la diminui em –1 PM.",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "astuto",
+    name: "Astuto",
+    description: "Você recebe +5 em Intuição e Percepção. Uma vez por rodada, pode gastar 3 PM para detectar automaticamente a presença e a localização de todas as criaturas escondidas ou invisíveis em alcance curto.",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "densa",
+    name: "Densa",
+    description: "A armadura gera uma aura de peso e lentidão. Isso reduz o deslocamento de inimigos em alcance curto em –3m. Uma vez por rodada, você pode gastar uma ação de movimento e 2 PM para deixar todos os inimigos em alcance curto abalados e lentos por 1d4 rodadas (CD For ou Des evita).",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "egide",
+    name: "Égide",
+    description: "O bônus na Defesa do item contra ataques à distância aumenta em +5. Além disso, uma vez por cena, quando sofre dano de um ataque à distância, você pode gastar 3 PM para ignorar esse dano.",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "enraizada",
+    name: "Enraizada",
+    description: "A armadura estende filamentos nododos que o mantêm firme no chão. Você recebe +5 em testes para resistir às manobras derrubar e empurrar. Quando faz um teste de resistência contra outro tipo de efeito de movimento, você pode gastar 2 PM para receber +5 no teste.",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "esmerico",
+    name: "Esmérico",
+    description: "O item é decorado com esmeraldas encantadas. Você recebe redução de ácido 10 e resistência a veneno +5. Além disso, você pode gastar 1 PM para criar um campo de energia esverdeada com duração sustentada que estende essa proteção para todos os aliados em alcance curto.",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "estigio",
+    name: "Estígio",
+    description: "Uma vez por cena, se for reduzido a 0 PV ou menos, você pode gastar 5 PM para, em vez disso, ser reduzido a 1 PV. Pré-requisito: abençoado.",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "etereo",
+    name: "Etéreo",
+    description: "Uma vez por cena você pode gastar 3 PM para se tornar incorpóreo por 1 rodada. Nessa forma, você ignora ataques e efeitos não mágicos e pode atravessar paredes e objetos sólidos, mas não manipulá-los (você tem Força nula). Se terminar sua rodada dentro de um objeto sólido, você é expelido para o espaço vazio mais próximo e perde 1d12 PV para cada 1,5m pelo qual for expelido.",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "geomantico",
+    name: "Geomântico",
+    description: "Você recebe redução de dano 10/impacto e fortificação 25%. Além disso, você pode lançar a magia Controlar Terra (CD Car). Caso já conheça essa magia, o custo para lançá-la diminui em –1 PM.",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "ligeira",
+    name: "Ligeira",
+    description: "A armadura pode ser vestida ou removida com uma ação livre (acompanhada ou não de coreografia e música tema).",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "luminescente",
+    name: "Luminescente",
+    description: "Você pode lançar Luz e usar seus aprimoramentos como se tivesse acesso aos mesmos círculos de magia que um clérigo de seu nível (CD Car). Caso já conheça essa magia, o custo para lançá-la diminui em –1 PM. Além disso, quando você lança essa magia, além de seus efeitos normais, criaturas com sensibilidade a luz devem passar em um teste de Vontade ou ficam cegas por 1 rodada (apenas uma vez por cena).",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "pristino",
+    name: "Prístino",
+    description: "Você recebe resistência a necromancia e veneno +5. Além disso, pode gastar 2 PM para remover uma condição entre doente, enjoado ou envenenado de uma criatura adjacente.",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "purificador",
+    name: "Purificador",
+    description: "Você recebe resistência a medo e mental +5 e pode gastar 2 PM para permitir que um aliado em alcance curto repita um teste de resistência contra um desses efeitos que o esteja afetando. Se ele passar, cancela o efeito. Você só pode usar essa habilidade uma vez por efeito.",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "reanimador",
+    name: "Reanimador",
+    description: "O item possui um brilho pulsante que emana calor reconfortante. Você pode lançar Curar Ferimentos (CD Sab). Caso já conheça essa magia, o custo para lançá-la diminui em –1 PM.",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "replicante",
+    name: "Replicante",
+    description: "O item possui pontas afiadas. Quando é atingido por um ataque corpo a corpo, você pode gastar 1 PM para causar 2d6 pontos de dano do mesmo tipo sofrido ao atacante e reduzir essa mesma quantidade do dano sofrido.",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "resiliente",
+    name: "Resiliente",
+    description: "Você recebe resistência a atordoamento, paralisia e petrificação +5. Além disso, pode gastar 1 PM para repetir um teste de resistência contra uma dessas condições que o esteja afetando. Se você passar, cancela o efeito. Você só pode usar essa habilidade uma vez por efeito.",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "vortice",
+    name: "Vórtice",
+    description: "Você pode gastar 1 PM para criar um redemoinho que puxa uma criatura em alcance curto até um ponto adjacente a você (Fort CD For evita).",
+    origin: "Herois de Arton"
+  }
 
 ];
 
@@ -208,5 +328,75 @@ export const specificWeapons: SpecificWeapon[] = [
     price: "50.000",
     origin: "Tormenta20 - Jogo do Ano",
   },
+  {
+    id: "armadura-das-sombras-profundas",
+    name: "Armadura das Sombras Profundas",
+    description: "Esta cota de malha sob medida defensora sombria negra e translúcida parece feita de pura escuridão. Você recebe redução de luz 10 e pode lançar Invisibilidade. Caso já conheça essa magia, o custo para lançá-la diminui em –1 PM.",
+    price: "40.500",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "armadura-do-dragao-anciao",
+    name: "Armadura do Dragão Ancião",
+    description: "Esta armadura completa guardiã invulnerável feita de escamas douradas iridescentes é incrivelmente resistente. Você recebe redução de eletricidade, fogo e frio 10. Além disso, enquanto estiver com menos da metade dos seus pontos de vida, você pode emitir um rugido dracônico idêntico ao efeito de um item assustador.",
+    price: "100.000",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "armadura-do-inverno-perene",
+    name: "Armadura do Inverno Perene",
+    description: "Esta couraça defensora gélida de gelo eterno é coberta por névoa gelada. Quando você usa a habilidade ativada do encanto gélido, recebe 20 PV (em vez de 10). Além disso, pode lançar Área Escorregadia (CD Sab) como uma ação de movimento — o efeito assume a forma de uma fina camada de gelo escorregadio. Caso já conheça essa magia, o custo para lançá-la diminui em –1 PM.",
+    price: "40.500",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "cota-da-serpente-marinha",
+    name: "Cota da Serpente Marinha",
+    description: "Esta cota de malha ajustada guardiã azul-esverdeada é feita com escamas de monstros marinhos. Você recebe deslocamento de natação 12m e pode lançar Sopro das Uivantes (CD Sab). Caso já conheça essa magia, o custo para lançá-la diminui em –1 PM.",
+    price: "27.000",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "couraca-do-guardiao-celeste",
+    name: "Couraça do Guardião Celeste",
+    description: "Esta couraça banhada a ouro defensora protetora é adornada com asas douradas no peitoral e nas ombreiras. Você recebe +1 em Carisma (somente após um dia de uso) e seus efeitos de cura de luz curam +1 PV por dado de cura.",
+    price: "54.000",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "escudo-da-luz-estelar",
+    name: "Escudo da Luz Estelar",
+    description: "Este escudo leve defensor parece feito de cristal e brilha com a luz das estrelas. Você recebe +5 em Percepção. Além disso, pode lançar Luz e usar seus aprimoramentos como se tivesse acesso aos mesmos círculos de magia que um arcanista de seu nível (CD Int). Caso já conheça essa magia, o custo para lançá-la diminui em –1 PM.",
+    price: "27.000",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "escudo-da-ira-vulcanica",
+    name: "Escudo da Ira Vulcânica",
+    description: "Feito de rocha vulcânica e gravado com runas de magma, este escudo pesado guardião fornece redução de fogo 10 e permite que você lance Explosão de Chamas como uma ação de movimento (Ref CD Car; se já puder lançar essa magia, sua área é dobrada).",
+    price: "54.000",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "escudo-da-natureza-viva",
+    name: "Escudo da Natureza Viva",
+    description: "Este escudo leve defensor de madeira Tollon é feito de madeira viva e constantemente floresce com plantas. Você recebe +2 em Fortitude e pode lançar Curar Ferimentos (CD Sab). Caso já conheça essa magia, o custo para lançá-la diminui em –1 PM.",
+    price: "27.000",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "escudo-do-grifo",
+    name: "Escudo do Grifo",
+    description: "Este escudo pesado defensor é forjado no formato de uma asa gigante. Você recebe redução de dano 10 contra ataques à distância e pode lançar Sopro das Uivantes (CD Sab). Caso já conheça essa magia, o custo para lançá-la diminui em –1 PM.",
+    price: "27.000",
+    origin: "Herois de Arton"
+  },
+  {
+    id: "escudo-do-trovao",
+    name: "Escudo do Trovão",
+    description: "Este escudo pesado guardião de mitral é decorado com raios em alto-relevo. Sempre que você sofre dano de um ataque corpo a corpo, pode gastar 2 PM para liberar um estrondo sônico que empurra inimigos adjacentes 3m para trás (Fort CD Car evita).",
+    price: "54.000",
+    origin: "Herois de Arton"
+  }
 
 ];

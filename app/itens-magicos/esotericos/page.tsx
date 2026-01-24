@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import { enchantments, specificWeapons } from "@/data/magics";
+import { enchantments, specificWeapons } from "@/data/magicesoterics";
 import { Enchantment, SpecificWeapon } from "@/types/magic";
 
 // --- Componente Auxiliar: Formatação de Texto (Estilo Stone) ---
@@ -47,22 +47,22 @@ const EnchantmentCard = ({ enchantment }: { enchantment: Enchantment }) => {
   );
 };
 
-// --- Componente 2: Card de Arma Específica (TEMA VERMELHO/CARMESIM - Lendário/Combate) ---
+// --- Componente 2: Card de Armadura Específica (TEMA CIANO/AÇO - Proteção) ---
 const SpecificWeaponCard = ({ weapon }: { weapon: SpecificWeapon }) => {
   return (
     // Fundo ligeiramente mais escuro (Stone-950) para dar peso
-    <div className="group relative p-4 md:p-5 rounded-xl bg-stone-950 border border-stone-800 shadow-lg hover:bg-stone-900 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_25px_rgba(153,27,27,0.15)] hover:border-red-900/50 text-left h-full flex flex-col">
-      {/* Brilho Superior Vermelho */}
-      <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-red-800/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+    <div className="group relative p-4 md:p-5 rounded-xl bg-stone-950 border border-stone-800 shadow-lg hover:bg-stone-900 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_25px_rgba(8,145,178,0.15)] hover:border-cyan-900/50 text-left h-full flex flex-col">
+      {/* Brilho Superior Ciano */}
+      <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-cyan-800/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
       
-      <div className="mb-3 pb-2 border-b border-stone-800 group-hover:border-red-900/30 transition-colors flex justify-between items-start gap-2">
-        <h3 className="text-lg md:text-xl font-bold text-stone-200 group-hover:text-red-500 transition-all break-words font-serif">
+      <div className="mb-3 pb-2 border-b border-stone-800 group-hover:border-cyan-900/30 transition-colors flex justify-between items-start gap-2">
+        <h3 className="text-lg md:text-xl font-bold text-stone-200 group-hover:text-cyan-500 transition-all break-words font-serif">
           {weapon.name}
         </h3>
       </div>
       
       <div className="mt-0 mb-3">
-        <span className="inline-block px-2 py-0.5 bg-stone-900/80 border border-stone-800 rounded text-[10px] md:text-xs text-red-400 font-serif tracking-wide group-hover:border-red-900/30 transition-colors">
+        <span className="inline-block px-2 py-0.5 bg-stone-900/80 border border-stone-800 rounded text-[10px] md:text-xs text-cyan-400 font-serif tracking-wide group-hover:border-cyan-900/30 transition-colors">
           Preço: T$ {weapon.price}
         </span>
       </div>
@@ -73,7 +73,7 @@ const SpecificWeaponCard = ({ weapon }: { weapon: SpecificWeapon }) => {
       
       <div className="mt-4 pt-2 border-t border-stone-800 text-right">
         <span className="text-[10px] md:text-xs text-stone-600 italic font-serif">
-          <span className="text-red-900/80 font-bold uppercase tracking-wider group-hover:text-red-800 transition-colors">{weapon.origin}</span>
+          <span className="text-cyan-900/80 font-bold uppercase tracking-wider group-hover:text-cyan-700 transition-colors">{weapon.origin}</span>
         </span>
       </div>
     </div>
@@ -82,7 +82,7 @@ const SpecificWeaponCard = ({ weapon }: { weapon: SpecificWeapon }) => {
 
 // --- Página Principal ---
 
-export default function ArmasMagicasPage() {
+export default function ArmadurasMagicasPage() {
   const [enchantmentSearch, setEnchantmentSearch] = useState("");
   const [weaponSearch, setWeaponSearch] = useState("");
 
@@ -90,8 +90,8 @@ export default function ArmasMagicasPage() {
     const term = enchantmentSearch.toLowerCase();
     return enchantments.filter(enc => 
       enc.name.toLowerCase().includes(term) ||
-      enc.description.toLowerCase().includes(term) ||
-      enc.origin.toLowerCase().includes(term)
+      enc.origin.toLowerCase().includes(term) ||
+      enc.description.toLowerCase().includes(term)
     )
     .sort((a, b) => a.name.localeCompare(b.name));
   }, [enchantmentSearch]);
@@ -119,7 +119,7 @@ export default function ArmasMagicasPage() {
       {/* Background Effect */}
       <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.8)_100%)]" />
 
-      {/* Header Responsivo */}
+      {/* Header Responsivo (CORRIGIDO: Logo na Esquerda, Menu na Direita) */}
       <header className="relative z-10 w-full p-4 md:p-6 border-b-2 border-stone-800 bg-stone-950/90 backdrop-blur-md shadow-lg mb-8 md:mb-12">
         <div className="w-full px-2 flex flex-col md:flex-row justify-between items-center gap-4">
             
@@ -141,14 +141,14 @@ export default function ArmasMagicasPage() {
                       Itens Mágicos
                     </Link>
                     <span className="text-stone-700">/</span>
-                    <span className="text-red-700">Armas</span>
+                    <span className="text-red-700">Esotéricos</span>
                 </div>
 
                 <button 
                     onClick={scrollToWeapons}
-                    className="w-full md:w-auto px-6 py-2 bg-stone-900 border border-stone-700 rounded-sm text-stone-400 hover:bg-stone-800 hover:text-red-500 hover:border-red-900 transition-all font-medium uppercase tracking-wider text-center text-xs sm:text-sm font-serif shadow-sm"
+                    className="w-full md:w-auto px-6 py-2 bg-stone-900 border border-stone-700 rounded-sm text-stone-400 hover:bg-stone-800 hover:text-cyan-500 hover:border-cyan-900 transition-all font-medium uppercase tracking-wider text-center text-xs sm:text-sm font-serif shadow-sm"
                 >
-                    Ver Armas ↓
+                    Ver Esotéricos ↓
                 </button>
             </div>
         </div>
@@ -160,7 +160,7 @@ export default function ArmasMagicasPage() {
         {/* Título da Página */}
         <div className="mb-10 md:mb-16 text-center px-2">
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-amber-600 to-red-500 mb-4 md:mb-6 drop-shadow-lg leading-tight">
-            Armas Mágicas
+            Esotéricos
           </h1>
         </div>
 
@@ -205,19 +205,19 @@ export default function ArmasMagicasPage() {
           )}
         </section>
 
-        {/* --- Seção 2: Armas Específicas (Tema Vermelho) --- */}
+        {/* --- Seção 2: Armaduras Específicas (Tema Ciano/Aço) --- */}
         <section id="specific-weapons-section" className="w-full pt-8 md:pt-12 pb-12 md:pb-20 border-t border-stone-900">
           <div className="mt-8 mb-6">
-            <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-red-800 font-serif">
-                <span className="w-1.5 md:w-2 h-6 md:h-8 bg-red-900 rounded-full shadow-[0_0_10px_rgba(127,29,29,0.5)]"></span>
-                Armas Específicas
+            <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-cyan-800 font-serif">
+                <span className="w-1.5 md:w-2 h-6 md:h-8 bg-cyan-900 rounded-full shadow-[0_0_10px_rgba(22,78,99,0.5)]"></span>
+                Esotéricos Específicos
             </h2>
           </div>
 
-          {/* Busca Armas - ESTILO CAIXA (Vermelho) */}
+          {/* Busca Armaduras - ESTILO CAIXA (Ciano) */}
           <div className="mb-8 p-6 rounded bg-stone-900 border border-stone-800 shadow-inner w-full">
             <label className="block text-sm font-bold text-stone-400 mb-3 uppercase tracking-wider">
-                Buscar Arma Lendária
+                Buscar Esotéricos Lendário
             </label>
             <div className="relative">
                 <input
@@ -225,7 +225,7 @@ export default function ArmasMagicasPage() {
                 placeholder="Nome ou descrição..."
                 value={weaponSearch}
                 onChange={(e) => setWeaponSearch(e.target.value)}
-                className="w-full px-5 py-3 bg-stone-950 border border-stone-700 rounded text-stone-200 placeholder-stone-600 focus:outline-none focus:border-red-600 focus:ring-1 focus:ring-red-900 transition-all font-serif"
+                className="w-full px-5 py-3 bg-stone-950 border border-stone-700 rounded text-stone-200 placeholder-stone-600 focus:outline-none focus:border-cyan-600 focus:ring-1 focus:ring-cyan-900 transition-all font-serif"
                 />
                 <div className="absolute right-4 top-1/2 -translate-y-1/2 text-stone-600">
                     🔍
@@ -241,7 +241,7 @@ export default function ArmasMagicasPage() {
             </div>
           ) : (
             <div className="text-center py-8 md:py-12 text-stone-600 italic border border-dashed border-stone-800 rounded-xl text-sm md:text-base font-serif">
-              Nenhuma arma encontrada com "{weaponSearch}".
+              Nenhuma esotérico encontrado com "{weaponSearch}".
             </div>
           )}
         </section>

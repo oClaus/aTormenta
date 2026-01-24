@@ -40,7 +40,7 @@ const EnchantmentCard = ({ enchantment }: { enchantment: Enchantment }) => {
       </div>
       <div className="mt-4 pt-2 border-t border-stone-800 text-right">
         <span className="text-[10px] md:text-xs text-stone-600 italic flex justify-end items-center gap-1 font-serif">
-          Origem: <span className="text-amber-800/80 font-bold uppercase tracking-wider group-hover:text-amber-700 transition-colors">{enchantment.origin}</span>
+          <span className="text-amber-800/80 font-bold uppercase tracking-wider group-hover:text-amber-700 transition-colors">{enchantment.origin}</span>
         </span>
       </div>
     </div>
@@ -73,7 +73,7 @@ const SpecificWeaponCard = ({ weapon }: { weapon: SpecificWeapon }) => {
       
       <div className="mt-4 pt-2 border-t border-stone-800 text-right">
         <span className="text-[10px] md:text-xs text-stone-600 italic font-serif">
-          Origem: <span className="text-cyan-900/80 font-bold uppercase tracking-wider group-hover:text-cyan-700 transition-colors">{weapon.origin}</span>
+          <span className="text-cyan-900/80 font-bold uppercase tracking-wider group-hover:text-cyan-700 transition-colors">{weapon.origin}</span>
         </span>
       </div>
     </div>
@@ -90,6 +90,7 @@ export default function ArmadurasMagicasPage() {
     const term = enchantmentSearch.toLowerCase();
     return enchantments.filter(enc => 
       enc.name.toLowerCase().includes(term) ||
+      enc.origin.toLowerCase().includes(term) ||
       enc.description.toLowerCase().includes(term)
     )
     .sort((a, b) => a.name.localeCompare(b.name));
@@ -99,6 +100,7 @@ export default function ArmadurasMagicasPage() {
     const term = weaponSearch.toLowerCase();
     return specificWeapons.filter(weapon => 
       weapon.name.toLowerCase().includes(term) ||
+      weapon.origin.toLowerCase().includes(term) ||
       weapon.description.toLowerCase().includes(term)
     )
     .sort((a, b) => a.name.localeCompare(b.name));
