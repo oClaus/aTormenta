@@ -5,7 +5,8 @@ import {
   ScrollText, 
   Gem, 
   Flame,
-  Sparkle
+  Sparkle,
+  Skull
 } from "lucide-react";
 
 export const equipmentCategories: EquipmentCategory[] = [
@@ -56,5 +57,13 @@ export const equipmentCategories: EquipmentCategory[] = [
     icon: Sparkle,
     color: "from-amber-600 to-amber-900",
     href: "/itens-magicos/esotericos",
+  },
+  {
+    id: "amaldicoados",
+    title: "Amaldiçoados",
+    description: "Objetos mágicos que receberam efeitos negativos.",
+    icon: Skull,
+    color: "from-amber-600 to-amber-900",
+    href: "/itens-magicos/amaldicoados",
   },
 ];

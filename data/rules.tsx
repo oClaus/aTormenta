@@ -2,7 +2,7 @@
 
 // Certifique-se de importar React se precisar de Fragments (<></>) ou de outros elementos React
 import React from 'react'; 
-import { Difficulty, RuleSection, ExtendedTest } from "@/types/rule";
+import { Difficulty, RuleSection, ExtendedTest, AgeGroup, AgeComplication, HeroicGoal, GroupRole } from "@/types/rule";
 
 // Tabela 5-1: Dificuldades (Sem Alteração)
 export const difficulties: Difficulty[] = [
@@ -70,6 +70,139 @@ export const objectStats = {
     { example: "Armadura pesada", rd: 10, pv: 40 },
   ]
 };
+
+export const ageGroups: AgeGroup[] = [
+  { name: "Criança", age: "9-12", modifiers: "For –2, Con –1, Sab –1, Tamanho Menor, Protegido dos Deuses, Sem Origem" },
+  { name: "Adolescente", age: "13-17", modifiers: "Sab –1, Ímpeto Juvenil, Origem em Construção" },
+  { name: "Jovem", age: "18-24", modifiers: "Nenhum" },
+  { name: "Adulto", age: "25-39", modifiers: "Um poder geral extra, uma complicação de idade (opcional)" },
+  { name: "Maduro", age: "40-59", modifiers: "Um nível extra, duas complicações de idade" },
+  { name: "Velho", age: "60-79", modifiers: "For –1, Des –1, Con –1, dois níveis extras, três complicações, Atributo físico bloqueado" },
+  { name: "Ancião", age: "80+", modifiers: "For –2, Des –2, Con –2, três níveis extras, quatro complicações, Atributo físico bloqueado" },
+];
+
+// Texto completo das complicações
+export const ageComplications: AgeComplication[] = [
+  { name: "Abatido", effect: "Seu vigor se foi. Você recebe –2 PV por nível." },
+  { name: "Catarata", effect: "Seus olhos já não são os mesmos. Você sofre –5 em Percepção e Pontaria." },
+  { name: "Dedos Trêmulos", effect: "Você sofre –2 em Luta e Pontaria. Além disso, quando usa um item que esteja empunhando, role 1d4. Em um resultado 1, você derruba esse item." },
+  { name: "Definhamento", effect: "A idade roubou seu peso, deixando-o um fiapo do que era antes. Você sofre –5 em Fortitude e em testes de manobras de combate." },
+  { name: "Desatento", effect: "Você já não é mais tão atento quanto outrora. Na primeira rodada de qualquer cena de ação, role um dado. Em um resultado ímpar, você fica surpreendido (mesmo que um efeito possa evitar isso)." },
+  { name: "“Devagar, Jovem!”", effect: "Você já não anda no mesmo ritmo que antes. Seu deslocamento diminui em –3m e você não pode correr ou fazer investidas." },
+  { name: "Gota", effect: "Sempre que faz um teste de Destreza ou de perícias baseadas nesse atributo você perde 1d6 pontos de vida. Você só pode recuperar esses PV com descanso." },
+  { name: "Juntas Duras", effect: "Suas articulações doem. Você sofre –5 em testes de Acrobacia e Reflexos." },
+  { name: "Melancólico", effect: "Você já não tem mais tanta motivação para realizar grandes façanhas. Você perde 1 PM por nível." },
+  { name: "Memórias Tristes", effect: "Você passou por um trauma, como a perda de um ente querido ou a culpa por um erro que cometeu e pelo qual nunca se perdoou. Sempre que rola um resultado 1 natural em qualquer teste, você fica pasmo por 1 rodada e frustrado até o fim do dia (cumulativo)." },
+  { name: "“No Meu Tempo...”", effect: "Você se prende a visões idealizadas de um passado que nunca existiu e se torna presa fácil para manipulação. Você sofre –5 em Intuição e Vontade." },
+  { name: "Pulmão Ruim", effect: "Quando corre ou prende a respiração, você precisa fazer testes de Fortitude para não ficar fatigado a partir da primeira rodada (normalmente, personagens só precisam fazer esses testes após um número de rodadas igual a sua Constituição +1). Além disso, sempre que faz uma investida, você fica fatigado até o fim da cena." },
+  { name: "Rabugento", effect: "Você reclama de tudo. Você sofre –5 em testes de Carisma e de perícias baseadas nesse atributo, exceto Intimidação." },
+  { name: "Recurvado", effect: "A idade dobrou suas costas. Você conta como uma categoria de tamanho menor para alcance natural, modificador de manobras e armas que pode empunhar (mas não para espaço ocupado, modificador de Furtividade ou dano de armas naturais)." },
+  { name: "Sono Ruim", effect: "Você acorda várias vezes no meio da noite, o que atrapalha seu descanso. Sua recuperação de PM e PV é sempre uma categoria pior. Se a condição de descanso já é ruim, você recupera apenas 1 PM e 1 PV, independentemente do seu nível. Se já recupera apenas 1 PM e 1 PV, não recupera nada!" },
+  { name: "Teimoso", effect: "Sempre que falha em um teste de atributo ou de perícia que possa tentar novamente, você é obrigado a tentar pelo menos mais uma vez (mesmo que isso possa prejudicá-lo). Teimoso é quem teima com você!" },
+  { name: "Tosse", effect: "Em cenas de ação, role 1d6 no início de cada rodada. Num resultado 1, você tem uma crise de tosse e fica atordoado por 1 rodada. Em cenas de interpretação, role 1d6 sempre que fizer um teste de perícia baseada em Carisma. Num resultado 1, você tem uma crise de tosse e sofre uma penalidade de –5 nesse teste." },
+  { name: "Turrão", effect: "Você faz tudo sempre do seu jeito e tem dificuldade de lidar com coisas nas quais não é perito. Você não recebe o bônus de metade do nível em perícias nas quais não é treinado." },
+  { name: "Velha Ferida", effect: "Você tem um machucado antigo, que nunca cicatrizou direito. Sempre que você sofre um acerto crítico, o multiplicador de dano aumenta em +1 e você fica fraco (mesmo que seja imune, cumulativo)." },
+];
+
+export const heroicGoals: HeroicGoal[] = [
+  {
+    name: "Desafio",
+    description: "Você quer fazer algo muito difícil, apenas porque é difícil. Deseja escalar o Monte do Dragão Adormecido sem equipamento, sem magias e vendado; ou vencer Laan numa corrida a pé; ou derrotar Maquius em combate desarmado após ter bebido mais do que ele.",
+    benefit: "Você recebe +2d4 PM temporários.",
+    penalty: "Você fica fatigado.",
+    conclusion: "Você recebe +1 em dois atributos diferentes a sua escolha."
+  },
+  {
+    name: "Descoberta",
+    description: "Você deseja aprender um conhecimento específico, formular uma teoria ou desvendar um mistério: quer visitar todos os reinos dos deuses, descobrir como criar uma nova raça de seres vivos ou solucionar o assassinato do Rei de Salistick.",
+    benefit: "Você recebe um bônus de +2 em testes de Inteligência e de perícias baseadas nesse atributo.",
+    penalty: "Você fica frustrado.",
+    conclusion: "Você recebe +1 em Inteligência e um poder geral a sua escolha."
+  },
+  {
+    name: "Liderança",
+    description: "Você quer ascender socialmente e conquistar uma posição de destaque: Alto Comandante da Ordem da Luz, irmão mais velho da Companhia dos Irmãos ou o próximo Ayrrak de Lamnor. Você é movido pela ambição, ou talvez seja o legítimo herdeiro de algum título.",
+    benefit: "Você recebe +2 em testes de Carisma e de perícias baseadas nesse atributo.",
+    penalty: "Você fica alquebrado.",
+    conclusion: "Você recebe +1 em Carisma e uma estrutura ou benefício equivalente, a critério do mestre."
+  },
+  {
+    name: "Obra",
+    description: "Você deseja construir uma obra monumental, algo nunca visto em Arton. Por exemplo, uma estátua maior que a de Sckhar, uma ponte ligando os dois continentes ou uma embarcação capaz de cruzar o éter divino.",
+    benefit: "Você recebe +2 em testes de resistência e 1d4 PM temporários.",
+    penalty: "Você fica abalado.",
+    conclusion: "Você recebe +1 em Constituição e os benefícios de sua obra (provavelmente uma base, domínio, negócio ou veículo, a critério do mestre)."
+  },
+  {
+    name: "Riqueza",
+    description: "Você quer dinheiro, pura e simplesmente. Não é o mesmo que ascensão social, pois não envolve reconhecimento ou legitimidade. Para cumprir este objetivo, você deve acumular uma quantidade de tibares decidida pelo mestre (provavelmente um milhão!). Equipamento, patrimônio, domínios, propriedades e outros bens não contam para o cumprimento do objetivo, apenas dinheiro vivo!",
+    benefit: "O custo em PM de suas habilidades é reduzido em –1.",
+    penalty: "Você fica alquebrado.",
+    conclusion: "Escolha uma habilidade com custo em PM. O custo em PM para usá-la é reduzido em –2 PM (cumulativo com outras reduções). Além disso, agora você pode gastar o dinheiro guardado!"
+  },
+  {
+    name: "Salvação",
+    description: "Você deseja ajudar, encontrar ou resgatar uma pessoa necessitada, perdida ou aprisionada. Como alternativa, pode querer ajudar toda uma população. Por exemplo, quer libertar seu irmão da Fortaleza Hardof, devolver a divindade a Tilliann ou reformar toda a Favela dos Goblins.",
+    benefit: "Você recebe +2 na Defesa.",
+    penalty: "Você fica vulnerável.",
+    conclusion: "Você recebe +2 na Defesa e em testes de resistência, além de um parceiro mestre de um tipo a sua escolha."
+  },
+  {
+    name: "Vingança",
+    description: "Você quer matar, prender ou punir uma pessoa ou monstro que lhe fez um grande mal. Seja quem for, deve ser um vilão poderoso: Hermann Von Krauser, Ferren Asloth ou mesmo Gatzvalith!",
+    benefit: "Uma vez por rodada, você recebe +5 em uma rolagem de dano.",
+    penalty: "Você fica fraco.",
+    conclusion: "Você recebe +1 em Força e um poder de combate a sua escolha."
+  }
+];
+
+export const groupRoles: GroupRole[] = [
+  {
+    name: "Advogado",
+    description: "O papel do advogado é simples: ajudar o grupo com regras. Ao contrário de outros papéis, o jogador deve conhecer bem o sistema e saber onde encontrar a maior parte das informações. Faz parte de seu trabalho auxiliar jogadores novatos, achar regras no livro quando o mestre pede e até dar palpites (quando for solicitado) sobre otimização de fichas de seus colegas. Em suma, é um auxiliar de regras da mesa toda.",
+    benefit: "Se for o advogado, você recebe +1 ponto de mana."
+  },
+  {
+    name: "Arquivista",
+    description: "O arquivista anota nomes de NPCs e lugares, acontecimentos importantes, objetivos que outros jogadores tenham declarado e que possam esquecer (“Se um dia formos a Valkaria, quero procurar Lorde Niebling!”), além das relações entre os coadjuvantes mais importantes. Em suma, ele ajuda o mestre e os jogadores a lembrar de informações da história, impedindo que sejam ignoradas ou confundidas.",
+    benefit: "Se for o arquivista, você recebe +1 em Diplomacia."
+  },
+  {
+    name: "Bibliotecário",
+    description: "O bibliotecário é o guardião das informações que o grupo possui sobre o cenário. O jogador não precisa necessariamente conhecer muito sobre Arton. Contudo, assim que o grupo descobre algo digno de nota (por exemplo, a história da Revolta dos Três ou a estrutura dos exércitos da Supremacia Purista), o bibliotecário faz uma anotação sobre isso, com o livro e a página onde a informação pode ser encontrada para consulta. Grupos que estejam conhecendo o cenário aos poucos podem se beneficiar muito de um bibliotecário.",
+    benefit: "Se for o bibliotecário, você recebe +1 em Conhecimento."
+  },
+  {
+    name: "Cartógrafo",
+    description: "O cartógrafo mapeia o terreno onde o grupo está — seja uma masmorra, sejam ermos em que eles possam se perder. Em grupos que não usam mapas de batalha, o cartógrafo deve manter um controle sobre onde cada personagem e NPC está num combate, além de suas posições relativas (para flanquear, por exemplo). Caso a campanha envolva longas viagens, o cartógrafo deve saber a distância aproximada dos principais pontos de interesse. Se o grupo calcular mantimentos de forma rígida, o cartógrafo pode auxiliar o tesoureiro a manter esse controle durante viagens.",
+    benefit: "Se for o cartógrafo, você recebe +1 em Sobrevivência."
+  },
+  {
+    name: "Enfermeiro",
+    description: "O enfermeiro mantém o controle de condições e penalidades que afetam os membros do grupo, totais de PV e suprimentos de cura. Se houver personagens sangrando, ele lembra dos testes de Constituição. Além disso, alerta os demais sobre companheiros prestes a morrer.",
+    benefit: "Se for o enfermeiro, você recebe +1 em Cura."
+  },
+  {
+    name: "Estrategista",
+    description: "O estrategista mantém o controle da iniciativa e das informações dos efeitos que afetam os personagens em combate. É dever dele lembrar os demais de bônus temporários (como pelo poder Comandar ou pela Aura Sagrada do paladino) e ter uma ideia geral dos principais poderes de combate de cada um, para que o grupo não ignore possibilidades em batalha.",
+    benefit: "Se for o estrategista, você recebe +1 em Guerra."
+  },
+  {
+    name: "Teratólogo",
+    description: "O teratólogo mantém o controle sobre habilidades e fraquezas de monstros e inimigos que os personagens conheçam. Por exemplo, depois que o grupo encontra pela primeira vez um troll, o teratólogo pode anotar sua habilidade de regeneração, então lembrar a todos do que sabem da próxima vez. Não serve apenas para limitar as ações dos jogadores: também registra estratégias e vulnerabilidades. Este papel também pode ser útil para lembrar o mestre de habilidades e fraquezas de inimigos.",
+    benefit: "Se for o teratólogo, você recebe +1 em Misticismo."
+  },
+  {
+    name: "Tesoureiro",
+    description: "Responsável por anotar os bens do grupo. Quando o grupo encontra um tesouro, o tesoureiro divide-o entre todos igualmente, tendo a palavra final sobre quem ficará com um item específico. Uma vez que o item esteja com um personagem, não é mais responsabilidade do tesoureiro. Bens de propriedade coletiva são de responsabilidade do tesoureiro. Ele também mantém o controle sobre quanto cada um investiu em uma propriedade coletiva, para garantir que todos estejam contribuindo.",
+    benefit: "Se for o tesoureiro, você recebe +1 em Nobreza ou em um Ofício."
+  },
+  {
+    name: "Xerife",
+    description: "Alguns grupos têm pouco tempo para jogar. Assim, qualquer indecisão exagerada (como demorar uma hora para abrir uma porta) pode prejudicar a sessão. O xerife é um jogador que o mestre pode contactar discretamente (pela internet, sussurrando ou por um bilhete) para ajudá-lo a empurrar o grupo para a frente. Não se trata de fazer a história acontecer de uma determinada maneira — apenas de fazê-la acontecer! Outras responsabilidades do xerife podem ser ajudar o mestre a conter o número de piadas (desde que isso não vá prejudicar a diversão do grupo) ou servir de “voz do bom senso”, evitando decisões absurdas ou que resultarão no fim da campanha. Em suma, o xerife é um auxiliar do mestre, alguém que abre mão de algumas surpresas e ajuda o jogo a “andar”.",
+    benefit: "Se for o xerife, você recebe +1 em Iniciativa."
+  }
+];
 
 // Seções de Regras (Acordeão) - Conteúdo agora em JSX
 export const ruleSections: RuleSection[] = [
@@ -634,112 +767,398 @@ export const ruleSections: RuleSection[] = [
     </>
   ),
   },
-{ id: "acoes-completas",
-  title: "Ações Completas",
-  content: (
-    <>
-      <p>
-        Ações completas exigem muito tempo e esforço.
-      </p>
-      <ul className="list-disc ml-6 space-y-2">
-        <li><strong>Corrida.</strong> Corre mais rápido que o deslocamento normal. Veja Atletismo.</li>
-        <li><strong>Golpe de Misericórdia.</strong> Golpe letal em oponente indefeso adjacente. É um <strong>acerto crítico automático</strong>. Além do dano, chance de morte instantânea (25% para personagens importantes, 75% para NPCs secundários).</li>
-        <li><strong>Investida.</strong> Avança até o dobro do deslocamento em linha reta e faz ataque corpo a corpo. Recebe +2 no ataque, mas –2 na Defesa até o próximo turno. Não pode ser feita em terreno difícil. Durante a investida, pode fazer a manobra <em>atropelar</em> como ação livre.</li>
-        <li><strong>Lançar uma Magia.</strong> Magias com execução maior que uma ação completa exigem ação completa a cada rodada.</li>
-      </ul>
-    </>
-  ),
-},
-{ id: "acoes-livres",
-  title: "Ações Livres",
-  content: (
-    <>
-      <p>
-        Uma ação livre demanda pouco ou nenhum tempo, esforço ou atenção.
-      </p>
-      <ul className="list-disc ml-6 space-y-2">
-        <li><strong>Atrasar.</strong> Age mais tarde na ordem de Iniciativa. É o mesmo que reduzir voluntariamente sua Iniciativa. Limite: até –10 menos seu valor. Se vários atrasarem, o de maior Iniciativa original age primeiro.</li>
-        <li><strong>Falar.</strong> Em geral, falar é ação livre. O mestre pode limitar (padrão de vinte palavras).</li>
-        <li><strong>Jogar-se no Chão.</strong> Recebe benefícios e penalidades normais por estar caído, mas normalmente não sofre dano.</li>
-        <li><strong>Largar um Item.</strong> Deixar cair um item segurado é ação livre. (Lançar para acertar algo é ação padrão; lançar para alguém agarrar é ação de movimento).</li>
-      </ul>
-    </>
-  ),
-},
-{ id: "ferimentos-morte",
-  title: "Ferimentos & Morte",
-  content: (
-    <>
-      <p>
-        Sempre que você sofre dano, subtrai este valor de seus pontos de vida. O dano não o impede de agir até que seus PV cheguem a <strong>0 ou menos</strong>.
-      </p>
-      <ul className="list-disc ml-6 space-y-2">
-        <li><strong>Inconsciência e Sangramento.</strong> Com 0 PV ou menos, cai inconsciente e sangra. No início do turno, faça Constituição (CD 15). Sucesso: estabiliza. Falha: perde 1d6 PV e repete na próxima rodada.</li>
-        <li><strong>Estabilização Externa.</strong> Pode ser estabilizado com Cura (CD 15) ou efeito que cure ao menos 1 PV.</li>
-        <li><strong>Recuperando a Consciência.</strong> Se recuperar PV até positivo (1 ou mais), recobra a consciência.</li>
-        <li><strong>Morte.</strong> Morre ao chegar a –10 PV ou a um número negativo igual à metade dos PV totais (o que for mais baixo).</li>
-      </ul>
-      <blockquote className="border-l-4 border-red-500 pl-4 italic text-sm text-gray-300">
-        Exemplo: Oberon, com 12 PV, morre se chegar a –10 PV. Mais tarde, com 30 PV, só morre se chegar a –15 PV.
-      </blockquote>
+  { id: "acoes-completas",
+    title: "Ações Completas",
+    content: (
+      <>
+        <p>
+          Ações completas exigem muito tempo e esforço.
+        </p>
+        <ul className="list-disc ml-6 space-y-2">
+          <li><strong>Corrida.</strong> Corre mais rápido que o deslocamento normal. Veja Atletismo.</li>
+          <li><strong>Golpe de Misericórdia.</strong> Golpe letal em oponente indefeso adjacente. É um <strong>acerto crítico automático</strong>. Além do dano, chance de morte instantânea (25% para personagens importantes, 75% para NPCs secundários).</li>
+          <li><strong>Investida.</strong> Avança até o dobro do deslocamento em linha reta e faz ataque corpo a corpo. Recebe +2 no ataque, mas –2 na Defesa até o próximo turno. Não pode ser feita em terreno difícil. Durante a investida, pode fazer a manobra <em>atropelar</em> como ação livre.</li>
+          <li><strong>Lançar uma Magia.</strong> Magias com execução maior que uma ação completa exigem ação completa a cada rodada.</li>
+        </ul>
+      </>
+    ),
+  },
+  { id: "acoes-livres",
+    title: "Ações Livres",
+    content: (
+      <>
+        <p>
+          Uma ação livre demanda pouco ou nenhum tempo, esforço ou atenção.
+        </p>
+        <ul className="list-disc ml-6 space-y-2">
+          <li><strong>Atrasar.</strong> Age mais tarde na ordem de Iniciativa. É o mesmo que reduzir voluntariamente sua Iniciativa. Limite: até –10 menos seu valor. Se vários atrasarem, o de maior Iniciativa original age primeiro.</li>
+          <li><strong>Falar.</strong> Em geral, falar é ação livre. O mestre pode limitar (padrão de vinte palavras).</li>
+          <li><strong>Jogar-se no Chão.</strong> Recebe benefícios e penalidades normais por estar caído, mas normalmente não sofre dano.</li>
+          <li><strong>Largar um Item.</strong> Deixar cair um item segurado é ação livre. (Lançar para acertar algo é ação padrão; lançar para alguém agarrar é ação de movimento).</li>
+        </ul>
+      </>
+    ),
+  },
+  { id: "ferimentos-morte",
+    title: "Ferimentos & Morte",
+    content: (
+      <>
+        <p>
+          Sempre que você sofre dano, subtrai este valor de seus pontos de vida. O dano não o impede de agir até que seus PV cheguem a <strong>0 ou menos</strong>.
+        </p>
+        <ul className="list-disc ml-6 space-y-2">
+          <li><strong>Inconsciência e Sangramento.</strong> Com 0 PV ou menos, cai inconsciente e sangra. No início do turno, faça Constituição (CD 15). Sucesso: estabiliza. Falha: perde 1d6 PV e repete na próxima rodada.</li>
+          <li><strong>Estabilização Externa.</strong> Pode ser estabilizado com Cura (CD 15) ou efeito que cure ao menos 1 PV.</li>
+          <li><strong>Recuperando a Consciência.</strong> Se recuperar PV até positivo (1 ou mais), recobra a consciência.</li>
+          <li><strong>Morte.</strong> Morre ao chegar a –10 PV ou a um número negativo igual à metade dos PV totais (o que for mais baixo).</li>
+        </ul>
+        <blockquote className="border-l-4 border-red-500 pl-4 italic text-sm text-gray-300">
+          Exemplo: Oberon, com 12 PV, morre se chegar a –10 PV. Mais tarde, com 30 PV, só morre se chegar a –15 PV.
+        </blockquote>
 
-      <h4 className="mt-4 font-bold text-red-300">Dano Não Letal</h4>
-      <p>
-        Dano não letal conta para cair inconsciente, mas não para sangrar ou morrer. Cura recupera primeiro PV perdidos por dano não letal.
-      </p>
-      <ul className="list-disc ml-6 space-y-2">
-        <li><strong>Armas Letais.</strong> Podem causar dano não letal sofrendo –5 no ataque.</li>
-        <li><strong>Ataques Desarmados.</strong> Causam dano não letal. Podem causar dano letal sofrendo –5 no ataque.</li>
-      </ul>
-    </>
-  ),
-},
-{ id: "movimentacao", 
-  title: "Movimentação", content: ( <> <ul className="list-disc ml-6 space-y-2"> <li><strong>Deslocamento.</strong> Medida de quantos metros você percorre com uma ação de movimento (padrão 9m).</li> <li><strong>Atravessar Espaço Ocupado.</strong> Você pode atravessar o espaço de um aliado. Espaço de inimigo só pode ser atravessado se ele estiver caído/indefeso, se houver diferença de três categorias de tamanho, ou via <em>Acrobacia</em>/<em>Atropelar</em>. Espaço de inimigo conta como <strong>terreno difícil</strong>.</li> <li><strong>Carga.</strong> Se estiver sobrecarregado, seu deslocamento diminui em <strong>3m</strong>.</li> <li><strong>Diagonais.</strong> Mover-se na diagonal custa o dobro (<strong>3m por quadrado</strong>).</li> <li><strong>Subir ou Mergulhar.</strong> Na vertical, subir custa o dobro e descer custa a metade.</li> <li><strong>Terreno Difícil.</strong> Neve, raízes ou escombros. Mover-se aqui custa o dobro (<strong>3m por quadrado</strong>).</li> </ul> </> ), 
-},
-{ id: "situacoes-especiais",
-  title: "Situações Especiais",
-  content: (
-    <>
-      <h4 className="mt-4 font-bold text-red-300">Camuflagem</h4>
-      <p>Dificulta a visão do alvo (neblina, escuridão leve).</p>
-      <ul className="list-disc ml-6 space-y-1">
-        <li><strong>Leve:</strong> 20% de chance de falha (1 ou 2 no d10).</li>
-        <li><strong>Total:</strong> 50% de chance de falha (1 a 5 no d10).</li>
-      </ul>
+        <h4 className="mt-4 font-bold text-red-300">Dano Não Letal</h4>
+        <p>
+          Dano não letal conta para cair inconsciente, mas não para sangrar ou morrer. Cura recupera primeiro PV perdidos por dano não letal.
+        </p>
+        <ul className="list-disc ml-6 space-y-2">
+          <li><strong>Armas Letais.</strong> Podem causar dano não letal sofrendo –5 no ataque.</li>
+          <li><strong>Ataques Desarmados.</strong> Causam dano não letal. Podem causar dano letal sofrendo –5 no ataque.</li>
+        </ul>
+      </>
+    ),
+  },
+  { id: "movimentacao", 
+    title: "Movimentação", content: ( <> <ul className="list-disc ml-6 space-y-2"> <li><strong>Deslocamento.</strong> Medida de quantos metros você percorre com uma ação de movimento (padrão 9m).</li> <li><strong>Atravessar Espaço Ocupado.</strong> Você pode atravessar o espaço de um aliado. Espaço de inimigo só pode ser atravessado se ele estiver caído/indefeso, se houver diferença de três categorias de tamanho, ou via <em>Acrobacia</em>/<em>Atropelar</em>. Espaço de inimigo conta como <strong>terreno difícil</strong>.</li> <li><strong>Carga.</strong> Se estiver sobrecarregado, seu deslocamento diminui em <strong>3m</strong>.</li> <li><strong>Diagonais.</strong> Mover-se na diagonal custa o dobro (<strong>3m por quadrado</strong>).</li> <li><strong>Subir ou Mergulhar.</strong> Na vertical, subir custa o dobro e descer custa a metade.</li> <li><strong>Terreno Difícil.</strong> Neve, raízes ou escombros. Mover-se aqui custa o dobro (<strong>3m por quadrado</strong>).</li> </ul> </> ), 
+  },
+  { id: "situacoes-especiais",
+    title: "Situações Especiais",
+    content: (
+      <>
+        <h4 className="mt-4 font-bold text-red-300">Camuflagem</h4>
+        <p>Dificulta a visão do alvo (neblina, escuridão leve).</p>
+        <ul className="list-disc ml-6 space-y-1">
+          <li><strong>Leve:</strong> 20% de chance de falha (1 ou 2 no d10).</li>
+          <li><strong>Total:</strong> 50% de chance de falha (1 a 5 no d10).</li>
+        </ul>
 
-      <h4 className="mt-4 font-bold text-red-300">Cobertura</h4>
-      <p>Bloqueio físico entre atacante e alvo (árvores, muralhas).</p>
-      <ul className="list-disc ml-6 space-y-1">
-        <li><strong>Leve:</strong> Fornece +5 na Defesa.</li>
-        <li><strong>Total:</strong> Impede que você seja atacado.</li>
-      </ul>
+        <h4 className="mt-4 font-bold text-red-300">Cobertura</h4>
+        <p>Bloqueio físico entre atacante e alvo (árvores, muralhas).</p>
+        <ul className="list-disc ml-6 space-y-1">
+          <li><strong>Leve:</strong> Fornece +5 na Defesa.</li>
+          <li><strong>Total:</strong> Impede que você seja atacado.</li>
+        </ul>
 
-      <h4 className="mt-4 font-bold text-red-300">Flanquear</h4>
-      <p>
-        Quando você e um aliado estão em lados opostos de um inimigo no corpo a corpo. 
-        Ambos recebem <strong>+2 nos testes de ataque</strong>. Não se flanqueia à distância.
-      </p>
-    </>
-  ),
-},
-{ id: "quebrando-objetos",
-  title: "Quebrando Objetos",
-  content: (
-    <>
-      <p>Atacar um objeto é similar a atacar uma criatura.</p>
-      <ul className="list-disc ml-6 space-y-1">
-        <li><strong>Defesa:</strong> Definida pelo tamanho do objeto (+5 se estiver em movimento).</li>
-        <li><strong>Quebrar:</strong> Se o objeto estiver sendo segurado, usa-se a manobra <em>Quebrar</em>.</li>
-        <li><strong>Destruição:</strong> Objetos possuem <strong>Redução de Dano (RD)</strong> conforme o material. Um objeto com 0 PV é destruído.</li>
-      </ul>
-    </>
-  ),
-},
+        <h4 className="mt-4 font-bold text-red-300">Flanquear</h4>
+        <p>
+          Quando você e um aliado estão em lados opostos de um inimigo no corpo a corpo. 
+          Ambos recebem <strong>+2 nos testes de ataque</strong>. Não se flanqueia à distância.
+        </p>
+      </>
+    ),
+  },
+  { id: "quebrando-objetos",
+    title: "Quebrando Objetos",
+    content: (
+      <>
+        <p>Atacar um objeto é similar a atacar uma criatura.</p>
+        <ul className="list-disc ml-6 space-y-1">
+          <li><strong>Defesa:</strong> Definida pelo tamanho do objeto (+5 se estiver em movimento).</li>
+          <li><strong>Quebrar:</strong> Se o objeto estiver sendo segurado, usa-se a manobra <em>Quebrar</em>.</li>
+          <li><strong>Destruição:</strong> Objetos possuem <strong>Redução de Dano (RD)</strong> conforme o material. Um objeto com 0 PV é destruído.</li>
+        </ul>
+      </>
+    ),
+  },
+  { id: "idades-variadas",
+    title: "Idades Variadas (Opcional - Herois de Arton)",
+    content: (
+      <>
+        <p>
+          Personagens iniciantes em Tormenta20 normalmente são jovens, na casa dos 20 anos. Contudo, isso é apenas costume, não lei! Se você quiser, seu personagem pode ter uma idade diferente — a ficção está repleta de protagonistas mais novos ou mais velhos.
+        </p>
+        <p>
+          Você pode considerar a idade de seu personagem um fator puramente descritivo, sem efeito em jogo. Se não quiser complicar as coisas, esse é o melhor caminho. Contudo, na vida real a idade é um fator determinante para diversas características pessoais — uma criança dificilmente terá a mesma força física de um adulto, por exemplo.
+        </p>
+        <p>
+          Se você quiser que sua faixa etária tenha consequências em jogo (ou se simplesmente quiser mais um elemento mecânico com o qual construir sua ficha), pode usar as regras opcionais desta seção. Estas regras substituem os modificadores de atributos para personagens mais velhos descritos no livro básico (Tormenta20, p. 108).
+        </p>
+        
+        <h4 className="font-bold text-red-300 mt-6">Personagens de Idades Variadas</h4>
+        <p>
+          Para criar um personagem de idade variada, escolha uma faixa etária para ele e aplique os efeitos dela. Existem sete faixas etárias: criança, adolescente, jovem, adulto, maduro, velho e ancião. A faixa etária padrão é jovem, a única que não altera sua ficha — todas as outras trazem benefícios e penalidades.
+        </p>
+        <p>
+           Os efeitos de faixas etárias não são necessariamente equilibrados. No geral, crianças são menos poderosas que adultos, e os efeitos refletem isso. Se você quer um jogo balanceado, sugerimos que não use estas regras — elas são opcionais justamente por trazerem certo desequilíbrio!
+        </p>
 
+        {/* Tabela de Referência */}
+        <div className="overflow-x-auto shadow-lg rounded-xl border border-stone-800 mt-6 mb-8 bg-stone-900">
+          <table className="min-w-full divide-y divide-stone-800 font-serif text-sm">
+            <caption className="p-3 text-lg font-bold text-red-500 bg-stone-950 border-b border-stone-800 text-left uppercase">
+              Tabela: Faixas Etárias
+            </caption>
+            <thead className="bg-stone-950 text-red-600">
+              <tr>
+                <th className="px-4 py-3 text-left font-bold uppercase">Faixa Etária</th>
+                <th className="px-4 py-3 text-left font-bold uppercase">Idade</th>
+                <th className="px-4 py-3 text-left font-bold uppercase">Modificadores</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-stone-800">
+              {ageGroups.map((group, idx) => (
+                <tr key={group.name} className={idx % 2 === 0 ? "bg-stone-900" : "bg-stone-900/50"}>
+                  <td className="px-4 py-3 font-bold text-stone-300 whitespace-nowrap">{group.name}</td>
+                  <td className="px-4 py-3 text-stone-400 whitespace-nowrap">{group.age}</td>
+                  <td className="px-4 py-3 text-stone-400 italic">{group.modifiers}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
+        {/* Detalhamento Completo */}
+        <div className="space-y-6 mt-6">
+          
+          <div className="pb-4 border-b border-stone-800">
+            <strong className="text-xl text-red-500 block mb-2 font-serif">Criança (9 a 12 anos)</strong>
+            <p>
+              A menor faixa etária possível para personagens jogadores. Obviamente existem pessoas mais novas no mundo, mas não recomendamos jogar com personagens com menos de 9 anos. Crianças nasceram durante a Guerra Artoniana, ou logo antes, mas eram muito pequenas para terem participado do conflito — provavelmente nem lembram dele. Embora não tenham se envolvido diretamente, podem ter sofrido suas consequências. Por exemplo, podem ser órfãos da guerra ou filhos de refugiados. Ou, se tiverem sorte, filhos de soldados que enriqueceram com espólios, ou mesmo de nobres que ganharam terras com as mudanças políticas.
+            </p>
+            <ul className="list-disc ml-6 space-y-2 mt-3 text-stone-300">
+              <li><strong>Atributos:</strong> Força –2, Constituição –1, Sabedoria –1. Crianças são fisicamente mais fracas e frágeis que adultos, além de menos capazes de entender as sutilezas do mundo.</li>
+              <li><strong>Tamanho Menor:</strong> Você é uma categoria de tamanho menor que o padrão de sua raça (exceto se sua raça já for Minúscula; nesse caso, a mudança é apenas estética).</li>
+              <li><strong>Sem Origem:</strong> Você não recebe benefícios de origem. Você está apenas começando a viver os anos que definirão quem você será!</li>
+              <li><strong>Protegido dos Deuses:</strong> Você recebe +2 na Defesa e +5 em todos os testes de resistência. Isso é uma mistura de sorte sobrenatural com o fato de que inimigos normalmente ignoram crianças, justamente por serem menos perigosas.</li>
+            </ul>
+          </div>
 
+          <div className="pb-4 border-b border-stone-800">
+            <strong className="text-xl text-red-500 block mb-2 font-serif">Adolescente (13 a 17 anos)</strong>
+            <p>
+              Muitos aventureiros começam suas carreiras nesta idade. Adolescentes viram a Guerra Artoniana, mas dificilmente terão participado dela. Esta é a categoria de idade mais velha para um personagem que nasceu em Tamu-ra após a libertação da ilha.
+            </p>
+            <ul className="list-disc ml-6 space-y-2 mt-3 text-stone-300">
+              <li><strong>Atributos:</strong> Sabedoria –1. Adolescentes são conhecidos por sua impetuosidade.</li>
+              <li><strong>Ímpeto Juvenil:</strong> Você recebe +3 pontos de mana. Adolescentes acham que podem fazer qualquer coisa, e essa confiança os torna mais heroicos.</li>
+              <li><strong>Origem em Construção:</strong> Você recebe apenas um benefício de origem, em vez de dois (se sua origem possuir um único benefício, comece com uma perícia treinada a menos por sua classe).</li>
+            </ul>
+          </div>
 
+          <div className="pb-4 border-b border-stone-800">
+            <strong className="text-xl text-red-500 block mb-2 font-serif">Jovem (18 a 24 anos)</strong>
+            <p>
+              A idade padrão. Heróis jovens usam as regras básicas de construção de personagem, sem modificadores. Jovens podem ter participado da Guerra Artoniana, mas provavelmente em postos iniciais. Eles podem se lembrar de fatos históricos como as Guerras Táuricas, a Marcha de Arsenal, a batalha dos deuses em Tamu-ra, a Libertação de Valkaria e a coroação de Shivara como Rainha-Imperatriz, mas serão muito novos para terem efetivamente participado desses eventos.
+            </p>
+          </div>
 
+          <div className="pb-4 border-b border-stone-800">
+            <strong className="text-xl text-red-500 block mb-2 font-serif">Adulto (25 a 39 anos)</strong>
+            <p>
+              Uma idade comum para aventureiros — pelo menos para aqueles que não morreram em sua primeira caverna infestada de glops! Um personagem adulto pode ter participado dos últimos grandes acontecimentos do mundo, como a Guerra Artoniana, a queda da Flecha de Fogo ou a rebelião de escravos no Império de Tauron. Mesmo que não tenha se envolvido diretamente, pode ter sofrido as consequências deles. Um personagem desta faixa etária também terá visto acontecimentos mais antigos, como a queda do Paladino de Arton, a primeira batalha contra a Tormenta em Trebuck e a Libertação de Valkaria, mas dificilmente terá participado deles.
+            </p>
+            <ul className="list-disc ml-6 space-y-2 mt-3 text-stone-300">
+              <li><strong>Já Vi Coisas:</strong> Você pode receber um poder geral. Nesse caso, também recebe uma complicação de idade (veja a seguir).</li>
+            </ul>
+          </div>
+
+          <div className="pb-4 border-b border-stone-800">
+            <strong className="text-xl text-red-500 block mb-2 font-serif">Maduro (40 a 59 anos)</strong>
+            <p>
+              Muitas figuras de autoridade, como burgomestres e capitães da guarda, são desta faixa etária. Elas talvez não tenham o vigor de pessoas mais novas, mas compensam isso com experiência. Um personagem maduro já terá visto muitas coisas. Além de tudo descrito em “Adulto”, acima, ele poderá se lembrar de eventos como a chegada de Mestre Arsenal ao mundo de Arton, a guerra civil de Bielefeld e o surgimento da Tormenta no Império de Jade. Será muito novo para ter participado desses eventos, mas poderá ter lutado contra Arsenal ou nas Guerras Táuricas, e novamente na Guerra Artoniana, sendo um veterano de diversos grandes conflitos.
+            </p>
+             <ul className="list-disc ml-6 space-y-2 mt-3 text-stone-300">
+              <li><strong>Veterano Calejado:</strong> Você começa o jogo com um nível adicional em relação aos personagens mais novos do grupo. Por exemplo, se o grupo vai começar no 1º nível, você começa no 2º. Contudo, essa experiência tem seu preço — você recebe duas complicações de idade.</li>
+            </ul>
+          </div>
+
+          <div className="pb-4 border-b border-stone-800">
+            <strong className="text-xl text-red-500 block mb-2 font-serif">Velho (60 a 79 anos)</strong>
+            <p>
+              Num mundo de problemas como Arton, nem todos chegam a esta idade respeitável. Aqueles que a alcançam muitas vezes assumem posições de respeito, como mestres de guildas, alto sacerdotes ou conselheiros reais. Claro, nem todos atingem tamanha eminência. Alguns, ao chegar a esta idade, serão fazendeiros, artesãos ou estarão descansando em suas casas. Um artoniano velho terá muitas histórias para contar! Ele poderá se lembrar de eventos considerados lendários na era atual, como o eclipse solar no qual Thwor nasceu e a coroação do Rei-Imperador Thormy. Um personagem desta idade poderia até mesmo ter lutado no Dia dos Gigantes, em Valkaria, uma batalha hoje envolta em lendas e mistérios!
+            </p>
+             <ul className="list-disc ml-6 space-y-2 mt-3 text-stone-300">
+              <li><strong>Ai Minhas Costas:</strong> Você começa o jogo com dois níveis adicionais. Contudo, perde 1 ponto em todos os atributos físicos (Força, Destreza e Constituição) e recebe três complicações de idade. Além disso, não pode escolher o poder Aumento de Atributo para nenhum atributo físico — infelizmente, os tempos de vigor ficaram para trás. A partir deste ponto, mesmo o mais saudável dos aventureiros começa a sentir que a idade é um caminho sem volta…</li>
+            </ul>
+          </div>
+
+           <div className="pb-4 border-b border-stone-800">
+            <strong className="text-xl text-red-500 block mb-2 font-serif">Ancião (80+ anos)</strong>
+            <p>
+              A última faixa etária. Em Arton, poucas pessoas chegam até aqui — mesmo aqueles que não encontram um fim violento normalmente acabam morrendo de simples velhice antes de se tornarem anciões. Contudo, entre aqueles ricos o bastante para adquirir poções e magias milagrosas (ou tratamento médico de Salistick), atingir este patamar é mais comum. Um ancião é tão velho quanto o antigo Rei-Imperador Thormy. Ele terá visto diversas mudanças no mundo, como os primeiros contatos formais entre o Reinado e Tamu-ra e a chegada de Lorde Niebling a Arton. As histórias que um ancião escutava quando criança já foram praticamente esquecidas hoje, e falavam sobre o primeiro encontro de Talude e Vectorius, a fundação da Ordem da Luz e a luta contra um antigo deus chamado Sartan.
+            </p>
+             <ul className="list-disc ml-6 space-y-2 mt-3 text-stone-300">
+              <li><strong>O Inverno da Vida:</strong> Você começa o jogo com três níveis adicionais. Porém, perde 2 pontos em todos os atributos físicos (Força, Destreza e Constituição) e recebe quatro complicações de idade. Assim como velhos, você não pode escolher o poder Aumento de Atributo para atributos físicos.</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <h4 className="font-bold text-red-300 mt-8 border-b border-stone-800 pb-2 text-lg">O Peso da Idade</h4>
+        <p className="mt-2">
+          Personagens adultos ou mais velhos precisam escolher uma complicação de idade por faixa etária — ou seja, uma para adultos, duas para maduros, três para velhos e quatro para anciões. Como a velhice não atinge todas as pessoas da mesma forma, esta mecânica representa melhor os efeitos do envelhecimento do que os modificadores de atributos da regra padrão. Complicações de idade funcionam como complicações normais (veja p. 282). Seus efeitos se acumulam!
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+          {ageComplications.map((comp) => (
+            <div key={comp.name} className="bg-stone-950/50 p-4 rounded border border-stone-800 hover:border-red-900/30 transition-colors">
+              <strong className="text-red-400 font-serif text-lg block mb-1">{comp.name}</strong>
+              <p className="text-sm text-stone-300 leading-relaxed">{comp.effect}</p>
+            </div>
+          ))}
+        </div>
+
+        <h4 className="font-bold text-red-300 mt-8 border-b border-stone-800 pb-2 text-lg">Regras Adicionais</h4>
+        <ul className="list-disc ml-6 space-y-3 mt-4 text-stone-300">
+          <li>
+            <strong>Envelhecendo:</strong> Quando atinge uma faixa etária maior, você ajusta seus efeitos de idade de acordo. Assim, se for criança e se tornar adolescente, aumenta uma categoria de tamanho e recebe +2 em Força, +1 em Constituição, um benefício de origem e a habilidade Ímpeto Juvenil, mas perde a habilidade Protegido dos Deuses. Se mais tarde se tornar jovem, ganha +1 em Sabedoria e um benefício de origem (completando os dois habituais), mas perde a habilidade Ímpeto Juvenil.
+          </li>
+          <li>
+            <strong>Idades das Raças:</strong> Os intervalos de idade das faixas etárias usam as idades humanas como referência. Contudo, certas raças envelhecem em ritmos diferentes.
+            <ul className="list-none mt-2 space-y-2 pl-4 border-l-2 border-stone-800">
+               <li><span className="text-red-400 font-bold">Anões, meios-elfos e qareen:</span> Envelhecem mais lentamente que humanos. Multiplique os intervalos de idade deles a partir de adulto por 2.</li>
+               <li><span className="text-red-400 font-bold">Dahllan, duendes, eiradaan, elfos, golens, osteon, sátiros e sílfides:</span> Envelhecem muito mais lentamente — multiplique os intervalos de idade deles a partir de adulto por 5. (Ex: um elfo se torna adulto aos 125 anos). Nota: embora essas raças sejam mais longevas, amadurecem no mesmo ritmo de humanos até a juventude.</li>
+               <li><span className="text-red-400 font-bold">Goblins e trogs:</span> São menos longevos que humanos. Multiplique todos os intervalos de idade deles por 0,7 (arredonde para o valor mais próximo).</li>
+            </ul>
+          </li>
+        </ul>
+      </>
+    )
+  },
+  { id: "objetivos-heroicos",
+    title: "Objetivos Heroicos (Opcional - Herois de Arton)",
+    content: (
+      <>
+        <p>
+          Com esta regra opcional, você pode escolher um objetivo heroico para seu personagem: ascender ao trono de um reino, vingar a morte de seu mestre, tornar-se o líder de uma guilda de ladrões ou outra coisa igualmente grandiosa. Um objetivo heroico deve ser algo que marca uma virada na vida do personagem e que o modificará para sempre.
+        </p>
+        <p>
+          Todo objetivo heroico deve ser grandioso e específico. Ser admitido na Ordem da Luz não é um objetivo heroico. Tornar-se o Alto Comandante, sim. Da mesma forma, não basta dizer que você deseja “ascender à nobreza” ou “punir um grande vilão”. Você deseja ser o rei de Bielefeld ou prender Dee. Cumprindo um objetivo heroico, você será o líder ou maior expoente de algo, terá revolucionado algum aspecto de Arton. O mestre tem a palavra final sobre o que pode ser um objetivo heroico.
+        </p>
+        <p>
+          Você pode escolher seu objetivo durante a construção do personagem ou com a campanha já em andamento. Um objetivo heroico nunca pode começar já estando perto de ser cumprido. Por exemplo, você não pode esperar até estar em Lamnor para decidir que seu objetivo é ser o novo Ayrrak.
+        </p>
+        <p>
+          Em termos de jogo, um personagem com um objetivo heroico recebe certos benefícios quando se aproxima de seu objetivo e sofre penalidades quando se afasta dele.
+        </p>
+
+        <h4 className="font-bold text-red-300 mt-6 border-b border-stone-800 pb-2">Mecânicas de Objetivo</h4>
+        
+        <div className="space-y-4 mt-4">
+          <div>
+            <strong className="text-red-400 block mb-1">Benefícios de Objetivo</strong>
+            <p className="text-sm">
+              No início de qualquer cena diretamente relacionada a seu objetivo, você recebe um benefício de acordo com seu objetivo. Esse benefício conta como uma habilidade e dura até o fim da cena.
+            </p>
+            <p className="text-sm mt-2">
+              Você só pode receber um benefício de objetivo por aventura. Você pode escolher não receber o benefício em uma cena se achar que a aventura terá outra cena relacionada ao objetivo, que seja mais importante. O que exatamente significa uma cena diretamente relacionada a seu objetivo fica a critério do mestre. Como regra geral, se ao término da cena você estiver mais perto de seu objetivo, a cena ativa o benefício.
+            </p>
+          </div>
+
+          <div>
+            <strong className="text-red-400 block mb-1">Penalidades de Objetivo</strong>
+            <p className="text-sm">
+              Se ao fim de uma cena você estiver mais longe de seu objetivo, sofre uma penalidade ditada por seu objetivo. Você sofre essa penalidade mesmo que seja imune a seu efeito.
+            </p>
+            <p className="text-sm mt-2">
+              Embora a maior parte das cenas não vá aproximá-lo de seu objetivo, provavelmente também não vai afastá-lo. Assim, cenas não relacionadas ao objetivo não impõem penalidades. Por exemplo, caso seu objetivo seja casar com Vladislav Tpish, uma cena longe da Academia Arcana não o afasta de seu objetivo. Contudo, uma cena em que você briga com ele o afasta.
+            </p>
+          </div>
+
+          <div>
+            <strong className="text-red-400 block mb-1">Concluindo um Objetivo</strong>
+            <p className="text-sm">
+              Se você completar seu objetivo, recebe um benefício maior e permanente. A partir desse ponto, não recebe mais benefícios ou penalidades em cenas relacionadas ao objetivo. Você não pode escolher um novo objetivo — afinal, um objetivo heroico é algo que define toda uma vida.
+            </p>
+          </div>
+        </div>
+
+        <h4 className="font-bold text-red-300 mt-8 border-b border-stone-800 pb-2">Tipos de Objetivos</h4>
+        <p className="mt-2 mb-4">
+          A seguir estão algumas categorias amplas nas quais seu objetivo pode se enquadrar. Se você quiser um objetivo que não se enquadre em nenhuma delas, você e o mestre podem criar uma nova categoria, usando estas como base.
+        </p>
+
+        <div className="grid gap-6 mt-6">
+          {heroicGoals.map((goal) => (
+            <div key={goal.name} className="bg-stone-900 border border-stone-800 rounded-lg p-5 hover:border-red-900/50 transition-colors shadow-sm">
+              <h5 className="text-xl font-bold text-red-500 font-serif mb-2">{goal.name}</h5>
+              <p className="text-stone-300 text-sm mb-4 italic border-l-2 border-stone-700 pl-3">
+                "{goal.description}"
+              </p>
+              <ul className="space-y-2 text-sm">
+                <li className="flex gap-2">
+                  <span className="font-bold text-red-400 min-w-[80px]">Benefício:</span>
+                  <span className="text-stone-200">{goal.benefit}</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="font-bold text-red-400 min-w-[80px]">Penalidade:</span>
+                  <span className="text-stone-200">{goal.penalty}</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="font-bold text-red-400 min-w-[80px]">Conclusão:</span>
+                  <span className="text-stone-200">{goal.conclusion}</span>
+                </li>
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-8 bg-stone-950/50 p-4 border border-red-900/20 rounded">
+          <strong className="text-red-400 block mb-2 font-serif uppercase tracking-wide">Abandonando um Objetivo</strong>
+          <p className="text-sm text-stone-400">
+            Uma vez que um personagem escolha um objetivo, deve se esforçar para cumpri-lo. Alguns objetivos oferecem benefícios significativos apenas por tentar cumpri-los... Mas jogadores espertos podem escolhê-los sem nunca realmente almejar sua conclusão, apenas desfrutando os benefícios de tentar!
+          </p>
+          <p className="text-sm text-stone-400 mt-2">
+            Se o mestre julgar que o personagem não está se esforçando para cumprir o objetivo, pode definir que o objetivo foi abandonado. O jogador sofre a penalidade do objetivo por uma aventura, então o perde. Nenhum benefício ou penalidade se aplicam mais, mas ele não pode escolher um novo objetivo.
+          </p>
+        </div>
+      </>
+    )
+  },
+  { id: "papeis-grupo",
+    title: "Papéis no Grupo (Opcional - Herois de Arton)",
+    content: (
+      <>
+        <p>
+          Grupos de Tormenta20 normalmente se organizam de forma natural e espontânea, de acordo com a personalidade de cada jogador. Cada pessoa na mesa cuida de seu personagem, incluindo tesouro, condições etc., enquanto o mestre fica responsável pelos NPCs e pelo mundo.
+        </p>
+        <p>
+          Contudo, essa forma de organização pode levar a alguns problemas. Um jogador que tenha dificuldade de ordenar suas anotações pode ignorar parte de seu tesouro, ou mesmo algum objetivo que já tinha planejado. Alguém com memória ruim e sem um sistema de controle pode se perder na duração de seus efeitos e nas condições (e bônus!) que afetam seu personagem. O próprio mestre pode se ver sobrecarregado por ter que lembrar de todos os eventos da campanha, além de todas as regras.
+        </p>
+        
+        <h4 className="font-bold text-red-300 mt-6 border-b border-stone-800 pb-2">Como funcionam os Papéis</h4>
+        <p className="mt-2">
+          Para resolver esse tipo de situação, os jogadores podem se dividir em papéis. Papéis são funções que cada jogador tem na mesa, auxiliando o bom andamento do jogo. Cada um fica responsável por uma parte “burocrática” ou específica da campanha, garantindo que ninguém acabe sobrecarregado e minimizando os erros. O mestre não tem um papel, já que normalmente cuida de muitos elementos que outros papéis tomam para si.
+        </p>
+        <p>
+          Existe um número maior de papéis do que a média de jogadores em um grupo. Isso é proposital: provavelmente alguns desses papéis serão divididos entre todos ou ficarão a cargo do mestre. Nenhum jogador pode assumir mais de um papel. Contudo, caso o grupo decida usar esta regra opcional, todos precisam assumir um. Ninguém fica isento de responsabilidades. O grupo como um todo deve decidir quais papéis são necessários e qual jogador é mais adequado para cada um deles.
+        </p>
+        <p>
+          Embora os papéis digam respeito a tarefas da vida real, alguns podem se refletir nos personagens. Por exemplo, o cartógrafo pode interpretar um personagem que também mapeia o terreno — assim garantindo que os mapas existam dentro da campanha. A lista a seguir descreve os papéis disponíveis para personagens jogadores.
+        </p>
+
+        <div className="grid grid-cols-1 gap-6 mt-8">
+          {groupRoles.map((role) => (
+            <div key={role.name} className="relative bg-stone-900 border border-stone-800 rounded-lg p-6 hover:border-red-900/40 transition-all shadow-md group">
+              {/* Decorative Header Line */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-900 to-transparent rounded-t-lg opacity-50 group-hover:opacity-100 transition-opacity" />
+              
+              <h5 className="text-xl font-bold text-stone-100 font-serif mb-3 flex items-center gap-2">
+                <span className="text-red-600">✦</span> {role.name}
+              </h5>
+              
+              <p className="text-stone-300 text-sm leading-relaxed mb-4 border-l-2 border-stone-800 pl-4">
+                {role.description}
+              </p>
+              
+              <div className="mt-4 pt-4 border-t border-stone-800/50 flex items-start gap-2">
+                <span className="text-red-500 font-bold text-xs uppercase tracking-widest mt-0.5">Benefício:</span>
+                <span className="text-stone-200 text-sm font-medium italic">{role.benefit}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </>
+    )
+  },
 
 ];

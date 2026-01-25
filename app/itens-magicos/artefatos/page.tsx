@@ -7,22 +7,31 @@ import { Artifact } from "@/types/artifact";
 
 // --- 1. Formatação de Texto (Estilo Stone/Grimório) ---
 const formatTextWithBreaks = (text: string) => {
-  const lines = text.split('\\n');
+  // CORREÇÃO AQUI: Use '\n' em vez de '\\n' para pegar as quebras de linha reais do TS
+  const lines = text.split('\n'); 
 
   return lines.map((line, index) => {
+    // Se a linha for vazia (apenas uma quebra extra), renderiza um espaço para manter o layout
+    if (!line.trim()) return <div key={index} className="h-4" />;
+
     let formattedLine = line
       // Negrito -> Stone Claro
       .replace(/\*\*\*(.*?)\*\*\*/g, '<em class="text-stone-100 drop-shadow-sm font-serif"><strong>$1</strong></em>')
       .replace(/\*\*(.*?)\*\*/g, '<strong class="text-stone-200 font-serif">$1</strong>')
       // Itálico -> Stone Médio
       .replace(/\*(.*?)\*/g, '<em class="text-stone-400 font-serif">$1</em>')
-      // Listas -> Âmbar
-      .replace(/- (.*?)\./g, '<p class="mt-1 ml-2 md:ml-4 text-sm font-serif"><span class="font-bold text-amber-600">❖</span> $1.</p>')
+      // Listas (Bullet points) -> Transforma a linha inteira em um item de lista estilizado
+      // Ajustei o regex para pegar a linha toda caso comece com "- "
+      .replace(/^- (.*)/g, '<p class="mt-2 ml-2 md:ml-4 text-sm font-serif flex items-start"><span class="font-bold text-amber-600 mr-2 mt-[2px]">❖</span><span>$1</span></p>')
       // Citações -> Borda Âmbar e Fundo Stone
-      .replace(/> (.*)/g, '<blockquote class="border-l-4 border-amber-700 pl-3 md:pl-4 py-2 my-3 text-sm italic text-stone-400 bg-stone-900/50 rounded-r-lg shadow-inner font-serif">$1</blockquote>');
+      .replace(/^> (.*)/g, '<blockquote class="border-l-4 border-amber-700 pl-3 md:pl-4 py-2 my-3 text-sm italic text-stone-400 bg-stone-900/50 rounded-r-lg shadow-inner font-serif">$1</blockquote>');
 
     return (
-      <div key={index} dangerouslySetInnerHTML={{ __html: formattedLine }} className="mb-2 last:mb-0 text-sm md:text-base leading-relaxed text-stone-300 font-serif" />
+      <div 
+        key={index} 
+        dangerouslySetInnerHTML={{ __html: formattedLine }} 
+        className="mb-1 text-sm md:text-base leading-relaxed text-stone-300 font-serif" 
+      />
     );
   });
 };
@@ -154,7 +163,8 @@ export default function ArmasMagicasPage() {
     
     return artifacts.filter(weapon => {
       return weapon.name.toLowerCase().includes(term) ||
-             weapon.description.toLowerCase().includes(term);
+      weapon.origin.toLowerCase().includes(term) ||
+      weapon.description.toLowerCase().includes(term);
     })
     .sort((a, b) => a.name.localeCompare(b.name));
   }, [weaponSearch, sizeFilter]);

@@ -35,3 +35,29 @@ export interface ObjectStat {
   rd: number;
   pv: number;
 }
+
+// Novas interfaces para Idades Variadas
+export interface AgeGroup {
+  name: string;
+  age: string;
+  modifiers: string;
+}
+
+export interface AgeComplication {
+  name: string;
+  effect: string;
+}
+
+export interface HeroicGoal {
+  name: string;
+  description: string;
+  benefit: string;
+  penalty: string;
+  conclusion: string;
+}
+
+export interface GroupRole {
+  name: string;
+  description: string;
+  benefit: string;
+}
