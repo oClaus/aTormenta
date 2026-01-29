@@ -199,5 +199,17 @@ export const powersGeraisDestino: Power[] = [
     prerequisite: "treinado em Atuação e Enganação",
     origin: "Herois de Arton"
   },
+  { id: "Ás da Cozinha",
+    name: "Ás da Cozinha",
+    description: " Você aprende três novas receitas. Quando atinge o patamar campeão, e novamente quando atinge o patamar lendário, aprende mais três novas receitas. Além disso, quando prepara um prato especial, você pode acumular os benefícios de dois pratos (bônus iguais não se acumulam). Por exemplo, pode preparar um sashimi com salada élfica que fornece +1 em testes de ataque à distância e +2 em rolagens de dano. A CD do teste de Ofício (cozinheiro) é igual à CD do prato mais difícil +5 e você deve gastar os ingredientes de ambos os pratos. ",
+    prerequisite: "treinado em Ofício (cozinheiro), 5º nível de personagem.",
+    origin: "Herois de Arton"
+  },
+  { id: "Bom de Garfo",
+    name: "Bom de Garfo",
+    description: "Você recebe +3 PV por patamar e pode comer até dois pratos especiais por dia, recebendo os benefícios de ambos (bônus iguais não se acumulam). ",
+    prerequisite: "Con 1",
+    origin: "Herois de Arton"
+  },
 
 ];
