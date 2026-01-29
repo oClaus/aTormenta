@@ -1568,6 +1568,7 @@ export const classes: GameClass[] = [
     },
     { id: "Alquimista (Inventor)",
     name: "Alquimista (Inventor)",
+    powersUrl: "/poderes/inventor",
     origin: "Herois de Arton",
     image: "/classes/alquimista.png",
     description: "Inventores são artesãos versáteis, capazes de fabricar, consertar e aprimorar vários tipos de itens. Contudo, alguns pensam que os únicos itens que merecem tamanho esmero são aqueles que elevam Arton de forma física e espiritual. O único ofício verdadeiramente transcendente é a alquimia.\nO alquimista é um inventor que busca mais do que criar objetos mundanos: cada preparado teria um componente místico, afetando a alma de quem o usa. Assim, ácido não seria apenas uma maneira de causar dano, mas um modo de destruir o que é velho, para que possa ser substituído pelo novo. Essência de mana não seria apenas um elixir de ervas, mas energia materializada, capaz de elevar a mente. Para o alquimista, o verdadeiro ofício é compreender como Arton está conectada a outras dimensões, outros mundos, outros realidades — e imbuir seus preparados com essa compreensão transcendental.\nUm ditado comum entre alquimistas é “Assim acima como abaixo”: todo ato em Arton teria um reflexo nos reinos dos deuses e todo item alquímico seria uma metáfora para algum processo de transformação espiritual. Dizem que os maiores alquimistas podem transformar chumbo em ouro... Mas apenas os aprendizes pensam que isso é sobre riqueza.",
@@ -2953,6 +2954,89 @@ export const classes: GameClass[] = [
     },
     ]
     },
+    { id: "Capanga (Ladino)",
+    name: "Capanga (Ladino)",
+    powersUrl: "/poderes/ladino",
+    origin: "Dragão Brasil",
+    image: "/classes/capanga.png",
+    description: "'Quer saber a melhor maneira de roubar algo? Bata no dono. Bata com força.'\nEm vielas úmidas, cortiços esquecidos e tavernas onde até a luz evita entrar, o crime raramente envolve acrobacias elegantes ou truques engenhosos. A vida é direta e cruel. Nesse cenário, nasce o capanga.\nEle é o ladino que trocou sutileza por brutalidade. Um sujeito de punhos pesados e paciência curta, que resolve problemas do jeito mais simples possível: acertando primeiro. Covis criminosos, cartéis e gangues poderosas sempre têm espaço para dezenas deles — trabalhadores do submundo que lidam com o serviço que ninguém mais quer fazer. Enquanto mestres ladrões põem planos refinados em prática, capangas são enviados para cobrar dívidas, intimidar informantes ou abrir caminho na marra.\nAinda assim, engana-se quem imagina o capanga como um idiota valentão. Muitos vieram da miséria, empurrados cedo demais para becos perigosos. Não aprenderam a mentir com charme, nem a passar despercebidos; aprenderam a sobreviver. Alguns, inclusive, mantêm uma honestidade desconfortante: são diretos, leais, e defendem seus companheiros com a ferocidade de quem cresceu sem ninguém para defendê-los.\nCicatrizes que capangas carregam não lembram aventuras ousadas, mas noites em que fizeram o trabalho sujo, quebraram ossos errados ou bateram em quem não merecia. São pesos que trazem consigo para sempre… mas que também moldam um ladino duro, decidido e incapaz de abandonar aqueles que chamam de amigos.",
+    characteristics: {
+      pvBase: "12 + Constituição",
+      pvPerLevel: "3 + Constituição",
+      pmPerLevel: "4 PM por nível"
+    },
+    skills: {
+    mandatory: ["Ladinagem (Des)", "Enganação (Des)"],
+    optional: {
+      skills: [      
+       'Acrobacia (Des)', 'Atletismo (For)', 'Atuação (Car)', 'Cavalgar (Des)', 'Conhecimento (Int)', 'Diplomacia (Car)', 'Furtividade (Des)', 'Iniciativa (Des)', 'Intimidação (Car)', 'Intuição (Sab)', 'Investigação (Int)', 'Jogatina (Car)', 'Luta (For)', 'Ofício (Int)', 'Percepção (Sab)', 'Pilotagem (Des)', 'Pontaria (Des)', 'Reflexos (Des)'
+      ],
+      count: 6
+      }
+    },
+    proficiency: "Nenhuma",
+    abilities: [
+      {
+      name: "Ataque Furtivo Brutal",
+      description: "Você sabe aproveitar a distração do inimigo para atingir seus pontos vitais. Uma vez por rodada, quando atinge uma criatura desprevenida com um ataque corpo a corpo, ou uma criatura que esteja flanqueando, você causa 1d8 pontos de dano extra. A cada dois níveis, esse dano aumenta em +1d8. Uma criatura imune a acertos críticos também é imune a ataques furtivos.",
+      },
+      {
+        name: "Evasão",
+        description: "A partir do 2º nível, quando sofre um efeito que permite um teste de Reflexos para reduzir o dano à metade, você não sofre dano algum se passar. Você ainda sofre dano normal se falhar no teste de Reflexos. Esta habilidade exige liberdade de movimentos; você não pode usá-la se estiver de armadura pesada ou na condição imóvel."
+      },
+      {
+        name: "Poder de Ladino",
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um dos poderes de sua classe ou geral."
+      },
+      {
+        name: "Rápido e Rasteiro",
+        description: "No 3º nível, você recebe +2 em Iniciativa, Defesa e em rolagens de dano na primeira rodada de cada combate. Esse bônus aumenta para +4 no 7º nível e para +6 no 15º nível."
+      },
+      {
+        name: "Cara Feia",
+        description: "No 4º nível, você recebe +5 em testes de resistência contra efeitos de Medo e em testes de Vontade para resistir a intimidações."
+      },
+      {
+        name: "Flanquear Aprimorado",
+        description: "No 6º nível, o bônus que você recebe contra oponentes flanqueados aumenta para +4 (em vez de +2)."
+      },
+      {
+        name: "Olhos nas Costas",
+        description: "A partir do 8º nível, você consegue lutar contra diversos inimigos como se fossem apenas um. Você não pode ser flanqueado."
+      },
+      {
+        name: "Evasão Aprimorada",
+        description: "No 10º nível, quando sofre um efeito que permite um teste de Reflexos para reduzir o dano à metade, você não sofre dano algum se passar e sofre apenas metade do dano se falhar. Esta habilidade exige liberdade de movimentos; você não pode usá-la se estiver de armadura pesada ou na condição imóvel."
+      },
+      {
+        name: "Debulhar Inimigos",
+        description: "No 20º nível, você já perdeu a paciência com inimigos cheios de truques ou que são resistentes às suas habilidades. Seus ataques furtivos ignoram imunidades de criaturas a acertos críticos. Além disso, você pode gastar 5 PM quando faz um ataque para usar seu ataque furtivo mesmo que o alvo não esteja desprevenido ou que você não o esteja flanqueando."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Ataque furtivo brutal +1d8" },
+      { level: 2, abilities: "Evasão, poder de ladino" },
+      { level: 3, abilities: "Ataque furtivo brutal +2d8, poder de ladino, rápido e rasteiro +2" },
+      { level: 4, abilities: "Cara feia, poder de ladino" },
+      { level: 5, abilities: "Ataque furtivo brutal +3d8, poder de ladino" },
+      { level: 6, abilities: "Flanquear aprimorado, poder de ladino" },
+      { level: 7, abilities: "Ataque furtivo brutal +4d8, poder de ladino, rápido e rasteiro +4" },
+      { level: 8, abilities: "Olho nas costas, poder de ladino" },
+      { level: 9, abilities: "Ataque furtivo brutal +5d8, poder de ladino" },
+      { level: 10, abilities: "Evasão aprimorada, poder de ladino" },
+      { level: 11, abilities: "Ataque furtivo brutal +6d8, poder de ladino" },
+      { level: 12, abilities: "Poder de ladino" },
+      { level: 13, abilities: "Ataque furtivo brutal +7d8, poder de ladino" },
+      { level: 14, abilities: "Poder de ladino" },
+      { level: 15, abilities: "Ataque furtivo brutal +8d8, poder de ladino, rápido e rasteiro +6" },
+      { level: 16, abilities: "Poder de ladino" },
+      { level: 17, abilities: "Ataque furtivo brutal +9d8, poder de ladino" },
+      { level: 18, abilities: "Poder de ladino" },
+      { level: 19, abilities: "Ataque furtivo brutal +10d8, poder de ladino" },
+      { level: 20, abilities: "Debulhar inimigos, poder de ladino" }
+    ],
+    },
+
     
     
 ];

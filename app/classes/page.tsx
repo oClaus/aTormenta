@@ -26,25 +26,27 @@ export default function ClassesPage() {
   };
 
   return (
-    <div className="min-h-screen bg-stone-950 text-stone-200 font-serif selection:bg-red-900 selection:text-white relative overflow-x-hidden">
+    // MUDANÇA GERAL: Fundo bege claro, texto marrom escuro, seleção sépia
+    <div className="min-h-screen bg-[#f5e6d0] text-amber-950 font-serif selection:bg-amber-800 selection:text-amber-50 relative overflow-x-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#f5e6d0] to-[#e6d5b8]">
       
-      {/* Background Effect */}
-      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.8)_100%)]" />
+      {/* Background Effect - Mantido o original, apenas ajustado a cor da vinheta para marrom */}
+      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(69,26,3,0.15)_100%)]" />
 
-      {/* Header */}
-      <header className="relative z-10 w-full p-6 border-b-2 border-stone-800 bg-stone-950/90 backdrop-blur-md shadow-lg">
+      {/* Header - Cores de pergaminho e bordas duplas */}
+      <header className="relative z-10 w-full p-6 border-b-4 border-double border-amber-900/40 bg-[#e6d5b8]/90 backdrop-blur-md shadow-sm">
         <div className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4">
             <Link href="/" className="inline-block group">
-                <h1 className="text-4xl font-bold tracking-wider uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-500 via-red-600 to-red-900 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 0 10px rgba(220, 38, 38, 0.3)' }}>
+                {/* Gradiente do título mais profundo, tipo tinta */}
+                <h1 className="text-4xl font-bold tracking-wider uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-700 via-red-800 to-red-950 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 1px 2px rgba(69,26,3,0.1)' }}>
                     a-Tormenta
                 </h1>
             </Link>
             <div className="flex items-center gap-3 text-sm font-bold tracking-wide uppercase">
-                <Link href="/" className="text-stone-500 hover:text-amber-600 transition-colors">
+                <Link href="/" className="text-amber-900/60 hover:text-red-700 transition-colors">
                     Início
                 </Link>
-                <span className="text-stone-700">/</span>
-                <span className="text-amber-700">Classes</span>
+                <span className="text-amber-900/40">/</span>
+                <span className="text-red-800">Classes</span>
             </div>
         </div>
       </header>
@@ -55,35 +57,36 @@ export default function ClassesPage() {
         {/* Título e Introdução - MANTENDO A ORDEM EXATA DO TEXTO ORIGINAL */}
         <div className="mb-12 w-full space-y-8 text-lg leading-relaxed">
             <div>
-                <h2 className="text-4xl font-bold text-amber-700 mb-3 border-b border-stone-800 pb-2">Classes</h2>
-                <p className="text-stone-300">Uma classe é como uma profissão. Ela representa a forma que você escolheu para enfrentar os perigos do mundo e perseguir seus objetivos — com armas, perícias ou magias.</p>
+                {/* Bordas e textos ajustados para tons de marrom/sépia */}
+                <h2 className="text-4xl font-bold text-amber-800 mb-3 border-b-2 border-amber-900/20 pb-2">Classes</h2>
+                <p className="text-amber-900/80 font-medium">Uma classe é como uma profissão. Ela representa a forma que você escolheu para enfrentar os perigos do mundo e perseguir seus objetivos — com armas, perícias ou magias.</p>
             </div>
             
             <div>
-                <h2 className="text-2xl font-bold text-amber-700 mb-3">Escolhendo sua Classe</h2>
-                <p className="text-stone-300">A classe é a característica mais importante de um personagem e define que papel você terá no grupo de aventureiros. Tormenta20 contém quatorze classes. A tabela a seguir traz um resumo das classes, com uma descrição curta, sugestão de atributo principal, e PV, PM e perícias iniciais.</p>
+                <h2 className="text-2xl font-bold text-amber-800 mb-3">Escolhendo sua Classe</h2>
+                <p className="text-amber-900/80 font-medium">A classe é a característica mais importante de um personagem e define que papel você terá no grupo de aventureiros. Tormenta20 contém quatorze classes. A tabela a seguir traz um resumo das classes, com uma descrição curta, sugestão de atributo principal, e PV, PM e perícias iniciais.</p>
             </div>
 
             <div>
-                <h3 className="text-2xl font-bold text-amber-700 mb-3">Características das Classes</h3>
-                <p className="text-stone-300">Sua classe define seus pontos de vida e pontos de mana, quais perícias são treinadas e quais os tipos de armas e armaduras que você sabe usar (além de armas simples e armaduras leves, que todos os personagens sabem usar).</p>
+                <h3 className="text-2xl font-bold text-amber-800 mb-3">Características das Classes</h3>
+                <p className="text-amber-900/80 font-medium">Sua classe define seus pontos de vida e pontos de mana, quais perícias são treinadas e quais os tipos de armas e armaduras que você sabe usar (além de armas simples e armaduras leves, que todos os personagens sabem usar).</p>
             </div>
 
             <div>
-                <h3 className="text-2xl font-bold text-amber-700 mb-3">Habilidades e Poderes de Classes</h3>
-                <p className="text-stone-300">Você começa o jogo com todas as habilidades do 1º nível da sua classe. Todas as classes possuem uma habilidade “Poder” (Poder de Arcanista, Poder de Bárbaro, Poder de Bardo...) que permite que você escolha um poder de uma lista. Alguns poderes têm pré-requisitos. Para escolhê-los e usá-los, você deve possuir todos os requerimentos mencionados. Você pode escolher um poder no nível em que atinge seus pré-requisitos. A menos que especificado o contrário, você não pode escolher um mesmo poder mais de uma vez. Você sempre pode substituir um poder de classe por um poder geral. Para outros propósitos, poderes funcionam como habilidades. Poderes que aumentam o custo em PM de uma magia são poderes de aprimoramento.</p>
+                <h3 className="text-2xl font-bold text-amber-800 mb-3">Habilidades e Poderes de Classes</h3>
+                <p className="text-amber-900/80 font-medium text-justify">Você começa o jogo com todas as habilidades do 1º nível da sua classe. Todas as classes possuem uma habilidade “Poder” (Poder de Arcanista, Poder de Bárbaro, Poder de Bardo...) que permite que você escolha um poder de uma lista. Alguns poderes têm pré-requisitos. Para escolhê-los e usá-los, você deve possuir todos os requerimentos mencionados. Você pode escolher um poder no nível em que atinge seus pré-requisitos. A menos que especificado o contrário, você não pode escolher um mesmo poder mais de uma vez. Você sempre pode substituir um poder de classe por um poder geral. Para outros propósitos, poderes funcionam como habilidades. Poderes que aumentam o custo em PM de uma magia são poderes de aprimoramento.</p>
             </div>
 
             <div>
-                <h3 className="text-2xl font-bold text-amber-700 mb-3">Subindo de Nível</h3>
-                <p className="text-stone-300 mb-4">Quando acumula XP suficiente você sobe de nível. Quando isso acontece, você ganha três benefícios, seus PV e PM aumentam de acordo com a sua classe. Some sua Constituição aos PV que ganha por nível (mas você sempre ganha pelo menos 1 PV ao subir de nível). Você ganha todas as habilidades do nível alcançado. Consulte a página da sua classe para saber quais. E por fim, seu bônus em perícias é igual à metade do seu nível. Assim, a cada nível par (2º, 4º, 6º etc.) ele aumenta em +1. Isso representa o fato de que heróis experientes se tornam mais capazes. Você usa o número antes da barra para perícias treinadas e o número depois da barra para perícias não treinadas.</p>
-                <p className="text-stone-400 italic font-bold">Mais informações, sobre Patamares e Multiclasses estão no final da página.</p>
+                <h3 className="text-2xl font-bold text-amber-800 mb-3">Subindo de Nível</h3>
+                <p className="text-amber-900/80 font-medium mb-4 text-justify">Quando acumula XP suficiente você sobe de nível. Quando isso acontece, você ganha três benefícios, seus PV e PM aumentam de acordo com a sua classe. Some sua Constituição aos PV que ganha por nível (mas você sempre ganha pelo menos 1 PV ao subir de nível). Você ganha todas as habilidades do nível alcançado. Consulte a página da sua classe para saber quais. E por fim, seu bônus em perícias é igual à metade do seu nível. Assim, a cada nível par (2º, 4º, 6º etc.) ele aumenta em +1. Isso representa o fato de que heróis experientes se tornam mais capazes. Você usa o número antes da barra para perícias treinadas e o número depois da barra para perícias não treinadas.</p>
+                <p className="text-red-800 italic font-bold">Mais informações, sobre Patamares e Multiclasses estão no final da página.</p>
             </div>
         </div>
 
-        {/* Search */}
-        <div className="mb-12 p-6 rounded bg-stone-900 border border-stone-800 shadow-inner w-full">
-          <label className="block text-sm font-bold text-stone-400 mb-3 uppercase tracking-wider">
+        {/* Search - Estilo "Caixa de Madeira/Papel" */}
+        <div className="mb-12 p-6 rounded bg-[#e8dac1] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] w-full">
+          <label className="block text-sm font-bold text-amber-900/60 mb-3 uppercase tracking-wider">
             Buscar Classe
           </label>
            <div className="relative">
@@ -92,9 +95,10 @@ export default function ClassesPage() {
                 placeholder="Digite o nome ou origem..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-5 py-3 bg-stone-950 border border-stone-700 rounded text-stone-200 placeholder-stone-600 focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-900 transition-all font-serif"
+                // Input com cor de papel mais claro
+                className="w-full px-5 py-3 bg-[#fbf5e6] border-2 border-amber-900/20 rounded text-amber-900 placeholder-amber-900/40 focus:outline-none focus:border-amber-700 focus:ring-1 focus:ring-amber-700 transition-all font-serif shadow-sm"
             />
-             <div className="absolute right-4 top-1/2 -translate-y-1/2 text-stone-600">
+             <div className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/40">
                 🔍
             </div>
           </div>
@@ -106,88 +110,91 @@ export default function ClassesPage() {
             <div
               key={cls.id}
               onClick={() => setSelectedClass(cls)}
-              className="group relative overflow-hidden rounded bg-stone-900 border border-stone-800 hover:border-amber-700/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_4px_20px_rgba(0,0,0,0.6)] cursor-pointer flex flex-col"
+              // Cards com fundo de papiro e bordas de couro
+              className="group relative overflow-hidden rounded bg-[#e8dac1] border border-amber-900/30 hover:border-amber-700/80 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_4px_20px_rgba(69,26,3,0.15)] cursor-pointer flex flex-col"
             >
-              {/* Imagem de fundo - FUNDO BRANCO SOLICITADO */}
-              <div className="relative w-full h-64 bg-white border-b border-stone-800 overflow-hidden flex items-center justify-center">
+              {/* Imagem de fundo - FUNDO BRANCO SOLICITADO (Ajustado com mix-blend para parecer desenhado no papel) */}
+              <div className="relative w-full h-64 bg-[#f0e6d2] border-b border-amber-900/10 overflow-hidden flex items-center justify-center">
                 {cls.image ? (
                   <img
                     src={cls.image}
                     alt={cls.name}
-                    // Removido filtros de opacidade/saturação para ficar nítido no fundo branco
-                    className="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500"
+                    // ADICIONADO: mix-blend-multiply e sepia para fundir a imagem branca no papel bege
+                    className="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500 mix-blend-multiply filter sepia-[0.3] opacity-90 group-hover:opacity-100"
                   />
                 ) : (
-                  <div className="text-6xl text-stone-300">🧙</div>
+                  <div className="text-6xl text-amber-900/20">🧙</div>
                 )}
               </div>
 
               {/* Conteúdo */}
-              <div className="relative p-5 text-center flex-1 flex flex-col justify-between bg-stone-900">
+              <div className="relative p-5 text-center flex-1 flex flex-col justify-between bg-[#e8dac1]">
                  {/* ADICIONADO: 'w-full flex flex-col items-center' para forçar centralização */}
                  <div className="w-full flex flex-col items-center">
-                    {/* Decorative Diamond */}
+                    {/* Decorative Diamond - Cor ajustada */}
                     {/* Pode remover o mx-auto, pois o items-center do pai já centraliza, mas deixei limpo abaixo */}
-                    <div className="w-2 h-2 bg-amber-900/40 rotate-45 mb-2 group-hover:bg-amber-500 transition-colors duration-300"></div>
+                    <div className="w-2 h-2 bg-amber-900/40 rotate-45 mb-2 group-hover:bg-red-600 transition-colors duration-300"></div>
 
-                    <h3 className="text-xl font-bold text-stone-200 group-hover:text-amber-500 transition-colors mb-3 font-serif tracking-wide">
+                    <h3 className="text-xl font-bold text-amber-950 group-hover:text-red-700 transition-colors mb-3 font-serif tracking-wide">
                     {cls.name}
                     </h3>
                 </div>
                 
                 <div>
-                    <span className="inline-block px-3 py-1 rounded-sm text-xs font-bold uppercase tracking-widest bg-stone-950 text-stone-500 border border-stone-800 group-hover:border-amber-900/50 group-hover:text-amber-700 transition-colors">
+                    <span className="inline-block px-3 py-1 rounded-sm text-xs font-bold uppercase tracking-widest bg-[#f5e6d0] text-amber-900/60 border border-amber-900/10 group-hover:border-amber-900/30 group-hover:text-amber-800 transition-colors">
                     {cls.origin}
                     </span>
                 </div>
 
-                {/* Corner Borders */}
-                <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-stone-600 group-hover:border-amber-500 transition-colors"></div>
-                <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-stone-600 group-hover:border-amber-500 transition-colors"></div>
+                {/* Corner Borders - Cores ajustadas */}
+                <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-amber-900/30 group-hover:border-red-600 transition-colors"></div>
+                <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-amber-900/30 group-hover:border-red-600 transition-colors"></div>
               </div>
             </div>
           ))}
         </div>
 
         {filteredClasses.length === 0 && (
-          <div className="text-center py-20 border border-dashed border-stone-800 rounded bg-stone-900/30">
-            <p className="text-stone-500 text-lg italic">Nenhuma classe encontrada nos registros.</p>
+          <div className="text-center py-20 border-2 border-dashed border-amber-900/30 rounded bg-[#e8dac1]/50">
+            <p className="text-amber-900/60 text-lg italic">Nenhuma classe encontrada nos registros.</p>
           </div>
         )}
 
         {/* Seção de Informação Extra - MANTENDO A ORDEM DO TEXTO ORIGINAL */}
-        <div className="mt-16 space-y-12 w-full text-lg leading-relaxed p-8 rounded bg-stone-900/50 border border-stone-800">
+        {/* Fundo de pergaminho mais claro com borda */}
+        <div className="mt-16 space-y-12 w-full text-lg leading-relaxed p-8 rounded bg-[#e8dac1]/50 border border-amber-900/20 shadow-sm">
             
             <div>
-                <h3 className="text-3xl font-bold text-amber-700 mb-4 border-b border-stone-800 pb-2">Multiclasse</h3>
-                <p className="text-stone-300 mb-6">
+                <h3 className="text-3xl font-bold text-amber-800 mb-4 border-b-2 border-amber-900/10 pb-2">Multiclasse</h3>
+                <p className="text-amber-900/80 font-medium mb-6 text-justify">
                     Quando sobe de nível, você pode escolher outra classe. Essa opção é conhecida como multiclasse e fornece mais versatilidade, em troca de poder bruto. O qareen Zaled Rayeder, um arcanista de 3º nível, encontra um propósito para seus dons mágicos selvagens na ordem de Khalmyr, o Deus da Justiça. Ao subir para o 4º nível, escolhe um nível de paladino, tornando-se um arcanista 3/paladino 1. Zaled terá as habilidades de um arcanista de 3º nível e de um paladino de 1º nível.
                 </p>
-                <div className="space-y-3 pl-4 border-l-2 border-amber-900/30 text-base">
-                    <p> <span className="text-amber-600 font-bold"> Pontos de Vida: </span> <span className="text-stone-400">Quando você ganha o primeiro nível em uma nova classe, ganha os PV de um nível subsequente, não do primeiro. Zaled ganha 5 PV pelo primeiro nível de paladino, não 20.</span></p>
-                    <p> <span className="text-amber-600 font-bold"> Pontos de Mana: </span> <span className="text-stone-400">Some os PM fornecidos por cada classe para determinar seu montante total.</span></p>
-                    <p> <span className="text-amber-600 font-bold"> Perícias & Proficiências: </span> <span className="text-stone-400"> Quando você ganha o primeiro nível em uma nova classe, não ganha as perícias treinadas ou proficiências da nova classe.</span></p>
-                    <p> <span className="text-amber-600 font-bold"> Níveis de Classe e de Personagem: </span> <span className="text-stone-400"> Nível de classe são níveis numa classe específica. Já seu nível de personagem é a soma dos níveis de todas as suas classes. Zaled é um arcanista de 3º nível, um paladino de 1º nível e um personagem de 4º nível (a soma dos dois).</span></p>
+                <div className="space-y-3 pl-4 border-l-4 border-amber-900/30 text-base">
+                    <p> <span className="text-amber-700 font-bold"> Pontos de Vida: </span> <span className="text-amber-900/70">Quando você ganha o primeiro nível em uma nova classe, ganha os PV de um nível subsequente, não do primeiro. Zaled ganha 5 PV pelo primeiro nível de paladino, não 20.</span></p>
+                    <p> <span className="text-amber-700 font-bold"> Pontos de Mana: </span> <span className="text-amber-900/70">Some os PM fornecidos por cada classe para determinar seu montante total.</span></p>
+                    <p> <span className="text-amber-700 font-bold"> Perícias & Proficiências: </span> <span className="text-amber-900/70"> Quando você ganha o primeiro nível em uma nova classe, não ganha as perícias treinadas ou proficiências da nova classe.</span></p>
+                    <p> <span className="text-amber-700 font-bold"> Níveis de Classe e de Personagem: </span> <span className="text-amber-900/70"> Nível de classe são níveis numa classe específica. Já seu nível de personagem é a soma dos níveis de todas as suas classes. Zaled é um arcanista de 3º nível, um paladino de 1º nível e um personagem de 4º nível (a soma dos dois).</span></p>
                 </div>
             </div>
 
             <div>
-                <h3 className="text-3xl font-bold text-amber-700 mb-4 border-b border-stone-800 pb-2">Patamares de Jogo</h3>
-                <p className="text-stone-300 mb-6"> As classificações abaixo fornecem uma noção da escala de poder dos personagens e afetam certas habilidades.</p>
+                <h3 className="text-3xl font-bold text-amber-800 mb-4 border-b-2 border-amber-900/10 pb-2">Patamares de Jogo</h3>
+                <p className="text-amber-900/80 font-medium mb-6"> As classificações abaixo fornecem uma noção da escala de poder dos personagens e afetam certas habilidades.</p>
                 <div className="space-y-3 text-base">
-                    <p className="p-2 bg-stone-950 rounded border border-stone-800"><span className="text-stone-200 font-bold">Iniciante (1º ao 4º nível):</span><span className="text-stone-400"> Aventureiro novato, envolvido em missões locais, como proteger vilas do ataque de bandidos e escoltar caravanas.</span></p>
-                    <p className="p-2 bg-stone-950 rounded border border-stone-800"><span className="text-amber-600 font-bold">Veterano (5º ao 10º nível):</span><span className="text-stone-400"> Neste patamar, o herói presta serviços importantes a nobres e líderes de guildas.</span></p>
-                    <p className="p-2 bg-stone-950 rounded border border-stone-800"><span className="text-red-500 font-bold">Campeão (11º ao 16º nível):</span><span className="text-stone-400"> Já famoso por suas façanhas, o aventureiro trabalha para monarcas e enfrenta grandes vilões e monstros terríveis.</span></p>
-                    <p className="p-2 bg-stone-950 rounded border border-stone-800"><span className="text-purple-500 font-bold">Lenda (17º ao 20º nível):</span><span className="text-stone-400"> Entre os mais poderosos de Arton, o herói lida com perigos que ameaçam todo o mundo... Ou mesmo toda a realidade!</span></p>
+                    {/* Boxes de patamares ajustados para cores de papel */}
+                    <p className="p-3 bg-[#fbf5e6] rounded border border-amber-900/20 shadow-sm"><span className="text-amber-950 font-bold">Iniciante (1º ao 4º nível):</span><span className="text-amber-900/70"> Aventureiro novato, envolvido em missões locais, como proteger vilas do ataque de bandidos e escoltar caravanas.</span></p>
+                    <p className="p-3 bg-[#fbf5e6] rounded border border-amber-900/20 shadow-sm"><span className="text-amber-600 font-bold">Veterano (5º ao 10º nível):</span><span className="text-amber-900/70"> Neste patamar, o herói presta serviços importantes a nobres e líderes de guildas.</span></p>
+                    <p className="p-3 bg-[#fbf5e6] rounded border border-amber-900/20 shadow-sm"><span className="text-red-700 font-bold">Campeão (11º ao 16º nível):</span><span className="text-amber-900/70"> Já famoso por suas façanhas, o aventureiro trabalha para monarcas e enfrenta grandes vilões e monstros terríveis.</span></p>
+                    <p className="p-3 bg-[#fbf5e6] rounded border border-purple-900/20 shadow-sm"><span className="text-purple-800 font-bold">Lenda (17º ao 20º nível):</span><span className="text-amber-900/70"> Entre os mais poderosos de Arton, o herói lida com perigos que ameaçam todo o mundo... Ou mesmo toda a realidade!</span></p>
                 </div>
             </div>
 
             <div>
-                <h3 className="text-3xl font-bold text-amber-700 mb-4 border-b border-stone-800 pb-2">Classes Variantes</h3>
-                <p className="text-stone-300 mb-6"> As classes de Tormenta20 são versáteis, típicas e abrangentes. Representam a grande maioria dos aventureiros de Arton — são classes básicas.</p>
-                <p className="text-stone-300 mb-6"> Contudo, existem outros tipos de aventureiros. Heróis que se dedicam a um aspecto específico de seu caminho, abrindo mão de conhecimentos, habilidades e poderes genéricos. Suas personalidades não se adaptam ao treinamento “comum”. Eles procuram se concentrar em áreas e tarefas específicas. Adotam classes variantes.</p>
-                <p className="text-stone-300 mb-6"> Classes variantes são modificações de suas versões básicas; as características e habilidades descritas aqui substituem as da classe básica (aquelas não listadas não fazem parte da variante). Exceto por isso, a classe variante funciona como sua contraparte básica: usa a mesma lista de poderes e serve para cumprir quaisquer pré-requisitos que exijam a classe básica. Não é possível fazer multiclasse entre uma classe básica e uma de suas variantes — para todos os efeitos, ambas são a mesma classe.</p>
-                <p className="text-stone-300 mb-6"> A escolha por uma classe variante deve ser feita na criação do personagem ou ao alcançar o 1º nível da classe. Uma vez feita, não pode ser mudada. Nesta página, serão as classes representadas por "Nome da Classe (Classe Base)"</p>
+                <h3 className="text-3xl font-bold text-amber-800 mb-4 border-b-2 border-amber-900/10 pb-2">Classes Variantes</h3>
+                <p className="text-amber-900/80 font-medium mb-6 text-justify"> As classes de Tormenta20 são versáteis, típicas e abrangentes. Representam a grande maioria dos aventureiros de Arton — são classes básicas.</p>
+                <p className="text-amber-900/80 font-medium mb-6 text-justify"> Contudo, existem outros tipos de aventureiros. Heróis que se dedicam a um aspecto específico de seu caminho, abrindo mão de conhecimentos, habilidades e poderes genéricos. Suas personalidades não se adaptam ao treinamento “comum”. Eles procuram se concentrar em áreas e tarefas específicas. Adotam classes variantes.</p>
+                <p className="text-amber-900/80 font-medium mb-6 text-justify"> Classes variantes são modificações de suas versões básicas; as características e habilidades descritas aqui substituem as da classe básica (aquelas não listadas não fazem parte da variante). Exceto por isso, a classe variante funciona como sua contraparte básica: usa a mesma lista de poderes e serve para cumprir quaisquer pré-requisitos que exijam a classe básica. Não é possível fazer multiclasse entre uma classe básica e uma de suas variantes — para todos os efeitos, ambas são a mesma classe.</p>
+                <p className="text-amber-900/80 font-medium mb-6 text-justify"> A escolha por uma classe variante deve ser feita na criação do personagem ou ao alcançar o 1º nível da classe. Uma vez feita, não pode ser mudada. Nesta página, serão as classes representadas por "Nome da Classe (Classe Base)"</p>
             </div>
         </div>
       </main>
@@ -196,15 +203,16 @@ export default function ClassesPage() {
       {selectedClass && (
         <div
           onClick={handleBackdropClick}
-          className="fixed inset-0 bg-stone-950/90 backdrop-blur-sm flex items-center justify-center z-50 p-2 md:p-4"
+          // Backdrop marrom escuro
+          className="fixed inset-0 bg-[#2a1810]/80 backdrop-blur-sm flex items-center justify-center z-50 p-2 md:p-4"
         >
-          {/* Container do Modal com textura */}
-          <div className="bg-stone-900 border-2 border-stone-700 rounded-lg shadow-[0_0_60px_rgba(0,0,0,1)] max-w-4xl w-full max-h-[95vh] overflow-y-auto relative custom-scrollbar bg-[url('/noise.png')]">
+          {/* Container do Modal com textura - Cor de página envelhecida e borda dupla */}
+          <div className="bg-[#f2e8d5] border-4 border-double border-amber-900/40 rounded-lg shadow-[0_0_60px_rgba(69,26,3,0.3)] max-w-4xl w-full max-h-[95vh] overflow-y-auto relative custom-scrollbar bg-[url('/noise.png')]">
             
             {/* Botão de Fechar */}
             <button
               onClick={() => setSelectedClass(null)}
-              className="absolute top-6 right-6 text-stone-500 hover:text-red-600 transition-colors z-10 bg-stone-950/80 border border-stone-800 rounded-full w-10 h-10 flex items-center justify-center text-2xl pb-1"
+              className="absolute top-6 right-6 text-amber-900/60 hover:text-red-800 transition-colors z-10 bg-[#e8dac1] border border-amber-900/30 rounded-full w-10 h-10 flex items-center justify-center text-2xl pb-1 shadow-sm"
             >
               ×
             </button>
@@ -213,26 +221,27 @@ export default function ClassesPage() {
             <div className="p-8 md:p-12 font-serif">
               
               {/* Cabeçalho da Classe */}
-              <div className="mb-10 text-center border-b-2 border-stone-800 pb-8">
-                  <h2 className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-amber-500 to-amber-800 mb-4 tracking-wide">
+              <div className="mb-10 text-center border-b-2 border-amber-900/20 pb-8">
+                  {/* Gradiente de tinta escura */}
+                  <h2 className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-amber-700 via-red-800 to-amber-950 mb-4 tracking-wide">
                     {selectedClass.name}
                   </h2>
                   <div className="flex items-center justify-center gap-4">
-                    <div className="h-[1px] w-12 bg-amber-800/50"></div>
-                    <span className="inline-block text-lg font-bold uppercase tracking-[0.2em] text-amber-700">
+                    <div className="h-[1px] w-12 bg-amber-900/40"></div>
+                    <span className="inline-block text-lg font-bold uppercase tracking-[0.2em] text-red-800">
                         {selectedClass.origin}
                     </span>
-                    <div className="h-[1px] w-12 bg-amber-800/50"></div>
+                    <div className="h-[1px] w-12 bg-amber-900/40"></div>
                   </div>
               </div>
 
-              {/* Descrição */}
-              <div className="mb-10 p-6 bg-stone-950/40 border border-stone-800 rounded shadow-inner relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-1 h-full bg-amber-800/30"></div>
-                <h3 className="text-2xl font-bold text-amber-700 mb-4 flex items-center gap-2">
+              {/* Descrição - Caixa de papel mais claro */}
+              <div className="mb-10 p-6 bg-[#fffaf0] border border-amber-900/20 rounded shadow-inner relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-1 h-full bg-amber-900/20"></div>
+                <h3 className="text-2xl font-bold text-amber-800 mb-4 flex items-center gap-2">
                     <span>📖</span> Descrição
                 </h3>
-                <p className="text-stone-300 leading-relaxed whitespace-pre-line text-lg first-letter:text-5xl first-letter:font-bold first-letter:text-amber-800 first-letter:mr-2 first-letter:float-left">
+                <p className="text-amber-900/90 font-medium leading-relaxed whitespace-pre-line text-lg first-letter:text-5xl first-letter:font-bold first-letter:text-red-800 first-letter:mr-2 first-letter:float-left text-justify">
                   {selectedClass.description}
                 </p>
               </div>
@@ -240,39 +249,39 @@ export default function ClassesPage() {
               {/* Famosos */}
               {selectedClass.famousExamples && selectedClass.famousExamples.length > 0 && (
                 <div className="mb-10 text-center">
-                  <h3 className="text-lg font-bold text-stone-500 mb-3 uppercase tracking-widest flex items-center justify-center gap-2">
+                  <h3 className="text-lg font-bold text-amber-900/50 mb-3 uppercase tracking-widest flex items-center justify-center gap-2">
                     <span>🌟</span> Exemplos Famosos
                   </h3>
-                    <p className="text-amber-600 text-xl italic font-bold">
+                    <p className="text-amber-700 text-xl italic font-bold">
                       "{selectedClass.famousExamples.join(", ")}."
                     </p>
                 </div>
               )}
 
-              {/* Características Principais (Cards) */}
+              {/* Características Principais (Cards) - Estilo Cartões de Papiro */}
               <div className="mb-12">
-                <h3 className="text-3xl font-bold text-amber-800 mb-6 text-center border-b border-stone-800 pb-2">⚔️ Características de Classe</h3>
+                <h3 className="text-3xl font-bold text-amber-800 mb-6 text-center border-b border-amber-900/20 pb-2">⚔️ Características de Classe</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <div className="p-5 rounded bg-stone-950 border border-stone-800 text-center shadow-md">
-                    <p className="text-stone-500 text-xs font-bold uppercase tracking-wider mb-2">PV Iniciais</p>
-                    <p className="text-red-600 text-4xl font-bold flex items-center justify-center gap-1">
+                  <div className="p-5 rounded bg-[#e8dac1] border border-amber-900/20 text-center shadow-md">
+                    <p className="text-amber-900/60 text-xs font-bold uppercase tracking-wider mb-2">PV Iniciais</p>
+                    <p className="text-red-700 text-4xl font-bold flex items-center justify-center gap-1">
                         <span>❤</span> {selectedClass.characteristics.pvBase}
                     </p>
-                     <p className="text-stone-600 text-xs mt-1">+ Mod. Constituição</p>
+                      <p className="text-amber-900/50 text-xs mt-1">+ Mod. Constituição</p>
                   </div>
-                  <div className="p-5 rounded bg-stone-950 border border-stone-800 text-center shadow-md">
-                    <p className="text-stone-500 text-xs font-bold uppercase tracking-wider mb-2">PV por Nível</p>
-                    <p className="text-red-500 text-4xl font-bold">
+                  <div className="p-5 rounded bg-[#e8dac1] border border-amber-900/20 text-center shadow-md">
+                    <p className="text-amber-900/60 text-xs font-bold uppercase tracking-wider mb-2">PV por Nível</p>
+                    <p className="text-red-700 text-4xl font-bold">
                       +{selectedClass.characteristics.pvPerLevel}
                     </p>
-                    <p className="text-stone-600 text-xs mt-1">+ Mod. Constituição</p>
+                    <p className="text-amber-900/50 text-xs mt-1">+ Mod. Constituição</p>
                   </div>
-                  <div className="p-5 rounded bg-stone-950 border border-stone-800 text-center shadow-md">
-                    <p className="text-stone-500 text-xs font-bold uppercase tracking-wider mb-2">PM por Nível</p>
-                    <p className="text-blue-500 text-4xl font-bold flex items-center justify-center gap-1">
-                       <span>✨</span> {selectedClass.characteristics.pmPerLevel}
+                  <div className="p-5 rounded bg-[#e8dac1] border border-amber-900/20 text-center shadow-md">
+                    <p className="text-amber-900/60 text-xs font-bold uppercase tracking-wider mb-2">PM por Nível</p>
+                    <p className="text-blue-700 text-4xl font-bold flex items-center justify-center gap-1">
+                        <span>✨</span> {selectedClass.characteristics.pmPerLevel}
                     </p>
-                     <p className="text-stone-600 text-xs mt-1">Pontos de Mana</p>
+                      <p className="text-amber-900/50 text-xs mt-1">Pontos de Mana</p>
                   </div>
                 </div>
               </div>
@@ -281,17 +290,17 @@ export default function ClassesPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                   {/* Coluna da Esquerda: Perícias */}
                   <div>
-                    <h3 className="text-2xl font-bold text-amber-700 mb-6 border-b border-stone-800 pb-2 flex items-center gap-2">
+                    <h3 className="text-2xl font-bold text-amber-800 mb-6 border-b border-amber-900/20 pb-2 flex items-center gap-2">
                         <span>🎯</span> Perícias
                     </h3>
                     
                     <div className="mb-6">
-                        <p className="text-stone-400 mb-3 text-sm uppercase tracking-wide font-bold flex items-center gap-2">
+                        <p className="text-amber-900/50 mb-3 text-sm uppercase tracking-wide font-bold flex items-center gap-2">
                             <span className="w-2 h-2 bg-amber-700 rotate-45"></span> Treinamento Inicial Obrigatório:
                         </p>
                         <ul className="space-y-2">
                             {selectedClass.skills.mandatory.map((skill, index) => (
-                            <li key={index} className="flex items-center gap-2 text-stone-200 font-bold text-lg">
+                            <li key={index} className="flex items-center gap-2 text-amber-950 font-bold text-lg">
                                 <span className="text-amber-600">✓</span> {skill}
                             </li>
                             ))}
@@ -299,12 +308,13 @@ export default function ClassesPage() {
                     </div>
 
                     <div>
-                        <p className="text-stone-400 mb-3 text-sm uppercase tracking-wide font-bold flex items-center gap-2">
-                            <span className="w-2 h-2 bg-stone-600 rotate-45"></span> Escolha mais <span className="text-amber-500 text-lg">{selectedClass.skills.optional.count}</span>:
+                        <p className="text-amber-900/50 mb-3 text-sm uppercase tracking-wide font-bold flex items-center gap-2">
+                            <span className="w-2 h-2 bg-amber-900/40 rotate-45"></span> Escolha mais <span className="text-amber-600 text-lg">{selectedClass.skills.optional.count}</span>:
                         </p>
                         <div className="flex flex-wrap gap-2">
                             {selectedClass.skills.optional.skills.map((skill, index) => (
-                            <span key={index} className="px-3 py-1 rounded-full bg-stone-950 border border-stone-800 text-stone-400 text-sm">
+                            // Tags de perícia estilo etiquetas de papel
+                            <span key={index} className="px-3 py-1 rounded-sm bg-[#fbf5e6] border border-amber-900/20 text-amber-900/70 text-sm shadow-sm">
                                 {skill}
                             </span>
                             ))}
@@ -314,12 +324,12 @@ export default function ClassesPage() {
 
                   {/* Coluna da Direita: Proficiências */}
                   <div>
-                     <h3 className="text-2xl font-bold text-amber-700 mb-6 border-b border-stone-800 pb-2 flex items-center gap-2">
+                      <h3 className="text-2xl font-bold text-amber-800 mb-6 border-b border-amber-900/20 pb-2 flex items-center gap-2">
                         <span>🛡️</span> Proficiências
                     </h3>
-                    <div className="p-6 bg-stone-950/50 rounded border border-stone-800 shadow-inner flex items-start gap-4">
-                        <span className="text-4xl">⚔️</span>
-                        <p className="text-stone-300 text-lg leading-relaxed font-bold">
+                    <div className="p-6 bg-[#e8dac1]/50 rounded border border-amber-900/20 shadow-inner flex items-start gap-4">
+                        <span className="text-4xl opacity-60">⚔️</span>
+                        <p className="text-amber-950 text-lg leading-relaxed font-bold">
                             {selectedClass.proficiency}
                         </p>
                     </div>
@@ -331,18 +341,19 @@ export default function ClassesPage() {
                 <div className="mb-12 flex justify-center">
                   <Link 
                     href={selectedClass.powersUrl} // Puxa direto do seu JSON/Data
-                    className="group relative inline-flex items-center justify-center px-10 py-5 overflow-hidden font-serif font-bold text-white transition-all duration-300 bg-stone-950 border border-stone-700 hover:border-amber-600 hover:bg-stone-900 shadow-lg hover:shadow-[0_0_30px_rgba(217,119,6,0.2)]"
+                    // Botão estilo madeira escura/couro com texto dourado
+                    className="group relative inline-flex items-center justify-center px-10 py-5 overflow-hidden font-serif font-bold text-amber-100 transition-all duration-300 bg-[#5c2e0e] border-2 border-[#78350f] hover:border-amber-500 hover:bg-[#78350f] shadow-[0_4px_15px_rgba(0,0,0,0.2)] rounded-sm"
                   >
-                    {/* Textura de fundo */}
+                    {/* Textura de fundo - mantida a original */}
                     <span className="absolute inset-0 w-full h-full bg-[url('/noise.png')] opacity-20"></span>
                     
                     {/* Conteúdo do Botão */}
-                    <span className="relative text-lg uppercase tracking-[0.25em] text-stone-400 group-hover:text-amber-500 transition-colors flex items-center gap-4">
-                      <span className="text-amber-800 group-hover:text-amber-500 transition-colors">❖</span> 
+                    <span className="relative text-lg uppercase tracking-[0.25em] text-amber-200/80 group-hover:text-amber-100 transition-colors flex items-center gap-4">
+                      <span className="text-amber-500 group-hover:text-amber-300 transition-colors">❖</span> 
                       
                       Ver Poderes de {selectedClass.name}
                       
-                      <span className="text-amber-800 group-hover:text-amber-500 transition-colors">❖</span>
+                      <span className="text-amber-500 group-hover:text-amber-300 transition-colors">❖</span>
                     </span>
                   </Link>
                 </div>
@@ -350,24 +361,22 @@ export default function ClassesPage() {
 
               {/* Habilidades de Classe */}
               <div className="mb-12">
-                <h3 className="text-3xl font-bold text-amber-800 mb-8 text-center border-b border-stone-800 pb-2">✨ Habilidades de Classe</h3>
+                <h3 className="text-3xl font-bold text-amber-800 mb-8 text-center border-b border-amber-900/20 pb-2">✨ Habilidades de Classe</h3>
                 <div className="space-y-8">
                   {selectedClass.abilities.map((ability, index) => (
                     <div key={index} className="relative group">
-                      {/* Marcador lateral */}
-                      <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-amber-700 via-amber-900 to-stone-900 rounded-l"></div>
-                      
-                      <div className="ml-1 rounded-r bg-stone-900 border border-stone-800 overflow-hidden shadow-sm hover:border-amber-800/50 transition-colors">
+              
+                      <div className="ml-1 rounded-r bg-[#fbf5e6] border border-amber-900/20 overflow-hidden shadow-sm hover:border-amber-700/50 transition-colors">
                         {/* Título da Habilidade */}
-                        <div className="p-5 bg-stone-950 border-b border-stone-800">
-                          <h4 className="text-2xl font-bold text-amber-600">{ability.name}</h4>
+                        <div className="p-5 bg-[#e8dac1] border-b border-amber-900/10">
+                          <h4 className="text-2xl font-bold text-red-800">{ability.name}</h4>
                         </div>
 
-                        {/* Conteúdo da Habilidade */}
+                        {/* Conteúdo da Habilidade - Fundo com ruído original mantido */}
                         <div className="p-6 bg-[url('/noise.png')]">
                           {/* Descrição Geral */}
                           {ability.description && (
-                            <p className="text-stone-300 leading-relaxed whitespace-pre-wrap text-lg">
+                            <p className="text-amber-900/90 leading-relaxed whitespace-pre-wrap text-lg font-medium">
                               {ability.description}
                             </p>
                           )}
@@ -376,11 +385,11 @@ export default function ClassesPage() {
                           {ability.subAbilities && ability.subAbilities.length > 0 && (
                             <div className="space-y-6 mt-8">
                               {ability.subAbilities.map((subAbility, subIndex) => (
-                                <div key={subIndex} className="pl-6 border-l-4 border-stone-800">
-                                  <h5 className="text-xl font-bold text-amber-700 mb-2 flex items-center gap-2">
-                                     <span className="text-xs">◆</span> {subAbility.name}
+                                <div key={subIndex} className="pl-6 border-l-4 border-amber-900/30">
+                                  <h5 className="text-xl font-bold text-amber-800 mb-2 flex items-center gap-2">
+                                     <span className="text-xs text-amber-600">◆</span> {subAbility.name}
                                   </h5>
-                                  <p className="text-stone-400 text-base leading-relaxed whitespace-pre-wrap">
+                                  <p className="text-amber-900/80 text-base leading-relaxed whitespace-pre-wrap font-medium">
                                     {subAbility.description}
                                   </p>
                                 </div>
@@ -394,10 +403,10 @@ export default function ClassesPage() {
                 </div>
               </div>
 
-              {/* Extras/Regras Especiais */}
+              {/* Extras/Regras Especiais - Estilo Tinta Roxa/Mágica no Pergaminho */}
               {selectedClass.extras && selectedClass.extras.length > 0 && (
-                <div className="mb-12 p-6 bg-purple-950/10 rounded border border-purple-900/30">
-                  <h3 className="text-2xl font-bold text-purple-400 mb-6 flex items-center gap-3">
+                <div className="mb-12 p-6 bg-purple-100/50 rounded border border-purple-900/20">
+                  <h3 className="text-2xl font-bold text-purple-900 mb-6 flex items-center gap-3">
                     <span>⭐</span> Regras Especiais & Notas
                   </h3>
                   
@@ -405,14 +414,14 @@ export default function ClassesPage() {
                     {selectedClass.extras.map((extra, index) => (
                       <div
                         key={index}
-                        className="pb-6 border-b border-purple-900/20 last:border-0"
+                        className="pb-6 border-b border-purple-900/10 last:border-0"
                       >
                         {/* Título do Extra Principal */}
-                        <h4 className="text-purple-300 font-bold text-xl mb-3">{extra.title}</h4>
+                        <h4 className="text-purple-800 font-bold text-xl mb-3">{extra.title}</h4>
                         
                         {/* Descrição Principal */}
                         {extra.description && (
-                          <p className="text-stone-400 text-base leading-relaxed whitespace-pre-line mb-6">
+                          <p className="text-purple-950/80 text-base leading-relaxed whitespace-pre-line mb-6 font-medium">
                             {extra.description}
                           </p>
                         )}
@@ -421,13 +430,13 @@ export default function ClassesPage() {
                         {extra.sections && (
                           <div className="space-y-6 mt-4 pl-4 border-l-2 border-purple-900/20">
                             {extra.sections.map((section, sIndex) => (
-                              <div key={sIndex} className="bg-stone-900/30 p-4 rounded">
-                                <h5 className="text-amber-600 font-bold text-lg mb-2 uppercase tracking-wide">
+                              <div key={sIndex} className="bg-white/60 p-4 rounded border border-purple-200">
+                                <h5 className="text-amber-700 font-bold text-lg mb-2 uppercase tracking-wide">
                                   {section.title}
                                 </h5>
                                 
                                 {section.intro && (
-                                  <p className="text-stone-500 italic mb-4 text-sm">
+                                  <p className="text-purple-900/60 italic mb-4 text-sm">
                                     {section.intro}
                                   </p>
                                 )}
@@ -435,10 +444,10 @@ export default function ClassesPage() {
                                 <dl className="space-y-3">
                                   {section.content.map((item, cIndex) => (
                                     <div key={cIndex} className="group">
-                                      <dt className="text-stone-200 font-bold inline text-base">
+                                      <dt className="text-purple-900 font-bold inline text-base">
                                         {item.name}:
                                       </dt>
-                                      <dd className="text-stone-400 inline ml-2 text-base leading-relaxed">
+                                      <dd className="text-purple-950/80 inline ml-2 text-base leading-relaxed font-medium">
                                         {item.description}
                                       </dd>
                                     </div>
@@ -454,29 +463,30 @@ export default function ClassesPage() {
                 </div>
               )}
 
-              {/* Tabela de Progressão de Níveis */}
+              {/* Tabela de Progressão de Níveis - Estilo Tabela Desenhada a Mão */}
               <div className="mb-8">
-                <h3 className="text-2xl font-bold text-amber-700 mb-6 border-b border-stone-800 pb-2 flex items-center gap-2">
+                <h3 className="text-2xl font-bold text-amber-800 mb-6 border-b border-amber-900/20 pb-2 flex items-center gap-2">
                     <span>📈</span> Tabela de Progressão
                 </h3>
-                <div className="overflow-x-auto rounded border border-stone-800 shadow-xl">
+                <div className="overflow-x-auto rounded border-2 border-amber-900/30 shadow-sm">
                   <table className="w-full text-left">
                     <thead>
-                      <tr className="bg-stone-950 border-b border-stone-800">
-                        <th className="p-4 text-amber-600 font-bold w-24 uppercase text-sm tracking-wider border-r border-stone-800 text-center">Nível</th>
-                        <th className="p-4 text-amber-600 font-bold uppercase text-sm tracking-wider">Habilidades Adquiridas</th>
+                      <tr className="bg-[#e6d5b8] border-b-2 border-amber-900/30">
+                        <th className="p-4 text-amber-900 font-bold w-24 uppercase text-sm tracking-wider border-r-2 border-amber-900/30 text-center">Nível</th>
+                        <th className="p-4 text-amber-900 font-bold uppercase text-sm tracking-wider">Habilidades Adquiridas</th>
                       </tr>
                     </thead>
-                    <tbody className="bg-stone-900 divide-y divide-stone-800">
+                    <tbody className="bg-[#fffbf2] divide-y divide-amber-900/10">
                       {selectedClass.levelProgression.map((progression, index) => (
                         <tr
                           key={index}
-                          className={`${index % 2 === 0 ? 'bg-stone-900/50' : 'bg-stone-900'} hover:bg-amber-900/10 transition-colors`}
+                          // Alternância de cores sutis de papel
+                          className={`${index % 2 === 0 ? 'bg-[#fffbf2]' : 'bg-[#f9f2e0]'} hover:bg-amber-100 transition-colors`}
                         >
-                          <td className="p-4 text-stone-200 font-bold text-center border-r border-stone-800 text-lg">
+                          <td className="p-4 text-red-900 font-bold text-center border-r-2 border-amber-900/20 text-lg">
                             {progression.level}º
                           </td>
-                          <td className="p-4 text-stone-300 text-lg">
+                          <td className="p-4 text-amber-950/90 text-lg font-medium">
                             {progression.abilities}
                           </td>
                         </tr>
@@ -488,9 +498,9 @@ export default function ClassesPage() {
               
               {/* Fim do Modal - Decoração */}
               <div className="mt-12 flex items-center justify-center gap-4 opacity-50">
-                    <div className="h-[1px] w-20 bg-amber-800"></div>
-                    <span className="text-amber-800 text-2xl">❖</span>
-                    <div className="h-[1px] w-20 bg-amber-800"></div>
+                    <div className="h-[2px] w-20 bg-amber-900/60"></div>
+                    <span className="text-amber-900/60 text-2xl">❖</span>
+                    <div className="h-[2px] w-20 bg-amber-900/60"></div>
               </div>
 
             </div>
@@ -498,9 +508,9 @@ export default function ClassesPage() {
         </div>
       )}
 
-      {/* Footer */}
-      <footer className="mt-20 p-6 border-t border-stone-900 bg-black text-center text-stone-600 text-sm relative z-10">
-        <p>Compêndio Tormenta RPG © 2025</p>
+      {/* Footer - Estilo Rodapé de Couro Escuro */}
+      <footer className="mt-20 p-6 border-t-4 border-double border-amber-900/40 bg-[#2a231d] text-center text-amber-200/40 text-sm relative z-10">
+        <p className="mb-1">Compêndio Tormenta RPG © 2025</p>
         <p>Tormenta 20 pertence a Jambo Editora. Todos os direitos são reservados a editora.</p>
       </footer>
     </div>
