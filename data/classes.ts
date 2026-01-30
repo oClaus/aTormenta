@@ -3036,6 +3036,84 @@ export const classes: GameClass[] = [
       { level: 20, abilities: "Debulhar inimigos, poder de ladino" }
     ],
     },
+    { id: "Cruzado (Clérigo)",
+    name: "Cruzado (Clérigo)",
+    powersUrl: "/poderes/clerigo",
+    origin: "Dragão Brasil",
+    image: "/classes/cruzado.png",
+    description: "‘Os deuses perdoam. Eu apenas providencio o encontro com eles.’\nEntre os sacerdotes, o cruzado é o que mais vive com um pé no campo de batalha. Seus templos lembram fortalezas, seus hinos soam como comandos militares, e suas orações terminam com o ar metálico do aço sendo desembainhado. Para o cruzado, empunhar uma arma é tão sagrado quanto erguer um símbolo divino — às vezes, até mais.\nEnquanto muitos clérigos veem a fé como guia espiritual, o cruzado a trata como missão. Luta para proteger santuários isolados, marcha por fronteiras perigosas e permanece onde outros não poderiam. É enviado para locais onde o dogma precisa de muralhas, e onde cada inimigo derrotado é mais um triunfo dedicado à sua divindade.\nEssa postura marcial torna o cruzado firme, devoto — e, por vezes, inflexível. Ele respeita aliados da fé, mas raramente perde tempo tentando compreender crenças diferentes. Não por maldade, mas por convicção: acredita que sua dureza é necessária para que sacerdotes mais sábios e pacíficos possam seguir pregando.\nApesar de sua reputação severa, muitos cruzados carregam dúvidas silenciosas. Sabem que derramar sangue em nome da fé deixa marcas que não somem com simples orações. Ainda assim, continuam. Caminham por estradas que poucos aceitariam trilhar e defendem o sagrado com a ferocidade de quem acredita estar erguendo algo maior do que si próprio. Talvez, séculos depois, ninguém lembre o preço pago — mas para o cruzado, é justamente por isso que vale a pena lutar.",
+    characteristics: {
+      pvBase: "16 + Constituição",
+      pvPerLevel: "4 + Constituição",
+      pmPerLevel: "5 PM por nível"
+    },
+    skills: {
+    mandatory: ['Luta (For) ou Pontaria (Des)', 'Religião (Sab)'],
+    optional: {
+      skills: [      
+        'Conhecimento (Int)', 'Cura (Sab)', 'Diplomacia (Car)', 'Fortitude (Con)', 'Iniciativa (Des)', 'Intuição (Sab)', 'Luta (For)', 'Misticismo (Int)', 'Nobreza (Int)', 'Ofício (Int)', 'Percepção (Sab)', 'Pontaria (Des)', 'Vontade (Sab)'
+      ],
+      count: 2
+      }
+    },
+    proficiency: "Armas marciais, armaduras pesadas e escudos.",
+    abilities: [
+      {
+        name: "Devoto Fiel",
+        description: "Você se torna devoto de um deus maior. Veja as regras de devotos. Ao contrário de devotos normais, você recebe dois poderes concedidos por se tornar devoto, em vez de apenas um. Como alternativa, você pode cultuar o Panteão como um todo. Não recebe nenhum Poder Concedido, mas sua única obrigação e restrição é não usar armas cortantes ou perfurantes (porque derramam sangue, algo que clérigos do Panteão consideram proibido). Sua arma preferida é a maça e você pode canalizar energia positiva ou negativa à sua escolha (uma vez feita, essa escolha não pode ser mudada). Cultuar o Panteão conta como sua devoção. Mas você não pode escolher ser um clérigo de Lena, Marah, Sszzaas, Wynna ou um clérigo do Panteão."
+      },
+      {
+        name: "Magias",
+        description: "Você pode lançar magias divinas de 1º círculo. A cada quatro níveis, pode lançar magias de um círculo maior (2º círculo no 5º nível, 3º círculo no 9º nível e assim por diante). Você começa com três magias de 1º círculo. A cada nível, aprende uma magia de qualquer círculo que possa lançar. Seu atributo-chave para lançar magias é Sabedoria e você soma sua Sabedoria no seu total de PM."
+      },
+      {
+        name: "Presente dos Deuses",
+        description: "Você começa o jogo com uma arma superior com uma melhoria (exceto material especial) com preço total de até T$ 500. Preferencialmente, este item deve ser a arma preferida do seu deus, mas pode ser outra, de acordo com o mestre.\nNos níveis 5, 8 e 11, esse item recebe, respectivamente, uma segunda, terceira e quarta melhorias à sua escolha. Nos níveis 9, 14 e 18, esse item recebe, respectivamente, um, dois e três encantos à sua escolha.\nSeu presente dos deuses funciona como a versão mundana da arma, mas ele não ocupa espaços no inventário pois você deve gastar uma ação de movimento e 2 PM para invocá-lo com um brilho de luz dourada — efeito que dura até o fim da cena, quando o item desaparece e volta para o mundo divino de onde veio."
+      },
+      {
+        name: "Alma Guerreira",
+        description: "No 2º nível, quando invoca seu presente dos deuses em um combate, você recebe uma quantidade de pontos de vida temporários igual a seu nível + sua Sabedoria."
+      },
+      {
+        name: "Poder de Clérigo",
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um dos poderes de clérigo ou geral."
+      },
+      {
+        name: "Fé Inabalável",
+        description: "No 3º nível, enquanto estiver empunhando seu presente dos deuses, você não fica inconsciente por estar com 0 PV ou menos (você ainda morre se chegar a um valor negativo igual à metade de seus pontos de vida máximos)."
+      },
+      {
+        name: "Oração Marcial",
+        description: "No 10º nível, você pode, uma vez por dia, gastar uma hora e 5 PM para rezar ao seu deus e pedir orientação em combate; então escolha um poder de clérigo, de guerreiro ou de combate cujos pré-requisitos cumpra. Você recebe os benefícios desse poder até o próximo dia."
+      },
+      {
+        name: "Guerreiro Santificado",
+        description: "No 20º nível, você torna-se tão formidável em combate quanto seus aliados combatentes. Você pode usar Ataque Especial (Tormenta20, p. 65) como se fosse um guerreiro de 20º nível. Além disso, se usar essa habilidade em um ataque feito com o seu presente dos deuses, o custo para usá-la é reduzido em –1 PM."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Devoto fiel, magias (1º círculo), presente dos deuses (1 melhoria)" },
+      { level: 2, abilities: "Alma guerreira, poder de clérigo" },
+      { level: 3, abilities: "Fé inabalável, poder de clérigo" },
+      { level: 4, abilities: "Poder de clérigo" },
+      { level: 5, abilities: "Magias (2º círculo), poder de clérigo, presente dos deuses (2 melhorias)" },
+      { level: 6, abilities: "Poder de clérigo" },
+      { level: 7, abilities: "Poder de clérigo" },
+      { level: 8, abilities: "Poder de clérigo, presente dos deuses (3 melhorias)" },
+      { level: 9, abilities: "Magias (3º círculo), poder de clérigo, presente dos deuses (3 melhorias, 1 encanto)" },
+      { level: 10, abilities: "Oração marcial, poder de clérigo" },
+      { level: 11, abilities: "Poder de clérigo, presente dos deuses (4 melhorias, 1 encanto)" },
+      { level: 12, abilities: "Poder de clérigo" },
+      { level: 13, abilities: "Magias (4º círculo), poder de clérigo" },
+      { level: 14, abilities: "Poder de clérigo, presente dos deuses (4 melhorias, 2 encantos)" },
+      { level: 15, abilities: "Poder de clérigo" },
+      { level: 16, abilities: "Poder de clérigo" },
+      { level: 17, abilities: "Magias (5º círculo), poder de clérigo" },
+      { level: 18, abilities: "Poder de clérigo, presente dos deuses (4 melhorias, 3 encantos)" },
+      { level: 19, abilities: "Poder de clérigo" },
+      { level: 20, abilities: "Guerreiro Santificado, poder de clérigo" }
+    ],
+    },
 
     
     

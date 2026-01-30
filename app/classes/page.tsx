@@ -16,27 +16,21 @@ export default function ClassesPage() {
     )
     .sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
 
-  // --- NOVA FUNÇÃO: Fecha o modal se clicar no fundo escuro ---
   const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    // e.target é o elemento clicado
-    // e.currentTarget é o elemento que tem o evento (o fundo escuro)
     if (e.target === e.currentTarget) {
       setSelectedClass(null);
     }
   };
 
   return (
-    // MUDANÇA GERAL: Fundo bege claro, texto marrom escuro, seleção sépia
     <div className="min-h-screen bg-[#f5e6d0] text-amber-950 font-serif selection:bg-amber-800 selection:text-amber-50 relative overflow-x-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#f5e6d0] to-[#e6d5b8]">
       
-      {/* Background Effect - Mantido o original, apenas ajustado a cor da vinheta para marrom */}
       <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(69,26,3,0.15)_100%)]" />
 
-      {/* Header - Cores de pergaminho e bordas duplas */}
+      {/* Header */}
       <header className="relative z-10 w-full p-6 border-b-4 border-double border-amber-900/40 bg-[#e6d5b8]/90 backdrop-blur-md shadow-sm">
         <div className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4">
             <Link href="/" className="inline-block group">
-                {/* Gradiente do título mais profundo, tipo tinta */}
                 <h1 className="text-4xl font-bold tracking-wider uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-700 via-red-800 to-red-950 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 1px 2px rgba(69,26,3,0.1)' }}>
                     a-Tormenta
                 </h1>
@@ -54,10 +48,9 @@ export default function ClassesPage() {
       {/* Main Content */}
       <main className="relative z-10 w-full px-6 py-12">
         
-        {/* Título e Introdução - MANTENDO A ORDEM EXATA DO TEXTO ORIGINAL */}
+        {/* Título e Introdução */}
         <div className="mb-12 w-full space-y-8 text-lg leading-relaxed">
             <div>
-                {/* Bordas e textos ajustados para tons de marrom/sépia */}
                 <h2 className="text-4xl font-bold text-amber-800 mb-3 border-b-2 border-amber-900/20 pb-2">Classes</h2>
                 <p className="text-amber-900/80 font-medium">Uma classe é como uma profissão. Ela representa a forma que você escolheu para enfrentar os perigos do mundo e perseguir seus objetivos — com armas, perícias ou magias.</p>
             </div>
@@ -84,7 +77,7 @@ export default function ClassesPage() {
             </div>
         </div>
 
-        {/* Search - Estilo "Caixa de Madeira/Papel" */}
+        {/* Search */}
         <div className="mb-12 p-6 rounded bg-[#e8dac1] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] w-full">
           <label className="block text-sm font-bold text-amber-900/60 mb-3 uppercase tracking-wider">
             Buscar Classe
@@ -95,31 +88,27 @@ export default function ClassesPage() {
                 placeholder="Digite o nome ou origem..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                // Input com cor de papel mais claro
                 className="w-full px-5 py-3 bg-[#fbf5e6] border-2 border-amber-900/20 rounded text-amber-900 placeholder-amber-900/40 focus:outline-none focus:border-amber-700 focus:ring-1 focus:ring-amber-700 transition-all font-serif shadow-sm"
             />
              <div className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/40">
                 🔍
-            </div>
+             </div>
           </div>
         </div>
 
-        {/* Grid de Classes - Ordenado Alfabeticamente */}
+        {/* Grid de Classes */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-6 w-full mb-16">
           {filteredClasses.map((cls) => (
             <div
               key={cls.id}
               onClick={() => setSelectedClass(cls)}
-              // Cards com fundo de papiro e bordas de couro
               className="group relative overflow-hidden rounded bg-[#e8dac1] border border-amber-900/30 hover:border-amber-700/80 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_4px_20px_rgba(69,26,3,0.15)] cursor-pointer flex flex-col"
             >
-              {/* Imagem de fundo - FUNDO BRANCO SOLICITADO (Ajustado com mix-blend para parecer desenhado no papel) */}
               <div className="relative w-full h-64 bg-[#f0e6d2] border-b border-amber-900/10 overflow-hidden flex items-center justify-center">
                 {cls.image ? (
                   <img
                     src={cls.image}
                     alt={cls.name}
-                    // ADICIONADO: mix-blend-multiply e sepia para fundir a imagem branca no papel bege
                     className="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500 mix-blend-multiply filter sepia-[0.3] opacity-90 group-hover:opacity-100"
                   />
                 ) : (
@@ -127,14 +116,9 @@ export default function ClassesPage() {
                 )}
               </div>
 
-              {/* Conteúdo */}
               <div className="relative p-5 text-center flex-1 flex flex-col justify-between bg-[#e8dac1]">
-                 {/* ADICIONADO: 'w-full flex flex-col items-center' para forçar centralização */}
                  <div className="w-full flex flex-col items-center">
-                    {/* Decorative Diamond - Cor ajustada */}
-                    {/* Pode remover o mx-auto, pois o items-center do pai já centraliza, mas deixei limpo abaixo */}
                     <div className="w-2 h-2 bg-amber-900/40 rotate-45 mb-2 group-hover:bg-red-600 transition-colors duration-300"></div>
-
                     <h3 className="text-xl font-bold text-amber-950 group-hover:text-red-700 transition-colors mb-3 font-serif tracking-wide">
                     {cls.name}
                     </h3>
@@ -146,7 +130,6 @@ export default function ClassesPage() {
                     </span>
                 </div>
 
-                {/* Corner Borders - Cores ajustadas */}
                 <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-amber-900/30 group-hover:border-red-600 transition-colors"></div>
                 <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-amber-900/30 group-hover:border-red-600 transition-colors"></div>
               </div>
@@ -160,8 +143,7 @@ export default function ClassesPage() {
           </div>
         )}
 
-        {/* Seção de Informação Extra - MANTENDO A ORDEM DO TEXTO ORIGINAL */}
-        {/* Fundo de pergaminho mais claro com borda */}
+        {/* Seção de Informação Extra */}
         <div className="mt-16 space-y-12 w-full text-lg leading-relaxed p-8 rounded bg-[#e8dac1]/50 border border-amber-900/20 shadow-sm">
             
             <div>
@@ -181,7 +163,6 @@ export default function ClassesPage() {
                 <h3 className="text-3xl font-bold text-amber-800 mb-4 border-b-2 border-amber-900/10 pb-2">Patamares de Jogo</h3>
                 <p className="text-amber-900/80 font-medium mb-6"> As classificações abaixo fornecem uma noção da escala de poder dos personagens e afetam certas habilidades.</p>
                 <div className="space-y-3 text-base">
-                    {/* Boxes de patamares ajustados para cores de papel */}
                     <p className="p-3 bg-[#fbf5e6] rounded border border-amber-900/20 shadow-sm"><span className="text-amber-950 font-bold">Iniciante (1º ao 4º nível):</span><span className="text-amber-900/70"> Aventureiro novato, envolvido em missões locais, como proteger vilas do ataque de bandidos e escoltar caravanas.</span></p>
                     <p className="p-3 bg-[#fbf5e6] rounded border border-amber-900/20 shadow-sm"><span className="text-amber-600 font-bold">Veterano (5º ao 10º nível):</span><span className="text-amber-900/70"> Neste patamar, o herói presta serviços importantes a nobres e líderes de guildas.</span></p>
                     <p className="p-3 bg-[#fbf5e6] rounded border border-amber-900/20 shadow-sm"><span className="text-red-700 font-bold">Campeão (11º ao 16º nível):</span><span className="text-amber-900/70"> Já famoso por suas façanhas, o aventureiro trabalha para monarcas e enfrenta grandes vilões e monstros terríveis.</span></p>
@@ -199,17 +180,14 @@ export default function ClassesPage() {
         </div>
       </main>
 
-      {/* Modal de Detalhes - ESTILO DE PÁGINA DE LIVRO ANTIGO */}
+      {/* Modal de Detalhes */}
       {selectedClass && (
         <div
           onClick={handleBackdropClick}
-          // Backdrop marrom escuro
           className="fixed inset-0 bg-[#2a1810]/80 backdrop-blur-sm flex items-center justify-center z-50 p-2 md:p-4"
         >
-          {/* Container do Modal com textura - Cor de página envelhecida e borda dupla */}
           <div className="bg-[#f2e8d5] border-4 border-double border-amber-900/40 rounded-lg shadow-[0_0_60px_rgba(69,26,3,0.3)] max-w-4xl w-full max-h-[95vh] overflow-y-auto relative custom-scrollbar bg-[url('/noise.png')]">
             
-            {/* Botão de Fechar */}
             <button
               onClick={() => setSelectedClass(null)}
               className="absolute top-6 right-6 text-amber-900/60 hover:text-red-800 transition-colors z-10 bg-[#e8dac1] border border-amber-900/30 rounded-full w-10 h-10 flex items-center justify-center text-2xl pb-1 shadow-sm"
@@ -217,12 +195,10 @@ export default function ClassesPage() {
               ×
             </button>
 
-            {/* Conteúdo do Modal */}
             <div className="p-8 md:p-12 font-serif">
               
               {/* Cabeçalho da Classe */}
               <div className="mb-10 text-center border-b-2 border-amber-900/20 pb-8">
-                  {/* Gradiente de tinta escura */}
                   <h2 className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-amber-700 via-red-800 to-amber-950 mb-4 tracking-wide">
                     {selectedClass.name}
                   </h2>
@@ -235,12 +211,9 @@ export default function ClassesPage() {
                   </div>
               </div>
 
-              {/* Descrição - Caixa de papel mais claro */}
+              {/* Descrição */}
               <div className="mb-10 p-6 bg-[#fffaf0] border border-amber-900/20 rounded shadow-inner relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-1 h-full bg-amber-900/20"></div>
-                <h3 className="text-2xl font-bold text-amber-800 mb-4 flex items-center gap-2">
-                    <span>📖</span> Descrição
-                </h3>
                 <p className="text-amber-900/90 font-medium leading-relaxed whitespace-pre-line text-lg first-letter:text-5xl first-letter:font-bold first-letter:text-red-800 first-letter:mr-2 first-letter:float-left text-justify">
                   {selectedClass.description}
                 </p>
@@ -250,7 +223,7 @@ export default function ClassesPage() {
               {selectedClass.famousExamples && selectedClass.famousExamples.length > 0 && (
                 <div className="mb-10 text-center">
                   <h3 className="text-lg font-bold text-amber-900/50 mb-3 uppercase tracking-widest flex items-center justify-center gap-2">
-                    <span>🌟</span> Exemplos Famosos
+                    Nomes Grandiosos
                   </h3>
                     <p className="text-amber-700 text-xl italic font-bold">
                       "{selectedClass.famousExamples.join(", ")}."
@@ -258,14 +231,14 @@ export default function ClassesPage() {
                 </div>
               )}
 
-              {/* Características Principais (Cards) - Estilo Cartões de Papiro */}
+              {/* Características Principais */}
               <div className="mb-12">
-                <h3 className="text-3xl font-bold text-amber-800 mb-6 text-center border-b border-amber-900/20 pb-2">⚔️ Características de Classe</h3>
+                <h3 className="text-3xl font-bold text-amber-800 mb-6 text-center border-b border-amber-900/20 pb-2">Características de Classe</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div className="p-5 rounded bg-[#e8dac1] border border-amber-900/20 text-center shadow-md">
                     <p className="text-amber-900/60 text-xs font-bold uppercase tracking-wider mb-2">PV Iniciais</p>
                     <p className="text-red-700 text-4xl font-bold flex items-center justify-center gap-1">
-                        <span>❤</span> {selectedClass.characteristics.pvBase}
+                    {selectedClass.characteristics.pvBase}
                     </p>
                       <p className="text-amber-900/50 text-xs mt-1">+ Mod. Constituição</p>
                   </div>
@@ -279,24 +252,22 @@ export default function ClassesPage() {
                   <div className="p-5 rounded bg-[#e8dac1] border border-amber-900/20 text-center shadow-md">
                     <p className="text-amber-900/60 text-xs font-bold uppercase tracking-wider mb-2">PM por Nível</p>
                     <p className="text-blue-700 text-4xl font-bold flex items-center justify-center gap-1">
-                        <span>✨</span> {selectedClass.characteristics.pmPerLevel}
+                    {selectedClass.characteristics.pmPerLevel}
                     </p>
                       <p className="text-amber-900/50 text-xs mt-1">Pontos de Mana</p>
                   </div>
                 </div>
               </div>
 
-              {/* Perícias e Proficiências (Duas Colunas) */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                  {/* Coluna da Esquerda: Perícias */}
-                  <div>
-                    <h3 className="text-2xl font-bold text-amber-800 mb-6 border-b border-amber-900/20 pb-2 flex items-center gap-2">
-                        <span>🎯</span> Perícias
-                    </h3>
-                    
-                    <div className="mb-6">
+              {/* --- ALTERAÇÃO 1: PERÍCIAS (Largura total, topo) --- */}
+              <div className="mb-8">
+                 <h3 className="text-2xl font-bold text-amber-800 mb-6 border-b border-amber-900/20 pb-2 flex items-center gap-2">
+                    Perícias
+                 </h3>
+                 <div className="grid grid-cols-1 gap-6">
+                    <div>
                         <p className="text-amber-900/50 mb-3 text-sm uppercase tracking-wide font-bold flex items-center gap-2">
-                            <span className="w-2 h-2 bg-amber-700 rotate-45"></span> Treinamento Inicial Obrigatório:
+                            <span className="w-2 h-2 bg-amber-700 rotate-45"></span> Começa com:
                         </p>
                         <ul className="space-y-2">
                             {selectedClass.skills.mandatory.map((skill, index) => (
@@ -309,79 +280,65 @@ export default function ClassesPage() {
 
                     <div>
                         <p className="text-amber-900/50 mb-3 text-sm uppercase tracking-wide font-bold flex items-center gap-2">
-                            <span className="w-2 h-2 bg-amber-900/40 rotate-45"></span> Escolha mais <span className="text-amber-600 text-lg">{selectedClass.skills.optional.count}</span>:
+                            <span className="w-2 h-2 bg-amber-900/40 rotate-45"></span> Escolha mais <span className="text-amber-600 text-lg">{selectedClass.skills.optional.count}</span> entre: 
                         </p>
                         <div className="flex flex-wrap gap-2">
                             {selectedClass.skills.optional.skills.map((skill, index) => (
-                            // Tags de perícia estilo etiquetas de papel
                             <span key={index} className="px-3 py-1 rounded-sm bg-[#fbf5e6] border border-amber-900/20 text-amber-900/70 text-sm shadow-sm">
                                 {skill}
                             </span>
                             ))}
                         </div>
                     </div>
-                  </div>
+                 </div>
+              </div>
 
-                  {/* Coluna da Direita: Proficiências */}
-                  <div>
-                      <h3 className="text-2xl font-bold text-amber-800 mb-6 border-b border-amber-900/20 pb-2 flex items-center gap-2">
-                        <span>🛡️</span> Proficiências
-                    </h3>
-                    <div className="p-6 bg-[#e8dac1]/50 rounded border border-amber-900/20 shadow-inner flex items-start gap-4">
-                        <span className="text-4xl opacity-60">⚔️</span>
-                        <p className="text-amber-950 text-lg leading-relaxed font-bold">
-                            {selectedClass.proficiency}
-                        </p>
-                    </div>
+              {/* --- ALTERAÇÃO 1 (CONTINUAÇÃO): PROFICIÊNCIAS (Largura total, DEPOIS de perícias) --- */}
+              <div className="mb-12">
+                  <h3 className="text-2xl font-bold text-amber-800 mb-6 border-b border-amber-900/20 pb-2 flex items-center gap-2">
+                    Proficiências
+                  </h3>
+                  <div className="p-6 bg-[#e8dac1]/50 rounded border border-amber-900/20 shadow-inner flex items-start gap-4">
+                    <p className="text-amber-950 text-lg leading-relaxed font-bold">
+                        {selectedClass.proficiency}
+                    </p>
                   </div>
               </div>
 
-              {/* Botão para Página de Poderes (SÓ APARECE SE TIVER LINK NO DATA) */}
+              {/* --- ALTERAÇÃO 2: BOTÃO SÓLIDO (VERMELHO SANGUE) --- */}
               {selectedClass.powersUrl && (
-                <div className="mb-12 flex justify-center">
+                <div className="mb-14">
                   <Link 
-                    href={selectedClass.powersUrl} // Puxa direto do seu JSON/Data
-                    // Botão estilo madeira escura/couro com texto dourado
-                    className="group relative inline-flex items-center justify-center px-10 py-5 overflow-hidden font-serif font-bold text-amber-100 transition-all duration-300 bg-[#5c2e0e] border-2 border-[#78350f] hover:border-amber-500 hover:bg-[#78350f] shadow-[0_4px_15px_rgba(0,0,0,0.2)] rounded-sm"
+                    href={selectedClass.powersUrl} 
+                    className="group block w-full text-center py-5 bg-[#7f1d1d] text-amber-50 rounded-sm border-2 border-[#450a0a] shadow-md hover:bg-[#991b1b] hover:-translate-y-1 transition-all duration-200"
                   >
-                    {/* Textura de fundo - mantida a original */}
-                    <span className="absolute inset-0 w-full h-full bg-[url('/noise.png')] opacity-20"></span>
-                    
-                    {/* Conteúdo do Botão */}
-                    <span className="relative text-lg uppercase tracking-[0.25em] text-amber-200/80 group-hover:text-amber-100 transition-colors flex items-center gap-4">
-                      <span className="text-amber-500 group-hover:text-amber-300 transition-colors">❖</span> 
-                      
-                      Ver Poderes de {selectedClass.name}
-                      
-                      <span className="text-amber-500 group-hover:text-amber-300 transition-colors">❖</span>
+                    <span className="text-xl font-bold uppercase tracking-widest group-hover:tracking-[0.2em] transition-all">
+                        Ver Poderes de {selectedClass.name}
                     </span>
+                    <div className="text-xs text-amber-200/60 mt-1 uppercase tracking-wider">Clique para acessar a lista completa</div>
                   </Link>
                 </div>
               )}
 
               {/* Habilidades de Classe */}
               <div className="mb-12">
-                <h3 className="text-3xl font-bold text-amber-800 mb-8 text-center border-b border-amber-900/20 pb-2">✨ Habilidades de Classe</h3>
+                <h3 className="text-3xl font-bold text-amber-800 mb-8 text-center border-b border-amber-900/20 pb-2">Habilidades de Classe</h3>
                 <div className="space-y-8">
                   {selectedClass.abilities.map((ability, index) => (
                     <div key={index} className="relative group">
               
                       <div className="ml-1 rounded-r bg-[#fbf5e6] border border-amber-900/20 overflow-hidden shadow-sm hover:border-amber-700/50 transition-colors">
-                        {/* Título da Habilidade */}
                         <div className="p-5 bg-[#e8dac1] border-b border-amber-900/10">
                           <h4 className="text-2xl font-bold text-red-800">{ability.name}</h4>
                         </div>
 
-                        {/* Conteúdo da Habilidade - Fundo com ruído original mantido */}
                         <div className="p-6 bg-[url('/noise.png')]">
-                          {/* Descrição Geral */}
                           {ability.description && (
                             <p className="text-amber-900/90 leading-relaxed whitespace-pre-wrap text-lg font-medium">
                               {ability.description}
                             </p>
                           )}
 
-                          {/* Sub-Opções */}
                           {ability.subAbilities && ability.subAbilities.length > 0 && (
                             <div className="space-y-6 mt-8">
                               {ability.subAbilities.map((subAbility, subIndex) => (
@@ -403,40 +360,37 @@ export default function ClassesPage() {
                 </div>
               </div>
 
-              {/* Extras/Regras Especiais - Estilo Tinta Roxa/Mágica no Pergaminho */}
+              {/* --- ALTERAÇÃO 3: EXTRAS/REGRAS ESPECIAIS (Cor ajustada para marrom/pergaminho escuro, sem roxo) --- */}
               {selectedClass.extras && selectedClass.extras.length > 0 && (
-                <div className="mb-12 p-6 bg-purple-100/50 rounded border border-purple-900/20">
-                  <h3 className="text-2xl font-bold text-purple-900 mb-6 flex items-center gap-3">
-                    <span>⭐</span> Regras Especiais & Notas
+                <div className="mb-12 p-6 bg-[#d6cbb5] rounded border border-amber-900/20 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)]">
+                  <h3 className="text-2xl font-bold text-amber-900 mb-6 flex items-center gap-3">
+                   📜 Regras Especiais & Notas
                   </h3>
                   
-                  <div className="space-y-8"> {/* Aumentei o espaçamento entre extras */}
+                  <div className="space-y-8">
                     {selectedClass.extras.map((extra, index) => (
                       <div
                         key={index}
-                        className="pb-6 border-b border-purple-900/10 last:border-0"
+                        className="pb-6 border-b border-amber-900/10 last:border-0"
                       >
-                        {/* Título do Extra Principal */}
-                        <h4 className="text-purple-800 font-bold text-xl mb-3">{extra.title}</h4>
+                        <h4 className="text-amber-950 font-bold text-xl mb-3">{extra.title}</h4>
                         
-                        {/* Descrição Principal */}
                         {extra.description && (
-                          <p className="text-purple-950/80 text-base leading-relaxed whitespace-pre-line mb-6 font-medium">
+                          <p className="text-amber-900/90 text-base leading-relaxed whitespace-pre-line mb-6 font-medium">
                             {extra.description}
                           </p>
                         )}
 
-                        {/* RENDERIZAÇÃO DAS NOVAS SEÇÕES (Características, Tipos, Truques) */}
                         {extra.sections && (
-                          <div className="space-y-6 mt-4 pl-4 border-l-2 border-purple-900/20">
+                          <div className="space-y-6 mt-4 pl-4 border-l-2 border-amber-900/20">
                             {extra.sections.map((section, sIndex) => (
-                              <div key={sIndex} className="bg-white/60 p-4 rounded border border-purple-200">
-                                <h5 className="text-amber-700 font-bold text-lg mb-2 uppercase tracking-wide">
+                              <div key={sIndex} className="bg-[#e6d5b8] p-4 rounded border border-amber-900/10">
+                                <h5 className="text-amber-800 font-bold text-lg mb-2 uppercase tracking-wide">
                                   {section.title}
                                 </h5>
                                 
                                 {section.intro && (
-                                  <p className="text-purple-900/60 italic mb-4 text-sm">
+                                  <p className="text-amber-900/60 italic mb-4 text-sm">
                                     {section.intro}
                                   </p>
                                 )}
@@ -444,10 +398,10 @@ export default function ClassesPage() {
                                 <dl className="space-y-3">
                                   {section.content.map((item, cIndex) => (
                                     <div key={cIndex} className="group">
-                                      <dt className="text-purple-900 font-bold inline text-base">
+                                      <dt className="text-amber-950 font-bold inline text-base">
                                         {item.name}:
                                       </dt>
-                                      <dd className="text-purple-950/80 inline ml-2 text-base leading-relaxed font-medium">
+                                      <dd className="text-amber-900/80 inline ml-2 text-base leading-relaxed font-medium">
                                         {item.description}
                                       </dd>
                                     </div>
@@ -463,10 +417,10 @@ export default function ClassesPage() {
                 </div>
               )}
 
-              {/* Tabela de Progressão de Níveis - Estilo Tabela Desenhada a Mão */}
+              {/* Tabela de Progressão de Níveis */}
               <div className="mb-8">
                 <h3 className="text-2xl font-bold text-amber-800 mb-6 border-b border-amber-900/20 pb-2 flex items-center gap-2">
-                    <span>📈</span> Tabela de Progressão
+                Tabela de Progressão
                 </h3>
                 <div className="overflow-x-auto rounded border-2 border-amber-900/30 shadow-sm">
                   <table className="w-full text-left">
@@ -480,7 +434,6 @@ export default function ClassesPage() {
                       {selectedClass.levelProgression.map((progression, index) => (
                         <tr
                           key={index}
-                          // Alternância de cores sutis de papel
                           className={`${index % 2 === 0 ? 'bg-[#fffbf2]' : 'bg-[#f9f2e0]'} hover:bg-amber-100 transition-colors`}
                         >
                           <td className="p-4 text-red-900 font-bold text-center border-r-2 border-amber-900/20 text-lg">
@@ -496,7 +449,6 @@ export default function ClassesPage() {
                 </div>
               </div>
               
-              {/* Fim do Modal - Decoração */}
               <div className="mt-12 flex items-center justify-center gap-4 opacity-50">
                     <div className="h-[2px] w-20 bg-amber-900/60"></div>
                     <span className="text-amber-900/60 text-2xl">❖</span>
@@ -508,7 +460,7 @@ export default function ClassesPage() {
         </div>
       )}
 
-      {/* Footer - Estilo Rodapé de Couro Escuro */}
+      {/* Footer */}
       <footer className="mt-20 p-6 border-t-4 border-double border-amber-900/40 bg-[#2a231d] text-center text-amber-200/40 text-sm relative z-10">
         <p className="mb-1">Compêndio Tormenta RPG © 2025</p>
         <p>Tormenta 20 pertence a Jambo Editora. Todos os direitos são reservados a editora.</p>
