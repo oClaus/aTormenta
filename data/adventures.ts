@@ -5887,5 +5887,83 @@ export const adventures: Adventure[] = [
       content: "Outras soluções podem ter desfechos similares. Contudo, não importa a escolha, algo é revelado: a entidade contém a essência do falecido mestre! De alguma forma, ele voltou à vida, mas foi aprisionado dentro do ser e corrompido pela tempestade profana."
     }
   ]
+},
+{ id: "Epiphânia",
+  name: "Epiphânia",
+  theme: "Fantasia e Folclore",
+  image: "/aventuras/epiphania.png",
+  summary: "Arautos anunciam a chegada de Epiphânia, a Bruxa Celeste. Os heróis participam de um festival de fim de ciclo, encenando rituais e sendo julgados por sua generosidade para receber bênçãos ou carvão.",
+  sections: [
+    {
+      type: "text",
+      content: "Esta mini-aventura foi criada para jogos de fantasia como Fabula Ultima, A Lenda de Ghanor RPG e Tormenta20. É uma trama flexível, sem regras, adaptável às necessidades do seu grupo. Pode ser jogada como aventura avulsa ou início de uma campanha."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Anunciação"
+    },
+    {
+      type: "text",
+      content: "Os personagens dos jogadores percorrem estradas tranquilas quando avistam um cortejo vindo na direção oposta. São cantores itinerantes, todos vestidos como animais — raposas, cabras, lebres e um corvo de aparência imponente. Suas roupas são simples, costuradas com lã rústica e fitas coloridas. Eles andam devagar, repetindo cantigas e orações. Assim que avistam os aventureiros, param e se apresentam como arautos de Epiphânia, a Bruxa Celeste."
+    },
+    {
+      type: "text",
+      content: "Eles explicam que ela é uma deusa muito antiga, protetora dos novos começos e caçadora dos maus espíritos que vagueiam pelo mundo. Outros deuses tentaram apagar seu culto, mas ela sempre ressurge “ao fim de um ciclo”. Cabe ao mestre, junto dos próprios jogadores, definir o que significa fim de um ciclo dentro do mundo de jogo: o término das colheitas? O último dia do calendário, que virá em breve? A conclusão da aventura da qual estão voltando?"
+    },
+    {
+      type: "text",
+      content: "Quando esse ciclo se completa, os arautos viajam pelos vilarejos anunciando a aproximação da “Noite da Bruxa Celeste”. Eles recolhem oferendas dos camponeses — frutas secas, pedaços de tecido, bonecos de palha e moedas — que simbolizam gratidão e respeito. Os aventureiros logo percebem que, apesar da vida simples dos aldeões, todos fazem o possível para contribuir. Alguns queimam efígies da bruxa como parte do ritual. Outros deixam tigelas de leite à porta. Outros simplesmente juntam as mãos e murmuram preces."
+    },
+    {
+      type: "text",
+      content: "O grupo é convidado a fazer o mesmo. Eles podem entregar um tributo simples, ou, se tiverem condições, pagar a oferenda de camponeses que não conseguem participar. Esse gesto é significativo e será lembrado mais adiante."
+    },
+    {
+      type: "text",
+      content: "Após recolherem tudo, os cantores agradecem e seguem para o próximo vilarejo. Antes de partir, porém, recitam juntos um último aviso: “Ela virá quando o ciclo se completar.” Então desaparecem pela estrada, deixando para trás um clima de expectativa. Nos dias seguintes, os aventureiros ouvem cada vez mais preparativos, conversas ansiosas e relatos de presságios."
+    },
+    {
+      type: "text",
+      content: "Quando o ciclo enfim se encerrar, a bruxa virá."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Revelação"
+    },
+    {
+      type: "text",
+      content: "Quando o ciclo chega ao fim, os aventureiros alcançam um vilarejo durante sua próxima viagem. No centro da praça, uma enorme fogueira queima com chamas altas, iluminando máscaras, bandeirolas e esculturas de espíritos malignos feitas de barro e madeira. Líderes locais se aproximam e anunciam que hoje é a Noite da Bruxa Celeste, e que a celebração depende da participação do grupo. Cada personagem recebe uma fantasia de animal semelhante às usadas pelos arautos: o grupo é convidado a representar, diante de todos, os mensageiros da deusa. Os demais habitantes vestem máscaras grotescas que simbolizam os espíritos que ela caça."
+    },
+    {
+      type: "text",
+      content: "O ritual exige que os heróis participem de um “combate encenado”. Eles devem perseguir e enfrentar essas figuras mascaradas sem ferir ninguém de verdade, mas também sem tornar a encenação maçante. O Mestre decide (interpretando a persona de um NPC juíz que avalia tudo!), o desempenho do grupo, se a apresentação foi memorável, adequada ou desastrosa."
+    },
+    {
+      type: "text",
+      content: "Após a encenação, entre uma dança e outra, os personagens têm liberdade para circular pelo vilarejo. Cada jogador realiza uma cena curta entre seu personagem e cada outro integrante do grupo, garantindo que todas as duplas se encontrem durante esse interlúdio."
+    },
+    {
+      type: "text",
+      content: "Ao final da celebração, cada personagem recebe um par de meias rústicas. Se o grupo se saiu bem na encenação e demonstrou respeito pelos costumes locais, as meias são enormes. Caso tenham sido desatentos, deselegantes ou agressivos, recebem meias pequenas e esburacadas."
+    },
+    {
+      type: "text",
+      content: "Durante a noite, Epiphânia passa pelo vilarejo. Todos dormem sob um feitiço suave que impede que testemunhem sua presença. Apenas personagens que conseguirem resistir a três testes difíceis envolvendo força de vontade permanecem acordados por algum tempo. Esses poucos escolhidos enxergam uma figura envolta em luz azulada, com olhos brilhando como estrelas. A Bruxa Celeste pode revelar fragmentos do futuro da campanha ou segredos sobre o passado dos heróis."
+    },
+    {
+      type: "text",
+      content: "Na manhã seguinte, cada personagem encontra algo dentro de sua meia. Quem demonstrou ser altruísta durante a aventura, ou ao longo da campanha, recebe pequenos itens mágicos sugeridos pelos próprios jogadores. Contudo, estes devem caber dentro do tamanho da meia recebida. Os egoístas encontram apenas um pedaço de carvão, mas não é de todo inútil. É mágico, e ao ser deixado perto de uma fogueira entrará imediatamente em combustão e irá acendê-la."
+    },
+    {
+      type: "text",
+      content: "Talvez isso ajude a aquecer seus corações gelados!"
+    }
+  ]
 }
 ];

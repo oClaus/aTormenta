@@ -2388,6 +2388,66 @@ export const bosses: Boss[] = [
   equipamentos: [],
   tesouro: "Dobro, mais Faca do Chef (adaga precisa ameaçadora sanguinária; a do Rei Tonberry também é aumentada)."
 },
+{
+  id: "frieren-arquimaga",
+  name: "Frieren",
+  image: "/chefes/frieren.avif",
+  tipo: "Humanoide (elfa) média, solo.",
+  nd: 20,
+  historia: "Frieren e a Jornada Para o Além (Sousou no Frieren, no original) é um mangá de Kanehito Yamada (roteiro) e Tsukasa Abe (arte), publicado no Japão desde 2020. Em 2023, ganhou uma versão em anime, talvez o lançamento mais celebrado daquele ano, e que agora, em 2026, recebe a sua segunda temporada.\nA personagem principal, a arquimaga elfa Frieren, é, em um primeiro momento, uma personagem clássica de fantasia, mas também dotada de muitas particularidades. Será certamente um encontro marcante em qualquer aventura em que você queira colocá-la!\nDurante mais de mil anos, o Rei Demônio ameaçou os reinos dos humanos e outras raças, como elfos e anões. De sua fortaleza no extremo norte, comandava um exército que atravessou o continente, deixando um rastro de destruição e morte. Dezenas de grupos de heróis partiram em jornadas para derrotá-lo, sem sucesso. Até que um deles conseguiu.\nFormado pelo herói humano Himmel, o guerreiro anão Eisen, o padre humano Heiter e a maga elfa Frieren, o grupo empreendeu uma jornada de dez anos até a fortaleza demoníaca. Poucos acreditavam no seu sucesso, uma vez que nenhum deles parecia mais especial do que todos os que haviam tentado a mesma empreitada antes; mas, de alguma forma, conseguiram vencê-lo. Retornaram ao reino como heróis, e a paz finalmente foi alcançada.\nO grupo se despediu em meio a uma chuva de meteoros, prometendo reunir-se novamente em alguns anos. Deixando seus companheiros para trás, Frieren partiu em uma jornada solitária atrás de novas magias, esperando o momento do reencontro.\nPor ser elfa, Frieren percebe o tempo de maneira diferente das outras raças. Para alguém com mais de mil anos de idade, uma década de viagens parece insignificante – mas, para seus companheiros, foi uma parte considerável de suas vidas. Cinquenta anos se passaram até o reencontro, e Frieren não estava pronta para a forma como todos haviam se transformado nesse período.\nApós a morte de Himmel devido à idade avançada, a elfa entrou em choque ao perceber o quão pouco conhecia sobre o amigo e sobre a própria humanidade que se esforçaram para salvar. Assim, quando partiu em uma nova jornada, Frieren decidiu que o aprendizado que buscaria seria esse: entender os humanos, e, com eles, entender também os companheiros que a acompanharam no passado. Refazendo seu caminho até a fortaleza do Rei Demônio, ela busca algum tipo de redenção por tudo aquilo que deixou passar, e, quem sabe, uma última chance de reencontrar aqueles que ficaram para trás.",
+  dicas: "Frieren é uma maga poderosíssima, mas não faz questão de alardear o fato. Ao longo da sua vida milenar, desenvolveu uma técnica de controlar a aura mágica que emite, que impede até mesmo que magos experientes percebam todo o seu poder. Com isso, somado ao tempo que se passou desde a sua grande jornada contra o Rei Demônio, passa despercebeida pela maioria dos locais.\nA elfa também tem um desdém absoluto por magias de combate. Os grimórios que busca em suas viagens são aqueles com magias de uso cotidiano, feitiços pequenos que ajudem a resolver problemas do dia-a-dia: lavar roupas, purificar alimentos, fazer crescer flores no campo… Suas magias de ataque e defesa são as mais básicas, mas conjuradas com um domínio sobre as forças arcanas que sempre causa assombro e medo.\nSe o grupo precisar enfrentá-la — seja a própria Frieren, uma cópia mágica com seus poderes recriados, ou qualquer outra maneira que o mestre inventar —, terão que lidar com esse poder bruto. A quantidade de energia possuída pela elfa é incomparável, e mesmo quando parecer esgotada, prestes a conjurar seu último raio místico, ela ainda pode liberar tudo aquilo que estava contido e recomeçar como se ainda fosse a primeira rodada!",
+  tamanho: "Média",
+  iniciativa: 19,
+  percepcao: 27,
+  defesa: 70,
+  resistenciaDano: "resistência à magia +5",
+  fort: 22,
+  ref: 30,
+  von: 36,
+  pv: 1950,
+  deslocamento: "12m (8q)",
+  pm: 160,
+  ataqueDistancia: "Raio Arcano (Padrão): 12d12+30 pontos de dano de essência em um alvo em alcance médio. Ref CD 51 reduz à metade.",
+  habilidades: [
+    "Inimiga dos Demônios: Quando conjura uma magia contra criaturas do tipo espírito, a CD de resistência aumenta em +5.",
+    "Liberar Mana (Livre): Uma vez por encontro, Frieren desativa o poder Ocultar Mana e recupera todos os PM.",
+    "Maestria Arcana: Todas as magias de Frieren são consideradas de 5º círculo, e não podem ser evitadas por globo de invulnerabilidade e poderes semelhantes.",
+    "Magia Acelerada (Livre, 4 PM): Uma vez por rodada, Frieren lança uma magia com execução de ação completa ou menor como ação livre.",
+    "Magia Discreta (2 PM): Frieren pode conjurar magias mesmo amordaçada ou amarrada. Perceber que ela usou uma magia assim requer um teste de Misticismo (CD 20).",
+    "Magias: Frieren conjura magias como uma maga de 20º nível (CD 51).",
+    "Armadura arcana (Reação, 1 PM): Quando Frieren recebe um ataque, ela recebe Defesa +10 contra esse ataque.",
+    "Campo de força (Padrão, 4 PM): Frieren recebe 350 PV temporários.",
+    "Campo de força (Reação, 4 PM): Frieren recebe RD 90 contra o próximo dano que sofrer.",
+    "Dissipar magia (Padrão, 2 PM): Dissipa uma magia com CD máxima igual a uma rolagem de Misticismo de Frieren. Uma vez por rodada, pode ser feito como reação.",
+    "Explosão de Chamas (Padrão, 12 PM): 24d8+11 pontos de dano de fogo em um cone 15m que deixa os alvos em chamas. Ref reduz à metade e evita a condição.",
+    "Relâmpago (Padrão, 10 PM): 24d8+11 pontos de dano elétrico em uma linha de alcance médio. Ref reduz à metade.",
+    "Relâmpago em área (Padrão, 13 PM): 24d8+11 pontos de dano elétrico em alvos escolhidos em alcance médio de Frieren. Ref reduz à metade.",
+    "Velocidade (Padrão, 4 PM, sustentada): Frieren pode realizar uma ação padrão extra por rodada, que pode ser usada para lançar magias.",
+    "Voo (Padrão, 2 PM): Frieren recebe deslocamento de voo 15m até o fim da cena.",
+    "Seta Infalível de Talude (Padrão, 5 PM): Cria dez dardos místicos que podem ser direcionados a um ou mais alvos e acertam automaticamente. Cada dardo causa 1d12+12 pontos de dano.",
+    "Outras magias: O repertório de magias conhecidas de Frieren é vasto, e se estende muito além das descritas acima. O mestre pode fazê-la conjurar qualquer magia arcana que considerar conveniente à situação em que se encontra.",
+    "Ocultar Mana: Todas as tentativas de detectar a aura e efeitos mágicos em Frieren tem CD +20, ou requerem um teste oposto de Misticismo se feito através de magia ou poderes."
+  ],
+  for: -1,
+  des: 3,
+  con: 1,
+  int: 11,
+  sab: 9,
+  car: 5,
+  pericias: [
+    "Conhecimento +27",
+    "Enganação +21",
+    "Misticismo +29",
+    "Nobreza +27"
+  ],
+  equipamentos: [
+    "anel do escudo mental",
+    "brincos da sagacidade",
+    "cajado do poder",
+    "robe do arquimago"
+  ],
+  tesouro: "Tesouro padrão, mais 1d4 grimórios, cada um com 1d4+1 magias de 1º e 2º círculo."
+}
 
 
   
