@@ -177,6 +177,26 @@ export default function ClassesPage() {
                 <p className="text-amber-900/80 font-medium mb-6 text-justify"> Classes variantes são modificações de suas versões básicas; as características e habilidades descritas aqui substituem as da classe básica (aquelas não listadas não fazem parte da variante). Exceto por isso, a classe variante funciona como sua contraparte básica: usa a mesma lista de poderes e serve para cumprir quaisquer pré-requisitos que exijam a classe básica. Não é possível fazer multiclasse entre uma classe básica e uma de suas variantes — para todos os efeitos, ambas são a mesma classe.</p>
                 <p className="text-amber-900/80 font-medium mb-6 text-justify"> A escolha por uma classe variante deve ser feita na criação do personagem ou ao alcançar o 1º nível da classe. Uma vez feita, não pode ser mudada. Nesta página, serão as classes representadas por "Nome da Classe (Classe Base)"</p>
             </div>
+
+            <div>
+                <h3 className="text-3xl font-bold text-amber-800 mb-4 border-b-2 border-amber-900/10 pb-2">Classes Divinas</h3>
+                <p className="text-amber-900/80 font-medium mb-6 text-justify"> O livro básico Tormenta20 descreve as classes básicas dedicadas aos deuses (clérigo, druida e paladino) em termos gerais. Em Deuses, foi adicionado descrições específicas para personagens dessas classes — e também do novo frade — dedicadas para cada divindade. Esse conteúdo estará como "Regras Especiais & Notas" na página dessas classes.</p>
+                <div className="space-y-3 pl-4 border-l-4 border-amber-900/30 text-base">
+                    <p> <span className="text-amber-700 font-bold"> Indumentária: </span> <span className="text-amber-900/70">Vestimenta típica para o devoto. Usar outras vestes não viola as Obrigações & Restrições, mas pode influenciar testes sociais com outros devotos da mesma divindade.</span></p>
+                    <p> <span className="text-amber-700 font-bold"> Fundamentalistas: </span> <span className="text-amber-900/70">Enquanto um devoto normal às vezes questiona sua divindade, até mesmo desafiando-a, o fundamentalista é um seguidor extremo de seus ideais, beirando o fanatismo. Ele acredita que outros devotos são infiéis, que sua igreja tem sido liberal e tolerante demais! Não apenas segue as Obrigações & Restrições padrão à risca, mas também adota dogmas muito mais rígidos. A recompensa divina por tamanha lealdade é maior, assim como o castigo por falhar em cumprir essa doutrina severa.</span></p>
+                    <p className="text-amber-900/80 font-medium mb-6 text-justify"> Um fundamentalista recebe um poder concedido adicional, mas, além das Obrigações & Restrições de sua divindade, deve seguir também seus dogmas. Se violar qualquer deles, perde seus pontos de mana e habilidades de classe divina, só podendo recuperá-los a partir do próximo dia (habilidades são recuperadas após um descanso). Se violar obrigações ou dogmas de novo na mesma aventura, só pode recuperar os PM e habilidades após cumprir uma penitência — que deve ser imposta por outro fundamentalista do mesmo deus. Além disso, fundamentalistas usam apenas a arma favorita de sua divindade. Utilizar qualquer outra arma configura violação de seus dogmas.</p>
+                    <p className="text-amber-900/80 font-medium mb-6 text-justify"> Note que alguns dogmas fundamentalistas os tornam inviáveis como personagens jogadores, servindo melhor a NPCs.</p>
+                    <p> <span className="text-amber-700 font-bold"> Outros Fundamentalistas: </span> <span className="text-amber-900/70">Quase todos os fundamentalistas em Arton são clérigos, druidas, frades e paladinos: essas são as classes mais próximas dos deuses. São os “mais devotos dos devotos”, por assim dizer. Por isso, embora existam devotos de outras classes, fundamentalistas são muitíssimo raros — mas não impossíveis. É o proverbial leigo que “ensina o evangelho ao vigário”, considera os clérigos frouxos e tolerantes, acredita saber mais sobre sua religião que o próprio sumo-sacerdote! Quase todos são simples fanfarrões — mas, algumas vezes, os deuses decidem retribuir seu fervor com milagres reais.</span></p>
+                    <p className="text-amber-900/80 font-medium mb-6 text-justify"> Um devoto fundamentalista que não seja clérigo, druida, frade ou paladino pode escolher seu dogma entre essas classes, conforme a afinidade. Por exemplo, um guerreiro devoto fundamentalista de Azgher pode adotar o dogma do clérigo (atacar e destruir devotos de Tenebra) ou do paladino (idem, e também atacar e destruir necromantes e mortos-vivos). O benefício mecânico é o mesmo (um poder concedido a mais), bem como a punição por violações. Dogmas de paladinos tendem a ser mais rigorosos, mas o jogador pode escolhê-los como desafio de interpretação.</p>
+                </div>
+
+                <h3 className="text-2xl font-bold text-amber-800 mb-4 border-b-2 border-amber-900/10 pb-2">“Posso servir a mais de uma divindade?”</h3>
+                <p className="text-amber-900/80 font-medium mb-6 text-justify"> Sim. Mas sem poderes, espertinho! Ser devoto significa lealdade e devoção totais para com uma divindade. Os poderes concedidos são uma forma de recompensa divina para aqueles que concordam em atuar como servos de um deus. Apenas um.</p>
+                <p className="text-amber-900/80 font-medium mb-6 text-justify"> Qualquer personagem pode seguir as Obrigações & Restrições de duas ou mais divindades, simplesmente como demonstração de respeito. No entanto, embora essa atitude tenha alguma chance de atrair simpatia pontual — por parte das próprias divindades ou de seus devotos —, não concede quaisquer poderes concedidos.</p>
+
+                <h3 className="text-2xl font-bold text-amber-800 mb-4 border-b-2 border-amber-900/10 pb-2">Nova Regra: Devoção Ampla</h3>
+                <p className="text-amber-900/80 font-medium mb-6 text-justify"> Clérigos e frades do Panteão, druidas de Arton e paladinos do bem não recebem poderes concedidos. Em compensação, por sua devoção ampla, recebem +2 PM por patamar.</p>
+            </div>
         </div>
       </main>
 
@@ -390,7 +410,7 @@ export default function ClassesPage() {
                                 </h5>
                                 
                                 {section.intro && (
-                                  <p className="text-amber-900/60 italic mb-4 text-sm">
+                                  <p className="text-amber-900/90 text-base leading-relaxed whitespace-pre-line mb-6 font-medium">
                                     {section.intro}
                                   </p>
                                 )}
@@ -398,7 +418,7 @@ export default function ClassesPage() {
                                 <dl className="space-y-3">
                                   {section.content.map((item, cIndex) => (
                                     <div key={cIndex} className="group">
-                                      <dt className="text-amber-950 font-bold inline text-base">
+                                      <dt className="text-amber-900 font-bold inline text-base">
                                         {item.name}:
                                       </dt>
                                       <dd className="text-amber-900/80 inline ml-2 text-base leading-relaxed font-medium">
