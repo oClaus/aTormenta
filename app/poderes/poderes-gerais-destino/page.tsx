@@ -105,8 +105,7 @@ export default function GeraisPodersPage() {
                 </div>
             </div>
         </div>
-
-        {/* Grid de Poderes - ALTERAÇÃO AQUI: bg-[#d9c8a9] */}
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 items-stretch mb-16">
             {filteredPowers.map((power) => (
             <div

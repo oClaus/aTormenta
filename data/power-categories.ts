@@ -169,4 +169,11 @@ export const powerCategories: PowerCategory[] = [
     description: "Poderes que somente funcionam em grupo.",
     origin: "Herois de Arton"
   },
+  {
+    id: "frade",
+    name: "Frade",
+    slug: "frade",
+    description: "Poderes exclusivos de Frade.",
+    origin: "Deuses de Arton"
+  },
 ];

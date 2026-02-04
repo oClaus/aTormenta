@@ -101,9 +101,43 @@ export const classes: GameClass[] = [
   ],
   extras: [
     {
-      title: "Linhagens Sobrenaturais",
-      description: "O poder de um feiticeiro vem de seu sangue — mais precisamente, do sangue de um antepassado sobrenatural, como um dragão ou uma fada. Além da capacidade de lançar magias, o feiticeiro herda desse antepassado uma fração de seu poder natural, que ele pode desenvolver ao longo de sua vida. Ao escolher o caminho do feiticeiro, escolha uma linhagem da lista a seguir. Você recebe a herança básica de sua linhagem e pode desenvolver as demais através de poderes de arcanista. \n\n Linhagem Dracônica\n Um de seus antepassados foi um majestoso dragão. Escolha um tipo de dano entre ácido, eletricidade, fogo ou frio. \n - Básica: Você soma seu Carisma em seus pontos de vida iniciais e recebe redução de dano 5 ao tipo escolhido. \n - Aprimorada: Suas magias do tipo escolhido custam –1 PM e causam +1 ponto de dano por dado. \n - Superior: Você passa a somar o dobro do seu Carisma em seus pontos de vida iniciais e se torna imune a dano do tipo escolhido. Além disso, sempre que reduz um ou mais inimigos a 0 PV ou menos com uma magia do tipo escolhido, você recebe uma quantidade de PM temporários igual ao círculo da magia. \n\n Linhagem Feérica \n Seu sangue foi tocado pelas fadas. \n - Básica: Você se torna treinado em Enganação e aprende uma magia de 1º círculo de encantamento ou ilusão, arcana ou divina, à sua escolha. \n - Aprimorada: A CD para resistir a suas magias de encantamento e ilusão aumenta em +2 e suas magias dessas escolas custam –1 PM. \n - Superior: Você recebe +2 em Carisma. Se uma criatura passar no teste de resistência contra uma magia de encantamento ou ilusão lançada por você, você fica alquebrado até o final da cena. \n\n Linhagem Rubra\n Seu sangue foi corrompido pela Tormenta. \n - Básica: Você recebe um poder da Tormenta. Além disso, pode perder outro atributo em vez de Carisma por poderes da Tormenta. \n - Aprimorada: Escolha uma magia para cada poder da Tormenta que você possui. Essas magias custam –1 PM. Sempre que recebe um novo poder da Tormenta, você pode escolher uma nova magia. Esta herança conta como um poder da Tormenta (exceto para perda de Carisma). \n - Superior: Você recebe +4 PM para cada poder da Tormenta que tiver. Esta herança conta como um poder da Tormenta (exceto para perda de Carisma)."
-    },
+    title: "Linhagens Sobrenaturais",
+    description: "O poder de um feiticeiro vem de seu sangue — mais precisamente, do sangue de um antepassado sobrenatural, como um dragão ou uma fada. Além da capacidade de lançar magias, o feiticeiro herda desse antepassado uma fração de seu poder natural, que ele pode desenvolver ao longo de sua vida. Ao escolher o caminho do feiticeiro, escolha uma linhagem da lista a seguir. Você recebe a herança básica de sua linhagem e pode desenvolver as demais através de poderes de arcanista. ",
+    sections: [
+      { title: "Linhagem Dracônica",
+        intro: "Um de seus antepassados foi um majestoso dragão. Escolha um tipo de dano entre ácido, eletricidade, fogo ou frio.",
+        content: [
+          { name: "Básica", description: " Você soma seu Carisma em seus pontos de vida iniciais e recebe redução de dano 5 ao tipo escolhido." },
+          { name: "Aprimorada", description: " Suas magias do tipo escolhido custam –1 PM e causam +1 ponto de dano por dado." },
+          { name: "Superior", description: " Você passa a somar o dobro do seu Carisma em seus pontos de vida iniciais e se torna imune a dano do tipo escolhido. Além disso, sempre que reduz um ou mais inimigos a 0 PV ou menos com uma magia do tipo escolhido, você recebe uma quantidade de PM temporários igual ao círculo da magia." },
+        ]
+      },
+      { title: "Linhagem Feérica",
+        intro: "Seu sangue foi tocado pelas fadas.",
+        content: [
+          { name: "Básica", description: " Você se torna treinado em Enganação e aprende uma magia de 1º círculo de encantamento ou ilusão, arcana ou divina, à sua escolha." },
+          { name: "Aprimorada", description: " A CD para resistir a suas magias de encantamento e ilusão aumenta em +2 e suas magias dessas escolas custam –1 PM." },
+          { name: "Superior", description: " Você recebe +2 em Carisma. Se uma criatura passar no teste de resistência contra uma magia de encantamento ou ilusão lançada por você, você fica alquebrado até o final da cena." },
+        ]
+      },
+      { title: "Linhagem Rubra",
+        intro: "Seu sangue foi corrompido pela Tormenta.",
+        content: [
+          { name: "Básica", description: " Você recebe um poder da Tormenta. Além disso, pode perder outro atributo em vez de Carisma por poderes da Tormenta." },
+          { name: "Aprimorada", description: " Escolha uma magia para cada poder da Tormenta que você possui. Essas magias custam –1 PM. Sempre que recebe um novo poder da Tormenta, você pode escolher uma nova magia. Esta herança conta como um poder da Tormenta (exceto para perda de Carisma)." },
+          { name: "Superior", description: " Você recebe +4 PM para cada poder da Tormenta que tiver. Esta herança conta como um poder da Tormenta (exceto para perda de Carisma)." },
+        ]
+      },
+      { title: "Linhagem Abençoada",
+        intro: "É consenso que devotos têm pactos sagrados com seus deuses. Recebem poderes miraculosos em troca de servir a seus objetivos com grande esforço e dedicação. Certos indivíduos, contudo, parecem violar essa regra suprema. São contemplados com dons divinos sem a necessidade de praticar nenhuma devoção. Já nascem com a centelha divina em seu sangue.\nFeiticeiros de linhagem abençoada são muito diferentes de sacerdotes e druidas. Manifestam suas conjurações de forma natural, sem necessidade de orações ou ritos a uma divindade — sequer precisam seguir suas crenças e objetivos, ou obedecer a suas Obrigações & Restrições.\nComo isso acontece é um mistério. Alguns acreditam que estes feiticeiros descendem de seres celestiais que se apaixonaram por mortais no passado. Outros dizem que são peões em alguma guerra cósmica. E, para outros, são criações casuais de deuses entediados. Feiticeiros abençoados podem surgir a qualquer momento e em qualquer lugar, da mais humilde família camponesa à mais rica casa nobre. É curioso como sua índole ou passado não parecem influenciar qual deus os abençoa. Um lutador violento pode ser tocado por Marah, enquanto uma dançarina de taverna pode receber a bênção de Thwor.\nOstentar tais poderes divinos pode ser tanto bênção quanto maldição — abençoados frequentemente se veem envolvidos em aventuras e desafios inesperados. Um jovem abençoado por um deus benevolente pode se tornar um herói admirado, enquanto outro, abençoado por uma divindade maligna, pode ser confundido com um cultista e forçado a fugir. Mesmo alguém que apenas busca uma vida tranquila pode se transformar em um campeão poderoso, lançando tempestades de fogo sobre seus inimigos.\nEmbora abençoados sejam geralmente bem recebidos por outros aventureiros, essa bênção pode gerar inveja. Sacerdotes podem se sentir ultrajados, especialmente se o feiticeiro recebeu seus poderes do mesmo deus que ele venera. A presença de um abençoado traz uma mistura de admiração e ciúmes.\nA relação dos abençoados com a fé pode variar. Alguns se dedicam ao deus que lhes concedeu poder, enquanto outros se ressentem por receber um dom indesejado e inconveniente. Em qualquer caso, abençoados costumam ter profunda conexão com o divino, seja em forma de adoração, seja de aversão.",
+        content: [
+          { name: "Básica", description: " Escolha um deus maior. Uma vez feita, essa escolha não pode ser mudada. Você aprende uma magia divina de 1º círculo e pode aprender magias divinas de 1º círculo como magias de feiticeiro. No 2º nível, você recebe um poder concedido do deus escolhido, aprovado pelo mestre, sem precisar ser devoto dele (mas você ainda pode ser devoto desse ou de outro deus)." },
+          { name: "Aprimorada", description: " Suas magias divinas de círculo igual ou menor que sua Sabedoria custam –1 PM e você pode aprender magias divinas de 2º e 3º círculos como magias de feiticeiro." },
+          { name: "Superior", description: " Você recebe +1 em Sabedoria e aprende uma magia divina de cada círculo a que tenha acesso, limitado por sua Sabedoria. A cada dia, após descansar, pode trocar essas magias por outras dos mesmos círculos. Por fim, pode aprender magias divinas de 4º e 5º círculos como magias de feiticeiro." },
+        ]
+      },
+    ]
+  }
   ]
     },
     { id: "Ladino",
@@ -1367,7 +1401,78 @@ export const classes: GameClass[] = [
       title: "Montaria Sagrada",
       description: "Um paladino de 5º nível pode receber uma montaria sagrada, designada pelos deuses. Este animal vai atuar como um fiel companheiro de batalhas. Normalmente será um cavalo de guerra para paladinos de tamanho Médio ou um pônei para Pequenos, mas suplementos futuros trarão outras opções de montarias. \n Para invocar sua montaria você gasta uma ação de movimento e 2 PM. Ela aparece com um brilho de luz dourada ao seu lado e fica até o fim da cena, quando desaparece de volta para o mundo divino de onde veio. \n Como opção para campanhas mais realistas, a montaria sagrada pode ser um animal mundano, em vez de invocado. Neste caso, você nunca precisa gastar uma ação ou PM para ter a montaria — que já estará com você. Por outro lado, o animal pode não ser capaz de acompanhá-lo em todos os lugares (um cavalo, por exemplo, não conseguirá entrar num túnel apertado ou escalar uma montanha). \n Você e sua montaria têm um vínculo mental, sendo sempre capazes de entender um ao outro (não é preciso fazer testes de Adestramento). Ela fornece os benefícios de um parceiro veterano de seu tipo. No 11º nível, passa a fornecer os benefícios de um parceiro mestre. Veja a lista de parceiros. Uma montaria cumpre qualquer ordem sua, mesmo que signifique arriscar a vida. Se a montaria sagrada morrer, você fica atordoado por uma rodada. Você pode invocar uma nova montaria após um dia de prece e meditação."
     },
+    {
+    title: "Classe Divina - Paladinos",
+    description: "Em Arton, os paladinos existem em sua forma mais clássica: guerreiros sagrados, abençoados pelos deuses, defensores do bem e da ordem. Eles são treinados de maneira semelhante aos clérigos: acolhidos em templos e mosteiros desde a infância, são instruídos nos caminhos da justiça e da nobreza, além de serem preparados como guerreiros para combater o mal.\nHá casos de indivíduos de valor extraordinário que são escolhidos pelos próprios deuses e recebem o título de paladino por seus méritos, sem qualquer contato com sacerdotes ou templos. No entanto, esses casos são exceções; a maioria dos paladinos atua como soldados de elite em ordens clericais.\nEntre os deuses maiores, apenas Azgher, Khalmyr, Lena, Lin-Wu, Marah, Tanna-Toh, Thyatis e Valkaria têm paladinos.",
+    sections: [
+      { title: "Paladino de Azgher",
+        intro: "Os soldados santos do Deus-Sol são ensinados que as piores ameaças se escondem nas sombras, onde devem ser encontradas e exterminadas. Eles avançam escuridão adentro brandindo suas espadas de chamas, levando purificação aos sítios profanos e destruindo o mal que espreita na noite.\nPaladinos de Azgher são perseguidores incansáveis dos mortos-vivos, essas abominações de Tenebra que rastejam na noite. Consideram a criação desses seres como profanação antinatural, o crime mais abominável na existência. Mesmo o mais nobre e bem-intencionado osteon terá grande dificuldade em convencer um guerreiro santo de Azgher a poupar sua não vida, sendo alguns dos companheiros mais improváveis em um grupo de aventureiros.\nA pior vergonha na história dos devotos de Azgher foi a traição de Raz-Al-Baddinn, seu antigo sumo-sacerdote, como o atual clérigo máximo de Tenebra. Outrora liderando o culto do Deus-Sol ao lado do irmão gêmeo, Al-Baddinn acabaria seduzido e convocado pelas Trevas. Não há paladino de Azgher que não sonhe encontrar e punir o maior infiel na história da ordem.",
+        content: [
+          { name: "Indumentária", description: " Diferente do paladino clássico, muitas vezes visto como um cavaleiro em armadura brilhante, o soldado santo de Azgher se veste como os povos do deserto. Usa trajes brancos que dispersam calor, com detalhes dourados, muitas vezes exibindo o símbolo sagrado em um escudo pequeno. Traz o rosto oculto, conforme as exigências de seu deus." },
+          { name: "Fundamentalista", description: " Como o sacerdote. Além disso, também é proibido de se associar a necromantes e mortos-vivos (incluindo osteon), devendo atacar e destruir todos que encontrar." },
+        ]
+      },
+      { title: "Paladino de Khalmyr",
+        intro: "Não há, em Arton, maiores campeões do bem e da ordem que os paladinos de Khalmyr. Os heróis mais admirados e respeitados pelo povo — e os mais temidos pelos vilões. Como esperado de soldados santos do próprio Deus da Justiça.\nPaladinos de Khalmyr fazem cumprir as leis, sejam aquelas prescritas por regentes mortais em seus reinos, sejam os comandos do próprio Khalmyr — e quando elas entram em conflito, obviamente a palavra divina tem precedência. Mesmo um nobre ou regente local pode ser repreendido por um paladino legítimo. Poucas vezes a autoridade do guerreiro sagrado é questionada, todos sabem que podem confiar em seu julgamento — Khalmyr não abençoa os falsos ou mal-intencionados com seu poder. Claro, tamanha confiança vem acompanhada de responsabilidade enorme. Quando o paladino comete uma injustiça, um erro de julgamento, as consequências para toda a ordem são terríveis. A mais absoluta retidão é necessária.\nPaladinos da Justiça muitas vezes pertencem a uma das duas grandes ordens devotadas a Khalmyr: a Ordem de Khalmyr, sediada nas Montanhas Lannestul, na costa oeste de Arton; ou a Ordem da Luz, localizada em Norm, no reino de Bielefeld. Alguns atuam de forma independente; esses às vezes são vistos como renegados, precisando se esforçar mais para provar sua autoridade e boa vontade.",
+        content: [
+          { name: "Indumentária", description: " O paladino da Justiça se veste de azul e branco, exibindo com orgulho o símbolo sagrado de Khalmyr em sua armadura, escudo ou flâmula." },
+          { name: "Fundamentalista", description: " Como o sacerdote." },
+        ]
+      },
+      { title: "Paladino de Lena",
+        intro: "Lena tem quase exclusivamente mulheres como clérigas, e essas seguem votos que as impedem de realizar qualquer ato violento contra outras criaturas. Assim, guerreiros sagrados parecem ter pouco em comum com os interesses da deusa. No entanto, eles existem!\nPaladinos de Lena estão entre os poucos homens que podem receber poder divino da Deusa da Vida. Sua origem mais comum é quando são filhos de sacerdotisas, então orientados a seguir o caminho do soldado santo — embora pouquíssimos continuem até o final. Contudo, sabe-se de lendas sobre paladinos de procedências muito diferentes, atendendo ao chamado caloroso da deusa em qualquer tribo, aldeia ou palácio.\nOutros paladinos combatem e destroem o mal. Paladinos de Lena, em vez disso, protegem a vida — sendo comum que acompanhem as clérigas como seus guarda-costas. Seu poder mágico de cura é superior ao de outros paladinos, mas suas restrições de combate acabam se mostrando mais severas. Proibidos de usar qualquer arma, ataque ou magia capaz de causar ferimentos, suas opções de combate ficam restritas a manobras ou ataques de imobilização, esquiva, desarme e outras.\nPaladinos de Lena são mais bondosos, generosos e atenciosos que outros guerreiros sagrados. Devido à natureza matriarcal da ordem, assim como a sua própria deusa, demonstram grande respeito por mulheres. Muito poucos acabam em grupos de aventureiros, visto que esses quase sempre recorrem a soluções violentas. Alguns, no entanto, acreditam ser capazes de proteger seus companheiros e ensinar-lhes o valor da Vida.",
+        content: [
+          { name: "Indumentária", description: " Como as sacerdotisas, paladinos de Lena vestem verde, amarelo e branco. São reconhecidos por exibir a lua prateada, símbolo da deusa." },
+          { name: "Fundamentalista", description: " Não pode causar nenhum tipo de dano, nem mesmo dano não letal." },
+        ]
+      },
+      { title: "Paladino de Lin-Wu",
+        intro: "Embora sejam conhecidos no Reinado por esse título, a cultura de Tamu-ra não tem paladinos. Seus guerreiros santos são os samurais, campeões sagrados de Lin-Wu, guiados pela honra absoluta.\nNem todos os samurais manifestam exatamente os mesmos poderes divinos. Aqueles atuando longe de sua terra natal, no entanto, acabam adotando as mesmas habilidades e poderes dos paladinos locais — como forma de respeito aos deuses estrangeiros ou por razões misteriosas que apenas Lin-Wu conhece. Embora, em sua sociedade, “samurai de Lin-Wu” seja uma redundância, alguns adotam o título em outras terras, deixando sua devoção mais clara aos locais.\nSamurais são conhecidos por servir a um lorde, que pode ser um senhor feudal, ou mesmo o próprio Imperador. O paladino de Lin-Wu, da mesma forma, adota o próprio Deus da Honra como seu mestre absoluto. Clérigos da ordem, os shugenja, são aceitos como seus representantes e também devem ser obedecidos. A aliança entre samurai e shugenja é sagrada, sendo uma grande infelicidade quando não acontece essa harmonia.\nAssim como os clérigos, paladinos de Lin-Wu consideram-se em dívida de honra com o Reinado de Arton, por acolher os refugiados de Tamu-ra em sua capital durante o ataque da Tormenta. É normal vê-los integrando grupos de aventureiros em missões para proteger o povo artoniano, especialmente quando envolve combater a Tormenta.",
+        content: [
+          { name: "Indumentária", description: " Como os clérigos, vestem vermelho, verde e/ou dourado em tons brilhantes. Preferem a armadura tradicional de seu povo — mas, por serem raras e dispendiosas nestas terras, podem adotar peças locais por praticidade." },
+          { name: "Fundamentalista", description: " Como o sacerdote. Além disso é também proibido de se associar a devotos de Aharadak, também devendo atacar e destruir todos que encontrar." },
+        ]
+      },
+      { title: "Paladino de Marah",
+        intro: "Paladinos são guerreiros santos, então é difícil imaginar que a Deusa da Paz recorra a eles. Na verdade, o paladino de Marah é mais eficiente em combate do que o senso comum leva a acreditar.\nComo os clérigos, paladinos de Marah buscam apaziguar conflitos da forma mais compassiva possível. Cientes de que seus adversários quase sempre recorrem à violência, atuam como muralhas protetoras vivas para seus aliados, atraindo ataques para si, perseverando, restaurando os próprios ferimentos — até que seus companheiros estejam em segurança ou consigam nulificar a ameaça. Claro, o paladino não concorda que isso seja alcançado por meios agressivos; vai preferir aliar-se a outros que, mesmo não sendo devotos, compartilhem de seus ideais pacifistas. Ele aceita que seus colegas usem violência moderada, apenas em situações de necessidade.\nPaladinos de Marah não protegem apenas a paz, mas também a felicidade. São inimigos de todos que buscam causar sofrimento e miséria. Um destes guerreiros santos é capaz de interromper sua viagem e conversar longamente com o ancião amargurado que encontrou no caminho. Ajudar o fazendeiro em dificuldades com a colheita. Aconselhar o jovem bardo apaixonado na conquista da caçadora élfica. Perguntar à criança o motivo de seu choro, então salvar seu cão perdido. Fazer sorrisos retornarem é seu modo de agradar a deusa.\nA positividade do paladino de Marah raramente encontra rival. Ele acredita não existir poder maior que o Amor e está sempre disposto a provar.\nPara representar suas habilidades únicas como um campeão da Deusa da Paz, o paladino de Marah pode substituir Luta por Diplomacia em suas perícias iniciais, e inclui Atuação e Luta em suas perícias de classe. Além disso, ele pode substituir a habilidade Golpe Divino pela seguinte.",
+        content: [
+          { name: "Mensagem de Paz", description: " Você pode gastar uma ação padrão e 1 PM para diminuir o desejo de violência de uma criatura em alcance curto. Faça um teste de Diplomacia oposto ao teste de Vontade da criatura. Se você vencer, a criatura sofre uma penalidade cumulativa de –1 em testes de ataque e rolagens de dano e, se for um lacaio, fica também pasma por 1 rodada (uma criatura só pode ficar pasma por este efeito uma vez por cena). Para cada 10 pontos pelos quais você vencer o teste oposto, a penalidade aumenta em 1 e, se a criatura estava enfeitiçada, fascinada ou pasma, a penalidade aumenta em 1 para cada uma dessas condições. A cada rodada, a penalidade acumulada da criatura diminui em 1. A cada quatro níveis, você pode gastar +1 PM para receber +5 no teste de Diplomacia.\nA partir do 5º nível, quando usa esta habilidade, você pode gastar +2 PM. Se fizer isso, afeta todas as criaturas à sua escolha em alcance curto. Mental." },
+          { name: "Indumentária", description: " Paladinos de Marah vestem branco. Mas, por seu papel como protetores, tendem a usar as armaduras mais pesadas que conseguem." },
+          { name: "Fundamentalista", description: " Nunca permite que seus aliados causem perda de vida ou dano, nem mesmo dano não letal." },
+        ]
+      },
+      { title: "Paladino de Tanna-Toh",
+        intro: "A Deusa do Conhecimento não é necessariamente pacífica. Conhecimento é um tesouro valioso como outro qualquer. Muitas vezes é preciso lutar para obtê-lo, ou para protegê-lo.\nPaladinos de Tanna-Toh são especializados em missões que envolvem resgatar ou salvar tesouros culturais. São treinados para reconhecer e localizar esses itens de forma mais eficiente que outros paladinos, constantemente participando de expedições para encontrar relíquias e artefatos perdidos. Grupos de aventureiros que prestam serviços à Academia Arcana e a outros patronos eruditos muitas vezes contam com um destes entre seus membros.\nOutro papel vital destes paladinos é proteger a verdade. Eles lutam para desvendar enigmas, expor mentiras, dissipar intrigas. Em cortes e grandes centros urbanos, impedem que falsidades e boatarias causem a derrocada das instituições. Nem mesmo os paladinos de Khalmyr são guardiões tão ferrenhos da retidão dos poderosos.\nAinda que habilidoso em combate, o paladino de Tanna-Toh prefere superar obstáculos com sagacidade e astúcia, honrando as graças de sua deusa. Se houver um meio criativo para vencer um conflito, em vez de simplesmente atacar com sua espada, ele o tentará. Em geral respeita arcanistas e inventores por suas mentes brilhantes — e até ladinos, quando escolhem usar sua perícia para o bem.",
+        content: [
+          { name: "Indumentária", description: " Um paladino de Tanna-Toh em geral usa armadura mais leve que outros guerreiros santos. Como o clérigo, veste cinza, branco e/ou amarelo." },
+          { name: "Fundamentalista", description: " Como o sacerdote. Além disso, sempre informa sua verdadeira identidade e ocupação antes de iniciar uma conversa." },
+        ]
+      },
+      { title: "Paladino de Thyatis",
+        intro: "O Deus da Ressurreição e da Profecia tem poucos paladinos. Eles existem para ensinar a Arton que o bem e a justiça nunca morrem. Assim como eles próprios.\nMuitos paladinos de Thyatis recebem o dom da imortalidade. Quando morrem, retornam à vida magicamente em poucos dias, independentemente da causa da morte. Se forem queimados, suas cinzas se reúnem para reformar o corpo. Cortados em mil pedaços, seus fragmentos se unem novamente. Mesmo que os pedaços sejam separados e enterrados longe um do outro, um deles regenerará por completo, trazendo o paladino de volta. Não há morte.\nEsse dom torna os paladinos de Thyatis muito poderososos, mas não invencíveis. Existe uma forma secreta de matá-los permanentemente, chamada Morte Verdadeira. Pode ser qualquer evento comum que acompanhe uma morte: um gole de vinho élfico, o soco de um ogro, o toque de um dragão, uma gota de chuva no outono... Se esse evento secreto ocorre, o paladino morre instantaneamente e não pode ser ressuscitado. Para descobrir sua Morte Verdadeira antes que ocorra, o paladino pode realizar uma missão especial para Thyatis. A informação valiosa é então revelada por um alto clérigo, pelo sumo-sacerdote ou pelo próprio Thyatis.\nComo esperado, um paladino de Thyatis luta para que todos tenham uma segunda chance. Tem poder combativo elevado mas, como os clérigos, é proibido de matar seres inteligentes. Sem temer dor ou morte, não hesita em recorrer à imortalidade para salvar inocentes e proteger seus aliados, “sacrificando-se” sempre que houver vantagem.",
+        content: [
+          { name: "Imortais", description: " Paladinos com Dom da Imortalidade que sejam mortos retornam magicamente à vida após algum tempo (em geral, 3d6 dias).\nPara representar isso, sempre que um paladino de Thyatis com o Dom da Imortalidade morrer, deve rolar 1d20. Com um resultado 1, aquela foi a Morte Verdadeira dele, e ele estará permanentemente morto. Com qualquer outro resultado, aquela foi só uma morte comum e o paladino voltará. Porém, se morrer novamente e rolar um número já rolado antes, deverá rolar novamente — afinal, aquele resultado representa uma morte que já aconteceu. A exceção é uma rolagem de 20 natural, que sempre pode ser repetida. Por exemplo, um paladino de Thyatis cai do alto da muralha de um castelo e morre pela primeira vez. O jogador rola 1d20 e tira um resultado 3. Isso significa que essa foi uma morte comum, da qual o paladino se recuperará em 3d6 dias. Mais tarde, ele é atropelado por um vagão goblin desgovernado e morre de novo. Mais uma vez, o jogador rola 1d20. Se for um 3, o jogador deverá rolar novamente — este número já tendo representado a morte por cair do alto de uma muralha. Paladinos de Thyatis não ganham pontos de experiência por sessões de jogo nas quais tenham morrido." },
+          { name: "Indumentária", description: " Prefere armaduras vistosas para atrair ataques inimigos, sempre adornadas com a ave fênix e suas cores: amarelo, laranja, dourado." },
+          { name: "Fundamentalista", description: " Proibido de matar não apenas seres inteligentes, mas quaisquer seres vivos." },
+        ]
+      },
+      { title: "Paladino de Valkaria",
+        intro: "Lendas falam de tempos antigos em que apenas os humanos podiam ser paladinos. Mais tarde, também seria permitido a membros das raças com sangue humano — como meios-elfos e meios-orcs — serem abençoados como soldados santos. Se essa restrição realmente aconteceu (pois muitos duvidam), é possível que tenha sido Valkaria, e não Khalmyr, a primeira divindade com paladinos. Essa teoria é reforçada pelo fato de que, hoje, quase todos os paladinos são humanos — e as maiores ordens de paladinos são compostas principalmente por humanos.\nDepois dos paladinos de Khalmyr, os paladinos de Valkaria são os mais numerosos em Arton — e também os mais obstinados, aqueles que melhor representam a determinação e o espírito aventureiro da raça humana. Buscam aventura com a mesma paixão com que buscam justiça. Quanto maior o desafio, quanto maior a dificuldade da missão, maior será seu empenho em participar.\nAté recentemente, como os clérigos, paladinos de Valkaria perdiam parte de seus poderes quando ultrapassavam as fronteiras de Deheon. Assim, demonstravam sua bravura aventurando-se em terras distantes, mesmo quando isso reduzia suas forças. Hoje é diferente: Valkaria não apenas está livre, mas comanda o Panteão, e seus paladinos são mais audaciosos do que nunca.\nTalvez devido ao antigo cativeiro da deusa, paladinos de Valkaria são defensores irredutíveis da liberdade. Combatem déspotas, tiranos, escravagistas e todos aqueles que buscam privar outros de seu sagrado livre-arbítrio.",
+        content: [
+          { name: "Indumentária", description: " Todo paladino de Valkaria traz na placa peitoral, escudo ou flâmula a imagem da estátua de sua deusa." },
+          { name: "Fundamentalista", description: " Deve sempre buscar novas missões e aventuras, jamais recusando uma missão. Sempre que houver um tempo entre aventuras, deve realizar uma busca relacionada a uma aventura. Também é proibido de usar habilidades que causam condições de movimento. Apenas humanos podem ser paladinos fundamentalistas de Valkaria." },
+        ]
+      },
+      { title: "Paladino do Bem",
+        intro: "Da mesma forma que ocorre com o clérigo do Panteão, nem todo paladino decide servir a esta ou aquela divindade. O paladino do bem reconhece a existência e soberania de todos os vinte deuses — e, humildemente, não acredita ser digno de escolher apenas um entre eles. Guiado apenas por sua fé e princípios morais, serve “aos deuses” sem se prender a nenhum.\nO paladino do bem jamais coloca uma crença acima de outra. Demonstra respeito perante todos os outros clérigos e paladinos que encontra. No entanto, ainda é um campeão sagrado do bem e ordem. Quando seus opositores são sszzaazitas ou outros devotos de deuses malignos, não hesita em destruí-los. Mesmo respeitando todos os vinte, um paladino do bem acredita na soberania dos deuses bondosos sobre os malignos, ele próprio atuando como instrumento para esse equilíbrio.\nPaladinos são especiais, por vezes atraindo o interesse pessoal dos deuses. Este paladino pode acabar abordado por uma divindade maior, pedindo (ou exigindo) sua devoção exclusiva. Nesse momento dramático ele pode aceitar servir ao novo patrono ou — que ousadia! — preferir manter sua independência. É uma situação delicada, mesmo os deuses mais bondosos não lidam bem com orgulho ferido. Muito mais complicado é quando dois ou mais deuses cobiçam o guerreiro santo!\nSeguindo o código dos paladinos, mas sem Obrigações & Restrições, o paladino do bem costuma ser um excelente aliado e companheiro em grupos de aventureiros.",
+        content: [
+          { name: "Indumentária", description: " Segue o estilo clássico dos paladinos, usando armaduras brilhantes, embora possa se vestir como quiser. Alguns ostentam diferentes símbolos sagrados dos deuses bondosos." },
+          { name: "Fundamentalista", description: " Como o sacerdote do Panteão." },
+        ]
+      },
     ]
+  }
+]
     },
     { id: "Samurai",
     name: "Samurai",
@@ -3325,6 +3430,97 @@ export const classes: GameClass[] = [
       { level: 19, abilities: "Poder de clérigo" },
       { level: 20, abilities: "Guerreiro Santificado, poder de clérigo" }
     ],
+    },
+    { id: "Frade",
+    name: "Frade",
+    powersUrl: "/poderes/frade",
+    origin: "Deuses de Arton",
+    image: "/classes/frade.png",
+    description: "Um tipo de sacerdote, o frade é um conjurador divino focado em suporte, cura e conhecimento. É similar ao clérigo, mas enquanto este é mais combativo, valendo-se de armas e armaduras, o frade prefere mantos esvoaçantes e ostenta poder mágico superior. Como se fosse um tipo de arcanista divino, costuma ser conhecido em alguns círculos como “mago sagrado”.\nClérigos e frades servem aos mesmos deuses, mas agem de formas diferentes — na verdade, eles se complementam. O clérigo de Arsenal abençoa soldados no campo de batalha e luta a seu lado, enquanto o frade do Deus da Guerra atua no templo-quartel analisando mapas e criando estratégias militares. Um clérigo de Khalmyr persegue criminosos para levá-los à justiça; o frade do mesmo deus trava suas batalhas nos tribunais, defendendo inocentes e punindo culpados.\nEm suas respectivas igrejas e cultos, frades alcançam posições de liderança com mais frequência que clérigos. Também é comum encontrá-los como líderes de comunidades; seu vasto conhecimento e sabedoria costumam ser mais valiosos nessa função que habilidades de combate. O xamã de Allihanna que comanda uma pequena aldeia de bárbaros muito provavelmente será um frade, em vez de um clérigo. O mesmo vale para a professora de Tanna-Toh que ensina escrita e aritmética às crianças do povoado, bem como o capelão do Oceano conduzindo serviços religiosos a bordo da nau capitânia de uma frota pirata.\nAssim, é pouco comum que frades sejam aventureiros — mas não impossível. Apesar de sua maior afinidade com funções burocráticas, frades também podem ser compelidos a grandes missões. Em vez de lutar na linha de frente, juntam-se aos arcanistas na retaguarda, provendo suporte e proteção — não apenas com seu acervo superior de magias, mas também com astúcia e estratégia. O frade é, além disso, um investigador ferrenho, tendo na solução de mistérios uma frequente motivação para se aventurar. É valioso decifrando escrituras e identificando maldições.\nAlém de suas habilidades milagrosas, frades são conhecidos por sua grande erudição. São dedicados ao estudo das artes, da história e da filosofia, que consideram tão essencial quanto a prática de magias. Acumulam conhecimento sobre civilizações antigas, tradições culturais e segredos místicos, tornando-se conselheiros valiosos, diplomatas hábeis e sábios estrategistas. São procurados por regentes e líderes, que valorizam sua sabedoria, perspicácia e perícia em negociação.\nEmbora sejam encontrados servindo a todo o Panteão, frades têm mais afinidade com certas divindades. Por valorizarem a magia acima do combate, muitos são devotados a Lena, Marah e Thyatis. Um grande número também serve a Tanna-Toh, buscando seu conhecimento sagrado. Muitos oram pela esperteza de Hyninn e pela sagacidade de Sszzaas, perseverando através de trapaça e traição. Wynna também é bem servida por frades — esses talvez estejam entre os conjuradores mais versáteis de Arton, igualmente dominando magia arcana e divina. De fato, mesmo entre devotos de deuses combativos ou violentos, sempre haverá aqueles buscando superar desafios não com armas, mas com magia e inteligência.",
+    famousExamples: [
+      'Belinda Arting', 'Khorr’benn An-ug’atz', 'Nekapeth', 'Nichaela', 'Tella Andoren'
+    ],
+    characteristics: {
+      pvBase: "12 + Constituição",
+      pvPerLevel: "3 + Constituição",
+      pmPerLevel: "6 PM por nível"
+    },
+    skills: {
+    mandatory: ["Religião (Sab)", "Vontade (Sab)"],
+    optional: {
+      skills: [ 'Adestramento (Car)', 'Atuação (Car)', 'Conhecimento (Int)', 'Cura (Sab)', 'Diplomacia (Car)', 'Fortitude (Con)', 'Guerra (Int)', 'Iniciativa (Des)', 'Intimidação (Car)', 'Intuição (Sab)', 'Investigação (Int)', 'Misticismo (Int)', 'Ofício (Int)', 'Percepção (Sab)', 'Nobreza (Int)'],
+      count: 4
+      }
+    },
+    proficiency: "Nenhuma",
+    abilities: [
+      {
+      name: "Devoto Fiel",
+      description: "Você se torna devoto de um deus maior. Veja as regras de devotos. Ao contrário de devotos normais, você recebe dois poderes concedidos por se tornar devoto, em vez de apenas um.\nComo alternativa, você pode cultuar o Panteão como um todo. Não recebe nenhum Poder Concedido, mas sua única obrigação e restrição é não usar armas cortantes ou perfurantes (porque derramam sangue, algo que frades do Panteão consideram proibido). Sua arma preferida é a maça e você pode canalizar energia positiva ou negativa a sua escolha (uma vez feita, essa escolha não pode ser mudada). Cultuar o Panteão conta como sua devoção.",
+      },
+      {
+        name: "Erudição",
+        description: "Quando faz um teste de perícia (exceto de ataque), você pode gastar uma quantidade de PM a sua escolha (limitada pela sua Inteligência). Para cada PM que gastar, recebe +2 no teste."
+      },
+      {
+        name: "Magias",
+        description: "Você pode lançar magias divinas de 1º círculo. A cada quatro níveis, pode lançar magias de um círculo maior (2º círculo no 5º nível, 3º círculo no 9º nível e assim por diante).\nVocê começa com três magias de 1º círculo. A cada nível, aprende uma magia de qualquer círculo que possa lançar. Você pode lançar essas magias vestindo armaduras leves mas, se estiver usando armadura pesada, precisará fazer um teste de Misticismo como se fosse um conjurador arcano.\nSeu atributo-chave para lançar magias é Sabedoria e você soma sua Sabedoria no seu total de PM."
+      },
+      {
+        name: "Versiculário",
+        description: "No 2º nível, você recebe um versiculário, um livro de anotações religiosas pessoais. Uma vez por dia, você pode gastar 1 hora estudando suas anotações no versiculário. Quando faz isso, escolha uma quantidade de magias igual à sua Inteligência (limitada pelo seu nível). Até o próximo dia, quando lança uma dessas magias, você recebe +1 PM para gastar em aprimoramentos. Se perder seu versiculário, você pode escrever outro com 1 semana de trabalho e o gasto de T$ 100."
+      },
+      {
+        name: "Poder de Frade",
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um dos poderes de Frade ou Gerais"
+      },
+      {
+        name: "Dádiva da Fé",
+        description: "No 5º nível, você recebe Proteção Sagrada (se sua divindade canaliza energia positiva) ou Cólera Divina (se canaliza energia negativa).",
+        subAbilities: [
+          {
+            name: "Proteção Sagrada",
+            description: "Você pode gastar uma ação de movimento e até 2 PM por círculo de magia a que tem acesso para energizar seu símbolo sagrado até o fim da cena. Enquanto você estiver empunhando o símbolo, ele projeta uma aura com 9m de raio. Criaturas a sua escolha dentro dessa aura recebem redução de dano igual à metade do total de PM gastos."
+          },
+          {
+            name: "Cólera Divina",
+            description: "Você pode gastar uma ação de movimento e até 2 PM por círculo de magia a que tem acesso para energizar seu símbolo sagrado até o fim da cena. Enquanto você estiver empunhando o símbolo, ele projeta uma aura com 9m de raio. Criaturas a sua escolha dentro dessa aura recebem um bônus em suas rolagens de dano igual à metade do total de PM gastos."
+          },
+        ]
+      },
+      {
+        name: "Solo Santificado",
+        description: "No 20º nível, o raio de sua Dádiva da Fé muda para 30m e criaturas afetadas por ela também somam o bônus concedido pela habilidade na CD de suas próprias habilidades."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Devoto fiel, erudição, magias (1º círculo)" },
+      { level: 2, abilities: "Poder de frade, versiculário" },
+      { level: 3, abilities: "Poder de frade" },
+      { level: 4, abilities: "Poder de frade" },
+      { level: 5, abilities: "Dádiva da fé, magias (2º círculo), poder de frade" },
+      { level: 6, abilities: "Poder de frade" },
+      { level: 7, abilities: "Poder de frade" },
+      { level: 8, abilities: "Poder de frade" },
+      { level: 9, abilities: "Magias (3º círculo), poder de frade" },
+      { level: 10, abilities: "Poder de frade" },
+      { level: 11, abilities: "Poder de frade" },
+      { level: 12, abilities: "Poder de frade" },
+      { level: 13, abilities: "Magias (4º círculo), poder de frade" },
+      { level: 14, abilities: "Poder de frade" },
+      { level: 15, abilities: "Poder de frade" },
+      { level: 16, abilities: "Poder de frade" },
+      { level: 17, abilities: "Magias (5º círculo), poder de frade" },
+      { level: 18, abilities: "Poder de frade" },
+      { level: 19, abilities: "Poder de frade" },
+      { level: 20, abilities: "Poder de frade, solo santificado" }
+    ],
+    extras: [
+    {
+      title: "Dom da Ressurreição e Frades",
+      description: "O poder concedido Dom da Ressurreição, originalmente limitado a clérigos, também pode ser escolhido por frades de Thyatis."
+    },
+    ]
     },
 
     
