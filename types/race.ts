@@ -9,13 +9,24 @@ export interface FlexibleAttributeModifier {
   description: string; // Ex: "Escolha +1 em dois atributos diferentes"
 }
 
+export interface SubAbility {
+  name: string;
+  description: string;
+}
+
+export interface RaceAbility {
+  name: string;
+  description: string;
+  subAbilities?: SubAbility[]; // Para listas de escolha ou sub-poderes
+}
+
 export interface Race {
   id: string;
   name: string;
   origin: "tormenta20 - jogo do ano" | "Dragão Brasil" | string;
   image: string;
   description: string; // Use \n para quebras de linha
-  abilities: string[];
+  abilities: RaceAbility[];
   // Pode ser um array de modificadores fixos OU um array com descrição flexível
   attributeModifiers: (AttributeModifier | FlexibleAttributeModifier)[];
   longevidade?: string;
