@@ -29,7 +29,7 @@
     name: "",
     description: "",
     prerequisite: "",
-    origin: "Herois de Arton"
+    origin: "Deuses de Arton"
   },
 
 ------------------Origem-----------------------------

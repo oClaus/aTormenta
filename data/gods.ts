@@ -1,16 +1,35 @@
 import { God } from "@/types/god";
 
 export const gods: God[] = [
-  {
-    id: "1",
+  { id: "Aharadak",
     name: "Aharadak",
-    image: "/deuses/aharadak.png",
+    subtitle: "DEUS DA TORMENTA",
+    image: [
+    "/deuses/aharadak.png", 
+    "/deuses/aharadak2.png",
+    ],
     status: "normal",
-    history: "Outrora um dos terríveis Lordes da Tormenta, esta aberração monstruosa ambicionava o grande poder divino oferecido pelos devotos de Arton. Após anos liderando seu próprio culto profano, Aharadak matou Tauron, o Deus da Força, e ascendeu como o novo e macabro Deus da Tormenta. Agora ocupando uma posição importante no Panteão, os invasores lefeu avançam mais uma etapa em seus planos para corromper Arton. Apenas os devotos mais depravados ousam cultuar esta divindade de escatologia e sadismo.",
-    beliefs: "Reverenciar a Tormenta, apregoar a inevitabilidade de sua chegada ao mundo. Praticar a devassidão e a perversão. Deturpar tudo que é correto, desfigurar tudo que é normal. Abraçar a agonia, crueldade e loucura.",
-    sacredSymbol: "Um olho macabro de pupila vertical e cercado de espinhos.",
+    // Novos campos curtos
+    otherNames: "O Devorador; o Deus Rubro; o Lorde da Tormenta; o Redentor (entre alguns cultistas).",
+    areasOfInfluence: "Tormenta, devassidão, dor, loucura, fome, servidão, corrupção, evolução.",
+    significantColors: "Vermelho.",
+    motto: "“Tudo é lefeu.”",
+    
+    sacredSymbol: "Um olho macabro de pupila vertical e cercado de espinhos. Cultistas enlouquecidos podem usar quase qualquer objeto ou imagem repugnante.",
     channelEnergy: "Negativa",
     preferredWeapon: "Corrente de espinhos",
+    
+    // Lore
+    history: "Outrora um dos terríveis Lordes da Tormenta, esta aberração monstruosa ambicionava o grande poder divino oferecido pelos devotos de Arton. Após anos liderando seu próprio culto profano, Aharadak matou Tauron, o Deus da Força, e ascendeu como o novo e macabro Deus da Tormenta...",
+    
+    beliefs: "Reverenciar a Tormenta, apregoar a inevitabilidade de sua chegada ao mundo. Praticar a devassidão e a perversão. Deturpar tudo que é correto, desfigurar tudo que é normal.",
+    
+    motivations: "Aharadak é, antes de mais nada, lefeu. Os Lordes da Tormenta mantêm alguma individualidade, têm suas próprias personalidades...\n\nAharadak preza, acima de tudo, o domínio total de tudo que existe, a transformação de Arton na Anticriação. Diferente de outros deuses, o culto ao Deus da Tormenta é um fim em si mesmo.",
+    
+    relationships: "A única fagulha de “otimismo” que ainda não se provou falsa é: embora a Tormenta esteja corrompendo e modificando Arton, Arton também está modificando a Tormenta.\n\nAllihanna e Oceano são seus maiores inimigos. Khalmyr, Azgher e Thyatis o veem como um vilão supremo. Mais assustadora é a relação entre Aharadak e Valkaria...",
+    
+    churchAndClergy: "De início, a igreja de Aharadak era espalhada em pequenas células sem muita comunicação entre si. Contudo, desde a ascensão do Devorador, em poucos anos seu culto ganhou grandes proporções.\n\nSeja como for, células de cultistas de Aharadak estão entre os mais perigosos e cruéis adversários que qualquer grupo de aventureiros pode enfrentar.",
+
     devotees: "Quaisquer. A Tormenta aceita tudo e todos.",
     grantedPowers: [
       "Afinidade com a Tormenta",
@@ -18,10 +37,9 @@ export const gods: God[] = [
       "Percepção Temporal",
       "Rejeição Divina"
     ],
-    obligationsRestrictions: "Quase todos os cultistas de Aharadak são maníacos insanos, compelidos a praticar os atos mais abomináveis. No entanto, talvez devido à natureza alienígena e incompreensível deste deus, alguns devotos conseguem se resguardar. Preservam sua humanidade, abstendo-se de cometer crimes ou profanações. Ainda assim, o devoto paga um preço. No início de qualquer cena de ação, role 1d6. Com um resultado ímpar, você fica fascinado na primeira rodada, perdido em devaneios sobre a futilidade da vida (mesmo que seja imune a esta condição)."
+    obligationsRestrictions: "Quase todos os cultistas de Aharadak são maníacos insanos, compelidos a praticar os atos mais abomináveis. No entanto, talvez devido à natureza alienígena e incompreensível deste deus, alguns devotos conseguem se resguardar..."
   },
-  {
-    id: "2",
+  { id: "Lena",
     name: "Lena",
     image: "/deuses/lena.png",
     status: "normal",
@@ -30,7 +48,7 @@ export const gods: God[] = [
     sacredSymbol: "Lua crescente prateada.",
     channelEnergy: "Positiva",
     preferredWeapon: " Não há. Servos desta deusa não podem lançar a magia Arma Espiritual e similares.",
-    devotees: "Dahllan, qareen, nobres, paladinos.",
+    devotees: "Ceratops, dahllan, eiradaan, qareen, kappa, kobolds, pteros, velocis, Nobre, paladino.",
     grantedPowers: [
       "Ataque Piedoso",
       "Aura Restauradora",
@@ -39,8 +57,7 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: "Devotos de Lena não podem causar dano letal ou perda de PV a criaturas vivas (fornecer bônus em dano letal também é proibido). Podem causar dano não letal e prejudicar seus inimigos (em termos de jogo, impondo condições), desde que não causem dano letal ou perda de PV. Para um devoto de Lena, é preferível perder a própria vida a tirá-la de outros. Apenas mulheres podem ser devotas de Lena (exceto paladinos homens). Uma clériga precisa dar à luz pelo menos uma vez antes de receber seus poderes divinos."
   },
-  {
-    id: "3",
+  { id: "Nimb",
     name: "Nimb",
     image: "/deuses/nimb.png",
     status: "normal",
@@ -49,7 +66,7 @@ export const gods: God[] = [
     sacredSymbol: "Um dado de seis faces.",
     channelEnergy: "Qualquer",
     preferredWeapon: "Nenhuma e todas! Ao usar um efeito que dependa de arma preferida, qualquer arma (ou outro objeto!) pode aparecer, de acordo com o mestre.",
-    devotees: "Goblins, qareen, sílfides, arcanistas, bárbaros, bardos, bucaneiros, inventores, ladinos.",
+    devotees: "Duende, gnoll, goblin, naidora, orc, qareen, sátiro, sílfide, tabrachi, yidishan, Arcanista, bárbaro, bardo, bucaneiro, inventor, ladino, treinador.",
     grantedPowers: [
       "Êxtase da Loucura",
       "Poder Oculto",
@@ -58,8 +75,7 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: "Por serem incapazes de seguir regras, estes devotos não têm “obrigações” verdadeiras (portanto, nunca perdem PM por descumprirem suas O&R). No entanto, sofrem certas restrições que não podem ignorar. Devotos de Nimb são loucos (ou agem como se fossem), não conseguindo convencer ninguém de coisa alguma. Você sofre –5 em testes de perícias baseadas em Carisma. Além disso, no início de cada cena de ação, role 1d6. Com um resultado 1, você fica confuso."
   },
-  {
-    id: "4",
+  { id: "Tenebra",
     name: "Tenebra",
     image: "/deuses/tenebra.png",
     status: "normal",
@@ -68,7 +84,7 @@ export const gods: God[] = [
     sacredSymbol: "Estrela negra de cinco pontas.",
     channelEnergy: "Negativa.",
     preferredWeapon: "Adaga.",
-    devotees: " Anões, medusas, qareen, osteon, sulfure, trogs, arcanistas, bardos, ladinos.",
+    devotees: "Anão, bugbear, finntroll, gnoll, harpia, hobgoblin, kobolds, medusa, nagah, nezumi, qareen, ogro, orc, osteon, sulfure, tabrachi, trog, Arcanista, bardo, druida, ladino, treinador.",
     grantedPowers: [
       "Carícia Sombria",
       " Manto da Penumbra",
@@ -77,8 +93,7 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: "Tenebra proíbe que seus devotos sejam tocados por Azgher, o odiado rival. O devoto deve se cobrir inteiramente durante o dia, sem expor ao sol nenhum pedaço de pele."
   },
-  {
-    id: "5",
+  { id: "Wynna",
     name: "Wynna",
     image: "/deuses/wynna.png",
     status: "normal",
@@ -87,7 +102,7 @@ export const gods: God[] = [
     sacredSymbol: "Um anel metálico.",
     channelEnergy: "Qualquer.",
     preferredWeapon: "Adaga.",
-    devotees: "Elfos, golens, qareen, sílfides, arcanistas, bardos.",
+    devotees: "Duende, elfo, eiradaan, golem, kallyanach, mashin, nagah, pteros, qareen, sátiro, sílfide, tengu, Arcanista, bardo, treinador.",
     grantedPowers: [
       "Bênção do Mana",
       "Centelha Mágica",
@@ -96,8 +111,7 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: "Devotos de Wynna devem praticar a bondade e a generosidade de sua deusa, jamais recusando um pedido de ajuda de alguém inocente. Além disso, devotos de Wynna são proibidos de matar seres mágicos (elfos, qareen, sílfides e outros a critério do mestre) e conjuradores arcanos."
   },
-  {
-    id: "6",
+  { id: "Allihanna",
     name: "Allihanna",
     image: "/deuses/allihanna.png",
     status: "normal",
@@ -106,7 +120,7 @@ export const gods: God[] = [
     sacredSymbol: "Para bárbaros e outros adoradores de animais, o símbolo corresponde ao respectivo animal. Para outros, uma pequena árvore.",
     channelEnergy: "Positiva",
     preferredWeapon: "Bordão",
-    devotees: "Dahllan, elfos, sílfides, bárbaros, caçadores, druidas.",
+    devotees: "Centauro, ceratops, dahllan, duende, eiradaan, elfo, elfo-do-mar, galokk, gnoll, nagah, ogro, orc, pteros, sátiro, sílfide, tabrachi, velocis, voracis, Bárbaro, caçador, druida, treinador",
     grantedPowers: [
       "Compreender os Ermos",
       "Dedo Verde",
@@ -115,8 +129,7 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: "Devotos de Allihanna não podem usar armaduras e escudos feitos de metal. Assim, você só pode usar armadura acolchoada, de couro, gibão de peles e escudo leve, ou itens feitos de materiais especiais não metálicos. Devotos de Allihanna não podem descansar em nenhuma comunidade maior que uma aldeia (não perdem seus poderes, mas também não recuperam pontos de vida ou mana). Por isso, sempre preferem o relento a um quarto de estalagem."
   },
-  {
-    id: "7",
+  { id: "Khalmyr",
     name: "Khalmyr",
     image: "/deuses/khalmyr.png",
     status: "normal",
@@ -125,7 +138,7 @@ export const gods: God[] = [
     sacredSymbol: "Espada sobreposta a uma balança.",
     channelEnergy: "Positiva.",
     preferredWeapon: "Espada longa.",
-    devotees: "Aggelus, anões, cavaleiros, guerreiros, nobres, paladinos.",
+    devotees: "Aggelus, anão, kobolds, tengu, Cavaleiro, guerreiro, nobre, paladino.",
     grantedPowers: [
       "Coragem Total",
       "Dom da Verdade",
@@ -134,8 +147,7 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: " Devotos de Khalmyr não podem recusar pedidos de ajuda de pessoas inocentes. Também devem cumprir as ordens de superiores na hierarquia da igreja. Só podem usar itens mágicos permanentes criados por devotos do mesmo deus."
   },
-  {
-    id: "8",
+  { id: "Megalokk",
     name: "Megalokk",
     image: "/deuses/Megalokk.png",
     status: "normal",
@@ -144,7 +156,7 @@ export const gods: God[] = [
     sacredSymbol: "A garra de um monstro.",
     channelEnergy: "Negativa",
     preferredWeapon: "Maça",
-    devotees: "Goblins, medusas, minotauros, sulfure, trogs, bárbaros, caçadores, druidas, lutadores.",
+    devotees: "Bugbear, centauro, ceratops, elfo-do-mar, finntroll, galokk, gnoll, goblin, harpia, hobgoblin, kallyanach, kobolds, medusa, minotauro, nagah, nezumi, ogro, orc, sulfure, tabrachi, trog, voracis, yidishan, Bárbaro, caçador, druida, lutador, treinador.",
     grantedPowers: [
       "Olhar Amedrontador",
       "Presas Primordiais",
@@ -153,8 +165,7 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: "Devotos de Megalokk devem rejeitar os modos civilizados e se entregar à ferocidade, descontrole e impaciência. Você é proibido de usar perícias baseadas em Inteligência ou Carisma (exceto Adestramento e Intimidação) e não pode preparar uma ação, escolher 10 ou 20 em testes e lançar magias sustentadas."
   },
-  {
-    id: "9",
+  { id: "Sszzaas",
     name: "Sszzaas",
     image: "/deuses/Sszzaas.png",
     status: "normal",
@@ -163,7 +174,7 @@ export const gods: God[] = [
     sacredSymbol: "Uma naja vertendo veneno pelas presas.",
     channelEnergy: "Negativa",
     preferredWeapon: "Adaga",
-    devotees: "Medusas, arcanistas, bardos, bucaneiros, inventores, ladinos, nobres.",
+    devotees: "Finntroll, medusa, nagah, tabrachi, Arcanista, bardo, bucaneiro, inventor, ladino, nobre.",
     grantedPowers: [
       "Astúcia da Serpente",
       " Familiar Ofídico",
@@ -172,8 +183,7 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: " O devoto deve fazer um ato de traição, intriga ou corrupção por dia (ou por sessão de jogo, o que demorar mais) como oferenda a Sszzaas. Em termos de jogo, uma ação exigindo um teste de Enganação com CD mínima 15 + {metade do seu nível}."
   },
-  {
-    id: "10",
+  { id: "Thyatis",
     name: "Thyatis",
     image: "/deuses/Thyatis.png",
     status: "normal",
@@ -182,7 +192,7 @@ export const gods: God[] = [
     sacredSymbol: "Uma ave fênix.",
     channelEnergy: "Positiva",
     preferredWeapon: "Espada longa.",
-    devotees: "Aggelus, cavaleiros, guerreiros, inventores, lutadores, paladinos.",
+    devotees: "Aggelus, eiradaan, Cavaleiro, guerreiro, inventor, lutador, paladino.",
     grantedPowers: [
       "Ataque Piedoso",
       "Dom da Imortalidade",
@@ -191,8 +201,7 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: "Devotos de Thyatis são proibidos de matar criaturas inteligentes (Int –3 ou maior). Podem atacar e causar dano, mas jamais levar à morte. Por esse motivo, devotos de Thyatis preferem armas e ataques que apenas incapacitam seus oponentes ou causam dano não letal."
   },
-  {
-    id: "11",
+  { id: "Arsenal",
     name: "Arsenal",
     image: "/deuses/Arsenal.png",
     status: "normal",
@@ -201,7 +210,7 @@ export const gods: God[] = [
     sacredSymbol: "Um martelo de guerra e uma espada longa cruzados sobre um escudo.",
     channelEnergy: "Qualquer.",
     preferredWeapon: "Martelo de guerra.",
-    devotees: "Anões, minotauros, bárbaros, cavaleiros, guerreiros, lutadores.",
+    devotees: "Anão, bugbear, ceratops, elfo-do-mar, galokk, hobgoblin, kallyanach, kaijin, minotauro, nezumi, ogro, orc, tengu, voracis, yidishan, Bárbaro, cavaleiro, guerreiro, lutador.",
     grantedPowers: [
       "Conjurar Arma",
       "Coragem Total",
@@ -210,8 +219,7 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: "Um devoto de Arsenal é proibido de ser derrotado em qualquer tipo de combate ou disputa (como um teste oposto para ver quem é mais forte). Caso seu grupo seja derrotado, isso também constitui uma violação das obrigações."
   },
-  {
-    id: "12",
+  { id: "Kallyadranoch",
     name: "Kallyadranoch",
     image: "/deuses/Kallyadranoch.png",
     status: "normal",
@@ -220,7 +228,7 @@ export const gods: God[] = [
     sacredSymbol: "Escamas de cinco cores diferentes.",
     channelEnergy: " Negativa.",
     preferredWeapon: " Lança.",
-    devotees: "Elfos, medusas, sulfure, arcanistas, cavaleiros, guerreiros, lutadores, nobres.",
+    devotees: "Elfo, finntroll, kallyanach, kobolds, medusa, nagah, naidora, sulfure, Arcanista, cavaleiro, guerreiro, lutador, nobre.",
     grantedPowers: [
       "Aura de Medo",
       "Escamas Dracônicas",
@@ -229,8 +237,7 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: "Para subir de nível, além de acumular XP suficiente, o devoto de Kally deve realizar uma oferenda em tesouro. O valor é igual a 20% da diferença do dinheiro inicial do nível que vai alcançar para o nível atual."
   },
-  {
-    id: "13",
+  { id: "Lin-Wu",
     name: "Lin-Wu",
     image: "/deuses/Lin-Wu.png",
     status: "normal",
@@ -239,7 +246,7 @@ export const gods: God[] = [
     sacredSymbol: "Placa de metal com a silhueta de um dragão-serpente celestial.",
     channelEnergy: "Qualquer.",
     preferredWeapon: "Katana.",
-    devotees: "Anões, cavaleiros, guerreiros, nobres, paladinos.",
+    devotees: "Anão, kaijin, kappa, mashin, tengu, Cavaleiro, guerreiro, nobre, paladino.",
     grantedPowers: [
       "Coragem Total",
       "Kiai Divino",
@@ -248,8 +255,7 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: "Devotos de Lin-Wu ainda devem demonstrar comportamento honrado, jamais recorrendo a mentiras e subterfúgios. Em termos de jogo, são proibidos de tentar qualquer ação que exigiria um teste de Enganação, Furtividade ou Ladinagem."
   },
-  {
-    id: "14",
+  { id: "Oceano",
     name: "Oceano",
     image: "/deuses/Oceano.png",
     status: "normal",
@@ -258,7 +264,7 @@ export const gods: God[] = [
     sacredSymbol: "Uma concha.",
     channelEnergy: "Qualquer.",
     preferredWeapon: "Tridente.",
-    devotees: "Dahllan, hynne, minotauros, sereias/tritões, bárbaros, bucaneiros, caçadores, druidas.",
+    devotees: "Dahllan, elfo-do-mar, hynne, kappa, minotauro, sereia/tritão, Bárbaro, bucaneiro, caçador, druida, treinador.",
     grantedPowers: [
       "Anfíbio",
       "Arsenal das Profundezas",
@@ -267,8 +273,7 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: "As únicas armas permitidas para devotos do Oceano são a azagaia, a lança, o tridente e a rede. Podem usar apenas armaduras leves. O devoto também não pode se manter afastado do oceano por mais de um mês."
   },
-  {
-    id: "15",
+  { id: "Thwor",
     name: "Thwor",
     image: "/deuses/Thwor.png",
     status: "normal",
@@ -277,7 +282,7 @@ export const gods: God[] = [
     sacredSymbol: "Um grande punho fechado.",
     channelEnergy: " Qualquer.",
     preferredWeapon: "Machado de guerra.",
-    devotees: "Qualquer duyshidakk (veja abaixo)",
+    devotees: "Todas duyshidakk, exceto aquelas com devoção específica que não inclui Thwor.",
     grantedPowers: [
       "Almejar o Impossível",
       "Fúria Divina",
@@ -286,8 +291,7 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: "Não importando sua raça, o devoto de Thwor deve ser duyshidakk — ou seja, aceito como membro do povo goblinóide. Também deve se esforçar para que o “Mundo Como Deve Ser” tome o continente. Deve sempre procurar fazer alianças com goblinoides e só lutar contra eles em último caso."
   },
-  {
-    id: "16",
+  { id: "Azgher",
     name: "Azgher",
     image: "/deuses/Azgher.png",
     status: "normal",
@@ -296,7 +300,7 @@ export const gods: God[] = [
     sacredSymbol: "Um sol dourado.",
     channelEnergy: "Positiva.",
     preferredWeapon: "Cimitarra.",
-    devotees: "Aggelus, qareen, arcanistas, bárbaros, caçadores, cavaleiros, guerreiros, nobres, paladinos.",
+    devotees: "Aggelus, ceratops, qareen, Arcanista, bárbaro, caçador, cavaleiro, guerreiro, nobre, paladino.",
     grantedPowers: [
       "Espada Solar",
       "Fulgor Solar",
@@ -305,8 +309,7 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: "O devoto de Azgher deve manter o rosto sempre coberto (com uma máscara, capuz ou trapos). Sua face pode ser revelada apenas ao sumo-sacerdote ou em seu funeral. Devotos do Sol também devem doar para a igreja de Azgher 20% de qualquer tesouro obtido. Essa doação deve ser feita em ouro, seja na forma de moedas ou itens."
   },
-  {
-    id: "17",
+  { id: "Hyninn",
     name: "Hyninn",
     image: "/deuses/Hyninn.png",
     status: "normal",
@@ -315,7 +318,7 @@ export const gods: God[] = [
     sacredSymbol: "Uma adaga atravessando uma máscara, ou uma raposa.",
     channelEnergy: "Qualquer.",
     preferredWeapon: "Adaga.",
-    devotees: "Hynne, goblins, sílfides, bardos, bucaneiros, ladinos, inventores, nobres.",
+    devotees: "Duende, elfo-do-mar, gnoll, goblin, harpia, hynne, kappa, nagah, naidora, sátiro, sílfide, Bardo, bucaneiro, ladino, inventor, nobre.",
     grantedPowers: [
       "Apostar com o Trapaceiro",
       "Farsa do Fingidor",
@@ -324,8 +327,7 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: "Um devoto de Hyninn não recusa participação em um golpe, trapaça ou artimanha (o que muitas vezes inclui missões para roubar... hã, resgatar tesouros), exceto quando prejudica seus próprios aliados. O devoto também deve fazer um ato furtivo, ousado ou proibido por dia (ou por sessão de jogo, o que demorar mais), como oferenda a Hyninn. Em termos de jogo, uma ação exigindo um teste de Enganação ou Ladinagem com CD mínima 15 + {metade do seu nível}."
   },
-  {
-    id: "18",
+  { id: "Marah",
     name: "Marah",
     image: "/deuses/Marah.png",
     status: "normal",
@@ -334,7 +336,7 @@ export const gods: God[] = [
     sacredSymbol: "Um coração vermelho.",
     channelEnergy: "Positiva.",
     preferredWeapon: "Não há. Devotos desta deusa não podem lançar a magia Arma Espiritual e similares.",
-    devotees: "Aggelus, elfos, hynne, qareen, bardos, nobres, paladinos.",
+    devotees: "Aggelus, elfo, gnoll, hynne, qareen, pteros, sátiro, velocis, Bardo, nobre, paladino.",
     grantedPowers: [
       "Aura de Paz",
       "Dom da Esperança",
@@ -343,8 +345,7 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: " Devotos de Marah não podem causar dano, perda de PV e condições a criaturas, exceto enfeitiçado, fascinado e pasmo (fornecer bônus em dano também é proibido). Em combate, só podem recorrer a ações como proteger ou curar — ou fugir, render-se ou aceitar a morte. Um devoto de Marah jamais vai causar violência, nem mesmo para se salvar."
   },
-  {
-    id: "19",
+  { id: "Tanna-Toh",
     name: "Tanna-Toh",
     image: "/deuses/Tanna-Toh.png",
     status: "normal",
@@ -353,7 +354,7 @@ export const gods: God[] = [
     sacredSymbol: "Pergaminho e pena.",
     channelEnergy: "Qualquer.",
     preferredWeapon: "Bordão.",
-    devotees: "Golens, kliren, arcanistas, bardos, inventores, nobres, paladinos.",
+    devotees: "Golem, kliren, mashin, tengu, Arcanista, bardo, inventor, nobre, paladino.",
     grantedPowers: [
       "Conhecimento Enciclopédico",
       "Mente Analítica",
@@ -362,8 +363,7 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: "Devotos de Tanna-Toh jamais podem recusar uma missão que envolva a busca por um novo conhecimento ou informação. Sempre deve dizer a verdade e nunca pode se recusar a responder uma pergunta direta. É proibido para ele esconder qualquer conhecimento."
   },
-  {
-    id: "20",
+  { id: "Valkaria",
     name: "Valkaria",
     image: "/deuses/Valkaria.png",
     status: "normal",
@@ -372,7 +372,7 @@ export const gods: God[] = [
     sacredSymbol: "A Estátua de Valkaria ou seis faixas entrelaçadas.",
     channelEnergy: "Positiva.",
     preferredWeapon: "Mangual.",
-    devotees: "Aventureiros; membros de todas as classes podem ser devotos de Valkaria.",
+    devotees: "Todos, exceto aquelas com devoção específica que não inclui Valkaria (como druida).",
     grantedPowers: [
       "Almejar o Impossível",
       "Armas da Ambição",
@@ -381,8 +381,7 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: "Valkaria odeia o conformismo. Seus devotos são proibidos de fixar moradia em um mesmo lugar, não podendo permanecer mais de $2d10+10$ dias na mesma cidade (ou vila, aldeia, povoado...) ou 1d4+2 meses no mesmo reino. Devotos de Valkaria também são proibidos de se casar ou formar qualquer união estável."
   },
-  {
-    id: "21",
+  { id: "Morte - Sandman",
     name: "Morte - Sandman",
     image: "/deuses/morte.png",
     status: "normal",

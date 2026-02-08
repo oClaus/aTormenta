@@ -3,8 +3,15 @@ export type GodStatus = "normal" | "caido" | "menor";
 export interface God {
   id: string;
   name: string;
-  image: string; 
+  subtitle?: string;
+  image: string | string[];
   status?: GodStatus; // "caido" ou "menor"
+
+  otherNames?: string;      // NOVO
+  areasOfInfluence?: string;// NOVO
+  significantColors?: string;// NOVO
+  motto?: string;           // NOVO
+
   history: string;
   beliefs: string;
   sacredSymbol: string;
@@ -13,6 +20,10 @@ export interface God {
   devotees: string;
   grantedPowers: string[];
   obligationsRestrictions: string;
+
+  motivations?: string;     // NOVO
+  relationships?: string;   // NOVO
+  churchAndClergy?: string; // NOVO
 }
 
 export function getStatusLabel(status?: GodStatus): string {
