@@ -113,6 +113,78 @@ export const esoteric: Gear[] = [
     origin: "Herois de Arton",
     price: "T$ 600",
     spaces: "1"
+  },
+  {
+    id: "afiador-solar",
+    name: "Afiador solar",
+    description: "Esta pequena pedra de amolar canaliza luz para suas armas. Quando lança uma magia que tenha como alvo uma arma e que forneça dados adicionais de dano a ela, você pode mudar o tipo desse dano adicional para luz.",
+    origin: "Deuses de Arton",
+    price: "T$ 100",
+    spaces: "1"
+  },
+  {
+    id: "baculo-da-retribuicao",
+    name: "Báculo da retribuição",
+    description: "Este bastão longo possui uma ponta curva, geralmente adornada com um símbolo religioso. Sempre que gastar pelo menos 1 PM em uma magia de cura de luz, role 1d4. Com um resultado 4, além do normal, a magia recupera 1 PM de cada criatura curada.",
+    origin: "Deuses de Arton",
+    price: "T$ 200",
+    spaces: "1"
+  },
+  {
+    id: "contas-de-oracao",
+    name: "Contas de oração",
+    description: "Este item está presente em muitas religiões artonianas, consistindo de várias pequenas esferas, miçangas, conchas ou outros ornamentos parecidos, presos por um cordão. Elas têm a função de ajudar o devoto a contar as orações ou cânticos que já fez, assim auxiliando-o a se concentrar em suas orações. Aumenta seu limite de PM para magias divinas em +1.",
+    origin: "Deuses de Arton",
+    price: "T$ 500",
+    spaces: "1"
+  },
+  {
+    id: "estola",
+    name: "Estola",
+    description: "Uma faixa larga e comprida que sacerdotes usam em torno do pescoço. Cada estola é adornada com símbolos que remetem a uma magia divina específica, e o uso de um destes acessórios indica que o sacerdote está ocupado com algum dever eclesiástico ligado a essa magia. A CD para resistir à magia divina representada na estola aumenta em +2. Ao contrário de outros itens esotéricos, uma estola pode ser vestida em vez de empunhada.",
+    origin: "Deuses de Arton",
+    price: "T$ 150",
+    spaces: "1"
+  },
+  {
+    id: "frasco-purificador",
+    name: "Frasco purificador",
+    description: "Este pequeno vasilhame contém 10 doses de uma combinação de água e especiarias santificadas. Quando lança uma magia que tenha uma criatura como alvo, você pode gastar uma quantidade dessas doses (limitada por sua Sabedoria); para cada dose gasta, o alvo da magia também recupera 1d4 PV. Recarregar um frasco purificador é uma ação completa e consome 2 doses de água benta. Um frasco purificador só pode ser usado por devotos de divindades que canalizam energia positiva.",
+    origin: "Deuses de Arton",
+    price: "T$ 100",
+    spaces: "1"
+  },
+  {
+    id: "medalhao-afiado",
+    name: "Medalhão afiado",
+    description: "Um pequeno medalhão com bordas afiadas e a imagem de uma arma gravada. Quando você lança uma magia que fornece um bônus em testes de ataque, ela também fornece +1 na margem de ameaça desses ataques.",
+    origin: "Deuses de Arton",
+    price: "T$ 900",
+    spaces: "1"
+  },
+  {
+    id: "ostensorio-santificado",
+    name: "Ostensório santificado",
+    description: "Uma obra de arte dedicada ao deus, muitas vezes contendo uma relíquia. Escolha uma magia que você possa lançar. Seu custo diminui em –1 PM (cumulativo com outras reduções), mas somente se for lançada em devotos do seu deus.",
+    origin: "Deuses de Arton",
+    price: "T$ 750",
+    spaces: "1"
+  },
+  {
+    id: "rede-de-almas",
+    name: "Rede de almas",
+    description: "Esta pequena rede decorada com ossos só pode ser usada por devotos de divindades que canalizam energia negativa. Quando lança uma magia divina de trevas, para cada resultado máximo nos dados de dano da magia (incluindo dados maximizados), você recebe 1 PV temporário cumulativo.",
+    origin: "Deuses de Arton",
+    price: "T$ 600",
+    spaces: "1"
+  },
+  {
+    id: "turibulo-ungido",
+    name: "Turíbulo ungido",
+    description: "Um vaso ou incensário formado por um fornilho na ponta de uma corrente, onde se queimam ervas e incensos. Aumenta a área de suas magias em +1,5m (uma magia que afeta um raio de 3m passa a afetar um raio de 4,5m, por exemplo).",
+    origin: "Deuses de Arton",
+    price: "T$ 100",
+    spaces: "1"
   }
 
  

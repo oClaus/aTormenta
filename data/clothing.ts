@@ -361,6 +361,94 @@ export const clothing: Gear[] = [
     origin: "Herois de Arton",
     price: "T$ 60",
     spaces: "1"
+  },
+  {
+    id: "anel-eclesiastico",
+    name: "Anel eclesiástico",
+    description: "Este anel é um símbolo da autoridade de um sacerdote. Pessoas comuns tendem a se impressionar com estes anéis, até mesmo se ajoelhando para beijá-los na mão de seus portadores. Se for um clérigo ou frade e estiver vestindo um anel eclesiástico, você recebe +1 em Diplomacia e Intimidação.",
+    origin: "Deuses de Arton",
+    price: "T$ 50",
+    spaces: "1"
+  },
+  {
+    id: "carcaca-do-predador-primal",
+    name: "Carcaça do predador primal",
+    description: "Esta carcaça de um animal ou monstro é trabalhada na forma de uma capa ou manto. Quando adquire a forma de uma criatura selvagem (como pelo poder Forma Selvagem ou pela magia Metamorfose), o bônus na Defesa concedido pela forma aumenta em +1.",
+    origin: "Deuses de Arton",
+    price: "T$ 150",
+    spaces: "1"
+  },
+  {
+    id: "garras-do-predador-primal",
+    name: "Garras do predador primal",
+    description: "Estas garras de um animal ou monstro são trabalhadas na forma de um colar ou um par de braceletes. Quando adquire a forma de uma criatura selvagem (como pelo poder Forma Selvagem ou pela magia Metamorfose), você recebe +1 nas rolagens de dano com armas naturais.",
+    origin: "Deuses de Arton",
+    price: "T$ 300",
+    spaces: "1"
+  },
+  {
+    id: "habito-monastico",
+    name: "Hábito monástico",
+    description: "Uma vestimenta simples, em geral de tecido cru, amarrada com um cinto de corda. A humildade dos religiosos que vestem estes hábitos só é rivalizada por sua temperança. Fornece +2 em Vontade contra efeitos mentais e aumenta em +2 a CD da magia Tranquilidade. Porém, impõe –2 em perícias baseadas em Carisma contra pessoas ricas, nobres ou arrogantes.",
+    origin: "Deuses de Arton",
+    price: "T$ 30",
+    spaces: "1"
+  },
+  {
+    id: "habito-sacerdotal",
+    name: "Hábito sacerdotal",
+    description: "Para o sacerdote que dedica sua vida à fé, mas não de forma tão extrema quanto os monges, uma roupa mais atraente e confortável. A aparência desta batina varia muito de acordo com a religião do devoto, mas ela sempre concede +2 em testes de perícias baseadas em Carisma com devotos da mesma divindade.",
+    origin: "Deuses de Arton",
+    price: "T$ 30",
+    spaces: "1"
+  },
+  {
+    id: "manto-de-alto-sacerdote",
+    name: "Manto de alto sacerdote",
+    description: "Um manto longo com mangas, que cobre todo o corpo. Esta batina é ricamente adornada, feita de tecidos finos de alta qualidade, e tem mais em comum com as vestimentas de um nobre do que com o hábito de um frade. Se você possuir o poder Autoridade Eclesiástica, recebe +1 PM por patamar acima de iniciante (somente após um dia de uso).",
+    origin: "Deuses de Arton",
+    price: "T$ 100",
+    spaces: "1"
+  },
+  {
+    id: "penas-do-predador-primal",
+    name: "Penas do predador primal",
+    description: "Estas penas de um animal ou monstro são costuradas como uma capa ou um capuz. Quando adquire a forma de uma criatura selvagem (como pelo poder Forma Selvagem ou pela magia Metamorfose), enquanto estiver nessa forma você recebe +2 em Atletismo e seu deslocamento aumenta em +3m.",
+    origin: "Deuses de Arton",
+    price: "T$ 100",
+    spaces: "1"
+  },
+  {
+    id: "piercing-de-umbigo",
+    name: "Piercing de umbigo",
+    description: "Esta joia, muito apreciada por devotos de Marah, deve ser usada na barriga ou em outra parte do corpo visível e, por assim dizer, sensual. A CD para resistir às suas habilidades que causam as condições enfeitiçado, fascinado ou pasmo aumenta em +1, mas apenas se você estiver sem armadura ou usando uma armadura sensual (Heróis de Arton, Capítulo 3: Arsenal dos Heróis).",
+    origin: "Deuses de Arton",
+    price: "T$ 50",
+    spaces: "1"
+  },
+  {
+    id: "sandalias",
+    name: "Sandálias",
+    description: "Um solado resistente para proteger os pés de objetos pontiagudos como pedras e espinhos, mas não da chuva. Muitas vezes sandálias são usadas como sinal de humildade e abnegação. Impõem uma penalidade de –2 em testes para resistir a condições climáticas e para evitar ser derrubado no chão. Entretanto, fornecem +1 ponto de mana, mas apenas se você for um conjurador divino.",
+    origin: "Deuses de Arton",
+    price: "T$ 9",
+    spaces: "1"
+  },
+  {
+    id: "tonsura",
+    name: "Tonsura",
+    description: "Não uma roupa, mas um estilo de cabelo. A tonsura pode significar que o devoto tem o topo da cabeça raspado, ou toda a frente do couro cabeludo, ou ainda algum corte mais exótico. A maioria das pessoas acha um sacerdote tonsurado bastante engraçado e “bonitinho”. Impõe –5 em Intimidação, mas permite usar o poder Aparência Inofensiva. Se já tiver este poder, em vez disso você pode usá-lo contra as duas primeiras criaturas inteligentes que o atacarem em uma cena. Uma tonsura conta como um item vestido porque você precisa deixar a cabeça à mostra, mas não ocupa um espaço.",
+    origin: "Deuses de Arton",
+    price: "T$ 3",
+    spaces: "—"
+  },
+  {
+    id: "tunica-do-virtuoso",
+    name: "Túnica do Virtuoso",
+    description: "Esta túnica de algodão tem um corte simples e prático, que faz jus às verdadeiras virtudes de um paladino. Conta como uma Virtude Paladinesca (Tormenta20, p. 84) para cálculo dos PM adicionais que você recebe por esses poderes (somente após um dia de uso).",
+    origin: "Deuses de Arton",
+    price: "T$ 25",
+    spaces: "1"
   }
 
  
