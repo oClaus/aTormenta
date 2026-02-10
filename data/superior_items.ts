@@ -406,5 +406,45 @@ export const improvements: Improvement[] = [
     category: ["Armadura", "Vestuário"],
     description: "O item não é apenas decorado com metais ou pedras preciosas, ele é um ícone de ostentação dourada e brilhante, uma verdadeira pilha de luxo e exagero. A CD para resistir às suas habilidades baseadas em Carisma aumenta em +1. Só pode ser aplicada em armaduras e vestuários. Pré-requisito: banhado a ouro ou cravejado de gemas.",
     origin: "Herois de Arton"
-  }
+  },
+  {
+    id: "canonico",
+    name: "Canônico",
+    effect: "+1 na CD para resistir a habilidades mágicas divinas",
+    category: ["Arma", "Armadura", "Escudo", "Ferramenta", "Vestuário"],
+    description: "Canônico. O item possui inscrições sagradas referentes a uma divindade específica. Se você for devoto dessa divindade, a CD de suas habilidades mágicas aumenta em +1.",
+    origin: "Deuses de Arton",
+  },
+  {
+    id: "conduite",
+    name: "Conduíte",
+    effect: "Reduz em –1 PM o custo de Abençoar Arma",
+    category: ["Arma"],
+    description: "Conduíte. A empunhadura da arma é ornamentada com uma medalha ou outro objeto minúsculo de significado religioso que a torna mais propícia para receber bênçãos. O custo para usar o poder Abençoar Arma nela é reduzido em –1 PM.",
+    origin: "Deuses de Arton",
+  },
+  {
+    id: "devotado",
+    name: "Devotado",
+    effect: "Reduz em –1 PM o custo de um poder concedido",
+    category: ["Arma", "Armadura", "Escudo", "Ferramenta", "Vestuário"],
+    description: "Devotado. O item foi banhado em água abençoada e sintonizado com o espírito de seu usuário. Escolha um poder concedido com custo em PM. Esse custo é reduzido em –1. Pré-requisito: Inscrito.",
+    origin: "Deuses de Arton",
+  },
+  {
+    id: "diligente",
+    name: "Diligente",
+    effect: "Reduz em –1 PM o custo de Prece de Combate",
+    category: ["Armadura", "Escudo", "Ferramenta", "Vestuário"],
+    description: "Diligente. O item é decorado com símbolos que evocam aspectos divinos de combate ou proteção. Reduz o custo do poder Prece de Combate em –1 PM.",
+    origin: "Deuses de Arton",
+  },
+  {
+    id: "inscrito",
+    name: "Inscrito",
+    effect: "Conta como símbolo sagrado",
+    category: ["Armadura", "Escudo", "Ferramenta", "Vestuário"],
+    description: "Inscrito. O item possui inscrições religiosas de uma divindade específica e conta como um símbolo sagrado desse deus (inclusive fornecendo o bônus de +1 em testes de resistência).",
+    origin: "Deuses de Arton",
+  },
 ];

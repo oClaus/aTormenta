@@ -858,4 +858,204 @@ export const food: Gear[] = [
     spaces: "0,5", 
     category: "Ingrediente" 
   },
+  {
+    id: "abraco-da-noite",
+    name: "Abraço da Noite",
+    description: "Dizem que este doce gelado e aveludado como a noite foi criado por clérigos anões para homenagear sua mãe Ayrelynn (Tenebra). Até o fim do dia, você pode usar o poder Carícia Sombria uma vez. Se já o possui, pode usá-lo uma vez causando 4d6 pontos de dano de trevas (em vez de 2d6). Pela graça da Mãe Noite, mortos-vivos podem receber o benefício deste prato especial. Tenebra.",
+    origin: "Deuses de Arton",
+    price: "T$ 3",
+    spaces: "-",
+    category: "Alimentação",
+    ingredients: "É uma receita sagrada, dedicada a Tenebra e que leva como ingrediente especial uma porção da devoção do cozinheiro. Por isso, estes pratos só podem ser preparados por devotos de Tenebra."
+  },
+  {
+    id: "assado-de-entranhas",
+    name: "Assado de Entranhas",
+    description: "Este assado tem uma aparência pouco agradável, mas desperta os instintos mais primais. Feito com técnicas simples dos ermos, pode ser fabricado também com Sobrevivência. Até o fim do dia, você pode invocar esses instintos para receber +1 nas rolagens de dano com armas corpo a corpo por uma cena. Megalokk.",
+    origin: "Deuses de Arton",
+    price: "T$ 2",
+    spaces: "-",
+    category: "Alimentação",
+    ingredients: "É uma receita sagrada, dedicada a Megalokk e que leva como ingrediente especial uma porção da devoção do cozinheiro. Por isso, estes pratos só podem ser preparados por devotos de Megalokk."
+  },
+  {
+    id: "bencao-dos-mares",
+    name: "Bênção dos Mares",
+    description: "Este festival de ostras se tornou uma lenda entre as gentes do mar. Dizem que, em momentos de grande aflição, o próprio deus envia estes presentes para restaurar a força de quem depende do mar. Até o fim do dia, você pode invocar o poder do Deus dos Mares para adquirir deslocamento de natação, igual ao seu deslocamento, por uma cena (se já possuir esse deslocamento, em vez disso ele aumenta em +3m). Oceano.",
+    origin: "Deuses de Arton",
+    price: "T$ 4",
+    spaces: "-",
+    category: "Alimentação",
+    ingredients: "É uma receita sagrada, dedicada a Oceano e que leva como ingrediente especial uma porção da devoção do cozinheiro. Por isso, estes pratos só podem ser preparados por devotos de Oceano."
+  },
+  {
+    id: "bolinho-de-jade",
+    name: "Bolinho de Jade",
+    description: "Este prosaico bolinho de ervas é como a honra pregada por Lin-Wu: simples, direto e verdadeiro. Até o fim do dia, você pode usar o poder Kiai Divino uma vez. Se já o possui, pode usá-lo uma vez sem pagar seu custo em PM. Lin-Wu.",
+    origin: "Deuses de Arton",
+    price: "T$ 4",
+    spaces: "-",
+    category: "Alimentação",
+    ingredients: "É uma receita sagrada, dedicada a Lin-Wu e que leva como ingrediente especial uma porção da devoção do cozinheiro. Por isso, estes pratos só podem ser preparados por devotos de Lin-Wu."
+  },
+  {
+    id: "bombas-de-saber",
+    name: "Bombas de Saber",
+    description: "O estudo é a maior paixão dos devotos de Tanna-Toh. Este doce assado recheado com creme lhes dá a energia para estudar noite adentro. Uma vez até o fim do dia, quando vai fazer um teste de perícia, você pode receber os benefícios de ser treinado nessa perícia para esse teste. Tanna-Toh.",
+    origin: "Deuses de Arton",
+    price: "T$ 4",
+    spaces: "-",
+    category: "Alimentação",
+    ingredients: "É uma receita sagrada, dedicada a Tanna-Toh e que leva como ingrediente especial uma porção da devoção do cozinheiro. Por isso, estes pratos só podem ser preparados por devotos de Tanna-Toh."
+  },
+  {
+    id: "caldo-de-lena",
+    name: "Caldo de Lena",
+    description: "Esta sobremesa a base de milho é perfeita para celebrar a fertilidade do campo. Uma comida tão doce é ideal para acalentar aventureiros cansados após um dia difícil. Quando recebe cura mágica de luz, você recupera +2 PV. Lena.",
+    origin: "Deuses de Arton",
+    price: "T$ 3",
+    spaces: "-",
+    category: "Alimentação",
+    ingredients: "É uma receita sagrada, dedicada a Lena e que leva como ingrediente especial uma porção da devoção do cozinheiro. Por isso, estes pratos só podem ser preparados por devotos de Lena."
+  },
+  {
+    id: "coragem-de-sangue",
+    name: "Coragem de Sangue",
+    description: "Açúcar para energia, especiarias com propriedades fortificantes e vinho para coragem são misturados em uma receita de gosto forte e pungente, servida em chamas, que desperta o instinto de luta. Uma vez até o fim do dia, quando faz a ação agredir, você pode executar um ataque extra. Arsenal.",
+    origin: "Deuses de Arton",
+    price: "T$ 4",
+    spaces: "-",
+    category: "Alimentação",
+    ingredients: "É uma receita sagrada, dedicada a Arsenal e que leva como ingrediente especial uma porção da devoção do cozinheiro. Por isso, estes pratos só podem ser preparados por devotos de Arsenal."
+  },
+  {
+    id: "deleite-magico",
+    name: "Deleite Mágico",
+    description: "Em Arton, a magia pode ser comum, mas não deixa de ser especial. Ao consumir este folhado místico, escolha uma magia de 1º círculo. Até o fim do dia, você pode lançá-la uma única vez, sem aprimoramentos, gastando 2 PM (atributo-chave Sabedoria). Wynna.",
+    origin: "Deuses de Arton",
+    price: "T$ 18",
+    spaces: "-",
+    category: "Alimentação",
+    ingredients: "É uma receita sagrada, dedicada a Wynna e que leva como ingrediente especial uma porção da devoção do cozinheiro. Por isso, estes pratos só podem ser preparados por devotos de Wynna."
+  },
+  {
+    id: "frescor-de-nimb",
+    name: "Frescor de Nimb",
+    description: "Mesmo os paladares mais refinados têm dificuldade em descrever o frescor de Nimb. Ao ingerir este prato, escolha um deus aleatoriamente. Você recebe o benefício do prato desse deus (se for Nimb, role novamente duas vezes, repetindo isso sempre que rolar o Deus do Caos). Nimb.",
+    origin: "Deuses de Arton",
+    price: "T$ 1",
+    spaces: "-",
+    category: "Alimentação",
+    ingredients: "É uma receita sagrada, dedicada a Nimb e que leva como ingrediente especial uma porção da devoção do cozinheiro. Por isso, estes pratos só podem ser preparados por devotos de Nimb."
+  },
+  {
+    id: "joia-do-deserto",
+    name: "Joia do Deserto",
+    description: "Este doce a base de tâmaras mostra o amor do povo de Azgher por seu patrono. Uma vez até o fim do dia, você pode fazer uma arma corpo a corpo de corte que esteja empunhando se cobrir de chamas. Ela causa +1d6 pontos de dano de fogo (ou +2d6 contra mortos-vivos). As chamas duram até você acertar três ataques ou até o fim da cena (o que acontecer primeiro). Azgher.",
+    origin: "Deuses de Arton",
+    price: "T$ 5",
+    spaces: "-",
+    category: "Alimentação",
+    ingredients: "É uma receita sagrada, dedicada a Azgher e que leva como ingrediente especial uma porção da devoção do cozinheiro. Por isso, estes pratos só podem ser preparados por devotos de Azgher."
+  },
+  {
+    id: "justos-de-khalmyr",
+    name: "Justos de Khalmyr",
+    description: "Assim como a justiça, este biscoitinho foi criado para chegar a todos. Até o fim do dia, quando fizer um teste de perícia, você pode gastar o efeito deste prato para escolher 10 nesse teste (em vez de usar o valor rolado no d20). Khalmyr.",
+    origin: "Deuses de Arton",
+    price: "T$ 2",
+    spaces: "-",
+    category: "Alimentação",
+    ingredients: "É uma receita sagrada, dedicada a Khalmyr e que leva como ingrediente especial uma porção da devoção do cozinheiro. Por isso, estes pratos só podem ser preparados por devotos de Khalmyr."
+  },
+  {
+    id: "justos-virtuosos",
+    name: "Justos Virtuosos",
+    description: "Este biscoito, propositalmente semelhante à receita de Khalmyr, guarda uma surpresa na forma de um recheio azedo, capaz de estragar qualquer apetite. Uma vez nesse dia, quando um inimigo em alcance curto usa uma habilidade, você pode invocar o poder deste doce para ser afetado por essa habilidade como se fosse um aliado desse inimigo (se aplicável). Sszzaas.",
+    origin: "Deuses de Arton",
+    price: "T$ 6",
+    spaces: "-",
+    category: "Alimentação",
+    ingredients: "É uma receita sagrada, dedicada a Sszzaas e que leva como ingrediente especial uma porção da devoção do cozinheiro. Por isso, estes pratos só podem ser preparados por devotos de Sszzaas."
+  },
+  {
+    id: "manjar-da-paz",
+    name: "Manjar da Paz",
+    description: "Esta delícia, compartilhada com alegria pelos devotos de Marah, é degustada em toda Arton. Uma vez nesse dia, quando uma criatura em alcance curto fizer um ataque, você pode fazer com que ela role dois dados e use o pior resultado. Marah.",
+    origin: "Deuses de Arton",
+    price: "T$ 7",
+    spaces: "-",
+    category: "Alimentação",
+    ingredients: "É uma receita sagrada, dedicada a Marah e que leva como ingrediente especial uma porção da devoção do cozinheiro. Por isso, estes pratos só podem ser preparados por devotos de Marah."
+  },
+  {
+    id: "ouro-de-dragao",
+    name: "Ouro de Dragão",
+    description: "Este creme doce é considerado uma iguaria reservada aos maiores sacerdotes de Kallyadranoch. Uma vez até o fim do dia, você pode evocar a força de Kallyadranoch para receber +1 em testes de ataque por uma cena. Kallyadranoch.",
+    origin: "Deuses de Arton",
+    price: "T$ 6",
+    spaces: "-",
+    category: "Alimentação",
+    ingredients: "É uma receita sagrada, dedicada a Kallyadranoch e que leva como ingrediente especial uma porção da devoção do cozinheiro. Por isso, estes pratos só podem ser preparados por devotos de Kallyadranoch."
+  },
+  {
+    id: "ovos-de-raposa",
+    name: "Ovos de Raposa",
+    description: "O tempero do Deus dos Ladrões garante que estes ovos recheados tenham sempre um sabor diferente e inesperado. Uma vez nesse dia, você pode rolar novamente um teste de Enganação ou Ladinagem recém-feito. Hyninn.",
+    origin: "Deuses de Arton",
+    price: "T$ 3",
+    spaces: "-",
+    category: "Alimentação",
+    ingredients: "É uma receita sagrada, dedicada a Hyninn e que leva como ingrediente especial uma porção da devoção do cozinheiro. Por isso, estes pratos só podem ser preparados por devotos de Hyninn."
+  },
+  {
+    id: "pao-de-thwor",
+    name: "Pão de Thwor",
+    description: "O pão, um alimento tão simples quanto importante, simboliza a tenacidade e resistência duyshidakk. Uma vez até o fim do dia, quando faz um teste de Fortitude ou de perícia baseada em Força, você pode rolá-lo novamente. Thwor.",
+    origin: "Deuses de Arton",
+    price: "T$ 1",
+    spaces: "-",
+    category: "Alimentação",
+    ingredients: "É uma receita sagrada, dedicada a Thwor e que leva como ingrediente especial uma porção da devoção do cozinheiro. Por isso, estes pratos só podem ser preparados por devotos de Thwor."
+  },
+  {
+    id: "presente-da-terra",
+    name: "Presente da Terra",
+    description: "Esta granola especial usa ingredientes acessíveis, encontrados em qualquer ambiente natural; você pode usar Sobrevivência no lugar de Ofício (cozinheiro) para fabricar este prato. Uma vez até o fim do dia, você pode rolar novamente um teste de Adestramento ou Sobrevivência recém-feito. Allihanna.",
+    origin: "Deuses de Arton",
+    price: "T$ 3",
+    spaces: "-",
+    category: "Alimentação",
+    ingredients: "É uma receita sagrada, dedicada a Allihanna e que leva como ingrediente especial uma porção da devoção do cozinheiro. Por isso, estes pratos só podem ser preparados por devotos de Allihanna."
+  },
+  {
+    id: "renascer-gentil",
+    name: "Renascer Gentil",
+    description: "Esta pastilha refrescante e ardida, tradicionalmente distribuída por devotos a pessoas em dificuldade, é carregada de esperanças. A primeira vez até o fim do dia em que seus PV forem reduzidos a 0 ou menos por dano, em vez disso eles são reduzidos a 1. Thyatis.",
+    origin: "Deuses de Arton",
+    price: "T$ 30",
+    spaces: "-",
+    category: "Alimentação",
+    ingredients: "É uma receita sagrada, dedicada a Thyatis e que leva como ingrediente especial uma porção da devoção do cozinheiro. Por isso, estes pratos só podem ser preparados por devotos de Thyatis."
+  },
+  {
+    id: "sufle-rubro",
+    name: "Suflê Rubro",
+    description: "Quase um alimento ritualístico, este prato oferece um vislumbre do raciocínio alienígena e incompreensível dos lefeu. No início de qualquer cena de ação, role 1d6. Com um resultado ímpar, você fica fascinado na primeira rodada, perdido em devaneios sobre a futilidade da vida. Com um resultado par, entretanto, você enxerga falhas na Criação que podem ser exploradas a seu favor. Você recebe +5 em um teste de perícia a sua escolha feito até o fim de seu próximo turno. Aharadak.",
+    origin: "Deuses de Arton",
+    price: "T$ 3",
+    spaces: "-",
+    category: "Alimentação",
+    ingredients: "É uma receita sagrada, dedicada a Aharadak e que leva como ingrediente especial uma porção da devoção do cozinheiro. Por isso, estes pratos só podem ser preparados por devotos de Aharadak."
+  },
+  {
+    id: "tesouro-de-valkaria",
+    name: "Tesouro de Valkaria",
+    description: "Este prato, que mistura grãos com carnes menos nobres e temperos fortes, é popular entre viajantes, sendo frequentemente preparado em acampamentos à beira das estradas. Uma vez nesse dia, você recebe +5 em um teste de resistência contra efeitos de movimento. Valkaria.",
+    origin: "Deuses de Arton",
+    price: "T$ 2",
+    spaces: "-",
+    category: "Alimentação",
+    ingredients: "É uma receita sagrada, dedicada a Valkaria e que leva como ingrediente especial uma porção da devoção do cozinheiro. Por isso, estes pratos só podem ser preparados por devotos de Valkaria."
+  }
 ];

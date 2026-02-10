@@ -272,6 +272,30 @@ export const services: Gear[] = [
     origin: "Herois de Arton",
     price: "T$ 150", //
     spaces: "—" //
+  },
+  {
+    id: "casamento",
+    name: "Casamento (por pessoa)",
+    description: "Você se casa com uma pessoa amada. Em geral, casamentos são entre duas pessoas, mas algumas religiões (notavelmente Marah) permitem a poligamia. O poder do amor fornece aos pombinhos uma reserva conjunta de 3 PM, que eles só podem usar se estiverem em alcance curto um do outro. Qualquer um deles pode recuperar esses PM (inclusive com descanso). O suplemento Só Aventuras descreve casamentos específicos de cada religião.",
+    origin: "Deuses de Arton",
+    price: "T$ 150",
+    spaces: "—"
+  },
+  {
+    id: "cerimonia-religiosa",
+    name: "Cerimônia religiosa",
+    description: "Frades e clérigos podem celebrar ritos em campo, mas para um fiel, nada se compara a ouvir as palavras sagradas na casa de seu deus. Assistir a uma cerimônia em um templo da divindade da qual você é devoto fornece +1 em Religião e Vontade e +2 PM até o fim da aventura.",
+    origin: "Deuses de Arton",
+    price: "T$ 20",
+    spaces: "—"
+  },
+  {
+    id: "sacramento",
+    name: "Sacramento",
+    description: "Este rito religioso transfere uma fração de poder divino para um fiel. Por sua importância e dificuldade, é reservado para aqueles mais propensos a fazer bom uso desta dádiva; em geral, aventureiros envolvidos em uma missão de cunho divino. Escolha uma magia divina de 1º círculo; até o fim da aventura, você pode lançar essa magia uma única vez, sem aprimoramentos, gastando 2 PM (atributo-chave Sabedoria). Apenas devotos podem receber um sacramento e, obviamente, somente em templos de sua divindade.",
+    origin: "Deuses de Arton",
+    price: "T$ 50",
+    spaces: "—"
   }
   
 ];

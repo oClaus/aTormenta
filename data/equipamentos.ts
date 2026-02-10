@@ -13,7 +13,8 @@ import {
   Ship, 
   HandCoins,
   Crown, 
-  Unplug
+  Unplug,
+  BookOpen
 } from "lucide-react";
 
 
@@ -154,6 +155,14 @@ export const equipmentCategories: EquipmentCategory[] = [
     icon: Unplug,
     color: "text-amber-400",
     href: "/equipamentos/aparatos",
+  },
+   {
+    id: "liturgicos",
+    title: "Liturgicos",
+    description: "Objetos mágicos que receberam efeitos negativos.",
+    icon: BookOpen,
+    color: "from-amber-600 to-amber-900",
+    href: "/equipamentos/liturgicos",
   },
   
 ];
