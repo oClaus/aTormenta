@@ -44,7 +44,7 @@ export const powersBarbaro: Power[] = [
   },
   { id: "Fúria da Savana",
     name: "Fúria da Savana",
-    description: "Seu deslocamento aumenta em $+3m$. Quando usa Fúria, você aplica o bônus em ataque e dano também a armas de arremesso.",
+    description: "Seu deslocamento aumenta em +3m. Quando usa Fúria, você aplica o bônus em ataque e dano também a armas de arremesso.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },

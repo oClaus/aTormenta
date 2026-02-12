@@ -135,7 +135,7 @@ export const powersLutador: Power[] = [
   },
   { id: "Voadora",
     name: "Voadora",
-    description: "Quando faz uma investida desarmada, você pode gastar 2 PM. Se fizer isso, recebe $+1d6$ no dano para cada 3m que se deslocar até chegar ao oponente, limitado pelo seu nível.",
+    description: "Quando faz uma investida desarmada, você pode gastar 2 PM. Se fizer isso, recebe +1d6 no dano para cada 3m que se deslocar até chegar ao oponente, limitado pelo seu nível.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },

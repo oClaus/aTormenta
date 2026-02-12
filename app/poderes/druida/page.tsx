@@ -137,7 +137,7 @@ export default function DruidaPodersPage() {
             <div className="space-y-6">
                 <div className="border-t border-stone-800 pt-4">
                     <h3 className="text-xl font-bold text-emerald-400 mb-2 font-serif"> Forma Ágil </h3>
-                    <p className="text-stone-300 leading-relaxed font-serif mb-2"> Você recebe Destreza +2 e duas armas naturais que causam $1d6$ pontos de dano e possuem margem de ameaça 19. Se atacar com ambas, sofre –2 em todos os testes de ataque até o seu próximo turno.</p>
+                    <p className="text-stone-300 leading-relaxed font-serif mb-2"> Você recebe Destreza +2 e duas armas naturais que causam 1d6 pontos de dano e possuem margem de ameaça 19. Se atacar com ambas, sofre –2 em todos os testes de ataque até o seu próximo turno.</p>
                     <p className="text-stone-400 font-serif"><span className="text-emerald-500 font-bold"> Aprimorada: </span>Você recebe Destreza +4, deslocamento +3m e duas armas naturais (como acima, mas com dano de 1d8). Seu tamanho muda para Grande (–2 em Furtividade, +2 em testes de manobra).</p>
                     <p className="text-stone-400 font-serif"><span className="text-emerald-500 font-bold"> Superior: </span>Você recebe Destreza +6, deslocamento +6m e duas armas naturais (como acima, mas com dano de 1d10). Seu tamanho muda para Grande (–2 em Furtividade, +2 em testes de manobra).</p>
                 </div>

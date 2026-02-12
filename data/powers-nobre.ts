@@ -39,7 +39,7 @@ export const powersNobre: Power[] = [
   },
   { id: "General",
     name: "General",
-    description: "Quando você usa o poder Estrategista, aliados direcionados recebem $1d4$ PM temporários. Esses PM duram até o fim do turno do aliado e não podem ser usados em efeitos que concedam PM.",
+    description: "Quando você usa o poder Estrategista, aliados direcionados recebem 1d4 PM temporários. Esses PM duram até o fim do turno do aliado e não podem ser usados em efeitos que concedam PM.",
     prerequisite: "Estrategista, 12º nível de nobre.",
     origin: "Tormenta20 - Jogo do Ano"
   },

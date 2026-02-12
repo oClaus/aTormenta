@@ -33,7 +33,7 @@ export const powersLadino: Power[] = [
   },
   { id: "Fuga Formidável",
     name: "Fuga Formidável",
-    description: "Você pode gastar uma ação completa e 1 PM para analisar o lugar no qual está (um castelo, um porto, a praça de uma cidade...). Até o fim da cena, recebe $+3m$ em seu deslocamento, +5 em Acrobacia e Atletismo e ignora penalidades em movimento por terreno difícil. Você perde esses benefícios se fizer uma ação que não seja diretamente relacionada a fugir. Por exemplo, você só pode atacar um inimigo se ele estiver bloqueando seu caminho, agarrando-o etc. Você pode fazer ações para ajudar seus aliados, mas apenas se eles estiverem tentando escapar.",
+    description: "Você pode gastar uma ação completa e 1 PM para analisar o lugar no qual está (um castelo, um porto, a praça de uma cidade...). Até o fim da cena, recebe +3m em seu deslocamento, +5 em Acrobacia e Atletismo e ignora penalidades em movimento por terreno difícil. Você perde esses benefícios se fizer uma ação que não seja diretamente relacionada a fugir. Por exemplo, você só pode atacar um inimigo se ele estiver bloqueando seu caminho, agarrando-o etc. Você pode fazer ações para ajudar seus aliados, mas apenas se eles estiverem tentando escapar.",
     prerequisite: "Int 1",
     origin: "tormenta20 - jogo do ano"
   },
@@ -81,7 +81,7 @@ export const powersLadino: Power[] = [
   },
   { id: "Roubo de Mana",
     name: "Roubo de Mana",
-    description: "Quando você causa dano com um ataque furtivo, para cada $1d6$ de dano de seu ataque furtivo, você recebe 1 PM temporário e a criatura perde 1 ponto de mana (se tiver). Você só pode usar este poder uma vez por cena contra uma mesma criatura.",
+    description: "Quando você causa dano com um ataque furtivo, para cada 1d6 de dano de seu ataque furtivo, você recebe 1 PM temporário e a criatura perde 1 ponto de mana (se tiver). Você só pode usar este poder uma vez por cena contra uma mesma criatura.",
     prerequisite: "Truque Mágico, 7º nível de ladino.",
     origin: "tormenta20 - jogo do ano"
   },

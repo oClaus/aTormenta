@@ -51,7 +51,7 @@ export const powersInventor: Power[] = [
   },
   { id: "Autômato Prototipado",
     name: "Autômato Prototipado",
-    description: "Você pode gastar uma ação padrão e 2 PM para ativar uma melhoria experimental em seu autômato. Role $1d6$. Em um resultado 2 a 6, você aumenta o nível de parceiro do autômato em um passo (até mestre), ou concede a ele a habilidade iniciante de outro de seus tipos, até o fim da cena. Em um resultado 1, o autômato enguiça como uma engenhoca. ",
+    description: "Você pode gastar uma ação padrão e 2 PM para ativar uma melhoria experimental em seu autômato. Role 1d6. Em um resultado 2 a 6, você aumenta o nível de parceiro do autômato em um passo (até mestre), ou concede a ele a habilidade iniciante de outro de seus tipos, até o fim da cena. Em um resultado 1, o autômato enguiça como uma engenhoca. ",
     prerequisite: "Autômato.",
     origin: "Tormenta20 - Jogo do Ano"
   },
@@ -123,7 +123,7 @@ export const powersInventor: Power[] = [
   },
   { id: "Homúnculo",
     name: "Homúnculo",
-    description: "Você possui um homúnculo, uma criatura Minúscula feita de alquimia. Vocês podem se comunicar telepaticamente em alcance longo e ele obedece a suas ordens, mas ainda está limitado ao que uma criatura de seu tamanho pode fazer. Um homúnculo é um parceiro ajudante iniciante. Você pode perder $1d6$ pontos de vida para seu homúnculo assumir uma forma capaz de protegê-lo e se tornar também um parceiro guardião iniciante até o fim da cena.",
+    description: "Você possui um homúnculo, uma criatura Minúscula feita de alquimia. Vocês podem se comunicar telepaticamente em alcance longo e ele obedece a suas ordens, mas ainda está limitado ao que uma criatura de seu tamanho pode fazer. Um homúnculo é um parceiro ajudante iniciante. Você pode perder 1d6 pontos de vida para seu homúnculo assumir uma forma capaz de protegê-lo e se tornar também um parceiro guardião iniciante até o fim da cena.",
     prerequisite: "Alquimista Iniciado.",
     origin: "Tormenta20 - Jogo do Ano"
   },

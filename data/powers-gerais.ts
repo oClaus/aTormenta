@@ -153,7 +153,7 @@ export const powersGerais: Power[] = [
   },
   { id: "Estilo Desarmado",
     name: "Estilo Desarmado",
-    description: "Seus ataques desarmados causam $1d6$ pontos de dano e podem causar dano letal ou não letal (sem penalidades).",
+    description: "Seus ataques desarmados causam 1d6 pontos de dano e podem causar dano letal ou não letal (sem penalidades).",
     prerequisite: "treinado em Luta.",
     origin: "Tormenta20 - Jogo do Ano"
   },

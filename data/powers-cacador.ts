@@ -105,7 +105,7 @@ export const powersCacador: Power[] = [
   {
     id: "17",
     name: "Escaramuça Superior",
-    description: "Quando usa Escaramuça, seus bônus aumentam para +5 na Defesa e Reflexos e $+1d12$ em rolagens de dano.",
+    description: "Quando usa Escaramuça, seus bônus aumentam para +5 na Defesa e Reflexos e +1d12 em rolagens de dano.",
     prerequisite: "Escaramuça, 12º nível de caçador.",
     origin: "Tormenta20 - Jogo do Ano"
   },

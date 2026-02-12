@@ -93,7 +93,7 @@ export const powersBardo: Power[] = [
   },
   { id: "Música: Melodia Curativa",
     name: "Música: Melodia Curativa",
-    description: "Criaturas à sua escolha no alcance recuperam $1d6$ PV. Quando usa esta habilidade, você pode gastar mais pontos de mana. Para cada PM extra, aumente a cura em +1d6 PV.",
+    description: "Criaturas à sua escolha no alcance recuperam 1d6 PV. Quando usa esta habilidade, você pode gastar mais pontos de mana. Para cada PM extra, aumente a cura em +1d6 PV.",
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
