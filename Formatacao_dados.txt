@@ -162,16 +162,26 @@
 ------------------Deuses-----------------------------
 
 
-  {
-    id: "",
+  { id: "",
     name: "",
-    image: "/deuses/.png",
+    subtitle: "Deus d",
+    image: [
+    "/deuses/.png", 
+    "/deuses/.png",
+    ],
     status: "normal",
-    history: "",
-    beliefs: "",
+    otherNames: "",
+    areasOfInfluence: "",
+    significantColors: "",
+    motto: "“”",
     sacredSymbol: "",
     channelEnergy: "",
     preferredWeapon: "",
+    history: "",
+    beliefs: "",
+    motivations: "",
+    relationships: "",
+    churchAndClergy: "",
     devotees: "",
     grantedPowers: [
       "",

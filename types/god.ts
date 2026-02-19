@@ -32,6 +32,8 @@ export function getStatusLabel(status?: GodStatus): string {
       return "Caído";
     case "menor":
       return "Menor";
+    case "normal":
+      return "Panteão";
     default:
       return "";
   }
@@ -40,10 +42,11 @@ export function getStatusLabel(status?: GodStatus): string {
 export function getStatusColor(status?: GodStatus): string {
   switch (status) {
     case "caido":
-      return "from-red-600 to-red-900";
+      return "bg-[#7f1d1d] border-red-900"; // Vermelho
     case "menor":
-      return "from-amber-600 to-amber-900";
+      return "bg-amber-700 border-amber-900"; // Âmbar
+    case "normal":
     default:
-      return "from-purple-600 to-purple-900";
+      return "bg-purple-800 border-purple-950"; // Roxo para Panteão
   }
 }

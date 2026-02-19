@@ -948,5 +948,11 @@ export const powersGeraisConcedido: Power[] = [
     prerequisite: "",
     origin: "Deuses de Arton"
   },
+  { id: "Espírito da Alcateia (Akok)",
+    name: "Espírito da Alcateia (Akok)",
+    description: "Você pode se comunicar livremente com todos os tipos de cães e lobos, como se estivesse sob efeito da magia Voz Divina. Além disso, quando ataca um inimigo que você esteja flanqueando, você recebe +2 na rolagem de dano.",
+    prerequisite: "",
+    origin: "Deuses Menores"
+  },
 
 ];

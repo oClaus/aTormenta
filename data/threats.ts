@@ -3906,8 +3906,8 @@ export const threats: Threat[] = [
   pericias: ["Atletismo +11", "Furtividade +15"],
   equipamentos: ["Nenhum"],
   tesouro: "Padrão."
-},{
-  id: "Tsugami",
+},
+{ id: "Tsugami",
   name: "Tsugami",
   description: "No Império de Jade, os samurais são uma classe social prestigiosa. Estes guerreiros protegidos por Lin-Wu são versados em arte, combate e filosofia para entender o pleito dos camponeses e poder protegê-los melhor. São guardiões da honra, protetores da cultura tamuraniana, combatentes abnegados que mantiveram o espírito da nação vivo durante o domínio da Tormenta.\nAssim, quando uma vila não conta com a presença de um samurai, há um certo desconforto. Quem, afinal, poderá defendê-los?\nDe acordo com a lenda, uma pequena vila de pescadores se encontrou nessa situação em eras muito distantes. Enquanto a maior ameaça eram pequenos monstros e bandidos de estrada, os pescadores conseguiam se virar. Eram fortes, eram unidos e, mais do que tudo, corajosos. Mas havia um limite para onde o coração e espírito podiam chegar sem técnica nem equipamento.\nQuando piratas encontraram a vila, acharam também um saque fácil, e decidiram voltar mais vezes. Os pescadores, outrora prósperos, passaram a ter dificuldade em prover para suas famílias. Isso piorou o resultado dos saques progressivamente, irritando cada vez mais os piratas. Como forma de punição, resolveram afogar pescadores, dizendo que assim virariam comida de peixe. Com cada vez menos trabalhadores aptos e cada vez mais medo, a vila se afundou na miséria.\nE teria continuado assim, não fosse uma visita ilustre. Não de um samurai, mas de um artesão. Um mestre do origami, respeitado por sua arte em todo o império, nativo daquela mesma pequena vila. Ao descobrir o problema de sua terra natal, o artista não teve dúvidas: escreveu uma carta pedindo ajuda ao próprio imperador e enviou um dos pescadores para levá-la. Os piratas devolveram o pescador, alguns dias depois, com a carta amassada e enfiada na garganta.\nA essa altura, os habitantes do vilarejo eram um mero punhado de pescadores, muitas crianças e alguns idosos. Mesmo sem conhecimentos profundos de estratégia, o artista sabia que não teriam qualquer chance de vencer seus inimigos em combate direto. Seria preciso pensar em algo diferente. Meditou e orou, pedindo respostas a Lin-Wu, mas só tinha visões do próprio ofício. Tinha ideias para novas formas, novos arranjos, formas de origami completamente diferentes do que jamais criara.\nHouve um novo ataque dos piratas, piorando ainda mais a situação. Os camponeses pediam ajuda ao artista, com toda sua cultura e conhecimento. Mas um origami jamais teria o poder de salvá-los. Ou teria?\nFinalmente entendendo a inspiração divina, o mestre dobrador se pôs a desenvolver um samurai para defender sua vila. Através da sua arte, dobrou e redobrou papel. Traçou ideogramas sagrados nas formas. Testou suas possibilidades. E, por fim, conseguiu um samurai enorme, com cabeça de grou. Em sua mente, a via como uma mulher. A vila inteira festejou, tirando alegria de onde não havia mais nenhuma. E a escultura de papel se moveu, participando das festividades.\nA lenda não explica exatamente o que aconteceu com os piratas ou o nome do artista. Alguns dizem que a tsugami foi criada para ocupar o lugar de uma filha falecida ou de um amor perdido. Outros ponderam que os registros antigos além de não muito confiáveis são profundamente machistas: talvez a responsável fosse uma artista o tempo todo. Mas, diferente dessas incertezas, sabe-se que a tsugami é eficiente. Os planos de sua fabricação ainda são passados de mestre para discípulo no Império de Jade. Por vezes, servem como companheiros de guerreiros camponeses, ajudando-os em jornadas com suas formas diferentes. Algumas até mesmo desenvolveram pensamento independente e saíram pelo mundo em busca de novas experiências e aventuras. Essas costumam ser dramáticas, fazendo poses bombásticas e declamando frases melodramáticas antes de entrar combate.\nA arma portada pela tsugami, uma katana feita de papel, é uma obra-prima por si só. Mesmo não sendo encantada, é capaz de cortes precisos e mortais. Empunhar essa arma é uma honra reservada a poucos guerreiros, concedendo prestígio mesmo que apenas em uma batalha. Isso torna as tsugami alvos dos bandidos que foram criadas para enfrentar, desejosos de vender a arma no mercado negro.\nIndependente dos desígnios desses cães sem honra, porém, artesãos dedicados continuam fazendo tsugamis para defender os fracos e ajudar os fortes.",
   image: "/ameacas/Tesugami.png",
@@ -3941,6 +3941,42 @@ export const threats: Threat[] = [
   pericias: ["Diplomacia +10", "Enganação –2", "Furtividade –5", "Intuição +10"],
   equipamentos: [],
   tesouro: "Katana de papel, padrão.\nKatana de Papel: Essa katana aumentada precisa pungente ignora RD de criaturas, equipamentos ou magias de pedra. Quando faz um acerto crítico, deixa o alvo sangrando. T$ 22.000."
+},
+{ id: "Frisiano",
+  name: "Frisiano",
+  description: "Se entre os minotauros do Império de Tauron já é comum considerar minauros como inferiores, a situação fica ainda pior nos confins das Uivantes entre os membros selvagens da Manada. Onde a força importa acima de qualquer coisa, estatura e massa muscular valem mais que tudo. Isso tornou a vida de Frisiano muito difícil. Embora seja forte de corpo e mente, sempre foi preterido pela baixa estatura.\nA forma como era visto dentro da Manada forçou o minauro a adotar outras táticas. Tornou-se cada vez mais esperto e inescrupuloso, disposto a absolutamente qualquer coisa para obter vantagem. Enquanto seus pares desprezavam furtividade e magia, ele fez questão de dominá-las. Frisiano é um prodígio, mas ainda é visto como um fracassado pelos adultos da Manada.",
+  image: "/ameacas/frisiano.png",
+  nd: "1",
+  tipo: "Humanoide (minauro)",
+  tamanho: "Médio",
+  papel: "Solo",
+  origin: "Dragão Brasil",
+  iniciativa: 6,
+  percepcao: 2,
+  defesa: 14,
+  fort: 0,
+  ref: 11,
+  von: 5,
+  resistenciaDano: "faro",
+  pv: 25,
+  pm: 12,
+  deslocamento: "9m (6q)",
+  ataqueCorpoACorpo: "Adaga +7 (1d4+2, 19) e chifres +7 (1d6+2)",
+  ataqueDistancia: "Adaga +10 (1d4+2, 19)",
+  habilidades: [
+    "Ataque Furtivo: +2d6.",
+    "Magias: Como um bardo de 3º nível (CD 16).\n• Adaga Mental (Padrão, 3 PM): Uma criatura em alcance curto sofre 3d6 pontos de dano psíquico e fica atordoada por 1 rodada (Von reduz o dano à metade e evita a condição). Uma criatura só pode ser atordoada por esta magia uma vez por cena.\n• Amedrontar (Padrão, 3 PM): Um animal ou humanoide em alcance curto fica apavorado por 1d4+1 rodadas e depois abalado (Von reduz para abalado por 1d4 rodadas).\n• Invisibilidade (Padrão, 3 PM): Frisiano fica invisível por 1 rodada ou até realizar uma ação hostil. Ele recebe camuflagem total e +10 em testes de Furtividade contra ouvir, e criaturas que não possam vê-lo ficam desprevenidas contra seus ataques.\n• Leque Cromático (Padrão, 3 PM): Animais e humanoides em um cone de 4,5m ficam atordoados por 1 rodada (apenas uma vez por cena, Von evita), ofuscadas e vulneráveis.",
+    "Velocidade Ladina (2 PM): Uma vez por rodada, Frisiano executa uma ação de movimento adicional em seu turno."
+  ],
+  for: "3",
+  des: "2",
+  con: "2",
+  int: "2",
+  sab: "0",
+  car: "1",
+  pericias: ["Enganação +4", "Furtividade +4", "Ladinagem +4"],
+  equipamentos: ["Adaga x2", "armadura de couro"],
+  tesouro: "Nenhum (veja a descrição do encontro)."
 }
 
 ];
