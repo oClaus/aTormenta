@@ -167,7 +167,7 @@
     subtitle: "Deus d",
     image: [
     "/deuses/.png", 
-    "/deuses/.png",
+    "/deuses/2.png",
     ],
     status: "normal",
     otherNames: "",

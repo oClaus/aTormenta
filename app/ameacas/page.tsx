@@ -9,14 +9,6 @@ export default function AmeacasPage() {
   const [selectedThreat, setSelectedThreat] = useState<Threat | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
 
-  // --- FUNÇÃO PARA O SCROLL ---
-  const scrollToGrid = () => {
-    const element = document.getElementById("ameacas-grid");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   const filteredThreats = threats.filter(threat => {
     const searchLower = searchTerm.toLowerCase();
     
@@ -31,60 +23,36 @@ export default function AmeacasPage() {
   })
   .sort((a, b) => a.name.localeCompare(b.name));
 
+  const RulesSection = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div className="min-h-screen bg-[#f5e6d0] text-amber-950 font-serif selection:bg-amber-800 selection:text-amber-50 relative overflow-x-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#f5e6d0] to-[#e6d5b8]">
-      
-      {/* Background Effect */}
-      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(69,26,3,0.15)_100%)]" />
-
-      {/* Header - 100% Width */}
-      <header className="relative z-10 w-full p-6 border-b-4 border-double border-amber-900/40 bg-[#e6d5b8]/90 backdrop-blur-md shadow-sm">
-        <div className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4">
-            <Link href="/" className="inline-block group">
-                <h1 className="text-4xl font-bold tracking-wider uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-700 via-red-800 to-red-950 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 1px 2px rgba(69,26,3,0.1)' }}>
-                    a-Tormenta
-                </h1>
-            </Link>
-            <div className="flex items-center gap-3 text-sm font-bold tracking-wide uppercase">
-                <Link href="/" className="text-amber-900/60 hover:text-red-700 transition-colors">
-                    Início
-                </Link>
-                <span className="text-amber-900/40">/</span>
-                <span className="text-red-800">Ameaças</span>
-            </div>
+    <div className="mb-12 w-full">
+      <button 
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full flex items-center justify-between p-6 bg-[#e8dac1] border-2 border-amber-900/30 rounded hover:border-amber-700/80 transition-all group shadow-sm hover:shadow-[0_4px_20px_rgba(69,26,3,0.1)]"
+      >
+        <div className="flex items-center gap-3">
+          <span className="text-2xl opacity-70">📜</span>
+          <div className="text-left">
+            <h2 className="text-xl font-bold text-amber-950 group-hover:text-red-800 transition-colors">
+              Regras de Ameaças
+            </h2>
+            <p className="text-sm text-amber-900/60 font-serif italic font-bold">
+              Clique para mais informações sobre regras de Ameaças;
+            </p>
+          </div>
         </div>
-      </header>
+        <span className={`text-amber-900/40 text-2xl transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
+          ▼
+        </span>
+      </button>
 
-      {/* Main Content - 100% Width */}
-      <main className="relative z-10 w-full px-6 py-12">
-        
-        {/* Título e Descrição */}
-        <div className="mb-12 w-full">
-            <button 
-            onClick={scrollToGrid}
-            className="group flex items-center gap-3 px-6 py-3 mb-8 bg-[#e8dac1] border border-amber-900/30 rounded hover:border-red-600 hover:bg-[#d9c8a9] transition-all duration-300 shadow-sm"
-          >
-            <span className="text-amber-900/70 group-hover:text-red-800 font-bold uppercase tracking-wider text-xs">Ir para a Lista</span>
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              fill="none" 
-              viewBox="0 0 24 24" 
-              strokeWidth={2} 
-              stroke="currentColor" 
-              className="w-4 h-4 text-amber-900/50 group-hover:text-red-700 animate-bounce group-hover:animate-none"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
-            </svg>
-          </button>
-
-          <h2 className="text-5xl font-bold text-red-800 mb-6 border-b border-amber-900/20 pb-4">
-            Ameaças
-          </h2>
-          <p className="text-amber-900/80 text-lg mb-8 italic border-l-4 border-red-800/50 pl-4 font-medium">
-            As seções a seguir trazem criaturas para o mestre usar como inimigos. As seções são divididas por temas, para ajudar o mestre na seleção dos adversários. Porém, o mestre é livre para misturar os grupos!
-          </p>
-
-          <div className="space-y-6 text-amber-900/90 font-medium">
+      <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+        <div className="p-8 bg-[#fbf5e6]/80 border-x-2 border-b-2 border-amber-900/20 rounded-b text-amber-900/90 font-serif leading-relaxed space-y-6 text-lg">
+          
+          {/* Introdução do Texto */}
+            <div className="space-y-6 text-amber-900/90 font-medium">
             <div>
                 <h1 className="text-2xl font-bold text-amber-800 mb-2">Nome e ND</h1>
                 <p>O nome e o nível de desafio (ND) da criatura. O ND funciona como o nível da criatura (mas uma criatura terá sempre pelo menos 1 nível).</p>
@@ -162,6 +130,50 @@ export default function AmeacasPage() {
                 </div>
             </div>
           </div>
+
+        </div>
+      </div>
+    </div>
+  );
+};
+
+  return (
+    <div className="min-h-screen bg-[#f5e6d0] text-amber-950 font-serif selection:bg-amber-800 selection:text-amber-50 relative overflow-x-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#f5e6d0] to-[#e6d5b8]">
+      
+      {/* Background Effect */}
+      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(69,26,3,0.15)_100%)]" />
+
+      {/* Header - 100% Width */}
+      <header className="relative z-10 w-full p-6 border-b-4 border-double border-amber-900/40 bg-[#e6d5b8]/90 backdrop-blur-md shadow-sm">
+        <div className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <Link href="/" className="inline-block group">
+                <h1 className="text-4xl font-bold tracking-wider uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-700 via-red-800 to-red-950 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 1px 2px rgba(69,26,3,0.1)' }}>
+                    a-Tormenta
+                </h1>
+            </Link>
+            <div className="flex items-center gap-3 text-sm font-bold tracking-wide uppercase">
+                <Link href="/" className="text-amber-900/60 hover:text-red-700 transition-colors">
+                    Início
+                </Link>
+                <span className="text-amber-900/40">/</span>
+                <span className="text-red-800">Ameaças</span>
+            </div>
+        </div>
+      </header>
+
+      {/* Main Content - 100% Width */}
+      <main className="relative z-10 w-full px-6 py-12">
+        
+        {/* Título e Descrição */}
+        <div className="mb-12 w-full">
+          <h2 className="text-5xl font-bold text-red-800 mb-6 border-b border-amber-900/20 pb-4">
+            Ameaças
+          </h2>
+          <p className="text-amber-900/80 text-lg mb-8 italic border-l-4 border-red-800/50 pl-4 font-medium">
+            As seções a seguir trazem criaturas para o mestre usar como inimigos. As seções são divididas por temas, para ajudar o mestre na seleção dos adversários. Porém, o mestre é livre para misturar os grupos!
+          </p>
+
+          <RulesSection />
         </div>
 
         {/* Separador */}
@@ -330,7 +342,7 @@ export default function AmeacasPage() {
               {/* Descrição */}
               <section className="mb-6">
                 <h3 className="text-xl font-bold text-amber-800 mb-2 flex items-center gap-2 font-serif border-b border-amber-900/10 pb-1">
-                  📖 Descrição
+                  Descrição
                 </h3>
                 <p className="text-amber-900/90 leading-relaxed whitespace-pre-wrap font-medium">
                   {selectedThreat.description}
@@ -339,7 +351,7 @@ export default function AmeacasPage() {
 
               {/* Estatísticas (Iniciativa, Defesa, PV, PM) */}
               <section className="mb-6">
-                <h3 className="text-xl font-bold text-amber-800 mb-3 font-serif border-b border-amber-900/10 pb-1">⚔️ Estatísticas</h3>
+                <h3 className="text-xl font-bold text-amber-800 mb-3 font-serif border-b border-amber-900/10 pb-1">Estatísticas</h3>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                   <div className="p-3 bg-[#e8dac1] rounded border border-amber-900/20 shadow-sm text-center">
                     <div className="text-xs text-amber-900/60 font-bold uppercase mb-1">INICIATIVA</div>
@@ -366,7 +378,7 @@ export default function AmeacasPage() {
 
               {/* Resistências (Fort, Ref, Von) */}
               <section className="mb-6">
-                <h3 className="text-xl font-bold text-amber-800 mb-3 font-serif border-b border-amber-900/10 pb-1">🛡️ Resistências</h3>
+                <h3 className="text-xl font-bold text-amber-800 mb-3 font-serif border-b border-amber-900/10 pb-1">Resistências</h3>
                 <div className="grid grid-cols-3 gap-3 mb-3">
                   <div className="p-3 bg-[#fbf5e6] rounded border border-amber-900/10 text-center">
                     <div className="text-xs text-amber-900/60 font-bold uppercase mb-1">FORT</div>
@@ -413,15 +425,15 @@ export default function AmeacasPage() {
 
               {/* Ataques */}
               <section className="mb-6">
-                <h3 className="text-xl font-bold text-red-800 mb-3 font-serif border-b border-red-900/20 pb-1">⚡ Ataques</h3>
+                <h3 className="text-xl font-bold text-red-800 mb-3 font-serif border-b border-red-900/20 pb-1">Ataques</h3>
                 {selectedThreat.ataqueCorpoACorpo && (
-                  <div className="p-3 bg-[#fbf5e6] rounded border-l-4 border-red-800 mb-3 shadow-sm">
+                  <div className="p-3 bg-[#fbf5e6]  mb-3 shadow-sm">
                     <div className="text-xs text-red-800/70 font-bold uppercase mb-1">CORPO A CORPO</div>
                     <div className="text-amber-950 font-serif font-medium">{selectedThreat.ataqueCorpoACorpo}</div>
                   </div>
                 )}
                 {selectedThreat.ataqueDistancia && (
-                  <div className="p-3 bg-[#fbf5e6] rounded border-l-4 border-amber-800 shadow-sm">
+                  <div className="p-3 bg-[#fbf5e6] shadow-sm">
                     <div className="text-xs text-amber-800/70 font-bold uppercase mb-1">À DISTÂNCIA</div>
                     <div className="text-amber-950 font-serif font-medium">{selectedThreat.ataqueDistancia}</div>
                   </div>
@@ -431,7 +443,7 @@ export default function AmeacasPage() {
               {/* Habilidades Especiais */}
               {selectedThreat.habilidades.length > 0 && (
                 <section className="mb-6">
-                  <h3 className="text-xl font-bold text-amber-800 mb-3 font-serif border-b border-amber-900/10 pb-1">✨ Habilidades</h3>
+                  <h3 className="text-xl font-bold text-amber-800 mb-3 font-serif border-b border-amber-900/10 pb-1">Habilidades</h3>
                   <div className="space-y-2">
                     {selectedThreat.habilidades.map((hab, index) => (
                       <div key={index} className="p-3 bg-[#e8dac1]/50 rounded border border-amber-900/10">
@@ -444,7 +456,7 @@ export default function AmeacasPage() {
 
               {/* Atributos Básicos (GRID DE 6) */}
               <section className="mb-6">
-                <h3 className="text-xl font-bold text-amber-800 mb-3 font-serif border-b border-amber-900/10 pb-1">📊 Atributos</h3>
+                <h3 className="text-xl font-bold text-amber-800 mb-3 font-serif border-b border-amber-900/10 pb-1">Atributos</h3>
                 <div className="grid grid-cols-3 md:grid-cols-6 gap-3">
                   {[
                     { label: "FOR", val: selectedThreat.for },
@@ -464,7 +476,7 @@ export default function AmeacasPage() {
 
               {/* Perícias e Equipamentos */}
               <section className="mb-6">
-                <h3 className="text-xl font-bold text-amber-900/60 mb-3 font-serif uppercase text-sm border-b border-amber-900/10 pb-1">🎯 Perícias & Equipamento</h3>
+                <h3 className="text-xl font-bold text-amber-900/60 mb-3 font-serif uppercase text-sm border-b border-amber-900/10 pb-1">Perícias & Equipamento</h3>
                 <div className="flex flex-wrap gap-2 mb-3">
                   {selectedThreat.pericias.map((pericia, index) => (
                     <span key={index} className="px-3 py-1 bg-[#e8dac1] rounded-sm border border-amber-900/20 text-amber-900/80 text-sm font-bold shadow-sm">
@@ -484,9 +496,9 @@ export default function AmeacasPage() {
               {/* Tesouro */}
               <section className="p-4 mb-8 bg-[#e6d5b8] border border-amber-900/20 rounded shadow-inner">
                 <h3 className="text-xl font-bold text-amber-800 mb-2 flex items-center gap-2 font-serif">
-                  💰 Tesouro
+                  Tesouro
                 </h3>
-                <p className="text-amber-900/90 text-sm leading-relaxed font-medium">{selectedThreat.tesouro}</p>
+                <p className="text-amber-900/90 text-sm leading-relaxed whitespace-pre-wrap font-medium">{selectedThreat.tesouro}</p>
               </section>
 
               {/* IMAGEM (NO FINAL) */}
