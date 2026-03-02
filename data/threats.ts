@@ -4679,7 +4679,7 @@ export const threats: Threat[] = [
   papel: "Solo",
   origin: "Deuses de Arton",
   iniciativa: 31,
-  percepcao: "1d20+21",
+  percepcao: 0,
   defesa: 61,
   fort: 27,
   ref: 33,
@@ -4688,6 +4688,7 @@ export const threats: Threat[] = [
   pv: 4777,
   deslocamento: "sorrelfliflar 13,5m (9q; veja Sorrelfliflo Galunflante)",
   habilidades: [
+    "Percepção: 1d20+21",
     "Aura Caótica Derradeira: O Avatar de Nimb emana uma aura de puro Caos capaz de distorcer a própria existência de seus inimigos. No início do turno do Avatar, cada criatura em um raio de 90m perde 8d6 pontos de vida. Cada vez que rolar o valor máximo em um dado de dano da aura, role um dado extra e some ao dano total desta habilidade.",
     "Centelha Divina: O Avatar pode lançar qualquer magia divina como um clérigo de 19,5º nível sem gastar PM (CD 55, limite de PM 21). Sempre que uma criatura obtém um resultado 1 no dado em um teste de resistência contra uma magia do Avatar, ela fica confusa.",
     "“Eu Movo as Peças!”: No começo da rodada, o Avatar rola 1d6 e move cada criatura a sua escolha em alcance médio um número de quadrados igual ao resultado, em uma direção a sua escolha.",
@@ -5014,5 +5015,42 @@ export const threats: Threat[] = [
   equipamentos: ["Belo Presente"],
   tesouro: "Nenhum.\nBelo Presente\nA adaga empregada pelo Avatar de Wynna é mais um símbolo — e um poderoso amplificador mágico — do que uma arma. Ela conta como um orbe cristalino e uma varinha arcana, e permite que você sustente até três magias ao mesmo tempo. Além disso, ela armazena 20 PM (que são totalmente recuperados ao amanhecer) que podem ser usados apenas para sustentar habilidades mágicas. Artefato."
 },
+{
+  id: "Mau Olhado",
+  name: "Mau Olhado",
+  description: "Uma lenda é sussurrada nas noites pelos habitantes da floresta de Tollon. Para os jovens, uma mera crendice. Para alguns dos mais velhos, a lembrança dolorosa de amigos perdidos. De qualquer forma, quando se despedem uns dos outros nas noites escuras, os lenhadores dizem: “cuidado com o mau olhado”.\nO monstro transita como um lenhador corpulento, principalmente nas tavernas locais. Não é especialmente esperto, mas não precisa. Depois de encontrar uma vítima em potencial, se transforma em sua forma verdadeira — uma bolha amorfa capaz de engolir pessoas inteiras, digerindo todo seu corpo com a exceção dos olhos. Em seu interior semitransparente, podem ser vistos os pedaços das criaturas que consumiu, pedaços usados como peças para seus disfarces.\nA criatura é motivada por uma necessidade visceral de consumir olhos alheios. Os poucos estudiosos que conseguiram algum parecer sobre o mau olhado acreditam haver alguma relação com sua memória. Ao que tudo indica, o monstro não consegue estabelecer suas próprias memórias, mas consegue visualizar as mais recentes daqueles que consome. Depois de consumir muitos olhos, costuma costurar as lembranças vistas em uma colcha de retalhos mental, inventando seu próprio passado inexistente. Muitas vezes isso o leva a se aproximar dos amigos ou família de suas vítimas, com consequências terríveis.\nA origem do mau olhado é controversa. Talvez seja uma criatura vinda de um mundo dos deuses, talvez seja resultado do experimento de um mago. Acredita-se não existir mais de um mau olhado, mas nunca foi encontrado em pares. Por sua natureza transmorfa e suas memórias fluidas, talvez seja sempre a mesma criatura, fadada a continuar roubando olhos até o fim dos tempos. Ainda assim, há uma lenda muito antiga na floresta relacionada ao mau olhado.\nUm bárbaro devoto de Megalokk aterrorizava os lenhadores locais, matando-os e devorando-os. Um dia, foi preso em uma armadilha, enganado por suas presas. Incapaz de escapar, o bárbaro foi visitado por uma serpente de cinco olhos. Graças à esperteza da serpente, escapou de seu cativeiro, mas perdeu a graça de Megalokk para sempre. Havia traído sua divindade, pensado antes de agir, e como tal acabou recebendo uma maldição: passaria a eternidade sem se lembrar de mais nada, como preço por ter esquecido os próprios votos.",
+  image: "/ameacas/mau-olhado.png",
+  nd: "7",
+  tipo: "Monstro",
+  tamanho: "Enorme",
+  papel: "Solo",
+  origin: "Dragão Brasil",
+  iniciativa: 3,
+  percepcao: 9,
+  defesa: 30,
+  fort: 20,
+  ref: 7,
+  von: 14,
+  resistenciaDano: "percepção às cegas, visão no escuro, imune a efeitos de metabolismo",
+  pv: 300,
+  deslocamento: "12m (8q), voo 6m (4q)",
+  ataqueCorpoACorpo: "Machado de batalha x2 +24 (2d8+22, x3) ou pseudópodes x4 +24 (2d6+8, alcance 4,5m, 19)",
+  habilidades: [
+    "Mudar de Forma (Movimento): Muda entre a forma humanoide ou forma de bolha.",
+    "Olho Gordo (Reação): Uma vez por rodada, quando uma criatura faz um ataque contra o mau olhado, ele causa um redutor de –2 em todos os seus testes de perícia por uma rodada (Von CD 24 evita).",
+    "Transmorfo: Em sua forma humanoide, o mau olhado é Médio, pode atacar apenas com seu machado, não pode usar seu deslocamento de voo nem suas demais habilidades. Na forma de bolha, seu tamanho é Enorme e não pode atacar com seu machado.",
+    "Raio do Esquecimento (Padrão): O mau olhado dispara um raio contra um alvo em alcance médio, causando 10d8 pontos de dano de trevas e as condições alquebrado e esmorecido até o final da cena (Ref CD 24 diminui o dano pela metade e evita as condições). Recarga (roubar olhos).",
+    "Roubar Olhos: Quando faz um acerto crítico com seus pseudópodes, o mau olhado pode roubar os olhos de suas vítimas (Fort CD 24 evita). Uma vítima com os olhos roubados fica cega; o mau olhado se torna treinado em uma das perícias da vítima. Caso o mau olhado seja morto, a vítima recupera seus olhos e deixa de ficar cega."
+  ],
+  for: "8",
+  des: "0",
+  con: "8",
+  int: "–1",
+  sab: "2",
+  car: "–2",
+  pericias: ["Enganação +5"],
+  equipamentos: ["Machado de batalha"],
+  tesouro: "Metade."
+}
 
 ];
