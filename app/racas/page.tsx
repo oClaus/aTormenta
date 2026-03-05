@@ -49,6 +49,64 @@ export default function RacasPage() {
     }
   };
 
+  const RulesSection = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="mb-12 w-full">
+      <button 
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full flex items-center justify-between p-6 bg-[#e8dac1] border-2 border-amber-900/30 rounded hover:border-amber-700/80 transition-all group shadow-sm hover:shadow-[0_4px_20px_rgba(69,26,3,0.1)]"
+      >
+        <div className="flex items-center gap-3">
+          <span className="text-2xl opacity-70">📜</span>
+          <div className="text-left">
+            <h2 className="text-xl font-bold text-amber-950 group-hover:text-red-800 transition-colors">
+              Regras das Raças
+            </h2>
+            <p className="text-sm text-amber-900/60 font-serif italic font-bold">
+              Clique para regras e recomendações sobre Raças.
+            </p>
+          </div>
+        </div>
+        <span className={`text-amber-900/40 text-2xl transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
+          ▼
+        </span>
+      </button>
+
+      <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+        <div className="p-8 bg-[#fbf5e6]/80 border-x-2 border-b-2 border-amber-900/20 rounded-b text-amber-900/90 font-serif leading-relaxed space-y-6 text-lg">
+          
+          {/* Introdução do Texto */}
+            <div>
+                <h2 className="text-4xl font-bold text-amber-800 mb-3 border-b-2 border-amber-900/20 pb-2">Raças</h2>
+                <p className="text-amber-900/80 font-medium">As raças de Arton são muito variadas entre si. Na maior parte do mundo civilizado um personagem não será hostilizado por pertencer a qualquer raça. Contudo, alguns antros de vilania podem nutrir verdadeiro ódio por determinadas raças — a Supremacia Purista, por exemplo, despreza não humanos. A exceção a isso são os lefou. Tocados pela Tormenta, a maior ameaça deste mundo, os lefou atraem medo em todos os reinos.</p>
+                <p className="text-amber-900/80 font-medium mt-4">Algumas raças são mais numerosas ou têm papel predominante na história de Arton — humanos, anões, dahllan, elfos, goblins, lefou, minotauros e qareen. O povo do continente está acostumado a ver membros dessas raças. Uma vila humana pode ter um ferreiro anão, por exemplo, e ninguém ficará surpreso.</p>
+                <p className="text-amber-900/80 font-medium mt-4">Mas essas não são as únicas raças de Arton. Dentre toda a variedade dos seres deste mundo, há um grupo de raças mais raras: golens, hynne, kliren, medusas, osteon, sereias, sílfides, suraggel e trogs. A maioria das pessoas nunca viu um membro dessas raças. Pode considerar que são míticas, que foram extintas ou que jamais pisaram no continente. Um membro dessas raças pode atrair curiosidade, espanto ou até medo por onde passar. Em termos de jogo, essas raças possuem mecânicas mais avançadas e são indicadas para jogadores veteranos.</p>
+                <p className="text-amber-900/80 font-medium mt-4">Quase todas as grandes sagas artonianas são sobre grupos de diferentes raças. Aventureiros aprendem a ver o melhor em cada indivíduo e, ao longo de uma vida de viagens e batalhas, acostumam-se até mesmo ao mais exótico companheiro.</p>
+            </div>
+            <div>
+                <h3 className="text-2xl font-bold text-amber-800 mb-3">Escolhendo sua Raça</h3>
+                <p className="text-amber-900/80 font-medium">Após definir seus atributos, é hora de escolher sua raça. Você pode escolher qualquer raça, mas dependendo do seu conceito de personagem, algumas são mais indicadas que outras.</p>
+                <p className="text-amber-900/80 font-medium mt-4">Se você quiser um personagem bom de briga, por exemplo, minotauro é uma boa escolha. Se gosta de lançar magias, vá de elfo. Já se prefere resolver seus problemas na lábia, escolha qareen. Da mesma forma, algumas raças não são indicadas para certos conceitos. Um trog estudioso provavelmente não será muito competente, assim como um hynne brigão. Humanos são um caso especial — são a raça mais versátil, capazes de se destacar em qualquer carreira. Se estiver em dúvida, vá de humano.</p>
+                <p className="text-amber-900/80 font-medium mt-4">Como dito acima, todas as raças funcionam para todos os tipos de personagem, e fazer combinações inusitadas pode ser muito divertido. Mas, se você for um jogador iniciante, prefira uma raça que forneça um bônus no atributo principal de sua classe.</p>
+            </div>
+            <div>
+                <h3 className="text-2xl font-bold text-amber-800 mb-3">Características das Raças</h3>
+                <p className="text-amber-900/80 font-medium">- Sua raça modifica seus atributos, podendo aumentá-los acima de 4 ou diminuí-los abaixo de –2.</p>
+                <p className="text-amber-900/80 font-medium">- Você possui todas as habilidades de sua raça.</p>
+            </div>
+            <div>
+                <h3 className="text-2xl font-bold text-amber-800 mb-3">Raças Variantes e Crossovers</h3>
+                <p className="text-amber-900/80 font-medium"> Será apresentado ideias que podem não se encaixar muito bem no cenário canônico de Arton, mas que seriam interessantes de acontecer em outras versões do universo de Tormenta20. Para representar as raças que só funcionam em versões diferentes de Arton, o ícone Ω aparecerá ao lado do nome de cada uma.</p>
+                <p className="text-amber-900/80 font-medium">Da mesma forma que fazemos com as classes variantes, o nome da raça apresentada ao lado do nome da variante representa a raça original na qual a variante se baseia.</p>
+            </div>         
+        </div>
+      </div>
+    </div>
+  );
+};
+
   return (
     <div className="min-h-screen bg-[#f5e6d0] text-amber-950 font-serif selection:bg-amber-800 selection:text-amber-50 relative overflow-x-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#f5e6d0] to-[#e6d5b8]">
       
@@ -78,26 +136,7 @@ export default function RacasPage() {
         
         {/* Título e Introdução */}
         <div className="mb-12 w-full space-y-8 text-lg leading-relaxed">
-            <div>
-                <h2 className="text-4xl font-bold text-amber-800 mb-3 border-b-2 border-amber-900/20 pb-2">Raças</h2>
-                <p className="text-amber-900/80 font-medium">As raças de Arton são muito variadas entre si. Na maior parte do mundo civilizado um personagem não será hostilizado por pertencer a qualquer raça. Contudo, alguns antros de vilania podem nutrir verdadeiro ódio por determinadas raças — a Supremacia Purista, por exemplo, despreza não humanos. A exceção a isso são os lefou. Tocados pela Tormenta, a maior ameaça deste mundo, os lefou atraem medo em todos os reinos.</p>
-                <p className="text-amber-900/80 font-medium mt-4">Algumas raças são mais numerosas ou têm papel predominante na história de Arton — humanos, anões, dahllan, elfos, goblins, lefou, minotauros e qareen. O povo do continente está acostumado a ver membros dessas raças. Uma vila humana pode ter um ferreiro anão, por exemplo, e ninguém ficará surpreso.</p>
-                <p className="text-amber-900/80 font-medium mt-4">Mas essas não são as únicas raças de Arton. Dentre toda a variedade dos seres deste mundo, há um grupo de raças mais raras: golens, hynne, kliren, medusas, osteon, sereias, sílfides, suraggel e trogs. A maioria das pessoas nunca viu um membro dessas raças. Pode considerar que são míticas, que foram extintas ou que jamais pisaram no continente. Um membro dessas raças pode atrair curiosidade, espanto ou até medo por onde passar. Em termos de jogo, essas raças possuem mecânicas mais avançadas e são indicadas para jogadores veteranos.</p>
-                <p className="text-amber-900/80 font-medium mt-4">Quase todas as grandes sagas artonianas são sobre grupos de diferentes raças. Aventureiros aprendem a ver o melhor em cada indivíduo e, ao longo de uma vida de viagens e batalhas, acostumam-se até mesmo ao mais exótico companheiro.</p>
-            </div>
-            
-            <div>
-                <h3 className="text-2xl font-bold text-amber-800 mb-3">Escolhendo sua Raça</h3>
-                <p className="text-amber-900/80 font-medium">Após definir seus atributos, é hora de escolher sua raça. Você pode escolher qualquer raça, mas dependendo do seu conceito de personagem, algumas são mais indicadas que outras.</p>
-                <p className="text-amber-900/80 font-medium mt-4">Se você quiser um personagem bom de briga, por exemplo, minotauro é uma boa escolha. Se gosta de lançar magias, vá de elfo. Já se prefere resolver seus problemas na lábia, escolha qareen. Da mesma forma, algumas raças não são indicadas para certos conceitos. Um trog estudioso provavelmente não será muito competente, assim como um hynne brigão. Humanos são um caso especial — são a raça mais versátil, capazes de se destacar em qualquer carreira. Se estiver em dúvida, vá de humano.</p>
-                <p className="text-amber-900/80 font-medium mt-4">Como dito acima, todas as raças funcionam para todos os tipos de personagem, e fazer combinações inusitadas pode ser muito divertido. Mas, se você for um jogador iniciante, prefira uma raça que forneça um bônus no atributo principal de sua classe.</p>
-            </div>
-
-            <div>
-                <h3 className="text-2xl font-bold text-amber-800 mb-3">Características das Raças</h3>
-                <p className="text-amber-900/80 font-medium">- Sua raça modifica seus atributos, podendo aumentá-los acima de 4 ou diminuí-los abaixo de –2.</p>
-                <p className="text-amber-900/80 font-medium">- Você possui todas as habilidades de sua raça.</p>
-            </div>
+          <RulesSection />        
         </div>
 
         {/* Search */}

@@ -72,7 +72,7 @@ export const races: Race[] = [
     ]
   },
   { id: "Qunari",
-    name: "Qunari",
+    name: "Qunari Ω",
     origin: "Dragão Brasil - Dragon Age",
     image: "/racas/qunari.png",
     description: "Acredita-se que os Qunari vieram de além do mar, até pelo fato de costumarem ser os melhores navegadores de Thedas. Estabelecidos principalmente em Par Vollen e Seheron, os Qunari costumam ser vistos com suspeita pelo resto de Thedas. \n A cultura Qunari é muito fechada e existe variação nas nomenclaturas que são bem importantes. Apesar de existir a raça Qunari, você só é considerado um Qunari se seguir o Qun*, caso contrário é chamado de Tal-Vashoth, um termo para alguém que nasceu no Qun, mas o abandonou. Esse termo é considerado uma desonra. E alguém de outra raça que entre para o qun pode passar a ser chamado de qunari também. \n O Qun é o que rege a sociedade dos qunari, um conjunto de regras para manter a sociedade deles funcionando. Laços familiares não são tão fortes, e os qunari não são chamados pelos seus nomes normalmente, e sim pelo seu título. Por exemplo, o nome de Sten, em Dragon Age: Origins, é a função dele, mas nós tratamos como nome. Iron Bull, de Dragon Age: Inquisition, é uma exceção. O mais importante para o qunari é realizar a sua função e eles são regidos por três governantes, cada um responsável por uma área: Arishok (líder militar), Arigena (líder dos artesãos e trabalhadores braçais) e Ariqun (líder espiritual).",
@@ -584,7 +584,7 @@ export const races: Race[] = [
     ]
   },
   { id: "Jotunn",
-    name: "Jotunn",
+    name: "Jotunn Ω",
     origin: "Dragão Brasil - God of War Ragnarok",
     image: "/racas/jotunn.png",
     description: "Jötunheim, o Reino dos Gigantes de Gelo \n Lar das montanhas mais altas de todos os Nove Reinos, este Reino não possui mais nativos, todos mortos em uma campanha genocida feita por Thor e seu Mjölnir. Nem todos os Jötnar (Jötunn no singular, outro nome para os gigantes de gelo) eram realmente grandes em tamanho. Muitos tinham o tamanho de um humano comum, outros possuíam cabeças de animais ou até eram animais por completo, como a própria Serpente do Mundo, Jörmungandr. \n\n Muspelheim, o Reino dos Gigantes de Fogo \n Um dos Reinos mais primordiais da mitologia nórdica, este lugar é tomado de lava e fumaça vulcânica, completamente inabitável. Já foi habitada por gigantes, mas isso foi há muito tempo. Não se sabe o paradeiro de seu rei, Sutr — alguns supõem que esteja dormindo apenas esperando o Ragnarök. É um dos reinos mais avessos à vida humana, então aventureiros devem estar bem preparados se quiserem desbravá-lo. \n\n Os Jotunns \n As poderosas e ancestrais raças de gigantes nativas de Jötunheim e Muspelheim, antigamente abundante em Midgard, mas praticamente dizimada pelos Aesir por conta de seu medo e inveja. Apesar de sua alcunha, os jotnar variam muito de estatura, apresentando desde corpos enormes como montanhas até o tamanho de humanos comuns.",
@@ -619,7 +619,7 @@ export const races: Race[] = [
     ]
   },
   { id: "Vanir",
-    name: "Vanir",
+    name: "Vanir Ω",
     origin: "Dragão Brasil - God of War Ragnarok",
     image: "/racas/vanir.png",
     description: "Vanaheim, o Reino dos Vanir \n Este reino tomado de selvas, criaturas perigosas e umidade já foi o lar dos deuses Vanir, inimigos derrotados dos Aesir. Poucas pessoas, além dos próprios Vanir, puderam pisar em Vanaheim nos últimos tempos, já que Odin também bloqueou a passagem para o Reino. Em meio às ruínas erguidas aos deuses Vanir, os últimos poucos membros de uma resistência tramam planos para enfrentar os Aesir novamente, enquanto impedem que os deuses asgardianos invadam e tomem Vanaheim de forma definitiva. \n Considerados divinos como os Aesir, os Vanir são uma raça escassa e desconfiada desde sua quase aniquilação e vivem escondidos dos Aesir, tramando sua vingança. Sua afinidade com as energias mágicas e com a magia antiga é um grande poder e uma grande maldição.",
@@ -644,7 +644,7 @@ export const races: Race[] = [
     ]
   },
   { id: "Elfo de Elfheim",
-    name: "Elfo de Elfheim",
+    name: "Elfo de Elfheim Ω",
     origin: "Dragão Brasil - God of War Ragnarok",
     image: "/racas/elfo_elfheim.png",
     description: "Alfheim, o Reino dos Elfos \n Não fosse palco de uma longa guerra entre elfos luminosos e elfos negros, este Reino possuiria ares tranquilos com suas florestas densas e volumosas. O motivo para o conflito é a Luz de Alfheim, disputada pelos dois grupos de maneira ferrenha. Os céus do Reino sempre estão azuis quando os luminosos estão sob controle da Luz, mas logo o firmamento é tingido de vermelho quando os elfos negros tomam controle. \n Apesar de elfos negros serem vistos como cruéis e malignos por natureza quando comparados aos elfos luminosos, as coisas não são assim tão simples. Há mais tons de cinza nesse conflito do que qualquer analogia fácil entre luz e trevas. Duas raças ancestrais que dividem uma mesma origem, os elfos luminosos (Ljósálfar) são seres pálidos de pele quase translúcida e olhos brilhantes, enquanto os elfos negros (Dökkalfar) têm a pele variando em tons de grafite e características insetóides." ,
@@ -688,7 +688,7 @@ export const races: Race[] = [
     ]
   },
   { id: "Anão de Svartalfheim",
-    name: "Anão de Svartalfheim",
+    name: "Anão de Svartalfheim Ω",
     origin: "Dragão Brasil - God of War Ragnarok",
     image: "/racas/anao_svaltafheim.png",
     description: "Svartalfheim, o Reino dos Anões \n Um Reino próspero, tranquilo, mas ao mesmo tempo apreensivo e temeroso da benevolência de seu patrono, Odin. Os anões são gênios da manufatura e da arquitetura, e trabalham para o Pai-de-Todos em troca de proteção. Não possuem permissão para falar com ninguém que não seja Aesir ou de Asgard. \n As terras de Svartalfheim são mais férteis, o clima também é mais ameno e agradável. A genialidade anã também oferece mais comodidades, como maquinário e sistemas de fornecimento de água. As riquezas naturais são exploradas pelos artesãos anões e por Asgard — seu aço é tão superior que é conhecido como “aço de Svartalfheim” em outros Reinos. \n Anões de Svartalfheim, os mais astutos e talentosos artesãos, alquimistas e cientistas dos Nove Reinos, responsáveis por construir e aperfeiçoar as armas que os deuses irão brandir no dia do Ragnarok.",
@@ -781,7 +781,7 @@ export const races: Race[] = [
     devotos: "Hyninn, Kallyadranoch, Nimb.",
   },
   { id: "Gorons",
-    name: "Gorons",
+    name: "Gorons Ω",
     origin: "Dragão Brasil - Zelda",
     image: "/racas/gorons.png",
     description: "Conhecidos como o povo das rochas, essas criaturas corpulentas e fortes vivem em regiões montanhosas, onde se alimentam de pedras e trabalham com mineração para sobreviver. Gorons costumam ser maiores que outras raças — alguns indivíduos lendários podem chegar ao tamanho de uma montanha! Por viverem em montanhas vulcânicas como a Death Mountain (“Montanha da Morte” em inglês), os gorons não são abalados pelo calor, fogo ou lava. Também são conhecidos por sua longa tradição na forja de armas e equipamentos.",
@@ -810,7 +810,7 @@ export const races: Race[] = [
     ],
   },
   { id: "Rito",
-    name: "Rito",
+    name: "Rito Ω",
     origin: "Dragão Brasil - Zelda",
     image: "/racas/rito.png",
     description: "Os rito são seres humanoides com feições de ave, bico, penas, asas no lugar dos braços e garras no lugar dos pés. Mesmo com as asas, possuem mãos nas extremidades dos braços e por isso são capazes de empunhar e segurar objetos. Rito agem como mensageiros entre os povos e entre o seu. Sua capacidade de voar foi capaz de conectar os diversos povos de Hyrule nos momentos de maior necessidade.",
@@ -1086,7 +1086,7 @@ export const races: Race[] = [
     devotos: "Allihanna, Hyninn, Marah, Nimb, Wynna.",
   },
   { id: "Zora",
-    name: "Zora",
+    name: "Zora Ω",
     origin: "Dragão Brasil - Zelda",
     image: "/racas/Zora.png",
     description: "Este povo é composto por pessoas humanoides com características aquáticas e anfíbias. Possuem guelras e uma cauda em sua cabeça, além de um corpo escamoso e úmido, que varia entre as cores branca, azul, vermelho e cinza. Costumam viver em lagos, rios e mares, especialmente nas partes submersas, e por isso são considerados os guardiões das águas. Sua cultura é conhecida pela grande admiração pela música e suas canções curativas e restauradoras. Apesar disso, ao longo das eras de Hyrule, muitos zora rescindiram a hábitos mais animalescos e irracionais, tornando-se inimigos da família real e do herói.",
@@ -1106,5 +1106,222 @@ export const races: Race[] = [
       { attribute: "int", modifier: -1 }
     ],
   },
+  { id: "Anão da Superfície",
+    name: "Anão da Superfície",
+    origin: "Dragão Brasil",
+    image: "/racas/anao_superficie.png",
+    description: "Nós, o povo anão da superfície, somos a prova viva de que a tradição anã não precisa estar presa ao subterrâneo para continuar firme. Enquanto doheritas erguem cidadelas sob as montanhas, nós preferimos as estradas, feiras e portos de Arton, viajando com carroças reforçadas, cofres bem trancados e um sorriso confiante sob a barba. Somos um povo de mercadores natos, conhecidos por negociar com justiça, cumprir acordos à risca e nunca trapacear — afinal, um anão pode até mudar de rota, mas jamais de palavra.\nMesmo longe das cavernas ancestrais, os anões da superfície mantêm vivos os costu­mes de nosso povo. Suas barbas exibem tranças que marcam clãs, viagens memoráveis ou contratos importantes. E suas forjas, embora menores e portáteis, produzem obras que fariam qualquer ferreiro de Doherimm erguer a sobrancelha em aprovação. Acostumados a lidar com diferentes culturas, nós aprendemos a rir alto, brindar com estranhos e contar boas histórias ao redor da fogueira, sem nunca esquecer quem somos.\n— Bartha Barba-de-Aço, anão da superfície paladino de Valkaria.",
+    abilities: [
+      {
+      name: "Somente o Necessário",
+      description: "Você nunca sai de casa sem estar preparado. Uma vez por sessão de jogo, você pode gastar uma ação completa e 1 PM para encontrar nos seus equipamentos um item de valor equivalente a T$ 1d10 + seu nível. Você também pode usar este poder para encontrar materiais de fabricação, mas o valor deve ser equivalente a T$ 1d6 + seu nível.",
+      },
+      {
+      name: "Devagar e Sempre",
+      description: "Seu deslocamento é 6m (em vez de 9m). Porém, seu deslocamento não é reduzido por uso de armadura ou excesso de carga.",
+      },
+      {
+      name: "Duro como Pedra",
+      description: "Você recebe +3 pontos de vida no 1º nível e +1 por nível seguinte.",
+      },
+      {
+      name: "Tradição de Heredrimm",
+      description: "Você é perito nas armas tradicionais anãs, seja por ter treinado com elas, seja por usá-las como ferramentas de ofício. Para você, todos os machados, martelos, marretas e picaretas são armas simples. Você recebe +2 em ataques com essas armas.",
+      },
+    ],
+    // Modificadores FIXOS para Anão
+    attributeModifiers: [
+      { attribute: "con", modifier: 2 },
+      { attribute: "int", modifier: 1 },
+      { attribute: "des", modifier: -1 }
+    ]
+  },
+  { id: "Elfo-do-Gelo",
+    name: "Elfo-do-Gelo Ω",
+    origin: "Dragão Brasil",
+    image: "/racas/elfo_do_gelo.png",
+    description: "Meu povo descende daqueles que deixaram as asas de Glórienn e encontraram refúgio onde quase ninguém ousava ir: as gélidas Montanhas Uivantes. Lá, aprendemos a sobreviver num mundo de neve eterna, ventos cortantes e caça difícil. Com o tempo, o frio deixou de ser um obstáculo e passou a moldar as pessoas: pele pálida como a geada, cabelos em tons claros ou frios, olhos adaptados à escuridão e corpos marcados por cicatrizes de um ambiente que não perdoa erros. Passamos a viver em pequenos grupos, geralmente em cavernas, sem reis ou chefes: cada aldeia decide seu caminho em conjunto, guiada pela necessidade e pela experiência.\nMuitos elfos-do-gelo são como eu, devotos da Dragoa-Rainha do Gelo, pedindo proteção e força, enquanto outros ainda fazem preces a Allihanna por boas caçadas. Poucos de nós deixam as montanhas, mas quando o fazem é por necessidade, curiosidade ou chamado da aventura — e onde passam, levam consigo o silêncio do inverno e a certeza de que até no frio mais implacável a liberdade pode florescer.",
+    abilities: [
+      {
+      name: "Graça de Glórienn",
+      description: "Seu deslocamento é 12m (em vez de 9m).",
+    },
+    {
+      name: "Herança Gélida",
+      description: "Você recebe redução de frio 10 e resistência a frio +5.",
+    },
+    {
+      name: "Sentidos Élficos",
+      description: "Você recebe visão na penumbra e +2 em Misticismo e Percepção.",
+    },
+    ],
+    attributeModifiers: [
+      { attribute: "des", modifier: 1 },
+      { attribute: "sab", modifier: 2 },
+      { attribute: "con", modifier: -1 }
+    ]
+  },
+  { id: "Elfo-Sombrio",
+    name: "Elfo-Sombrio Ω",
+    origin: "Dragão Brasil",
+    image: "/racas/Elfo-Sombrio.png",
+    description: "Nos abismos de Sombria, onde a luz é uma lembrança distante e as sombras parecem ter vontade própria, meu povo aprendeu a transformar silêncio em poder e paciência em arma. Nossas cidades se erguem como colmeias de pedra e obsidiana, cheias de passagens ocultas, torres invertidas e salões iluminados por fungos bioluminescentes e chamas negras. Para um elfo-sombrio, sobreviver é entender o jogo social: alianças são afiadas como lâminas, promessas duram o tempo que for útil e a confiança é uma fraqueza rara.\nEmbora sejamos temidos em Arton, engana-se quem acredita que sejamos vilões. Nós somos herdeiros de um mundo mais honesto, onde a força e a astúcia definem o destino. Somos guerreiros, conjuradores e assassinos que treinam desde cedo, pois em Sombria não há espaço para fraqueza. Alguns poucos, porém, abandonam o reino divino de Tenebra e viajam até Arton, movidos por ambição, curiosidade ou exílio. Esses raros aventureiros carregam consigo o peso do preconceito e a fama sombria de nosso povo, mas também o potencial de se provar tão valoroso quanto qualquer herói.\n— Eleanorilanas Danthallas, elfa-sombria ladina de Hyninn.",
+    abilities: [
+      {
+      name: "Arsenal de Tenebra",
+      description: "Você recebe proficiência em florete, gadanho e mosquete e +2 em testes de ataque com essas armas. Se receber proficiência em uma dessas armas novamente, pode considerá-la uma arma leve.",
+    },
+    {
+      name: "Manto das Sombras",
+      description: "Você pode lançar Invisibilidade, mas apenas em você. Caso aprenda novamente essa magia, seu custo diminui em –1 PM.",
+    },
+    {
+      name: "Sentidos Élficos",
+      description: "Você recebe visão na penumbra e +2 em Misticismo e Percepção.",
+    },
+    {
+      name: "Sensibilidade ao Sol",
+      description: "Quando exposto à luz solar direta, você fica ofuscado e, a cada rodada, perde 2d6 PV por patamar de personagem.",
+    },
+    ],
+    attributeModifiers: [
+      { attribute: "des", modifier: 1 },
+      { attribute: "int", modifier: 2 },
+      { attribute: "con", modifier: -1 }
+    ]
+  },
+  { id: "Humano Feérico",
+    name: "Humano Feérico",
+    origin: "Dragão Brasil",
+    image: "/racas/Humano_Feérico.png",
+    description: "Raptados, trocados ou substituídos ainda crianças pelas fadas da Pondsmânia, nós feéricos crescemos em salões de cristal, bosques impossíveis e palácios que só existem à meia-noite. Lá, aprendemos que nomes têm poder, promessas são leis e a própria realidade pode se dobrar à vontade da Rainha Thantalla-Dhaedelin. Quando fugi e retornei a Deheon, até parecia um humano comum à primeira vista, mas algo em mim denunciava a passagem pelo Reino das Fadas. Depois de viver lá, a magia nos envolve de forma natural, quase instintiva.\nDe volta ao mundo mortal, nós feéricos nunca nos encaixamos por completo. Alguns pensam rápido demais, outros sentem demais e há quem deseje demais. As “bênçãos” que nos foram dadas pelos seres feéricos são curiosas, imprevisíveis e perigosas, nos fazendo alternar entre uma alegria contagiante e uma melancolia profunda por algo que não conseguimos explicar. No fim das contas, ser um humano feérico é carregar dois mundos no peito — e não pertencer completamente a nenhum deles.\n— Aedwlyn Dralinur, feérico druida de Allihanna.",
+    abilities: [
+      {
+        name: "Bênção das Fadas",
+        description: "Escolha quatro bênçãos da lista a seguir. Quando recebe um novo poder de classe, pode trocar este poder por uma bênção. Cada bênção só pode ser escolhida uma vez.",
+        subAbilities: [
+        {
+          name: "Ardiloso Como uma Cobra",
+          description: "Você pode lançar Disfarce Ilusório (atributo-chave Carisma)."
+        },
+        {
+          name: "Duro Como Pedra",
+          description: "Você recebe +1 em Constituição e resistência a magia +2."
+        },
+        {
+          name: "Falante Como um Grilo",
+          description: "Você recebe +2 em Adestramento e Sobrevivência, e pode falar com animais e plantas (como o efeito da magia Voz Divina)."
+        },
+        {
+          name: "Forte Como um Touro",
+          description: "Você recebe +1 em Força e +5 de capacidade de carga."
+        },
+        {
+          name: "Mágico Como uma Borboleta",
+          description: "Você pode lançar uma magia arcana de 1º círculo à sua escolha (atributo-chave Carisma). Se aprender novamente esta magia, seu custo diminui em –1 PM."
+        },
+        {
+          name: "Raivoso Como um Carcaju",
+          description: "Você possui uma arma natural de mordida (dano 1d6, crítico x2, perfuração). Uma vez por rodada, quando usa a ação agredir para atacar com outra arma corpo a corpo, pode gastar 1 PM para fazer um ataque extra com a mordida."
+        },
+        {
+          name: "Rápido Como um Coelho",
+          description: "Você recebe +1 em Destreza e deslocamento +3m."
+        },
+        {
+          name: "Sábio Como uma Coruja",
+          description: "Você recebe +1 em Sabedoria e +3 PM."
+        },
+        {
+          name: "Sagaz Como um Falcão",
+          description: "Você recebe visão na penumbra e está permanentemente sob efeito da magia Visão Mística com o aprimoramento de enxergar criaturas e objetos invisíveis."
+        },
+        
+        ]
+    },
+    ],
+    attributeModifiers: [
+      { description: "Escolha +1 em três atributos diferentes" }
+    ]
+  },
+  { id: "Medusa Dracônica",
+    name: "Medusa Dracônica",
+    origin: "Dragão Brasil",
+    image: "/racas/medusa_draconica.png",
+    description: "Nós somos herdeiras de um legado antigo e poderoso, fruto da união entre o sangue das medusas e a essência dos dragões. Diferente das medusas serpentinas, a magia flui em nós de forma quase instintiva, carregada da essência elemental dos dragões. Nossas serpentes exibem escamas mais duras e cores profundas, e nosso olhar não petrifica, ele lança magias. Para medusas dracônicas como eu, a herança dos dragões não é apenas um detalhe de nascimento, mas um chamado: fomos feitas para lembrar o mundo do poder de Kallyadranoch.\nCulturalmente, medusas dracônicas tendem a se organizar em círculos fechados, ordens ou linhagens, muitas vezes seguindo a tradição dos trios, um símbolo de equilíbrio, vigilância e domínio. Devotas de Kallyadranoch são mais comuns, embora não exclusivas, muitas de nós se dedicam também a Sckhar, Beluhga e outros Dragões-Reais; ou a divindades de poder semelhante, como Arsenal e Thwor. Orgulhosas e pacientes, nós acreditamos que governar é um dever natural, não uma ambição vulgar, e que a força deve ser usada com propósito, não por impulso. Quando uma de nós surge em Arton, raramente o faz em silêncio: nossa presença anuncia intriga, reverência e poder bruto.\n— Aleteia, medusa dracônica cavaleira de Kallyadranoch",
+    abilities: [
+      {
+      name: "Cria de Megalokk",
+      description: "Você é uma criatura do tipo monstro e recebe visão no escuro.",
+    },
+    {
+      name: "Natureza Elemental",
+      description: "Escolha um tipo de dano entre ácido, eletricidade, fogo ou frio. Você recebe RD 5 do tipo escolhido. Além disso, pode gastar uma ação de movimento e 1 PM para encantar uma arma que esteja usando. A arma causa +1d12 pontos de dano do tipo escolhido. O efeito dura até você acertar um ataque ou até o fim da cena (o que acontecer primeiro).",
+    },
+    {
+      name: "Olhar Místico",
+      description: "Você pode lançar uma magia de 1º círculo à sua escolha. A magia deve ser da energia correspondente à sua Natureza Elemental. Caso aprenda novamente essa magia, seu custo diminui em –1 PM. Se você estiver cego ou semelhante, não consegue conjurar essa magia.",
+    },
+    ],
+    attributeModifiers: [
+      { attribute: "int", modifier: 2 },
+      { attribute: "car", modifier: 1 },
+    ]
+  },
+  { id: "Tabrachi",
+    name: "Tabrachi",
+    origin: "Ameaças de Arton",
+    image: "/racas/Tabrachi.png",
+    description: "“Tenham cuidado. Soube que um povo-sapo maldito ronda por estes pântanos.”\n— Hyakunen, o Imortal (emboscado)\nEmbora humanoide, a criatura tem o aspecto de um grande sapo. Veste uma armadura rústica de couro e empunha uma lança. Da boca larga e rasgada pende uma língua grossa, mas ligeira, que lambe um dos olhos grandes e salientes.\nOs tabrachi, mais conhecidos como “homens-sapos”, são encontrados em pequenos bandos, sempre à procura de vítimas, para roubar seus pertences e oferecê-las como sacrifício a Inghlblhphollstgt, o Grande Deus Sapo. Embora sejam mais numerosos no infame Pântano dos Juncos, entre Deheon e Wynlla, podem ser encontrados por todo o Reinado. Sua tática favorita é manter-se à espreita sob as águas do pântano ou nas copas das árvores, usando sua furtividade para atacar transeuntes de surpresa.",
+    abilities: [
+      {
+      name: "Batráquio",
+      description: "Você recebe visão na penumbra e deslocamento de natação igual ao seu deslocamento terrestre.",
+      },
+      {
+      name: "Linguarudo",
+      description: "Sua língua é uma arma natural que pode atacar inimigos a até 3m (dano 1d4, crítico x2, impacto). Ela é uma arma versátil, fornecendo +2 em testes para desarmar e derrubar. Uma vez por rodada, quando usa a ação agredir com outra arma, você pode gastar 1 PM para fazer um ataque corpo a corpo extra com a língua.",
+      },
+      {
+      name: "Saltador",
+      description: "Você recebe +10 em testes de Atletismo para saltar.",
+      },
+    ],
+    attributeModifiers: [
+      { attribute: "con", modifier: 2 },
+      { attribute: "for", modifier: 1 },
+      { attribute: "car", modifier: -1 }
+    ],
+    longevidade: "Normal",
+    devotos: "Allihanna, Megalokk, Nimb, Sszzaas, Tenebra."
+  },
+  { id: "Teju - Tabrachi",
+    name: "Teju - Tabrachi Ω",
+    origin: "Dragão Brasil",
+    image: "/racas/teju.png",
+    description: "Muito me ofende quem confunde meu povo com aqueles sapos brutamontes. Tejus são a face menos conhecida — e bem mais refinada — do sangue tabrachi. Enquanto os homens-sapos se aferram ao pântano e à brutalidade ritual, nós seguimos outro caminho: somos moldados por rios limpos, cavernas úmidas e ruínas alagadas onde agilidade vale mais que força bruta. Pequenos e esguios, somos salamandras bípedes, com caudas longas, pele fria e úmida e movimentos rápidos como um bote certeiro. Ouvi dizer que, à distância, já fomos confundidos com kobolds, mas basta um olhar atento para perceber que não temos escamas ou fogo; apenas músculos flexíveis, olhos atentos e uma elegância anfíbia.\nCulturalmente, somos mais organizados e curiosos que os tabrachi comuns. Nossas comunidades são estáveis, com tradições orais, líderes eleitos e um apreço surpreendente por diplomacia, comércio e artes práticas como navegação fluvial e engenharia mágica. Embora não rejeitemos o uso da força, preferimos astúcia e velocidade, atacando apenas quando necessário. Quando um teju deixa suas águas natais para se aventurar pelo Reinado, costuma fazê-lo como explorador, mensageiro ou aventureiro ágil, provavelmente em busca de um novo conhecimento mágico, teórico ou prático.\n— Rusk Ojawale, teju frade de Nerelim",
+    abilities: [
+      {
+      name: "Mecanismo de Defesa",
+      description: "Quando for alvo de um acerto crítico (ou de um efeito capaz de decepar um de seus membros), você pode gastar 3 PM para descolar o membro do corpo e reduzir o dano sofrido à metade. Um membro perdido dessa forma leva 2d6 dias para crescer novamente e, de acordo com o mestre, você pode sofrer o efeito de uma complicação que reflita a falta desse membro (como Maneta para a falta de um braço ou Vagaroso para a falta de uma perna) até que o membro perdido cresça novamente.",
+      },
+      {
+      name: "Linguarudo",
+      description: "Sua língua é uma arma natural que pode atacar inimigos a até 3m (dano 1d4, crítico x2, impacto). Ela é uma arma versátil, fornecendo +2 em testes para desarmar e derrubar. Uma vez por rodada, quando usa a ação agredir com outra arma, você pode gastar 1 PM para fazer um ataque corpo a corpo extra com a língua.",
+      },
+      {
+      name: "Urodelo",
+      description: "Você recebe visão na penumbra e deslocamento de escalada igual ao seu deslocamento terrestre.",
+      },
+    ],
+    attributeModifiers: [
+      { attribute: "con", modifier: 2 },
+      { attribute: "for", modifier: 1 },
+      { attribute: "car", modifier: -1 }
+    ],
+    longevidade: "Normal",
+    devotos: "Allihanna, Megalokk, Nimb, Sszzaas, Tenebra."
+  },
+  
   
 ];
