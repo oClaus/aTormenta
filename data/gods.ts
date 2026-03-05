@@ -649,4 +649,23 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: "Devotos de Akok não podem aprisionar ou matar lobos de qualquer tipo (como lobos-das-cavernas), nem permitir que outros o façam. Além disso, o grupo ao qual o devoto pertence (família, aventureiros, guilda…) é considerado sua alcateia. Ele não pode enganá-la, traí-la ou abandoná-la."
   },
+  { id: "Gwendolynn",
+    name: "Gwendolynn",
+    subtitle: "Deusa da Liberdade",
+    image: [
+    "/deuses/Gwendolynn.png",
+    ],
+    status: "menor",
+    sacredSymbol: "Um elo de corrente partido ao meio.",
+    channelEnergy: "Positiva",
+    preferredWeapon: "Cajado de batalha",
+    history: "Uma elfa de longas tranças loiras, quase sempre de armadura e carregando um bordão. Exaventureira, participou de várias buscas que pareciam missões simples, mas acabaram mudando o destino de Arton. Gwen libertou o feudo de Adhurian de monstros conjurados a partir da Joia da Alma, um dos artefatos mais antigos da Criação. Envolveu-se com os organizadores da Revolta da Lavoura, sendo uma das principais responsáveis por acabar com o escravagismo no Império de Tauron./nEntão ainda uma clériga de Tanna-Toh, Gwen se mostrou um símbolo de força, esperança e resistência, expondo ao mundo a traição de Glórienn e tornando-se um foco de devoção. Finalmente, ascendeu a divindade menor protegendo a cidade de Tiberus da destruição pela Tormenta./nGwen prega liberdade de todo tipo de escravidão. Isso inclui escravidão física (como era praticada no Império de Tauron) e mental (como a crença na inferioridade dos goblinoides).",
+    beliefs: "Libertar escravos. Libertar mentes. Transformar sistemas rígidos e antiquados. Lutar contra qualquer submissão involuntária. Pregar a independência.",
+    devotees: "Dahllan, duendes, elfos, elfos-do-mar, eiradaan, galokk, goblins, lefou, minotauros, qareen, kliren, sátiros, sílfides, velocis, bardos, bucaneiros, inventores, ladinos, paladino (único).",
+    grantedPowers: [
+      "Liberdade Irrestrita",
+    ],
+    obligationsRestrictions: "Devotos de Gwendolynn jamais podem recusar uma missão que envolva a libertação de escravos, exceto quando isso significa a morte ou a ruína de seus próprios aliados.",
+    rank: "Mortal ascendida, status divino 3",
+  },
 ];

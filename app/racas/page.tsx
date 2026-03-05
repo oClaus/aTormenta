@@ -249,7 +249,7 @@ export default function RacasPage() {
               <div className="mb-10 p-6 bg-[#fffaf0] border border-amber-900/20 rounded shadow-inner relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-1 h-full bg-amber-900/20"></div>
                 <h3 className="text-2xl font-bold text-amber-800 mb-4 flex items-center gap-2">
-                    <span>📖</span> Descrição
+                Descrição
                 </h3>
                 <p className="text-amber-900/90 font-medium leading-relaxed whitespace-pre-line text-lg first-letter:text-5xl first-letter:font-bold first-letter:text-red-800 first-letter:mr-2 first-letter:float-left text-justify">
                   {selectedRace.description}
@@ -259,7 +259,7 @@ export default function RacasPage() {
               {/* Habilidades */}
               <div className="mb-10">
                 <h3 className="text-2xl font-bold text-amber-800 mb-6 border-b border-amber-900/20 pb-2 flex items-center gap-2">
-                  <span>✨</span> Habilidades Raciais
+                Habilidades Raciais
                 </h3>
                 
                 <div className="space-y-6">
@@ -319,7 +319,7 @@ export default function RacasPage() {
               {/* Modificadores de Atributos */}
               <div className="mb-8">
                 <h3 className="text-2xl font-bold text-amber-800 mb-6 border-b border-amber-900/20 pb-2 flex items-center gap-2">
-                    <span>📊</span> Modificadores de Atributos
+                Modificadores de Atributos
                 </h3>
                 <div className="space-y-4">
                   {selectedRace.attributeModifiers.map((mod, index) => {

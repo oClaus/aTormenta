@@ -954,5 +954,11 @@ export const powersGeraisConcedido: Power[] = [
     prerequisite: "",
     origin: "Deuses Menores"
   },
+  { id: "Liberdade Irrestrita (Gwendolynn)",
+    name: "Liberdade Irrestrita (Gwendolynn)",
+    description: "Você recebe +2 em testes de manobra para evitar ser agarrado e de resistência contra efeitos mentais, de medo, de metamorfose e de movimento. Além disso, se falhar num desses testes, pode rolá-lo novamente. Se ainda assim falhar, no início de cada um de seus turnos pode rolar esse teste novamente, como uma ação livre e com um bônus cumulativo de +2, até se libertar.",
+    prerequisite: "",
+    origin: "Deuses de Arton"
+  },
 
 ];

@@ -24,6 +24,7 @@ export interface God {
   motivations?: string;     // NOVO
   relationships?: string;   // NOVO
   churchAndClergy?: string; // NOVO
+  rank?: string;
 }
 
 export function getStatusLabel(status?: GodStatus): string {
