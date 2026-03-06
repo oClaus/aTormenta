@@ -960,5 +960,15 @@ export const powersGeraisConcedido: Power[] = [
     prerequisite: "",
     origin: "Deuses de Arton"
   },
+  { id: "Incentivador da Economia (Tibar)",
+    name: "Incentivador da Economia (Tibar)",
+    description: "A cada T$ 50 x seu nível que gastar em uma aventura, você recebe +1 PM cumulativo até o fim da aventura.",
+    origin: "Deuses de Arton"
+  },
+  { id: "Guardei para Você (Mauziell)",
+    name: "Guardei para Você (Mauziell)",
+    description: "Você pode gastar uma ação de movimento e 1 PM para produzir uma lembrança, na forma de uma memória ou de um objeto, para um aliado em alcance curto. Uma memória fornece +1d4 em um teste de perícia feito até o fim da cena, enquanto um objeto é uma versão mundana e não superior de um item não consumível a sua escolha, que dura até o fim da cena ou até ser largado pelo aliado. Você só pode produzir uma lembrança para cada aliado na mesma cena. ",
+    origin: "Deuses de Arton"
+  },
 
 ];

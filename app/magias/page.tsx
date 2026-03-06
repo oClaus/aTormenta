@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import { spells } from "@/data/spells";
 import { Spell, SpellType, SpellSchool } from "@/types/speel";
@@ -28,7 +28,14 @@ const ALL_SPELL_SCHOOLS: [
 ];
 const ALL_CIRCLES: number[] = [1, 2, 3, 4, 5];
 
-// --- Componentes Auxiliares ---
+// --- Funções Auxiliares ---
+const createUrlSafeId = (text: string) => {
+  return text
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/\s+/g, "-");
+};
 
 const renderTextWithBold = (text: string) => {
   const parts = text.split(/(\*\*.*?\*\*)/g);
@@ -40,7 +47,10 @@ const renderTextWithBold = (text: string) => {
   });
 };
 
-const SpellCard = ({ spell }: { spell: Spell }) => {
+// --- Componente: Modal da Magia (A Tela que abre) ---
+const SpellModal = ({ spell, onClose }: { spell: Spell; onClose: () => void }) => {
+  const safeId = createUrlSafeId(spell.id);
+
   const typeColor = spell.type === "Arcana" 
     ? "bg-purple-100 text-purple-900 border-purple-300" 
     : spell.type === "Divina" 
@@ -49,12 +59,151 @@ const SpellCard = ({ spell }: { spell: Spell }) => {
       
   const circleColor = spell.circle === 5 ? "text-amber-900" : "text-amber-700";
 
-  return (
-    <div className="p-5 rounded-xl bg-[#e6dcc5] border-2 border-amber-900/20 hover:border-amber-900/60 shadow-md flex flex-col transition-all duration-300 hover:-translate-y-1">
-      <div className="h-1 w-10 bg-amber-900/20 mb-3 rounded-full"></div>
+  const copiarLink = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    const url = `${window.location.origin}${window.location.pathname}#${safeId}`;
+    navigator.clipboard.writeText(url);
+    alert(`Link para ${spell.name} copiado!`);
+  };
 
-      <div className="mb-3 pb-2 border-b border-amber-900/20">
-        <h3 className="text-xl font-bold text-amber-950 font-serif">{spell.name}</h3>
+  const handleModalClick = (e: React.MouseEvent) => e.stopPropagation();
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [onClose]);
+
+  return (
+    <div 
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-amber-950/60 backdrop-blur-sm"
+      onClick={onClose}
+    >
+      <div 
+        className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto p-6 md:p-8 rounded-xl bg-[#e6dcc5] border-4 border-double border-amber-900/40 shadow-2xl flex flex-col"
+        onClick={handleModalClick}
+      >
+        <div className="absolute top-4 right-4 flex gap-2">
+          <button 
+            onClick={copiarLink}
+            className="p-2 bg-amber-900/10 hover:bg-amber-900/20 rounded-full text-amber-900 transition-colors"
+            title="Copiar link direto para esta magia"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+            </svg>
+          </button>
+          <button 
+            onClick={onClose}
+            className="p-2 bg-red-900/10 hover:bg-red-900/20 rounded-full text-red-900 transition-colors"
+            title="Fechar"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <div className="h-1 w-12 bg-amber-900/30 mb-4 rounded-full"></div>
+
+        <div className="mb-4 pb-3 border-b border-amber-900/20 pr-20">
+          <h3 className="text-3xl font-bold text-amber-950 font-serif">{spell.name}</h3>
+          <div className="flex justify-start items-center gap-3 text-sm mt-3">
+            <span className={`px-2 py-0.5 rounded-sm text-xs font-serif uppercase tracking-wide border font-bold ${typeColor}`}>
+              {spell.type}
+            </span>
+            <span className="text-amber-900/80 italic font-serif font-bold text-base">
+              {spell.school}
+            </span>
+          </div>
+        </div>
+
+        <div className="text-base text-amber-900/90 space-y-1.5 mb-5 font-serif bg-[#dcc8a9]/30 p-4 rounded">
+          <p><strong className={`${circleColor} font-bold text-lg`}> {spell.circle}° Círculo</strong></p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-2">
+            <p><strong className="text-amber-950">Execução:</strong> {spell.execution}</p>
+            <p><strong className="text-amber-950">Alcance:</strong> {spell.range}</p>
+            <p><strong className="text-amber-950">Alvo/Área:</strong> {spell.target}</p>
+            <p><strong className="text-amber-950">Duração:</strong> {spell.duration}</p>
+            <p className="md:col-span-2"><strong className="text-amber-950">Resistência:</strong> {spell.resistance}</p>
+          </div>
+        </div>
+
+        <div className="text-base text-amber-900/90 mb-6 flex-grow font-serif leading-relaxed" style={{ whiteSpace: 'pre-wrap' }}>
+          {renderTextWithBold(spell.description)}
+        </div>
+
+        {spell.enhancements && spell.enhancements.length > 0 && (
+          <div className="mt-auto pt-4 border-t border-amber-900/20">
+            <p className="text-sm font-bold text-red-900 mb-3 uppercase tracking-wider font-serif">Aprimoramentos:</p>
+            <ul className="text-sm text-amber-950 space-y-3 font-serif">
+              {spell.enhancements.map((enh, index) => (
+                <li key={index} className="flex flex-col sm:flex-row gap-1 sm:gap-2">
+                  <span className="font-bold text-red-800 whitespace-nowrap bg-red-900/10 px-2 py-0.5 rounded text-xs self-start mt-0.5">{enh.cost}</span> 
+                  <span className="italic leading-relaxed">{enh.effect}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        <div className="mt-6 pt-3 border-t border-amber-900/10 text-right">
+          <span className="text-[10px] text-red-800 italic font-serif uppercase tracking-wider font-bold">{spell.origin}</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// --- Componente: Card da Magia (Tamanho Integral e Clicável) ---
+const SpellCard = ({ spell, onClick }: { spell: Spell; onClick: () => void }) => {
+  const safeId = createUrlSafeId(spell.id);
+
+  const typeColor = spell.type === "Arcana" 
+    ? "bg-purple-100 text-purple-900 border-purple-300" 
+    : spell.type === "Divina" 
+      ? "bg-amber-100 text-amber-900 border-amber-300" 
+      : "bg-stone-200 text-stone-800 border-stone-400";
+      
+  const circleColor = spell.circle === 5 ? "text-amber-900" : "text-amber-700";
+
+  const copiarLink = (e: React.MouseEvent) => {
+    e.stopPropagation(); // Impede que clicar no botão de copiar abra o modal sem querer
+    const url = `${window.location.origin}${window.location.pathname}#${safeId}`;
+    navigator.clipboard.writeText(url);
+    alert(`Link para ${spell.name} copiado!`);
+  };
+
+  return (
+    <div 
+      id={safeId}
+      onClick={onClick}
+      className="p-5 rounded-xl bg-[#e6dcc5] border-2 border-amber-900/20 hover:border-amber-900/60 shadow-md flex flex-col transition-all duration-300 hover:-translate-y-1 scroll-mt-32 relative group cursor-pointer"
+      role="button"
+      tabIndex={0}
+      title="Clique para abrir em destaque"
+    >
+      
+      {/* Botão de copiar link */}
+      <button 
+        onClick={copiarLink}
+        className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity p-2 bg-amber-900/10 hover:bg-amber-900/20 rounded-full text-amber-900 z-10"
+        title="Copiar link direto para esta magia"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+          <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+        </svg>
+      </button>
+
+      <div className="h-1 w-10 bg-amber-900/20 mb-3 rounded-full group-hover:bg-amber-900/40 transition-colors"></div>
+
+      <div className="mb-3 pb-2 border-b border-amber-900/20 pr-8">
+        <h3 className="text-xl font-bold text-amber-950 font-serif group-hover:text-red-900 transition-colors">{spell.name}</h3>
         <div className="flex justify-between items-center text-sm mt-2">
           <span className={`px-2 py-0.5 rounded-sm text-xs font-serif uppercase tracking-wide border font-bold ${typeColor}`}>
             {spell.type}
@@ -92,8 +241,9 @@ const SpellCard = ({ spell }: { spell: Spell }) => {
         </div>
       )}
 
-      <div className="mt-4 pt-2 border-t border-amber-900/10 text-right">
-        <span className="text-[10px] text-amber-900/60 italic font-serif uppercase tracking-wider font-bold">{spell.origin}</span>
+      <div className="mt-4 pt-2 border-t border-amber-900/10 flex justify-between items-center">
+        <span className="text-xs font-bold text-amber-900/60 opacity-0 group-hover:opacity-100 transition-opacity">Expandir ⤢</span>
+        <span className="text-[10px] text-red-800 italic font-serif uppercase tracking-wider font-bold">{spell.origin}</span>
       </div>
     </div>
   );
@@ -105,6 +255,42 @@ export default function MagiasPage() {
   const [selectedSchools, setSelectedSchools] = useState<SpellSchool[]>([]);
   const [selectedCircle, setSelectedCircle] = useState<number | "Todos">("Todos");
   const [isRulesOpen, setIsRulesOpen] = useState(false);
+  
+  const [activeSpell, setActiveSpell] = useState<Spell | null>(null);
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace('#', '');
+      if (hash) {
+        const foundSpell = spells.find(s => createUrlSafeId(s.id) === hash);
+        setActiveSpell(foundSpell || null);
+        
+        // Rola a página para o card se ele existir por baixo do modal
+        setTimeout(() => {
+          const element = document.getElementById(hash);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      } else {
+        setActiveSpell(null);
+      }
+    };
+
+    handleHashChange();
+    window.addEventListener('popstate', handleHashChange);
+    return () => window.removeEventListener('popstate', handleHashChange);
+  }, []);
+
+  const openSpellModal = (spell: Spell) => {
+    setActiveSpell(spell);
+    window.history.pushState(null, '', `#${createUrlSafeId(spell.id)}`);
+  };
+
+  const closeSpellModal = () => {
+    setActiveSpell(null);
+    window.history.pushState(null, '', window.location.pathname);
+  };
 
   const toggleSchool = (school: SpellSchool) => {
     setSelectedSchools(prevSchools => 
@@ -145,6 +331,10 @@ export default function MagiasPage() {
   return (
     <div className="min-h-screen bg-[#e0d2b4] text-amber-950 font-serif selection:bg-amber-900 selection:text-amber-100 relative overflow-x-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#e0d2b4] to-[#cbbba0]">
 
+      {activeSpell && (
+        <SpellModal spell={activeSpell} onClose={closeSpellModal} />
+      )}
+
       <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(60,30,10,0.10)_100%)]" />
 
       <header className="relative z-10 w-full p-6 border-b-4 border-double border-amber-900/40 bg-[#d6c6aa]/95 backdrop-blur-md shadow-md mb-8 md:mb-12">
@@ -166,7 +356,6 @@ export default function MagiasPage() {
 
       <div className="relative z-10 w-full px-4 sm:px-8 md:px-12 pb-12"> 
 
-        {/* --- ACORDEÃO COM TEXTO INTEGRAL --- */}
         <div className="mb-12 overflow-hidden rounded border border-amber-900/30 bg-[#dcc8a9]/60 shadow-sm transition-all">
           <button 
             onClick={() => setIsRulesOpen(!isRulesOpen)}
@@ -294,7 +483,6 @@ export default function MagiasPage() {
           </div>
         </div>
 
-        {/* Filtros e Busca */}
         <section id="secao-magias" className="mb-8 p-6 bg-[#dcc8a9] rounded border border-amber-900/30 shadow-inner space-y-6">
             <div>
                 <label className="block text-sm font-bold text-amber-900/70 mb-3 uppercase tracking-wider font-serif">Buscar Magia</label>
@@ -310,7 +498,6 @@ export default function MagiasPage() {
             </div>
 
             <div className="space-y-6 font-serif">
-                {/* Tipo */}
                 <div>
                     <h4 className="text-sm font-bold text-amber-800 mb-2 uppercase tracking-wide">Tipo de Magia</h4>
                     <div className="flex flex-wrap gap-2">
@@ -321,7 +508,6 @@ export default function MagiasPage() {
                     </div>
                 </div>
 
-                {/* Escola */}
                 <div>
                     <h4 className="text-sm font-bold text-amber-800 mb-2 uppercase tracking-wide">Escola de Magia</h4>
                     <div className="flex flex-wrap gap-2">
@@ -332,7 +518,6 @@ export default function MagiasPage() {
                     </div>
                 </div>
 
-                {/* Círculo */}
                 <div>
                     <h4 className="text-sm font-bold text-amber-800 mb-2 uppercase tracking-wide">Círculo</h4>
                     <div className="flex flex-wrap gap-2">
@@ -345,14 +530,17 @@ export default function MagiasPage() {
             </div>
         </section>
 
-        {/* Grid de Magias */}
         <div className="mb-8">
             <h2 className="text-xl font-bold text-amber-800 mb-6 font-serif border-b border-amber-900/20 pb-2">
                 {filteredSpells.length} Magias Encontradas
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredSpells.map((spell) => (
-                    <SpellCard key={spell.id} spell={spell} />
+                    <SpellCard 
+                      key={spell.id} 
+                      spell={spell} 
+                      onClick={() => openSpellModal(spell)} 
+                    />
                 ))}
             </div>
         </div>
