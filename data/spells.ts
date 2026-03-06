@@ -844,7 +844,7 @@ export const spells: Spell[] = [
     circle: 1,
     execution: "Padrão",
     range: "Longo",
-    target: "Esfera cin 9m de raio",
+    target: "Esfera com 9m de raio",
     duration: "1 dia",
     resistance: "Nenhuma",
     description: "Você enche a área com energia positiva. Pontos de vida curados por efeitos de luz são maximizados dentro da área. Isso também afeta dano causado em mortos-vivos por esses efeitos. Por exemplo, Curar Ferimentos cura automaticamente 18 PV. Esta magia não pode ser lançada em uma área contendo um símbolo visível dedicado a uma divindade que não a sua. Consagrar anula Profanar.",
