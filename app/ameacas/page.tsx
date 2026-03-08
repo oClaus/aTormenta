@@ -145,7 +145,7 @@ export default function AmeacasPage() {
 
       {/* Header - 100% Width */}
       <header className="relative z-10 w-full p-6 border-b-4 border-double border-amber-900/40 bg-[#e6d5b8]/90 backdrop-blur-md shadow-sm">
-        <div className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="w-full px-2 sm:px-6 md:px-12 lg:px-20 xl:px-28 flex flex-col md:flex-row justify-between items-center gap-4">
             <Link href="/" className="inline-block group">
                 <h1 className="text-4xl font-bold tracking-wider uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-700 via-red-800 to-red-950 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 1px 2px rgba(69,26,3,0.1)' }}>
                     a-Tormenta
@@ -162,14 +162,14 @@ export default function AmeacasPage() {
       </header>
 
       {/* Main Content - 100% Width */}
-      <main className="relative z-10 w-full px-6 py-12">
+      <main className="relative z-10 w-full px-6 sm:px-10 md:px-16 lg:px-24 xl:px-32 py-12">
         
         {/* Título e Descrição */}
         <div className="mb-12 w-full">
           <h2 className="text-5xl font-bold text-red-800 mb-6 border-b border-amber-900/20 pb-4">
             Ameaças
           </h2>
-          <p className="text-amber-900/80 text-lg mb-8 italic border-l-4 border-red-800/50 pl-4 font-medium">
+          <p className="text-amber-900/80 text-lg mb-8 italic border-red-800/50 pl-4 font-medium">
             As seções a seguir trazem criaturas para o mestre usar como inimigos. As seções são divididas por temas, para ajudar o mestre na seleção dos adversários. Porém, o mestre é livre para misturar os grupos!
           </p>
 

@@ -5965,5 +5965,88 @@ export const adventures: Adventure[] = [
       content: "Talvez isso ajude a aquecer seus corações gelados!"
     }
   ]
+},
+{ id: "O Fim",
+  name: "O Fim",
+  theme: "Fantasia e Ilusão Divina",
+  image: "/aventuras/o-fim.png",
+  summary: "Após a morte do clássico 'velhinho da taverna' e o fim de todas as missões, os heróis experimentam uma vida pacífica que logo se transforma em um envelhecimento mágico acelerado. Eles devem descobrir que estão presos em um teste divino.",
+  sections: [
+    {
+      type: "subtitle",
+      content: "MUNDO SEM PROBLEMAS"
+    },
+    {
+      type: "text",
+      content: "Esta aventura deve ser narrada apenas quando o grupo concluir um arco de história e não tiver urgências pendentes. Tudo começa de forma simples. Os heróis visitam o local onde costumavam receber missões, descansar e reencontrar conhecidos. Desta vez, porém, descobrem que a clássica figura do “velhinho da taverna” faleceu. Se preferir, pode substituí-lo por qualquer outra figura que costuma distribuir missões em sua campanha. O essencial é que seja um NPC suficientemente familiar para causar estranhamento."
+    },
+    {
+      type: "text",
+      content: "Inicialmente, parece uma morte comum e o grupo pode reagir à notícia como preferir. Contudo, depois disso, nada mais acontece. O mestre não oferece nenhum gancho sobre o que fazer em seguida. Não surge mensageiro, nem oferta de nova aventura. O mundo permanece estático. Se questionado, o mestre pode explicar — sem dar spoilers — que esta será uma sessão mais \"sandbox\", mas, mesmo assim, ao longo do jogo, absolutamente nada movimenta a trama apesar dos esforços do jogadores."
+    },
+    {
+      type: "text",
+      content: "Personagens em busca de aventuras podem procurar trabalho em três lugares: entre os arautos do rei, na guilda de aventureiros e no espaço onde as caravanas se aglomeram. Entretanto, em todos eles nada de interessante aparece. Os arautos foram dispensados por cortes orçamentários. Na guilda, todas as vagas estão ocupadas. Entre as caravanas, descobrem que os assaltantes migraram para atividades legítimas mais lucrativas e os monstros da região foram extintos pela caça predatória. Por mais que os heróis procurem, novas missões NÃO surgem. É então que o mestre interrompe a narrativa e faz uma única pergunta dramática aos jogadores:"
+    },
+    {
+      type: "text",
+      content: "“O que seu herói faria se todas as aventuras do mundo acabassem?”"
+    },
+    {
+      type: "text",
+      content: "Após espaço para respostas, ocorre um salto temporal. Cada jogador descreve como seu herói se adaptou à vida sem conflitos. Encontrou um novo ofício? Conquistou uma vida pacífica? Caiu em desgraça?"
+    },
+    {
+      type: "text",
+      content: "Certo dia, todos acordam com sinais de envelhecimento. Há cabelos brancos, novas rugas e dor na coluna. Inicialmente parece natural, mas até seres imortais ou longevos são afetados. Logo fica claro que é um envelhecimento acelerado e mágico, na verdade, um dreno de energia vital."
+    },
+    {
+      type: "text",
+      content: "À medida que a debilitação aumenta, todos sentem — instintivamente — a necessidade urgente de reencontrar seus companheiros e descobrir a origem do estranho fenômeno, antes que seja tarde demais."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "JOVEM DA TAVERNA"
+    },
+    {
+      type: "text",
+      content: "Reunidos novamente, os heróis podem fazer testes para descobrir a origem da aflição. Testes de conhecimento arcano ou histórico revelam uma pista: para entender a origem do fenômeno, é preciso retornar ao lugar onde tudo começou a mudar."
+    },
+    {
+      type: "text",
+      content: "Mesmo que os jogadores já saibam qual é o local, os personagens têm dificuldade em lembrar-se dele, como se suas memórias estivessem embaçadas. Eles precisam realizar testes, conversar com NPCs ou revisitar lugares familiares, até que finalmente se recordam: o mundo começou a mudar no dia em que o velhinho da taverna morreu!"
+    },
+    {
+      type: "text",
+      content: "Se forem até a taverna, encontram o estabelecimento fechado e abandonado, mas não é difícil entrar. Há mesas cobertas de poeira, lanternas apagadas e silêncio. Porém, atrás do balcão, há alguém. O velhinho da taverna está lá, perfeitamente vivo, mas não é mais um homem idoso. Parece uma versão muito mais jovem e vigorosa de si mesmo. (Caso você tenha usado outro personagem, ele deve aparecer com uma aparência transformada.)"
+    },
+    {
+      type: "text",
+      content: "O NPC sorri com naturalidade e revela sua verdadeira identidade: um deus antigo que assumiu aquela forma para testar os aventureiros. Explica que, no mundo real, os heróis foram derrotados há muito tempo e estão presos em um domínio de sonhos criado por ele. O mundo sem aventuras, o vazio e o envelhecimento acelerado são manifestações desse domínio, alimentado pelo espírito heroico dos personagens."
+    },
+    {
+      type: "text",
+      content: "De acordo com ele, tudo foi um experimento para avaliar a perseverança do grupo após a perda de propósito. O deus afirma que pode libertá-los, mas apenas se acreditarem que ainda merecem retornar ao mundo real, repleto de problemas."
+    },
+    {
+      type: "text",
+      content: "Se acreditam que ainda têm aventuras a viver."
+    },
+    {
+      type: "text",
+      content: "O grupo pode tentar convencer a entidade por meio de argumentos, lembrando feitos passados, demonstrando coragem, arrependimento ou compaixão. Também podem optar por enfrentá-lo. Se escolherem o combate, enfrentam o deus em suas formas atuais, debilitadas pelo dreno de força vital, o que torna o confronto mais desafiador."
+    },
+    {
+      type: "text",
+      content: "Caso vençam ou consigam comover a entidade, ela reconhece seu valor e liberta todos da ilusão. Antes de desaparecer, profere palavras que continuam ecoando nas mentes dos heróis muito tempo após despertarem:"
+    },
+    {
+      type: "text",
+      content: "— Que comece um novo jogo!"
+    }
+  ]
 }
 ];

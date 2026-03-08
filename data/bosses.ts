@@ -3122,6 +3122,49 @@ export const bosses: Boss[] = [
     "lança atroz discreta"
   ],
   tesouro: "Metade. Ao derrotar um predador é possível pegar esses itens para si, porém o canhão de plasma possui apenas cinco cargas (e conseguir mais não será nada fácil). Além disso, carregar os objetos atrai a ira e atenção de outros predadores, que tentarão reavê-los por quaisquer meios necessários."
+},
+{ id: "sir-duncan",
+  name: "Sir Duncan - O Cavaleiro dos Sete Reinos",
+  image: "/chefes/sir-duncan.png",
+  tipo: "Humano",
+  nd: 3,
+  historia: "Noventa anos antes da Guerra dos Tronos, outro cavaleiro andou por Westeros. De origem humilde e contra todas as probabilidades, marcou seu nome na história dos Sete Reinos, tornando-se uma das lendas espalhadas tanto em canções populares como em anais de documentos eruditos. Diferente dos romances que formam a saga mais famosa do universo de George R. R. Martin, as aventuras de Sir Duncan e seu escudeiro Egg são contadas em novelas curtas, cada uma com uma história fechada mas que, juntas, formam uma trama maior. Com um tom mais leve que o grande épico, Martin ainda apresenta uma fantasia dura e suja, que não tem pudores em retratar a violência e as tragédias da vida de cavaleiro. Como outras histórias do mundo de Gelo e Fogo, a história dos dois também está sendo adaptada pela HBO na série O Cavaleiro dos Sete Reinos. E agora, eles podem também aparecer na sua próxima aventura de RPG medieval!\n\nO ALTO\nDuncan nasceu na Baixada das Pulgas, a região mais pobre de Porto Real, capital dos Sete Reinos de Westeros. Órfão praticamente desde o nascimento, nunca conheceu os pais; passou seus primeiros anos entre pivetes e ladrões, vivendo como podia em meio às ruas. Mas esse não era o destino que o aguardava.\nQuando tinha cinco ou seis anos, Duncan conheceu Sir Arlan de Centarbor, um cavaleiro errante, e sua vida mudou completamente.\nAdotado como escudeiro, Duncan passou a viajar com ele e conheceu quase toda Westeros, com exceção do Norte. Aprendeu a cavalgar, a manejar uma espada, e outras habilidades e etiqueta necessárias a um cavaleiro. Além disso, a personalidade humilde e otimista de Arlan influenciou o garoto, que passou a tê-lo como ideal de cavaleiro e ser humano.\nAos poucos Duncan cresceu, tornando-se um homem alto e robusto, ainda que pouco brilhante — “Duncan, o pateta, cabeça-dura como uma muralha de castelo”, como dizia Arlan.\nE então a sorte (ou falta dela) mudou outra vez os rumos de sua vida.\nSir Arlan morreu quando ambos se dirigiam à cidade de Vaufreixo, onde participariam de um torneio de cavalaria. Após enterrá-lo, sem outro rumo, Duncan decidiu seguir viagem e participar do torneio sozinho, esperando impressionar algum nobre que o empregasse. No caminho, encontrou um garoto franzino, sem nenhum cabelo na cabeça, que atendia pelo nome de Egg — e, mais uma vez, viu sua vida virar de ponta cabeça por um encontro do acaso.",
+  dicas: "O CAVALEIRO DOS SETE REINOS\nApós os acontecimentos do Torneio de Vaufreixo, Duncan adotou Egg como escudeiro, assim como Arlan havia feito com ele anos antes, e ambos passaram a viajar por Westeros. Oficialmente sagrado cavaleiro, adotou também a vida errante de seu tutor, buscando emprego como mercenário em disputas entre nobres menores, e participando de torneios de cavalaria atrás de honra, glória e subsistência.\nNesse contexto, ele — ou qualquer personagem plagiado inspirado nele — pode facilmente bater de frente com um grupo de heróis em um cenário medieval ou semelhante.\nEle pode ser encontrado em uma justa de torneio, onde uma rivalidade acirrada pode surgir com outro cavaleiro. Ou então ser enfrentado como um mercenário contratado por um nobre menor, sem consciência de que talvez haja tons de cinza mais profundos no conflito do qual tomou parte. Ou quem sabe as duas coisas!\nE, é claro, ainda há Egg. O garoto guarda um segredo — e ameaçá-lo pode ser a forma mais eficiente de levar Duncan a se envolver em um conflito, para o bem ou para o mal.",
+  tamanho: "Médio",
+  iniciativa: 5,
+  percepcao: 5,
+  defesa: 21,
+  fort: 15,
+  ref: 9,
+  von: 3,
+  pv: 105,
+  deslocamento: "9m (6q)",
+  pm: 0,
+  ataqueCorpoACorpo: "Espada longa +14 (2d8+12)",
+  habilidades: [
+    "Carga Montada: Quando está montado e faz uma investida, o dano de Sir Duncan aumenta em +2d6.",
+    "Durão: O primeiro dano que Sir Duncan sofre em cada rodada é reduzido à metade.",
+    "Montaria: Se estiver montado, o deslocamento de Sir Duncan muda para 12m, e ele pode fazer uma ação de movimento extra por rodada, mas apenas para se deslocar.",
+    "Parceiro Egg: Uma vez por rodada, Sir Duncan pode rolar novamente um teste de resistência ou Percepção."
+  ],
+  for: 3,
+  des: 2,
+  con: 4,
+  int: 0,
+  sab: 2,
+  car: 2,
+  pericias: [
+    "Cavalgar +5",
+    "Intimidação +5",
+    "Nobreza +3"
+  ],
+  equipamentos: [
+    "cavalo de montaria",
+    "armadura de couro batido reforçada",
+    "espada longa",
+    "escudo pesado"
+  ],
+  tesouro: "metade."
 }
 
   
