@@ -59,12 +59,12 @@ export default function AmeacasPage() {
             </div>
 
             <div>
-                <h1 className="text-2xl font-bold text-amber-800 mb-2">Tipo e tamanho</h1>
+                <h1 className="text-2xl font-bold text-amber-800 mb-2 border-t-2 border-amber-900/10">Tipo e tamanho</h1>
                 <p>O tipo (e subtipo, quando houver) representa a natureza da criatura dentro do mundo. Ele determina que habilidades podem afetar a criatura. Além disso, alguns tipos fornecem habilidades específicas.</p>
             </div>
 
             <div>
-                <h1 className="text-2xl font-bold text-amber-800 mb-2">Papel de Combate</h1>
+                <h1 className="text-2xl font-bold text-amber-800 mb-2 border-t-2 border-amber-900/10">Papel de Combate</h1>
                 <p className="mb-2">O papel de combate da criatura indica como ela deve ser usada pelo mestre. Existem três papeis: solo, lacaio e especial, indicados por um ícone (no livro, aqui constará apenas a informação).</p>
                 <div className="space-y-2 mt-2 pl-4 border-l-2 border-amber-900/20">
                     <p><strong className="text-1xl text-red-700 block mb-1">Solo: </strong>A criatura foi construída para enfrentar os personagens sozinha. Ela possui estatísticas equilibradas; especialmente, possui muitos pontos de vida, para garantir que o combate dure um tempo bom (por volta de 3 a 5 rodadas). Este papel é ocupado principalmente por grandes monstros e vilões.</p>
@@ -74,53 +74,53 @@ export default function AmeacasPage() {
             </div>
 
             <div>
-                <h1 className="text-2xl font-bold text-amber-800 mb-2">Iniciativa e percepção</h1>
+                <h1 className="text-2xl font-bold text-amber-800 mb-2 border-t-2 border-amber-900/10">Iniciativa e percepção</h1>
                 <p>Os valores de Iniciativa e Percepção da criatura e quaisquer habilidades relacionadas a sentidos.</p>
             </div>
 
             <div>
-                <h1 className="text-2xl font-bold text-amber-800 mb-2">Defesa e Resistências</h1>
+                <h1 className="text-2xl font-bold text-amber-800 mb-2 border-t-2 border-amber-900/10">Defesa e Resistências</h1>
                 <p>A Defesa e os valores de Fortitude, Reflexos e Vontade da criatura, além de quaisquer habilidades especiais defensivas, como redução de dano.</p>
             </div>
 
             <div>
-                <h1 className="text-2xl font-bold text-amber-800 mb-2">Pontos de Vida</h1>
+                <h1 className="text-2xl font-bold text-amber-800 mb-2 border-t-2 border-amber-900/10">Pontos de Vida</h1>
                 <p>O total de pontos de vida da criatura.</p>
             </div>
 
             <div>
-                <h1 className="text-2xl font-bold text-amber-800 mb-2">Deslocamento</h1>
+                <h1 className="text-2xl font-bold text-amber-800 mb-2 border-t-2 border-amber-900/10">Deslocamento</h1>
                 <p>A quantidade de metros que a criatura consegue percorrer com uma ação de movimento (e, entre parênteses, a quantidade de quadrados de 1,5m). O número padrão é o deslocamento terrestre da criatura. Uma criatura pode possuir outras formas de deslocamento, como voo e natação.</p>
             </div>
 
             <div>
-                <h1 className="text-2xl font-bold text-amber-800 mb-2">Pontos de Mana</h1>
+                <h1 className="text-2xl font-bold text-amber-800 mb-2 border-t-2 border-amber-900/10">Pontos de Mana</h1>
                 <p>A quantidade de PM que a criatura possui. Caso a criatura não possua habilidades com custo em PM, esta linha não aparecerá.</p>
             </div>
 
             <div>
-                <h1 className="text-2xl font-bold text-amber-800 mb-2">Ações</h1>
+                <h1 className="text-2xl font-bold text-amber-800 mb-2 border-t-2 border-amber-900/10">Ações</h1>
                 <p>Todos os ataques e habilidades que a criatura pode fazer (e, entre parênteses, a ação necessária e seu custo em PM, se houver). Habilidades sem ação exigida são passivas (estão sempre ativas). Algumas habilidades terminam com o termo “recarga” e um tipo de ação. Nesse caso, sempre que usar a habilidade, a criatura precisará gastar a ação determinada para recarregá-la antes de poder usá-la novamente.</p>
             </div>
 
             <div>
-                <h1 className="text-2xl font-bold text-amber-800 mb-2">Atributos</h1>
+                <h1 className="text-2xl font-bold text-amber-800 mb-2 border-t-2 border-amber-900/10">Atributos</h1>
                 <p>Os valores de atributos da criatura. Algumas criaturas possuem um valor de atributo nulo (–). Nesse caso, a criatura não possui o atributo em questão e não pode usá-lo. Uma criatura com “For –” não pode exercer força física sobre o mundo; uma criatura com “Des –” não pode se mover, e uma criatura com “Int –” não é capaz de pensar, agindo apenas conforme uma programação prévia.</p>
             </div>
 
             <div>
-                <h1 className="text-2xl font-bold text-amber-800 mb-2">Perícias</h1>
+                <h1 className="text-2xl font-bold text-amber-800 mb-2 border-t-2 border-amber-900/10">Perícias</h1>
                 <p>Os valores totais das demais perícias da criatura (além de Iniciativa, Percepção, Fortitude, Reflexos e Vontade, que já apareceram). Caso a criatura não possua outras perícias, esta linha não aparecerá.</p>
             </div>
 
             <div>
-                <h1 className="text-2xl font-bold text-amber-800 mb-2">Equipamento e Tesouro</h1>
+                <h1 className="text-2xl font-bold text-amber-800 mb-2 border-t-2 border-amber-900/10">Equipamento e Tesouro</h1>
                 <p>Itens utilizados pela criatura, se houver. Após os itens, a categoria de tesouro da criatura. Algumas criaturas possuem recursos que podem ser extraídos de seu corpo. Extrair um recurso exige uma hora de trabalho e um teste de Sobrevivência, ou de um Ofício relacionado ao recurso, com CD 15 + ND da criatura. Em caso de falha, os recursos são estragados.</p>
             </div>
 
             <div>
-                <h1 className="text-2xl font-bold text-amber-800 mb-2">Tipos de criaturas</h1>
-                <div className="space-y-2">
+                <h1 className="text-2xl font-bold text-amber-800 mb-2 border-t-2 border-amber-900/10">Tipos de criaturas</h1>
+                <div className="space-y-4">
                     <p><strong className="text-1xl text-red-700">Animais: </strong>Bestas e feras irracionais (Int –5 ou –4), sem poderes mágicos.</p>
                     <p><strong className="text-1xl text-red-700">Construtos: </strong>Objetos animados ou criaturas artificiais. Possuem visão no escuro e imunidade a efeitos de cansaço, metabólicos e de veneno, não recuperam PV por descanso e efeitos de cura, e a perícia Cura não funciona com eles — mas Ofício (artesão) pode ser usada no lugar dela com os mesmos efeitos.</p>
                     <p><strong className="text-1xl text-red-700">Espíritos: </strong>Nativos de outros planos.</p>
@@ -129,6 +129,44 @@ export default function AmeacasPage() {
                     <p><strong className="text-1xl text-red-700">Mortos-vivos: </strong>Cadáveres animados por energia negativa. Mortos-vivos possuem visão no escuro; imunidade a efeitos de cansaço, metabólicos, de trevas e de veneno; sofrem dano por efeitos mágicos de cura de luz (Vontade CD do efeito reduz à metade) e recuperam PV com dano de trevas.</p>
                 </div>
             </div>
+
+            {/* Início do novo conteúdo: Aspectos e Avatares */}
+            <div className="pt-4 border-t-2 border-amber-900/10">
+            <h1 className="text-2xl font-bold text-amber-800 mb-2 border-t-2 border-amber-900/10">Aspectos e Avatares</h1>
+                <div className="space-y-4">
+                    <p>Dispondo de tantos devotos em todos os pontos de Arton, pode parecer estranho que os deuses necessitem de ainda mais agentes para cuidar de seus assuntos. A verdade é que nem todas as tarefas divinas cabem a servos mortais — algumas, por demandar muito, e outras, pouco.</p>
+                    <p>As mais poderosas criaturas a serviço dos deuses são seus avatares. Um avatar é a versão encarnada de uma divindade, uma parte de sua essência. Equiparamse, em poder, aos maiores heróis de Arton. Mas a manifestação de um avatar é evento raro, reservado apenas a situações extremas — porque um deus investe neles parte significativa de sua força vital, e sua eventual perda pode enfraquecer a própria divindade. A queda de Glórienn e a derrota de seu avatar nas mãos de Thwor Ironfist não foram eventos sem ligação.</p>
+                    <p>Quando um servo mortal não basta e a convocação de um avatar seria imprudente, entram em cena os aspectos dos deuses. Assim como um avatar, um aspecto é a encarnação de sua divindade, mas usando uma quantidade de poder muito menor. Em geral são invocados por curtos períodos para realizar tarefas simples, porém importantes — tipicamente lutar. Um aspecto pode surgir, por exemplo, atendendo à súplica de um clérigo durante um combate atroz.</p>
+                    <p>Embora alguns estudiosos os descrevam como “avatares menores”, isso não é totalmente correto. Um aspecto dos deuses é, em quase todos os sentidos, uma criatura mortal de existência temporária. Tem a mesma aparência da divindade original (ou uma de suas aparências), mas pode apresentar pequenas diferenças; ou estar totalmente disfarçado, conforme o propósito da missão. Ao contrário de avatares, um deus pode manifestar quantos aspectos quiser (mas é raro designar mais de um para cada tarefa).</p>
+                    <p>Aspectos normalmente têm tamanho humano, embora alguns sejam maiores. Usam vestes e equipamentos mundanos (mas frequentemente de qualidade superior) que desaparecem quando afastados do aspecto por mais de um dia.</p>
+                    <p>Aspectos podem se manifestar naturalmente durante eventos grandiosos — por exemplo, uma batalha entre exércitos de devotos —, ou então ser invocados a partir de rituais complexos. Diferente de outras criaturas conjuradas, um aspecto não obedece necessariamente a seu invocador; ele o faz apenas se assim quiser, agindo conforme seus próprios objetivos.</p>
+                    <p>A personalidade dos aspectos é um tópico muito intrigante. Eles pensam e agem como seus deuses originais, mas são mais limitados em pensamento, e muito exagerados em comportamento — chegam a ser quase caricaturas. Um aspecto de Arsenal pode se portar como um guerreiro feroz e descuidado, sem a inteligência estratégica do Deus da Guerra. Um aspecto de Khalmyr pode ser um anão paladino de mente estreita, atacando qualquer monstro à primeira vista, e assim por diante. Talvez por sua existência tão breve, aspectos são muito afoitos, impetuosos, ansiosos para agir. E podem, sim, cometer erros.</p>
+                    <p><strong className="text-1xl text-red-700">Outros Aspectos. </strong>Os aspectos apresentados aqui, e também em outros grupos, são apenas aqueles mais comumente manifestados em situações de batalha. Uma mesma divindade pode ter aspectos muito diferentes. O mestre é livre para construir quaisquer NPCs ou criaturas que julgar interessantes, conforme a personalidade e os objetivos de cada deus.</p>
+                </div>
+            </div>
+
+            <div>
+                <h1 className="text-2xl font-bold text-amber-800 mb-2 border-t-2 border-amber-900/10">Invocando Aspectos</h1>
+                <div className="space-y-4">
+                    <p>Sob certas condições, é possível que um devoto consiga invocar um aspecto na esperança de que ele possa auxiliá-lo. Essa é uma tarefa complexa, que exige habilidade e recursos, e nem sempre tem o resultado esperado.</p>
+                    <p>Invocar um aspecto é um ritual especial, que só pode ser realizado por um devoto da divindade em questão que seja treinado em Religião e tenha o poder Celebrar Ritual. Para realizar o ritual, o celebrante deve gastar 1 hora, 10 PM e T$ 3.000 em materiais litúrgicos apropriados à divindade. Então deve passar em um teste de Religião (CD 25 + ND do aspecto invocado). Ao executar o ritual, o celebrante pode empregar até três auxiliares, que não precisam ser devotos. Cada auxiliar faz um teste de Religião para ajudar (Tormenta20, p. 221) o teste do celebrante e, se for devoto da divindade em questão, reduz o custo do ritual em –1 PM.</p>
+                    <p>Em um ritual bem-sucedido, o aspecto é invocado. Sua atitude inicial depende da divindade que ele representa e fica a critério do mestre. Da mesma forma, o tempo de permanência do aspecto depende da capacidade do celebrante em persuadilo a ajudar.</p>
+                    <p>Um ritual falho não causa maiores problemas, além do gasto dos PM e dos materiais. Entretanto, em um resultado 1 natural no teste de Religião, o ritual foi um desastre: o celebrante pode inadvertidamente ter ofendido o seu deus ou invocado outro aspecto (que será hostil ao celebrante e a seus aliados).</p>
+                    <p>A critério do mestre, um deus pode exigir custos específicos para o ritual (que serão de conhecimento do celebrante). Deuses malignos, em especial, podem exigir sacrifícios em troca de sua atenção.</p>
+                </div>
+            </div>
+
+            <div>
+                <h1 className="text-2xl font-bold text-amber-800 mb-2 border-t-2 border-amber-900/10">Aspectos e Avatares</h1>
+                <div className="space-y-4">
+                    <p>Cada deus do Panteão tem apenas um avatar — uma forma poderosa, que a divindade utiliza para descer ao mundo material e lidar com grandes problemas e crises. Glórienn veio em forma de avatar para enfrentar Thwor Khoshkothruk, Megalokk enviou um avatar (o dragão Morte Branca) para devastar o Reino das Torres em Moreania. O avatar pode surgir com diferentes formas físicas, mas suas capacidades e poder são constantes. O avatar é uma materialização de todas as facetas do deus. Essencialmente, uma versão muito menos poderosa (mas ainda magnífica) da própria divindade.</p>
+                    <p>Já aspectos são partes de deuses. Alguns podem ser versões da representação típica do deus — Khalmyr enviou um aspecto para guiar a Paladina em Nova Malpetrim. Outros podem ter formas totalmente diversas: Khalmyr pode surgir na forma de um cubo flutuando no ar, de um juiz com um púlpito, de pura luz radiante... Outros ainda podem ou não lembrar fisicamente as representações da divindade, mas são a encarnação de apenas uma de suas facetas. Por exemplo, quando Khalmyr se manifesta na forma de um cubo, ele é apenas ordem e simetria, não justiça ou bondade.</p>
+                    <p>Aspectos podem ter autonomia e consciência plenas (às vezes até parecendo diferir do deus), ou podem ser conceitos materializados, incapazes de tomar decisões ou mesmo agir fora de seu escopo. Diz-se que Keenn, o antigo Deus da Guerra, surgiu na forma de um aspecto para uma clériga na estrada. O aspecto era um pistoleiro que estava lá apenas para cobrar de sua devota um preço alto — a perda de um olho — pelas façanhas que ela pretendia realizar. O aspecto tinha seu próprio nome e comportamento, mas não podia fazer nada exceto encontrá-la na estrada e arrancar seu olho.</p>
+                    <p>Por isso, embora avatares sejam sempre poderosos, aspectos variam muito em poder. Um mero mascate pode ser um aspecto de Nimb; um pássaro flamejante capaz de imensa destruição pode ser um aspecto de Thyatis. Tudo depende do propósito do aspecto e da(s) faceta(s) do deus que ele personifica.</p>
+                    <p>A única constante é: quando o aspecto de um deus está presente, coisas extraordinárias tendem a acontecer...</p>
+                </div>
+            </div>
+
           </div>
 
         </div>
@@ -447,7 +485,7 @@ export default function AmeacasPage() {
                   <div className="space-y-2">
                     {selectedThreat.habilidades.map((hab, index) => (
                       <div key={index} className="p-3 bg-[#e8dac1]/50 rounded border border-amber-900/10">
-                        <p className="text-amber-900/90 text-sm font-medium">{hab}</p>
+                        <p className="text-amber-900/90 text-sm font-medium whitespace-pre-line">{hab}</p>
                       </div>
                     ))}
                   </div>
