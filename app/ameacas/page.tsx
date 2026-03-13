@@ -439,7 +439,7 @@ export default function AmeacasPage() {
                 </div>
                 {selectedThreat.resistenciaDano && (
                   <div className="p-3 bg-[#e8dac1]/50 rounded border border-amber-900/10">
-                    <span className="text-amber-800 font-bold text-sm mr-2">Vantagens/RD:</span>
+                    <span className="text-amber-800 font-bold text-sm mr-2">Vantagens/RD: </span>
                     <span className="text-amber-900/90 text-sm font-medium">{selectedThreat.resistenciaDano}</span>
                   </div>
                 )}

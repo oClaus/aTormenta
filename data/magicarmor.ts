@@ -397,6 +397,13 @@ export const specificWeapons: SpecificWeapon[] = [
     description: "Este escudo pesado guardião de mitral é decorado com raios em alto-relevo. Sempre que você sofre dano de um ataque corpo a corpo, pode gastar 2 PM para liberar um estrondo sônico que empurra inimigos adjacentes 3m para trás (Fort CD Car evita).",
     price: "54.000",
     origin: "Herois de Arton"
+  },
+  {
+    id: "Armadura dos Neladriel",
+    name: "Armadura dos Neladriel",
+    description: "Composta de placas impossivelmente leves, essa meia armadura reforçada guardiã de mitral existe apenas na posse dos muhir ou de valorosos heróis presenteados pelos celestiais. Ela conta como uma armadura leve para fins de aplicar sua Destreza na Defesa e para uso de habilidades que normalmente não podem ser usadas com armadura pesada (como Escaramuça e Evasão)",
+    price: "65.000",
+    origin: "Deuses de Arton"
   }
 
 ];
