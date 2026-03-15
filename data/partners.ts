@@ -230,6 +230,60 @@ export const partners: Partner[] = [
     veterano: "+2 em Acrobacia e em testes opostos e de resistência contra efeitos de movimento. Também permite usar a habilidade Bloqueio Contundente (se evitar o ataque, causa dano igual ao dano básico de sua arma). Se você violar as Obrigações & Restrições de Valkaria, o aspecto deixa de apoiá-lo.",
     mestre: "-",
   },
+  },
+  { id: "Yazzu",
+  name: "Yazzu",
+  description: "Um gênio da água de pele azulada e aparência imponente, adornado com joias marinhas e empunhando um tridente dourado. Generoso, mas amante da liberdade, comanda as forças dos mares em batalha.",
+  origin: "Deuses de Arton",
+  benefits: {
+    iniciante: "Você recebe +2 em testes contra manobras de combate e efeitos de movimento.",
+    veterano: "Uma vez por rodada, você pode gastar uma ação de movimento e 4 PM para criar uma onda mágica de água em um cubo de 4,5m em alcance curto. Criaturas nessa área sofrem 4d4 pontos de dano de impacto e ficam caídas.",
+    mestre: "Como acima, mas o bônus em testes aumenta para +4 e o dano da onda aumenta para 4d6.",
+  },
+  },
+  {
+  id: "Jairuan",
+  name: "Jairuan",
+  description: "Um gênio do ar sociável e carismático, de pele bronzeada e sorriso constante. Pacifista e brincalhão, prefere resolver conflitos com encantamentos e ilusões em vez de violência.",
+  origin: "Deuses de Arton",
+  benefits: {
+    iniciante: "Você pode lançar uma magia de encantamento ou ilusão de 1° círculo (definida pelo jairuan; atributo-chave Carisma).",
+    veterano: "Seu deslocamento muda para 12m (normal e de voo).",
+    mestre: "Seu deslocamento normal e de voo muda para 18m e, quando voa, você pode carregar uma criatura Média ou menor sem penalidades por carga.",
+  },
+},
+{
+  id: "Gizzehi",
+  name: "Gizzehi",
+  description: "Um gênio do fogo de pele escura como carvão e cabelos feitos de chamas. Ressentido e temperamental, serve mestres contra a própria vontade enquanto espalha destruição ardente.",
+  origin: "Deuses de Arton",
+  benefits: {
+    iniciante: "Seus ataques corpo a corpo deixam o alvo em chamas mágicas.",
+    veterano: "Quando você deixa uma criatura em chamas, o dano dessa condição aumenta para 1d8.",
+    mestre: "Quando você deixa uma criatura em chamas, ela precisa gastar uma ação completa (em vez de uma ação padrão) para tentar apagar o fogo.",
+  },
+},
+{
+  id: "Allaraz",
+  name: "Allaraz",
+  description: "Um gênio da luz de aparência élfica e aura radiante, dedicado a proteger as criações divinas. Benevolente e poderoso, combate forças destrutivas e auxilia aqueles que usam magia para o bem.",
+  origin: "Deuses de Arton",
+  benefits: {
+    iniciante: "Você pode lançar uma magia de ilusão ou evocação de 1º círculo (definida pelo allaraz; atributo-chave Carisma).",
+    veterano: "Você pode lançar Campo de Força.",
+    mestre: "Uma vez por rodada, você pode gastar 4 PM para curar 5d8+5 PV em uma criatura em alcance curto.",
+  },
+},
+{
+  id: "Kemooz",
+  name: "Kemooz",
+  description: "Um gênio da terra gigantesco e robusto, mestre construtor das criações divinas. Honrado e determinado, usa seu domínio sobre a terra para proteger e erguer estruturas colossais.",
+  origin: "Deuses de Arton",
+  benefits: {
+    iniciante: "Uma vez por rodada, você pode criar um cubo de terra de 1,5m de lado em um espaço desocupado a até 9m. O cubo tem RD 5 e 30 PV e dura até o fim da cena ou até você acumular 4 cubos.",
+    veterano: "Você recebe +2 na Defesa.",
+    mestre: "Você pode lançar Controlar Terra (atributo-chave Carisma).",
+  },
 },
   
   

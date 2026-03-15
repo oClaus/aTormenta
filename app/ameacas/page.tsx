@@ -23,6 +23,20 @@ export default function AmeacasPage() {
   })
   .sort((a, b) => a.name.localeCompare(b.name));
 
+  const renderFormattedText = (text: string) => {
+  if (!text) return "";
+  return text.split(/(\*\*.*?\*\*)/g).map((part, index) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return (
+        <strong key={index} className="font-bold text-red-900">
+          {part.slice(2, -2)}
+        </strong>
+      );
+    }
+    return part;
+  });
+};
+
   const RulesSection = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -39,7 +53,7 @@ export default function AmeacasPage() {
               Regras de Ameaças
             </h2>
             <p className="text-sm text-amber-900/60 font-serif italic font-bold">
-              Clique para mais informações sobre regras de Ameaças;
+              Clique para mais informações sobre regras de Ameaças.
             </p>
           </div>
         </div>
@@ -240,6 +254,9 @@ export default function AmeacasPage() {
         </div>
 
         {/* Grid de Ameaças - ATENÇÃO: bg-[#d9c8a9] usado aqui nos cards */}
+        <h2 className="text-xl font-bold text-red-800 mb-6 font-serif border-b border-amber-900/20 pb-2">
+            {filteredThreats.length} Ameaças Encontradas
+            </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 w-full">
           {filteredThreats.map((threat) => (
             <div
@@ -536,7 +553,9 @@ export default function AmeacasPage() {
                 <h3 className="text-xl font-bold text-amber-800 mb-2 flex items-center gap-2 font-serif">
                   Tesouro
                 </h3>
-                <p className="text-amber-900/90 text-sm leading-relaxed whitespace-pre-wrap font-medium">{selectedThreat.tesouro}</p>
+                <p className="text-amber-900/90 text-sm leading-relaxed whitespace-pre-wrap font-medium">
+                  {renderFormattedText(selectedThreat.tesouro)}
+                </p>
               </section>
 
               {/* IMAGEM (NO FINAL) */}
