@@ -742,7 +742,7 @@ export const gods: God[] = [
   },
   { id: "Tauron",
     name: "Tauron",
-    subtitle: "Deus da Morte",
+    subtitle: "Deus da Força",
     image: [
     "/deuses/Tauron.png", 
     "/deuses/Tauron2.png",
