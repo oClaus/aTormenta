@@ -45,4 +45,5 @@ export interface Threat {
   
   // Opcionais (Metadados)
   origin?: string; // De onde veio (Manual, Aventura, etc)
+  tema?: string; // <-- ADICIONADO AQUI COMO OPCIONAL
 }
