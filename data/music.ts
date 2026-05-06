@@ -2,6 +2,15 @@ import { Gear } from "@/types/gear";
 
 // Tabela de Equipamento de Aventura
 export const music: Gear[] = [
+  // Dragão Brasil
+  { id: "Maracas Estelares",
+    name: "Maracas Estelares",
+    description: "Quando usado em conjunto, este par de instrumentos musicais diminui o custo de suas Músicas de Bardo em –1 PM. Além disso, cada maraca conta como uma arma simples corpo a corpo leve (dano 1d6, x2, impacto) que, quando empunhada por um bardo, recebe o encanto Veloz. Por fim, as maracas podem receber melhorias e encantos tanto de armas quanto de ferramentas (exceto material especial), até o limite normal de melhorias e encantos.",
+    origin: "Dragão Brasil",
+    price: "T$ 19000",
+    spaces: "1",
+  },
+  // Fulgor dos Deuses
   {
     id: "instrumento_musical",
     name: "Instrumento Musical",
@@ -10,14 +19,7 @@ export const music: Gear[] = [
     price: "T$ 35",
     spaces: "1",
   },
-  {
-    id: "Maracas Estelares",
-    name: "Maracas Estelares",
-    description: "Quando usado em conjunto, este par de instrumentos musicais diminui o custo de suas Músicas de Bardo em –1 PM. Além disso, cada maraca conta como uma arma simples corpo a corpo leve (dano 1d6, x2, impacto) que, quando empunhada por um bardo, recebe o encanto Veloz. Por fim, as maracas podem receber melhorias e encantos tanto de armas quanto de ferramentas (exceto material especial), até o limite normal de melhorias e encantos.",
-    origin: "Dragão Brasil",
-    price: "T$ 19000",
-    spaces: "1",
-  },
+  
   {
     id: "Alaúde Élfico",
     name: "Alaúde Élfico",

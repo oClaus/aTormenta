@@ -3165,6 +3165,42 @@ export const bosses: Boss[] = [
     "escudo pesado"
   ],
   tesouro: "metade."
+},
+{ id: "tyrant-resident-evil",
+  name: "Mr. X - Resident Evil",
+  image: "/chefes/tyrant.png",
+  tipo: "Construto Grande",
+  nd: 10, 
+  historia: "Desde sua primeira aparição em 1996, além de final boss, o tyrant se tornou o exemplo ideal de como o mercado de games enxerga a ameaça biológica. No entanto, sua trajetória reflete a própria evolução tecnológica da indústria, saindo de um monstro estático para se tornar uma força da natureza que redefine o comportamento do jogador.\nQuando a Capcom lançou o primeiro Resident Evil, o tyrant T-002 foi o choque cultural necessário para o gênero. Ele representava o ápice da \"ciência fora de controle\". No mercado de 32 bits, sua imponência era limitada por hardware, servindo como o clímax de uma narrativa. Mas foi em Resident Evil 2 (1998) que a variante T-103, o lendário Mr. X, introduziu um conceito que mudaria o design de jogos de terror: a perseguição persistente. Pela primeira vez, o perigo não estava apenas atrás de uma porta, mas ativamente procurando por você.\nO verdadeiro divisor de águas para o mercado ocorreu com o lançamento de Resident Evil 2 Remake. A Capcom transformou o Mr. X em um fenômeno viral e um marco de engenharia de IA. O tyrant deixou de ser um script e passou a ser um programa sistêmico.\nO mercado viu como o design de som — os ecos rítmicos e pesados dos passos no andar de cima — poderia ser tão lucrativo e atraente quanto os gráficos de última geração. O sucesso comercial do jogo provou que o público moderno ainda ansiava pelo \"terror de vulnerabilidade\", onde o jogador não é o predador, mas a presa. Isso influenciou uma safra de novos jogos de horror com tendência a abandonar o combate em nome da tensão atmosférica.\nHoje, o tyrant é um arquétipo. Sua silhueta de sobretudo e chapéu tornou-se sinônimo de um inimigo que não pode ser parado, apenas atrasado. Ele pavimentou o caminho para vilões como a Lady Dimitrescu e o novo Patriarca Corrompido de Resident Evil 9, provando que a figura humanoide, silenciosa e imparável é o medo mais universal que o mercado de entretenimento pode vender.\nTrinta anos depois, o tyrant permanece como um lembrete de que, nos videogames, a maior ferramenta de engajamento pode ser a bota pesada de um gigante ecoando no corredor escuro.\n\nTYRANT, A ARMA PERFEITA\nO tyrant é o resultado final da obsessão da Umbrella Corporation em criar a \"Arma Bio-Orgânica\" (Bio Organic Weapon ou BOW) perfeita: um soldado imparável que combina a ferocidade de um monstro com a inteligência necessária para seguir ordens. A sua história começa com o projeto ultra-secreto da mansão Spencer, onde o T-002 foi desenvolvido. Diferente dos zumbis comuns, que são subprodutos acidentais, o tyrant foi planejado para ser o ápice da evolução viral, embora a sua criação tenha exigido uma busca exaustiva por indivíduos com uma compatibilidade genética raríssima ao T-Vírus.\nA sua aparência é a de um humanoide de proporções colossais, frequentemente ultrapassando dois metros e meio de altura. Na sua forma contida, como o Mr. X de Raccoon City, ele apresenta uma pele acinzentada, pálida e sem pelos, com uma face estoica e desprovida de emoções que beira o “vale da estranheza”. Para operar em zonas urbanas sem causar pânico imediato e para manter o seu poder sob controle, ele utiliza um sobretudo de polímero pesado e um chapéu. Sob essa veste, esconde-se uma massa muscular hipertrofiada e veias pulsantes.\nNo entanto, a verdadeira face do tyrant revela-se quando o seu limitador é destruído ou quando ele sofre danos críticos. Ao entrar no estado de super tyrant, a criatura sofre uma mutação violenta: o braço direito ou ambos expandem-se em garras gigantescas e afiadas, enquanto o coração, incapaz de ser contido pela caixa torácica devido ao metabolismo acelerado, projeta-se para fora do peito, batendo freneticamente como uma vulnerabilidade exposta.",
+  dicas: "EM TORMENTA20\nEm Tormenta20, o tyrant é facilmente adaptado como um golem de carne, fruto de experimentos macabros feitos por arcanos sem escrúpulos financiados por nobres que buscam desenvolver a arma perfeita para vencer guerras.",
+  tamanho: "Grande",
+  iniciativa: 9,
+  percepcao: 10,
+  defesa: 36,
+  resistenciaDano: "percepção às cegas, visão no escuro, cura acelerada 5, imunidade a metamorfose e trevas, redução de dano 10",
+  fort: 22,
+  ref: 10,
+  von: 16,
+  pv: 400,
+  deslocamento: "9m (6q)",
+  pm: 0,
+  ataqueCorpoACorpo: "Duas pancadas +29 (4d10+20).",
+  habilidades: [
+    "Imunidade a Magia: Tyrant é imune a efeitos mágicos, com as seguintes exceções. Magias de fogo e frio deixam ele lento por 1d6 rodadas. Efeitos mágicos de eletricidade removem a condição lento e curam PV em quantidade igual à metade do dano que causariam.",
+    "Super Tyrant: Se estiver com a metade de seus PV, tyrant rompe seus limitadores. Ele recebe uma ação padrão extra, +1d10 em testes e rolagens de dano e, quando causa dano, deixa a vítima sangrando. Além disso, seu deslocamento muda para 18m (12q). Nesse estado, seu coração fica exposto; tentar atingi-lo é mais difícil (Defesa 41), mas se acertar, o ataque causa dano como se fosse um acerto crítico. Tentar atingi-lo com magia também é mais difícil (tyrant recebe +5 no teste de resistência), mas dano em área, como de uma bomba, causa +50% de dano no tyrant, por também atingir o coração exposto."
+  ],
+  for: 9,
+  des: -1,
+  con: 8,
+  int: 0,
+  sab: 0,
+  car: -5,
+  pericias: [
+    "Atletismo +22",
+    "Enganação +6"
+  ],
+  equipamentos: [],
+  tesouro: "Nenhum."
 }
 
   
