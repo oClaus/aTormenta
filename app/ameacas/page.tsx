@@ -307,13 +307,10 @@ export default function AmeacasPage() {
           <RulesSection />
         </div>
 
-        {/* Separador */}
-        <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-amber-900 to-transparent my-12 opacity-30"></div>
-
         {/* Filtros e Busca (Atualizado para grid) */}
         <div 
           id="ameacas-grid" 
-          className="mb-8 p-6 rounded bg-[#e8dac1] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] scroll-mt-24 w-full"
+          className="mb-8 scroll-mt-24 w-full"
         >
           <label className="block text-sm font-bold text-amber-900/60 mb-3 uppercase tracking-wider">
             Filtros e Busca
@@ -349,7 +346,7 @@ export default function AmeacasPage() {
               </select>
             </div>
 
-            {/* Select de Região */}
+            {/* Select de Tema */}
             <div className="relative">
               <select
                 value={selectedRegiao}
@@ -367,7 +364,7 @@ export default function AmeacasPage() {
           </div>
         </div>
 
-        {/* Grid de Ameaças - ATENÇÃO: bg-[#d9c8a9] usado aqui nos cards */}
+        {/* Grid de Ameaças */}
         <h2 className="text-xl font-bold text-red-800 mb-6 font-serif border-b border-amber-900/20 pb-2">
             {filteredThreats.length} Ameaças Encontradas
             </h2>
@@ -377,12 +374,13 @@ export default function AmeacasPage() {
               key={threat.id}
               id={createUrlSafeId(threat.id)}
               onClick={() => openModal(threat)}
-              className="group relative overflow-hidden rounded bg-[#d9c8a9] border border-amber-900/30 hover:border-red-700/50 transition-all duration-300 hover:shadow-[0_4px_20px_rgba(69,26,3,0.15)] cursor-pointer p-5 flex flex-col justify-between min-h-[180px] scroll-mt-24"
+              className="group relative overflow-hidden rounded bg-[#d9c8a9] border border-amber-900/30 hover:border-red-700/50 transition-all duration-300 hover:shadow-[0_4px_20px_rgba(69,26,3,0.15)] cursor-pointer p-5 flex flex-col justify-between min-h-[190px] scroll-mt-24"
             >
-              {/* Botão de copiar link direto no Card */}
+              
+              {/* --- 1. BOTÃO DE COPIAR NO TOPO DIREITO --- */}
               <button 
                 onClick={(e) => copyLink(threat, e)}
-                className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity p-2 bg-amber-900/10 hover:bg-amber-900/20 rounded-full text-amber-900 z-20"
+                className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity p-2 bg-amber-900/10 hover:bg-amber-900/20 rounded-full text-amber-900 z-30"
                 title="Copiar link direto para esta ameaça"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -391,62 +389,64 @@ export default function AmeacasPage() {
                 </svg>
               </button>
 
-              {/* --- 1. IMAGEM DE FUNDO (Ajustada para o fundo bege) --- */}
-              <div className="absolute right-0 top-0 h-full w-[60%] opacity-80 group-hover:opacity-100 transition-all duration-500 pointer-events-none select-none mask-gradient-left flex justify-end">
+              {/* --- 2. BADGE DE ND NO CANTO INFERIOR DIREITO --- */}
+              <div className="absolute bottom-3 right-3 z-20 shrink-0 flex flex-col items-center justify-center w-12 h-12 rounded bg-[#f5e6d0]/90 backdrop-blur-sm border border-amber-900/20 shadow-sm group-hover:border-red-600 transition-colors">
+                <span className="text-[0.6rem] uppercase text-amber-900/50 font-bold tracking-wider">ND</span>
+                <span className="text-xl font-black text-red-800 leading-none font-sans">{threat.nd}</span>
+              </div>
+
+              {/* --- 3. IMAGEM E MARCA D'ÁGUA --- */}
+              {/* Removido o hover de opacidade para a imagem ficar estática */}
+              <div className="absolute right-0 top-0 h-full w-full opacity-80 pointer-events-none select-none flex justify-end overflow-hidden z-0">
                 {threat.image ? (
                   <>
-                    {/* Máscara de gradiente ajustada para a cor #d9c8a9 */}
-                    <div className="absolute inset-0 z-10 bg-gradient-to-r from-[#d9c8a9] via-[#d9c8a9]/20 to-transparent" />
-                    
+                    {/* Gradiente mantido para o efeito de opacidade da direita para esquerda */}
+                    <div className="absolute inset-0 z-10 bg-gradient-to-r from-[#d9c8a9] via-[#d9c8a9]/60 to-transparent" />
                     <img
                       src={threat.image}
                       alt=""
-                      className="h-full w-auto drop-shadow-sm mix-blend-multiply filter sepia-[0.3]"
+                      /* Classes de mix-blend e sepia foram removidas aqui! */
+                      className="h-full w-[60%] object-cover object-top drop-shadow-sm"
                     />
                   </>
                 ) : (
-                  <div className="w-full h-full flex items-center justify-center opacity-10">
-                      <span className="text-8xl block translate-x-4 grayscale text-amber-900">☠️</span>
+                  /* Nova alternativa para cards sem imagem: Letra inicial grande */
+                  <div className="absolute inset-0 flex items-center justify-end pr-6 opacity-10">
+                    <span className="text-[12rem] font-serif font-black italic text-amber-950 leading-none translate-y-4">
+                      {threat.name.charAt(0)}
+                    </span>
                   </div>
                 )}
               </div>
 
-              {/* --- 2. CONTEÚDO DE TEXTO --- */}
-              <div className="relative z-10 flex flex-col justify-between h-full w-full">
+              {/* --- 4. CONTEÚDO DE TEXTO --- */}
+              <div className="relative z-10 flex flex-col justify-between h-full w-full pointer-events-none">
                 
-                {/* TOPO: Nome e ND */}
-                <div className="flex justify-between items-start gap-3 pr-2">
-                  <h3 className="text-xl font-bold text-amber-950 group-hover:text-red-700 transition-colors leading-tight drop-shadow-sm line-clamp-2 max-w-[65%]">
+                {/* TOPO: Adicionado pr-10 para o texto não ficar embaixo do botão de copiar */}
+                <div className="pr-10"> 
+                  <h3 className="text-xl font-bold text-amber-950 group-hover:text-red-700 transition-colors leading-tight drop-shadow-sm line-clamp-2">
                     {threat.name}
                   </h3>
-                  
-                  {/* Badge ND */}
-                  <div className="shrink-0 flex flex-col items-center justify-center w-11 h-11 rounded bg-[#f5e6d0] border border-amber-900/20 shadow-sm group-hover:border-red-600 transition-colors">
-                    <span className="text-[0.6rem] uppercase text-amber-900/50 font-bold tracking-wider">ND</span>
-                    <span className="text-lg font-black text-red-800 leading-none font-sans">{threat.nd}</span>
-                  </div>
                 </div>
 
-                {/* RODAPÉ: Separador, Tipo, Tamanho, Papel, Origem, Região */}
-                <div className="mt-6">
-                  {/* Separador Animado */}
-                  <div className="w-12 h-[2px] bg-red-800/60 mb-3 group-hover:w-1/2 transition-all duration-500"></div>
+                {/* RODAPÉ: Adicionado pr-14 para o texto não ficar embaixo do escudo de ND */}
+                <div className="mt-6 pr-14">
+                  <div className="w-12 h-[2px] bg-red-800/60 mb-3 group-hover:w-1/3 transition-all duration-500"></div>
 
-                  {/* Linha de Metadados */}
                   <div className="flex flex-wrap items-center gap-y-1 gap-x-2 mb-2">
                     <span className="px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wide bg-[#e8dac1] border border-amber-900/20 text-amber-900/80">
                       {threat.tipo}
                     </span>
                     
                     {threat.tamanho && (
-                      <div className="flex items-center gap-2 text-xs text-amber-900/70 font-medium">
+                      <div className="flex items-center gap-1 text-xs text-amber-900/70 font-medium">
                         <span className="w-1 h-1 rounded-full bg-amber-900/40"></span>
                         <span>{threat.tamanho}</span>
                       </div>
                     )}
 
                     {threat.papel && (
-                      <div className="flex items-center gap-2 text-xs font-medium">
+                      <div className="flex items-center gap-1 text-xs font-medium">
                         <span className="w-1 h-1 rounded-full bg-amber-900/40"></span>
                         <span className="text-red-800/90 uppercase tracking-wider text-[10px] font-bold">
                           {threat.papel}
@@ -455,9 +455,8 @@ export default function AmeacasPage() {
                     )}
                   </div>
 
-                  {/* Origem e Região com Ícone */}
-                  <div className="flex flex-col gap-1 text-xs text-amber-900/50 group-hover:text-amber-900/80 transition-colors">
-                    <span className="uppercase tracking-widest truncate max-w-[150px]">
+                  <div className="flex flex-col gap-1 text-xs text-red-800 group-hover:text-red-800 transition-colors font-bold">
+                    <span className="uppercase tracking-widest truncate">
                     {threat.origin || "Desconhecida"}
                     </span>
                   </div>
@@ -465,7 +464,6 @@ export default function AmeacasPage() {
 
               </div>
               
-              {/* Detalhes de Canto */}
               <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-amber-900/40 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-amber-900/40 opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </div>
@@ -716,7 +714,7 @@ export default function AmeacasPage() {
                     <img
                       src={selectedThreat.image}
                       alt={selectedThreat.name}
-                      className="w-full h-auto object-cover mix-blend-multiply filter sepia-[0.3]"
+                      className="w-full h-auto object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#d9c8a9]/50 via-transparent to-transparent pointer-events-none"></div>
                   </div>

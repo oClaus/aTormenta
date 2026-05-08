@@ -3,6 +3,7 @@
 import { Spell } from "@/types/speel";
 
 export const spells: Spell[] = [
+  // Tormenta20 - Jogo do Ano
   { id: "abencoar-alimentos",
     name: "Abençoar Alimentos",
     type: "Divina",
@@ -460,6 +461,10 @@ export const spells: Spell[] = [
     enhancements: [
       { cost: "+5 PM", effect: "Aumenta o dano de cada esfera em +2d6." },
       { cost: "+5 PM", effect: "Muda o tipo de dano de todas as esferas para essência (mas elas ainda causam os outros efeitos como se seu tipo de dano não mudasse)." },
+      {
+      cost: "+1 PM",
+      effect: "Muda a resistência para Reflexos (eletricidade, fogo) ou Fortitude (frio) parcial. Se falha, a criatura sofre uma condição de acordo com o elemento da magia: arrefecido (frio), eletrificado (eletricidade) ou em chamas (fogo). (Dragão Brasil)",
+    },
     ],
   },
   { id: "Bênção",
@@ -477,6 +482,7 @@ export const spells: Spell[] = [
     enhancements: [
       { cost: "+1 PM", effect: "Muda o alvo para 1 cadáver e a duração para 1 semana. O cadáver não se decompõe nem pode ser transformado em morto-vivo." },
       { cost: "+2 PM", effect: "Aumenta os bônus em +1 (bônus máximo limitado pelo círculo máximo de magia que você pode lançar)." },
+      { cost: "+1 PM", effect: "Também deixa o alvo abençoado. (Dragão Brasil)" },
     ],
   },
   { id: "Bola de Fogo",
@@ -495,6 +501,10 @@ export const spells: Spell[] = [
       { cost: "+2 PM", effect: "Aumenta o dano em +2d6." },
       { cost: "+2 PM", effect: "Muda a área para efeito de esfera flamejante com tamanho Médio e a duração para cena. Em vez do normal, cria uma esfera flamejante com 1,5m de diâmetro que causa 3d6 pontos de dano a qualquer criatura no mesmo espaço. Você pode gastar uma ação de movimento para fazer a esfera voar 9m em qualquer direção. Ela é imune a dano, mas pode ser apagada com água. Uma criatura só pode sofrer dano da esfera uma vez por rodada." },
       { cost: "+3 PM", effect: "Muda a duração para um dia ou até ser descarregada. Em vez do normal, você cria uma pequena pedra flamejante, que pode detonar como uma reação, descarregando a magia. A pedra pode ser usada como uma arma de arremesso com alcance curto. Uma vez detonada, causa o dano da magia numa área de esfera com 6m de raio." },
+      {
+      cost: "+1 PM",
+      effect: "Muda a resistência para Reflexos (eletricidade, fogo) ou Fortitude (frio) parcial. Se falha, a criatura sofre uma condição de acordo com o elemento da magia: arrefecido (frio), eletrificado (eletricidade) ou em chamas (fogo). (Dragão Brasil)",
+    },
     ],
   },
   { id: "Buraco Negro",
@@ -647,6 +657,10 @@ export const spells: Spell[] = [
       { cost: "+2 PM", effect: "Aumenta o dano em +2d6 (+2d8 contra mortos-vivos)." },
       { cost: "+2 PM", effect: "Aumenta a área em +6m de raio." },
       { cost: "+5 PM", effect: "A luz purificadora do Deus-Sol dissipa todas as magias de necromancia ativas na área. Requer 5º círculo." },
+      {
+      cost: "+1 PM",
+      effect: "Muda a resistência para Reflexos (eletricidade, fogo) ou Fortitude (frio) parcial. Se falha, a criatura sofre uma condição de acordo com o elemento da magia: arrefecido (frio), eletrificado (eletricidade) ou em chamas (fogo). (Dragão Brasil)",
+    },
     ],
   },
   { id: "Coluna de Chamas",
@@ -664,6 +678,10 @@ export const spells: Spell[] = [
     enhancements: [
       { cost: "+1 PM", effect: "Aumenta o dano de fogo em +1d6." },
       { cost: "+1 PM", effect: "Aumenta o dano de luz em +1d6." },
+      {
+      cost: "+1 PM",
+      effect: "Muda a resistência para Reflexos (eletricidade, fogo) ou Fortitude (frio) parcial. Se falha, a criatura sofre uma condição de acordo com o elemento da magia: arrefecido (frio), eletrificado (eletricidade) ou em chamas (fogo). (Dragão Brasil)",
+    },
     ],
   },
   { id: "Comando",
@@ -922,6 +940,10 @@ export const spells: Spell[] = [
       { cost: "+1 PM", effect: "Muda a duração para sustentada e a resistência para Reflexos reduz à metade. Em vez do normal, você deve escolher o seguinte efeito. Labaredas: a cada rodada, você pode gastar uma ação de movimento para projetar uma labareda, acertando um alvo em alcance curto a partir da chama. O alvo sofre 4d6 pontos de dano de fogo (Reflexos reduz à metade)." },
       { cost: "+2 PM", effect: "Aumenta o dano em +1d6 (exceto do efeito chamejar)." },
       { cost: "+3 PM", effect: "Muda o alvo para 1 criatura composta principalmente por fogo, lava ou magma (como um elemental do fogo) e a resistência para Fortitude parcial. Em vez do normal, se a criatura falhar no teste de resistência, é reduzida a 0 PV. Se passar, sofre 5d6 pontos de dano." },
+      {
+      cost: "+1 PM",
+      effect: "Muda a resistência para Reflexos (eletricidade, fogo) ou Fortitude (frio) parcial. Se falha, a criatura sofre uma condição de acordo com o elemento da magia: arrefecido (frio), eletrificado (eletricidade) ou em chamas (fogo). (Dragão Brasil)",
+    },
     ],
   },
   { id: "Controlar Madeira",
@@ -1419,6 +1441,10 @@ export const spells: Spell[] = [
     enhancements: [
       { cost: "+3 PM", effect: "aumenta o dano de frio em +2d6 e o dano de corte em +2d6." },
       { cost: "+4 PM", effect: "muda a área para cilindro com 6m de raio e 6m de altura e a duração para sustentada. Em vez do normal, a magia cria uma tempestade de granizo que causa 3d6 pontos de dano de impacto e 3d6 pontos de dano de frio em todas as criaturas na área (sem teste de resistência). A tempestade fornece camuflagem leve às criaturas dentro dela e deixa o piso escorregadio. Piso escorregadio conta como terreno difícil e obriga criaturas na área a fazer testes de Acrobacia para equilíbrio. Requer 4º círculo." },
+      {
+      cost: "+1 PM",
+      effect: "Muda a resistência para Reflexos (eletricidade, fogo) ou Fortitude (frio) parcial. Se falha, a criatura sofre uma condição de acordo com o elemento da magia: arrefecido (frio), eletrificado (eletricidade) ou em chamas (fogo). (Dragão Brasil)",
+    },
     ],
   },
   { id: "Escudo da Fé",
@@ -1506,6 +1532,10 @@ export const spells: Spell[] = [
       { cost: "Truque", effect: "Muda o alcance para curto, a área para alvo de 1 objeto e a resistência para Reflexos anula. Você gera uma pequena explosão que não causa dano mas pode acender uma vela, tocha ou fogueira. Também pode fazer um objeto inflamável com RD 0 (como uma corda ou pergaminho) ficar em chamas. Uma criatura em posse de um objeto pode evitar esse efeito se passar no teste de resistência." },
       { cost: "+1 PM", effect: "Aumenta o dano em +1d6." },
       { cost: "+1 PM", effect: "Muda a resistência para Reflexos parcial. Se passar, a criatura reduz o dano à metade; se falhar, fica em chamas." },
+      {
+      cost: "+1 PM",
+      effect: "Muda a resistência para Reflexos (eletricidade, fogo) ou Fortitude (frio) parcial. Se falha, a criatura sofre uma condição de acordo com o elemento da magia: arrefecido (frio), eletrificado (eletricidade) ou em chamas (fogo). (Dragão Brasil)",
+    },
     ],
   },
   { id: "Ferver Sangue",
@@ -1590,6 +1620,10 @@ export const spells: Spell[] = [
     resistance: "Veja texto",
     description: "Você cria uma nuvem de tempestade violenta. Os ventos tornam ataques à distância impossíveis e fazem a área contar como condição terrível para lançar magia. Além disso, inimigos na área têm a visibilidade reduzida (como a magia Névoa). Uma vez por turno, você pode gastar uma ação de movimento para gerar um dos efeitos a seguir.\n**Nevasca.** Inimigos na área sofrem 10d6 pontos de dano de frio (Fortitude reduz à metade). A área fica coberta de neve, virando terreno difícil até o fim da cena ou até você usar siroco.\n**Raios.** Até 6 inimigos a sua escolha na área sofrem 10d8 pontos de dano de eletricidade (Reflexos reduz à metade).\n**Siroco.** Transforma a chuva em uma tempestade de areia escaldante. Inimigos na área sofrem 10d6 pontos de dano (metade corte, metade fogo) e ficam sangrando (Fortitude reduz o dano à metade e evita a condição).\n**Trovões.** Inimigos sofrem 10d6 pontos de dano de impacto e ficam desprevenidos por uma rodada (Fortitude reduz o dano à metade e evita a condição).",
     origin: "Tormenta20 - Jogo do Ano",
+    enhancements: [
+      { cost: "+1 PM",
+      effect: "Muda a resistência para Reflexos (eletricidade, fogo) ou Fortitude (frio) parcial. Se falha, a criatura sofre uma condição de acordo com o elemento da magia: arrefecido (frio), eletrificado (eletricidade) ou em chamas (fogo). (Dragão Brasil)", },
+    ],
   },
   { id: "Globo da Verdade de Gwen",
     name: "Globo da Verdade de Gwen",
@@ -1828,6 +1862,10 @@ export const spells: Spell[] = [
     enhancements: [
       { cost: "+3 PM", effect: "Aumenta o dano inicial em +2d6 e o dano do efeito em chamas em +1d6." },
       { cost: "+4 PM", effect: "Muda a duração para cena ou até ser descarregada. Em vez do efeito normal, a magia cria quatro dardos de lava que flutuam ao lado do conjurador. Uma vez por rodada, como uma ação livre, você pode disparar um dos dardos em uma criatura, causando o efeito normal da magia. Requer 4º círculo." },
+      {
+      cost: "+1 PM",
+      effect: "Muda a resistência para Reflexos (eletricidade, fogo) ou Fortitude (frio) parcial. Se falha, a criatura sofre uma condição de acordo com o elemento da magia: arrefecido (frio), eletrificado (eletricidade) ou em chamas (fogo). (Dragão Brasil)",
+    },
     ],
   },
   { id: "Legião",
@@ -2225,6 +2263,10 @@ export const spells: Spell[] = [
       { cost: "+2 PM", effect: "Aumenta o dano por atravessar a muralha em +2d6." },
       { cost: "+2 PM", effect: "Aumenta o comprimento em +15m e altura em +3m, até 60m de comprimento e 9m de altura." },
       { cost: "+4 PM", effect: "Muda a duração para sustentada e adiciona uma nova escolha, Essência. A muralha é invisível e indestrutível — imune a qualquer forma de dano e não afetada por nenhuma magia. Ela não pode ser atravessada nem mesmo por criaturas incorpóreas. No entanto, magias que teletransportam criaturas, como Salto Dimensional, podem atravessá-la. Magias e efeitos de dano, como Bola de Fogo e o sopro de um dragão, não vencem a muralha, mas magias lançadas diretamente sobre uma criatura ou área, como Sono, podem ser lançadas contra alvos que estejam no outro lado como se tivessem linha de efeito. Requer 4º círculo." },
+      {
+      cost: "+1 PM",
+      effect: "Muda a resistência para Reflexos (eletricidade, fogo) ou Fortitude (frio) parcial. Se falha, a criatura sofre uma condição de acordo com o elemento da magia: arrefecido (frio), eletrificado (eletricidade) ou em chamas (fogo). (Dragão Brasil)",
+    },
     ],
   },
   { id: "Névoa",
@@ -2554,7 +2596,7 @@ export const spells: Spell[] = [
   target: "1 criatura",
   duration: "Instantânea",
   resistance: "Nenhuma",
-  description: "Você purifica a criatura tocada, removendo uma condição dela entre abalado, apavorado, alquebrado, atordoado, cego, confuso, debilitado, enjoado, envenenado, esmorecido, exausto, fascinado, fatigado, fraco, frustrado, lento, ofuscado, paralisado, pasmo ou surdo.",
+  description: "Você purifica a criatura tocada, removendo uma condição dela entre abalado, alquebrado, apavorado, atordoado, cego, confuso, debilitado, decaído, enjoado, envenenado, esmorecido, exausto, fascinado, fatigado, fedido, fraco, frustrado, lento, ofuscado, paralisado, pasmo ou surdo.",
   origin: "Tormenta20 - Jogo do Ano",
   enhancements: [
     {
@@ -2599,6 +2641,10 @@ export const spells: Spell[] = [
     {
       cost: "+2 PM",
       effect: "Aumenta a categoria de tamanho do alvo em uma.",
+    },
+    {
+      cost: "+1 PM",
+      effect: "Também deixa o alvo leve. (Dragão Brasil)",
     },
   ],
   },
@@ -2649,6 +2695,10 @@ export const spells: Spell[] = [
     {
       cost: "+5 PM",
       effect: "Muda o alvo para área de esfera com 6m de raio. Em vez de um raio, você dispara uma bola de gelo que explode, causando o efeito da magia em todas as criaturas na área.",
+    },
+    {
+      cost: "+1 PM",
+      effect: "Muda a resistência para Reflexos (eletricidade, fogo) ou Fortitude (frio) parcial. Se falha, a criatura sofre uma condição de acordo com o elemento da magia: arrefecido (frio), eletrificado (eletricidade) ou em chamas (fogo). (Dragão Brasil)",
     },
   ],
   },
@@ -2748,6 +2798,10 @@ export const spells: Spell[] = [
       cost: "+3 PM",
       effect: "Muda a área para alvo (criaturas escolhidas). Em vez do normal, você dispara vários relâmpagos, um para cada alvo escolhido, causando 6d6 pontos de dano de eletricidade. Requer 3º círculo.",
     },
+    {
+      cost: "+1 PM",
+      effect: "Muda a resistência para Reflexos (eletricidade, fogo) ou Fortitude (frio) parcial. Se falha, a criatura sofre uma condição de acordo com o elemento da magia: arrefecido (frio), eletrificado (eletricidade) ou em chamas (fogo). (Dragão Brasil)",
+    },
   ],
   },
   { id: "Relâmpago Flamejante de Reynard",
@@ -2766,6 +2820,10 @@ export const spells: Spell[] = [
     {
       cost: "+2 PM",
       effect: "Aumenta o dano das rajadas em +1d6 e o dano da rajada mista em +2d12.",
+    },
+    {
+      cost: "+1 PM",
+      effect: "Muda a resistência para Reflexos (eletricidade, fogo) ou Fortitude (frio) parcial. Se falha, a criatura sofre uma condição de acordo com o elemento da magia: arrefecido (frio), eletrificado (eletricidade) ou em chamas (fogo). (Dragão Brasil)",
     },
   ],
   },
@@ -3288,6 +3346,10 @@ export const spells: Spell[] = [
       cost: "+3 PM",
       effect: "Aumenta o tamanho máximo das criaturas afetadas em uma categoria. Requer 3º círculo.",
     },
+    {
+      cost: "+1 PM",
+      effect: "Muda a resistência para Reflexos (eletricidade, fogo) ou Fortitude (frio) parcial. Se falha, a criatura sofre uma condição de acordo com o elemento da magia: arrefecido (frio), eletrificado (eletricidade) ou em chamas (fogo). (Dragão Brasil)",
+    },
   ],
   },
   { id: "Suporte Ambiental",
@@ -3300,7 +3362,7 @@ export const spells: Spell[] = [
   target: "1 criatura",
   duration: "1 dia",
   resistance: "Nenhuma",
-  description: "Esta magia facilita a sobrevivência em ambientes hostis. O alvo fica imune aos efeitos de calor e frio extremos, pode respirar na água se respirar ar (ou vice-versa) e não sufoca em fumaça densa.",
+  description: "Esta magia facilita a sobrevivência em ambientes hostis. O alvo fica imune aos efeitos de calor e frio extremos, pode respirar na água se respirar ar (ou vice-versa) e não sufoca em fumaça densa. (Dragão Brasil: O alvo também fica imune a arrefecido, congelado, eletrificado, eletrizado, em chamas e molhado.)",
   origin: "Tormenta20 - Jogo do Ano",
   enhancements: [
     {
@@ -3469,6 +3531,10 @@ export const spells: Spell[] = [
       cost: "+3 PM",
       effect: "Muda a área para cilindro com 90m de raio e 90m de altura.",
     },
+    {
+      cost: "+1 PM",
+      effect: "Muda a resistência para Reflexos (eletricidade, fogo) ou Fortitude (frio) parcial. Se falha, a criatura sofre uma condição de acordo com o elemento da magia: arrefecido (frio), eletrificado (eletricidade) ou em chamas (fogo). (Dragão Brasil)",
+    },
   ],
   },
   { id: "Tentáculos de Trevas",
@@ -3531,6 +3597,10 @@ export const spells: Spell[] = [
     {
       cost: "+2 PM",
       effect: "Muda o alcance para pessoal e o alvo para área: esfera com 6m de raio. Você dispara raios pelas pontas dos dedos que afetam todas as criaturas na área.",
+    },
+    {
+      cost: "+1 PM",
+      effect: "Muda a resistência para Reflexos. Se falha, a criatura sofre uma condição de acordo com o elemento da magia: eletrificado (eletricidade). (Dragão Brasil)",
     },
   ],
   },
@@ -3728,6 +3798,10 @@ export const spells: Spell[] = [
     {
       cost: "+7 PM",
       effect: "Muda o alcance para pessoal e o alvo para você. Você acelera sua mente, além de seu corpo. A ação adicional pode ser usada para lançar magias e ativar engenhocas. Requer 4º círculo.",
+    },
+    {
+      cost: "+1 PM",
+      effect: "Também deixa o alvo veloz. (Dragão Brasil)",
     },
   ],
   },
@@ -3964,6 +4038,10 @@ export const spells: Spell[] = [
     {
       cost: "+3 PM",
       effect: "Muda a energia para essência. Requer 2º círculo.",
+    },
+    {
+      cost: "+1 PM",
+      effect: "Muda a resistência para Reflexos (eletricidade, fogo) ou Fortitude (frio) parcial. Se falha, a criatura sofre uma condição de acordo com o elemento da magia: arrefecido (frio), eletrificado (eletricidade) ou em chamas (fogo). (Dragão Brasil)",
     },
   ],
 },
@@ -5053,6 +5131,7 @@ export const spells: Spell[] = [
         cost: "+1 PM",
         effect: "(Apenas Devotos de Kallyadranoch) Além do normal, criaturas que falhem nos testes de resistência contra suas habilidades mágicas sofrem uma condição baseada no tipo de dano. Ácido: vulnerável até o fim da cena. Eletricidade: atordoado por 1 rodada (apenas uma vez por cena). Fogo: em chamas e vulnerável enquanto estiver em chamas. Frio: lento até o fim da cena. Requer 2° círculo.",
       },
+      
     ],
   },
   { id: "Posse de Arsenal",
@@ -5324,6 +5403,136 @@ export const spells: Spell[] = [
         effect: "(Apenas Devotos de Tanna-Toh) Além do normal, você recebe +5 em Intuição e em testes de Investigação para interrogar.",
       },
     ],
+  },
+  // Dragão Brasil
+  { id: "Armadura Gélida",
+    name: "Armadura Gélida",
+    type: "Universal",
+    school: "Abjuração",
+    circle: 1,
+    execution: "Padrão",
+    range: "Pessoal",
+    target: "Você",
+    duration: "Cena",
+    resistance: "Reflexos (veja texto)",
+    description: "Esta magia cria uma grossa armadura feita de gelo, protegendo o corpo do usuário, que sofre todos os efeitos de ficar congelado, menos a paralisia. Se ficar em chamas ou sofrer dano de fogo enquanto estiver sob efeito desta magia, o usuário deve fazer um teste de Reflexos (CD 20). Se passar, o efeito da magia se mantém; se falhar, a armadura derrete e você fica arrefecido.",
+    origin: "Dragão Brasil",
+    enhancements: [
+      {
+        cost: "+1 PM",
+        effect: "Muda a execução para reação. Em vez do normal, quando sofre um ataque que causa dano de fogo, você cria um escudo mágico de gelo que fornece RD 10 contra esse ataque (cumulativo com o bônus do efeito básico desta magia e de armaduras).",
+      },
+      {
+        cost: "+2 PM",
+        effect: "Além do normal, a armadura também concede +5 na Defesa. Esse bônus é cumulativo com outras magias, mas não com bônus fornecido por armaduras.",
+      },
+      {
+        cost: "+2 PM",
+        effect: "Muda a duração para um dia.",
+      },
+    ],
+  },
+  { id: "Aura Restauradora",
+    name: "Aura Restauradora",
+    type: "Divina",
+    school: "Evocação",
+    circle: 3,
+    execution: "Padrão",
+    range: "Pessoal",
+    target: "Esfera com 6m de raio",
+    duration: "Sustentada",
+    resistance: "Nenhuma",
+    description: "Você evoca uma aura poderosíssima de energia positiva. Aliados que terminarem seus turnos dentro da aura ficam restaurando e absorvendo até o fim do próximo turno deles (se continuarem dentro da área, continuam sob efeito das condições enquanto a magia durar).",
+    origin: "Dragão Brasil",
+    enhancements: [
+      {
+        cost: "+5 PM",
+        effect: "Inimigos que terminarem seu turno dentro da aura ficam decaídos e sangrando até o fim do próximo turno deles (se continuarem dentro da área, continuam sob efeito das condições enquanto a magia durar).",
+      },
+    ],
+  },
+  { id: "Chuva",
+    name: "Chuva",
+    type: "Divina",
+    school: "Evocação",
+    circle: 1,
+    execution: "Movimento",
+    range: "Curto",
+    target: "Cilindro com 9m de raio e 9m de altura",
+    duration: "Sustentada",
+    resistance: "Nenhuma",
+    description: "Esta magia só pode ser usada em ambientes abertos. A área é coberta por nuvens, que derramam uma chuva fraca. As intempéries climáticas não são fortes o suficiente para causar penalidades, mas deixam todas as criaturas e objetos dentro da área molhados até que gastem uma ação padrão (ou sofram dano de fogo) para se secar.",
+    origin: "Dragão Brasil",
+    enhancements: [
+      {
+        cost: "+2 PM",
+        effect: "A chuva fica ainda mais espessa, causando uma penalidade de –5 em testes de Percepção e em ataques à distância.",
+      },
+    ],
+  },
+  { id: "Necrofogo",
+    name: "Necrofogo",
+    type: "Universal",
+    school: "Evocação",
+    circle: 2,
+    execution: "Padrão",
+    range: "Pessoal",
+    target: "Linha de 15m",
+    duration: "Instantânea",
+    resistance: "Reflexos parcial",
+    description: "Você toca o chão, fazendo-o irromper em chamas profanas. Criaturas na área sofrem 3d6 pontos de dano de fogo e 3d6 pontos de dano de trevas. Alvos que passarem na resistência reduzem o dano à metade; alvos que falharem ficam decaídos e sangrando (se curar da condição decaído também cura a condição sangrando).",
+    origin: "Dragão Brasil",
+    enhancements: [
+      {
+        cost: "+2 PM",
+        effect: "Aumenta o dano de fogo em +1d6 e o dano de trevas em +1d6.",
+      },
+      {
+      cost: "+1 PM",
+      effect: "Muda a resistência para Reflexos (eletricidade, fogo) ou Fortitude (frio) parcial. Se falha, a criatura sofre uma condição de acordo com o elemento da magia: arrefecido (frio), eletrificado (eletricidade) ou em chamas (fogo). (Dragão Brasil)",
+    },
+    ],
+  },
+  { id: "Toque Congelante",
+    name: "Toque Congelante",
+    type: "Arcana",
+    school: "Evocação",
+    circle: 1,
+    execution: "Padrão",
+    range: "Toque",
+    target: "1 criatura",
+    duration: "Instantânea",
+    resistance: "Fortitude parcial",
+    description: "Uma névoa gélida envolve sua mão, causando 2d8+2 pontos de dano de frio. Se passar na resistência, o alvo reduz o dano à metade; se falhar, além de sofrer dano, fica arrefecido. Se estiver molhado, o alvo sofre uma penalidade de –5 no teste de resistência.",
+    origin: "Dragão Brasil",
+    enhancements: [
+      {
+        cost: "+1 PM",
+        effect: "Aumenta o dano em +1d8+1.",
+      },
+      {
+        cost: "+2 PM",
+        effect: "Muda o alcance para pessoal, o alvo para área: esfera com 6m de raio. Você exala uma névoa gélida que afeta todas as criaturas na área.",
+      },
+      {
+      cost: "+1 PM",
+      effect: "Muda a resistência para Reflexos (eletricidade, fogo) ou Fortitude (frio) parcial. Se falha, a criatura sofre uma condição de acordo com o elemento da magia: arrefecido (frio), eletrificado (eletricidade) ou em chamas (fogo). (Dragão Brasil)",
+    },
+    ],
+  },
+  { id: "Ventania Mística",
+    name: "Ventania Mística",
+    type: "Universal",
+    school: "Abjuração",
+    circle: 1,
+    execution: "Padrão",
+    range: "Pessoal",
+    target: "Cilindro com 9m de raio e 9m de altura",
+    duration: "Instantânea",
+    resistance: "Nenhuma",
+    description: "Você conjura ventos fortes repletos de magia, limpando condições das criaturas dentro da área. Criaturas arrefecidas, eletrificadas, em chamas ou molhadas perdem essas condições; criaturas congeladas ficam arrefecidas; criaturas eletrizadas ficam eletrificadas ou molhadas (à escolha do mestre).",
+    origin: "Dragão Brasil",
+    enhancements: [],
   },
 
   

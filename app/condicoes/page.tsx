@@ -5,30 +5,30 @@ import Link from "next/link";
 import { conditions } from "@/data/conditions";
 import { Condition } from "@/types/condition";
 
-// --- 1. Formatação de Texto (Mantida, apenas ajuste de cores para o tema) ---
+// --- 1. Formatação de Texto (Cores atualizadas para o Pergaminho) ---
 const formatTextWithBreaks = (text: string) => {
   const lines = text.split('\n');
 
   return lines.map((line, index) => {
     let formattedLine = line
       // Negrito forte
-      .replace(/\*\*\*(.*?)\*\*\*/g, '<em class="text-red-400 drop-shadow-sm font-serif"><strong>$1</strong></em>')
+      .replace(/\*\*\*(.*?)\*\*\*/g, '<em class="text-red-800 drop-shadow-sm font-serif"><strong>$1</strong></em>')
       // Negrito padrão
-      .replace(/\*\*(.*?)\*\*/g, '<strong class="text-stone-200">$1</strong>')
+      .replace(/\*\*(.*?)\*\*/g, '<strong class="text-amber-950">$1</strong>')
       // Itálico
-      .replace(/\*(.*?)\*/g, '<em class="text-stone-500 font-serif">$1</em>')
+      .replace(/\*(.*?)\*/g, '<em class="text-amber-900/80 font-serif">$1</em>')
       // Listas
-      .replace(/- (.*?)\./g, '<p class="mt-1 ml-2 md:ml-4 text-sm"><span class="font-bold text-amber-700">❖</span> $1.</p>')
+      .replace(/- (.*?)\./g, '<p class="mt-1 ml-2 md:ml-4 text-sm font-medium"><span class="font-bold text-red-800">❖</span> $1.</p>')
       // Citações
-      .replace(/> (.*)/g, '<blockquote class="border-l-4 border-amber-900/50 pl-3 md:pl-4 py-2 my-3 text-sm italic text-stone-400 bg-stone-950/50 rounded-r shadow-inner">$1</blockquote>');
+      .replace(/> (.*)/g, '<blockquote class="border-l-4 border-red-800 pl-3 md:pl-4 py-2 my-3 text-sm italic text-amber-950 font-medium bg-[#e8dac1] rounded-r shadow-sm">$1</blockquote>');
 
     return (
-      <div key={index} dangerouslySetInnerHTML={{ __html: formattedLine }} className="mb-2 last:mb-0 text-sm md:text-base leading-relaxed text-stone-300 font-serif" />
+      <div key={index} dangerouslySetInnerHTML={{ __html: formattedLine }} className="mb-2 last:mb-0 text-sm md:text-base leading-relaxed text-amber-900/90 font-serif font-medium" />
     );
   });
 };
 
-// --- Componente: Modal de Imagem (Mantido) ---
+// --- Componente: Modal de Imagem (Mantido Original) ---
 const ImageModal = ({ src, alt, onClose }: { src: string, alt: string, onClose: () => void }) => {
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
@@ -64,138 +64,181 @@ const ImageModal = ({ src, alt, onClose }: { src: string, alt: string, onClose: 
   );
 };
 
-// --- 2. Card de Condição (Ajustado para o Grid) ---
+// --- 2. Card de Condição (Visual de Pergaminho) ---
 const SpecificWeaponCard = ({ weapon }: { weapon: Condition }) => {
   return (
     <div className="
-      group relative p-6 rounded bg-stone-900 border border-stone-800 
-      hover:border-red-900/50 transition-all duration-300 
-      flex flex-col text-left w-full
-      hover:shadow-[0_4px_20px_rgba(0,0,0,0.6)]
+      group relative p-6 rounded-xl bg-[#d9c8a9] border-2 border-amber-900/30 
+      hover:border-red-800/50 transition-all duration-300 
+      flex flex-col text-left w-full shadow-sm
+      hover:shadow-[0_4px_20px_rgba(69,26,3,0.15)] hover:-translate-y-1
     ">
       
       {/* Cabeçalho do Card */}
-      <div className="mb-3 pb-2 border-b border-stone-800 group-hover:border-red-900/30 transition-colors flex justify-between items-start gap-3">
-        <h3 className="text-xl font-bold text-stone-200 group-hover:text-red-500 transition-colors break-words tracking-wide font-serif">
+      <div className="mb-3 pb-2 border-b-2 border-amber-900/20 group-hover:border-red-800/30 transition-colors flex justify-between items-start gap-3">
+        <h3 className="text-xl font-bold text-amber-950 group-hover:text-red-800 transition-colors break-words tracking-wide font-serif drop-shadow-sm">
           {weapon.name}
         </h3>
       </div>
     
       {/* Descrição */}
-      <div className="text-sm md:text-base pt-1 text-stone-400 flex-grow leading-relaxed font-serif">
+      <div className="pt-1 flex-grow">
         {formatTextWithBreaks(weapon.description)}
       </div>
       
       {/* Rodapé */}
-      <div className="mt-4 pt-3 border-t border-stone-800 flex justify-between items-center w-full">
+      <div className="mt-4 pt-3 border-t-2 border-amber-900/10 flex justify-between items-center w-full">
           {/* Lado Esquerdo: Efeito */}
           <div>
             {weapon.efeito && (
-              <span className="text-[10px] md:text-xs font-bold text-amber-600 bg-stone-950 px-2 py-1 rounded border border-stone-800 uppercase tracking-widest">
+              <span className="text-[10px] md:text-xs font-bold text-red-800 bg-[#fbf5e6] px-2 py-1 rounded border border-amber-900/20 uppercase tracking-widest shadow-sm">
                 {weapon.efeito}
               </span>
             )}
           </div>
 
           {/* Lado Direito: Origem */}
-          <span className="text-xs text-stone-600 italic flex items-center gap-1 font-serif">
-              <span className="text-amber-700">♦</span>
-              Origem: <span className="text-stone-500">{weapon.origin}</span>
+          <span className="text-xs text-amber-900/60 italic flex items-center gap-1 font-serif font-medium">
+              <span className="text-red-800">♦</span>
+              <span className="text-amber-950 font-bold">{weapon.origin}</span>
           </span>
       </div>
 
       {/* Detalhes de Canto */}
-      <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-stone-700 opacity-50 group-hover:border-red-700 group-hover:opacity-100 transition-colors"></div>
-      <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-stone-700 opacity-50 group-hover:border-red-700 group-hover:opacity-100 transition-colors"></div>
+      <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-amber-900/40 opacity-0 group-hover:opacity-100 transition-colors"></div>
+      <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-amber-900/40 opacity-0 group-hover:opacity-100 transition-colors"></div>
     </div>
   );
 };
 
 // --- Página Principal ---
 
-export default function ArmasMagicasPage() { // Mantendo o nome da função conforme seu original
+export default function ArmasMagicasPage() { 
   const [weaponSearch, setWeaponSearch] = useState("");
+  // Estado do acordeão iniciando fechado
+  const [isIntroOpen, setIsIntroOpen] = useState(false); 
 
   const filteredSpecificWeapons = useMemo(() => {
     const term = weaponSearch.toLowerCase();
     
     return conditions.filter(weapon => {
       return weapon.name.toLowerCase().includes(term) ||
+             weapon.origin.toLowerCase().includes(term) ||
              weapon.description.toLowerCase().includes(term);
     })
     .sort((a, b) => a.name.localeCompare(b.name));
   }, [weaponSearch]);
 
   return (
-    <div className="min-h-screen bg-stone-950 text-stone-200 font-serif selection:bg-red-900 selection:text-white relative overflow-x-hidden">
+    <div className="min-h-screen bg-[#f5e6d0] text-amber-950 font-serif selection:bg-amber-800 selection:text-amber-50 relative overflow-x-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#f5e6d0] to-[#e6d5b8]">
       
       {/* Background Effect */}
-      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.8)_100%)]" />
+      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(69,26,3,0.15)_100%)]" />
 
-      {/* Header - IDÊNTICO ÀS OUTRAS PÁGINAS */}
-      <header className="relative z-10 w-full p-6 border-b-2 border-stone-800 bg-stone-950/90 backdrop-blur-md shadow-lg">
-        <div className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4">
-            <Link href="/" className="inline-block group">
-                <h1 className="text-4xl font-bold tracking-wider uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-500 via-red-600 to-red-900 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 0 10px rgba(220, 38, 38, 0.3)' }}>
+      {/* Header Responsivo */}
+      <header className="relative z-10 w-full p-6 border-b-4 border-double border-amber-900/40 bg-[#e6d5b8]/90 backdrop-blur-md shadow-sm mb-8 md:mb-12 sticky top-0">
+        <div className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4 max-w-screen-2xl mx-auto">
+            <Link href="/" className="inline-block group self-start md:self-auto">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-wider uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-700 via-red-800 to-red-950 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 1px 2px rgba(69,26,3,0.1)' }}>
                     a-Tormenta
                 </h1>
             </Link>
-            <div className="flex items-center gap-3 text-sm font-bold tracking-wide uppercase">
-                <Link href="/" className="text-stone-500 hover:text-amber-600 transition-colors">
+            <div className="flex items-center gap-2 flex-wrap text-xs sm:text-sm font-bold tracking-wide uppercase self-end md:self-auto">
+                <Link href="/" className="text-amber-900/60 hover:text-red-700 transition-colors whitespace-nowrap">
                     Início
                 </Link>
-                <span className="text-stone-700">/</span>
-                <span className="text-red-700">Condições</span>
+                <span className="text-amber-900/40">/</span>
+                <span className="text-red-800">Condições</span>
             </div>
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="relative z-10 w-full px-6 py-12"> 
+      <main className="relative z-10 w-full px-4 sm:px-8 md:px-12 pb-12 max-w-screen-xl mx-auto"> 
         
-        {/* Título e Texto - 100% WIDTH */}
-        <div className="mb-12 w-full border-b border-stone-800 pb-8">
-          <h1 className="text-5xl font-bold text-amber-700 mb-6 drop-shadow-sm">
+        {/* Título Principal */}
+        <div className="mb-8 w-full">
+          <h1 className="text-4xl sm:text-5xl font-bold text-red-800 mb-4 drop-shadow-sm font-serif">
             Condições
           </h1>
-          <div className="p-6 rounded bg-stone-900 border border-stone-800 shadow-sm w-full">
-            <p className="text-stone-300 text-lg leading-relaxed">
+        </div>
+
+        {/* Acordeão de Regras */}
+        <div className="mb-12 w-full">
+          <button 
+            onClick={() => setIsIntroOpen(!isIntroOpen)}
+            className="w-full flex items-center justify-between p-6 bg-[#e8dac1] border-2 border-amber-900/30 rounded-t-xl hover:border-amber-700/80 transition-all group shadow-sm"
+          >
+            <div className="flex items-center gap-3">
+              <span className="text-2xl opacity-70">📜</span>
+              <div className="text-left">
+                <h2 className="text-xl font-bold text-amber-950 group-hover:text-red-800 transition-colors font-serif">
+                  Regras de Condições
+                </h2>
+                <p className="text-sm text-amber-900/60 font-serif italic font-bold">
+                  Clique para expandir ou recolher as regras básicas.
+                </p>
+              </div>
+            </div>
+            <span className={`text-amber-900/40 text-2xl transition-transform duration-300 ${isIntroOpen ? 'rotate-180' : ''}`}>
+              ▼
+            </span>
+          </button>
+
+          <div className={`overflow-hidden transition-all duration-500 ease-in-out border-x-2 border-b-2 border-amber-900/30 rounded-b-xl bg-[#fbf5e6] ${isIntroOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0 border-transparent'}`}>
+            <div className="p-8 sm:p-10 space-y-8">
+              <p className="text-amber-950 text-lg font-medium leading-relaxed">
                 Condições com os mesmos efeitos não se acumulam; aplique apenas os mais severos. Por exemplo, um personagem desprevenido e vulnerável sofre –5 na Defesa, não –7. A menos que especificado o contrário, condições terminam no fim da cena. Algumas condições possuem um tipo de efeito (veja em "Regras de Jogo").
-            </p>
+              </p>
+            </div>
           </div>
         </div>
 
-        {/* Busca - ESTILO CAIXA (Igual outras páginas) */}
-        <div className="mb-12 p-6 rounded bg-stone-900 border border-stone-800 shadow-inner w-full">
-            <label className="block text-sm font-bold text-stone-400 mb-3 uppercase tracking-wider">
+        {/* Busca - ESTILO CAIXA */}
+        <div className="mb-12 p-6 rounded-xl bg-[#e8dac1] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] w-full">
+            <label className="block text-sm font-bold text-amber-900/60 mb-3 uppercase tracking-wider font-serif">
                 Buscar Condição
             </label>
             <div className="relative">
                 <input
                 type="text"
-                placeholder="Nome ou descrição..."
+                placeholder="Nome, descrição ou origem..."
                 value={weaponSearch}
                 onChange={(e) => setWeaponSearch(e.target.value)}
-                className="w-full px-5 py-3 bg-stone-950 border border-stone-700 rounded text-stone-200 placeholder-stone-600 focus:outline-none focus:border-red-600 focus:ring-1 focus:ring-red-900 transition-all font-serif"
+                className="w-full px-5 py-3 pr-12 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-lg text-amber-900 placeholder-amber-900/40 focus:outline-none focus:border-red-800 focus:ring-1 focus:ring-red-800 transition-all font-serif shadow-sm"
                 />
-                <div className="absolute right-4 top-1/2 -translate-y-1/2 text-stone-600">
-                    🔍
-                </div>
+                {weaponSearch ? (
+                  <button 
+                    onClick={() => setWeaponSearch("")}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 text-red-800 font-bold hover:scale-110 transition-transform"
+                    title="Limpar busca"
+                  >
+                    ✕
+                  </button>
+                ) : (
+                  <div className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/40">
+                      🔍
+                  </div>
+                )}
             </div>
+            {weaponSearch && (
+              <p className="text-xs font-medium text-amber-900/70 mt-3 italic">
+                Exibindo {filteredSpecificWeapons.length} resultado(s) para "{weaponSearch}".
+              </p>
+            )}
         </div>
 
         {/* Grid/Lista de Condições */}
         <section className="w-full">
           {filteredSpecificWeapons.length > 0 ? (
-            // Grid-cols-1 com gap reduzido para evitar espaçamento excessivo
-            <div className="grid grid-cols-1 gap-4 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
               {filteredSpecificWeapons.map((weapon) => (
                 <SpecificWeaponCard key={weapon.id} weapon={weapon} />
               ))}
             </div>
           ) : (
-            <div className="text-center py-20 border border-dashed border-stone-800 rounded bg-stone-900/30">
-              <p className="text-stone-500 text-lg italic">Nenhuma condição encontrada com "{weaponSearch}".</p>
+            <div className="text-center py-12 text-amber-900/60 font-bold italic border-2 border-dashed border-amber-900/30 rounded-xl font-serif bg-[#e8dac1]/50 mt-8">
+              <p className="text-lg">Nenhuma condição encontrada com "{weaponSearch}".</p>
             </div>
           )}
         </section>
@@ -203,7 +246,7 @@ export default function ArmasMagicasPage() { // Mantendo o nome da função conf
       </main>
 
        {/* Footer */}
-      <footer className="mt-12 py-8 border-t border-stone-900 bg-black text-center text-stone-600 text-sm relative z-10">
+      <footer className="mt-12 py-8 border-t-4 border-double border-amber-900/40 bg-[#2a231d] text-center text-amber-200/40 text-sm relative z-10 font-serif">
         <p>Compêndio Tormenta RPG © 2025 • Feito por um fã para fãs</p>
         <p>Tormenta 20 pertence a Jambo Editora. Todos os direitos são reservados a editora.</p>
       </footer>
