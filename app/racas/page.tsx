@@ -246,7 +246,7 @@ export default function RacasPage() {
               </div>
 
               {/* Descrição */}
-              <div className="mb-10 p-6 bg-[#fffaf0] border border-amber-900/20 rounded shadow-inner relative overflow-hidden">
+              <div className="mb-10 p-6  border border-amber-900/20 rounded shadow-inner relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-1 h-full bg-amber-900/20"></div>
                 <h3 className="text-2xl font-bold text-amber-800 mb-4 flex items-center gap-2">
                 Descrição

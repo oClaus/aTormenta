@@ -8,6 +8,7 @@ import { classes } from "@/data/classes";
 export default function ClassesPage() {
   const [selectedClass, setSelectedClass] = useState<GameClass | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
+  const [isIntroOpen, setIsIntroOpen] = useState(false);
 
   const filteredClasses = classes
     .filter(cls =>
@@ -48,33 +49,117 @@ export default function ClassesPage() {
       {/* Main Content */}
       <main className="relative z-10 w-full px-6 py-12">
         
-        {/* Título e Introdução */}
-        <div className="mb-12 w-full space-y-8 text-lg leading-relaxed">
-            <div>
-                <h2 className="text-4xl font-bold text-amber-800 mb-3 border-b-2 border-amber-900/20 pb-2">Classes</h2>
-                <p className="text-amber-900/80 font-medium">Uma classe é como uma profissão. Ela representa a forma que você escolheu para enfrentar os perigos do mundo e perseguir seus objetivos — com armas, perícias ou magias.</p>
+        {/* Título Principal Solto */}
+        <div className="mb-8 w-full">
+          <h1 className="text-4xl sm:text-5xl font-bold text-red-800 mb-4 drop-shadow-sm font-serif">
+            Classes
+          </h1>
+        </div>
+
+        {/* Acordeão de Introdução/Regras */}
+        <div className="mb-12 w-full">
+          <button 
+            onClick={() => setIsIntroOpen(!isIntroOpen)}
+            className="w-full flex items-center justify-between p-6 bg-[#e8dac1] border-2 border-amber-900/30 rounded-t-xl hover:border-amber-700/80 transition-all group shadow-sm"
+          >
+            <div className="flex items-center gap-3">
+              <span className="text-2xl opacity-70">📜</span>
+              <div className="text-left">
+                <h2 className="text-xl font-bold text-amber-950 group-hover:text-red-800 transition-colors font-serif">
+                  Regras de Classes
+                </h2>
+                <p className="text-sm text-amber-900/60 font-serif italic font-bold">
+                  Clique para expandir ou recolher as regras básicas.
+                </p>
+              </div>
             </div>
-            
-            <div>
-                <h2 className="text-2xl font-bold text-amber-800 mb-3">Escolhendo sua Classe</h2>
-                <p className="text-amber-900/80 font-medium">A classe é a característica mais importante de um personagem e define que papel você terá no grupo de aventureiros. Tormenta20 contém quatorze classes. A tabela a seguir traz um resumo das classes, com uma descrição curta, sugestão de atributo principal, e PV, PM e perícias iniciais.</p>
+            <span className={`text-amber-900/40 text-2xl transition-transform duration-300 ${isIntroOpen ? 'rotate-180' : ''}`}>
+              ▼
+            </span>
+          </button>
+
+          <div className={`overflow-hidden transition-all duration-500 ease-in-out border-x-2 border-b-2 border-amber-900/30 rounded-b-xl bg-[#fbf5e6] ${isIntroOpen ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0 border-transparent'}`}>
+            <div className="p-8 sm:p-10 space-y-8 text-lg leading-relaxed">
+              
+              <div>
+                  <p className="text-amber-950 font-medium">Uma classe é como uma profissão. Ela representa a forma que você escolheu para enfrentar os perigos do mundo e perseguir seus objetivos — com armas, perícias ou magias.</p>
+              </div>
+              
+              <div className="border-t-2 border-amber-900/20 pt-6">
+                  <h2 className="text-2xl font-bold text-red-800 mb-3 font-serif">Escolhendo sua Classe</h2>
+                  <p className="text-amber-900/90 font-medium">A classe é a característica mais importante de um personagem e define que papel você terá no grupo de aventureiros. Tormenta20 contém quatorze classes. A tabela a seguir traz um resumo das classes, com uma descrição curta, sugestão de atributo principal, e PV, PM e perícias iniciais.</p>
+              </div>
+
+              <div className="border-t-2 border-amber-900/20 pt-6">
+                  <h3 className="text-2xl font-bold text-red-800 mb-3 font-serif">Características das Classes</h3>
+                  <p className="text-amber-900/90 font-medium">Sua classe define seus pontos de vida e pontos de mana, quais perícias são treinadas e quais os tipos de armas e armaduras que você sabe usar (além de armas simples e armaduras leves, que todos os personagens sabem usar).</p>
+              </div>
+
+              <div className="border-t-2 border-amber-900/20 pt-6">
+                  <h3 className="text-2xl font-bold text-red-800 mb-3 font-serif">Habilidades e Poderes de Classes</h3>
+                  <p className="text-amber-900/90 font-medium text-justify">Você começa o jogo com todas as habilidades do 1º nível da sua classe. Todas as classes possuem uma habilidade “Poder” (Poder de Arcanista, Poder de Bárbaro, Poder de Bardo...) que permite que você escolha um poder de uma lista. Alguns poderes têm pré-requisitos. Para escolhê-los e usá-los, você deve possuir todos os requerimentos mencionados. Você pode escolher um poder no nível em que atinge seus pré-requisitos. A menos que especificado o contrário, você não pode escolher um mesmo poder mais de uma vez. Você sempre pode substituir um poder de classe por um poder geral. Para outros propósitos, poderes funcionam como habilidades. Poderes que aumentam o custo em PM de uma magia são poderes de aprimoramento.</p>
+              </div>
+
+              <div className="border-t-2 border-amber-900/20 pt-6">
+                  <h3 className="text-2xl font-bold text-red-800 mb-3 font-serif">Subindo de Nível</h3>
+                  <p className="text-amber-900/90 font-medium mb-4 text-justify">Quando acumula XP suficiente você sobe de nível. Quando isso acontece, você ganha três benefícios, seus PV e PM aumentam de acordo com a sua classe. Some sua Constituição aos PV que ganha por nível (mas você sempre ganha pelo menos 1 PV ao subir de nível). Você ganha todas as habilidades do nível alcançado. Consulte a página da sua classe para saber quais. E por fim, seu bônus em perícias é igual à metade do seu nível. Assim, a cada nível par (2º, 4º, 6º etc.) ele aumenta em +1. Isso representa o fato de que heróis experientes se tornam mais capazes. Você usa o número antes da barra para perícias treinadas e o número depois da barra para perícias não treinadas.</p>
+                  <p className="text-red-800 italic font-bold">Mais informações, sobre Patamares e Multiclasses estão no final da página.</p>
+              </div>
+              
+              <div className="border-t-2 border-amber-900/20 pt-6">
+                <h3 className="text-2xl font-bold text-red-800 mb-3 font-serif">Multiclasse</h3>
+                <p className="text-amber-900/90 font-medium mb-4 text-justify">
+                    Quando sobe de nível, você pode escolher outra classe. Essa opção é conhecida como multiclasse e fornece mais versatilidade, em troca de poder bruto. O qareen Zaled Rayeder, um arcanista de 3º nível, encontra um propósito para seus dons mágicos selvagens na ordem de Khalmyr, o Deus da Justiça. Ao subir para o 4º nível, escolhe um nível de paladino, tornando-se um arcanista 3/paladino 1. Zaled terá as habilidades de um arcanista de 3º nível e de um paladino de 1º nível.
+                </p>
+                <div className="space-y-3 pl-4 border-l-4 border-amber-900/30 text-base">
+                    <p> <span className="text-red-700 font-bold"> Pontos de Vida: </span> <span className="text-amber-900/70">Quando você ganha o primeiro nível em uma nova classe, ganha os PV de um nível subsequente, não do primeiro. Zaled ganha 5 PV pelo primeiro nível de paladino, não 20.</span></p>
+                    <p> <span className="text-red-700 font-bold"> Pontos de Mana: </span> <span className="text-amber-900/70">Some os PM fornecidos por cada classe para determinar seu montante total.</span></p>
+                    <p> <span className="text-red-700 font-bold"> Perícias & Proficiências: </span> <span className="text-amber-900/70"> Quando você ganha o primeiro nível em uma nova classe, não ganha as perícias treinadas ou proficiências da nova classe.</span></p>
+                    <p> <span className="text-red-700 font-bold"> Níveis de Classe e de Personagem: </span> <span className="text-amber-900/70"> Nível de classe são níveis numa classe específica. Já seu nível de personagem é a soma dos níveis de todas as suas classes. Zaled é um arcanista de 3º nível, um paladino de 1º nível e um personagem de 4º nível (a soma dos dois).</span></p>
+                </div>
             </div>
 
-            <div>
-                <h3 className="text-2xl font-bold text-amber-800 mb-3">Características das Classes</h3>
-                <p className="text-amber-900/80 font-medium">Sua classe define seus pontos de vida e pontos de mana, quais perícias são treinadas e quais os tipos de armas e armaduras que você sabe usar (além de armas simples e armaduras leves, que todos os personagens sabem usar).</p>
+            <div className="border-t-2 border-amber-900/20 pt-6">
+                <h3 className="text-2xl font-bold text-red-800 mb-3 font-serif">Patamares de Jogo</h3>
+                <p className="text-amber-900/90 font-medium mb-4 text-justify"> As classificações abaixo fornecem uma noção da escala de poder dos personagens e afetam certas habilidades.</p>
+                <div className="space-y-3 text-base">
+                    <p className="p-3 bg-[#fbf5e6] rounded border border-amber-900/20 shadow-sm"><span className="text-amber-950 font-bold">Iniciante (1º ao 4º nível):</span><span className="text-amber-900/70"> Aventureiro novato, envolvido em missões locais, como proteger vilas do ataque de bandidos e escoltar caravanas.</span></p>
+                    <p className="p-3 bg-[#fbf5e6] rounded border border-amber-900/20 shadow-sm"><span className="text-amber-600 font-bold">Veterano (5º ao 10º nível):</span><span className="text-amber-900/70"> Neste patamar, o herói presta serviços importantes a nobres e líderes de guildas.</span></p>
+                    <p className="p-3 bg-[#fbf5e6] rounded border border-amber-900/20 shadow-sm"><span className="text-red-700 font-bold">Campeão (11º ao 16º nível):</span><span className="text-amber-900/70"> Já famoso por suas façanhas, o aventureiro trabalha para monarcas e enfrenta grandes vilões e monstros terríveis.</span></p>
+                    <p className="p-3 bg-[#fbf5e6] rounded border border-purple-900/20 shadow-sm"><span className="text-purple-800 font-bold">Lenda (17º ao 20º nível):</span><span className="text-amber-900/70"> Entre os mais poderosos de Arton, o herói lida com perigos que ameaçam todo o mundo... Ou mesmo toda a realidade!</span></p>
+                </div>
             </div>
 
-            <div>
-                <h3 className="text-2xl font-bold text-amber-800 mb-3">Habilidades e Poderes de Classes</h3>
-                <p className="text-amber-900/80 font-medium text-justify">Você começa o jogo com todas as habilidades do 1º nível da sua classe. Todas as classes possuem uma habilidade “Poder” (Poder de Arcanista, Poder de Bárbaro, Poder de Bardo...) que permite que você escolha um poder de uma lista. Alguns poderes têm pré-requisitos. Para escolhê-los e usá-los, você deve possuir todos os requerimentos mencionados. Você pode escolher um poder no nível em que atinge seus pré-requisitos. A menos que especificado o contrário, você não pode escolher um mesmo poder mais de uma vez. Você sempre pode substituir um poder de classe por um poder geral. Para outros propósitos, poderes funcionam como habilidades. Poderes que aumentam o custo em PM de uma magia são poderes de aprimoramento.</p>
+            <div className="border-t-2 border-amber-900/20 pt-6">
+                <h3 className="text-2xl font-bold text-red-800 mb-3 font-serif">Classes Variantes</h3>
+                <p className="text-amber-900/80 font-medium mb-3 text-justify"> As classes de Tormenta20 são versáteis, típicas e abrangentes. Representam a grande maioria dos aventureiros de Arton — são classes básicas.</p>
+                <p className="text-amber-900/80 font-medium mb-3 text-justify"> Contudo, existem outros tipos de aventureiros. Heróis que se dedicam a um aspecto específico de seu caminho, abrindo mão de conhecimentos, habilidades e poderes genéricos. Suas personalidades não se adaptam ao treinamento “comum”. Eles procuram se concentrar em áreas e tarefas específicas. Adotam classes variantes.</p>
+                <p className="text-amber-900/80 font-medium mb-3 text-justify"> Classes variantes são modificações de suas versões básicas; as características e habilidades descritas aqui substituem as da classe básica (aquelas não listadas não fazem parte da variante). Exceto por isso, a classe variante funciona como sua contraparte básica: usa a mesma lista de poderes e serve para cumprir quaisquer pré-requisitos que exijam a classe básica. Não é possível fazer multiclasse entre uma classe básica e uma de suas variantes — para todos os efeitos, ambas são a mesma classe.</p>
+                <p className="text-amber-900/80 font-medium mb-3 text-justify"> A escolha por uma classe variante deve ser feita na criação do personagem ou ao alcançar o 1º nível da classe. Uma vez feita, não pode ser mudada. Nesta página, serão as classes representadas por "Nome da Classe (Classe Base)"</p>
             </div>
 
-            <div>
-                <h3 className="text-2xl font-bold text-amber-800 mb-3">Subindo de Nível</h3>
-                <p className="text-amber-900/80 font-medium mb-4 text-justify">Quando acumula XP suficiente você sobe de nível. Quando isso acontece, você ganha três benefícios, seus PV e PM aumentam de acordo com a sua classe. Some sua Constituição aos PV que ganha por nível (mas você sempre ganha pelo menos 1 PV ao subir de nível). Você ganha todas as habilidades do nível alcançado. Consulte a página da sua classe para saber quais. E por fim, seu bônus em perícias é igual à metade do seu nível. Assim, a cada nível par (2º, 4º, 6º etc.) ele aumenta em +1. Isso representa o fato de que heróis experientes se tornam mais capazes. Você usa o número antes da barra para perícias treinadas e o número depois da barra para perícias não treinadas.</p>
-                <p className="text-red-800 italic font-bold">Mais informações, sobre Patamares e Multiclasses estão no final da página.</p>
+            <div className="border-t-2 border-amber-900/20 pt-6">
+                <h3 className="text-2xl font-bold text-red-800 mb-3 font-serif">Classes Divinas</h3>
+                <p className="text-amber-900/80 font-medium mb-3 text-justify"> O livro básico Tormenta20 descreve as classes básicas dedicadas aos deuses (clérigo, druida e paladino) em termos gerais. Em Deuses, foi adicionado descrições específicas para personagens dessas classes — e também do novo frade — dedicadas para cada divindade. Esse conteúdo estará como "Regras Especiais & Notas" na página dessas classes.</p>
+                <div className="space-y-3 pl-4 border-l-4 border-amber-900/30 text-base">
+                    <p> <span className="text-red-700 font-bold"> Indumentária: </span> <span className="text-amber-900/70">Vestimenta típica para o devoto. Usar outras vestes não viola as Obrigações & Restrições, mas pode influenciar testes sociais com outros devotos da mesma divindade.</span></p>
+                    <p> <span className="text-red-700 font-bold"> Fundamentalistas: </span> <span className="text-amber-900/70">Enquanto um devoto normal às vezes questiona sua divindade, até mesmo desafiando-a, o fundamentalista é um seguidor extremo de seus ideais, beirando o fanatismo. Ele acredita que outros devotos são infiéis, que sua igreja tem sido liberal e tolerante demais! Não apenas segue as Obrigações & Restrições padrão à risca, mas também adota dogmas muito mais rígidos. A recompensa divina por tamanha lealdade é maior, assim como o castigo por falhar em cumprir essa doutrina severa.</span></p>
+                    <p className="text-amber-900/80 font-medium text-justify"> Um fundamentalista recebe um poder concedido adicional, mas, além das Obrigações & Restrições de sua divindade, deve seguir também seus dogmas. Se violar qualquer deles, perde seus pontos de mana e habilidades de classe divina, só podendo recuperá-los a partir do próximo dia (habilidades são recuperadas após um descanso). Se violar obrigações ou dogmas de novo na mesma aventura, só pode recuperar os PM e habilidades após cumprir uma penitência — que deve ser imposta por outro fundamentalista do mesmo deus. Além disso, fundamentalistas usam apenas a arma favorita de sua divindade. Utilizar qualquer outra arma configura violação de seus dogmas.</p>
+                    <p className="text-amber-900/80 font-medium text-justify"> Note que alguns dogmas fundamentalistas os tornam inviáveis como personagens jogadores, servindo melhor a NPCs.</p>
+                    <p> <span className="text-red-700 font-bold"> Outros Fundamentalistas: </span> <span className="text-amber-900/70">Quase todos os fundamentalistas em Arton são clérigos, druidas, frades e paladinos: essas são as classes mais próximas dos deuses. São os “mais devotos dos devotos”, por assim dizer. Por isso, embora existam devotos de outras classes, fundamentalistas são muitíssimo raros — mas não impossíveis. É o proverbial leigo que “ensina o evangelho ao vigário”, considera os clérigos frouxos e tolerantes, acredita saber mais sobre sua religião que o próprio sumo-sacerdote! Quase todos são simples fanfarrões — mas, algumas vezes, os deuses decidem retribuir seu fervor com milagres reais.</span></p>
+                    <p className="text-amber-900/80 font-medium mb-6 text-justify"> Um devoto fundamentalista que não seja clérigo, druida, frade ou paladino pode escolher seu dogma entre essas classes, conforme a afinidade. Por exemplo, um guerreiro devoto fundamentalista de Azgher pode adotar o dogma do clérigo (atacar e destruir devotos de Tenebra) ou do paladino (idem, e também atacar e destruir necromantes e mortos-vivos). O benefício mecânico é o mesmo (um poder concedido a mais), bem como a punição por violações. Dogmas de paladinos tendem a ser mais rigorosos, mas o jogador pode escolhê-los como desafio de interpretação.</p>
+                </div>
+
+                <h3 className="text-2xl font-bold text-red-800 mb-3 font-serif">“Posso servir a mais de uma divindade?”</h3>
+                <p className="text-amber-900/90 font-medium mb-4 text-justify"> Sim. Mas sem poderes, espertinho! Ser devoto significa lealdade e devoção totais para com uma divindade. Os poderes concedidos são uma forma de recompensa divina para aqueles que concordam em atuar como servos de um deus. Apenas um.</p>
+                <p className="text-amber-900/90 font-medium mb-4 text-justify"> Qualquer personagem pode seguir as Obrigações & Restrições de duas ou mais divindades, simplesmente como demonstração de respeito. No entanto, embora essa atitude tenha alguma chance de atrair simpatia pontual — por parte das próprias divindades ou de seus devotos —, não concede quaisquer poderes concedidos.</p>
+
+                <h3 className="text-2xl font-bold text-red-800 mb-3 font-serif">Nova Regra: Devoção Ampla</h3>
+                <p className="text-amber-900/90 font-medium mb-4 text-justify"> Clérigos e frades do Panteão, druidas de Arton e paladinos do bem não recebem poderes concedidos. Em compensação, por sua devoção ampla, recebem +2 PM por patamar.</p>
             </div>
+
+            </div>
+          </div>
         </div>
 
         {/* Search */}
@@ -142,62 +227,6 @@ export default function ClassesPage() {
             <p className="text-amber-900/60 text-lg italic">Nenhuma classe encontrada nos registros.</p>
           </div>
         )}
-
-        {/* Seção de Informação Extra */}
-        <div className="mt-16 space-y-12 w-full text-lg leading-relaxed p-8 rounded bg-[#e8dac1]/50 border border-amber-900/20 shadow-sm">
-            
-            <div>
-                <h3 className="text-3xl font-bold text-amber-800 mb-4 border-b-2 border-amber-900/10 pb-2">Multiclasse</h3>
-                <p className="text-amber-900/80 font-medium mb-6 text-justify">
-                    Quando sobe de nível, você pode escolher outra classe. Essa opção é conhecida como multiclasse e fornece mais versatilidade, em troca de poder bruto. O qareen Zaled Rayeder, um arcanista de 3º nível, encontra um propósito para seus dons mágicos selvagens na ordem de Khalmyr, o Deus da Justiça. Ao subir para o 4º nível, escolhe um nível de paladino, tornando-se um arcanista 3/paladino 1. Zaled terá as habilidades de um arcanista de 3º nível e de um paladino de 1º nível.
-                </p>
-                <div className="space-y-3 pl-4 border-l-4 border-amber-900/30 text-base">
-                    <p> <span className="text-amber-700 font-bold"> Pontos de Vida: </span> <span className="text-amber-900/70">Quando você ganha o primeiro nível em uma nova classe, ganha os PV de um nível subsequente, não do primeiro. Zaled ganha 5 PV pelo primeiro nível de paladino, não 20.</span></p>
-                    <p> <span className="text-amber-700 font-bold"> Pontos de Mana: </span> <span className="text-amber-900/70">Some os PM fornecidos por cada classe para determinar seu montante total.</span></p>
-                    <p> <span className="text-amber-700 font-bold"> Perícias & Proficiências: </span> <span className="text-amber-900/70"> Quando você ganha o primeiro nível em uma nova classe, não ganha as perícias treinadas ou proficiências da nova classe.</span></p>
-                    <p> <span className="text-amber-700 font-bold"> Níveis de Classe e de Personagem: </span> <span className="text-amber-900/70"> Nível de classe são níveis numa classe específica. Já seu nível de personagem é a soma dos níveis de todas as suas classes. Zaled é um arcanista de 3º nível, um paladino de 1º nível e um personagem de 4º nível (a soma dos dois).</span></p>
-                </div>
-            </div>
-
-            <div>
-                <h3 className="text-3xl font-bold text-amber-800 mb-4 border-b-2 border-amber-900/10 pb-2">Patamares de Jogo</h3>
-                <p className="text-amber-900/80 font-medium mb-6"> As classificações abaixo fornecem uma noção da escala de poder dos personagens e afetam certas habilidades.</p>
-                <div className="space-y-3 text-base">
-                    <p className="p-3 bg-[#fbf5e6] rounded border border-amber-900/20 shadow-sm"><span className="text-amber-950 font-bold">Iniciante (1º ao 4º nível):</span><span className="text-amber-900/70"> Aventureiro novato, envolvido em missões locais, como proteger vilas do ataque de bandidos e escoltar caravanas.</span></p>
-                    <p className="p-3 bg-[#fbf5e6] rounded border border-amber-900/20 shadow-sm"><span className="text-amber-600 font-bold">Veterano (5º ao 10º nível):</span><span className="text-amber-900/70"> Neste patamar, o herói presta serviços importantes a nobres e líderes de guildas.</span></p>
-                    <p className="p-3 bg-[#fbf5e6] rounded border border-amber-900/20 shadow-sm"><span className="text-red-700 font-bold">Campeão (11º ao 16º nível):</span><span className="text-amber-900/70"> Já famoso por suas façanhas, o aventureiro trabalha para monarcas e enfrenta grandes vilões e monstros terríveis.</span></p>
-                    <p className="p-3 bg-[#fbf5e6] rounded border border-purple-900/20 shadow-sm"><span className="text-purple-800 font-bold">Lenda (17º ao 20º nível):</span><span className="text-amber-900/70"> Entre os mais poderosos de Arton, o herói lida com perigos que ameaçam todo o mundo... Ou mesmo toda a realidade!</span></p>
-                </div>
-            </div>
-
-            <div>
-                <h3 className="text-3xl font-bold text-amber-800 mb-4 border-b-2 border-amber-900/10 pb-2">Classes Variantes</h3>
-                <p className="text-amber-900/80 font-medium mb-6 text-justify"> As classes de Tormenta20 são versáteis, típicas e abrangentes. Representam a grande maioria dos aventureiros de Arton — são classes básicas.</p>
-                <p className="text-amber-900/80 font-medium mb-6 text-justify"> Contudo, existem outros tipos de aventureiros. Heróis que se dedicam a um aspecto específico de seu caminho, abrindo mão de conhecimentos, habilidades e poderes genéricos. Suas personalidades não se adaptam ao treinamento “comum”. Eles procuram se concentrar em áreas e tarefas específicas. Adotam classes variantes.</p>
-                <p className="text-amber-900/80 font-medium mb-6 text-justify"> Classes variantes são modificações de suas versões básicas; as características e habilidades descritas aqui substituem as da classe básica (aquelas não listadas não fazem parte da variante). Exceto por isso, a classe variante funciona como sua contraparte básica: usa a mesma lista de poderes e serve para cumprir quaisquer pré-requisitos que exijam a classe básica. Não é possível fazer multiclasse entre uma classe básica e uma de suas variantes — para todos os efeitos, ambas são a mesma classe.</p>
-                <p className="text-amber-900/80 font-medium mb-6 text-justify"> A escolha por uma classe variante deve ser feita na criação do personagem ou ao alcançar o 1º nível da classe. Uma vez feita, não pode ser mudada. Nesta página, serão as classes representadas por "Nome da Classe (Classe Base)"</p>
-            </div>
-
-            <div>
-                <h3 className="text-3xl font-bold text-amber-800 mb-4 border-b-2 border-amber-900/10 pb-2">Classes Divinas</h3>
-                <p className="text-amber-900/80 font-medium mb-6 text-justify"> O livro básico Tormenta20 descreve as classes básicas dedicadas aos deuses (clérigo, druida e paladino) em termos gerais. Em Deuses, foi adicionado descrições específicas para personagens dessas classes — e também do novo frade — dedicadas para cada divindade. Esse conteúdo estará como "Regras Especiais & Notas" na página dessas classes.</p>
-                <div className="space-y-3 pl-4 border-l-4 border-amber-900/30 text-base">
-                    <p> <span className="text-amber-700 font-bold"> Indumentária: </span> <span className="text-amber-900/70">Vestimenta típica para o devoto. Usar outras vestes não viola as Obrigações & Restrições, mas pode influenciar testes sociais com outros devotos da mesma divindade.</span></p>
-                    <p> <span className="text-amber-700 font-bold"> Fundamentalistas: </span> <span className="text-amber-900/70">Enquanto um devoto normal às vezes questiona sua divindade, até mesmo desafiando-a, o fundamentalista é um seguidor extremo de seus ideais, beirando o fanatismo. Ele acredita que outros devotos são infiéis, que sua igreja tem sido liberal e tolerante demais! Não apenas segue as Obrigações & Restrições padrão à risca, mas também adota dogmas muito mais rígidos. A recompensa divina por tamanha lealdade é maior, assim como o castigo por falhar em cumprir essa doutrina severa.</span></p>
-                    <p className="text-amber-900/80 font-medium mb-6 text-justify"> Um fundamentalista recebe um poder concedido adicional, mas, além das Obrigações & Restrições de sua divindade, deve seguir também seus dogmas. Se violar qualquer deles, perde seus pontos de mana e habilidades de classe divina, só podendo recuperá-los a partir do próximo dia (habilidades são recuperadas após um descanso). Se violar obrigações ou dogmas de novo na mesma aventura, só pode recuperar os PM e habilidades após cumprir uma penitência — que deve ser imposta por outro fundamentalista do mesmo deus. Além disso, fundamentalistas usam apenas a arma favorita de sua divindade. Utilizar qualquer outra arma configura violação de seus dogmas.</p>
-                    <p className="text-amber-900/80 font-medium mb-6 text-justify"> Note que alguns dogmas fundamentalistas os tornam inviáveis como personagens jogadores, servindo melhor a NPCs.</p>
-                    <p> <span className="text-amber-700 font-bold"> Outros Fundamentalistas: </span> <span className="text-amber-900/70">Quase todos os fundamentalistas em Arton são clérigos, druidas, frades e paladinos: essas são as classes mais próximas dos deuses. São os “mais devotos dos devotos”, por assim dizer. Por isso, embora existam devotos de outras classes, fundamentalistas são muitíssimo raros — mas não impossíveis. É o proverbial leigo que “ensina o evangelho ao vigário”, considera os clérigos frouxos e tolerantes, acredita saber mais sobre sua religião que o próprio sumo-sacerdote! Quase todos são simples fanfarrões — mas, algumas vezes, os deuses decidem retribuir seu fervor com milagres reais.</span></p>
-                    <p className="text-amber-900/80 font-medium mb-6 text-justify"> Um devoto fundamentalista que não seja clérigo, druida, frade ou paladino pode escolher seu dogma entre essas classes, conforme a afinidade. Por exemplo, um guerreiro devoto fundamentalista de Azgher pode adotar o dogma do clérigo (atacar e destruir devotos de Tenebra) ou do paladino (idem, e também atacar e destruir necromantes e mortos-vivos). O benefício mecânico é o mesmo (um poder concedido a mais), bem como a punição por violações. Dogmas de paladinos tendem a ser mais rigorosos, mas o jogador pode escolhê-los como desafio de interpretação.</p>
-                </div>
-
-                <h3 className="text-2xl font-bold text-amber-800 mb-4 border-b-2 border-amber-900/10 pb-2">“Posso servir a mais de uma divindade?”</h3>
-                <p className="text-amber-900/80 font-medium mb-6 text-justify"> Sim. Mas sem poderes, espertinho! Ser devoto significa lealdade e devoção totais para com uma divindade. Os poderes concedidos são uma forma de recompensa divina para aqueles que concordam em atuar como servos de um deus. Apenas um.</p>
-                <p className="text-amber-900/80 font-medium mb-6 text-justify"> Qualquer personagem pode seguir as Obrigações & Restrições de duas ou mais divindades, simplesmente como demonstração de respeito. No entanto, embora essa atitude tenha alguma chance de atrair simpatia pontual — por parte das próprias divindades ou de seus devotos —, não concede quaisquer poderes concedidos.</p>
-
-                <h3 className="text-2xl font-bold text-amber-800 mb-4 border-b-2 border-amber-900/10 pb-2">Nova Regra: Devoção Ampla</h3>
-                <p className="text-amber-900/80 font-medium mb-6 text-justify"> Clérigos e frades do Panteão, druidas de Arton e paladinos do bem não recebem poderes concedidos. Em compensação, por sua devoção ampla, recebem +2 PM por patamar.</p>
-            </div>
-        </div>
       </main>
 
       {/* Modal de Detalhes */}
@@ -232,7 +261,7 @@ export default function ClassesPage() {
               </div>
 
               {/* Descrição */}
-              <div className="mb-10 p-6 bg-[#fffaf0] border border-amber-900/20 rounded shadow-inner relative overflow-hidden">
+              <div className="mb-10 p-6 border border-amber-900/20 rounded shadow-inner relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-1 h-full bg-amber-900/20"></div>
                 <p className="text-amber-900/90 font-medium leading-relaxed whitespace-pre-line text-lg first-letter:text-5xl first-letter:font-bold first-letter:text-red-800 first-letter:mr-2 first-letter:float-left text-justify">
                   {selectedClass.description}
@@ -264,8 +293,8 @@ export default function ClassesPage() {
                   </div>
                   <div className="p-5 rounded bg-[#e8dac1] border border-amber-900/20 text-center shadow-md">
                     <p className="text-amber-900/60 text-xs font-bold uppercase tracking-wider mb-2">PV por Nível</p>
-                    <p className="text-red-700 text-4xl font-bold">
-                      +{selectedClass.characteristics.pvPerLevel}
+                    <p className="text-red-700 text-4xl font-bold flex items-center justify-center gap-1">
+                      {selectedClass.characteristics.pvPerLevel}
                     </p>
                     <p className="text-amber-900/50 text-xs mt-1">+ Mod. Constituição</p>
                   </div>

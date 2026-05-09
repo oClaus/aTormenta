@@ -1,6 +1,22 @@
 import { Race } from "@/types/race";
 
 export const races: Race[] = [
+  // Tormenta20 - Jogo do Ano
+  { id: "Humano",
+    name: "Humano",
+    origin: "tormenta20 - jogo do ano",
+    image: "/racas/humano.png",
+    description: "Humanos são como uma praga: espalham-se por todo o mundo de Arton. \n Não interessa onde você olhe ou por onde passe. Nas Montanhas Sanguinárias, nas ilhas do Mar do Dragão-Rei, em alguma masmorra debaixo da terra, sempre haverá algum humano se metendo onde não deve, procurando alguma coisa. Não é à toa que são maioria. \n Aos quinze anos já se consideram adultos, andando por aí, sacudindo espadas e lançando feitiços malucos. \n Dizem que a culpa é de Valkaria. A deusa, que passou gerações presa em forma de estátua, hoje lidera todas as divindades e alimenta a ambição daqueles que chama de filhos. Faz com que queiram cada vez mais, não importa o que já tenham conseguido. Com exemplos como o arquimago Vectorius, que arrancou um pedaço enorme do chão para transformar em ilha voadora só por causa de uma aposta, ou Mestre Arsenal, que enfrentou o próprio Deus da Guerra para tomar seu lugar, é difícil convencê-los de que isso pode ser errado. Talvez nem seja. \n Humanos podem ter qualquer porte físico, cor de pele ou tipo de cabelo. São tão variados quanto suas ambições, tão diversos quanto as ideias que têm a cada instante. Suas tradições e modas vêm e vão rápido demais e eles fazem o que bem entendem. E embora a deusa criadora seja sua principal padroeira, humanos podem ser devotos de quais e quantos deuses desejarem. \n Ser humano é ter a liberdade e a conveniência de se tornar o que quiser, mesmo sem nem sempre compreender as responsabilidades que isso carrega. É ter o instinto aventureiro correndo no sangue. \n — Broktar Hellpipes, anão bardo \n\n O povo mais numeroso em Arton, humanos são considerados os escolhidos dos deuses, aqueles que governam o mundo. Em sua variedade e adaptabilidade, são encontrados em quase todos os pontos do continente — dos vales férteis do Reinado às vastidões áridas do Deserto da Perdição. São exploradores e desbravadores ambiciosos, sempre buscando algo além.",
+    abilities: [
+      {
+      name: "Versátil",
+      description: "Você se torna treinado em duas perícias à sua escolha (não precisam ser da sua classe). Você pode trocar uma dessas perícias por um poder geral à sua escolha.",
+    },
+    ],
+    attributeModifiers: [
+      { description: "Escolha +1 em três atributos diferentes" }
+    ]
+  },
   { id: "Anão",
     name: "Anão",
     origin: "Tormenta20 - Jogo do Ano",
@@ -31,100 +47,6 @@ export const races: Race[] = [
       { attribute: "des", modifier: -1 }
     ]
   },
-  { id: "Elfo",
-    name: "Elfo",
-    origin: "tormenta20 - jogo do ano",
-    image: "/racas/elfo.png",
-    description: "Os elfos vieram de longe há muito tempo, em embarcações trazidas — dizem — por ventos divinos. São belos e esguios, de cabelos e olhos de cores tão variadas quanto o arco-íris. Suas vestes costumam ser intrincadas e fluidas como seus movimentos. Nada neles parece comum, rasteiro. É difícil não se sentir impressionado ou inspirado ao lado de uma presença élfica. Há sempre algo de mágico nos elfos. \n Um dia eles tiveram sua própria pátria, Lenórienn, no continente sul. Uma cidade majestosa, de torres espiraladas surgidas em meio à floresta, onde a magia e as artes eram ensinadas desde cedo. Onde tomos ancestrais ocupavam longas estantes e a poesia tomava os ares com suas rimas e melodias. \n Mas o conhecimento trouxe a arrogância, e a arrogância, a derrota. Lenórienn caiu, vítima da Aliança Negra dos goblinoides, um exército implacável. Depois, por conta de um estratagema de Glórienn, antiga Deusa dos Elfos, os membros da raça que não ficaram espalhados pelo Reinado foram escravizados pelos minotauros. O que sobrou foi um povo mergulhado em amargor, apoiado nas glórias de um passado destruído. \n Agora, porém, eles encaram uma chance de redenção. Com a morte de Tauron e livres dos desígnios de uma divindade mesquinha, os elfos do Reinado têm pela primeira vez um futuro em branco à frente. E ainda estão tentando descobrir o que fazer com ele. Enquanto uns buscam recuperar os conhecimentos perdidos de seu antigo reino, outros se misturam a ordens de cavalaria ou guildas de ladrões, usando seus talentos naturais para traçar seu próprio caminho, abraçando os deuses que melhor lhes convêm. \n “Das maiores tragédias nascem os maiores aventureiros”, diz um ditado que circula nas tavernas de Malpetrim. Parece algo feito sob medida para os elfos de Arton. \n — Garibaldo Cachimbo Caído, *hynne* bardo \n\n Elfos são seres feitos para a beleza e para a guerra, tão habilidosos com magia quanto com espadas e arcos. Elegantes, astutos, de vidas quase eternas, parecem superiores aos humanos em tudo. Poderiam ter governado toda Arton, não fosse a arrogância herdada de sua deusa. Com a queda de Glórienn, os elfos se tornaram um povo sem uma deusa. Um povo independente. Enquanto alguns veem a falta de uma divindade como uma tragédia, outros acreditam que, pela primeira vez na história, são livres.",
-    abilities: [
-      {
-      name: "Graça de Glórienn",
-      description: "Seu deslocamento é 12m (em vez de 9m).",
-    },
-    {
-      name: "Sangue Mágico",
-      description: "Você recebe +1 ponto de mana por nível.",
-    },
-    {
-      name: "Sentidos Élficos",
-      description: "Você recebe visão na penumbra e +2 em Misticismo e Percepção.",
-    },
-    ],
-    attributeModifiers: [
-      { attribute: "des", modifier: 1 },
-      { attribute: "int", modifier: 2 },
-      { attribute: "con", modifier: -1 }
-    ]
-  },
-  { id: "Humano",
-    name: "Humano",
-    origin: "tormenta20 - jogo do ano",
-    image: "/racas/humano.png",
-    description: "Humanos são como uma praga: espalham-se por todo o mundo de Arton. \n Não interessa onde você olhe ou por onde passe. Nas Montanhas Sanguinárias, nas ilhas do Mar do Dragão-Rei, em alguma masmorra debaixo da terra, sempre haverá algum humano se metendo onde não deve, procurando alguma coisa. Não é à toa que são maioria. \n Aos quinze anos já se consideram adultos, andando por aí, sacudindo espadas e lançando feitiços malucos. \n Dizem que a culpa é de Valkaria. A deusa, que passou gerações presa em forma de estátua, hoje lidera todas as divindades e alimenta a ambição daqueles que chama de filhos. Faz com que queiram cada vez mais, não importa o que já tenham conseguido. Com exemplos como o arquimago Vectorius, que arrancou um pedaço enorme do chão para transformar em ilha voadora só por causa de uma aposta, ou Mestre Arsenal, que enfrentou o próprio Deus da Guerra para tomar seu lugar, é difícil convencê-los de que isso pode ser errado. Talvez nem seja. \n Humanos podem ter qualquer porte físico, cor de pele ou tipo de cabelo. São tão variados quanto suas ambições, tão diversos quanto as ideias que têm a cada instante. Suas tradições e modas vêm e vão rápido demais e eles fazem o que bem entendem. E embora a deusa criadora seja sua principal padroeira, humanos podem ser devotos de quais e quantos deuses desejarem. \n Ser humano é ter a liberdade e a conveniência de se tornar o que quiser, mesmo sem nem sempre compreender as responsabilidades que isso carrega. É ter o instinto aventureiro correndo no sangue. \n — Broktar Hellpipes, anão bardo \n\n O povo mais numeroso em Arton, humanos são considerados os escolhidos dos deuses, aqueles que governam o mundo. Em sua variedade e adaptabilidade, são encontrados em quase todos os pontos do continente — dos vales férteis do Reinado às vastidões áridas do Deserto da Perdição. São exploradores e desbravadores ambiciosos, sempre buscando algo além.",
-    abilities: [
-      {
-      name: "Versátil",
-      description: "Você se torna treinado em duas perícias à sua escolha (não precisam ser da sua classe). Você pode trocar uma dessas perícias por um poder geral à sua escolha.",
-    },
-    ],
-    attributeModifiers: [
-      { description: "Escolha +1 em três atributos diferentes" }
-    ]
-  },
-  { id: "Qunari",
-    name: "Qunari Ω",
-    origin: "Dragão Brasil - Dragon Age",
-    image: "/racas/qunari.png",
-    description: "Acredita-se que os Qunari vieram de além do mar, até pelo fato de costumarem ser os melhores navegadores de Thedas. Estabelecidos principalmente em Par Vollen e Seheron, os Qunari costumam ser vistos com suspeita pelo resto de Thedas. \n A cultura Qunari é muito fechada e existe variação nas nomenclaturas que são bem importantes. Apesar de existir a raça Qunari, você só é considerado um Qunari se seguir o Qun*, caso contrário é chamado de Tal-Vashoth, um termo para alguém que nasceu no Qun, mas o abandonou. Esse termo é considerado uma desonra. E alguém de outra raça que entre para o qun pode passar a ser chamado de qunari também. \n O Qun é o que rege a sociedade dos qunari, um conjunto de regras para manter a sociedade deles funcionando. Laços familiares não são tão fortes, e os qunari não são chamados pelos seus nomes normalmente, e sim pelo seu título. Por exemplo, o nome de Sten, em Dragon Age: Origins, é a função dele, mas nós tratamos como nome. Iron Bull, de Dragon Age: Inquisition, é uma exceção. O mais importante para o qunari é realizar a sua função e eles são regidos por três governantes, cada um responsável por uma área: Arishok (líder militar), Arigena (líder dos artesãos e trabalhadores braçais) e Ariqun (líder espiritual).",
-    abilities: [
-      {
-      name: "Estatura Intimidadora",
-      description: "Qunari podem usar Força em vez de Carisma para testes de Intimidação.",
-    },
-    {
-      name: "Disciplina Militar",
-      description: "A forte disciplina militar que permeia a cultura qunari concede +2 em Iniciativa e Guerra.",
-    },
-    {
-      name: "Lógica do Qun",
-      description: "Repressão da individualidade e foco cultural no autocontrole dão aos qunari +2 em Vontade e Guerra.",
-    }
-    ],
-    attributeModifiers: [
-      { attribute: "for", modifier: 2 },
-      { attribute: "con", modifier: 1 },
-      { attribute: "int", modifier: -1 }
-    ]
-  },
-  { id: "Danim",
-    name: "Danim",
-    origin: "Dragão Brasil",
-    image: "/racas/danim.png",
-    description: "Os danins (singular danim) são um povo humanoide de três olhos nativo das Montanhas Sanguinárias. Pequenos e com mentes inquisitivas, conseguiram escapar dos grandes predadores que povoam a área e estabelecer uma cidade única nas Montanhas Sanguinárias. \n Nesse refúgio da civilização no meio da selvageria, desenvolveram artes arcanas e alquímicas, vivendo uma existência confortável e reclusa. \n Essa paz durou séculos, com ardis mágicos ajudando os danins a evitar os monstros ao redor. Entretanto, um certo dia, o olhar tenebroso de Megalokk, o Deus dos Monstros, caiu sobre a cidade deste povo. Descobrindo essa chaga chamada civilização em seu solo sagrado, no berço das suas criações mais queridas, o deus bestial vomitou uma maldição sobre os danins. \n Uma praga vegetal assolou a cidade, com vinhas grossas e mortíferas surgindo por entre os prédios, raízes espinhentas brotando no meio de ruas pavimentadas, plantas carnívoras devorando os incautos. Essa maldição verde destruiu completamente sua sociedade, pulverizando o trabalho de séculos em uma questão de dias. Mas a mera ruína não era castigo suficiente para aquele atrevimento, não aos olhos de Megalokk. Os danins foram transformados, cada um deles, sem nenhuma exceção, em monstros. A mesma massa vegetal que destruiu sua cidade passou a cobrir seus corpos, tornando-os criaturas muito maiores e mais assustadoras. Essa substância amaldiçoada carrega consigo o toque monstruoso de Megalokk, tornando-os violentos e brutos, quase desprovidos de consciência. E seu destino seria vagar pelas Sanguinárias, matando e morrendo, como tantos outros habitantes desse local brutal. \n Porém, por algum motivo, os danins receberam uma segunda chance. Talvez seja apenas descaso de Megalokk, talvez algum outro deus tenha se afeiçoado pelos pequeninos. Mas a maldição enfraquece conforme um danim envelhece. A matéria vegetal começa a apodrecer e morrer, dando lugar ao povo original, o povo pacífico e recluso que ousou desafiar o Deus dos Monstros. Esse processo leva quase um século, terminando com apenas alguns resquícios de matéria vegetal no corpo — raízes, vinhas e folhas, por cima e por baixo da pele. \n Os danins que escapam da maldição pela idade precisam fugir dos mais jovens, que os odeiam instintivamente. Tentam fazer sua marca no mundo, especialmente através das artes arcanas, para sentir algum propósito em uma vida tão trágica, em décadas perdidas na mais insossa violência sem sentido. Poucos sequer imaginam, porém, que ao morrer seu ciclo se reinicia. Poucos dias após a morte de um danim ancião, ele renasce como um danim jovem e pleno, colocando toda uma região em perigo e frequentemente eliminando tudo aquilo que o danim ancião conseguiu construir nos poucos anos de vida que lhe restavam.",
-    abilities: [
-      {
-      name: "Natureza Mística",
-      description: "Você recebe resistência a efeitos mentais e de metabolismo +2 e +1 PM por nível.",
-    },
-    {
-      name: "Pequeno e Apressado",
-      description: "Seu tamanho é Pequeno e seu deslocamento é 6m. Você recebe +2 em Iniciativa, mas sofre –2 em Diplomacia, por falar muito rápido.",
-    },
-    {
-      name: "Visão Tripla",
-      description: "Você recebe visão no escuro e +2 em Percepção. Além disso, pode lançar Visão Mística. Caso aprenda novamente essa magia, seu custo diminui em –1 PM.",
-    },
-    {
-      name: "Intimidação Natural",
-      description: "Recebe +2 em testes de Intimidação",
-    },
-    ],
-    attributeModifiers: [
-      { description: "Sabedoria +2, Escolha +1 em um atributo(Exceto Força)" }
-    ],
-    longevidade: "Normal.",
-    devotos: "Tanna-Toh, Thyatis, Wynna.",
-  },
   { id: "Dahllan",
     name: "Dahllan",
     origin: "Tormenta20 - jogo do ano",
@@ -148,6 +70,31 @@ export const races: Race[] = [
       { attribute: "sab", modifier: 2 },
       { attribute: "des", modifier: 1 },
       { attribute: "int", modifier: -1 }
+    ]
+  },
+  { id: "Elfo",
+    name: "Elfo",
+    origin: "tormenta20 - jogo do ano",
+    image: "/racas/elfo.png",
+    description: "Os elfos vieram de longe há muito tempo, em embarcações trazidas — dizem — por ventos divinos. São belos e esguios, de cabelos e olhos de cores tão variadas quanto o arco-íris. Suas vestes costumam ser intrincadas e fluidas como seus movimentos. Nada neles parece comum, rasteiro. É difícil não se sentir impressionado ou inspirado ao lado de uma presença élfica. Há sempre algo de mágico nos elfos. \n Um dia eles tiveram sua própria pátria, Lenórienn, no continente sul. Uma cidade majestosa, de torres espiraladas surgidas em meio à floresta, onde a magia e as artes eram ensinadas desde cedo. Onde tomos ancestrais ocupavam longas estantes e a poesia tomava os ares com suas rimas e melodias. \n Mas o conhecimento trouxe a arrogância, e a arrogância, a derrota. Lenórienn caiu, vítima da Aliança Negra dos goblinoides, um exército implacável. Depois, por conta de um estratagema de Glórienn, antiga Deusa dos Elfos, os membros da raça que não ficaram espalhados pelo Reinado foram escravizados pelos minotauros. O que sobrou foi um povo mergulhado em amargor, apoiado nas glórias de um passado destruído. \n Agora, porém, eles encaram uma chance de redenção. Com a morte de Tauron e livres dos desígnios de uma divindade mesquinha, os elfos do Reinado têm pela primeira vez um futuro em branco à frente. E ainda estão tentando descobrir o que fazer com ele. Enquanto uns buscam recuperar os conhecimentos perdidos de seu antigo reino, outros se misturam a ordens de cavalaria ou guildas de ladrões, usando seus talentos naturais para traçar seu próprio caminho, abraçando os deuses que melhor lhes convêm. \n “Das maiores tragédias nascem os maiores aventureiros”, diz um ditado que circula nas tavernas de Malpetrim. Parece algo feito sob medida para os elfos de Arton. \n — Garibaldo Cachimbo Caído, *hynne* bardo \n\n Elfos são seres feitos para a beleza e para a guerra, tão habilidosos com magia quanto com espadas e arcos. Elegantes, astutos, de vidas quase eternas, parecem superiores aos humanos em tudo. Poderiam ter governado toda Arton, não fosse a arrogância herdada de sua deusa. Com a queda de Glórienn, os elfos se tornaram um povo sem uma deusa. Um povo independente. Enquanto alguns veem a falta de uma divindade como uma tragédia, outros acreditam que, pela primeira vez na história, são livres.",
+    abilities: [
+      {
+      name: "Graça de Glórienn",
+      description: "Seu deslocamento é 12m (em vez de 9m).",
+    },
+    {
+      name: "Sangue Mágico",
+      description: "Você recebe +1 ponto de mana por nível.",
+    },
+    {
+      name: "Sentidos Élficos",
+      description: "Você recebe visão na penumbra e +2 em Misticismo e Percepção.",
+    },
+    ],
+    attributeModifiers: [
+      { attribute: "des", modifier: 1 },
+      { attribute: "int", modifier: 2 },
+      { attribute: "con", modifier: -1 }
     ]
   },
   { id: "Goblin",
@@ -433,7 +380,7 @@ export const races: Race[] = [
     attributeModifiers: [
       { attribute: "car", modifier: 2 },
       { attribute: "des", modifier: 1 },
-      { attribute: "for", modifier: -1 }
+      { attribute: "for", modifier: -2 }
     ]
   },
   { id: "Suraggel",
@@ -583,6 +530,106 @@ export const races: Race[] = [
       { attribute: "int", modifier: -1 }
     ]
   },
+
+  // Dragão Brasil
+  { id: "Vampiro",
+    name: "Vampiro",
+    origin: "Dragão Brasil",
+    image: "/racas/vampiro.png",
+    description: "Vampiros são considerados monstros terríveis, predadores que espreitam à noite em busca do sangue de outras pessoas. E, embora essa descrição possa se aplicar à maioria dos vampiros, a verdade é que nem todos aqueles que sofrem a maldição do vampirismo sucumbem aos seus instintos ferais. Alguns, de fato, lutam contra sua nova natureza, apegando-se à sua humanidade e buscando uma existência o mais próximo possível de sua vida anterior. \n Personagens vampiros são indivíduos que foram transformados no início de suas carreiras ou que, por alguma razão, perderam suas memórias como parte de sua transformação. Alguns buscam uma vida de aventuras como forma de compensar os pecados causados por sua fome, ou como um caminho para dominar sua fera interior ou mesmo encontrar uma cura para sua condição. \n\n Tornando-se um Vampiro \n As regras para personagens vampiros assumem a criação de um vampiro jovem, em início de carreira. Entretanto, mesmo aventureiros veteranos podem ser transformados em vampiros — geralmente como resultado de um embate mal-sucedido contra uma dessas criaturas mais poderosas. \n Para transformar um personagem já existente em um vampiro, troque todas as características raciais do personagem (incluindo modificadores de atributos) pelas características de vampiro. Se o personagem não for humano, escolha uma das habilidades de sua raça original (aprovada pelo mestre) para sua habilidade Resquícios da Outra Vida. Por fim, para cada patamar do personagem, você pode substituir um de seus poderes de classe por um poder de Bênção Vampírica. Ao substituir esses poderes, tenha em mente poderes que são pré-requisitos de outros poderes do personagem. Você deve continuar cumprindo quaisquer pré-requisitos dos poderes restantes.",
+    abilities: [
+      {
+      name: "Bênçãos Vampíricas",
+      description: "Escolha um dos poderes na página da Classe. Você pode escolher outros desses poderes no lugar de poderes de classe quando subir de nível(Somente 1 vez por patamar).",
+    },
+    {
+      name: "Resquícios da Outra Vida",
+      description: "Você se torna treinado em uma perícia (não precisa ser da sua classe) ou recebe um poder geral a sua escolha. Como alternativa, você pode ser um vampiro de outra raça humanoide ou monstro que não humano. Neste caso, você ganha uma habilidade dessa raça a sua escolha (e aprovada pelo mestre). Se a raça era de tamanho diferente de Médio, você também possui sua categoria de tamanho.",
+    },
+    {
+      name: "Natureza Não Viva",
+      description: "Você é uma criatura do tipo morto-vivo. Recebe visão no escuro e imunidade a efeitos de cansaço, metabólicos, de trevas e de veneno. Além disso, não precisa respirar, alimentar-se ou dormir. Por fim, efeitos mágicos de cura de luz causam dano a você e você não se beneficia de itens da categoria alimentação, mas dano de trevas recupera seus PV.",
+    },
+    {
+      name: "Perda da Humanidade",
+      description: "Conforme seus poderes vampíricos crescem, sua humanidade vai sucumbindo à monstruosidade em seu interior. Você possui as fraquezas vampíricas descritas a seguir, que se tornam mais severas conforme você recebe novas bênçãos vampíricas.",
+    },
+    {
+      name: "Chamado das Trevas",
+      description: "Você precisa repousar por oito horas dentro da terra (no subterrâneo, em uma cova ou totalmente coberto de terra). Se fizer isso, recupera PV e PM por descanso em condições normais (vampiros não são afetados por condições boas ou ruins de descanso). Caso contrário, sofre uma penalidade em perícias de –1 por bênção vampírica que possuir. Essa penalidade desaparece após repousar na terra.",
+    },
+    {
+      name: "Sede de Sangue",
+      description: "Você precisa consumir pelo menos uma dose de sangue por semana (veja Dieta de Sangue na página de poderes). Se não fizer isso, sofre os efeitos de fome. Para cada bênção vampírica que possuir além da primeira, o intervalo entre suas refeições de sangue diminui em um dia (até um mínimo de uma dose por dia).",
+    },
+    {
+      name: "Sensibilidade ao Sol",
+      description: "Quando exposto à luz solar direta, você fica ofuscado e, a cada rodada, perde 1d6 PV por bênção vampírica que possuir.",
+    }
+    ],
+    attributeModifiers: [
+      { attribute: "car", modifier: 1 },
+      { attribute: "con", modifier: -1 },
+      { description: "Escolha +1 em dois atributos diferentes (exceto Constituição)" },
+    ],
+  },
+  
+  
+  
+  { id: "Qunari",
+    name: "Qunari Ω",
+    origin: "Dragão Brasil - Dragon Age",
+    image: "/racas/qunari.png",
+    description: "Acredita-se que os Qunari vieram de além do mar, até pelo fato de costumarem ser os melhores navegadores de Thedas. Estabelecidos principalmente em Par Vollen e Seheron, os Qunari costumam ser vistos com suspeita pelo resto de Thedas. \n A cultura Qunari é muito fechada e existe variação nas nomenclaturas que são bem importantes. Apesar de existir a raça Qunari, você só é considerado um Qunari se seguir o Qun*, caso contrário é chamado de Tal-Vashoth, um termo para alguém que nasceu no Qun, mas o abandonou. Esse termo é considerado uma desonra. E alguém de outra raça que entre para o qun pode passar a ser chamado de qunari também. \n O Qun é o que rege a sociedade dos qunari, um conjunto de regras para manter a sociedade deles funcionando. Laços familiares não são tão fortes, e os qunari não são chamados pelos seus nomes normalmente, e sim pelo seu título. Por exemplo, o nome de Sten, em Dragon Age: Origins, é a função dele, mas nós tratamos como nome. Iron Bull, de Dragon Age: Inquisition, é uma exceção. O mais importante para o qunari é realizar a sua função e eles são regidos por três governantes, cada um responsável por uma área: Arishok (líder militar), Arigena (líder dos artesãos e trabalhadores braçais) e Ariqun (líder espiritual).",
+    abilities: [
+      {
+      name: "Estatura Intimidadora",
+      description: "Qunari podem usar Força em vez de Carisma para testes de Intimidação.",
+    },
+    {
+      name: "Disciplina Militar",
+      description: "A forte disciplina militar que permeia a cultura qunari concede +2 em Iniciativa e Guerra.",
+    },
+    {
+      name: "Lógica do Qun",
+      description: "Repressão da individualidade e foco cultural no autocontrole dão aos qunari +2 em Vontade e Guerra.",
+    }
+    ],
+    attributeModifiers: [
+      { attribute: "for", modifier: 2 },
+      { attribute: "con", modifier: 1 },
+      { attribute: "int", modifier: -1 }
+    ]
+  },
+  { id: "Danim",
+    name: "Danim",
+    origin: "Dragão Brasil",
+    image: "/racas/danim.png",
+    description: "Os danins (singular danim) são um povo humanoide de três olhos nativo das Montanhas Sanguinárias. Pequenos e com mentes inquisitivas, conseguiram escapar dos grandes predadores que povoam a área e estabelecer uma cidade única nas Montanhas Sanguinárias. \n Nesse refúgio da civilização no meio da selvageria, desenvolveram artes arcanas e alquímicas, vivendo uma existência confortável e reclusa. \n Essa paz durou séculos, com ardis mágicos ajudando os danins a evitar os monstros ao redor. Entretanto, um certo dia, o olhar tenebroso de Megalokk, o Deus dos Monstros, caiu sobre a cidade deste povo. Descobrindo essa chaga chamada civilização em seu solo sagrado, no berço das suas criações mais queridas, o deus bestial vomitou uma maldição sobre os danins. \n Uma praga vegetal assolou a cidade, com vinhas grossas e mortíferas surgindo por entre os prédios, raízes espinhentas brotando no meio de ruas pavimentadas, plantas carnívoras devorando os incautos. Essa maldição verde destruiu completamente sua sociedade, pulverizando o trabalho de séculos em uma questão de dias. Mas a mera ruína não era castigo suficiente para aquele atrevimento, não aos olhos de Megalokk. Os danins foram transformados, cada um deles, sem nenhuma exceção, em monstros. A mesma massa vegetal que destruiu sua cidade passou a cobrir seus corpos, tornando-os criaturas muito maiores e mais assustadoras. Essa substância amaldiçoada carrega consigo o toque monstruoso de Megalokk, tornando-os violentos e brutos, quase desprovidos de consciência. E seu destino seria vagar pelas Sanguinárias, matando e morrendo, como tantos outros habitantes desse local brutal. \n Porém, por algum motivo, os danins receberam uma segunda chance. Talvez seja apenas descaso de Megalokk, talvez algum outro deus tenha se afeiçoado pelos pequeninos. Mas a maldição enfraquece conforme um danim envelhece. A matéria vegetal começa a apodrecer e morrer, dando lugar ao povo original, o povo pacífico e recluso que ousou desafiar o Deus dos Monstros. Esse processo leva quase um século, terminando com apenas alguns resquícios de matéria vegetal no corpo — raízes, vinhas e folhas, por cima e por baixo da pele. \n Os danins que escapam da maldição pela idade precisam fugir dos mais jovens, que os odeiam instintivamente. Tentam fazer sua marca no mundo, especialmente através das artes arcanas, para sentir algum propósito em uma vida tão trágica, em décadas perdidas na mais insossa violência sem sentido. Poucos sequer imaginam, porém, que ao morrer seu ciclo se reinicia. Poucos dias após a morte de um danim ancião, ele renasce como um danim jovem e pleno, colocando toda uma região em perigo e frequentemente eliminando tudo aquilo que o danim ancião conseguiu construir nos poucos anos de vida que lhe restavam.",
+    abilities: [
+      {
+      name: "Natureza Mística",
+      description: "Você recebe resistência a efeitos mentais e de metabolismo +2 e +1 PM por nível.",
+    },
+    {
+      name: "Pequeno e Apressado",
+      description: "Seu tamanho é Pequeno e seu deslocamento é 6m. Você recebe +2 em Iniciativa, mas sofre –2 em Diplomacia, por falar muito rápido.",
+    },
+    {
+      name: "Visão Tripla",
+      description: "Você recebe visão no escuro e +2 em Percepção. Além disso, pode lançar Visão Mística. Caso aprenda novamente essa magia, seu custo diminui em –1 PM.",
+    },
+    {
+      name: "Intimidação Natural",
+      description: "Recebe +2 em testes de Intimidação",
+    },
+    ],
+    attributeModifiers: [
+      { description: "Sabedoria +2, Escolha +1 em um atributo(Exceto Força)" }
+    ],
+    longevidade: "Normal.",
+    devotos: "Tanna-Toh, Thyatis, Wynna.",
+  },
   { id: "Jotunn",
     name: "Jotunn Ω",
     origin: "Dragão Brasil - God of War Ragnarok",
@@ -712,47 +759,7 @@ export const races: Race[] = [
       { attribute: "car", modifier: -1 }
     ]
   },
-  { id: "Vampiro",
-    name: "Vampiro",
-    origin: "Dragão Brasil",
-    image: "/racas/vampiro.png",
-    description: "Vampiros são considerados monstros terríveis, predadores que espreitam à noite em busca do sangue de outras pessoas. E, embora essa descrição possa se aplicar à maioria dos vampiros, a verdade é que nem todos aqueles que sofrem a maldição do vampirismo sucumbem aos seus instintos ferais. Alguns, de fato, lutam contra sua nova natureza, apegando-se à sua humanidade e buscando uma existência o mais próximo possível de sua vida anterior. \n Personagens vampiros são indivíduos que foram transformados no início de suas carreiras ou que, por alguma razão, perderam suas memórias como parte de sua transformação. Alguns buscam uma vida de aventuras como forma de compensar os pecados causados por sua fome, ou como um caminho para dominar sua fera interior ou mesmo encontrar uma cura para sua condição. \n\n Tornando-se um Vampiro \n As regras para personagens vampiros assumem a criação de um vampiro jovem, em início de carreira. Entretanto, mesmo aventureiros veteranos podem ser transformados em vampiros — geralmente como resultado de um embate mal-sucedido contra uma dessas criaturas mais poderosas. \n Para transformar um personagem já existente em um vampiro, troque todas as características raciais do personagem (incluindo modificadores de atributos) pelas características de vampiro. Se o personagem não for humano, escolha uma das habilidades de sua raça original (aprovada pelo mestre) para sua habilidade Resquícios da Outra Vida. Por fim, para cada patamar do personagem, você pode substituir um de seus poderes de classe por um poder de Bênção Vampírica. Ao substituir esses poderes, tenha em mente poderes que são pré-requisitos de outros poderes do personagem. Você deve continuar cumprindo quaisquer pré-requisitos dos poderes restantes.",
-    abilities: [
-      {
-      name: "Bênçãos Vampíricas",
-      description: "Escolha um dos poderes na página da Classe. Você pode escolher outros desses poderes no lugar de poderes de classe quando subir de nível(Somente 1 vez por patamar).",
-    },
-    {
-      name: "Resquícios da Outra Vida",
-      description: "Você se torna treinado em uma perícia (não precisa ser da sua classe) ou recebe um poder geral a sua escolha. Como alternativa, você pode ser um vampiro de outra raça humanoide ou monstro que não humano. Neste caso, você ganha uma habilidade dessa raça a sua escolha (e aprovada pelo mestre). Se a raça era de tamanho diferente de Médio, você também possui sua categoria de tamanho.",
-    },
-    {
-      name: "Natureza Não Viva",
-      description: "Você é uma criatura do tipo morto-vivo. Recebe visão no escuro e imunidade a efeitos de cansaço, metabólicos, de trevas e de veneno. Além disso, não precisa respirar, alimentar-se ou dormir. Por fim, efeitos mágicos de cura de luz causam dano a você e você não se beneficia de itens da categoria alimentação, mas dano de trevas recupera seus PV.",
-    },
-    {
-      name: "Perda da Humanidade",
-      description: "Conforme seus poderes vampíricos crescem, sua humanidade vai sucumbindo à monstruosidade em seu interior. Você possui as fraquezas vampíricas descritas a seguir, que se tornam mais severas conforme você recebe novas bênçãos vampíricas.",
-    },
-    {
-      name: "Chamado das Trevas",
-      description: "Você precisa repousar por oito horas dentro da terra (no subterrâneo, em uma cova ou totalmente coberto de terra). Se fizer isso, recupera PV e PM por descanso em condições normais (vampiros não são afetados por condições boas ou ruins de descanso). Caso contrário, sofre uma penalidade em perícias de –1 por bênção vampírica que possuir. Essa penalidade desaparece após repousar na terra.",
-    },
-    {
-      name: "Sede de Sangue",
-      description: "Você precisa consumir pelo menos uma dose de sangue por semana (veja Dieta de Sangue na página de poderes). Se não fizer isso, sofre os efeitos de fome. Para cada bênção vampírica que possuir além da primeira, o intervalo entre suas refeições de sangue diminui em um dia (até um mínimo de uma dose por dia).",
-    },
-    {
-      name: "Sensibilidade ao Sol",
-      description: "Quando exposto à luz solar direta, você fica ofuscado e, a cada rodada, perde 1d6 PV por bênção vampírica que possuir.",
-    }
-    ],
-    attributeModifiers: [
-      { attribute: "car", modifier: 1 },
-      { attribute: "con", modifier: -1 },
-      { description: "Escolha +1 em dois atributos diferentes (exceto Constituição)" },
-    ],
-  },
+  
   { id: "Naidora",
     name: "Naidora",
     origin: "Dragão Brasil",
