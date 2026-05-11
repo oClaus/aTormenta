@@ -1,6 +1,7 @@
 import { Power } from "@/types/power";
 
 export const powersLadino: Power[] = [
+  // Tormenta20 - Jogo do Ano
   { id: "Assassinar",
     name: "Assassinar",
     description: "Você pode gastar uma ação de movimento e 3 PM para analisar uma criatura em alcance curto. Até o fim de seu próximo turno, seu primeiro Ataque Furtivo que causar dano a ela tem seus dados de dano extras dessa habilidade dobrados",
@@ -10,13 +11,11 @@ export const powersLadino: Power[] = [
   { id: "Aumento de Atributo",
     name: "Aumento de Atributo",
     description: "Você recebe +1 em um atributo. Você pode escolher este poder várias vezes, mas apenas uma vez por patamar para um mesmo atributo.",
-    prerequisite: "Nenhum",
     origin: "tormenta20 - jogo do ano"
   },
   { id: "Contatos no Submundo",
     name: "Contatos no Submundo",
     description: "Quando chega em uma comunidade equivalente a uma vila ou maior, você pode gastar 2 PM para fazer um teste de Carisma (CD 10). Se passar, enquanto estiver nessa comunidade, recebe +5 em testes de Investigação para interrogar, pode comprar itens mundanos, poções e pergaminhos com 20% de desconto (não cumulativo com barganha e outros descontos) e, de acordo com o mestre, tem acesso a itens e serviços proibidos (como armas de pólvora e venenos).",
-    prerequisite: "Nenhum",
     origin: "tormenta20 - jogo do ano"
   },
   { id: "Emboscar",
@@ -28,7 +27,6 @@ export const powersLadino: Power[] = [
   { id: "Escapista",
     name: "Escapista",
     description: "Você recebe +5 em testes de Acrobacia para escapar, passar por espaço apertado e passar por inimigo e em testes para resistir a efeitos de movimento.",
-    prerequisite: "Nenhum",
     origin: "tormenta20 - jogo do ano"
   },
   { id: "Fuga Formidável",
@@ -40,7 +38,6 @@ export const powersLadino: Power[] = [
   { id: "Gatuno",
     name: "Gatuno",
     description: "Você recebe +2 em Atletismo. Quando escala, não fica desprevenido e avança seu deslocamento normal, em vez de metade dele.",
-    prerequisite: "Nenhum",
     origin: "tormenta20 - jogo do ano"
   },
   { id: "Ladrão Arcano",
@@ -88,7 +85,6 @@ export const powersLadino: Power[] = [
   { id: "Saqueador de Tumbas",
     name: "Saqueador de Tumbas",
     description: "Você recebe +5 em testes de Investigação para encontrar armadilhas e em testes de resistência contra elas. Além disso, gasta uma ação padrão para desabilitar mecanismos, em vez de 1d4 rodadas (veja a perícia Ladinagem).",
-    prerequisite: "Nenhum",
     origin: "tormenta20 - jogo do ano"
   },
   { id: "Sombra",
@@ -121,6 +117,8 @@ export const powersLadino: Power[] = [
     prerequisite: "treinado em Ofício (alquimista).",
     origin: "tormenta20 - jogo do ano"
   },
+
+  
   { id: "Ameaça Brutal",
     name: "Ameaça Brutal",
     description: "Se fizer um teste de Intimidação para assustar uma criatura na qual tenha causado dano desde a última rodada, você recebe +5 no teste e ela fica apavorada se você passar por 5 ou mais (em vez de 10 ou mais).",

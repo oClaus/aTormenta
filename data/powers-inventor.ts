@@ -1,6 +1,7 @@
 import { Power } from "@/types/power";
 
 export const powersInventor: Power[] = [
+  // Tormenta20 - Jogo do Ano
   { id: "Agite Antes de Usar",
     name: "Agite Antes de Usar",
     description: "Quando usa um preparado alquímico que cause dano, você pode gastar uma quantidade de PM à sua escolha (limitado por sua Inteligência). Para cada PM que gastar, o item causa um dado extra de dano do mesmo tipo.",
@@ -40,7 +41,6 @@ export const powersInventor: Power[] = [
   { id: "Aumento de Atributo",
     name: "Aumento de Atributo",
     description: "Você recebe +1 em um atributo. Você pode escolher este poder várias vezes, mas apenas uma vez por patamar para um mesmo atributo.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Autômato",
@@ -136,7 +136,6 @@ export const powersInventor: Power[] = [
   { id: "Maestria em Perícia",
     name: "Maestria em Perícia",
     description: "Escolha um número de perícias treinadas igual à sua Inteligência, exceto bônus temporários. Com essas perícias, você pode gastar 1 PM para escolher 10 em qualquer situação, exceto testes de ataque.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Manutenção Eficiente",
@@ -181,6 +180,8 @@ export const powersInventor: Power[] = [
     prerequisite: "Alquimista Iniciado.",
     origin: "Tormenta20 - Jogo do Ano"
   },
+
+  
   { id: "Alquimista Exímio",
     name: "Alquimista Exímio",
     description: "Quando você usa um preparado alquímico ou uma poção, a CD para resistir a ele aumenta em +2 e, se ele causar dano ou recuperar PV ou PM, esse efeito aumenta em +1 por dado. ",

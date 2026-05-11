@@ -1,6 +1,7 @@
 import { Power } from "@/types/power";
 
 export const powersBarbaro: Power[] = [
+  // Tormenta20 - Jogo do Ano
   { id: "Alma de Bronze",
     name: "Alma de Bronze ",
     description: "Quando entra em fúria, você recebe uma quantidade de pontos de vida temporários igual a seu nível + sua Força.",
@@ -15,25 +16,21 @@ export const powersBarbaro: Power[] = [
   { id: "Frenesi",
     name: "Frenesi",
     description: "Uma vez por rodada, se estiver em fúria e usar a ação agredir para fazer um ataque corpo a corpo ou com uma arma de arremesso, você pode gastar 2 PM para fazer um ataque adicional.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Ímpeto",
     name: "Ímpeto",
     description: "Você pode gastar 1 PM para aumentar seu deslocamento em +6m por uma rodada.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Sangue dos Inimigos",
     name: "Sangue dos Inimigos",
     description: "Enquanto está em fúria, quando faz um acerto crítico ou reduz um inimigo a 0 PV, você recebe um bônus cumulativo de +1 em testes de ataque e rolagens de dano, limitado pelo seu nível, até o fim da cena.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Aumento de Atributo",
     name: "Aumento de Atributo",
     description: "Você recebe +1 em um atributo. Você pode escolher este poder várias vezes, mas apenas uma vez por patamar para um mesmo atributo.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Espírito Inquebrável",
@@ -45,37 +42,32 @@ export const powersBarbaro: Power[] = [
   { id: "Fúria da Savana",
     name: "Fúria da Savana",
     description: "Seu deslocamento aumenta em +3m. Quando usa Fúria, você aplica o bônus em ataque e dano também a armas de arremesso.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Investida Imprudente",
     name: "Investida Imprudente",
     description: "Quando faz uma investida, você pode aumentar sua penalidade na Defesa pela investida para –5 para receber um bônus de +1d12 na rolagem de dano deste ataque.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Superstição",
     name: "Superstição",
     description: "Você odeia magia, o que faz com que seja mais resistente a ela. Você recebe resistência a magia +5.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Brado Assustador",
     name: "Brado Assustador",
-    description: "Você pode gastar uma ação de movimento e 1 PM para soltar um berro feroz. Todos os inimigos em alcance curto ficam vulneráveis até o fim da cena.",
-    prerequisite: "Treinado em Intimidação. Medo.",
+    description: "Você pode gastar uma ação de movimento e 1 PM para soltar um berro feroz. Todos os inimigos em alcance curto ficam vulneráveis até o fim da cena.  Medo.",
+    prerequisite: "Treinado em Intimidação.",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Esquiva Sobrenatural",
     name: "Esquiva Sobrenatural",
     description: "Seus instintos são tão apurados que você consegue reagir ao perigo antes que seus sentidos o percebam. Você nunca fica surpreendido.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Fúria Raivosa",
     name: "Fúria Raivosa",
     description: "Se sua Fúria for terminar por você não ter atacado nem sido alvo de um efeito hostil, você pode pagar 1 PM para continuar em fúria nesta rodada. Se você atacar ou for atacado na rodada seguinte, sua fúria continua normalmente.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Pele de Aço",
@@ -86,7 +78,7 @@ export const powersBarbaro: Power[] = [
   },
   { id: "Totem Espiritual",
     name: "Totem Espiritual",
-    description: "Você soma sua Sabedoria no seu total de pontos de mana. Escolha um animal totêmico (veja descrição ao fim da página). Você aprende e pode lançar uma magia definida pelo animal escolhido (atributo-chave Sabedoria) e pode lançá-la mesmo em fúria.",
+    description: "Você soma sua Sabedoria no seu total de pontos de mana. Escolha um animal totêmico (veja descrição no início da página). Você aprende e pode lançar uma magia definida pelo animal escolhido (atributo-chave Sabedoria) e pode lançá-la mesmo em fúria.",
     prerequisite: "Sab 1, 4º nível de bárbaro",
     origin: "Tormenta20 - Jogo do Ano"
   },
@@ -99,27 +91,25 @@ export const powersBarbaro: Power[] = [
   { id: "Força Indomável",
     name: "Força Indomável",
     description: "Você pode gastar 1 PM para somar seu nível em um teste de Força ou Atletismo. Você pode usar esta habilidade depois de rolar o dado, mas deve usá-la antes de o mestre dizer se você passou ou não.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Golpe Poderoso",
     name: "Golpe Poderoso ",
     description: "Ao acertar um ataque corpo a corpo ou com uma arma de arremesso, você pode gastar 1 PM para causar um dado extra de dano do mesmo tipo (por exemplo, com um montante, causa +1d6, para um dano total de 3d6; com um machado de guerra, causa +1d12, para um dano total de 2d12).",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Pele de Ferro",
     name: "Pele de Ferro ",
     description: "Você recebe +4 na Defesa, mas apenas se não estiver usando armadura pesada.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Vigor Primal",
     name: "Vigor Primal",
     description: "Você pode gastar uma ação de movimento e uma quantidade de PM limitada por sua Constituição. Para cada PM que gastar, você recupera 1d12 pontos de vida.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
+
+
   { id: "Alma Inabalável",
     name: "Alma Inabalável",
     description: "Quando faz um teste de resistência, você pode gastar 1 PM para substituir a perícia normal por Intimidação. Se você passar no teste e a fonte do efeito for uma criatura, ela fica abalada por 1d4 rodadas (Vontade CD igual ao resultado do teste de Intimidação evita). ",

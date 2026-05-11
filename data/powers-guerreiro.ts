@@ -1,6 +1,7 @@
 import { Power } from "@/types/power";
 
 export const powersGuerreiro: Power[] = [
+  // Tormenta20 - Jogo do Ano
   { id: "Ambidestria",
     name: "Ambidestria",
     description: "Se estiver empunhando duas armas (e pelo menos uma delas for leve) e fizer a ação agredir, você pode fazer dois ataques, um com cada arma. Se fizer isso, sofre –2 em todos os testes de ataque até o seu próximo turno.",
@@ -22,13 +23,11 @@ export const powersGuerreiro: Power[] = [
   { id: "Aumento de Atributo",
     name: "Aumento de Atributo",
     description: "Você recebe +1 em um atributo. Você pode escolher este poder várias vezes, mas apenas uma vez por patamar para um mesmo atributo.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Bater e Correr",
     name: "Bater e Correr",
     description: "Quando faz uma investida, você pode continuar se movendo após o ataque, até o limite de seu deslocamento. Se gastar 2 PM, pode fazer uma investida sobre terreno difícil e sem sofrer a penalidade de Defesa.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Destruidor",
@@ -46,7 +45,6 @@ export const powersGuerreiro: Power[] = [
   { id: "Especialização em Arma",
     name: "Especialização em Arma",
     description: "Escolha uma arma. Você recebe +2 em rolagens de dano com essa arma. Você pode escolher este poder outras vezes para armas diferentes.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Especialização em Armadura",
@@ -58,13 +56,11 @@ export const powersGuerreiro: Power[] = [
   { id: "Golpe de Raspão",
     name: "Golpe de Raspão",
     description: "Uma vez por rodada, quando erra um ataque, você pode gastar 2 PM. Se fizer isso, causa metade do dano que causaria (ignorando efeitos que se aplicariam caso o ataque acertasse).",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Golpe Demolidor",
     name: "Golpe Demolidor",
     description: "Quando usa a manobra quebrar ou ataca um objeto, você pode gastar 2 PM para ignorar a redução de dano dele.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Golpe Pessoal",
@@ -76,7 +72,6 @@ export const powersGuerreiro: Power[] = [
   { id: "Ímpeto",
     name: "Ímpeto",
     description: "Você pode gastar 1 PM para aumentar seu deslocamento em +6m por uma rodada.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Mestre em Arma",
@@ -94,13 +89,11 @@ export const powersGuerreiro: Power[] = [
   { id: "Romper Resistências",
     name: "Romper Resistências",
     description: "Quando faz um Ataque Especial, você pode gastar 1 PM adicional para ignorar 10 pontos de redução de dano.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Solidez",
     name: "Solidez",
     description: "Se estiver usando um escudo, você aplica o bônus na Defesa recebido pelo escudo em testes de resistência.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Tornado de Dor",
@@ -112,9 +105,10 @@ export const powersGuerreiro: Power[] = [
   { id: "Valentão",
     name: "Valentão",
     description: "Você recebe +2 em testes de ataque e rolagens de dano contra oponentes caídos, desprevenidos, flanqueados ou indefesos.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
+
+  
   { id: "Análise Tática",
     name: "Análise Tática",
     description: "Você recebe +2 em Guerra e pode fazer testes dessa perícia para identificar criatura contra humanoides. ",

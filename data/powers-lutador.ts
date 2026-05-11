@@ -1,28 +1,25 @@
 import { Power } from "@/types/power";
 
 export const powersLutador: Power[] = [
+  // Tormenta20 - Jogo do Ano
   { id: "Arma Improvisada",
     name: "Arma Improvisada",
     description: "Para você, atacar com armas improvisadas conta como fazer um ataque desarmado, mas seu dano aumenta em um passo. Você pode gastar uma ação de movimento para procurar uma pedra, cadeira, garrafa ou qualquer coisa que possa usar como arma. Faça um teste de Percepção (CD 20). Se você passar, encontra uma arma improvisada. Armas improvisadas são frágeis; se você errar um ataque e o resultado do d20 for um número ímpar, a arma quebra.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Até Acertar",
     name: "Até Acertar",
     description: "Se você errar um ataque desarmado, recebe um bônus cumulativo de +2 em testes de ataque e rolagens de dano desarmado contra o mesmo oponente. Os bônus terminam quando você acertar um ataque ou no fim da cena, o que acontecer primeiro.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Aumento de Atributo",
     name: "Aumento de Atributo",
     description: "Você recebe +1 em um atributo. Você pode escolher este poder várias vezes, mas apenas uma vez por patamar para um mesmo atributo.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Braços Calejados",
     name: "Braços Calejados",
     description: "Se você não estiver usando armadura, soma sua Força na Defesa, limitado pelo seu nível.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Chave",
@@ -34,7 +31,6 @@ export const powersLutador: Power[] = [
   { id: "Cabeçada",
     name: "Cabeçada",
     description: "Quando faz um ataque desarmado, você pode gastar 2 PM. Se fizer isso, o oponente fica desprevenido contra este ataque. Você só pode usar este poder uma vez por cena contra um mesmo alvo.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Confiança dos Ringues",
@@ -46,19 +42,16 @@ export const powersLutador: Power[] = [
   { id: "Convencido",
     name: "Convencido",
     description: "Acostumado a contar apenas com seus músculos, você adquiriu certo desdém por artes mais sofisticadas. Você recebe resistência a medo e mental +5.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Golpe Baixo",
     name: "Golpe Baixo",
     description: "Quando faz um ataque desarmado, você pode gastar 2 PM. Se fizer isso e acertar o ataque, o oponente deve fazer um teste de Fortitude (CD For). Se ele falhar, fica atordoado por uma rodada (apenas uma vez por cena).",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Golpe Imprudente",
     name: "Golpe Imprudente",
     description: "Quando usa Golpe Relâmpago, você pode atacar de forma impulsiva. Se fizer isso, seus ataques desarmados recebem um dado de dano extra do mesmo tipo (por exemplo, se o seu dano é 2d6, você causa 3d6), mas você sofre –5 na Defesa até o início de seu próximo turno.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Imobilização",
@@ -76,7 +69,6 @@ export const powersLutador: Power[] = [
   { id: "Lutador de Chão",
     name: "Lutador de Chão",
     description: "Você recebe +2 em testes de ataque para agarrar e derrubar. Quando agarra uma criatura, pode gastar 1 PM para fazer uma manobra derrubar contra ela como uma ação livre.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Nome na Arena",
@@ -94,7 +86,6 @@ export const powersLutador: Power[] = [
   { id: "Rasteira",
     name: "Rasteira",
     description: "Quando faz um ataque desarmado contra uma criatura até uma categoria de tamanho maior que a sua, você pode gastar 2 PM. Se fizer isso e acertar o ataque, a criatura fica caída.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Sarado",
@@ -130,15 +121,15 @@ export const powersLutador: Power[] = [
   { id: "Valentão",
     name: "Valentão",
     description: "Você recebe +2 em testes de ataque e rolagens de dano contra oponentes caídos, desprevenidos, flanqueados ou indefesos.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Voadora",
     name: "Voadora",
     description: "Quando faz uma investida desarmada, você pode gastar 2 PM. Se fizer isso, recebe +1d6 no dano para cada 3m que se deslocar até chegar ao oponente, limitado pelo seu nível.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
+
+  
   { id: "Aquecimento",
     name: "Aquecimento",
     description: "Em seu primeiro turno de um combate, você pode gastar uma ação completa para aquecer seus músculos. Você soma sua Constituição em seus testes de ataque desarmado (limitada pelo seu nível) e recebe uma quantidade de PV temporários igual a sua Constituição + seu nível. Ambos os bônus duram até o fim da cena.",

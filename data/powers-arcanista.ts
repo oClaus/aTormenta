@@ -1,16 +1,15 @@
 import { Power } from "@/types/power";
 
 export const powersArcanista: Power[] = [
+  // Tormenta20 - Jogo do Ano
   { id: "Arcano de Batalha",
     name: "Arcano de Batalha",
     description: "Quando lança uma magia, você soma seu atributo-chave na rolagem de dano.",
-    prerequisite: "Nenhum",
     origin: "tormenta20 - jogo do ano"
   },
   { id: "Aumento de Atributo",
     name: "Aumento de Atributo",
     description: "Você recebe +1 em um atributo. Você pode escolher este poder várias vezes, mas apenas uma vez por patamar para um mesmo atributo.",
-    prerequisite: "Nenhum",
     origin: "tormenta20 - jogo do ano"
   },
   { id: "Fluxo de Mana",
@@ -52,7 +51,6 @@ export const powersArcanista: Power[] = [
   { id: "Conhecimento Mágico",
     name: "Conhecimento Mágico",
     description: "Você aprende duas magias de qualquer círculo que possa lançar. Você pode escolher este poder quantas vezes quiser.",
-    prerequisite: "Nenhum",
     origin: "Tormenta20 - jogo do ano"
   },
   { id: "Fortalecimento Arcano",
@@ -70,7 +68,6 @@ export const powersArcanista: Power[] = [
   { id: "Poder Mágico",
     name: "Poder Mágico",
     description: "Você recebe +1 ponto de mana por nível de arcanista. Quando sobe de nível, os PM. Por exemplo, se escolher este poder no 4º nível, recebe 4 PM. Quando subir para o 5º nível, recebe +1 PM e assim por diante.",
-    prerequisite: "Nenhum",
     origin: "Tormenta20 - jogo do ano"
   },
   { id: "Raio Elemental",
@@ -88,7 +85,6 @@ export const powersArcanista: Power[] = [
   { id: "Envolto em Mistério",
     name: "Envolto em Mistério",
     description: "Sua aparência e postura assombrosas o permitem manipular e assustar pessoas ignorantes ou supersticiosas. O mestre define o que exatamente você pode fazer e quem se encaixa nessa descrição. Como regra geral, você recebe +5 em Enganação e Intimidação contra pessoas não treinadas em Conhecimento ou Misticismo.",
-    prerequisite: "Nenhum",
     origin: "Tormenta20 - jogo do ano"
   },
   { id: "Herança Aprimorada",
@@ -100,13 +96,11 @@ export const powersArcanista: Power[] = [
   { id: "Magia Pungente",
     name: "Magia Pungente",
     description: "Quando lança uma magia, você pode pagar 1 PM para aumentar em +2 a CD para resistir a ela.",
-    prerequisite: "Nenhum.",
     origin: "Tormenta20 - jogo do ano"
   },
   { id: "Raio Arcano",
     name: "Raio Arcano",
     description: "Você pode gastar uma ação padrão para causar 1d8 pontos de dano de essência num alvo em alcance curto. Esse dano aumenta em +1d8 para cada círculo de magia acima do 1º que você puder lançar. O alvo pode fazer um teste de Reflexos (CD atributo-chave) para reduzir o dano à metade. O raio arcano conta como uma magia para efeitos de habilidades e itens que beneficiem suas magias.",
-    prerequisite: "Nenhum.",
     origin: "Tormenta20 - jogo do ano"
   },
   { id: "Tinta do Mago",
@@ -123,10 +117,12 @@ export const powersArcanista: Power[] = [
   },
   { id: "Familiar",
     name: "Familiar",
-    description: "Você possui um animal de estimação mágico. Veja ao final da página sobre.",
-    prerequisite: "Nenhum.",
+    description: "Você possui um animal de estimação mágico. Veja no início da página sobre.",
     origin: "Tormenta20 - jogo do ano"
   },
+  // Tormenta20 - Jogo do Ano
+
+
   { id: "Agrilhoar os Caídos",
     name: "Agrilhoar os Caídos",
     description: "Quando uma de suas magias de necromancia reduz os PV de um inimigo vivo a 0 ou menos, você pode aprisionar uma parte de seu espírito, que então fica flutuando ao seu redor. Para cada espírito, você recebe +2 na Defesa e em testes de resistência. Quando lança uma magia de dano, você pode libertar um espírito para causar +2d6 pontos de dano de trevas. Você pode acumular um máximo de espíritos simultâneos igual ao seu atributo-chave e eles permanecem ao seu redor até serem libertados ou até o fim do dia.",

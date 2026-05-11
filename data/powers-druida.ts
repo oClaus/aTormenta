@@ -1,34 +1,30 @@
 import { Power } from "@/types/power";
 
 export const powersDruida: Power[] = [
+  // Tormenta20 - Jogo do Ano
   { id: "Aspecto do Inverno",
     name: "Aspecto do Inverno",
     description: "Você aprende e pode lançar uma magia de convocação ou evocação, arcana ou divina, de qualquer círculo que possa lançar. Além disso, recebe redução de frio 5 e suas magias que causam dano de frio causam +1 ponto de dano por dado.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Aspecto do Outono",
     name: "Aspecto do Outono",
     description: "Você aprende e pode lançar uma magia de necromancia, arcana ou divina, de qualquer círculo que possa lançar. Além disso, pode gastar 1 PM para impor uma penalidade de –2 nos testes de resistência de todos os inimigos em alcance curto até o início do seu próximo turno.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Aspecto da Primavera",
     name: "Aspecto da Primavera",
     description: "Você aprende e pode lançar uma magia de encantamento ou ilusão, arcana ou divina, de qualquer círculo que possa lançar. Além disso, escolha uma quantidade de magias igual ao seu Carisma (mínimo 1). O custo dessas magias é reduzido em −1 PM.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Aspecto do Verão",
     name: "Aspecto do Verão",
     description: "Você aprende e pode lançar uma magia de transmutação, arcana ou divina, de qualquer círculo que possa lançar. Além disso, pode gastar 1 PM para cobrir uma de suas armas com chamas até o fim da cena. A arma causa +1d6 pontos de dano de fogo. Sempre que você acertar um ataque com ela, recebe 1 PM temporário. Você pode ganhar um máximo de PM temporários por cena igual ao seu nível e eles desaparecem no final da cena.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Aumento de Atributo",
     name: "Aumento de Atributo",
     description: "Você recebe +1 em um atributo. Você pode escolher este poder várias vezes, mas apenas uma vez por patamar para um mesmo atributo.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Companheiro Animal",
@@ -58,7 +54,6 @@ export const powersDruida: Power[] = [
   { id: "Coração da Selva",
     name: "Coração da Selva",
     description: "A CD para resistir a seus efeitos de veneno aumenta em +2 e estes efeitos causam +1 de perda de vida por dado.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Espírito dos Equinócios",
@@ -87,8 +82,7 @@ export const powersDruida: Power[] = [
   },
   { id: "Forma Selvagem",
     name: "Forma Selvagem",
-    description: "Você pode se transformar em animais (veja a seguir).",
-    prerequisite: "",
+    description: "Você pode se transformar em animais (veja acima nas regras).",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Forma Selvagem Aprimorada",
@@ -106,7 +100,6 @@ export const powersDruida: Power[] = [
   { id: "Liberdade da Pradaria",
     name: "Liberdade da Pradaria",
     description: "Você recebe +2 em Reflexos. Se estiver ao ar livre, sempre que lança uma magia, pode gastar 1 PM para aumentar o alcance dela em um passo (de toque para curto, de curto para médio ou de médio para longo).",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Magia Natural",
@@ -118,21 +111,20 @@ export const powersDruida: Power[] = [
   { id: "Presas Afiadas",
     name: "Presas Afiadas",
     description: "A margem de ameaça de suas armas naturais aumenta em +2.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Segredos da Natureza",
     name: "Segredos da Natureza",
     description: "Você aprende duas magias de qualquer círculo que possa lançar. Elas devem pertencer às escolas que você sabe usar, mas podem ser arcanas ou divinas. Você pode escolher este poder quantas vezes quiser.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Tranquilidade dos Lagos",
     name: "Tranquilidade dos Lagos",
     description: "Você recebe +2 em Vontade. Se estiver portando um recipiente com água (não precisa estar empunhando), uma vez por rodada, quando faz um teste de resistência, pode pagar 1 PM para refazer a rolagem.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
+
+
   { id: "Arma Tradicional",
     name: "Arma Tradicional",
     description: "Quando faz um ataque com uma foice, você pode gastar 2 PM para lançar uma magia de ácido, eletricidade, fogo ou frio com execução de movimento, padrão ou completa como ação livre. Considere que a mão da arma está livre para lançar essa magia. ",

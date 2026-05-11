@@ -2,6 +2,7 @@ import { GameClass } from "@/types/class";
 import { title } from "process";
 
 export const classes: GameClass[] = [
+    // Tormenta20 - Jogo do Ano
     { id: "Arcanista",
   name: "Arcanista",
   powersUrl: "/poderes/arcanista",
@@ -139,310 +140,6 @@ export const classes: GameClass[] = [
     ]
   }
   ]
-    },
-    { id: "Ladino",
-    name: "Ladino",
-    powersUrl: "/poderes/ladino",
-    origin: "tormenta20 - jogo do ano",
-    image: "/classes/ladino.png",
-    description: "A maior parte dos perigos pode ser evitada com um pouco de furtividade. A maior parte das dificuldades pode ser superada com um pouco de ouro subtraído de outra pessoa. A maior parte dos vilões pode ser vencida com uma boa mentira. E, quando nada disso dá certo, uma adaga nas costas resolve o problema. \n O ladino é o mais esperto, discreto, silencioso e malandro de todos os heróis. Um aventureiro que usa táticas que muitos consideram desleais, mas que para ele são apenas pragmáticas e lógicas. Ladinos se especializam em arrombar portas, esgueirar-se pelas sombras, desarmar armadilhas, roubar itens valiosos... Enfim, fazer tudo que “heróis de bem” nunca fariam. \n Isto não quer dizer que ladinos sejam traidores ou covardes. Pelo contrário: um ladino conhece bem o valor de um grupo coeso de aventureiros, em que cada um faz sua parte. Ele apenas sabe que, em qualquer grande missão, existe um lado sombrio que exige menos gritos de guerra e mais infiltrações silenciosas. \n Há ladinos que fazem parte de grandes guildas de criminosos, mas muitos são malandros solitários, confiando apenas em si mesmos e num pequeno grupo de amigos para sobreviver. \n Qualquer tipo de atividade escusa ou discreta atrai ladinos. Muitos são mesmo ladrões, furtando bolsas ou entrando em mansões à noite nas ruas escuras das metrópoles. Outros são espiões a serviço de grandes reinos ou mesmo igrejas. Também há muitos ladinos nas cortes, malandros que se especializam em espalhar boatos, descobrir segredos, seduzir alvos e, quando necessário, envenenar algum aristocrata inconveniente. Ladinos podem até mesmo ser assassinos: suas habilidades de furtividade e precisão podem ser mais mortais que a investida tresloucada de um brutamontes enfurecido. \n O típico ladino aventureiro tem um pouco de cada uma destas “profissões”. Um grupo de exploradores de masmorras dura pouco se não houver alguém para procurar armadilhas, escutar atrás de portas, abrir trancas e se esconder de guardas. Muitas vezes o ladino é o herói que realmente resolve a missão: enquanto o resto do grupo está enfrentando o dragão vermelho, o ladino encontra e surrupia o artefato que o monstro estava guardando. \n Ladinos podem ter qualquer tipo de personalidade, mas poucos são espalhafatosos ou arrogantes. A maioria dos ladinos prefere ficar na sombra dos outros heróis, sem grande reconhecimento, sendo subestimada pelos inimigos. Muitos ladinos adquirem suas habilidades por falta de opção: tendo crescido nas áreas mais pobres de uma cidade, precisaram aprender a roubar e fugir para sobreviver. Outros sempre tiveram vidas confortáveis e acham que a maneira mais fácil de preservá-las é se manter escondidos. Alguns foram treinados especificamente para isto por exércitos ou famílias criminosas. \n De qualquer forma, quase nenhum ladino consegue se manter do lado da lei por muito tempo. Mesmo que sua intenção seja boa, precisam cometer algum crime para atingir seus objetivos.",
-    famousExamples: [
-      "Andrus o Aranha",
-      "Ashlen Ironsmith, o Camaleão",
-      "Drikka",
-      "Leon Galtran",
-    ],
-    characteristics: {
-      pvBase: "12 + Constituição",
-      pvPerLevel: "3 + Constituição",
-      pmPerLevel: "4 PM por nível"
-    },
-    skills: {
-    mandatory: ["Ladinagem (Des)", "Relexos (Des)"],
-    optional: {
-      skills: [      
-        "Acrobacia (Des)", "Atletismo (For)", "Atuação (Car)", "Cavalgar (Des)", "Conhecimento (Int)", "Diplomacia (Car)", "Enganação (Car)", "Furtividade (Des)", "Iniciativa (Des)", "Intimidação (Car)", "Intuição (Sab)", "Investigação (Int)", "Jogatina (Car)", "Luta (For)", "Ofício (Int)", "Percepção (Sab)", "Pilotagem (Des)", "Pontaria (Des)"
-      ],
-      count: 8
-      }
-    },
-    proficiency: "Nenhuma",
-    abilities: [
-      {
-      name: "Ataque Furtivo",
-      description: "Você sabe atingir os pontos vitais de inimigos distraídos. Uma vez por rodada, quando atinge uma criatura desprevenida com um ataque corpo a corpo ou em alcance curto, ou uma criatura que esteja flanqueando, você causa 1d6 pontos de dano extra. A cada dois níveis, esse dano extra aumenta em +1d6. Uma criatura imune a acertos críticos também é imune a ataques furtivos.",
-      },
-      {
-        name: "Especialista",
-        description: "Escolha um número de perícias treinadas igual à sua Inteligência, exceto bônus temporários (mínimo 1). Ao fazer um teste de uma dessas perícias, você pode gastar 1 PM para dobrar seu bônus de treinamento. Você não pode usar esta habilidade em testes de ataque."
-      },
-      {
-        name: "Evasão",
-        description: "A partir do 2º nível, quando sofre um efeito que permite um teste de Reflexos para reduzir o dano à metade, você não sofre dano algum se passar. Você ainda sofre dano normal se falhar no teste de Reflexos. Esta habilidade exige liberdade de movimentos; você não pode usá-la se estiver de armadura pesada ou na condição imóvel."
-      },
-      {
-        name: "Poder de Ladino",
-        description: "No 2º nível, e a cada nível seguinte, você escolhe um dos poderes de sua classe ou geral."
-      },
-      {
-        name: "Esquiva Sobrenatural",
-        description: "No 4º nível, seus instintos são tão apurados que você consegue reagir ao perigo antes que seus sentidos percebam. Você nunca fica surpreendido."
-      },
-      {
-        name: "Olhos nas Costas",
-        description: "A partir do 8º nível, você consegue lutar contra diversos inimigos como se fossem apenas um. Você não pode ser flanqueado."
-      },
-      {
-        name: "Evasão Aprimorada",
-        description: "No 10º nível, quando sofre um efeito que permite um teste de Reflexos para reduzir o dano à metade, você não sofre dano algum se passar e sofre apenas metade do dano se falhar. Esta habilidade exige liberdade de movimentos; você não pode usá-la se estiver de armadura pesada ou na condição imóvel."
-      },
-      {
-        name: "A Pessoa Certa para o Trabalho",
-        description: "No 20º nível, você se torna um mestre da ladinagem. Ao fazer um ataque furtivo ou usar uma perícia da lista de ladino, você pode gastar 5 PM para receber +10 no teste."
-      },
-    ],
-    levelProgression: [
-      { level: 1, abilities: "Ataque furtivo +1d6, especialista" },
-      { level: 2, abilities: "Evasão, poder de ladino" },
-      { level: 3, abilities: "Ataque furtivo +2d6, poder de ladino" },
-      { level: 4, abilities: "Esquiva sobrenatural, poder de ladino" },
-      { level: 5, abilities: "Ataque furtivo +3d6, poder de ladino" },
-      { level: 6, abilities: "Poder de ladino" },
-      { level: 7, abilities: "Ataque furtivo +4d6, poder de ladino" },
-      { level: 8, abilities: "Olho nas costas, poder de ladino" },
-      { level: 9, abilities: "Ataque furtivo +5d6, poder de ladino" },
-      { level: 10, abilities: "Evasão aprimorada, poder de ladino" },
-      { level: 11, abilities: "Ataque furtivo +6d6, poder de ladino" },
-      { level: 12, abilities: "Poder de ladino" },
-      { level: 13, abilities: "Ataque furtivo +7d6, poder de ladino" },
-      { level: 14, abilities: "Poder de ladino" },
-      { level: 15, abilities: "Ataque furtivo +8d6, poder de ladino" },
-      { level: 16, abilities: "Poder de ladino" },
-      { level: 17, abilities: "Ataque furtivo +9d6, poder de ladino" },
-      { level: 18, abilities: "Poder de ladino" },
-      { level: 19, abilities: "Ataque furtivo +10d6, poder de ladino" },
-      { level: 20, abilities: "A pessoa certa para o trabalho, poder de ladino" }
-    ],
-    },
-    { id: "Nobre",
-    name: "Nobre",
-    powersUrl: "/poderes/nobre",
-    origin: "tormenta20 - jogo do ano",
-    image: "/classes/nobre.png",
-    description: "Todos precisam de um líder. Sem hierarquia, há anarquia. Sem uma ordem estabelecida, só o que existe é a lei do mais forte. Algumas dinastias tomam para si a responsabilidade e o privilégio de governar, servindo aos plebeus enquanto recebem deles obediência e tributo. \n O aventureiro nobre é mais do que alguém que nasceu nas circunstâncias certas. É um herói que reconhece o valor de um bom líder e se considera ligado à terra, ao povo, a seus aliados. Um burguês, um aventureiro ou mesmo um plebeu comum podem todos mudar de casa e de vida, ir atrás de suas próprias ambições. Mas o nobre não tem escolha. Se ele abandonar seu posto, toda uma sociedade pode ruir, pessoas vão ficar sem trabalho e sem destino, conquistadores inescrupulosos podem invadir. O nobre é rico, mas não é livre. \n Nem todo nobre é um aristocrata ou um governante por nascença. Muitos são donos ou herdeiros de grandes impérios mercantes, líderes de guildas poderosas, governadores eleitos, senadores ou mesmo diplomatas treinados em escolas especiais. O que une todos os nobres é sua capacidade de organizar os outros, dando ordens, conselhos e palavras de encorajamento. \n A posição do nobre pode não parecer muito adequada a uma vida de aventuras, mas muitas vezes o nobre é o único que tem verdadeira obrigação de se aventurar. Um destes heróis parte em grandes buscas e missões perigosas para combater os inimigos de sua terra, para encontrar artefatos que garantam a continuidade de sua linhagem, para defender o povo comum. Quando há uma ameaça, todos têm a opção de fugir, menos os soldados e os nobres. \n Muitos nobres aventureiros não têm grandes responsabilidades. Estão justamente tentando escapar de um destino que já foi decidido em seu nascimento, aventurando-se por rebeldia e sede de experiências. Contudo, mais cedo ou mais tarde todo nobre precisa encarar seu fardo. \n Nobres se destacam em situações sociais e como suporte para o resto do grupo. Contudo, muitas vezes precisam provar seu valor mais do que qualquer outro herói. Aventureiros mais humildes pensam que todo nobre é um almofadinha mimado, acostumado a que todos façam tudo por ele. Isto às vezes é verdade, mas esse tipo de desocupado raramente sobrevive a mais de uma ou duas aventuras. \n Nobres têm personalidades variadas, mas sempre marcadas por sua posição social e seus deveres. Alguns são extremamente sérios, nunca se permitindo um instante de descanso ou alegria. Outros têm um otimismo totalmente fantasioso, acreditando que tudo vai dar certo — porque, para eles, tudo sempre deu certo! Alguns ficam pasmos com pequenas realidades da vida dos plebeus, como a necessidade de economizar ou acordar cedo. Outros vivem cheios de culpa por sua posição privilegiada. \n De qualquer forma, nenhum nobre pode negar que é diferente dos plebeus. Para o bem ou para o mal, ele sempre será algo além de uma pessoa comum.",
-    famousExamples: [
-      "Arius Gorgonius Dubitatius",
-      "General Supremo Hermann Von Krauser",
-      "Lady Ayleth Karst, Rainha-Imperatriz Shivara",
-    ],
-    characteristics: {
-      pvBase: "16 + Constituição",
-      pvPerLevel: "4 + Constituição",
-      pmPerLevel: "4 PM por nível"
-    },
-    skills: {
-    mandatory: ["Diplomacia (Car) ou Intimidação (Car)", "Vontade (Sab)"],
-    optional: {
-      skills: [      
-        "Adestramento (Car)", "Atuação (Car)", "Cavalgar (Des)", "Conhecimento (Int)", "Diplomacia (Car)", "Enganação (Car)", "Fortitude (Con)", "Guerra (Int)", "Iniciativa (Des)", "Intimidação (Car)", "Intuição (Sab)", "Investigação (Int)", "Jogatina (Car)", "Luta (For)", "Nobreza (Int)", "Ofício (Int)", "Percepção (Sab)",  "Pontaria (Des)",
-      ],
-      count: 4
-      }
-    },
-    proficiency: "Armas marciais, armaduras pesadas e escudos.",
-    abilities: [
-      {
-      name: "Autoconfiança",
-      description: "Você pode usar seu Carisma em vez de Destreza na Defesa (mas continua não podendo somar um atributo na Defesa quando usa armadura pesada).",
-      },
-      {
-        name: "Espólio",
-        description: "Você recebe um item à sua escolha com preço de até T$ 2.000."
-      },
-      {
-        name: "Orgulho",
-        description: "Quando faz um teste de perícia, você pode gastar uma quantidade de PM à sua escolha (limitado pelo seu Carisma). Para cada PM que gastar, recebe +2 no teste."
-      },
-      {
-        name: "Poder de Nobre",
-        description: "No 2º nível, e a cada nível seguinte, você escolhe um dos poderes de Nobre ou Poderes Gerais."
-      },
-      {
-        name: "Palavras Afiadas",
-        description: "No 2º nível, você pode gastar uma ação padrão e 1 PM para fazer um teste de Diplomacia ou Intimidação oposto ao teste de Vontade de uma criatura inteligente (Int –3 ou maior) em alcance curto. Se vencer, você causa 2d6 pontos de dano psíquico não letal à criatura. Se perder, causa metade deste dano. Se a criatura for reduzida a 0 ou menos PV, em vez de cair inconsciente, ela se rende (se você usou Diplomacia) ou fica apavorada e foge de você da maneira mais eficiente possível (se usou Intimidação). A cada quatro níveis, você pode gastar +1 PM para aumentar o dano (veja a tabela da classe)."
-      },
-      {
-        name: "Riqueza",
-        description: "No 3º nível, você passa a receber dinheiro de sua família, patrono ou negócios. Uma vez por aventura, pode fazer um teste de Carisma com um bônus igual ao seu nível de nobre. Você recebe um número de Tibares de ouro igual ao resultado do teste. Assim, um nobre de 5º nível com Carisma 4 que role 13 no dado recebe 22 TO. O uso desta habilidade é condicionado à sua relação com sua família, patrono ou negócios e a onde você está. Por exemplo, um nobre viajando pelos ermos, isolado da civilização, dificilmente teria como receber dinheiro."
-      },
-      {
-        name: "Gritar Ordens",
-        description: "A partir do 4º nível, você pode gastar uma quantidade de PM à sua escolha (limitado pelo seu Carisma). Até o início de seu próximo turno, todos os seus aliados em alcance curto recebem um bônus nos testes de perícia igual à quantidade de PM que você gastou."
-      },
-      {
-        name: "Presença Aristocrática",
-        description: "A partir do 5º nível, sempre que uma criatura inteligente tentar machucá-lo (causar dano com um ataque, magia ou habilidade) você pode gastar 2 PM. Se fizer isso, a criatura deve fazer um teste de Vontade (CD Car). Se falhar, não conseguirá machucá-lo e perderá a ação. Você só pode usar esta habilidade uma vez por cena contra cada criatura."
-      },
-      {
-        name: "Realeza",
-        description: "No 20º nível, a CD para resistir à sua Presença Aristocrática aumenta em +5 e uma criatura que falhe no teste de Vontade por 10 ou mais se arrepende tanto de ter tentado machucá-lo que passa a lutar ao seu lado (e seguir suas ordens, se puder entendê-lo) pelo resto da cena. Além disso, uma criatura que seja reduzida a 0 PV por Palavras Afiadas não sofre este dano; em vez disso, passa a lutar ao seu lado pelo resto da cena."
-      },
-    ],
-    levelProgression: [
-      { level: 1, abilities: "Autoconfiança, espólio, orgulho" },
-      { level: 2, abilities: "Palavra afiada (2d6), poder de Nobre" },
-      { level: 3, abilities: "Poder de Nobre, riqueza" },
-      { level: 4, abilities: "Gritar ordens, pode de Nobre" },
-      { level: 5, abilities: "Poder de Nobre, presença aristocrática" },
-      { level: 6, abilities: "Palavra afiada (4d6), poder de Nobre" },
-      { level: 7, abilities: "Poder de Nobre" },
-      { level: 8, abilities: "Poder de Nobre" },
-      { level: 9, abilities: "Poder de Nobre" },
-      { level: 10, abilities: "Palavra afiada (6d6), poder de Nobre" },
-      { level: 11, abilities: "Poder de Nobre" },
-      { level: 12, abilities: "Poder de Nobre" },
-      { level: 13, abilities: "Poder de Nobre" },
-      { level: 14, abilities: "Palavra afiada (8d6), poder de Nobre" },
-      { level: 15, abilities: "Poder de Nobre" },
-      { level: 16, abilities: "Poder de Nobre" },
-      { level: 17, abilities: "Poder de Nobre" },
-      { level: 18, abilities: "Palavra afiada (10d6), poder de Nobre" },
-      { level: 19, abilities: "Poder de Nobre" },
-      { level: 20, abilities: "Realeza, poder de Nobre" }
-    ],
-    },
-    { id: "Druida",
-    name: "Druida",
-    powersUrl: "/poderes/druida",
-    origin: "tormenta20 - jogo do ano",
-    image: "/classes/druida.png",
-    description: "No coração das florestas, nas partes mais remotas dos ermos inexplorados, existem mistérios. Clareiras sagradas onde os animais não caçam. Círculos de pedras erguidos por culturas ancestrais. Árvores gigantescas que emanam poder divino. Existe algo milagroso na vida selvagem, uma tradição secreta e antiga passada através dos séculos por mulheres e homens que cultuam, defendem e vivem a natureza. É o mundo místico dos druidas. \n O druida é um tipo específico de sacerdote. Devotado a Allihanna, a Deusa da Natureza; Megalokk, o Deus dos Monstros, ou Oceano, o Deus dos Mares, o druida é mais do que um líder religioso. É um guardião de tudo que é selvagem, vivo e puro, um devoto ligado a uma forma primordial de culto divino. Não tem uma congregação ou um templo: vive com os animais e as plantas, realiza suas cerimônias a céu aberto. Sua devoção tem menos a ver com palavras e ritos do que com sangue, seiva, terra, carne. O contato do druida com os deuses e o mundo natural é primitivo, bruto, incorrupto. Muitas vezes um druida nem mesmo reconhece seu deus padroeiro, conectando-se com as forças naturais cruas, sem rosto e sem nome. \n Embora haja tradições druídicas em Arton, transferindo conhecimento de mestre para aprendiz ao longo dos séculos, muitos druidas adquirem seus poderes sozinhos, pelo simples contato com a natureza. Isso acontece principalmente com pessoas criadas longe da civilização, mas o chamado selvagem pode surgir para qualquer um. De certa forma, alguém que se torna um druida sempre foi diferente ou especial: a conexão com as forças primitivas não pode ser aprendida numa escola. \n Druidas rejeitam boa parte da civilização e suas invenções. Não usam armaduras de metal, preferem dormir ao relento, não entendem autoridades arbitrárias do mundo artificial. Seus maiores companheiros costumam ser animais, não bípedes. Alguns nem usam roupas normais, preferindo se cobrir com folhas, couro cru ou trapos. Eles entendem o ciclo de vida e morte, mas não matam animais sem motivo. Preferem não interferir com a natureza, adaptando-se a ela e deixando que ela direcione sua existência. \n Até mesmo o corpo de um druida é modificado por sua ligação com o mundo natural. Druidas são capazes de se transformar em animais, plantas ou coisas mais exóticas. Druidas poderosos se tornam menos pessoas do que entidades ou espíritos dos ermos. \n Embora a maioria dos druidas adote uma postura pacífica, defendendo os ermos apenas quando a civilização os ameaça, outros são militantes quase fanáticos. Querem destruir a civilização, queimar cidades e derrubar castelos para devolver Arton a um estado mais puro. Não dão grande importância às mortes que isso causaria: para eles, todos os bípedes inteligentes são invasores numa terra que pertence aos animais e às plantas.\n Druidas sabem que a civilização é transitória. Antigamente não havia construções e um dia não haverá mais uma vez. O mundo é selvagem e criaturas inteligentes são meros hóspedes temporários.",
-    famousExamples: [
-      "Lisandra",
-      "Oihana",
-      "Shantall",
-      "Trebane",
-    ],
-    characteristics: {
-      pvBase: "16 + Constituição",
-      pvPerLevel: "4 + Constituição",
-      pmPerLevel: "4 PM por nível"
-    },
-    skills: {
-    mandatory: ["Sobrevivência (Sab)", "Vontade (Sab)"],
-    optional: {
-      skills: [    
-        "Adestramento (Car)", "Atletismo (For)", "Cavalgar (Des)", "Conhecimento (Int)", "Cura (Sab)", "Fortitude (Con)", "Iniciativa (Des)", "Intuição (Sab)", "Luta (For)", "Misticismo (Int)", "Ofício (Int)", "Percepção (Sab)",  "Religião (Sab)",
-      ],
-      count: 4
-      }
-    },
-    proficiency: "Escudos",
-    abilities: [
-      {
-      name: "Devoto Fiel",
-      description: "Você se torna devoto de um deus disponível para druidas (Allihanna, Megalokk ou Oceano). Veja as regras de devotos. Ao contrário de devotos normais, você recebe dois poderes concedidos por se tornar devoto, em vez de apenas um.",
-      },
-      {
-        name: "Empatia Selvagem",
-        description: "Você pode se comunicar com animais por meio de linguagem corporal e vocalizações. Você pode usar Adestramento com animais para mudar atitude e persuasão."
-      },
-      {
-        name: "Magias",
-        description: "Escolha três escolas de magia. Uma vez feita, essa escolha não pode ser mudada. Você pode lançar magias divinas de 1º círculo que pertençam a essas escolas. À medida que sobe de nível, pode lançar magias de círculos maiores (2º círculo no 6º nível, 3º círculo no 10º nível e 4º círculo no 14º nível). Você começa com duas magias de 1º círculo. A cada nível par (2º, 4º etc.), aprende uma magia de qualquer círculo e escola que possa lançar. Seu atributo-chave para lançar magias é Sabedoria e você soma sua Sabedoria no seu total de PM. "
-      },
-      {
-        name: "Poder de Druida",
-        description: "No 2º nível, e a cada nível seguinte, você escolhe um dos poderes de Druida ou Gerais."
-      },
-      {
-        name: "Caminho dos Ermos",
-        description: "No 2º nível, você pode atravessar terrenos difíceis sem sofrer redução em seu deslocamento e a CD para rastreá-lo aumenta em +10. Esta habilidade só funciona em terrenos naturais."
-      },
-      {
-        name: "Força da Natureza.",
-        description: "No 20º nível, você diminui o custo de todas as suas magias em –2 PM e aumenta a CD delas em +2. Os bônus dobram (–4 PM e +4 na CD) se você estiver em terrenos naturais."
-      },
-    ],
-    levelProgression: [
-      { level: 1, abilities: "Devoto fiel, empatia selvagem, magias (1º círculo)" },
-      { level: 2, abilities: "Caminho dos ermos, poder de druida" },
-      { level: 3, abilities: "Poder de druida" },
-      { level: 4, abilities: "Poder de druida" },
-      { level: 5, abilities: "Poder de druida" },
-      { level: 6, abilities: "Magias (2º círculo), poder de druida" },
-      { level: 7, abilities: "Poder de druida" },
-      { level: 8, abilities: "Poder de druida" },
-      { level: 9, abilities: "Poder de druida" },
-      { level: 10, abilities: "Magias (3º círculo), poder de druida" },
-      { level: 11, abilities: "Poder de druida" },
-      { level: 12, abilities: "Poder de druida" },
-      { level: 13, abilities: "Poder de druida" },
-      { level: 14, abilities: "Magias (4º círculo), poder de druida" },
-      { level: 15, abilities: "Poder de druida" },
-      { level: 16, abilities: "Poder de druida" },
-      { level: 17, abilities: "Poder de druida" },
-      { level: 18, abilities: "Poder de druida" },
-      { level: 19, abilities: "Poder de druida" },
-      { level: 20, abilities: "Força da natureza, poder de druida" }
-    ],
-    extras: [
-  {
-    title: "Classe Divina - Druidas",
-    description: "Druidas de Arton são reclusos, vivendo isolados em áreas selvagens — ou, às vezes, reunindo-se em pequenos grupos. Por seu contato maior com a natureza, eles sabem sobreviver nos ermos e lidar com animais, mas têm dificuldade em se relacionar com pessoas e agir em grandes centros urbanos. Pouca coisa consegue deixar um druida mais nervoso que uma cidade cheia de gente.\nTrês novos druidas apresentados a seguir — Aharadak, Tenebra, Arton — foram apresentados em 'Deuses de Arton'. Utilize-os em conjunto com as regras vistas na parte inferior da página.",
-    sections: [
-      { title: "Druida de Aharadak",
-        intro: "A tempestade aberrante se infiltrou no Panteão. Aharadak, o Devorador, assassinou Tauron e se tornou o Deus da Tormenta, impactando Arton profundamente. A Tormenta, antes uma força invasora, agora é parte de Arton. Mesmo que algumas áreas tenham sido eliminadas, muitas persistem, e suas criaturas se espalham pelo Reinado. Os lefou, meios-demônios da Tormenta, estão presentes em comunidades humanas, às vezes aceitos. Para muitos, a Tormenta é agora um fato da vida.\nIsto é, assim acreditam aqueles que se tornam druidas de Aharadak. Eles assumem a missão de proteger uma suposta harmonia entre Arton e a Tormenta, entre Criação e Anticriação. Demonstram que as criaturas lefeu não diferem tanto das feras de Allihanna, dos monstros de Megalokk ou dos seres do Oceano. Acolhem as aberrações rubras como parceiros. Mais ainda, adotam formas selvagens horrendas com poderes da Tormenta.\nDruidas de Aharadak acreditam em uma harmonia entre Arton e a Tormenta, tratando os lefeu como seres naturais. Adotam formas horrendas e são odiados, vistos como traidores que corrompem a natureza. Devotos de Allihanna e Megalokk se unem contra eles, temendo que a Tormenta tenha realmente se tornado parte de Arton.\nEmbora tudo na Tormenta seja alienígena, druidas de Aharadak entendem e controlam seus demônios, vendo-os como irmãos em batalha contra inimigos como mortos-vivos e vilões. Sonham com um futuro em que Arton acolherá a Tormenta, formando um ser coletivo supremo. Muitos heróis, contudo, consideram intolerável sua tentativa de apaziguar os lefeu.\nGrupos de aventureiros às vezes aceitam este druida, como aceitariam colegas lefou. Contudo, assim como um druida de Allihanna busca apaziguar conflitos com feras naturais, o druida de Aharadak tentará o mesmo em relação aos lefeu. E para muitos heróis isso é intolerável.",
-        content: [
-          { name: "Indumentária", description: " Invariavelmente, veste vermelho. De preferência trajes rústicos com materiais obtidos em áreas de Tormenta." },
-          { name: "Obrigações & Restrições", description: " Mesmas do devoto de Aharadak." },
-          { name: "Considerações Mecânicas", description: " O druida de Aharadak, como outros devotos, tem acesso aos poderes concedidos de sua divindade." },
-          { name: "Fundamentalista", description: " Jamais ataca lefou e criaturas da Tormenta." },
-        ]
-      },
-      { title: "Druida de Allihanna",
-        intro: "“Se todos os deuses bondosos têm paladinos, por que não Allihanna?“. A Deusa da Natureza tem, sim, seus campeões sagrados. Eles se chamam druidas. Enquanto o clérigo desta deusa protege comunidades humanoides nos ermos, o druida faz o oposto — vive entre as feras, devotado a sua proteção. De fato, “druida de Allihanna” é praticamente uma redundância; quase todos os druidas amam a natureza, não há druida em Arton sem devoção profunda a esta deusa. Alguns duvidam, inclusive, que Oceano seja o verdadeiro patrono das formas de vida marinhas. Quanto a Megalokk, seus monstros não são aceitos como parte do mundo natural, e seus “druidas” seriam apenas anomalias profanas.\nPoucas vezes recebendo educação formal de mestres, druidas adquirem sua devoção e recebem seus poderes através de sonhos com Allihanna, ou outros meios sobrenaturais — não sendo raro algum animal sagrado da deusa, ou ela própria em forma de avatar, se encarregar desse treinamento. Muitos consideram toda a vida natural como algo sagrado, evitando qualquer dano a qualquer ser vivo (sabe-se até mesmo de druidas dahllan que, como as plantas, vivem apenas de água e luz). Outros entendem que toda criatura tem seu lugar no Grande Ciclo, morrendo para que outras possam viver, mas jamais tolerando mortes sem propósito.",
-        content: [
-          { name: "Indumentária", description: " Muitos druidas vestem apenas trapos. Outros encontram formas criativas de conseguir material para roupas: couro de grandes répteis (que descamam de tempos em tempos), membranas de grandes ovos, seda de casulos, conchas, folhas, flores, plumas. Outros ainda tratam com carinho uma vestimenta obtida em alguma ocasião especial, ou recebida de alguém importante." },
-          { name: "Fundamentalista", description: " Jamais ataca animais ou monstros com Natureza Vegetal, nem permite que seus aliados o façam. Além disso, não apenas é proibido de se associar a devotos de Megalokk, mas também deve atacar e destruir todos aqueles que encontrar." },
-        ]
-      },
-      { title: "Druida de Megalokk",
-        intro: "Um xamã de Megalokk lidera uma comunidade de algum povo monstruoso, em um arremedo de civilização. Seu druida, pelo contrário, rejeita os próprios conceitos de “civilização” e “povo”. Considera-os absurdos totais, insultos ao Deus dos Monstros. Vários, contudo, adotam monstros variados como parceiros.\nO druida de Megalokk busca ser mais monstruoso que os próprios monstros, assumindo uma forma terrível após outra. Ele não vive em “harmonia” com monstros, nem tem qualquer preocupação em protegê-los — pois monstros existem apenas para lutar e matar, até mesmo os seus. Como o louvado Monstro-Pai, ele deseja vingança contra as criações mortiças dos outros deuses, por ousarem confinar os monstros às Sanguinárias e outros pontos remotos, tomando Arton para si.\nQuase todo druida do Deus dos Monstros simplesmente odeia todos os outros seres, atacando e matando tudo que encontra. Onde ele habita, histórias de horror abundam, camponeses temem se afastar de suas aldeias. Encontrar e destruir a criatura para restaurar a paz na região acaba se tornando missão comum para aventureiros.\nTodo druida de Megalokk busca demonstrar, através da própria violência e selvageria, a grandiosidade de seu patrono. Uns poucos acabam unidos a grupos de aventureiros, cujas missões sempre oferecem oportunidades para lutar e matar; ele será um aliado poderoso, mas difícil (senão impossível) de ser controlado. Nada enfurece mais este druida que qualquer tentativa de restringir sua liberdade. Contudo, pode ser possível conviver com ele através do reconhecimento constante de sua superioridade, e/ou quantidades fantásticas de comida.",
-        content: [
-          { name: "Indumentária", description: " Visto que suas formas selvagens monstruosas acabam por destruir qualquer vestimenta, druidas de Megalokk quase nunca se incomodam em vestir algo. No máximo, usam trajes rústicos de pele ou carapaça extraída de presas anteriores." },
-          { name: "Fundamentalista", description: " Jamais se associa a ninguém. Todos os outros seres, incluindo monstros, servem apenas como oferenda a Megalokk. Ou comida." },
-        ]
-      },
-      { title: "Druida do Oceano",
-        intro: "Aliado das criaturas marinhas, este druida se mantém afastado do conflito entre Allihanna e Megalokk. A Deusa da Natureza e o Deus dos Monstros possuem devotos entre os seres do mar, cada um protegendo suas respectivas criaturas. No entanto, o Grande Oceano é imparcial em relação a animais e monstros, acolhendo e resguardando todos que buscam a força de suas águas. Os verdadeiros inimigos deste druida são os habitantes do Mundo Seco, que invadem os mares para saquear, pilhar e matar.\nDruidas do Oceano vivem quase sempre na escuridão profunda, vigiando os reinos submarinos e raramente emergindo por qualquer motivo — desde o desaparecimento misterioso da divindade, agem como guardiões ainda mais obstinados. Assim, sereias, tritões, elfos-do-mar e outras raças submarinas são os que mais frequentemente seguem esse caminho — embora eles às vezes apareçam entre humanos e outros povos, sempre com origens exóticas. Sabe-se de osteon que emergem de naufrágios como druidas, assim como golens perdidos no mar e então ressuscitados, suas carcaças cheias de cracas e corais.\nUm druida do Oceano atuando com aventureiros será muitíssimo incomum, visto que suas jornadas muitas vezes os levam para longe da água salgada. Ele muito provavelmente será apenas um companheiro ocasional quando percorrem áreas costeiras. Ou vai recorrer a soluções criativas para demonstrar a majestade do Oceano mesmo na aridez do Mundo Seco.",
-        content: [
-          { name: "Indumentária", description: " É raro que usem qualquer tipo de vestimenta, além de tangas simples ou algas marinhas. Também não costumam usar armas, armaduras, ferramentas ou qualquer objeto que se deteriore em contato prolongado com a água do mar." },
-          { name: "Fundamentalista", description: " Jamais deixa a água, nem por um instante." },
-        ]
-      },
-      { title: "Druida de Tenebra",
-        intro: "Os druidas de Allihanna, Megalokk e Oceano têm em comum a veneração e proteção de seres vivos, sejam naturais ou não. Porém, nem todos os seres em Arton são desse tipo. Tenebra, a Mãe Noite, dá vida aos mortos que, embora movidos mais por instinto que intelecto, ainda existem e sentem. Desprezados por devotos de outros deuses e usados como servos sem alma por necromantes, os mortos-vivos encontram proteção nos druidas de Tenebra.\nEstes druidas escolhem a companhia dos mortos após decepções, banimentos ou por incapacidade de se ajustar à sociedade. Habitam necrópoles, antigos cemitérios, vastidões desoladas e outros locais onde os mortos-vivos podem espalhar seu terror.\nEnquanto outros druidas dominam os ermos, habitando florestas e outros terrenos naturais, druidas de Tenebra escolhem lugares assombrados como ruínas e cemitérios — ou aqueles onde ocorreram grandes morticínios, como a Conflagração do Aço e outros campos de batalha. Embora muitos os considerem perigosos para os povos ao redor (e alguns realmente o são), muitas vezes ocorre o contrário; o druida zeloso e vigilante evita que mortos-vivos abandonem seus sítios e que tragam terror às cidades, acabando por proteger tanto os vivos quanto os mortos. Esse tipo de druida se tornou particularmente comum no reino de Aslothia, onde povoados convivem com a ameaça constante de esqueletos, zumbis e coisas muito piores.\nManter o equilíbrio entre vida e morte em vida é difícil e solitário. Druidas de Tenebra raramente encontram aliados, exceto entre os mortos-vivos. Alguns se unem a aventureiros para combater necromantes, mas enfrentam conflitos de interesse com devotos de outros deuses. Seus companheiros animais são versões esqueléticas ou zumbis de feras naturais, muitas vezes reanimadas após grandes jornadas em busca da carcaça certa.",
-        content: [
-          { name: "Indumentária", description: " Como outros devotos de Tenebra, preferem se vestir de negro. Muitos usam armaduras ou ornamentos de ossos, feitos com partes de mortos-vivos destruídos, para honrá-los." },
-          { name: "Obrigações & Restrições", description: " Mesmas do devoto de Tenebra." },
-          { name: "Considerações Mecânicas", description: " O druida de Tenebra, como outros devotos, tem acesso aos poderes concedidos de sua divindade." },
-          { name: "Fundamentalista", description: " Jamais ataca mortos-vivos, mesmo que seja atacado por eles." },
-        ]
-      },
-      { title: "Druida de Arton",
-        intro: "Enquanto devotos de Allihanna e Megalokk se antagonizam, achando que suas criações têm mais direito a Arton, alguns druidas consideram esse conflito tolo. Para eles, toda forma de vida é sagrada: animais, plantas, feras, monstros, até mesmo a Tormenta.\nO druida de Arton não distingue entre seres viventes. Todo ser, incluindo aqueles não considerados vivos, tem o direito de existir. Embora respeitem Lena, estes druidas acreditam que a vida é maior que o Panteão, e que os deuses foram criados pela vida, não o contrário.\nPara o druida de Arton, pouco importa se as criaturas nascem de reprodução natural (como a maioria das crias de Allihanna), são formadas por meios fantásticos (a maioria dos monstros de Megalokk) ou trazidas a este mundo artificialmente (quase todos os construtos). Mesmo espíritos e mortos-vivos são ainda considerados seres viventes — vida diferente, exótica, mas ainda vida. Chegam ao cúmulo de respeitar as próprias aberrações da Tormenta, julgando merecerem lugar em Arton tanto quanto quaisquer entidades.\n“Se respeitam toda a vida em todas as suas formas, então contra quem lutam?“. Estes druidas lutam contra ameaças à vida, como exterminadores de espécies ou assassinos sem sentido. Desprezam caçadores que matam por glória, fascistas movidos por ódio, cultistas que sacrificam por deuses. No entanto, aceitam matar para subsistência ou autodefesa, seguindo o Grande Ciclo.\nO druida de Arton cultiva relação muito especial com as criaturas elementais, estranhos seres não abençoados nem por Allihanna, nem Megalokk. Tais entidades são prova do poder irrestrito da vida pura, capaz de se manifestar mesmo nos componentes mais fundamentais da Criação. O druida não apenas controla esses seres (considerados imprevisíveis e indomáveis por quase quaisquer outros); também compartilha de seus poderes, recorrendo à forma selvagem para transformar partes do corpo — até mesmo o corpo inteiro — em fogo, água, terra e outros.",
-        content: [
-          { name: "Indumentária", description: " Druidas de Arton vestem apenas materiais que não exigem sacrifícios desnecessários de seres viventes. Lã tosquiada, seda de casulos ou teias, membranas de grandes ovos, couro descamado de répteis..." },
-          { name: "Obrigações & Restrições", description: " Nunca matar ou destruir seres que não ameaçam sua própria sobrevivência, ou a de seus aliados." },
-          { name: "Considerações Mecânicas", description: " Como o clérigo do Panteão e o paladino do bem, o druida de Arton não é devotado a um único deus, nem tem acesso a poderes concedidos. Sua arma preferida é a foice. Ser um druida de Arton conta como uma devoção." },
-          { name: "Fundamentalista", description: " Jamais matar, nem mesmo para subsistência. Deve recorrer a meios mágicos para sustento. Em vez de um poder concedido, o druida de Arton fundamentalista recebe um poder geral." },
-        ]
-      },
-    ]
-  }
-]
-
     },
     { id: "Bárbaro",
     name: "Bárbaro",
@@ -1071,6 +768,139 @@ export const classes: GameClass[] = [
   }
 ]
     },
+    { id: "Druida",
+    name: "Druida",
+    powersUrl: "/poderes/druida",
+    origin: "tormenta20 - jogo do ano",
+    image: "/classes/druida.png",
+    description: "No coração das florestas, nas partes mais remotas dos ermos inexplorados, existem mistérios. Clareiras sagradas onde os animais não caçam. Círculos de pedras erguidos por culturas ancestrais. Árvores gigantescas que emanam poder divino. Existe algo milagroso na vida selvagem, uma tradição secreta e antiga passada através dos séculos por mulheres e homens que cultuam, defendem e vivem a natureza. É o mundo místico dos druidas. \n O druida é um tipo específico de sacerdote. Devotado a Allihanna, a Deusa da Natureza; Megalokk, o Deus dos Monstros, ou Oceano, o Deus dos Mares, o druida é mais do que um líder religioso. É um guardião de tudo que é selvagem, vivo e puro, um devoto ligado a uma forma primordial de culto divino. Não tem uma congregação ou um templo: vive com os animais e as plantas, realiza suas cerimônias a céu aberto. Sua devoção tem menos a ver com palavras e ritos do que com sangue, seiva, terra, carne. O contato do druida com os deuses e o mundo natural é primitivo, bruto, incorrupto. Muitas vezes um druida nem mesmo reconhece seu deus padroeiro, conectando-se com as forças naturais cruas, sem rosto e sem nome. \n Embora haja tradições druídicas em Arton, transferindo conhecimento de mestre para aprendiz ao longo dos séculos, muitos druidas adquirem seus poderes sozinhos, pelo simples contato com a natureza. Isso acontece principalmente com pessoas criadas longe da civilização, mas o chamado selvagem pode surgir para qualquer um. De certa forma, alguém que se torna um druida sempre foi diferente ou especial: a conexão com as forças primitivas não pode ser aprendida numa escola. \n Druidas rejeitam boa parte da civilização e suas invenções. Não usam armaduras de metal, preferem dormir ao relento, não entendem autoridades arbitrárias do mundo artificial. Seus maiores companheiros costumam ser animais, não bípedes. Alguns nem usam roupas normais, preferindo se cobrir com folhas, couro cru ou trapos. Eles entendem o ciclo de vida e morte, mas não matam animais sem motivo. Preferem não interferir com a natureza, adaptando-se a ela e deixando que ela direcione sua existência. \n Até mesmo o corpo de um druida é modificado por sua ligação com o mundo natural. Druidas são capazes de se transformar em animais, plantas ou coisas mais exóticas. Druidas poderosos se tornam menos pessoas do que entidades ou espíritos dos ermos. \n Embora a maioria dos druidas adote uma postura pacífica, defendendo os ermos apenas quando a civilização os ameaça, outros são militantes quase fanáticos. Querem destruir a civilização, queimar cidades e derrubar castelos para devolver Arton a um estado mais puro. Não dão grande importância às mortes que isso causaria: para eles, todos os bípedes inteligentes são invasores numa terra que pertence aos animais e às plantas.\n Druidas sabem que a civilização é transitória. Antigamente não havia construções e um dia não haverá mais uma vez. O mundo é selvagem e criaturas inteligentes são meros hóspedes temporários.",
+    famousExamples: [
+      "Lisandra",
+      "Oihana",
+      "Shantall",
+      "Trebane",
+    ],
+    characteristics: {
+      pvBase: "16 + Constituição",
+      pvPerLevel: "4 + Constituição",
+      pmPerLevel: "4 PM por nível"
+    },
+    skills: {
+    mandatory: ["Sobrevivência (Sab)", "Vontade (Sab)"],
+    optional: {
+      skills: [    
+        "Adestramento (Car)", "Atletismo (For)", "Cavalgar (Des)", "Conhecimento (Int)", "Cura (Sab)", "Fortitude (Con)", "Iniciativa (Des)", "Intuição (Sab)", "Luta (For)", "Misticismo (Int)", "Ofício (Int)", "Percepção (Sab)",  "Religião (Sab)",
+      ],
+      count: 4
+      }
+    },
+    proficiency: "Escudos",
+    abilities: [
+      {
+      name: "Devoto Fiel",
+      description: "Você se torna devoto de um deus disponível para druidas (Allihanna, Megalokk ou Oceano). Veja as regras de devotos. Ao contrário de devotos normais, você recebe dois poderes concedidos por se tornar devoto, em vez de apenas um.",
+      },
+      {
+        name: "Empatia Selvagem",
+        description: "Você pode se comunicar com animais por meio de linguagem corporal e vocalizações. Você pode usar Adestramento com animais para mudar atitude e persuasão."
+      },
+      {
+        name: "Magias",
+        description: "Escolha três escolas de magia. Uma vez feita, essa escolha não pode ser mudada. Você pode lançar magias divinas de 1º círculo que pertençam a essas escolas. À medida que sobe de nível, pode lançar magias de círculos maiores (2º círculo no 6º nível, 3º círculo no 10º nível e 4º círculo no 14º nível). Você começa com duas magias de 1º círculo. A cada nível par (2º, 4º etc.), aprende uma magia de qualquer círculo e escola que possa lançar. Seu atributo-chave para lançar magias é Sabedoria e você soma sua Sabedoria no seu total de PM. "
+      },
+      {
+        name: "Poder de Druida",
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um dos poderes de Druida ou Gerais."
+      },
+      {
+        name: "Caminho dos Ermos",
+        description: "No 2º nível, você pode atravessar terrenos difíceis sem sofrer redução em seu deslocamento e a CD para rastreá-lo aumenta em +10. Esta habilidade só funciona em terrenos naturais."
+      },
+      {
+        name: "Força da Natureza.",
+        description: "No 20º nível, você diminui o custo de todas as suas magias em –2 PM e aumenta a CD delas em +2. Os bônus dobram (–4 PM e +4 na CD) se você estiver em terrenos naturais."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Devoto fiel, empatia selvagem, magias (1º círculo)" },
+      { level: 2, abilities: "Caminho dos ermos, poder de druida" },
+      { level: 3, abilities: "Poder de druida" },
+      { level: 4, abilities: "Poder de druida" },
+      { level: 5, abilities: "Poder de druida" },
+      { level: 6, abilities: "Magias (2º círculo), poder de druida" },
+      { level: 7, abilities: "Poder de druida" },
+      { level: 8, abilities: "Poder de druida" },
+      { level: 9, abilities: "Poder de druida" },
+      { level: 10, abilities: "Magias (3º círculo), poder de druida" },
+      { level: 11, abilities: "Poder de druida" },
+      { level: 12, abilities: "Poder de druida" },
+      { level: 13, abilities: "Poder de druida" },
+      { level: 14, abilities: "Magias (4º círculo), poder de druida" },
+      { level: 15, abilities: "Poder de druida" },
+      { level: 16, abilities: "Poder de druida" },
+      { level: 17, abilities: "Poder de druida" },
+      { level: 18, abilities: "Poder de druida" },
+      { level: 19, abilities: "Poder de druida" },
+      { level: 20, abilities: "Força da natureza, poder de druida" }
+    ],
+    extras: [
+  {
+    title: "Classe Divina - Druidas",
+    description: "Druidas de Arton são reclusos, vivendo isolados em áreas selvagens — ou, às vezes, reunindo-se em pequenos grupos. Por seu contato maior com a natureza, eles sabem sobreviver nos ermos e lidar com animais, mas têm dificuldade em se relacionar com pessoas e agir em grandes centros urbanos. Pouca coisa consegue deixar um druida mais nervoso que uma cidade cheia de gente.\nTrês novos druidas apresentados a seguir — Aharadak, Tenebra, Arton — foram apresentados em 'Deuses de Arton'. Utilize-os em conjunto com as regras vistas na parte inferior da página.",
+    sections: [
+      { title: "Druida de Aharadak",
+        intro: "A tempestade aberrante se infiltrou no Panteão. Aharadak, o Devorador, assassinou Tauron e se tornou o Deus da Tormenta, impactando Arton profundamente. A Tormenta, antes uma força invasora, agora é parte de Arton. Mesmo que algumas áreas tenham sido eliminadas, muitas persistem, e suas criaturas se espalham pelo Reinado. Os lefou, meios-demônios da Tormenta, estão presentes em comunidades humanas, às vezes aceitos. Para muitos, a Tormenta é agora um fato da vida.\nIsto é, assim acreditam aqueles que se tornam druidas de Aharadak. Eles assumem a missão de proteger uma suposta harmonia entre Arton e a Tormenta, entre Criação e Anticriação. Demonstram que as criaturas lefeu não diferem tanto das feras de Allihanna, dos monstros de Megalokk ou dos seres do Oceano. Acolhem as aberrações rubras como parceiros. Mais ainda, adotam formas selvagens horrendas com poderes da Tormenta.\nDruidas de Aharadak acreditam em uma harmonia entre Arton e a Tormenta, tratando os lefeu como seres naturais. Adotam formas horrendas e são odiados, vistos como traidores que corrompem a natureza. Devotos de Allihanna e Megalokk se unem contra eles, temendo que a Tormenta tenha realmente se tornado parte de Arton.\nEmbora tudo na Tormenta seja alienígena, druidas de Aharadak entendem e controlam seus demônios, vendo-os como irmãos em batalha contra inimigos como mortos-vivos e vilões. Sonham com um futuro em que Arton acolherá a Tormenta, formando um ser coletivo supremo. Muitos heróis, contudo, consideram intolerável sua tentativa de apaziguar os lefeu.\nGrupos de aventureiros às vezes aceitam este druida, como aceitariam colegas lefou. Contudo, assim como um druida de Allihanna busca apaziguar conflitos com feras naturais, o druida de Aharadak tentará o mesmo em relação aos lefeu. E para muitos heróis isso é intolerável.",
+        content: [
+          { name: "Indumentária", description: " Invariavelmente, veste vermelho. De preferência trajes rústicos com materiais obtidos em áreas de Tormenta." },
+          { name: "Obrigações & Restrições", description: " Mesmas do devoto de Aharadak." },
+          { name: "Considerações Mecânicas", description: " O druida de Aharadak, como outros devotos, tem acesso aos poderes concedidos de sua divindade." },
+          { name: "Fundamentalista", description: " Jamais ataca lefou e criaturas da Tormenta." },
+        ]
+      },
+      { title: "Druida de Allihanna",
+        intro: "“Se todos os deuses bondosos têm paladinos, por que não Allihanna?“. A Deusa da Natureza tem, sim, seus campeões sagrados. Eles se chamam druidas. Enquanto o clérigo desta deusa protege comunidades humanoides nos ermos, o druida faz o oposto — vive entre as feras, devotado a sua proteção. De fato, “druida de Allihanna” é praticamente uma redundância; quase todos os druidas amam a natureza, não há druida em Arton sem devoção profunda a esta deusa. Alguns duvidam, inclusive, que Oceano seja o verdadeiro patrono das formas de vida marinhas. Quanto a Megalokk, seus monstros não são aceitos como parte do mundo natural, e seus “druidas” seriam apenas anomalias profanas.\nPoucas vezes recebendo educação formal de mestres, druidas adquirem sua devoção e recebem seus poderes através de sonhos com Allihanna, ou outros meios sobrenaturais — não sendo raro algum animal sagrado da deusa, ou ela própria em forma de avatar, se encarregar desse treinamento. Muitos consideram toda a vida natural como algo sagrado, evitando qualquer dano a qualquer ser vivo (sabe-se até mesmo de druidas dahllan que, como as plantas, vivem apenas de água e luz). Outros entendem que toda criatura tem seu lugar no Grande Ciclo, morrendo para que outras possam viver, mas jamais tolerando mortes sem propósito.",
+        content: [
+          { name: "Indumentária", description: " Muitos druidas vestem apenas trapos. Outros encontram formas criativas de conseguir material para roupas: couro de grandes répteis (que descamam de tempos em tempos), membranas de grandes ovos, seda de casulos, conchas, folhas, flores, plumas. Outros ainda tratam com carinho uma vestimenta obtida em alguma ocasião especial, ou recebida de alguém importante." },
+          { name: "Fundamentalista", description: " Jamais ataca animais ou monstros com Natureza Vegetal, nem permite que seus aliados o façam. Além disso, não apenas é proibido de se associar a devotos de Megalokk, mas também deve atacar e destruir todos aqueles que encontrar." },
+        ]
+      },
+      { title: "Druida de Megalokk",
+        intro: "Um xamã de Megalokk lidera uma comunidade de algum povo monstruoso, em um arremedo de civilização. Seu druida, pelo contrário, rejeita os próprios conceitos de “civilização” e “povo”. Considera-os absurdos totais, insultos ao Deus dos Monstros. Vários, contudo, adotam monstros variados como parceiros.\nO druida de Megalokk busca ser mais monstruoso que os próprios monstros, assumindo uma forma terrível após outra. Ele não vive em “harmonia” com monstros, nem tem qualquer preocupação em protegê-los — pois monstros existem apenas para lutar e matar, até mesmo os seus. Como o louvado Monstro-Pai, ele deseja vingança contra as criações mortiças dos outros deuses, por ousarem confinar os monstros às Sanguinárias e outros pontos remotos, tomando Arton para si.\nQuase todo druida do Deus dos Monstros simplesmente odeia todos os outros seres, atacando e matando tudo que encontra. Onde ele habita, histórias de horror abundam, camponeses temem se afastar de suas aldeias. Encontrar e destruir a criatura para restaurar a paz na região acaba se tornando missão comum para aventureiros.\nTodo druida de Megalokk busca demonstrar, através da própria violência e selvageria, a grandiosidade de seu patrono. Uns poucos acabam unidos a grupos de aventureiros, cujas missões sempre oferecem oportunidades para lutar e matar; ele será um aliado poderoso, mas difícil (senão impossível) de ser controlado. Nada enfurece mais este druida que qualquer tentativa de restringir sua liberdade. Contudo, pode ser possível conviver com ele através do reconhecimento constante de sua superioridade, e/ou quantidades fantásticas de comida.",
+        content: [
+          { name: "Indumentária", description: " Visto que suas formas selvagens monstruosas acabam por destruir qualquer vestimenta, druidas de Megalokk quase nunca se incomodam em vestir algo. No máximo, usam trajes rústicos de pele ou carapaça extraída de presas anteriores." },
+          { name: "Fundamentalista", description: " Jamais se associa a ninguém. Todos os outros seres, incluindo monstros, servem apenas como oferenda a Megalokk. Ou comida." },
+        ]
+      },
+      { title: "Druida do Oceano",
+        intro: "Aliado das criaturas marinhas, este druida se mantém afastado do conflito entre Allihanna e Megalokk. A Deusa da Natureza e o Deus dos Monstros possuem devotos entre os seres do mar, cada um protegendo suas respectivas criaturas. No entanto, o Grande Oceano é imparcial em relação a animais e monstros, acolhendo e resguardando todos que buscam a força de suas águas. Os verdadeiros inimigos deste druida são os habitantes do Mundo Seco, que invadem os mares para saquear, pilhar e matar.\nDruidas do Oceano vivem quase sempre na escuridão profunda, vigiando os reinos submarinos e raramente emergindo por qualquer motivo — desde o desaparecimento misterioso da divindade, agem como guardiões ainda mais obstinados. Assim, sereias, tritões, elfos-do-mar e outras raças submarinas são os que mais frequentemente seguem esse caminho — embora eles às vezes apareçam entre humanos e outros povos, sempre com origens exóticas. Sabe-se de osteon que emergem de naufrágios como druidas, assim como golens perdidos no mar e então ressuscitados, suas carcaças cheias de cracas e corais.\nUm druida do Oceano atuando com aventureiros será muitíssimo incomum, visto que suas jornadas muitas vezes os levam para longe da água salgada. Ele muito provavelmente será apenas um companheiro ocasional quando percorrem áreas costeiras. Ou vai recorrer a soluções criativas para demonstrar a majestade do Oceano mesmo na aridez do Mundo Seco.",
+        content: [
+          { name: "Indumentária", description: " É raro que usem qualquer tipo de vestimenta, além de tangas simples ou algas marinhas. Também não costumam usar armas, armaduras, ferramentas ou qualquer objeto que se deteriore em contato prolongado com a água do mar." },
+          { name: "Fundamentalista", description: " Jamais deixa a água, nem por um instante." },
+        ]
+      },
+      { title: "Druida de Tenebra",
+        intro: "Os druidas de Allihanna, Megalokk e Oceano têm em comum a veneração e proteção de seres vivos, sejam naturais ou não. Porém, nem todos os seres em Arton são desse tipo. Tenebra, a Mãe Noite, dá vida aos mortos que, embora movidos mais por instinto que intelecto, ainda existem e sentem. Desprezados por devotos de outros deuses e usados como servos sem alma por necromantes, os mortos-vivos encontram proteção nos druidas de Tenebra.\nEstes druidas escolhem a companhia dos mortos após decepções, banimentos ou por incapacidade de se ajustar à sociedade. Habitam necrópoles, antigos cemitérios, vastidões desoladas e outros locais onde os mortos-vivos podem espalhar seu terror.\nEnquanto outros druidas dominam os ermos, habitando florestas e outros terrenos naturais, druidas de Tenebra escolhem lugares assombrados como ruínas e cemitérios — ou aqueles onde ocorreram grandes morticínios, como a Conflagração do Aço e outros campos de batalha. Embora muitos os considerem perigosos para os povos ao redor (e alguns realmente o são), muitas vezes ocorre o contrário; o druida zeloso e vigilante evita que mortos-vivos abandonem seus sítios e que tragam terror às cidades, acabando por proteger tanto os vivos quanto os mortos. Esse tipo de druida se tornou particularmente comum no reino de Aslothia, onde povoados convivem com a ameaça constante de esqueletos, zumbis e coisas muito piores.\nManter o equilíbrio entre vida e morte em vida é difícil e solitário. Druidas de Tenebra raramente encontram aliados, exceto entre os mortos-vivos. Alguns se unem a aventureiros para combater necromantes, mas enfrentam conflitos de interesse com devotos de outros deuses. Seus companheiros animais são versões esqueléticas ou zumbis de feras naturais, muitas vezes reanimadas após grandes jornadas em busca da carcaça certa.",
+        content: [
+          { name: "Indumentária", description: " Como outros devotos de Tenebra, preferem se vestir de negro. Muitos usam armaduras ou ornamentos de ossos, feitos com partes de mortos-vivos destruídos, para honrá-los." },
+          { name: "Obrigações & Restrições", description: " Mesmas do devoto de Tenebra." },
+          { name: "Considerações Mecânicas", description: " O druida de Tenebra, como outros devotos, tem acesso aos poderes concedidos de sua divindade." },
+          { name: "Fundamentalista", description: " Jamais ataca mortos-vivos, mesmo que seja atacado por eles." },
+        ]
+      },
+      { title: "Druida de Arton",
+        intro: "Enquanto devotos de Allihanna e Megalokk se antagonizam, achando que suas criações têm mais direito a Arton, alguns druidas consideram esse conflito tolo. Para eles, toda forma de vida é sagrada: animais, plantas, feras, monstros, até mesmo a Tormenta.\nO druida de Arton não distingue entre seres viventes. Todo ser, incluindo aqueles não considerados vivos, tem o direito de existir. Embora respeitem Lena, estes druidas acreditam que a vida é maior que o Panteão, e que os deuses foram criados pela vida, não o contrário.\nPara o druida de Arton, pouco importa se as criaturas nascem de reprodução natural (como a maioria das crias de Allihanna), são formadas por meios fantásticos (a maioria dos monstros de Megalokk) ou trazidas a este mundo artificialmente (quase todos os construtos). Mesmo espíritos e mortos-vivos são ainda considerados seres viventes — vida diferente, exótica, mas ainda vida. Chegam ao cúmulo de respeitar as próprias aberrações da Tormenta, julgando merecerem lugar em Arton tanto quanto quaisquer entidades.\n“Se respeitam toda a vida em todas as suas formas, então contra quem lutam?“. Estes druidas lutam contra ameaças à vida, como exterminadores de espécies ou assassinos sem sentido. Desprezam caçadores que matam por glória, fascistas movidos por ódio, cultistas que sacrificam por deuses. No entanto, aceitam matar para subsistência ou autodefesa, seguindo o Grande Ciclo.\nO druida de Arton cultiva relação muito especial com as criaturas elementais, estranhos seres não abençoados nem por Allihanna, nem Megalokk. Tais entidades são prova do poder irrestrito da vida pura, capaz de se manifestar mesmo nos componentes mais fundamentais da Criação. O druida não apenas controla esses seres (considerados imprevisíveis e indomáveis por quase quaisquer outros); também compartilha de seus poderes, recorrendo à forma selvagem para transformar partes do corpo — até mesmo o corpo inteiro — em fogo, água, terra e outros.",
+        content: [
+          { name: "Indumentária", description: " Druidas de Arton vestem apenas materiais que não exigem sacrifícios desnecessários de seres viventes. Lã tosquiada, seda de casulos ou teias, membranas de grandes ovos, couro descamado de répteis..." },
+          { name: "Obrigações & Restrições", description: " Nunca matar ou destruir seres que não ameaçam sua própria sobrevivência, ou a de seus aliados." },
+          { name: "Considerações Mecânicas", description: " Como o clérigo do Panteão e o paladino do bem, o druida de Arton não é devotado a um único deus, nem tem acesso a poderes concedidos. Sua arma preferida é a foice. Ser um druida de Arton conta como uma devoção." },
+          { name: "Fundamentalista", description: " Jamais matar, nem mesmo para subsistência. Deve recorrer a meios mágicos para sustento. Em vez de um poder concedido, o druida de Arton fundamentalista recebe um poder geral." },
+        ]
+      },
+    ]
+  }
+]
+
+    },
     { id: "Guerreiro",
     name: "Guerreiro",
     powersUrl: "/poderes/guerreiro",
@@ -1228,6 +1058,90 @@ export const classes: GameClass[] = [
       { level: 20, abilities: "Obra-prima, poder de inventor" }
     ],
     },
+    { id: "Ladino",
+    name: "Ladino",
+    powersUrl: "/poderes/ladino",
+    origin: "tormenta20 - jogo do ano",
+    image: "/classes/ladino.png",
+    description: "A maior parte dos perigos pode ser evitada com um pouco de furtividade. A maior parte das dificuldades pode ser superada com um pouco de ouro subtraído de outra pessoa. A maior parte dos vilões pode ser vencida com uma boa mentira. E, quando nada disso dá certo, uma adaga nas costas resolve o problema. \n O ladino é o mais esperto, discreto, silencioso e malandro de todos os heróis. Um aventureiro que usa táticas que muitos consideram desleais, mas que para ele são apenas pragmáticas e lógicas. Ladinos se especializam em arrombar portas, esgueirar-se pelas sombras, desarmar armadilhas, roubar itens valiosos... Enfim, fazer tudo que “heróis de bem” nunca fariam. \n Isto não quer dizer que ladinos sejam traidores ou covardes. Pelo contrário: um ladino conhece bem o valor de um grupo coeso de aventureiros, em que cada um faz sua parte. Ele apenas sabe que, em qualquer grande missão, existe um lado sombrio que exige menos gritos de guerra e mais infiltrações silenciosas. \n Há ladinos que fazem parte de grandes guildas de criminosos, mas muitos são malandros solitários, confiando apenas em si mesmos e num pequeno grupo de amigos para sobreviver. \n Qualquer tipo de atividade escusa ou discreta atrai ladinos. Muitos são mesmo ladrões, furtando bolsas ou entrando em mansões à noite nas ruas escuras das metrópoles. Outros são espiões a serviço de grandes reinos ou mesmo igrejas. Também há muitos ladinos nas cortes, malandros que se especializam em espalhar boatos, descobrir segredos, seduzir alvos e, quando necessário, envenenar algum aristocrata inconveniente. Ladinos podem até mesmo ser assassinos: suas habilidades de furtividade e precisão podem ser mais mortais que a investida tresloucada de um brutamontes enfurecido. \n O típico ladino aventureiro tem um pouco de cada uma destas “profissões”. Um grupo de exploradores de masmorras dura pouco se não houver alguém para procurar armadilhas, escutar atrás de portas, abrir trancas e se esconder de guardas. Muitas vezes o ladino é o herói que realmente resolve a missão: enquanto o resto do grupo está enfrentando o dragão vermelho, o ladino encontra e surrupia o artefato que o monstro estava guardando. \n Ladinos podem ter qualquer tipo de personalidade, mas poucos são espalhafatosos ou arrogantes. A maioria dos ladinos prefere ficar na sombra dos outros heróis, sem grande reconhecimento, sendo subestimada pelos inimigos. Muitos ladinos adquirem suas habilidades por falta de opção: tendo crescido nas áreas mais pobres de uma cidade, precisaram aprender a roubar e fugir para sobreviver. Outros sempre tiveram vidas confortáveis e acham que a maneira mais fácil de preservá-las é se manter escondidos. Alguns foram treinados especificamente para isto por exércitos ou famílias criminosas. \n De qualquer forma, quase nenhum ladino consegue se manter do lado da lei por muito tempo. Mesmo que sua intenção seja boa, precisam cometer algum crime para atingir seus objetivos.",
+    famousExamples: [
+      "Andrus o Aranha",
+      "Ashlen Ironsmith, o Camaleão",
+      "Drikka",
+      "Leon Galtran",
+    ],
+    characteristics: {
+      pvBase: "12 + Constituição",
+      pvPerLevel: "3 + Constituição",
+      pmPerLevel: "4 PM por nível"
+    },
+    skills: {
+    mandatory: ["Ladinagem (Des)", "Relexos (Des)"],
+    optional: {
+      skills: [      
+        "Acrobacia (Des)", "Atletismo (For)", "Atuação (Car)", "Cavalgar (Des)", "Conhecimento (Int)", "Diplomacia (Car)", "Enganação (Car)", "Furtividade (Des)", "Iniciativa (Des)", "Intimidação (Car)", "Intuição (Sab)", "Investigação (Int)", "Jogatina (Car)", "Luta (For)", "Ofício (Int)", "Percepção (Sab)", "Pilotagem (Des)", "Pontaria (Des)"
+      ],
+      count: 8
+      }
+    },
+    proficiency: "Nenhuma",
+    abilities: [
+      {
+      name: "Ataque Furtivo",
+      description: "Você sabe atingir os pontos vitais de inimigos distraídos. Uma vez por rodada, quando atinge uma criatura desprevenida com um ataque corpo a corpo ou em alcance curto, ou uma criatura que esteja flanqueando, você causa 1d6 pontos de dano extra. A cada dois níveis, esse dano extra aumenta em +1d6. Uma criatura imune a acertos críticos também é imune a ataques furtivos.",
+      },
+      {
+        name: "Especialista",
+        description: "Escolha um número de perícias treinadas igual à sua Inteligência, exceto bônus temporários (mínimo 1). Ao fazer um teste de uma dessas perícias, você pode gastar 1 PM para dobrar seu bônus de treinamento. Você não pode usar esta habilidade em testes de ataque."
+      },
+      {
+        name: "Evasão",
+        description: "A partir do 2º nível, quando sofre um efeito que permite um teste de Reflexos para reduzir o dano à metade, você não sofre dano algum se passar. Você ainda sofre dano normal se falhar no teste de Reflexos. Esta habilidade exige liberdade de movimentos; você não pode usá-la se estiver de armadura pesada ou na condição imóvel."
+      },
+      {
+        name: "Poder de Ladino",
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um dos poderes de sua classe ou geral."
+      },
+      {
+        name: "Esquiva Sobrenatural",
+        description: "No 4º nível, seus instintos são tão apurados que você consegue reagir ao perigo antes que seus sentidos percebam. Você nunca fica surpreendido."
+      },
+      {
+        name: "Olhos nas Costas",
+        description: "A partir do 8º nível, você consegue lutar contra diversos inimigos como se fossem apenas um. Você não pode ser flanqueado."
+      },
+      {
+        name: "Evasão Aprimorada",
+        description: "No 10º nível, quando sofre um efeito que permite um teste de Reflexos para reduzir o dano à metade, você não sofre dano algum se passar e sofre apenas metade do dano se falhar. Esta habilidade exige liberdade de movimentos; você não pode usá-la se estiver de armadura pesada ou na condição imóvel."
+      },
+      {
+        name: "A Pessoa Certa para o Trabalho",
+        description: "No 20º nível, você se torna um mestre da ladinagem. Ao fazer um ataque furtivo ou usar uma perícia da lista de ladino, você pode gastar 5 PM para receber +10 no teste."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Ataque furtivo +1d6, especialista" },
+      { level: 2, abilities: "Evasão, poder de ladino" },
+      { level: 3, abilities: "Ataque furtivo +2d6, poder de ladino" },
+      { level: 4, abilities: "Esquiva sobrenatural, poder de ladino" },
+      { level: 5, abilities: "Ataque furtivo +3d6, poder de ladino" },
+      { level: 6, abilities: "Poder de ladino" },
+      { level: 7, abilities: "Ataque furtivo +4d6, poder de ladino" },
+      { level: 8, abilities: "Olho nas costas, poder de ladino" },
+      { level: 9, abilities: "Ataque furtivo +5d6, poder de ladino" },
+      { level: 10, abilities: "Evasão aprimorada, poder de ladino" },
+      { level: 11, abilities: "Ataque furtivo +6d6, poder de ladino" },
+      { level: 12, abilities: "Poder de ladino" },
+      { level: 13, abilities: "Ataque furtivo +7d6, poder de ladino" },
+      { level: 14, abilities: "Poder de ladino" },
+      { level: 15, abilities: "Ataque furtivo +8d6, poder de ladino" },
+      { level: 16, abilities: "Poder de ladino" },
+      { level: 17, abilities: "Ataque furtivo +9d6, poder de ladino" },
+      { level: 18, abilities: "Poder de ladino" },
+      { level: 19, abilities: "Ataque furtivo +10d6, poder de ladino" },
+      { level: 20, abilities: "A pessoa certa para o trabalho, poder de ladino" }
+    ],
+    },
     { id: "Lutador",
     name: "Lutador",
     powersUrl: "/poderes/lutador",
@@ -1303,6 +1217,93 @@ export const classes: GameClass[] = [
       { level: 18, abilities: "Poder de lutador" },
       { level: 19, abilities: "Casca grossa (Con+4), poder de lutador" },
       { level: 20, abilities: "Dono da rua (2d10), poder de lutador" }
+    ],
+    },
+    { id: "Nobre",
+    name: "Nobre",
+    powersUrl: "/poderes/nobre",
+    origin: "tormenta20 - jogo do ano",
+    image: "/classes/nobre.png",
+    description: "Todos precisam de um líder. Sem hierarquia, há anarquia. Sem uma ordem estabelecida, só o que existe é a lei do mais forte. Algumas dinastias tomam para si a responsabilidade e o privilégio de governar, servindo aos plebeus enquanto recebem deles obediência e tributo. \n O aventureiro nobre é mais do que alguém que nasceu nas circunstâncias certas. É um herói que reconhece o valor de um bom líder e se considera ligado à terra, ao povo, a seus aliados. Um burguês, um aventureiro ou mesmo um plebeu comum podem todos mudar de casa e de vida, ir atrás de suas próprias ambições. Mas o nobre não tem escolha. Se ele abandonar seu posto, toda uma sociedade pode ruir, pessoas vão ficar sem trabalho e sem destino, conquistadores inescrupulosos podem invadir. O nobre é rico, mas não é livre. \n Nem todo nobre é um aristocrata ou um governante por nascença. Muitos são donos ou herdeiros de grandes impérios mercantes, líderes de guildas poderosas, governadores eleitos, senadores ou mesmo diplomatas treinados em escolas especiais. O que une todos os nobres é sua capacidade de organizar os outros, dando ordens, conselhos e palavras de encorajamento. \n A posição do nobre pode não parecer muito adequada a uma vida de aventuras, mas muitas vezes o nobre é o único que tem verdadeira obrigação de se aventurar. Um destes heróis parte em grandes buscas e missões perigosas para combater os inimigos de sua terra, para encontrar artefatos que garantam a continuidade de sua linhagem, para defender o povo comum. Quando há uma ameaça, todos têm a opção de fugir, menos os soldados e os nobres. \n Muitos nobres aventureiros não têm grandes responsabilidades. Estão justamente tentando escapar de um destino que já foi decidido em seu nascimento, aventurando-se por rebeldia e sede de experiências. Contudo, mais cedo ou mais tarde todo nobre precisa encarar seu fardo. \n Nobres se destacam em situações sociais e como suporte para o resto do grupo. Contudo, muitas vezes precisam provar seu valor mais do que qualquer outro herói. Aventureiros mais humildes pensam que todo nobre é um almofadinha mimado, acostumado a que todos façam tudo por ele. Isto às vezes é verdade, mas esse tipo de desocupado raramente sobrevive a mais de uma ou duas aventuras. \n Nobres têm personalidades variadas, mas sempre marcadas por sua posição social e seus deveres. Alguns são extremamente sérios, nunca se permitindo um instante de descanso ou alegria. Outros têm um otimismo totalmente fantasioso, acreditando que tudo vai dar certo — porque, para eles, tudo sempre deu certo! Alguns ficam pasmos com pequenas realidades da vida dos plebeus, como a necessidade de economizar ou acordar cedo. Outros vivem cheios de culpa por sua posição privilegiada. \n De qualquer forma, nenhum nobre pode negar que é diferente dos plebeus. Para o bem ou para o mal, ele sempre será algo além de uma pessoa comum.",
+    famousExamples: [
+      "Arius Gorgonius Dubitatius",
+      "General Supremo Hermann Von Krauser",
+      "Lady Ayleth Karst, Rainha-Imperatriz Shivara",
+    ],
+    characteristics: {
+      pvBase: "16 + Constituição",
+      pvPerLevel: "4 + Constituição",
+      pmPerLevel: "4 PM por nível"
+    },
+    skills: {
+    mandatory: ["Diplomacia (Car) ou Intimidação (Car)", "Vontade (Sab)"],
+    optional: {
+      skills: [      
+        "Adestramento (Car)", "Atuação (Car)", "Cavalgar (Des)", "Conhecimento (Int)", "Diplomacia (Car)", "Enganação (Car)", "Fortitude (Con)", "Guerra (Int)", "Iniciativa (Des)", "Intimidação (Car)", "Intuição (Sab)", "Investigação (Int)", "Jogatina (Car)", "Luta (For)", "Nobreza (Int)", "Ofício (Int)", "Percepção (Sab)",  "Pontaria (Des)",
+      ],
+      count: 4
+      }
+    },
+    proficiency: "Armas marciais, armaduras pesadas e escudos.",
+    abilities: [
+      {
+      name: "Autoconfiança",
+      description: "Você pode usar seu Carisma em vez de Destreza na Defesa (mas continua não podendo somar um atributo na Defesa quando usa armadura pesada).",
+      },
+      {
+        name: "Espólio",
+        description: "Você recebe um item à sua escolha com preço de até T$ 2.000."
+      },
+      {
+        name: "Orgulho",
+        description: "Quando faz um teste de perícia, você pode gastar uma quantidade de PM à sua escolha (limitado pelo seu Carisma). Para cada PM que gastar, recebe +2 no teste."
+      },
+      {
+        name: "Poder de Nobre",
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um dos poderes de Nobre ou Poderes Gerais."
+      },
+      {
+        name: "Palavras Afiadas",
+        description: "No 2º nível, você pode gastar uma ação padrão e 1 PM para fazer um teste de Diplomacia ou Intimidação oposto ao teste de Vontade de uma criatura inteligente (Int –3 ou maior) em alcance curto. Se vencer, você causa 2d6 pontos de dano psíquico não letal à criatura. Se perder, causa metade deste dano. Se a criatura for reduzida a 0 ou menos PV, em vez de cair inconsciente, ela se rende (se você usou Diplomacia) ou fica apavorada e foge de você da maneira mais eficiente possível (se usou Intimidação). A cada quatro níveis, você pode gastar +1 PM para aumentar o dano (veja a tabela da classe)."
+      },
+      {
+        name: "Riqueza",
+        description: "No 3º nível, você passa a receber dinheiro de sua família, patrono ou negócios. Uma vez por aventura, pode fazer um teste de Carisma com um bônus igual ao seu nível de nobre. Você recebe um número de Tibares de ouro igual ao resultado do teste. Assim, um nobre de 5º nível com Carisma 4 que role 13 no dado recebe 22 TO. O uso desta habilidade é condicionado à sua relação com sua família, patrono ou negócios e a onde você está. Por exemplo, um nobre viajando pelos ermos, isolado da civilização, dificilmente teria como receber dinheiro."
+      },
+      {
+        name: "Gritar Ordens",
+        description: "A partir do 4º nível, você pode gastar uma quantidade de PM à sua escolha (limitado pelo seu Carisma). Até o início de seu próximo turno, todos os seus aliados em alcance curto recebem um bônus nos testes de perícia igual à quantidade de PM que você gastou."
+      },
+      {
+        name: "Presença Aristocrática",
+        description: "A partir do 5º nível, sempre que uma criatura inteligente tentar machucá-lo (causar dano com um ataque, magia ou habilidade) você pode gastar 2 PM. Se fizer isso, a criatura deve fazer um teste de Vontade (CD Car). Se falhar, não conseguirá machucá-lo e perderá a ação. Você só pode usar esta habilidade uma vez por cena contra cada criatura."
+      },
+      {
+        name: "Realeza",
+        description: "No 20º nível, a CD para resistir à sua Presença Aristocrática aumenta em +5 e uma criatura que falhe no teste de Vontade por 10 ou mais se arrepende tanto de ter tentado machucá-lo que passa a lutar ao seu lado (e seguir suas ordens, se puder entendê-lo) pelo resto da cena. Além disso, uma criatura que seja reduzida a 0 PV por Palavras Afiadas não sofre este dano; em vez disso, passa a lutar ao seu lado pelo resto da cena."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Autoconfiança, espólio, orgulho" },
+      { level: 2, abilities: "Palavra afiada (2d6), poder de Nobre" },
+      { level: 3, abilities: "Poder de Nobre, riqueza" },
+      { level: 4, abilities: "Gritar ordens, pode de Nobre" },
+      { level: 5, abilities: "Poder de Nobre, presença aristocrática" },
+      { level: 6, abilities: "Palavra afiada (4d6), poder de Nobre" },
+      { level: 7, abilities: "Poder de Nobre" },
+      { level: 8, abilities: "Poder de Nobre" },
+      { level: 9, abilities: "Poder de Nobre" },
+      { level: 10, abilities: "Palavra afiada (6d6), poder de Nobre" },
+      { level: 11, abilities: "Poder de Nobre" },
+      { level: 12, abilities: "Poder de Nobre" },
+      { level: 13, abilities: "Poder de Nobre" },
+      { level: 14, abilities: "Palavra afiada (8d6), poder de Nobre" },
+      { level: 15, abilities: "Poder de Nobre" },
+      { level: 16, abilities: "Poder de Nobre" },
+      { level: 17, abilities: "Poder de Nobre" },
+      { level: 18, abilities: "Palavra afiada (10d6), poder de Nobre" },
+      { level: 19, abilities: "Poder de Nobre" },
+      { level: 20, abilities: "Realeza, poder de Nobre" }
     ],
     },
     { id: "Paladino",
@@ -1474,6 +1475,15 @@ export const classes: GameClass[] = [
   }
 ]
     },
+
+    // Tormenta20 - Jogo do Ano
+    
+    
+    
+    
+    
+    
+    
     { id: "Samurai",
     name: "Samurai",
     powersUrl: "/poderes/samurai",

@@ -1,16 +1,15 @@
 import { Power } from "@/types/power";
 
 export const powersClerigo: Power[] = [
+  // Tormenta20 - Jogo do Ano
   { id: "Abençoar Arma",
     name: "Abençoar Arma",
     description: "Você se torna proficiente na arma preferida de sua divindade. Se estiver empunhando essa arma, pode gastar uma ação de movimento e 3 PM para infundi-la com poder divino. Até o final da cena, a arma é considerada mágica e emite luz dourada ou púrpura (como uma tocha). Além disso, o dano da arma aumenta em um passo e você pode usar sua Sabedoria em testes de ataque e rolagens de dano com ela, em vez do atributo padrão (não cumulativo com efeitos que somam este atributo).",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Aumento de Atributo",
     name: "Aumento de Atributo",
     description: "Você recebe +1 em um atributo. Você pode escolher este poder várias vezes, mas apenas uma vez por patamar para um mesmo atributo.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Autoridade Eclesiástica",
@@ -22,7 +21,6 @@ export const powersClerigo: Power[] = [
   { id: "Canalizar Energia Positiva/Negativa",
     name: "Canalizar Energia Positiva/Negativa",
     description: "Você pode gastar uma ação padrão e PM para liberar uma onda de luz (se sua divindade canaliza energia positiva) ou trevas (se canaliza energia negativa) que afeta criaturas à sua escolha em alcance curto. Para cada PM que gastar, luz cura 1d6 PV em criaturas vivas e causa 1d6 pontos de dano de luz em mortos-vivos (Vontade CD Sab reduz o dano à metade). Trevas tem o efeito inverso — causa dano de trevas a criaturas vivas e cura mortos-vivos.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Canalizar Amplo",
@@ -34,13 +32,11 @@ export const powersClerigo: Power[] = [
   { id: "Comunhão Vital",
     name: "Comunhão Vital",
     description: "Quando lança uma magia que cure uma criatura, você pode pagar +2 PM para que outra criatura em alcance curto (incluindo você mesmo) recupere uma quantidade de pontos de vida igual à metade dos PV da cura original.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Conhecimento Mágico",
     name: "Conhecimento Mágico",
     description: "Você aprende duas magias divinas de qualquer círculo que possa lançar. Você pode escolher este poder quantas vezes quiser.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Expulsar/Comandar Mortos-Vivos",
@@ -52,13 +48,11 @@ export const powersClerigo: Power[] = [
   { id: "Liturgia Mágica",
     name: "Liturgia Mágica",
     description: "Você pode gastar uma ação de movimento para executar uma breve liturgia de sua fé. Se fizer isso, a CD para resistir à sua próxima habilidade de clérigo (desde que usada até o final de seu próximo turno) aumenta em +2.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Magia Sagrada/Profana",
     name: "Magia Sagrada/Profana",
     description: "Quando lança uma magia divina que causa dano, você pode gastar +1 PM. Se fizer isso, muda o tipo de dano da magia para luz (se sua divindade canaliza energia positiva) ou trevas (se canaliza energia negativa).",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Mestre Celebrante",
@@ -70,45 +64,41 @@ export const powersClerigo: Power[] = [
   { id: "Missa: Bênção da Vida",
     name: "Missa: Bênção da Vida",
     description: "Os participantes recebem pontos de vida temporários em um valor igual ao seu nível + sua Sabedoria.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Missa: Chamado às Armas",
     name: "Missa: Chamado às Armas",
     description: "Os participantes recebem +1 em testes de ataque e rolagens de dano.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Missa: Elevação do Espírito",
     name: "Missa: Elevação do Espírito",
     description: "Os participantes recebem pontos de mana temporários em um valor igual à sua Sabedoria.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Missa: Escudo Divino",
     name: "Missa: Escudo Divino",
     description: "Os participantes recebem +1 na Defesa e testes de resistência.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Missa: Superar as Limitações",
     name: "Missa: Superar as Limitações",
     description: "Cada participante recebe +1d6 num único teste à sua escolha e pode usá-lo mesmo após rolar o dado.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Prece de Combate",
     name: "Prece de Combate",
     description: "Quando lança uma magia divina com tempo de conjuração de uma ação padrão em si mesmo, você pode gastar +2 PM para lançá-la como uma ação de movimento.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Símbolo Sagrado Energizado",
     name: "Símbolo Sagrado Energizado",
     description: "Você pode gastar uma ação de movimento e 1 PM para fazer uma prece e energizar seu símbolo sagrado até o fim da cena. Um símbolo sagrado energizado emite uma luz dourada ou prateada (se sua divindade canaliza energia positiva) ou púrpura ou avermelhada (se canaliza energia negativa) que ilumina como uma tocha. Enquanto você estiver empunhando um símbolo sagrado energizado, o custo em PM para lançar suas magias divinas diminui em 1.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
+
+
+  
   { id: "Acólito Escudeiro",
     name: "Acólito Escudeiro",
     description: "Você recebe os serviços de um acólito escudeiro, um parceiro especial que não conta em seu limite de parceiros. Você recebe +2 em Religião e o custo de uma de suas magias de 1º círculo, escolhida ao você receber este poder, diminui em –1 PM. Além disso, você pode gastar 1 PM para receber os efeitos de um esotérico ou catalisador em seu inventário, mesmo que não o esteja empunhando. Caso perca seu acólito, você pode treinar outro com uma semana de trabalho. ",

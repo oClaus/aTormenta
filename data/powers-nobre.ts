@@ -1,6 +1,7 @@
 import { Power } from "@/types/power";
 
 export const powersNobre: Power[] = [
+  // Tormenta20 - Jogo do Ano
   { id: "Armadura Brilhante",
     name: "Armadura Brilhante",
     description: "Você pode usar seu Carisma na Defesa quando usa armadura pesada. Se fizer isso, não pode somar sua Destreza, mesmo que outras habilidades ou efeitos permitam isso.",
@@ -10,7 +11,6 @@ export const powersNobre: Power[] = [
   { id: "Aumento de Atributo",
     name: "Aumento de Atributo",
     description: "Você recebe +1 em um atributo. Você pode escolher este poder várias vezes, mas apenas uma vez por patamar para um mesmo atributo.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Autoridade Feudal",
@@ -22,7 +22,6 @@ export const powersNobre: Power[] = [
   { id: "Educação Privilegiada",
     name: "Educação Privilegiada",
     description: "Você se torna treinado em duas perícias de nobre à sua escolha.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Estrategista",
@@ -34,7 +33,6 @@ export const powersNobre: Power[] = [
   { id: "Favor",
     name: "Favor",
     description: "Você pode usar sua influência para pedir favores a pessoas poderosas. Isso gasta 5 PM e uma hora de conversa e bajulação, ou mais, de acordo com o mestre, e funciona como o uso persuasão de Diplomacia. Porém, você pode pedir favores ainda mais caros, difíceis ou perigosos — um convite para uma festa particular, uma carona de barco até Galrasia ou mesmo acesso aos planos militares do reino. Se você falhar, não pode pedir o mesmo favor por pelo menos uma semana.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "General",
@@ -52,7 +50,6 @@ export const powersNobre: Power[] = [
   { id: "Inspirar Confiança",
     name: "Inspirar Confiança",
     description: "Sua presença faz as pessoas darem o melhor de si. Quando um aliado em alcance curto faz um teste, você pode gastar 2 PM para fazer com que ele possa rolar esse teste novamente.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Inspirar Glória",
@@ -64,7 +61,6 @@ export const powersNobre: Power[] = [
   { id: "Jogo da Corte",
     name: "Jogo da Corte",
     description: "Você pode gastar 1 PM para rolar novamente um teste recém realizado de Diplomacia, Intuição ou Nobreza.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Liderar pelo Exemplo",
@@ -82,13 +78,11 @@ export const powersNobre: Power[] = [
   { id: "Língua de Prata",
     name: "Língua de Prata",
     description: "Quando faz um teste de perícia baseada em Carisma, você pode gastar 2 PM para receber um bônus no teste igual à metade do seu nível.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Língua Rápida",
     name: "Língua Rápida",
     description: "Quando faz um teste de Diplomacia para mudar atitude como uma ação completa, você sofre uma penalidade de –5, em vez de –10.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Presença Majestosa",
@@ -106,12 +100,13 @@ export const powersNobre: Power[] = [
   { id: "Voz Poderosa",
     name: "Voz Poderosa",
     description: "Você recebe +2 em Diplomacia e Intimidação. Suas habilidades de nobre com alcance curto passam para alcance médio.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
+
+
   { id: "Agente de Elite",
     name: "Agente de Elite",
-    description: "Você recebe um agente especial, um parceiro veterano que fornece os benefícios de um parceiro a sua escolha (Tormenta20, p. 260) ou um poder de outra classe, cujos pré-requisitos você cumpra (para efeitos de nível na classe desse poder, considere seu nível de nobre −4). No início de cada aventura, você pode trocar seu agente.",
+    description: "Você recebe um agente especial, um parceiro veterano que fornece os benefícios de um parceiro a sua escolha ou um poder de outra classe, cujos pré-requisitos você cumpra (para efeitos de nível na classe desse poder, considere seu nível de nobre −4). No início de cada aventura, você pode trocar seu agente.",
     prerequisite: "Título, 11º nível de nobre",
     origin: "Herois de Arton"
   },

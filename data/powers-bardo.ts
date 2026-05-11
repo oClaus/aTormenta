@@ -1,22 +1,20 @@
 import { Power } from "@/types/power";
 
 export const powersBardo: Power[] = [
+  // Tormenta20 - Jogo do Ano
   { id: "Arte Mágica",
     name: "Arte Mágica",
     description: "Enquanto você estiver sob efeito de sua Inspiração, a CD para resistir a suas habilidades de bardo aumenta em +2.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Aumentar Repertório",
     name: "Aumentar Repertório",
     description: "Você aprende duas magias de qualquer círculo que possa lançar. Elas devem pertencer às escolas que você sabe usar, mas podem ser arcanas ou divinas. Você pode escolher este poder quantas vezes quiser.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Aumento de Atributo",
     name: "Aumento de Atributo",
     description: "Você recebe +1 em um atributo. Você pode escolher este poder várias vezes, mas apenas uma vez por patamar para um mesmo atributo.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Dança das Lâminas",
@@ -28,7 +26,6 @@ export const powersBardo: Power[] = [
   { id: "Esgrima Mágica",
     name: "Esgrima Mágica",
     description: "Sua arte mescla esgrima e magia, transformando dança em golpes. Se estiver sob efeito de Inspiração, você pode substituir testes de Luta por testes de Atuação, mas apenas para ataques com armas corpo a corpo leves ou de uma mão.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Estrelato",
@@ -58,7 +55,6 @@ export const powersBardo: Power[] = [
   { id: "Inspiração Marcial",
     name: "Inspiração Marcial",
     description: "Quando você usa Inspiração, você e seus aliados aplicam o bônus recebido em rolagens de dano (além de testes de perícia).",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Lendas e Histórias",
@@ -82,19 +78,16 @@ export const powersBardo: Power[] = [
   { id: "Música: Balada Fascinante",
     name: "Música: Balada Fascinante",
     description: "Faça um teste de Atuação oposto pelo teste de Vontade de uma criatura no alcance. Se você passar, ela fica fascinada enquanto você se concentrar (uma ação padrão por rodada). Um alvo hostil ou envolvido em combate recebe +5 no teste de resistência e tem direito a um novo teste sempre que você se concentrar. Se a criatura passar, fica imune a este efeito por um dia.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Música: Canção Assustadora",
     name: "Música: Canção Assustadora",
     description: "Faça um teste de Atuação oposto pelo teste de Vontade de cada criatura à sua escolha dentro do alcance (você faz um único teste). Alvos que falhem ficam abalados até o fim da cena. Alvos que passem ficam imunes a este efeito por um dia",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Música: Melodia Curativa",
     name: "Música: Melodia Curativa",
     description: "Criaturas à sua escolha no alcance recuperam 1d6 PV. Quando usa esta habilidade, você pode gastar mais pontos de mana. Para cada PM extra, aumente a cura em +1d6 PV.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Melodia Restauradora",
@@ -112,7 +105,6 @@ export const powersBardo: Power[] = [
   { id: "Paródia",
     name: "Paródia",
     description: "Uma vez por rodada, quando vê outra criatura lançando uma magia em alcance médio, você pode pagar 1 PM e fazer um teste de Atuação (CD 15 + custo em PM da magia). Se passar, até o final de seu próximo turno você pode lançar essa magia.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Prestidigitação",
@@ -121,6 +113,8 @@ export const powersBardo: Power[] = [
     prerequisite: "6º nível de bardo.",
     origin: "Tormenta20 - Jogo do Ano"
   },
+
+  
   { id: "Acorde Místico",
     name: "Acorde Místico",
     description: "Se estiver empunhando um instrumento musical, você pode gastar uma ação padrão para fazer um teste de Atuação oposto ao teste de Vontade de uma criatura em alcance curto. Se você vencer, a criatura sofre 1d6 pontos de dano de essência e fica vulnerável por 1 rodada. Esse dano aumenta em +1d6 para cada círculo de magia acima do 1º que você puder lançar. Quando faz um ataque como parte da execução de uma magia (como pelo aprimoramento de Toque Chocante), você pode usar este poder no lugar do ataque.",

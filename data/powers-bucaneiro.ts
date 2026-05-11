@@ -1,67 +1,54 @@
 import { Power } from "@/types/power";
 
 export const powersBucaneiro: Power[] = [
-  {
-    id: "1",
+  // Tormenta20 - Jogo do Ano
+  { id: "Abusar dos Fracos",
     name: "Abusar dos Fracos",
     description: "Quando ataca uma criatura sob efeito de uma condição de medo, seu dano aumenta em um passo.",
     prerequisite: "Flagelo dos Mares.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "2",
+  { id: "Amigos no Porto",
     name: "Amigos no Porto",
     description: "Quando chega em uma comunidade portuária, você pode fazer um teste de Carisma (CD 10). Se passar, encontra um amigo para o qual pode pedir um favor ou que pode ajudá-lo como parceiro veterano de um tipo à sua escolha por um dia.",
     prerequisite: "Car 1, 6º nível de bucaneiro.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "3",
+  { id: "Aparar",
     name: "Aparar",
     description: "Uma vez por rodada, quando é atingido por um ataque, você pode gastar 1 PM para fazer um teste de ataque com bônus igual ao seu nível (além do normal). Se o resultado do seu teste for maior que o do oponente, você evita o ataque. Você só pode usar este poder se estiver usando uma arma corpo a corpo leve ou ágil.",
     prerequisite: "Esgrimista.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "4",
+  { id: "Apostador",
     name: "Apostador",
     description: "Você pode gastar um dia para encontrar e participar de uma mesa de wyrt ou outro jogo de azar. Escolha um valor e faça um teste de Jogatina contra a CD correspondente: T$ 100 (CD 15), T$ 200 (CD 20), T$ 400 (CD 25), T$ 800 (CD 30), T$ 1.600 (CD 35) e assim por diante. Se passar, você ganha o valor escolhido (ou um item ou favor equivalente, a critério do mestre). Se falhar, perde esse mesmo o valor. A critério do mestre, o lugar onde você está pode limitar ou impossibilitar o uso deste poder. ",
     prerequisite: "treinado em Jogatina.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "5",
+  { id: "Ataque Acrobático",
     name: "Ataque Acrobático",
     description: "Quando se aproxima de um inimigo com um salto ou pirueta (em termos de jogo, usando Atletismo ou Acrobacia para se mover) e o ataca no mesmo turno, você recebe +2 nesse teste de ataque e na rolagem de dano.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "6",
+  { id: "Aumento de Atributo",
     name: "Aumento de Atributo",
     description: "Você recebe +1 em um atributo. Você pode escolher este poder várias vezes, mas apenas uma vez por patamar para um mesmo atributo.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "7",
+  { id: "Aventureiro Ávido",
     name: "Aventureiro Ávido",
     description: "Uma vez por rodada, você pode gastar 5 PM para realizar uma ação padrão ou de movimento adicional. Se possuir o poder Surto Heroico, em vez disso seu custo diminui em –2 PM.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "8",
+  { id: "Bravata Audaz",
     name: "Bravata Audaz",
     description: "Você jura fazer uma façanha específica, como roubar o tesouro de Sckhar ou ganhar um beijo do príncipe e da princesa até o fim do baile. Se cumprir a bravata, seus PM aumentam em +2 por nível de bucaneiro até o fim da aventura.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "9",
+  { id: "Bravata Imprudente",
     name: "Bravata Imprudente",
     description: "Na primeira rodada de um combate, você pode jurar derrotar seus inimigos com uma restrição à sua escolha, como lutar com uma mão nas costas, de guarda aberta (em termos de jogo, desprevenido), de olhos vendados (cego) etc. Uma restrição só é válida se prejudicá-lo (por exemplo, lutar com uma mão nas costas só vale como restrição se você luta com duas armas). O mestre tem a palavra final sobre a validade de uma restrição. Você sofre a penalidade durante todo o combate, mas, se vencer, recebe +2 nos testes de ataque e na margem de ameaça até o fim da aventura.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "En Garde",
@@ -97,13 +84,11 @@ export const powersBucaneiro: Power[] = [
   { id: "Pernas do Mar",
     name: "Pernas do Mar",
     description: "Você recebe +2 em Acrobacia e Atletismo. Além disso, quando está se equilibrando ou escalando, você não fica desprevenido e seu deslocamento não é reduzido à metade.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Pistoleiro",
     name: "Pistoleiro",
     description: "Você recebe proficiência com armas de fogo e +2 nas rolagens de dano com essas armas.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Presença Paralisante",
@@ -124,6 +109,8 @@ export const powersBucaneiro: Power[] = [
     prerequisite: "Esgrimista, 10º nível de bucaneiro.",
     origin: "Tormenta20 - Jogo do Ano"
   },
+
+  
   { id: "Ardil Afiado",
     name: "Ardil Afiado",
     description: "Você pode usar Audácia em testes de manobra. Se fizer isso contra um oponente desprevenido, soma o dobro do Carisma no teste. ",
