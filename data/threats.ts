@@ -361,6 +361,8 @@ export const threats: Threat[] = [
   equipamentos: [],
   tesouro: "Nenhum."
   },
+
+
   // Bandidos
   { id: "Bandido",
   name: "Bandido",
@@ -945,6 +947,8 @@ export const threats: Threat[] = [
   equipamentos: [],
   tesouro: "1d4 doses de peçonha concentrada (CD 20 para extrair)."
   },
+
+
   // OS Puristas
   { id: "Recruta Purista",
   name: "Recruta Purista",
@@ -1186,6 +1190,8 @@ export const threats: Threat[] = [
   equipamentos: [],
   tesouro: "1d6 engrenagens (CD 29 para extrair; cada engrenagem conta como T$ 1.000 em matéria-prima para fabricar engenhocas)."
   },
+
+
   // Reino dos Mortos
   { id: "Zumbi",
   name: "Zumbi",
@@ -1451,6 +1457,8 @@ export const threats: Threat[] = [
     equipamentos: ["Armadura completa delicada de mitral", "espada longa precisa de mitral"],
     tesouro: "Dobro."
   },
+
+
   // Os Duyshidakk
   { id: "Goblin Salteador",
   name: "Goblin Salteador",
@@ -1729,6 +1737,8 @@ export const threats: Threat[] = [
     equipamentos: ["Couro batido ajustado", "machadinhas atrozes x4", "peçonha potente x1d4"],
     tesouro: "Padrão."
   },
+
+
   // Os Sszzaazitas
   { id: "Cascavel",
   name: "Cascavel",
@@ -2034,6 +2044,8 @@ export const threats: Threat[] = [
     equipamentos: [],
     tesouro: "Padrão."
   },
+
+
   // Os Trolls Nobres
   { id: "Finntroll Caçador",
   name: "Finntroll Caçador",
@@ -2308,6 +2320,8 @@ export const threats: Threat[] = [
     equipamentos: [],
     tesouro: "Padrão."
   },
+
+
   // Os Dragões
   { id: "Enxame Kobold",
   name: "Enxame Kobold",
@@ -2583,6 +2597,8 @@ export const threats: Threat[] = [
     equipamentos: ["Armadura completa de adamante", "machado de batalha de adamante atroz"],
     tesouro: "Dobro."
   },
+
+
   // A Tormenta
   { id: "Maníaco Lefou",
   name: "Maníaco Lefou",
@@ -2835,6 +2851,8 @@ export const threats: Threat[] = [
     equipamentos: ["Símbolo sagrado de Aharadak"],
     tesouro: "Padrão."
   },
+
+
   // Expedição Escarlate
   { id: "Belkor",
   name: "Belkor",
@@ -2964,6 +2982,8 @@ export const threats: Threat[] = [
     equipamentos: ["Katana de mitral ameaçadora x4"],
     tesouro: "Metade."
   },
+
+
   // Fulgor dos Deuses
   { id: "Asmithar Martelo-Mudo",
   name: "Asmithar Martelo-Mudo",
@@ -3439,6 +3459,217 @@ export const threats: Threat[] = [
     equipamentos: ["Promessa das Cinzas"],
     tesouro: "Nenhum."
   },
+  { id: "Carvarel Enfraquecido",
+  name: "Carvarel Enfraquecido",
+  description: "“Para vocês, impuros, ele é punição divina. Para nós, os escolhidos, ele é sinal dos deuses!”\nViolentos e brutais, os abissais também conhecidos como “guerreiros de chifres” são soldados da matança. Não pensam demais, não se preparam, vão para o combate armados de seus imensos machados com a missão de destruir tudo em sua frente. Sua aparência é terrível, uma cabeça de bode encimando o corpo humanoide, coberto de pelos.\nMas aqui, no local da corrupção do Fullgor, eles são tocados por algo diferente. Apesar de sua origem infernal, os demônios são seres divinos, criados pelo lado cruel e sombrio da influência dos deuses. E assim são corrompidos pela luz doente fullgori. O pouco de racionalidade que havia nesses guerreiros demoníacos não está mais lá. São os cães de guarda ideais para os fanáticos puristas.",
+  nd: "1",
+  tipo: "Espírito (abissal)",
+  tamanho: "Médio",
+  papel: "Solo",
+  tema: "Fulgor dos Deuses",
+  origin: "Fulgor dos Deuses",
+  iniciativa: 4,
+  percepcao: 2,
+  defesa: 16,
+  fort: 9,
+  ref: 7,
+  von: 5,
+  resistenciaDano: "faro, visão no escuro, imunidade a ácido e venenos, redução de dano 5, redução de fogo e frio 10",
+  pv: 30,
+  deslocamento: "9m (6q)",
+  ataqueCorpoACorpo: "Machado de guerra +9 (1d12+5, x3) ou chifres +9 (2d6+5 impacto)",
+  habilidades: [
+    "Marrada (Completa): O carvarel faz uma investida e ataca com seu machado de guerra e seus chifres. Os dois ataques recebem o bônus de +2 da investida, mas devem ser feitos contra o mesmo alvo."
+  ],
+  for: "4",
+  des: "2",
+  con: "3",
+  int: "–3",
+  sab: "0",
+  car: "–2",
+  pericias: ["Atletismo +6", "Intimidação +2"],
+  equipamentos: ["Machado de guerra cruel"],
+  tesouro: "Padrão."
+  },
+  { id: "Carvarel Fullgori",
+    name: "Carvarel Fullgori",
+    description: "“Para vocês, impuros, ele é punição divina. Para nós, os escolhidos, ele é sinal dos deuses!”\nViolentos e brutais, os abissais também conhecidos como “guerreiros de chifres” são soldados da matança. Não pensam demais, não se preparam, vão para o combate armados de seus imensos machados com a missão de destruir tudo em sua frente. Sua aparência é terrível, uma cabeça de bode encimando o corpo humanoide, coberto de pelos.\nMas aqui, no local da corrupção do Fullgor, eles são tocados por algo diferente. Apesar de sua origem infernal, os demônios são seres divinos, criados pelo lado cruel e sombrio da influência dos deuses. E assim são corrompidos pela luz doente fullgori. O pouco de racionalidade que havia nesses guerreiros demoníacos não está mais lá. São os cães de guarda ideais para os fanáticos puristas.",
+    image: "/ameacas/carvarel-fullgori.png",
+    nd: "2",
+    tipo: "Espírito (abissal)",
+    tamanho: "Médio",
+    papel: "Solo",
+    tema: "Fulgor dos Deuses",
+    origin: "Fulgor dos Deuses",
+    iniciativa: 6,
+    percepcao: 3,
+    defesa: 18,
+    fort: 10,
+    ref: 8,
+    von: 2,
+    resistenciaDano: "faro, visão no escuro, imunidade a ácido e venenos, redução de dano 10, resistência a magia divina +2",
+    pv: 65,
+    deslocamento: "12m (8q)",
+    ataqueCorpoACorpo: "Machado de guerra +13 (1d12+5, x3) e chifres +13 (2d6+5 impacto)",
+    habilidades: [
+      "Decepador Divino: O machado de guerra do carvarel fullgori causa +1d6 de dano de essência contra devotos e suraggel.",
+      "Marrada Fullgori (Completa): O carvarel percorre até o dobro do seu deslocamento em linha reta, golpeando todas as criaturas em seu caminho. Ele faz um teste de ataque com o machado de guerra e chifres e compara com a Defesa de cada criatura adjacente aos espaços por onde passou."
+    ],
+    for: "5",
+    des: "3",
+    con: "4",
+    int: "–3",
+    sab: "0",
+    car: "–1",
+    pericias: ["Atletismo +8", "Intimidação +5"],
+    equipamentos: ["Machado de guerra cruel"],
+    tesouro: "Nenhum."
+  },
+  { id: "Cultista da Pureza Divina",
+    name: "Cultista da Pureza Divina",
+    description: "“Arsenal e Valkaria não sussurram sua revelação. Eles bradam, em batalha, pelo fim desses povos imundos.”\nNa doutrina anterior à ascensão purista, não humanos já eram tidos como seres inferiores. Tudo aquilo que era diferente, ou desviasse de seu normal, era caçado e destruído. Entretanto, em algum ponto, esta crença deixou de ser apenas uma seita. Movidos por uma suposta revelação, tornou-se a matriz filosófica de toda a Supremacia Purista, dando a ela um viés de missão divina.\nO Templo da Pureza Divina tornou-se parte do estado purista. Seus sacerdotes caminham com os exércitos invasores, escorrendo sobre eles suas bênçãos malditas. Sua cruzada é mais do que pelo domínio do território. É a “fé” de que Arton só pode ser purificada através da morte dos não humanos. Uma fé respondida com seus próprios milagres.\nA iconografia do Templo da Pureza Divina é dual, misturando Valkaria, na posição de deusa da humanidade, e Arsenal, como o deus da guerra. Os mais fracos, apenas cultistas devotados, são pouco mais que soldados da causa, iludidos pela fantasia de um dever maior que si mesmos.",
+    nd: "1/2",
+    tipo: "Humanoide (humano)",
+    tamanho: "Médio",
+    papel: "Lacaio",
+    tema: "Fulgor dos Deuses",
+    origin: "Fulgor dos Deuses",
+    iniciativa: 4,
+    percepcao: 2,
+    defesa: 15,
+    fort: 3,
+    ref: 0,
+    von: 5,
+    pv: 6,
+    deslocamento: "6m (4q)",
+    ataqueCorpoACorpo: "Martelo de guerra +7 (1d8+3, x3)",
+    habilidades: [
+      "Ódio Puro: Como um purista, o cultista recebe +5 em testes de Vontade quando está seguindo ordens de um superior (qualquer purista com ND maior) e +2 em rolagens de dano contra humanoides não humanos."
+    ],
+    for: "2",
+    des: "0",
+    con: "1",
+    int: "-1",
+    sab: "0",
+    car: "-1",
+    pericias: [],
+    equipamentos: ["Brunea", "Martelo de guerra"],
+    tesouro: "Padrão."
+  },
+  { id: "Espião Purista",
+    name: "Espião Purista",
+    description: "“Arsenal e Valkaria não sussurram sua revelação. Eles bradam, em batalha, pelo fim desses povos imundos.”\nNa doutrina anterior à ascensão purista, não humanos já eram tidos como seres inferiores. Movidos por uma suposta revelação, tornou-se a matriz filosófica de toda a Supremacia Purista, dando a ela um viés de missão divina.\nAlguns membros do Templo da Pureza Divina se especializam na infiltração em comunidades diversas, fingindo ser apenas mais um, para no fim facilitar a entrada de seus comparsas. Usam do veneno, da furtividade e do engano para pavimentar o caminho dos exércitos puristas.",
+    nd: "1",
+    tipo: "Humanoide (humano)",
+    tamanho: "Médio",
+    papel: "Especial",
+    tema: "Fulgor dos Deuses",
+    origin: "Fulgor dos Deuses",
+    iniciativa: 7,
+    percepcao: 5,
+    defesa: 14,
+    fort: 0,
+    ref: 11,
+    von: 5,
+    resistenciaDano: "evasão",
+    pv: 20,
+    deslocamento: "9m (6q)",
+    ataqueCorpoACorpo: "Adaga +7 (1d4+1, 19, mais veneno)",
+    habilidades: [
+      "Ataque Furtivo: +2d6.",
+      "Ódio Puro: Como um purista, o espião recebe +5 em testes de Vontade quando está seguindo as ordens de um superior (qualquer purista com ND maior) e +2 em rolagens de dano contra humanoides não humanos.",
+      "Um Na Multidão: O espião purista recebe +10 em testes de Enganação para manter seu disfarce e em testes de Vontade contra efeitos que possam revelar sua verdadeira identidade.",
+      "Veneno: Peçonha comum (perde 1d12 PV, Fort CD 16 evita)."
+    ],
+    for: "1",
+    des: "3",
+    con: "2",
+    int: "1",
+    sab: "1",
+    car: "2",
+    pericias: ["Acrobacia +5", "Enganação +9", "Furtividade +10", "Intuição +5", "Investigação +5", "Ladinagem +7"],
+    equipamentos: ["Adaga", "Armadura de couro", "Dose de peçonha comum x6", "Estojo de disfarces aprimorado", "Gazua"],
+    tesouro: "Padrão."
+  },
+  { id: "Acólito da Pureza Divina",
+    name: "Acólito da Pureza Divina",
+    description: "“Arsenal e Valkaria não sussurram sua revelação. Eles bradam, em batalha, pelo fim desses povos imundos.”\nNa doutrina anterior à ascensão purista, não humanos já eram tidos como seres inferiores. Movidos por uma suposta revelação, tornou-se a matriz filosófica de toda a Supremacia Purista, dando a ela um viés de missão divina. O Templo da Pureza Divina tornou-se parte do estado purista. Seus sacerdotes caminham com os exércitos invasores, escorrendo sobre eles suas bênçãos malditas.\nDa fé distorcida, surgem os acólitos. Estes empunham armas e milagres com o objetivo de levar sua pureza aos incautos que não reconhecem a superioridade de sua crença.",
+    nd: "2",
+    tipo: "Humanoide (humano)",
+    tamanho: "Médio",
+    papel: "Especial",
+    tema: "Fulgor dos Deuses",
+    origin: "Fulgor dos Deuses",
+    iniciativa: 4,
+    percepcao: 7,
+    defesa: 17,
+    fort: 7,
+    ref: 1,
+    von: 13,
+    resistenciaDano: "imunidade a medo",
+    pv: 56,
+    pm: 18,
+    deslocamento: "6m (4q)",
+    ataqueCorpoACorpo: "Martelo de guerra +10 (1d8+5, x3)",
+    habilidades: [
+      "Ódio Puro: Como um purista, o acólito da Pureza Divina recebe +5 em testes de Vontade quando está seguindo as ordens de um superior (qualquer purista com ND maior) e +2 em rolagens de dano contra humanoides não humanos.",
+      "Magias: Como um clérigo de Arsenal de 3º nível (CD 16, limite de PM 3).",
+      "Arma Espiritual (Padrão, 3 PM, sustentada): Uma vez por rodada, como uma ação livre, o acólito causa 2d6 pontos de dano de impacto automaticamente a uma criatura adjacente. Se não fizer isso e sofrer um ataque corpo a corpo nesta rodada, ele pode usar uma reação para causar este dano ao atacante.",
+      "Arma Mágica (Padrão, 3 PM): Até o fim da cena, uma arma adjacente se torna mágica, fornecendo +2 nos testes de ataque e rolagens de dano.",
+      "Bênção (Padrão, 3 PM): Aliados em alcance curto recebem +2 em testes de ataque e rolagens de dano até o fim da cena.",
+      "Curar Ferimentos (Padrão, 3 PM): Uma criatura adjacente cura 4d8+4 PV."
+    ],
+    for: "3",
+    des: "0",
+    con: "3",
+    int: "0",
+    sab: "3",
+    car: "-1",
+    pericias: ["Misticismo +3", "Religião +6"],
+    equipamentos: ["Escudo leve", "Martelo de guerra", "Meia armadura", "Símbolo sagrado"],
+    tesouro: "Padrão."
+  },
+  { id: "Ídolo Fullgori",
+    name: "Ídolo Fullgori",
+    description: "“Arsenal sonha com conquista. Valkaria, com ambição. O Fullgor corrige ambos.”\nDo altar partido, moldado em pedra viva e carne sacrificada, ergue-se a abominação.\nO ídolo pulsa com luz dourada, mas não é dourado. É uma cor impossível, febril, que arde nos olhos e corrói a sanidade. Seus membros são desproporcionais, como várias formas humanas — e desumanas — fundidas em um único corpo. O peito exibe uma versão distorcida do símbolo de Arsenal, talhado com lâminas derretidas. Do outro lado, o rosto deformado de Valkaria esculpido em agonia, preso a grilhões simbólicos, como se protestando contra o que foi feito em seu nome.\nCorrentes de energia se arrastam como veias ao longo do monólito andante, ligando o solo rachado ao corpo monumental. Cada passo do ídolo ressoa como um sino fúnebre, a câmara inteira estremece sob sua presença profana. Ecos do ritual ainda vibram ao redor, entoando dogmas puristas em vozes sobrepostas — sussurros, clamores, lamentos.\nEle executa. Ele julga. É a arma perfeita de uma fé imperfeita.",
+    image: "/ameacas/idolo-fullgori.png",
+    nd: "1",
+    tipo: "Espírito (fullgori)",
+    tamanho: "Grande",
+    papel: "Solo",
+    tema: "Fulgor dos Deuses",
+    origin: "Fulgor dos Deuses",
+    iniciativa: 4,
+    percepcao: 6,
+    defesa: 22,
+    fort: 16,
+    ref: 4,
+    von: 10,
+    resistenciaDano: "percepção às cegas, imunidade a efeitos de movimento e a medo, redução de dano 10, resistência a magia divina +5",
+    pv: 150,
+    deslocamento: "9m (6q)",
+    ataqueCorpoACorpo: "Pancada x2 +14 (1d10+5)",
+    habilidades: [
+      "Almejar o Fullgor: Quando o ídolo fullgori faz um teste de perícia, um resultado de 19 ou mais no dado sempre é um sucesso, não importando o valor a ser alcançado.",
+      "Arsenal Fullgurante (Completa): O ídolo manifesta armas douradas e golpeia todas as criaturas ao seu redor. Ele faz um único teste de ataque de pancada e compara com a Defesa de cada criatura em seu alcance. Se acertar, causa o dano do ataque +1d8 pontos de dano de essência. Recarga (movimento).",
+      "Grilhões Luminosos (Movimento): Correntes de luz doentia se enroscam em uma criatura em alcance curto, deixando-a agarrada (Ref CD 18 evita). Uma vítima agarrada pode tentar se livrar, gastando uma ação padrão para fazer um teste de Atletismo ou Vontade (CD 18). Uma criatura que comece seu turno agarrada por essa habilidade sofre 1d8+1 pontos de dano de essência. O ídolo pode manter até duas criaturas agarradas desta maneira.",
+      "Ódio Fullgori: O ídolo recebe +5 em testes de Vontade contra efeitos causados por não humanos e recebe +2 em rolagens de dano contra não humanos e devotos.",
+      "Sinos Infinitos (Padrão): O ídolo pisoteia o chão, emitindo um som retumbante. Todas as criaturas em alcance curto sofrem 4d8+4 pontos de dano de essência, ficam surdas por 1d4 rodadas e atordoadas por 1 rodada (Fort CD 18 reduz o dano à metade e evita as condições). Uma criatura só pode ser atordoada por esta habilidade uma vez por cena. Recarga (movimento).",
+      "Teofagia (Fullgori): Quando um fullgori causa dano a um devoto, o devoto perde 1 PM por patamar do fullgori. Se o devoto for reduzido a 0 PM dessa forma, perde acesso a todos os seus poderes concedidos e às magias fornecidas por sua divindade por 24 horas.",
+      "Imunidades (Fullgori): Fullgori são imunes a acertos críticos, cansaço, metabolismo, metamorfose e paralisia."
+    ],
+    for: "6",
+    des: "0",
+    con: "6",
+    int: "–2",
+    sab: "2",
+    car: "–5",
+    pericias: [],
+    equipamentos: [],
+    tesouro: "Nenhum."
+  },
+
+
   // Abissais
   { id: "Trio de Carvarel",
   name: "Trio de Carvarel",
@@ -3828,6 +4059,8 @@ export const threats: Threat[] = [
     equipamentos: ["Cimitarra energética", "Espada bastarda sanguinária", "Espada longa anticriatura", "Mangual magnífico", "Martelo de guerra lancinante", "Tridente venenoso"],
     tesouro: "Triplo."
   },
+
+
   // Aspectos dos Deuses
   { id: "Aspecto de Allihanna",
   name: "Aspecto de Allihanna",
@@ -4053,6 +4286,8 @@ export const threats: Threat[] = [
     equipamentos: ["Couraça sob medida", "Florete certeiro preciso", "Sapato de camurça aprimorado"],
     tesouro: "Nenhum.\n\nParceiro: O aspecto de Valkaria é um parceiro veterano que fornece +2 em Acrobacia e em testes opostos e de resistência contra efeitos de movimento. Também permite que você use a habilidade Bloqueio Contundente (veja acima; se evitar o ataque, você causa dano igual ao dano básico de sua arma). Caso você viole as Obrigações & Restrições de Valkaria, o aspecto deixa de apoiá-lo."
   },
+
+
   // Celestiais
   { id: "Pilly",
   name: "Pilly",
@@ -4507,6 +4742,8 @@ export const threats: Threat[] = [
     equipamentos: [],
     tesouro: "Lâmina flamejante (CD 35 para extrair, reduz em 1 PM o custo para fabricar uma vingadora sagrada)."
   },
+
+
   // Fadas
   { id: "Dríade",
   name: "Dríade",
@@ -4990,6 +5227,8 @@ export const threats: Threat[] = [
     equipamentos: ["Espada longa de mitral"],
     tesouro: "Padrão.\nParceiro\nO gamo é um parceiro montaria (Grande) que fornece os benefícios a seguir. Iniciante: seu deslocamento muda para 12m e você ignora terreno difícil. Veterano: você ganha deslocamento de voo 12m. Mestre: você pode gastar uma ação completa e 10 PM para transportar você e o gamo para o Plano etéreo (como o efeito básico da magia Forma Etérea), com duração sustentada. O efeito acaba se você desmontar do gamo."
   },
+
+
   // Gênios
   { id: "Yazzu",
   name: "Gênio da Água (Yazzu)",
@@ -5239,6 +5478,8 @@ export const threats: Threat[] = [
     equipamentos: [],
     tesouro: "Padrão.\n\n**Habilidades de Gênios**\nDentro de uma Lampadazinha. Para cada dia sem um pacto ativo, o total de PM do gênio é reduzido em 1; se for reduzido a 0 PM dessa forma, ele sofre um efeito debilitante. O efeito debilitante e a perda de PM são revertidos quando o gênio firma um pacto com um amo.\nPoderes Cósmicos Fenomenais (Completa). O gênio estabelece um pacto com uma criatura inteligente (Int –3 ou maior) voluntária em alcance curto, que se torna seu amo. O gênio se torna um parceiro iniciante do amo e, enquanto estiver presente na cena, o custo de suas próprias habilidades mágicas é reduzido em –1 PM.\nServo dos Deuses. Todos os gênios podem lançar a magia Viagem Planar, sem necessidade de componente material, mas apenas em si mesmos."
   },
+
+
   // Gigantes
   { id: "Galokk Capanga",
   name: "Galokk Capanga",
@@ -5595,6 +5836,8 @@ export const threats: Threat[] = [
     equipamentos: [],
     tesouro: "Dobro."
   },
+
+
   // Avatares dos Deuses
   { id: "Avatar de Aharadak",
   name: "Avatar de Aharadak",
@@ -6380,6 +6623,7 @@ export const threats: Threat[] = [
     equipamentos: ["Belo Presente"],
     tesouro: "Nenhum.\nBelo Presente\nA adaga empregada pelo Avatar de Wynna é mais um símbolo — e um poderoso amplificador mágico — do que uma arma. Ela conta como um orbe cristalino e uma varinha arcana, e permite que você sustente até três magias ao mesmo tempo. Além disso, ela armazena 20 PM (que são totalmente recuperados ao amanhecer) que podem ser usados apenas para sustentar habilidades mágicas. Artefato."
   },
+
   // Monster Chefe
   { id: "Necromúsico",
     name: "Necromúsico",
@@ -6452,10 +6696,9 @@ export const threats: Threat[] = [
   car: "–1",
   pericias: [],
   equipamentos: [],
-  tesouro: "1d4 doses de d’ranikum (CD 20 para extrair).\nMorte Branca: Por si só, o pó colhido de um d’ranniko não tem utilidade prática. Porém, após um processo alquímico, se torna um poderoso agente antirregenerativo. Este veneno só pode ser fabricado com acesso a doses de d’ranikum. Contato, cura acelerada para de funcionar por 1d4 rodadas (cura acelerada para de funcionar por 1 rodada).\nParceiro: O d’ranniko é um parceiro especial (fortão) que fornece os benefícios a seguir. Iniciante: você recebe resistência a medo +2 e +2 em testes de manobra para quebrar. Veterano: os bônus aumentam para +3 e, quando faz um acerto crítico, você pode fazer uma manobra quebrar como ação livre contra o mesmo alvo. Mestre: os bônus aumentam para +4 e você recebe a habilidade Alvo Destemor."
+  tesouro: "1d4 doses de d’ranikum (CD 20 para extrair).\nMorte Branca: Por si só, o pó colhido de um d’ranniko não tem utilidade prática. Porém, após um processo alquímico, se torna um poderoso agente antirregenerativo. Este veneno só pode ser fabricado com acesso a doses de d’ranikum. Contato, cura acelerada para de funcionar por 1d4 rodadas (cura acelerada para de funcionar por 1 rodada).\n\n**Parceiro:** O d’ranniko é um parceiro especial (fortão) que fornece os benefícios a seguir. Iniciante: você recebe resistência a medo +2 e +2 em testes de manobra para quebrar. Veterano: os bônus aumentam para +3 e, quando faz um acerto crítico, você pode fazer uma manobra quebrar como ação livre contra o mesmo alvo. Mestre: os bônus aumentam para +4 e você recebe a habilidade Alvo Destemor."
   },
-  { id: "D'ranniko Fêmea",
-    
+  { id: "D'ranniko Fêmea",  
     name: "D'ranniko Fêmea",
     description: "Embora insetos gigantes sejam rapidamente ligados a Galrasia, a ilha remota onde seres titânicos atravessam a paisagem tropical, existem seres similares em vários lugares de Arton. Os próprios corcéis do deserto, tão comumente usados como montarias pelos Sar-Allan, são insetoides. Formas de vida tão diversas conseguem encontrar formas de sobreviver nos lugares mais hostis, especialmente no subterrâneo. Os anões de Doherimm sabem disso muito bem, temendo alguns desses seres e admirando outros. Um inseto subterrâneo temido e admirado na mesma medida é o d’ranniko.\nEssa criatura se parece com um louva-a-deus do tamanho de um anão, de carapaça completamente branca, com um par de olhos compostos muito vermelhos. Suas pinças são particularmente grandes e ameaçadoras, inspirando cautela. Se fosse apenas isso, dificilmente o d’ranniko teria sobrevivido em ambiente tão perigoso quanto as fronteiras entre Doherimm e Trollkyra. Mas o inseto gigante desenvolveu habilidades que o permitiram prosperar. Sua carapaça engana a visão no escuro de anões e trolls, tornando o monstro invisível no escuro. Suas pinças enormes podem destruir os equipamentos dos anões, enquanto sua carapaça secreta um pó capaz de inibir a capacidade regenerativa de trolls. Além disso, possui uma valentia incrível, tornando-se muito mais perigoso quando encurralado, uma característica advinda de seu modo de vida incomum.\nDiferente do louva-a-deus tradicional, o d’ranniko é um inseto social. Faz seus ninhos em cavernas, com cerca de uma dezena de machos liderados por uma fêmea maior, mais forte e mais inteligente. Os machos caçam e competem entre si, trazendo carne de anões e trolls para alimentar e agradar a fêmea. Ao final de cada estação, a fêmea escolhe um preferido para acasalar. Durante a cópula, a fêmea mata o macho e depois usa seu corpo como incubadora para as centenas de ovos que põe. Desses ovos nascem d’rannikos menores, que competem entre si para poder comer o corpo do pai. Há uma chance em dez de uma fêmea eclodir de um dos ovos: nesse caso, o bando se divide e os menores e mais jovens levam a nova fêmea para outra caverna. Apesar da rivalidade individual dentro do bando, os d’rannikos cooperam entre si para enfrentar outros inimigos.\nEnfrentar um bando de d’rannikos em seu território é especialmente difícil; não apenas pela quantidade de insetos, mas também pela presença da rainha. Além das propriedades poderosas dos machos, a fêmea tem habilidades mágicas. Cruzar seu olhar é arriscadíssimo, causando uma tontura leve que pode se tornar um torpor completo. Como se isso não fosse o bastante, pode cortar o espaço com suas pinças, teleportando-se curtas distâncias. Mais que isso, a d’ranniko fêmea é muito mais inteligente do que os machos ou outros insetos, conseguindo identificar conjuradores e direcionando seus servos a destruírem itens esotéricos.\nTanto anões quanto trolls tentaram treinar d’rannikos machos como animais de combate, com graus variados de sucesso. Os anões que conseguem amizade com uma dessas criaturas conseguem excelentes parceiros de guerra, implacáveis contra os troll. Os finntroll aparentemente estão tentando capturar exemplares vivos de d’rannikos para maiores experimentos: chegam a contratar grupos de aventureiros para tanto. As fêmeas morrem rapidamente se mantidas em cativeiro.",
     image: "/ameacas/d-ranniko.png",
@@ -6561,8 +6804,45 @@ export const threats: Threat[] = [
   car: "3",
   pericias: ["Diplomacia +10", "Enganação –2", "Furtividade –5", "Intuição +10"],
   equipamentos: [],
-  tesouro: "Katana de papel, padrão.\nKatana de Papel: Essa katana aumentada precisa pungente ignora RD de criaturas, equipamentos ou magias de pedra. Quando faz um acerto crítico, deixa o alvo sangrando. T$ 22.000."
+  tesouro: "Katana de papel, padrão.\n\n**Katana de Papel:** Essa katana aumentada precisa pungente ignora RD de criaturas, equipamentos ou magias de pedra. Quando faz um acerto crítico, deixa o alvo sangrando. T$ 22.000."
   },
+  { id: "Zedian",
+  name: "Zedian",
+  description: "O brilho das estrelas e o movimento de corpos celestes é observado apenas por sonhadores e estudiosos. Por isso, quando uma estrela cadente rasgou os céus de Arton alguns anos atrás, poucos acompanharam a trajetória de sua cauda vermelha atravessando o véu de Tenebra. Aqueles que o fizeram perceberam como a estrela caiu em Aslothia, o Reino dos Mortos, justamente onde os sonhos vão para morrer. Foi quando deixaram de prestar atenção naquele fenômeno incomum, sem imaginar ter testemunhado o último suspiro de uma alma nobre e o surgimento de um campeão das trevas.\nUma estrutura misteriosa, tanto metálica quanto orgânica, atingiu uma montanha naquela noite. Era o baronato da Micrólia, as terras do Barão Raozz, osteon necromante e servo fervoroso de Ferren Asloth. Nos escombros fumegantes, o morto-vivo encontrou um corpo. Um humanoide de dimensões heroicas, trajado em cores vivas, com musculatura forte. Uma luz cálida ainda era emitida de seu corpo, iluminando a noite mesmo após a morte. Outros estudiosos arcanos provavelmente empregariam magias de adivinhação e contatariam entidades extraplanares para entender a origem de tal criatura. Mas não era este o intuito de Raozz e não são esses os costumes de Aslothia. Pouco importa quem você era antes de perecer. Só o que importa é como você vai perseverar.\nRaozz dissecou o visitante de outro mundo, descobrindo braços com múltiplas articulações, pernas longas, pele impenetrável. Mais que isso, dentro de seu corpo havia um fragmento de luz elemental, emitindo um brilho cálido e mantendo uma aparência de vida no corpo, mesmo após a morte. O necromante enxergou ali uma oportunidade. Aquele material poderia gerar um servo extremamente poderoso. Se Nimb havia entregado um presente, seria pouco educado recusá-lo.\nOs experimentos do necromante permitiram corromper a luz interior daquela criatura. Agora podia emitir um brilho avermelhado, na forma de asas tenebrosas. Melhor ainda, sua ligação intrínseca com a luz a protegia contra esse tipo de ataque, uma das maiores fraquezas de mortos-vivos. Dessa forma, podia defender a Micrólia mesmo durante o dia. Era necessário ter controle direto quanto a tanto poder. Raozz precisava se certificar de que seu guardião seria totalmente obediente, sem nenhuma chance de revolta. Para tanto, removeu o tecido de suas mãos, deixando-as descarnadas, tão esqueléticas quanto as do próprio necromante. Com os músculos e a pele do visitante, o osteon fez um par de luvas de comando. Ao vesti-las, o osteon pode direcionar as ações de sua criação, como se fosse uma marionete.\nO morto-vivo resultante foi batizado de Zedian, o filho renascido de Aslothia. Forte, obediente e imune à luz, seu voo inaugural chamou atenção de todo o Reino dos Mortos. Sua criação é o maior feito de Raozz, arrancando um elogio pessoal de Ferren Asloth e a atenção indesejada dos Sislach. Micrólia passou a sofrer ataques, seja de aventureiros querendo destruir Raozz e sua criatura ou de enviados dos Sislach dedicados a impedir a ascensão do barão.\nPor sua conta, o Barão Raozz não se incomoda com os ataques. São uma forma de colocar Zedian à prova; cada vitória aumenta sua fama. A população da Micrólia aumenta progressivamente conforme os cadáveres dos desafiantes se transformam em esqueletos, osteons e zumbis.\nPor vezes, entre essa mistura de moradores voluntários e servos hipnotizados, surge uma dúvida: de onde veio o nome Zedian? Alguns dizem ser o nome do filho humano de Raozz, incapaz de perseverar como morto-vivo, perdido para sempre. Outros afirmam ser uma palavra inscrita no interior do invólucro que trouxe a criatura a Aslothia. A pergunta irrita o barão, resultando em explosões de raiva e em ordens para que Zedian esmague os importunadores, então a resposta pode permanecer distante por muito tempo ainda.\nDe uma forma ou de outra, seja durante o dia ou a noite, o baronato de Micrólia continua protegido pelo filho renascido de Aslothia. Cruzando os céus com suas asas de um vermelho sinistro, pode surgir a qualquer momento para esmagar um inimigo ou punir um desafeto do barão. Zedian é humanoide, mas de proporções incomuns: os braços e pernas são longos, com os braços ainda contando com uma articulação adicional. Seu corpo ainda é coberto pelos farrapos do seu traje em vida, hoje sujos e esmaecidos. A carne morta-viva e os cortes de dissecação permitem entrever seu cérebro e vísceras.\nO barão Raozz não esconde de ninguém seu interesse por outras criaturas similares a Zedian. Para tanto, começou a estudar o Éter Divino e pode contratar aventureiros para descobrir mais sobre essa fronteira distante. Possivelmente existem outros, apenas esperando a oportunidade de perecer para poder perseverar em Aslothia.",
+  image: "/ameacas/zedian.png",
+  nd: "19",
+  tipo: "Morto-vivo",
+  tamanho: "Grande",
+  papel: "Solo",
+  origin: "Dragão Brasil",
+  tema: "Monster Chefe",
+  iniciativa: 20,
+  percepcao: 17,
+  defesa: 60,
+  fort: 32,
+  ref: 25,
+  von: 20,
+  resistenciaDano: "visão no escuro, imunidade a atordoamento, luz e metamorfose, redução de dano 20, resistência a magia +5",
+  pv: 1100,
+  deslocamento: "12m (8q), voo 24m (16q)",
+  ataqueCorpoACorpo: "Pancada x4 +52 (5d10+52)",
+  habilidades: [
+    "Fúria Solar: Quando está sob a luz do sol, Zedian recebe +2 em testes de ataque e causa +3d6 pontos de dano de trevas com seus ataques de pancada.",
+    "Olhar Noturno (Padrão): Uma criatura no alcance médio sofre 18d12 pontos de dano de trevas e não pode curar PV por uma rodada (Ref CD 47 evita o dano e a restrição de cura). Recarga (Movimento).",
+    "Vísceras Etéreas (Padrão): Todas as criaturas em um cone de 9m são banhadas por vísceras. As vítimas sofrem 18d12 pontos de dano de trevas e ficam paralisadas por um turno (Fort CD 47 reduz o dano à metade e evita a condição). Recarga (movimento)."
+  ],
+  for: "15",
+  des: "5",
+  con: "10",
+  int: "–3",
+  sab: "2",
+  car: "–3",
+  pericias: [],
+  equipamentos: [],
+  tesouro: "Nenhum. \n\n**Luvas de Controle:** Essas luvas feitas do corpo de Zedian se assentam nas mãos de forma incômoda. Ao vesti-las, você recebe Força +2, uma arma natural de pancada (impacto, 1d10) e controle mental do filho renascido de Aslothia. Acessório maior, T$ 100.000."
+  },
+
+
   // Dragão Brasil
   { id: "Condessa Sirissa Tarvela",
   name: "Condessa Sirissa Tarvela",
@@ -6749,6 +7029,8 @@ export const threats: Threat[] = [
     equipamentos: ["Armadura completa delicada de mitral", "Espada longa precisa de mitral", "Tabardo aprimorado"],
     tesouro: "Dobro."
   },
+
+
   // Duelo de Dragões
   {  id: "Glop de Gelo",
     name: "Glop de Gelo",
@@ -7262,6 +7544,181 @@ export const threats: Threat[] = [
     pericias: ["Furtividade +4"],
     equipamentos: ["Brunea", "Cimitarra cruel precisa", "Escudo grande"],
     tesouro: "Nenhum."
+  },
+  { id: "Borr",
+  name: "Borr",
+  description: "Este humano grande e forte poderia ser um lutador de arena em Tiberus ou Valkaria. Porém, nasceu em uma vila pacata como Vardugg. Seu tamanho, força e carisma o tornaram uma figura de destaque local, o que acabou levando à posição de chefe da vila.\nBorr gosta de desafios e tem grande respeito pela força. Ele desafia os heróis a enfrentá-lo principalmente por ter interesse em competições. O homem sabe que não há mais espaço em sua vida para aventuras e riscos: suas responsabilidades com os habitantes de Vardugg superam quaisquer ambições ou anseios. Embora não seja a pessoa mais esperta das Uivantes, Borr é bem-intencionado e honesto. Seu maior defeito é a vaidade. Costumava exibir cabelo e barba com orgulho, trançando-os em padrões intrincados, mas os anos e a calvície mudaram esse hábito. Hoje usa um capuz para esconder sua cabeça, exibindo apenas uma simples barba trançada.",
+  image: "/ameacas/Borr.png",
+  nd: "1",
+  tipo: "Humanoide (humano)",
+  tamanho: "Médio",
+  papel: "Solo",
+  origin: "Duelo de Dragões",
+  tema: "Duelo de Dragões",
+  iniciativa: 0,
+  percepcao: 0,
+  defesa: 14,
+  fort: 6,
+  ref: 3,
+  von: -1,
+  pv: 70,
+  deslocamento: "9m (6q)",
+  ataqueCorpoACorpo: "Ataque desarmado x2 +10 ($1d6+4$)",
+  habilidades: [
+    "Dá Uma Cabeçada Nele: Quando Borr faz um acerto crítico, seus compatriotas gritam para que ele dê uma cabeçada em seus inimigos. Ele faz um ataque desarmado como uma ação livre e, caso acerte, a vítima fica atordoada por 1 rodada (Fort CD 14 evita a condição).",
+    "Vaidoso: Se alguma criatura em alcance curto de Borr tiver ofendido sua aparência, principalmente falando de sua calvície, ele escolhe essa criatura como alvo de seus ataques e recebe +2 nos testes de ataque e nas rolagens de dano contra ela."
+  ],
+  for: "4",
+  des: "0",
+  con: "2",
+  int: "0",
+  sab: "0",
+  car: "2",
+  pericias: ["Atletismo +6", "Intimidação +4", "Sobrevivência +3"],
+  equipamentos: ["Gibão de peles", "machado de batalha"],
+  tesouro: "Padrão."
+  },
+  { id: "Frisiano",
+  name: "Frisiano",
+  description: "Se entre os minotauros do Império de Tauron já é comum considerar minauros como inferiores, a situação fica ainda pior nos confins das Uivantes entre os membros selvagens da Manada. Onde a força importa acima de qualquer coisa, estatura e massa muscular valem mais que tudo. Isso tornou a vida de Frisiano muito difícil. Embora seja forte de corpo e mente, sempre foi preterido pela baixa estatura.\nA forma como era visto dentro da Manada forçou o minauro a adotar outras táticas. Tornou-se cada vez mais esperto e inescrupuloso, disposto a absolutamente qualquer coisa para obter vantagem. Enquanto seus pares desprezavam furtividade e magia, ele fez questão de dominá-las. Frisiano é um prodígio, mas ainda é visto como um fracassado pelos adultos da Manada.",
+  image: "/ameacas/frisiano.png",
+  nd: "1",
+  tipo: "Humanoide (minauro)",
+  tamanho: "Médio",
+  papel: "Especial",
+  origin: "Duelo de Dragões",
+  tema: "Duelo de Dragões",
+  iniciativa: 6,
+  percepcao: 2,
+  defesa: 14,
+  fort: 0,
+  ref: 11,
+  von: 5,
+  resistenciaDano: "faro",
+  pv: 25,
+  pm: 12,
+  deslocamento: "9m (6q)",
+  ataqueCorpoACorpo: "Adaga +7 (1d4+2, 19) e chifres +7 (1d6+2)",
+  ataqueDistancia: "Adaga +10 (1d4+2, 19)",
+  habilidades: [
+    "Ataque Furtivo: +2d6.",
+    "Magias: Como um bardo de 3º nível (CD 16).\n• Adaga Mental (Padrão, 3 PM): Uma criatura em alcance curto sofre 3d6 pontos de dano psíquico e fica atordoada por 1 rodada (Von reduz o dano à metade e evita a condição). Uma criatura só pode ser atordoada por esta magia uma vez por cena.\n• Amedrontar (Padrão, 3 PM): Um animal ou humanoide em alcance curto fica apavorado por 1d4+1 rodadas e depois abalado (Von reduz para abalado por 1d4 rodadas).\n• Invisibilidade (Padrão, 3 PM): Frisiano fica invisível por 1 rodada ou até realizar uma ação hostil. Ele recebe camuflagem total e +10 em testes de Furtividade contra ouvir, e criaturas que não possam vê-lo ficam desprevenidas contra seus ataques.\n• Leque Cromático (Padrão, 3 PM): Animais e humanoides em um cone de 4,5m ficam atordoados por 1 rodada (apenas uma vez por cena, Von evita), ofuscadas e vulneráveis.",
+    "Velocidade Ladina (2 PM): Uma vez por rodada, Frisiano executa uma ação de movimento adicional em seu turno."
+  ],
+  for: "3",
+  des: "2",
+  con: "2",
+  int: "2",
+  sab: "0",
+  car: "1",
+  pericias: ["Enganação +4", "Furtividade +4", "Ladinagem +4"],
+  equipamentos: ["Adaga x2", "armadura de couro"],
+  tesouro: "Nenhum (veja a descrição do encontro)."
+  },
+  { id: "Minotauro da Manada",
+    name: "Minotauro da Manada",
+    description: "A proximidade das Uivantes com o Império de Tauron faz com que a região seja regularmente visitada por expedições de minotauros. Contudo, no passado distante, um gigantesco bando decidiu fazer destas montanhas sua morada permanente.\nA Manada é formada por cerca de 4.000 minotauros, que mostram um tipo físico diferente do cidadão comum do Império: muito mais peludos e com muita gordura sob a pele, da mesma forma que os iaques (tipo de boi selvagem). Vivem em nomadismo, formando acampamentos temporários até que os recursos naturais da região se esgotem, para então procurar outro lugar.\nAssim como o antigo Império, minotauros da Manada são escravistas — mas ainda mais brutais. Qualquer humanoide em seu caminho corre o risco de ser transformado em escravo, a menos que demonstre força suficiente para garantir a própria segurança e liberdade. Escravos da Manada vivem em condições cruéis — não é raro que morram de frio, doença ou fadiga. Pequenos bandos da Manada às vezes viajam até reinos distantes em busca de novas vítimas.",
+    image: "/ameacas/minotauro-da-manada.png",
+    nd: "2",
+    tipo: "Humanoide (minotauro)",
+    tamanho: "Médio",
+    origin: "Duelo de Dragões",
+    tema: "Duelo de Dragões",
+    papel: "Lacaio",
+    iniciativa: 3,
+    percepcao: 4,
+    defesa: 18,
+    fort: 12,
+    ref: 7,
+    von: 3,
+    resistenciaDano: "faro, redução de frio 5",
+    pv: 16,
+    deslocamento: "9m (6q)",
+    ataqueCorpoACorpo: "Machado de batalha +13 (2d8+5, x3) e chifres +13 (1d6+5)",
+    habilidades: [
+      "Capturar: O minotauro da Manada recebe +2 em testes de agarrar e pode se deslocar normalmente enquanto arrasta uma criatura. Uma criatura arrastada desta forma sofre 1d4 pontos de dano de impacto para cada 3m que for arrastada.",
+      "Ver Vermelho: Se não tiver sido alvo de um efeito hostil (ataque, habilidade, magia...) desde o fim de seu último turno, o minotauro recebe +2 em testes de perícia."
+    ],
+    for: "4",
+    des: "0",
+    con: "3",
+    int: "0",
+    sab: "1",
+    car: "-2",
+    pericias: ["Atletismo +9", "Intimidação +7"],
+    equipamentos: ["Gibão de peles", "Machado de batalha"],
+    tesouro: "Padrão."
+  },
+  { id: "Minotauro da Manada Adolescente",
+    name: "Minotauro da Manada Adolescente",
+    description: "A proximidade das Uivantes com o Império de Tauron faz com que a região seja regularmente visitada por expedições de minotauros. Contudo, no passado distante, um gigantesco bando decidiu fazer destas montanhas sua morada permanente.\nA Manada é formada por cerca de 4.000 minotauros, que mostram um tipo físico diferente do cidadão comum do Império: muito mais peludos e com muita gordura sob a pele, da mesma forma que os iaques (tipo de boi selvagem). Vivem em nomadismo, formando acampamentos temporários até que os recursos naturais da região se esgotem, para então procurar outro lugar.\nAssim como o antigo Império, minotauros da Manada são escravistas — mas ainda mais brutais. Qualquer humanoide em seu caminho corre o risco de ser transformado em escravo, a menos que demonstre força suficiente para garantir a própria segurança e liberdade. Escravos da Manada vivem em condições cruéis — não é raro que morram de frio, doença ou fadiga. Pequenos bandos da Manada às vezes viajam até reinos distantes em busca de novas vítimas.",
+    image: "/ameacas/minotauro-da-manada-adolescente.png",
+    nd: "1/2",
+    tipo: "Humanoide (minotauro)",
+    tamanho: "Médio",
+    origin: "Duelo de Dragões",
+    tema: "Duelo de Dragões",
+    papel: "Lacaio",
+    iniciativa: 1,
+    percepcao: 0,
+    defesa: 13,
+    fort: 5,
+    ref: 0,
+    von: 0,
+    resistenciaDano: "faro",
+    pv: 6,
+    deslocamento: "9m (6q)",
+    ataqueCorpoACorpo: "Clava +9 (1d8+3) e chifres +9 (1d4+2)",
+    ataqueDistancia: "Pedra +9 (1d8+3)",
+    habilidades: [
+      "Paus e Pedras: O minotauro adolescente pode empunhar clavas com as duas mãos, como se fosse uma arma versátil, aumentando seu dano em um passo (já incluso). Além disso, o minotauro adolescente pode arremessar pedras em alcance curto, usando as duas mãos. Um alvo atingido por uma pedra deve fazer um teste de Reflexos (CD 13) ou fica caído.",
+      "Furor da Juventude (Reação): Quando reduz um inimigo a zero pontos de vida ou faz um acerto crítico, um minotauro da manada adolescente pode se mover metade do seu deslocamento.",
+      "Valentão: O minotauro recebe +2 em testes de ataque e rolagens de dano contra oponentes caídos, desprevenidos, flanqueados ou indefesos."
+    ],
+    for: "2",
+    des: "0",
+    con: "1",
+    int: "–2",
+    sab: "–2",
+    car: "–2",
+    pericias: ["Atletismo +9", "Intimidação +7"],
+    equipamentos: ["Clava", "Gibão de peles"],
+    tesouro: "Nenhum."
+  },
+  { id: "Serpe Branca",
+    name: "Serpe Branca",
+    description: "As asas da criatura lançam uma sombra contra a neve conforme ela cruza os céus. Seu corpanzil coberto de escamas brancas se confunde com a paisagem, mas a ponta de seu ferrão e a sede de sangue em seus olhos tornam impossível ignorá-la.\nRaríssimas fora das Montanhas Uivantes, as serpes brancas são primas da variedade de serpe encontrada em florestas e lugares sob grande influência dracônica, como Sckharshantallas. São menores e menos agressivas que suas primas de climas mais temperados, e seu veneno gela o sangue nas veias.",
+    image: "/ameacas/serpe-branca.png",
+    nd: "4",
+    tipo: "Monstro",
+    tamanho: "Grande",
+    origin: "Duelo de Dragões",
+    tema: "Duelo de Dragões",
+    papel: "Solo",
+    iniciativa: 6,
+    percepcao: 5,
+    defesa: 23,
+    fort: 16,
+    ref: 10,
+    von: 4,
+    resistenciaDano: "faro, visão no escuro, imunidade a paralisia, redução de frio 20, vulnerabilidade a fogo",
+    pv: 140,
+    deslocamento: "9m (6q), voo 9m (6q)",
+    ataqueCorpoACorpo: "Mordida +14 (2d6+10) e ferrão +14 (1d8+5 e veneno)",
+    habilidades: [
+      "Agarrar Aprimorado (Livre): Se a serpe branca acertar um ataque de mordida, pode fazer a manobra agarrar (teste +16).",
+      "Aperto Gelado: Uma vítima agarrada pela serpe branca fica lenta por uma rodada (Fort CD 18 evita).",
+      "Veneno: Peçonha concentrada (perde 1d12 pontos de vida por rodada durante 3 rodadas, Fort CD 20 reduz a duração para uma rodada)."
+    ],
+    for: "5",
+    des: "2",
+    con: "5",
+    int: "–2",
+    sab: "1",
+    car: "–1",
+    pericias: [],
+    equipamentos: [],
+    tesouro: "1d4 doses de peçonha concentrada (CD 20 para extrair)."
   },
 
 
@@ -8189,39 +8646,6 @@ export const threats: Threat[] = [
   equipamentos: [],
   tesouro: "Padrão."
 },
-
-{ id: "Borr",
-  name: "Borr",
-  description: "Este humano grande e forte poderia ser um lutador de arena em Tiberus ou Valkaria. Porém, nasceu em uma vila pacata como Vardugg. Seu tamanho, força e carisma o tornaram uma figura de destaque local, o que acabou levando à posição de chefe da vila.\nBorr gosta de desafios e tem grande respeito pela força. Ele desafia os heróis a enfrentá-lo principalmente por ter interesse em competições. O homem sabe que não há mais espaço em sua vida para aventuras e riscos: suas responsabilidades com os habitantes de Vardugg superam quaisquer ambições ou anseios. Embora não seja a pessoa mais esperta das Uivantes, Borr é bem-intencionado e honesto. Seu maior defeito é a vaidade. Costumava exibir cabelo e barba com orgulho, trançando-os em padrões intrincados, mas os anos e a calvície mudaram esse hábito. Hoje usa um capuz para esconder sua cabeça, exibindo apenas uma simples barba trançada.",
-  image: "/ameacas/Borr.png",
-  nd: "1",
-  tipo: "Humanoide (humano)",
-  tamanho: "Médio",
-  papel: "Solo",
-  origin: "Dragão Brasil",
-  iniciativa: 0,
-  percepcao: 0,
-  defesa: 14,
-  fort: 6,
-  ref: 3,
-  von: -1,
-  pv: 70,
-  deslocamento: "9m (6q)",
-  ataqueCorpoACorpo: "Ataque desarmado x2 +10 ($1d6+4$)",
-  habilidades: [
-    "Dá Uma Cabeçada Nele: Quando Borr faz um acerto crítico, seus compatriotas gritam para que ele dê uma cabeçada em seus inimigos. Ele faz um ataque desarmado como uma ação livre e, caso acerte, a vítima fica atordoada por 1 rodada (Fort CD 14 evita a condição).",
-    "Vaidoso: Se alguma criatura em alcance curto de Borr tiver ofendido sua aparência, principalmente falando de sua calvície, ele escolhe essa criatura como alvo de seus ataques e recebe +2 nos testes de ataque e nas rolagens de dano contra ela."
-  ],
-  for: "4",
-  des: "0",
-  con: "2",
-  int: "0",
-  sab: "0",
-  car: "2",
-  pericias: ["Atletismo +6", "Intimidação +4", "Sobrevivência +3"],
-  equipamentos: ["Gibão de peles", "machado de batalha"],
-  tesouro: "Padrão."
-},
 { id: "Restalho",
   name: "Restalho",
   description: "As fadas são criaturas misteriosas. Embora sejam belas e pareçam frágeis, podem também ser intensamente cruéis. Até mesmo essa crueldade é de difícil compreensão, coberta por um verniz de inocência, quase infantilidade. Dizem que nasceram dos sonhos de Wynna, perturbada após ouvir os sussurros de Nimb — assim, seriam criaturas do caos e da magia. Quem pode afirmar com precisão? A única certeza sobre as fadas, afinal, é a incerteza.\nEssa incerteza torna difícil determinar qual é a origem da fada conhecida como restalho. Sua aparência lembra a de outras fadas, mas esta habita os ambientes mais banais e menos mágicos da sociedade humanoide — grandes cidades, especialmente seus esgotos e lixões. Lembra um híbrido entre os animais mais encontrados em seu habitat (ratos, morcegos e insetos) e um humanoide pequeno, do tamanho de uma criança humana. É uma fada sem rosto e sem identidade. Alguma força parece determinada a aprisionar o restalho — seu corpo assimétrico traz os braços amarrados às costas por correntes espectrais fluorescentes. Qualquer que seja essa força, a consciência da criatura ainda tem algum controle sobre si mesma, manipulando as próprias amarras como tentáculos, usando-as para atacar, manipular objetos ou se deslocar. Alguns teorizam que as correntes seriam a própria fada, enquanto o corpo é apenas uma ferramenta para obter seu grande objetivo, a identidade.\nO restalho não tem rosto. Onde ele deveria existir há apenas um buraco escuro. A criatura pode roubar o rosto de vítimas capturadas em suas correntes, dividindo com elas sua identidade. Caso a vítima morra, o restalho tenta assumir seu lugar na sociedade. Como mantém a própria aparência e não consegue obter nenhuma informação sobre sua vítima, o resultado se torna ao mesmo tempo cômico e perturbador.\nEmbora não sejam aparições comuns, os restalhos são muito temidos. Os problemas não se resumem apenas a seus ataques, mas no impacto emocional causado naqueles que ficam para trás. Especialmente quando se trata de hynne ou crianças, os entes queridos por vezes se deixam enganar e adotam a criatura esquisita como seu familiar retornado dos mortos. Essa é uma história de terror relativamente comum entre os plebeus de Thartann, capital de Ahlen, onde os humanoides mais pobres vivem em um lixão a céu aberto. As crianças temem ser comidas vivas pelas criaturas que ali vivem, mas a história que as coloca nas camas mesmo com as barrigas doendo de fome é a de ser substituída por um restalho.\nCuriosamente, o restalho é tratado como desconhecido na Pondsmânia. As fadas afirmam categoricamente não ter nenhuma relação com essa criatura. Ainda mais curioso é como os relatos de avistamento de restalhos se iniciaram a partir da fundação da Cidade Normal dos Humanos, o simulacro das fadas para a vida dos humanoides. Seria o restalho, então, um resultado de empreitadas feéricas? Talvez crianças ou hynne amaldiçoadas a buscarem eternamente a própria identidade, vagando entre os dejetos da sociedade humana. Talvez um experimento arcano, um reflexo distorcido de como as fadas percebem os habitantes dos lugares mais imundos ocupados pelos humanos. Talvez apenas um novo tipo de fada, ressoando com o que Arton se tornou com a integração da Tormenta em sua realidade. Ninguém é capaz de afirmar. Afinal, a única certeza sobre as fadas — incluindo o restalho — é a incerteza.",
@@ -8259,42 +8683,7 @@ export const threats: Threat[] = [
   tesouro: "Padrão."
 },
 
-{ id: "Frisiano",
-  name: "Frisiano",
-  description: "Se entre os minotauros do Império de Tauron já é comum considerar minauros como inferiores, a situação fica ainda pior nos confins das Uivantes entre os membros selvagens da Manada. Onde a força importa acima de qualquer coisa, estatura e massa muscular valem mais que tudo. Isso tornou a vida de Frisiano muito difícil. Embora seja forte de corpo e mente, sempre foi preterido pela baixa estatura.\nA forma como era visto dentro da Manada forçou o minauro a adotar outras táticas. Tornou-se cada vez mais esperto e inescrupuloso, disposto a absolutamente qualquer coisa para obter vantagem. Enquanto seus pares desprezavam furtividade e magia, ele fez questão de dominá-las. Frisiano é um prodígio, mas ainda é visto como um fracassado pelos adultos da Manada.",
-  image: "/ameacas/frisiano.png",
-  nd: "1",
-  tipo: "Humanoide (minauro)",
-  tamanho: "Médio",
-  papel: "Solo",
-  origin: "Dragão Brasil",
-  iniciativa: 6,
-  percepcao: 2,
-  defesa: 14,
-  fort: 0,
-  ref: 11,
-  von: 5,
-  resistenciaDano: "faro",
-  pv: 25,
-  pm: 12,
-  deslocamento: "9m (6q)",
-  ataqueCorpoACorpo: "Adaga +7 (1d4+2, 19) e chifres +7 (1d6+2)",
-  ataqueDistancia: "Adaga +10 (1d4+2, 19)",
-  habilidades: [
-    "Ataque Furtivo: +2d6.",
-    "Magias: Como um bardo de 3º nível (CD 16).\n• Adaga Mental (Padrão, 3 PM): Uma criatura em alcance curto sofre 3d6 pontos de dano psíquico e fica atordoada por 1 rodada (Von reduz o dano à metade e evita a condição). Uma criatura só pode ser atordoada por esta magia uma vez por cena.\n• Amedrontar (Padrão, 3 PM): Um animal ou humanoide em alcance curto fica apavorado por 1d4+1 rodadas e depois abalado (Von reduz para abalado por 1d4 rodadas).\n• Invisibilidade (Padrão, 3 PM): Frisiano fica invisível por 1 rodada ou até realizar uma ação hostil. Ele recebe camuflagem total e +10 em testes de Furtividade contra ouvir, e criaturas que não possam vê-lo ficam desprevenidas contra seus ataques.\n• Leque Cromático (Padrão, 3 PM): Animais e humanoides em um cone de 4,5m ficam atordoados por 1 rodada (apenas uma vez por cena, Von evita), ofuscadas e vulneráveis.",
-    "Velocidade Ladina (2 PM): Uma vez por rodada, Frisiano executa uma ação de movimento adicional em seu turno."
-  ],
-  for: "3",
-  des: "2",
-  con: "2",
-  int: "2",
-  sab: "0",
-  car: "1",
-  pericias: ["Enganação +4", "Furtividade +4", "Ladinagem +4"],
-  equipamentos: ["Adaga x2", "armadura de couro"],
-  tesouro: "Nenhum (veja a descrição do encontro)."
-},
+
 
 { id: "Fruto D'hali",
   name: "Fruto D'hali",

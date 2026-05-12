@@ -1096,6 +1096,14 @@ export const accessories: SpecificAccessory[] = [
     price: "T$ 45.000",
     size: "Maior",
     origin: "Herois de Arton"
-  }
+  },
+  // Dragão Brasil
+  { id: "Luvas de Controle",
+    name: "Luvas de Controle",
+    description: "Essas luvas feitas do corpo de Zedian se assentam nas mãos de forma incômoda. Ao vesti-las, você recebe Força +2, uma arma natural de pancada (impacto, 1d10) e controle mental do filho renascido de Aslothia.",
+    price: "T$ 100.000",
+    size: "Maior",
+    origin: "Dragão Brasil"
+  },
 ];
   

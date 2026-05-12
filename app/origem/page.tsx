@@ -45,7 +45,7 @@ export default function OrigemPage() {
       </header>
 
       {/* Main Content */}
-      <div className="relative z-10 w-full px-6 py-12">
+      <div className="relative z-10 w-full px-6 py-2">
 
         {/* Título Principal */}
         <div className="mb-8 w-full">
@@ -76,22 +76,22 @@ export default function OrigemPage() {
             </span>
           </button>
 
-          <div className={`overflow-hidden transition-all duration-500 ease-in-out border-x-2 border-b-2 border-amber-900/30 rounded-b-xl bg-[#fbf5e6] ${isIntroOpen ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0 border-transparent'}`}>
-            <div className="p-8 sm:p-10 space-y-4">
-                <p>Enquanto sua raça diz como você nasceu e sua classe diz o que se tornou, sua origem revela sua ocupação antes de ser aventureiro. É o que você fazia até ganhar seu primeiro nível em uma classe.</p>
-                <p>Cada origem apresentada a seguir é intencionalmente vaga e breve, apenas uma ideia por onde começar. Você pode usá-la como está, para jogar rapidamente, ou então colorir com quantos detalhes quiser!</p>
+          <div className={`overflow-hidden transition-all duration-500 ease-in-out border-x-2 border-b-2 border-amber-900/30 rounded-b-xl bg-[#fbf5e6] ${isIntroOpen ? 'max-h-[200000px] opacity-100' : 'max-h-0 opacity-0 border-transparent'}`}>
+            <div className="p-8 sm:p-10">
+                <p className="text-amber-900/90 font-medium mb-2 text-justify">Enquanto sua raça diz como você nasceu e sua classe diz o que se tornou, sua origem revela sua ocupação antes de ser aventureiro. É o que você fazia até ganhar seu primeiro nível em uma classe.</p>
+                <p className="text-amber-900/90 font-medium mb-2 text-justify">Cada origem apresentada a seguir é intencionalmente vaga e breve, apenas uma ideia por onde começar. Você pode usá-la como está, para jogar rapidamente, ou então colorir com quantos detalhes quiser!</p>
 
-                <h3 className="text-2xl font-bold text-red-800 pt-4 border-b-2 border-amber-900/20 pb-2">Itens de Origem</h3>
-                <p>Você começa com todos os itens descritos na linha “Itens” de sua origem sem pagar por eles.</p>
+                <h3 className="text-2xl font-bold text-red-800 mb-3 border-t-2 border-amber-900/20 pt-4 font-serif">Itens de Origem</h3>
+                <p className="text-amber-900/90 font-medium mb-2 text-justify">Você começa com todos os itens descritos na linha “Itens” de sua origem sem pagar por eles.</p>
 
-                <h3 className="text-2xl font-bold text-red-800 pt-4 border-b-2 border-amber-900/20 pb-2">Benefícios de Origem</h3>
-                <p>Cada origem possui uma lista de benefícios que inclui perícias e poderes gerais. Você escolhe dois benefícios da lista — duas perícias, dois poderes ou uma perícia e um poder. Se preferir regras mais rápidas, escolha apenas perícias.</p>
+                <h3 className="text-2xl font-bold text-red-800 mb-3 border-t-2 border-amber-900/20 pt-4 font-serif">Benefícios de Origem</h3>
+                <p className="text-amber-900/90 font-medium mb-2 text-justify">Cada origem possui uma lista de benefícios que inclui perícias e poderes gerais. Você escolhe dois benefícios da lista — duas perícias, dois poderes ou uma perícia e um poder. Se preferir regras mais rápidas, escolha apenas perícias.</p>
                 
-                <p><span className="text-red-800 font-bold">Perícias: </span><span className="text-amber-950 font-medium">Atuar como batedor aguçou os sentidos do meio-elfo Gorack Misuk. Uma infância na estrada tornou Aivy Karter capaz de cuidar de si mesma nos ermos. Fugir da milícia pelas ruas de Malpetrim fez de Sima, a Astuta, uma pessoa furtiva. Você se torna treinado na perícia escolhida, representando aprendizado adquirido em sua vida pregressa.</span></p>
-                <p><span className="text-red-800 font-bold"> Poderes: </span><span className="text-amber-950 font-medium">A vida de apresentações em Valkaria fez da barda Kiim Nomi uma estrela nata. Trabalhar em navios durante a juventude garantiu ao bucaneiro Don Doido contatos com quem conseguir transporte marítimo. Anos servindo no exército de Deheon ensinaram o paladino Rhogar a manejar sua espada. Você recebe o poder escolhido, mas ainda precisa cumprir seus pré-requisitos.</span></p>
-                <p><span className="text-red-800 font-bold">Poder Único: </span><span className="text-amber-950 font-medium">Cada origem tem um poder exclusivo, descrito após os outros benefícios. Ele pode ser escolhido como um de seus dois benefícios. Apenas personagens com essa origem podem escolher esse poder.</span></p>
+                <p className="text-amber-900/90 font-medium mb-2 text-justify"><span className="text-red-800 font-bold">Perícias: </span><span>Atuar como batedor aguçou os sentidos do meio-elfo Gorack Misuk. Uma infância na estrada tornou Aivy Karter capaz de cuidar de si mesma nos ermos. Fugir da milícia pelas ruas de Malpetrim fez de Sima, a Astuta, uma pessoa furtiva. Você se torna treinado na perícia escolhida, representando aprendizado adquirido em sua vida pregressa.</span></p>
+                <p className="text-amber-900/90 font-medium mb-2 text-justify"><span className="text-red-800 font-bold"> Poderes: </span><span>A vida de apresentações em Valkaria fez da barda Kiim Nomi uma estrela nata. Trabalhar em navios durante a juventude garantiu ao bucaneiro Don Doido contatos com quem conseguir transporte marítimo. Anos servindo no exército de Deheon ensinaram o paladino Rhogar a manejar sua espada. Você recebe o poder escolhido, mas ainda precisa cumprir seus pré-requisitos.</span></p>
+                <p className="text-amber-900/90 font-medium mb-2 text-justify"><span className="text-red-800 font-bold">Poder Único: </span><span>Cada origem tem um poder exclusivo, descrito após os outros benefícios. Ele pode ser escolhido como um de seus dois benefícios. Apenas personagens com essa origem podem escolher esse poder.</span></p>
                 
-                <p className="text-amber-950 italic border-l-4 border-red-800 pl-4 bg-[#e8dac1] py-3 rounded-r shadow-sm mt-4">O humano clérigo Pivas, que cresceu isolado nas florestas de Tollon, escolhe a origem eremita. Ele começa com os seguintes itens: uma barraca e uma maleta de medicamentos. Pivas então pode escolher dois benefícios: ele escolhe a perícia Religião e o poder único Busca Interior.</p>
+                <p className="text-amber-900/90 font-medium mb-2 text-justify italic border-l-4 border-red-800 pl-4 bg-[#e8dac1] py-3 rounded-r shadow-sm mt-4">O humano clérigo Pivas, que cresceu isolado nas florestas de Tollon, escolhe a origem eremita. Ele começa com os seguintes itens: uma barraca e uma maleta de medicamentos. Pivas então pode escolher dois benefícios: ele escolhe a perícia Religião e o poder único Busca Interior.</p>
             </div>
           </div>
         </div>

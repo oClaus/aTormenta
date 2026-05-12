@@ -1,6 +1,19 @@
 import { Partner } from "@/types/partner";
 
 export const partners: Partner[] = [
+  // Monster Chefe
+  { id: "Dranniko",
+  name: "D’ranniko",
+  description: "Um inseto gigante semelhante a um louva-a-deus branco de olhos vermelhos. Valente e implacável, é temido nas cavernas próximas a Doherimm e valorizado como feroz parceiro de combate.",
+  origin: "Dragão Brasil",
+  benefits: {
+    iniciante: "Você recebe resistência a medo +2 e +2 em testes de manobra para quebrar.",
+    veterano: "Os bônus aumentam para +3 e, quando faz um acerto crítico, você pode fazer uma manobra quebrar como ação livre contra o mesmo alvo.",
+    mestre: "Os bônus aumentam para +4 e você recebe a habilidade Alvo Destemor.",
+  },
+  },
+
+  
   {
     id: "atirador",
     name: "Atirador",
@@ -181,16 +194,7 @@ export const partners: Partner[] = [
     mestre: "-",
   },
   },
-  { id: "Dranniko",
-  name: "D’ranniko",
-  description: "Um inseto gigante semelhante a um louva-a-deus branco de olhos vermelhos. Valente e implacável, é temido nas cavernas próximas a Doherimm e valorizado como feroz parceiro de combate.",
-  origin: "Dragão Brasil",
-  benefits: {
-    iniciante: "Você recebe resistência a medo +2 e +2 em testes de manobra para quebrar.",
-    veterano: "Os bônus aumentam para +3 e, quando faz um acerto crítico, você pode fazer uma manobra quebrar como ação livre contra o mesmo alvo.",
-    mestre: "Os bônus aumentam para +4 e você recebe a habilidade Alvo Destemor.",
-  },
-  },
+  
   { id: "AspectoKallyadranoch",
   name: "Aspecto de Kallyadranoch",
   description: "Uma manifestação dracônica coberta por escamas ardentes e espinhos afiados, com asas majestosas e olhar arrogante. Orgulhoso e vaidoso, só serve aqueles que considera dignos.",

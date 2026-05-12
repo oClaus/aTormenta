@@ -276,6 +276,15 @@ export const enchantments: Enchantment[] = [
 ];
 
 export const specificWeapons: SpecificWeapon[] = [
+  // Dragão Brasil
+  { id: "Katana de Papel",
+    name: "Katana de Papel",
+    description: "Essa katana aumentada precisa pungente ignora RD de criaturas, equipamentos ou magias de pedra. Quando faz um acerto crítico, deixa o alvo sangrando.",
+    price: "22.000",
+    origin: "Dragão Brasil",
+  },
+
+
   { id: "arco-do-poder",
     name: "Arco do Poder",
     description: "O arco do poder conta como um arco longo formidável, mas parece apenas o corpo de um arco — não tem corda e não aceita flechas. Contudo, quando você o empunha e faz o gesto de puxar a corda inexistente, o arco cria uma corda e uma flecha de energia dourada. O arco do poder é capaz de ler suas intenções, produzindo diferentes tipos de flechas energéticas a sua escolha.\n\n- *Flecha Normal.* 3d8 pontos de dano de essência.\n- *Flecha Piedosa.* 4d8 pontos de dano de essência não letal.\n- *Flecha Explosiva.* 3d6 pontos de dano de fogo no alvo e em todas as criaturas adjacentes a ele. Essas têm direito a um teste de Reflexos (CD Des) para reduzir o dano à metade.\n- *Flecha-Rede.* Não causa dano, mas deixa a vítima agarrada por uma rede de energia. A criatura pode se soltar passando em um teste de Força ou Acrobacia (CD 25). A rede se dissipa quando a criatura se solta ou no fim da cena.",
