@@ -1,6 +1,20 @@
 import { Mount } from "@/types/mount";
 
 export const mounts: Mount[] = [
+  // Duelo de Dragões
+  { id: "Corcel de Comando ",
+    name: "Corcel de Comando ",
+    size: "Grande",
+    description: "Uma montaria mecânica quadrúpede feita de metal escuro, criada pela Supremacia Purista para líderes militares. Protegido por magia e equipado com encantos de comando, atravessa o campo de batalha com eficiência implacável.",
+    origin: "Duelo de Dragões",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 12m e você ignora a penalidade por terreno difícil. Você usa Pilotagem no lugar de Cavalgar.",
+      veterano: "Você pode lançar a magia Campo de Força (apenas o efeito básico). Se aprender essa magia, seu custo diminui em –1 PM.",
+      mestre: "O alcance de suas habilidades baseadas em som (como Músicas de Bardo) aumenta em um passo (de curto para médio e de médio para longo).",
+    },
+  },
+
+
   { id: "Cavalo ",
     name: "Cavalo ",
     size: "Grande",

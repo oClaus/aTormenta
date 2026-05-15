@@ -3201,6 +3201,47 @@ export const bosses: Boss[] = [
   ],
   equipamentos: [],
   tesouro: "Nenhum."
+},
+{
+  id: "demonio-bomba-reze",
+  name: "Demônio-Bomba - Chainsaw Man",
+  image: "/chefes/reze.png",
+  tipo: "Espírito Médio",
+  nd: 9,
+  historia: "Chainsaw Man, escrito por Tatsuki Fujimoto, é um dos maiores fenômenos dos mangás e animes dos últimos anos. Conta a história de Denji, que firmou um pacto com o Demônio da Serra Elétrica, e busca sobreviver em um mundo tomado de caos, morte e niilismo existencial. Em Chainsaw Man — O Filme: Arco da Reze, ele encontra talvez os seus maiores desafios até o momento: uma oponente explosiva… e os dilemas de um amor juvenil. Temos certeza que pelo menos um deles pode combinar com a sua mesa de jogo!\nHÍBRIDOS INFERNAIS\nO mundo de Chainsaw Man é assombrado por demônios que representam seus maiores medos: o demônio da guerra, das armas, do sangue... A maioria é hostil à humanidade, e trava com ela uma longa guerra de atrito. Também existem, no entanto, aqueles amigáveis, que por interesse, empatia ou coerção firmam pactos para conceder poderes aos próprios seres humanos com quem seus irmãos guerreiam.\nOutro tipo de demônio, no entanto, vai ainda além: em uma fusão completa com o seu hospedeiro, une a força e os poderes demoníacos, uma capacidade de regeneração explosiva, e a imprevisibilidade de um ser humano louco o bastante para fazer esse pacto!\nAssim nascem os híbridos, um grupo de criaturas únicas e perigosas. Mas que podem ser a arma secreta que a humanidade precisa na guerra contra os seres infernais — se não forem usadas para guerrear entre si em primeiro lugar!\nA DEMÔNIA QUE VEIO DO FRIO\nUma lenda urbana contava que, na União Soviética, havia uma instituição para onde crianças órfãs da guerra eram levadas e criadas até a idade adulta. Não era um orfanato idílico, no entanto, mas um centro onde eram submetidas a um treinamento rigoroso e cruel para tornarem-se máquinas de batalha e espiãs furtivas, de onde apenas as mais aptas saíam vivas. Algumas, dizem, podiam mesmo ser submetidas a pactos demoníacos.\nPor muito tempo, acreditou-se que a existência de um lugar assim fosse apenas um mito — até que uma reportagem jornalística expôs a realidade, para a surpresa e horror de todo o mundo. Em meio ao escândalo que se seguiu, a instituição foi fechada, e os jovens libertados foram reintegrados à sociedade.\nOu será que não? Muitos agentes já haviam sido formados e enviados ao redor do mundo para cumprir missões. Qualquer um pode ser um deles — talvez mesmo aquela jovem simpática que você encontrou em uma cabine telefônica em Tóquio enquanto se protegia da chuva…",
+  dicas: "BOMBÁSTICA\nAinda que venha de uma série de fantasia moderna, o conceito de Reze, a demônio- -bomba, é fácil o bastante de ser transportado para quase qualquer história fantástica. Uma criatura demoníaca com poderes explosivos pode facilmente existir em Arton. Talvez seja subordinada aos Demônios da Pólvora, ou a outros deuses e criaturas da guerra e do combate. Mesmo o seu histórico como espiã pode ser aproveitado, fazendo dela uma agente da Supremacia ou outro reino militarizado, cumprindo missões como parte de um pacto com seus senhores.",
+  tamanho: "Médio",
+  iniciativa: 12,
+  percepcao: 11,
+  defesa: 36,
+  resistenciaDano: "visão no escuro, cura acelerada 15",
+  fort: 9,
+  ref: 21,
+  von: 15,
+  pv: 320,
+  deslocamento: "12m (8q)",
+  pm: 0,
+  ataqueCorpoACorpo: "pancada x2 +27 (2d6+6, x3, mais 6d6 de fogo)",
+  habilidades: [
+    "Aceleração Bombástica: A demônio-bomba pode fazer uma ação de movimento extra por rodada, apenas para se deslocar. Quando utiliza uma ação de movimento para saltar, ela não precisa pegar impulso e recebe +30 no teste de Atletismo.",
+    "Arremessar Bombas (Padrão): 1d4+1 bombas são arremessadas em alcance médio. Criaturas até 3m do ponto em que a bomba foi arremessada sofrem 6d6 pontos de dano de impacto (Ref CD 28 reduz à metade). Recarga (movimento).",
+    "Coração do Demônio: A demônia-bomba não morre mesmo se chegar à –160 PV. Ela só pode ser verdadeiramente morta se reduzida a –320 PV ou se receber um golpe de misericórdia.",
+    "Puxar o Pino (Completa): A demônio puxa o pino no seu pescoço e explode, causando 12d6 pontos de dano de impacto a todas as criaturas em alcance curto da demônio-bomba (Ref CD 28 reduz à metade). Recarga (sofer 100 pontos de dano).",
+    "Finta Explosiva (Movimento): A demônio-bomba faz um teste de fintar contra uma criatura em alcance curto. Se ela vencer, além de receber os benefícios de fintar, causa 3d6 pontos de dano de impacto a criatura."
+  ],
+  for: 2,
+  des: 4,
+  con: 3,
+  int: 3,
+  sab: 3,
+  car: 4,
+  pericias: [
+    "Acrobacia +12",
+    "Atletismo +10",
+    "Enganação +12"
+  ],
+  equipamentos: [],
+  tesouro: "nenhum."
 }
 
   

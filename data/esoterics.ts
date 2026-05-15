@@ -2,6 +2,16 @@ import { Gear } from "@/types/gear";
 
 // Tabela de Equipamento de Aventura
 export const esoteric: Gear[] = [
+  // Duelo de Dragões
+  { id: "Tomo de Guerra",
+    name: "Tomo de Guerra",
+    description: "Quando lança uma magia de evocação, você recebe +1 PM para gastar em aprimoramentos.",
+    origin: "Duelo de Dragões",
+    price: "T$ 300",
+    spaces: "1",
+  },
+
+
   {
     id: "Bolsa de Pó",
     name: "Bolsa de Pó",
