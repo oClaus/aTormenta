@@ -12,6 +12,16 @@ export const partners: Partner[] = [
     mestre: "Os bônus aumentam para +4 e você recebe a habilidade Alvo Destemor.",
   },
   },
+  { id: "Jaata",
+  name: "Jäätä",
+  description: "Uma criatura elemental de gelo semelhante a um pangolim gigante, coberta por escamas brancas afiadas e envolta em névoa congelante. Forte e agressiva, espalha frio intenso ao seu redor.",
+  origin: "Dragão Brasil",
+  benefits: {
+    iniciante: "Você tem redução de frio 5.",
+    veterano: "Como iniciante, e seus ataques causam +2 pontos de dano de frio.",
+    mestre: "Você recebe a habilidade Aura Congelante.",
+  },
+  },
 
   
   {
@@ -174,16 +184,7 @@ export const partners: Partner[] = [
     mestre: "A redução de custo em magias de encantamento e ilusão se torna cumulativa com outras reduções e você fica sempre sob o efeito básico da magia Visão Mística.",
   },
   },
-  { id: "Jaata",
-  name: "Jäätä",
-  description: "Uma criatura elemental de gelo semelhante a um pangolim gigante, coberta por escamas brancas afiadas e envolta em névoa congelante. Forte e agressiva, espalha frio intenso ao seu redor.",
-  origin: "Dragão Brasil",
-  benefits: {
-    iniciante: "Você tem redução de frio 5.",
-    veterano: "Como iniciante, e seus ataques causam +2 pontos de dano de frio.",
-    mestre: "Você recebe a habilidade Aura Congelante.",
-  },
-  },
+  
   { id: "AspectoAllihanna",
   name: "Aspecto de Allihanna",
   description: "Uma criatura mística que mistura traços de vários animais e plantas, adaptando sua forma para a natureza ao redor. Selvagem e caprichosa, serve apenas devotos de Allihanna.",

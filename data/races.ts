@@ -573,7 +573,224 @@ export const races: Race[] = [
       { description: "Escolha +1 em dois atributos diferentes (exceto Constituição)" },
     ],
   },
-  
+  { id: "Anão da Superfície",
+    name: "Anão da Superfície",
+    origin: "Dragão Brasil",
+    image: "/racas/anao_superficie.png",
+    description: "Nós, o povo anão da superfície, somos a prova viva de que a tradição anã não precisa estar presa ao subterrâneo para continuar firme. Enquanto doheritas erguem cidadelas sob as montanhas, nós preferimos as estradas, feiras e portos de Arton, viajando com carroças reforçadas, cofres bem trancados e um sorriso confiante sob a barba. Somos um povo de mercadores natos, conhecidos por negociar com justiça, cumprir acordos à risca e nunca trapacear — afinal, um anão pode até mudar de rota, mas jamais de palavra.\nMesmo longe das cavernas ancestrais, os anões da superfície mantêm vivos os costu­mes de nosso povo. Suas barbas exibem tranças que marcam clãs, viagens memoráveis ou contratos importantes. E suas forjas, embora menores e portáteis, produzem obras que fariam qualquer ferreiro de Doherimm erguer a sobrancelha em aprovação. Acostumados a lidar com diferentes culturas, nós aprendemos a rir alto, brindar com estranhos e contar boas histórias ao redor da fogueira, sem nunca esquecer quem somos.\n— Bartha Barba-de-Aço, anão da superfície paladino de Valkaria.",
+    abilities: [
+      {
+      name: "Somente o Necessário",
+      description: "Você nunca sai de casa sem estar preparado. Uma vez por sessão de jogo, você pode gastar uma ação completa e 1 PM para encontrar nos seus equipamentos um item de valor equivalente a T$ 1d10 + seu nível. Você também pode usar este poder para encontrar materiais de fabricação, mas o valor deve ser equivalente a T$ 1d6 + seu nível.",
+      },
+      {
+      name: "Devagar e Sempre",
+      description: "Seu deslocamento é 6m (em vez de 9m). Porém, seu deslocamento não é reduzido por uso de armadura ou excesso de carga.",
+      },
+      {
+      name: "Duro como Pedra",
+      description: "Você recebe +3 pontos de vida no 1º nível e +1 por nível seguinte.",
+      },
+      {
+      name: "Tradição de Heredrimm",
+      description: "Você é perito nas armas tradicionais anãs, seja por ter treinado com elas, seja por usá-las como ferramentas de ofício. Para você, todos os machados, martelos, marretas e picaretas são armas simples. Você recebe +2 em ataques com essas armas.",
+      },
+    ],
+    // Modificadores FIXOS para Anão
+    attributeModifiers: [
+      { attribute: "con", modifier: 2 },
+      { attribute: "int", modifier: 1 },
+      { attribute: "des", modifier: -1 }
+    ]
+  },
+  { id: "Elfo-do-Gelo",
+    name: "Elfo-do-Gelo Ω",
+    origin: "Dragão Brasil",
+    image: "/racas/elfo_do_gelo.png",
+    description: "Meu povo descende daqueles que deixaram as asas de Glórienn e encontraram refúgio onde quase ninguém ousava ir: as gélidas Montanhas Uivantes. Lá, aprendemos a sobreviver num mundo de neve eterna, ventos cortantes e caça difícil. Com o tempo, o frio deixou de ser um obstáculo e passou a moldar as pessoas: pele pálida como a geada, cabelos em tons claros ou frios, olhos adaptados à escuridão e corpos marcados por cicatrizes de um ambiente que não perdoa erros. Passamos a viver em pequenos grupos, geralmente em cavernas, sem reis ou chefes: cada aldeia decide seu caminho em conjunto, guiada pela necessidade e pela experiência.\nMuitos elfos-do-gelo são como eu, devotos da Dragoa-Rainha do Gelo, pedindo proteção e força, enquanto outros ainda fazem preces a Allihanna por boas caçadas. Poucos de nós deixam as montanhas, mas quando o fazem é por necessidade, curiosidade ou chamado da aventura — e onde passam, levam consigo o silêncio do inverno e a certeza de que até no frio mais implacável a liberdade pode florescer.",
+    abilities: [
+      {
+      name: "Graça de Glórienn",
+      description: "Seu deslocamento é 12m (em vez de 9m).",
+    },
+    {
+      name: "Herança Gélida",
+      description: "Você recebe redução de frio 10 e resistência a frio +5.",
+    },
+    {
+      name: "Sentidos Élficos",
+      description: "Você recebe visão na penumbra e +2 em Misticismo e Percepção.",
+    },
+    ],
+    attributeModifiers: [
+      { attribute: "des", modifier: 1 },
+      { attribute: "sab", modifier: 2 },
+      { attribute: "con", modifier: -1 }
+    ]
+  },
+  { id: "Elfo-Sombrio",
+    name: "Elfo-Sombrio Ω",
+    origin: "Dragão Brasil",
+    image: "/racas/Elfo-Sombrio.png",
+    description: "Nos abismos de Sombria, onde a luz é uma lembrança distante e as sombras parecem ter vontade própria, meu povo aprendeu a transformar silêncio em poder e paciência em arma. Nossas cidades se erguem como colmeias de pedra e obsidiana, cheias de passagens ocultas, torres invertidas e salões iluminados por fungos bioluminescentes e chamas negras. Para um elfo-sombrio, sobreviver é entender o jogo social: alianças são afiadas como lâminas, promessas duram o tempo que for útil e a confiança é uma fraqueza rara.\nEmbora sejamos temidos em Arton, engana-se quem acredita que sejamos vilões. Nós somos herdeiros de um mundo mais honesto, onde a força e a astúcia definem o destino. Somos guerreiros, conjuradores e assassinos que treinam desde cedo, pois em Sombria não há espaço para fraqueza. Alguns poucos, porém, abandonam o reino divino de Tenebra e viajam até Arton, movidos por ambição, curiosidade ou exílio. Esses raros aventureiros carregam consigo o peso do preconceito e a fama sombria de nosso povo, mas também o potencial de se provar tão valoroso quanto qualquer herói.\n— Eleanorilanas Danthallas, elfa-sombria ladina de Hyninn.",
+    abilities: [
+      {
+      name: "Arsenal de Tenebra",
+      description: "Você recebe proficiência em florete, gadanho e mosquete e +2 em testes de ataque com essas armas. Se receber proficiência em uma dessas armas novamente, pode considerá-la uma arma leve.",
+    },
+    {
+      name: "Manto das Sombras",
+      description: "Você pode lançar Invisibilidade, mas apenas em você. Caso aprenda novamente essa magia, seu custo diminui em –1 PM.",
+    },
+    {
+      name: "Sentidos Élficos",
+      description: "Você recebe visão na penumbra e +2 em Misticismo e Percepção.",
+    },
+    {
+      name: "Sensibilidade ao Sol",
+      description: "Quando exposto à luz solar direta, você fica ofuscado e, a cada rodada, perde 2d6 PV por patamar de personagem.",
+    },
+    ],
+    attributeModifiers: [
+      { attribute: "des", modifier: 1 },
+      { attribute: "int", modifier: 2 },
+      { attribute: "con", modifier: -1 }
+    ]
+  },
+  { id: "Humano Feérico",
+    name: "Humano Feérico",
+    origin: "Dragão Brasil",
+    image: "/racas/Humano_Feérico.png",
+    description: "Raptados, trocados ou substituídos ainda crianças pelas fadas da Pondsmânia, nós feéricos crescemos em salões de cristal, bosques impossíveis e palácios que só existem à meia-noite. Lá, aprendemos que nomes têm poder, promessas são leis e a própria realidade pode se dobrar à vontade da Rainha Thantalla-Dhaedelin. Quando fugi e retornei a Deheon, até parecia um humano comum à primeira vista, mas algo em mim denunciava a passagem pelo Reino das Fadas. Depois de viver lá, a magia nos envolve de forma natural, quase instintiva.\nDe volta ao mundo mortal, nós feéricos nunca nos encaixamos por completo. Alguns pensam rápido demais, outros sentem demais e há quem deseje demais. As “bênçãos” que nos foram dadas pelos seres feéricos são curiosas, imprevisíveis e perigosas, nos fazendo alternar entre uma alegria contagiante e uma melancolia profunda por algo que não conseguimos explicar. No fim das contas, ser um humano feérico é carregar dois mundos no peito — e não pertencer completamente a nenhum deles.\n— Aedwlyn Dralinur, feérico druida de Allihanna.",
+    abilities: [
+      {
+        name: "Bênção das Fadas",
+        description: "Escolha quatro bênçãos da lista a seguir. Quando recebe um novo poder de classe, pode trocar este poder por uma bênção. Cada bênção só pode ser escolhida uma vez.",
+        subAbilities: [
+        {
+          name: "Ardiloso Como uma Cobra",
+          description: "Você pode lançar Disfarce Ilusório (atributo-chave Carisma)."
+        },
+        {
+          name: "Duro Como Pedra",
+          description: "Você recebe +1 em Constituição e resistência a magia +2."
+        },
+        {
+          name: "Falante Como um Grilo",
+          description: "Você recebe +2 em Adestramento e Sobrevivência, e pode falar com animais e plantas (como o efeito da magia Voz Divina)."
+        },
+        {
+          name: "Forte Como um Touro",
+          description: "Você recebe +1 em Força e +5 de capacidade de carga."
+        },
+        {
+          name: "Mágico Como uma Borboleta",
+          description: "Você pode lançar uma magia arcana de 1º círculo à sua escolha (atributo-chave Carisma). Se aprender novamente esta magia, seu custo diminui em –1 PM."
+        },
+        {
+          name: "Raivoso Como um Carcaju",
+          description: "Você possui uma arma natural de mordida (dano 1d6, crítico x2, perfuração). Uma vez por rodada, quando usa a ação agredir para atacar com outra arma corpo a corpo, pode gastar 1 PM para fazer um ataque extra com a mordida."
+        },
+        {
+          name: "Rápido Como um Coelho",
+          description: "Você recebe +1 em Destreza e deslocamento +3m."
+        },
+        {
+          name: "Sábio Como uma Coruja",
+          description: "Você recebe +1 em Sabedoria e +3 PM."
+        },
+        {
+          name: "Sagaz Como um Falcão",
+          description: "Você recebe visão na penumbra e está permanentemente sob efeito da magia Visão Mística com o aprimoramento de enxergar criaturas e objetos invisíveis."
+        },
+        
+        ]
+    },
+    ],
+    attributeModifiers: [
+      { description: "Escolha +1 em três atributos diferentes" }
+    ]
+  },
+  { id: "Medusa Dracônica",
+    name: "Medusa Dracônica",
+    origin: "Dragão Brasil",
+    image: "/racas/medusa_draconica.png",
+    description: "Nós somos herdeiras de um legado antigo e poderoso, fruto da união entre o sangue das medusas e a essência dos dragões. Diferente das medusas serpentinas, a magia flui em nós de forma quase instintiva, carregada da essência elemental dos dragões. Nossas serpentes exibem escamas mais duras e cores profundas, e nosso olhar não petrifica, ele lança magias. Para medusas dracônicas como eu, a herança dos dragões não é apenas um detalhe de nascimento, mas um chamado: fomos feitas para lembrar o mundo do poder de Kallyadranoch.\nCulturalmente, medusas dracônicas tendem a se organizar em círculos fechados, ordens ou linhagens, muitas vezes seguindo a tradição dos trios, um símbolo de equilíbrio, vigilância e domínio. Devotas de Kallyadranoch são mais comuns, embora não exclusivas, muitas de nós se dedicam também a Sckhar, Beluhga e outros Dragões-Reais; ou a divindades de poder semelhante, como Arsenal e Thwor. Orgulhosas e pacientes, nós acreditamos que governar é um dever natural, não uma ambição vulgar, e que a força deve ser usada com propósito, não por impulso. Quando uma de nós surge em Arton, raramente o faz em silêncio: nossa presença anuncia intriga, reverência e poder bruto.\n— Aleteia, medusa dracônica cavaleira de Kallyadranoch",
+    abilities: [
+      {
+      name: "Cria de Megalokk",
+      description: "Você é uma criatura do tipo monstro e recebe visão no escuro.",
+    },
+    {
+      name: "Natureza Elemental",
+      description: "Escolha um tipo de dano entre ácido, eletricidade, fogo ou frio. Você recebe RD 5 do tipo escolhido. Além disso, pode gastar uma ação de movimento e 1 PM para encantar uma arma que esteja usando. A arma causa +1d12 pontos de dano do tipo escolhido. O efeito dura até você acertar um ataque ou até o fim da cena (o que acontecer primeiro).",
+    },
+    {
+      name: "Olhar Místico",
+      description: "Você pode lançar uma magia de 1º círculo à sua escolha. A magia deve ser da energia correspondente à sua Natureza Elemental. Caso aprenda novamente essa magia, seu custo diminui em –1 PM. Se você estiver cego ou semelhante, não consegue conjurar essa magia.",
+    },
+    ],
+    attributeModifiers: [
+      { attribute: "int", modifier: 2 },
+      { attribute: "car", modifier: 1 },
+    ]
+  },
+  { id: "Teju - Tabrachi",
+    name: "Teju - Tabrachi Ω",
+    origin: "Dragão Brasil",
+    image: "/racas/teju.png",
+    description: "Muito me ofende quem confunde meu povo com aqueles sapos brutamontes. Tejus são a face menos conhecida — e bem mais refinada — do sangue tabrachi. Enquanto os homens-sapos se aferram ao pântano e à brutalidade ritual, nós seguimos outro caminho: somos moldados por rios limpos, cavernas úmidas e ruínas alagadas onde agilidade vale mais que força bruta. Pequenos e esguios, somos salamandras bípedes, com caudas longas, pele fria e úmida e movimentos rápidos como um bote certeiro. Ouvi dizer que, à distância, já fomos confundidos com kobolds, mas basta um olhar atento para perceber que não temos escamas ou fogo; apenas músculos flexíveis, olhos atentos e uma elegância anfíbia.\nCulturalmente, somos mais organizados e curiosos que os tabrachi comuns. Nossas comunidades são estáveis, com tradições orais, líderes eleitos e um apreço surpreendente por diplomacia, comércio e artes práticas como navegação fluvial e engenharia mágica. Embora não rejeitemos o uso da força, preferimos astúcia e velocidade, atacando apenas quando necessário. Quando um teju deixa suas águas natais para se aventurar pelo Reinado, costuma fazê-lo como explorador, mensageiro ou aventureiro ágil, provavelmente em busca de um novo conhecimento mágico, teórico ou prático.\n— Rusk Ojawale, teju frade de Nerelim",
+    abilities: [
+      {
+      name: "Mecanismo de Defesa",
+      description: "Quando for alvo de um acerto crítico (ou de um efeito capaz de decepar um de seus membros), você pode gastar 3 PM para descolar o membro do corpo e reduzir o dano sofrido à metade. Um membro perdido dessa forma leva 2d6 dias para crescer novamente e, de acordo com o mestre, você pode sofrer o efeito de uma complicação que reflita a falta desse membro (como Maneta para a falta de um braço ou Vagaroso para a falta de uma perna) até que o membro perdido cresça novamente.",
+      },
+      {
+      name: "Linguarudo",
+      description: "Sua língua é uma arma natural que pode atacar inimigos a até 3m (dano 1d4, crítico x2, impacto). Ela é uma arma versátil, fornecendo +2 em testes para desarmar e derrubar. Uma vez por rodada, quando usa a ação agredir com outra arma, você pode gastar 1 PM para fazer um ataque corpo a corpo extra com a língua.",
+      },
+      {
+      name: "Urodelo",
+      description: "Você recebe visão na penumbra e deslocamento de escalada igual ao seu deslocamento terrestre.",
+      },
+    ],
+    attributeModifiers: [
+      { attribute: "con", modifier: 2 },
+      { attribute: "for", modifier: 1 },
+      { attribute: "car", modifier: -1 }
+    ],
+    longevidade: "Normal",
+    devotos: "Allihanna, Megalokk, Nimb, Sszzaas, Tenebra."
+  },
+
+  // Duelo de Dragões
+  { id: "Naidora",
+    name: "Naidora",
+    origin: "Duelo de Dragões",
+    image: "/racas/naidora.png",
+    description: "Descendentes de Hydora, Dragão-Rei dos Ventos, e da exploradora elfa Hana, os naidora (também conhecidos pelo nome completo nailanandora; ou elfos-do-céu, no linguajar mais simples) são elfos alados extremamente raros. São tidos como lendas, invenções exageradas dos bardos, na maior parte dos lugares. Mesmo Valkaria, a maior metrópole do mundo conhecido, só teve três desses seres como moradores em toda a sua história. Seus números reduzidos impedem que estabeleçam sociedades, por isso normalmente vivem sozinhos, como nômades. \n Os naidora ficam completamente à vontade no ar. Podem até mesmo dormir enquanto voam. Alguns, à imagem de seu ancestral dragão, jamais tocam o chão. Costumam ficar desconfortáveis em espaços fechados ou no subterrâneo, acostumados com a liberdade de singrar os céus com suas asas. \n Visualmente, são como elfos de pele azulada, com grandes asas plumadas, similares às de pássaros. Quando totalmente abertas, têm largura igual ao dobro da altura do elfo — sendo esse o espaço mínimo de que precisa para decolar e voar. Sua maior diferença do povo de Lenórienn é a distância em relação às tragédias sofridas; afastados dessa sociedade e do culto à Glórienn, a cicatriz da Infinita Guerra ou da traição da deusa não afetam a vida despreocupada desses elfos alados.",
+    abilities: [
+      {
+      name: "Alma das Nuvens",
+      description: "Você recebe resistência a encantamento +2.",
+    },
+    {
+      name: "Asas Emplumadas",
+      description: "Você pode gastar 1 PM por rodada para voar com deslocamento de 12m. Enquanto está voando dessa forma, você recebe +2 na Defesa e em Reflexos.",
+    },
+    {
+      name: "Sentidos Élficos",
+      description: "Você recebe visão na penumbra e +2 em Misticismo e Percepção.",
+    }
+    ],
+    attributeModifiers: [
+      { attribute: "des", modifier: 2 },
+      { attribute: "car", modifier: 1 },
+      { attribute: "con", modifier: -1 }
+    ],
+    longevidade: "x5.",
+    devotos: "Hyninn, Kallyadranoch, Nimb.",
+  },
   
   
   { id: "Qunari",
@@ -760,33 +977,7 @@ export const races: Race[] = [
     ]
   },
   
-  { id: "Naidora",
-    name: "Naidora",
-    origin: "Dragão Brasil",
-    image: "/racas/naidora.png",
-    description: "Descendentes de Hydora, Dragão-Rei dos Ventos, e da exploradora elfa Hana, os naidora (também conhecidos pelo nome completo nailanandora; ou elfos-do-céu, no linguajar mais simples) são elfos alados extremamente raros. São tidos como lendas, invenções exageradas dos bardos, na maior parte dos lugares. Mesmo Valkaria, a maior metrópole do mundo conhecido, só teve três desses seres como moradores em toda a sua história. Seus números reduzidos impedem que estabeleçam sociedades, por isso normalmente vivem sozinhos, como nômades. \n Os naidora ficam completamente à vontade no ar. Podem até mesmo dormir enquanto voam. Alguns, à imagem de seu ancestral dragão, jamais tocam o chão. Costumam ficar desconfortáveis em espaços fechados ou no subterrâneo, acostumados com a liberdade de singrar os céus com suas asas. \n Visualmente, são como elfos de pele azulada, com grandes asas plumadas, similares às de pássaros. Quando totalmente abertas, têm largura igual ao dobro da altura do elfo — sendo esse o espaço mínimo de que precisa para decolar e voar. Sua maior diferença do povo de Lenórienn é a distância em relação às tragédias sofridas; afastados dessa sociedade e do culto à Glórienn, a cicatriz da Infinita Guerra ou da traição da deusa não afetam a vida despreocupada desses elfos alados.",
-    abilities: [
-      {
-      name: "Alma das Nuvens",
-      description: "Você recebe resistência a encantamento +2.",
-    },
-    {
-      name: "Asas Emplumadas",
-      description: "Você pode gastar 1 PM por rodada para voar com deslocamento de 12m. Enquanto está voando dessa forma, você recebe +2 na Defesa e em Reflexos.",
-    },
-    {
-      name: "Sentidos Élficos",
-      description: "Você recebe visão na penumbra e +2 em Misticismo e Percepção.",
-    }
-    ],
-    attributeModifiers: [
-      { attribute: "des", modifier: 2 },
-      { attribute: "car", modifier: 1 },
-      { attribute: "con", modifier: -1 }
-    ],
-    longevidade: "x5.",
-    devotos: "Hyninn, Kallyadranoch, Nimb.",
-  },
+  
   { id: "Gorons",
     name: "Gorons Ω",
     origin: "Dragão Brasil - Zelda",
@@ -1113,168 +1304,7 @@ export const races: Race[] = [
       { attribute: "int", modifier: -1 }
     ],
   },
-  { id: "Anão da Superfície",
-    name: "Anão da Superfície",
-    origin: "Dragão Brasil",
-    image: "/racas/anao_superficie.png",
-    description: "Nós, o povo anão da superfície, somos a prova viva de que a tradição anã não precisa estar presa ao subterrâneo para continuar firme. Enquanto doheritas erguem cidadelas sob as montanhas, nós preferimos as estradas, feiras e portos de Arton, viajando com carroças reforçadas, cofres bem trancados e um sorriso confiante sob a barba. Somos um povo de mercadores natos, conhecidos por negociar com justiça, cumprir acordos à risca e nunca trapacear — afinal, um anão pode até mudar de rota, mas jamais de palavra.\nMesmo longe das cavernas ancestrais, os anões da superfície mantêm vivos os costu­mes de nosso povo. Suas barbas exibem tranças que marcam clãs, viagens memoráveis ou contratos importantes. E suas forjas, embora menores e portáteis, produzem obras que fariam qualquer ferreiro de Doherimm erguer a sobrancelha em aprovação. Acostumados a lidar com diferentes culturas, nós aprendemos a rir alto, brindar com estranhos e contar boas histórias ao redor da fogueira, sem nunca esquecer quem somos.\n— Bartha Barba-de-Aço, anão da superfície paladino de Valkaria.",
-    abilities: [
-      {
-      name: "Somente o Necessário",
-      description: "Você nunca sai de casa sem estar preparado. Uma vez por sessão de jogo, você pode gastar uma ação completa e 1 PM para encontrar nos seus equipamentos um item de valor equivalente a T$ 1d10 + seu nível. Você também pode usar este poder para encontrar materiais de fabricação, mas o valor deve ser equivalente a T$ 1d6 + seu nível.",
-      },
-      {
-      name: "Devagar e Sempre",
-      description: "Seu deslocamento é 6m (em vez de 9m). Porém, seu deslocamento não é reduzido por uso de armadura ou excesso de carga.",
-      },
-      {
-      name: "Duro como Pedra",
-      description: "Você recebe +3 pontos de vida no 1º nível e +1 por nível seguinte.",
-      },
-      {
-      name: "Tradição de Heredrimm",
-      description: "Você é perito nas armas tradicionais anãs, seja por ter treinado com elas, seja por usá-las como ferramentas de ofício. Para você, todos os machados, martelos, marretas e picaretas são armas simples. Você recebe +2 em ataques com essas armas.",
-      },
-    ],
-    // Modificadores FIXOS para Anão
-    attributeModifiers: [
-      { attribute: "con", modifier: 2 },
-      { attribute: "int", modifier: 1 },
-      { attribute: "des", modifier: -1 }
-    ]
-  },
-  { id: "Elfo-do-Gelo",
-    name: "Elfo-do-Gelo Ω",
-    origin: "Dragão Brasil",
-    image: "/racas/elfo_do_gelo.png",
-    description: "Meu povo descende daqueles que deixaram as asas de Glórienn e encontraram refúgio onde quase ninguém ousava ir: as gélidas Montanhas Uivantes. Lá, aprendemos a sobreviver num mundo de neve eterna, ventos cortantes e caça difícil. Com o tempo, o frio deixou de ser um obstáculo e passou a moldar as pessoas: pele pálida como a geada, cabelos em tons claros ou frios, olhos adaptados à escuridão e corpos marcados por cicatrizes de um ambiente que não perdoa erros. Passamos a viver em pequenos grupos, geralmente em cavernas, sem reis ou chefes: cada aldeia decide seu caminho em conjunto, guiada pela necessidade e pela experiência.\nMuitos elfos-do-gelo são como eu, devotos da Dragoa-Rainha do Gelo, pedindo proteção e força, enquanto outros ainda fazem preces a Allihanna por boas caçadas. Poucos de nós deixam as montanhas, mas quando o fazem é por necessidade, curiosidade ou chamado da aventura — e onde passam, levam consigo o silêncio do inverno e a certeza de que até no frio mais implacável a liberdade pode florescer.",
-    abilities: [
-      {
-      name: "Graça de Glórienn",
-      description: "Seu deslocamento é 12m (em vez de 9m).",
-    },
-    {
-      name: "Herança Gélida",
-      description: "Você recebe redução de frio 10 e resistência a frio +5.",
-    },
-    {
-      name: "Sentidos Élficos",
-      description: "Você recebe visão na penumbra e +2 em Misticismo e Percepção.",
-    },
-    ],
-    attributeModifiers: [
-      { attribute: "des", modifier: 1 },
-      { attribute: "sab", modifier: 2 },
-      { attribute: "con", modifier: -1 }
-    ]
-  },
-  { id: "Elfo-Sombrio",
-    name: "Elfo-Sombrio Ω",
-    origin: "Dragão Brasil",
-    image: "/racas/Elfo-Sombrio.png",
-    description: "Nos abismos de Sombria, onde a luz é uma lembrança distante e as sombras parecem ter vontade própria, meu povo aprendeu a transformar silêncio em poder e paciência em arma. Nossas cidades se erguem como colmeias de pedra e obsidiana, cheias de passagens ocultas, torres invertidas e salões iluminados por fungos bioluminescentes e chamas negras. Para um elfo-sombrio, sobreviver é entender o jogo social: alianças são afiadas como lâminas, promessas duram o tempo que for útil e a confiança é uma fraqueza rara.\nEmbora sejamos temidos em Arton, engana-se quem acredita que sejamos vilões. Nós somos herdeiros de um mundo mais honesto, onde a força e a astúcia definem o destino. Somos guerreiros, conjuradores e assassinos que treinam desde cedo, pois em Sombria não há espaço para fraqueza. Alguns poucos, porém, abandonam o reino divino de Tenebra e viajam até Arton, movidos por ambição, curiosidade ou exílio. Esses raros aventureiros carregam consigo o peso do preconceito e a fama sombria de nosso povo, mas também o potencial de se provar tão valoroso quanto qualquer herói.\n— Eleanorilanas Danthallas, elfa-sombria ladina de Hyninn.",
-    abilities: [
-      {
-      name: "Arsenal de Tenebra",
-      description: "Você recebe proficiência em florete, gadanho e mosquete e +2 em testes de ataque com essas armas. Se receber proficiência em uma dessas armas novamente, pode considerá-la uma arma leve.",
-    },
-    {
-      name: "Manto das Sombras",
-      description: "Você pode lançar Invisibilidade, mas apenas em você. Caso aprenda novamente essa magia, seu custo diminui em –1 PM.",
-    },
-    {
-      name: "Sentidos Élficos",
-      description: "Você recebe visão na penumbra e +2 em Misticismo e Percepção.",
-    },
-    {
-      name: "Sensibilidade ao Sol",
-      description: "Quando exposto à luz solar direta, você fica ofuscado e, a cada rodada, perde 2d6 PV por patamar de personagem.",
-    },
-    ],
-    attributeModifiers: [
-      { attribute: "des", modifier: 1 },
-      { attribute: "int", modifier: 2 },
-      { attribute: "con", modifier: -1 }
-    ]
-  },
-  { id: "Humano Feérico",
-    name: "Humano Feérico",
-    origin: "Dragão Brasil",
-    image: "/racas/Humano_Feérico.png",
-    description: "Raptados, trocados ou substituídos ainda crianças pelas fadas da Pondsmânia, nós feéricos crescemos em salões de cristal, bosques impossíveis e palácios que só existem à meia-noite. Lá, aprendemos que nomes têm poder, promessas são leis e a própria realidade pode se dobrar à vontade da Rainha Thantalla-Dhaedelin. Quando fugi e retornei a Deheon, até parecia um humano comum à primeira vista, mas algo em mim denunciava a passagem pelo Reino das Fadas. Depois de viver lá, a magia nos envolve de forma natural, quase instintiva.\nDe volta ao mundo mortal, nós feéricos nunca nos encaixamos por completo. Alguns pensam rápido demais, outros sentem demais e há quem deseje demais. As “bênçãos” que nos foram dadas pelos seres feéricos são curiosas, imprevisíveis e perigosas, nos fazendo alternar entre uma alegria contagiante e uma melancolia profunda por algo que não conseguimos explicar. No fim das contas, ser um humano feérico é carregar dois mundos no peito — e não pertencer completamente a nenhum deles.\n— Aedwlyn Dralinur, feérico druida de Allihanna.",
-    abilities: [
-      {
-        name: "Bênção das Fadas",
-        description: "Escolha quatro bênçãos da lista a seguir. Quando recebe um novo poder de classe, pode trocar este poder por uma bênção. Cada bênção só pode ser escolhida uma vez.",
-        subAbilities: [
-        {
-          name: "Ardiloso Como uma Cobra",
-          description: "Você pode lançar Disfarce Ilusório (atributo-chave Carisma)."
-        },
-        {
-          name: "Duro Como Pedra",
-          description: "Você recebe +1 em Constituição e resistência a magia +2."
-        },
-        {
-          name: "Falante Como um Grilo",
-          description: "Você recebe +2 em Adestramento e Sobrevivência, e pode falar com animais e plantas (como o efeito da magia Voz Divina)."
-        },
-        {
-          name: "Forte Como um Touro",
-          description: "Você recebe +1 em Força e +5 de capacidade de carga."
-        },
-        {
-          name: "Mágico Como uma Borboleta",
-          description: "Você pode lançar uma magia arcana de 1º círculo à sua escolha (atributo-chave Carisma). Se aprender novamente esta magia, seu custo diminui em –1 PM."
-        },
-        {
-          name: "Raivoso Como um Carcaju",
-          description: "Você possui uma arma natural de mordida (dano 1d6, crítico x2, perfuração). Uma vez por rodada, quando usa a ação agredir para atacar com outra arma corpo a corpo, pode gastar 1 PM para fazer um ataque extra com a mordida."
-        },
-        {
-          name: "Rápido Como um Coelho",
-          description: "Você recebe +1 em Destreza e deslocamento +3m."
-        },
-        {
-          name: "Sábio Como uma Coruja",
-          description: "Você recebe +1 em Sabedoria e +3 PM."
-        },
-        {
-          name: "Sagaz Como um Falcão",
-          description: "Você recebe visão na penumbra e está permanentemente sob efeito da magia Visão Mística com o aprimoramento de enxergar criaturas e objetos invisíveis."
-        },
-        
-        ]
-    },
-    ],
-    attributeModifiers: [
-      { description: "Escolha +1 em três atributos diferentes" }
-    ]
-  },
-  { id: "Medusa Dracônica",
-    name: "Medusa Dracônica",
-    origin: "Dragão Brasil",
-    image: "/racas/medusa_draconica.png",
-    description: "Nós somos herdeiras de um legado antigo e poderoso, fruto da união entre o sangue das medusas e a essência dos dragões. Diferente das medusas serpentinas, a magia flui em nós de forma quase instintiva, carregada da essência elemental dos dragões. Nossas serpentes exibem escamas mais duras e cores profundas, e nosso olhar não petrifica, ele lança magias. Para medusas dracônicas como eu, a herança dos dragões não é apenas um detalhe de nascimento, mas um chamado: fomos feitas para lembrar o mundo do poder de Kallyadranoch.\nCulturalmente, medusas dracônicas tendem a se organizar em círculos fechados, ordens ou linhagens, muitas vezes seguindo a tradição dos trios, um símbolo de equilíbrio, vigilância e domínio. Devotas de Kallyadranoch são mais comuns, embora não exclusivas, muitas de nós se dedicam também a Sckhar, Beluhga e outros Dragões-Reais; ou a divindades de poder semelhante, como Arsenal e Thwor. Orgulhosas e pacientes, nós acreditamos que governar é um dever natural, não uma ambição vulgar, e que a força deve ser usada com propósito, não por impulso. Quando uma de nós surge em Arton, raramente o faz em silêncio: nossa presença anuncia intriga, reverência e poder bruto.\n— Aleteia, medusa dracônica cavaleira de Kallyadranoch",
-    abilities: [
-      {
-      name: "Cria de Megalokk",
-      description: "Você é uma criatura do tipo monstro e recebe visão no escuro.",
-    },
-    {
-      name: "Natureza Elemental",
-      description: "Escolha um tipo de dano entre ácido, eletricidade, fogo ou frio. Você recebe RD 5 do tipo escolhido. Além disso, pode gastar uma ação de movimento e 1 PM para encantar uma arma que esteja usando. A arma causa +1d12 pontos de dano do tipo escolhido. O efeito dura até você acertar um ataque ou até o fim da cena (o que acontecer primeiro).",
-    },
-    {
-      name: "Olhar Místico",
-      description: "Você pode lançar uma magia de 1º círculo à sua escolha. A magia deve ser da energia correspondente à sua Natureza Elemental. Caso aprenda novamente essa magia, seu custo diminui em –1 PM. Se você estiver cego ou semelhante, não consegue conjurar essa magia.",
-    },
-    ],
-    attributeModifiers: [
-      { attribute: "int", modifier: 2 },
-      { attribute: "car", modifier: 1 },
-    ]
-  },
+  
   { id: "Tabrachi",
     name: "Tabrachi",
     origin: "Ameaças de Arton",
@@ -1302,33 +1332,7 @@ export const races: Race[] = [
     longevidade: "Normal",
     devotos: "Allihanna, Megalokk, Nimb, Sszzaas, Tenebra."
   },
-  { id: "Teju - Tabrachi",
-    name: "Teju - Tabrachi Ω",
-    origin: "Dragão Brasil",
-    image: "/racas/teju.png",
-    description: "Muito me ofende quem confunde meu povo com aqueles sapos brutamontes. Tejus são a face menos conhecida — e bem mais refinada — do sangue tabrachi. Enquanto os homens-sapos se aferram ao pântano e à brutalidade ritual, nós seguimos outro caminho: somos moldados por rios limpos, cavernas úmidas e ruínas alagadas onde agilidade vale mais que força bruta. Pequenos e esguios, somos salamandras bípedes, com caudas longas, pele fria e úmida e movimentos rápidos como um bote certeiro. Ouvi dizer que, à distância, já fomos confundidos com kobolds, mas basta um olhar atento para perceber que não temos escamas ou fogo; apenas músculos flexíveis, olhos atentos e uma elegância anfíbia.\nCulturalmente, somos mais organizados e curiosos que os tabrachi comuns. Nossas comunidades são estáveis, com tradições orais, líderes eleitos e um apreço surpreendente por diplomacia, comércio e artes práticas como navegação fluvial e engenharia mágica. Embora não rejeitemos o uso da força, preferimos astúcia e velocidade, atacando apenas quando necessário. Quando um teju deixa suas águas natais para se aventurar pelo Reinado, costuma fazê-lo como explorador, mensageiro ou aventureiro ágil, provavelmente em busca de um novo conhecimento mágico, teórico ou prático.\n— Rusk Ojawale, teju frade de Nerelim",
-    abilities: [
-      {
-      name: "Mecanismo de Defesa",
-      description: "Quando for alvo de um acerto crítico (ou de um efeito capaz de decepar um de seus membros), você pode gastar 3 PM para descolar o membro do corpo e reduzir o dano sofrido à metade. Um membro perdido dessa forma leva 2d6 dias para crescer novamente e, de acordo com o mestre, você pode sofrer o efeito de uma complicação que reflita a falta desse membro (como Maneta para a falta de um braço ou Vagaroso para a falta de uma perna) até que o membro perdido cresça novamente.",
-      },
-      {
-      name: "Linguarudo",
-      description: "Sua língua é uma arma natural que pode atacar inimigos a até 3m (dano 1d4, crítico x2, impacto). Ela é uma arma versátil, fornecendo +2 em testes para desarmar e derrubar. Uma vez por rodada, quando usa a ação agredir com outra arma, você pode gastar 1 PM para fazer um ataque corpo a corpo extra com a língua.",
-      },
-      {
-      name: "Urodelo",
-      description: "Você recebe visão na penumbra e deslocamento de escalada igual ao seu deslocamento terrestre.",
-      },
-    ],
-    attributeModifiers: [
-      { attribute: "con", modifier: 2 },
-      { attribute: "for", modifier: 1 },
-      { attribute: "car", modifier: -1 }
-    ],
-    longevidade: "Normal",
-    devotos: "Allihanna, Megalokk, Nimb, Sszzaas, Tenebra."
-  },
+  
   
   
 ];

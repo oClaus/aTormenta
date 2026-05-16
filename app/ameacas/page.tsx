@@ -364,22 +364,22 @@ export default function AmeacasPage() {
           </div>
 
         {/* Grid de Ameaças */}
-        <h2 className="text-xl font-bold text-red-800 mb-6 font-serif border-b border-amber-900/20 pb-2">
-            {filteredThreats.length} Ameaças Encontradas
-            </h2>
+        <h2 className="text-2xl font-bold text-red-800 mb-6 font-serif border-b-2 border-amber-900/20 pb-2 tracking-wide">
+          {filteredThreats.length} Ameaças Encontradas
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 w-full">
           {filteredThreats.map((threat) => (
             <div
               key={threat.id}
               id={createUrlSafeId(threat.id)}
               onClick={() => openModal(threat)}
-              className="group relative overflow-hidden rounded bg-[#d9c8a9] border border-amber-900/30 hover:border-red-700/50 transition-all duration-300 hover:shadow-[0_4px_20px_rgba(69,26,3,0.15)] cursor-pointer p-5 flex flex-col justify-between min-h-[190px] scroll-mt-24"
+              className="group relative overflow-hidden rounded-xl bg-[#e8dac1] border-2 border-amber-900/30 hover:border-red-800/50 transition-all duration-300 hover:shadow-[0_4px_20px_rgba(153,27,27,0.15)] cursor-pointer p-5 flex flex-col justify-between min-h-[190px] scroll-mt-24 font-serif"
             >
               
               {/* --- 1. BOTÃO DE COPIAR NO TOPO DIREITO --- */}
               <button 
                 onClick={(e) => copyLink(threat, e)}
-                className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity p-2 bg-amber-900/10 hover:bg-amber-900/20 rounded-full text-amber-900 z-30"
+                className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity p-2 bg-amber-900/10 hover:bg-amber-900/20 rounded-full text-amber-950/70 hover:text-red-800 z-30"
                 title="Copiar link direto para esta ameaça"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -389,29 +389,27 @@ export default function AmeacasPage() {
               </button>
 
               {/* --- 2. BADGE DE ND NO CANTO INFERIOR DIREITO --- */}
-              <div className="absolute bottom-3 right-3 z-20 shrink-0 flex flex-col items-center justify-center w-12 h-12 rounded bg-[#f5e6d0]/90 backdrop-blur-sm border border-amber-900/20 shadow-sm group-hover:border-red-600 transition-colors">
-                <span className="text-[0.6rem] uppercase text-amber-900/50 font-bold tracking-wider">ND</span>
+              <div className="absolute bottom-3 right-3 z-20 shrink-0 flex flex-col items-center justify-center w-12 h-12 rounded-lg bg-[#fbf5e6]/90 backdrop-blur-sm border-2 border-amber-900/20 shadow-sm group-hover:border-red-800/50 transition-colors">
+                <span className="text-[0.6rem] uppercase text-amber-950/60 font-bold tracking-wider">ND</span>
                 <span className="text-xl font-black text-red-800 leading-none font-sans">{threat.nd}</span>
               </div>
 
               {/* --- 3. IMAGEM E MARCA D'ÁGUA --- */}
-              {/* Removido o hover de opacidade para a imagem ficar estática */}
               <div className="absolute right-0 top-0 h-full w-full opacity-80 pointer-events-none select-none flex justify-end overflow-hidden z-0">
                 {threat.image ? (
                   <>
-                    {/* Gradiente mantido para o efeito de opacidade da direita para esquerda */}
-                    <div className="absolute inset-0 z-10 bg-gradient-to-r from-[#d9c8a9] via-[#d9c8a9]/60 to-transparent" />
+                    {/* Gradiente atualizado para a cor exata do card (#e8dac1) */}
+                    <div className="absolute inset-0 z-10 bg-gradient-to-r from-[#e8dac1] via-[#e8dac1]/60 to-transparent" />
                     <img
                       src={threat.image}
                       alt=""
-                      /* Classes de mix-blend e sepia foram removidas aqui! */
                       className="h-full w-[60%] object-cover object-top drop-shadow-sm"
                     />
                   </>
                 ) : (
-                  /* Nova alternativa para cards sem imagem: Letra inicial grande */
+                  /* Alternativa para cards sem imagem */
                   <div className="absolute inset-0 flex items-center justify-end pr-6 opacity-10">
-                    <span className="text-[12rem] font-serif font-black italic text-amber-950 leading-none translate-y-4">
+                    <span className="text-[12rem] font-black italic text-amber-950 leading-none translate-y-4">
                       {threat.name.charAt(0)}
                     </span>
                   </div>
@@ -423,7 +421,7 @@ export default function AmeacasPage() {
                 
                 {/* TOPO: Adicionado pr-10 para o texto não ficar embaixo do botão de copiar */}
                 <div className="pr-10"> 
-                  <h3 className="text-xl font-bold text-amber-950 group-hover:text-red-700 transition-colors leading-tight drop-shadow-sm line-clamp-2">
+                  <h3 className="text-xl font-bold text-amber-950 group-hover:text-red-800 transition-colors leading-tight drop-shadow-sm line-clamp-2 tracking-wide">
                     {threat.name}
                   </h3>
                 </div>
@@ -432,29 +430,29 @@ export default function AmeacasPage() {
                 <div className="mt-6 pr-14">
                   <div className="w-12 h-[2px] bg-red-800/60 mb-3 group-hover:w-1/3 transition-all duration-500"></div>
 
-                  <div className="flex flex-wrap items-center gap-y-1 gap-x-2 mb-2">
-                    <span className="px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wide bg-[#e8dac1] border border-amber-900/20 text-amber-900/80">
+                  <div className="flex flex-wrap items-center gap-y-2 gap-x-2 mb-2">
+                    <span className="px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-widest bg-[#fbf5e6] border border-amber-900/20 text-amber-950/70 shadow-sm">
                       {threat.tipo}
                     </span>
                     
                     {threat.tamanho && (
-                      <div className="flex items-center gap-1 text-xs text-amber-900/70 font-medium">
+                      <div className="flex items-center gap-1 text-xs text-amber-950/70 font-bold">
                         <span className="w-1 h-1 rounded-full bg-amber-900/40"></span>
                         <span>{threat.tamanho}</span>
                       </div>
                     )}
 
                     {threat.papel && (
-                      <div className="flex items-center gap-1 text-xs font-medium">
+                      <div className="flex items-center gap-1 text-xs font-bold">
                         <span className="w-1 h-1 rounded-full bg-amber-900/40"></span>
-                        <span className="text-red-800/90 uppercase tracking-wider text-[10px] font-bold">
+                        <span className="text-red-800/90 uppercase tracking-widest text-[10px]">
                           {threat.papel}
                         </span>
                       </div>
                     )}
                   </div>
 
-                  <div className="flex flex-col gap-1 text-xs text-red-800 group-hover:text-red-800 transition-colors font-bold">
+                  <div className="flex flex-col gap-1 text-[10px] text-amber-950/60 group-hover:text-red-800 transition-colors font-bold">
                     <span className="uppercase tracking-widest truncate">
                     {threat.origin || "Desconhecida"}
                     </span>
@@ -463,36 +461,40 @@ export default function AmeacasPage() {
 
               </div>
               
-              <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-amber-900/40 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-amber-900/40 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              {/* Detalhes nos cantos atualizados para borda 2px e arredondamento suave */}
+              <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-amber-900/40 opacity-0 group-hover:opacity-100 group-hover:border-red-800/60 transition-all rounded-tl-lg"></div>
+              <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-amber-900/40 opacity-0 group-hover:opacity-100 group-hover:border-red-800/60 transition-all rounded-br-lg"></div>
             </div>
           ))}
         </div>
 
         {/* Mensagem quando não há resultados */}
         {filteredThreats.length === 0 && (
-          <div className="text-center py-16 border-2 border-dashed border-amber-900/30 rounded bg-[#e8dac1]/50">
-            <p className="text-amber-900/60 text-lg italic">Nenhuma ameaça encontrada nos registros.</p>
-          </div>
-        )}
+        <div className="text-center py-20 border-2 border-dashed border-amber-900/30 rounded-xl bg-[#e8dac1]/50 font-serif flex flex-col items-center justify-center">
+          <p className="text-amber-950/70 text-lg italic tracking-wide">
+            Nenhuma Ameaça encontrada nos registros.
+          </p>
+        </div>
+      )}
       </main>
 
       {/* Modal Detalhado */}
       {selectedThreat && (
         <div
-          className="fixed inset-0 bg-[#2a1810]/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 overflow-y-auto"
+          className="fixed inset-0 bg-[#2a1810]/80 backdrop-blur-sm z-50 flex items-center justify-center p-2 md:p-4 overflow-y-auto"
           onClick={closeModal}
         >
+          {/* Fundo do modal padronizado com a cor mais clara do pergaminho, borda dupla e font-serif herdada */}
           <div
-            className="bg-[#f2e8d5] border-4 border-double border-amber-900/40 rounded shadow-[0_0_60px_rgba(69,26,3,0.3)] max-w-5xl w-full my-8 relative custom-scrollbar bg-[url('/noise.png')]"
+            className="bg-[#fbf5e6] border-4 border-double border-amber-900/40 rounded-xl shadow-[0_0_60px_rgba(69,26,3,0.3)] max-w-5xl w-full my-4 md:my-8 relative custom-scrollbar bg-[url('/noise.png')] font-serif text-amber-950/85"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header Modal */}
-            <div className="relative p-6 border-b border-amber-900/20 bg-[#e8dac1]/50">
-              <div className="absolute top-4 right-4 flex gap-2 z-10">
+            <div className="relative p-5 md:p-8 border-b-2 border-amber-900/20 bg-[#e8dac1]/50 rounded-t-xl">
+              <div className="absolute top-4 right-4 md:top-6 md:right-6 flex gap-2 z-10">
                 <button 
                   onClick={(e) => copyLink(selectedThreat, e)}
-                  className="p-2 bg-amber-900/10 hover:bg-amber-900/20 rounded-full text-amber-900 transition-colors flex items-center"
+                  className="p-2 bg-[#e8dac1] border-2 border-amber-900/30 hover:border-red-800/50 hover:text-red-800 rounded-full text-amber-950/70 transition-colors flex items-center shadow-sm"
                   title="Copiar link direto para esta ameaça"
                 >
                   {copiedId === selectedThreat.id ? (
@@ -506,7 +508,7 @@ export default function AmeacasPage() {
                 </button>
                 <button 
                   onClick={closeModal}
-                  className="p-2 bg-red-900/10 hover:bg-red-900/20 rounded-full text-red-900 transition-colors flex items-center justify-center"
+                  className="p-2 bg-[#e8dac1] border-2 border-amber-900/30 hover:border-red-800/50 hover:text-red-800 rounded-full text-amber-950/70 transition-colors flex items-center justify-center shadow-sm"
                   title="Fechar"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -516,138 +518,141 @@ export default function AmeacasPage() {
                 </button>
               </div>
 
-              <h2 className="text-3xl font-bold text-red-800 mb-1 font-serif tracking-wide pr-20">
+              <h2 className="text-3xl md:text-5xl font-bold text-red-800 mb-2 md:mb-3 tracking-wider pr-20 md:pr-24 drop-shadow-sm">
                 {selectedThreat.name}
               </h2>
-              <div className="flex flex-wrap gap-4 mt-2 text-sm font-bold uppercase tracking-wide">
-                <span className="text-amber-900/70">{selectedThreat.tipo}</span>
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mt-2 text-xs md:text-sm font-bold uppercase tracking-widest">
+                <span className="text-amber-950/70 bg-[#fbf5e6] px-2 py-1 rounded border border-amber-900/20 shadow-sm">{selectedThreat.tipo}</span>
+                <span className="text-amber-950/80">{selectedThreat.tamanho}</span>
                 <span className="text-amber-900/40">•</span>
-                <span className="text-amber-800">{selectedThreat.tamanho}</span>
+                <span className="text-red-800">{selectedThreat.papel}</span>
                 <span className="text-amber-900/40">•</span>
-                <span className="text-red-700">{selectedThreat.papel}</span>
-                <span className="text-amber-900/40">•</span>
-                <span className="text-amber-950">ND {selectedThreat.nd}</span>
+                <span className="text-amber-950 font-black">ND {selectedThreat.nd}</span>
                 
-                <span className="text-amber-900/40">•</span>
-                <span className="text-amber-900/60">Origem: {selectedThreat.origin || "Desconhecida"}</span>
+                <span className="text-amber-900/40 hidden sm:inline">•</span>
+                <span className="text-amber-950/60 w-full sm:w-auto mt-1 sm:mt-0">Origem: {selectedThreat.origin || "Desconhecida"}</span>
                 
-                <span className="text-amber-900/40">•</span>
-                <span className="text-amber-900/60">Tema: {selectedThreat.tema || "Desconhecido"}</span>
+                <span className="text-amber-900/40 hidden sm:inline">•</span>
+                <span className="text-amber-950/60">Tema: {selectedThreat.tema || "Desconhecido"}</span>
               </div>
             </div>
 
             {/* Conteúdo Scrollável */}
-            <div className="p-6 max-h-[70vh] overflow-y-auto custom-scrollbar">
+            <div className="p-5 md:p-8 max-h-[75vh] overflow-y-auto custom-scrollbar">
               
               {/* Descrição */}
-              <section className="mb-6">
-                <h3 className="text-xl font-bold text-amber-800 mb-2 flex items-center gap-2 font-serif border-b border-amber-900/10 pb-1">
-                  Descrição
-                </h3>
-                <p className="text-amber-900/90 leading-relaxed whitespace-pre-wrap font-medium">
+              <section className="mb-8">
+                <p className="text-amber-950/85 leading-relaxed whitespace-pre-wrap font-medium text-base md:text-lg text-left md:text-justify italic border-l-4 border-amber-900/30 pl-4">
                   {selectedThreat.description}
                 </p>
               </section>
 
               {/* Estatísticas (Iniciativa, Defesa, PV, PM) */}
-              <section className="mb-6">
-                <h3 className="text-xl font-bold text-amber-800 mb-3 font-serif border-b border-amber-900/10 pb-1">Estatísticas</h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                  <div className="p-3 bg-[#e8dac1] rounded border border-amber-900/20 shadow-sm text-center">
-                    <div className="text-xs text-amber-900/60 font-bold uppercase mb-1">INICIATIVA</div>
-                    <div className="text-2xl font-bold text-amber-950">
+              <section className="mb-8">
+                <h3 className="text-xl md:text-2xl font-bold text-red-800 mb-4 border-b-2 border-amber-900/20 pb-2 tracking-wide">Estatísticas</h3>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+                  <div className="p-3 md:p-4 bg-[#e8dac1] rounded-xl border-2 border-amber-900/20 shadow-sm text-center">
+                    <div className="text-[10px] md:text-xs text-amber-950/60 font-bold uppercase tracking-widest mb-1">INICIATIVA</div>
+                    <div className="text-2xl md:text-3xl font-bold text-amber-950">
                       {selectedThreat.iniciativa >= 0 ? "+" : ""}{selectedThreat.iniciativa}
                     </div>
                   </div>
-                  <div className="p-3 bg-[#e8dac1] rounded border border-amber-900/20 shadow-sm text-center">
-                    <div className="text-xs text-amber-900/60 font-bold uppercase mb-1">PERCEPÇÃO</div>
-                    <div className="text-2xl font-bold text-amber-950">
+                  <div className="p-3 md:p-4 bg-[#e8dac1] rounded-xl border-2 border-amber-900/20 shadow-sm text-center">
+                    <div className="text-[10px] md:text-xs text-amber-950/60 font-bold uppercase tracking-widest mb-1">PERCEPÇÃO</div>
+                    <div className="text-2xl md:text-3xl font-bold text-amber-950">
                       {selectedThreat.percepcao >= 0 ? "+" : ""}{selectedThreat.percepcao}
                     </div>
                   </div>
-                  <div className="p-3 bg-[#e8dac1] rounded border border-amber-900/20 shadow-sm text-center">
-                    <div className="text-xs text-amber-900/60 font-bold uppercase mb-1">DEFESA</div>
-                    <div className="text-2xl font-bold text-amber-950">{selectedThreat.defesa}</div>
+                  <div className="p-3 md:p-4 bg-[#e8dac1] rounded-xl border-2 border-amber-900/20 shadow-sm text-center">
+                    <div className="text-[10px] md:text-xs text-amber-950/60 font-bold uppercase tracking-widest mb-1">DEFESA</div>
+                    <div className="text-2xl md:text-3xl font-bold text-amber-950">{selectedThreat.defesa}</div>
                   </div>
-                  <div className="p-3 bg-red-100 rounded border border-red-900/20 text-center shadow-sm">
-                    <div className="text-xs text-red-700 font-bold uppercase mb-1">PV</div>
-                    <div className="text-2xl font-bold text-red-800">{selectedThreat.pv}</div>
+                  {/* PV destacado sem perder a textura de pergaminho */}
+                  <div className="p-3 md:p-4 bg-[#fbf5e6] rounded-xl border-2 border-red-800/30 text-center shadow-sm relative overflow-hidden">
+                    <div className="absolute inset-0 bg-red-800/5 pointer-events-none"></div>
+                    <div className="text-[10px] md:text-xs text-red-800/70 font-bold uppercase tracking-widest mb-1 relative z-10">PV</div>
+                    <div className="text-2xl md:text-3xl font-bold text-red-800 relative z-10">{selectedThreat.pv}</div>
                   </div>
                 </div>
               </section>
 
               {/* Resistências (Fort, Ref, Von) */}
-              <section className="mb-6">
-                <h3 className="text-xl font-bold text-amber-800 mb-3 font-serif border-b border-amber-900/10 pb-1">Resistências</h3>
-                <div className="grid grid-cols-3 gap-3 mb-3">
-                  <div className="p-3 bg-[#fbf5e6] rounded border border-amber-900/10 text-center">
-                    <div className="text-xs text-amber-900/60 font-bold uppercase mb-1">FORT</div>
-                    <div className="text-xl font-bold text-amber-950">
+              <section className="mb-8">
+                <h3 className="text-xl md:text-2xl font-bold text-red-800 mb-4 border-b-2 border-amber-900/20 pb-2 tracking-wide">Resistências</h3>
+                <div className="grid grid-cols-3 gap-3 md:gap-4 mb-4">
+                  <div className="p-3 md:p-4 bg-[#fbf5e6] rounded-xl border-2 border-amber-900/20 text-center shadow-sm">
+                    <div className="text-[10px] md:text-xs text-amber-950/60 font-bold uppercase tracking-widest mb-1">FORT</div>
+                    <div className="text-xl md:text-2xl font-bold text-amber-950">
                       {selectedThreat.fort >= 0 ? "+" : ""}{selectedThreat.fort}
                     </div>
                   </div>
-                  <div className="p-3 bg-[#fbf5e6] rounded border border-amber-900/10 text-center">
-                    <div className="text-xs text-amber-900/60 font-bold uppercase mb-1">REF</div>
-                    <div className="text-xl font-bold text-amber-950">
+                  <div className="p-3 md:p-4 bg-[#fbf5e6] rounded-xl border-2 border-amber-900/20 text-center shadow-sm">
+                    <div className="text-[10px] md:text-xs text-amber-950/60 font-bold uppercase tracking-widest mb-1">REF</div>
+                    <div className="text-xl md:text-2xl font-bold text-amber-950">
                       {selectedThreat.ref >= 0 ? "+" : ""}{selectedThreat.ref}
                     </div>
                   </div>
-                  <div className="p-3 bg-[#fbf5e6] rounded border border-amber-900/10 text-center">
-                    <div className="text-xs text-amber-900/60 font-bold uppercase mb-1">VON</div>
-                    <div className="text-xl font-bold text-amber-950">
+                  <div className="p-3 md:p-4 bg-[#fbf5e6] rounded-xl border-2 border-amber-900/20 text-center shadow-sm">
+                    <div className="text-[10px] md:text-xs text-amber-950/60 font-bold uppercase tracking-widest mb-1">VON</div>
+                    <div className="text-xl md:text-2xl font-bold text-amber-950">
                       {selectedThreat.von >= 0 ? "+" : ""}{selectedThreat.von}
                     </div>
                   </div>
                 </div>
                 {selectedThreat.resistenciaDano && (
-                  <div className="p-3 bg-[#e8dac1]/50 rounded border border-amber-900/10">
-                    <span className="text-amber-800 font-bold text-sm mr-2">Vantagens/RD: </span>
-                    <span className="text-amber-900/90 text-sm font-medium">{selectedThreat.resistenciaDano}</span>
+                  <div className="p-4 bg-[#e8dac1]/50 rounded-xl border-2 border-amber-900/20 shadow-sm">
+                    <span className="text-red-800 font-bold text-sm md:text-base mr-2 uppercase tracking-wide">Vantagens/RD: </span>
+                    <span className="text-amber-950/85 text-sm md:text-base font-medium">{selectedThreat.resistenciaDano}</span>
                   </div>
                 )}
               </section>
 
               {/* Movimento e Mana */}
-              <section className="mb-6">
-                <div className={`grid gap-3 ${selectedThreat.pm != null ? 'grid-cols-2' : 'grid-cols-1'}`}>
-                  <div className="p-3 bg-[#fbf5e6] rounded border border-amber-900/10">
-                    <div className="text-xs text-amber-900/60 font-bold uppercase mb-1">DESLOCAMENTO</div>
-                    <div className="text-amber-950 font-bold">{selectedThreat.deslocamento}</div>
+              <section className="mb-8">
+                <div className={`grid gap-3 md:gap-4 ${selectedThreat.pm != null ? 'grid-cols-2' : 'grid-cols-1'}`}>
+                  <div className="p-3 md:p-4 bg-[#fbf5e6] rounded-xl border-2 border-amber-900/20 shadow-sm flex flex-col items-center justify-center">
+                    <div className="text-[10px] md:text-xs text-amber-950/60 font-bold uppercase tracking-widest mb-1">DESLOCAMENTO</div>
+                    <div className="text-amber-950 font-bold text-lg">{selectedThreat.deslocamento}</div>
                   </div>
                   {selectedThreat.pm != null && (
-                    <div className="p-3 bg-blue-50 rounded border border-blue-900/10">
-                      <div className="text-xs text-blue-700 font-bold uppercase mb-1">PM</div>
-                      <div className="text-blue-900 font-bold">{selectedThreat.pm}</div>
+                    <div className="p-3 md:p-4 bg-[#fbf5e6] rounded-xl border-2 border-blue-800/30 shadow-sm flex flex-col items-center justify-center relative overflow-hidden">
+                      <div className="absolute inset-0 bg-blue-800/5 pointer-events-none"></div>
+                      <div className="text-[10px] md:text-xs text-blue-800/70 font-bold uppercase tracking-widest mb-1 relative z-10">PM</div>
+                      <div className="text-blue-800 font-bold text-xl relative z-10">{selectedThreat.pm}</div>
                     </div>
                   )}
                 </div>
               </section>
 
               {/* Ataques */}
-              <section className="mb-6">
-                <h3 className="text-xl font-bold text-red-800 mb-3 font-serif border-b border-red-900/20 pb-1">Ataques</h3>
+              <section className="mb-8">
+                <h3 className="text-xl md:text-2xl font-bold text-red-800 mb-4 border-b-2 border-amber-900/20 pb-2 tracking-wide">Ataques</h3>
                 {selectedThreat.ataqueCorpoACorpo && (
-                  <div className="p-3 bg-[#fbf5e6]  mb-3 shadow-sm">
-                    <div className="text-xs text-red-800/70 font-bold uppercase mb-1">CORPO A CORPO</div>
-                    <div className="text-amber-950 font-serif font-medium">{selectedThreat.ataqueCorpoACorpo}</div>
+                  <div className="p-4 md:p-5 bg-[#e8dac1] rounded-xl border-2 border-amber-900/20 mb-3 shadow-sm">
+                    <div className="text-[10px] md:text-xs text-red-800/80 font-bold uppercase tracking-widest mb-2 flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-red-800 rotate-45"></span> CORPO A CORPO
+                    </div>
+                    <div className="text-amber-950/85 font-medium text-base md:text-lg">{selectedThreat.ataqueCorpoACorpo}</div>
                   </div>
                 )}
                 {selectedThreat.ataqueDistancia && (
-                  <div className="p-3 bg-[#fbf5e6] shadow-sm">
-                    <div className="text-xs text-amber-800/70 font-bold uppercase mb-1">À DISTÂNCIA</div>
-                    <div className="text-amber-950 font-serif font-medium">{selectedThreat.ataqueDistancia}</div>
+                  <div className="p-4 md:p-5 bg-[#e8dac1] rounded-xl border-2 border-amber-900/20 shadow-sm">
+                    <div className="text-[10px] md:text-xs text-red-800/80 font-bold uppercase tracking-widest mb-2 flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-red-800 rotate-45"></span> À DISTÂNCIA
+                    </div>
+                    <div className="text-amber-950/85 font-medium text-base md:text-lg">{selectedThreat.ataqueDistancia}</div>
                   </div>
                 )}
               </section>
 
               {/* Habilidades Especiais */}
               {selectedThreat.habilidades.length > 0 && (
-                <section className="mb-6">
-                  <h3 className="text-xl font-bold text-amber-800 mb-3 font-serif border-b border-amber-900/10 pb-1">Habilidades</h3>
-                  <div className="space-y-2">
+                <section className="mb-8">
+                  <h3 className="text-xl md:text-2xl font-bold text-red-800 mb-4 border-b-2 border-amber-900/20 pb-2 tracking-wide">Habilidades</h3>
+                  <div className="space-y-3">
                     {selectedThreat.habilidades.map((hab, index) => (
-                      <div key={index} className="p-3 bg-[#e8dac1]/50 rounded border border-amber-900/10">
-                        <p className="text-amber-900/90 text-sm font-medium whitespace-pre-line">{hab}</p>
+                      <div key={index} className="p-4 md:p-5 bg-[#fbf5e6] rounded-xl border-2 border-amber-900/20 shadow-sm">
+                        <p className="text-amber-950/85 text-base md:text-lg font-medium whitespace-pre-line leading-relaxed text-left md:text-justify">{hab}</p>
                       </div>
                     ))}
                   </div>
@@ -655,9 +660,9 @@ export default function AmeacasPage() {
               )}
 
               {/* Atributos Básicos (GRID DE 6) */}
-              <section className="mb-6">
-                <h3 className="text-xl font-bold text-amber-800 mb-3 font-serif border-b border-amber-900/10 pb-1">Atributos</h3>
-                <div className="grid grid-cols-3 md:grid-cols-6 gap-3">
+              <section className="mb-8">
+                <h3 className="text-xl md:text-2xl font-bold text-red-800 mb-4 border-b-2 border-amber-900/20 pb-2 tracking-wide">Atributos</h3>
+                <div className="grid grid-cols-3 md:grid-cols-6 gap-3 md:gap-4">
                   {[
                     { label: "FOR", val: selectedThreat.for },
                     { label: "DES", val: selectedThreat.des },
@@ -666,56 +671,58 @@ export default function AmeacasPage() {
                     { label: "SAB", val: selectedThreat.sab },
                     { label: "CAR", val: selectedThreat.car },
                   ].map((attr) => (
-                    <div key={attr.label} className="p-3 bg-[#fbf5e6] rounded border border-amber-900/20 text-center shadow-sm">
-                      <div className="text-xs text-amber-900/60 font-bold uppercase mb-1">{attr.label}</div>
-                      <div className="text-xl font-bold text-amber-950">{attr.val}</div>
+                    <div key={attr.label} className="p-3 bg-[#e8dac1] rounded-xl border-2 border-amber-900/20 text-center shadow-sm">
+                      <div className="text-[10px] md:text-xs text-amber-950/60 font-bold uppercase tracking-widest mb-1">{attr.label}</div>
+                      <div className="text-xl md:text-2xl font-bold text-amber-950">{attr.val}</div>
                     </div>
                   ))}
                 </div>
               </section>
 
               {/* Perícias e Equipamentos */}
-              <section className="mb-6">
-                <h3 className="text-xl font-bold text-amber-900/60 mb-3 font-serif uppercase text-sm border-b border-amber-900/10 pb-1">Perícias & Equipamento</h3>
-                <div className="flex flex-wrap gap-2 mb-3">
+              <section className="mb-8">
+                <h3 className="text-lg md:text-xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/20 pb-2">Perícias & Equipamento</h3>
+                <div className="flex flex-wrap gap-2 mb-4">
                   {selectedThreat.pericias.map((pericia, index) => (
-                    <span key={index} className="px-3 py-1 bg-[#e8dac1] rounded-sm border border-amber-900/20 text-amber-900/80 text-sm font-bold shadow-sm">
+                    <span key={index} className="px-3 py-1.5 bg-[#fbf5e6] rounded-lg border border-amber-900/20 text-amber-950/80 text-sm md:text-base font-bold shadow-sm">
                       {pericia}
                     </span>
                   ))}
                 </div>
                 {selectedThreat.equipamentos.length > 0 && (
-                   <div className="space-y-1 mt-2">
-                      {selectedThreat.equipamentos.map((equip, idx) => (
-                          <div key={idx} className="text-sm text-amber-900/60 italic font-medium">• {equip}</div>
-                      ))}
-                   </div>
+                  <div className="space-y-2 mt-2 bg-[#e8dac1]/50 p-4 rounded-xl border-2 border-amber-900/20">
+                    {selectedThreat.equipamentos.map((equip, idx) => (
+                      <div key={idx} className="text-base text-amber-950/70 italic font-medium flex items-start gap-2">
+                        <span className="text-amber-900/40 mt-1">•</span> {equip}
+                      </div>
+                    ))}
+                  </div>
                 )}
               </section>
 
               {/* Tesouro */}
-              <section className="p-4 mb-8 bg-[#e6d5b8] border border-amber-900/20 rounded shadow-inner">
-                <h3 className="text-xl font-bold text-amber-800 mb-2 flex items-center gap-2 font-serif">
+              <section className="p-5 md:p-6 mb-8 bg-[#e8dac1] border-2 border-amber-900/20 rounded-xl shadow-inner">
+                <h3 className="text-xl md:text-2xl font-bold text-red-800 mb-3 flex items-center gap-2 tracking-wide border-b-2 border-amber-900/10 pb-2">
                   Tesouro
                 </h3>
-                <p className="text-amber-900/90 text-sm leading-relaxed whitespace-pre-wrap font-medium">
+                <p className="text-amber-950/85 text-base md:text-lg leading-relaxed whitespace-pre-wrap font-medium">
                   {renderFormattedText(selectedThreat.tesouro)}
                 </p>
               </section>
 
               {/* IMAGEM (NO FINAL) */}
               {selectedThreat.image && (
-                <section className="mt-8 pt-8 border-t border-amber-900/20">
-                  <h3 className="text-amber-900/50 text-sm uppercase tracking-widest mb-4 text-center font-bold">
+                <section className="mt-8 pt-8 border-t-2 border-amber-900/20">
+                  <h3 className="text-amber-950/50 text-xs md:text-sm uppercase tracking-widest mb-6 text-center font-bold">
                     Registro Visual
                   </h3>
-                  <div className="relative w-full rounded overflow-hidden border-2 border-amber-900/30 shadow-md bg-[#e8dac1] max-w-2xl mx-auto">
+                  <div className="relative w-full rounded-xl overflow-hidden border-2 border-amber-900/30 shadow-md bg-[#e8dac1] max-w-2xl mx-auto">
                     <img
                       src={selectedThreat.image}
                       alt={selectedThreat.name}
                       className="w-full h-auto object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#d9c8a9]/50 via-transparent to-transparent pointer-events-none"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#e8dac1]/50 via-transparent to-transparent pointer-events-none"></div>
                   </div>
                 </section>
               )}
@@ -726,9 +733,14 @@ export default function AmeacasPage() {
       )}
 
       {/* Footer */}
-      <footer className="mt-20 p-6 border-t-4 border-double border-amber-900/40 bg-[#2a231d] text-center text-amber-200/40 text-sm relative z-10 font-serif">
-        <p>Compêndio Tormenta RPG © 2025</p>
-        <p>Tormenta 20 pertence a Jambo Editora. Todos os direitos são reservados a editora.</p>
+      <footer className="relative z-10 mt-20 p-8 border-t-4 border-double border-amber-900/40 bg-[#2a1810] text-center font-serif shadow-[0_-4px_20px_rgba(0,0,0,0.15)] flex flex-col items-center justify-center">
+        <span className="text-red-900/40 text-2xl mb-3">❖</span>
+        <p className="mb-2 text-[#e8dac1]/60 text-sm md:text-base tracking-widest uppercase font-bold">
+          Compêndio Tormenta RPG © 2025
+        </p>
+        <p className="text-[#e8dac1]/40 text-xs md:text-sm tracking-wide">
+          Tormenta 20 pertence a Jambo Editora. Todos os direitos são reservados a editora.
+        </p>
       </footer>
     </div>
   );

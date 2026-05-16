@@ -10,6 +10,27 @@ import { Weapon, DamageProgression, WeaponProficiency, WeaponGrip, DamageType, W
 
 // --- Componentes Auxiliares ---
 
+// Função auxiliar para transformar **texto** em negrito no React
+const formatTextWithBold = (text: string) => {
+  if (!text) return null;
+
+  // O Regex divide a string onde encontrar **qualquer coisa**, mantendo o delimitador
+  const parts = text.split(/(\*\*.*?\*\*)/g);
+
+  return parts.map((part, index) => {
+    // Se a parte começar e terminar com **, aplicamos o negrito
+    if (part.startsWith('**') && part.endsWith('**')) {
+      return (
+        <strong key={index} className="font-bold text-red-900">
+          {part.slice(2, -2)} {/* Remove os dois primeiros e os dois últimos caracteres (os **) */}
+        </strong>
+      );
+    }
+    // Caso contrário, retorna o texto normal
+    return part;
+  });
+};
+
 // 1. Componente para renderizar a Tabela de Dano de Armas
 const DamageTable = ({ data }: { data: DamageProgression[][] }) => {
   const headers = data[0].map(d => d.step);
@@ -282,8 +303,8 @@ const WeaponFilterableTable = ({ allWeapons }: { allWeapons: Weapon[] }) => {
                   Descrição
                   <span className="h-px bg-amber-900/20 flex-grow"></span>
                 </h3>
-                <p className="text-amber-950 leading-relaxed italic whitespace-pre-line bg-[#dcc8a9]/30 p-4 rounded border-l-2 border-red-800">
-                  {selectedWeapon.description}
+                <p className="text-amber-950/85 text-base md:text-lg leading-relaxed whitespace-pre-wrap font-medium">
+                  {formatTextWithBold(selectedWeapon.description)}
                 </p>
               </div>
             </div>
@@ -453,6 +474,9 @@ export default function ArmasPage() {
                     </li>
                     <li>
                     <strong className="text-red-900">Surpreendente.</strong> Uma vez por cena, se você sacar a arma como ação livre e usá-la para atacar no mesmo turno, o oponente fica desprevenido contra esse ataque.
+                    </li>
+                    <li>
+                    <strong className="text-red-900">Híbrida.</strong> Uma arma híbrida possui dois ou mais modos de uso. Quando usa a arma, você considera apenas as características do modo que está usando e aplica apenas habilidades e efeitos que afetem este modo. Trocar de modo normalmente é uma ação de movimento (ou livre, se você tiver Saque Rápido). Aplicar melhorias e encantos em uma arma híbrida custa o dobro do preço em tibares.
                     </li>
                 </ul>
 

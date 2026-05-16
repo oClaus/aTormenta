@@ -52,6 +52,25 @@ export const enchantments: Enchantment[] = [
 ];
 
 export const accessories: SpecificAccessory[] = [
+  // Dragão Brasil
+  { id: "Luvas de Controle",
+    name: "Luvas de Controle",
+    description: "Essas luvas feitas do corpo de Zedian se assentam nas mãos de forma incômoda. Ao vesti-las, você recebe Força +2, uma arma natural de pancada (impacto, 1d10) e controle mental do filho renascido de Aslothia.",
+    price: "T$ 100.000",
+    size: "Maior",
+    origin: "Dragão Brasil"
+  },
+
+  // Duelo de Dragões
+  { id: "Cetro do Poder Usurpado",
+    name: "Cetro do Poder Usurpado",
+    description: "Esse cetro se parece com a pata de um dragão segurando um orbe em sua extremidade. \nQuando o empunha, você pode usar o poder Raio Arcano (CD seu atributo-chave de magias ou Car); se já o possuir, em vez disso cada dado de dano aumenta em um passo. \nO cetro concede habilidades adicionais conforme sua ligação com dragões. Se você for um devoto de Kallyadranoch, pode usar também o poder Raio Elemental; se já o possuir, em vez disso seu custo é reduzido a 0 PM. Se for um kallyanach, o dano do seu Raio Arcano aumenta em 1 passo adicional e, se você for um feiticeiro de linhagem dracônica, a CD para resistir ao seu Raio aumenta em +2.",
+    price: "T$ 9.000",
+    size: "Menor",
+    origin: "Duelo de Dragões"
+  },
+
+
   // --- Acessórios Menores (Tabela 8-13) ---
   {
     id: "anel-da-protecao",
@@ -1097,13 +1116,6 @@ export const accessories: SpecificAccessory[] = [
     size: "Maior",
     origin: "Herois de Arton"
   },
-  // Dragão Brasil
-  { id: "Luvas de Controle",
-    name: "Luvas de Controle",
-    description: "Essas luvas feitas do corpo de Zedian se assentam nas mãos de forma incômoda. Ao vesti-las, você recebe Força +2, uma arma natural de pancada (impacto, 1d10) e controle mental do filho renascido de Aslothia.",
-    price: "T$ 100.000",
-    size: "Maior",
-    origin: "Dragão Brasil"
-  },
+  
 ];
   
