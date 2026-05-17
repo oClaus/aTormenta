@@ -1,6 +1,7 @@
 import { Power } from "@/types/power";
 
 export const powersGeraisDestino: Power[] = [
+  // Tormenta20 - Jogo do Ano
   { id: "Acrobático",
     name: "Acrobático",
     description: "Você pode usar sua Destreza em vez de Força em testes de Atletismo. Além disso, terreno difícil não reduz seu deslocamento nem o impede de realizar investidas. ",
@@ -9,7 +10,7 @@ export const powersGeraisDestino: Power[] = [
   },
   { id: "Ao Sabor do Destino",
     name: "Ao Sabor do Destino",
-    description: "Confiando em suas próprias habilidades (ou em sua própria sorte), você abre mão de usar itens mágicos. Sua autoconfiança fornece diversos benefícios, de acordo com seu nível de personagem e a tabela no final da página. Os bônus não são cumulativos (os bônus em atributos e perícias devem ser aplicados num atributo ou perícia diferente a cada vez). Se você utilizar voluntariamente qualquer item mágico (exceto poções), perde o benefício deste poder até o fim da aventura. Você ainda pode lançar magias, receber magias benéficas ou beneficiar-se de itens usados por outros — por exemplo, pode “ir de carona” em um tapete voador, mas não pode você mesmo conduzi-lo. ",
+    description: "Confiando em suas próprias habilidades (ou em sua própria sorte), você abre mão de usar itens mágicos. Sua autoconfiança fornece diversos benefícios, de acordo com seu nível de personagem e a tabela no início da página. Os bônus não são cumulativos (os bônus em atributos e perícias devem ser aplicados num atributo ou perícia diferente a cada vez). Se você utilizar voluntariamente qualquer item mágico (exceto poções), perde o benefício deste poder até o fim da aventura. Você ainda pode lançar magias, receber magias benéficas ou beneficiar-se de itens usados por outros — por exemplo, pode “ir de carona” em um tapete voador, mas não pode você mesmo conduzi-lo. ",
     prerequisite: "6º nível de personagem.",
     origin: "Tormenta20 - Jogo do Ano"
   },
@@ -121,6 +122,8 @@ export const powersGeraisDestino: Power[] = [
     prerequisite: "Sab 1.",
     origin: "Tormenta20 - Jogo do Ano"
   },
+
+
   { id: "Alma Livre",
     name: "Alma Livre",
     description: "Arton tem muitas maravilhas a serem exploradas, muitos caminhos a serem percorridos — e você não é louco de se prender a um só. Escolha uma classe. Você pode escolher um poder dessa classe como se pertencesse a ela (para efeitos de nível na classe desse poder, considere seu nível de personagem −4). Note que você não recebe o poder, apenas o direito de escolhê-lo mais tarde.",
@@ -297,7 +300,7 @@ export const powersGeraisDestino: Power[] = [
   },
   { id: "Autoridade Eclesiástica - Tanna-Toh",
     name: "Autoridade Eclesiástica - Tanna-Toh",
-    description: "Você possui uma posição formal e reconhecida em uma igreja. Você recebe +5 em testes de Diplomacia e Intimidação ao lidar com devotos de sua divindade, além do benefício específico de sua divindade, apresentado a seguir.\nVocê recebe +5 em Conhecimento e em testes de perícia para identificar criatura, item e magia (veja Misticismo em Tormenta20, p. 121). Além disso, se visitar um templo da Deusa do Conhecimento, tem acesso a todo o conteúdo de sua biblioteca. Escolha uma perícia em que não seja treinado. Até o fim da aventura, ou até usar esse benefício novamente, você recebe os benefícios de ser treinado na perícia escolhida.",
+    description: "Você possui uma posição formal e reconhecida em uma igreja. Você recebe +5 em testes de Diplomacia e Intimidação ao lidar com devotos de sua divindade, além do benefício específico de sua divindade, apresentado a seguir.\nVocê recebe +5 em Conhecimento e em testes de perícia para identificar criatura, item e magia. Além disso, se visitar um templo da Deusa do Conhecimento, tem acesso a todo o conteúdo de sua biblioteca. Escolha uma perícia em que não seja treinado. Até o fim da aventura, ou até usar esse benefício novamente, você recebe os benefícios de ser treinado na perícia escolhida.",
     prerequisite: "5º nível de clérigo ou frade, devoto de Tanna-Toh.",
     origin: "Deuses de Arton" 
   },

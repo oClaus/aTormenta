@@ -1,146 +1,132 @@
 import { PowerCategory } from "@/types/power";
 
 export const powerCategories: PowerCategory[] = [
-  {
-    id: "1",
+  // Tormenta20 - Jogo do Ano
+  { id: "Arcanista",
     name: "Arcanista",
     slug: "arcanista",
     description: "Poderes exclusivos de Arcanista.",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "2",
-    name: "Poderes Gerais de Combate ",
-    slug: "poderes-gerais",
-    description: "Poderes utilizados em todas classes.",
-    origin: "tormenta20 - jogo do ano"
-  },
-  {
-    id: "3",
-    name: "Ladino",
-    slug: "ladino",
-    description: "Poderes exclusivos de Ladino.",
-    origin: "tormenta20 - jogo do ano"
-  },
-  {
-    id: "4",
-    name: "Vampiro",
-    slug: "vampiro",
-    description: "Poderes exclusivos de Vampiro.",
-    origin: "Dragão Brasil"
-  },
-  {
-    id: "5",
+  { id: "Bárbaro",
     name: "Bárbaro",
     slug: "barbaro",
     description: "Poderes exclusivos de Bárbaros",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "6",
+  { id: "Bardo",
     name: "Bardo",
     slug: "bardo",
     description: "Poderes exclusivos de Bardo.",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "7",
+  { id: "Bucaneiro",
     name: "Bucaneiro",
     slug: "bucaneiro",
     description: "Poderes exclusivos de Bucaneiro.",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "8",
+  { id: "Caçador",
     name: "Caçador",
     slug: "cacador",
     description: "Poderes exclusivos de Caçador.",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "9",
+  { id: "Cavaleiro",
     name: "Cavaleiro",
     slug: "cavaleiro",
     description: "Poderes exclusivos de Cavaleiro.",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "10",
+  { id: "Clérigo",
     name: "Clérigo",
     slug: "clerigo",
     description: "Poderes exclusivos de Clerigo.",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "11",
+  { id: "Druida",
     name: "Druida",
     slug: "druida",
     description: "Poderes exclusivos de Druida.",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "12",
+  { id: "Guerreiro",
     name: "Guerreiro",
     slug: "guerreiro",
     description: "Poderes exclusivos de Guerreiro.",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "13",
+  { id: "Inventor",
     name: "Inventor",
     slug: "inventor",
     description: "Poderes exclusivos de Inventor.",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "14",
+  { id: "Ladino",
+    name: "Ladino",
+    slug: "ladino",
+    description: "Poderes exclusivos de Ladino.",
+    origin: "tormenta20 - jogo do ano"
+  },
+  { id: "Lutador",
     name: "Lutador",
     slug: "lutador",
     description: "Poderes exclusivos de Lutador.",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "15",
+  { id: "Nobre",
     name: "Nobre",
     slug: "nobre",
     description: "Poderes exclusivos de Nobre.",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "16",
+  { id: "Paladino",
     name: "Paladino",
     slug: "paladino",
     description: "Poderes exclusivos de Paladino.",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "17",
+  { id: "Poderes Gerais de Combate",
+    name: "Poderes Gerais de Combate ",
+    slug: "poderes-gerais",
+    description: "Poderes utilizados em todas classes.",
+    origin: "tormenta20 - jogo do ano"
+  },
+  { id: "Poderes Gerais de Destino",
     name: "Poderes Gerais de Destino",
     slug: "poderes-gerais-destino",
     description: "Poderes utilizados em todas classes.",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "18",
+  { id: "Poderes Gerais de Magia",
     name: "Poderes Gerais de Magia",
     slug: "poderes-gerais-magia",
     description: "Poderes utilizados em todas classes.",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "19",
+  { id: "Poderes Gerais Condedidos",
     name: "Poderes Gerais Condedidos",
     slug: "poderes-gerais-concedidos",
     description: "Poderes utilizados em todas classes.",
     origin: "tormenta20 - jogo do ano"
   },
-  {
-    id: "20",
+  { id: "Poderes Gerais da Tormenta",
     name: "Poderes Gerais da Tormenta",
     slug: "poderes-gerais-tormenta",
     description: "Poderes utilizados em todas classes.",
     origin: "tormenta20 - jogo do ano"
   },
+
+  // Dragão Brasil
+  { id: "Vampiro",
+    name: "Vampiro",
+    slug: "vampiro",
+    description: "Poderes exclusivos de Vampiro.",
+    origin: "Dragão Brasil"
+  },
+
+  
+  
   {
     id: "Samurai",
     name: "Samurai",

@@ -24,22 +24,22 @@ export default function CacadorPodersPage() {
       {/* Background Effect */}
       <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(69,26,3,0.15)_100%)]" />
 
-      {/* Header Responsivo (Logo Esquerda, Menu Direita) */}
-      <header className="relative z-10 w-full p-6 border-b-4 border-double border-amber-900/40 bg-[#e6d5b8]/90 backdrop-blur-md shadow-sm mb-8 md:mb-12 sticky top-0">
+      {/* Header Responsivo */}
+      <header className="relative z-10 w-full p-6 border-b-4 border-double border-amber-900/40 bg-[#e8dac1]/90 backdrop-blur-md shadow-sm mb-8 md:mb-12 sticky top-0 font-serif">
         <div className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4">
             
             <Link href="/" className="inline-block group self-start md:self-auto">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-wider uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-700 via-red-800 to-red-950 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 1px 2px rgba(69,26,3,0.1)' }}>
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-700 via-red-800 to-red-950 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 1px 2px rgba(69,26,3,0.1)' }}>
                     a-Tormenta
                 </h1>
             </Link>
             
-            <div className="flex items-center gap-2 flex-wrap text-xs sm:text-sm font-bold tracking-wide uppercase self-end md:self-auto">
-                <Link href="/" className="text-amber-900/60 hover:text-red-700 transition-colors whitespace-nowrap">
+            <div className="flex items-center gap-2 flex-wrap text-xs sm:text-sm font-bold tracking-widest uppercase self-end md:self-auto">
+                <Link href="/" className="text-amber-950/70 hover:text-red-800 transition-colors whitespace-nowrap">
                   Início
                 </Link>
                 <span className="text-amber-900/40">/</span>
-                <Link href="/poderes" className="text-amber-900/60 hover:text-red-700 transition-colors">
+                <Link href="/poderes" className="text-amber-950/70 hover:text-red-800 transition-colors">
                   Poderes
                 </Link>
                 <span className="text-amber-900/40">/</span>
@@ -49,91 +49,108 @@ export default function CacadorPodersPage() {
       </header>
 
       {/* Main Content */}
-      <div className="relative z-10 w-full px-6 py-12">
+      <div className="relative z-10 w-full px-6 py-12 max-w-screen-2xl mx-auto">
 
         {/* Título Principal */}
-        <div className="mb-8 w-full">
-          <h1 className="text-4xl sm:text-5xl font-bold text-red-800 mb-4 drop-shadow-sm font-serif">
+        <div className="mb-10 md:mb-12 w-full flex flex-col items-start">
+          <h1 className="text-4xl sm:text-5xl font-bold text-red-800 mb-3 drop-shadow-sm font-serif tracking-wider">
             Poderes de Caçador
           </h1>
+          <div className="w-32 h-1 bg-gradient-to-r from-red-800 to-transparent rounded-full"></div>
         </div>
 
-        {/* Acordeão de Introdução (COMEÇA FECHADO) */}
+        {/* Acordeão de Introdução */}
         <div className="mb-12 w-full">
           <button 
             onClick={() => setIsIntroOpen(!isIntroOpen)}
-            className="w-full flex items-center justify-between p-6 bg-[#e8dac1] border-2 border-amber-900/30 rounded-t-xl hover:border-amber-700/80 transition-all group shadow-sm"
+            className="w-full flex items-center justify-between p-6 bg-[#e8dac1] border-2 border-amber-900/30 rounded-t-xl hover:border-red-800/40 transition-all group shadow-sm"
           >
             <div className="flex items-center gap-3">
               <span className="text-2xl opacity-70">📜</span>
               <div className="text-left">
-                <h2 className="text-xl font-bold text-amber-950 group-hover:text-red-800 transition-colors font-serif">
+                <h2 className="text-xl font-bold text-amber-950 group-hover:text-red-800 transition-colors font-serif uppercase tracking-wide">
                   Regras
                 </h2>
-                <p className="text-sm text-amber-900/60 font-serif italic font-bold">
+                <p className="text-sm text-amber-950/70 font-serif italic font-bold">
                   Clique para expandir ou recolher as informações.
                 </p>
               </div>
             </div>
-            <span className={`text-amber-900/40 text-2xl transition-transform duration-300 ${isIntroOpen ? 'rotate-180' : ''}`}>
+            <span className={`text-red-800 text-2xl transition-transform duration-300 ${isIntroOpen ? 'rotate-180' : ''}`}>
               ▼
             </span>
           </button>
 
-          <div className={`overflow-hidden transition-all duration-500 ease-in-out border-x-2 border-b-2 border-amber-900/30 rounded-b-xl bg-[#fbf5e6] ${isIntroOpen ? 'max-h-[100000px] opacity-100' : 'max-h-0 opacity-0 border-transparent'}`}>
-            <div className="p-8 sm:p-10 ">
-            {/* Seção de Informação (Armadilhas) */}
-        
-            <div className="space-y-4 text-amber-900/90 text-sm leading-relaxed font-serif text-justify">
-                <h3 className="text-2xl font-bold text-red-800 mb-2 font-serif pb-2">Armadilhas</h3>
-                <p className="text-amber-900/90 font-medium mb-4 text-justify">Alguns poderes do caçador são Armadilhas. Esses poderes compartilham as seguintes regras:</p>
-            </div>
+          <div className={`overflow-hidden transition-all duration-500 ease-in-out border-x-2 border-b-2 border-amber-900/30 rounded-b-xl bg-[#fbf5e6] ${isIntroOpen ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0 border-transparent'}`}>
+            <div className="p-5 md:p-10 font-serif text-amber-950/85 text-base md:text-lg text-left md:text-justify leading-relaxed flex flex-col gap-8">
+              
+              {/* Seção 1: Armadilhas */}
+              <section>
+                <h3 className="text-2xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/20 pb-2">Armadilhas</h3>
+                <p className="font-medium mb-6">Alguns poderes do caçador são Armadilhas. Esses poderes compartilham as seguintes regras:</p>
+                
+                <ul className="space-y-4 mb-6">
+                  <li className="flex items-start gap-3">
+                    <span className="text-[10px] text-red-800/60 mt-2">◆</span>
+                    <span className="font-medium">Preparar uma armadilha gasta uma ação completa e 3 PM.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[10px] text-red-800/60 mt-2">◆</span>
+                    <span className="font-medium">Uma armadilha afeta uma área de 3m de lado adjacente a você e é acionada pela primeira criatura que entrar na área.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[10px] text-red-800/60 mt-2">◆</span>
+                    <span className="font-medium">Uma criatura que o veja preparando a armadilha saberá que ela está lá. Uma criatura que não o veja preparando a armadilha pode encontrá-la se gastar uma ação padrão procurando e passar em um teste de Investigação (CD Sab).</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[10px] text-red-800/60 mt-2">◆</span>
+                    <span className="font-medium">É possível aplicar veneno a uma armadilha, como se ela fosse uma arma.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[10px] text-red-800/60 mt-2">◆</span>
+                    <span className="font-medium">Você não precisa de nenhum item para criar a armadilha, pois usa materiais naturais, como galhos e cipós. Porém, precisa estar em um ambiente propício, como uma floresta, um beco repleto de entulhos etc.</span>
+                  </li>
+                </ul>
+              </section>
 
-            <div className="space-y-4 text-amber-900/90 text-sm leading-relaxed font-serif text-justify">
-                <p><span className="text-red-800 font-bold">• </span><span className="font-medium">Preparar uma armadilha gasta uma ação completa e 3 PM.</span></p>
-                <p><span className="text-red-800 font-bold">• </span><span className="font-medium">Uma armadilha afeta uma área de 3m de lado adjacente a você e é acionada pela primeira criatura que entrar na área.</span></p>
-                <p><span className="text-red-800 font-bold">• </span><span className="font-medium">Uma criatura que o veja preparando a armadilha saberá que ela está lá. Uma criatura que não o veja preparando a armadilha pode encontrá-la se gastar uma ação padrão procurando e passar em um teste de Investigação (CD Sab).</span></p>
-                <p><span className="text-red-800 font-bold">• </span><span className="font-medium">É possível aplicar veneno a uma armadilha, como se ela fosse uma arma.</span></p>
-                <p><span className="text-red-800 font-bold">• </span><span className="font-medium">Você não precisa de nenhum item para criar a armadilha, pois usa materiais naturais, como galhos e cipós. Porém, precisa estar em um ambiente propício, como uma floresta, um beco repleto de entulhos etc.</span></p>
-            </div>
-
-                {/* Seção de Informação (Companheiro Animal) */}
-            <div className="space-y-4 text-amber-900/90 text-sm leading-relaxed font-serif text-justify">
-                <h3 className="text-2xl font-bold text-red-800 mb-1 mt-6 font-serif border-t-2 border-amber-900/10 pb-2">Companheiro Animal</h3>
-                <p className="text-amber-900/90 font-medium mb-2 text-serif">
-                Um companheiro animal é um amigo valoroso e fiel. Você decide de qual espécie é seu companheiro. Vocês têm um vínculo mental, sendo capazes de entender um ao outro. Seu companheiro animal obedece a você, mesmo que isso arrisque a vida dele. Em termos de jogo, seu companheiro animal é um parceiro ajudante, assassino, atirador, combatente, fortão, guardião, perseguidor, ou uma montaria, do nível iniciante. No 7º nível ele muda para veterano e, no 15º nível, para mestre (se tiver mais de um tipo, todos mudam de nível). Se o companheiro animal morrer, você fica atordoado por uma rodada. Você pode invocar um novo companheiro após um dia inteiro de prece e meditação.
+              {/* Seção 2: Companheiro Animal */}
+              <section className="border-t-2 border-amber-900/20 pt-8">
+                <h3 className="text-2xl font-bold text-red-800 mb-4 tracking-wide">Companheiro Animal</h3>
+                <p className="font-medium mb-4">
+                  Um companheiro animal é um amigo valoroso e fiel. Você decide de qual espécie é seu companheiro. Vocês têm um vínculo mental, sendo capazes de entender um ao outro. Seu companheiro animal obedece a você, mesmo que isso arrisque a vida dele. Em termos de jogo, seu companheiro animal é um parceiro ajudante, assassino, atirador, combatente, fortão, guardião, perseguidor, ou uma montaria, do nível iniciante. No 7º nível ele muda para veterano e, no 15º nível, para mestre (se tiver mais de um tipo, todos mudam de nível). Se o companheiro animal morrer, você fica atordoado por uma rodada. Você pode invocar um novo companheiro após um dia inteiro de prece e meditação.
                 </p>
-                <p className="text-amber-900/90 font-medium mb-2 text-serif">
-                A seguir, alguns exemplos de animais (mas você é livre para escolher outros):
+                <p className="font-medium mb-6">
+                  A seguir, alguns exemplos de animais (mas você é livre para escolher outros):
                 </p>
-            </div>
 
-            <div className="space-y-4 text-amber-900/90 text-sm leading-relaxed font-serif text-justify">
-                <p><span className="text-red-800 font-bold"> Ajudante: </span><span className="text-amber-900/90 font-medium mb-4 text-serif">Corvo, macaco, raposa, serpente ou outro animal ágil ou esperto.</span></p>
-                <p><span className="text-red-800 font-bold"> Assassino: </span><span className="text-amber-900/90 font-medium mb-4 text-serif">Lince, onça ou outro animal treinado para abater presas.</span></p>
-                <p><span className="text-red-800 font-bold"> Atirador: </span><span className="text-amber-900/90 font-medium mb-4 text-serif">Águia, falcão ou outro animal capaz de mergulhar rapidamente nos alvos de seus ataques à distância.</span></p>
-                <p><span className="text-red-800 font-bold"> Fortão: </span><span className="text-amber-900/90 font-medium mb-4 text-serif">Crocodilo, javali, leão, lobo ou outro animal capaz de lutar ao seu lado.</span></p>
-                <p><span className="text-red-800 font-bold"> Guardião: </span><span className="text-amber-900/90 font-medium mb-4 text-serif">Alce, cão, coruja, tartaruga, urso ou outro animal pesado ou atento.</span></p>
-                <p><span className="text-red-800 font-bold"> Perseguidor: </span><span className="text-amber-900/90 font-medium mb-4 text-serif">Gambá, sabujo ou outro animal farejador</span></p>
-            </div>
+                <div className="space-y-4 pl-4 md:pl-5 border-l-4 border-amber-900/30 text-base md:text-lg text-left">
+                  <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Ajudante: </span><span className="font-medium">Corvo, macaco, raposa, serpente ou outro animal ágil ou esperto.</span></p>
+                  <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Assassino: </span><span className="font-medium">Lince, onça ou outro animal treinado para abater presas.</span></p>
+                  <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Atirador: </span><span className="font-medium">Águia, falcão ou outro animal capaz de mergulhar rapidamente nos alvos de seus ataques à distância.</span></p>
+                  <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Fortão: </span><span className="font-medium">Crocodilo, javali, leão, lobo ou outro animal capaz de lutar ao seu lado.</span></p>
+                  <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Guardião: </span><span className="font-medium">Alce, cão, coruja, tartaruga, urso ou outro animal pesado ou atento.</span></p>
+                  <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Perseguidor: </span><span className="font-medium">Gambá, sabujo ou outro animal farejador.</span></p>
+                </div>
+              </section>
+
             </div>
           </div>
         </div>
 
-        {/* Busca - ESTILO CAIXA */}
-        <div className="mb-12 p-6 rounded-xl bg-[#e8dac1] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] w-full">
-            <label className="block text-sm font-bold text-amber-900/60 mb-3 uppercase tracking-wider font-serif">
+        {/* Busca */}
+        <div className="mb-12 p-6 rounded-xl bg-[#e8dac1] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] w-full font-serif">
+            <label className="block text-sm font-bold text-amber-950/70 mb-3 uppercase tracking-widest">
                 Buscar Poder
             </label>
             <div className="relative">
                 <input
-                type="text"
-                placeholder="Buscar por nome, descrição ou origem..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-5 py-3 pr-12 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-lg text-amber-900 placeholder-amber-900/40 focus:outline-none focus:border-red-800 focus:ring-1 focus:ring-red-800 transition-all font-serif shadow-sm"
+                  type="text"
+                  placeholder="Buscar por nome, descrição ou origem..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full px-5 py-3 pr-12 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-lg text-amber-950/85 placeholder-amber-900/40 focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
                 />
-                <div className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/40">
+                <div className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/40 text-lg">
                     🔍
                 </div>
             </div>
@@ -144,57 +161,63 @@ export default function CacadorPodersPage() {
             {filteredPowers.map((power) => (
             <div
                 key={power.id}
-                className="rounded-xl bg-[#d9c8a9] border-2 border-amber-900/30 p-6 hover:border-red-800/50 hover:shadow-[0_4px_20px_rgba(69,26,3,0.15)] transition-all duration-300 flex flex-col h-full group hover:-translate-y-1"
+                className="rounded-xl bg-[#e8dac1] border-2 border-amber-900/30 p-5 md:p-6 hover:border-red-800/50 hover:shadow-[0_4px_20px_rgba(153,27,27,0.15)] transition-all duration-300 flex flex-col h-full group hover:-translate-y-1 font-serif"
             >
                 {/* Nome do Poder */}
-                <h3 className="text-xl font-bold text-red-800 mb-3 group-hover:text-red-700 transition-colors font-serif drop-shadow-sm">
-                {power.name}
+                <h3 className="text-xl font-bold text-red-800 mb-3 group-hover:text-red-800 transition-colors tracking-wide border-b-2 border-amber-900/10 pb-2">
+                  {power.name}
                 </h3>
 
                 {/* Descrição */}
                 <div className="flex-1 mb-4">
-                <p className="text-amber-900/90 text-sm leading-relaxed font-serif font-medium">
-                    {power.description}
-                </p>
+                  <p className="text-amber-950/85 text-sm md:text-base leading-relaxed font-medium">
+                      {power.description}
+                  </p>
                 </div>
 
                 {/* Rodapé do Card */}
                 <div className="mt-auto">
-                {/* Pré-requisito */}
-                {power.prerequisite && (
-                    <div className="mb-4 pt-4 border-t-2 border-amber-900/10 group-hover:border-amber-900/30 transition-colors">
-                    <p className="text-xs text-amber-900/70 font-serif font-medium">
-                        <span className="font-bold text-red-800 uppercase tracking-wide">Pré-requisito:</span> {power.prerequisite}
-                    </p>
-                    </div>
-                )}
+                  {/* Pré-requisito */}
+                  {power.prerequisite && (
+                      <div className="mb-4 pt-4 border-t-2 border-amber-900/20 group-hover:border-red-800/30 transition-colors">
+                      <p className="text-xs md:text-sm text-amber-950/70 font-medium">
+                          <span className="font-bold text-red-800 uppercase tracking-widest">Pré-requisito:</span> {power.prerequisite}
+                      </p>
+                      </div>
+                  )}
 
-                {/* Origem */}
-                <div className="flex items-center justify-end pt-4 border-t-2 border-amber-900/10 group-hover:border-amber-900/30 transition-colors">
-                    <span className="text-[10px] px-2 py-0.5 rounded bg-[#fbf5e6] border border-amber-900/20 text-amber-900/80 font-serif uppercase tracking-widest font-bold shadow-sm">
-                    {formatOrigin(power.origin)}
-                    </span>
-                </div>
+                  {/* Origem */}
+                  <div className="flex items-center justify-end pt-4 border-t-2 border-amber-900/20 group-hover:border-red-800/30 transition-colors">
+                      <span className="text-[10px] px-2 py-1 rounded bg-[#fbf5e6] border border-amber-900/20 text-amber-950/70 uppercase tracking-widest shadow-sm font-bold">
+                        {formatOrigin(power.origin)}
+                      </span>
+                  </div>
                 </div>
             </div>
             ))}
         </div>
 
+        {/* Empty State */}
         {filteredPowers.length === 0 && (
-            <div className="text-center py-12 text-amber-900/60 font-bold italic border-2 border-dashed border-amber-900/30 rounded-xl font-serif bg-[#e8dac1]/50 mt-8">
-            <p className="text-lg">Nenhum poder encontrado.</p>
+            <div className="text-center py-20 border-2 border-dashed border-amber-900/30 rounded-xl bg-[#e8dac1]/50 font-serif flex flex-col items-center justify-center mt-8">
+              <span className="text-4xl opacity-40 mb-4">📜</span>
+              <p className="text-amber-950/70 text-lg italic tracking-wide">
+                Nenhum poder de caçador encontrado.
+              </p>
             </div>
         )}
       </div>
 
       {/* Footer */}
-      <footer className="mt-12 py-8 border-t-4 border-double border-amber-900/40 bg-[#2a231d] text-center text-amber-200/40 text-sm relative z-10 font-serif">
-        <p>Compêndio Tormenta RPG © 2025 • Feito por um fã para fãs</p>
-        <p>Tormenta 20 pertence a Jambo Editora. Todos os direitos são reservados a editora.</p>
+      <footer className="relative z-10 mt-20 p-8 border-t-4 border-double border-amber-900/40 bg-[#2a1810] text-center font-serif shadow-[0_-4px_20px_rgba(0,0,0,0.15)] flex flex-col items-center justify-center">
+        <span className="text-red-900/40 text-2xl mb-3">❖</span>
+        <p className="mb-2 text-[#e8dac1]/60 text-sm md:text-base tracking-widest uppercase font-bold">
+          Compêndio Tormenta RPG © 2025 • Feito por um fã para fãs
+        </p>
+        <p className="text-[#e8dac1]/40 text-xs md:text-sm tracking-wide">
+          Tormenta 20 pertence a Jambo Editora. Todos os direitos são reservados a editora.
+        </p>
       </footer>
     </div>
   );
 }
-
-        
-      

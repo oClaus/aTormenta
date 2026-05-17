@@ -1,27 +1,30 @@
 // types/skill.ts
 
+// Interface para a estrutura de tabelas
+export interface SkillTable {
+  headers: string[];
+  rows: string[][];
+}
+
 // Interface para as funções/usos de uma perícia
 export interface SkillFunction {
-  title: string; // Ex: Amortecer Queda (CD 15, Apenas Treinado).
-  description: string; // O texto detalhado da função
+  title: string; 
+  description: string; 
+  table?: SkillTable; // Adicionado: Tabela opcional
+  footer?: string;    // Adicionado: Texto opcional que vem abaixo da tabela
 }
 
 // Interface principal para a Perícia
 export interface Skill {
   id: string;
   name: string;
-  attribute: string; // Ex: Des (Destreza), Car (Carisma)
-  trainedOnly: boolean; // Se a perícia só pode ser usada se for treinada
-  armorPenalty: boolean; // Se sofre penalidade de armadura
-  description: string; // Descrição geral da perícia (primeiro parágrafo)
-  functions: SkillFunction[]; // Lista de usos/funções da perícia
+  attribute: string; 
+  trainedOnly: boolean; 
+  armorPenalty: boolean; 
+  description: string; 
+  functions: SkillFunction[]; 
 }
 
-/**
- * Função auxiliar para formatar o status da perícia (Ex: Des • Treinada • Armadura)
- * @param skill A perícia a ser formatada
- * @returns A string formatada
- */
 export function formatSkillStatus(skill: Skill): string {
     let status = `${skill.attribute}`;
     

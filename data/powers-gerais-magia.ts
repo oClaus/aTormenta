@@ -1,6 +1,7 @@
 import { Power } from "@/types/power";
 
 export const powersGeraisMagia: Power[] = [
+  // Tormenta20 - Jogo do Ano
   { id: "Celebrar Ritual",
     name: "Celebrar Ritual",
     description: "Você pode lançar magias como rituais. Isso dobra seu limite de PM, mas muda a execução para 1 hora (ou o dobro, o que for maior) e exige um gasto de T$ 10 por PM gasto (em incensos, oferendas...). Assim, um arcanista de 8º nível pode lançar uma magia de 16 PM gastando T$ 160. Magias lançadas como rituais não podem ser armazenadas em itens. ",
@@ -16,7 +17,6 @@ export const powersGeraisMagia: Power[] = [
   { id: "Foco em Magia",
     name: "Foco em Magia",
     description: "Escolha uma magia que possa lançar. Seu custo diminui em –1 PM (cumulativo com outras reduções de custo). Você pode escolher este poder outras vezes para magias diferentes.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Magia Acelerada - Aprimoramento",
@@ -28,27 +28,25 @@ export const powersGeraisMagia: Power[] = [
   { id: "Magia Ampliada - Aprimoramento",
     name: "Magia Ampliada - Aprimoramento",
     description: "Aumenta o alcance da magia em um passo (de curto para médio, de médio para longo) ou dobra a área de efeito da magia. Por exemplo, uma Bola de Fogo ampliada tem seu alcance aumentado para longo ou sua área aumentada para 12m de raio. Custo: +2 PM.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Magia Discreta - Aprimoramento",
     name: "Magia Discreta - Aprimoramento",
     description: "Você lança a magia sem gesticular e falar, usando apenas concentração. Isso permite lançar magias com as mãos presas, amordaçado etc. Também permite lançar magias arcanas usando armadura sem teste de Misticismo. Outros personagens só percebem que você lançou uma magia se passarem num teste de Misticismo (CD 20). Custo: +2 PM.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Magia Ilimitada",
     name: "Magia Ilimitada",
     description: "Você soma seu atributo-chave no limite de PM que pode gastar numa magia. Por exemplo, um arcanista de 5º nível com Int 4 e este poder pode gastar até 9 PM em cada magia.",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Preparar Poção",
     name: "Preparar Poção",
     description: "Você pode usar a perícia Ofício (alquimista) para fabricar poções com magias que conheça de 1º e 2º círculos. Veja a página 121 para a regra de fabricar itens e as páginas 333 e 341 para as regras de poções. Pré-requisitos: habilidade de classe Magias, treinado em Ofício (alquimista).",
-    prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
+
+  
   { id: "Barreira Mística",
     name: "Barreira Mística",
     description: "Você usa a energia residual da conjuração de feitiços para materializar escudos capazes de protegê-lo de ataques físicos. Quando lança uma magia, você pode gastar 1 PM. Se fizer isso, você recebe +4 na Defesa até o início do seu próximo turno.",

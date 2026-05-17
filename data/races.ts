@@ -92,8 +92,8 @@ export const races: Race[] = [
     },
     ],
     attributeModifiers: [
-      { attribute: "des", modifier: 1 },
       { attribute: "int", modifier: 2 },
+      { attribute: "des", modifier: 1 },
       { attribute: "con", modifier: -1 }
     ]
   },

@@ -1,6 +1,7 @@
 import { Power } from "@/types/power";
 
 export const powersGerais: Power[] = [
+  // Tormenta20 - Jogo do Ano
   { id: "Acuidade com Arma",
     name: "Acuidade com Arma",
     description: "Quando usa uma arma corpo a corpo leve ou uma arma de arremesso, você pode usar sua Destreza em vez de Força nos testes de ataque e rolagens de dano.",
@@ -241,6 +242,8 @@ export const powersGerais: Power[] = [
     prerequisite: "Con 1.",
     origin: "Tormenta20 - Jogo do Ano"
   },
+
+  
   { id: "Arremesso Devastador",
     name: "Arremesso Devastador",
     description: "Quando faz um ataque à distância com uma arma de arremesso, você pode gastar 1 PM. Se fizer isso e acertar o ataque, além do dano você faz uma manobra derrubar ou empurrar contra o alvo, usando o resultado do ataque como o teste de manobra. ",

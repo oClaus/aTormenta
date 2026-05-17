@@ -1,8 +1,7 @@
 import { Skill } from "@/types/skill";
 
 export const skills: Skill[] = [
-  {
-    id: "acrobacia",
+  { id: "acrobacia",
     name: "Acrobacia",
     attribute: "Des",
     trainedOnly: false, // Acrobacia pode ser usada sem ser treinada
@@ -35,8 +34,7 @@ export const skills: Skill[] = [
       },
     ],
   },
-  {
-    id: "adestramento",
+  { id: "adestramento",
     name: "Adestramento",
     attribute: "Car",
     trainedOnly: true, // Adestramento só pode ser usada se for treinada
@@ -53,8 +51,7 @@ export const skills: Skill[] = [
       },
     ],
   },
-  {
-    id: "atletismo",
+  { id: "atletismo",
     name: "Atletismo",
     attribute: "For",
     trainedOnly: false, 
@@ -79,8 +76,7 @@ export const skills: Skill[] = [
       },
     ],
   },
-  {
-    id: "atuacao",
+  { id: "atuacao",
     name: "Atuação",
     attribute: "Car",
     trainedOnly: true, //  só pode ser usada se for treinada
@@ -97,8 +93,7 @@ export const skills: Skill[] = [
       },
     ],
   },
-  {
-    id: "cavalgar",
+  { id: "cavalgar",
     name: "Cavalgar",
     attribute: "Des",
     trainedOnly: false, //  só pode ser usada se for treinada
@@ -119,8 +114,7 @@ export const skills: Skill[] = [
       },
     ],
   },
-  {
-    id: "conhecimento",
+  { id: "conhecimento",
     name: "Conhecimento",
     attribute: "Int",
     trainedOnly: true, //  só pode ser usada se for treinada
@@ -137,8 +131,7 @@ export const skills: Skill[] = [
       },
     ],
   },
-  {
-    id: "cura",
+  { id: "cura",
     name: "Cura",
     attribute: "Sab",
     trainedOnly: false, //  só pode ser usada se for treinada
@@ -163,8 +156,7 @@ export const skills: Skill[] = [
       },
     ],
   },
-  {
-    id: "diplomacia",
+  { id: "diplomacia",
     name: "Diplomacia",
     attribute: "Car",
     trainedOnly: false, //  só pode ser usada se for treinada
@@ -185,8 +177,7 @@ export const skills: Skill[] = [
       },
     ],
   },
-  {
-    id: "Enganação",
+  { id: "Enganação",
     name: "Enganação",
     attribute: "Car",
     trainedOnly: false, //  só pode ser usada se for treinada
@@ -219,8 +210,7 @@ export const skills: Skill[] = [
       },
     ],
   },
-  {
-    id: "Fortitude ",
+  { id: "Fortitude ",
     name: "Fortitude ",
     attribute: "Con",
     trainedOnly: false, //  só pode ser usada se for treinada
@@ -233,8 +223,7 @@ export const skills: Skill[] = [
       },
     ],
   },
-  {
-    id: "Furtividade",
+  { id: "Furtividade",
     name: "Furtividade",
     attribute: "Des",
     trainedOnly: false, //  só pode ser usada se for treinada
@@ -251,8 +240,7 @@ export const skills: Skill[] = [
       },
     ],
   },
-  {
-    id: "Guerra ",
+  { id: "Guerra ",
     name: "Guerra ",
     attribute: "Int",
     trainedOnly: true, //  só pode ser usada se for treinada
@@ -269,8 +257,7 @@ export const skills: Skill[] = [
       },
     ],
   },
-  {
-    id: "Iniciativa ",
+  { id: "Iniciativa ",
     name: "Iniciativa ",
     attribute: "Des",
     trainedOnly: false, //  só pode ser usada se for treinada
@@ -278,8 +265,7 @@ export const skills: Skill[] = [
     description: "Esta perícia determina sua velocidade de reação em situações de perigo. Quando uma cena de ação começa, cada personagem envolvido faz um teste de Iniciativa. Eles então agem em ordem decrescente dos resultados.",
     functions: [    ],
   },
-  {
-    id: "Intimidação",
+  { id: "Intimidação",
     name: "Intimidação",
     attribute: "Car",
     trainedOnly: false, //  só pode ser usada se for treinada
@@ -296,8 +282,7 @@ export const skills: Skill[] = [
       },
     ],
   },
-  {
-    id: "Intuição ",
+  { id: "Intuição ",
     name: "Intuição ",
     attribute: "Sab",
     trainedOnly: false, //  só pode ser usada se for treinada
@@ -314,8 +299,7 @@ export const skills: Skill[] = [
       },
     ],
   },
-  {
-    id: "Investigação ",
+  { id: "Investigação ",
     name: "Investigação ",
     attribute: "Int",
     trainedOnly: false, //  só pode ser usada se for treinada
@@ -332,17 +316,28 @@ export const skills: Skill[] = [
       },
     ],
   },
-  {
-    id: "Jogatina ",
-    name: "Jogatina ",
+  { id: "Jogatina",
+    name: "Jogatina",
     attribute: "Car",
-    trainedOnly: true, //  só pode ser usada se for treinada
-    armorPenalty: false, // Sofre penalidade de armadura
+    trainedOnly: true,
+    armorPenalty: false,
     description: "Você sabe jogar jogos de azar.",
     functions: [
       {
         title: "Apostar",
-        description: "Para resolver uma noite de jogatina: Pague T$ 1d10. Faça um teste de perícia. Consulte a tabela abaixo para determinar quanto você ganha. [Teste]/[Ganho] - [9 ou menos]/[Nenhum] - [10 a 14]/[Metade da aposta.] - [15 a 19]/[Valor da aposta (você “empata”).] - [20 a 29]/[Dobro da aposta.] - [30 a 39]/[Triplo da aposta.] - [40 ou mais]/[Quíntuplo da aposta.].  O mestre pode variar o valor da aposta básica: T$ 1d3, para uma taverna no porto frequentada por marujos e estivadores, a 1d10 × T$ 1.000, para um cassino de luxo em Valkaria.",
+        description: "Para resolver uma noite de jogatina, pague T$ 1d10, faça um teste de perícia e consulte a tabela abaixo para determinar quanto você ganha.",
+        table: {
+          headers: ["Teste", "Ganho"],
+          rows: [
+            ["9 ou menos", "Nenhum."],
+            ["10 a 14", "Metade da aposta."],
+            ["15 a 19", "Valor da aposta (você \"empata\")."],
+            ["20 a 29", "Dobro da aposta."],
+            ["30 a 39", "Triplo da aposta."],
+            ["40 ou mais", "Quíntuplo da aposta."]
+          ]
+        },
+        footer: "O mestre pode variar o valor da aposta básica. De T$ 1d3, para uma taverna no porto frequentada por marujos e estivadores, a 1d10 x T$ 1.000, para um cassino de luxo em Valkaria."
       },
     ],
   },

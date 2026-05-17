@@ -1,7 +1,7 @@
 import { Origin } from "@/types/origin";
 
 export const origins: Origin[] = [
-  // Dragão Brasil
+  // Tormanta20 - Jogo do Ano
   { id: "Acólito",
     name: "Acólito",
     description: "Neste mundo agraciado com tantos deuses e igrejas, muitos ingressam cedo em alguma ordem religiosa — o que, dependendo de quem é seu deus padroeiro, pode ser motivo de admiração ou repulsa. Talvez você tenha ouvido o chamado da fé, seguiu a tradição espiritual de sua família, ou apenas foi abandonado quando pequeno às portas de um templo ou mosteiro. Tenha ou não se tornado um devoto, suas lembranças são carregadas de orações, evangelhos e outros ensinamentos.",
@@ -19,8 +19,7 @@ export const origins: Origin[] = [
     },
     source: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "2",
+  {  id: "Amigo dos Animais",
     name: "Amigo dos Animais",
     description: "Você pode ter sido cavalariço no estábulo de um castelo, criador de gado em uma fazenda, ginete de Namalkah ou mesmo tratador em um zoológico ou circo — em Arton, existem espetáculos circenses com animais em jaulas, que talvez você tenha desejado libertar. Ou então nada disso: desde criança você tem facilidade em lidar com animais, sempre conversou com eles, sentiu ser capaz de compreendê-los. Em certos lugares ou tribos, alguma montaria especial seria destinada a você.",
     items: [
@@ -36,8 +35,7 @@ export const origins: Origin[] = [
     },
     source: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "3",
+  { id: "Amnésico",
     name: "Amnésico",
     description: "Você perdeu a maior parte da memória. Sabe apenas o próprio nome ou nem isso. Talvez tenha alguns itens pessoais, mas nenhuma ideia de como os conseguiu — podem ser relíquias de família, presentes de um ente querido ou apenas coisas que pegou de viajantes mortos lá atrás. Você não sabe como recebeu seu treinamento; apenas tem uma intuição sobre aquilo que consegue fazer. Seus atuais companheiros são a única família que conhece. Talvez viajando com eles você descubra algo sobre seu passado.",
     items: [
@@ -52,8 +50,7 @@ export const origins: Origin[] = [
     },
     source: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "4",
+  { id: "Aristocrata",
     name: "Aristocrata",
     description: "Você nasceu na nobreza. Recebeu educação sofisticada em assuntos acadêmicos, política mercantil, torneios de cavalaria ou mesmo conjuração arcana, dependendo das tradições em sua linhagem e desejos de seus pais. Você ainda procura cumprir seus compromissos como nobre? Luta para conciliar as expectativas da família com a vida de aventuras? Ou cortou totalmente seus laços com o passado, mantendo apenas alguns pertences valiosos e contatos úteis?",
     items: [
@@ -70,8 +67,7 @@ export const origins: Origin[] = [
     },
     source: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "5",
+  { id: "Artesão",
     name: "Artesão",
     description: "Do alfaiate habilidoso em costurar as vestes da nobreza ao armeiro que forja armas letais, você foi treinado por um parente, mestre ou guilda para fabricar itens importantes no mundo civilizado. Suas habilidades podem ter sido aprendidas para o trabalho, mas se mostraram úteis durante as aventuras.",
     items: [
@@ -88,8 +84,7 @@ export const origins: Origin[] = [
     },
     source: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "6",
+  { id: "Artista",
     name: "Artista",
     description: "Você possui talento, nasceu com um “dom” — pelo menos é o que outras pessoas gostam de pensar. Será verdade? Ou será que você apenas sentiu atração por certa forma de arte e treinou muito, muito mesmo? Enquanto o artesão fabrica itens “mundanos”, o artista produz entretenimento, alimento para o coração e a alma. Talvez você apenas saiba entoar belas canções, aprendidas na infância com pais amorosos, ou ouvindo fadas na floresta. Ou talvez seja um ator ou dançarino formado em alguma escola de artes prestigiada.",
     items: [
@@ -105,8 +100,7 @@ export const origins: Origin[] = [
     },
     source: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "7",
+  { id: "Assistente de Laboratório",
     name: "Assistente de Laboratório",
     description: "Você atuou como ajudante para um alquimista, inventor ou mago. Costumava tomar notas, limpar o laboratório, arrumar as ferramentas, vasculhar mercados em busca de ingredientes exóticos, recapturar a aberração antinatural que fugiu da jaula... enfim, não era o trabalho mais fácil, limpo ou seguro do mundo. Exposição prolongada a substâncias e experimentos perigosos talvez tenham prejudicado sua saúde (ou despertado suas habilidades de classe...).",
     items: [
@@ -122,8 +116,7 @@ export const origins: Origin[] = [
     },
     source: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "8",
+  { id: "Batedor",
     name: "Batedor",
     description: "Seja conduzindo caravanas através dos reinos, rastreando inimigos nos campos de batalha ou guiando exploradores nas vastidões selvagens, você aprendeu a achar caminhos e dirigir outros com segurança. Batedores podem surgir nas tribos mais primitivas, acompanhando grupos de caça, como profissionais sofisticados nas grandes cidades e forças militares ou ainda na perigosa atividade de caça-recompensas. Pouco importando a carreira que adotou mais tarde, como aventureiro, seu antigo treino acaba se revelando útil em numerosas ocasiões.",
     items: [
@@ -141,8 +134,7 @@ export const origins: Origin[] = [
     },
     source: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "9",
+  { id: "Capanga",
     name: "Capanga",
     description: "Agilidade e esperteza são importantes no mundo do crime, mas não são tudo; às vezes é preciso esmurrar alguém. Por ser grande, forte ou mal-encarado, você acabou trabalhando como músculos para algum bandido, ou integrando um bando, quadrilha ou guilda de ladrões. Talvez você não fosse muito bom em bater carteiras nas ruas de Ahlen, mas sabia erguer alguém pelo tornozelo e sacudir até as moedas caírem. Hoje, como aventureiro, você provavelmente deixou essa época para trás — pelo menos até que alguém precise ser “convencido” a colaborar.",
     items: [
@@ -159,8 +151,7 @@ export const origins: Origin[] = [
     },
     source: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "10",
+  { id: "Charlatão",
     name: "Charlatão",
     description: "Você sempre teve talento para resolver problemas com conversa, sincera ou nem tanto. Talvez tenha aprendido andando com más companhias. Por ser pequeno e fraco em meio a guerreiros truculentos, talvez fosse pura questão de sobrevivência. Ou foi tocado por Hyninn, Sszzaas ou outra entidade traiçoeira. Seja como for, após um pouco de diálogo, você percebe o que as pessoas mais querem ou temem, usando palavras para vencer obstáculos tão facilmente quanto espadas e magias. Ou melhor.",
     items: [
@@ -177,8 +168,7 @@ export const origins: Origin[] = [
     },
     source: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "11",
+  { id: "Circense",
     name: "Circense",
     description: "Você treinou acrobacia, malabarismo, mágica ou outra forma de arte circense. Talvez tenha aprendido sozinho, durante as brincadeiras de infância. Talvez tenha sido ensinado por um ente querido, tornando essa arte uma forte ligação com seu passado. Ou ainda, é possível que tenha sido forçado a aprender seus truques para sobreviver nas ruas. De qualquer forma, são aptidões que podem ser úteis em suas aventuras.",
     items: [
@@ -194,8 +184,7 @@ export const origins: Origin[] = [
     },
     source: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "12",
+  { id: "Criminoso",
     name: "Criminoso",
     description: "Fazer o bem é bonito, mas não enche barriga — pelo menos, assim você foi ensinado. Por necessidade, ambição ou apenas sem conhecer outra vida, você foi um bandido durante boa parte da juventude. Furtava bolsas, trapaceava em jogos de taverna, emboscava viajantes nas estradas ou até aceitava contratos para matar. Agia sozinho, com seu próprio bando, pertencia a uma guilda de ladrões. Tornar-se aventureiro talvez seja uma forma de expiar por seus crimes, ou apenas o passo seguinte; em vez de mercadores, roubar tesouros de dragões!",
     items: [
@@ -211,8 +200,7 @@ export const origins: Origin[] = [
     },
     source: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "13",
+  { id: "Curandeiro",
     name: "Curandeiro",
     description: "Que bom seria se a cura milagrosa dos clérigos estivesse ao alcance de todos! Talvez você tenha sido ajudante do curandeiro da vila, testemunhando quando ele tratava doenças e lesões sem conjurar qualquer magia. Ou teve um estudo formal e sofisticado de medicina no Colégio Real de Médicos em Salistick. De qualquer modo, você é treinado em curar com remédios e tratamentos naturais — algo sempre útil, mesmo quando há um clérigo por perto.",
     items: [
@@ -229,8 +217,7 @@ export const origins: Origin[] = [
     },
     source: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "14",
+  { id: "Eremita",
     name: "Eremita",
     description: "Você passou parte da vida isolado, afastado da sociedade. Foi banido ainda criança, por nascer lefou ou com alguma deformidade da Tormenta. Ouviu um chamado dos deuses, buscando o isolamento para meditar sobre seu significado. Viveu enclausurado em um mosteiro, mantendo contato apenas com monges silenciosos. Ou foi praticante de artes arcanas proibidas, mantendo-se longe de olhares curiosos. A vida simples o tornou forte de corpo e espírito. Mas, em algum momento, você decidiu que bastava — ou teve sua tranquilidade interrompida.",
     items: [
@@ -247,8 +234,7 @@ export const origins: Origin[] = [
     },
     source: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "15",
+  { id: "Escravo",
     name: "Escravo",
     description: "De minotauros odiosos no Império de Tauron aos cruéis mestres subterrâneos de Trollkyrka, várias culturas praticam a escravidão. Você já nasceu escravo, fez parte de um povo derrotado na guerra ou foi capturado em alguma rua escura para depois despertar na jaula, em algum mercado clandestino? Encontrou uma chance de escapar, tornando-se agora um escravo foragido? Recebeu a liberdade como recompensa por realizar um grande favor a seu algoz? Foi resgatado por aventureiros que agora se tornaram sua nova família?",
     items: [
@@ -265,8 +251,7 @@ export const origins: Origin[] = [
     },
     source: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "16",
+  { id: "Estudioso",
     name: "Estudioso",
     description: "Não importa se você já nasceu apaixonado por certo assunto, testemunhou um evento incrível que atiçou sua curiosidade ou se viu forçado a estudar por imposição familiar. Longos anos de sua vida foram gastos em meio a livros e pergaminhos. Da engenharia dos anões à geopolítica do Reinado, das táticas militares puristas aos sistemas de conjuração da Academia Arcana, da anatomia dos dragões aos enigmas cósmicos da Tormenta... em Arton não faltam campos a conquistar, segredos a desvendar. Agora, como aventureiro, você tem a chance de vivenciar aquilo que aprendeu e também auxiliar o grupo com o fruto de seus estudos.",
     items: [
@@ -282,8 +267,7 @@ export const origins: Origin[] = [
     },
     source: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "17",
+  { id: "Fazendeiro",
     name: "Fazendeiro",
     description: "Boa parte da população de Arton jamais conheceu outro modo de viver. Em algum lugar na perigosa transição entre os ermos e as cidades, você trabalhou duro em campos e fazendas. Cultivando a terra ou criando animais, viveu longos anos em contato com a natureza, orando e trabalhando por boas colheitas ou gado saudável, só ocasionalmente visitando povoados para negociar sua produção. Por que essa vida tranquila acabou? Sua família foi assassinada por goblins? Sua fazenda foi devastada por um dragão? Ou você apenas foi atraído pelo chamado da aventura?",
     items: [
@@ -302,8 +286,7 @@ export const origins: Origin[] = [
     },
     source: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "18",
+  { id: "Forasteiro",
     name: "Forasteiro",
     description: "Você veio de longe. Sua cultura nativa é quase ou totalmente desconhecida no Reinado, tornando-o uma figura exótica, de hábitos estranhos. Você pertence a uma tribo perdida nas Montanhas Sanguinárias? Nasceu em uma bela cidade de cúpulas douradas no Deserto da Perdição? Navegou em navios audazes desde os Reinos de Moreania? Talvez você até tenha chegado de outro mundo, através de algum portal mágico. Será que conseguiu ajustar-se a este Reinado, agora chamando-o de lar? Ou procura até hoje o caminho de volta para casa?",
     items: [
@@ -321,8 +304,7 @@ export const origins: Origin[] = [
     },
     source: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "19",
+  { id: "Gladiador",
     name: "Gladiador",
     description: "Combates de arena são um entretenimento popular em Arton — a ponto de atrair muitos jovens praticantes. Podem ser combates até a morte ou apenas encenações elaboradas ou ainda corridas de cavalo, arquearia e outros esportes menos sangrentos. Você se envolveu nesse mundo glamoroso por ser tradição em sua família, por admirar algum gladiador renomado ou apenas por sede de fama e fortuna. Um evento traumático, uma desilusão ou o puro tédio levou você a abandonar as arenas e aplausos, usando sua experiência em torneios para viver aventuras.",
     items: [
@@ -339,8 +321,7 @@ export const origins: Origin[] = [
     },
     source: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "20",
+  { id: "Guarda",
     name: "Guarda",
     description: "Você atuou como agente da lei em uma vila ou cidade. Nem de longe uma profissão tão glamorosa ou emocionante quanto parece; boa parte de seu trabalho resumia-se a guardar um portão, fazer rondas tediosas ou recolher bêbados em tavernas. Pelo menos você recebeu algum treino em investigação e combate. Também tem consigo alguma boa arma, que “esqueceu” de devolver quando abandonou a milícia para se tornar aventureiro.",
     items: [
@@ -358,8 +339,7 @@ export const origins: Origin[] = [
     },
     source: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "21",
+  { id: "Herdeiro",
     name: "Herdeiro",
     description: "Você pertence a uma linhagem de nobres, mercadores, conjuradores, acadêmicos, assassinos, ou outra atividade tradicional em sua família — tão tradicional que, de você, não se espera outra coisa. Pode ser uma longa e antiquíssima ascendência, traçada até antes da Grande Batalha, ou você apenas é filho de uma importante personalidade. Talvez tenha nascido em alguma ordem de cavalaria em Bielefeld, ou uma influente estirpe da nobreza de Deheon, ou como filho de um célebre arquimago com planos de enviá-lo à Academia Arcana, ou até cresceu em um culto familiar secreto a um deus maligno. Graças a essa herança, recebeu treino e equipamento adequados. Mas você pretende mesmo seguir esse caminho?",
     items: [
@@ -375,8 +355,7 @@ export const origins: Origin[] = [
     },
     source: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "22",
+  { id: "Herói Camponês",
     name: "Herói Camponês",
     description: "Quando o povoado foi atacado por goblins, você empunhou o forcado para expulsá-los. Quando o estábulo pegou fogo, você se arriscou para salvar todos os animais. Quando todos temiam a mansão assombrada na colina, você encontrou a carta de amor perdida que trouxe descanso à alma torturada. Você era o campeão local, amado pelo povo, mas também destinado a feitos maiores. Houve comoção quando você partiu para uma vida de aventuras, mas ninguém deixou de orar por seu sucesso. Talvez você até tenha sido presenteado com alguma arma ou item há tempos guardado no povoado.",
     items: [
@@ -393,8 +372,7 @@ export const origins: Origin[] = [
     },
     source: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "23",
+  { id: "Marujo",
     name: "Marujo",
     description: "Você foi tripulante em uma embarcação — um barco pesqueiro, galé pirata, caravela exploradora, trirreme dos minotauros... — no Mar Negro, no Mar do Dragão-Rei ou mesmo ao longo do imenso Rio dos Deuses. Você também pode ter trabalhado em um veículo exótico, como um dirigível goblin, ou mesmo em uma embarcação mágica, como as naves vivas gog’magogue que viajam entre mundos!",
     items: [
@@ -411,8 +389,7 @@ export const origins: Origin[] = [
     },
     source: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "24",
+  { id: "Mateiro",
     name: "Mateiro",
     description: "Nem todos em Arton vivem em cidades confortavelmente abastecidas por fazendeiros, mineiros ou pescadores — muitas comunidades ainda obtêm sustento através da caça. Você aprendeu cedo a abater animais selvagens para colocar comida na mesa, ou como esporte de gosto duvidoso. Se você caça com reverência a Allihanna ou apenas coleciona troféus com orgulho, a escolha é sua. De qualquer forma, para alguém habituado a flechar cervos e colocar armadilhas para coelhos, combater ogros, demônios e dragões seria apenas o passo seguinte.",
     items: [
@@ -431,8 +408,7 @@ export const origins: Origin[] = [
     },
     source: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "25",
+  { id: "Membro de Guild",
     name: "Membro de Guilda",
     description: "Você foi, ou ainda é, membro atuante em uma grande guilda — uma associação de artesãos, mercadores, magos, criminosos ou mesmo aventureiros. A guilda forneceu o treinamento e equipamento necessários para suas atividades, esperando que você seja útil em troca. Você se manteve fiel a seus patronos, cumprindo missões e colhendo os benefícios de pertencer a uma vasta organização? Ou deixou essa vida para trás, sendo agora desprezado ou até caçado por seus antigos mestres?",
     items: [
@@ -448,8 +424,7 @@ export const origins: Origin[] = [
     },
     source: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "26",
+  { id: "Mercador",
     name: "Mercador",
     description: "Seguindo uma tradição de família, após herdar um estabelecimento ou apenas como um jovem empregado, você atuou como comerciante — pelo menos por algum tempo. Uma tenda modesta em algum grande mercado urbano? Uma caravana mercante cruzando o Reinado? Um belo bazar na prestigiada cidade voadora de Vectora? Após alguns anos de negociações e jornadas (nem tão tranquilas quanto outros imaginam), você talvez não tenha ficado rico, mas reuniu algum equipamento e dinheiro suficientes para começar carreira como aventureiro.",
     items: [
@@ -467,8 +442,7 @@ export const origins: Origin[] = [
     },
     source: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "27",
+  { id: "Minerador",
     name: "Minerador",
     description: "Ser aventureiro é a profissão mais perigosa de todas; ser mineiro, talvez a segunda mais perigosa. Você mergulhou nas profundezas da terra atrás de metais necessários à civilização ou riquezas em gemas preciosas. Enquanto humanos e outras raças consideram essa vida um pesadelo, quase todos os anões acreditam ser a mais feliz das carreiras. A escuridão e o sufocamento dos subterrâneos talvez tenham sido assustadores, mas trouxeram a você bens materiais valiosos, bem como informação profunda (sem trocadilhos) sobre túneis e masmorras.",
     items: [
@@ -485,8 +459,7 @@ export const origins: Origin[] = [
     },
     source: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "28",
+  { id: "Nômade",
     name: "Nômade",
     description: "Até onde se lembra, você nunca pertenceu a um só lugar. Sua família viajava constantemente, como parte de alguma grande caravana comercial, peregrinação religiosa ou algum povo primitivo que nunca praticou agricultura. Ou talvez suas razões para viajar sejam bastante diferentes e pessoais — após a quase extinção de seu povo, muitos elfos temem criar raízes, enquanto a deusa Valkaria exige que seus devotos se mantenham sempre em viagem. Para você, habituado às estradas e sem laços com nenhuma terra, bastou um pequeno passo para se tornar aventureiro.",
     items: [
@@ -503,8 +476,7 @@ export const origins: Origin[] = [
     },
     source: "Tormenta20 - Jogo do Ano"
   },
-  {
-    id: "29",
+  { id: "Pivete",
     name: "Pivete",
     description: "Você era uma criança de rua. Não conheceu seus pais, foi abandonado por eles ou fugiu para evitar maus tratos. Sem muitas escolhas na vida, aprendeu cedo a sobreviver em grandes cidades, pedindo esmolas, roubando bolsas ou cumprindo pequenas tarefas para bandidos. Tornar-se aventureiro não parecia apenas um jeito de ficar rico e famoso, mas também a única chance de uma vida melhor. Talvez você não tenha as armaduras e mantos chiques de seus companheiros, mas sabe se virar nas ruas melhor que ninguém.",
     items: [
@@ -625,6 +597,8 @@ export const origins: Origin[] = [
     },
     source: "Tormenta20 - Jogo do Ano"
   },
+
+  
   { id: "Discípulo de um Campeão",
     name: "Discípulo de um Campeão",
     description: "Desde jovem, você foi treinado para ser um dos melhores: um veterano da Guerra Artoniana. Um verdadeiro herói o tomou sob sua proteção e ensinou seus melhores truques e técnicas para que você possa se aventurar e construir seus próprios feitos. Como você se relaciona com seu mentor é uma decisão sua; alguns discípulos viajam junto de seus mentores já envelhecidos, outros escondem seu passado e tentam escapar da sua sombra, enquanto outros ainda têm muito orgulho e tentam garantir a longevidade desse legado.",

@@ -234,50 +234,95 @@ export default function RacasPage() {
       </main>
 
       {/* Modal de Detalhes - ESTILO DE PÁGINA DE LIVRO ANTIGO */}
-      {selectedRace && (
-        <div
-          onClick={handleBackdropClick}
-          className="fixed inset-0 bg-[#2a1810]/80 backdrop-blur-sm flex items-center justify-center z-50 p-2 md:p-4"
-        >
-          {/* Container do Modal com textura */}
-          <div className="bg-[#f2e8d5] border-4 border-double border-amber-900/40 rounded-lg shadow-[0_0_60px_rgba(69,26,3,0.3)] max-w-3xl w-full max-h-[95vh] overflow-y-auto relative custom-scrollbar bg-[url('/noise.png')]">
-            
-            {/* Botão de Fechar */}
-            <button
-              onClick={() => setSelectedRace(null)}
-              className="absolute top-6 right-6 text-amber-900/60 hover:text-red-800 transition-colors z-10 bg-[#e8dac1] border border-amber-900/30 rounded-full w-10 h-10 flex items-center justify-center text-2xl pb-1 shadow-sm"
-            >
-              ×
-            </button>
+{selectedRace && (
+  <div
+    onClick={handleBackdropClick}
+    className="fixed inset-0 bg-[#2a1810]/80 backdrop-blur-sm flex items-center justify-center z-50 p-2 md:p-4"
+  >
+    {/* Container do Modal com textura padronizada */}
+    <div className="bg-[#fbf5e6] border-4 border-double border-amber-900/40 rounded-xl shadow-[0_0_60px_rgba(69,26,3,0.3)] max-w-4xl w-full max-h-[95vh] overflow-y-auto relative custom-scrollbar bg-[url('/noise.png')]">
+      
+      {/* Botão de Fechar */}
+      <button
+        onClick={() => setSelectedRace(null)}
+        className="absolute top-4 right-4 md:top-6 md:right-6 text-amber-950/70 hover:text-red-800 transition-colors z-10 bg-[#e8dac1] border-2 border-amber-900/30 hover:border-red-800/50 rounded-full w-10 h-10 flex items-center justify-center text-2xl pb-1 shadow-sm"
+      >
+        ×
+      </button>
 
-            {/* Conteúdo do Modal */}
-            <div className="p-8 md:p-12 font-serif">
+      {/* Conteúdo do Modal - Herdando fontes e cores */}
+      <div className="p-5 md:p-12 font-serif text-amber-950/85">
+        
+        {/* Cabeçalho da Raça */}
+        <div className="mb-8 md:mb-10 text-center border-b-2 border-amber-900/20 pb-6 md:pb-8 mt-4 md:mt-0">
+            <h2 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-amber-700 via-red-800 to-amber-950 mb-4 tracking-wider uppercase drop-shadow-sm">
+              {selectedRace.name}
+            </h2>
+            <div className="flex items-center justify-center gap-4">
+              <div className="h-[2px] w-8 md:w-12 bg-amber-900/30"></div>
+              <span className="inline-block text-base md:text-lg font-bold uppercase tracking-[0.2em] text-red-800">
+                  {selectedRace.origin}
+              </span>
+              <div className="h-[2px] w-8 md:w-12 bg-amber-900/30"></div>
+            </div>
+        </div>
+
+        {/* Descrição */}
+        <div className="mb-10 p-5 md:p-8 bg-[#e8dac1]/50 border-2 border-amber-900/20 rounded-xl shadow-inner relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-1 md:w-2 h-full bg-amber-900/20"></div>
+          <h3 className="text-xl md:text-2xl font-bold text-red-800 mb-4 border-b-2 border-amber-900/10 pb-2 tracking-wide flex items-center gap-2">
+            Descrição
+          </h3>
+          <p className="text-amber-950/90 leading-relaxed whitespace-pre-line text-base md:text-lg font-medium first-letter:text-5xl md:first-letter:text-6xl first-letter:font-bold first-letter:text-red-800 first-letter:mr-2 first-letter:float-left text-left md:text-justify">
+            {selectedRace.description}
+          </p>
+        </div>
               
-              {/* Cabeçalho da Raça */}
-              <div className="mb-10 text-center border-b-2 border-amber-900/20 pb-8">
-                  <h2 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-amber-700 via-red-800 to-amber-950 mb-4 tracking-wide">
-                    {selectedRace.name}
-                  </h2>
-                  <div className="flex items-center justify-center gap-4 opacity-50">
-                    <div className="h-[1px] w-12 bg-amber-900/40"></div>
-                    <span className="inline-block text-lg font-bold uppercase tracking-[0.2em] text-red-800">
-                        {selectedRace.origin}
-                    </span>
-                    <div className="h-[1px] w-12 bg-amber-900/40"></div>
-                  </div>
-              </div>
+              {/* Modificadores de Atributos */}
+            <div className="mb-8">
+              <h3 className="text-xl md:text-2xl font-bold text-red-800 mb-4 border-b-2 border-amber-900/20 pb-2 flex items-center gap-2 tracking-wide">
+                Modificadores de Atributos
+              </h3>
+              <div className="space-y-3 md:space-y-4">
+                {selectedRace.attributeModifiers.map((mod, index) => {
+                  // Se é modificador FIXO
+                  if (isFixedModifier(mod)) {
+                    return (
+                      <div
+                        key={index}
+                        className="flex items-center justify-between p-4 md:p-5 rounded-xl bg-[#fbf5e6] border-2 border-amber-900/20 hover:border-red-800/40 transition-colors shadow-sm"
+                      >
+                        <p className="text-amber-950/70 font-bold uppercase tracking-widest text-xs md:text-sm">
+                          {getAttributeName(mod.attribute)}
+                        </p>
+                        <p className={`text-2xl md:text-3xl font-bold ${getModifierColor(mod.modifier)}`}>
+                          {formatModifier(mod.modifier)}
+                        </p>
+                      </div>
+                    );
+                  }
 
-              {/* Descrição */}
-              <div className="mb-10 p-6  border border-amber-900/20 rounded shadow-inner relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-1 h-full bg-amber-900/20"></div>
-                <h3 className="text-2xl font-bold text-amber-800 mb-4 flex items-center gap-2">
-                Descrição
-                </h3>
-                <p className="text-amber-900/90 font-medium leading-relaxed whitespace-pre-line text-lg first-letter:text-5xl first-letter:font-bold first-letter:text-red-800 first-letter:mr-2 first-letter:float-left text-justify">
-                  {selectedRace.description}
-                </p>
-              </div>
+                  // Se é modificador FLEXÍVEL
+                  if (isFlexibleModifier(mod)) {
+                    return (
+                      <div
+                        key={index}
+                        className="p-4 md:p-5 rounded-xl bg-[#fbf5e6] border-2 border-amber-900/20 shadow-sm"
+                      >
+                        <p className="text-amber-950/85 leading-relaxed text-base md:text-lg font-medium text-left md:text-justify">
+                          <span className="font-bold uppercase tracking-wide text-amber-700 mr-2"></span>
+                          {mod.description}
+                        </p>
+                      </div>
+                    );
+                  }
 
+                  return null;
+                })}
+              </div>
+            </div>
+
+            
               {/* Habilidades */}
               <div className="mb-10">
               <h3 className="text-xl md:text-2xl font-bold text-red-800 mb-4 border-b-2 border-amber-900/20 pb-2 flex items-center gap-2 tracking-wide">
@@ -338,49 +383,7 @@ export default function RacasPage() {
               )}
             </div>
 
-            {/* Modificadores de Atributos */}
-            <div className="mb-8">
-              <h3 className="text-xl md:text-2xl font-bold text-red-800 mb-4 border-b-2 border-amber-900/20 pb-2 flex items-center gap-2 tracking-wide">
-                Modificadores de Atributos
-              </h3>
-              <div className="space-y-3 md:space-y-4">
-                {selectedRace.attributeModifiers.map((mod, index) => {
-                  // Se é modificador FIXO
-                  if (isFixedModifier(mod)) {
-                    return (
-                      <div
-                        key={index}
-                        className="flex items-center justify-between p-4 md:p-5 rounded-xl bg-[#fbf5e6] border-2 border-amber-900/20 hover:border-red-800/40 transition-colors shadow-sm"
-                      >
-                        <p className="text-amber-950/70 font-bold uppercase tracking-widest text-xs md:text-sm">
-                          {getAttributeName(mod.attribute)}
-                        </p>
-                        <p className={`text-2xl md:text-3xl font-bold ${getModifierColor(mod.modifier)}`}>
-                          {formatModifier(mod.modifier)}
-                        </p>
-                      </div>
-                    );
-                  }
-
-                  // Se é modificador FLEXÍVEL
-                  if (isFlexibleModifier(mod)) {
-                    return (
-                      <div
-                        key={index}
-                        className="p-4 md:p-5 rounded-xl bg-[#fbf5e6] border-2 border-amber-900/20 shadow-sm"
-                      >
-                        <p className="text-amber-950/85 leading-relaxed text-base md:text-lg font-medium text-left md:text-justify">
-                          <span className="font-bold uppercase tracking-wide text-amber-700 mr-2"></span>
-                          {mod.description}
-                        </p>
-                      </div>
-                    );
-                  }
-
-                  return null;
-                })}
-              </div>
-            </div>
+            
 
             {/* Extra */}
             <div className="mb-8 grid grid-cols-1 gap-4">
@@ -409,9 +412,14 @@ export default function RacasPage() {
       )}
 
       {/* Footer */}
-      <footer className="mt-20 p-6 border-t-4 border-double border-amber-900/40 bg-[#2a231d] text-center text-amber-200/40 text-sm relative z-10">
-        <p className="mb-1">Compêndio Tormenta RPG © 2025 • Feito por um fã para fãs</p>
-        <p>Tormenta 20 pertence a Jambo Editora. Todos os direitos são reservados a editora.</p>
+      <footer className="relative z-10 mt-20 p-8 border-t-4 border-double border-amber-900/40 bg-[#2a1810] text-center font-serif shadow-[0_-4px_20px_rgba(0,0,0,0.15)] flex flex-col items-center justify-center">
+        <span className="text-red-900/40 text-2xl mb-3">❖</span>
+        <p className="mb-2 text-[#e8dac1]/60 text-sm md:text-base tracking-widest uppercase font-bold">
+          Compêndio Tormenta RPG © 2025
+        </p>
+        <p className="text-[#e8dac1]/40 text-xs md:text-sm tracking-wide">
+          Tormenta 20 pertence a Jambo Editora. Todos os direitos são reservados a editora.
+        </p>
       </footer>
     </div>
   );
