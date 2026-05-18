@@ -1,9 +1,8 @@
 import { Armor, ArmorType } from "@/types/armors";
 
 export const armors: Armor[] = [
-  // --- Armaduras Leves ---
-  {
-    id: "armadura-acolchoada",
+  // Tormenta20 - Jogo do Ano
+  { id: "armadura-acolchoada",
     name: "Armadura acolchoada",
     type: "Leve",
     description: "Uma túnica almofadada feita em linho ou lã. É a armadura mais leve, mas protege todo o corpo, fornecendo +2 em Fortitude.",
@@ -12,9 +11,9 @@ export const armors: Armor[] = [
     defenseBonus: 1,
     armorPenalty: 0,
     spaces: 2,
+    image: "/armadura/acolchoada.png",
   },
-  {
-    id: "armadura-de-couro",
+  { id: "armadura-de-couro",
     name: "Armadura de couro",
     type: "Leve",
     description: "O peitoral desta armadura é feito de couro curtido em óleo fervente, para ficar mais rígido, enquanto as demais partes são feitas de couro flexível.",
@@ -23,9 +22,9 @@ export const armors: Armor[] = [
     defenseBonus: 2,
     armorPenalty: 0,
     spaces: 2,
+    image: "/armadura/couro.png",
   },
-  {
-    id: "couro-batido",
+  { id: "couro-batido",
     name: "Couro batido",
     type: "Leve",
     description: "Versão mais pesada da armadura de couro, reforçada com rebites de metal.",
@@ -34,9 +33,9 @@ export const armors: Armor[] = [
     defenseBonus: 3,
     armorPenalty: -1,
     spaces: 2,
+    image: "/armadura/batido.png",
   },
-  {
-    id: "gibao-de-peles",
+  { id: "gibao-de-peles",
     name: "Gibão de peles",
     type: "Leve",
     description: "Usada principalmente por bárbaros e selvagens, esta armadura é formada por várias camadas de peles e couro de animais.",
@@ -45,9 +44,9 @@ export const armors: Armor[] = [
     defenseBonus: 4,
     armorPenalty: -3,
     spaces: 2,
+    image: "/armadura/gibao.png",
   },
-  {
-    id: "couraca",
+  { id: "couraca",
     name: "Couraça",
     type: "Leve",
     description: "A mais robusta das armaduras leves, formada por uma placa metálica que protege o peito e as costas, presa sobre um casaco de couro.",
@@ -56,9 +55,9 @@ export const armors: Armor[] = [
     defenseBonus: 5,
     armorPenalty: -4,
     spaces: 2,
+    image: "/armadura/couraca.png",
   },
-  {
-    id: "brunea",
+  { id: "brunea",
     name: "Brunea",
     type: "Pesada",
     description: "Colete de couro coberto com plaquetas de metal sobrepostas, como escamas de um peixe. Por ser barata de produzir, é a armadura mais utilizada no Reinado por soldados de infantaria e guardas de castelo.",
@@ -67,9 +66,9 @@ export const armors: Armor[] = [
     defenseBonus: 5,
     armorPenalty: -2,
     spaces: 5,
+    image: "/armadura/brunea.png",
   },
-  {
-    id: "cota-de-malha",
+  { id: "cota-de-malha",
     name: "Cota de malha",
     type: "Pesada",
     description: "Longa veste de anéis metálicos interligados, formando uma malha flexível e resistente, que vai até os joelhos.",
@@ -78,9 +77,9 @@ export const armors: Armor[] = [
     defenseBonus: 6,
     armorPenalty: -2,
     spaces: 5,
+    image: "/armadura/cotamalha.png",
   },
-  {
-    id: "loriga-segmentada",
+  { id: "loriga-segmentada",
     name: "Loriga segmentada",
     type: "Pesada",
     description: "Composta por tiras horizontais de metal, esta armadura pesada é muito utilizada por legionários do Império de Tauron.",
@@ -89,9 +88,9 @@ export const armors: Armor[] = [
     defenseBonus: 7,
     armorPenalty: -3,
     spaces: 5,
+    image: "/armadura/lorigasegmentada.png",
   },
-  {
-    id: "meia-armadura",
+  { id: "meia-armadura",
     name: "Meia armadura",
     type: "Pesada",
     description: "Uma cota de malha reforçada com placas de metal.",
@@ -100,9 +99,9 @@ export const armors: Armor[] = [
     defenseBonus: 8,
     armorPenalty: -4,
     spaces: 5,
+    image: "/armadura/meia-armadura.png",
   },
-  {
-    id: "armadura-completa",
+  { id: "armadura-completa",
     name: "Armadura completa",
     type: "Pesada",
     description: "A mais forte e pesada das armaduras, formada por placas de metal forjadas e encaixadas de modo a cobrir o corpo inteiro. Inclui uma túnica acolchoada para ser usada sob as placas. Correias e fivelas distribuem o peso da armadura pelo corpo inteiro. Esta armadura precisa ser feita sob medida para cada usuário; um ferreiro cobra T$ 200 para adaptar uma armadura completa a um novo usuário.",
@@ -111,9 +110,9 @@ export const armors: Armor[] = [
     defenseBonus: 10,
     armorPenalty: -5,
     spaces: 5,
+    image: "/armadura/armadura-completa.png",
   },
-  {
-    id: "escudo-leve",
+  { id: "escudo-leve",
     name: "Escudo leve",
     type: "Escudo",
     description: "Tipicamente feito de madeira, este escudo é amarrado no antebraço, deixando a mão livre. Você pode carregar um objeto na mão que empunha o escudo, mas não manusear uma arma.",
@@ -122,9 +121,9 @@ export const armors: Armor[] = [
     defenseBonus: 1,
     armorPenalty: -1,
     spaces: 1,
+    image: "/armadura/escudo-leve.png",
   },
-  {
-    id: "escudo-pesado",
+  { id: "escudo-pesado",
     name: "Escudo pesado",
     type: "Escudo",
     description: "Normalmente feito de aço, este escudo é preso ao antebraço e também deve ser empunhado com firmeza, impedindo o usuário de usar aquela mão.",
@@ -133,7 +132,10 @@ export const armors: Armor[] = [
     defenseBonus: 2,
     armorPenalty: -2,
     spaces: 2,
+    image: "/armadura/escudo-pesado.png",
   },
+
+
   {
     id: "armadura-sensual",
     name: "Armadura sensual",

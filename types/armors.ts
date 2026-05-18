@@ -14,4 +14,5 @@ export interface Armor {
   defenseBonus: number; // Ex: +1
   armorPenalty: number; // Ex: 0 ou -1
   spaces: number; // Ex: 2
+  image?: string;
 }

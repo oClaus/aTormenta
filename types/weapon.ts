@@ -35,4 +35,5 @@ export interface Weapon {
   range: string; // Ex: "Curto", "Médio", "—"
   type: DamageType;
   spaces: number; // Espaços ocupados
+  image?: string;
 }
