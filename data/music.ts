@@ -1,7 +1,7 @@
 import { Gear } from "@/types/gear";
 
-// Tabela de Equipamento de Aventura
 export const music: Gear[] = [
+
   // Dragão Brasil
   { id: "Maracas Estelares",
     name: "Maracas Estelares",
@@ -10,40 +10,39 @@ export const music: Gear[] = [
     price: "T$ 19000",
     spaces: "1",
   },
-  // Fulgor dos Deuses
-  {
-    id: "instrumento_musical",
+
+  // Tormenta20 - Jogo do Ano
+  { id: "instrumento_musical",
     name: "Instrumento Musical",
     description: "Um instrumento típico, como um bandolim, flauta ou lira. Veja o quadro acima para as regras deste item.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 35",
     spaces: "1",
   },
-  
-  {
-    id: "Alaúde Élfico",
+  { id: "Alaúde Élfico",
     name: "Alaúde Élfico",
     description: "Feito com madeira de alta qualidade e manufatura delicada, este alaúde gera notas vívidas e emocionantes. Enquanto empunha este item, você pode usar a habilidade Inspiração como uma ação de movimento. Conta como um instrumento musical.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 300",
     spaces: "1",
   },
-    {
-    id: "Flauta Mística",
+  { id: "Flauta Mística",
     name: "Flauta Mística",
     description: "Um instrumento delicado, repleto de runas e pequenas gemas místicas. Um bardo que empunhe este item aumenta a CD para resistir às magias lançadas por ele em +1. Conta como um instrumento musical.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 150",
     spaces: "1",
   },
-    {
-    id: "Tambor das Profundezas",
+  { id: "Tambor das Profundezas",
     name: "Tambor das Profundezas",
     description: "Um instrumento típico de anões de Doherimm, capaz de sons graves e retumbantes. Enquanto empunha este item, o alcance da habilidade Inspiração e de qualquer Música de Bardo é dobrado. Conta como um instrumento musical.",
     origin: "Tormenta20 - Jogo do Ano",
     price: "T$ 80",
     spaces: "1",
   },
+
+
+
   {
     id: "clarim-deheoni",
     name: "Clarim Deheoni",

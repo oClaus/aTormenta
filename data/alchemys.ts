@@ -1,8 +1,8 @@
 import { Alchemy, AlchemyType } from "@/types/alchemy";
 
 export const alchemy: Alchemy[] = [
-  {
-    id: "Ácido",
+  // Tormenta20 - Jogo do Ano
+  { id: "Ácido",
     name: "Ácido",
     type: "Preparados",
     description: "Frasco de vidro contendo um ácido alquímico altamente corrosivo. Para usar o ácido, você gasta uma ação padrão e escolhe uma criatura em alcance curto. Essa criatura sofre 2d4 pontos de dano de ácido (Reflexos CD Des reduz à metade).",
@@ -10,8 +10,7 @@ export const alchemy: Alchemy[] = [
     price: "T$ 10",
     spaces: "0,5",
   },
-  {
-    id: "Bálsamo Restaurador",
+  { id: "Bálsamo Restaurador",
     name: "Bálsamo Restaurador",
     type: "Preparados",
     description: "Uma pasta verde e fedorenta, feita de ervas medicinais. Usá-la é uma ação completa e recupera 2d4 pontos de vida.",
@@ -19,8 +18,7 @@ export const alchemy: Alchemy[] = [
     price: "T$ 10",
     spaces: "0,5",
   },
-  {
-    id: "Bomba",
+  { id: "Bomba",
     name: "Bomba",
     type: "Preparados",
     description: "Uma granada rudimentar. Para usar a bomba, você precisa empunhá-la, gastar uma ação de movimento para acender seu pavio e uma ação padrão para arremessá-la em um ponto em alcance curto. Criaturas a até 3m desse ponto sofrem 6d6 pontos de dano de impacto (Reflexos CD Des reduz à metade).",
@@ -28,8 +26,7 @@ export const alchemy: Alchemy[] = [
     price: "T$ 50",
     spaces: "0,5",
   },
-  {
-    id: "Cosmético",
+  { id: "Cosmético",
     name: "Cosmético",
     type: "Preparados",
     description: "Perfume ou maquiagem. Usá-lo é uma ação completa e fornece +2 em testes de perícias baseadas em Carisma até o fim da cena.",
@@ -37,8 +34,7 @@ export const alchemy: Alchemy[] = [
     price: "T$ 30",
     spaces: "0,5",
   },
-  {
-    id: "Elixir do Amor",
+  { id: "Elixir do Amor",
     name: "Elixir do Amor",
     type: "Preparados",
     description: "Um humanoide que beba este líquido adocicado fica apaixonado pela primeira criatura que enxergar (condição enfeitiçado; Vontade CD Car anula). O efeito dura 1d3 dias.",
@@ -46,8 +42,7 @@ export const alchemy: Alchemy[] = [
     price: "T$ 100",
     spaces: "0,5",
   },
-  {
-    id: "Essência de Mana",
+  { id: "Essência de Mana",
     name: "Essência de Mana",
     type: "Preparados",
     description: " Esta poção feita de ervas raras e compostos alquímicos recupera energia pessoal. Beber a essência de mana é uma ação padrão e recupera 1d4 pontos de mana.",
@@ -55,8 +50,7 @@ export const alchemy: Alchemy[] = [
     price: "T$ 50",
     spaces: "0,5",
   },
-  {
-    id: "Fogo Alquímico",
+  { id: "Fogo Alquímico",
     name: "Fogo Alquímico",
     type: "Preparados",
     description: "Frasco de cerâmica contendo uma substância que entra em combustão em contato com o ar. Para usar o fogo alquímico, você gasta uma ação padrão e escolhe uma criatura em alcance curto. Essa criatura sofre 1d6 pontos de dano de fogo e fica em chamas. Um teste de Reflexos (CD Des) reduz o dano à metade e evita as chamas.",
@@ -64,8 +58,7 @@ export const alchemy: Alchemy[] = [
     price: "T$ 10",
     spaces: "0,5",
   },
-  {
-    id: "Pó do Desaparecimento",
+  { id: "Pó do Desaparecimento",
     name: "Pó do Desaparecimento",
     type: "Preparados",
     description: "Uma criatura ou objeto coberto por este pó torna-se invisível (como em Invisibilidade) por 2d6 rodadas. O usuário não sabe quando a invisibilidade vai terminar.",
@@ -73,8 +66,7 @@ export const alchemy: Alchemy[] = [
     price: "T$ 100",
     spaces: "0,5",
   },
-  {
-    id: "Baga-de-Fogo",
+  { id: "Baga-de-Fogo",
     name: "Baga-de-Fogo",
     type: "Catalisadores",
     description: "Pequeno fruto vermelho, apreciado por seu sabor picante. Usado como catalisador, adiciona +1d6 de dano de fogo a magias.",
@@ -82,8 +74,7 @@ export const alchemy: Alchemy[] = [
     price: "T$ 30",
     spaces: "0,5",
   },
-  {
-    id: "Dente-de-Dragão",
+  { id: "Dente-de-Dragão",
     name: "Dente-de-Dragão",
     type: "Catalisadores",
     description: "Uma flor comum em regiões montanhosas, especialmente nas Sanguinárias, possui formato parecido com uma presa de monstro. Suas propriedades místicas aumentam o dano de magias em um dado do mesmo tipo.",
@@ -91,8 +82,7 @@ export const alchemy: Alchemy[] = [
     price: "T$ 45",
     spaces: "0,5",
   },
-  {
-    id: "Essência Abissal",
+  { id: "Essência Abissal",
     name: "Essência Abissal",
     type: "Catalisadores",
     description: "Um líquido espesso, produzido através do sangue de criaturas demoníacas. Aumenta os dados de dano de magias de fogo em uma categoria — d4 para d6, d6 para d8, d8 para d10 e d10 para d12 (o máximo).",
@@ -100,8 +90,7 @@ export const alchemy: Alchemy[] = [
     price: "T$ 150",
     spaces: "0,5",
   },
-  {
-    id: "Líquen Lilás",
+  { id: "Líquen Lilás",
     name: "Líquen Lilás",
     type: "Catalisadores",
     description: "Esta estranha planta tem aspecto cristalino e cresce em abundância na região das Uivantes. Adiciona +1d6 de dano de frio a magias.",
@@ -109,8 +98,7 @@ export const alchemy: Alchemy[] = [
     price: "T$ 30",
     spaces: "0,5",
   },
-  {
-    id: "Musgo Púrpura",
+  { id: "Musgo Púrpura",
     name: "Musgo Púrpura",
     type: "Catalisadores",
     description: "Encontrado em florestas fechadas, esse fungo cintilante possui propriedades que fornecem +2 na CD de magias de ilusão.",
@@ -118,8 +106,7 @@ export const alchemy: Alchemy[] = [
     price: "T$ 45",
     spaces: "0,5",
   },
-  {
-    id: "Ossos de Monstro",
+  { id: "Ossos de Monstro",
     name: "Ossos de Monstro",
     type: "Catalisadores",
     description: "Pequenas falanges de criaturas monstruosas, tratadas com óleos alquímicos. Fornece +2 na CD de magias de necromancia.",
@@ -127,8 +114,7 @@ export const alchemy: Alchemy[] = [
     price: "T$ 45",
     spaces: "0,5",
   },
-  {
-    id: "Pó de Cristal",
+  { id: "Pó de Cristal",
     name: "Pó de Cristal",
     type: "Catalisadores",
     description: "Uma pitada de pó de um mineral cristalino puro, como quartzo ou topázio. Diminui o custo de magias de encantamento em –1 PM.",
@@ -136,8 +122,7 @@ export const alchemy: Alchemy[] = [
     price: "T$ 30",
     spaces: "0,5",
   },
-  {
-    id: "Pó de Giz",
+  { id: "Pó de Giz",
     name: "Pó de Giz",
     type: "Catalisadores",
     description: "Calcário esmagado em pó, uma substância comum que, usada como catalisador, diminui o custo de magias de convocação em –1 PM.",
@@ -145,8 +130,7 @@ export const alchemy: Alchemy[] = [
     price: "T$ 30",
     spaces: "0,5",
   },
-  {
-    id: "Ramo Verdejante",
+  { id: "Ramo Verdejante",
     name: "Ramo Verdejante",
     type: "Catalisadores",
     description: "Esta combinação de ervas potencializa magias de cura, aumentando sua cura em +1 PV por dado.",
@@ -154,8 +138,7 @@ export const alchemy: Alchemy[] = [
     price: "T$ 45",
     spaces: "0,5",
   },
-  {
-    id: "Saco de Sal",
+  { id: "Saco de Sal",
     name: "Saco de Sal",
     type: "Catalisadores",
     description: "Um pequeno saco de couro com sal marinho. Fornece +2 na CD de magias de abjuração.",
@@ -163,8 +146,7 @@ export const alchemy: Alchemy[] = [
     price: "T$ 45",
     spaces: "0,5",
   },
-  {
-    id: "Seixo de Âmbar",
+  { id: "Seixo de Âmbar",
     name: "Seixo de Âmbar",
     type: "Catalisadores",
     description: "Essa “gema” feita de seiva de árvore fossilizada diminui o custo de magias de transmutação em –1 PM.",
@@ -172,8 +154,7 @@ export const alchemy: Alchemy[] = [
     price: "T$ 30",
     spaces: "0,5",
   },
-  {
-    id: "Terra de Cemitério",
+  { id: "Terra de Cemitério",
     name: "Terra de Cemitério",
     type: "Catalisadores",
     description: "Um punhado de terra cinzenta, colhida à noite de um cemitério. Adiciona +1d6 de dano de trevas a magias.",
@@ -181,17 +162,15 @@ export const alchemy: Alchemy[] = [
     price: "T$ 30",
     spaces: "0,5",
   },
-  {
-    id: "Beladona",
+  { id: "Beladona",
     name: "Beladona",
     type: "Venenos",
     description: "Planta extremamente tóxica que afeta o sistema nervoso da vítima. Ingestão, vítima fica paralisada (lenta) por 3 rodadas. A CD para fabricar e para resistir a este veneno aumenta em +5.",
     origin: "Tormenta20 - Jogo do Ano",
-    price: "T$ 1500",
+    price: "T$ 1.500",
     spaces: "0,5",
   },
-  {
-    id: "Bruma Sonolenta",
+  { id: "Bruma Sonolenta",
     name: "Bruma Sonolenta",
     type: "Venenos",
     description: "Um gás sonífero. Inalação, vítima fica inconsciente (enjoada por 1 rodada).",
@@ -199,8 +178,7 @@ export const alchemy: Alchemy[] = [
     price: "T$ 150",
     spaces: "0,5",
   },
-  {
-    id: "Cicuta",
+  { id: "Cicuta",
     name: "Cicuta",
     type: "Venenos",
     description: "Planta cuja ingestão pode causar náusea, dores e até morte. Ingestão, perde 1d12 PV por rodada durante 3 rodadas (perde 1d12 PV).",
@@ -208,8 +186,7 @@ export const alchemy: Alchemy[] = [
     price: "T$ 60",
     spaces: "0,5",
   },
-  {
-    id: "Essência de Sombra",
+  { id: "Essência de Sombra",
     name: "Essência de Sombra",
     type: "Venenos",
     description: "Produzido a partir de compostos alquímicos que canalizam energia de trevas. Contato, vítima fica debilitada (fraca).",
@@ -217,8 +194,7 @@ export const alchemy: Alchemy[] = [
     price: "T$ 100",
     spaces: "0,5",
   },
-  {
-    id: "Névoa Tóxica",
+  { id: "Névoa Tóxica",
     name: "Névoa Tóxica",
     type: "Venenos",
     description: "Este gás verde queima e corrói a pele e os pulmões. Inalação, perde 1d12 PV por rodada durante 3 rodadas (perde 1d12 PV).",
@@ -226,8 +202,7 @@ export const alchemy: Alchemy[] = [
     price: "T$ 30",
     spaces: "0,5",
   },
-  {
-    id: "Peçonha Comum",
+  { id: "Peçonha Comum",
     name: "Peçonha Comum",
     type: "Venenos",
     description: "Veneno típico, extraído de animais ou plantas tóxicas. Contato, perde 1d12 PV.",
@@ -235,8 +210,7 @@ export const alchemy: Alchemy[] = [
     price: "T$ 15",
     spaces: "0,5",
   },
-  {
-    id: "Peçonha Concentrada",
+  { id: "Peçonha Concentrada",
     name: "Peçonha Concentrada",
     type: "Venenos",
     description: "Dose concentrada da peçonha comum. Contato, perde 1d12 PV por rodada durante 3 rodadas (perde 1d12 PV).",
@@ -244,8 +218,7 @@ export const alchemy: Alchemy[] = [
     price: "T$ 90",
     spaces: "0,5",
   },
-  {
-    id: "Peçonha Potente",
+  { id: "Peçonha Potente",
     name: "Peçonha Potente",
     type: "Venenos",
     description: "Veneno poderoso, extraído de animais ou plantas perigosos. Contato, perde 2d12 PV por rodada durante 3 rodadas (perde 2d12 PV).",
@@ -253,17 +226,15 @@ export const alchemy: Alchemy[] = [
     price: "T$ 600",
     spaces: "0,5",
   },
-  {
-    id: "Pó de Lich",
+  { id: "Pó de Lich",
     name: "Pó de Lich",
     type: "Venenos",
     description: "Veneno letal, usado para assassinar alvos poderosos. Ingestão, perde 4d12 PV por rodada durante 5 rodadas (perde 4d12 PV). A CD para fabricar e para resistir a este veneno aumenta em +5.",
     origin: "Tormenta20 - Jogo do Ano",
-    price: "T$ 3000",
+    price: "T$ 3.000",
     spaces: "0,5",
   },
-  {
-    id: "Riso de Nimb",
+  { id: "Riso de Nimb",
     name: "Riso de Nimb",
     type: "Venenos",
     description: "Este gás púrpura faz a vítima rir descontroladamente e agir de forma caótica. Inalação, vítima fica confusa (lenta por 1 rodada).",
@@ -271,6 +242,10 @@ export const alchemy: Alchemy[] = [
     price: "T$ 150",
     spaces: "0,5",
   },
+
+
+
+
   {
     id: "Ácido Concentrado",
     name: "Ácido Concentrado",

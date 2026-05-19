@@ -4014,6 +4014,8 @@ export const spells: Spell[] = [
     },
   ],
   },
+
+  
   { id: "Armadura Elemental",
   name: "Armadura Elemental",
   type: "Arcana",

@@ -5,15 +5,16 @@ import Link from "next/link";
 import { alchemy } from "@/data/alchemys";
 import { Alchemy, AlchemyType } from "@/types/alchemy";
 
-// Ajustei as cores para terem bom contraste no fundo bege escuro
-const typeColorMap = {
-  "Preparados": "text-purple-700",      // Laranja queimado
-  "Catalisadores": "text-cyan-700",    // Ciano escuro
-  "Venenos": "text-emerald-700",       // Verde esmeralda escuro
+// Ajustei as cores para terem bom contraste no fundo bege claro (pergaminho)
+const typeColorMap: Record<string, string> = {
+  "Preparados": "text-purple-800",      
+  "Catalisadores": "text-cyan-800",    
+  "Venenos": "text-emerald-800",       
 };
 
+// --- Componentes Auxiliares ---
 
-// 2. Componente para a Tabela Filtrável de Alquímicos
+// Componente para a Tabela Filtrável de Alquímicos
 const AlchemyFilterableTable = ({ allAlchemys }: { allAlchemys: Alchemy[] }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [filters, setFilters] = useState({
@@ -56,18 +57,17 @@ const AlchemyFilterableTable = ({ allAlchemys }: { allAlchemys: Alchemy[] }) => 
   const allTypes: AlchemyType[] = ["Preparados", "Catalisadores", "Venenos"];
 
   const renderFilterGroup = (title: string, options: string[], key: keyof typeof filters) => (
-    // Box de Filtro - Estilo Papel
-    <div className="p-4 bg-[#dcc8a9] rounded border-2 border-amber-900/30 shadow-sm">
-      <h4 className="text-xs font-bold text-amber-900/70 uppercase tracking-wider mb-3">{title}</h4>
+    <div className="p-4 bg-[#e8dac1]/50 rounded-xl border border-amber-900/20 shadow-sm">
+      <h4 className="text-xs font-bold text-red-800 uppercase tracking-widest mb-3">{title}</h4>
       <div className="flex flex-wrap gap-2">
         {options.map(option => (
           <button
             key={option}
             onClick={() => handleFilterChange(key, option as AlchemyType)}
-            className={`px-3 py-1 text-xs rounded border transition-colors font-serif font-bold ${
+            className={`px-3 py-1.5 text-xs rounded-md transition-colors font-serif font-bold uppercase tracking-wide border shadow-sm ${
               (filters[key] as string[]).includes(option)
-                ? "bg-emerald-800 text-[#efe5d5] border-emerald-900 shadow-inner" // Ativo: Verde escuro com texto claro
-                : "bg-[#efe5d5] text-amber-900/60 border-amber-900/20 hover:border-emerald-700 hover:text-emerald-800" // Inativo: Bege com hover verde
+                ? "bg-red-800 text-[#fbf5e6] border-red-900 shadow-inner"
+                : "bg-[#fbf5e6] text-amber-950/70 border-amber-900/20 hover:border-red-800/50 hover:text-red-800"
             }`}
           >
             {option}
@@ -78,62 +78,85 @@ const AlchemyFilterableTable = ({ allAlchemys }: { allAlchemys: Alchemy[] }) => 
   );
 
   return (
-    <div className="space-y-6 w-full">
-      {/* Barra de Busca - Fundo mais escuro (#dcc8a9) */}
-      <div className="relative">
-        <div className="p-4 rounded bg-[#dcc8a9] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)]">
-            <div className="relative">
-                <input
-                    type="text"
-                    placeholder="Buscar alquímicos..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    // Input com fundo bege médio (#efe5d5)
-                    className="w-full px-5 py-3 bg-[#efe5d5] border-2 border-amber-900/20 rounded text-amber-950 placeholder-amber-900/50 focus:outline-none focus:border-emerald-700 focus:ring-1 focus:ring-emerald-700 transition-all font-serif shadow-sm"
-                />
-                <div className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/50">
-                    🔍
-                </div>
+    <div className="space-y-6 w-full relative">
+      {/* Barra de Busca - ESTILO CAIXA PADRÃO */}
+      <div className="mb-8 p-6 rounded-xl bg-[#e8dac1] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] font-serif">
+        <label className="block text-sm font-bold text-amber-950/70 mb-3 uppercase tracking-widest">
+            Buscar Alquímico
+        </label>
+        <div className="relative">
+          <input
+            type="text"
+            placeholder="Buscar por nome, descrição ou origem..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="w-full px-5 py-3 pr-12 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-lg text-amber-950/85 placeholder-amber-900/40 focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
+          />
+          {searchTerm ? (
+            <button 
+              onClick={() => setSearchTerm("")}
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-red-800 font-bold hover:scale-110 transition-transform text-lg"
+              title="Limpar busca"
+            >
+              ✕
+            </button>
+          ) : (
+            <div className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/40 text-lg">
+                🔍
             </div>
+          )}
         </div>
+        {searchTerm && (
+          <p className="text-xs font-medium text-amber-950/70 mt-3 italic tracking-wide">
+            Exibindo {filteredAlchemys.length} resultado(s) para "{searchTerm}".
+          </p>
+        )}
       </div>
 
       {/* Filtros */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full mb-8">
         {renderFilterGroup("Tipo", allTypes, "type")}
       </div>
 
-      {/* Tabela de Alquimicos */}
-      <div className="overflow-x-auto rounded border-2 border-amber-900/40 shadow-lg w-full">
-        <table className="min-w-full divide-y divide-amber-900/20 text-left font-serif">
-          {/* Header mais escuro (#c4b090) com texto verde escuro */}
-          <thead className="bg-[#c4b090] text-emerald-900 border-b-2 border-amber-900/30">
+      {/* Tabela de Alquímicos */}
+      <div className="overflow-x-auto rounded-xl border-2 border-amber-900/20 shadow-sm w-full bg-[#e8dac1]">
+        <table className="min-w-full divide-y-2 divide-amber-900/20 table-fixed font-serif">
+          <thead className="bg-[#d9c8a9] text-amber-950/80 border-b-2 border-amber-900/20">
             <tr>
-              <th scope="col" className="px-4 py-4 text-left text-xs font-bold uppercase tracking-wider border-r border-amber-900/20">Alquímicos</th>
-              <th scope="col" className="w-24 px-4 pr-4 py-4 text-right text-xs font-bold uppercase tracking-wider border-r border-amber-900/20">Preço</th>
-              <th scope="col" className="w-20 px-4 pr-4 py-4 text-center text-xs font-bold uppercase tracking-wider">Espaços</th>
+              <th scope="col" className="w-[90%] px-4 py-4 text-left text-xs font-bold uppercase tracking-widest border-r-2 border-amber-900/20">Alquímicos</th>
+              <th scope="col" className="w-[5%] px-4 py-4 text-center text-xs font-bold uppercase tracking-widest border-r-2 border-amber-900/20">Preço</th>
+              <th scope="col" className="w-[5%] px-4 py-4 text-center text-xs font-bold uppercase tracking-widest">Espaços</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-amber-900/10">
-            {filteredAlchemys.map((alchemy, index) => (
-              // Alternância de cores suave: #e6dcc5 (par) e #dbcfb4 (ímpar)
-              <tr key={alchemy.id} className={`transition-colors hover:bg-[#c9bb9e] ${index % 2 === 0 ? "bg-[#e6dcc5]" : "bg-[#dbcfb4]"}`}>
-                <td className="px-4 py-3 text-sm font-medium text-amber-950 border-r border-amber-900/20 align-top">
-                  <div className="font-bold text-amber-950 font-serif text-lg">{alchemy.name}</div>
-                  <div className="text-sm text-amber-900/90 break-words font-serif italic mt-1">{alchemy.description}</div>
-                  <div className="mt-2 text-xs font-serif font-bold tracking-wider">
-                      <div className={typeColorMap[alchemy.type] || "text-amber-900"}> {alchemy.type}</div>
-                  </div>
-                  <div className="mt-1 text-xs text-amber-800 font-bold uppercase tracking-widest opacity-80">{alchemy.origin}</div>
-                </td>
-                <td className="w-24 px-4 pr-4 py-3 text-right text-sm text-red-900 font-bold font-serif align-top border-r border-amber-900/20">{alchemy.price}</td>
-                <td className="w-20 px-4 pr-4 py-3 text-center text-sm text-amber-950 font-serif align-top">{alchemy.spaces}</td>
-              </tr>
-            ))}
+          <tbody className="divide-y divide-amber-900/10 bg-[#fbf5e6]">
+            {filteredAlchemys.map((alchemy, index) => {
+               const rowClass = index % 2 === 0 ? "bg-[#fbf5e6]" : "bg-[#e8dac1]/30";
+               
+               return (
+                <tr key={alchemy.id} className={`${rowClass} hover:bg-[#e8dac1]/60 transition-colors group`}>
+                  <td className="px-4 py-4 border-r-2 border-amber-900/10 align-top">
+                    <div className="font-bold text-amber-950 font-serif text-lg group-hover:text-red-800 transition-colors">{alchemy.name}</div>
+                    <div className="text-sm text-amber-950/85 break-words font-serif font-medium mt-1 leading-relaxed">{alchemy.description}</div>
+                    <div className="mt-4 flex items-center gap-2">
+                        <div className={`text-[10px] inline-block px-2 py-1 rounded bg-[#fbf5e6] border border-amber-900/20 uppercase tracking-widest shadow-sm font-bold ${typeColorMap[alchemy.type] || "text-amber-900"}`}>
+                            {alchemy.type}
+                        </div>
+                        <div className="text-[10px] inline-block px-2 py-1 rounded bg-[#fbf5e6] border border-amber-900/20 text-amber-950/70 uppercase tracking-widest shadow-sm font-bold">
+                            {alchemy.origin}
+                        </div>
+                    </div>
+                  </td>
+                  <td className="px-4 py-4 text-center text-sm text-red-800 font-bold font-serif align-middle border-r-2 border-amber-900/10">{alchemy.price}</td>
+                  <td className="px-4 py-4 text-center text-sm text-amber-950/85 font-serif font-medium align-middle">{alchemy.spaces}</td>
+                </tr>
+               )
+            })}
           </tbody>
         </table>
         {filteredAlchemys.length === 0 && (
-          <div className="text-center py-12 text-amber-900/70 bg-[#e6dcc5] border-t border-amber-900/20 italic">Nenhum alquímico com os filtros aplicados.</div>
+          <div className="text-center py-12 text-amber-950/70 bg-[#fbf5e6] italic text-lg border-t-2 border-amber-900/20">
+            Nenhum alquímico encontrado com os filtros aplicados.
+          </div>
         )}
       </div>
     </div>
@@ -144,98 +167,132 @@ const AlchemyFilterableTable = ({ allAlchemys }: { allAlchemys: Alchemy[] }) => 
 // --- Página Principal ---
 
 export default function ArmadurasPage() {
-  // A lógica de busca do grid de cards foi removida/não utilizada no return original, 
-  // mas mantive o hook caso queira reativar futuramente, conforme pedido para não mudar estrutura.
-  const [cardSearchTerm, setCardSearchTerm] = useState("");
-
-  // (FilteredCards logic mantida mas não renderizada, seguindo o padrão original)
-  const filteredCards = useMemo(() => {
-    const lowerCaseSearch = cardSearchTerm.toLowerCase();
-    
-    let sorted = [...alchemy].sort((a, b) => 
-      a.name.localeCompare(b.name, "pt-BR")
-    );
-
-    if (lowerCaseSearch) {
-      sorted = sorted.filter(a => 
-        a.name.toLowerCase().includes(lowerCaseSearch) ||
-        a.description.toLowerCase().includes(lowerCaseSearch) ||
-        a.origin.toLowerCase().includes(lowerCaseSearch)
-      );
-    }
-    return sorted;
-  }, [cardSearchTerm]);
-
+  const [isIntroOpen, setIsIntroOpen] = useState(false);
 
   return (
-    // Fundo escurecido #e0d2b4
-    <div className="min-h-screen bg-[#e0d2b4] text-amber-950 font-serif selection:bg-emerald-900 selection:text-emerald-50 relative overflow-x-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#e0d2b4] to-[#cbbba0]">
+    <div className="min-h-screen bg-[#f5e6d0] text-amber-950 font-serif selection:bg-amber-800 selection:text-amber-50 relative overflow-x-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#f5e6d0] to-[#e6d5b8]">
 
       {/* Background Effect */}
-      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(60,30,10,0.10)_100%)]" />
+      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(69,26,3,0.15)_100%)]" />
 
-      {/* Header */}
-      <header className="relative z-10 w-full p-6 border-b-4 border-double border-amber-900/40 bg-[#d6c6aa]/95 backdrop-blur-md shadow-md">
-        <div className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4">
-            <Link href="/" className="inline-block group">
-                <h1 className="text-4xl font-bold tracking-wider uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-800 via-red-900 to-black drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 1px 2px rgba(69,26,3,0.1)' }}>
+      {/* Header Responsivo */}
+      <header className="relative z-10 w-full p-6 border-b-4 border-double border-amber-900/40 bg-[#e8dac1]/90 backdrop-blur-md shadow-sm mb-8 md:mb-12 sticky top-0 font-serif">
+        <div className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4 max-w-screen-2xl mx-auto">
+            <Link href="/" className="inline-block group self-start md:self-auto">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-700 via-red-800 to-red-950 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 1px 2px rgba(69,26,3,0.1)' }}>
                     a-Tormenta
                 </h1>
             </Link>
-            <div className="flex items-center gap-3 text-sm font-bold tracking-wide uppercase">
-                <Link href="/" className="text-amber-900/70 hover:text-emerald-800 transition-colors">
+            <div className="flex items-center gap-2 flex-wrap text-xs sm:text-sm font-bold tracking-widest uppercase self-end md:self-auto">
+                <Link href="/" className="text-amber-950/70 hover:text-red-800 transition-colors whitespace-nowrap">
                     Início
                 </Link>
                 <span className="text-amber-900/40">/</span>
-                <Link href="/equipamentos" className="text-amber-900/70 hover:text-emerald-800 transition-colors">
+                <Link href="/equipamentos" className="text-amber-950/70 hover:text-red-800 transition-colors whitespace-nowrap">
                     Equipamentos
                 </Link>
                 <span className="text-amber-900/40">/</span>
-                <span className="text-red-900">Alquímicos</span>
+                <span className="text-red-800">Alquímicos</span>
             </div>
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="relative z-10 w-full px-6 py-12">
+      <main className="relative z-10 w-full px-6 py-12 max-w-screen-2xl mx-auto">
 
-      {/* Seção de Texto Introdutório */}
-      <section className="mb-12 p-8 bg-[#dcc8a9]/60 rounded border border-amber-900/30 shadow-sm w-full">
-      <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-800 via-teal-800 to-emerald-900 mb-4 drop-shadow-sm">
-          Alquímicos
-        </h1>
-        <div className="space-y-4 text-amber-950 leading-relaxed font-serif">
-          <p className="text-lg font-medium">Inclui preparados, catalisadores e venenos.</p>
-
-          <h3 className="text-xl font-bold text-emerald-800 pt-2 border-b border-amber-900/20 pb-1">Preparados</h3>
-          <p>Itens de uso único que geram efeitos variados quando usados. A CD para fabricar qualquer preparado é 15.</p>
-
-          <h3 className="text-xl font-bold text-emerald-800 pt-2 border-b border-amber-900/20 pb-1">Catalisadores</h3>
-          <p>Substâncias preparadas através de processos alquímicos, catalisadores são itens de uso único que melhoram o efeito de uma magia quando ela é lançada. Você precisa estar empunhando um catalisador para usá-lo e só pode usar um catalisador por vez. Reduções de custo de catalisadores acumulam com outras reduções de custo. Catalisadores que aumentam o dano só funcionam em magias que já causem dano. </p>
-          <p>A CD para fabricar qualquer catalisador é 15 e para fabricá-lo você deve ser treinado em Misticismo.</p>
-
-          <h3 className="text-xl font-bold text-emerald-800 pt-2 border-b border-amber-900/20 pb-1">Venenos</h3>
-          <p>Substâncias naturais ou preparadas perigosas para seres vivos. Exceto se indicado o contrário, a CD para fabricar qualquer veneno é 20.</p>
-          <p><strong className="text-emerald-900">Regras de Venenos:</strong></p>
-          <p>Venenos são classificados de acordo com o método de inoculação.</p>
-          <p><strong className="text-emerald-900">Contato: </strong>Inoculados via um ataque que acerte (ou se a vítima toca o objeto envenenado). Aplicar um veneno em uma arma exige uma ação de movimento e uma rolagem de 1d6. Se você rolar 1, se envenena acidentalmente (mas veja o poder Venefício). O veneno permanece na arma até acertar um ataque ou até o fim da cena (o que acontecer primeiro).</p>
-          <p><strong className="text-emerald-900">Inalação: </strong>Inoculados via respiração. São armazenados em frascos que podem ser arremessados em alcance curto. Quando o frasco se quebra, libera o veneno num cubo com 3m de lado. Todas as criaturas na área são expostas — prender a respiração não impede a inoculação, pois o veneno pode entrar por canais lacrimais, membranas nasais e outras partes do corpo.</p>
-          <p><strong className="text-emerald-900">Ingestão: </strong> Inoculados através da ingestão de comida ou bebida.</p>
-          <p>Uma criatura exposta a um veneno deve fazer um teste de Fortitude (CD definida pelo aplicador do veneno, atributo-chave Int). Se falhar, sofre o efeito do veneno (efeitos em parênteses afetam vítimas que passem no teste de resistência). Efeitos que não sejam instantâneos, como perda de PV recorrente ou condições, deixam a vítima com a condição envenenada, e curar esta condição encerra quaisquer efeitos de veneno (mas não recupera PV perdidos).</p>
+        {/* Título Principal */}
+        <div className="mb-10 md:mb-12 w-full flex flex-col items-start">
+            <h1 className="text-4xl sm:text-5xl font-bold text-red-800 mb-3 drop-shadow-sm font-serif tracking-wider">
+                Alquímicos
+            </h1>
+            <div className="w-32 h-1 bg-gradient-to-r from-red-800 to-transparent rounded-full mb-6"></div>
         </div>
-      </section>
 
-      {/* Tabela Completa e Filtrável */}
-      <section className="w-full">
-        <h2 className="text-3xl font-bold text-emerald-900 mb-6 border-b border-amber-900/30 pb-2">Tabela Completa de Alquímicos</h2>
-        <AlchemyFilterableTable allAlchemys={alchemy} />
-      </section>
-    </main>
-    {/* Footer */}
-    <footer className="mt-12 py-8 border-t-4 border-double border-amber-900/40 bg-[#2a231d] text-center text-amber-200/50 text-sm relative z-10 font-serif">
-        <p>Compêndio Tormenta RPG © 2025 • Feito por um fã para fãs</p>
-        <p>Tormenta 20 pertence a Jambo Editora. Todos os direitos são reservados a editora.</p>
-    </footer>
+        {/* Acordeão de Regras */}
+        <div className="mb-12 w-full">
+          <button 
+            onClick={() => setIsIntroOpen(!isIntroOpen)}
+            className="w-full flex items-center justify-between p-6 bg-[#e8dac1] border-2 border-amber-900/30 rounded-t-xl hover:border-red-800/40 transition-all group shadow-sm"
+          >
+            <div className="flex items-center gap-3">
+              <span className="text-2xl opacity-70">📜</span>
+              <div className="text-left">
+                <h2 className="text-xl font-bold text-amber-950 group-hover:text-red-800 transition-colors font-serif uppercase tracking-wide">
+                  Regras de Alquimia
+                </h2>
+                <p className="text-sm text-amber-950/70 font-serif italic font-bold">
+                  Clique para expandir informações sobre preparados, catalisadores e venenos.
+                </p>
+              </div>
+            </div>
+            <span className={`text-red-800 text-2xl transition-transform duration-300 ${isIntroOpen ? 'rotate-180' : ''}`}>
+              ▼
+            </span>
+          </button>
+
+          <div className={`overflow-hidden transition-all duration-500 ease-in-out border-x-2 border-b-2 border-amber-900/30 rounded-b-xl bg-[#fbf5e6] ${isIntroOpen ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0 border-transparent'}`}>
+            <div className="p-5 md:p-10 font-serif text-amber-950/85 text-base md:text-lg text-left md:text-justify leading-relaxed flex flex-col gap-8">
+              
+              <section>
+                <p className="text-lg font-medium mb-6">Inclui preparados, catalisadores e venenos.</p>
+
+                {/* Preparados */}
+                <h3 className="text-2xl font-bold text-red-800 pt-4 border-b-2 border-amber-900/10 pb-2 mb-4 tracking-wide">Preparados</h3>
+                <p className="font-medium mb-6">Itens de uso único que geram efeitos variados quando usados. A CD para fabricar qualquer preparado é 15.</p>
+
+                {/* Catalisadores */}
+                <h3 className="text-2xl font-bold text-red-800 pt-6 border-b-2 border-amber-900/10 pb-2 mb-4 tracking-wide">Catalisadores</h3>
+                <p className="font-medium mb-4">Substâncias preparadas através de processos alquímicos, catalisadores são itens de uso único que melhoram o efeito de uma magia quando ela é lançada. Você precisa estar empunhando um catalisador para usá-lo e só pode usar um catalisador por vez. Reduções de custo de catalisadores acumulam com outras reduções de custo. Catalisadores que aumentam o dano só funcionam em magias que já causem dano.</p>
+                <p className="font-medium mb-6">A CD para fabricar qualquer catalisador é 15 e para fabricá-lo você deve ser treinado em Misticismo.</p>
+
+                {/* Venenos */}
+                <h3 className="text-2xl font-bold text-red-800 pt-6 border-b-2 border-amber-900/10 pb-2 mb-4 tracking-wide">Venenos</h3>
+                <p className="font-medium mb-4">Substâncias naturais ou preparadas perigosas para seres vivos. Exceto se indicado o contrário, a CD para fabricar qualquer veneno é 20.</p>
+                
+                <p className="font-bold text-amber-950 uppercase tracking-widest mt-6 mb-4">Regras de Venenos:</p>
+                <p className="font-medium mb-4">Venenos são classificados de acordo com o método de inoculação.</p>
+                
+                <ul className="space-y-4 mb-6 ml-2 md:ml-4">
+                  <li className="flex items-start gap-3">
+                    <span className="text-[10px] text-red-800/60 mt-2">◆</span>
+                    <span className="font-medium"><strong className="text-red-800 uppercase tracking-widest text-sm">Contato: </strong>Inoculados via um ataque que acerte (ou se a vítima toca o objeto envenenado). Aplicar um veneno em uma arma exige uma ação de movimento e uma rolagem de 1d6. Se você rolar 1, se envenena acidentalmente (mas veja o poder Venefício). O veneno permanece na arma até acertar um ataque ou até o fim da cena (o que acontecer primeiro).</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[10px] text-red-800/60 mt-2">◆</span>
+                    <span className="font-medium"><strong className="text-red-800 uppercase tracking-widest text-sm">Inalação: </strong>Inoculados via respiração. São armazenados em frascos que podem ser arremessados em alcance curto. Quando o frasco se quebra, libera o veneno num cubo com 3m de lado. Todas as criaturas na área são expostas — prender a respiração não impede a inoculação, pois o veneno pode entrar por canais lacrimais, membranas nasais e outras partes do corpo.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[10px] text-red-800/60 mt-2">◆</span>
+                    <span className="font-medium"><strong className="text-red-800 uppercase tracking-widest text-sm">Ingestão: </strong> Inoculados através da ingestão de comida ou bebida.</span>
+                  </li>
+                </ul>
+
+                <p className="font-medium border-t-2 border-amber-900/10 pt-6">Uma criatura exposta a um veneno deve fazer um teste de Fortitude (CD definida pelo aplicador do veneno, atributo-chave Int). Se falhar, sofre o efeito do veneno (efeitos em parênteses afetam vítimas que passem no teste de resistência). Efeitos que não sejam instantâneos, como perda de PV recorrente ou condições, deixam a vítima com a condição envenenada, e curar esta condição encerra quaisquer efeitos de veneno (mas não recupera PV perdidos).</p>
+              </section>
+
+            </div>
+          </div>
+        </div>
+
+        {/* Tabela Completa e Filtrável */}
+        <section className="w-full">
+            <h2 className="text-3xl font-bold text-red-800 mb-6 flex items-center gap-3 tracking-wide">
+                <span className="text-red-800 text-3xl">❖</span> Acervo Alquímico
+            </h2>
+            <AlchemyFilterableTable allAlchemys={alchemy} />
+        </section>
+      </main>
+
+      {/* Footer */}
+      <footer className="relative z-10 mt-20 p-8 border-t-4 border-double border-amber-900/40 bg-[#2a1810] text-center font-serif shadow-[0_-4px_20px_rgba(0,0,0,0.15)] flex flex-col items-center justify-center">
+        <span className="text-red-900/40 text-2xl mb-3">❖</span>
+        <p className="mb-2 text-[#e8dac1]/60 text-sm md:text-base tracking-widest uppercase font-bold">
+          Compêndio Tormenta RPG © 2025 • Feito por um fã para fãs
+        </p>
+        <p className="text-[#e8dac1]/40 text-xs md:text-sm tracking-wide">
+          Tormenta 20 pertence a Jambo Editora. Todos os direitos são reservados a editora.
+        </p>
+      </footer>
     </div>
   );
 }

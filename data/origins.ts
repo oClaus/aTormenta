@@ -1,7 +1,28 @@
 import { Origin } from "@/types/origin";
 
 export const origins: Origin[] = [
-  // Tormanta20 - Jogo do Ano
+  // Dragão Brasil
+  { id: "Iniciado Verdugo (Ubani)",
+    name: "Iniciado Verdugo (Ubani)",
+    description: "Em Ubani, os ofícios da morte eram ensinados na cidade perdida de Ojumajele. Depois de sua queda diante da Tormenta, estes assuntos se tornaram cada vez mais tabu. Ainda existem aqueles, porém, devotados a cuidar dos ritos fúnebres e eliminar mortos-vivos.",
+    items: [
+      "Água benta x2",
+      "Cimitarra ou espada longa",
+      "Símbolo sagrado (Allihanna, Kallyadranoch, Megalokk ou Wynna)",
+      "T$50 (pagamento por ritos fúnebres realizados)",
+    ],
+    benefits: [
+      " Você é treinado em Religião. Além disso, pode usar a habilidade Golpe Divino como um paladino de 1º nível. Se já possui a habilidade, em vez disso seu custo diminui em –1 PM.",
+    ],
+    uniquePower: {
+      name: "",
+      description: ""
+    },
+    source: "Dragão Brasil"
+  },
+
+
+  // Tormenta20 - Jogo do Ano
   { id: "Acólito",
     name: "Acólito",
     description: "Neste mundo agraciado com tantos deuses e igrejas, muitos ingressam cedo em alguma ordem religiosa — o que, dependendo de quem é seu deus padroeiro, pode ser motivo de admiração ou repulsa. Talvez você tenha ouvido o chamado da fé, seguiu a tradição espiritual de sua família, ou apenas foi abandonado quando pequeno às portas de um templo ou mosteiro. Tenha ou não se tornado um devoto, suas lembranças são carregadas de orações, evangelhos e outros ensinamentos.",

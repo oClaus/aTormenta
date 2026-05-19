@@ -2,7 +2,6 @@
 
 import { Improvement, ItemCategory, PriceImprovement, MaterialPriceRow, MaterialItemCategory, MaterialType } from "@/types/superior_item";
 
-// Tabela 3-7: Preço de Melhorias
 export const priceImprovements: PriceImprovement[] = [
   { level: 1, priceIncrease: "+ T$ 300", cdIncrease: "+5" },
   { level: 2, priceIncrease: "+ T$ 3.000", cdIncrease: "+10" },
@@ -10,8 +9,8 @@ export const priceImprovements: PriceImprovement[] = [
   { level: 4, priceIncrease: "+ T$ 18.000", cdIncrease: "+20" },
 ];
 
-// Tabela 3-9: Preço Adicional de Materiais Especiais
 export const materialPrices: MaterialPriceRow[] = [
+  // Tormenta20 - Jogo do Ano
   { material: "Aço-Rubi",
     Arma: "+ T$ 6.000",
     "Armadura Leve": "+ T$ 6.000",
@@ -84,6 +83,8 @@ export const materialPrices: MaterialPriceRow[] = [
     description_esoterico: "Permite que você pague +2 PM ao lançar uma magia para aumentar a CD dela em +2.",
     origin: "Tormenta20 - Jogo do Ano",
   },
+
+  
   { material: "Couro de Dragão",
     Arma: "—",
     "Armadura Leve": "—",
@@ -98,9 +99,9 @@ export const materialPrices: MaterialPriceRow[] = [
   },
 ];
 
-// Tabela 3-8: Melhorias
+
 export const improvements: Improvement[] = [
-  // Melhorias para armas
+  // Tormenta20 - Jogo do Ano
   { id: "certeira", 
     name: "Certeira", 
     effect: "+1 nos testes de ataque", 
@@ -121,189 +122,191 @@ export const improvements: Improvement[] = [
     category: ["Arma"], 
     description: "Rebarbas, espinhos e até mesmo lâminas adicionais compõem uma arma cruel. Ela fornece +1 nas rolagens de dano.",
     origin: "Tormenta20 - Jogo do Ano"
- },
+  },
   { id: "atroz", 
     name: "Atroz", 
     effect: "+2 nas rolagens de dano", 
     category: ["Arma"], 
     description: "Uma arma é amontoada de pontas, ganchos e protuberâncias. É difícil empunhá-la sem se machucar, mas ela fornece +2 nas rolagens de dano. Pré-requisito: Cruel.",
     origin: "Tormenta20 - Jogo do Ano"
- },
+  },
   { id: "equilibrada", 
     name: "Equilibrada", 
     effect: "+2 em testes de manobras", 
     category: ["Arma"], 
     description: "Uma arma equilibrada é forjada com o balanço perfeito, o que facilita movimentos complexos. Ela fornece +2 em testes de manobras (desarmar, quebrar etc.).",
     origin: "Tormenta20 - Jogo do Ano" 
-},
+  },
   { id: "harmonizada-arma", 
     name: "Harmonizada", 
     effect: "Custo de habilidades de ataque diminui em –1 PM", 
     category: ["Arma"], 
     description: "A arma foi banhada em óleos alquímicos que a deixaram sintonizada com a aura de seu usuário. Escolha uma habilidade ativada ao se fazer um ataque ou usar a ação agredir e que custe pontos de mana. Esta habilidade tem seu custo em PM reduzido em –1 se utilizada com esta arma. Pré-requisito: outra melhoria qualquer.", 
     origin: "Tormenta20 - Jogo do Ano" 
-},
+  },
   { id: "injecao-alquimica", 
     name: "Injeção Alquímica", 
     effect: "Gera efeito de preparado", 
     category: ["Arma"], 
     description: "Um minúsculo frasco de cerâmica ou vidro é inserido ao longo da arma, junto com um mecanismo injetor ativado por impacto. Um ataque que acerte causa seu dano normal e libera uma carga de um preparado (como ácido ou fogo alquímico) ou de água benta, que atinge o alvo automaticamente. A melhoria tem espaço para 2 doses. Carregá-la exige uma ação completa e o gasto dos itens com os quais você quiser carregá-la.", 
     origin: "Tormenta20 - Jogo do Ano"
- },
+  },
   { id: "macica", 
     name: "Maciça", 
     effect: "+1 no multiplicador de crítico", 
     category: ["Arma"], 
     description: "A arma é feita com material denso, fazendo com que seus golpes tenham um impacto terrível. O multiplicador de crítico da arma aumenta em 1 ponto. Uma arma não pode ser maciça e precisa.", 
     origin: "Tormenta20 - Jogo do Ano" 
-},
+  },
   { id: "material-especial-arma", 
     name: "Material especial", 
     effect: "Conforme o material", 
     category: ["Arma", "Armadura", "Escudo", "Esotérico"], 
     description: "A arma, armadura, escudo ou item esotérico é feito de, ou banhado em óleos alquímicos que a deixaram sintonizada com a aura de seu usuário. Escolha uma habilidade ativada ao se fazer um ataque ou usar a ação agredir e que custe pontos de mana. Esta habilidade tem seu custo em PM reduzido em –1 se utilizada com esta arma. Pré-requisito: outra melhoria qualquer.", 
     origin: "Tormenta20 - Jogo do Ano" 
-},
+  },
   { id: "mira-telescopica", 
     name: "Mira telescópica",
      effect: "Aumenta alcance da arma", 
      category: ["Arma"], 
      description: "Aumenta o alcance da arma em uma categoria (de curto para médio, de médio para longo) e o alcance da habilidade Ataque Furtivo para médio. Esta melhoria só pode ser aplicada em armas de disparo (exceto fundas).", 
      origin: "Tormenta20 - Jogo do Ano" 
-    },
+  },
   { id: "precisa", 
     name: "Precisa", 
     effect: "+1 na margem de ameaça", 
     category: ["Arma"], 
     description: "Cuidado especial foi tomado ao temperar o aço desta arma, para que seu fio se mantenha sempre como uma navalha. A margem de ameaça aumenta em 1 ponto. Uma arma não pode ser precisa e maciça.", 
     origin: "Tormenta20 - Jogo do Ano" 
-},
+  },
   { id: "ajustada", 
     name: "Ajustada", 
     effect: "–1 na penalidade de armadura", 
     category: ["Armadura", "Escudo"], 
     description: "Feito com peças medidas com precisão, o item tem a sua penalidade de armadura diminuída em 1.", 
     origin: "Tormenta20 - Jogo do Ano" 
-},
+  },
   { id: "sob-medida", 
     name: "Sob medida", 
     effect: "–2 na penalidade de armadura", 
     category: ["Armadura", "Escudo"], 
     description: "Embora muitas armaduras sejam feitas especificamente para um usuário, esta passou por um período extenso de ajustes e refinamento, adequando-se com perfeição ao seu corpo. Reduz a penalidade por armadura em 2, mas apenas para o usuário específico (para outros, comporta-se como um item ajustado). Pré-requisito: Ajustada.", 
     origin: "Tormenta20 - Jogo do Ano"
- },
+  },
   { id: "delicada", 
     name: "Delicada", 
     effect: "Aplica 1 ponto de Des na Defesa", 
     category: ["Armadura", "Escudo"], 
     description: "Apenas os materiais mais leves foram usados nesta armadura. As placas têm a espessura mínima necessária para oferecer a proteção que devem. Esta melhoria só pode ser aplicada a armaduras pesadas e permite que o personagem aplique 1 ponto de sua Destreza na Defesa (ou de outro atributo, caso o utilize em vez de Des). Uma armadura não pode ser delicada e reforçada.", 
     origin: "Tormenta20 - Jogo do Ano" 
-},
+  },
   { id: "espinhosa-armadura", 
     name: "Espinhosa (armadura)", 
     effect: "Causa dano ao agarrar", 
     category: ["Armadura"], 
     description: "Uma armadura coberta de espinhos é uma visão impressionante — principalmente se os espinhos estiverem banhados com o sangue dos inimigos! Se o usuário agarrar ou for agarrado por uma criatura, causa dano de perfuração nesta criatura igual a sua Força. O dano é causado quando a manobra é feita e no início de cada turno do personagem, enquanto ela for mantida.", 
     origin: "Tormenta20 - Jogo do Ano" 
-},
+  },
   { id: "espinhosa-escudo", 
     name: "Espinhosa (escudo)", 
     effect: "Aumenta dano do escudo", 
     category: ["Escudo"], 
     description: "Aumenta o dano de um ataque com escudo em um passo.", 
     origin: "Tormenta20 - Jogo do Ano" 
-},
+  },
   { id: "polida", 
     name: "Polida", 
     effect: "+5 na Defesa na primeira rodada", 
     category: ["Armadura", "Escudo"], 
     description: "A armadura ou escudo foi feito com metais reluzentes. Além de bonita, a luz refletida ofusca inimigos. Em ambientes iluminados, o bônus de Defesa do item aumenta em +5, mas apenas na primeira rodada de combate — após isso, os inimigos se acostumam ao reflexo.", 
     origin: "Tormenta20 - Jogo do Ano"
- },
+  },
   { id: "reforcada", 
     name: "Reforçada", 
     effect: "+1 na Defesa, +1 na penalidade de armadura", 
     category: ["Armadura", "Escudo"], 
     description: "Se for uma armadura, o item possui uma camada adicional de tecido, malha mais densa ou placas mais grossas. Se for um escudo, possui uma chapa mais espessa. O bônus na Defesa e a penalidade de armadura do item aumentam em 1. Um item não pode ser reforçado e delicado.", 
     origin: "Tormenta20 - Jogo do Ano" 
-},
+  },
   { id: "selada", 
     name: "Selada", 
     effect: "+1 nos testes de resistência", 
     category: ["Armadura", "Escudo"], 
     description: "A armadura foi forjada de forma a proteger todo o corpo do usuário, sem deixar espaço para nem mesmo um alfinete! Esta melhoria fornece um bônus de +1 em testes de resistência, mas só pode ser aplicado em armaduras pesadas.", 
     origin: "Tormenta20 - Jogo do Ano" 
-},
+  },
   { id: "canalizador", 
     name: "Canalizador", 
     effect: "+1 no limite de PM", 
     category: ["Esotérico"], 
     description: "O esotérico possui uma gema mística que permite que você canalize mais mana do que normalmente seria capaz. O máximo de PM que você pode gastar em magias aumenta em +1.", 
     origin: "Tormenta20 - Jogo do Ano" 
-},
+  },
   { id: "energetico", 
     name: "Energético", 
     effect: "+1d6 no dano de magias", 
     category: ["Esotérico"], 
     description: "Catalisadores alquímicos inseridos no item fazem com que ele potencialize energias mágicas. Suas magias que causam dano causam +1d6 pontos de dano do mesmo tipo de magia.", 
     origin: "Tormenta20 - Jogo do Ano" 
-},
+  },
   { id: "harmonizado-esoterico", 
     name: "Harmonizado", 
     effect: "Custo de uma magia diminui em –1 PM", 
     category: ["Esotérico"], 
     description: "Escolha uma magia. Seu custo diminui em –1 PM. Você pode mudar a magia afetada pelo item com um ritual que exige um dia e T$ 100 em ingredientes.", 
     origin: "Tormenta20 - Jogo do Ano" 
-},
+  },
   { id: "poderoso", 
     name: "Poderoso", 
     effect: "+1 na CD de suas magias", 
     category: ["Esotérico"], 
     description: "O item é construído de forma cuidadosa e com os melhores materiais. Esta melhoria só pode ser aplicada a uma ferramenta ou vestuário que modifique uma perícia (reduza uma penalidade ou forneça um bônus) e fornece um bônus de +1 nessa perícia (ou aumenta o bônus fornecido em +1). Por exemplo, uma maleta de medicamentos aprimorada fornece +1 em Cura e uma luva de pelica aprimorada fornece +2 em Ladinagem.", 
     origin: "Tormenta20 - Jogo do Ano" 
-},
+  },
   { id: "vigilante", 
     name: "Vigilante", 
     effect: "+2 na Defesa", 
     category: ["Esotérico"], 
     description: "O item usa parte de sua mana pessoal para gerar um campo que desvia ataques. Você recebe +2 na Defesa.", 
     origin: "Tormenta20 - Jogo do Ano" 
-},
+  },
   { id: "aprimorado", 
     name: "Aprimorado", 
     effect: "+1 em testes de perícia", 
     category: ["Ferramenta", "Vestuário"], 
     description: "O item é construído de forma cuidadosa e com os melhores materiais. Esta melhoria só pode ser aplicada a uma ferramenta ou vestuário que modifique uma perícia (reduza uma penalidade ou forneça um bônus) e fornece um bônus de +1 nessa perícia (ou aumenta o bônus fornecido em +1). Por exemplo, uma maleta de medicamentos aprimorada fornece +1 em Cura e uma luva de pelica aprimorada fornece +2 em Ladinagem.", 
     origin: "Tormenta20 - Jogo do Ano" 
-},
+  },
   { id: "banhado-a-ouro", 
     name: "Banhado a ouro", 
     effect: "+2 em Diplomacia", 
     category: ["Qualquer"], 
     description: "Uma melhoria favorita de nobres pomposos ou de aventureiros que acabaram de enriquecer. Fornece +2 em Diplomacia. O mestre pode mudar o bônus para uma penalidade de –2 contra pessoas que desprezam ostentação. Além disso, pode atrair a cobiça de ladrões.", 
     origin: "Tormenta20 - Jogo do Ano" 
-},
+  },
   { id: "cravejado-de-gemas", 
     name: "Cravejado de gemas", 
     effect: "+2 em Enganação", 
     category: ["Qualquer"], 
     description: "É fácil ser persuadido por alguém opulento o bastante para ostentar um item cravejado de gemas. Fornece +2 em Enganação. Assim como um item banhado a ouro, um item cravejado de gemas pode atrair a cobiça de ladrões.", 
     origin: "Tormenta20 - Jogo do Ano" 
-},
+  },
   { id: "discreto", 
     name: "Discreto", 
     effect: "–1 Espaço, +5 para ocultar", 
     category: ["Qualquer"], 
     description: "O item é disfarçado como outro item inócuo (como um florete escondido em uma bengala) ou modificado para ser telescópico (podendo se dobrar em si mesmo para ocupar menos espaço). O item ocupa –1 espaço (mínimo 1) e fornece +5 em testes de Ladinagem para ser ocultado.", 
     origin: "Tormenta20 - Jogo do Ano" 
-},
+  },
   { id: "macabro", 
     name: "Macabro", 
     effect: "+2 em Intimidação, –2 em Diplomacia", 
     category: ["Qualquer"], 
     description: "O macabro é pintado com sangue seco, esculpido na forma de uma caveira ou decorado com pedaços de orelhas, dedos e olhos. Essa aparência assustadora fornece +2 em Intimidação, mas impõe uma penalidade de –2 em Diplomacia.", 
     origin: "Tormenta20 - Jogo do Ano" 
-},
+  },
+
+
   { id: "Agulha", 
     name: "Agulha", 
     effect: "Ignora 5 pontos de redução de dano", 

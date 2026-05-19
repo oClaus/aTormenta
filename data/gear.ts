@@ -1,7 +1,7 @@
 import { Gear } from "@/types/gear";
 
-// Tabela de Equipamento de Aventura
 export const gear: Gear[] = [
+  // Tormenta20 - Jogo do Ano
   { id: "agua-benta",
     name: "Água benta",
     description: "Produzida com a magia Abençoar Alimentos, esta água sagrada é um poderoso recurso na luta contra o mal. Para usar a água benta, você gasta uma ação padrão e escolhe um morto-vivo, demônio ou diabo em alcance curto (a água benta é inofensiva contra outras criaturas). O alvo sofre 2d10 pontos de dano de luz (Reflexos CD Sab reduz à metade).",
@@ -121,6 +121,9 @@ export const gear: Gear[] = [
     price: "T$ 0,2",
     spaces: "1",
   },
+
+
+  
   { id: "abaco",
     name: "Ábaco",
     description: "Este instrumento desenvolvido pelos sábios sar-allan fornece a seu usuário a capacidade de fazer operações matemáticas complexas em pouco tempo. Muito útil para determinar custos e margens de lucro! Para usar um ábaco você precisa ser treinado em Conhecimento. Se você fizer um teste de Ofício para sustento, recebe TO, em vez de T$. Além disso, se possuir Poder Monetário, o limite de TO que você pode gastar por dia aumenta em +2.",

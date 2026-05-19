@@ -1,7 +1,81 @@
-// data/food.ts
 import { Gear } from "@/types/comidas";
 
 export const food: Gear[] = [
+  // Tormenta20 - Jogo do Ano
+  { id: "Batata Valkariana",
+    name: "Batata Valkariana",
+    description: "Batatas cortadas em tiras e mergulhadas em óleo fervente. Gordurentas e pouco nutritivas, são o tipo de prato que só é servido numa metrópole como Valkaria. Apesar disso, são saborosas e deixam qualquer um empolgado. Você recebe +1d6 em um teste a sua escolha realizado até o fim do dia. Para não esquecer, deixe 1d6 em cima da sua ficha. De preferência, amarelo.",
+    origin: "Tormenta20 - Jogo do Ano",
+    price: "T$ 2",
+    spaces: "0,5",
+    category: "Alimentação",
+    ingredients: "Óleo, legume",
+    cookingCost: "T$ 4",
+    cookingDC: "15"
+  },
+  { id: "Gorad Quente",
+    name: "Gorad Quente",
+    description: "Gorad e leite, servidos fumegando. Não tem erro. O gorad ativa o cérebro, fornecendo +2 PM temporários.",
+    origin: "Tormenta20 - Jogo do Ano",
+    price: "T$ 18",
+    spaces: "0,5",
+    category: "Alimentação",
+    ingredients: "Gorad, leite",
+    cookingCost: "T$ 31",
+    cookingDC: "25"
+  },
+  { id: "Macarrão de Yuvalin",
+    name: "Macarrão de Yuvalin",
+    description: "Yuvalin é uma cidade mineradora em Zakharov, na fronteira com as Montanhas Uivantes. Seus habitantes criaram este prato reforçado (macarrão, bacon e creme de leite) para encarar suas árduas jornadas de trabalho nas minas. Deliciosa, a receita se espalhou por outras cidades e reinos. Você recebe +5 PV temporários.",
+    origin: "Tormenta20 - Jogo do Ano",
+    price: "T$ 6",
+    spaces: "0,5",
+    category: "Alimentação",
+    ingredients: "Farinha, leite, porco",
+    cookingCost: "T$ 10",
+    cookingDC: "20"
+  },
+  { id: "Prato do Aventureiro",
+    name: "Prato do Aventureiro",
+    description: "Um cozido de frango com legumes, esta é uma refeição simples, mas mantém qualquer um bem alimentado. Em sua próxima noite de sono, você aumenta a sua recuperação de pontos de vida em +1 por nível.",
+    origin: "Tormenta20 - Jogo do Ano",
+    price: "T$ 2",
+    spaces: "0,5",
+    category: "Alimentação",
+    ingredients: "Ave, legume",
+    cookingCost: "T$ 5",
+    cookingDC: "15"
+  },
+  { id: "Ração de Viagem",
+    name: "Ração de Viagem",
+    description: "Própria para viagens, uma porção desta ração alimenta uma pessoa por um dia. É feita de alimentos conservados, como carne defumada, frutas secas, pão, queijo e biscoitos. Se mantida seca dura bastante, mas quando molhada se estraga em 24 horas.",
+    origin: "Tormenta20 - Jogo do Ano",
+    price: "T$ 0,5",
+    spaces: "0,5",
+    category: "Alimentação"
+  },
+  { id: "Refeição Comum",
+    name: "Refeição Comum",
+    description: "Uma refeição típica inclui pão, queijo, cozido de carne ou galinha com legumes e uma caneca de bebida, geralmente cidra, vinho ou cerveja.",
+    origin: "Tormenta20 - Jogo do Ano",
+    price: "T$ 0,3",
+    spaces: "0,5",
+    category: "Alimentação"
+  },
+  { id: "Sopa de Peixe",
+    name: "Sopa de Peixe",
+    description: "Um cozido de peixe com verduras, este é um prato humilde, mas garante descanso relaxante. Em sua próxima noite de sono, você aumenta a sua recuperação de pontos de mana em +1 por nível.",
+    origin: "Tormenta20 - Jogo do Ano",
+    price: "T$ 3",
+    spaces: "0,5",
+    category: "Alimentação",
+    ingredients: "Verdura, peixe",
+    cookingCost: "T$ 8",
+    cookingDC: "15"
+  },
+
+
+
   {
     id: "Assado de carnes",
     name: "Assado de carnes",
@@ -38,18 +112,7 @@ export const food: Gear[] = [
     cookingCost: "T$ 82",
     cookingDC: "30"
   },
-  {
-    id: "Batata Valkariana",
-    name: "Batata Valkariana",
-    description: "Batatas cortadas em tiras e mergulhadas em óleo fervente. Gordurentas e pouco nutritivas, são o tipo de prato que só é servido numa metrópole como Valkaria. Apesar disso, são saborosas e deixam qualquer um empolgado. Você recebe +1d6 em um teste a sua escolha realizado até o fim do dia. Para não esquecer, deixe 1d6 em cima da sua ficha. De preferência, amarelo.",
-    origin: "Tormenta20 - Jogo do Ano",
-    price: "T$ 2",
-    spaces: "0,5",
-    category: "Alimentação",
-    ingredients: "Óleo, legume",
-    cookingCost: "T$ 4",
-    cookingDC: "15"
-  },
+  
   {
     id: "Bolo de cenoura",
     name: "Bolo de cenoura",
@@ -110,18 +173,7 @@ export const food: Gear[] = [
     cookingCost: "T$ 8",
     cookingDC: "20"
   },
-  {
-    id: "Gorad Quente",
-    name: "Gorad Quente",
-    description: "Gorad e leite, servidos fumegando. Não tem erro. O gorad ativa o cérebro, fornecendo +2 PM temporários.",
-    origin: "Tormenta20 - Jogo do Ano",
-    price: "T$ 18",
-    spaces: "0,5",
-    category: "Alimentação",
-    ingredients: "Gorad, leite",
-    cookingCost: "T$ 31",
-    cookingDC: "25"
-  },
+  
   {
     id: "Gorvelã",
     name: "Gorvelã",
@@ -146,18 +198,7 @@ export const food: Gear[] = [
     cookingCost: "T$ 38",
     cookingDC: "20"
   },
-  {
-    id: "Macarrão de Yuvalin",
-    name: "Macarrão de Yuvalin",
-    description: "Yuvalin é uma cidade mineradora em Zakharov, na fronteira com as Montanhas Uivantes. Seus habitantes criaram este prato reforçado (macarrão, bacon e creme de leite) para encarar suas árduas jornadas de trabalho nas minas. Deliciosa, a receita se espalhou por outras cidades e reinos. Você recebe +5 PV temporários.",
-    origin: "Tormenta20 - Jogo do Ano",
-    price: "T$ 6",
-    spaces: "0,5",
-    category: "Alimentação",
-    ingredients: "Farinha, leite, porco",
-    cookingCost: "T$ 10",
-    cookingDC: "20"
-  },
+  
   {
     id: "Manjar dos titãs",
     name: "Manjar dos titãs",
@@ -230,18 +271,7 @@ export const food: Gear[] = [
     cookingCost: "T$ 12",
     cookingDC: "20"
   },
-  {
-    id: "Prato do Aventureiro",
-    name: "Prato do Aventureiro",
-    description: "Um cozido de frango com legumes, esta é uma refeição simples, mas mantém qualquer um bem alimentado. Em sua próxima noite de sono, você aumenta a sua recuperação de pontos de vida em +1 por nível.",
-    origin: "Tormenta20 - Jogo do Ano",
-    price: "T$ 2",
-    spaces: "0,5",
-    category: "Alimentação",
-    ingredients: "Ave, legume",
-    cookingCost: "T$ 5",
-    cookingDC: "15"
-  },
+  
   {
     id: "Salada de Salistick",
     name: "Salada de Salistick",
@@ -302,18 +332,7 @@ export const food: Gear[] = [
     cookingCost: "T$ 7",
     cookingDC: "20"
   },
-  {
-    id: "Sopa de Peixe",
-    name: "Sopa de Peixe",
-    description: "Um cozido de peixe com verduras, este é um prato humilde, mas garante descanso relaxante. Em sua próxima noite de sono, você aumenta a sua recuperação de pontos de mana em +1 por nível.",
-    origin: "Tormenta20 - Jogo do Ano",
-    price: "T$ 3",
-    spaces: "0,5",
-    category: "Alimentação",
-    ingredients: "Verdura, peixe",
-    cookingCost: "T$ 8",
-    cookingDC: "15"
-  },
+  
   {
     id: "Torta de maçã",
     name: "Torta de maçã",
@@ -326,24 +345,7 @@ export const food: Gear[] = [
     cookingCost: "T$ 4",
     cookingDC: "20"
   },
-  {
-    id: "Ração de Viagem",
-    name: "Ração de Viagem",
-    description: "Própria para viagens, uma porção desta ração alimenta uma pessoa por um dia. É feita de alimentos conservados, como carne defumada, frutas secas, pão, queijo e biscoitos. Se mantida seca dura bastante, mas quando molhada se estraga em 24 horas.",
-    origin: "Tormenta20 - Jogo do Ano",
-    price: "T$ 0,5",
-    spaces: "0,5",
-    category: "Alimentação"
-  },
-  {
-    id: "Refeição Comum",
-    name: "Refeição Comum",
-    description: "Uma refeição típica inclui pão, queijo, cozido de carne ou galinha com legumes e uma caneca de bebida, geralmente cidra, vinho ou cerveja.",
-    origin: "Tormenta20 - Jogo do Ano",
-    price: "T$ 0,3",
-    spaces: "0,5",
-    category: "Alimentação"
-  },
+  
 
   // --- PRATOS DE SUPLEMENTOS (Dragão Brasil, etc.) ---
   {

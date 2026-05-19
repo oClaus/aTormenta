@@ -284,6 +284,14 @@ export const specificWeapons: SpecificWeapon[] = [
     origin: "Dragão Brasil",
   },
 
+  // Duelo de Dragões
+  { id: "Lança do guerreiro dragão",
+    name: "Lança do Guerreiro Dragão",
+    description: "A lança do guerreiro dragão é uma arma concedida por Kallyadranoch como recompensa para dracomantes de inclinação marcial. Se estiver empunhando esta lança formidável quando lança uma magia, ela recebe +2 nas rolagens de dano e sua CD aumenta em +2.",
+    price: "24.000",
+    origin: "Duelo de Dragões",
+  },
+
 
   { id: "arco-do-poder",
     name: "Arco do Poder",
@@ -393,12 +401,7 @@ export const specificWeapons: SpecificWeapon[] = [
     price: "200.000",
     origin: "Tormenta20 - Jogo do Ano",
   },
-  { id: "Lança do guerreiro dragão",
-    name: "Lança do guerreiro dragão",
-    description: "A lança do guerreiro dragão é uma arma concedida por Kallyadranoch como recompensa para dracomantes de inclinação marcial. Se estiver empunhando esta lança formidável quando lança uma magia, ela recebe +2 nas rolagens de dano e sua CD aumenta em +2.",
-    price: "24.000",
-    origin: "Dragão Brasil",
-  },
+  
   {
     id: "adaga-da-bruma",
     name: "Adaga da Bruma",
