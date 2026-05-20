@@ -193,16 +193,7 @@ export default function TesourosPage() {
   const needsEquip =
     iResult?.result?.startsWith("Equipamento") ?? false;
 
-  const eqCatEntry =
-    eqCatRoll !== null ? findResult(EQUIPAMENTO_CATEGORIAS, eqCatRoll) : null;
-  const eqSubtable =
-    eqCatEntry?.label === "Arma"
-      ? EQUIPAMENTO_ARMA
-      : eqCatEntry?.label === "Armadura"
-      ? EQUIPAMENTO_ARMADURA
-      : eqCatEntry?.label === "Esotérico"
-      ? EQUIPAMENTO_ESOTER
-      : null;
+  
 
   return (
     <div className="min-h-screen bg-[#f5e6d0] text-amber-950 font-serif selection:bg-amber-800 selection:text-amber-50 relative overflow-x-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#f5e6d0] to-[#e6d5b8]">
@@ -392,50 +383,9 @@ export default function TesourosPage() {
                   </p>
                 </div>
 
-                {/* Categoria */}
-                <div className="space-y-3">
-                  <NumberPad
-                    label="D% — Categoria (01-60 Arma · 61-90 Armadura · 91-100 Esotérico)"
-                    value={rollEqCat}
-                    onChange={(v) => {
-                      setRollEqCat(v);
-                      setRollEqItem("");
-                    }}
-                  />
-                  <RollTable
-                    title="Categoria de Equipamento"
-                    table={EQUIPAMENTO_CATEGORIAS}
-                    selected={eqCatRoll}
-                    onSelect={(v) => {
-                      setRollEqCat(String(v));
-                      setRollEqItem("");
-                    }}
-                  />
-                </div>
+               
 
-                {/* Item dentro da categoria */}
-                {eqSubtable && eqCatEntry && (
-                  <div className="space-y-3 pt-4 border-t border-amber-900/15">
-                    <NumberPad
-                      label={`D% — ${eqCatEntry.label}`}
-                      value={rollEqItem}
-                      onChange={setRollEqItem}
-                    />
-                    {eqItemRoll !== null && (
-                      <ResultBadge
-                        label={eqCatEntry.label}
-                        roll={eqItemRoll}
-                        result={findResult(eqSubtable, eqItemRoll)?.result ?? "—"}
-                      />
-                    )}
-                    <RollTable
-                      title={`Tabela 8-4: ${eqCatEntry.label}`}
-                      table={eqSubtable}
-                      selected={eqItemRoll}
-                      onSelect={(v) => setRollEqItem(String(v))}
-                    />
-                  </div>
-                )}
+              
               </div>
             )}
           </section>
