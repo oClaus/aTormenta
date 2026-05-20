@@ -114,6 +114,26 @@ export const powersBardo: Power[] = [
     origin: "Tormenta20 - Jogo do Ano"
   },
 
+  // Dragão Brasil
+  { id: "Canto da Sereia",
+    name: "Canto da Sereia",
+    description: "Sua voz é melodiosa e encantadora, capaz de fascinar até as pessoas mais cruéis. O alcance da habilidade Inspiração e de qualquer Música de Bardo aumenta em um passo.",
+    prerequisite: "sereia/tritão.",
+    origin: "Dragão Brasil"
+  },
+  { id: "Esgrima Élfica",
+    name: "Esgrima Élfica",
+    description: "Se há uma raça capaz de mesclar arte à guerra, é a élfica. Você pode usar Esgrima Mágica com armas marciais.",
+    prerequisite: "elfo, 5º nível de bardo.",
+    origin: "Dragão Brasil"
+  },
+  { id: "Fascínio Rubro",
+    name: "Fascínio Rubro",
+    description: "Você pode usar Intimidação em vez de Atuação para sua Música: Balada Fascinante. Se fizer isso, pode gastar +1 PM para impedir alvos hostis ou envolvidos em combate de receberem o bônus de +5 no teste de resistência. Sua aparência rubra causa delírios fascinantes!",
+    prerequisite: "lefou, Música: Balada Fascinante.",
+    origin: "Dragão Brasil"
+  },
+
   
   { id: "Acorde Místico",
     name: "Acorde Místico",

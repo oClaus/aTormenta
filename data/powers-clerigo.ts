@@ -97,6 +97,20 @@ export const powersClerigo: Power[] = [
     origin: "Tormenta20 - Jogo do Ano"
   },
 
+  // Dragão Brasil
+  { id: "Devoção Finntroll",
+    name: "Devoção Finntroll",
+    description: "Renegando os deuses do Império Trollkyrka, você se tornou um dos devotos mais fervorosos de sua nova divindade. Uma vez por dia, você pode gastar uma hora e 3 PM para trocar um poder concedido do seu deus por outro. Esse benefício dura um dia, quando perde o novo poder e recebe novamente o antigo.",
+    prerequisite: "finntroll, não ser devoto de Kallyadranoch, Megalokk, Sszzaas ou Tenebra.",
+    origin: "Dragão Brasil"
+  },
+  { id: "Exaltação do Rejeitado",
+    name: "Exaltação do Rejeitado",
+    description: "Muitos acreditam que você não merece sua divindade, mas ela prova o contrário. Quando lança uma magia divina, você recebe resistência a magia igual ao círculo da magia lançada.",
+    prerequisite: "lefou.",
+    origin: "Dragão Brasil"
+  },
+
 
   
   { id: "Acólito Escudeiro",

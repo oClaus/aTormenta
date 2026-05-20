@@ -103,6 +103,26 @@ export const powersNobre: Power[] = [
     origin: "Tormenta20 - Jogo do Ano"
   },
 
+  // Dragão Brasil
+  { id: "Abundância dos Pequeninos",
+    name: "Abundância dos Pequeninos",
+    description: "Você vem de uma família abastada de hynne. Quando faz o teste de Carisma para sua habilidade Riqueza, você pode somar 1d6 ao resultado do teste.",
+    prerequisite: "hynne, 3º nível de nobre.",
+    origin: "Dragão Brasil"
+  },
+  { id: "Inspirar Medo",
+    name: "Inspirar Medo",
+    description: "Sua ascendência monstruosa causa pavor nos ignorantes. Você pode gastar uma ação de movimento e 1 PM para esbravejar impropérios aos seus inimigos. Faça um teste de Intimidação oposto pelo teste de Vontade de cada criatura a sua escolha em alcance curto (você faz um único teste). Alvos que falhem ficam abalados até o início do seu próximo turno.",
+    prerequisite: "bugbear ou medusa, Inspirar Confiança.",
+    origin: "Dragão Brasil"
+  },
+  { id: "Mestra dos Sussurros",
+    name: "Mestra dos Sussurros",
+    description: "Suas cobras assustam ou atraem seus colegas da aristocracia. Você também pode usar Jogo da Corte em testes de Intimidação e, quando usa esta habilidade em alguma de suas perícias, a segunda rolagem do teste é feita com +2.",
+    prerequisite: "medusa, Jogo da Corte.",
+    origin: "Dragão Brasil"
+  },
+
 
   { id: "Agente de Elite",
     name: "Agente de Elite",

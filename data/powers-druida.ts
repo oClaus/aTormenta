@@ -124,6 +124,26 @@ export const powersDruida: Power[] = [
     origin: "Tormenta20 - Jogo do Ano"
   },
 
+  // Dragão Brasil
+  { id: "Anatomia Natural",
+    name: "Anatomia Natural",
+    description: "A ligação do seu corpo com a natureza é mais do que especial. Quando lança uma magia, você pode gastar uma ação de movimento e 1 PM para usar Armadura de Allihanna. Se fizer isso, o bônus na Defesa concedido por esta habilidade aumenta para +4.",
+    prerequisite: "dahllan.",
+    origin: "Dragão Brasil"
+  },
+  { id: "Coragem dos Pampas",
+    name: "Coragem dos Pampas",
+    description: "Estar em contato com sua divindade acalenta seus medos. Enquanto estiver em terreno natural, você não sofre os efeitos da habilidade Medo de Altura.",
+    prerequisite: "centauro ou minotauro.",
+    origin: "Dragão Brasil"
+  },
+  { id: "Sangue Ofídico",
+    name: "Sangue Ofídico",
+    description: "Para cada círculo de magia que você é capaz de lançar, a CD para resistir a seus efeitos de veneno aumenta em +2 (cumulativos com o aumento de Coração da Selva) e a resistência a veneno dos seus Presentes de Sszzaas também aumenta em +2.",
+    prerequisite: "nagah, Coração da Selva.",
+    origin: "Dragão Brasil"
+  },
+
 
   { id: "Arma Tradicional",
     name: "Arma Tradicional",

@@ -108,6 +108,26 @@ export const powersCavaleiro: Power[] = [
     origin: "Tormenta20 - Jogo do Ano"
   },
 
+  // Dragão Brasil
+  { id: "Cavaleiro de Mim Mesmo",
+    name: "Cavaleiro de Mim Mesmo",
+    description: "Seu treinamento ultrapassa alguns limites da sua raça. Você pode escolher Combate Montado e Resistência Montada mesmo sem cumprir seus pré-requisitos. Além disso, se escolher Montaria como seu Caminho do Cavaleiro, você recebe os mesmos benefícios de um cavalo de guerra.",
+    prerequisite: "centauro.",
+    origin: "Dragão Brasil"
+  },
+  { id: "Desafio Divino",
+    name: "Desafio Divino",
+    description: "Sua ascendência assusta ou fascina seus inimigos. Uma vez por cena, o custo para usar Duelo diminui em –1 PM.",
+    prerequisite: "suraggel.",
+    origin: "Dragão Brasil"
+  },
+  { id: "Ginete de Javali",
+    name: "Ginete de Javali",
+    description: "Você é um dos poucos que aprendeu a montar uma espécie de enormes javalis, o orgulho da Guilda dos Provedores em Doherimm. Você recebe um javali doherita iniciante com o qual possui +2 em Adestramento e Cavalgar. Se escolher Montaria como seu Caminho do Cavaleiro, além dos benefícios da habilidade, você recebe +2 na Defesa enquanto estiver montado em seu javali.",
+    prerequisite: "anão.",
+    origin: "Dragão Brasil"
+  },
+
 
 
   { id: "Armas da Cavalaria",

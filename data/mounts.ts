@@ -15,6 +15,21 @@ export const mounts: Mount[] = [
   },
 
 
+  // Dragão Brasil
+  { id: "Javali Doherita",
+    name: "Javali Doherita ",
+    size: "Grande",
+    description: "Apenas doheritas da Guilda dos Provedores ou da Guilda dos Guerreiros têm permissão para montar estes animais.",
+    origin: "Dragão Brasil",
+    benefits: {
+      iniciante: "Você pode usar o poder Carga de Cavalaria. Caso possua este poder, o bônus no dano fornecido por ele aumenta em +1d8.",
+      veterano: "Seu deslocamento muda para 9m e o bônus de dano de Carga de Cavalaria aumenta em +1d8.",
+      mestre: "Seu deslocamento muda para 12m e, quando faz uma investida, você ignora 10 pontos de redução de dano do alvo.",
+    },
+  },
+
+
+  // Dragão Brasil
   { id: "Cavalo ",
     name: "Cavalo ",
     size: "Grande",
@@ -83,6 +98,8 @@ export const mounts: Mount[] = [
       mestre: "Como acima, mas o bônus em testes de resistência muda para +5.",
     },
   },
+
+
   { id: "nautilon ",
     name: "Nautilon ",
     size: "Grande",
@@ -94,17 +111,7 @@ export const mounts: Mount[] = [
       mestre: "Como acima, mas você recebe uma ação de movimento extra por turno (apenas para se deslocar).",
     },
   },
-  { id: "Javali Doherita",
-    name: "Javali Doherita ",
-    size: "Grande",
-    description: "Apenas doheritas da Guilda dos Provedores ou da Guilda dos Guerreiros têm permissão para montar estes animais.",
-    origin: "Dragão Brasil",
-    benefits: {
-      iniciante: "Seu deslocamento muda para 9m e, se você fizer uma investida montada, causa +1d8 pontos de dano.",
-      veterano: "Você recebe uma ação de movimento extra por turno (apenas para se deslocar) e seu bônus de dano em investidas montadas aumenta para +2d6.",
-      mestre: "Seu deslocamento muda para 12m e, quando faz uma investida, você ignora 10 pontos de redução de dano do alvo.",
-    },
-  },
+  
   { id: "Pegaso",
   name: "Pégaso",
   size: "Grande",
@@ -142,7 +149,7 @@ export const mounts: Mount[] = [
   name: "Acquarella",
   size: "Enorme",
   description: "Uma criatura marinha sagrada semelhante a uma arraia gigante translúcida, com tentáculos e veias multicoloridas. Inteligente e tímida, carrega consigo uma pequena porção do mar e serve como montaria para devotos de Oceano.",
-  origin: "Tormenta20 - Jogo do Ano",
+  origin: "Dragão Brasil",
   benefits: {
     iniciante: "Você recebe deslocamento de natação 9m e uma ação de movimento extra (apenas para se deslocar).",
     veterano: "Uma vez por rodada, você pode gastar 1 PM para causar 2d6 pontos de dano de eletricidade em uma criatura em alcance curto. Além disso, você pode entrar na acquarella como uma ação de movimento (ela pode conter até 40 espaços e criaturas em seu interior ficam sob efeito de Suportar Elementos).",

@@ -110,6 +110,26 @@ export const powersBucaneiro: Power[] = [
     origin: "Tormenta20 - Jogo do Ano"
   },
 
+  // Dragão Brasil
+  { id: "Amigo do Passado",
+    name: "Amigo do Passado",
+    description: "Você conhece alguém poderoso da época em que ainda estava vivo. Uma vez por aventura, o amigo fornecido por Amigos no Porto é um parceiro mestre, em vez de veterano.",
+    prerequisite: "osteon, Amigos no Porto, 11º nível de bucaneiro.",
+    origin: "Dragão Brasil"
+  },
+  { id: "Pirata Oceânico",
+    name: "Pirata Oceânico",
+    description: "A sagacidade dos piratas elfos-do-mar é notória. Para você, arpões e tridentes são consideradas armas ágeis.",
+    prerequisite: "elfo-do-mar, Esgrimista.",
+    origin: "Dragão Brasil"
+  },
+  { id: "Salmoura",
+    name: "Salmoura",
+    description: "Você foi um réptil entre os piratas, aprendendo suas táticas mais traiçoeiras. Seus ataques corpo a corpo causam +1d6 pontos de dano de ácido; criaturas que sofram esse dano também sofrem –2 em testes de perícia por 1 rodada.",
+    prerequisite: "trog, Pernas do Mar",
+    origin: "Dragão Brasil"
+  },
+
   
   { id: "Ardil Afiado",
     name: "Ardil Afiado",

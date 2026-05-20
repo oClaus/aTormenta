@@ -129,6 +129,20 @@ export const powersCacador: Power[] = [
     origin: "Tormenta20 - Jogo do Ano"
   },
 
+  // Dragão Brasil
+  { id: "Emboscada Oportuna",
+    name: "Emboscada Oportuna",
+    description: "Um gnoll que não sabe aproveitar uma brecha não é um gnoll de verdade. Quando ataca uma criatura analisada com Marca da Presa, o bônus em rolagens de dano concedido por sua habilidade Oportunista aumenta para +5.",
+    prerequisite: "gnoll.",
+    origin: "Dragão Brasil"
+  },
+  { id: "Faro de Caçador",
+    name: "Faro de Caçador",
+    description: "Seu olfato é ainda mais aguçado, treinado para caça. Você recebe +5 em testes de Sobrevivência para rastrear e identificar criatura usando seu Faro. Se usar Marca da Presa contra o alvo dessas ações, seu custo diminui em –1 PM.",
+    prerequisite: "qualquer raça (ou herança moreau) que conceda a habilidade Faro.",
+    origin: "Dragão Brasil"
+  },
+
   
   { id: "Armadilha Alquímica",
     name: "Armadilha Alquímica",

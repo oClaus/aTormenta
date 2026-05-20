@@ -23,9 +23,8 @@ export const partners: Partner[] = [
   },
   },
 
-  
-  {
-    id: "atirador",
+  // Tormenta20 - Jogo do Ano
+  { id: "atirador",
     name: "Atirador",
     description: "Um arqueiro, besteiro ou outro combatente à distância.",
     origin: "Tormenta20 - Jogo do Ano",
@@ -35,8 +34,7 @@ export const partners: Partner[] = [
       mestre: "Muda para +2d8.",
     },
   },
-  {
-    id: "combatente",
+  { id: "combatente",
     name: "Combatente",
     description: "Um bucaneiro, guerreiro, paladino ou animal de caça.",
     origin: "Tormenta20 - Jogo do Ano",
@@ -46,8 +44,7 @@ export const partners: Partner[] = [
       mestre: "Muda para +4 em testes de ataque e, uma vez por rodada, você pode gastar 5 PM para fazer um ataque extra.",
     },
   },
-  {
-    id: "destruidor",
+  { id: "destruidor",
     name: "Destruidor",
     description: "Um arcanista ou inventor.",
     origin: "Tormenta20 - Jogo do Ano",
@@ -57,8 +54,7 @@ export const partners: Partner[] = [
       mestre: "Como acima, mas você também pode gastar 4 PM para causar 6d6 pontos de dano em uma área de 6m de raio em alcance médio.",
     },
   },
-  {
-    id: "fortao",
+  { id: "fortao",
     name: "Fortão",
     description: "Um bárbaro, lutador ou outro tipo que bate primeiro e pensa depois.",
     origin: "Tormenta20 - Jogo do Ano",
@@ -68,8 +64,7 @@ export const partners: Partner[] = [
       mestre: "Muda para +3d6.",
     },
   },
-  {
-    id: "guardiao",
+  { id: "guardiao",
     name: "Guardião",
     description: "Um cavaleiro, cão de guarda ou outro NPC cuja função primária é proteger.",
     origin: "Tormenta20 - Jogo do Ano",
@@ -79,8 +74,7 @@ export const partners: Partner[] = [
       mestre: "Muda para +4 na Defesa e +2 em testes de resistência.",
     },
   },
-  {
-    id: "magivocador",
+  { id: "magivocador",
     name: "Magivocador",
     description: "Um conjurador especializado em magias ofensivas.",
     origin: "Tormenta20 - Jogo do Ano",
@@ -90,8 +84,7 @@ export const partners: Partner[] = [
       mestre: "Como acima, mas dobra os bônus (para um total de +2 dados de dano e +2 na CD).",
     },
   },
-  {
-    id: "medico",
+  { id: "medico",
     name: "Médico",
     description: "Um clérigo, druida, herbalista ou outro NPC com capacidades curativas.",
     origin: "Tormenta20 - Jogo do Ano",
@@ -101,8 +94,7 @@ export const partners: Partner[] = [
       mestre: "Como acima, mas você também pode gastar 5 PM para curar 6d8+6 PV.",
     },
   },
-  {
-    id: "Adepto",
+  { id: "Adepto",
     name: "Adepto",
     description: "Um conjurador capaz de ajudá-lo a lançar suas magias.",
     origin: "Tormenta20 - Jogo do Ano",
@@ -112,8 +104,7 @@ export const partners: Partner[] = [
       mestre: "Como acima, e esta redução se torna cumulativa com outras reduções.",
     },
   },
-  {
-    id: "Ajudante",
+  { id: "Ajudante",
     name: "Ajudante",
     description: "Um bardo, nobre ou sábio que ajuda com palavras firmes ou encorajadoras. Um ajudante não pode fornecer bônus em Luta ou Pontaria.",
     origin: "Tormenta20 - Jogo do Ano",
@@ -123,8 +114,7 @@ export const partners: Partner[] = [
       mestre: "Muda para +4 em três perícias. As perícias são definidas pelo parceiro. ",
     },
   },
-  {
-    id: "Assassino",
+  { id: "Assassino",
     name: "Assassino",
     description: "Um ladino ou outro tipo furtivo e letal. Note que, além de fornecer +2 em testes de ataque corpo a corpo, o bônus por flanquear facilita que o personagem use seu Ataque Furtivo.",
     origin: "Tormenta20 - Jogo do Ano",
@@ -154,6 +144,11 @@ export const partners: Partner[] = [
       mestre: "Você pode usar Olhos nas Costas.",
     },
   },
+
+
+
+
+  
   { id: "Pilly",
   name: "Pilly",
   description: "Um pequeno celestial semelhante a uma fada, com quatro asas iridescentes e cabelos metálicos. Gentil e brincalhão, viaja pelo mundo levando alegria a quem está triste ou desanimado.",

@@ -109,6 +109,26 @@ export const powersBarbaro: Power[] = [
     origin: "Tormenta20 - Jogo do Ano"
   },
 
+  // Dragão Brasil
+  { id: "Fúria do Gigante",
+    name: "Fúria do Gigante",
+    description: "Quando você entra em Fúria, inimigos em alcance curto ficam abalados por 1d4 rodadas (Von CD Con reduz para abalado por 1 rodada).",
+    prerequisite: "galokk ou ogro.",
+    origin: "Dragão Brasil"
+  },
+  { id: "Fúria Primordial",
+    name: "Fúria Primordial",
+    description: "Quando está em Fúria, o bônus de dano com armas corpo a corpo e de arremesso concedido pela habilidade Feroz aumenta em +2. Quando sofre dano de um inimigo, esse aumento se torna +4 até o fim de seu próximo turno.",
+    prerequisite: "Orc.",
+    origin: "Dragão Brasil"
+  },
+  { id: "Fúria Trog",
+    name: "Fúria Trog",
+    description: "Trogs, por natureza, sabem ceder particularmente bem à ira animalesca. Quando está em Fúria você pode, uma vez por rodada, fazer um ataque corpo a corpo extra com sua Mordida sem gastar PM.",
+    prerequisite: "Trog.",
+    origin: "Dragão Brasil"
+  },
+
 
   { id: "Alma Inabalável",
     name: "Alma Inabalável",

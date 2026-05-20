@@ -1,5 +1,3 @@
-// data/spells.ts
-
 import { Spell } from "@/types/speel";
 
 export const spells: Spell[] = [
@@ -4016,6 +4014,7 @@ export const spells: Spell[] = [
   },
 
   
+
   { id: "Armadura Elemental",
   name: "Armadura Elemental",
   type: "Arcana",

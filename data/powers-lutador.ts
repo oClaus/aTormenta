@@ -129,6 +129,26 @@ export const powersLutador: Power[] = [
     origin: "Tormenta20 - Jogo do Ano"
   },
 
+  // Dragão Brasil
+  { id: "Cascos Caprinos",
+    name: "Cascos Caprinos",
+    description: "Você tem cascos poderosos e letais. Quando faz um ataque desarmado, você pode gastar 1 PM para usar seus cascos em vez das mãos. Se fizer isso, causa +1 dado de dano do mesmo tipo, mas não pode escolher causar dano não letal.",
+    prerequisite: "centauro ou sátiro.",
+    origin: "Dragão Brasil"
+  },
+  { id: "Pele Grudenta",
+    name: "Pele Grudenta",
+    description: "Um muco viscoso é expelido por sua pele e língua, fazendo tudo grudar! Quando acerta um ataque corpo a corpo desarmado ou com sua arma natural, você pode gastar 1 PM para fazer uma manobra desarmar como ação livre com um bônus de +2.",
+    prerequisite: "tabrachi.",
+    origin: "Dragão Brasil"
+  },
+  { id: "Sangue Humano",
+    name: "Sangue Humano",
+    description: "Seu corpo, esculpido para as lutas, se tornou mais resistente do que os dos seus ancestrais élficos. Quando faz um teste de resistência, você pode gastar 1 PM para somar sua Constituição ao resultado do teste.",
+    prerequisite: "meio-elfo, Sarado.",
+    origin: "Dragão Brasil"
+  },
+
   
   { id: "Aquecimento",
     name: "Aquecimento",

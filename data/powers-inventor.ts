@@ -181,6 +181,20 @@ export const powersInventor: Power[] = [
     origin: "Tormenta20 - Jogo do Ano"
   },
 
+  // Dragão Brasil
+  { id: "Armadura de Suporte",
+    name: "Armadura de Suporte",
+    description: "Se estiver usando armadura pesada, você pode gastar 1 PM para ignorar o dano adicional que sofreria por conta da habilidade Ossos Frágeis.",
+    prerequisite: "kliren, Couraceiro.",
+    origin: "Dragão Brasil"
+  },
+  { id: "Síntese Goblin",
+    name: "Síntese Goblin",
+    description: "Quando fabrica um item alquímico ou poção, você pode fabricar uma dose a mais (pagando metade do seu custo em matéria-prima); mas o item é feito de forma rápida e desleixada; ao ser usado, tem 25% de chance (1 em 1d4) de não surtir efeito.",
+    prerequisite: "goblin, Síntese Alquímica.",
+    origin: "Dragão Brasil"
+  },
+
   
   { id: "Alquimista Exímio",
     name: "Alquimista Exímio",

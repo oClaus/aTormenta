@@ -118,6 +118,26 @@ export const powersLadino: Power[] = [
     origin: "tormenta20 - jogo do ano"
   },
 
+  // Dragão Brasil
+  { id: "Furtividade Murídea",
+    name: "Furtividade Murídea",
+    description: "Você é ágil e esguio, difícil de capturar. Para o bônus de Furtividade concedido pelo seu tamanho, você é considerado uma categoria de tamanho menor.",
+    prerequisite: "nezumi.",
+    origin: "Dragão Brasil"
+  },
+  { id: "Papinho",
+    name: "Papinho",
+    description: "Goblins costumam saber se virar para se aproveitar dos outros e conseguir o que querem, mas você foi além. Escolha uma perícia de Carisma. Você muda o atributo-chave dessa perícia para Inteligência.",
+    prerequisite: "goblin.",
+    origin: "Dragão Brasil"
+  },
+  { id: "Táticas Hobgoblin",
+    name: "Táticas Hobgoblin",
+    description: "Muitas gerações de hobgoblins fizeram parte da Infinita Guerra contra os elfos. Quando usa Guerra para analisar terreno, você também pode descobrir uma brecha na organização tática dos seus oponentes. Se passar, o alvo do seu próximo ataque corpo a corpo é considerado desprevenido.",
+    prerequisite: "hobgoblin.",
+    origin: "Dragão Brasil"
+  },
+
   
   { id: "Ameaça Brutal",
     name: "Ameaça Brutal",

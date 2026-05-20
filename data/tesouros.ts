@@ -1,64 +1,174 @@
+// data/tesouros.ts
 import { TreasureND } from "@/types/tesouro";
 
 export const tesouros: TreasureND[] = [
   {
     nd: "1/4",
     dinheiro: [
-      { roll: "01-30", result: "—" },
-      { roll: "31-70", result: "1d6x10 TC" },
-      { roll: "71-95", result: "1d4x100 TC" },
-      { roll: "96-100", result: "1d6x10 T$" }
+      { min: 1,  max: 30,  result: "—" },
+      { min: 31, max: 70,  result: "1d6×10 TC" },
+      { min: 71, max: 95,  result: "1d4×100 TC" },
+      { min: 96, max: 100, result: "1d6×10 T$" },
     ],
     itens: [
-      { roll: "01-50", result: "—" },
-      { roll: "51-75", result: "Diverso" },
-      { roll: "76-100", result: "Equipamento" }
-    ]
+      { min: 1,  max: 50,  result: "—" },
+      { min: 51, max: 75,  result: "Diverso" },
+      { min: 76, max: 100, result: "Equipamento" },
+    ],
   },
   {
     nd: "1/2",
     dinheiro: [
-      { roll: "01-25", result: "—" },
-      { roll: "26-70", result: "2d6x10 TC" },
-      { roll: "71-95", result: "2d8x10 T$" },
-      { roll: "96-100", result: "1d4x100 T$" }
+      { min: 1,  max: 25,  result: "—" },
+      { min: 26, max: 70,  result: "2d6×10 TC" },
+      { min: 71, max: 95,  result: "2d8×10 T$" },
+      { min: 96, max: 100, result: "1d4×100 T$" },
     ],
     itens: [
-      { roll: "01-45", result: "—" },
-      { roll: "46-70", result: "Diverso" },
-      { roll: "71-100", result: "Equipamento" }
-    ]
+      { min: 1,  max: 45,  result: "—" },
+      { min: 46, max: 70,  result: "Diverso" },
+      { min: 71, max: 100, result: "Equipamento" },
+    ],
   },
   {
     nd: "1",
     dinheiro: [
-      { roll: "01-20", result: "—" },
-      { roll: "21-70", result: "3d8x10 T$" },
-      { roll: "71-95", result: "4d12x10 T$" },
-      { roll: "96-100", result: "1 riqueza menor" }
+      { min: 1,  max: 20,  result: "—" },
+      { min: 21, max: 70,  result: "3d8×10 T$" },
+      { min: 71, max: 95,  result: "4d12×10 T$" },
+      { min: 96, max: 100, result: "1 riqueza menor" },
     ],
     itens: [
-      { roll: "01-40", result: "—" },
-      { roll: "41-65", result: "Diverso" },
-      { roll: "66-90", result: "Equipamento" },
-      { roll: "91-100", result: "1 poção" }
-    ]
+      { min: 1,  max: 40,  result: "—" },
+      { min: 41, max: 65,  result: "Diverso" },
+      { min: 66, max: 90,  result: "Equipamento" },
+      { min: 91, max: 100, result: "1 poção" },
+    ],
   },
   {
     nd: "2",
     dinheiro: [
-      { roll: "01-15", result: "—" },
-      { roll: "16-55", result: "3d10x10 T$" },
-      { roll: "56-85", result: "2d4x100 T$" },
-      { roll: "86-95", result: "2d6+1x100 T$" },
-      { roll: "96-100", result: "1 riqueza menor" }
+      { min: 1,  max: 15,  result: "—" },
+      { min: 16, max: 55,  result: "3d10×10 T$" },
+      { min: 56, max: 85,  result: "2d4×100 T$" },
+      { min: 86, max: 95,  result: "2d6+1×100 T$" },
+      { min: 96, max: 100, result: "1 riqueza menor" },
     ],
     itens: [
-      { roll: "01-30", result: "—" },
-      { roll: "31-40", result: "Diverso" },
-      { roll: "41-70", result: "Equipamento" },
-      { roll: "71-90", result: "1 poção" },
-      { roll: "91-100", result: "Superior (1 melhoria)" }
-    ]
-  }
+      { min: 1,  max: 30,  result: "—" },
+      { min: 31, max: 40,  result: "Diverso" },
+      { min: 41, max: 70,  result: "Equipamento" },
+      { min: 71, max: 90,  result: "1 poção" },
+      { min: 91, max: 100, result: "Superior (1 melhoria)" },
+    ],
+  },
+  {
+    nd: "3",
+    dinheiro: [
+      { min: 1,  max: 10,  result: "—" },
+      { min: 11, max: 20,  result: "4d12×10 T$" },
+      { min: 21, max: 40,  result: "1d8×10 TO" },
+      { min: 41, max: 90,  result: "1d8×10 TO" },
+      { min: 91, max: 100, result: "1d3 riquezas menores" },
+    ],
+    itens: [
+      { min: 1,  max: 25,  result: "—" },
+      { min: 26, max: 35,  result: "Diverso" },
+      { min: 36, max: 60,  result: "Equipamento" },
+      { min: 61, max: 85,  result: "1 poção" },
+      { min: 86, max: 100, result: "Superior (1 melhoria)" },
+    ],
+  },
+  {
+    nd: "4",
+    dinheiro: [
+      { min: 1,  max: 10,  result: "—" },
+      { min: 11, max: 50,  result: "1d6×100 T$" },
+      { min: 51, max: 80,  result: "1d12×100 T$" },
+      { min: 81, max: 90,  result: "1 riqueza menor*" },
+      { min: 91, max: 100, result: "1d3 riquezas menores*" },
+    ],
+    itens: [
+      { min: 1,  max: 20,  result: "—" },
+      { min: 21, max: 30,  result: "Diverso" },
+      { min: 31, max: 55,  result: "Equipamento*" },
+      { min: 56, max: 80,  result: "1 poção*" },
+      { min: 81, max: 100, result: "Superior (1 melhoria)*" },
+    ],
+  },
+  {
+    nd: "5",
+    dinheiro: [
+      { min: 1,  max: 15,  result: "—" },
+      { min: 16, max: 65,  result: "3d4×10 TO" },
+      { min: 66, max: 95,  result: "1 riqueza menor" },
+      { min: 96, max: 100, result: "1 riqueza média" },
+    ],
+    itens: [
+      { min: 1,  max: 20,  result: "—" },
+      { min: 21, max: 70,  result: "1 poção" },
+      { min: 71, max: 90,  result: "Superior (1 melhoria)" },
+      { min: 91, max: 100, result: "Superior (2 melhorias)" },
+    ],
+  },
+  {
+    nd: "6",
+    dinheiro: [
+      { min: 1,  max: 15,  result: "—" },
+      { min: 16, max: 60,  result: "2d6×100 T$" },
+      { min: 61, max: 90,  result: "2d10×100 T$" },
+      { min: 91, max: 100, result: "1d3+1 riquezas menores" },
+    ],
+    itens: [
+      { min: 1,  max: 20,  result: "—" },
+      { min: 21, max: 65,  result: "1 poção*" },
+      { min: 66, max: 95,  result: "Superior (1 melhoria)" },
+      { min: 96, max: 100, result: "Superior (2 melhorias)*" },
+    ],
+  },
+  {
+    nd: "7",
+    dinheiro: [
+      { min: 1,  max: 10,  result: "—" },
+      { min: 11, max: 60,  result: "—" },
+      { min: 61, max: 90,  result: "2d12×10 TO" },
+      { min: 91, max: 100, result: "1d4+1 riquezas menores" },
+    ],
+    itens: [
+      { min: 1,  max: 20,  result: "—" },
+      { min: 21, max: 60,  result: "1d3 poções" },
+      { min: 61, max: 90,  result: "Superior (2 melhorias)" },
+      { min: 91, max: 100, result: "Superior (3 melhorias)" },
+    ],
+  },
+  {
+    nd: "8",
+    dinheiro: [
+      { min: 1,  max: 10,  result: "—" },
+      { min: 11, max: 55,  result: "2d10×100 T$" },
+      { min: 56, max: 85,  result: "1d4+1 riquezas menores" },
+      { min: 86, max: 100, result: "1 riqueza média*" },
+    ],
+    itens: [
+      { min: 1,  max: 20,  result: "—" },
+      { min: 21, max: 75,  result: "1d3 poções" },
+      { min: 76, max: 95,  result: "Superior (2 melhorias)" },
+      { min: 96, max: 100, result: "Superior (3 melhorias)*" },
+    ],
+  },
+  {
+    nd: "9",
+    dinheiro: [
+      { min: 1,  max: 10,  result: "—" },
+      { min: 11, max: 35,  result: "—" },
+      { min: 36, max: 85,  result: "4d6×100 T$" },
+      { min: 86, max: 100, result: "1d3 riquezas menores" },
+    ],
+    itens: [
+      { min: 1,  max: 20,  result: "—" },
+      { min: 21, max: 70,  result: "1 poção*" },
+      { min: 71, max: 95,  result: "Superior (3 melhorias)" },
+      { min: 96, max: 100, result: "Mágico (menor)" },
+    ],
+  },
 ];

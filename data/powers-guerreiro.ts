@@ -108,6 +108,26 @@ export const powersGuerreiro: Power[] = [
     origin: "Tormenta20 - Jogo do Ano"
   },
 
+  // Dragão Brasil
+  { id: "Estilo Clássico",
+    name: "Estilo Clássico",
+    description: "Um clichê só é clichê porque funciona! Quando usa Ataque Especial, se estiver empunhando um escudo e uma espada longa, você recebe +2 na Defesa e em rolagens de dano até o início do seu próximo turno.",
+    prerequisite: "humano, Estilo de Arma e Escudo.",
+    origin: "Dragão Brasil"
+  },
+  { id: "Duro Como Aço",
+    name: "Duro Como Aço",
+    description: "Você vem de uma linhagem de anões da infantaria. Se estiver usando armadura pesada, você pode somar sua Constituição na Defesa, limitado pelo seu nível. Se fizer isso, não pode somar sua Destreza, mesmo que outras habilidades ou efeitos o façam.",
+    prerequisite: "anão, Encouraçado, 8º nível de guerreiro.",
+    origin: "Dragão Brasil"
+  },
+  { id: "Herdeiro dos Gigantes",
+    name: "Herdeiro dos Gigantes",
+    description: "Poucos são capazes de equiparar sua força. Quando usa Ataque Especial e Força dos Titãs em um mesmo ataque, você aumenta o dano extra concedido por Força dos Titãs em +1d12.",
+    prerequisite: "galokk.",
+    origin: "Dragão Brasil"
+  },
+
   
   { id: "Análise Tática",
     name: "Análise Tática",
