@@ -1637,6 +1637,84 @@ export const classes: GameClass[] = [
       { level: 20, abilities: "Guerreiro Santificado, poder de clérigo" }
     ],
     },
+    { id: "Miragem",
+    name: "Miragem (Caçador)",
+    powersUrl: "/poderes/cacador",
+    origin: "Dragão Brasil",
+    image: "/classes/miragem.png",
+    description: "Miragens são combatentes praticantes da Dança da Areia, um estilo de luta criado pelos ferani, o povo réptil do Planalto de Sukala. Baseada em velocidade, furtividade e mobilidade, a Dança da Areia combina movimentos acrobáticos e técnicas de guerrilha em uma forma de combate única. Seus praticantes mesclam agilidade e magia para executar feitos marciais impressionantes que confundem, desorientam e surpreendem seus oponentes.\nEntre os ferani, os miragens são considerados guerreiros de elite, cujo papel vai além das divisões tribais. Praticamente uma ordem de combatentes sagrados, eles são o principal laço que une as tribos deste povo. Em tempos de paz, vivem em suas respectivas tribos como líderes e caçadores. Entretanto, quando um inimigo externo ameaça seu povo, estes guerreiros se unem como principal linha de defesa dos territórios ferani.\nGeralmente, o treinamento de um miragem começa na infância. Os jovens que demonstram a aptidão física e espiritual para se tornarem bher’duins são levados para um local sagrado, onde passam por uma cerimônia de iniciação secreta. Aqueles aceitos são indicados a um kuathor, um mestre e tutor, que irá treiná-los na arte da Dança da Areia. Um kuathor e seu discípulo sempre devem pertencer a tribos diferentes; uma forma de fortalecer o papel dos caçador como protetores de todos.\nEmbora seja considerada um segredo dos ferani, a Dança da Areia acabou se espalhando por Andória. Os primeiros a revelarem suas técnicas foram bher’duins desgarrados, que caíram em desgraça por algum crime e fugiram de Sukala. Posteriormente, certas tribos ferani abriram exceções para indivíduos de grande valor e ensinaram a eles os segredos da Dança.\nHoje, embora os miragens ainda sejam fortemente associados aos ferani, é cada vez mais comum encontrar indivíduos de outras raças trilhando esse caminho.",
+    characteristics: {
+      pvBase: "16 + Constituição",
+      pvPerLevel: "4 + Constituição",
+      pmPerLevel: "3 PM por nível"
+    },
+    skills: {
+    mandatory: ["Luta (For) ou Pontaria (Des)", "Sobrevivência (Sab)"],
+    optional: {
+      skills: [      
+        'Acrobacia (Des)', 'Atletismo (For)', 'Fortitude (Con)', 'Furtividade (Des)', 'Guerra (Int)', 'Iniciativa (Des)', 'Intimidação (Car)', 'Luta (For)', 'Ofício (Int)', 'Percepção (Sab)', 'Pontaria (Des)', 'Reflexos (Des)'
+      ],
+      count: 4
+      }
+    },
+    proficiency: "Armas marciais e escudos",
+    abilities: [
+      {
+      name: "Dança da Areia",
+      description: "Você pode gastar 2 PM para iniciar uma dança da areia. Enquanto executa essa dança, você recebe um bônus de +1d4 em suas rolagens de dano contra alvos em alcance curto. A cada quatro níveis, você pode gastar +1 PM para aumentar o dado de bônus de dano em um passo (de 1d4 para 1d6, por exemplo). A dança termina ao final da cena ou se você passar uma rodada sem percorrer pelo menos 6m sem passar pelo mesmo espaço duas vezes. Esta habilidade exige liberdade de movimentos; você não pode usá-la se estiver de armadura pesada ou na condição imóvel.",
+      },
+      {
+        name: "Rastreador",
+        description: "Você recebe +2 em Sobrevivência. Além disso, pode se mover com seu deslocamento normal enquanto rastreia sem sofrer penalidades no teste de Sobrevivência."
+      },
+      {
+        name: "Poder de Caçador",
+        description: "No 2º nível, e a cada nível seguinte, você recebe uma habilidade de caçador ou Geral. Mas não pode escolher os poderes Escaramuça e Escaramuça Superior"
+      },
+      {
+        name: "Explorador",
+        description: "No 3º nível, escolha um tipo de terreno entre aquático, ártico, colina, deserto, floresta, montanha, pântano, planície, subterrâneo ou urbano. A partir do 11º nível, você também pode escolher área de Tormenta. Quando estiver no tipo de terreno escolhido, você soma sua Sabedoria (mínimo +1) na Defesa e nos testes de Acrobacia, Atletismo, Furtividade, Percepção e Sobrevivência. A cada quatro níveis, escolha outro tipo de terreno para receber o bônus ou aumente o bônus em um tipo de terreno já escolhido em +2."
+      },
+      {
+        name: "Caminho do Explorador",
+        description: "No 5º nível, você pode atravessar terrenos difíceis sem sofrer redução em seu deslocamento e a CD para rastrear você aumenta em +10. Esta habilidade só funciona em terrenos nos quais você tenha a habilidade Explorador."
+      },
+      {
+        name: "Cortina de Poeira",
+        description: "No 7º nível, você usa sua velocidade para criar uma nuvem de terra ou outros detritos para obscurecer a visão de seus inimigos. Quando usa Dança da Areia, você pode gastar +2 PM para receber camuflagem enquanto sua dança estiver ativa."
+      },
+      {
+        name: "Passo do Deserto",
+        description: "A partir do 9º nível, se estiver sob areia, terra ou outro tipo de terreno que não seja rocha sólida (ou o equivalente), uma vez por rodada você pode gastar 3 PM se teleportar para qualquer outro ponto em alcance curto sobre o mesmo tipo de terreno."
+      },
+      {
+        name: "Mestre do Deserto",
+        description: "No 20º nível, enquanto estiver usando Dança da Areia, quando sofre dano você pode gastar 1 PM para receber RD 20 contra esse dano. Além disso, quando usa a ação agredir durante uma Dança da Areia, você pode gastar 1 PM para fazer um ataque adicional."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Dança da areia +1d4, rastreador" },
+      { level: 2, abilities: "Poder de caçador" },
+      { level: 3, abilities: "Explorador, poder de caçador" },
+      { level: 4, abilities: "Poder de caçador" },
+      { level: 5, abilities: "Caminho do explorador, dança da areia +1d6, poder de caçador" },
+      { level: 6, abilities: "Poder de caçador" },
+      { level: 7, abilities: "Cortina de poeira, poder de caçador" },
+      { level: 8, abilities: "Poder de caçador" },
+      { level: 9, abilities: "Dança da areia +1d8, passo do deserto, poder de caçador" },
+      { level: 10, abilities: "Poder de caçador" },
+      { level: 11, abilities: "Poder de caçador" },
+      { level: 12, abilities: "Poder de caçador" },
+      { level: 13, abilities: "Dança da areia +1d10, poder de caçador" },
+      { level: 14, abilities: "Poder de caçador" },
+      { level: 15, abilities: "Poder de caçador" },
+      { level: 16, abilities: "Poder de caçador" },
+      { level: 17, abilities: "Dança da areia +1d12, poder de caçador" },
+      { level: 18, abilities: "Poder de caçador" },
+      { level: 19, abilities: "Poder de caçador" },
+      { level: 20, abilities: "Mestre do deserto, poder de caçador" }
+    ],
+    },
     
     
     

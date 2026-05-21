@@ -142,6 +142,31 @@ export const powersCacador: Power[] = [
     prerequisite: "qualquer raça (ou herança moreau) que conceda a habilidade Faro.",
     origin: "Dragão Brasil"
   },
+  { id: "Arsenal do Deserto",
+    name: "Arsenal do Deserto",
+    description: "Você recebe +2 nas rolagens de dano com azagaias, cimitarras e lanças. Para você, essas armas são armas leves.",
+    origin: "Dragão Brasil"
+  },
+  { id: "Escaramuça Distante",
+    name: "Escaramuça Distante",
+    description: "Você pode usar Escaramuça e Dança da Areia contra alvos em alcance médio.",
+    origin: "Dragão Brasil"
+  },
+  { id: "Passo Duplo",
+    name: "Passo Duplo",
+    description: "Se estiver usando Escaramuça ou Dança da Areia e usar a ação agredir para fazer um ataque corpo a corpo com uma arma leve, você pode gastar 2PM para fazer um ataque adicional.",
+    origin: "Dragão Brasil"
+  },
+  { id: "Passos Precisos",
+    name: "Passos Precisos",
+    description: "Enquanto estiver usando Escaramuça ou Dança da Areia, você recebe +2 na margem de ameaça de seus ataques.",
+    origin: "Dragão Brasil"
+  },
+  { id: "Tesouros da Natureza",
+    name: "Tesouros da Natureza",
+    description: "Sempre que for bem-sucedido em montar um acampamento em terreno natural, você encontra frutos, insetos ou outros recursos naturais que recuperam 1 PM por  patamar de cada personagem acampado.",
+    origin: "Dragão Brasil"
+  },
 
   
   { id: "Armadilha Alquímica",
