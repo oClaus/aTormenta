@@ -21,7 +21,7 @@ export default function Home() {
     { id: "condicoes",  title: "Condições",  icon: "/temas/condicoes.png",  color: "from-rose-600 to-red-800",  href: "/condicoes"},
     { id: "distincoes",  title: "Distinções",  icon: "/temas/distincoes.png",  color: "from-rose-600 to-red-800",  href: "/distincoes"},
     { id: "complicacoes",  title: "Complicações",  icon: "/temas/complicacoes.png",  color: "from-rose-600 to-red-800",  href: "/complicacoes"},
-    { id: "tesouros",  title: "Tesouros",  icon: "/temas/complicacoes.png",  color: "from-rose-600 to-red-800",  href: "/tesouros"},
+    { id: "tesouros",  title: "Tesouros",  icon: "/temas/tesouro.jpg",  color: "from-rose-600 to-red-800",  href: "/tesouros"},
   ];
 
   return (

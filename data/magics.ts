@@ -1,6 +1,7 @@
 import { Enchantment, SpecificWeapon } from "@/types/magic";
 
 export const enchantments: Enchantment[] = [
+  // Tormenta20 - Jogo do Ano
   { id: "ameacadora",
     name: "Ameaçadora",
     description: "A margem de ameaça da arma duplica. Por exemplo, uma espada longa ameaçadora tem margem de ameaça 17. Efeitos que duplicam a margem de ameaça são aplicados antes de quaisquer efeitos que a aumentem.",
@@ -141,6 +142,9 @@ export const enchantments: Enchantment[] = [
     description: "Uma vez por rodada, quando ataca, você pode gastar 2 PM. Se fizer isso e acertar o ataque, a vítima fica envenenada, perdendo 1d12 pontos de vida por rodada durante 3 rodadas. Uma arma venenosa verte um líquido verde e viscoso.",
     origin: "Tormenta20 - Jogo do Ano",
   },
+
+
+
   {
     id: "alvorada",
     name: "Alvorada",
@@ -292,7 +296,7 @@ export const specificWeapons: SpecificWeapon[] = [
     origin: "Duelo de Dragões",
   },
 
-
+  // Tormenta20 - Jogo do Ano
   { id: "arco-do-poder",
     name: "Arco do Poder",
     description: "O arco do poder conta como um arco longo formidável, mas parece apenas o corpo de um arco — não tem corda e não aceita flechas. Contudo, quando você o empunha e faz o gesto de puxar a corda inexistente, o arco cria uma corda e uma flecha de energia dourada. O arco do poder é capaz de ler suas intenções, produzindo diferentes tipos de flechas energéticas a sua escolha.\n\n- *Flecha Normal.* 3d8 pontos de dano de essência.\n- *Flecha Piedosa.* 4d8 pontos de dano de essência não letal.\n- *Flecha Explosiva.* 3d6 pontos de dano de fogo no alvo e em todas as criaturas adjacentes a ele. Essas têm direito a um teste de Reflexos (CD Des) para reduzir o dano à metade.\n- *Flecha-Rede.* Não causa dano, mas deixa a vítima agarrada por uma rede de energia. A criatura pode se soltar passando em um teste de Força ou Acrobacia (CD 25). A rede se dissipa quando a criatura se solta ou no fim da cena.",
@@ -401,6 +405,7 @@ export const specificWeapons: SpecificWeapon[] = [
     price: "200.000",
     origin: "Tormenta20 - Jogo do Ano",
   },
+  
   
   {
     id: "adaga-da-bruma",
