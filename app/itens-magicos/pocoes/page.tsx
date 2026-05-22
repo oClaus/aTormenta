@@ -52,6 +52,7 @@ const potionsData: PotionRow[] = [
 
 export default function PocoesPergaminhosPage() {
   const [searchTerm, setSearchTerm] = useState("");
+  const [isIntroOpen, setIsIntroOpen] = useState(false);
 
   const filteredPotions = useMemo(() => {
     const term = searchTerm.toLowerCase();
@@ -61,201 +62,225 @@ export default function PocoesPergaminhosPage() {
   }, [searchTerm]);
 
   return (
-    <div className="min-h-screen bg-stone-950 text-stone-200 font-serif selection:bg-red-900 selection:text-white relative overflow-x-hidden">
+    <div className="min-h-screen bg-[#f5e6d0] text-amber-950 font-serif selection:bg-amber-800 selection:text-amber-50 relative overflow-x-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#f5e6d0] to-[#e6d5b8]">
       
       {/* Background Effect */}
-      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.8)_100%)]" />
+      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(69,26,3,0.15)_100%)]" />
 
-      {/* --- Header Estilo Grimório --- */}
-      <header className="relative z-10 w-full p-6 border-b-2 border-stone-800 bg-stone-950/90 backdrop-blur-md shadow-lg mb-8 md:mb-12">
-        <div className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+      {/* --- Header Estilo Pergaminho --- */}
+      <header className="relative z-10 w-full p-6 border-b-4 border-double border-amber-900/40 bg-[#e8dac1]/90 backdrop-blur-md shadow-sm mb-8 md:mb-12 sticky top-0">
+        <div className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4 max-w-screen-2xl mx-auto">
             
             {/* Logo */}
-            <Link href="/" className="inline-block group">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-wider uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-500 via-red-600 to-red-900 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 0 10px rgba(220, 38, 38, 0.3)' }}>
+            <Link href="/" className="inline-block group self-start md:self-auto">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-700 via-red-800 to-red-950 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 1px 2px rgba(69,26,3,0.1)' }}>
                     a-Tormenta
                 </h1>
             </Link>
             
             {/* Breadcrumbs */}
-            <div className="flex items-center gap-2 flex-wrap text-xs sm:text-sm font-bold tracking-wide uppercase">
-                <Link href="/" className="text-stone-500 hover:text-amber-600 transition-colors whitespace-nowrap">Início</Link>
-                <span className="text-stone-700">/</span>
-                <Link href="/itens-magicos" className="text-stone-500 hover:text-amber-600 transition-colors whitespace-nowrap">Itens Mágicos</Link>
-                <span className="text-stone-700">/</span>
-                <span className="text-red-700">Poções & Pergaminhos</span>
+            <div className="flex items-center gap-2 flex-wrap text-xs sm:text-sm font-bold tracking-widest uppercase self-end md:self-auto">
+                <Link href="/" className="text-amber-950/70 hover:text-red-800 transition-colors whitespace-nowrap">Início</Link>
+                <span className="text-amber-900/40">/</span>
+                <Link href="/itens-magicos" className="text-amber-950/70 hover:text-red-800 transition-colors whitespace-nowrap">Itens Mágicos</Link>
+                <span className="text-amber-900/40">/</span>
+                <span className="text-red-800">Poções & Pergaminhos</span>
             </div>
         </div>
       </header>
 
       {/* --- Conteúdo Principal --- */}
-      <div className="relative z-10 w-full px-4 sm:px-8 md:px-12 pb-12">
+      <main className="relative z-10 w-full px-6 py-12 max-w-screen-2xl mx-auto">
         
         {/* Título da Página */}
-        <div className="mb-10 text-center md:text-left">
-           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-amber-600 to-red-500 mb-6 drop-shadow-lg leading-tight">
-            Poções & Pergaminhos
-          </h1>
-          <p className="text-stone-400 text-lg md:text-xl max-w-3xl leading-relaxed border-b border-stone-800 pb-6 font-serif italic">
-            Poções e pergaminhos contêm o efeito de uma magia. Quando são ativados, geram o efeito dessa magia e então desaparecem.
-          </p>
+        <div className="mb-10 md:mb-12 w-full flex flex-col items-start">
+            <h1 className="text-4xl sm:text-5xl font-bold text-red-800 mb-3 drop-shadow-sm font-serif tracking-wider">
+                Poções & Pergaminhos
+            </h1>
+            <div className="w-32 h-1 bg-gradient-to-r from-red-800 to-transparent rounded-full mb-6"></div>
+            <p className="text-amber-950/85 text-lg font-serif font-medium leading-relaxed">
+                Poções e pergaminhos contêm o efeito de uma magia. Quando são ativados, geram o efeito dessa magia e então desaparecem.
+            </p>
         </div>
 
-        {/* 🛠️ CORREÇÃO DE LAYOUT: 
-            Adicionei este container 'flex flex-col gap-20'.
-            Ele garante que a parte de cima (Texto) fique separada da parte de baixo (Tabela),
-            criando um espaço rígido de 'gap-20' entre elas.
-        */}
-        <div className="flex flex-col gap-20">
+        {/* Acordeão de Regras */}
+        <div className="mb-12 w-full">
+          <button 
+            onClick={() => setIsIntroOpen(!isIntroOpen)}
+            className="w-full flex items-center justify-between p-6 bg-[#e8dac1] border-2 border-amber-900/30 rounded-t-xl hover:border-red-800/40 transition-all group shadow-sm"
+          >
+            <div className="flex items-center gap-3">
+              <span className="text-2xl opacity-70">📜</span>
+              <div className="text-left">
+                <h2 className="text-xl font-bold text-amber-950 group-hover:text-red-800 transition-colors font-serif uppercase tracking-wide">
+                  Regras de Uso e Ativação
+                </h2>
+                <p className="text-sm text-amber-950/70 font-serif italic font-bold">
+                  Clique para expandir as regras de poções, óleos, granadas e pergaminhos.
+                </p>
+              </div>
+            </div>
+            <span className={`text-red-800 text-2xl transition-transform duration-300 ${isIntroOpen ? 'rotate-180' : ''}`}>
+              ▼
+            </span>
+          </button>
 
-            {/* --- Parte 1: Texto e Regras (Cima) --- */}
-            <div className="space-y-12">
-                
+          <div className={`overflow-hidden transition-all duration-500 ease-in-out border-x-2 border-b-2 border-amber-900/30 rounded-b-xl bg-[#fbf5e6] ${isIntroOpen ? 'max-h-[8000px] opacity-100' : 'max-h-0 opacity-0 border-transparent'}`}>
+            <div className="p-5 md:p-10 font-serif text-amber-950/85 text-base md:text-lg text-left md:text-justify leading-relaxed flex flex-col gap-8">
+              
                 {/* Classificação */}
-                <div className="bg-stone-900 p-4 rounded-lg border border-stone-800 text-stone-400 text-sm font-serif">
-                <span className="font-bold text-amber-600 uppercase tracking-wide not-italic mr-2">Nota:</span> Poções e pergaminhos são classificados conforme o círculo da magia que contêm: 1º ou 2º (item mágico menor), 3º ou 4º (médio) e 5º (maior).
+                <div className="bg-[#e8dac1]/50 p-4 rounded-xl border border-amber-900/20 text-amber-950/85 text-base font-serif shadow-sm">
+                    <span className="font-bold text-red-800 uppercase tracking-widest mr-2">Nota:</span> Poções e pergaminhos são classificados conforme o círculo da magia que contêm: 1º ou 2º (item mágico menor), 3º ou 4º (médio) e 5º (maior).
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start mt-4">
                     {/* Seção: Poções */}
                     <section>
-                    <h2 className="text-3xl font-bold text-amber-700 mb-4 flex items-center gap-3 font-serif">
-                        <span className="w-1.5 h-8 bg-amber-800 rounded-full shadow-[0_0_10px_rgba(180,83,9,0.5)]"></span>
-                        Poções
-                    </h2>
-                    <p className="text-stone-300 leading-relaxed mb-6 font-serif">
-                        Uma poção é um líquido mágico armazenado em um frasco de vidro ou cerâmica. Poções que afetam objetos também são chamadas de <em className="text-stone-100 font-bold">óleos</em> e poções que geram efeito em área também são chamadas de <em className="text-stone-100 font-bold">granadas</em>.
-                    </p>
+                        <h2 className="text-2xl font-bold text-red-800 mb-4 flex items-center gap-3 font-serif tracking-wide">
+                            <span className="text-red-800/60 text-3xl">❖</span>
+                            Poções
+                        </h2>
+                        <p className="text-amber-950/85 font-medium leading-relaxed mb-6 font-serif">
+                            Uma poção é um líquido mágico armazenado em um frasco de vidro ou cerâmica. Poções que afetam objetos também são chamadas de <strong className="text-red-800">óleos</strong> e poções que geram efeito em área também são chamadas de <strong className="text-red-800">granadas</strong>.
+                        </p>
 
-                    {/* Box de Regra: Ativação Poções */}
-                    <div className="relative group rounded-xl overflow-hidden bg-stone-900/50 border border-stone-800 p-6 shadow-lg">
-                        <div className="absolute top-0 left-0 w-1 h-full bg-amber-700/50"></div>
-                        <h3 className="text-xl font-bold text-stone-200 mb-3 uppercase tracking-wider border-b border-stone-800 pb-2 font-serif">Ativação</h3>
-                        <div className="space-y-3 text-stone-400 text-sm md:text-base font-serif">
-                            <p>
-                            <strong className="text-amber-600">Beber:</strong> Para ativar uma poção você deve bebê-la (a poção afeta quem ingeri-la). Isso exige uma <strong className="text-stone-200">ação padrão</strong>.
-                            </p>
-                            <p>
-                            <strong className="text-amber-600">Outros:</strong> Também é possível dar uma poção a uma criatura inconsciente como uma <strong className="text-stone-200">ação completa</strong> ou forçar uma criatura a beber uma poção fazendo a manobra agarrar e então vencendo mais um teste de manobra.
-                            </p>
-                            <p>
-                            <strong className="text-amber-600">Óleos:</strong> Ativar um óleo exige uma <strong className="text-stone-200">ação padrão</strong> para aplicá-lo no objeto que será afetado.
-                            </p>
-                            <p>
-                            <strong className="text-amber-600">Granadas:</strong> Ativar uma granada exige uma <strong className="text-stone-200">ação padrão</strong> para arremessá-la em qualquer ponto em alcance curto (o centro do efeito da magia é o ponto onde a granada foi arremessada).
-                            </p>
+                        {/* Box de Regra: Ativação Poções */}
+                        <div className="relative group rounded-xl bg-[#fbf5e6] border border-amber-900/20 p-6 shadow-sm border-l-4 border-l-red-800">
+                            <h3 className="text-xl font-bold text-amber-950 mb-3 uppercase tracking-widest border-b-2 border-amber-900/10 pb-2 font-serif">Ativação</h3>
+                            <div className="space-y-4 text-amber-950/85 text-sm md:text-base font-serif font-medium mt-4">
+                                <p>
+                                    <strong className="text-red-800">Beber:</strong> Para ativar uma poção você deve bebê-la (a poção afeta quem ingeri-la). Isso exige uma <strong className="text-amber-950">ação padrão</strong>.
+                                </p>
+                                <p>
+                                    <strong className="text-red-800">Outros:</strong> Também é possível dar uma poção a uma criatura inconsciente como uma <strong className="text-amber-950">ação completa</strong> ou forçar uma criatura a beber uma poção fazendo a manobra agarrar e então vencendo mais um teste de manobra.
+                                </p>
+                                <p>
+                                    <strong className="text-red-800">Óleos:</strong> Ativar um óleo exige uma <strong className="text-amber-950">ação padrão</strong> para aplicá-lo no objeto que será afetado.
+                                </p>
+                                <p>
+                                    <strong className="text-red-800">Granadas:</strong> Ativar uma granada exige uma <strong className="text-amber-950">ação padrão</strong> para arremessá-la em qualquer ponto em alcance curto (o centro do efeito da magia é o ponto onde a granada foi arremessada).
+                                </p>
+                            </div>
                         </div>
-                    </div>
                     </section>
 
                     {/* Seção: Pergaminhos */}
                     <section>
-                    <h2 className="text-3xl font-bold text-amber-700 mb-4 flex items-center gap-3 font-serif">
-                        <span className="w-1.5 h-8 bg-amber-800 rounded-full shadow-[0_0_10px_rgba(180,83,9,0.5)]"></span>
-                        Pergaminhos
-                    </h2>
-                    <p className="text-stone-300 leading-relaxed mb-6 font-serif">
-                        Um pergaminho mágico é uma folha grossa feita de papel, papiro, couro ou outros materiais. Pergaminhos podem conter qualquer magia. Quando as palavras escritas nele são pronunciadas, a magia é ativada e o pergaminho se desfaz em cinzas.
-                    </p>
+                        <h2 className="text-2xl font-bold text-red-800 mb-4 flex items-center gap-3 font-serif tracking-wide">
+                            <span className="text-red-800/60 text-3xl">❖</span>
+                            Pergaminhos
+                        </h2>
+                        <p className="text-amber-950/85 font-medium leading-relaxed mb-6 font-serif">
+                            Um pergaminho mágico é uma folha grossa feita de papel, papiro, couro ou outros materiais. Pergaminhos podem conter qualquer magia. Quando as palavras escritas nele são pronunciadas, a magia é ativada e o pergaminho se desfaz em cinzas.
+                        </p>
 
-                    {/* Box de Regra: Ativação Pergaminhos */}
-                    <div className="relative group rounded-xl overflow-hidden bg-stone-900/50 border border-stone-800 p-6 shadow-lg">
-                        <div className="absolute top-0 left-0 w-1 h-full bg-amber-700/50"></div>
-                        <h3 className="text-xl font-bold text-stone-200 mb-3 uppercase tracking-wider border-b border-stone-800 pb-2 font-serif">Ativação</h3>
-                        <div className="space-y-3 text-stone-400 text-sm md:text-base font-serif">
-                            <p>
-                            Para ativar um pergaminho você deve lê-lo em voz alta. Isso exige uma <strong className="text-stone-200">ação padrão</strong> ou a ação necessária para lançar a magia, o que for maior.
-                            </p>
-                            
-                            <div className="bg-stone-950 p-3 rounded border border-stone-800">
-                            <p className="italic">
-                            ⚠️ Para ler um pergaminho, você deve conhecer a magia escrita nele <strong>ou</strong> passar em um teste de <strong className="text-amber-600 not-italic">Misticismo (CD 20 + custo em PM da magia)</strong>.
-                            </p>
+                        {/* Box de Regra: Ativação Pergaminhos */}
+                        <div className="relative group rounded-xl bg-[#fbf5e6] border border-amber-900/20 p-6 shadow-sm border-l-4 border-l-red-800">
+                            <h3 className="text-xl font-bold text-amber-950 mb-3 uppercase tracking-widest border-b-2 border-amber-900/10 pb-2 font-serif">Ativação</h3>
+                            <div className="space-y-4 text-amber-950/85 text-sm md:text-base font-serif font-medium mt-4">
+                                <p>
+                                    Para ativar um pergaminho você deve lê-lo em voz alta. Isso exige uma <strong className="text-amber-950">ação padrão</strong> ou a ação necessária para lançar a magia, o que for maior.
+                                </p>
+                                
+                                <div className="bg-[#e8dac1]/50 p-4 rounded-lg border border-amber-900/20 shadow-sm mt-4 mb-4">
+                                    <p className="italic text-red-900">
+                                        ⚠️ Para ler um pergaminho, você deve conhecer a magia escrita nele <strong className="not-italic">ou</strong> passar em um teste de <strong className="text-red-800 not-italic">Misticismo (CD 20 + custo em PM da magia)</strong>.
+                                    </p>
+                                </div>
+
+                                <p>
+                                    Quando ativa um pergaminho, você toma quaisquer decisões exigidas pela magia, como se a tivesse lançado, e aplica efeitos que se aplicariam às suas próprias magias. Caso conheça a magia, pode aplicar aprimoramentos nela, pagando o custo em pontos de mana deles (você paga apenas o custo dos aprimoramentos, não o custo básico da magia).
+                                </p>
                             </div>
-
-                            <p>
-                            Quando ativa um pergaminho, você toma quaisquer decisões exigidas pela magia, como se a tivesse lançado, e aplica efeitos que se aplicariam às suas próprias magias. Caso conheça a magia, pode aplicar aprimoramentos nela, pagando o custo em pontos de mana deles (você paga apenas o custo dos aprimoramentos, não o custo básico da magia).
-                            </p>
                         </div>
-                    </div>
                     </section>
                 </div>
+
+            </div>
+          </div>
+        </div>
+
+        {/* --- Parte 2: Busca e Tabela --- */}
+        <section className="w-full">
+            
+            {/* Header da Seção Tabela */}
+            <div className="mb-6">
+                <h3 className="text-2xl font-bold text-red-800 uppercase tracking-widest flex items-center gap-3 font-serif border-b-2 border-amber-900/20 pb-2">
+                    <span className="text-red-800 text-3xl">❖</span>
+                    Acervo de Consumíveis
+                </h3>
             </div>
 
-            {/* --- Parte 2: Tabela (Baixo) --- */}
-            <section className="w-full">
-                
-                {/* Header da Seção Tabela */}
-                <div className="mb-6">
-                    <h3 className="text-2xl font-bold text-amber-700 uppercase tracking-wider flex items-center gap-3 font-serif border-b border-stone-800 pb-2">
-                        <span className="text-stone-500">📜</span>
-                        Tabela de Poções
-                    </h3>
-                </div>
-
-                {/* Busca */}
-                <div className="mb-8 p-6 rounded bg-stone-900 border border-stone-800 shadow-inner w-full">
-                    <label className="block text-sm font-bold text-stone-400 mb-3 uppercase tracking-wider">
-                        Buscar Consumível
-                    </label>
-                    <div className="relative">
-                        <input
+            {/* Busca - ESTILO CAIXA PADRÃO */}
+            <div className="mb-8 p-6 rounded-xl bg-[#e8dac1] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] w-full font-serif">
+                <label className="block text-sm font-bold text-amber-950/70 mb-3 uppercase tracking-widest">
+                    Buscar Consumível
+                </label>
+                <div className="relative">
+                    <input
                         type="text"
                         placeholder="Nome da poção ou efeito..."
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
-                        className="w-full px-5 py-3 bg-stone-950 border border-stone-700 rounded text-stone-200 placeholder-stone-600 focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-900 transition-all font-serif"
-                        />
-                        <div className="absolute right-4 top-1/2 -translate-y-1/2 text-stone-600">
-                            🔍
-                        </div>
-                    </div>
+                        className="w-full px-5 py-3 pr-12 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-lg text-amber-950/85 placeholder-amber-900/40 focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
+                    />
+                    {searchTerm ? (
+                      <button 
+                        onClick={() => setSearchTerm("")}
+                        className="absolute right-4 top-1/2 -translate-y-1/2 text-red-800 font-bold hover:scale-110 transition-transform text-lg"
+                        title="Limpar busca"
+                      >
+                        ✕
+                      </button>
+                    ) : (
+                      <div className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/40 text-lg">
+                          🔍
+                      </div>
+                    )}
                 </div>
+            </div>
 
-                <div className="bg-stone-950 rounded-xl border border-stone-800 overflow-hidden shadow-2xl">
+            <div className="bg-[#e8dac1] rounded-xl border-2 border-amber-900/20 overflow-hidden shadow-sm">
                 {/* Corpo da Tabela */}
                 <div className="overflow-x-auto">
-                    <table className="w-full text-left text-base table-auto">
-                    <thead className="bg-stone-900 text-xs sm:text-sm uppercase font-bold text-amber-700 tracking-wider font-serif">
-                        <tr>
-                        <th className="px-6 py-4 border-r border-stone-800">Poção / Efeito</th>
-                        <th className="px-6 py-4 text-right w-48">Preço</th>
-                        </tr>
-                    </thead>
-                    <tbody className="divide-y divide-stone-800 font-serif">
-                        {filteredPotions.length > 0 ? (
-                        filteredPotions.map((row, index) => (
-                            <tr key={index} className="hover:bg-stone-900/50 transition-colors group">
-                            <td className="px-6 py-3 text-stone-300 group-hover:text-amber-500 font-medium border-r border-stone-800/50">{row.item}</td>
-                            <td className="px-6 py-3 text-right font-mono text-stone-400 group-hover:text-stone-200 whitespace-nowrap">{row.price}</td>
+                    <table className="w-full text-left text-base table-auto font-serif">
+                        <thead className="bg-[#d9c8a9] text-xs sm:text-sm uppercase font-bold text-amber-950/80 tracking-widest border-b-2 border-amber-900/20">
+                            <tr>
+                                <th className="px-6 py-4 border-r-2 border-amber-900/20">Poção / Efeito</th>
+                                <th className="px-6 py-4 text-center w-48">Preço</th>
                             </tr>
-                        ))
-                        ) : (
-                        <tr>
-                            <td colSpan={2} className="px-6 py-12 text-center text-stone-500 italic">
-                            Nenhuma poção encontrada com o termo "{searchTerm}".
-                            </td>
-                        </tr>
-                        )}
-                    </tbody>
+                        </thead>
+                        <tbody className="divide-y divide-amber-900/10 bg-[#fbf5e6]">
+                            {filteredPotions.length > 0 ? (
+                            filteredPotions.map((row, index) => (
+                                <tr key={index} className={`transition-colors hover:bg-[#e8dac1]/50 group ${index % 2 !== 0 ? "bg-[#e8dac1]/30" : ""}`}>
+                                    <td className="px-6 py-4 text-amber-950 font-bold group-hover:text-red-800 border-r-2 border-amber-900/10 transition-colors">{row.item}</td>
+                                    <td className="px-6 py-4 text-center font-bold text-red-800 whitespace-nowrap">{row.price}</td>
+                                </tr>
+                            ))
+                            ) : (
+                            <tr>
+                                <td colSpan={2} className="px-6 py-12 text-center text-amber-950/70 italic font-medium">
+                                    Nenhuma poção encontrada com o termo "{searchTerm}".
+                                </td>
+                            </tr>
+                            )}
+                        </tbody>
                     </table>
                 </div>
-                
-                {/* Footer da Tabela */}
-                <div className="p-3 border-t border-stone-800 bg-stone-900 text-[10px] sm:text-xs text-center text-stone-500 font-serif uppercase tracking-widest">
-                    Tormenta20
-                </div>
-                </div>
-            </section>
-        
-        </div> {/* Fim do Flex Wrapper */}
-
-      </div>
+            </div>
+        </section>
+      </main>
 
       {/* Footer */}
-      <footer className="mt-12 py-8 border-t border-stone-900 bg-black text-center text-stone-600 text-sm relative z-10">
-        <p>Compêndio Tormenta RPG © 2025 • Feito por um fã para fãs</p>
-        <p>Tormenta 20 pertence a Jambo Editora. Todos os direitos são reservados a editora.</p>
+      <footer className="relative z-10 mt-20 p-8 border-t-4 border-double border-amber-900/40 bg-[#2a1810] text-center font-serif shadow-[0_-4px_20px_rgba(0,0,0,0.15)] flex flex-col items-center justify-center">
+        <span className="text-red-900/40 text-2xl mb-3">❖</span>
+        <p className="mb-2 text-[#e8dac1]/60 text-sm md:text-base tracking-widest uppercase font-bold">
+          Compêndio Tormenta RPG © 2026 • Feito por um fã para fãs
+        </p>
+        <p className="text-[#e8dac1]/40 text-xs md:text-sm tracking-wide">
+          Tormenta 20 pertence a Jambo Editora. Todos os direitos são reservados a editora.
+        </p>
       </footer>
     </div>
   );

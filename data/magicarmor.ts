@@ -1,6 +1,7 @@
 import { Enchantment, SpecificWeapon } from "@/types/magic";
 
 export const enchantments: Enchantment[] = [
+  // Tormenta20 - Jogo do Ano
   {  id: "Abascanto",
     name: "Abascanto",
     description: "Você recebe resistência a magia +5.",
@@ -126,6 +127,8 @@ export const enchantments: Enchantment[] = [
     description: "Uma vez por rodada, se um aliado adjacente for alvo de um ataque, você pode gastar 1 PM para se tornar o alvo do ataque, que então é resolvido normalmente.",
     origin: "Tormenta20 - Jogo do Ano",
   },
+
+
   {
     id: "abissal",
     name: "Abissal",
@@ -250,6 +253,7 @@ export const enchantments: Enchantment[] = [
 ];
 
 export const specificWeapons: SpecificWeapon[] = [
+  // Tormenta20 - Jogo do Ano
   { id: "Armadura da Luz",
     name: "Armadura da Luz",
     description: "Esta armadura completa banhada a ouro reforçada guardiã zelosa possui o símbolo de Khalmyr gravado no peitoral. Se você possuir um código de conduta (de honra, do herói...) ou for devoto de uma divindade que canaliza apenas energia positiva, recebe redução de dano igual ao seu Carisma.",
@@ -328,6 +332,9 @@ export const specificWeapons: SpecificWeapon[] = [
     price: "50.000",
     origin: "Tormenta20 - Jogo do Ano",
   },
+
+
+  
   {
     id: "armadura-das-sombras-profundas",
     name: "Armadura das Sombras Profundas",

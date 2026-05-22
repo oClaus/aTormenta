@@ -5,251 +5,250 @@ import Link from "next/link";
 import { enchantments, specificWeapons } from "@/data/magicarmor";
 import { Enchantment, SpecificWeapon } from "@/types/magic";
 
-// --- Componente Auxiliar: Formatação de Texto (Estilo Stone) ---
+// --- Formatação de Texto (Estilo Pergaminho) ---
 const formatTextWithBreaks = (text: string) => {
+  if (!text) return null;
   const lines = text.split('\\n');
-
   return lines.map((line, index) => {
     let formattedLine = line
-      .replace(/\*\*\*(.*?)\*\*\*/g, '<em class="text-stone-200"><strong>$1</strong></em>')
-      .replace(/\*\*(.*?)\*\*/g, '<strong class="text-stone-200">$1</strong>')
-      .replace(/\*(.*?)\*/g, '<em class="text-stone-400">$1</em>')
-      .replace(/- (.*?)\./g, '<p class="mt-1 ml-2 md:ml-4 text-sm"><span class="font-bold text-stone-500">❖</span> $1.</p>')
-      .replace(/> (.*)/g, '<blockquote class="border-l-2 border-stone-700 pl-3 md:pl-4 py-2 my-3 text-sm italic text-stone-400 bg-stone-950/50 rounded-r-md">$1</blockquote>');
+      .replace(/\*\*\*(.*?)\*\*\*/g, '<strong class="text-red-800 font-serif italic">$1</strong>')
+      .replace(/\*\*(.*?)\*\*/g, '<strong class="text-red-800 font-serif">$1</strong>')
+      .replace(/\*(.*?)\*/g, '<em class="text-amber-950/85 font-serif font-medium">$1</em>')
+      .replace(/- (.*?)\./g, '<div class="mt-3 flex items-start gap-3"><span class="text-red-800/60 mt-1.5 text-[10px] shrink-0">◆</span><span class="font-medium">$1.</span></div>')
+      .replace(/> (.*)/g, '<blockquote class="border-l-4 border-red-800 pl-4 py-3 my-4 text-sm italic text-amber-950/85 bg-[#e8dac1]/50 rounded-r-xl font-serif font-medium shadow-sm">$1</blockquote>');
 
-    return (
-      <div key={index} dangerouslySetInnerHTML={{ __html: formattedLine }} className="mb-2 last:mb-0 text-sm md:text-base leading-relaxed text-stone-300 font-serif" />
-    );
+    return <div key={index} dangerouslySetInnerHTML={{ __html: formattedLine }} className="mb-2 last:mb-0 text-sm md:text-base leading-relaxed text-amber-950/85 font-serif" />;
   });
 };
 
-// --- Componente 1: Card de Encanto (TEMA ÂMBAR - Magia) ---
-const EnchantmentCard = ({ enchantment }: { enchantment: Enchantment }) => {
-  return (
-    <div className="group relative p-4 md:p-5 rounded-xl bg-stone-900 border border-stone-800 shadow-lg hover:bg-stone-800 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(180,83,9,0.15)] hover:border-amber-900/50 text-left h-full flex flex-col">
-      {/* Brilho Superior Âmbar */}
-      <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-amber-700/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-      
-      <div className="mb-3 pb-2 border-b border-stone-800 group-hover:border-amber-900/30 transition-colors">
-        <h3 className="text-lg md:text-xl font-bold text-stone-200 group-hover:text-amber-500 transition-all break-words font-serif">
-          {enchantment.name}
-        </h3>
-      </div>
-      <div className="text-sm flex-grow font-serif text-stone-400 group-hover:text-stone-300 transition-colors">
-        {formatTextWithBreaks(enchantment.description)}
-      </div>
-      <div className="mt-4 pt-2 border-t border-stone-800 text-right">
-        <span className="text-[10px] md:text-xs text-stone-600 italic flex justify-end items-center gap-1 font-serif">
-          <span className="text-amber-800/80 font-bold uppercase tracking-wider group-hover:text-amber-700 transition-colors">{enchantment.origin}</span>
-        </span>
-      </div>
+// --- Card de Encanto ---
+const EnchantmentCard = ({ enchantment }: { enchantment: Enchantment }) => (
+  <div className="p-6 rounded-xl bg-[#e8dac1] border-2 border-amber-900/30 hover:border-red-800/50 hover:shadow-[0_4px_20px_rgba(153,27,27,0.15)] flex flex-col transition-all duration-300 hover:-translate-y-1 h-full group relative">
+    {/* Efeito de Brilho Superior */}
+    <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-red-800/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+    
+    <div className="mb-4 pb-3 border-b-2 border-amber-900/10 group-hover:border-amber-900/30 transition-colors">
+      <h3 className="text-xl font-bold text-red-800 font-serif tracking-wide group-hover:text-red-700 transition-colors">{enchantment.name}</h3>
     </div>
-  );
-};
-
-// --- Componente 2: Card de Armadura Específica (TEMA CIANO/AÇO - Proteção) ---
-const SpecificWeaponCard = ({ weapon }: { weapon: SpecificWeapon }) => {
-  return (
-    // Fundo ligeiramente mais escuro (Stone-950) para dar peso
-    <div className="group relative p-4 md:p-5 rounded-xl bg-stone-950 border border-stone-800 shadow-lg hover:bg-stone-900 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_25px_rgba(8,145,178,0.15)] hover:border-cyan-900/50 text-left h-full flex flex-col">
-      {/* Brilho Superior Ciano */}
-      <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-cyan-800/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-      
-      <div className="mb-3 pb-2 border-b border-stone-800 group-hover:border-cyan-900/30 transition-colors flex justify-between items-start gap-2">
-        <h3 className="text-lg md:text-xl font-bold text-stone-200 group-hover:text-cyan-500 transition-all break-words font-serif">
-          {weapon.name}
-        </h3>
-      </div>
-      
-      <div className="mt-0 mb-3">
-        <span className="inline-block px-2 py-0.5 bg-stone-900/80 border border-stone-800 rounded text-[10px] md:text-xs text-cyan-400 font-serif tracking-wide group-hover:border-cyan-900/30 transition-colors">
-          Preço: T$ {weapon.price}
-        </span>
-      </div>
-
-      <div className="text-sm pt-1 text-stone-400 flex-grow font-serif group-hover:text-stone-300 transition-colors">
-        {formatTextWithBreaks(weapon.description)}
-      </div>
-      
-      <div className="mt-4 pt-2 border-t border-stone-800 text-right">
-        <span className="text-[10px] md:text-xs text-stone-600 italic font-serif">
-          <span className="text-cyan-900/80 font-bold uppercase tracking-wider group-hover:text-cyan-700 transition-colors">{weapon.origin}</span>
-        </span>
-      </div>
+    <div className="text-sm flex-grow font-serif text-amber-950/85 leading-relaxed font-medium">
+      {formatTextWithBreaks(enchantment.description)}
     </div>
-  );
-};
+    <div className="mt-6 pt-4 border-t-2 border-amber-900/10 text-right">
+      <span className="text-[10px] px-2 py-1 rounded bg-[#fbf5e6] border border-amber-900/20 text-amber-950/70 italic font-serif uppercase tracking-widest font-bold shadow-sm inline-block">{enchantment.origin}</span>
+    </div>
+  </div>
+);
+
+// --- Card de Armadura Específica ---
+const SpecificWeaponCard = ({ weapon }: { weapon: SpecificWeapon }) => (
+  <div className="p-6 rounded-xl bg-[#e8dac1] border-2 border-amber-900/30 hover:border-red-800/50 hover:shadow-[0_4px_20px_rgba(153,27,27,0.15)] flex flex-col transition-all duration-300 hover:-translate-y-1 h-full group relative">
+    {/* Efeito de Brilho Superior */}
+    <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-red-800/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+
+    <div className="mb-4 pb-3 border-b-2 border-amber-900/10 group-hover:border-amber-900/30 transition-colors flex flex-col items-start gap-3">
+      <h3 className="text-xl font-bold text-red-800 font-serif tracking-wide group-hover:text-red-700 transition-colors">{weapon.name}</h3>
+      <span className="inline-block px-2.5 py-1 bg-[#fbf5e6] border border-amber-900/20 shadow-sm rounded text-[10px] text-red-800 font-bold uppercase tracking-widest">Preço: T$ {weapon.price}</span>
+    </div>
+    <div className="text-sm pt-1 text-amber-950/85 flex-grow font-serif font-medium leading-relaxed">
+      {formatTextWithBreaks(weapon.description)}
+    </div>
+    <div className="mt-6 pt-4 border-t-2 border-amber-900/10 text-right">
+      <span className="text-[10px] px-2 py-1 rounded bg-[#fbf5e6] border border-amber-900/20 text-amber-950/70 italic font-serif uppercase tracking-widest font-bold shadow-sm inline-block">{weapon.origin}</span>
+    </div>
+  </div>
+);
 
 // --- Página Principal ---
-
 export default function ArmadurasMagicasPage() {
+  const [activeTab, setActiveTab] = useState<'encantos' | 'armaduras'>('encantos');
   const [enchantmentSearch, setEnchantmentSearch] = useState("");
   const [weaponSearch, setWeaponSearch] = useState("");
 
   const filteredEnchantments = useMemo(() => {
     const term = enchantmentSearch.toLowerCase();
     return enchantments.filter(enc => 
-      enc.name.toLowerCase().includes(term) ||
-      enc.origin.toLowerCase().includes(term) ||
-      enc.description.toLowerCase().includes(term)
-    )
-    .sort((a, b) => a.name.localeCompare(b.name));
+      enc.name.toLowerCase().includes(term) || 
+      enc.description.toLowerCase().includes(term) || 
+      enc.origin.toLowerCase().includes(term)
+    ).sort((a, b) => a.name.localeCompare(b.name));
   }, [enchantmentSearch]);
 
   const filteredSpecificWeapons = useMemo(() => {
     const term = weaponSearch.toLowerCase();
-    return specificWeapons.filter(weapon => 
-      weapon.name.toLowerCase().includes(term) ||
-      weapon.origin.toLowerCase().includes(term) ||
-      weapon.description.toLowerCase().includes(term)
-    )
-    .sort((a, b) => a.name.localeCompare(b.name));
+    return specificWeapons.filter(w => 
+      w.name.toLowerCase().includes(term) || 
+      w.origin.toLowerCase().includes(term) || 
+      w.description.toLowerCase().includes(term)
+    ).sort((a, b) => a.name.localeCompare(b.name));
   }, [weaponSearch]);
 
-  const scrollToWeapons = () => {
-    const element = document.getElementById('specific-weapons-section');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
-    <div className="min-h-screen bg-stone-950 text-stone-200 font-serif selection:bg-red-900 selection:text-white relative overflow-x-hidden">
-      
-      {/* Background Effect */}
-      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.8)_100%)]" />
+    <div className="min-h-screen bg-[#f5e6d0] text-amber-950 font-serif selection:bg-amber-800 selection:text-amber-50 relative overflow-x-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#f5e6d0] to-[#e6d5b8]">
+      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(69,26,3,0.15)_100%)]" />
 
-      {/* Header Responsivo (CORRIGIDO: Logo na Esquerda, Menu na Direita) */}
-      <header className="relative z-10 w-full p-4 md:p-6 border-b-2 border-stone-800 bg-stone-950/90 backdrop-blur-md shadow-lg mb-8 md:mb-12">
-        <div className="w-full px-2 flex flex-col md:flex-row justify-between items-center gap-4">
-            
-            {/* Esquerda: Logo */}
+      <header className="relative z-10 w-full p-6 border-b-4 border-double border-amber-900/40 bg-[#e8dac1]/90 backdrop-blur-md shadow-sm mb-12 sticky top-0">
+        <div className="max-w-screen-2xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
             <Link href="/" className="inline-block group self-start md:self-auto">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-wider uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-500 via-red-600 to-red-900 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 0 10px rgba(220, 38, 38, 0.3)' }}>
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-700 via-red-800 to-red-950 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 1px 2px rgba(69,26,3,0.1)' }}>
                     a-Tormenta
                 </h1>
             </Link>
-            
-            {/* Direita: Menu e Botão */}
-            <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 self-end md:self-auto w-full md:w-auto">
-                <div className="flex items-center gap-2 flex-wrap text-xs sm:text-sm font-bold tracking-wide uppercase justify-end">
-                    <Link href="/" className="text-stone-500 hover:text-amber-600 transition-colors whitespace-nowrap">
-                      Início
-                    </Link>
-                    <span className="text-stone-700">/</span>
-                    <Link href="/itens-magicos" className="text-stone-500 hover:text-amber-600 transition-colors whitespace-nowrap">
-                      Itens Mágicos
-                    </Link>
-                    <span className="text-stone-700">/</span>
-                    <span className="text-red-700">Armaduras</span>
-                </div>
-
-                <button 
-                    onClick={scrollToWeapons}
-                    className="w-full md:w-auto px-6 py-2 bg-stone-900 border border-stone-700 rounded-sm text-stone-400 hover:bg-stone-800 hover:text-cyan-500 hover:border-cyan-900 transition-all font-medium uppercase tracking-wider text-center text-xs sm:text-sm font-serif shadow-sm"
-                >
-                    Ver Armaduras ↓
-                </button>
+            <div className="flex items-center gap-2 flex-wrap text-xs sm:text-sm font-bold tracking-widest uppercase self-end md:self-auto">
+                <Link href="/" className="text-amber-950/70 hover:text-red-800 transition-colors whitespace-nowrap">Início</Link>
+                <span className="text-amber-900/40">/</span>
+                <Link href="/itens-magicos" className="text-amber-950/70 hover:text-red-800 transition-colors whitespace-nowrap">Itens Mágicos</Link>
+                <span className="text-amber-900/40">/</span>
+                <span className="text-red-800">Armaduras</span>
             </div>
         </div>
       </header>
 
-      {/* Conteúdo Principal Full Width */}
-      <div className="relative z-10 w-full px-4 sm:px-8 md:px-12 pb-12">
+      <main className="relative z-10 w-full max-w-screen-2xl mx-auto px-6 pb-20">
         
-        {/* Título da Página */}
-        <div className="mb-10 md:mb-16 text-center px-2">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-amber-600 to-red-500 mb-4 md:mb-6 drop-shadow-lg leading-tight">
-            Armaduras & Escudos
-          </h1>
+        {/* Título Principal */}
+        <div className="mb-10 md:mb-12 w-full flex flex-col items-start">
+            <h1 className="text-4xl sm:text-5xl font-bold text-red-800 mb-3 drop-shadow-sm font-serif tracking-wider">
+                Armaduras & Escudos
+            </h1>
+            <div className="w-32 h-1 bg-gradient-to-r from-red-800 to-transparent rounded-full mb-6"></div>
         </div>
 
-        {/* --- Seção 1: Encantos (Tema Âmbar) --- */}
-        <section className="mb-16 md:mb-24 w-full relative">
-          <div className="absolute -top-6 md:-top-8 left-1/2 -translate-x-1/2 w-16 md:w-24 h-1 bg-gradient-to-r from-transparent via-amber-900/50 to-transparent opacity-50"></div>
+        {/* Sistema de Abas */}
+        <div className="flex flex-wrap gap-2 mb-8 bg-[#e8dac1] p-2 rounded-xl border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] w-fit">
+            <button 
+                onClick={() => setActiveTab('encantos')} 
+                className={`px-6 py-2.5 rounded-lg font-bold uppercase text-[10px] md:text-xs tracking-widest transition-all ${activeTab === 'encantos' ? 'bg-red-800 text-[#fbf5e6] shadow-md' : 'text-amber-950/70 hover:text-red-800 hover:bg-[#e8dac1]/50'}`}
+            >
+                Encantos
+            </button>
+            <button 
+                onClick={() => setActiveTab('armaduras')} 
+                className={`px-6 py-2.5 rounded-lg font-bold uppercase text-[10px] md:text-xs tracking-widest transition-all ${activeTab === 'armaduras' ? 'bg-red-800 text-[#fbf5e6] shadow-md' : 'text-amber-950/70 hover:text-red-800 hover:bg-[#e8dac1]/50'}`}
+            >
+                Armaduras Específicas
+            </button>
+        </div>
 
-          <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-amber-700 font-serif mb-6">
-            <span className="w-1.5 md:w-2 h-6 md:h-8 bg-amber-800 rounded-full shadow-[0_0_10px_rgba(180,83,9,0.5)]"></span>
-            Encantos
-          </h2>
-
-          {/* Busca Encantos - ESTILO CAIXA (Âmbar) */}
-          <div className="mb-8 p-6 rounded bg-stone-900 border border-stone-800 shadow-inner w-full">
-            <label className="block text-sm font-bold text-stone-400 mb-3 uppercase tracking-wider">
-                Buscar Encantamento
-            </label>
-            <div className="relative">
-                <input
-                type="text"
-                placeholder="Nome ou descrição..."
-                value={enchantmentSearch}
-                onChange={(e) => setEnchantmentSearch(e.target.value)}
-                className="w-full px-5 py-3 bg-stone-950 border border-stone-700 rounded text-stone-200 placeholder-stone-600 focus:outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-900 transition-all font-serif"
-                />
-                <div className="absolute right-4 top-1/2 -translate-y-1/2 text-stone-600">
-                    🔍
-                </div>
-            </div>
-          </div>
-
-          {filteredEnchantments.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 min-[1900px]:grid-cols-6 min-[2400px]:grid-cols-7 gap-4 md:gap-6">
-              {filteredEnchantments.map((enc) => (
-                <EnchantmentCard key={enc.id} enchantment={enc} />
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-8 md:py-12 text-stone-600 italic border border-dashed border-stone-800 rounded-xl text-sm md:text-base font-serif">
-              Nenhum encantamento encontrado com "{enchantmentSearch}".
-            </div>
-          )}
-        </section>
-
-        {/* --- Seção 2: Armaduras Específicas (Tema Ciano/Aço) --- */}
-        <section id="specific-weapons-section" className="w-full pt-8 md:pt-12 pb-12 md:pb-20 border-t border-stone-900">
-          <div className="mt-8 mb-6">
-            <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-cyan-800 font-serif">
-                <span className="w-1.5 md:w-2 h-6 md:h-8 bg-cyan-900 rounded-full shadow-[0_0_10px_rgba(22,78,99,0.5)]"></span>
-                Armaduras & Escudos Específicos
+        {/* Conteúdo das Abas */}
+        {activeTab === 'encantos' ? (
+          <section className="animate-in fade-in duration-500">
+            
+            <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-red-800 font-serif mb-6 tracking-wide">
+              <span className="text-red-800 text-3xl">❖</span>
+              Acervo de Encantos
             </h2>
-          </div>
 
-          {/* Busca Armaduras - ESTILO CAIXA (Ciano) */}
-          <div className="mb-8 p-6 rounded bg-stone-900 border border-stone-800 shadow-inner w-full">
-            <label className="block text-sm font-bold text-stone-400 mb-3 uppercase tracking-wider">
-                Buscar Armadura/Escudo Lendário
-            </label>
-            <div className="relative">
-                <input
-                type="text"
-                placeholder="Nome ou descrição..."
-                value={weaponSearch}
-                onChange={(e) => setWeaponSearch(e.target.value)}
-                className="w-full px-5 py-3 bg-stone-950 border border-stone-700 rounded text-stone-200 placeholder-stone-600 focus:outline-none focus:border-cyan-600 focus:ring-1 focus:ring-cyan-900 transition-all font-serif"
-                />
-                <div className="absolute right-4 top-1/2 -translate-y-1/2 text-stone-600">
-                    🔍
-                </div>
+            {/* Busca Encantos - ESTILO CAIXA PADRÃO */}
+            <div className="mb-8 p-6 rounded-xl bg-[#e8dac1] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] font-serif w-full">
+              <label className="block text-sm font-bold text-amber-950/70 mb-3 uppercase tracking-widest">
+                  Buscar Encantamento
+              </label>
+              <div className="relative">
+                  <input 
+                      type="text" 
+                      placeholder="Nome, descrição ou origem..." 
+                      value={enchantmentSearch} 
+                      onChange={(e) => setEnchantmentSearch(e.target.value)} 
+                      className="w-full px-5 py-3 pr-12 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-lg text-amber-950/85 placeholder-amber-900/40 focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm" 
+                  />
+                  {enchantmentSearch ? (
+                    <button 
+                      onClick={() => setEnchantmentSearch("")}
+                      className="absolute right-4 top-1/2 -translate-y-1/2 text-red-800 font-bold hover:scale-110 transition-transform text-lg"
+                      title="Limpar busca"
+                    >
+                      ✕
+                    </button>
+                  ) : (
+                    <div className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/40 text-lg">
+                        🔍
+                    </div>
+                  )}
+              </div>
+              {enchantmentSearch && (
+                <p className="text-xs font-medium text-amber-950/70 mt-3 italic tracking-wide">
+                  Exibindo {filteredEnchantments.length} resultado(s) para "{enchantmentSearch}".
+                </p>
+              )}
             </div>
-          </div>
 
-          {filteredSpecificWeapons.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 min-[1900px]:grid-cols-6 min-[2400px]:grid-cols-7 gap-4 md:gap-6">
-              {filteredSpecificWeapons.map((weapon) => (
-                <SpecificWeaponCard key={weapon.id} weapon={weapon} />
-              ))}
+            {filteredEnchantments.length > 0 ? (
+              // Limite de 3 colunas (lg:grid-cols-3)
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+                {filteredEnchantments.map(enc => <EnchantmentCard key={enc.id} enchantment={enc} />)}
+              </div>
+            ) : (
+              <div className="text-center py-20 border-2 border-dashed border-amber-900/30 rounded-xl bg-[#e8dac1]/50 font-serif flex flex-col items-center justify-center mt-8">
+                <span className="text-4xl opacity-40 mb-4">📜</span>
+                <p className="text-amber-950/70 text-lg italic tracking-wide">
+                  Nenhum encantamento encontrado com o termo aplicado.
+                </p>
+              </div>
+            )}
+          </section>
+        ) : (
+          <section className="animate-in fade-in duration-500">
+            
+            <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-3 text-red-800 font-serif mb-6 tracking-wide">
+              <span className="text-red-800 text-3xl">❖</span>
+              Acervo de Armaduras Específicas
+            </h2>
+
+            {/* Busca Armaduras - ESTILO CAIXA PADRÃO */}
+            <div className="mb-8 p-6 rounded-xl bg-[#e8dac1] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] font-serif w-full">
+              <label className="block text-sm font-bold text-amber-950/70 mb-3 uppercase tracking-widest">
+                  Buscar Armadura ou Escudo Lendário
+              </label>
+              <div className="relative">
+                  <input 
+                      type="text" 
+                      placeholder="Nome, descrição ou origem..." 
+                      value={weaponSearch} 
+                      onChange={(e) => setWeaponSearch(e.target.value)} 
+                      className="w-full px-5 py-3 pr-12 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-lg text-amber-950/85 placeholder-amber-900/40 focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm" 
+                  />
+                  {weaponSearch ? (
+                    <button 
+                      onClick={() => setWeaponSearch("")}
+                      className="absolute right-4 top-1/2 -translate-y-1/2 text-red-800 font-bold hover:scale-110 transition-transform text-lg"
+                      title="Limpar busca"
+                    >
+                      ✕
+                    </button>
+                  ) : (
+                    <div className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/40 text-lg">
+                        🔍
+                    </div>
+                  )}
+              </div>
+              {weaponSearch && (
+                <p className="text-xs font-medium text-amber-950/70 mt-3 italic tracking-wide">
+                  Exibindo {filteredSpecificWeapons.length} resultado(s) para "{weaponSearch}".
+                </p>
+              )}
             </div>
-          ) : (
-            <div className="text-center py-8 md:py-12 text-stone-600 italic border border-dashed border-stone-800 rounded-xl text-sm md:text-base font-serif">
-              Nenhuma armadura encontrada com "{weaponSearch}".
-            </div>
-          )}
-        </section>
-      </div>
-      {/* Footer */}
-      <footer className="mt-12 py-8 border-t border-stone-900 bg-black text-center text-stone-600 text-sm relative z-10">
-        <p>Compêndio Tormenta RPG © 2025 • Feito por um fã para fãs</p>
-        <p>Tormenta 20 pertence a Jambo Editora. Todos os direitos são reservados a editora.</p>
+
+            {filteredSpecificWeapons.length > 0 ? (
+              // Limite de 3 colunas (lg:grid-cols-3)
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+                {filteredSpecificWeapons.map(w => <SpecificWeaponCard key={w.id} weapon={w} />)}
+              </div>
+            ) : (
+              <div className="text-center py-20 border-2 border-dashed border-amber-900/30 rounded-xl bg-[#e8dac1]/50 font-serif flex flex-col items-center justify-center mt-8">
+                <span className="text-4xl opacity-40 mb-4">📜</span>
+                <p className="text-amber-950/70 text-lg italic tracking-wide">
+                  Nenhuma armadura lendária encontrada com o termo aplicado.
+                </p>
+              </div>
+            )}
+          </section>
+        )}
+      </main>
+
+      <footer className="relative z-10 mt-20 p-8 border-t-4 border-double border-amber-900/40 bg-[#2a1810] text-center font-serif text-[#e8dac1]/60 text-sm flex flex-col items-center justify-center">
+        <span className="text-red-900/40 text-2xl mb-3">❖</span>
+        <p className="mb-2 text-[#e8dac1]/60 text-sm md:text-base tracking-widest uppercase font-bold">Compêndio Tormenta RPG © 2026 • Feito por um fã para fãs</p>
+        <p className="text-[#e8dac1]/40 text-xs md:text-sm tracking-wide">Tormenta 20 pertence a Jambo Editora. Todos os direitos são reservados a editora.</p>
       </footer>
     </div>
   );
