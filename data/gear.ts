@@ -122,6 +122,8 @@ export const gear: Gear[] = [
     spaces: "1",
   },
 
+  // Dragão Brasil
+
 
   
   { id: "abaco",

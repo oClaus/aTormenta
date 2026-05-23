@@ -27,6 +27,17 @@ export const mounts: Mount[] = [
       mestre: "Seu deslocamento muda para 12m e, quando faz uma investida, você ignora 10 pontos de redução de dano do alvo.",
     },
   },
+  { id: "Acquarella",
+  name: "Acquarella",
+  size: "Enorme",
+  description: "Uma criatura marinha sagrada semelhante a uma arraia gigante translúcida, com tentáculos e veias multicoloridas. Inteligente e tímida, carrega consigo uma pequena porção do mar e serve como montaria para devotos de Oceano.",
+  origin: "Dragão Brasil",
+  benefits: {
+    iniciante: "Você recebe deslocamento de natação 9m e uma ação de movimento extra (apenas para se deslocar).",
+    veterano: "Uma vez por rodada, você pode gastar 1 PM para causar 2d6 pontos de dano de eletricidade em uma criatura em alcance curto. Além disso, você pode entrar na acquarella como uma ação de movimento (ela pode conter até 40 espaços e criaturas em seu interior ficam sob efeito de Suportar Elementos).",
+    mestre: "Seu deslocamento de natação muda para 15m e você pode gastar uma ação padrão e 3 PM para usar a habilidade Tinta Multicolorida.",
+  },
+  },
 
 
   // Dragão Brasil
@@ -145,17 +156,7 @@ export const mounts: Mount[] = [
     mestre: "Você pode gastar uma ação completa e 10 PM para transportar você e o gamo para o Plano Etéreo (como o efeito básico da magia Forma Etérea), com duração sustentada. O efeito acaba se você desmontar do gamo.",
   },
   },
-  { id: "Acquarella",
-  name: "Acquarella",
-  size: "Enorme",
-  description: "Uma criatura marinha sagrada semelhante a uma arraia gigante translúcida, com tentáculos e veias multicoloridas. Inteligente e tímida, carrega consigo uma pequena porção do mar e serve como montaria para devotos de Oceano.",
-  origin: "Dragão Brasil",
-  benefits: {
-    iniciante: "Você recebe deslocamento de natação 9m e uma ação de movimento extra (apenas para se deslocar).",
-    veterano: "Uma vez por rodada, você pode gastar 1 PM para causar 2d6 pontos de dano de eletricidade em uma criatura em alcance curto. Além disso, você pode entrar na acquarella como uma ação de movimento (ela pode conter até 40 espaços e criaturas em seu interior ficam sob efeito de Suportar Elementos).",
-    mestre: "Seu deslocamento de natação muda para 15m e você pode gastar uma ação padrão e 3 PM para usar a habilidade Tinta Multicolorida.",
-  },
-  },
+  
   { id: "Khanoa",
   name: "Khan’Oa",
   size: "Grande",
