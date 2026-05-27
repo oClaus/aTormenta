@@ -1,6 +1,51 @@
 import { Boss } from "@/types/boss";
 
 export const bosses: Boss[] = [
+  { id: "lynel",
+  name: "Lynel - The Legend of Zelda",
+  image: "/chefes/lynel.png",
+  tipo: "Monstro Enorme",
+  nd: 12,
+  historia: "Quase toda terra de fantasias e aventuras é marcada por criaturas icônicas, seres que tornam o cenário mais colorido e familiar aos fãs. A franquia de jogos The Legend of Zelda, é claro, não é exceção, e desde o seu primeiro jogo, aquele que deu nome à série em 1986, os temíveis Lynels já faziam parte dessa mitologia.\nDesde então, os Lynels passaram por diversas mudanças ao longo dos jogos e das gerações de consoles, mas seu conceito básico sempre se manteve: uma criatura com corpo de cavalo, torso de humano, cabeça de leão e sempre muito bem armada. Extremamente perigosos e territoriais, são também feras astutas, que usam de estratégia e de armas poderosas para eliminar os invasores de seus territórios. No mundo de Hyrule, podem servir de guardiões em lugares remotos ou como perigos locais de imenso poder.\nE agora, podem ameaçar os jogadores da sua mesa de jogo!\n\nFERAS INDOMÁVEIS\nOs sábios de Hyrule afirmam que os Lynels habitam aquelas terras desde tempos ancestrais. Costumam ser criaturas solitárias, que patrulham seus territórios constantemente. Contudo, não são feras completamente irracionais, que atacam intrusos logo de cara. Ao perceber invasores em suas terras, o Lynel irá encará-los, a princípio, dando aos aventureiros uma chance de escapar. Porém, heróis que decidam ficar nas proximidades ou que demonstrem hostilidade, precisarão enfrentar um inimigo formidável.\nÀ distância, o Lynel pode ser descrito como um centauro com cabeça de leão, mas as semelhanças param por aí. Lynels são mais abrutalhados, seus músculos são inchados, suas mãos possuem garras e seu corpo é coberto por uma pelagem espessa. Um olhar mais atento revela o detalhe mais assustador: Lynels são muito, muito grandes.\nE essa nem é a pior parte.\nSeria razoável presumir que uma enorme fera, toda músculos e garras e presas, usaria suas armas naturais para derrotar seus inimigos. Tal qual um animal imenso, talvez, mas ainda assim um animal. Esta maneira de pensar já custou a vida de muitos aventureiros despreparados.\nLynels demonstram notável esperteza. São capazes de mudar sua estratégia de combate de acordo com a situação. Costumam atacar à distância usando arco e flecha, trocando para armas de combate corpo-a-corpo quando o inimigo se aproxima. Caso tenham espaço para cavalgar livremente, podem tentar investidas contra seus adversários e, se nada disso tiver efeito, seu sopro de fogo pode causar bastante estrago.\nSeu porte físico, suas habilidades de combate e sua resistência natural a dano elemental torna o Lynel um inimigo muito difícil de abater. Sua natureza territorial, contudo, pode ser útil aos aventureiros, pois o Lynel dificilmente ataca sem ser provocado e quase nunca persegue inimigos em fuga para além de seu território.",
+  dicas: "LYNEL EM TORMENTA20\nLynels são extremamente raros em Arton. São criaturas de grande poder e muito solitárias, preferindo viver nos ermos, em grandes descampados, onde podem vigiar seu território e correr desimpedidos para enfrentar quaisquer invasores enxeridos.\nNaturalmente, os lugares mais remotos de Arton também podem oferecer grandes recompensas. Templos perdidos, cavernas místicas, lagoas encantadas… tudo isso pode estar dentro do território de um Lynel. Aventureiros que busquem por tesouros e conhecimentos há muito perdidos talvez precisem enfrentar uma dessas criaturas durante suas buscas.\nHá também histórias de Lynels que se mudam ao longo da vida, tomando para si extensões de terras que antes poderiam ser consideradas seguras. Aventureiros podem ser contratados como escolta de mercadores ou convocados para dar cabo de uma nova ameaça que habita o bosque de alguma pacata vila no meio do nada. Onde quer que seja, é bom que estejam preparados.",
+  tamanho: "Enorme",
+  iniciativa: 18,
+  percepcao: 16,
+  defesa: 43,
+  resistenciaDano: "faro, visão na penumbra, redução de ácido, eletricidade, fogo e frio 10",
+  fort: 26,
+  ref: 20,
+  von: 12,
+  pv: 600,
+  deslocamento: "15m (10q)",
+  pm: 0,
+  ataqueDistancia: "Arco de guerra +32 x2 (4d12+25, x3).",
+  ataqueCorpoACorpo: "Armamento Lynel x2 (veja a seguir) +36 e Mordida +36 (4d10+25, 19).",
+  habilidades: [
+    "Armamento Lynel: O Lynel possui uma das armas abaixo: Espada bastarda e escudo: (5d10+27, 19/x3). Uma vez por rodada, ao acertar um alvo, o Lynel pode fazer uma manobra de combate como ação livre com ele (teste +36). Alabarda: (5d10+27, x4). Quando acerta um ataque, o alvo é empurrado 3m na direção oposta ao Lynel e fica caído (Fortitude ou Reflexos DT 33 evita). Machado de guerra: (5d12+27, x4). Uma vez por rodada, ao acertar um ataque, o Lynel pode fazer um único ataque adicional com o machado contra outro alvo no alcance. Tacape: (6d10+27, x4). Quando acerta um ataque, o alvo fica atordoado (Reflexos DT 33 evita).",
+    "Bramido Indomável (Padrão): Se o Lynel ainda não tiver sido alvo da ação agredir, ele emite um rugido ameaçador que deixa todos os oponentes em alcance curto apavorados por 1d4+1 rodadas (Vontade CD 33 muda para abalado). Medo.",
+    "Coice Oportuno (Reação): Uma vez por rodada, quando uma criatura erra um ataque corpo a corpo contra o Lynel por 5 ou mais, ele causa 4d8+25 pontos de dano de impacto na criatura (Reflexos CD 33 evita). Se a criatura estava se beneficiando de flanquear o Lynel, ela é considerada desprevenida contra esse golpe.",
+    "Investida Galopante (Completa): O Lynel faz uma investida. Ele pode passar pelo espaço ocupado por criaturas menores que ele, pode continuar se movendo depois do ataque e, se acertar, causa +4d10 pontos de dano. Criaturas no caminho percorrido pelo Lynel sofrem 1d12+10 pontos de dano de impacto e ficam caídas (Reflexos CD 33 evita).",
+    "Garras: Caso seja desarmado, o Lynel pode continuar atacando com duas garras +36 (4d8+25, 19) e com sua mordida.",
+    "Sopro (Padrão): Todas as criaturas em um cone de 12m sofrem 14d12 pontos de dano de fogo e ficam em chamas (Reflexos CD 33 reduz o dano à metade e evita a condição). Recarga (movimento)."
+  ],
+  for: 10,
+  des: 8,
+  con: 8,
+  int: -1,
+  sab: 5,
+  car: -2,
+  pericias: [
+    "Atletismo +22",
+    "Intimidação +14",
+    "Sobrevivência +20"
+  ],
+  equipamentos: [
+    "Arco de guerra (Heróis de Arton, p. 216)",
+    "alabarda atroz maciça, machado de guerra atroz maciço, tacape atroz maciço ou espada bastarda atroz maciça e escudo pesado reforçado"
+  ],
+  tesouro: "Metade."
+  },
   {
     id: "1",
     name: "Cavaleiro da Lua - Marvel",
