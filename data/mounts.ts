@@ -110,6 +110,19 @@ export const mounts: Mount[] = [
     },
   },
 
+  //Ameaças de Arton
+  { id: "Sapo Atroz ",
+    name: "Sapo Atroz ",
+    size: "Grande",
+    description: "Um sapo gigantesco de pele rugosa que espreita em pântanos e águas lamacentas. Usa sua língua venenosa para capturar presas e arrastá-las para a água.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 9m (normal e de natação) e você recebe uma ação de movimento extra por turno (apenas para se deslocar) e +5 em testes de Atletismo para saltar. ",
+      veterano: "Você recebe +2 em testes para derrubar e desarmar.",
+      mestre: "Muda o bônus de Atletismo para +10 e, uma vez por rodada, você pode gastar 1 PM para fazer uma manobra desarmar ou derrubar contra um alvo a até 3m.",
+    },
+  },
+
 
   { id: "nautilon ",
     name: "Nautilon ",

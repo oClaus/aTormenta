@@ -791,6 +791,120 @@ export const races: Race[] = [
     longevidade: "x5.",
     devotos: "Hyninn, Kallyadranoch, Nimb.",
   },
+
+  // Ameaças de Arton
+  { id: "Meio-Orc",
+  name: "Meio-Orc",
+  origin: "Ameaças de Arton",
+  image: "/ameacas/meio-orc.png",
+  description: "“Acha que essa cara feia me assusta? Venha, tenho trabalho para você na minha estalagem.”\n — Ned Kallrogan, ex-aventureiro \n\n O forasteiro poderia ser descrito apenas como um “humano grande e feroz”, mas é algo mais. A pele possui tom cinza-esverdeado, os caninos inferiores são maiores, as orelhas e o nariz também parecem grandes demais para o resto da face. \n Meios-orcs não unem, necessariamente, o melhor das duas raças. São mais inteligentes e determinados que orcs, mas não tanto quanto humanos. São mais fortes que humanos, mas não se equiparam a orcs. Sua aparência pode causar repulsa entre humanos e entre orcs. Sua própria existência muitas vezes é rejeitada, pois a maior parte das duas raças não acredita que seus membros podem conviver em paz, respeito e até amor. \n No Reinado, meios-orcs se isolam nos ermos ou vivem em comunidades populosas, onde são apenas “mais um na multidão”. Vários detestam suas linhagens, revoltam-se quando lembrados de que são apenas “metade” de alguma coisa. Ficam mais confortáveis sozinhos. \n A maior parte dos povos trata um meio-orc como trataria um orc puro — atacando-o ou expulsando-o. Sua entrada será barrada na maioria das tavernas, estalagens ou mesmo cidades. Mas pessoas de bom coração podem, às vezes, dar-lhes chance de provar que são civilizados. E isso pode ser tudo de que precisam: estes seres são variados em personalidade, capazes de se adaptar, surpreender. Um meio-orc amistoso é raro — porque também é raro que o mundo seja amistoso com ele. \n Por sua maior esperteza e adaptabilidade, um meio-orc pode chefiar uma tribo orc de forma inteligente, até mesmo fazendo acordos com outros povos — ou atacando de formas mais astutas. De fato, quando um bando orc cresce a ponto de ameaçar as comunidades do Reinado, muitas vezes isso acontece sob a liderança de um meio-orc. \n Muitos meios-orcs se tornam aventureiros. Ser dono do próprio destino, viver sem se importar com o que outros pensam, desafiar todas as expectativas… essa pode ser a vida mais sonhada!",
+  abilities: [
+    {
+      name: "Adaptável",
+      description: "Você recebe +2 em Intimidação e se torna treinado em uma perícia a sua escolha.",
+    },
+    {
+      name: "Criatura das Profundezas",
+      description: "Você recebe visão no escuro e +2 em testes de Percepção e Sobrevivência realizados no subterrâneo.",
+    },
+    {
+      name: "Sangue Orc",
+      description: "Você recebe +1 em rolagens de dano com armas corpo a corpo e de arremesso e é considerado um orc para efeitos relacionados a raça.",
+    }
+  ],
+  attributeModifiers: [
+    { attribute: "for", modifier: 2 },
+    { description: "Escolha +1 em outro atributo (exceto Carisma)" }
+  ],
+  longevidade: "Normal",
+  devotos: "Qualquer"
+},
+{
+  id: "Orc",
+  name: "Orc",
+  origin: "Ameaças de Arton",
+  image: "/ameacas/orc.png",
+  description: "“Você diz que orcs são impuros por serem miscigenados? Traz o narizinho mais perto e repete isso…”\n — Brivaria, meia-elfa lutadora \n\n O bando é formado por humanoides musculosos, com pele verde-acinzentada, focinho suíno e presas inferiores que se projetam fora da boca. Os olhos trazem um sinistro brilho avermelhado. \n Quando alguém diz que humanoides monstruosos são violentos e estúpidos, quase sempre está falando de orcs. \n Orcs são, talvez, o povo humanoide mais brutal e violento de Arton. Orcs existem em números vastos, espalhados por todo o mundo — de fato, é uma surpresa que nunca tenham formado reinos ou mesmo erguido impérios. Vivem em cavernas e túneis sob Arton, tanto por hábito quanto por necessidade: são sensíveis à luz do sol, que ofusca sua visão e reduz suas habilidades de combate. \n A origem dos orcs é um mistério. Alguns afirmam que eles podem ter sido o povo mais antigo do mundo — ainda um esboço rudimentar, uma primeira tentativa dos deuses para povoar Arton. Para outros, orcs seriam seres misturados, mestiços, uma combinação de traços vistos em outras grandes raças. Talvez nem tenham sido criados pelos deuses; podem ser uma ocorrência acidental, ou então nascidos de algum experimento doentio. \n Orcs existem há muito tempo, mas não parecem capazes de evoluir. Não aprendem nada novo, nem absorvem conhecimentos de outras culturas — a maior parte mal domina o fogo. Também não se organizam em grandes comunidades; formam apenas pequenas tribos que fazem guerra com as demais, lutando por território e recursos. Não sabem plantar ou criar animais, vivendo puramente de caça e pilhagem de outros povos. Talvez a única atividade “produtiva” que conseguem desempenhar bem seja a mineração: por viverem sob a terra, sabem escavar e encontrar minérios úteis, que usam para fabricar suas armas simples, mas letais. \n Embora a raça orc apresente variações físicas extremas, todos são mental e culturalmente muito parecidos: ferozes e brutais, incapazes de entender qualquer linguagem exceto a força. Em combate, são rudes e óbvios — avançam em fúria aos urros, agitando as armas, sem qualquer tática ou estratégia. É quase impossível intimidar um orc: mesmo diante de coisas que não compreendem, como magia, sua reação imediata é atacar. Para o orc típico, não existe poder maior que a força bruta, nem resposta melhor que a violência. \n Orcs são liderados por um chefe, que conquista esse posto pela força e selvageria. É raro um líder se manter no comando por muito tempo — logo será desafiado e vencido por alguém mais forte, jovem ou oportunista. O destino de qualquer orc um pouco mais esperto que seus iguais é abandonar a tribo, ou ser logo massacrado. Esses podem se tornar aventureiros, com muito custo; ainda que bandos de heróis sejam conhecidos por acolher todo tipo de criatura inusitada, mesmo entre eles um orc será raro. Aqueles que conseguem ser aceitos precisam se esforçar em dobro para provar seu valor.",
+  abilities: [
+    {
+      name: "Feroz",
+      description: "Você recebe +2 em rolagens de dano com armas corpo a corpo e de arremesso. Quando sofre dano de um inimigo, esse bônus se torna +4 até o fim de seu próximo turno.",
+    },
+    {
+      name: "Habitante das Cavernas",
+      description: "Você recebe visão no escuro e +2 em testes de Percepção e Sobrevivência realizados no subterrâneo. Entretanto, recebe sensibilidade a luz.",
+    },
+    {
+      name: "Vigor Brutal",
+      description: "Você recebe +2 em Fortitude e soma sua Força em seu total de pontos de vida.",
+    }
+  ],
+  attributeModifiers: [
+    { attribute: "for", modifier: 2 },
+    { attribute: "con", modifier: 1 },
+    { attribute: "int", modifier: -1 }
+  ],
+  longevidade: "Normal",
+  devotos: "Allihanna, Arsenal, Megalokk, Nimb, Tenebra"
+},
+{ id: "Trog Anão",
+    name: "Trog Anão",
+    origin: "Ameaças de Arton",
+    image: "/ameacas/trog-anao.png",
+    description: "“Me chamou de nanico? ME CHAMOU DE NANICO??”\n— Tork, trog anão\nA criatura parece uma estranha combinação entre um anão e um homem-lagarto. Tem a estatura atarracada do primeiro, a face reptiliana escamada do segundo e a rabugice somada de ambos! Usa armadura metálica e empunha um machado, parecendo muito disposto a enterrá-lo nas tripas de quem chegar perto.\nTrogloditas temem os deuses mais do que os respeitam ou veneram. Para eles, sua criadora Tenebra é uma terrível Rainha das Trevas, pronta a puni-los por qualquer pequeno deslize. Desesperados por agradá-la, realizam cerimônias tribais que muitas vezes envolvem oferendas e sacrifícios.\nTrogs consideram sua ligação com os anões uma maldição. Pensam neles como os filhos que a deusa realmente ama. Assim, o ocasional nascimento de um trog anão é visto com grande ressentimento — um sinal agourento de que a deusa está mostrando aos trogs como eles foram um dia, ou como “deveriam ser”. Esses anões são logo mortos ou, por temor de desagradar ainda mais a deusa, expulsos de suas cavernas.\nSem uma tribo e com escassas chances de aceitação nas cidades humanas, o trog anão pode acabar isolado como um monstro qualquer nas profundezas de alguma masmorra. Alguns, contudo, conseguem se tornar aventureiros e integrar equipes.",
+    abilities: [
+      {
+      name: "Mau Cheiro",
+      description: "Você pode gastar uma ação padrão e 2 PM para expelir um gás fétido. Todas as criaturas (exceto trogs) em alcance curto devem passar em um teste de Fortitude contra veneno (CD Con) ou ficarão enjoadas durante 1d6 rodadas. Uma criatura que passe no teste de resistência fica imune a esta habilidade por um dia.",
+    },
+    {
+      name: "Mordida",
+      description: "Você possui uma arma natural de mordida (dano 1d6, crítico x2, perfuração). Uma vez por rodada, quando usa a ação agredir para atacar com outra arma, pode gastar 1 PM para fazer um ataque corpo a corpo extra com a mordida.",
+    },
+    {
+      name: "Quase Anão",
+      description: "Você é uma criatura do tipo monstro e recebe visão no escuro e +1 PV por nível. Além disso, seu deslocamento é 6m (em vez de 9m), mas não é reduzido por uso de armadura ou excesso de carga.",
+    },
+    {
+      name: "Sangue Frio",
+      description: "Você sofre 1 ponto de dano adicional por dado de dano de frio.",
+    }
+    ],
+    attributeModifiers: [
+      { attribute: "con", modifier: 2 },
+      { attribute: "for", modifier: 1 },
+      { attribute: "des", modifier: -1 }
+    ]
+  },
+  {
+  id: "Ogro",
+  name: "Ogro",
+  origin: "Ameaças de Arton",
+  image: "/ameacas/ogro.png",
+  description: "“Eles são fortes como touros e quase tão espertos. Ah, você já ouviu essa…”\n — Horatikk, bardo goblin \n\n Quando ouvia que algo é “grande como um ogro”, talvez você não soubesse o significado exato da comparação — mas agora sabe. Aquilo que se aproxima a passadas pesadas é alto e robusto como um antigo carvalho, uma montanha de músculos em forma humanoide, encimada por uma cabeça diminuta. Tão feio quanto forte, coberto de pelos desgrenhados, verrugas e manchas. Veste peles e couro de animais que matou, e empunha uma clava grande como uma tora. \n Grandes e fortes como touros (e quase tão espertos), estes gigantes primitivos são também solitários e mal-humorados, quase nunca encontrados em bandos. No entanto, por sua estupidez, são frequentemente convencidos a acompanhar bandidos e gnolls, em troca de diversão ou guloseimas. Também é comum encontrá-los servindo a bruxos ou cultistas. Enganar um ogro não é tarefa difícil, sendo muito mais recomendado que tentar vencê-lo pela força bruta. Mesmo quando enfurecidos, ogros podem cair em provocações e ser levados a cometer erros. \n Ogros são combatentes brutais, mas rústicos. Normalmente usam apenas tacapes, embora causem grande dano com essas armas improvisadas. Sua estratégia é simples: bater com força, matar e devorar os restos da vítima enquanto ainda quentes… \n Ogros não desenvolvem tecnologia; vivem de saque, roubo e pilhagem. Carnívoros, alimentam-se de praticamente qualquer criatura — incluindo humanos, elfos, anões e hynne (pelos quais têm certa predileção). Sua única outra forma de conseguir comida e equipamento é recebendo-os de algum vilão que os recrute; por sua combinação de força e inépcia, ogros são muito utilizados como guardas, soldados e capangas. Estes recebem armas e armaduras melhores, tornando-se uma ameaça ainda maior que seus primos mais selvagens. \n Contam-se histórias sobre ogros que teriam se reunido a grupos de aventureiros. Essa ocorrência é muito rara, mas não impossível; o gigante bruto contribui com sua enorme força e resistência, embora também cause problemas de muitas maneiras.",
+  abilities: [
+    {
+      name: "Quanto Maior o Tamanho…",
+      description: "Você é um humanoide do subtipo gigante; seu tamanho é Grande e você recebe visão na penumbra.",
+    },
+    {
+      name: "…Maior a Porrada!",
+      description: "Quando acerta um ataque corpo a corpo, você pode gastar 1 PM para causar +1d8 pontos de dano do mesmo tipo.",
+    },
+    {
+      name: "Camada de Ingenuidade",
+      description: "Você sofre –5 em Intuição e Vontade.",
+    }
+  ],
+  attributeModifiers: [
+    { attribute: "for", modifier: 3 },
+    { attribute: "con", modifier: 2 },
+    { attribute: "int", modifier: -1 },
+    { attribute: "car", modifier: -1 }
+  ],
+  longevidade: "Normal",
+  devotos: "Allihanna, Arsenal, Megalokk, Tenebra"
+},
   
   
   { id: "Qunari",
