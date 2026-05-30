@@ -1,7 +1,7 @@
 import { Threat } from "@/types/threat";
 
 export const threats: Threat[] = [
-  // Masmorras
+  //#region Masmorras
   {  id: "Glop",
     name: "Glop",
     description: "Pequenas gosmas esverdeadas com formato de gota que perambulam pelos corredores de masmorras. Irracionais, seu único propósito parece ser alimentar-se, o que fazem saltando sobre matéria orgânica e dissolvendo-a com seus corpos ácidos.",
@@ -262,9 +262,9 @@ export const threats: Threat[] = [
   equipamentos: [],
   tesouro: "Nenhum."
   },
+  //#endregion
 
-
-  // Bandidos
+  //#region Ermos
   { id: "Bandido",
   name: "Bandido",
   description: "Bandidos operam em estradas desertas, emboscando viajantes. Individualmente, não são ameaça para heróis aventureiros, mas em grande número podem ser perigosos.",
@@ -293,38 +293,6 @@ export const threats: Threat[] = [
   pericias: ["Furtividade +5"],
   equipamentos: ["Clava"],
   tesouro: "Metade."
-  },
-  { id: "Chefe Bandido",
-  name: "Chefe Bandido",
-  description: "Bandidos operam em estradas desertas, emboscando viajantes. Individualmente, não são ameaça para heróis aventureiros, mas em grande número podem ser perigosos.",
-  nd: "1",
-  tipo: "Humanoide (humano)",
-  tema: "Ermos",
-  tamanho: "Médio",
-  papel: "Solo",
-  origin: "Tormenta20 - Jogo do Ano",
-  iniciativa: 4,
-  percepcao: 2,
-  defesa: 16,
-  fort: 5,
-  ref: 8,
-  von: 3,
-  pv: 30,
-  deslocamento: "9m",
-  ataqueCorpoACorpo: "Espada curta +9 (1d6+5, 19)",
-  ataqueDistancia: "Adaga +7 (1d4+3, 19)",
-  habilidades: [
-    "Ataque Furtivo: Uma vez por rodada, o chefe bandido causa +2d6 pontos de dano com ataques corpo a corpo, ou à distância em alcance curto, contra alvos desprevenidos ou que esteja flanqueando."
-  ],
-  for: "3",
-  des: "2",
-  con: "2",
-  int: "0",
-  sab: "0",
-  car: "1",
-  pericias: ["Furtividade +7", "Intimidação +6"],
-  equipamentos: ["Adaga", "espada curta"],
-  tesouro: "Padrão."
   },
   { id: "Guarda de Cidade",
   name: "Guarda de Cidade",
@@ -815,9 +783,9 @@ export const threats: Threat[] = [
   equipamentos: [],
   tesouro: "1d4 doses de peçonha concentrada (CD 20 para extrair)."
   },
+  //#endregion
 
-
-  // OS Puristas
+  //#region OS Puristas
   { id: "Recruta Purista",
   name: "Recruta Purista",
   description: "A ralé do exército purista. São recrutados entre filhos de camponeses — ou entre órfãos, criminosos e outros “indesejados”. Recebem treinamento militar e equipamento abaixo dos padrões da Supremacia, mas ainda superior ao da maior parte do Reinado. São usados em missões menos importantes, como atacar aldeias com poucas defesas, proteger lugares não estratégicos e patrulhar estradas secundárias.",
@@ -1058,9 +1026,9 @@ export const threats: Threat[] = [
   equipamentos: [],
   tesouro: "1d6 engrenagens (CD 29 para extrair; cada engrenagem conta como T$ 1.000 em matéria-prima para fabricar engenhocas)."
   },
+  //#endregion
 
-
-  // Reino dos Mortos
+  //#region Reino dos Mortos
   { id: "Zumbi",
   name: "Zumbi",
   description: "O tipo mais comum e rudimentar de morto-vivo, pouco mais que um amontoado cambaleante de carne apodrecida. Podem ser conjurados e controlados ou ocorrer espontaneamente em lugares amaldiçoados. Sozinhos, zumbis são adversários fáceis até para plebeus bem armados ou heróis novatos — mas uma grande horda pode surpreender e sobrepujar até mesmo aventureiros experientes.",
@@ -1325,9 +1293,9 @@ export const threats: Threat[] = [
     equipamentos: ["Armadura completa delicada de mitral", "espada longa precisa de mitral"],
     tesouro: "Dobro."
   },
+  //#endregion
 
-
-  // Os Duyshidakk
+  //#region Os Duyshidakk
   { id: "Goblin Salteador",
   name: "Goblin Salteador",
   description: "Quase sempre subestimados e considerados “fracos”, estes goblins possuem uma ferocidade caótica, sendo máquinas insanas de esfaquear e estripar. Um pequeno bando pode chacinar um povoado humano ou sobrepujar aventureiros novatos; em grandes números, atacando por todos os lados, conseguem derrubar até mesmo heróis experientes.",
@@ -1605,9 +1573,9 @@ export const threats: Threat[] = [
     equipamentos: ["Couro batido ajustado", "machadinhas atrozes x4", "peçonha potente x1d4"],
     tesouro: "Padrão."
   },
+  //#endregion
 
-
-  // Os Sszzaazitas
+  //#region Os Sszzaazitas
   { id: "Cascavel",
   name: "Cascavel",
   description: "Não apenas um animal sagrado para os sszzaazitas, mas o próprio símbolo de sua divindade, será praticamente certa a existência de serpentes variadas (especialmente as peçonhentas) em seus covis e esconderijos. São amplamente utilizadas como familiares, armadilhas e instrumentos de assassinato. E como precaver-se contra seus “aliados” nunca é demais, cultistas também guardam zelosamente frascos com antídoto.",
@@ -1912,9 +1880,9 @@ export const threats: Threat[] = [
     equipamentos: [],
     tesouro: "Padrão."
   },
+  //#endregion
 
-
-  // Os Trolls Nobres
+  //#region Os Trolls Nobres
   { id: "Finntroll Caçador",
   name: "Finntroll Caçador",
   description: "Arrogantes e indolentes, finntroll raramente deixam seu império subterrâneo — e quando o fazem, sempre têm um propósito cruel, como caçar escravos, roubar itens mágicos ou selar alianças nefastas com vilões da superfície.\nCaçadores são especialistas em caçar escravos, os mais vistos no Reinado. A população de aldeias inteiras já desapareceu na calada da noite após o ataque de um bando de caçadores.\nFeitores são ainda mais perigosos. Membros de uma casta elevada, raramente serão encontrados sozinhos — em geral, estarão no comando de escravos, trolls ou monstros ainda piores.",
@@ -2188,9 +2156,9 @@ export const threats: Threat[] = [
     equipamentos: [],
     tesouro: "Padrão."
   },
+  //#endregion
 
-
-  // Os Dragões
+  //#region Os Dragões
   { id: "Enxame Kobold",
   name: "Enxame Kobold",
   description: "Esses pequenos humanoides reptilianos são considerados uma praga — o que realmente são! Medindo 75cm de altura, parecem caricaturas de dragões, com cabeças grandes e desproporcionais, orelhas caninas e pequenos chifres, corpo magro e cauda fina, curta. Embora possam se reproduzir como seres normais, kobolds às vezes surgem espontaneamente onde existe ou existiu um dragão; diz-se que a própria energia dracônica faz seus ovos brotarem como fungos. Um kobold sozinho dificilmente representa ameaça. Infelizmente, eles normalmente surgem em grandes quantidades, atacando como enxames.",
@@ -2465,9 +2433,9 @@ export const threats: Threat[] = [
     equipamentos: ["Armadura completa de adamante", "machado de batalha de adamante atroz"],
     tesouro: "Dobro."
   },
+  //#endregion
 
-
-  // A Tormenta
+  //#region A Tormenta
   { id: "Maníaco Lefou",
   name: "Maníaco Lefou",
   description: "Poucos meios-demônios da Tormenta têm a sorte de integrar um grupo de aventureiros. Temidos e hostilizados por todas as outras raças, quase todos abraçam a violência e a loucura. Tornam-se selvagens ensandecidos, solitários ou em pequenos grupos, atacando tudo que encontram. Mais de uma aldeia foi chacinada por maníacos lefou, buscando apenas um fim para o pesadelo sangrento que é sua existência.",
@@ -3329,9 +3297,9 @@ export const threats: Threat[] = [
     equipamentos: ["Rompedor da Realidade"],
     tesouro: "Dobro."
   },
+  //#endregion
 
-
-  // Expedição Escarlate
+  //#region Expedição Escarlate
   { id: "Belkor",
   name: "Belkor",
   description: "Expedição Escarlate traz um elenco de NPCs novos para o cenário. Eles são parte viva da campanha, surgindo nas missões, sendo resgatados e recrutados.\nOs primeiros que o grupo conhece são trigêmeos que ficaram para trás quando o povo de Ramanar fugiu do ataque da Tormenta: Mathias, Mitreus e Mizlah. Como todos que sobrevivem à Tempestade Rubra de alguma forma, os gêmeos se tornaram lefou. Eles surgem após a missão introdutória, e cada um precisa ser salvo antes da horda lefeu alcançar o grupo de aventureiros.\nOs trigêmeos são refugiados: personagens que, após a primeira interação, têm sua miniatura removida do mapa. Contudo, há outro tipo de NPC: os habitantes, pessoas que viviam em Trebuck antes da chegada da Tormenta e precisaram aprender a viver em conjunto com os lefeu. Era isso ou se sacrificar para a Tempestade Rubra.\nBelkor e Dom Lefou IX são dois desses habitantes com os quais os aventureiros podem interagir e se beneficiar. Diferente dos refugiados, cada um tem suas próprias mecânicas e ficam no mapa mesmo após a interação.\nA Dama Escarlate é talvez a mais enigmática entre os habitantes. Sua presença distorce o espaço e a narrativa, como se fosse uma manifestação consciente da própria Tormenta. Um tipo de personagem que não precisa de regras complexas para ser memorável.\nJogando no modo campanha, a fase de caravana é onde tudo isso se conecta. Entre missões, os jogadores gerenciam recursos, recrutam aliados e tomam decisões que afetam as próximas partidas. É o equivalente board game de “roleplay entre sessões”, algo que fãs de campanhas longas vão reconhecer na hora.",
@@ -3460,9 +3428,9 @@ export const threats: Threat[] = [
     equipamentos: ["Katana de mitral ameaçadora x4"],
     tesouro: "Metade."
   },
+  //#endregion
 
-
-  // Fulgor dos Deuses
+  //#region Fulgor dos Deuses
   { id: "Asmithar Martelo-Mudo",
   name: "Asmithar Martelo-Mudo",
   description: "“O martelo não reconhece nomes. O fogo não honra títulos.”\nMestre Forjador da célula dos Forjadores Litúrgicos em Valkaria — um ancião imenso, queimado por décadas de devoção e aço, cuja presença impõe respeito sem necessidade de voz elevada. Usa meia-armadura sobre o avental de ferreiro, ornamentada com o símbolo cruzado do martelo e espada. Suas mãos são mais calejadas que qualquer couro.\nFoi o primeiro a acender o fogo da forja quando o templo de Arsenal ainda exalava o sangue dos antigos servos de Keenn. Desde então, dedica-se a moldar armas e almas com o mesmo rigor.\nEm combate, é adversário formidável — um guerreiro que mede resultados, não glória. Encerra duelos apenas quando o fogo reconhece o valor de seu oponente.\nDevoto austero, Asmithar considera a arte da forja uma forma de liturgia: o ferro é oração, o martelo é juízo. Vê o advento do aço sillariano como a mais pura dádiva de Arsenal, o milagre bélico definitivo contra o Fullgor. Contudo, a perda da Alma da Bigorna, martelo sagrado da ordem, pesa-lhe como pecado pessoal.",
@@ -4703,9 +4671,9 @@ export const threats: Threat[] = [
     equipamentos: ["Lança", "Símbolo sagrado de Tenebra"],
     tesouro: "Padrão."
   },
+  //#endregion
 
-
-  // Abissais
+  //#region Abissais
   { id: "Trio de Carvarel",
   name: "Trio de Carvarel",
   description: "Carvarel\nA criatura abissal tem corpo humanoide robusto, coberto de pelos, com cabeça de bode, chifres e cascos. Ele empunha um grande machado e bufa em antecipação ao combate.\nTambém conhecidos apenas como “guerreiro de chifres”, são o tipo mais comum de abissal. Nos reinos divinos, formam as tropas de infantaria nos exércitos dos deuses malignos, em vastos números. Embora considerado fraco entre os abissais, um único carvarel é bem capaz de dizimar vários soldados humanos!\nCarvarel são violentos, brutais, sempre ansiosos para ferir e matar com seus machados. Estão também entre os demônios de menor inteligência, sendo razoavelmente fácil enganá-los ou atacá-los com magias mentais.\nEm Arton, carvarel podem ser encontrados em pequenos bandos errantes (masmorras costumam ser seu terreno favorito) ou servindo a devotos do mal. Apesar da dificuldade de mantê-los sob controle, a magia para invocá-los é relativamente simples, tornando-os interessantes como guardas e soldados para vilões conjuradores.",
@@ -5094,9 +5062,9 @@ export const threats: Threat[] = [
     equipamentos: ["Cimitarra energética", "Espada bastarda sanguinária", "Espada longa anticriatura", "Mangual magnífico", "Martelo de guerra lancinante", "Tridente venenoso"],
     tesouro: "Triplo."
   },
+  //#endregion
 
-
-  // Aspectos dos Deuses
+  //#region Aspectos dos Deuses
   { id: "Aspecto de Allihanna",
   name: "Aspecto de Allihanna",
   description: "A criatura estranha, porém bela, lembra uma mescla de vários animais selvagens. Tem o corpo poderoso de um grande felino, a galhada orgulhosa de um alce, a cauda volumosa de um garanhão. O rosnado sugere uma horda inteira de feras diversas.\nUm aspecto de Allihanna pode surgir como qualquer animal natural ou criatura-planta, mas quase sempre apresenta partes combinadas de várias espécies vivas — reunindo as características mais adequadas para a missão. Sentidos aguçados para atuar nas trevas, traços piscianos para ação subaquática, asas para movimentação nas nuvens e assim por diante. Pode ser ligeiro para atacar inimigos numerosos, ou robusto para dar cobertura a aliados, ou provedor de frutos com qualidades curativas. Não há limites para os atributos que os reinos animal e vegetal podem oferecer.\nEste aspecto pode certamente lutar, mas também prover sustento ou sobrevivência nos ermos de várias formas, guiando aventureiros por terras selvagens, ou rastreando seus alvos, ou até mesmo atuando como montaria ou besta de carga. Algumas vezes também surge como um animal humanoide, um membro do povo moreau, que seja treinado em habilidades úteis.\nQuanto à personalidade, o aspecto de Allihanna costuma se comportar como um animal caprichoso, por vezes temperamental e indócil, precisando ser domado. Ou subornado com comida. Ou com elogios adocicados e afagos no pescoço.",
@@ -5321,9 +5289,9 @@ export const threats: Threat[] = [
     equipamentos: ["Couraça sob medida", "Florete certeiro preciso", "Sapato de camurça aprimorado"],
     tesouro: "Nenhum.\n\nParceiro: O aspecto de Valkaria é um parceiro veterano que fornece +2 em Acrobacia e em testes opostos e de resistência contra efeitos de movimento. Também permite que você use a habilidade Bloqueio Contundente (veja acima; se evitar o ataque, você causa dano igual ao dano básico de sua arma). Caso você viole as Obrigações & Restrições de Valkaria, o aspecto deixa de apoiá-lo."
   },
+  //#endregion
 
-
-  // Celestiais
+  //#region Celestiais
   { id: "Pilly",
   name: "Pilly",
   description: "Em um primeiro momento, a criaturinha lembra uma fada, com suas quatro finas asas de inseto que brilham ao sol com as cores do arco-íris. Tem cabelo farto, em tons metálicos de prata e ouro. Veste uma toga simples, mas graciosa, feita de folhas e pétalas.\nPilly estão entre os menores celestiais conhecidos, e também entre os mais fracos. Eram muito comuns e numerosos no antigo Reino de Glórienn; hoje são poucos, encontrados nos reinos de Allihanna, Marah e Lena, além de alguns pontos de Arton. Não existem para lutar, mas para alegrar e divertir: percorrem o mundo procurando aqueles em desalento, como crianças assustadas, sonhadores frustrados, artistas deprimidos, parentes ou amantes saudosos, e outros que poderiam se beneficiar de um sorriso ou risada.\nPor seu tamanho e fragilidade, os pilly costumam evitar qualquer confronto: diante de algum perigo, fogem o mais rápido possível para tentar alertar celestiais mais poderosos. São às vezes empregados por clérigos ou por outros celestiais como mensageiros, embora seja necessário ter certa paciência, pois os pilly tendem a perder o foco e esquecer suas tarefas. Alguns também aceitam acompanhar conjuradores divinos para ajudá-los (ou tentar diverti-los quando os consideram sérios demais).",
@@ -5777,9 +5745,9 @@ export const threats: Threat[] = [
     equipamentos: [],
     tesouro: "Lâmina flamejante (CD 35 para extrair, reduz em 1 PM o custo para fabricar uma vingadora sagrada)."
   },
+  //#endregion
 
-
-  // Fadas
+  //#region Fadas
   { id: "Dríade",
   name: "Dríade",
   description: "A criatura de pele esverdeada e cabeleira lembrando folhagens mal parece humana — mas é uma visão fugidia. Quando vocês olham outra vez, ela aparenta ser uma linda jovem de olhos amendoados e misteriosos. Seu cabelo lembra a textura das folhas das árvores mais cheias de vida, e sua pele, madeira oleada e polida à perfeição.\nDríades são fadas magicamente ligadas a bosques e florestas. Elas defendem as árvores, algumas vezes entrando em conflito com lenhadores e desbravadores, pois são capazes de tudo para evitar que a vida natural nas redondezas seja destruída.\nEmbora todas as fadas amem a natureza, uma dríade também tem outra razão para protegê-la: sua alma fica abrigada em uma árvore muito antiga, com séculos de idade. Não importa quantas vezes o corpo humanoide da dríade seja destruído, ela sempre voltará, renascida como um grande fruto em sua árvore poucos dias depois. A única forma de matar uma dríade é destruindo essa árvore. Assim, ao derrubar um bosque ou floresta para construir uma aldeia, é bem possível que colonos humanos estejam assassinando uma ou mais destas fadas.\nDríades são pacíficas, preferindo enganar e despistar em vez de lutar. Quando forçadas a isso, sua tática preferida é enfeitiçar ou seduzir inimigos para que lutem em sua defesa.\nNão é incomum que dríades se apaixonem por seres de outras raças, e vice-versa — pois podem alterar livremente sua aparência, entre um ser vegetal e uma forma humana ou élfica. Acabam cativadas por pessoas de boa aparência, personalidade distinta ou grande nobreza. Quando apaixonada, a dríade busca iludir, capturar e/ou seduzir o alvo, como se ele fosse um adversário; alguns aceitam o cativeiro de bom grado, às vezes para sempre — ou até que a dríade perca interesse, embora alguns romances durem por toda a vida. Tais relacionamentos também produzem as dahllan, ou meias-dríades.",
@@ -6513,9 +6481,9 @@ export const threats: Threat[] = [
     equipamentos: [],
     tesouro: "Padrão.\n\n**Habilidades de Gênios**\nDentro de uma Lampadazinha. Para cada dia sem um pacto ativo, o total de PM do gênio é reduzido em 1; se for reduzido a 0 PM dessa forma, ele sofre um efeito debilitante. O efeito debilitante e a perda de PM são revertidos quando o gênio firma um pacto com um amo.\nPoderes Cósmicos Fenomenais (Completa). O gênio estabelece um pacto com uma criatura inteligente (Int –3 ou maior) voluntária em alcance curto, que se torna seu amo. O gênio se torna um parceiro iniciante do amo e, enquanto estiver presente na cena, o custo de suas próprias habilidades mágicas é reduzido em –1 PM.\nServo dos Deuses. Todos os gênios podem lançar a magia Viagem Planar, sem necessidade de componente material, mas apenas em si mesmos."
   },
+  //#endregion
 
-
-  // Gigantes
+  //#region Gigantes
   { id: "Galokk Capanga",
   name: "Galokk Capanga",
   description: "Chega a ser difícil determinar a raça da mulher, e quase inacreditável supor ser humana. Deve ser quase tão alta quanto um ogro, com ombros ainda mais largos. Braços e pernas de puro músculo, quase não contidos pela meia armadura escamada de adamante. O elmo de face aberta, adornado com chifres, faz pouco para conter a juba farta e selvagem, cor de palha. Uma capa pesada torna sua silhueta ainda maior.\nGigantes são os \"humanos de Megalokk\". Mas são opostos aos humanos verdadeiros, por serem estagnados; não buscam, não avançam, não evoluem, não ambicionam. Valkaria os odeia e despreza, não teve nenhuma participação em sua gênese. Ou teve? Xamãs de Megalokk provocam, gargalham que Valkaria contribuiu com o surgimento desses seres. Devotos da deusa, claro, renegam tal absurdo. Afirmam que ela jamais teria participado disso.\nMas a existência de meios-gigantes pode ser evidência de que a Deusa da Ambição teve, sim, algum envolvimento na origem desses monstros.\nTambém chamados galokk, meios-gigantes não são uma raça ou povo. Não resultam de cruzamentos entre humanos e gigantes, não têm gigantes como ancestrais. Eles surgem de formas não naturais: nascem em famílias humanas, crescem como crianças e jovens normais, atingindo tamanho avantajado apenas bem depois de adultos. Outros são devotos de Megalokk, recompensados e transformados por aprazê-lo. Outros ainda são vítimas de maldições.\nGalokk são grandes e fortes, mas também temidos, raramente encontrando lugar em cidades feitas para seres menores. Muitos acabam como capangas, guarda-costas, gladiadores, soldados ou bárbaros. Mas existem aqueles que desafiam suas naturezas, adotam carreiras inesperadas como arcanistas, bardos, até inventores.",
@@ -6871,9 +6839,9 @@ export const threats: Threat[] = [
     equipamentos: [],
     tesouro: "Dobro."
   },
+  //#endregion
 
-
-  // Avatares dos Deuses
+  //#region Avatares dos Deuses
   { id: "Avatar de Aharadak",
   name: "Avatar de Aharadak",
   description: "O avatar mais comum de Aharadak é uma monstruosidade do tamanho de um castelo, coberta de carapaça, pedaços de carne esponjosa e bocarras cheias de dentes afiados. Em meio a esse caos, um único e imenso olho vermelho.\nNo entanto, correm boatos de que Aharadak possui outros avatares — um guerreiro trajado em couraça vermelha, um feiticeiro sem rosto, uma barda com a boca costurada. Também já teria assumido formas inofensivas, até mesmo nascido em uma família humana humilde, crescendo como uma criança-prodígio da degradação. Nenhuma tática é perversa demais para o Devorador.",
@@ -7658,8 +7626,9 @@ export const threats: Threat[] = [
     equipamentos: ["Belo Presente"],
     tesouro: "Nenhum.\nBelo Presente\nA adaga empregada pelo Avatar de Wynna é mais um símbolo — e um poderoso amplificador mágico — do que uma arma. Ela conta como um orbe cristalino e uma varinha arcana, e permite que você sustente até três magias ao mesmo tempo. Além disso, ela armazena 20 PM (que são totalmente recuperados ao amanhecer) que podem ser usados apenas para sustentar habilidades mágicas. Artefato."
   },
+  //#endregion
 
-  // Monster Chefe
+  //#region Monster Chefe
   { id: "Necromúsico",
     name: "Necromúsico",
     description: "Músicos itinerantes temem tocar sozinhos, longe das cidades. Os motivos são óbvios — chamar a atenção, longe da civilização, pode atrair bandidos ou monstros. Entre artistas, porém, muitas histórias surgiram para incutir algo de misterioso e especial nesta cautela tão pragmática. Alguns desses contos assustadores, porém, são a mais pura verdade.\nNas noites mais escuras, nos lugares mais isolados, um músico pode ser abordado por um espectro misterioso. Sua aparência varia — sempre aparece como um membro atraente da raça do próprio músico, trajado como um artista itinerante, com roupas coloridas e exageradas. Chega acompanhado por sons de uma orquestra completa, complementando a composição do artista que o atraiu. Após demonstrar grande habilidade dançando e regendo os instrumentos invisíveis com um par muito característico de maracas pretas, ele ataca o músico, devorando sua música. Quando tem sucesso, a performance da vítima é interrompida — e ela passa integrar o repertório desta terrível criatura, o necromúsico.\nO necromúsico costuma se aproximar disfarçado, sem levantar suspeitas, e inicia sua apresentação, fascinando os presentes. Em seguida, conjura seus mortos-vivos e se concentra em atacar o bardo, para consumir sua música.\nAs origens desse artista fantasmagórico são incertas. Existem duas lendas bastante difundidas. Uma o coloca como filho de Tenebra e Nimb, uma criatura do caos, da noite e morto-vivo. De acordo com essa hipótese, existe apenas um necromúsico, — mas sua natureza divina o permite estar em vários lugares e tempos simultaneamente. A outra possibilidade tem uma narrativa um pouco mais elaborada. Conta a história de um bardo itinerante, um dançarino com predileção por maracas. Em uma de suas viagens, encontrou uma viajante de pele muito pálida, usando um vestido tão escuro quanto a noite. Quase hipnotizado, tentou chamar a atenção da linda viajante com repetidas performances, mas foi cruelmente ignorado. Por fim, com um único olhar de irritação, ela o teria amaldiçoado. O corpo do dançarino se dissolveu para sempre, substituído por uma forma fantasmagórica mutável. As maracas coloridas enegreceram, cobertas por pontos cintilantes como as estrelas. A maldição levaria o necromúsico a vagar por Arton coletando mais e mais sons e canções, em uma tentativa desesperada de agradar Tenebra, a Deusa da Noite.\nApesar da presença de tantos artistas em grandes cidades e nas cortes dos nobres, o necromúsico nunca aparece nesses ambientes. Não se sabe se isso é apenas uma decisão arbitrária, alguma demonstração equivocada de sensibilidade artística ou um efeito da maldição, dificultando ainda mais sua missão. Mas há duas máximas discutidas frequentemente entre os bardos: “Não deixe que estranhos de azul afinem seu instrumento em encruzilhadas” e “Não toque para dançarinos charmosos portando maracas pretas”.",
@@ -8269,10 +8238,78 @@ export const threats: Threat[] = [
     equipamentos: [],
     tesouro: "Dobro (apenas riquezas de metal)."
   },
+  { id: "Diablete",
+    name: "Diablete",
+    description: "Quem recusaria um bom doce? Os mais elaborados ocupam bandejas de prata nos salões dos nobres, mas os confeitos de açúcar mais simples podem ser encontrados em qualquer lugar. Para cada receita exótica de gorad, existe um doce regional entregue a trabalhadores cansados depois de um dia árduo de labuta. Na maior parte de Arton, a oferta de uma guloseima dessas é recebida com um sorriso e um agradecimento. No pequeno feudo de Prodd, porém, doces são de fato recusados. A proximidade com a Pondsmânia faz os buckers daqui receberem visitas constantes de fadas. Algumas delas, brincalhonas e maldosas como apenas seres feéricos podem ser, começaram a brincar com os doces dos humanoides.\nOs diabletes são fadas minúsculas, de origem mineral. Elas agem em bandos, se aproximando de locais abandonados e cheios de entulho em centros urbanos. Então, realizam uma simbiose com o lixo rejeitado pela sociedade humanoide — pedaços de vidro quebrado se tornam balas, lama se torna bolo, chorume se torna suco. Ou, pelo menos, é isso que as vítimas acreditam quando comem essas coisas!\nO processo de diabletização do entulho não é apenas uma transmutação, muito menos uma ilusão. Aquele pedaço de lixo, por mais insignificante que seja, é preenchido com um pouco da energia vital de cada diablete do bando. Quando alguém é enganado e come o entulho, os demais diabletes caem na gargalhada — e esse riso transforma o lixo mastigado em mais uma dessas criaturinhas.\nEnquanto algumas fadas possuem raciocínios completamente alienígenos e motivações indecifráveis, os diabletes são extremamente simples: só querem dar risadas e se reproduzir. Encontraram, então, uma forma de fazer as duas coisas ao mesmo tempo. Para conseguir enganar humanos, o suficiente para que uma bela dentada na guloseima especial seja dada, diabletes costumam se disfarçar como parte da decoração. Sua estrutura corporal é quase mineral, sem precisar respirar ou transpirar, facilitando a tarefa quando se fazem passar por estatuetas, brinquedos ou até mesmo doces estilizados.\nA própria ruína dessas fadas fica muito próxima de seus objetivos — são imunes a armas, mas por serem comestíveis podem ser afetadas por mordidas. Cada mastigadinha pode acabar gerando um novo diablete, se a vítima o cuspir… ou terminar com um deles digerido!\nComo tudo em relação às fadas, há divergências sobre os diabletes. Alguns estudiosos afirmam se tratarem de espíritos do açúcar, se adaptando à expansão dos humanoides e à aglomerações urbanas. Outros postulam serem espíritos recentes, nascidos justamente da relação dos humanoides com seu refugo, com a intenção de reaproveitar aquilo que foi descartado.\nDe uma maneira ou de outra, os diabletes continuam atormentando pessoas por todo o continente. Embora sejam mais comuns em Prodd, qualquer centro urbano com grande acúmulo de lixo — ou seja, qualquer centro urbano — pode dar origem a uma criatura dessas.",
+    image: "/ameacas/diablete.png",
+    nd: "1/4",
+    tipo: "Espírito",
+    tamanho: "Pequeno",
+    papel: "Especial",
+    origin: "Dragão Brasil",
+    tema: "Monster Chefe",
+    iniciativa: 4,
+    percepcao: 1,
+    defesa: 11,
+    fort: -2,
+    ref: 3,
+    von: 0,
+    resistenciaDano: "visão no escuro, imunidade a corte, impacto, metabolismo e perfuração",
+    pv: 5,
+    deslocamento: "6m (4q)",
+    ataqueCorpoACorpo: "Cabeçada +4 (1d8+2 impacto)",
+    habilidades: [
+      "Docinho, Mas Malvado: A imunidade do diablete não funciona contra mordidas. Um personagem sem uma arma natural de mordida pode morder o diablete como um ataque desarmado. Quando uma criatura acerta um ataque de mordida no diablete, engasga e fica atordoada por 1 rodada (Fort CD 14 evita)."
+    ],
+    for: "–2",
+    des: "2",
+    con: "–2",
+    int: "1",
+    sab: "–1",
+    car: "1",
+    pericias: ["Enganação +8", "Furtividade +6"],
+    equipamentos: [],
+    tesouro: "Nenhum."
+  },
+  { id: "Doçaria de Diabletes",
+    name: "Doçaria de Diabletes",
+    description: "Quem recusaria um bom doce? Os mais elaborados ocupam bandejas de prata nos salões dos nobres, mas os confeitos de açúcar mais simples podem ser encontrados em qualquer lugar. Para cada receita exótica de gorad, existe um doce regional entregue a trabalhadores cansados depois de um dia árduo de labuta. Na maior parte de Arton, a oferta de uma guloseima dessas é recebida com um sorriso e um agradecimento. No pequeno feudo de Prodd, porém, doces são de fato recusados. A proximidade com a Pondsmânia faz os buckers daqui receberem visitas constantes de fadas. Algumas delas, brincalhonas e maldosas como apenas seres feéricos podem ser, começaram a brincar com os doces dos humanoides.\nOs diabletes são fadas minúsculas, de origem mineral. Elas agem em bandos, se aproximando de locais abandonados e cheios de entulho em centros urbanos. Então, realizam uma simbiose com o lixo rejeitado pela sociedade humanoide — pedaços de vidro quebrado se tornam balas, lama se torna bolo, chorume se torna suco. Ou, pelo menos, é isso que as vítimas acreditam quando comem essas coisas!\nO processo de diabletização do entulho não é apenas uma transmutação, muito menos uma ilusão. Aquele pedaço de lixo, por mais insignificante que seja, é preenchido com um pouco da energia vital de cada diablete do bando. Quando alguém é enganado e come o entulho, os demais diabletes caem na gargalhada — e esse riso transforma o lixo mastigado em mais uma dessas criaturinhas.\nEnquanto algumas fadas possuem raciocínios completamente alienígenos e motivações indecifráveis, os diabletes são extremamente simples: só querem dar risadas e se reproduzir. Encontraram, então, uma forma de fazer as duas coisas ao mesmo tempo. Para conseguir enganar humanos, o suficiente para que uma bela dentada na guloseima especial seja dada, diabletes costumam se disfarçar como parte da decoração. Sua estrutura corporal é quase mineral, sem precisar respirar ou transpirar, facilitando a tarefa quando se fazem passar por estatuetas, brinquedos ou até mesmo doces estilizados.\nA própria ruína dessas fadas fica muito próxima de seus objetivos — são imunes a armas, mas por serem comestíveis podem ser afetadas por mordidas. Cada mastigadinha pode acabar gerando um novo diablete, se a vítima o cuspir… ou terminar com um deles digerido!\nComo tudo em relação às fadas, há divergências sobre os diabletes. Alguns estudiosos afirmam se tratarem de espíritos do açúcar, se adaptando à expansão dos humanoides e à aglomerações urbanas. Outros postulam serem espíritos recentes, nascidos justamente da relação dos humanoides com seu refugo, com a intenção de reaproveitar aquilo que foi descartado.\nDe uma maneira ou de outra, os diabletes continuam atormentando pessoas por todo o continente. Embora sejam mais comuns em Prodd, qualquer centro urbano com grande acúmulo de lixo — ou seja, qualquer centro urbano — pode dar origem a uma criatura dessas.",
+    image: "/ameacas/diablete.png",
+    nd: "4",
+    tipo: "Espírito",
+    tamanho: "Enorme",
+    papel: "Especial",
+    origin: "Dragão Brasil",
+    tema: "Monster Chefe",
+    iniciativa: 6,
+    percepcao: 3,
+    defesa: 21,
+    fort: 4,
+    ref: 16,
+    von: 10,
+    resistenciaDano: "visão no escuro, imunidade a corte, impacto, metabolismo e perfuração",
+    pv: 100,
+    deslocamento: "6m (4q)",
+    ataqueCorpoACorpo: "",
+    habilidades: [
+      "Enxame: 5d8+2 impacto e condição.",
+      "Adaptação ao Entulho: Dependendo do tipo de entulho usado para enganar humanoides e compor o enxame, a doçaria causa condições diferentes. Para determinar o tipo de entulho, jogue 1d6 na tabela: 1 - Vidro (Sangrando); 2 - Comida estragada (Enjoado); 3 - Refugos alquímicos (Alquebrado); 4 - Lama (Lento); 5 - Escória de forja (Em chamas); 6 - Pedras (Fatigado).",
+      "Docinhos, Mas Malvados: A imunidade da doçaria não funciona contra mordidas. Um personagem sem uma arma natural de mordida pode morder a doçaria como um ataque desarmado. Quando uma criatura acerta um ataque de mordida na doçaria, engasga com um diablete e fica atordoada por 1 rodada (Fort CD 20 evita). Metabolismo.",
+      "Gênese Doce: Quando uma criatura falha no teste de resistência contra Docinho, Mas Malvado, um novo diablete é gerado e se junta ao bando, que recebe 5 pontos de vida temporários cumulativos. A doçaria recebe +1 nos ataques e dano para cada 10 pontos de vida temporários que tiver. Se acumular 100 pontos de vida temporários, a doçaria se divide em dois monstros com as mesmas estatísticas."
+    ],
+    for: "–2",
+    des: "2",
+    con: "–2",
+    int: "1",
+    sab: "–1",
+    car: "1",
+    pericias: ["Enganação +10", "Furtividade +1"],
+    equipamentos: [],
+    tesouro: "Nenhum."
+  },
+  //#endregion
 
-
-
-  // Dragão Brasil
+  //#region Dragão Brasil
   { id: "Condessa Sirissa Tarvela",
   name: "Condessa Sirissa Tarvela",
   description: "Para os desavisados, a Condessa Sirissa Tarvela pode parecer apenas mais uma personalidade aslothiana surgida recentemente em busca de favores do monarca do reino, mas a opulenta e astuta jovem de pele alva e cabelos negros é filha de Esskas Tarvela, poderoso líder da tradicional companhia mercenária Punhos Cruzados.\nFiel apoiador de Ferren Asloth, Esskas sempre fez o máximo para manter sua família em suas graças, empenhando-se dia e noite no cumprimento de missões em nome de Aslothia. A principal delas foi a longa campanha para tomar o Castelo Caerilech, localizado na região oeste do reino, propriedade do mago Caerilech Govaron, inimigo histórico de Asloth.\nDepois de anos de tentativas frustradas, as defesas da foritificação arrefeceram misteriosamente durante a Noite da Ascensão Profana, e Esskas finalmente conquistou seu objetivo ao encontrá-lo completamente vazio. Com a vitória surpreendente, o mercenário esperava receber uma benção de seu soberano como recompensa pelo empenho irrefreável, mas uma queda fatal enquanto montava seu principal cavalo, Turvo, mudou os rumos da família Tarvela.\nQuem se apresentou a Ferren Asloth em seu lugar foi Sirissa, chorosa e emocionada pela tragédia, disposta a carregar com orgulho o mesmo papel de servidão de seu pai. Em troca, foi transformada em vampira pelos poderes profanos do Arquilich, e ganhou para si a posse do Castelo Caerilech.\nObviamente, nada houve de acidental no destino infeliz de Esskas. Sirissa aguardara por anos sua vez de liderar, e certificou-se de não perder a oportunidade quando ela lhe foi apresentada.\nCom frequência ela usa sua aparência para desarmar aqueles que lhe dão pouco crédito, e encara a posse de seu castelo como o primeiro passo de um plano intrincado para estender sua influência pelo reino e além. Atualmente, tem focado em contratar grupos de aventureiros para explorar o próprio castelo em busca de segredos do rebelde dono anterior, e de quaisquer armadilhas ou ameaças que tenham sido deixadas pelo caminho.",
@@ -8576,9 +8613,9 @@ export const threats: Threat[] = [
     equipamentos: [],
     tesouro: "Padrão."
   },
+  //#endregion
 
-
-  // Duelo de Dragões
+  //#region Duelo de Dragões
   {  id: "Glop de Gelo",
     name: "Glop de Gelo",
     description: "Essa criatura poderia ser confundida, em um dia bom, com um pudim gigante. Trata-se de uma massa azulada, uma espécie de geleia semitransparente, mais ou menos do tamanho de uma pessoa. Por onde passa, deixa uma trilha viscosa por trás de si. Um núcleo menor e mais escuro se destaca na massa amorfa que compõe seu corpo, em meio aos cristais de gelo.\nGlops comuns costumam perambular em bandos pelos subterrâneos, em busca de matéria orgânica para dissolver com seu ácido natural. Porém, numerosos como são, alguns acabam expostos a condições especiais — mágicas, inclusive.\nO glop de gelo é uma mutação do glop comum causada por magia. Maior, é composto de uma substância gelada e demora muito mais para se alimentar. Essa demora o impede de fazer parte de grupos maiores, tornando sua existência mais solitária… mas não menos faminta.",
@@ -8740,37 +8777,6 @@ export const threats: Threat[] = [
   pericias: ["Atletismo +6", "Intimidação +4", "Sobrevivência +8"],
   equipamentos: [],
   tesouro: "Nenhum."
-  },
-  { id: "Capanga do Culto",
-    name: "Capanga",
-    description: "Há quem faça crueldades pela fé. Outros fazem pela igreja que pagar melhor.",
-    nd: "1/2",
-    tipo: "Humanoide (humano)",
-    tamanho: "Médio",
-    origin: "Duelo de Dragões",
-    papel: "Lacaio",
-    tema: "Duelo de Dragões",
-    iniciativa: 3,
-    percepcao: 2,
-    defesa: 13,
-    fort: 5,
-    ref: 3,
-    von: 0,
-    pv: 7,
-    deslocamento: "9m (6q)",
-    ataqueCorpoACorpo: "Tacape +10 (1d10+5)",
-    habilidades: [
-      "Ímpeto Agressor: O capanga recebe +1d10 na rolagem de dano de seu primeiro ataque na cena."
-    ],
-    for: "3",
-    des: "1",
-    con: "1",
-    int: "–1",
-    sab: "0",
-    car: "–1",
-    pericias: [],
-    equipamentos: ["Tacape"],
-    tesouro: "Metade."
   },
   { id: "Golem de Nor",
     name: "Golem de Nor",
@@ -10239,113 +10245,6 @@ export const threats: Threat[] = [
     equipamentos: ["Adaga", "Alaúde élfico"],
     tesouro: "Metade."
   },
-  { id: "Jagunço",
-    name: "Jagunço",
-    description: "Os capangas de Moggo e Trina incluem toda sorte de achacadores, punguistas e quebradores de pernas. Os chefes se rodeiam principalmente dos mais brutos e implacáveis, capazes dos feitos mais atrozes. Estes criminosos de carreira já estão dessensibilizados com a violência, e encaram ordens de quebrar crânios com a naturalidade de quem pede uma cerveja na taverna.\nOs bandidos a serviço de Moggo são de maioria humana. Já Trina aprecia ter a seu serviço proscritos sem nada a perder, pessoas totalmente dependentes dela e de sua organização: principalmente elfos e lefou.",
-    nd: "2",
-    tipo: "Humanoide (humano)",
-    tamanho: "Médio",
-    papel: "Lacaio",
-    origin: "Duelo de Dragões",
-    tema: "Duelo de Dragões",
-    iniciativa: 7,
-    percepcao: 3,
-    defesa: 18,
-    fort: 8,
-    ref: 9,
-    von: 5,
-    resistenciaDano: "imunidade a medo",
-    pv: 21,
-    deslocamento: "9m (6q)",
-    ataqueCorpoACorpo: "Espada longa x2 +14 (1d8+6, 19)",
-    ataqueDistancia: "Pistola +14 (2d6+6, 19/x3)",
-    habilidades: [
-      "Saque Rápido: O jagunço pode sacar ou guardar itens como uma ação livre e recarregar sua pistola como uma ação de movimento."
-    ],
-    for: "2",
-    des: "3",
-    con: "2",
-    int: "–1",
-    sab: "0",
-    car: "–1",
-    pericias: ["Intimidação +6", "Sobrevivência +5"],
-    equipamentos: ["Balas x20", "Couro batido", "Espada longa", "Pistola"],
-    tesouro: "Metade."
-  },
-  { id: "Gatuno Mestre",
-    name: "Gatuno Mestre",
-    description: "Os capangas de Moggo e Trina incluem toda sorte de achacadores, punguistas e quebradores de pernas. Os chefes se rodeiam principalmente dos mais brutos e implacáveis, capazes dos feitos mais atrozes. Estes criminosos de carreira já estão dessensibilizados com a violência, e encaram ordens de quebrar crânios com a naturalidade de quem pede uma cerveja na taverna.\nOs bandidos a serviço de Moggo são de maioria humana. Já Trina aprecia ter a seu serviço proscritos sem nada a perder, pessoas totalmente dependentes dela e de sua organização: principalmente elfos e lefou.",
-    nd: "3",
-    tipo: "Humanoide (humano)",
-    tamanho: "Médio",
-    papel: "Solo",
-    origin: "Duelo de Dragões",
-    tema: "Duelo de Dragões",
-    iniciativa: 8,
-    percepcao: 3,
-    defesa: 19,
-    fort: 3,
-    ref: 15,
-    von: 9,
-    resistenciaDano: "evasão, resistência a efeitos de movimento +3",
-    pv: 68,
-    deslocamento: "9m (6q), escalada 6m (4q)",
-    ataqueCorpoACorpo: "Porrete +14 x2 (1d6+7 não letal)",
-    habilidades: [
-      "Ataque Furtivo: Uma vez por rodada, quando atinge uma criatura desprevenida com um ataque corpo a corpo ou em alcance curto, ou uma criatura que esteja flanqueando, o gatuno causa 3d6 pontos de dano extra.",
-      "Bomba de Fumaça (Padrão): O gatuno mestre prepara e arremessa uma bomba de fumaça em um ponto em alcance curto. A bomba libera uma fumaça espessa em um raio de 6m a partir do impacto; a fumaça obscurece toda a visão, fornece camuflagem para criaturas a até 1,5m e camuflagem total para criaturas a partir de 3m e dura até o fim da cena.",
-      "Pancada na Cabeça: Uma criatura atingida por um ataque furtivo do gatuno mestre fica inconsciente e caída ou, se estiver envolvida em combate ou outra situação perigosa, fica exausta por 1 rodada, depois fatigada até o fim da cena (em ambos os casos, Fort CD 19 reduz para fatigada por 1d4 rodadas).",
-      "Sombra: O gatuno mestre não sofre penalidade em testes de Furtividade por se mover com seu deslocamento normal e reduz a penalidade por atacar e fazer outras ações chamativas para –10."
-    ],
-    for: "0",
-    des: "4",
-    con: "–1",
-    int: "3",
-    sab: "0",
-    car: "0",
-    pericias: ["Acrobacia +9", "Furtividade +12", "Ladinagem +10"],
-    equipamentos: ["Armadura de couro", "Bomba de fumaça x3", "Gazua aprimorada", "Porrete"],
-    tesouro: "Padrão."
-  },
-  { id: "Sacerdote de Hyninn",
-    name: "Sacerdote de Hyninn",
-    description: "Os capangas de Moggo e Trina incluem toda sorte de achacadores, punguistas e quebradores de pernas. Os chefes se rodeiam principalmente dos mais brutos e implacáveis, capazes dos feitos mais atrozes. Estes criminosos de carreira já estão dessensibilizados com a violência, e encaram ordens de quebrar crânios com a naturalidade de quem pede uma cerveja na taverna.\nOs bandidos a serviço de Moggo são de maioria humana. Já Trina aprecia ter a seu serviço proscritos sem nada a perder, pessoas totalmente dependentes dela e de sua organização: principalmente elfos e lefou.",
-    nd: "2",
-    tipo: "Humanoide (humano)",
-    tamanho: "Médio",
-    papel: "Especial",
-    origin: "Duelo de Dragões",
-    tema: "Duelo de Dragões",
-    iniciativa: 6,
-    percepcao: 6,
-    defesa: 17,
-    fort: 5,
-    ref: 7,
-    von: 12,
-    resistenciaDano: "imunidade a efeitos mentais",
-    pv: 49,
-    pm: 28,
-    deslocamento: "9m (6q)",
-    ataqueCorpoACorpo: "Adaga x2 +10 (1d4+5, 18)",
-    habilidades: [
-      "Bênção do Gatuno (Livre): Uma vez por cena, o sacerdote de Hyninn lança uma magia como uma ação livre, pagando seu custo normal.",
-      "Forma de Macaco (Completa, 2 PM): O sacerdote se transforma em um macaco. Ele adquire tamanho Minúsculo (+5 em Furtividade e –5 em testes de manobra). Seu equipamento desaparece (e ele perde seus benefícios) até voltar ao normal, mas suas outras estatísticas não são alteradas. A transformação dura indefinidamente, mas termina caso ele faça um ataque, lance uma magia ou sofra dano.",
-      "Malandragem Divina (Livre, 1 PM): Quando faz um teste de perícia, o sacerdote usa Enganação no lugar da perícia original.",
-      "Magias: Como um clérigo de Hyninn de 2º nível (CD 18).",
-      "Arma Espiritual (Padrão, 2 PM): Até o fim da cena, o sacerdote recebe +1 na Defesa e, uma vez por rodada, quando sofre um ataque corpo a corpo, pode usar uma reação para causar 2d6 pontos de dano de corte no atacante.",
-      "Curar Ferimentos (Padrão, 2 PM): Uma criatura adjacente cura 3d8+3 PV.",
-      "Despedaçãr (Padrão, 1 PM): Um alvo em alcance curto sofre 1d8+2 pontos de dano de impacto se for uma criatura, ou o dobro disso sem aplicar RD se for um construto ou um objeto mundano Pequeno, e fica atordoado por 1 rodada (Fort reduz à metade e evita a condição). Uma criatura só pode ficar atordoada por esta magia uma vez por cena."
-    ],
-    for: "–1",
-    des: "3",
-    con: "1",
-    int: "0",
-    sab: "3",
-    car: "2",
-    pericias: ["Enganação +7", "Ladinagem +10", "Religião +6"],
-    equipamentos: ["Adaga", "Gazua", "Símbolo sagrado de Hyninn"],
-    tesouro: "Padrão."
-  },
   { id: "Moggo Navalha",
     name: "Moggo Navalha",
     description: "Os mais atentos conseguem notar uma certa tristeza no olhar de Moggo, perceptível entre um momento e outro, típica de alguém que conhece a dor da perda. Mas em pouco tempo fica claro que o chefão do crime de Fross não é um hynne qualquer. Vê a violência como uma ferramenta — e não tem medo de usá-la.\nNascido na saudosa terra de Hongari, Moggo desde cedo se destacou entre seus pares como alguém de casca grossa, capaz de fazer aquilo que precisava ser feito. Envolvia-se em brigas com pessoas maiores o tempo todo, apartando intrigas ou intimidando forasteiros. O tempo todo afirmava que preferia continuar seu ofício — aparar e estilizar barbas, cabelos e bigodes — enquanto sua reputação se espalhava e sua família aumentava com a prosperidade de seu trabalho.\nAnos depois, um clã de anões visitou a pequena vila onde Moggo vivia. Eles se tornaram seus melhores clientes e ofereceram a riqueza de um rei para que o hynne os acompanhasse até Doherimm, onde seria barbeiro da elite anã. A despedida foi difícil, mas a família não precisaria mais se preocupar com dinheiro.\nO plano era que o barbeiro ficasse distante apenas alguns anos, mas mesmo os melhores planos podem dar errado. Enquanto viajava pelo Rio dos Deuses, a comitiva doherita foi atacada por lursh lyin. O combate feroz custou ao hynne um olho e rendeu uma cicatriz para o resto da vida. Quase todos seus empregadores morreram, o que arruinou seus planos e suas ambições de seguir para Doherimm.\nPelo menos conseguiram chegar ao porto de Fross. A cidade tinha muitos protocolos e regras, mas as palavras duras e a navalha afiada de Moggo logo o fizeram ser ouvido. Tornou-se um bandido de segunda categoria, cobrando dívidas e quebrando braços, sendo cada vez menos subestimado pelo tamanho a cada serviço. Sempre pensava em voltar para casa, mas inventava as mais variadas desculpas para ficar. Até chegar a notícia do advento de Aslothia e a destruição de Hongari.\nPela vergonha de retornar como um fracassado, Moggo havia deixado a família para trás e permitido que morressem no maior massacre já sofrido por seu povo. Não os encontrou entre os refugiados, mesmo depois de muita procura. Esse acontecimento terminou de petrificar seu coração. Moggo se tornou realmente impiedoso, obtendo a rispidez necessária para se tornar o chefão do crime local.\nEm combate, Moggo mantém ao menos um jagunço por perto o tempo todo, para usar Tropas Dispensáveis. Ele não tem o menor receio de descartar os seus comparsas para salvar a própria pele.",
@@ -10461,9 +10360,9 @@ export const threats: Threat[] = [
     equipamentos: ["Pistola-punhal certeira precisa"],
     tesouro: "Nenhum.\n\n**Parceiro (Veterano):** Você recebe +2 na Defesa e em ataques corpo a corpo. Além disso, pode gastar 1 PM para usar Encontrar Brecha."
   },
+  //#endregion
 
-
-  // Brutos & Indomaveis
+  //#region Brutos & Indomaveis
   { id: "Meio-Orc Bandoleiro",
     name: "Meio-Orc Bandoleiro",
     description: "“Acha que essa cara feia me assusta? Venha, tenho trabalho para você na minha estalagem.”\n— Ned Kallrogan, ex-aventureiro\nO forasteiro poderia ser descrito apenas como um “humano grande e feroz”, mas é algo mais. A pele possui tom cinza-esverdeado, os caninos inferiores são maiores, as orelhas e o nariz também parecem grandes demais para o resto da face.\nMeios-orcs não unem, necessariamente, o melhor das duas raças. São mais inteligentes e determinados que orcs, mas não tanto quanto humanos. São mais fortes que humanos, mas não se equiparam a orcs. Sua aparência pode causar repulsa entre humanos e entre orcs. Sua própria existência muitas vezes é rejeitada, pois a maior parte das duas raças não acredita que seus membros podem conviver em paz, respeito e até amor.\nNo Reinado, meios-orcs se isolam nos ermos ou vivem em comunidades populosas, onde são apenas “mais um na multidão”. Vários detestam suas linhagens, revoltam-se quando lembrados de que são apenas “metade” de alguma coisa. Ficam mais confortáveis sozinhos.\nA maior parte dos povos trata um meio-orc como trataria um orc puro — atacando-o ou expulsando-o. Sua entrada será barrada na maioria das tavernas, estalagens ou mesmo cidades. Mas pessoas de bom coração podem, às vezes, dar-lhes chance de provar que são civilizados. E isso pode ser tudo de que precisam: estes seres são variados em personalidade, capazes de se adaptar, surpreender. Um meio-orc amistoso é raro — porque também é raro que o mundo seja amistoso com ele.\nPor sua maior esperteza e adaptabilidade, um meio-orc pode chefiar uma tribo orc de forma inteligente, até mesmo fazendo acordos com outros povos — ou atacando de formas mais astutas. De fato, quando um bando orc cresce a ponto de ameaçar as comunidades do Reinado, muitas vezes isso acontece sob a liderança de um meio-orc.\nMuitos meios-orcs se tornam aventureiros. Ser dono do próprio destino, viver sem se importar com o que outros pensam, desafiar todas as expectativas… essa pode ser a vida mais sonhada!",
@@ -11194,6 +11093,599 @@ export const threats: Threat[] = [
     equipamentos: ["Marreta aumentada cruel"],
     tesouro: "Metade."
   },
+  //#endregion
+
+  //#region Capangas & Bandoleiros
+  { id: "Bandido Comum",
+    name: "Bandido Comum",
+    description: "“Nada nesta mão! Nada nesta outra! E agora, nada entre suas orelhas!”\n— Cooper Al’Aziz, humano ladino\nHá três assaltantes cheios de valentia em torno da jovem filha do taverneiro. Quando percebem sua chegada, eles devolvem olhares ferozes, mas as clavas em suas mãos perdem firmeza.\nO mais comum e débil dos malfeitores, a ralé do crime. Muitos são apenas valentões mal-intencionados, tirando proveito dos mais fracos. Outros são forçados pela miséria, buscando apenas sobreviver. Atuam em trilhas desertas nos ermos ou ruas de grandes cidades, sempre em pequenos grupos — um bandido agindo sozinho estará realmente desesperado, caindo de joelhos e implorando perdão diante da mínima ameaça. Conforme a região onde são encontrados, muitas vezes são humanos, mas é possível que pertençam a quase qualquer povo. Em terras distantes e inexploradas, estas fichas também podem representar qualquer humanoide com o hábito de espreitar rotas e atacar forasteiros.",
+    image: "/ameacas/bandido-comum.png",
+    nd: "1/4",
+    tipo: "Humanoide (humano)",
+    tamanho: "Médio",
+    papel: "Lacaio",
+    origin: "Ameaças de Arton",
+    tema: "Capangas & Bandoleiros",
+    iniciativa: 4,
+    percepcao: 1,
+    defesa: 13,
+    fort: 1,
+    ref: 3,
+    von: -1,
+    resistenciaDano: "",
+    pv: 6,
+    deslocamento: "9m (6q)",
+    ataqueCorpoACorpo: "Clava +7 (1d6+3)",
+    habilidades: [],
+    for: "1",
+    des: "2",
+    con: "1",
+    int: "0",
+    sab: "–1",
+    car: "0",
+    pericias: ["Furtividade +5"],
+    equipamentos: ["Clava"],
+    tesouro: "Metade."
+  },
+  { id: "Bandido Ligeiro",
+    name: "Bandido Ligeiro",
+    description: "“Nada nesta mão! Nada nesta outra! E agora, nada entre suas orelhas!”\n— Cooper Al’Aziz, humano ladino\nHá três assaltantes cheios de valentia em torno da jovem filha do taverneiro. Quando percebem sua chegada, eles devolvem olhares ferozes, mas as clavas em suas mãos perdem firmeza.\nO mais comum e débil dos malfeitores, a ralé do crime. Muitos são apenas valentões mal-intencionados, tirando proveito dos mais fracos. Outros são forçados pela miséria, buscando apenas sobreviver. Atuam em trilhas desertas nos ermos ou ruas de grandes cidades, sempre em pequenos grupos — um bandido agindo sozinho estará realmente desesperado, caindo de joelhos e implorando perdão diante da mínima ameaça. Conforme a região onde são encontrados, muitas vezes são humanos, mas é possível que pertençam a quase qualquer povo. Em terras distantes e inexploradas, estas fichas também podem representar qualquer humanoide com o hábito de espreitar rotas e atacar forasteiros.",
+    image: "/ameacas/bandido-comum.png",
+    nd: "1/2",
+    tipo: "Humanoide (humano)",
+    tamanho: "Médio",
+    papel: "Lacaio",
+    origin: "Ameaças de Arton",
+    tema: "Capangas & Bandoleiros",
+    iniciativa: 4,
+    percepcao: 1,
+    defesa: 15,
+    fort: 3,
+    ref: 5,
+    von: 0,
+    resistenciaDano: "",
+    pv: 9,
+    deslocamento: "9m (6q)",
+    ataqueCorpoACorpo: "Clava +9 (1d6+5)",
+    ataqueDistancia: "Funda +9 (1d6+1)",
+    habilidades: [],
+    for: "1",
+    des: "2",
+    con: "1",
+    int: "0",
+    sab: "–1",
+    car: "0",
+    pericias: ["Furtividade +6"],
+    equipamentos: ["Clava", "Funda", "Pedras x20"],
+    tesouro: "Metade."
+  },
+  { id: "Bandido Selvagem",
+    name: "Bandido Selvagem",
+    description: "“Nada nesta mão! Nada nesta outra! E agora, nada entre suas orelhas!”\n— Cooper Al’Aziz, humano ladino\nHá três assaltantes cheios de valentia em torno da jovem filha do taverneiro. Quando percebem sua chegada, eles devolvem olhares ferozes, mas as clavas em suas mãos perdem firmeza.\nO mais comum e débil dos malfeitores, a ralé do crime. Muitos são apenas valentões mal-intencionados, tirando proveito dos mais fracos. Outros são forçados pela miséria, buscando apenas sobreviver. Atuam em trilhas desertas nos ermos ou ruas de grandes cidades, sempre em pequenos grupos — um bandido agindo sozinho estará realmente desesperado, caindo de joelhos e implorando perdão diante da mínima ameaça. Conforme a região onde são encontrados, muitas vezes são humanos, mas é possível que pertençam a quase qualquer povo. Em terras distantes e inexploradas, estas fichas também podem representar qualquer humanoide com o hábito de espreitar rotas e atacar forasteiros.",
+    image: "/ameacas/bandido-comum.png",
+    nd: "1",
+    tipo: "Humanoide (humano)",
+    tamanho: "Médio",
+    papel: "Normal",
+    origin: "Ameaças de Arton",
+    tema: "Capangas & Bandoleiros",
+    iniciativa: 4,
+    percepcao: 3,
+    defesa: 16,
+    fort: 8,
+    ref: 6,
+    von: 2,
+    resistenciaDano: "",
+    pv: 12,
+    deslocamento: "9m (6q)",
+    ataqueCorpoACorpo: "Lança x2 +11 (1d6+5)",
+    ataqueDistancia: "Azagaia +11 (1d6+5)",
+    habilidades: [
+      "Arremesso de Emboscada (Livre): Uma única vez em seu primeiro turno de combate, o bandido selvagem saca uma azagaia e faz um ataque à distância com ela."
+    ],
+    for: "2",
+    des: "1",
+    con: "1",
+    int: "0",
+    sab: "0",
+    car: "–1",
+    pericias: ["Furtividade +7", "Sobrevivência +2"],
+    equipamentos: ["Azagaia x3", "Escudo leve", "Lança"],
+    tesouro: "Metade."
+  },
+  { id: "Capanga",
+    name: "Capanga",
+    description: "“Muito bem. Agora que estamos conversados, vai me levar a seu chefe.”\n— Lillian Amaryllis, alcaide da Guarda de Valkaria\nA entrada do esconderijo é vigiada por um homem enorme com um tacape, e um minotauro ainda maior com um machado. Nenhum deles parece estar aqui para fazer amigos.\n“Capanga” é como são chamados os bandidos que trabalham como soldados ou guarda-costas para um chefe de quadrilha, líder de guilda ou vilão menor. Quase todos são muito fortes e pouco espertos — “você não é pago para pensar!” é algo que ouvem bastante. Outros, mais perigosos (os assim chamados jagunços), sabem usar armas de pólvora. Quando um “trabalho” envolve a possibilidade de confronto físico, ou a intimidação de algum comerciante em débito, é certo que dois ou três capangas serão parte do bando.\nNem todos os capangas são bandidos ou rufiões. Em lugares perigosos, pessoas comuns os contratam para proteger seus negócios, não sendo raro encontrá-los atuando como seguranças em tavernas ou escoltando mercadores. Pode causar espanto que um capanga na verdade tenha alma bondosa, ainda que a natureza de seu trabalho não permita muita gentileza.\nCapangas costumam ser humanos, mas há exceções. Com a queda do Império de Tauron, muitos de seus outrora orgulhosos guerreiros caíram em desgraça. Por sua grande força, minotauros acabaram se tornando capangas bastante cobiçados pelos chefões do crime.",
+    image: "/ameacas/capanga.png",
+    nd: "1/2",
+    tipo: "Humanoide (humano)",
+    tamanho: "Médio",
+    papel: "Lacaio",
+    origin: "Ameaças de Arton",
+    tema: "Capangas & Bandoleiros",
+    iniciativa: 3,
+    percepcao: 2,
+    defesa: 13,
+    fort: 5,
+    ref: 3,
+    von: 0,
+    resistenciaDano: "",
+    pv: 7,
+    deslocamento: "9m (6q)",
+    ataqueCorpoACorpo: "Tacape +10 (1d10+5)",
+    habilidades: [
+      "Ímpeto Agressor: O capanga recebe +1d10 na rolagem de dano de seu primeiro ataque na cena."
+    ],
+    for: "3",
+    des: "1",
+    con: "1",
+    int: "–1",
+    sab: "0",
+    car: "–1",
+    pericias: [],
+    equipamentos: ["Tacape"],
+    tesouro: "Metade."
+  },
+  { id: "Jagunço",
+    name: "Jagunço",
+    description: "“Muito bem. Agora que estamos conversados, vai me levar a seu chefe.”\n— Lillian Amaryllis, alcaide da Guarda de Valkaria\nA entrada do esconderijo é vigiada por um homem enorme com um tacape, e um minotauro ainda maior com um machado. Nenhum deles parece estar aqui para fazer amigos.\n“Capanga” é como são chamados os bandidos que trabalham como soldados ou guarda-costas para um chefe de quadrilha, líder de guilda ou vilão menor. Quase todos são muito fortes e pouco espertos — “você não é pago para pensar!” é algo que ouvem bastante. Outros, mais perigosos (os assim chamados jagunços), sabem usar armas de pólvora. Quando um “trabalho” envolve a possibilidade de confronto físico, ou a intimidação de algum comerciante em débito, é certo que dois ou três capangas serão parte do bando.\nNem todos os capangas são bandidos ou rufiões. Em lugares perigosos, pessoas comuns os contratam para proteger seus negócios, não sendo raro encontrá-los atuando como seguranças em tavernas ou escoltando mercadores. Pode causar espanto que um capanga na verdade tenha alma bondosa, ainda que a natureza de seu trabalho não permita muita gentileza.\nCapangas costumam ser humanos, mas há exceções. Com a queda do Império de Tauron, muitos de seus outrora orgulhosos guerreiros caíram em desgraça. Por sua grande força, minotauros acabaram se tornando capangas bastante cobiçados pelos chefões do crime.",
+    image: "/ameacas/capanga.png",
+    nd: "2",
+    tipo: "Humanoide (humano)",
+    tamanho: "Médio",
+    papel: "Lacaio",
+    origin: "Ameaças de Arton",
+    tema: "Capangas & Bandoleiros",
+    iniciativa: 7,
+    percepcao: 3,
+    defesa: 18,
+    fort: 8,
+    ref: 9,
+    von: 5,
+    resistenciaDano: "imunidade a medo",
+    pv: 21,
+    deslocamento: "9m (6q)",
+    ataqueCorpoACorpo: "Espada longa x2 +14 (1d8+6, 19)",
+    ataqueDistancia: "Pistola +14 (2d6+6, 19/x3)",
+    habilidades: [
+      "Saque Rápido: O jagunço pode sacar ou guardar itens como uma ação livre e recarregar sua pistola como uma ação de movimento."
+    ],
+    for: "2",
+    des: "3",
+    con: "2",
+    int: "–1",
+    sab: "0",
+    car: "–1",
+    pericias: ["Intimidação +6", "Sobrevivência +5"],
+    equipamentos: ["Balas x20", "Couro batido", "Espada longa", "Pistola"],
+    tesouro: "Metade."
+  },
+  { id: "Capanga Minotauro",
+    name: "Capanga Minotauro",
+    description: "“Muito bem. Agora que estamos conversados, vai me levar a seu chefe.”\n— Lillian Amaryllis, alcaide da Guarda de Valkaria\nA entrada do esconderijo é vigiada por um homem enorme com um tacape, e um minotauro ainda maior com um machado. Nenhum deles parece estar aqui para fazer amigos.\n“Capanga” é como são chamados os bandidos que trabalham como soldados ou guarda-costas para um chefe de quadrilha, líder de guilda ou vilão menor. Quase todos são muito fortes e pouco espertos — “você não é pago para pensar!” é algo que ouvem bastante. Outros, mais perigosos (os assim chamados jagunços), sabem usar armas de pólvora. Quando um “trabalho” envolve a possibilidade de confronto físico, ou a intimidação de algum comerciante em débito, é certo que dois ou três capangas serão parte do bando.\nNem todos os capangas são bandidos ou rufiões. Em lugares perigosos, pessoas comuns os contratam para proteger seus negócios, não sendo raro encontrá-los atuando como seguranças em tavernas ou escoltando mercadores. Pode causar espanto que um capanga na verdade tenha alma bondosa, ainda que a natureza de seu trabalho não permita muita gentileza.\nCapangas costumam ser humanos, mas há exceções. Com a queda do Império de Tauron, muitos de seus outrora orgulhosos guerreiros caíram em desgraça. Por sua grande força, minotauros acabaram se tornando capangas bastante cobiçados pelos chefões do crime.",
+    image: "/ameacas/capanga.png",
+    nd: "3",
+    tipo: "Humanoide (minotauro)",
+    tamanho: "Médio",
+    papel: "Lacaio",
+    origin: "Ameaças de Arton",
+    tema: "Capangas & Bandoleiros",
+    iniciativa: 3,
+    percepcao: 2,
+    defesa: 22,
+    fort: 15,
+    ref: 5,
+    von: 10,
+    resistenciaDano: "faro",
+    pv: 35,
+    deslocamento: "6m (4q)",
+    ataqueCorpoACorpo: "Machado de batalha +17 (2d6+15, x3) e chifres +17 (1d6+15)",
+    ataqueDistancia: "Azagaia +17 (1d6+10)",
+    habilidades: [
+      "Medo de Altura: Se estiver adjacente a uma queda de 3m ou mais de altura (como um buraco ou penhasco), o capanga minotauro fica abalado."
+    ],
+    for: "5",
+    des: "0",
+    con: "3",
+    int: "–1",
+    sab: "0",
+    car: "–1",
+    pericias: [],
+    equipamentos: ["Azagaia x3", "Cota de malha", "Escudo pesado", "Machado de batalha"],
+    tesouro: "Metade."
+  },
+  { id: "Chefe Bandido",
+    name: "Chefe Bandido",
+    description: "“Já esperava por sua visita, alcaide. Baixe essa espada, ou aqueles reféns vão sofrer.”\n— Keiramm-Seis-Orelhas, lefou ladino\nDiante dos marginais, uma figura altiva parece se sobressair. Os demais o observam, ansiosos, como se aguardando suas ações. De peito estufado, ele ergue a espada curta e lança um olhar desafiador.\nEm grupos de dez ou mais bandidos, algum bandoleiro mais forte ou esperto acabará assumindo a liderança. Um bandido chefe não se limita a dar ordens: ele luta e se arrisca com seus companheiros. Inspirados por sua presença, estes grupos podem se tornar audaciosos e imprudentes, atacando caravanas com escoltas armadas ou mesmo grupos de aventureiros.\nEnquanto o chefe está ativo, o grupo pode seguir lutando mesmo que um ou dois membros caiam. Contudo, quando ele é derrotado, os demais geralmente fogem ou se rendem.",
+    image: "/ameacas/chefe-bandido.png",
+    nd: "1",
+    tipo: "Humanoide (humano)",
+    tamanho: "Médio",
+    papel: "Solo",
+    origin: "Ameaças de Arton",
+    tema: "Capangas & Bandoleiros",
+    iniciativa: 4,
+    percepcao: 2,
+    defesa: 16,
+    fort: 5,
+    ref: 8,
+    von: 3,
+    resistenciaDano: "",
+    pv: 30,
+    deslocamento: "9m (6q)",
+    ataqueCorpoACorpo: "Espada curta +9 (1d6+5, 19)",
+    ataqueDistancia: "Adaga +7 (1d4+3, 19)",
+    habilidades: [
+      "Ataque Furtivo: +2d6."
+    ],
+    for: "3",
+    des: "2",
+    con: "2",
+    int: "0",
+    sab: "0",
+    car: "1",
+    pericias: ["Furtividade +7", "Intimidação +6"],
+    equipamentos: ["Adaga", "Espada curta"],
+    tesouro: "Padrão."
+  },
+  { id: "Chefe de Gangue",
+    name: "Chefe de Gangue",
+    description: "“Já esperava por sua visita, alcaide. Baixe essa espada, ou aqueles reféns vão sofrer.”\n— Keiramm-Seis-Orelhas, lefou ladino\nDiante dos marginais, uma figura altiva parece se sobressair. Os demais o observam, ansiosos, como se aguardando suas ações. De peito estufado, ele ergue a espada curta e lança um olhar desafiador.\nEm grupos de dez ou mais bandidos, algum bandoleiro mais forte ou esperto acabará assumindo a liderança. Um bandido chefe não se limita a dar ordens: ele luta e se arrisca com seus companheiros. Inspirados por sua presença, estes grupos podem se tornar audaciosos e imprudentes, atacando caravanas com escoltas armadas ou mesmo grupos de aventureiros.\nEnquanto o chefe está ativo, o grupo pode seguir lutando mesmo que um ou dois membros caiam. Contudo, quando ele é derrotado, os demais geralmente fogem ou se rendem.",
+    image: "/ameacas/chefe-bandido.png",
+    nd: "2",
+    tipo: "Humanoide (humano)",
+    tamanho: "Médio",
+    papel: "Solo",
+    origin: "Ameaças de Arton",
+    tema: "Capangas & Bandoleiros",
+    iniciativa: 6,
+    percepcao: 6,
+    defesa: 19,
+    fort: 11,
+    ref: 7,
+    von: 4,
+    resistenciaDano: "resistência a medo +5",
+    pv: 63,
+    deslocamento: "9m (6q)",
+    ataqueCorpoACorpo: "Espada longa +12 (1d8+5, 19) e espada curta +12 (1d6+5, 19)",
+    habilidades: [
+      "Ataque Furtivo: +2d6.",
+      "Ordens (Movimento): O chefe grita ordens para seus aliados em alcance médio. Eles recebem +2 em testes de perícia até o fim da cena."
+    ],
+    for: "3",
+    des: "2",
+    con: "2",
+    int: "1",
+    sab: "0",
+    car: "1",
+    pericias: ["Furtividade +7", "Intimidação +7"],
+    equipamentos: ["Couro batido", "Espada curta", "Espada longa"],
+    tesouro: "Padrão."
+  },
+  { id: "Chefe de Quadrilha",
+    name: "Chefe de Quadrilha",
+    description: "“Já esperava por sua visita, alcaide. Baixe essa espada, ou aqueles reféns vão sofrer.”\n— Keiramm-Seis-Orelhas, lefou ladino\nDiante dos marginais, uma figura altiva parece se sobressair. Os demais o observam, ansiosos, como se aguardando suas ações. De peito estufado, ele ergue a espada curta e lança um olhar desafiador.\nEm grupos de dez ou mais bandidos, algum bandoleiro mais forte ou esperto acabará assumindo a liderança. Um bandido chefe não se limita a dar ordens: ele luta e se arrisca com seus companheiros. Inspirados por sua presença, estes grupos podem se tornar audaciosos e imprudentes, atacando caravanas com escoltas armadas ou mesmo grupos de aventureiros.\nEnquanto o chefe está ativo, o grupo pode seguir lutando mesmo que um ou dois membros caiam. Contudo, quando ele é derrotado, os demais geralmente fogem ou se rendem.",
+    image: "/ameacas/chefe-bandido.png",
+    nd: "4",
+    tipo: "Humanoide (humano)",
+    tamanho: "Médio",
+    papel: "Solo",
+    origin: "Ameaças de Arton",
+    tema: "Capangas & Bandoleiros",
+    iniciativa: 8,
+    percepcao: 5,
+    defesa: 22,
+    fort: 14,
+    ref: 11,
+    von: 5,
+    resistenciaDano: "resistência a medo +5",
+    pv: 120,
+    deslocamento: "9m (6q)",
+    ataqueCorpoACorpo: "Espada longa +16 (1d8+6, 19) e espada curta +16 (1d6+6, 19)",
+    habilidades: [
+      "Ataque Furtivo: +3d6.",
+      "Ordens (Movimento): O chefe grita ordens para seus aliados em alcance médio. Eles recebem +2 em testes de perícia até o fim da cena.",
+      "Tropas Dispensáveis (Reação): Uma vez por rodada, quando é afetado por um ataque ou efeito, o chefe faz com que um aliado adjacente sofra todos os efeitos em seu lugar."
+    ],
+    for: "3",
+    des: "3",
+    con: "2",
+    int: "1",
+    sab: "0",
+    car: "1",
+    pericias: ["Furtividade +8", "Intimidação +8"],
+    equipamentos: ["Bandana", "Couro batido", "Espada curta certeira", "Espada longa"],
+    tesouro: "Padrão."
+  },
+  { id: "Sacerdote de Hyninn",
+    name: "Sacerdote de Hyninn",
+    description: "“Hyninn? Deus dos Ladrões? Não, nunca ouvi falar.”\n— Herrig, suraggel clérigo de Hyninn\nEm seu manto puído, o goblin tem o aspecto de um ladrão maltrapilho comum, até dizer sutilmente algo como “fazei-me mais esperto que os mais espertos” e começar a conjuração de uma magia.\nEmbora dificilmente vistos como “sacerdotes” no sentido mais estrito, muitos clérigos de Hyninn dedicam-se a zelar pelos bandidos e delinquentes, aqueles preferidos por sua divindade. Em grandes cidades, seus templos ocultos acolhem criminosos fugitivos, onde são curados e acobertados dos olhares da lei, ou até treinados para melhorar suas habilidades. Mas engana-se quem vê este clérigo como um defensor dos fracos! No momento em que um “protegido” demonstra um pingo de ingenuidade ou estupidez, será escorraçado como o indigno que é!\nCom seus poderes, não é raro que clérigos de Hyninn se tornem chefões do crime, usando os milagres do Deus dos Ladrões para assegurar o sucesso de sua organização. Se a lei ou aventureiros ameaçam suas operações, o próprio clérigo acompanhará um grupo de capangas para liquidá-los, provendo suporte mágico durante o combate. Contudo, quando a derrota parece próxima, não hesitará em invocar algum milagre para escapar — afinal, Hyninn abençoa os mais espertos.",
+    image: "/ameacas/sacerdote-de-hyninn.png",
+    nd: "2",
+    tipo: "Humanoide (goblin)",
+    tamanho: "Pequeno",
+    papel: "Especial",
+    origin: "Ameaças de Arton",
+    tema: "Capangas & Bandoleiros",
+    iniciativa: 6,
+    percepcao: 6,
+    defesa: 17,
+    fort: 5,
+    ref: 7,
+    von: 12,
+    resistenciaDano: "visão no escuro, imunidade a efeitos mentais",
+    pv: 49,
+    pm: 28,
+    deslocamento: "9m (6q), escalada 9m (6q)",
+    ataqueCorpoACorpo: "Adaga x2 +10 (1d4+5, 19)",
+    habilidades: [
+      "Bênção do Gatuno (Livre): Uma vez por cena, o sacerdote de Hyninn lança uma magia como uma ação livre, pagando seu custo normal.",
+      "Forma de Macaco (Completa, 2 PM): O sacerdote se transforma em um macaco. Ele adquire tamanho Minúsculo (+5 em Furtividade e –5 em testes de manobra). Seu equipamento desaparece (e ele perde seus benefícios) até voltar ao normal, mas suas outras estatísticas não são alteradas. A transformação dura indefinidamente, mas termina caso ele faça um ataque, lance uma magia ou sofra dano.",
+      "Malandragem Divina (Livre, 1 PM): Quando faz um teste de perícia, o sacerdote usa Enganação no lugar da perícia original.",
+      "Magias: Como um clérigo de Hyninn de 2º nível (CD 18).",
+      "Arma Espiritual (Padrão, 2 PM): Até o fim da cena, o sacerdote recebe +1 na Defesa e, uma ver por rodada, quando sofre um ataque corpo a corpo, pode usar uma reação para causar 2d6 pontos de dano de corte no atacante.",
+      "Curar Ferimentos (Padrão, 2 PM): Uma criatura adjacente cura 3d8+3 PV.",
+      "Despedaçar (Padrão, 1 PM): Um alvo em alcance curto sofre 1d8+2 pontos de dano de impacto se for uma criatura, ou o dobro disso sem aplicar RD se for um construto ou um objeto mundano Pequeno, e fica atordoado (Fort reduz à metade e evita a condição). Uma criatura só pode ficar atordoada por esta magia uma vez por cena."
+    ],
+    for: "–1",
+    des: "3",
+    con: "1",
+    int: "0",
+    sab: "3",
+    car: "2",
+    pericias: ["Enganação +7", "Ladinagem +10", "Religião +6"],
+    equipamentos: ["Adaga", "Gazua", "Símbolo sagrado de Hyninn"],
+    tesouro: "Padrão."
+  },
+  { id: "Alto Sacerdote de Hyninn",
+    name: "Alto Sacerdote de Hyninn",
+    description: "“Hyninn? Deus dos Ladrões? Não, nunca ouvi falar.”\n— Herrig, suraggel clérigo de Hyninn\nEm seu manto puído, o goblin tem o aspecto de um ladrão maltrapilho comum, até dizer sutilmente algo como “fazei-me mais esperto que os mais espertos” e começar a conjuração de uma magia.\nEmbora dificilmente vistos como “sacerdotes” no sentido mais estrito, muitos clérigos de Hyninn dedicam-se a zelar pelos bandidos e delinquentes, aqueles preferidos por sua divindade. Em grandes cidades, seus templos ocultos acolhem criminosos fugitivos, onde são curados e acobertados dos olhares da lei, ou até treinados para melhorar suas habilidades. Mas engana-se quem vê este clérigo como um defensor dos fracos! No momento em que um “protegido” demonstra um pingo de ingenuidade ou estupidez, será escorraçado como o indigno que é!\nCom seus poderes, não é raro que clérigos de Hyninn se tornem chefões do crime, usando os milagres do Deus dos Ladrões para assegurar o sucesso de sua organização. Se a lei ou aventureiros ameaçam suas operações, o próprio clérigo acompanhará um grupo de capangas para liquidá-los, provendo suporte mágico durante o combate. Contudo, quando a derrota parece próxima, não hesitará em invocar algum milagre para escapar — afinal, Hyninn abençoa os mais espertos.",
+    image: "/ameacas/sacerdote-de-hyninn.png",
+    nd: "8",
+    tipo: "Humanoide (humano)",
+    tamanho: "Médio",
+    papel: "Especial",
+    origin: "Ameaças de Arton",
+    tema: "Capangas & Bandoleiros",
+    iniciativa: 13,
+    percepcao: 13,
+    defesa: 30,
+    fort: 10,
+    ref: 15,
+    von: 19,
+    resistenciaDano: "imunidade a efeitos mentais",
+    pv: 175,
+    pm: 60,
+    deslocamento: "9m (6q)",
+    ataqueCorpoACorpo: "Adaga x2 +24 (1d4+12, 19)",
+    habilidades: [
+      "Bênção do Gatuno (Livre): Uma vez por cena, o alto sacerdote de Hyninn lança uma magia como uma ação livre, pagando seu custo normal.",
+      "Fé na Sorte (Reação): Uma vez por rodada, quando sofre dano, o alto sacerdote reduz esse dano à metade.",
+      "Forma de Macaco (Completa, 2 PM): O alto sacerdote se transforma em um macaco. Ele adquire tamanho Minúsculo (+5 em Furtividade e –5 em testes de manobra) e recebe deslocamento de escalada 9m. Seu equipamento desaparece (e ele perde seus benefícios) até voltar ao normal, mas suas outras estatísticas não são alteradas. A transformação dura indefinidamente, mas termina caso ele faça um ataque, lance uma magia ou sofra dano.",
+      "Malandragem Divina (Livre, 1 PM): Quando faz um teste de perícia, o alto sacerdote usa Enganação no lugar da perícia original.",
+      "Magias: Como um clérigo de Hyninn de 8º nível (CD 28).",
+      "Arma Espiritual (Padrão, 6 PM): Até o fim da cena, o alto sacerdote recebe +2 na Defesa e, uma ver por rodada, quando sofre um ataque corpo a corpo, pode usar uma reação para causar 3d6 pontos de dano de corte no atacante.",
+      "Curar Ferimentos (Padrão, 8 PM): Uma criatura adjacente cura 9d8+9 PV.",
+      "Despedaçar (Padrão, 7 PM): Um alvo em alcance curto sofre 4d8+8 pontos de dano de impacto se for uma criatura, ou o dobro disso sem aplicar RD se for um construto ou um objeto mundano Pequeno, e fica atordoado (Fort reduz à metade e evita a condição). Uma criatura só pode ficar atordoada por esta magia uma vez por cena.",
+      "Enxame de Pestes (Completa, 7 PM, sustentada): Um enxame de palhaços em miniatura surge em alcance médio e ocupa um quadrado de 1,5m. No fim de cada um dos turnos do alto sacerdote, o enxame causa 4d12 pontos de dano de corte a qualquer criatura em seu espaço (Fort reduz à metade). O alto sacerdote pode gastar uma ação de movimento para mover o enxame 12m."
+    ],
+    for: "0",
+    des: "3",
+    con: "1",
+    int: "1",
+    sab: "5",
+    car: "4",
+    pericias: ["Enganação +16", "Furtividade +13", "Ladinagem +14", "Religião +14"],
+    equipamentos: ["Adaga", "Capa esvoaçante aprimorada", "Gazua", "Manto eclesiástico", "Símbolo sagrado de Hyninn"],
+    tesouro: "Padrão."
+  },
+  { id: "Devoto de Hyninn Manhoso",
+    name: "Devoto de Hyninn Manhoso",
+    description: "“Ele veio por esta passagem, juro! Deve estar por perto. Ei, aquilo é um macaco?”\n— Adalbert de Deheon, patrulheiro de Valkaria\nO ladrão está cercado, sua fuga parece impossível, até que ele murmura uma oração ligeira. Diante de seus olhares incrédulos, ele se transforma em um pequeno macaco e escala a muralha, sumindo do outro lado.\nSerão os bandidos que buscam a proteção de Hyninn, ou será Hyninn que os torna bandidos? Talvez ambas as afirmações sejam verdadeiras. O fato é que muitos marginais invocam o Deus dos Ladrões antes de praticar algum delito, alguns com tanto fervor que terminam por atrair suas graças. Para estes, furtar não é apenas modo de vida ou ato de ousadia: é sua religião.\nEmbora não seja um clérigo, o devoto de Hyninn pode impressionar bandidos medíocres com seus parcos poderes, tornando-se líder de pequenos grupos.",
+    nd: "1/2",
+    tipo: "Humanoide (humano)",
+    tamanho: "Médio",
+    papel: "Especial",
+    origin: "Ameaças de Arton",
+    tema: "Capangas & Bandoleiros",
+    iniciativa: 5,
+    percepcao: 3,
+    defesa: 13,
+    fort: -1,
+    ref: 6,
+    von: 3,
+    resistenciaDano: "imunidade a efeitos de movimento",
+    pv: 12,
+    deslocamento: "9m (6q)",
+    ataqueCorpoACorpo: "Adaga +6 (2d4+5, 19)",
+    habilidades: [
+      "No Bolso Dói Mais: Quando acerta um ataque em corpo a corpo, para cada 1 ponto de dano causado, o devoto de Hyninn manhoso rouba T$ 1 da vítima. Mesmo que o devoto de Hyninn seja derrotado, há 50% de chance de que esses tibares tenham desaparecido para sempre, pela graça de Hyninn.",
+      "Truque de Espelhos (Reação): Uma vez por rodada, quando é atacado, o devoto pode enganar o atacante com uma distração, como um reflexo em uma janela, fazendo com que o ataque erre automaticamente (Von CD 15 evita). O devoto só pode usar esta habilidade uma vez por cena contra cada criatura."
+    ],
+    for: "–1",
+    des: "2",
+    con: "0",
+    int: "1",
+    sab: "0",
+    car: "2",
+    pericias: ["Enganação +6", "Furtividade +6", "Ladinagem +6"],
+    equipamentos: ["Adaga", "Gazua"],
+    tesouro: "Metade."
+  },
+  { id: "Devoto de Hyninn Simão",
+    name: "Devoto de Hyninn Simão",
+    description: "“Ele veio por esta passagem, juro! Deve estar por perto. Ei, aquilo é um macaco?”\n— Adalbert de Deheon, patrulheiro de Valkaria\nO ladrão está cercado, sua fuga parece impossível, até que ele murmura uma oração ligeira. Diante de seus olhares incrédulos, ele se transforma em um pequeno macaco e escala a muralha, sumindo do outro lado.\nSerão os bandidos que buscam a proteção de Hyninn, ou será Hyninn que os torna bandidos? Talvez ambas as afirmações sejam verdadeiras. O fato é que muitos marginais invocam o Deus dos Ladrões antes de praticar algum delito, alguns com tanto fervor que terminam por atrair suas graças. Para estes, furtar não é apenas modo de vida ou ato de ousadia: é sua religião.\nEmbora não seja um clérigo, o devoto de Hyninn pode impressionar bandidos medíocres com seus parcos poderes, tornando-se líder de pequenos grupos.",
+    nd: "1",
+    tipo: "Humanoide (humano)",
+    tamanho: "Médio",
+    papel: "Especial",
+    origin: "Ameaças de Arton",
+    tema: "Capangas & Bandoleiros",
+    iniciativa: 6,
+    percepcao: 3,
+    defesa: 15,
+    fort: 0,
+    ref: 11,
+    von: 5,
+    resistenciaDano: "imunidade a efeitos de movimento",
+    pv: 26,
+    deslocamento: "9m (6q)",
+    ataqueCorpoACorpo: "Adaga +8 (2d4+10, 19)",
+    habilidades: [
+      "No Bolso Dói Mais: Quando acerta um ataque em corpo a corpo, para cada 1 ponto de dano causado, o devoto de Hyninn simão rouba T$ 1 da vítima. Mesmo que o devoto de Hyninn seja derrotado, há 75% de chance de que esses tibares tenham desaparecido para sempre, louvado seja Hyninn.",
+      "Truque de Espelhos (Reação): Uma vez por rodada, quando é atacado, o devoto pode enganar o atacante com uma distração, como um reflexo em uma janela, fazendo com que o ataque erre automaticamente (Von CD 16 evita). O devoto só pode usar esta habilidade uma vez por cena contra cada criatura."
+    ],
+    for: "–1",
+    des: "3",
+    con: "0",
+    int: "1",
+    sab: "0",
+    car: "2",
+    pericias: ["Enganação +6", "Furtividade +7", "Ladinagem +7"],
+    equipamentos: ["Adaga", "Gazua"],
+    tesouro: "Metade."
+  },
+  { id: "Devoto de Hyninn Velhaco",
+    name: "Devoto de Hyninn Velhaco",
+    description: "“Ele veio por esta passagem, juro! Deve estar por perto. Ei, aquilo é um macaco?”\n— Adalbert de Deheon, patrulheiro de Valkaria\nO ladrão está cercado, sua fuga parece impossível, até que ele murmura uma oração ligeira. Diante de seus olhares incrédulos, ele se transforma em um pequeno macaco e escala a muralha, sumindo do outro lado.\nSerão os bandidos que buscam a proteção de Hyninn, ou será Hyninn que os torna bandidos? Talvez ambas as afirmações sejam verdadeiras. O fato é que muitos marginais invocam o Deus dos Ladrões antes de praticar algum delito, alguns com tanto fervor que terminam por atrair suas graças. Para estes, furtar não é apenas modo de vida ou ato de ousadia: é sua religião.\nEmbora não seja um clérigo, o devoto de Hyninn pode impressionar bandidos medíocres com seus parcos poderes, tornando-se líder de pequenos grupos.",
+    nd: "4",
+    tipo: "Humanoide (humano)",
+    tamanho: "Médio",
+    papel: "Especial",
+    origin: "Ameaças de Arton",
+    tema: "Capangas & Bandoleiros",
+    iniciativa: 9,
+    percepcao: 5,
+    defesa: 22,
+    fort: 4,
+    ref: 16,
+    von: 10,
+    resistenciaDano: "imunidade a efeitos de movimento e surpreendido",
+    pv: 88,
+    deslocamento: "9m (6q)",
+    ataqueCorpoACorpo: "Adaga x2 +15 (1d4+8, 18)",
+    habilidades: [
+      "Malandríssimo: Quando o devoto de Hyninn velhaco passa em um teste de resistência contra um efeito de um inimigo, esse inimigo perde 3 PM.",
+      "No Bolso Dói Mais: Quando acerta um ataque em corpo a corpo, para cada 1 ponto de dano causado, o devoto rouba T$ 1 da vítima. Mesmo que o devoto seja derrotado, há 90% de chance de que esses tibares tenham desaparecido para sempre, pois é grande a mão de Hyninn.",
+      "Truque de Espelhos (Reação): Uma vez por rodada, quando é atacado, o devoto pode enganar o atacante com uma distração, como um reflexo em uma janela, fazendo com que o ataque erre automaticamente (Von CD 20 evita). O devoto só pode usar esta habilidade uma vez por cena contra cada criatura."
+    ],
+    for: "0",
+    des: "4",
+    con: "0",
+    int: "1",
+    sab: "0",
+    car: "3",
+    pericias: ["Enganação +10", "Furtividade +10", "Ladinagem +10"],
+    equipamentos: ["Adaga precisa", "Capa esvoaçante", "Gazua"],
+    tesouro: "Metade."
+  },
+  { id: "Gatuno",
+    name: "Gatuno",
+    description: "“A maior qualidade de uma boa ladra é ser imperceptível.”\n— Kira, medusa ladina\nO guarda do portão cai inconsciente, um pequeno dardo cravado no pescoço. Nenhum sinal do atacante, exceto por um breve farfalhar da folhagem na copa da árvore ao longe.\nO gatuno é o clássico ladrão furtivo e acrobático que corre sobre telhados, entra pelas janelas, engana sentinelas e espreita na escuridão. Ele é mais ágil, esperto e audacioso que o bandido comum. Com a motivação certa, talvez até venha a se tornar um ladino aventureiro.\nContra heróis focados em combate, gatunos são adversários desafiadores — porque quase nunca lutam de fato, apenas atacam furtivamente das sombras. Se o alvo não caiu, o gatuno foge e desiste, ou aguarda outra oportunidade. Poucas vezes um gatuno está interessado em matar; ele é um ladrão, não um assassino (assassinos são muito mais caros!). Quando um confronto é inevitável, sua meta será apenas incapacitar o oponente para então roubar aquilo que procura.\nGatunos agem sozinhos, formando grupos apenas para grandes golpes, como invadir e roubar tesouros em algum castelo. Alguns também trabalham para guildas e quadrilhas, em missões de roubo ou reconhecimento para golpes posteriores. Grupos de aventureiros em viagem, portando itens valiosos, também podem ser alvos de um gatuno: ele provavelmente vai esperar que todos durmam para roubá-los. Caso um deles esteja acordado, vigiando, pode atraí-lo para uma emboscada ou incapacitá-lo com sonífero. Estas estatísticas também podem representar espiões ou ninjas.",
+    image: "/ameacas/gatuno.png",
+    nd: "1",
+    tipo: "Humanoide (humano)",
+    tamanho: "Médio",
+    papel: "Especial",
+    origin: "Ameaças de Arton",
+    tema: "Capangas & Bandoleiros",
+    iniciativa: 7,
+    percepcao: 2,
+    defesa: 14,
+    fort: 0,
+    ref: 11,
+    von: 5,
+    resistenciaDano: "",
+    pv: 25,
+    deslocamento: "9m (6q), escalada 6m (4q)",
+    ataqueCorpoACorpo: "Porrete +9 (1d6+5 não letal)",
+    habilidades: [
+      "Ataque Furtivo: +2d6.",
+      "Pancada na Cabeça: Uma criatura atingida por um ataque furtivo do gatuno fica inconsciente e caída ou, se estiver envolvida em combate ou outra situação perigosa, fica exausta por 1 rodada, depois fatigada (em ambos os casos, Fort CD 16 reduz para fatigada por 1d4 rodadas).",
+      "Sombra: O gatuno não sofre penalidade em testes de Furtividade por se mover ao seu deslocamento normal e reduz a penalidade por atacar e fazer outras ações chamativas para –10."
+    ],
+    for: "0",
+    des: "3",
+    con: "1",
+    int: "1",
+    sab: "0",
+    car: "0",
+    pericias: ["Acrobacia +7", "Furtividade +10", "Ladinagem +7"],
+    equipamentos: ["Armadura de couro", "Gazua", "Porrete"],
+    tesouro: "Padrão."
+  },
+  { id: "Gatuno Mestre",
+    name: "Gatuno Mestre",
+    description: "“A maior qualidade de uma boa ladra é ser imperceptível.”\n— Kira, medusa ladina\nO guarda do portão cai inconsciente, um pequeno dardo cravado no pescoço. Nenhum sinal do atacante, exceto por um breve farfalhar da folhagem na copa da árvore ao longe.\nO gatuno é o clássico ladrão furtivo e acrobático que corre sobre telhados, entra pelas janelas, engana sentinelas e espreita na escuridão. Ele é mais ágil, esperto e audacioso que o bandido comum. Com a motivação certa, talvez até venha a se tornar um ladino aventureiro.\nContra heróis focados em combate, gatunos são adversários desafiadores — porque quase nunca lutam de fato, apenas atacam furtivamente das sombras. Se o alvo não caiu, o gatuno foge e desiste, ou aguarda outra oportunidade. Poucas vezes um gatuno está interessado em matar; ele é um ladrão, não um assassino (assassinos são muito mais caros!). Quando um confronto é inevitável, sua meta será apenas incapacitar o oponente para então roubar aquilo que procura.\nGatunos agem sozinhos, formando grupos apenas para grandes golpes, como invadir e roubar tesouros em algum castelo. Alguns também trabalham para guildas e quadrilhas, em missões de roubo ou reconhecimento para golpes posteriores. Grupos de aventureiros em viagem, portando itens valiosos, também podem ser alvos de um gatuno: ele provavelmente vai esperar que todos durmam para roubá-los. Caso um deles esteja acordado, vigiando, pode atraí-lo para uma emboscada ou incapacitá-lo com sonífero. Estas estatísticas também podem representar espiões ou ninjas.",
+    image: "/ameacas/gatuno.png",
+    nd: "3",
+    tipo: "Humanoide (humano)",
+    tamanho: "Médio",
+    papel: "Especial",
+    origin: "Ameaças de Arton",
+    tema: "Capangas & Bandoleiros",
+    iniciativa: 8,
+    percepcao: 3,
+    defesa: 19,
+    fort: 3,
+    ref: 15,
+    von: 9,
+    resistenciaDano: "evasão, resistência a efeitos de movimento +3",
+    pv: 68,
+    deslocamento: "9m (6q), escalada 6m (4q)",
+    ataqueCorpoACorpo: "Porrete +14 (1d6+7 não letal)",
+    habilidades: [
+      "Ataque Furtivo: +3d6.",
+      "Bomba de Fumaça (Padrão): O gatuno mestre prepara e arremessa uma bomba de fumaça em um ponto em alcance curto. A bomba libera uma fumaça espessa em um raio de 6m a partir do impacto; a fumaça obscurece toda a visão, fornece camuflagem para criaturas a até 1,5m e camuflagem total para criaturas a partir de 3m e dura até o fim da cena.",
+      "Pancada na Cabeça: Uma criatura atingida por um ataque furtivo do gatuno mestre fica inconsciente e caída ou, se estiver envolvida em combate ou outra situação perigosa, fica exausta por 1 rodada, depois fatigada (em ambos os casos, Fort CD 19 reduz para fatigada por 1d4 rodadas).",
+      "Sombra: O gatuno mestre não sofre penalidade em testes de Furtividade por se mover ao seu deslocamento normal e reduz a penalidade por atacar e fazer outras ações chamativas para –10."
+    ],
+    for: "0",
+    des: "4",
+    con: "1",
+    int: "1",
+    sab: "0",
+    car: "0",
+    pericias: ["Acrobacia +9", "Furtividade +12", "Ladinagem +10"],
+    equipamentos: ["Armadura de couro", "Bomba de fumaça x3", "Gazua aprimorada", "Porrete"],
+    tesouro: "Padrão."
+  },
+  { id: "Duplo",
+    name: "Duplo",
+    description: "“Por onde andou? Não se afaste outra vez, fico preocupada! Vem, vamos continuar, eu vou na frente.”\n— Marenn Loramis, sereia clériga de Oceano (últimas palavras)\nQuando seu disfarce é enfim desmascarado, a sacerdotisa élfica sorri com malícia — e se transforma em algo muito diferente. Lembra um boneco ou manequim de pele branca, sem feições. Sem nariz, orelhas ou cabelo; apenas olhos negros e uma pequena boca redonda, sem qualquer expressão. As mãos agora possuem longas garras negras, que a criatura parece disposta a usar.\nDuplos — também chamados doppelgangers — são os mestres supremos do disfarce. Seres estranhos, capazes de assumir a forma daqueles que encontram. Dizem que uma das primeiras ações de Hyninn, assim que ascendeu ao posto de divindade maior no Panteão, foi dar vida a estes traiçoeiros.\nO duplo pode se transformar em qualquer criatura humanoide, seja grande como um ogro ou pequena como um hynne. É uma transformação física, não ilusória; por isso, dificilmente detectável. Além disso, duplos são imunes a magias de leitura e controle da mente.\nO duplo sempre reverte à forma natural quando morre. Todo duplo é capaz de identificar outro, não importa a forma que ambos estejam usando. Contudo, por sua natureza esquiva, é muito raro que façam alianças.\nAlguns duplos atuam como espiões e assassinos para guildas de ladrões ou cultos malignos; outros lideram, eles próprios, tais organizações (não raras vezes após matar o líder original e assumir sua forma). Contudo, estes seres inquietos raramente preservam um mesmo disfarce por muito tempo, logo buscando um novo alvo para tomar seu lugar e viver outra farsa.",
+    image: "/ameacas/duplo.png",
+    nd: "4",
+    tipo: "Humanoide (duplo)",
+    tamanho: "Médio",
+    papel: "Especial",
+    origin: "Ameaças de Arton",
+    tema: "Capangas & Bandoleiros",
+    iniciativa: 9,
+    percepcao: 6,
+    defesa: 21,
+    fort: 5,
+    ref: 15,
+    von: 10,
+    resistenciaDano: "cura acelerada 5, imunidade a adivinhação e efeitos mentais",
+    pv: 143,
+    deslocamento: "9m (6q)",
+    ataqueCorpoACorpo: "Garra x2 +14 (1d6+7)",
+    habilidades: [
+      "Ataque Furtivo: +3d6.",
+      "Detectar Pensamentos: O duplo detecta constantemente os pensamentos superficiais de todas as criaturas inteligentes em alcance curto. Ele não pode ser surpreendido por criaturas cujos pensamentos esteja detectando dessa forma, e recebe +2 na Defesa e em testes de perícia contra elas. Uma criatura ciente desta habilidade pode gastar uma ação de movimento e fazer um teste de Vontade (CD 20). Se passar, esconde seus pensamentos até o fim da cena.",
+      "Mudar Forma (Padrão): O duplo assume a forma de qualquer humanoide de tamanho Pequeno a Grande, como no efeito da magia Metamorfose. Ele pode permanecer na forma escolhida por tempo indeterminado, mas, se morrer, reverte à forma natural."
+    ],
+    for: "2",
+    des: "5",
+    con: "2",
+    int: "2",
+    sab: "2",
+    car: "4",
+    pericias: ["Enganação +14", "Furtividade +11", "Intuição +10"],
+    equipamentos: ["Duplos geralmente não usam equipamento, mas podem portar armas, ferramentas e roupas adequadas ao seu disfarce atual."],
+    tesouro: "Padrão."
+  },
+  //#endregion
 
 
 

@@ -117,6 +117,74 @@ export const distinctions: Distinction[] = [
     },
   ],
   },
+  { id: "Presa de Coral",
+  name: "Presa de Coral",
+  origin: "Dragão Brasil",
+  image: "/distincoes/PresadeCoral.png",
+  introduction: `O reino arquipélago de Khubar tem um guardião sem igual. Ao longo dos séculos Benthos, o Dragão-Rei dos Mares, protegeu seus habitantes das mais variadas e perigosas ameaças. Entretanto, os khubarianos não são um povo que se sente confortável de viver sob a sombra de ninguém, seja homem ou dragão.\nCom o primeiro contato entre os khubarianos e Benthos, começou a surgir entre os habitantes do arquipélago uma poderosa tradição guerreira, dedicada a emular o poder bélico do Dragão-Rei. Chamados de Presas de Coral, os membros desta tradição acumularam poder político e militar, mantendo-se aliados de todos governos locais, mas sempren dependentes. Orgulhosos e dedicados, os Presas de Coral veem em Benthos uma fonte de poder e inspiração. Entretanto, ainda que alguns destes guerreiros venerem o Dragão-Rei como um deus, eles não se contentam apenas com preces. Como parte de seus ritos e treinamentos, eles se valem de um preparado alquímico especial para desenvolver habilidades mágicas que os permitem emular os poderes do próprio Dragão-Rei.\nUm Presa de Coral é um guerreiro de elite khubariano, um feroz campeão de seu povo. Ele empunha azagaia, espada e lança em combinações letais e invoca poderes mágicos assombrosos de sua conexão com Benthos e com o mar que cerca sua terra natal.`,
+  admission: `Para começar o processo de admissão, um candidato deve impressionar um capitão dos Presas de Coral e ser convidado pessoalmente a integrar a ordem. Feitos que normalmente impressionam os capitães incluem derrotar um grande número de oponentes desafiadores sozinho, ou vencer, sozinho ou em grupo, um oponente de poder claramente superior. Uma vez que tenha atraído a atenção de um capitão e aceito o convite, o candidato passa a treinar com um grupo de candidatos ou, dependendo das circunstâncias, com outros Presas de Coral. Este treinamento inclui testes de coragem, aptidão física, habilidade marcial e comprometimento com Khubar e pode se estender por várias semanas. Por fim, após participar do treinamento, o candidato é enviado em uma missão em que deverá provar sua lealdade a Benthos, ao arquipélago e, sobretudo, aos Presas de Coral. Se for bem-sucedido nessa missão, o candidato é convidado a passar pela cerimônia de iniciação, que envolve consumo de sangue do Dragão-Rei (veja caixa). Se sobreviver, se tornará um Presa de Coral.`,
+  mark: `**Sangue do Dragão-Rei**\nParte do ritual de iniciação de um Presa de Coral, o consumo de Sangue do Dragão-Rei é também a etapa mais perigosa da preparação destes combatentes.\nA poção alquímica conhecida como Sangue do Dragão-Rei é feita com veneno de serpentes marinhas, ervas locais de Khubar, água do mar e (dizem) uma gota de sangue de dragão. Sua fórmula exata, entretanto, é o segredo mais bem guardado dos Presas de Coral. Como parte do ritual de iniciação, você deve ingerir um gole de Sangue do Dragão-Rei e fazer um teste estendido de Fortitude (CD 20, 3 sucessos). Para cada falha, você perde 2d12 pontos de vida por veneno e, em uma falha total, sofre uma morte agonizante e dolorida. Se passar no teste estendido, completa o ritual de iniciação e recebe a capacidade de imbuir suas armas com poder dracônico. Você pode gastar 2 PM e uma ação de movimento para que as armas que você empunha causem +1d4 pontos de dano de ácido até o fim da cena.`,
+  powers: [
+    {
+      name: "Arsenal de Coral",
+      description: `O Presa de Coral se torna mestre no uso das armas tradicionais de sua ordem. \nVocê recebe +1 na margem de ameaça com armas do arsenal de coral (cimitarras, espadas curtas, espadas longas, azagaias e lanças). Além disso, quando usa Sangue do Dragão-Rei, o dano extra de ácido com essas armas aumenta em 1 passo, +1 passo para cada três outros poderes de Presa de Coral que você possuir. \nPré-requisitos: treinado em Atletismo e Luta.`,
+    },
+    {
+      name: "Presa Distante: Azagaia de Água",
+      description: `Os Presas de Coral aprendem a usar lanças e azagaias para invocar a fúria do mar. \nVocê não sofre a penalidade em ataque por empunhar azagaias como armas corpo a corpo e o alcance de seus ataques à distância com azagaias e lanças aumenta em um passo. Além disso, se estiver empunhando uma dessas armas, você pode gastar uma ação padrão e 2 PM para disparar uma rajada de água salgada que percorre uma linha de 9m e usa as mesmas características da arma empunhada. Faça um teste de ataque à distância com a arma e compare o resultado com a Defesa de cada criatura nesta área. Então, faça uma rolagem de dano e aplique o resultado a cada inimigo atingido. Criaturas que sofram dano dessa forma também ficam lentas por 1 rodada. \nPré-requisitos: Arsenal de Coral, Estilo de Arremesso.`,
+    },
+    {
+      name: "Presa Dupla: Corte da Correnteza",
+      description: `Os Presas de Coral aprendem a usar armas em pares para atacar de forma implacável e replicar a intensidade da correnteza marítima. \nSe estiver empunhando duas armas do arsenal de coral, você não sofre a penalidade em testes de ataque pelo poder Estilo de Duas Armas. Além disso, você pode gastar uma ação padrão e 3 PM para girar suas armas em um arco e invocar um redemoinho de água salgada. Faça um ataque corpo a corpo com cada uma das armas e compare-os com a Defesa de cada inimigo em seu alcance natural. Então, faça uma rolagem de dano para cada ataque e aplique o resultado correspondente a cada inimigo atingido. Criaturas atingidas por ambos os ataques ficam sangrando. \nPré-requisitos: Arsenal de Coral, Estilo de Duas Armas.`,
+    },
+    {
+      name: "Presa Suprema: Arquipélago de Dor",
+      description: `Da mesma forma que o mar envolve Khubar, um Presa de Coral pode se mover em volta de um oponente, preparando um golpe feroz. \nVocê pode gastar uma ação completa e 3 PM para desferir um ataque especial contra um oponente adjacente. Você pode percorrer qualquer distância, até o seu deslocamento, desde que se mantenha sempre adjacente ao alvo e não passe pelo mesmo espaço mais de uma vez. Ao final deste movimento, você faz uma ação agredir contra o alvo com um bônus de +1 no teste de ataque, na rolagem de dano e na margem de ameaça de seus ataques com armas do arsenal de coral para cada 1,5m percorrido desta forma. \nPré-requisito: Três Se Tornam Um.`,
+    },
+    {
+      name: "Manobra Maremoto",
+      description: `Quando um guerreiro khubariano de elite decide que vai atingir um alvo, nada pode detê-lo. \nQuando faz uma investida empunhando pelo menos uma arma de seu arsenal de coral, você pode gastar 3 PM para se transformar em um maremoto vivo. Durante esta investida, seu deslocamento aumenta em +6m e você ignora terreno difícil natural. Além disso, pode passar por objetos como se fosse água e empurra criaturas em seu caminho; faça um teste da manobra empurrar e compare o resultado com o teste de cada criatura afetada. Criaturas que perderem o teste de manobra são empurradas 1,5m para um lado à sua escolha. \nPré-requisito: Salto Oceânico.`,
+    },
+    {
+      name: "Salto Oceânico",
+      description: `Os Presas de Coral são tão integrados ao oceano que podem nadar até mesmo em terra firme. \nVocê recebe deslocamento de natação igual ao seu deslocamento (se já tiver deslocamento de natação, em vez disso ele aumenta em 3 metros). Além disso, você aprende e pode lançar a magia Salto Dimensional (apenas em você). Caso esteja sob a chuva ou com pelo menos metade do corpo imerso em água, você pode lançar esta magia como uma ação de movimento. \nPré-requisito: Arsenal de Coral.`,
+    },
+    {
+      name: "Três Se Tornam Um",
+      description: `O estilo de luta dos Presas de Coral usa lanças e espadas. Os mais habilidosos entre esses guerreiros de elite aprendem a extrair o máximo de cada uma dessas armas. \nVocê pode gastar uma ação de movimento e 1 PM para combinar suas técnicas de luta. Até o fim da cena, cada arma do arsenal de coral que você empunhar recebe as habilidades adaptável, alongada, ágil e/ou arremessável (curto), à sua escolha, e se beneficia de bônus específicos de armas que você possua para qualquer arma do arsenal (como a habilidade Mestre do Tridente). \nPré-requisito: Arsenal de Coral.`,
+    },
+  ],
+  },
+  { id: "Menestrel Maldito",
+  name: "Menestrel Maldito",
+  origin: "Dragão Brasil",
+  image: "/distincoes/MenestrelMaldito.png",
+  introduction: `Existe uma história sussurrada em tons de cautela e inveja nos conservatórios de música ou entre os bardos que frequentam as cortes dos nobres. Ela fala sobre uma figura trajada de azul que surge em uma encruzilhada diante de um músico que perdeu tudo e oferece a ele uma chance de começar de novo. É uma história de redenção e maldição, pois aqueles que aceitam a barganha do estranho de azul aceitam o maior dos preços por uma segunda chance em suas vidas.\nO mesmo relato pode ser ouvido nos mais diferentes lugares, nos mais variados tons. Ela pode ser um causo engraçado, contado entre risadas e bater de canecas em estalagens portuárias ou como uma fábula assustadora, recitada com seriedade diante de músicos aspirantes. Muitos que a ouvem acreditam ser apenas uma lenda, um conto feito para amedrontar os bem-sucedidos e levar uma módica esperança para aqueles que não têm nada. A realidade, entretanto, é que a história do Estranho de Azul é verdadeira; uma trágica narrativa que, independente de como seja contada, carrega mistério, suspense, esperança, maldição, arte e, inevitavelmente, morte.\nO menestrel maldito é um artista que perdeu tudo, ou ao menos aquilo que mais importava. Desiludido, ele perseguiu a história do Estranho de Azul até ser encontrado por ele. Em troca de uma porção de sua alma, este artista desesperado recebeu uma breve, mas redentora, segunda chance. Reencontrando sua arte, o menestrel maldito aprende que o pouco tempo que lhe resta é sua última chance de deixar uma marca indelével e emocionante na mente e na alma de seu público.`,
+  admission: `O candidato precisa ter sofrido uma tragédia pessoal terrível. Pode ter sido abandonado por um grande amor, presenciado a morte de um amigo próximo, perdido uma posição de destaque ou algum outro evento similar. Depois disso, deve ir até uma encruzilhada levando seu instrumento musical, cair de joelhos e se lamentar para o vazio. Após horas de choro, surgirá um demônio na forma de um indivíduo alto e esguio, vestindo um manto azul, com longos cabelos que caem por cima de seu rosto, deixando visível apenas o brilho soturno de seus cinco olhos. A figura estenderá a mão, pedindo o instrumento do músico. Caso entregue, o Estranho de Azul afinará o instrumento, usando fragmentos da alma do próprio candidato, e o oferecerá de volta. Se o músico aceitar esse instrumento, se tornará um menestrel maldito até o resto dos seus breves dias.`,
+  mark: `**A Maldição do Menestrel**\nComo pagamento pelo pacto com o Estranho de Azul, o menestrel cede uma pequena, mas importante, parte de sua alma.\nUm instrumento musical à sua escolha se torna afinado com uma porção de sua própria alma. Quando usa esse instrumento, você recebe +1 em Atuação e a CD para resistir às suas habilidades de bardo aumenta em +1. Se perder seu instrumento, o Estranho de Azul irá afinar outro, desde que você passe uma noite em claro em uma encruzilhada.\nTer firmado esse pacto, entretanto, significa que seu tempo em Arton será mais breve que o normal. Sempre que estiver com 0 PV ou menos, sua alma fica à mercê do Estranho de Azul; no início de cada um dos seus turnos, você deve fazer um teste de Sabedoria (CD 15). Se passar, evita o Estranho e não precisa mais fazer esse teste até sofrer dano que o deixe com 0 PV ou menos novamente. Caso termine três rodadas (não necessariamente consecutivas) na mesma cena nessa situação, você morre e é levado pelo Estranho de Azul para as profundezas de Venomia. Lá, passará sua existência em eterna miséria, tocando suas desgraças para o deleite de Sszzass, e nunca poderá ser revivido.`,
+  powers: [
+    {
+      name: "Técnica Endiabrada",
+      description: `Para um menestrel maldito, sua alma não é apenas uma moeda de barganha; ela é a energia que fortalece suas notas e torna sua música tão poderosa. \nQuando usa Inspiração ou uma música de bardo empunhando seu instrumento afinado, o alcance desta habilidade aumenta em um passo (de curto para médio e de médio para longo). Além disso, quando faz um teste de Atuação com seu instrumento afinado, você pode gastar 1 PM para escolher 10, ou 5 PM para escolher 20, em qualquer situação, exceto testes de ataque. Se escolher 20 dessa forma, você fica alquebrado. \nPré-requisitos: treinado em Atuação, Inspiração.`,
+    },
+    {
+      name: "Celeridade Cerúlea",
+      description: `Não basta ser mais preciso que qualquer outro músico, um menestrel maldito é também mais rápido. \nUma vez por rodada, quando usa uma música de bardo empunhando seu instrumento afinado, você pode gastar 2 PM para usar esta música como uma ação livre. \nPré-requisito: Técnica Endiabrada.`,
+    },
+    {
+      name: "Composição Mágica",
+      description: `O menestrel maldito aprende a entrelaçar suas magias com a tristeza de suas notas musicais. \nQuando lança uma magia de bardo com um teste de resistência, você pode gastar 2 PM para fazer um teste de Atuação (CD 10). Se passar, você aumenta a CD da magia em +1, +1 para cada 10 pontos que seu teste de Atuação passar a CD. \nPré-requisitos: treinado em Misticismo, Técnica Endiabrada.`,
+    },
+    {
+      name: "Música: Ária da Tristeza",
+      description: `Impregnada por sua própria tragédia, a música do menestrel maldito carrega tanta tristeza que pode até paralisar seus ouvintes. \nFaça um teste de Atuação oposto ao teste de Vontade de cada criatura à sua escolha dentro do alcance (você faz um único teste). Alvos que falhem ficam atordoados por uma rodada (uma criatura só pode ser atordoada por este poder uma vez por cena) e frustrados. \nPré-requisito: Técnica Endiabrada.`,
+    },
+    {
+      name: "Música: Nota Azul",
+      description: `É um risco se deixar levar pela música de um menestrel maldito. Os acordes hipnóticos podem não apenas conquistar sua atenção, mas também consumir sua mente e levar à morte. \nFaça um teste de Atuação oposto pelo teste de Vontade de cada criatura à sua escolha dentro do alcance (você faz um único teste). Alvos que falhem sofrem 1d8 pontos de dano mental (ou 1d12, se estiverem sofrendo alguma condição mental). Para cada outro poder de menestrel maldito que você possui, o dano de sua Nota Azul aumenta em +1d8 ou +1d12, conforme apropriado. \nPré-requisito: Técnica Endiabrada.`,
+    },
+  ],
+  },
 
 
   { id: "Arqueiro de Lenórienn",
@@ -1387,74 +1455,7 @@ Os materiais especiais que podem ser empregados em ornitópteros, bem como seu c
   ],
   },
   
-  { id: "Presa de Coral",
-  name: "Presa de Coral",
-  origin: "Dragão Brasil",
-  image: "/distincoes/PresadeCoral.png",
-  introduction: `O reino arquipélago de Khubar tem um guardião sem igual. Ao longo dos séculos Benthos, o Dragão-Rei dos Mares, protegeu seus habitantes das mais variadas e perigosas ameaças. Entretanto, os khubarianos não são um povo que se sente confortável de viver sob a sombra de ninguém, seja homem ou dragão.\nCom o primeiro contato entre os khubarianos e Benthos, começou a surgir entre os habitantes do arquipélago uma poderosa tradição guerreira, dedicada a emular o poder bélico do Dragão-Rei. Chamados de Presas de Coral, os membros desta tradição acumularam poder político e militar, mantendo-se aliados de todos governos locais, mas sempren dependentes. Orgulhosos e dedicados, os Presas de Coral veem em Benthos uma fonte de poder e inspiração. Entretanto, ainda que alguns destes guerreiros venerem o Dragão-Rei como um deus, eles não se contentam apenas com preces. Como parte de seus ritos e treinamentos, eles se valem de um preparado alquímico especial para desenvolver habilidades mágicas que os permitem emular os poderes do próprio Dragão-Rei.\nUm Presa de Coral é um guerreiro de elite khubariano, um feroz campeão de seu povo. Ele empunha azagaia, espada e lança em combinações letais e invoca poderes mágicos assombrosos de sua conexão com Benthos e com o mar que cerca sua terra natal.`,
-  admission: `Para começar o processo de admissão, um candidato deve impressionar um capitão dos Presas de Coral e ser convidado pessoalmente a integrar a ordem. Feitos que normalmente impressionam os capitães incluem derrotar um grande número de oponentes desafiadores sozinho, ou vencer, sozinho ou em grupo, um oponente de poder claramente superior. Uma vez que tenha atraído a atenção de um capitão e aceito o convite, o candidato passa a treinar com um grupo de candidatos ou, dependendo das circunstâncias, com outros Presas de Coral. Este treinamento inclui testes de coragem, aptidão física, habilidade marcial e comprometimento com Khubar e pode se estender por várias semanas. Por fim, após participar do treinamento, o candidato é enviado em uma missão em que deverá provar sua lealdade a Benthos, ao arquipélago e, sobretudo, aos Presas de Coral. Se for bem-sucedido nessa missão, o candidato é convidado a passar pela cerimônia de iniciação, que envolve consumo de sangue do Dragão-Rei (veja caixa). Se sobreviver, se tornará um Presa de Coral.`,
-  mark: `**Sangue do Dragão-Rei**\nParte do ritual de iniciação de um Presa de Coral, o consumo de Sangue do Dragão-Rei é também a etapa mais perigosa da preparação destes combatentes.\nA poção alquímica conhecida como Sangue do Dragão-Rei é feita com veneno de serpentes marinhas, ervas locais de Khubar, água do mar e (dizem) uma gota de sangue de dragão. Sua fórmula exata, entretanto, é o segredo mais bem guardado dos Presas de Coral. Como parte do ritual de iniciação, você deve ingerir um gole de Sangue do Dragão-Rei e fazer um teste estendido de Fortitude (CD 20, 3 sucessos). Para cada falha, você perde 2d12 pontos de vida por veneno e, em uma falha total, sofre uma morte agonizante e dolorida. Se passar no teste estendido, completa o ritual de iniciação e recebe a capacidade de imbuir suas armas com poder dracônico. Você pode gastar 2 PM e uma ação de movimento para que as armas que você empunha causem +1d4 pontos de dano de ácido até o fim da cena.`,
-  powers: [
-    {
-      name: "Arsenal de Coral",
-      description: `O Presa de Coral se torna mestre no uso das armas tradicionais de sua ordem. \nVocê recebe +1 na margem de ameaça com armas do arsenal de coral (cimitarras, espadas curtas, espadas longas, azagaias e lanças). Além disso, quando usa Sangue do Dragão-Rei, o dano extra de ácido com essas armas aumenta em 1 passo, +1 passo para cada três outros poderes de Presa de Coral que você possuir. \nPré-requisitos: treinado em Atletismo e Luta.`,
-    },
-    {
-      name: "Presa Distante: Azagaia de Água",
-      description: `Os Presas de Coral aprendem a usar lanças e azagaias para invocar a fúria do mar. \nVocê não sofre a penalidade em ataque por empunhar azagaias como armas corpo a corpo e o alcance de seus ataques à distância com azagaias e lanças aumenta em um passo. Além disso, se estiver empunhando uma dessas armas, você pode gastar uma ação padrão e 2 PM para disparar uma rajada de água salgada que percorre uma linha de 9m e usa as mesmas características da arma empunhada. Faça um teste de ataque à distância com a arma e compare o resultado com a Defesa de cada criatura nesta área. Então, faça uma rolagem de dano e aplique o resultado a cada inimigo atingido. Criaturas que sofram dano dessa forma também ficam lentas por 1 rodada. \nPré-requisitos: Arsenal de Coral, Estilo de Arremesso.`,
-    },
-    {
-      name: "Presa Dupla: Corte da Correnteza",
-      description: `Os Presas de Coral aprendem a usar armas em pares para atacar de forma implacável e replicar a intensidade da correnteza marítima. \nSe estiver empunhando duas armas do arsenal de coral, você não sofre a penalidade em testes de ataque pelo poder Estilo de Duas Armas. Além disso, você pode gastar uma ação padrão e 3 PM para girar suas armas em um arco e invocar um redemoinho de água salgada. Faça um ataque corpo a corpo com cada uma das armas e compare-os com a Defesa de cada inimigo em seu alcance natural. Então, faça uma rolagem de dano para cada ataque e aplique o resultado correspondente a cada inimigo atingido. Criaturas atingidas por ambos os ataques ficam sangrando. \nPré-requisitos: Arsenal de Coral, Estilo de Duas Armas.`,
-    },
-    {
-      name: "Presa Suprema: Arquipélago de Dor",
-      description: `Da mesma forma que o mar envolve Khubar, um Presa de Coral pode se mover em volta de um oponente, preparando um golpe feroz. \nVocê pode gastar uma ação completa e 3 PM para desferir um ataque especial contra um oponente adjacente. Você pode percorrer qualquer distância, até o seu deslocamento, desde que se mantenha sempre adjacente ao alvo e não passe pelo mesmo espaço mais de uma vez. Ao final deste movimento, você faz uma ação agredir contra o alvo com um bônus de +1 no teste de ataque, na rolagem de dano e na margem de ameaça de seus ataques com armas do arsenal de coral para cada 1,5m percorrido desta forma. \nPré-requisito: Três Se Tornam Um.`,
-    },
-    {
-      name: "Manobra Maremoto",
-      description: `Quando um guerreiro khubariano de elite decide que vai atingir um alvo, nada pode detê-lo. \nQuando faz uma investida empunhando pelo menos uma arma de seu arsenal de coral, você pode gastar 3 PM para se transformar em um maremoto vivo. Durante esta investida, seu deslocamento aumenta em +6m e você ignora terreno difícil natural. Além disso, pode passar por objetos como se fosse água e empurra criaturas em seu caminho; faça um teste da manobra empurrar e compare o resultado com o teste de cada criatura afetada. Criaturas que perderem o teste de manobra são empurradas 1,5m para um lado à sua escolha. \nPré-requisito: Salto Oceânico.`,
-    },
-    {
-      name: "Salto Oceânico",
-      description: `Os Presas de Coral são tão integrados ao oceano que podem nadar até mesmo em terra firme. \nVocê recebe deslocamento de natação igual ao seu deslocamento (se já tiver deslocamento de natação, em vez disso ele aumenta em 3 metros). Além disso, você aprende e pode lançar a magia Salto Dimensional (apenas em você). Caso esteja sob a chuva ou com pelo menos metade do corpo imerso em água, você pode lançar esta magia como uma ação de movimento. \nPré-requisito: Arsenal de Coral.`,
-    },
-    {
-      name: "Três Se Tornam Um",
-      description: `O estilo de luta dos Presas de Coral usa lanças e espadas. Os mais habilidosos entre esses guerreiros de elite aprendem a extrair o máximo de cada uma dessas armas. \nVocê pode gastar uma ação de movimento e 1 PM para combinar suas técnicas de luta. Até o fim da cena, cada arma do arsenal de coral que você empunhar recebe as habilidades adaptável, alongada, ágil e/ou arremessável (curto), à sua escolha, e se beneficia de bônus específicos de armas que você possua para qualquer arma do arsenal (como a habilidade Mestre do Tridente). \nPré-requisito: Arsenal de Coral.`,
-    },
-  ],
-  },
-  { id: "Menestrel Maldito",
-  name: "Menestrel Maldito",
-  origin: "Dragão Brasil",
-  image: "/distincoes/MenestrelMaldito.png",
-  introduction: `Existe uma história sussurrada em tons de cautela e inveja nos conservatórios de música ou entre os bardos que frequentam as cortes dos nobres. Ela fala sobre uma figura trajada de azul que surge em uma encruzilhada diante de um músico que perdeu tudo e oferece a ele uma chance de começar de novo. É uma história de redenção e maldição, pois aqueles que aceitam a barganha do estranho de azul aceitam o maior dos preços por uma segunda chance em suas vidas.\nO mesmo relato pode ser ouvido nos mais diferentes lugares, nos mais variados tons. Ela pode ser um causo engraçado, contado entre risadas e bater de canecas em estalagens portuárias ou como uma fábula assustadora, recitada com seriedade diante de músicos aspirantes. Muitos que a ouvem acreditam ser apenas uma lenda, um conto feito para amedrontar os bem-sucedidos e levar uma módica esperança para aqueles que não têm nada. A realidade, entretanto, é que a história do Estranho de Azul é verdadeira; uma trágica narrativa que, independente de como seja contada, carrega mistério, suspense, esperança, maldição, arte e, inevitavelmente, morte.\nO menestrel maldito é um artista que perdeu tudo, ou ao menos aquilo que mais importava. Desiludido, ele perseguiu a história do Estranho de Azul até ser encontrado por ele. Em troca de uma porção de sua alma, este artista desesperado recebeu uma breve, mas redentora, segunda chance. Reencontrando sua arte, o menestrel maldito aprende que o pouco tempo que lhe resta é sua última chance de deixar uma marca indelével e emocionante na mente e na alma de seu público.`,
-  admission: `O candidato precisa ter sofrido uma tragédia pessoal terrível. Pode ter sido abandonado por um grande amor, presenciado a morte de um amigo próximo, perdido uma posição de destaque ou algum outro evento similar. Depois disso, deve ir até uma encruzilhada levando seu instrumento musical, cair de joelhos e se lamentar para o vazio. Após horas de choro, surgirá um demônio na forma de um indivíduo alto e esguio, vestindo um manto azul, com longos cabelos que caem por cima de seu rosto, deixando visível apenas o brilho soturno de seus cinco olhos. A figura estenderá a mão, pedindo o instrumento do músico. Caso entregue, o Estranho de Azul afinará o instrumento, usando fragmentos da alma do próprio candidato, e o oferecerá de volta. Se o músico aceitar esse instrumento, se tornará um menestrel maldito até o resto dos seus breves dias.`,
-  mark: `**A Maldição do Menestrel**\nComo pagamento pelo pacto com o Estranho de Azul, o menestrel cede uma pequena, mas importante, parte de sua alma.\nUm instrumento musical à sua escolha se torna afinado com uma porção de sua própria alma. Quando usa esse instrumento, você recebe +1 em Atuação e a CD para resistir às suas habilidades de bardo aumenta em +1. Se perder seu instrumento, o Estranho de Azul irá afinar outro, desde que você passe uma noite em claro em uma encruzilhada.\nTer firmado esse pacto, entretanto, significa que seu tempo em Arton será mais breve que o normal. Sempre que estiver com 0 PV ou menos, sua alma fica à mercê do Estranho de Azul; no início de cada um dos seus turnos, você deve fazer um teste de Sabedoria (CD 15). Se passar, evita o Estranho e não precisa mais fazer esse teste até sofrer dano que o deixe com 0 PV ou menos novamente. Caso termine três rodadas (não necessariamente consecutivas) na mesma cena nessa situação, você morre e é levado pelo Estranho de Azul para as profundezas de Venomia. Lá, passará sua existência em eterna miséria, tocando suas desgraças para o deleite de Sszzass, e nunca poderá ser revivido.`,
-  powers: [
-    {
-      name: "Técnica Endiabrada",
-      description: `Para um menestrel maldito, sua alma não é apenas uma moeda de barganha; ela é a energia que fortalece suas notas e torna sua música tão poderosa. \nQuando usa Inspiração ou uma música de bardo empunhando seu instrumento afinado, o alcance desta habilidade aumenta em um passo (de curto para médio e de médio para longo). Além disso, quando faz um teste de Atuação com seu instrumento afinado, você pode gastar 1 PM para escolher 10, ou 5 PM para escolher 20, em qualquer situação, exceto testes de ataque. Se escolher 20 dessa forma, você fica alquebrado. \nPré-requisitos: treinado em Atuação, Inspiração.`,
-    },
-    {
-      name: "Celeridade Cerúlea",
-      description: `Não basta ser mais preciso que qualquer outro músico, um menestrel maldito é também mais rápido. \nUma vez por rodada, quando usa uma música de bardo empunhando seu instrumento afinado, você pode gastar 2 PM para usar esta música como uma ação livre. \nPré-requisito: Técnica Endiabrada.`,
-    },
-    {
-      name: "Composição Mágica",
-      description: `O menestrel maldito aprende a entrelaçar suas magias com a tristeza de suas notas musicais. \nQuando lança uma magia de bardo com um teste de resistência, você pode gastar 2 PM para fazer um teste de Atuação (CD 10). Se passar, você aumenta a CD da magia em +1, +1 para cada 10 pontos que seu teste de Atuação passar a CD. \nPré-requisitos: treinado em Misticismo, Técnica Endiabrada.`,
-    },
-    {
-      name: "Música: Ária da Tristeza",
-      description: `Impregnada por sua própria tragédia, a música do menestrel maldito carrega tanta tristeza que pode até paralisar seus ouvintes. \nFaça um teste de Atuação oposto ao teste de Vontade de cada criatura à sua escolha dentro do alcance (você faz um único teste). Alvos que falhem ficam atordoados por uma rodada (uma criatura só pode ser atordoada por este poder uma vez por cena) e frustrados. \nPré-requisito: Técnica Endiabrada.`,
-    },
-    {
-      name: "Música: Nota Azul",
-      description: `É um risco se deixar levar pela música de um menestrel maldito. Os acordes hipnóticos podem não apenas conquistar sua atenção, mas também consumir sua mente e levar à morte. \nFaça um teste de Atuação oposto pelo teste de Vontade de cada criatura à sua escolha dentro do alcance (você faz um único teste). Alvos que falhem sofrem 1d8 pontos de dano mental (ou 1d12, se estiverem sofrendo alguma condição mental). Para cada outro poder de menestrel maldito que você possui, o dano de sua Nota Azul aumenta em +1d8 ou +1d12, conforme apropriado. \nPré-requisito: Técnica Endiabrada.`,
-    },
-  ],
-  },
+  
   
   
   { id: "Bufão de Hyninn",
