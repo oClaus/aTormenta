@@ -53,7 +53,14 @@ const extractPmCost = (text: string): number | null => {
   return null;
 };
 
-const getHabilityTitle = (hab: string): string => hab.split(/[.(]/)[0].trim();
+const getHabilityTitle = (hab: string): string => {
+  // Separa no primeiro ponto, parêntese ou dois-pontos que venha APÓS pelo menos 3 chars
+  // Evita partir "Fort CD 14" etc no meio
+  const match = hab.match(/^(.+?)(?:\s*[:(]|\.[\s]|\.$)/);
+  if (match) return match[1].trim();
+  // Fallback: tudo antes do primeiro ponto ou parêntese
+  return hab.split(/[.(]/)[0].trim();
+};
 
 const conditionById = (id: string): Condition | undefined =>
   allConditions.find((c) => c.id === id);
@@ -241,6 +248,11 @@ function EditMonsterModal({ monster, onSave, onClose }: {
             <div><label className={lc}>Ref</label><input type="number" className={fc} value={draft.ref} onChange={(e) => setDraft({ ...draft, ref: Number(e.target.value) })} /></div>
             <div><label className={lc}>Von</label><input type="number" className={fc} value={draft.von} onChange={(e) => setDraft({ ...draft, von: Number(e.target.value) })} /></div>
           </div>
+          <div className="grid grid-cols-2 gap-5">
+            <div><label className={lc}>Percepção</label><input type="number" className={fc} value={draft.percepcao} onChange={(e) => setDraft({ ...draft, percepcao: Number(e.target.value) })} /></div>
+            <div><label className={lc}>Deslocamento</label><input className={fc} value={draft.deslocamento} onChange={(e) => setDraft({ ...draft, deslocamento: e.target.value })} /></div>
+          </div>
+          <div><label className={lc}>Resistência a Dano</label><input className={fc} placeholder="Ex: RD 5/Corte" value={draft.resistenciaDano ?? ""} onChange={(e) => setDraft({ ...draft, resistenciaDano: e.target.value || undefined })} /></div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div><label className={lc}>Ataque Corpo a Corpo</label><input className={fc} value={draft.ataqueCorpoACorpo ?? ""} onChange={(e) => setDraft({ ...draft, ataqueCorpoACorpo: e.target.value })} /></div>
             <div><label className={lc}>Ataque à Distância</label><input className={fc} value={draft.ataqueDistancia ?? ""} onChange={(e) => setDraft({ ...draft, ataqueDistancia: e.target.value })} /></div>
@@ -253,7 +265,7 @@ function EditMonsterModal({ monster, onSave, onClose }: {
         <div className="p-6 border-t-2 border-amber-900/20 flex gap-4 justify-end bg-[#fbf5e6] rounded-b-xl">
           <button onClick={onClose} className="px-6 py-2.5 rounded-xl border-2 border-amber-900/30 text-amber-950/70 font-serif font-bold hover:border-red-800 hover:text-red-800 hover:bg-red-800/5 transition-all">Cancelar</button>
           <button
-            onClick={() => { onSave({ ...monster, threat: draft as Threat, pvMax, pvCurrent: Math.min(monster.pvCurrent, pvMax), pmMax, pmCurrent: Math.min(monster.pmCurrent, pmMax) }); onClose(); }}
+            onClick={() => { onSave({ ...monster, name: (draft as Threat).name, threat: draft as Threat, pvMax, pvCurrent: Math.min(monster.pvCurrent, pvMax), pmMax, pmCurrent: Math.min(monster.pmCurrent, pmMax) }); onClose(); }}
             className="px-8 py-2.5 rounded-xl bg-red-800 text-[#fbf5e6] font-serif font-bold hover:bg-red-900 hover:-translate-y-0.5 transition-all shadow-md"
           >Salvar Alterações</button>
         </div>
@@ -274,6 +286,7 @@ function ParticipantCard({ participant, isActive, onUpdate, onEdit, onRemove, on
 }) {
   const [dmgInput, setDmgInput] = useState("");
   const [healInput, setHealInput] = useState("");
+  const [pmInput, setPmInput] = useState("");
   const [showCondSelector, setShowCondSelector] = useState(false);
 
   const isMonster = participant.type === "monster";
@@ -301,6 +314,26 @@ function ParticipantCard({ participant, isActive, onUpdate, onEdit, onRemove, on
     onLog(`💚 ${m.name} curou ${newPv - m.pvCurrent} PV → ${newPv}/${m.pvMax} PV`);
     onUpdate({ ...m, pvCurrent: newPv });
     setHealInput("");
+  };
+
+  const spendPm = () => {
+    if (!m) return;
+    const v = parseInt(pmInput);
+    if (!v || v <= 0) return;
+    const newPm = Math.max(0, m.pmCurrent - v);
+    onLog(`🔵 ${m.name} gastou ${v} PM → ${newPm}/${m.pmMax} PM`);
+    onUpdate({ ...m, pmCurrent: newPm });
+    setPmInput("");
+  };
+
+  const restorePm = () => {
+    if (!m) return;
+    const v = parseInt(pmInput);
+    if (!v || v <= 0) return;
+    const newPm = Math.min(m.pmMax, m.pmCurrent + v);
+    onLog(`🔷 ${m.name} recuperou ${newPm - m.pmCurrent} PM → ${newPm}/${m.pmMax} PM`);
+    onUpdate({ ...m, pmCurrent: newPm });
+    setPmInput("");
   };
 
   const useAbility = (hab: string) => {
@@ -365,6 +398,7 @@ function ParticipantCard({ participant, isActive, onUpdate, onEdit, onRemove, on
             <span className="text-amber-950/50 uppercase tracking-widest text-[10px]">Von <span className="text-red-800 text-xs ml-0.5">+{m.threat.von}</span></span>
             {m.threat.percepcao > 0 && <span className="text-amber-950/50 uppercase tracking-widest text-[10px]">Percepção <span className="text-red-800 text-xs ml-0.5">+{m.threat.percepcao}</span></span>}
             <span className="text-amber-950/50 uppercase tracking-widest text-[10px]">Desl. <span className="text-red-800 text-xs ml-0.5">{m.threat.deslocamento}</span></span>
+            {m.threat.resistenciaDano && <span className="text-amber-950/50 uppercase tracking-widest text-[10px]">Vantagens <span className="text-amber-950/80 text-xs ml-0.5 normal-case">{m.threat.resistenciaDano}</span></span>}
           </div>
         )}
 
@@ -431,6 +465,21 @@ function ParticipantCard({ participant, isActive, onUpdate, onEdit, onRemove, on
           </div>
         )}
 
+        {/* Controles de PM (apenas monstros com PM) */}
+        {m && m.pmMax > 0 && (
+          <div className="flex items-center gap-3 mb-4">
+            <span className="text-[10px] uppercase tracking-widest text-blue-800/60 font-bold">PM</span>
+            <div className="flex items-center gap-1.5">
+              <input type="number" min="0" placeholder="0" value={pmInput}
+                onChange={(e) => setPmInput(e.target.value)}
+                onKeyDown={(e) => { if (e.key === "Enter") spendPm(); }}
+                className="w-16 bg-[#fbf5e6] border-2 border-blue-800/20 rounded-lg px-2 py-1.5 text-amber-950 font-serif text-sm font-bold focus:outline-none focus:border-blue-700/50 text-center shadow-sm transition-all" />
+              <button onClick={spendPm} className="px-3 py-1.5 bg-blue-800 text-white rounded-lg text-xs uppercase tracking-widest font-black hover:bg-blue-900 hover:-translate-y-0.5 transition-all shadow-sm">−PM</button>
+              <button onClick={restorePm} className="px-3 py-1.5 bg-blue-600 text-white rounded-lg text-xs uppercase tracking-widest font-black hover:bg-blue-700 hover:-translate-y-0.5 transition-all shadow-sm">+PM</button>
+            </div>
+          </div>
+        )}
+
         {!m && (
           <div className="mb-2">
             <button
@@ -453,7 +502,7 @@ function ParticipantCard({ participant, isActive, onUpdate, onEdit, onRemove, on
                 const cost = extractPmCost(hab);
                 const title = getHabilityTitle(hab);
                 const canUse = cost === null || m.pmCurrent >= cost;
-                const rest = hab.replace(title, "").replace(/^[.:\s]+/, "").trim();
+                const rest = hab.replace(title, "").replace(/^[\s:]+|^\.\s*/, "").trim();
                 return (
                   <div key={i} className="flex items-start gap-3 group bg-[#fbf5e6]/50 p-2.5 rounded-xl border border-amber-900/5 hover:border-amber-900/20 transition-colors">
                     <button
@@ -469,7 +518,7 @@ function ParticipantCard({ participant, isActive, onUpdate, onEdit, onRemove, on
                     >{cost !== null ? `−${cost} PM` : "Usar"}</button>
                     <div className="flex-1 min-w-0 pt-0.5">
                       <p className="text-sm text-red-800 font-bold leading-snug">{title}</p>
-                      {rest && <p className="text-xs text-amber-950/70 font-medium leading-relaxed mt-1 line-clamp-2 group-hover:line-clamp-none transition-all">{rest}</p>}
+                      {rest && <p className="text-xs text-amber-950/70 font-medium leading-relaxed mt-1">{rest}</p>}
                     </div>
                   </div>
                 );
@@ -785,8 +834,10 @@ export default function CombatePage() {
   };
 
   const saveEditedMonster = (updated: MonsterParticipant) => {
-    setParticipants((prev) => prev.map((p) => (p.id === updated.id ? updated : p)));
-    addLog(`✎ ${updated.name} editado`);
+    // Garante que o nome do participante reflita o nome editado na threat
+    const synced: MonsterParticipant = { ...updated, name: updated.threat.name };
+    setParticipants((prev) => prev.map((p) => (p.id === synced.id ? synced : p)));
+    addLog(`✎ ${synced.name} editado`);
   };
 
   const endCombat = () => {
@@ -1029,7 +1080,7 @@ export default function CombatePage() {
             </div>
 
             <div className="grid xl:grid-cols-3 gap-8 items-start">
-              <div className="xl:col-span-2 space-y-5">
+              <div className="xl:col-span-2 space-y-5 pb-24">
                 {participants.map((p, i) => (
                   <div key={p.id} ref={i === activeIndex ? activeCardRef : null}>
                     <ParticipantCard
@@ -1057,8 +1108,31 @@ export default function CombatePage() {
               </div>
             </div>
           </div>
+
         )}
       </main>
+
+      {/* Barra flutuante inferior — apenas durante o combate */}
+      {phase === "combat" && (
+        <div className="fixed bottom-0 left-0 right-0 z-50 flex items-center justify-between gap-4 px-6 py-3 bg-[#1f100a]/95 backdrop-blur-md border-t-2 border-red-900/40 shadow-2xl">
+          <div className="flex items-center gap-4 min-w-0">
+            <div className="flex flex-col items-center bg-[#2a1810] px-4 py-1.5 rounded-lg border border-red-900/30 shrink-0">
+              <span className="text-[9px] uppercase tracking-widest text-red-400/70 font-bold">Rodada</span>
+              <span className="text-xl font-black text-[#fbf5e6]">{round}</span>
+            </div>
+            <div className="min-w-0">
+              <span className="text-[9px] uppercase tracking-widest text-[#fbf5e6]/40 font-bold block">Turno de</span>
+              <span className="text-sm font-bold text-red-400 truncate block">{participants[activeIndex]?.name ?? "—"}</span>
+            </div>
+          </div>
+          <button
+            onClick={nextTurn}
+            className="shrink-0 px-6 py-2.5 bg-red-800 hover:bg-red-700 text-[#fbf5e6] font-black tracking-widest uppercase rounded-xl transition-all shadow-lg text-xs flex items-center gap-2"
+          >
+            Próximo Turno →
+          </button>
+        </div>
+      )}
 
       {editingMonster && (
         <EditMonsterModal monster={editingMonster} onSave={saveEditedMonster} onClose={() => setEditingMonster(null)} />
