@@ -1,0 +1,42 @@
+import { Gear } from "@/types/gear";
+
+export const aharadak: Gear[] = [
+  // Ameaças de Arton
+  { id: "Armadura do Devorador",
+    name: "Armadura do Devorador",
+    description: "Também conhecido como “bioarmadura”, em sua forma natural este simbionte lembra um grotesco tatuzinho, mas do tamanho de uma mão aberta. Ele rasteja até a fronte do hospedeiro, ancorando-se ao crânio, assumindo o aspecto de uma tiara ou elmo macabro. Quando ativada, crostas revestem o corpo do hospedeiro, formando uma armadura completa.\nInvocar a Armadura do Devorador é uma ação livre. Isso faz com que o corpo do hospedeiro seja coberto por crostas e carapaças aberrantes que funcionam como uma armadura completa espinhosa selada sob medida de matéria vermelha que não requer proficiência. Além disso, quando a armadura é ativada, o hospedeiro não precisa respirar. Ela também é ativada involuntariamente como uma reação sempre que o hospedeiro sofre dano. É possível evitar uma ativação involuntária, mas para isso é necessário passar em um teste de Vontade (CD 10 + dano sofrido). Em ambos os casos, quando a armadura é ativada o hospedeiro perde 1d4 pontos de vida devido à dor da transformação e qualquer outra armadura que ele esteja usando é destruída. Desativar a bioarmadura é uma ação livre.",
+    origin: "Ameaças de Arton",
+    price: "T$ 54.000",
+    spaces: "—",
+  },
+  { id: "Asas do Devorador",
+    name: "Asas do Devorador",
+    description: "Também conhecido como “pterodraco”, este simbionte lembra uma grande concha com olhos telescópicos e centenas de pequenas patas. O simbionte se une ao hospedeiro instalando-se em suas costas. Suas inúmeras patas se cravam na carne até atingir a coluna, onde se prendem permanentemente. Quando a simbiose é bem-sucedida, o pterodraco desenvolve um par de grandes asas membranosas.\nO hospedeiro pode gastar 2 PM para ativar as Asas do Devorador e ganhar deslocamento de voo igual ao seu deslocamento em terra com duração sustentada.",
+    origin: "Ameaças de Arton",
+    price: "T$ 27.000",
+    spaces: "—",
+  },
+  { id: "Flagelo do Devorador",
+    name: "Flagelo do Devorador",
+    description: "Este simbionte lembra um grande escorpião com a aparência agressiva e alienígena dos lefeu — sendo por isso também conhecido como “escorpião da tempestade”. Prende-se ao antebraço do hospedeiro, cravando garras quase até os ossos e espalhando raízes sinistras pelo corpo todo, salientes sob a pele.\nO Flagelo do Devorador conta como um escudo leve de matéria vermelha. Além disso, o hospedeiro pode lançar Jato Corrosivo com tempo de conjuração de ação de movimento. Se aprender essa magia, seu custo é reduzido em –1 PM.",
+    origin: "Ameaças de Arton",
+    price: "T$ 33.000",
+    spaces: "—",
+  },
+  { id: "Mente do Devorador",
+    name: "Mente do Devorador",
+    description: "Este simbionte, conhecido por alguns como “psinídeo”, lembra uma grande aranha, com um abdome macabro em forma de cérebro humano. Ele agarra-se à cabeça do hospedeiro com suas longas patas, enterrando ali seu corpo.\nO hospedeiro recebe +1 em Inteligência e Sabedoria (cumulativo com outros itens), e pode lançar uma magia arcana de encantamento de 1ª círculo (escolhida quando o simbionte é implantado; atributo-chave Inteligência ou Sabedoria). Se aprender essa magia, seu custo é reduzido em –1 PM.",
+    origin: "Ameaças de Arton",
+    price: "T$ 34.000",
+    spaces: "—",
+  },
+  { id: "Olhos do Devorador",
+    name: "Olhos do Devorador",
+    description: "Chamado por alguns de “visorg”, este simbionte de corpo achatado lembra uma mão enrugada com dedos compridos e duas grandes gemas vermelhas incrustadas no dorso. Uma vez posicionada no rosto do hospedeiro, a criatura crava seus “dedos”, permanentemente prendendo- se à sua face e substituindo seus olhos.\nO hospedeiro recebe +5 em Percepção, enxerga perfeitamente no escuro, incluindo em magias de escuridão, e não pode ser flanqueado. Além disso, pode lançar a magia Visão da Verdade. Se aprender essa magia, seu custo é reduzido em –1 PM.",
+    origin: "Ameaças de Arton",
+    price: "T$ 34.000",
+    spaces: "—",
+  },
+
+  
+];

@@ -14,7 +14,8 @@ import {
   HandCoins,
   Crown, 
   Unplug,
-  BookOpen
+  BookOpen,
+  Dna
 } from "lucide-react";
 
 
@@ -163,6 +164,14 @@ export const equipmentCategories: EquipmentCategory[] = [
     icon: BookOpen,
     color: "from-amber-600 to-amber-900",
     href: "/equipamentos/liturgicos",
+  },
+  {
+    id: "dadivas-aharadak",
+    title: "Dádivas de Aharadak",
+    description: "Os devotos favoritos do Devorador são muitas vezes recompensados com simbiontes",
+    icon: Dna,
+    color: "from-amber-600 to-amber-900",
+    href: "/equipamentos/dadivas-aharadak",
   },
   
 ];

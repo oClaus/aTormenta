@@ -818,9 +818,8 @@ export const races: Race[] = [
   ],
   longevidade: "Normal",
   devotos: "Qualquer"
-},
-{
-  id: "Orc",
+  },
+  { id: "Orc",
   name: "Orc",
   origin: "Ameaças de Arton",
   image: "/ameacas/orc.png",
@@ -846,8 +845,8 @@ export const races: Race[] = [
   ],
   longevidade: "Normal",
   devotos: "Allihanna, Arsenal, Megalokk, Nimb, Tenebra"
-},
-{ id: "Trog Anão",
+  },
+  { id: "Trog Anão",
     name: "Trog Anão",
     origin: "Ameaças de Arton",
     image: "/ameacas/trog-anao.png",
@@ -876,8 +875,7 @@ export const races: Race[] = [
       { attribute: "des", modifier: -1 }
     ]
   },
-  {
-  id: "Ogro",
+  { id: "Ogro",
   name: "Ogro",
   origin: "Ameaças de Arton",
   image: "/ameacas/ogro.png",
@@ -904,7 +902,7 @@ export const races: Race[] = [
   ],
   longevidade: "Normal",
   devotos: "Allihanna, Arsenal, Megalokk, Tenebra"
-},
+  },
   
   
   { id: "Qunari",

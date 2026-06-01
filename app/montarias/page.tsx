@@ -184,6 +184,14 @@ export default function MontariasPage() {
 
               <section className="border-t-2 border-amber-900/20 pt-8">
                 <h1 className="text-2xl md:text-3xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/10 pb-2">
+                  Montaria Especial: Dragão
+                </h1>
+                <p className="font-medium border-amber-900/10">Dragões, mesmo os jovens, são criaturas orgulhosas e de personalidade forte. Assim, para se tornar o cavaleiro de um dragão, um personagem precisa primeiro conquistar sua amizade e, sobretudo, seu respeito! Isso significa que um dragão montaria não pode simplesmente ser escolhido como opção de uma habilidade (como o poder Parceiro). Conquistar um dragão deve fazer parte da história e ser a recompensa por ações do personagem durante o jogo. Os detalhes exatos de como isso ocorre dependem de cada campanha, mas, em geral, envolvem encontrar um dragão e conquistar seu respeito por meio de um favor, demonstração de poder ou qualquer ato que mostre ao dragão que você é digno de ser seu cavaleiro.</p>
+                <p className="font-medium border-amber-900/10">Um dragão jovem conta como dois parceiros para efeitos do limite de parceiros que você pode ter. Isso significa que um personagem de nível 4 ou menor dificilmente poderá ter um dragão jovem como parceiro, a menos que consiga aumentar seu limite de parceiros ou escolha o poder Coração de Dragão.</p>
+              </section>
+
+              <section className="border-t-2 border-amber-900/20 pt-8">
+                <h1 className="text-2xl md:text-3xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/10 pb-2">
                   Variante: Parceiros Vulneráveis
                 </h1>
                 <p className="font-medium italic border-l-4 border-red-800 pl-4 py-2 bg-[#e8dac1]/50 rounded-r">Com esta variante, parceiros podem se ferir e morrer. Sempre que um personagem sofre dano, deve rolar um dado para cada parceiro. Com um resultado “1”, o parceiro fica ferido. Por si só, isso não tem efeito em jogo. Porém, caso o jogador role um novo 1 para um parceiro que já esteja ferido, esse parceiro morre. O dado rolado depende do poder do parceiro: d4 para iniciantes, d6 para veteranos e d8 para mestres. Esta variante coloca sobre o jogador a decisão de continuar ou não usando um parceiro ferido — o personagem abre mão da ajuda para não arriscar o amigo? Recomendamos esta variante apenas para parceiros circunstanciais, não aqueles recebidos por habilidades de classe.</p>

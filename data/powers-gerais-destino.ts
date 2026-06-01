@@ -123,6 +123,14 @@ export const powersGeraisDestino: Power[] = [
     origin: "Tormenta20 - Jogo do Ano"
   },
 
+  // Ameaças de Arton
+  { id: "Coração de Dragão",
+    name: "Coração de Dragão",
+    description: "Você recebe +2 PV e +2 PM. Além disso, para você, um dragão jovem conta como um único parceiro para seu limite de parceiros.",
+    prerequisite: "Car 2, 3º nível de personagem.",
+    origin: "Ameaças de Arton"
+  },
+
   // Dragão Brasil
 
 

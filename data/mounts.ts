@@ -122,6 +122,17 @@ export const mounts: Mount[] = [
       mestre: "Muda o bônus de Atletismo para +10 e, uma vez por rodada, você pode gastar 1 PM para fazer uma manobra desarmar ou derrubar contra um alvo a até 3m.",
     },
   },
+  { id: "DragaoJovem",
+    name: "Dragão Jovem",
+    size: "Grande",
+    description: "Um dragão jovem de escamas reluzentes e personalidade orgulhosa. Poderoso e majestoso, apenas aceita como cavaleiro alguém que tenha conquistado seu respeito e amizade. (Leia texto nas regras)",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 12m (normal e de voo) e, uma vez por rodada, você pode gastar 1 PM para causar 2d6 pontos de dano da energia do dragão em uma criatura em alcance médio.",
+      veterano: "Você recebe também uma ação de movimento extra por turno (apenas para se deslocar) e pode gastar 2 PM para causar 4d6 pontos de dano.",
+      mestre: "Seu deslocamento muda para 18m e você pode gastar 5 PM e uma ação de movimento para usar a habilidade Sopro (de acordo com o dragão jovem).",
+    },
+  },
 
 
   { id: "nautilon ",
