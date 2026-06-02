@@ -92,6 +92,22 @@ export const weapons: Weapon[] = [
     spaces: 1,
   },
 
+  // Dragão Brasil
+  { id: "lâmina de essência",
+    name: "Lâmina de Essência",
+    description: "A lâmina de essência é um bracelete metálico que, ao ser acionado, projeta uma lâmina de energia. Acionar o bracelete é o equivalente a sacar a arma e, uma vez acionada, a lâmina ocupa a mão do usuário. A lâmina é uma arma ágil mas, devido à sua ausência de peso, requer um treinamento especial para ser usada (por isso é uma arma exótica). Você pode usar uma lâmina de essência como uma arma marcial desbalanceada.",
+    origin: "Dragão Brasil",
+    purpose: "Corpo a Corpo",
+    proficiency: "Exótica",
+    grip: "Uma Mão",
+    price: "T$ 500",
+    damage: "1d10",
+    critical: "19/x3",
+    range: "Curto",
+    type: "Essência",
+    spaces: 0.5,
+  },
+
 
   // Tormenta20 - Jogo do Ano
   { id: "adaga",

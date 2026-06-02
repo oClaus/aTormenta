@@ -126,7 +126,7 @@ const WeaponFilterableTable = ({ allWeapons }: { allWeapons: Weapon[] }) => {
 
   const allProficiencies: WeaponProficiency[] = ["Simples", "Marcial", "Exótica", "Fogo"];
   const allGrips: WeaponGrip[] = ["Leve", "Uma Mão", "Duas Mãos"];
-  const allDamageTypes: DamageType[] = ["Corte", "Perfuração", "Impacto", "Corte/Perfuração", "Impacto/Perfuração", "Ácido"];
+  const allDamageTypes: DamageType[] = ["Corte", "Perfuração", "Impacto", "Corte/Perfuração", "Impacto/Perfuração", "Ácido", "Essência"];
   const allPurposes: WeaponPurpose[] = ["Corpo a Corpo", "Distância", "Munição"]; 
   
   const renderFilterGroup = (title: string, options: string[], key: keyof typeof filters) => (

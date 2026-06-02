@@ -38,9 +38,20 @@ export const mounts: Mount[] = [
     mestre: "Seu deslocamento de natação muda para 15m e você pode gastar uma ação padrão e 3 PM para usar a habilidade Tinta Multicolorida.",
   },
   },
+  { id: "Khanoa",
+  name: "Khan’Oa",
+  size: "Grande",
+  description: "Um navio vivo e monstruoso formado por restos de embarcações e rancor sobrenatural. Essa criatura marinha busca inventores para completar sua própria construção.",
+  origin: "Dragão Brasil",
+  benefits: {
+    iniciante: "Seu deslocamento muda para natação 15m e você ignora a penalidade por terreno natural difícil em águas. O Khan’Oa só se desloca sob a água e você usa Pilotagem no lugar de Cavalgar.",
+    veterano: "Você pode utilizar o canhão do Khan’Oa como um arcabuz e, uma vez por rodada, pode usá-lo para fazer um ataque como uma ação livre.",
+    mestre: "Você pode lançar a magia Miragem (CD Int). Se aprender essa magia, seu custo é reduzido em –1 PM.",
+  },
+  },
 
 
-  // Dragão Brasil
+  // Tormenta20 - Jogo do Ano
   { id: "Cavalo ",
     name: "Cavalo ",
     size: "Grande",
@@ -181,17 +192,7 @@ export const mounts: Mount[] = [
   },
   },
   
-  { id: "Khanoa",
-  name: "Khan’Oa",
-  size: "Grande",
-  description: "Um navio vivo e monstruoso formado por restos de embarcações e rancor sobrenatural. Essa criatura marinha busca inventores para completar sua própria construção.",
-  origin: "Dragão Brasil",
-  benefits: {
-    iniciante: "Seu deslocamento muda para natação 15m e você ignora a penalidade por terreno natural difícil em águas. O Khan’Oa só se desloca sob a água e você usa Pilotagem no lugar de Cavalgar.",
-    veterano: "Você pode utilizar o canhão do Khan’Oa como um arcabuz e, uma vez por rodada, pode usá-lo para fazer um ataque como uma ação livre.",
-    mestre: "Você pode lançar a magia Miragem (CD Int). Se aprender essa magia, seu custo é reduzido em –1 PM.",
-  },
-  },
+  
   { id: "AspectoLinWu",
   name: "Aspecto de Lin-Wu",
   size: "Grande",

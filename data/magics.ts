@@ -287,6 +287,12 @@ export const specificWeapons: SpecificWeapon[] = [
     price: "22.000",
     origin: "Dragão Brasil",
   },
+  { id: "CUTELO DE AHARADAK",
+    name: "Cutelo de Aharadak",
+    description: "É uma arma mágica específica, uma espada curta atroz sanguinária de matéria vermelha. Para aqueles que não forem lefou, devotos de Aharadak ou personagens que possuam três poderes da Tormenta, a presença dela em alcance curto causa terríveis pesadelos (Vontade CD 20 ou acorda alquebrado por um dia).",
+    price: "00",
+    origin: "Dragão Brasil",
+  },
 
   // Duelo de Dragões
   { id: "Lança do guerreiro dragão",

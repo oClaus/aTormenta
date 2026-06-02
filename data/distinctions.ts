@@ -185,6 +185,36 @@ export const distinctions: Distinction[] = [
     },
   ],
   },
+  { id: "Xerife de Azgher",
+    name: "Xerife de Azgher",
+    origin: "Dragão Brasil",
+    image: "/distincoes/XerifedeAzgher.png",
+    introduction: `Dentro das fronteiras do Reinado, a justiça é vigilante e afiada como a espada de Khalmyr. Mas em regiões distantes, longe de castelos e cavaleiros, a lei se torna cada vez mais nublada.\nNessas fronteiras sem lei, criminosos e malfeitores se sentem cada vez mais seguros. Distantes da justiça de Khalmyr, se tornam mais ousados em seus trambiques e mais frequentes em seus achaques. O povo inocente sofre em silêncio, mas a verdade é que ninguém consegue se esconder do olhar implacável do Deus-Sol. Onde os bandidos gargalham crentes em sua impunidade, Azgher atua através de seus xerifes.\nMeio benfeitor, meio homem da lei, o xerife de Azgher é um viajante, missionário, caçador e juiz. Ele vaga de cidade em cidade, de vila em vila, caçando criminosos pela lei dos mortais e do Deus-Sol, protegendo os inocentes em nome de um poder superior. Muitos trazem o rosto oculto por um lenço ou máscara; alguns o fazem para proteger seus entes queridos contra a vingança dos criminosos, enquanto outros são devotos do deus Azgher e obedecem suas obrigações e restrições. Todos ostentam um broche mágico na forma de um sol dourado como símbolo de sua autoridade, conhecido como Sol Vigilante.\nOs xerifes de Azgher são uma organização afiliada à igreja do Deus-Sol que sagra oficiais para proteger o povo e garantir o cumprimento da lei. Operam frequentemente sozinhos, confiando em sua habilidade e retidão para garantir sua sobrevivência, por vezes com o apoio de grupos de aventureiros. São autorizados a usar armas de fogo mesmo dentro do Reinado, com uma predileção pela pistola, rivalizada pela a cimitarra tradicional entre devotos de Azgher.\nAlgumas cidades têm um xerife de Azgher residente, mas isso só acontece nas piores pocilgas de Arton, tão infestadas pelo crime que exigem um guardião permanente.`,
+    admission: `O candidato precisa encontrar, prender e entregar às autoridades um criminoso que tenha cometido um crime grave contra um inocente. O momento da entrega às autoridades deve acontecer às claras, sob a luz de Azgher. Depois que esta missão estiver cumprida, quando o candidato for dormir, terá um sonho mostrando o caminho para a sede dos xerifes, no Império de Tauron.\nApós visitar a sede e se identificar, o candidato deve provar seu valor para a ordem. Dependendo da notoriedade do criminoso preso pelo candidato, isso pode ser o suficiente. Caso contrário, a ordem pode designar alguns testes locais para avaliar sua habilidade. De qualquer forma, mesmo depois de considerado apto, o candidato precisa ajudar um xerife em um caso antes de ser sagrado.\nNormalmente se trata de uma aventura, na qual o xerife acompanha o candidato e permite que ele tome a iniciativa sempre que possível, atuando apenas como observador na maior parte do tempo. Ao longo dessa aventura, o xerife julgará principalmente a conduta do candidato. De certa forma, o teste na sede dos xerifes testa a habilidade e o caso acompanhando o xerife testa o caráter.\nCaso seja finalmente considerado digno, o candidato recebe um Sol Vigilante e é sagrado xerife de Azgher pela Ordem. É de bom tom que o candidato faça uma oferenda aos xerifes de pelo menos T$ 2.000 antes de ir embora.`,
+    mark: `**Sol Vigilante**\nA insígnia dos xerifes de Azgher é um broche de ouro em formato de sol. Mais do que a marca de uma ordem religiosa, o Sol Vigilante é um símbolo de autoridade, lei e ordem.\nVocê recebe um Sol Vigilante, uma insígnia de ouro que conta como um símbolo sagrado de Azgher. Enquanto ostentá-lo, você recebe +2 em testes de Diplomacia com devotos de Azgher e agentes da lei, como cavaleiros, paladinos, nobres e guardas, e +2 em Intimidação com criminosos, malfeitores e outros indivíduos que, a critério do mestre, tenham problemas com a justiça. Além disso, você é considerado oficialmente uma figura de autoridade, o que inclui autorização para portar armas de fogo no Reinado. Se perder seu Sol Vigilante, você pode obter outro após um dia de orações a Azgher e uma oferenda de T$ 500.`,
+    powers: [
+      {
+        name: "Destruir o Crime",
+        description: `O poder sagrado de Azgher flui por suas armas.\nQuando faz um ataque corpo a corpo, ou à distância com uma arma de fogo, você pode gastar 2 PM para fortalecer esse ataque com o poder de Azgher. Você soma seu Carisma no teste de ataque e +1d8 na rolagem de dano. Se possuir a habilidade Golpe Divino, em vez disso ela causa 1 dado extra de dano e pode ser usada com armas de fogo.\nPré-requisitos: treinado em Intuição, proficiência em armas de fogo, devoto de Azgher.`,
+      },
+      {
+        name: "Caçador de Bandidos",
+        description: `Uma vez que o xerife de Azgher esteja em seu encalço, resta aos malfeitores apenas a rendição.\nVocê pode gastar uma ação de movimento e uma quantidade de PM (limitada pelo número de poderes de xerife de Azgher que possui) para recitar em voz alta os crimes de uma criatura em alcance médio. Até o final da cena, ou até a criatura se render, para cada 1 PM gasto você recebe +1 na Defesa, em testes de perícia e em rolagens de dano contra esta criatura.\nPré-requisito: Destruir o Crime.`,
+      },
+      {
+        name: "O Longo Braço da Lei",
+        description: `Nenhum bandido está fora do alcance de um xerife de Azgher.\nUma vez por rodada, quando uma criatura a até 9m se move voluntariamente mais de 1,5m, você pode gastar 2 PM para fazer um ataque com arma de fogo ou cimitarra (se a criatura estiver em seu alcance natural) contra ela. Você pode sacar a arma com que vai atacar como parte dessa reação.\nPré-requisitos: Olho de Azgher, Saque Rápido.`,
+      },
+      {
+        name: "Olho de Azgher",
+        description: `Persistente como o sol do deserto, o xerife de Azgher sempre encontra os criminosos.\nVocê aprende e pode lançar Localização. Se tiver mais dois outros poderes de xerife de Azgher, aprende e pode lançar também Visão da Verdade. Caso aprenda novamente uma dessas magias, seu custo diminui em –1 PM.\nPré-requisito: Pistoleiro Solar.`,
+      },
+      {
+        name: "Pistoleiro Solar",
+        description: `Oficialmente sagrado, o xerife de Azgher recebe as bênçãos do Deus-Sol sobre suas armas.\nVocê passa a considerar todas as armas de fogo como armas preferidas de Azgher (além da cimitarra). Além disso, você pode usar o poder Espada Solar em armas de fogo e, para cada dois outros poderes de xerife de Azgher que possui, o dado de dano de fogo concedido por este poder aumenta em um passo.\nPré-requisitos: Destruir o Crime, Espada Solar.`,
+      },
+    ],
+  },
 
 
   { id: "Arqueiro de Lenórienn",

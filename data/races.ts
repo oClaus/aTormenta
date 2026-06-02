@@ -903,6 +903,61 @@ export const races: Race[] = [
   longevidade: "Normal",
   devotos: "Allihanna, Arsenal, Megalokk, Tenebra"
   },
+  { id: "Bugbear",
+  name: "Bugbear",
+  origin: "Ameaças de Arton",
+  image: "/ameacas/bugbear.png",
+  description: "“Cuidado! Esse monstrengo feioso é muito mais perigoso do que parece!”\n — Amorphir Thamior, elfo ladino \n\n Os seres enormes e abrutalhados parecem desatentos, quase adormecidos, os corpos imensos quase desabando sobre as pernas curtas. Não parecem capazes de oferecer um grande desafio. \n Ainda que o próprio Thwor tenha se tornado lenda, bugbears estão entre os adversários mais subestimados por aventureiros — o que é um grande erro. Seus corpos imensos parecem desajeitados, mal sustentados pelas pernas desproporcionalmente curtas. Essa imagem é enganosa: os goblins gigantes são mais rápidos do que parecem, mais ágeis que um humano médio. Mas seus movimentos trôpegos, enganadores, fazem crer o contrário. Até a expressão bestial é falsa, escondendo uma argúcia superior à humana. \n Entre as forças duyshidakk, bugbears são carrascos e guarda-costas eficazes. Quando amedrontam suas vítimas, os bugbears sorvem esse medo, deleitando-se e nutrindo-se com ele. Por isso, muitos são deliberadamente cruéis.",
+  abilities: [
+    {
+      name: "Empunhadura Poderosa",
+      description: "Ao usar uma arma feita para uma categoria de tamanho maior que a sua (por exemplo, uma arma aumentada para uma criatura Pequena ou Média), a penalidade que você sofre nos testes de ataque diminui para –2. Caso receba esta habilidade novamente, a penalidade diminui para 0 e você pode também usar armas de até duas categorias de tamanho maiores que a sua com uma penalidade de –5 nos testes de ataque.",
+    },
+    {
+      name: "Saborear Pavor",
+      description: "Você pode usar Força como atributo-chave de Intimidação (em vez de Carisma). Além disso, se estiver em alcance curto de outra criatura abalada ou apavorada, você recebe um bônus em testes de ataque igual à penalidade causada pela condição.",
+    },
+    {
+      name: "Sentidos de Predador",
+      description: "Você recebe faro e visão no escuro.",
+    }
+  ],
+  attributeModifiers: [
+    { attribute: "for", modifier: 2 },
+    { attribute: "des", modifier: 1 },
+    { attribute: "car", modifier: -1 }
+  ],
+  longevidade: "Normal",
+  devotos: "Arsenal, Megalokk, Tenebra"
+},
+{
+  id: "Hobgoblin",
+  name: "Hobgoblin",
+  origin: "Ameaças de Arton",
+  image: "/ameacas/hobgoblin.png",
+  description: "“Serei morto um dia, é certo que sim. Mas não agora. Nem por você!”\n — Latanaur de Tollon, humano caçador \n\n O hobgoblin de armadura leve recua, protegido pelos soldados na linha de frente. Ele empunha um tipo de lança metálica robusta, de aspecto peculiar, cheia de peças com mecanismos incomuns. Súbito, com um estampido, a extremidade parece cuspir uma breve labareda — e um ferimento explode em seu peito. Aquilo não é uma lança! \n Não apenas os bandoleiros do Reinado usam armas de fogo. Se os hobgoblins roubaram esse segredo, ou se foram eles os primeiros a idealizar tais artefatos de morte, talvez nem os deuses saibam. \n O uso de pólvora é muito difundido entre os militaristas hobgoblins, nem um pouco perturbados por sua possível procedência demoníaca. Com sua alta inteligência e perícia em forjar armas de alta qualidade, eles conseguem produzir uma variedade de mosquetes, rifles e outras armas de cano longo equipadas com baionetas em suas extremidades — ou mesmo combinadas com armas de combate corporal, podendo ser assim utilizadas quando o inimigo está muito próximo ou acaba a munição. \n Assim, embora seja capaz de empunhar sua arma como uma lança ou alabarda quando necessário, o hobgoblin atirador prefere se manter recuado, provendo fogo de cobertura aos soldados. Não raras vezes um ou mais destes também estarão escondidos enquanto o resto do bando faz uma emboscada de beira de estrada.",
+  abilities: [
+    {
+      name: "Arte da Guerra",
+      description: "Você é treinado em Guerra e recebe proficiência em armas marciais. Se receber essa proficiência novamente, recebe +2 em rolagens de dano com essas armas.",
+    },
+    {
+      name: "Metalurgia Hobgoblin",
+      description: "Você recebe +2 em Ofício (armeiro) e, se for treinado nesta perícia, pode fabricar armas e armaduras superiores com uma melhoria. Se aprender a fabricar itens superiores desses tipos por outra habilidade, gasta apenas ¼ do preço das melhorias que aplica nesses itens (em vez de ⅓).",
+    },
+    {
+      name: "Táticas de Guerrilha",
+      description: "Você recebe visão no escuro e +2 em Furtividade.",
+    }
+  ],
+  attributeModifiers: [
+    { attribute: "con", modifier: 2 },
+    { attribute: "des", modifier: 1 },
+    { attribute: "car", modifier: -1 }
+  ],
+  longevidade: "Normal",
+  devotos: "Arsenal, Megalokk, Tenebra"
+},
   
   
   { id: "Qunari",

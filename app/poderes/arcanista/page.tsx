@@ -105,6 +105,20 @@ export default function ArcanistaPodersPage() {
                 </div>
               </section>
 
+              <section>
+                <h3 className="text-2xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/20 pb-2">Familiares Elementais</h3>
+                <p className="font-medium mb-6">
+                  Você possui um familiar elemental que o acompanha como um familiar com as habilidades de um adepto iniciante. Estes familiares são atrelados ao poder "Familiar Elemental", concedido por Wynna. Se perder esse parceiro, você pode receber outro com uma cerimônia que exige 1 dia e T$ 100 em oferendas.
+                </p>
+                
+                <div className="space-y-4 pl-4 md:pl-5 border-l-4 border-amber-900/30 text-base md:text-lg text-left">
+                  <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Aquin’ne: </span><span className="font-medium">Um aquin’ne familiar concede deslocamento de natação 9m e permite lançar magias e respirar debaixo d’água.</span></p>
+                  <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">T'Peel: </span><span className="font-medium">Um t’peel familiar pode carregar 2 espaços de itens e permite que você lance Queda Suave.</span></p>
+                  <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Pakk: </span><span className="font-medium">Um pakk familiar permite que você lance Explosão de Chamas. Caso aprenda novamente essa magia, seu custo diminui em –1 PM.</span></p>
+                  <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Terrier: </span><span className="font-medium">Um terrier familiar concede redução de dano 2/impacto.</span></p>
+                </div>
+              </section>
+
             </div>
           </div>
         </div>
