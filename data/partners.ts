@@ -146,6 +146,31 @@ export const partners: Partner[] = [
   },
 
 
+  // Ameaças de Arton
+  { id: "Hiena",
+    name: "Hiena",
+    description: "Uma hiena astuta e resistente, famosa por sua mordida poderosa e habilidade de rastrear presas. Muito usada por gnolls como animal de caça e guarda.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "+2 em Furtividade e Sobrevivência.",
+      veterano: "Você pode usar Oportunismo. Se possuir esse poder, em vez disso seu custo diminui em –1 PM.",
+      mestre: "Você pode usar Sentidos Aguçados.",
+    },
+  },
+
+  // Dragão Brasil
+  { id: "Aberrante",
+  name: "Aberrante",
+  description: "Uma criatura corrompida pela Tormenta, de aparência perturbadora e mente alienígena. Apenas devotos de Aharadak podem ter este tipo de parceiro.",
+  origin: "Dragão Brasil",
+  benefits: {
+  iniciante: "Uma vez por rodada, você pode gastar 1 PM para causar 2d6 pontos de dano psíquico ou perda de 1d4 PM em uma criatura em alcance curto (efeito mental).",
+  veterano: "Você também pode gastar 2 PM para causar 4d6 pontos de dano psíquico ou perda de 1d6 PM.",
+  mestre: "Você também pode gastar 4 PM para causar 6d6 pontos de dano psíquico ou perda de 1d8 PM.",
+  },
+  },
+
+
 
 
   

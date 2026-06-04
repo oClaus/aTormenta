@@ -102,6 +102,7 @@ export default function ArcanistaPodersPage() {
                   <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Rato: </span><span className="font-medium">Você pode usar seu atributo-chave em Fortitude, no lugar de Constituição.</span></p>
                   <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Sapo: </span><span className="font-medium">Você soma seu atributo-chave ao seu total de pontos de vida (cumulativo).</span></p>
                   <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Dragão filhote: </span><span className="font-medium">Dragões filhotes de qualquer tipo podem ser invocados como familiares. Entretanto, isso exige obter um ovo de dragão. (Dragões filhotes são muito bestiais, e transformar um filhote já chocado em familiar é quase impossível). Se tiver um dragão filhote como familiar, suas magias que causam dano do mesmo tipo que o sopro do dragão têm a CD aumentada em +2 e custam –1 PM (cumulativo com outras reduções).</span></p>
+                  <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Estirge: </span><span className="font-medium">Um estirge pode ser invocado como familiar, mas isso requer uma ova de estirge. Um estirge familiar permite que você receba 1 PV temporário cumulativo (até o limite de seu nível) sempre que causa dano a uma criatura viva com uma magia.</span></p>
                 </div>
               </section>
 

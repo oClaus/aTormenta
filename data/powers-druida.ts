@@ -143,6 +143,43 @@ export const powersDruida: Power[] = [
     prerequisite: "nagah, Coração da Selva.",
     origin: "Dragão Brasil"
   },
+  { id: "Auspício da Lua Cheia",
+    name: "Auspício da Lua Cheia",
+    description: "Se você estiver sob efeito de escuridão ou forma selvagem, seus ataques corpo a corpo causam +1d6 pontos de dano de trevas.",
+    prerequisite: "devoto de Tenebra.",
+    origin: "Dragão Brasil"
+  },
+  { id: "Auspício da Lua Crescente",
+    name: "Auspício da Lua Crescente",
+    description: "Se você estiver sob efeito de escuridão, seus ataques e magias ignoram 5 pontos de redução de dano.",
+    prerequisite: "devoto de Tenebra.",
+    origin: "Dragão Brasil"
+  },
+  { id: "Auspício da Lua Nova",
+    name: "Auspício da Lua Nova",
+    description: "Se você estiver sob efeito de escuridão, o custo de suas habilidades de druida é reduzido em –1 PM e a CD para resistir a suas habilidades aumenta em +2.",
+    prerequisite: "devoto de Tenebra.",
+    origin: "Dragão Brasil"
+  },
+  { id: "Confluência Elemental",
+    name: "Confluência Elemental",
+    description: "Quando lança uma magia que causa dano de ácido, eletricidade, fogo ou frio, você pode gastar +2 PM para mudar o tipo de dano para outro elemento desta lista.",
+    prerequisite: "druida de Arton, 10º nível de druida.",
+    origin: "Dragão Brasil"
+  },
+  { id: "Ermos Rubros",
+    name: "Ermos Rubros",
+    description: "Você não fica esmorecido, nem tem o custo de suas habilidades aumentado em áreas de Tormenta. Além disso, áreas de Tormenta são consideradas terrenos naturais para você.",
+    prerequisite: "devoto de Aharadak, 8º nível de druida",
+    origin: "Dragão Brasil"
+  },
+  { id: "Poder Tumular",
+    name: "Poder Tumular",
+    description: "Você soma sua Sabedoria na Defesa de mortos-vivos conjurados e, uma vez por rodada, pode fazê-los andar com ação livre.",
+    prerequisite: "Conjurar Mortos-Vivos, devoto de Tenebra.",
+    origin: "Dragão Brasil"
+  },
+
 
 
   { id: "Arma Tradicional",

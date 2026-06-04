@@ -9,6 +9,18 @@ export const artifacts: Artifact[] = [
     image: "/artefatos/Kryzzaorin.png",
   },
 
+  // Dragão Brasil
+  { id: "Bastão Mágico",
+    name: "Bastão Mágico",
+    description: "O pilar utilizado como bastão por Sun Wukong é um bordão atroz pungente magnífico. Como uma ação livre, seu usuário pode mudar seu tamanho, desde pequeno o bastante para ser indetectável quanto grande o bastante para atingir oponentes em alcance longo. Na prática, isso permite fazer ataques corpo a corpo em alcance longo e sacar o bastão com uma ação livre. Uma vítima atingida duas vezes pelo bastão na mesma rodada fica atordoada por uma rodada (Fort CD For evita). Uma vítima atordoada pelo Bastão Mágico não pode ser atordoada novamente por ele na mesma cena.",
+    origin: "Dragão Brasil",
+  },
+  { id: "Nuvem Voadora",
+    name: "Nuvem Voadora",
+    description: "A Nuvem Voadora concede deslocamento de voo 24m para seu usuário, com possibilidade de carregar um passageiro Grande ou menor. Uma vez por cena, o usuário pode lançar Teleporte. Mesmo quando não está com seu dono, a nuvem pode ser invocada com um grito, chegando imediatamente para atender seus pedidos.",
+    origin: "Dragão Brasil",
+  },
+
 
   // Tormenta20 - Jogo do Ano
   { id: "A Espada-Deus",

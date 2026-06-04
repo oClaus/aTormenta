@@ -144,6 +144,29 @@ export const mounts: Mount[] = [
       mestre: "Seu deslocamento muda para 18m e você pode gastar 5 PM e uma ação de movimento para usar a habilidade Sopro (de acordo com o dragão jovem).",
     },
   },
+  { id: "Bulette",
+    name: "Bulette",
+    description: "Um enorme tubarão terrestre de carapaça resistente e apetite voraz. Capaz de nadar pelo solo como se fosse água, é uma montaria exótica temida e admirada em toda Arton.",
+    origin: "Ameaças de Arton",
+    size: "Grande",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 9m (escavação 6m) e, uma vez por rodada, você recebe +1d6 em uma rolagem de dano corpo a corpo.",
+      veterano: "O bônus em rolagens de dano muda para +1d10.",
+      mestre: "O deslocamento de escavação muda para 12m e o bônus em rolagens de dano muda para +2d8.",
+    },
+  },
+  { id: "Hienodonte",
+    name: "Hienodonte",
+    size: "Grande",
+    description: "Uma hiena atroz do tamanho de um urso, com mordida capaz de esmagar ossos. Ágil e feroz, é usada como montaria por gnolls e outros guerreiros dos ermos.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 12m e você recebe uma ação de movimento extra por turno (apenas para se deslocar).",
+      veterano: "Você pode usar Oportunismo. Se possuir esse poder, em vez disso seu custo diminui em –1 PM.",
+      mestre: "Quando acerta um ataque corpo a corpo, você pode fazer a manobra derrubar como uma ação livre.",
+    },
+  },
+  
 
 
   { id: "nautilon ",

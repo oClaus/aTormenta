@@ -929,35 +929,96 @@ export const races: Race[] = [
   ],
   longevidade: "Normal",
   devotos: "Arsenal, Megalokk, Tenebra"
-},
-{
-  id: "Hobgoblin",
-  name: "Hobgoblin",
+  },
+  { id: "Hobgoblin",
+    name: "Hobgoblin",
+    origin: "Ameaças de Arton",
+    image: "/ameacas/hobgoblin.png",
+    description: "“Serei morto um dia, é certo que sim. Mas não agora. Nem por você!”\n — Latanaur de Tollon, humano caçador \n\n O hobgoblin de armadura leve recua, protegido pelos soldados na linha de frente. Ele empunha um tipo de lança metálica robusta, de aspecto peculiar, cheia de peças com mecanismos incomuns. Súbito, com um estampido, a extremidade parece cuspir uma breve labareda — e um ferimento explode em seu peito. Aquilo não é uma lança! \n Não apenas os bandoleiros do Reinado usam armas de fogo. Se os hobgoblins roubaram esse segredo, ou se foram eles os primeiros a idealizar tais artefatos de morte, talvez nem os deuses saibam. \n O uso de pólvora é muito difundido entre os militaristas hobgoblins, nem um pouco perturbados por sua possível procedência demoníaca. Com sua alta inteligência e perícia em forjar armas de alta qualidade, eles conseguem produzir uma variedade de mosquetes, rifles e outras armas de cano longo equipadas com baionetas em suas extremidades — ou mesmo combinadas com armas de combate corporal, podendo ser assim utilizadas quando o inimigo está muito próximo ou acaba a munição. \n Assim, embora seja capaz de empunhar sua arma como uma lança ou alabarda quando necessário, o hobgoblin atirador prefere se manter recuado, provendo fogo de cobertura aos soldados. Não raras vezes um ou mais destes também estarão escondidos enquanto o resto do bando faz uma emboscada de beira de estrada.",
+    abilities: [
+      {
+        name: "Arte da Guerra",
+        description: "Você é treinado em Guerra e recebe proficiência em armas marciais. Se receber essa proficiência novamente, recebe +2 em rolagens de dano com essas armas.",
+      },
+      {
+        name: "Metalurgia Hobgoblin",
+        description: "Você recebe +2 em Ofício (armeiro) e, se for treinado nesta perícia, pode fabricar armas e armaduras superiores com uma melhoria. Se aprender a fabricar itens superiores desses tipos por outra habilidade, gasta apenas ¼ do preço das melhorias que aplica nesses itens (em vez de ⅓).",
+      },
+      {
+        name: "Táticas de Guerrilha",
+        description: "Você recebe visão no escuro e +2 em Furtividade.",
+      }
+    ],
+    attributeModifiers: [
+      { attribute: "con", modifier: 2 },
+      { attribute: "des", modifier: 1 },
+      { attribute: "car", modifier: -1 }
+    ],
+    longevidade: "Normal",
+    devotos: "Arsenal, Megalokk, Tenebra"
+  },
+  { id: "Centauro",
+  name: "Centauro",
   origin: "Ameaças de Arton",
-  image: "/ameacas/hobgoblin.png",
-  description: "“Serei morto um dia, é certo que sim. Mas não agora. Nem por você!”\n — Latanaur de Tollon, humano caçador \n\n O hobgoblin de armadura leve recua, protegido pelos soldados na linha de frente. Ele empunha um tipo de lança metálica robusta, de aspecto peculiar, cheia de peças com mecanismos incomuns. Súbito, com um estampido, a extremidade parece cuspir uma breve labareda — e um ferimento explode em seu peito. Aquilo não é uma lança! \n Não apenas os bandoleiros do Reinado usam armas de fogo. Se os hobgoblins roubaram esse segredo, ou se foram eles os primeiros a idealizar tais artefatos de morte, talvez nem os deuses saibam. \n O uso de pólvora é muito difundido entre os militaristas hobgoblins, nem um pouco perturbados por sua possível procedência demoníaca. Com sua alta inteligência e perícia em forjar armas de alta qualidade, eles conseguem produzir uma variedade de mosquetes, rifles e outras armas de cano longo equipadas com baionetas em suas extremidades — ou mesmo combinadas com armas de combate corporal, podendo ser assim utilizadas quando o inimigo está muito próximo ou acaba a munição. \n Assim, embora seja capaz de empunhar sua arma como uma lança ou alabarda quando necessário, o hobgoblin atirador prefere se manter recuado, provendo fogo de cobertura aos soldados. Não raras vezes um ou mais destes também estarão escondidos enquanto o resto do bando faz uma emboscada de beira de estrada.",
+  image: "/ameacas/centauro.png",
+  description: "“É perto daqui, um dia de viagem. Não, espera! Para vocês, bípedes… dois dias.”\n — Hipólita, centaura xamã de Allihanna \n\n Centauros vivem em pequenas comunidades silvestres, ocultas em florestas, planícies e savanas. São bastante gregários entre si, mas reservados quanto a estranhos. Em uma comunidade de centauros há caçadores que rastreiam e lutam, enquanto os demais se ocupam da colheita e dos afazeres domésticos. \n Centauros evitam cometer abusos contra a natureza. Não caçam ou pescam em demasia, nem na época reprodutiva de cada animal. As maiores tribos praticam a agricultura; algumas chegam a comercializar alimentos e artesanato com outras raças. Aldeias vizinhas a comunidades humanas podem manter relações pacíficas de comércio ou proteção mútua contra outras ameaças. Em certas regiões, centauros podem ser contratados para escoltar caravanas através de grandes extensões selvagens. Mas no geral eles evitam contato com povos bípedes; incursões de humanos em seus territórios de caça podem resultar em confrontos violentos. \n Centauros têm afinidade com elfos, dahllan, hynne e sílfides, por seus espíritos livres e sua ligação com a natureza. Seus maiores inimigos são os kobolds; esses pequenos covardes atacam e roubam suas aldeias, então se escondem em lugares de acesso impossível para os centauros. Não chegam a ser raros os casos de centauros que abandonam os modos de sua gente para viver em povoados humanos, ou mesmo atuar como aventureiros. Um centauro só aceita ser cavalgado em situações de vida ou morte, ou por alguém muito íntimo.",
   abilities: [
     {
-      name: "Arte da Guerra",
-      description: "Você é treinado em Guerra e recebe proficiência em armas marciais. Se receber essa proficiência novamente, recebe +2 em rolagens de dano com essas armas.",
+      name: "Avantajado",
+      description: "Seu tamanho é Grande e seu deslocamento é 12m.",
     },
     {
-      name: "Metalurgia Hobgoblin",
-      description: "Você recebe +2 em Ofício (armeiro) e, se for treinado nesta perícia, pode fabricar armas e armaduras superiores com uma melhoria. Se aprender a fabricar itens superiores desses tipos por outra habilidade, gasta apenas ¼ do preço das melhorias que aplica nesses itens (em vez de ⅓).",
+      name: "Cascos",
+      description: "Você possui uma arma natural de cascos (dano 1d8, crítico x2, impacto). Uma vez por rodada, quando usa a ação agredir para atacar com outra arma, pode gastar 1 PM para fazer um ataque corpo a corpo extra com os cascos.",
     },
     {
-      name: "Táticas de Guerrilha",
-      description: "Você recebe visão no escuro e +2 em Furtividade.",
+      name: "Ginete Natural",
+      description: "Você é considerado montado para efeito de fazer investidas e para benefícios das armas que empunha, e pode escolher o poder Carga de Cavalaria mesmo sem cumprir seus pré-requisitos. Entretanto, não pode se beneficiar de uma montaria e, se estiver carregando um cavaleiro, sofre −2 em testes (além das penalidades de sobrecarga, se houver) e é considerado em condição ruim para lançar magias.",
+    },
+    {
+      name: "Medo de Altura",
+      description: "Se estiver adjacente a uma queda de 3m ou mais (como um buraco ou penhasco), você fica abalado.",
     }
   ],
   attributeModifiers: [
-    { attribute: "con", modifier: 2 },
-    { attribute: "des", modifier: 1 },
-    { attribute: "car", modifier: -1 }
+    { attribute: "sab", modifier: 2 },
+    { attribute: "for", modifier: 1 },
+    { attribute: "int", modifier: -1 }
   ],
   longevidade: "Normal",
-  devotos: "Arsenal, Megalokk, Tenebra"
-},
+  devotos: "Allihanna, Hippion, Megalokk"
+  },
+  { id: "Gnoll",
+    name: "Gnoll",
+    origin: "Ameaças de Arton",
+    image: "/ameacas/gnoll.png",
+    description: "Arton é um mundo habitado por inúmeros povos e raças. Nem todos são cordiais: muitos são hostis, perigosos. Podem ser mais ou menos inteligentes, mais ou menos parecidos com feras. Não raras vezes mostram uma aparência híbrida entre humanos e algum animal selvagem. É o caso dos gnolls. \n Estes humanoides com traços de hiena vivem em regiões ermas. São caçadores e salteadores, espreitando rotas comerciais menos protegidas. Embora perigosos, são muitas vezes considerados um problema “menor” por regentes e outras autoridades. Roubam e pilham, mas raramente matam — exceto quando a vítima mostra resistência. Por isso em geral, apenas aventureiros iniciantes (ou baratos) são contratados para lidar com eles. \n A cultura gnoll considera a rendição um ato honrado. Quando estão perdendo uma luta ou percebem que subestimaram um inimigo, gnolls não têm pudor em largar as armas e parar de lutar. Rendem-se de imediato, esperando receber a liberdade, ainda que percam todas as posses. Da mesma forma, um gnoll sempre aceita a rendição de um inimigo, levando o que puder carregar, mas deixando o oponente vivo e livre. Sob o ponto de vista gnoll, atacar alguém que já ofereceu rendição é impensável — quem fizer isso será considerado louco ou maligno, possivelmente caçado sem trégua por todas as alcateias da região. Ainda mais honrado é o ato de se render quando em clara vantagem, ou mesmo após vencer uma luta: entre gnolls, não há prova maior de dignidade e bravura. \n Exceto por seu código de rendição, gnolls são animalescos: respeitam apenas a lei do mais forte, fazem o que têm vontade, seguem seus instintos e desejos. Tomam o que pertence a outros sem cerimônia. Aqueles que se distanciam muito deste comportamento são vistos como “anormais” e muitas vezes expulsos do bando, ou se afastam por vontade própria. Não é improvável que acabem se juntando a grupos de aventureiros.",
+    abilities: [
+      {
+        name: "Faro",
+        description: "Você tem olfato apurado. Contra inimigos em alcance curto que não possa ver, você não fica desprevenido e camuflagem total lhe causa apenas 20% de chance de falha.",
+      },
+      {
+        name: "Mordida",
+        description: "Você possui uma arma natural de mordida (dano 1d6, crítico x2, perfuração). Uma vez por rodada, quando usa a ação agredir para atacar com outra arma, pode gastar 1 PM para fazer um ataque corpo a corpo extra com a mordida.",
+      },
+      {
+        name: "Oportunista",
+        description: "Você recebe +2 nas rolagens de dano contra criaturas que tenham sofrido dano de outras criaturas desde seu último turno.",
+      },
+      {
+        name: "Rendição",
+        description: "Quando um inimigo se rende, você recebe 1d4 PM temporários cumulativos. Da mesma forma, quando é reduzido a um quarto de seus PV ou menos, seu instinto é se render. Caso continue lutando, fica alquebrado.",
+      }
+    ],
+    attributeModifiers: [
+      { attribute: "con", modifier: 2 },
+      { attribute: "sab", modifier: 1 },
+      { attribute: "int", modifier: -1 }
+    ],
+    longevidade: "Normal",
+    devotos: "Allihanna, Hyninn, Marah, Megalokk, Nimb, Tenebra"
+  },
   
   
   { id: "Qunari",
