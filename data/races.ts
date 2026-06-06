@@ -1125,6 +1125,54 @@ export const races: Race[] = [
   devotos: "Qualquer",
   extra: "Golem de Espelhos e Habilidades de Classe: O chassi de espelhos permite que um golem copie habilidades de classe de outras criaturas. Habilidades de classe são explicadas em detalhes em Tormenta20, Capítulo 1. Lembre-se de que cada magia fornecida por uma classe é uma habilidade individual. É possível também copiar habilidades de ameaças. Qualquer magia fornecida pela habilidade Magias, bem como qualquer habilidade com o mesmo nome de uma habilidade de classe, é considerada uma habilidade de classe."
   },
+  { id: "Kallyanach",
+  name: "Kallyanach",
+  origin: "Ameaças de Arton",
+  image: "/ameacas/kallyanach.png",
+  description: "“Sempre suspeitei haver algo em meu sangue… agora sei do que se trata!”\n — Ben-Hakk, meio-dragão bardo \n\n O ser humanoide é coberto de escamas robustas, tem cabeça adornada de chifres e presas, mãos com garras e grandes asas. Se foi humano um dia, ou elfo, ou mesmo minotauro, é impossível dizer — os traços dracônicos predominam por completo. \n Um meio-dragão pode surgir de várias maneiras. E, apesar da conhecida volúpia dos dragões, o acasalamento pode ser a menos comum de todas. Dragões são seres extremamente mágicos: sua própria presença emana uma aura elemental que se estende por toda a região que dominam, às vezes perdurando por anos após sua morte ou partida. Essa emanação pode ser pressentida ou farejada por predadores, que ficam prudentemente afastados. No entanto, quando povos humanoides vivem na área, um bebê nascido ali pode ser meio-dragão. \n Também ocorre que a transformação seja intencional, em vez de acidental. Para um devoto de Kally, não há honra maior do que ser abençoado com essa metamorfose em algo mais próximo de sua divindade. Muitos dracomantes também perseguem esse objetivo, através de fórmulas e rituais. Fala-se em pequenas aldeias bárbaras formadas apenas por meios-dragões, em alguns pontos das Sanguinárias. \n E existe ainda uma causa muito mais evidente: Kallyadranoch voltou a ser um deus maior. Se ele desejar que qualquer nascimento no mundo resulte em um meio-dragão, por motivos que apenas um deus conhece, assim será.",
+  abilities: [
+    {
+      name: "Herança Dracônica",
+      description: "Você é uma criatura do tipo monstro e recebe redução 5 contra um tipo de dano a sua escolha entre ácido, eletricidade, fogo, frio, luz ou trevas."
+    },
+    {
+      name: "Bênção de Kallyadranoch",
+      description: "Escolha dois dos poderes a seguir. Uma vez por patamar, você pode escolher uma bênção no lugar de um poder de classe.",
+      subAbilities: [
+        {
+          name: "Armamento Kallyanach",
+          description: "Você possui uma arma natural (dano 1d6, crítico x2) escolhida entre cauda (impacto), chifres (perfuração) ou mordida (perfuração). Uma vez por rodada, quando usa a ação agredir para atacar com outra arma, pode gastar 1 PM para fazer um ataque corpo a corpo extra com essa arma."
+        },
+        {
+          name: "Asas Dracônicas",
+          description: "Você pode gastar 1 PM por rodada para voar com deslocamento de 9m. Enquanto estiver voando desta forma, você fica vulnerável."
+        },
+        {
+          name: "Escamas Elementais",
+          description: "Sua pele é recoberta de escamas resistentes e brilhantes, que fornecem +2 na Defesa e aumentam a RD de sua Herança Dracônica para 10."
+        },
+        {
+          name: "Prática Arcana",
+          description: "Escolha uma magia arcana de 1º círculo que cause dano do mesmo tipo de sua Herança Dracônica. Você pode lançar essa magia (atributo-chave Inteligência). Caso aprenda novamente essa magia, seu custo diminui em –1 PM. Você pode escolher esta bênção mais de uma vez para outras magias."
+        },
+        {
+          name: "Sentidos Dracônicos",
+          description: "Seus sentidos são impregnados com poder dracônico. Você recebe faro e visão no escuro."
+        },
+        {
+          name: "Sopro de Dragão",
+          description: "Você pode gastar uma ação padrão e 1 PM para soprar um cone de 6m que causa 1d12 pontos de dano do tipo de sua Herança Dracônica (Ref CD Constituição reduz à metade). A cada quatro níveis após o 1º, você pode gastar +1 PM para aumentar o dano do sopro em +1d12."
+        }
+      ]
+    }
+  ],
+  attributeModifiers: [
+    { description: "Escolha +2 em um atributo a sua escolha ou +1 em dois atributos a sua escolha" }
+  ],
+  longevidade: "x2",
+  devotos: "Arsenal, Kallyadranoch, Megalokk, Wynna",
+  extra: "Kallyanach Feiticeiros Dracônicos\nA combinação de heranças místicas em um kallyanach feiticeiro da linhagem dracônica concede a ele certas habilidades especiais. Primeiramente, o kallyanach feiticeiro dracônico pode escolher Carisma como atributo-chave de seu Sopro de Dragão e das magias recebidas por Prática Arcana. Além disso, seu Sopro de Dragão conta como uma magia de feiticeiro para efeitos de habilidades e itens que beneficiem suas magias."
+  },
   
   
   { id: "Qunari",

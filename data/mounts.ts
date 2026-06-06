@@ -166,6 +166,18 @@ export const mounts: Mount[] = [
       mestre: "Quando acerta um ataque corpo a corpo, você pode fazer a manobra derrubar como uma ação livre.",
     },
   },
+  { id: "Corcel de Kally",
+    name: "Corcel de Kally",
+    description: "Uma montaria sagrada de Kallyadranoch com aparência de um pequeno dragão alado. Rápido, feroz e resistente ao fogo, é concedido apenas aos devotos mais dignos do Deus dos Dragões.",
+    origin: "Ameaças de Arton",
+    size: "Grande",
+    benefits: {
+    iniciante: "Seu deslocamento muda para 12m e, uma vez por rodada, você recebe +1d6 em uma rolagem de dano corpo a corpo.",
+    veterano: "O bônus na rolagem de dano muda para +1d8 e seu deslocamento muda para 12m (normal e de voo).",
+    mestre: "Seu deslocamento normal e de voo muda para 18m e, uma vez por rodada, você pode gastar 2 PM para causar 3d8 pontos de dano de fogo em todas as criaturas em um cone de 6m (Ref CD Car reduz à metade).",
+    },
+  },
+
   
 
 
