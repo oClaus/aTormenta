@@ -157,6 +157,17 @@ export const partners: Partner[] = [
       mestre: "Você pode usar Sentidos Aguçados.",
     },
   },
+  { id: "Ko-Kabuto",
+    name: "Ko-Kabuto",
+    description: "Um besouro robusto e disciplinado, usado como guardião e protetor. Apesar da aparência intimidadora, é dócil com seu mestre e extremamente resistente.",
+    origin: "Ameaças de Arton",
+    benefits: {
+    iniciante: "Você recebe visão na penumbra e +1 na Defesa.",
+    veterano: "Uma vez por rodada, você recebe +1d8 em uma rolagem de dano corpo a corpo.",
+    mestre: "O bônus na Defesa muda para +2 e o bônus em rolagens de dano muda para +1d10.",
+    },
+    },
+  
 
   // Dragão Brasil
   { id: "Aberrante",

@@ -1173,6 +1173,188 @@ export const races: Race[] = [
   devotos: "Arsenal, Kallyadranoch, Megalokk, Wynna",
   extra: "Kallyanach Feiticeiros Dracônicos\nA combinação de heranças místicas em um kallyanach feiticeiro da linhagem dracônica concede a ele certas habilidades especiais. Primeiramente, o kallyanach feiticeiro dracônico pode escolher Carisma como atributo-chave de seu Sopro de Dragão e das magias recebidas por Prática Arcana. Além disso, seu Sopro de Dragão conta como uma magia de feiticeiro para efeitos de habilidades e itens que beneficiem suas magias."
   },
+  { id: "Kaijin",
+  name: "Kaijin",
+  origin: "Ameaças de Arton",
+  image: "/ameacas/kaijin.png",
+  description: "“Você tem a mácula. Ainda assim, sinto honra em você. Por Lin-Wu, como isso é possível?”\n — Kanemi Hino, Alta-Magistrada Imperial \n\n O monstro aberrante é, obviamente, um demônio da Tormenta — mas algo parece diferente. É monstruoso, mas também humanoide. Tem um braço em forma de garra imensa, mas no outro há uma mão. A carapaça é insetoide e horrenda, mas também lembra a armadura de um samurai tamuraniano. É um homem-monstro perigoso, por certo; ainda assim, parece existir algo humano nele. \n Kaijin é como os meios-demônios da Tormenta são chamados em Tamu-ra. No entanto, uma vez que sua terra foi corrompida pela tempestade por tantos anos, estes seres são ainda mais fortes e monstruosos. \n Diferente dos lefou, poucos kaijin apresentam traços humanos. Seus corpos são revestidos de verrugas, couro, pelagem ou carapaça. Seus rostos são amontoados de crostas, olhos, presas, quelíceras e antenas. Braços e pernas são longos ou curtos demais, ou dobram-se em lugares errados. Suas mãos podem ser garras, pinças ou tentáculos. Espinhos e lâminas projetam-se de todas as partes. Exceto por manter uma estrutura humanoide básica (cabeça, tronco, dois braços, duas pernas), são pouco diferentes de outros lefeu. \n Quase todos os kaijin são criaturas selvagens, insanas, amaldiçoadas, pouco ou nada restando de sua alma humana. Ainda que alguns demonstrem inteligência cruel, são cheios de ódio pelo que se tornaram, com o único propósito de causar morte e sofrimento. São os vilões monstruosos que surgem regularmente com intenções de “destruir a humanidade”. Kaijin normalmente agem sozinhos — pois sua reação natural, ao encontrar outro kaijin, é lutar até a morte. Os mais fortes e espertos conseguem comandar capangas, ou até mesmo ninjas, para executar seus loucos planos de vingança contra o mundo.",
+  abilities: [
+    {
+      name: "Couraça Rubra",
+      description: "Você recebe redução de dano 2. Sua couraça conta como um poder da Tormenta, exceto para perda de Carisma.",
+    },
+    {
+      name: "Cria da Tormenta",
+      description: "Você é uma criatura do tipo monstro e recebe +5 em testes de resistência contra efeitos causados por lefeu e pela Tormenta. Além disso, efeitos da Tormenta que não afetem lefou também não afetam você.",
+    },
+    {
+      name: "Disforme",
+      description: "Por sua anatomia anômala, você não pode empunhar nem vestir itens, a menos que sejam mágicos ou especialmente adaptados para você (o que demora um dia e custa 50% do preço do item, sem contar melhorias). Seus itens iniciais, e aqueles recebidos por sua origem ou habilidades, são adaptados para você. Esta habilidade conta como um poder da Tormenta, exceto para perda de Carisma.",
+    },
+    {
+      name: "Terror Vivo",
+      description: "Você pode usar Força como atributo-chave de Intimidação (em vez de Carisma) e recebe um poder da Tormenta a sua escolha, que não conta para perda de Carisma.",
+    }
+  ],
+  attributeModifiers: [
+    { attribute: "for", modifier: 2 },
+    { attribute: "con", modifier: 1 },
+    { attribute: "car", modifier: -2 }
+  ],
+  longevidade: "Normal",
+  devotos: "Arsenal, Lin-Wu"
+  },
+  { id: "Kappa",
+    name: "Kappa",
+    origin: "Ameaças de Arton",
+    image: "/ameacas/kappa.png",
+    description: "“Mas essa postura de luta… será isso algum tipo de… tartaruga ninja?”\n — Yellsew Sadlac, qareen bucaneiro \n\n Os estranhos seres aquáticos têm o aspecto de tartarugas bípedes, com faces reptilianas, olhos redondos e vermelhos, escamas verde-amareladas e uma grande carapaça às costas. Têm pés com três dedos e mãos com quatro. Seus movimentos demonstram ser mais rápidos e ágeis do que sugere o parentesco animal. \n Demônio aquático tamuraniano, o kappa começou a surgir também em vários outros pontos de Arton — sobretudo rios e lagos nas proximidades de aldeias onde vivem nativos de Tamu-ra ou devotos de Lin-Wu. É como se estivessem perdidos e buscando alguma proximidade com o antigo lar — mas ao mesmo tempo são orgulhosos e arrogantes demais para admitir isso. \n Talvez o traço mais curioso sobre os kappa seja a depressão que trazem no alto da cabeça, como uma tigela ou vasilha, contendo um pouco d’água. Se essa água é derramada, o kappa fica enfraquecido. Tal façanha, no entanto, não é simples: por sua extrema agilidade, um kappa consegue manter a depressão sempre cheia, mesmo enquanto luta. De fato, estes seres são artistas marciais exímios. \n Embora não sejam extremamente cruéis, kappa são pouco honrados e muito inquietos. É possível negociar com eles usando de diplomacia e paciência, com muito cuidado para não os aborrecer. Quando cooperativos, podem prover informações importantes sobre a região. Caso se enfureça, contudo, um kappa ataca e tenta afogar seus inimigos, derrubando-os e segurando-os sob a água com manobras de artes marciais.",
+    abilities: [
+      {
+        name: "Alma da Água",
+        description: "Você é uma criatura do tipo espírito e tem deslocamento de natação igual ao seu deslocamento terrestre."
+      },
+      {
+        name: "Carapaça Kappa",
+        description: "Você não pode ser flanqueado e recebe cobertura leve se estiver submerso ou caído. Você soma sua Constituição na Defesa, limitado pelo seu nível, mas apenas se não estiver usando armaduras pesadas (se já faz isso, como pela habilidade Casca Grossa, em vez disso você recebe +2 na Defesa)."
+      },
+      {
+        name: "Cura das Águas",
+        description: "Você pode lançar a magia Curar Ferimentos (atributo-chave Sabedoria). Caso aprenda novamente essa magia, seu custo diminui em –1 PM. Você não pode usar esta habilidade se a água de sua cabeça estiver derramada."
+      },
+      {
+        name: "Tigela D’água",
+        description: "Sempre que falhar por 5 ou mais em um teste para evitar ser agarrado, derrubado ou empurrado, você derrama a água de sua cabeça. Você fica enjoado até encher a tigela novamente (o que exige uma fonte de água e uma ação padrão)."
+      }
+    ],
+    attributeModifiers: [
+      { attribute: "des", modifier: 2 },
+      { attribute: "con", modifier: 1 },
+      { attribute: "car", modifier: -1 }
+    ],
+    longevidade: "x2",
+    devotos: "Hyninn, Lena, Lin-Wu, Oceano"
+  },
+  { id: "Mashin",
+    name: "Mashin",
+    origin: "Ameaças de Arton",
+    image: "/ameacas/mashin.png",
+    description: "“Quanta honra, ser danificado em combate contra inimigos do Império!”\n — Makoto Tsume, mashin samurai \n\n À primeira vista, lembra um ser humano esbelto em armadura metálica, ou uma estátua de manufatura sofisticada. A cabeça parece um elmo fechado, sem rosto, com gemas luzindo como olhos. Placas metálicas em formas elegantes deslizam sobre o corpo com precisão impecável, deixando entrever uma musculatura interna de fibras mágicas sedosas, milimetricamente trançadas. Gravuras e ideogramas grafados no metal brilham e lampejam com a energia elemental interior. \n Golens vivos não são raros em Arton. O Império de Jade, no entanto, sempre contou com os mais extraordinários e talentosos artífices, capazes de produzir engenhos mecânicos inimagináveis no Reinado. E, embora grande parte dessa arte tenha se perdido com a destruição de Tamu-ra, ainda existem construtos remanescentes daqueles tempos, bem como novas gerações de inventores buscando recriar as antigas técnicas. \n Mashin são golens de origem tamuraniana, tão belos que são considerados obras de arte, tão sofisticados que igualam os humanos em qualquer tarefa. Todos têm inteligência, vontade própria e são reconhecidos como cidadãos no Império de Jade. Servem a clãs da nobreza, ajudam na reconstrução de Tamu-ra ou se aventuram em Arton por razões pessoais. \n Mashin foram criados para viver em sociedade. São educados, respeitosos e corteses, mesmo com inimigos. Quase todos são honrados — não por serem feitos assim, mas por influência da cultura tamuraniana. Demonstram senso de dever, dignidade e nobreza. Mas, conforme sua criação e experiências, a mente elemental pode adotar qualquer moral ou ética, não sendo incomum que alguns se tornem trapaceiros, cruéis ou até loucos.",
+    abilities: [
+      {
+        name: "Mashin (chassi)",
+        description: "+1 em dois atributos a sua escolha. Você se torna treinado em duas perícias a sua escolha e pode substituir uma dessas perícias por uma maravilha mecânica. Entretanto, você é sempre Médio."
+      },
+      {
+        name: "Maravilha Mecânica",
+        description: "Se escolher uma maravilha mecânica, você recebe um dos poderes a seguir. Uma vez por patamar, você pode escolher uma maravilha mecânica no lugar de um poder de classe.",
+        subAbilities: [
+          {
+            name: "Adaptação Elemental",
+            description: "Quando sofre dano de ácido, eletricidade, fogo, frio, luz ou trevas, você pode gastar 2 PM para receber redução 10 contra esse tipo de dano até o fim da cena."
+          },
+          {
+            name: "Arma Acoplada",
+            description: "Você possui uma arma acoplada ao seu corpo. Ela fica recolhida em um compartimento e não pode ser desarmada, e você conta como se tivesse Saque Rápido para usá-la. Um personagem treinado em Ofício (artesão) pode substituir essa arma com uma hora de trabalho e o gasto de T$ 100."
+          },
+          {
+            name: "Arma Elemental",
+            description: "Você pode gastar uma ação de movimento e 2 PM para fazer uma arma que esteja empunhando causar +1d6 pontos de dano do tipo de sua fonte elemental até o fim da cena. Pré-requisito: Fonte de Energia (elemental)."
+          },
+          {
+            name: "Auxílio de Mira",
+            description: "Quando faz um ataque à distância, você pode pagar 1 PM para aumentar em +2 a margem de ameaça desse ataque."
+          },
+          {
+            name: "Caminho da Perfeição",
+            description: "Escolha uma de suas perícias treinadas. Você recebe +2 nessa perícia."
+          },
+          {
+            name: "Canalizar Reparos",
+            description: "Como uma ação completa, você pode gastar pontos de mana para recuperar pontos de vida, à taxa de 5 PV por PM."
+          },
+          {
+            name: "Canhão Energético",
+            description: "Se sua arma acoplada for uma arma de fogo, você pode gastar uma ação de movimento e 1 PM para energizá-la. Até o fim da cena, seu próximo ataque com ela causa +1 dado de dano do mesmo tipo. Múltiplos usos deste poder são cumulativos (limitado por sua Constituição). Pré-requisito: Arma Acoplada."
+          },
+          {
+            name: "Dínamo de Mana",
+            description: "Escolha uma de suas habilidades com um custo em PM. Você pode gastar uma ação de movimento para canalizar seu mana. Quando faz isso, até o fim do seu turno, o custo do próximo uso da habilidade escolhida é reduzido em –1 PM. Um personagem treinado em Ofício (artesão) pode substituir essa habilidade com uma hora de trabalho e o gasto de T$ 100."
+          },
+          {
+            name: "Pernas Aprimoradas",
+            description: "Você pode gastar 2 PM para receber +6m em seu deslocamento e +5 em Atletismo até o fim da cena."
+          },
+          {
+            name: "Reservatório Alquímico",
+            description: "Você possui um reservatório em seu corpo que pode armazenar até duas doses de preparados alquímicos. Uma vez por rodada, você pode usar um desses preparados ou pode consumi-lo para sua fonte de energia. Carregar seu reservatório exige uma ação completa e o gasto dos itens com os quais você quiser carregá-lo. Pré-requisito: Fonte de Energia (alquímica)."
+          }
+        ]
+      }
+    ],
+    attributeModifiers: [
+      { attribute: "for", modifier: 1 },
+      { attribute: "car", modifier: -1 },
+    ],
+    extra: "Mashins são golens especiais criados com técnicas tamuranianas. Eles são um tipo de chassi para personagens golens."
+  },
+  { id: "Nezumi",
+    name: "Nezumi",
+    origin: "Ameaças de Arton",
+    image: "/ameacas/nezumi.png",
+    description: "“Homens-ratos? Saqueando nas estradas? Mas era o que me faltava!”\n — George Ruud, prefeito de Nova Malpetrim \n\n Os recém-chegados podem ser facilmente descritos como pessoas-ratos. Seres de pelagem cinzenta com grandes orelhas, focinhos alongados, olhos vermelhos e garras ameaçadoras. Quase todos têm cicatrizes e pedaços das orelhas e caudas faltando. Embora pequenos, parecem perigosos, prontos a explodir em fúria e arrancar os olhos de seus inimigos. \n No passado, o perigoso povo-rato estava entre as maiores ameaças ao Império de Jade. Ambos, humanos e nezumi, acreditavam ser os legítimos donos da ilha. Viviam em guerra contra os “invasores”, tentavam expulsá- los de todas as formas. Hoje, após sobreviverem aos horrores da Tormenta, os antigos inimigos buscam colocar de lado as diferenças para reconstruir Tamu-ra. \n Nezumi tratam outros povos como inimigos, mas sem necessariamente odiá-los. Sob seu estranho ponto de vista, considerar alguém “inimigo” é mostrar respeito, reconhecer sua força. Para os nezumi, inimigos são valiosos, dão significado ao mundo. Uma vida sem adversários é uma vida vazia, é apenas esperar pela temível morte por velhice ou doença. Na cultura nezumi, se você não tem um inimigo, também não tem valor. Bandos nezumi que desprezam a honra e a paz têm sido vistos abandonando Tamu-ra para se estabelecer no Reinado, tornando-se assaltantes ou mercenários.",
+    abilities: [
+      {
+        name: "Empunhadura Poderosa",
+        description: "Ao usar uma arma feita para uma categoria de tamanho maior que a sua (por exemplo, uma arma aumentada para uma criatura Pequena ou Média), a penalidade que você sofre nos testes de ataque diminui para –2. Caso receba esta habilidade novamente, a penalidade diminui para 0.",
+      },
+      {
+        name: "Pequeno, Mas Não Metade",
+        description: "Seu tamanho é Pequeno, mas seu deslocamento se mantém 9m e você recebe resistência a medo +5 contra criaturas maiores que você e +2 em Intimidação.",
+      },
+      {
+        name: "Roedor",
+        description: "Você possui uma arma natural de mordida (dano 1d6, crítico x2, corte). Uma vez por rodada, quando usa a ação agredir para atacar com outra arma, pode gastar 1 PM para fazer um ataque corpo a corpo extra com a mordida. Além disso, quando faz um acerto crítico com sua mordida, você deixa a armadura da vítima avariada ou, se ela estiver sem armadura, aumenta em +1 o multiplicador desse crítico.",
+      },
+      {
+        name: "Sentidos Murídeos",
+        description: "Você recebe faro e visão na penumbra.",
+      }
+    ],
+    attributeModifiers: [
+      { attribute: "con", modifier: 2 },
+      { attribute: "des", modifier: 1 },
+      { attribute: "int", modifier: -1 }
+    ],
+    longevidade: "Normal",
+    devotos: "Arsenal, Megalokk, Tenebra"
+  },
+  { id: "Tengu",
+    name: "Tengu",
+    origin: "Ameaças de Arton",
+    image: "/ameacas/tengu.png",
+    description: "“Como essas coisas-corvos estridentes conseguem lutar tão BEM?”\n — Sigmund Egill, humano guerreiro \n\n O vulto humanoide é escuro como a noite, todo coberto de penas profundamente negras. Tem cabeça de corvo e grandes asas às costas. Usa armadura tamuraniana tradicional e empunha uma bela espada katana. A postura é ereta e confiante, até mesmo digna, em oposição ao aspecto animalesco. \n Este povo alado de homens-corvos é formado por guerreiros habilidosos, orgulhosos de suas técnicas. Eram honrados no passado, mas os horrores da Tormenta talvez tenham sido demasiados para eles. Hoje atuam como bandoleiros, atacando viajantes e vilarejos. No entanto, por preferirem usar as melhores armas e armaduras, seus alvos favoritos são guerreiros e cavaleiros bem equipados, que os tengu enfrentam sem nenhum temor — alguns deles até mesmo buscando novos desafios longe de Tamu-ra. É o chamado Caminho do Céu, parte da cultura tengu: viajar pelos céus de forma nômade em busca de novidades e vivências. \n Quase todos os tengu empunham boas espadas, mas alguns lutam desarmados. Derrotar um tengu não é façanha simples; muitos guerreiros sonham em vencer tal duelo, acreditando ser o melhor teste para suas habilidades (e também um meio de conseguir boas armas). \n Alguns bandos tengu são liderados por um daitengu, mais poderoso e capaz de conjurar magias.",
+    abilities: [
+      {
+        name: "Asas Desorientadoras",
+        description: "Quando estão livres, suas asas podem ser usadas para distrair seus oponentes. Se não estiver usando-as para voar, você recebe os benefícios de Finta Aprimorada. Se tiver esse poder, em vez disso o bônus em Enganação para fintar aumenta para +5.",
+      },
+      {
+        name: "Caminhante do Céu",
+        description: "Você pode pairar a 1,5m do chão com deslocamento 9m. Isso permite que você ignore terreno difícil e o torna imune a dano por queda (a menos que esteja inconsciente). Você pode gastar 1 PM por rodada para voar com deslocamento de 12m. Você precisa de espaço para abrir suas asas; quando paira ou voa, ocupa o espaço de uma criatura de uma categoria de tamanho maior que a sua.",
+      },
+      {
+        name: "Espírito Corvino",
+        description: "Você é uma criatura do tipo espírito e recebe visão no escuro e +2 em Percepção.",
+      }
+    ],
+    attributeModifiers: [
+      { attribute: "des", modifier: 2 },
+      { attribute: "int", modifier: 1 }
+    ],
+    longevidade: "Normal",
+    devotos: "Arsenal, Khalmyr, Lin-Wu, Tanna-Toh, Valkaria, Wynna"
+  },
   
   
   { id: "Qunari",

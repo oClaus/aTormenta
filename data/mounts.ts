@@ -177,6 +177,17 @@ export const mounts: Mount[] = [
     mestre: "Seu deslocamento normal e de voo muda para 18m e, uma vez por rodada, você pode gastar 2 PM para causar 3d8 pontos de dano de fogo em todas as criaturas em um cone de 6m (Ref CD Car reduz à metade).",
     },
   },
+  { id: "Dai-Kabuto",
+    name: "Dai-Kabuto",
+    size: "Grande",
+    description: "Um enorme besouro de carga e guerra, valorizado como montaria por sua força, resistência e capacidade de imobilizar adversários.",
+    origin: "Ameaças de Arton",
+    benefits: {
+    iniciante: "Seu deslocamento muda para 9m e você recebe +2 em testes de agarrar e derrubar e uma ação de movimento extra por turno (apenas para se deslocar).",
+    veterano: "Você recebe deslocamento de voo 6m.",
+    mestre: "O bônus em agarrar se aplica a todas as manobras e você recebe +2 na Defesa.",
+    },
+  },
 
   
 
