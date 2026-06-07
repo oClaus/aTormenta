@@ -166,7 +166,28 @@ export const partners: Partner[] = [
     veterano: "Uma vez por rodada, você recebe +1d8 em uma rolagem de dano corpo a corpo.",
     mestre: "O bônus na Defesa muda para +2 e o bônus em rolagens de dano muda para +1d10.",
     },
+  },
+  { id: "Cão de Kally",
+    name: "Cão de Kally",
+    description: "Um lobo escamado de origem dracônica, com chifres e hálito de fogo. Feroz e poderoso, é uma temida fera de combate e guarda.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Uma vez por rodada, uma de suas rolagens de dano corpo a corpo causa +1d6 pontos de dano de fogo.",
+      veterano: "O dano extra muda para +2d6.",
+      mestre: "Além do normal, uma vez por rodada, você pode gastar 2 PM para causar 4d6 pontos de dano de fogo em um cone de 6m.",
     },
+  },
+  { id: "Kobold Patrulheiro",
+    name: "Kobold Patrulheiro",
+    description: "Pequeno e escamoso, o kobold patrulheiro lembra uma mistura de cão e lagarto. Sempre inquieto e barulhento, prefere atacar de forma oportunista, usando emboscadas, armadilhas e trabalho em grupo para compensar sua fragilidade.\nEmbora normalmente vivam em bandos, alguns kobolds acabam servindo aventureiros, dragões ou devotos de Kallyadranoch. Covardes por natureza, evitam confrontos justos e procuram sempre explorar qualquer vantagem disponível.\nComo parceiro, um kobold patrulheiro ajuda seu aliado a cercar inimigos e criar aberturas em combate, tornando-se surpreendentemente eficiente quando luta ao lado de companheiros mais poderosos.",
+    origin: "Ameaças de Arton",
+    benefits: {
+          iniciante: "Você recebe +1 em testes de ataque e rolagens de dano contra inimigos que esteja flanqueando (para um total de +3 de ataque).",
+          veterano: "Os bônus aumentam para +2.",
+          mestre: "Você pode flanquear mesmo criaturas que normalmente não podem ser flanqueadas.",
+        },
+    },
+
   
 
   // Dragão Brasil

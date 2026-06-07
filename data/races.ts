@@ -1355,6 +1355,105 @@ export const races: Race[] = [
     longevidade: "Normal",
     devotos: "Arsenal, Khalmyr, Lin-Wu, Tanna-Toh, Valkaria, Wynna"
   },
+  { id: "Minauro",
+    name: "Minauro",
+    origin: "Ameaças de Arton",
+    image: "/ameacas/minauro.png",
+    description: "“Fui embora daquele reino maldito porque sou minaura. Achavam que eu era a mais fraca, mas agora vamos ver!”\n — Minara Minostini, minaura guerreira \n\n Ela lembra uma humana robusta, como a maioria dos minotauros. Também tem cabeça bovina, mas com olhos grandes e expressivos, focinho curto e chifres menores que aqueles vistos em minotauros. Tem pés humanos calçando sandálias. Veste armadura de couro e empunha algo que, se não fosse absurdo, poderia ser um canhão. \n Minotauros precisam de fêmeas humanas, élficas ou qareen para se reproduzir — pois, apesar de existirem minotauras mulheres, não existem minotauros fêmeas. Filhos do sexo masculino são minotauros. Filhas do sexo feminino são humanas, elfas ou qareen. No entanto, em raras ocasiões, uma criatura totalmente nova vem à luz. \n Os meios-minotauros, ou minauros, lembram humanos com traços táuricos. Não demonstram a grande força da raça de Tauron, mas também estão livres de suas fraquezas. E, diferente destes, podem ter qualquer sexo. Já foram considerados aberrações, “coisas que não deveriam existir” — preconceito que ficou no passado, exceto para os mais intolerantes. \n Quando nascidos e criados no Império de Tauron, meios-minotauros agem e se comportam como seus pais, demonstrando disciplina, honra e orgulho. No entanto, talvez por sua força física inferior, sentem mais necessidade de demonstrar suas capacidades, competindo com minotauros “puros” o tempo todo. Sua parte humana também pode levar a uma curiosidade imprudente por assuntos “proibidos” para o povo táurico, como armas de longo alcance, magia arcana ou talentos ladinos. De fato, minauros tendem a mostrar comportamento mais diverso, desenvolvem gostos e aversões imprevisíveis. \n Minauros e minotauros não se relacionam bem. Mesmo o minotauro mais nobre e generoso não consegue disfarçar a mágoa, considerando os minauros inferiores, dignos de pena. Minauros são tratados como doentes, inválidos ou “irmãozinhos” pequenos — o que eles detestam! Por isso preferem deixar o convívio com minotauros para viver entre outras raças, onde sua força acima da média é respeitada e bem-vinda. \n Se resolvem ser aventureiros, minauros ficam muito à vontade em grupos formados por pessoas diversas. Entendem que sua grande força é importante para a equipe, adotando classes combativas, mas também podem “nadar contra a corrente” e seguir carreiras totalmente contrárias à raça dos pais, como arcanistas, bardos, inventores e ladinos.",
+    abilities: [
+      {
+        name: "Faro",
+        description: "Você tem olfato apurado. Contra inimigos em alcance curto que não possa ver, você não fica desprevenido e camuflagem total lhe causa apenas 20% de chance de falha."
+      },
+      {
+        name: "Mente Aberta",
+        description: "Você recebe +2 em Diplomacia e Investigação."
+      },
+      {
+        name: "Plurivalente",
+        description: "Você recebe um poder geral a sua escolha."
+      }
+    ],
+    attributeModifiers: [
+      { attribute: "for", modifier: 1 },
+      { description: "Escolha +1 em dois atributos" }
+    ],
+    longevidade: "Normal",
+    devotos: "Qualquer"
+  },
+  {
+    id: "Herois-Kobolds",
+    name: "Kobolds",
+    origin: "Ameaças de Arton",
+    image: "/ameacas/kobold.png",
+    description: "Pequenas pestes acostumadas a saquear e pilhar, kobolds raramente possuem as características e a inclinação necessárias para se tornarem aventureiros. Entretanto, como tudo em Arton, isso também tem suas exceções. Assim, é possível que, inspirados pelas lendas de algum herói, um pequeno grupo de kobolds de algum recanto do mundo reúna coragem suficiente para explorar o mundo e tentar seguir os passos de outros aventureiros. \n Um personagem kobolds é, na verdade, um pequeno grupo dessas criaturinhas. Ainda que em termos de regras seja tratado como um único indivíduo, em termos narrativos é um amontoado de kobolds que encontram nos números, e no trabalho coletivo e minimamente coordenado, a força e a capacidade de enfrentar grandes perigos. \n Ao jogar com kobolds, você certamente encontrará alguns desafios descritivos. Como seus kobolds vestem uma armadura? Talvez eles se empilhem em uma forma vagamente humanoide, vestindo a armadura como um construto gigante, ou então um dos membros pode ser escolhido para trajar a armadura e ficar à frente dos demais. Da mesma forma, um ataque com uma espada pode representar diversas lâminas menores, ou uma única arma empunhada por uma profusão de bracinhos escamosos. Aqui o que vale é a criatividade.",
+    abilities: [
+      {
+        name: "Ajuntamento Escamoso",
+        description: "Embora sejam um grupo de kobolds, para todos os efeitos vocês são uma única criatura Média com dois braços. Entretanto, contam como Pequenos para efeitos dos espaços por onde podem passar e, quando fazem um teste de resistência contra um efeito que afeta apenas uma criatura e não causa dano, rolam dois dados e usam o melhor resultado. Por fim, têm vulnerabilidade a dano de área."
+      },
+      {
+        name: "Praga Monstruosa",
+        description: "Vocês são criaturas do tipo monstro e recebem visão no escuro e +2 em Sobrevivência."
+      },
+      {
+        name: "Sensibilidade a Luz",
+        description: "Quando expostos à luz do sol ou similar, vocês ficam ofuscados."
+      },
+      {
+        name: "Talentos do Bando",
+        description: "Escolham dois dos poderes a seguir. Uma vez por patamar, vocês podem escolher outro desses poderes no lugar de um poder de classe.",
+        subAbilities: [
+          {
+            name: "Amontoados",
+            description: "Vocês são considerados uma criatura Grande para efeitos de espaço ocupado e modificadores de manobras de combate. Além disso, podem se organizar em qualquer forma equivalente a quatro cubos de 1,5m, desde cada um tenha pelo menos um lado adjacente a outro. Efeitos que aumentem seu tamanho se acumulam com este poder, e permitem que vocês se organizem em mais cubos (9 cubos de 1,5m para Enorme e 9 cubos de 3m para Colossal). Vocês podem mudar de configuração sempre que fizerem uma ação de movimento para se deslocar."
+          },
+          {
+            name: "Armadilha Terrível",
+            description: "Escolham uma magia de 1º círculo que tenha como alvo uma criatura ou que tenha um efeito em área e que cause dano ou um efeito negativo (como uma condição ou penalidade). Vocês possuem uma armadilha portátil que contém essa magia. Sua armadilha usa as mesmas regras de engenhocas (veja Tormenta20, p. 70), mas é acionada com Sobrevivência e tem Sabedoria como atributo-chave. Vocês podem escolher esta habilidade mais de uma vez para magias diferentes."
+          },
+          {
+            name: "Diferentão",
+            description: "Escolham um poder de outra classe cujos requisitos vocês cumpram (como um poder de bardo da lista de Poderes de Bardo). Vocês recebem o poder escolhido; para efeitos de nível na classe desse poder, considere seu nível de personagem −4."
+          },
+          {
+            name: "Ex-Familiar",
+            description: "Vocês recebem +2 PM e os benefícios de um tipo de familiar, escolhidos entre os familiares básicos de arcanista (veja Tormenta20, p. 38). Se não tiverem um atributo-chave para conjuração, para efeitos desta habilidade vocês usam Carisma."
+          },
+          {
+            name: "O Ousado",
+            description: "Uma vez por cena, vocês podem gastar 1 PM e uma ação de movimento para que um membro do bando se afaste e aja sozinho. Ele age a partir da sua próxima rodada, tem deslocamento 9m e pode gastar uma ação padrão para causar 2d4 pontos de dano de corte em uma criatura adjacente (a cada patamar além de iniciante, cada dado desse dano aumenta em um passo). Ele é Pequeno, tem as mesmas características do restante do bando, 1 PV, e retorna ao bando quando “morto” ou ao fim da cena. Usos criativos para o ousado ficam a critério do mestre."
+          },
+          {
+            name: "Os do Fundo",
+            description: "Vocês conseguem formar o equivalente a um terceiro braço, que pode empunhar um objeto (mas não concede ações extras). Se usarem-no para empunhar uma arma leve, uma vez por rodada, quando usam a ação agredir para atacar com outra arma, podem gastar 1 PM para fazer um ataque corpo a corpo extra com essa arma. Pré-requisito: Organizadinhos."
+          },
+          {
+            name: "Organizadinhos",
+            description: "Vocês podem usar Destreza para estabelecer seu limite de carga (em vez de Força) e podem se beneficiar de um item vestido adicional."
+          },
+          {
+            name: "Pestes Oportunistas",
+            description: "Uma vez por rodada, quando causam dano em uma criatura que já sofreu dano nessa rodada, vocês causam +1d6 pontos de dano do mesmo tipo. A cada patamar além de iniciante, esse dano extra aumenta em um passo."
+          },
+          {
+            name: "Somos Explosivos",
+            description: "Vocês podem gastar uma ação completa, 1 PM e uma quantidade de PV (limitado pelo seu nível) para arremessar um kobold explosivo em um ponto em alcance curto. Criaturas a até 3m desse ponto sofrem 1d6 pontos de dano de impacto por PV gasto (Ref CD Des reduz à metade). Sempre que rolar o valor máximo em um dos dados de dano, o dano aumenta em +1d6."
+          },
+          {
+            name: "Tática de Enxame",
+            description: "Vocês podem gastar 2 PM para assumir uma forma de enxame com duração sustentada. Nessa forma, vocês podem ocupar o espaço de criaturas inimigas, tornam-se imunes a manobras de combate e sofrem apenas metade do dano de armas. Entretanto, não podem fazer nenhuma ação que exija coordenação e concentração (como usar a perícia Furtividade ou lançar magias). Criaturas dentro do espaço que vocês ocupam são consideradas em condição ruim para lançar magias. Pré-requisito: Amontoados."
+          }
+        ]
+      }
+    ],
+    attributeModifiers: [
+      { attribute: "des", modifier: 2 },
+      { attribute: "for", modifier: -1 }
+    ],
+    longevidade: "Normal",
+    devotos: "Kallyadranoch, Khalmyr, Lena, Megalokk, Tenebra"
+  },
   
   
   { id: "Qunari",

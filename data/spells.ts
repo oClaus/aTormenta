@@ -851,6 +851,8 @@ export const spells: Spell[] = [
       { cost: "+7 PM", effect: "Em vez de esqueletos, conjura sombras. Requer 4º círculo." },
       { cost: "Carniçal", effect: "Como esqueletos, mas têm For 3, Des 3, Defesa 27 e causam 1d8+3 pontos de dano de trevas mais perda de 1d8 PV por veneno. Além disso, criaturas atingidas por um carniçal devem passar num teste de Fortitude ou ficam paralisadas por 1 rodada. Uma criatura que passe no teste de resistência fica imune à paralisia dos carniçais por um dia." },
       { cost: "Sombra", effect: "Como esqueletos, mas têm Des 4, Defesa 35, são incorpóreas e causam 2d10 pontos de dano de trevas. Além disso, criaturas vivas atingidas por uma sombra devem passar num teste de Fortitude ou perdem 1d4 PM. Sombras perdem a habilidade incorpóreo quando expostas à luz do sol." },
+      { cost: "+1 PM", effect: "Em vez de um monstro, você invoca 4 kobolds Pequenos, que têm For 1, Des 1, Def 12, 1 PV cada e causam, cada um, 1d6-1 pontos de dano com uma ordem atacar. Você pode comandar todos os kobolds com a mesma ação padrão, mas eles devem receber o mesmo tipo de ordem e não podem seguir a ordem lançar magia. Você pode usar este aprimoramento mais vezes para aumentar o número de kobolds em +1, mas não pode usá-lo em conjunto com outros aprimoramentos." },
+      { cost: "+3 PM", effect: "Como acima, mas cada kobold tem For 4, Des 1, Def 19, 15 PV e causa 2d6+1 pontos de dano de corte com uma ordem atacar. Requer 2º círculo." },
     ],
   },
   { id: "Consagrar",
