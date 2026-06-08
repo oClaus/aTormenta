@@ -276,13 +276,11 @@ function SuperiorSection({
 
   const catEntry = catNum !== null ? findInTable(SUPERIOR_CATEGORIAS, catNum) : null;
 
-  // Tabela para descobrir QUAL é o item base (Tabela 8-4)
   const baseTable =
     catEntry?.label === "Arma"            ? EQUIPAMENTO_ARMA :
     catEntry?.label === "Armadura/Escudo" ? EQUIPAMENTO_ARMADURA :
     catEntry?.label === "Esotérico"       ? EQUIPAMENTO_ESOTER : null;
 
-  // Tabela para descobrir qual é a MELHORIA (Tabela 8-5)
   const melhoriaTable =
     catEntry?.label === "Arma"            ? SUPERIOR_ARMA :
     catEntry?.label === "Armadura/Escudo" ? SUPERIOR_ARMADURA :
@@ -311,7 +309,6 @@ function SuperiorSection({
         <RollTable title="Categoria Superior" table={SUPERIOR_CATEGORIAS} selected={catNum} onSelect={(v) => { onCatChange(String(v)); onBaseChange(""); onItemChange(""); }} />
       </div>
 
-      {/* Passo Novo: Sorteando o Item Base */}
       {baseTable && catEntry && (
         <div className="space-y-4 pt-6 border-t-2 border-amber-900/10">
           <div className="flex flex-wrap items-end gap-4">
@@ -322,7 +319,6 @@ function SuperiorSection({
         </div>
       )}
 
-      {/* Passo Original: Sorteando a Melhoria */}
       {melhoriaTable && baseNum !== null && catEntry && (
         <div className="space-y-4 pt-6 border-t-2 border-amber-900/10">
           <div className="flex flex-wrap items-end gap-4">
@@ -410,7 +406,6 @@ function MagicoSection({ grau, rollCat, rollItem, rollEsp, onCatChange, onItemCh
         subtitle="Role 1d6 para a categoria: 1-2 Arma · 3 Armadura/Escudo · 4-6 Acessório. Depois role D% para o item."
       />
 
-      {/* Categoria 1d6 */}
       <div className="space-y-4">
         <NumberPad
           label="1d6 — Categoria"
@@ -435,7 +430,6 @@ function MagicoSection({ grau, rollCat, rollItem, rollEsp, onCatChange, onItemCh
         </div>
       </div>
 
-      {/* Encantos — Arma ou Armadura/Escudo */}
       {encantosTable && catLabel && (
         <div className="space-y-4 pt-6 border-t-2 border-amber-900/10">
           <div className="flex flex-wrap items-end gap-4">
@@ -463,7 +457,6 @@ function MagicoSection({ grau, rollCat, rollItem, rollEsp, onCatChange, onItemCh
         </div>
       )}
 
-      {/* Acessório */}
       {acessorioTable && catLabel && (
         <div className="space-y-4 pt-6 border-t-2 border-amber-900/10">
           <div className="flex flex-wrap items-end gap-4">
@@ -487,7 +480,6 @@ function MagicoSection({ grau, rollCat, rollItem, rollEsp, onCatChange, onItemCh
         </div>
       )}
 
-      {/* Item Específico */}
       {needsEspecifica && (
         <div className="space-y-4 pt-6 border-t-2 border-amber-900/10">
           <div className="text-sm font-medium text-red-800 bg-[#fbf5e6] rounded-lg px-4 py-3 border border-red-800/20 shadow-sm flex items-center gap-2">
@@ -522,6 +514,7 @@ function MagicoSection({ grau, rollCat, rollItem, rollEsp, onCatChange, onItemCh
 
 export default function TesourosPage() {
   const [selectedND, setSelectedND] = useState<string | null>(null);
+  const [isRegrasOpen, setIsRegrasOpen] = useState(false);
   const [rollDinheiro, setRollDinheiro] = useState("");
   const [rollItens,    setRollItens]    = useState("");
   const [rollRiqueza,  setRollRiqueza]  = useState("");
@@ -610,6 +603,162 @@ export default function TesourosPage() {
             Role os dados na mesa, selecione o Nível de Desafio, insira os resultados e consulte as tabelas. As linhas correspondentes serão destacadas automaticamente.
           </p>
         </div>
+
+        {/* Acordeão de Regras */}
+        {!selectedND && (
+          <div className="mb-12 w-full">
+            <button 
+              onClick={() => setIsRegrasOpen(!isRegrasOpen)}
+              className="w-full flex items-center justify-between p-6 bg-[#e8dac1] border-2 border-amber-900/30 rounded-t-xl hover:border-red-800/40 transition-all group shadow-sm"
+            >
+              <div className="flex items-center gap-3">
+                <span className="text-2xl opacity-70">📜</span>
+                <div className="text-left">
+                  <h2 className="text-xl font-bold text-amber-950 group-hover:text-red-800 transition-colors font-serif uppercase tracking-wide">
+                    Regras
+                  </h2>
+                  <p className="text-sm text-amber-950/70 font-serif italic font-bold">
+                    Clique para expandir ou recolher as informações.
+                  </p>
+                </div>
+              </div>
+              <span className={`text-red-800 text-2xl transition-transform duration-300 ${isRegrasOpen ? 'rotate-180' : ''}`}>
+                ▼
+              </span>
+            </button>
+
+            <div className={`overflow-hidden transition-all duration-500 ease-in-out border-x-2 border-b-2 border-amber-900/30 rounded-b-xl bg-[#fbf5e6] ${isRegrasOpen ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0 border-transparent'}`}>
+              <div className="p-5 md:p-10 font-serif text-amber-950/85 text-base md:text-lg text-left md:text-justify leading-relaxed flex flex-col gap-8">
+
+                {/* Tesouro em Combate */}
+                <section>
+                  <h3 className="text-2xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/20 pb-2">Tesouro em Combate</h3>
+                  <p className="font-medium mb-4">
+                    Para determinar o tesouro de um combate, faça os jogadores rolarem <strong>duas vezes na Tabela 8-1</strong> — uma na coluna <strong>Dinheiro</strong> e outra na coluna <strong>Itens</strong>, na linha equivalente ao ND da criatura derrotada. Se o grupo derrotou mais de uma criatura, role uma vez para cada criatura ou, de acordo com o mestre, uma vez na linha equivalente ao nível de desafio do combate.
+                  </p>
+                  <div className="space-y-3 pl-4 md:pl-5 border-l-4 border-amber-900/30 text-base md:text-lg text-left">
+                    <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Nenhum: </span><span className="font-medium">A criatura não traz tesouro — não use a tabela.</span></p>
+                    <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Padrão: </span><span className="font-medium">Tesouro típico; use a tabela sem modificação.</span></p>
+                    <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Metade: </span><span className="font-medium">A criatura tem poucos tesouros; use a tabela, mas divida pela metade os resultados rolados na coluna Dinheiro.</span></p>
+                    <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Dobro: </span><span className="font-medium">A criatura tem muitos tesouros. Role duas vezes em cada coluna da tabela.</span></p>
+                  </div>
+                </section>
+
+                {/* Resultados da Tabela */}
+                <section>
+                  <h3 className="text-2xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/20 pb-2">Resultados da Tabela</h3>
+                  <p className="font-bold text-red-800/80 uppercase tracking-widest text-sm mb-3">Dinheiro — Moedas ou Riquezas</p>
+                  <div className="space-y-3 pl-4 md:pl-5 border-l-4 border-amber-900/30 mb-6 text-base md:text-lg text-left">
+                    <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Moedas: </span><span className="font-medium">Descreva o valor ("Vocês encontram 25 TO") ou detalhe mais ("Vocês encontram 25 Tibares de ouro da época do Rei-Imperador Phylidio, o Tranquilo").</span></p>
+                    <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Riquezas: </span><span className="font-medium">O grupo encontra um ou mais itens sem uso prático, mas valiosos. Role 1d% na Tabela 8-2 para determinar o valor de venda de cada riqueza. A tabela traz exemplos de itens e, entre parênteses, quantos espaços eles ocupam.</span></p>
+                  </div>
+                  <p className="font-bold text-red-800/80 uppercase tracking-widest text-sm mb-3">Itens</p>
+                  <div className="space-y-3 pl-4 md:pl-5 border-l-4 border-amber-900/30 text-base md:text-lg text-left">
+                    <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Diverso: </span><span className="font-medium">Role na Tabela 8-3 para determinar qual item o grupo encontra.</span></p>
+                    <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Equipamento: </span><span className="font-medium">Role 1d6 para o tipo — 1–3) arma; 4–5) armadura ou escudo; 6) esotérico. Então role na Tabela 8-4 para o item específico.</span></p>
+                    <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Superior: </span><span className="font-medium">Role para determinar se é arma, armadura/escudo ou esotérico. Para cada melhoria do item, role uma vez na Tabela 8-5.</span></p>
+                    <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Poções: </span><span className="font-medium">Role na Tabela 8-12 para determinar qual poção o grupo encontra.</span></p>
+                    <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Mágico: </span><span className="font-medium">Role 1d6 — 1–2) arma; 3) armadura/escudo; 4–6) acessório. Consulte as tabelas correspondentes (8-8 a 8-15).</span></p>
+                  </div>
+                </section>
+
+                {/* Itens Superiores */}
+                <section>
+                  <h3 className="text-2xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/20 pb-2">Itens Superiores</h3>
+                  <p className="font-medium mb-4">
+                    Itens superiores funcionam como itens normais, mas possuem <strong>melhorias</strong>. Primeiro determine a categoria (arma, armadura/escudo ou esotérico). Depois, para <strong>cada melhoria</strong> do item, role uma vez na Tabela 8-5. Um mesmo item pode ser superior e encantado ao mesmo tempo.
+                  </p>
+                  <div className="space-y-3 pl-4 md:pl-5 border-l-4 border-amber-900/30 text-base md:text-lg text-left">
+                    <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">¹ Conta como duas melhorias. </span><span className="font-medium">Se o item já possuir uma, role novamente.</span></p>
+                    <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">² Material especial — </span><span className="font-medium">role 1d6: 1) aço-rubi · 2) adamante · 3) gelo eterno · 4) madeira Tollon · 5) matéria vermelha · 6) mitral.</span></p>
+                  </div>
+                </section>
+
+                {/* Itens Mágicos */}
+                <section>
+                  <h3 className="text-2xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/20 pb-2">Itens Mágicos</h3>
+                  <p className="font-medium mb-4">
+                    Itens mágicos permanentes são divididos em <strong>menores</strong> (1 encanto), <strong>médios</strong> (2 encantos) e <strong>maiores</strong> (3 encantos). Recebem bônus de PV e RD: <strong>+10</strong> para menores, <strong>+20</strong> para médios e <strong>+40</strong> para maiores.
+                  </p>
+                  <div className="space-y-3 pl-4 md:pl-5 border-l-4 border-amber-900/30 mb-6 text-base md:text-lg text-left">
+                    <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Armas Mágicas: </span><span className="font-medium">Role na Tabela 8-4 para o tipo, depois na Tabela 8-8 para os encantos (1× menor, 2× médio, 3× maior). Se rolar "Arma específica", use a Tabela 8-9.</span></p>
+                    <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Armaduras Mágicas: </span><span className="font-medium">Use a Tabela 8-10 para encantos. Se rolar "Item específico", use a Tabela 8-11.</span></p>
+                    <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Acessórios: </span><span className="font-medium">Tabela 8-13 para menores, 8-14 para médios, 8-15 para maiores.</span></p>
+                    <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Custo em PM para fabricar: </span><span className="font-medium">1 PM para menores · 2 PM para médios · 3 PM para maiores. Esses PM são perdidos permanentemente.</span></p>
+                  </div>
+                  <p className="font-bold text-red-800/80 uppercase tracking-widest text-sm mb-3">Tabela 8-7: Preço de Encantos</p>
+                  <div className="border-2 border-amber-900/20 rounded-xl overflow-hidden">
+                    <table className="w-full text-sm">
+                      <thead className="bg-[#e8dac1]">
+                        <tr>
+                          <th className="px-4 py-2.5 text-left text-amber-950/60 text-xs font-bold uppercase tracking-widest">Nº de Encantos</th>
+                          <th className="px-4 py-2.5 text-left text-amber-950/60 text-xs font-bold uppercase tracking-widest">Aumento no Preço</th>
+                          <th className="px-4 py-2.5 text-left text-amber-950/60 text-xs font-bold uppercase tracking-widest">Aumento na CD</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y-2 divide-amber-900/10 bg-[#fbf5e6]">
+                        <tr><td className="px-4 py-2 font-bold text-amber-950">1</td><td className="px-4 py-2 font-bold text-red-800">+T$ 18.000</td><td className="px-4 py-2 font-medium text-amber-950/80">+10</td></tr>
+                        <tr className="bg-[#e8dac1]/20"><td className="px-4 py-2 font-bold text-amber-950">2</td><td className="px-4 py-2 font-bold text-red-800">+T$ 36.000</td><td className="px-4 py-2 font-medium text-amber-950/80">+15</td></tr>
+                        <tr><td className="px-4 py-2 font-bold text-amber-950">3</td><td className="px-4 py-2 font-bold text-red-800">+T$ 72.000</td><td className="px-4 py-2 font-medium text-amber-950/80">+20</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+
+                {/* Tesouro em Outras Situações */}
+                <section>
+                  <h3 className="text-2xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/20 pb-2">Tesouro em Outras Situações</h3>
+                  <p className="font-medium mb-4">
+                    O mestre pode fornecer tesouros por situações que não envolvam combate — recompensas por atos realizados pelo grupo. A palavra-chave é <strong>"médio"</strong> — os personagens não precisam ganhar esse valor exato. Um grupo de quatro personagens deve vencer <strong>quatro ameaças de ND igual ao seu nível</strong> para subir para o próximo.
+                  </p>
+                  <p className="font-bold text-red-800/80 uppercase tracking-widest text-sm mb-3">Tabela 8-6: Tesouro Médio por Cena</p>
+                  <div className="border-2 border-amber-900/20 rounded-xl overflow-hidden">
+                    <table className="w-full text-sm">
+                      <thead className="bg-[#e8dac1]">
+                        <tr>
+                          <th className="px-3 py-2.5 text-left text-amber-950/60 text-xs font-bold uppercase tracking-widest">Nível</th>
+                          <th className="px-3 py-2.5 text-left text-amber-950/60 text-xs font-bold uppercase tracking-widest border-r-2 border-amber-900/10">Tesouro</th>
+                          <th className="px-3 py-2.5 text-left text-amber-950/60 text-xs font-bold uppercase tracking-widest">Nível</th>
+                          <th className="px-3 py-2.5 text-left text-amber-950/60 text-xs font-bold uppercase tracking-widest">Tesouro</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y-2 divide-amber-900/10 bg-[#fbf5e6]">
+                        {([
+                          ["1°","T$ 300","11°","T$ 8.000"],
+                          ["2°","T$ 300","12°","T$ 9.000"],
+                          ["3°","T$ 400","13°","T$ 13.000"],
+                          ["4°","T$ 1.000","14°","T$ 17.000"],
+                          ["5°","T$ 1.000","15°","T$ 22.000"],
+                          ["6°","T$ 2.000","16°","T$ 22.000"],
+                          ["7°","T$ 2.000","17°","T$ 40.000"],
+                          ["8°","T$ 3.000","18°","T$ 50.000"],
+                          ["9°","T$ 3.000","19°","T$ 60.000"],
+                          ["10°","T$ 6.000","20°","T$ 72.000"],
+                        ] as [string,string,string,string][]).map(([n1,v1,n2,v2], i) => (
+                          <tr key={i} className={i % 2 !== 0 ? "bg-[#e8dac1]/20" : ""}>
+                            <td className="px-3 py-2 font-bold text-amber-950/80">{n1}</td>
+                            <td className="px-3 py-2 font-bold text-red-800 border-r-2 border-amber-900/10">{v1}</td>
+                            <td className="px-3 py-2 font-bold text-amber-950/80">{n2}</td>
+                            <td className="px-3 py-2 font-bold text-red-800">{v2}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+
+                {/* Recompensas Fora de Jogo */}
+                <section>
+                  <h3 className="text-2xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/20 pb-2">Recompensas Fora de Jogo</h3>
+                  <p className="font-medium">
+                    Você pode premiar não apenas os personagens, mas os próprios jogadores. Dedicação ao jogo (limpar a sala após a partida, comprar os refrigerantes, mandar mensagens para marcar a sessão…) ou outras contribuições podem valer uma recompensa. Conceda <strong>1 PM temporário</strong> ou outro pequeno bônus aos mais prestativos.
+                  </p>
+                </section>
+
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* STEP 1: ND */}
         {!selectedND && (

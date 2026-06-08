@@ -186,8 +186,98 @@ export const partners: Partner[] = [
           veterano: "Os bônus aumentam para +2.",
           mestre: "Você pode flanquear mesmo criaturas que normalmente não podem ser flanqueadas.",
         },
-    },
+  },
 
+  { id: "Bogum",
+    name: "Bogum (Companheiro Animal)",
+    description: "Um pequeno construto feito de materiais naturais e animado pelas preces de um druida a Allihanna. Pequeno e furtivo, atua como um excelente mensageiro, espião e servo leal. Parceiro exclusivo de druidas.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Você forma um elo mental com o bogum e recebe +2 em Percepção e Sobrevivência.",
+      veterano: "Uma vez por rodada, você recebe +1d6 de ácido em uma rolagem de dano.",
+      mestre: "O bogum fornece também o benefício de um Dedo de Ente."
+    }
+  },
+  { id: "Escudeiro",
+    name: "Escudeiro (Fortão)",
+    description: "Um grande crustáceo que, a um comando do dono, agarra-se ao seu braço como um escudo vivo. Sua cauda rígida também permite que seja usado como uma lança curta, unindo ataque e defesa.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Você pode empunhar o escudeiro como uma lança e um escudo pesado na mesma mão; pode atacar com a lança sem perder o bônus na Defesa do escudo, mas não pode atacar com ambos na mesma rodada.",
+      veterano: "O escudeiro recebe uma melhoria de arma ou de escudo (exceto material especial).",
+      mestre: "O escudeiro recebe uma segunda melhoria de arma ou de escudo (exceto material especial)."
+    }
+  },
+  { id: "Fofo",
+    name: "Fofo (Guardião)",
+    description: "Um ser amorfo, macio e elástico, também chamado de plasmoide doméstico. Extremamente afetuoso e capaz de mudar de forma, utiliza sua consistência maleável para amortecer impactos e proteger seu dono.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Você recebe redução de dano 1.",
+      veterano: "A RD aumenta para 2 e você pode vestir um item que ocupe 1 espaço ou menos sem contar em seu limite de itens vestidos.",
+      mestre: "A RD aumenta para 3."
+    }
+  },
+  { id: "Gambá",
+    name: "Gambá (Vigilante)",
+    description: "Um pequeno mamífero marsupial com cauda preênsil. Quando ameaçado, alerta e expele um forte jato fétido insuportável. Geralmente adotado como parceiro por aventureiros reclusos.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Você recebe +2 em Iniciativa e Percepção.",
+      veterano: "Você pode gastar uma ação de movimento e 1 PM para deixar uma criatura em alcance curto enjoada por 1d4 rodadas (Fort CD Sab evita).",
+      mestre: "Os bônus em perícias aumentam para +5."
+    }
+  },
+  { id: "Homúnculo",
+    name: "Homúnculo (Ajudante)",
+    description: "Um pequeno golem voador de natureza abissal. Utilizado por conjuradores como espião, mensageiro ou assassino, ele pode assumir diversas aparências, atacando com veneno e seguindo ordens cegamente.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seus venenos causam a perda de +1 PV por dado.",
+      veterano: "Uma vez por rodada, quando faz um ataque, você pode gastar 1 PM. Se acertar o ataque, causa a perda de 1d12 PV por veneno.",
+      mestre: "A perda de PV aumenta para +2 por dado."
+    }
+  },
+  { id: "Kill'Bone",
+    name: "Kill'Bone (Perseguidor)",
+    description: "Um canídeo subterrâneo blindado com uma armadura óssea revestida de espinhos. Popular em Doherimm, é domado por anões para farejar invasores e caçar trolls com extrema ferocidade.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Você recebe faro e, uma vez por rodada, +1d6 em uma rolagem de dano corpo a corpo (o dano extra é dobrado contra finntroll e trolls).",
+      veterano: "O bônus em rolagens de dano muda para +1d8 e você recebe +2 em testes de perícia contra finntroll e trolls.",
+      mestre: "O bônus em rolagens de dano muda para +1d10 e você não pode ser flanqueado."
+    }
+  },
+  { id: "Tentacute",
+    name: "Tentacute (Vigilante)",
+    description: "Um pequeno felino com características peculiares, incluindo olhos telescópicos e cauda de tentáculo. Curioso e ágil nas árvores, adora roubar pequenos objetos brilhantes e possui visão extremamente aguçada.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Você recebe +2 em Percepção e, quando faz um teste de Ladinagem para punga, pode rolar dois dados e usar o melhor resultado.",
+      veterano: "Uma vez por rodada, você pode gastar uma ação de movimento e 1 PM para fazer um teste de Ladinagem para punga contra um alvo em alcance curto que possa ser alcançado pelo tentacute.",
+      mestre: "O bônus em Percepção se torna +4 e o alcance da punga muda para médio."
+    }
+  },
+  { id: "Verilêmur",
+    name: "Verilêmur (Vigilante)",
+    description: "(Apenas devotos de Khalmyr) Um pequeno mamífero noturno, animal sagrado de Khalmyr. Ele emana uma aura de ordem que dificulta mentiras, ilusões e teletransporte, revelando a verdadeira forma de criaturas transformadas.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Você pode lançar a magia Círculo da Justiça (atributo-chave Sabedoria); se aprender essa magia, seu custo diminui em –1 PM.",
+      veterano: "Quando falha em um teste de resistência contra uma magia, você pode gastar 2 PM para rolar novamente esse teste (apenas uma vez por teste).",
+      mestre: "A CD para resistir à sua magia Círculo da Justiça aumenta em +5."
+    }
+  },
+  { id: "Malafex",
+    name: "Malafex (Ajudante)",
+    description: "(Apenas devotos de Nimb) Animal sagrado de Nimb, conhecido como o pássaro do Caos. Sua simples presença distorce as leis naturais, transformando sorte em azar e vice-versa, sendo um mascote comum para devotos do imprevisível.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Você pode usar Sorte dos Loucos. Se já tiver esse poder, a perda de PM é reduzida para 1d4.",
+      veterano: "Você pode usar Sorte dos Loucos em aliados voluntários em alcance curto (caso falhe, o aliado perde os PM).",
+      mestre: "Quando um inimigo em alcance curto faz um teste, você pode gastar 2 PM para forçá-lo a rolar novamente o dado. Se ainda assim ele passar, você perde 1d6 PM (ou 1d4 se tiver Sorte dos Loucos)."
+    }
+  },
   
 
   // Dragão Brasil

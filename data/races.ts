@@ -1381,8 +1381,7 @@ export const races: Race[] = [
     longevidade: "Normal",
     devotos: "Qualquer"
   },
-  {
-    id: "Herois-Kobolds",
+  { id: "Herois-Kobolds",
     name: "Kobolds",
     origin: "Ameaças de Arton",
     image: "/ameacas/kobold.png",
