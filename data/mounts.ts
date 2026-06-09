@@ -98,28 +98,6 @@ export const mounts: Mount[] = [
       mestre: "Como acima, mas você recebe uma ação de movimento extra por turno (apenas para se deslocar).",
     },
   },
-  { id: "Gorlogg",
-    name: "Gorlogg",
-    size: "Grande",
-    description: "Esta besta primitiva é usada como montaria pelos mais selvagens. ",
-    origin: "Tormenta20 - Jogo do Ano",
-    benefits: {
-      iniciante: "Seu deslocamento muda para 12m e, uma vez por rodada, você recebe +1d6 em uma rolagem de dano corpo a corpo. ",
-      veterano: "Como acima, mas o bônus em rolagens de dano corpo a corpo muda para +1d10.",
-      mestre: "Seu deslocamento muda para 15m e o bônus em rolagens de dano corpo a corpo muda para +2d8.",
-    },
-  },
-  { id: "Trobo ",
-    name: "Trobo ",
-    size: "Grande",
-    description: "Usados como animais de carga e tração, trobos também servem como montarias. ",
-    origin: "Tormenta20 - Jogo do Ano",
-    benefits: {
-      iniciante: "Seu deslocamento muda para 9m e você recebe uma ação de movimento extra por turno (apenas para se deslocar) e +1 em testes de resistência. ",
-      veterano: "Como acima, mas seu deslocamento muda para 12m e o bônus em testes de resistência muda para +2. ",
-      mestre: "Como acima, mas o bônus em testes de resistência muda para +5.",
-    },
-  },
 
   //Ameaças de Arton
   { id: "Sapo Atroz ",
@@ -187,6 +165,259 @@ export const mounts: Mount[] = [
     veterano: "Você recebe deslocamento de voo 6m.",
     mestre: "O bônus em agarrar se aplica a todas as manobras e você recebe +2 na Defesa.",
     },
+  },
+  { id: "Cocatriz-real",
+    name: "Cocatriz-real",
+    size: "Grande",
+    description: "Uma versão gigante e rara da cocatriz, com o tamanho de um avestruz. Pode ser domesticada para atuar como uma montaria exótica, capaz de saltos altos, voos curtos e ataques debilitantes.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 12m e você ignora terreno difícil.",
+      veterano: "Uma vez por rodada, quando acerta um ataque corpo a corpo, você pode fazer com que a vítima fique lenta (Fort CD For evita).",
+      mestre: "Seu deslocamento muda para 12m (normal e de voo). Entretanto, quando voa, você deve terminar seu movimento sobre o chão ou outra superfície firme."
+    }
+  },
+  { id: "Baleote",
+    name: "Baleote",
+    size: "Grande",
+    description: "Um animal com aspecto de pequena baleia ou grande golfinho capaz de 'nadar' magicamente nos céus. Dóceis e fáceis de treinar, alimentam-se das nuvens e emitem descargas elétricas pelo focinho para se defender. São muito utilizados como montarias voadoras em Vectora.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Você pode gastar 1 PM para causar 2d6 pontos de dano de eletricidade em uma linha de 9m (um baleote iniciante é muito jovem para ser usado como montaria).",
+      veterano: "Pode ser usado como montaria, mudando seu deslocamento para 9m (voo 12m).",
+      mestre: "Seu deslocamento de voo muda para 15m e você também pode gastar 4 PM para causar 6d6 pontos de dano de eletricidade em uma linha de 9m."
+    }
+  },
+  { id: "Capivara",
+    name: "Capivara",
+    size: "Médio",
+    description: "Grandes roedores aquáticos que vivem às margens de rios e lagos. Geralmente calmas, mas territoriais, são excelentes nadadoras. Frequentemente utilizadas como montarias velozes por raças de pequena estatura, como goblins e hynne, que adotam o título de 'capivaleiros'.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 9m (natação 12m) e você recebe uma ação de movimento extra por turno (apenas para se deslocar).",
+      veterano: "Você pode usar Aparência Inofensiva (se já possuir esse poder, a CD para resistir a ele aumenta em +2).",
+      mestre: "Uma vez por rodada, você recebe +1d6 em uma rolagem de dano corpo a corpo."
+    }
+  },
+  { id: "Cavalo de Namalkah",
+    name: "Cavalo de Namalkah",
+    size: "Grande",
+    description: "Uma montaria excepcional nativa do reino de Namalkah. Muito cobiçados, raramente são comercializados fora de sua terra natal. Conquistar a lealdade de um desses magníficos animais exige grandes feitos para provar seu merecimento, em vez de apenas possuir moedas.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 15m e você recebe uma ação de movimento extra por turno (apenas para se deslocar).",
+      veterano: "Seu deslocamento muda para 18m e você recebe +2 em ataques corpo a corpo.",
+      mestre: "Você recebe uma segunda ação de movimento extra por turno (novamente, apenas para se deslocar) e, uma vez por rodada, +2d6 em uma rolagem de dano corpo a corpo."
+    }
+  },
+  { id: "Cavalo Glacial",
+    name: "Cavalo Glacial",
+    size: "Grande",
+    description: "Também conhecido como hipo-orca, é um predador anfíbio que mistura características de cavalo e baleia assassina. Nativo de regiões gélidas, possui uma espessa camada de gordura e nadadeiras. É uma montaria feroz, porém inteligente e dócil em cativeiro, perfeita para travessias aquáticas e frio extremo.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 9m (natação 12m) e você recebe redução de frio 5.",
+      veterano: "Uma vez por rodada, quando faz um ataque corpo a corpo, você pode gastar 1 PM. Se fizer isso e acertar o ataque, você causa +2d6 pontos de dano de frio.",
+      mestre: "Muda a redução de frio para 10 e você recebe uma ação de movimento extra (apenas para se deslocar)."
+    }
+  },
+  { id: "Corcel do Deserto",
+    name: "Corcel do Deserto",
+    size: "Grande",
+    description: "Um enorme insetoide com a carapaça, aparência e comportamento de um equino. Muito apreciado por viajantes do deserto, pois nunca bebe água em sua fase adulta, extraindo toda a umidade de que precisa do ar e mastigando cactos rígidos.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 12m e você ignora terreno difícil natural.",
+      veterano: "Uma vez por rodada, você pode gastar 1 PM para causar 2d6 pontos de dano de impacto em uma criatura adjacente.",
+      mestre: "Seu deslocamento muda para 15m e você recebe +5 em testes para resistir a efeitos de clima, calor e frio (veja Tormenta20, p. 267)."
+    }
+  },
+  { id: "Dromedário",
+    name: "Dromedário",
+    size: "Grande",
+    description: "Um animal robusto e resistente, caracterizado pela corcova que serve como depósito de gordura para períodos de escassez. Adaptados para cruzar desertos e terrenos irregulares, são comuns em caravanas. Possuem temperamento genioso e costumam cuspir para se defender ou quando contrariados.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 12m e ignora terreno difícil natural em desertos e terrenos similares.",
+      veterano: "Você recebe +2 em Percepção e Sobrevivência (este bônus é dobrado em desertos) e, uma vez por rodada, pode gastar 1 PM para causar 1d4+3 pontos de dano de impacto em uma criatura em alcance curto.",
+      mestre: "Você recebe uma ação de movimento extra por turno (apenas para se deslocar) e +5 em testes para resistir a efeitos de clima."
+    }
+  },
+  { id: "Elefante",
+    name: "Elefante",
+    size: "Enorme",
+    description: "Um imenso e robusto animal caracterizado por sua pele espessa, tromba preênsil e longas presas. Inteligente e dócil, mas extremamente perigoso quando enfurecido, é historicamente empregado como animal de carga, montaria e até besta de guerra.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 12m e ignora terreno difícil.",
+      veterano: "Uma vez por rodada, você pode sacar um item ou pegar um objeto solto em alcance de 4,5m como ação livre.",
+      mestre: "Você recebe +5 em testes de manobra para atropelar e, uma vez por rodada, se vencer o teste para atropelar uma criatura, pode pagar 1 PM para fazer um ataque contra ela."
+    }
+  },
+  { id: "Gorlogg",
+    name: "Gorlogg",
+    size: "Grande",
+    description: "Uma besta primitiva nativa de Galrasia que combina traços de répteis e mamíferos, semelhante a um grande felino ou lobo com escamas e dentes de sabre. Embora sejam predadores ferozes, podem aceitar heróis ligados à natureza como cavaleiros, demonstrando lealdade inabalável.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 12m e, uma vez por rodada, você recebe +1d6 em uma rolagem de dano corpo a corpo.",
+      veterano: "O bônus em rolagens de dano corpo a corpo muda para +1d10.",
+      mestre: "Seu deslocamento muda para 15m e o bônus em rolagens de dano corpo a corpo muda para +2d8."
+    }
+  },
+  { id: "Gorlogg Alfa",
+    name: "Gorlogg Alfa",
+    size: "Grande",
+    description: "O líder formidável de uma alcateia de gorloggs. Ainda mais letal e imponente que os espécimes comuns, atua como uma montaria de igual ferocidade e poder para aqueles capazes de domar sua natureza selvagem.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 12m e, uma vez por rodada, você recebe +1d6 em uma rolagem de dano corpo a corpo.",
+      veterano: "O bônus em rolagens de dano corpo a corpo muda para +1d10.",
+      mestre: "Seu deslocamento muda para 15m e o bônus em rolagens de dano corpo a corpo muda para +2d8."
+    }
+  },
+  { id: "Leão",
+    name: "Leão",
+    size: "Grande",
+    description: "O maior e mais forte dos felinos, caça em bandos utilizando estratégias elaboradas. É um predador imponente e formidável, comum na Grande Savana e outras regiões selvagens.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 12m e, uma vez por rodada, você recebe +1d6 em rolagens de dano corpo a corpo.",
+      veterano: "Quando faz uma investida, o bônus em rolagens de dano corpo a corpo dobra.",
+      mestre: "Seu deslocamento muda para 15m e o bônus em rolagens de dano corpo a corpo muda para +1d10."
+    }
+  },
+  { id: "Tigre",
+    name: "Tigre",
+    size: "Grande",
+    description: "Uma fera magnífica e mortal, sagrada para o povo de Tamu-ra. Levados à beira da extinção pela Tormenta, espécimes são raros e extremamente valiosos, conhecidos por sua ferocidade e velocidade brutal no primeiro ataque.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 12m e você recebe +5 em Iniciativa.",
+      veterano: "Na primeira rodada de combate, você recebe +5 em testes de ataque e rolagens de dano com armas.",
+      mestre: "Seu deslocamento muda para 15m e você recebe uma ação de movimento extra por turno (apenas para se deslocar)."
+    }
+  },
+  { id: "Rinoceronte",
+    name: "Rinoceronte",
+    size: "Grande",
+    description: "Um grande herbívoro agressivo de couro espesso e um enorme chifre. Outrora criados por anões como bestas de carga e guerra na superfície, mantêm uma estranha afinidade com eles e formam montarias formidáveis.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 12m e você recebe +2 em testes de ataque quando faz investidas.",
+      veterano: "Você pode usar Carga de Cavalaria. Caso possua esse poder, o bônus no dano em investida aumenta em +1d8.",
+      mestre: "Quando faz uma investida você ignora 10 pontos de redução de dano do alvo."
+    }
+  },
+  { id: "Rinoceronte Lanoso",
+    name: "Rinoceronte Lanoso",
+    size: "Grande",
+    description: "Uma variante do rinoceronte nativa das Montanhas Uivantes. Possui uma grossa pelagem adaptada ao frio intenso e consegue se locomover pela neve e pelo gelo sem dificuldades.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 12m e você recebe +2 em testes de ataque quando faz investidas.",
+      veterano: "Você pode usar Carga de Cavalaria. Se possui esse poder, o bônus no dano em investida aumenta em +1d8.",
+      mestre: "Seu deslocamento não é afetado por gelo ou neve."
+    }
+  },
+  { id: "Brontotério",
+    name: "Brontotério",
+    size: "Enorme",
+    description: "Uma versão gigantesca e bestial do rinoceronte encontrada em Galrasia, caracterizada pelo chifre em forma de 'Y'. Tão colossal que o bater de suas patas soa como o próprio trovão.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 12m e você recebe +1 na Defesa.",
+      veterano: "O bônus na Defesa muda para +2 e você recebe uma ação de movimento extra por turno (apenas para se deslocar).",
+      mestre: "Você recebe redução de dano 5."
+    }
+  },
+  { id: "Tatu-Montanha",
+    name: "Tatu-Montanha",
+    size: "Enorme",
+    description: "Uma variedade gigante de molusco semelhante a uma tartaruga monstruosa. Possui uma carapaça colossal imune a ácido e rasteja sobre uma base de caramujo. Lento, porém implacável, é uma montaria excelente para atravessar pântanos, usando sua cauda espinhosa em forma de maça para se defender.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 9m (normal e de natação) e você recebe uma ação de movimento extra por turno (apenas para se deslocar).",
+      veterano: "Você recebe +1 na Defesa e redução de ácido 5.",
+      mestre: "Muda o bônus na Defesa para +2 e a redução de ácido para 10."
+    }
+  },
+  { id: "Trobo",
+    name: "Trobo",
+    size: "Grande",
+    description: "Também conhecido como pássaro-boi, é uma grande ave sem asas, com chifres e cascos bovinos. Dócil, extremamente resistente e confortável de se cavalgar, é muito utilizado como animal de tração e carga, sendo ferozmente protetor com sua família adotiva.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 9m e você recebe uma ação de movimento extra por turno (apenas para se deslocar) e +1 em testes de resistência.",
+      veterano: "Seu deslocamento muda para 12m e o bônus em testes de resistência muda para +2.",
+      mestre: "O bônus em testes de resistência muda para +5."
+    }
+  },
+  { id: "Tumarkhân",
+    name: "Tumarkhân",
+    size: "Enorme",
+    description: "Um imenso lagarto herbívoro com proporções de elefante e presas de marfim, nativo do arquipélago de Khubar. Muito dócil e forte, é facilmente amansado pelos locais e amplamente utilizado como animal de carga, tração e montaria pesada.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 12m e seu limite de carga aumenta em 5 espaços.",
+      veterano: "Você recebe uma ação de movimento extra por turno (apenas para se deslocar) e, uma vez por rodada, recebe +1d8 em uma rolagem de dano corpo a corpo.",
+      mestre: "O bônus no limite de carga muda para 10 espaços e, quando faz um teste de Força ou de perícia baseada em Força, você pode gastar 2 PM para rolar dois dados e usar o melhor resultado."
+    }
+  },
+  { id: "Urso Panda",
+    name: "Urso Panda",
+    size: "Médio",
+    description: "Menor e relativamente inofensivo, alimenta-se de brotos de bambu. Quase extinto e reverenciado em Tamu-ra, é um animal raro e valioso que luta apenas em defesa própria.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 9m e você recebe +2 em Diplomacia e uma ação de movimento extra por turno (apenas para se deslocar).",
+      veterano: "Você pode usar Rolamento Defensivo. Caso possua esse poder, em vez disso o custo para usá-lo diminui em –1 PM.",
+      mestre: "Você pode usar Aparência Inofensiva. Se possuir esse poder, a CD para resistir a ele aumenta em +2."
+    }
+  },
+  { id: "Urso Pardo",
+    name: "Urso Pardo",
+    size: "Grande",
+    description: "Forte e surpreendentemente rápido, é o tipo mais comum em florestas temperadas e frias. Companheiro tradicional de druidas, atuando como um formidável protetor e montaria.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 12m e, uma vez por rodada, você recebe +1d6 em uma rolagem de dano corpo a corpo.",
+      veterano: "Uma vez por rodada, quando acerta um ataque corpo a corpo, você pode fazer a manobra agarrar como uma ação livre. Essa manobra não deixa sua mão ocupada, mas você só pode manter um inimigo agarrado por vez.",
+      mestre: "Muda o bônus em rolagens de dano corpo a corpo para +1d10."
+    }
+  },
+  { id: "Urso das Cavernas",
+    name: "Urso das Cavernas",
+    size: "Enorme",
+    description: "Versão pré-histórica e massiva do urso comum, encontrada em Galrasia e nas Sanguinárias. Extremamente agressivo, é o único de sua espécie que ataca seres inteligentes sem hesitar.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 12m e você recebe redução de dano 2.",
+      veterano: "Uma vez por rodada, quando acerta um ataque corpo a corpo, você pode fazer a manobra agarrar como uma ação livre. Essa manobra não deixa sua mão ocupada, mas você só pode manter um inimigo agarrado desta forma.",
+      mestre: "Muda a redução de dano para 5."
+    }
+  },
+  { id: "Warg",
+    name: "Warg",
+    size: "Grande",
+    description: "Uma fera quase sobrenatural semelhante a um lobo imenso e musculoso de pelagem negra. Com uma inteligência feroz que o permite compreender o idioma goblinoide, é amplamente utilizado pelos duyshidakk. Como montaria, o warg não causa penalidades em Furtividade por seu tamanho.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 12m e você recebe uma ação de movimento extra por turno (apenas para se deslocar).",
+      veterano: "Você recebe +2 em Furtividade e pode usar a habilidade Ataque Furtivo +2d6 (se já possui Ataque Furtivo, o bônus de dano se acumula).",
+      mestre: "Uma vez por rodada, quando acerta um ataque corpo a corpo, você pode fazer a manobra derrubar como uma ação livre."
+    }
+  },
+  { id: "Unicórnio",
+    name: "Unicórnio",
+    size: "Grande",
+    description: "Um espírito de pura bondade na forma de um magnífico cavalo branco com um chifre dourado. Extremamente raros e ariscos, fogem de conflitos, mas usam seus poderes para curar e purificar. Apenas seres genuinamente dignos são aceitos como cavaleiros.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 12m e você recebe uma ação de movimento extra por turno (apenas para se deslocar).",
+      veterano: "Seu deslocamento muda para 15m e você pode lançar Purificação. Se aprender essa magia, seu custo é reduzido em –1 PM.",
+      mestre: "Cada dado de seus efeitos mágicos de cura aumenta em um passo (até o máximo de d12). Unicórnios só aceitam ser cavalgados por pessoas dignas (o mestre tem a palavra final sobre isso)."
+    }
   },
 
   

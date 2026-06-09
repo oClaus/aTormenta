@@ -3,7 +3,7 @@ import { Partner } from "@/types/partner";
 export const partners: Partner[] = [
   // Monster Chefe
   { id: "Dranniko",
-  name: "D’ranniko",
+  name: "D’ranniko (Fortão)",
   description: "Um inseto gigante semelhante a um louva-a-deus branco de olhos vermelhos. Valente e implacável, é temido nas cavernas próximas a Doherimm e valorizado como feroz parceiro de combate.",
   origin: "Dragão Brasil",
   benefits: {
@@ -13,7 +13,7 @@ export const partners: Partner[] = [
   },
   },
   { id: "Jaata",
-  name: "Jäätä",
+  name: "Jäätä (Fortão)",
   description: "Uma criatura elemental de gelo semelhante a um pangolim gigante, coberta por escamas brancas afiadas e envolta em névoa congelante. Forte e agressiva, espalha frio intenso ao seu redor.",
   origin: "Dragão Brasil",
   benefits: {
@@ -148,7 +148,7 @@ export const partners: Partner[] = [
 
   // Ameaças de Arton
   { id: "Hiena",
-    name: "Hiena",
+    name: "Hiena (Perseguidor)",
     description: "Uma hiena astuta e resistente, famosa por sua mordida poderosa e habilidade de rastrear presas. Muito usada por gnolls como animal de caça e guarda.",
     origin: "Ameaças de Arton",
     benefits: {
@@ -158,7 +158,7 @@ export const partners: Partner[] = [
     },
   },
   { id: "Ko-Kabuto",
-    name: "Ko-Kabuto",
+    name: "Ko-Kabuto (Guardião)",
     description: "Um besouro robusto e disciplinado, usado como guardião e protetor. Apesar da aparência intimidadora, é dócil com seu mestre e extremamente resistente.",
     origin: "Ameaças de Arton",
     benefits: {
@@ -168,7 +168,7 @@ export const partners: Partner[] = [
     },
   },
   { id: "Cão de Kally",
-    name: "Cão de Kally",
+    name: "Cão de Kally (Fortão)",
     description: "Um lobo escamado de origem dracônica, com chifres e hálito de fogo. Feroz e poderoso, é uma temida fera de combate e guarda.",
     origin: "Ameaças de Arton",
     benefits: {
@@ -178,7 +178,7 @@ export const partners: Partner[] = [
     },
   },
   { id: "Kobold Patrulheiro",
-    name: "Kobold Patrulheiro",
+    name: "Kobold Patrulheiro (Combatente)",
     description: "Pequeno e escamoso, o kobold patrulheiro lembra uma mistura de cão e lagarto. Sempre inquieto e barulhento, prefere atacar de forma oportunista, usando emboscadas, armadilhas e trabalho em grupo para compensar sua fragilidade.\nEmbora normalmente vivam em bandos, alguns kobolds acabam servindo aventureiros, dragões ou devotos de Kallyadranoch. Covardes por natureza, evitam confrontos justos e procuram sempre explorar qualquer vantagem disponível.\nComo parceiro, um kobold patrulheiro ajuda seu aliado a cercar inimigos e criar aberturas em combate, tornando-se surpreendentemente eficiente quando luta ao lado de companheiros mais poderosos.",
     origin: "Ameaças de Arton",
     benefits: {
@@ -187,7 +187,6 @@ export const partners: Partner[] = [
           mestre: "Você pode flanquear mesmo criaturas que normalmente não podem ser flanqueadas.",
         },
   },
-
   { id: "Bogum",
     name: "Bogum (Companheiro Animal)",
     description: "Um pequeno construto feito de materiais naturais e animado pelas preces de um druida a Allihanna. Pequeno e furtivo, atua como um excelente mensageiro, espião e servo leal. Parceiro exclusivo de druidas.",
@@ -276,6 +275,36 @@ export const partners: Partner[] = [
       iniciante: "Você pode usar Sorte dos Loucos. Se já tiver esse poder, a perda de PM é reduzida para 1d4.",
       veterano: "Você pode usar Sorte dos Loucos em aliados voluntários em alcance curto (caso falhe, o aliado perde os PM).",
       mestre: "Quando um inimigo em alcance curto faz um teste, você pode gastar 2 PM para forçá-lo a rolar novamente o dado. Se ainda assim ele passar, você perde 1d6 PM (ou 1d4 se tiver Sorte dos Loucos)."
+    }
+  },
+  { id: "Asa-Assassina",
+    name: "Asa-Assassina (Assassino)",
+    description: "Insetos semelhantes a grandes mariposas de asas metálicas, conhecidos por suas asas extremamente afiadas. São agressivos e territoriais, atacando em bandos para fatiar e sangrar qualquer invasor.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Uma vez por rodada, quando causa dano com um ataque, você pode deixar a vítima sangrando.",
+      veterano: "A perda de PV pelo sangramento aumenta para 1d8.",
+      mestre: "A perda de PV aumenta para 2d8."
+    }
+  },
+  { id: "Cocatriz",
+    name: "Cocatriz (Adepto)",
+    description: "Um monstro mágico com a aparência de um grande galo grotesco com caudas de serpente. Apesar de seu aspecto cômico, é muito perigoso e temido por sua habilidade de petrificar vítimas com uma simples bicada.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Suas habilidades mágicas que causam condições de movimento têm o custo reduzido em –1 PM.",
+      veterano: "A CD para resistir a essas habilidades aumenta em +2.",
+      mestre: "A redução de custo se torna cumulativa com outras reduções."
+    }
+  },
+  { id: "Pantera",
+    name: "Pantera (Assassino)",
+    description: "Caçador solitário e letal que domina a escuridão das selvas e florestas. Furtiva e implacável, prefere abater suas presas à noite e arrastá-las para o alto das árvores.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Uma vez por rodada, quando causa dano com um ataque corpo a corpo, você pode deixar o alvo sangrando.",
+      veterano: "A CD dos testes para remover um sangramento que você provoca aumenta em +2.",
+      mestre: "Os sangramentos que você provoca exigem dois sucessos em testes para serem removidos."
     }
   },
   

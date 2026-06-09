@@ -130,6 +130,18 @@ export const powersGeraisDestino: Power[] = [
     prerequisite: "Car 2, 3º nível de personagem.",
     origin: "Ameaças de Arton"
   },
+  { id: "Adestrar Montaria",
+    name: "Adestrar Montaria",
+    description: "Você recebe +2 em Adestramento. Além disso, escolha um dos efeitos a seguir: Sua montaria se torna veterana ou recebe a habilidade de um outro tipo de parceiro iniciante, entre ajudante, assassino, besta de carga, combatente, fortão, guardião ou vigilante. No caso do ajudante, o mestre deve aprovar as perícias escolhidas. Você só pode ter uma montaria treinada desta forma por vez e, se perdê-la, pode aplicar um treinamento a outra com uma semana de trabalho.",
+    prerequisite: "treinado em Adestramento, 7º nível de personagem.",
+    origin: "Ameaças de Arton"
+  },
+  { id: "Dois Como Um",
+    name: "Dois Como Um",
+    description: "Quando faz um teste de Atletismo, Cavalgar, Iniciativa, Luta, Percepção, Pontaria ou Reflexos enquanto montado, você pode gastar 2 PM para rolar dois dados e usar o melhor resultado.",
+    prerequisite: "Ginete.",
+    origin: "Ameaças de Arton"
+  },
 
   // Dragão Brasil
 

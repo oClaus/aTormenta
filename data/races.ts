@@ -1453,6 +1453,37 @@ export const races: Race[] = [
     longevidade: "Normal",
     devotos: "Kallyadranoch, Khalmyr, Lena, Megalokk, Tenebra"
   },
+  { id: "Harpia",
+    name: "Harpia",
+    origin: "Ameaças de Arton",
+    image: "/ameacas/harpia.png",
+    description: "“Estamos sendo observados. Não, não é nenhuma sensação. Estão bem ali!”\n — Allysen Naviere, humana inventora \n\n O monstro lembra uma mulher humana, velha e sinistra como uma bruxa, com cabelo emaranhado e sujo de sangue. Tem a parte inferior do corpo, pernas e asas de um pássaro enorme, com penas marrons e imundas. A face feroz e a voz estridente chegam a amedrontá-los. \n Harpias são criaturas sádicas e malignas, que caçam não apenas para se alimentar, mas pelo regozijo de causar sofrimento e morte. São encontradas em masmorras, mas também espreitam comunidades humanas em busca de novas vítimas — especialmente crianças, que gostam de atormentar na presença dos pais. \n Não se sabe sobre a existência de harpias machos, nem se estes monstros têm formas naturais de procriação. Como outros seres mágicos, talvez seu nascimento seja alguma ocorrência sobrenatural ou simples desejo dos deuses. Também existe a teoria de que harpias machos são pequenos e fracos, mantidos confinados em cavernas secretas apenas como reprodutores. \n Harpias não usam roupas ou armadura, mas às vezes empunham armas com os pés. Preferem arcos e bestas, atacando à distância enquanto voam. No entanto, quando as vítimas já estão muito feridas, muitas vezes não resistem ao impulso assassino de mergulhar e acabar de matá-las com as próprias garras. Também é comum que capturem vítimas para torturá-las durante horas, ou mesmo dias, antes da refeição. \n Apesar de sua ferocidade incontrolável, harpias às vezes podem ser encontradas atuando como guardas ou capangas para vilões, sobretudo devotos de Megalokk. Dizem existir harpias heroicas, que acabam se reunindo a grupos de aventureiros — mas estas são incrivelmente raras.",
+    abilities: [
+      {
+        name: "Asas de Abutre",
+        description: "Você possui asas no lugar dos braços e das mãos. Você pode pairar a 1,5m do chão com deslocamento 12m. Isso permite que você ignore terreno difícil e o torna imune a dano por queda (a menos que esteja inconsciente). Se não estiver usando armadura pesada, você pode gastar 1 PM por rodada para voar com deslocamento de 12m."
+      },
+      {
+        name: "Cria de Masmorra",
+        description: "Você é uma criatura do tipo monstro e recebe visão no escuro e +2 em Intimidação e Sobrevivência."
+      },
+      {
+        name: "Grito Aterrorizante",
+        description: "Você pode gastar uma ação padrão e 1 PM para emitir um grito estridente. Criaturas em alcance curto ficam abaladas (Von CD Car evita)."
+      },
+      {
+        name: "Pés Rapinantes",
+        description: "Seus pés podem ser usados como mãos ou como duas armas naturais de garras (dano 1d6 cada, crítico x2, corte). Uma vez por rodada, quando usa a ação agredir para atacar com uma arma, você pode gastar 1 PM para fazer um ataque corpo a corpo extra com uma das garras, desde que ela esteja livre e não tenha sido usada para atacar neste turno. Como alternativa, se tiver habilidades que exijam uma arma secundária (como Estilo de Duas Armas), você pode usá-las com suas garras."
+      }
+    ],
+    attributeModifiers: [
+      { attribute: "des", modifier: 2 },
+      { attribute: "car", modifier: 1 },
+      { attribute: "int", modifier: -1 }
+    ],
+    longevidade: "Normal",
+    devotos: "Hyninn, Megalokk, Tenebra"
+  },
   
   
   { id: "Qunari",

@@ -1,6 +1,262 @@
 import { Power } from "@/types/power";
 
 export const powersSamurai: Power[] = [
+  // Dragão Brasil - 201
+  { id: "Acima do Bem e do Mal",
+    name: "Acima do Bem e do Mal",
+    description: "Quando faz um ataque com sua arma ancestral, você pode gastar 2 PM para aplicar o dano adicional do seu encanto profano ou sagrado contra qualquer criatura. ",
+    prerequisite: "10º nível de samurai, arma ancestral profana ou sagrada.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Ancestral Dançarino",
+    name: "Ancestral Dançarino",
+    description: "Quando usa o efeito de dançarina de sua arma ancestral, você pode gastar 2 PM para invocar um espírito ancestral para empunhar a arma. O espírito permanece enquanto dançarina for sustentada, não conta para seu limite de parceiros e é de um parceiro veterano fortão e guardião. ",
+    prerequisite: "10º nível de samurai, arma ancestral dançarina.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Aspecto Assustador",
+    name: "Aspecto Assustador",
+    description: "Quando faz um ataque corpo a corpo com sua arma ancestral, você pode gastar 1 PM para assumir um aspecto assustador. Se acertar o ataque, o alvo fica abalado (Vont CD Sab evita). ",
+    prerequisite: "arma ancestral macabra.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Aspecto Dourado",
+    name: "Aspecto Dourado",
+    description: "Você pode gastar 1 PM para substituir um teste de resistência por um teste de Diplomacia. ",
+    prerequisite: "arma ancestral banhada em ouro.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Aspecto Opulento",
+    name: "Aspecto Opulento",
+    description: "Uma vez por rodada, você pode gastar 1 PM para fintar como uma ação de movimento (ou livre, se tiver Finta Aprimorada).",
+    prerequisite: "arma ancestral cravejada de gemas.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Avalanche Súbita",
+    name: "Avalanche Súbita",
+    description: "Quando faz um ataque corpo a corpo com sua arma ancestral, você pode gastar 1 PM para desferir um golpe atordoante. Se acertar o ataque, o alvo fica atordoado por uma rodada (Fort CD Sab evita; uma criatura só pode ser atordoada por esta habilidade uma vez por cena). Se sua arma ancestral for atroz, a CD para resistir a este poder aumenta em +2.",
+    prerequisite: "arma ancestral cruel.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Cortar Magia",
+    name: "Cortar Magia",
+    description: "Enquanto empunha sua arma ancestral, você pode usar Dissipar Magia com o modificador de contramágica, mas apenas em magias que tenham você como alvo. ",
+    prerequisite: "10º nível de samurai, arma ancestral energética.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Corte do Vácuo",
+    name: "Corte do Vácuo",
+    description: "Quando faz um ataque corpo a corpo com sua arma ancestral, você pode gastar 1 PM projetar uma onda de energia. O alcance desse ataque se torna curto e todo o dano causado se torna de essência. ",
+    prerequisite: "arma ancestral precisa.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Cortador de Cavalos",
+    name: "Cortador de Cavalos",
+    description: "Quando faz um ataque corpo a corpo com sua arma ancestral, você pode gastar 1 PM para causar um dado de dano extra do mesmo tipo da arma. ",
+    prerequisite: "arma ancestral maciça.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Dança dos Elementos",
+    name: "Dança dos Elementos",
+    description: "Quando usa sua arma ancestral para causar dano por frio, ácido, eletricidade, fogo ou trevas, você pode gastar 1 PM para aumentar cada dado de dano em um passo. ",
+    prerequisite: "10º nível de samurai, arma ancestral congelante, corrosiva, elétrica, flamejante ou tumular.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Dor Infinita",
+    name: "Dor Infinita",
+    description: "Quando acerta um construto ou morto-vivo, você pode gastar 2 PM para aplicar nele o efeito de seu encanto excruciante. ",
+    prerequisite: "10º nível de samurai, arma ancestral excruciante.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Engenhosidade Alquímica",
+    name: "Engenhosidade Alquímica",
+    description: "Quando usa injeção alquímica, você pode gastar 1 PM para aumentar o dano do preparado em um dado do mesmo tipo.",
+    prerequisite: "arma ancestral injeção alquímica.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Escudo Ancestral",
+    name: "Escudo Ancestral",
+    description: "Quando faz um ataque com sua arma ancestral, você pode gastar 2 PM para escolher um aliado adjacente. Esse aliado recebe +5 na Defesa por uma rodada. ",
+    prerequisite: "arma ancestral defensora.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Essência Fluida",
+    name: "Essência Fluida",
+    description: "Quando obtém um acerto crítico com sua arma ancestral, você pode gastar 1 PM para se mover até o seu deslocamento.",
+    prerequisite: "arma ancestral de mitral.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Essência Gélida",
+    name: "Essência Gélida",
+    description: "Quando faz um teste de Iniciativa, você pode gastar 1 PM para receber redução contra frio igual ao seu nível + sua Sabedoria até o fim da cena. ",
+    prerequisite: "arma ancestral de gelo eterno.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Essência Invencível",
+    name: "Essência Invencível",
+    description: "Quando faz um ataque com sua arma ancestral, você pode gastar 1 PM para aumentar o dano desse ataque em um passo.",
+    prerequisite: "arma ancestral de adamante.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Essência Lefeu",
+    name: "Essência Lefeu",
+    description: "Se estiver empunhando sua arma ancestral, você pode gastar 3 PM para somar sua Sabedoria nos testes de ataque e Reflexos e na Defesa por 1 rodada. ",
+    prerequisite: "arma ancestral de matéria vermelha, Ronin.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Essência Marinha",
+    name: "Essência Marinha",
+    description: "Você soma sua Sabedoria em Atletismo e, quando faz um teste de Atletismo para nadar, pode gastar 1 PM para rolar dois dados e usar o melhor resultado. ",
+    prerequisite: "arma ancestral de lanajuste.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Essência Prateada",
+    name: "Essência Prateada",
+    description: "Quando acerta um ataque com sua arma ancestral, você pode gastar 1 PM. Se fizer isso, o alvo perde cura acelerada por 1 rodada.",
+    prerequisite: "arma ancestral de prata.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Essência Monstruosa",
+    name: "Essência Monstruosa",
+    description: "Quando faz um acerto crítico com sua arma ancestral, você pode gastar 1 PM para receber uma quantidade de PV temporários igual à metade do seu nível + Sabedoria",
+    prerequisite: "arma ancestral de casco de monstro.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Essência Rubi",
+    name: "Essência Rubi",
+    description: "Quando faz um ataque com sua arma ancestral, você pode gastar 1 PM para ignorar toda a redução de dano do alvo. ",
+    prerequisite: "arma ancestral de aço-rubi.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Essência Virente",
+    name: "Essência Virente",
+    description: "Se estiver empunhando sua arma ancestral, você pode gastar 1 PM para receber resistência a magia igual à sua Sabedoria por 1 rodada. ",
+    prerequisite: "arma ancestral de madeira tollon.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Fulgor Púrpura",
+    name: "Fulgor Púrpura",
+    description: "Quando faz um ataque corpo a corpo com sua arma ancestral, você pode gastar uma quantidade de PV temporários limitada pela sua Sabedoria. Para cada 2 PV gastos, seu ataque causa +1d8 pontos de dano de essência.",
+    prerequisite: "10º nível de samurai, arma ancestral drenante.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Golpe Fantasma",
+    name: "Golpe Fantasma",
+    description: "Quando faz um ataque com sua arma ancestral, você pode gastar 1 PM para ignorar as imunidades do alvo.",
+    prerequisite: "arma ancestral penetrante*.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Instinto Destruidor",
+    name: "Instinto Destruidor",
+    description: "Você recebe +2 em testes de manobra para quebrar. Sempre que reduz um item a 0 PV com essa manobra, você recupera 1 PM. ",
+    prerequisite: "10º nível de samurai, arma ancestral destruidora.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Lâmina Invertida",
+    name: "Lâmina Invertida",
+    description: " Você pode ativar ou desativar o encantamento piedosa sem gastar PM. ",
+    prerequisite: "10º nível de samurai, arma ancestral piedosa.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Lâmina Sedenta",
+    name: "Lâmina Sedenta",
+    description: "Quando faz um ataque contra um alvo sangrando, você pode gastar 2 PM para receber +5 no teste de ataque e na rolagem de dano. ",
+    prerequisite: "10º nível de samurai, arma ancestral sanguinária.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Mistério Nebuloso",
+    name: "Mistério Nebuloso",
+    description: "Quando faz um ataque corpo a corpo com sua arma ancestral, você pode gastar 1 PM para obter camuflagem leve por um turno. ",
+    prerequisite: "arma ancestral harmonizada.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Nada Além de Um Assassino",
+    name: "Nada Além de Um Assassino",
+    description: "Você recebe a habilidade Ataque Furtivo +1d6. Você pode escolher este poder várias vezes (mas apenas uma vez por patamar) e seus efeitos se acumulam.",
+    prerequisite: "10º nível de samurai, arma ancestral assassina, Ronin.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Paradoxo Absoluto",
+    name: "Paradoxo Absoluto",
+    description: "Quando faz um acerto crítico, você pode gastar 2 PM. Se fizer isso, soma sua Sabedoria na rolagem de dano (cumulativo com outros efeitos que somam este atributo). Se sua arma for lancinante, em vez disso você soma o dobro da Sabedoria. ",
+    prerequisite: "10º nível de samurai, arma ancestral dilacerante ou lancinante.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Paradoxo da Celeridade",
+    name: "Paradoxo da Celeridade",
+    description: "Uma vez por rodada, quando faz um acerto crítico com sua arma ancestral, você pode gastar 2 PM para fazer um ataque adicional contra o mesmo inimigo.",
+    prerequisite: "10º nível de samurai, arma ancestral veloz.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Paradoxo da Extinção",
+    name: "Paradoxo da Extinção",
+    description: "Quando faz um acerto crítico com sua arma ancestral, você pode gastar 2 PM para multiplicar o dano adicional causado pelo encanto anticriatura. ",
+    prerequisite: "10º nível de samurai, arma ancestral anticriatura.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Paradoxo da Extremidade",
+    name: "Paradoxo da Extremidade",
+    description: "Uma vez por rodada, quando faz um acerto crítico com sua arma ancestral, você pode gastar 2 PM para fazer outro ataque contra uma criatura adjacente. ",
+    prerequisite: "10º nível de samurai, arma ancestral caçadora.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Paradoxo do Gume",
+    name: "Paradoxo do Gume",
+    description: "Quando faz um ataque corpo a corpo com sua arma ancestral, você pode gastar 2 PM para somar sua Sabedoria na margem de ameaça. ",
+    prerequisite: "10º nível de samurai, arma ancestral ameaçadora.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Paradoxo da Magia",
+    name: "Paradoxo da Magia",
+    description: "Quando faz um acerto crítico com sua arma ancestral em um ataque em que tenha descarregado uma magia armazenada na arma, você pode gastar uma quantidade de PM igual ao círculo da magia para recuperá-la (ela volta a ser guardada na arma). ",
+    prerequisite: "10º nível de samurai, arma ancestral conjuradora.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Paradoxo Viperino",
+    name: "Paradoxo Viperino",
+    description: "Quando faz um acerto crítico com sua arma ancestral, você pode gastar 1 PM para ignorar imunidade ou resistência a veneno da criatura atingida. ",
+    prerequisite: "10º nível de samurai, arma ancestral venenosa.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Perfeição Marcial",
+    name: "Perfeição Marcial",
+    description: "Você pode usar uma ação de movimento e 2 PM para somar seu bônus de Olhar Assustador no próximo teste de ataque e, caso acerte, na rolagem de dano com sua arma ancestral. Caso a arma seja magnífica, esse bônus é dobrado",
+    prerequisite: "10º nível de samurai, arma ancestral formidável ou magnífica.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Tiro Perfeito",
+    name: "Tiro Perfeito",
+    description: "Quando faz um ataque a distância com sua arma ancestral, você pode gastar 1 PM para ignorar camuflagem e cobertura. ",
+    prerequisite: "arma ancestral mira telescópica.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Trovão Incessante",
+    name: "Trovão Incessante",
+    description: "Quando faz um acerto crítico, você pode gastar 2 PM para ativar o encanto trovejante, mesmo que já o tenha usado nessa cena.",
+    prerequisite: "10º nível de samurai, arma ancestral trovejante.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Roda Fluvial",
+    name: "Roda Fluvial",
+    description: "Quando faz um ataque com sua arma ancestral, você pode gastar 2 PM para fazer uma manobra de combate como uma ação livre. ",
+    prerequisite: "arma ancestral equilibrada.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Venha Cá",
+    name: "Venha Cá",
+    description: "Quando faz um ataque corpo a corpo com uma arma ancestral de arremesso, você pode gastar 2 PM para arrastar o inimigo até o espaço vazio mais próximo a 1,5m de você (Ref CD Sab). ",
+    prerequisite: "10º nível de samurai, arma ancestral de arremesso.",
+    origin: "Dragão Brasil - 201"
+  },
+  { id: "Voo da Andorinha",
+    name: "Voo da Andorinha",
+    description: "Uma vez por rodada, quando um inimigo erra um ataque corpo a corpo contra você, você pode gastar 1 PM para fazer um ataque contra ele usando sua arma ancestral. Se a arma for pungente, você recebe +2 nesse teste de ataque.",
+    prerequisite: "arma ancestral certeira.",
+    origin: "Dragão Brasil - 201"
+  },
+
+
+
   { id: "Arma Ancestral Adicional",
     name: "Arma Ancestral Adicional",
     description: "Você recebe uma arma ancestral adicional de um tipo à sua escolha. Esta arma segue a mesma progressão de melhorias e encantos de sua primeira arma ancestral, mas você pode escolher benefícios diferentes para ela.",
@@ -61,72 +317,17 @@ export const powersSamurai: Power[] = [
     prerequisite: "",
     origin: "Dragão Brasil"
   },
-  { id: "Aspecto Assustador",
-    name: "Aspecto Assustador",
-    description: "Quando faz um ataque corpo a corpo com sua arma ancestral, você pode gastar 1 PM para assumir um aspecto assustador. Se acertar o ataque, o alvo fica abalado (Vont CD Sab evita). ",
-    prerequisite: "arma ancestral macabra.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Avalanche Súbita",
-    name: "Avalanche Súbita",
-    description: "Quando faz um ataque corpo a corpo com sua arma ancestral, você pode gastar 1 PM para desferir um golpe atordoante. Se acertar o ataque, o alvo fica atordoado por uma rodada (Fort CD Sab evita; uma criatura só pode ser atordoada por esta habilidade uma vez por cena). Se sua arma ancestral for atroz, a CD para resistir a este poder aumenta em +2.",
-    prerequisite: "arma ancestral cruel.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Dor Infinita",
-    name: "Dor Infinita",
-    description: "Quando acerta um construto ou morto-vivo, você pode gastar 2 PM para aplicar nele o efeito de seu encanto excruciante. ",
-    prerequisite: "10º nível de samurai, arma ancestral excruciante.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Essência Fluida",
-    name: "Essência Fluida",
-    description: "Quando obtém um acerto crítico com sua arma ancestral, você pode gastar 1 PM para se mover até o seu deslocamento.",
-    prerequisite: "arma ancestral de mitral.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Essência Marinha",
-    name: "Essência Marinha",
-    description: "Você soma sua Sabedoria em Atletismo e, quando faz um teste de Atletismo para nadar, pode gastar 1 PM para rolar dois dados e usar o melhor resultado. ",
-    prerequisite: "arma ancestral de lanajuste.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Essência Virente",
-    name: "Essência Virente",
-    description: "Se estiver empunhando sua arma ancestral, você pode gastar 1 PM para receber resistência a magia igual à sua Sabedoria por 1 rodada. ",
-    prerequisite: "arma ancestral de madeira tollon.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Lâmina Invertida",
-    name: "Lâmina Invertida",
-    description: " Você pode ativar ou desativar o encantamento piedosa sem gastar PM. ",
-    prerequisite: "10º nível de samurai, arma ancestral piedosa.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Paradoxo Absoluto",
-    name: "Paradoxo Absoluto",
-    description: "Quando faz um acerto crítico, você pode gastar 2 PM. Se fizer isso, soma sua Sabedoria na rolagem de dano (cumulativo com outros efeitos que somam este atributo). Se sua arma for lancinante, em vez disso você soma o dobro da Sabedoria. ",
-    prerequisite: "10º nível de samurai, arma ancestral dilacerante ou lancinante.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Paradoxo do Gume",
-    name: "Paradoxo do Gume",
-    description: "Quando faz um ataque corpo a corpo com sua arma ancestral, você pode gastar 2 PM para somar sua Sabedoria na margem de ameaça. ",
-    prerequisite: "10º nível de samurai, arma ancestral ameaçadora.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Tiro Perfeito",
-    name: "Tiro Perfeito",
-    description: "Quando faz um ataque a distância com sua arma ancestral, você pode gastar 1 PM para ignorar camuflagem e cobertura. ",
-    prerequisite: "arma ancestral mira telescópica.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Voo da Andorinha",
-    name: "Voo da Andorinha",
-    description: "Uma vez por rodada, quando um inimigo erra um ataque corpo a corpo contra você, você pode gastar 1 PM para fazer um ataque contra ele usando sua arma ancestral. Se a arma for pungente, você recebe +2 nesse teste de ataque.",
-    prerequisite: "arma ancestral certeira.",
-    origin: "Dragão Brasil"
-  },
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   { id: "Equilíbrio Interior",
     name: "Equilíbrio Interior",
     description: "Quando rola um 1 natural em um teste, você pode rolar novamente o dado. Você só pode usar este poder uma vez por teste. ",
@@ -157,66 +358,16 @@ export const powersSamurai: Power[] = [
     prerequisite: "Corte da Correnteza, Serenidade dos Kami.",
     origin: "Dragão Brasil"
   },
-  { id: "Ancestral Dançarino",
-    name: "Ancestral Dançarino",
-    description: "Quando usa o efeito de dançarina de sua arma ancestral, você pode gastar 2 PM para invocar um espírito ancestral para empunhar a arma. O espírito permanece enquanto dançarina for sustentada, não conta para seu limite de parceiros e é de um parceiro veterano fortão e guardião. ",
-    prerequisite: "10º nível de samurai, arma ancestral dançarina.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Corte do Vácuo",
-    name: "Corte do Vácuo",
-    description: "Quando faz um ataque corpo a corpo com sua arma ancestral, você pode gastar 1 PM projetar uma onda de energia. O alcance desse ataque se torna curto e todo o dano causado se torna de essência. ",
-    prerequisite: "arma ancestral precisa.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Engenhosidade Alquímica",
-    name: "Engenhosidade Alquímica",
-    description: "Quando usa injeção alquímica, você pode gastar 1 PM para aumentar o dano do preparado em um dado do mesmo tipo.",
-    prerequisite: "arma ancestral injeção alquímica.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Essência Gélida",
-    name: "Essência Gélida",
-    description: "Quando faz um teste de Iniciativa, você pode gastar 1 PM para receber redução contra frio igual ao seu nível + sua Sabedoria até o fim da cena. ",
-    prerequisite: "arma ancestral de gelo eterno.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Essência Prateada",
-    name: "Essência Prateada",
-    description: "Quando acerta um ataque com sua arma ancestral, você pode gastar 1 PM. Se fizer isso, o alvo perde cura acelerada por 1 rodada.",
-    prerequisite: "arma ancestral de prata.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Fulgor Púrpura",
-    name: "Fulgor Púrpura",
-    description: "Quando faz um ataque corpo a corpo com sua arma ancestral, você pode gastar uma quantidade de PV temporários limitada pela sua Sabedoria. Para cada 2 PV gastos, seu ataque causa +1d8 pontos de dano de essência.",
-    prerequisite: "10º nível de samurai, arma ancestral drenante.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Lâmina Sedenta",
-    name: "Lâmina Sedenta",
-    description: "Quando faz um ataque contra um alvo sangrando, você pode gastar 2 PM para receber +5 no teste de ataque e na rolagem de dano. ",
-    prerequisite: "10º nível de samurai, arma ancestral sanguinária.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Paradoxo da Celeridade",
-    name: "Paradoxo da Celeridade",
-    description: "Uma vez por rodada, quando faz um acerto crítico com sua arma ancestral, você pode gastar 2 PM para fazer um ataque adicional contra o mesmo inimigo.",
-    prerequisite: "10º nível de samurai, arma ancestral veloz.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Paradoxo da Magia",
-    name: "Paradoxo da Magia",
-    description: "Quando faz um acerto crítico com sua arma ancestral em um ataque em que tenha descarregado uma magia armazenada na arma, você pode gastar uma quantidade de PM igual ao círculo da magia para recuperá-la (ela volta a ser guardada na arma). ",
-    prerequisite: "10º nível de samurai, arma ancestral conjuradora.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Venha Cá",
-    name: "Venha Cá",
-    description: "Quando faz um ataque corpo a corpo com uma arma ancestral de arremesso, você pode gastar 2 PM para arrastar o inimigo até o espaço vazio mais próximo a 1,5m de você (Ref CD Sab). ",
-    prerequisite: "10º nível de samurai, arma ancestral de arremesso.",
-    origin: "Dragão Brasil"
-  },
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   { id: "Avalanche das Três Mãos",
     name: "Avalanche das Três Mãos",
     description: "Se estiver usando sua arma ancestral com as duas mãos, você soma sua Constituição nas rolagens de dano (limitado pelo seu nível). ",
@@ -247,66 +398,16 @@ export const powersSamurai: Power[] = [
     prerequisite: "",
     origin: "Dragão Brasil"
   },
-  { id: "Aspecto Dourado",
-    name: "Aspecto Dourado",
-    description: "Você pode gastar 1 PM para substituir um teste de resistência por um teste de Diplomacia. ",
-    prerequisite: "arma ancestral banhada em ouro.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Cortar Magia",
-    name: "Cortar Magia",
-    description: "Enquanto empunha sua arma ancestral, você pode usar Dissipar Magia com o modificador de contramágica, mas apenas em magias que tenham você como alvo. ",
-    prerequisite: "10º nível de samurai, arma ancestral energética.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Dança dos Elementos",
-    name: "Dança dos Elementos",
-    description: "Quando usa sua arma ancestral para causar dano por frio, ácido, eletricidade, fogo ou trevas, você pode gastar 1 PM para aumentar cada dado de dano em um passo. ",
-    prerequisite: "10º nível de samurai, arma ancestral congelante, corrosiva, elétrica, flamejante ou tumular.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Essência Invencível",
-    name: "Essência Invencível",
-    description: "Quando faz um ataque com sua arma ancestral, você pode gastar 1 PM para aumentar o dano desse ataque em um passo.",
-    prerequisite: "arma ancestral de adamante.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Essência Monstruosa",
-    name: "Essência Monstruosa",
-    description: "Quando faz um acerto crítico com sua arma ancestral, você pode gastar 1 PM para receber uma quantidade de PV temporários igual à metade do seu nível + Sabedoria",
-    prerequisite: "arma ancestral de casco de monstro.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Golpe Fantasma",
-    name: "Golpe Fantasma",
-    description: "Quando faz um ataque com sua arma ancestral, você pode gastar 1 PM para ignorar as imunidades do alvo.",
-    prerequisite: "arma ancestral penetrante*.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Mistério Nebuloso",
-    name: "Mistério Nebuloso",
-    description: "Quando faz um ataque corpo a corpo com sua arma ancestral, você pode gastar 1 PM para obter camuflagem leve por um turno. ",
-    prerequisite: "arma ancestral harmonizada.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Paradoxo da Extinção",
-    name: "Paradoxo da Extinção",
-    description: "Quando faz um acerto crítico com sua arma ancestral, você pode gastar 2 PM para multiplicar o dano adicional causado pelo encanto anticriatura. ",
-    prerequisite: "10º nível de samurai, arma ancestral anticriatura.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Paradoxo Viperino",
-    name: "Paradoxo Viperino",
-    description: "Quando faz um acerto crítico com sua arma ancestral, você pode gastar 1 PM para ignorar imunidade ou resistência a veneno da criatura atingida. ",
-    prerequisite: "10º nível de samurai, arma ancestral venenosa.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Trovão Incessante",
-    name: "Trovão Incessante",
-    description: "Quando faz um acerto crítico, você pode gastar 2 PM para ativar o encanto trovejante, mesmo que já o tenha usado nessa cena.",
-    prerequisite: "10º nível de samurai, arma ancestral trovejante.",
-    origin: "Dragão Brasil"
-  },
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   { id: "Ataque Disciplinado",
     name: "Ataque Disciplinado",
     description: "Quando ataca com sua arma ancestral, você soma sua Sabedoria nas rolagens de dano (limitado pelo seu nível). ",
@@ -343,70 +444,15 @@ export const powersSamurai: Power[] = [
     prerequisite: "Avalanche das Três Mãos, Serenidade dos Kami.",
     origin: "Dragão Brasil"
   },
-  { id: "Acima do Bem e do Mal",
-    name: "Acima do Bem e do Mal",
-    description: "Quando faz um ataque com sua arma ancestral, você pode gastar 2 PM para aplicar o dano adicional do seu encanto profano ou sagrado contra qualquer criatura. ",
-    prerequisite: "10º nível de samurai, arma ancestral profana ou sagrada.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Aspecto Opulento",
-    name: "Aspecto Opulento",
-    description: "Uma vez por rodada, você pode gastar 1 PM para fintar como uma ação de movimento (ou livre, se tiver Finta Aprimorada).",
-    prerequisite: "arma ancestral cravejada de gemas.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Cortador de Cavalos",
-    name: "Cortador de Cavalos",
-    description: "Quando faz um ataque corpo a corpo com sua arma ancestral, você pode gastar 1 PM para causar um dado de dano extra do mesmo tipo da arma. ",
-    prerequisite: "arma ancestral maciça.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Escudo Ancestral",
-    name: "Escudo Ancestral",
-    description: "Quando faz um ataque com sua arma ancestral, você pode gastar 2 PM para escolher um aliado adjacente. Esse aliado recebe +5 na Defesa por uma rodada. ",
-    prerequisite: "arma ancestral defensora.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Essência Lefeu",
-    name: "Essência Lefeu",
-    description: "Se estiver empunhando sua arma ancestral, você pode gastar 3 PM para somar sua Sabedoria nos testes de ataque e Reflexos e na Defesa por 1 rodada. ",
-    prerequisite: "arma ancestral de matéria vermelha, Ronin.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Essência Rubi",
-    name: "Essência Rubi",
-    description: "Quando faz um ataque com sua arma ancestral, você pode gastar 1 PM para ignorar toda a redução de dano do alvo. ",
-    prerequisite: "arma ancestral de aço-rubi.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Instinto Destruidor",
-    name: "Instinto Destruidor",
-    description: "Você recebe +2 em testes de manobra para quebrar. Sempre que reduz um item a 0 PV com essa manobra, você recupera 1 PM. ",
-    prerequisite: "10º nível de samurai, arma ancestral destruidora.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Nada Além de Um Assassino",
-    name: "Nada Além de Um Assassino",
-    description: "Você recebe a habilidade Ataque Furtivo +1d6. Você pode escolher este poder várias vezes (mas apenas uma vez por patamar) e seus efeitos se acumulam.",
-    prerequisite: "10º nível de samurai, arma ancestral assassina, Ronin.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Paradoxo da Extremidade",
-    name: "Paradoxo da Extremidade",
-    description: "Uma vez por rodada, quando faz um acerto crítico com sua arma ancestral, você pode gastar 2 PM para fazer outro ataque contra uma criatura adjacente. ",
-    prerequisite: "10º nível de samurai, arma ancestral caçadora.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Perfeição Marcial",
-    name: "Perfeição Marcial",
-    description: "Você pode usar uma ação de movimento e 2 PM para somar seu bônus de Olhar Assustador no próximo teste de ataque e, caso acerte, na rolagem de dano com sua arma ancestral. Caso a arma seja magnífica, esse bônus é dobrado",
-    prerequisite: "10º nível de samurai, arma ancestral formidável ou magnífica.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Roda Fluvial",
-    name: "Roda Fluvial",
-    description: "Quando faz um ataque com sua arma ancestral, você pode gastar 2 PM para fazer uma manobra de combate como uma ação livre. ",
-    prerequisite: "arma ancestral equilibrada.",
-    origin: "Dragão Brasil"
-  },
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 ];

@@ -192,6 +192,25 @@ export default function MontariasPage() {
 
               <section className="border-t-2 border-amber-900/20 pt-8">
                 <h1 className="text-2xl md:text-3xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/10 pb-2">
+                  Treinando Montarias Selvagens
+                </h1>
+                <p className="font-medium border-amber-900/10">As duas formas mais comuns para um personagem obter uma montaria é por meio de uma habilidade, como Companheiro Animal e Montaria Sagrada, ou usando tibares para comprar um cavalo, trobo ou outra das montarias comumente disponíveis nos mercados de Arton. Entretanto, existe outra maneira: treinar uma criatura selvagem.</p>
+                <p className="font-medium border-amber-900/10">O primeiro passo para treinar uma criatura é domá-la. Para isso, você precisa capturar a criatura (por meio de uma armadilha, magia etc.) ou derrotá-la em combate. Após isso, deve fazer um teste de Adestramento (CD 15 + ND da criatura). Se passar, você doma a criatura e pode começar a treiná-la. Se falhar, a criatura é muito selvagem para ser treinada.</p>
+                <p className="font-medium border-amber-900/10">Uma vez que a criatura seja domada, é hora de começar seu treinamento. Isso é um teste estendido de Adestramento (CD 15 + ND da criatura), no qual é necessário um total de sucessos igual a 3 + ND da criatura antes de 3 falhas. Cada teste representa um dia de trabalho e você recebe um bônus cumulativo de +1 para cada sucesso consecutivo. Se passar no teste estendido, transforma a criatura em um parceiro montaria iniciante. Se falhar, precisa começar o treinamento do início.</p>
+                <p className="font-medium border-amber-900/10">Treinar uma criatura selvagem exige tempo e dedicação. O treinador se torna responsável pela criatura e deve cuidar de sua alimentação, saúde e segurança. Além disso, precisa passar tempo suficiente a seu lado para que ela se acostume com sua presença. Por isso, durante o período de treinamento, você sofre uma penalidade de –2 em testes de perícia e sua recuperação de PM por descanso diminui em um nível.</p>
+                <p className="font-medium border-amber-900/10">A critério do mestre, estas regras também podem ser usadas para treinar outros tipos de parceiros irracionais (como um animal perseguidor ou vigilante).</p>
+              </section>
+
+              <section className="border-t-2 border-amber-900/20 pt-8">
+                <h1 className="text-2xl md:text-3xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/10 pb-2">
+                  Montarias para Cavaleiros e Paladinos
+                </h1>
+                <p className="font-medium border-amber-900/10">A critério do mestre, quando um personagem recebe uma montaria específica (como o cavalo de guerra concedido por Caminho do Cavaleiro), pode escolher outro tipo de montaria. Se permitir essa opção, o mestre pode limitar os tipos de montarias disponíveis para cada habilidade ou pedir que o personagem cumpra algum requisito adicional para receber a montaria, como viajar até uma região específica ou encontrar um filhote e treiná-lo desde jovem.</p>
+                
+              </section>
+
+              <section className="border-t-2 border-amber-900/20 pt-8">
+                <h1 className="text-2xl md:text-3xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/10 pb-2">
                   Variante: Parceiros Vulneráveis
                 </h1>
                 <p className="font-medium italic border-l-4 border-red-800 pl-4 py-2 bg-[#e8dac1]/50 rounded-r">Com esta variante, parceiros podem se ferir e morrer. Sempre que um personagem sofre dano, deve rolar um dado para cada parceiro. Com um resultado “1”, o parceiro fica ferido. Por si só, isso não tem efeito em jogo. Porém, caso o jogador role um novo 1 para um parceiro que já esteja ferido, esse parceiro morre. O dado rolado depende do poder do parceiro: d4 para iniciantes, d6 para veteranos e d8 para mestres. Esta variante coloca sobre o jogador a decisão de continuar ou não usando um parceiro ferido — o personagem abre mão da ajuda para não arriscar o amigo? Recomendamos esta variante apenas para parceiros circunstanciais, não aqueles recebidos por habilidades de classe.</p>
