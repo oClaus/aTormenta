@@ -419,6 +419,61 @@ export const mounts: Mount[] = [
       mestre: "Cada dado de seus efeitos mágicos de cura aumenta em um passo (até o máximo de d12). Unicórnios só aceitam ser cavalgados por pessoas dignas (o mestre tem a palavra final sobre isso)."
     }
   },
+  { id: "Cavalo Esqueleto",
+    name: "Cavalo Esqueleto",
+    size: "Grande",
+    description: "Um morto-vivo profano formado a partir da ossada de um cavalo. Animado por magia necromântica ou pela aura de locais malditos, atua como uma montaria incansável e assustadora que instila pavor no coração dos vivos.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 12m e você recebe uma ação de movimento extra por turno (apenas para se deslocar).",
+      veterano: "Você recebe +2 em Intimidação e na CD de efeitos de medo.",
+      mestre: "Você recebe uma segunda ação de movimento extra por turno (novamente, apenas para se deslocar) e o alcance de seus efeitos de medo aumenta em um passo (de curto para médio, de médio para longo)."
+    }
+  },
+  { id: "Deinonico",
+    name: "Deinonico",
+    size: "Médio",
+    description: "Um predador bípede plumado nativo de Galrasia, notável por sua inteligência astuta e ferocidade. Armado com uma terrível garra em forma de foice em cada pata, é uma letal máquina de combate que, embora raramente, pode ser adotada como montaria por heróis valorosos.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 12m e sua margem de ameaça com armas corpo a corpo aumenta em +1.",
+      veterano: "Você recebe +5 em testes de Atletismo para saltar e uma ação de movimento adicional por turno (apenas para se deslocar).",
+      mestre: "Seu deslocamento muda para 15m e o bônus na margem de ameaça aumenta para +2."
+    }
+  },
+  { id: "Galhada Macho",
+    name: "Galhada Macho",
+    size: "Grande",
+    description: "Um ser construto de natureza vegetal com a aparência de um grande cervo feito de musgo e galhos. Dóceis e ariscos, os machos possuem chifres abençoados por Allihanna, sendo montarias muito valorizadas por devotos da deusa.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 12m e você recebe +2 em Sobrevivência.",
+      veterano: "Seus ataques corpo a corpo são considerados mágicos e, uma vez por turno, você recebe +1d8 em uma rolagem de dano corpo a corpo (esse bônus é dobrado contra mortos-vivos).",
+      mestre: "O bônus em rolagens de dano muda para +1d10 e você recebe uma ação de movimento extra por turno (apenas para se deslocar)."
+    }
+  },
+  { id: "Galhada Fêmea",
+    name: "Galhada Fêmea",
+    size: "Grande",
+    description: "Uma criatura vegetal com formato semelhante a uma corça de musgo. Extremamente visada por caçadores por produzir uma seiva rara com propriedades curativas, mas que também serve fielmente a druidas e aliados da natureza.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 12m e você pode gastar uma ação padrão e 1 PM para curar 1d8+1 PV.",
+      veterano: "Você também pode gastar uma ação padrão e 3 PM para curar 3d8+3 PV ou remover uma condição de doença, fadiga, paralisia ou veneno que o esteja afetando.",
+      mestre: "Você recebe uma ação de movimento extra por turno (apenas para se deslocar) e pode também gastar uma ação padrão e 5 PM para curar 6d8+6 PV."
+    }
+  },
+  { id: "Tuntram",
+    name: "Tuntram",
+    size: "Enorme",
+    description: "Um massivo lagarto-trovão herbívoro de Galrasia, guarnecido por um espesso escudo ósseo craniano e longos chifres. De temperamento notoriamente violento e irritadiço, é uma montaria cobiçada por cavaleiros audazes devido à excelente proteção frontal que sua carapaça oferece.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 9m e você recebe +2 em testes de ataque para derrubar e empurrar.",
+      veterano: "Você recebe cobertura leve contra ataques à distância e uma ação de movimento extra (apenas para se deslocar).",
+      mestre: "Você recebe +2 em testes de ataque para atropelar e, quando faz essa manobra, seu oponente não tem a opção de sair do caminho (mas ele ainda pode resistir com um teste oposto). Quando atropela uma criatura com essa manobra, você pode gastar 1 PM para fazer um ataque extra contra ela."
+    }
+  },
 
   
 
