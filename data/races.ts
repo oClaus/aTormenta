@@ -573,9 +573,11 @@ export const races: Race[] = [
       { description: "Escolha +1 em dois atributos diferentes (exceto Constituição)" },
     ],
   },
+  
+  // Dragão Brasil - 224
   { id: "Anão da Superfície",
     name: "Anão da Superfície",
-    origin: "Dragão Brasil",
+    origin: "Dragão Brasil - 224",
     image: "/racas/anao_superficie.png",
     description: "Nós, o povo anão da superfície, somos a prova viva de que a tradição anã não precisa estar presa ao subterrâneo para continuar firme. Enquanto doheritas erguem cidadelas sob as montanhas, nós preferimos as estradas, feiras e portos de Arton, viajando com carroças reforçadas, cofres bem trancados e um sorriso confiante sob a barba. Somos um povo de mercadores natos, conhecidos por negociar com justiça, cumprir acordos à risca e nunca trapacear — afinal, um anão pode até mudar de rota, mas jamais de palavra.\nMesmo longe das cavernas ancestrais, os anões da superfície mantêm vivos os costu­mes de nosso povo. Suas barbas exibem tranças que marcam clãs, viagens memoráveis ou contratos importantes. E suas forjas, embora menores e portáteis, produzem obras que fariam qualquer ferreiro de Doherimm erguer a sobrancelha em aprovação. Acostumados a lidar com diferentes culturas, nós aprendemos a rir alto, brindar com estranhos e contar boas histórias ao redor da fogueira, sem nunca esquecer quem somos.\n— Bartha Barba-de-Aço, anão da superfície paladino de Valkaria.",
     abilities: [
@@ -605,7 +607,7 @@ export const races: Race[] = [
   },
   { id: "Elfo-do-Gelo",
     name: "Elfo-do-Gelo Ω",
-    origin: "Dragão Brasil",
+    origin: "Dragão Brasil - 224",
     image: "/racas/elfo_do_gelo.png",
     description: "Meu povo descende daqueles que deixaram as asas de Glórienn e encontraram refúgio onde quase ninguém ousava ir: as gélidas Montanhas Uivantes. Lá, aprendemos a sobreviver num mundo de neve eterna, ventos cortantes e caça difícil. Com o tempo, o frio deixou de ser um obstáculo e passou a moldar as pessoas: pele pálida como a geada, cabelos em tons claros ou frios, olhos adaptados à escuridão e corpos marcados por cicatrizes de um ambiente que não perdoa erros. Passamos a viver em pequenos grupos, geralmente em cavernas, sem reis ou chefes: cada aldeia decide seu caminho em conjunto, guiada pela necessidade e pela experiência.\nMuitos elfos-do-gelo são como eu, devotos da Dragoa-Rainha do Gelo, pedindo proteção e força, enquanto outros ainda fazem preces a Allihanna por boas caçadas. Poucos de nós deixam as montanhas, mas quando o fazem é por necessidade, curiosidade ou chamado da aventura — e onde passam, levam consigo o silêncio do inverno e a certeza de que até no frio mais implacável a liberdade pode florescer.",
     abilities: [
@@ -630,7 +632,7 @@ export const races: Race[] = [
   },
   { id: "Elfo-Sombrio",
     name: "Elfo-Sombrio Ω",
-    origin: "Dragão Brasil",
+    origin: "Dragão Brasil - 224",
     image: "/racas/Elfo-Sombrio.png",
     description: "Nos abismos de Sombria, onde a luz é uma lembrança distante e as sombras parecem ter vontade própria, meu povo aprendeu a transformar silêncio em poder e paciência em arma. Nossas cidades se erguem como colmeias de pedra e obsidiana, cheias de passagens ocultas, torres invertidas e salões iluminados por fungos bioluminescentes e chamas negras. Para um elfo-sombrio, sobreviver é entender o jogo social: alianças são afiadas como lâminas, promessas duram o tempo que for útil e a confiança é uma fraqueza rara.\nEmbora sejamos temidos em Arton, engana-se quem acredita que sejamos vilões. Nós somos herdeiros de um mundo mais honesto, onde a força e a astúcia definem o destino. Somos guerreiros, conjuradores e assassinos que treinam desde cedo, pois em Sombria não há espaço para fraqueza. Alguns poucos, porém, abandonam o reino divino de Tenebra e viajam até Arton, movidos por ambição, curiosidade ou exílio. Esses raros aventureiros carregam consigo o peso do preconceito e a fama sombria de nosso povo, mas também o potencial de se provar tão valoroso quanto qualquer herói.\n— Eleanorilanas Danthallas, elfa-sombria ladina de Hyninn.",
     abilities: [
@@ -659,7 +661,7 @@ export const races: Race[] = [
   },
   { id: "Humano Feérico",
     name: "Humano Feérico",
-    origin: "Dragão Brasil",
+    origin: "Dragão Brasil - 224",
     image: "/racas/Humano_Feérico.png",
     description: "Raptados, trocados ou substituídos ainda crianças pelas fadas da Pondsmânia, nós feéricos crescemos em salões de cristal, bosques impossíveis e palácios que só existem à meia-noite. Lá, aprendemos que nomes têm poder, promessas são leis e a própria realidade pode se dobrar à vontade da Rainha Thantalla-Dhaedelin. Quando fugi e retornei a Deheon, até parecia um humano comum à primeira vista, mas algo em mim denunciava a passagem pelo Reino das Fadas. Depois de viver lá, a magia nos envolve de forma natural, quase instintiva.\nDe volta ao mundo mortal, nós feéricos nunca nos encaixamos por completo. Alguns pensam rápido demais, outros sentem demais e há quem deseje demais. As “bênçãos” que nos foram dadas pelos seres feéricos são curiosas, imprevisíveis e perigosas, nos fazendo alternar entre uma alegria contagiante e uma melancolia profunda por algo que não conseguimos explicar. No fim das contas, ser um humano feérico é carregar dois mundos no peito — e não pertencer completamente a nenhum deles.\n— Aedwlyn Dralinur, feérico druida de Allihanna.",
     abilities: [
@@ -713,7 +715,7 @@ export const races: Race[] = [
   },
   { id: "Medusa Dracônica",
     name: "Medusa Dracônica",
-    origin: "Dragão Brasil",
+    origin: "Dragão Brasil - 224",
     image: "/racas/medusa_draconica.png",
     description: "Nós somos herdeiras de um legado antigo e poderoso, fruto da união entre o sangue das medusas e a essência dos dragões. Diferente das medusas serpentinas, a magia flui em nós de forma quase instintiva, carregada da essência elemental dos dragões. Nossas serpentes exibem escamas mais duras e cores profundas, e nosso olhar não petrifica, ele lança magias. Para medusas dracônicas como eu, a herança dos dragões não é apenas um detalhe de nascimento, mas um chamado: fomos feitas para lembrar o mundo do poder de Kallyadranoch.\nCulturalmente, medusas dracônicas tendem a se organizar em círculos fechados, ordens ou linhagens, muitas vezes seguindo a tradição dos trios, um símbolo de equilíbrio, vigilância e domínio. Devotas de Kallyadranoch são mais comuns, embora não exclusivas, muitas de nós se dedicam também a Sckhar, Beluhga e outros Dragões-Reais; ou a divindades de poder semelhante, como Arsenal e Thwor. Orgulhosas e pacientes, nós acreditamos que governar é um dever natural, não uma ambição vulgar, e que a força deve ser usada com propósito, não por impulso. Quando uma de nós surge em Arton, raramente o faz em silêncio: nossa presença anuncia intriga, reverência e poder bruto.\n— Aleteia, medusa dracônica cavaleira de Kallyadranoch",
     abilities: [
@@ -737,7 +739,7 @@ export const races: Race[] = [
   },
   { id: "Teju - Tabrachi",
     name: "Teju - Tabrachi Ω",
-    origin: "Dragão Brasil",
+    origin: "Dragão Brasil - 224",
     image: "/racas/teju.png",
     description: "Muito me ofende quem confunde meu povo com aqueles sapos brutamontes. Tejus são a face menos conhecida — e bem mais refinada — do sangue tabrachi. Enquanto os homens-sapos se aferram ao pântano e à brutalidade ritual, nós seguimos outro caminho: somos moldados por rios limpos, cavernas úmidas e ruínas alagadas onde agilidade vale mais que força bruta. Pequenos e esguios, somos salamandras bípedes, com caudas longas, pele fria e úmida e movimentos rápidos como um bote certeiro. Ouvi dizer que, à distância, já fomos confundidos com kobolds, mas basta um olhar atento para perceber que não temos escamas ou fogo; apenas músculos flexíveis, olhos atentos e uma elegância anfíbia.\nCulturalmente, somos mais organizados e curiosos que os tabrachi comuns. Nossas comunidades são estáveis, com tradições orais, líderes eleitos e um apreço surpreendente por diplomacia, comércio e artes práticas como navegação fluvial e engenharia mágica. Embora não rejeitemos o uso da força, preferimos astúcia e velocidade, atacando apenas quando necessário. Quando um teju deixa suas águas natais para se aventurar pelo Reinado, costuma fazê-lo como explorador, mensageiro ou aventureiro ágil, provavelmente em busca de um novo conhecimento mágico, teórico ou prático.\n— Rusk Ojawale, teju frade de Nerelim",
     abilities: [
@@ -1483,6 +1485,127 @@ export const races: Race[] = [
     ],
     longevidade: "Normal",
     devotos: "Hyninn, Megalokk, Tenebra"
+  },
+  { id: "Ceratops",
+    name: "Ceratops",
+    origin: "Ameaças de Arton",
+    image: "/ameacas/ceratops.png",
+    description: "“Hah! Pois uma vez enfrentei um desses numa arena, só com os meus punhos! Adivinhem quem venceu?”\n — Murro, humano lutador \n\n Alta e forte como um ogro, a criatura exibe uma cabeçorra de formato incomum, ostentando um escudo de osso e vários longos chifres. Tem couro rosa-alaranjado, coberto de pinturas de rituais. A cauda é longa, musculosa e também com chifres. Veste um manto orgulhoso feito com a pele de algum grande felino, além de joias cravejadas com gemas locais. \n Ceratops são os maiores e mais fortes entre os thera. Descendem de enormes quadrúpedes com cabeças blindadas e repletas de chifres. São guerreiros truculentos, orgulhosos e agressivos; na maior parte dos casos, sua simples aparência basta para desencorajar qualquer agressor. \n Ceratops são caçadores-coletores, saindo em expedições para colher vegetais e caçar — embora herbívoros, abatem animais por seu couro, ossos e outras matérias-primas. Sua sociedade é separada em chefes e família. Chefes são aqueles que lideram, lutam e caçam; família são aqueles que coletam, fabricam e consertam. Ainda que o papel de chefe seja muitas vezes reservado aos homens (particularmente em Galrasia), não é assim em todas as comunidades; algumas são matriarcais, enquanto outras dividem as funções igualmente entre os gêneros. \n Suas aldeias são construídas em clareiras ou praias, perto de florestas. Têm casas de alvenaria, redondas, com telhados de palha. A proximidade de um rio ou lago também é desejada. \n Como outros thera, ceratops nascem quadrúpedes e atarracados, como pequenos rinocerontes. Começam a caminhar nas pernas traseiras aos 10 anos e atingem a maturidade perto dos 14, quando os chifres estão crescidos. Filhotes são criados e educados pela família, tratando todos os adultos como “mãe” e “pai”. \n Como a maioria dos animais de pasto, seus ancestrais nunca se afastaram do chão durante toda a vida; seu mundo não tem noções como “acima”, “abaixo”, “subir” ou “descer”. Por isso, de forma similar aos minotauros, ceratops temem altura.",
+    abilities: [
+      {
+        name: "Chifres",
+        description: "Você possui uma arma natural de chifres (dano 1d8, crítico x2, perfuração). Uma vez por rodada, quando usa a ação agredir para atacar com outra arma, pode gastar 1 PM para fazer um ataque corpo a corpo extra com os chifres."
+      },
+      {
+        name: "Papel Tribal",
+        description: "Você é treinado em uma perícia a sua escolha entre Cura, Intimidação, Ofício ou Sobrevivência."
+      },
+      {
+        name: "Paquidérmico",
+        description: "Seu tamanho é Grande. Você recebe +1 na Defesa e pode usar Força como atributo-chave de Intimidação (em vez de Carisma)."
+      },
+      {
+        name: "Medo de Altura",
+        description: "Se estiver adjacente a uma queda de 3m ou mais (como um buraco ou penhasco), você fica abalado."
+      }
+    ],
+    attributeModifiers: [
+      { attribute: "con", modifier: 2 },
+      { attribute: "for", modifier: 1 },
+      { attribute: "des", modifier: -1 },
+      { attribute: "int", modifier: -1 }
+    ],
+    longevidade: "Normal",
+    devotos: "Allihanna, Arsenal, Azgher, Lena, Megalokk"
+  },
+  { id: "Pteros",
+    name: "Pteros",
+    origin: "Ameaças de Arton",
+    image: "/ameacas/pteros.png",
+    description: "“Ele acha que é bom só porque voa! Deixa só eu mostrar um pouco da minha magia!”\n — Lassiantre, elfa maga \n\n A criatura de um metro e meio parece magra, mirrada, mas de musculatura rija. Os braços abertos revelam ser asas membranosas, com mãos rústicas, atrofiadas. A cabeça apresenta olhos de águia, focinho longo e uma crista colorida de cartilagem. A pele é lisa, coberta com uma fina penugem cinza-esverdeada. Tem cauda longa e fina, com ponta em forma de folha. As garras nos pés parecem bem perigosas. \n Pteros, ou “voadores”, são os únicos thera capazes de voar. Talvez por possuírem mãos subdesenvolvidas, são também os menos avançados tecnologicamente. Quase não usam qualquer arma ou instrumento — exceto pedras para quebrar conchas duras, e ninhos de galhos e algas marinhas. Também dispensam vestimentas, porque as asas dificultam seu uso. Quando necessário, recorrem a pequenas perfurações nas membranas das asas para a passagem de cintos, alças e cordões. \n Pteros formam grandes bandos, mas com organização social muito simples: não formam tribos, não adotam líderes, não dividem tarefas. Só vivem juntos porque são os únicos capazes de atingir os rochedos, penhascos e grandes árvores que escolhem para construir ninhos. Cada casal se ocupa com a própria sobrevivência e com sua prole. Apenas grandes emergências — como um predador perigoso na região — podem unir o bando contra uma ameaça comum. \n Pteros são monogâmicos, muito ligados a seus parceiros. O casal permanece unido por toda a vida; um voador pode se sacrificar para proteger o(a) companheiro(a). Quando um morre, o outro também pode morrer de tristeza. Aqueles que sobrevivem à perda, não raras vezes, tornam-se aventureiros. \n Apesar de sua reclusão, não é impossível negociar com pteros. Por seu acesso aos pontos mais remotos da região onde vivem, eles conhecem muitos segredos e podem ser convencidos a conduzir expedições. Como pagamento, estão sempre interessados em itens mágicos que consigam usar.",
+    abilities: [
+      {
+        name: "Ligação Natural",
+        description: "Você possui uma ligação mental com uma criatura inteligente (Int –3 ou mais). Vocês podem se comunicar mentalmente em alcance longo e sempre sabem em que direção e distância podem encontrar o outro. Você pode trocar a criatura com a qual mantém o vínculo no início de cada aventura."
+      },
+      {
+        name: "Mãos Rudimentares",
+        description: "Suas mãos não permitem que você empunhe itens, a menos que sejam mágicos ou especialmente adaptados para você (o que demora um dia e custa 50% do preço do item, sem contar melhorias). Seus itens iniciais, e aqueles recebidos por sua origem ou habilidades, são adaptados para você."
+      },
+      {
+        name: "Pés Rapinantes",
+        description: "Seus pés são duas armas naturais de garras (dano 1d6 cada, crítico x2, corte). Uma vez por rodada, quando usa a ação agredir para atacar com uma arma, você pode gastar 1 PM para fazer um ataque corpo a corpo extra com uma das garras, desde que ela esteja livre e não tenha sido usada para atacar neste turno. Como alternativa, se tiver habilidades que exijam uma arma secundária (como Estilo de Duas Armas), você pode usá-las com suas garras."
+      },
+      {
+        name: "Senhor dos Céus",
+        description: "Você pode pairar a 1,5m do chão com deslocamento 9m. Isso permite que você ignore terreno difícil e o torna imune a dano por queda (a menos que esteja inconsciente). Se não estiver usando armadura pesada, você pode gastar 1 PM por rodada para voar com deslocamento de 12m. Quando abre suas asas para pairar ou voar, você ocupa o espaço de uma criatura de uma categoria de tamanho maior que a sua."
+      },
+      {
+        name: "Sentidos Rapinantes",
+        description: "Você recebe visão na penumbra e +2 em Percepção e Sobrevivência."
+      }
+    ],
+    attributeModifiers: [
+      { attribute: "sab", modifier: 2 },
+      { attribute: "des", modifier: 1 },
+      { attribute: "int", modifier: -1 }
+    ],
+    longevidade: "Normal",
+    devotos: "Allihanna, Lena, Marah, Wynna"
+  },
+  { id: "Velocis",
+    name: "Velocis",
+    origin: "Ameaças de Arton",
+    image: "/ameacas/velocis.png",
+    description: "“Você chama de covardia. Eu chamo de presente de Allihanna a eles, para evitar derrota e morte.”\n — Lisandra de Allihanna, sumo-sacerdotisa \n\n Ele é alto e esguio, de pele azul-acinzentada, com manchas de negro profundo nas pernas, antebraços, pescoço e ao redor dos olhos. Tem um par de pequenos chifres voltados para trás, uma crina curta atrás do pescoço e outra na cauda delgada. Veste uma tanga simples. Empunha uma lança e um escudo grande, mas de aspecto leve. \n Parecidos com antílopes, os membros do povo-trovão chamados velocis são verdadeiras máquinas de correr e saltar. Alguns os descrevem como as criaturas terrestres mais rápidas de Arton. \n Estes thera nômades vivem em campo aberto, especialmente na Grande Savana, colhendo o que precisam por onde passam. Erguem acampamentos temporários em épocas de clima rigoroso, mas nunca ficam muito tempo no mesmo lugar; sua sobrevivência depende da fuga rápida. Comem quase qualquer matéria vegetal (até madeira), mas também caçam para abastecer a tribo de ossos, peles e ingredientes para magia. Uma grande tribo velocis é como uma manifestação de Allihanna: utiliza cada parte de suas dádivas, deixando para trás apenas vegetação rasteira e galhos nus. \n Velocis nascem quadrúpedes, como pequenas gazelas. São transportados pelas mães nas costas, em mochilas simples; uma ou duas semanas mais tarde, conseguem trotar e acompanhar o bando. Seus chifres crescem aos 9 anos, quando adotam a postura humanoide dos adultos e atingem a maturidade. \n Bastante espirituais, estes thera são os únicos que escolhem devotos divinos como líderes — tradicionalmente uma clériga de Marah, que eles chamam Sarana. Algumas tribos convivem com os ceratops, beneficiando-se de sua força guerreira e intimidação contra predadores — enquanto estes, por sua vez, são alertados contra perigos pelos incríveis sentidos aguçados dos velocis. \n Velocis não são apenas covardes, são orgulhosamente covardes. Nenhuma honra ou amor próprio impedem que violem promessas, abandonem companheiros ou recorram a golpes baixos. Ainda assim, são mestres em sobrevivência — não enfrentam perigos, mas sabem evitá-los, sendo valiosos como batedores, rastreadores ou curandeiros.",
+    abilities: [
+      {
+        name: "Através de Espinheiros",
+        description: "Você recebe redução de corte e perfuração 2 e não sofre redução em seu deslocamento por terreno difícil natural."
+      },
+      {
+        name: "Sentidos Selvagens",
+        description: "Você recebe +2 em Sobrevivência, visão na penumbra e faro (contra inimigos em alcance curto que não possa ver, você não fica desprevenido e camuflagem total lhe causa apenas 20% de chance de falha)."
+      },
+      {
+        name: "Velocista da Planície",
+        description: "Seu deslocamento é 12m. Você pode usar Destreza como atributo-chave de Atletismo (em vez de Força) e, quando faz testes de Atletismo para correr ou saltar, pode rolar dois dados e usar o melhor resultado."
+      }
+    ],
+    attributeModifiers: [
+      { attribute: "des", modifier: 2 },
+      { attribute: "sab", modifier: 1 },
+      { attribute: "int", modifier: -1 }
+    ],
+    longevidade: "Normal",
+    devotos: "Allihanna, Lena, Marah"
+  },
+  { id: "Voracis",
+    name: "Voracis",
+    origin: "Ameaças de Arton",
+    image: "/ameacas/voracis.png",
+    description: "“Espreitei-o muitas vezes. Era ainda fraco, perdido. Deixei-o livre para crescer. Tornar-se forte, digno. Sonhei com este futuro.”\n — Ghanna dos Voracis \n\n Embora pareça uma mulher baixa e esguia, sua postura lembra mais uma pantera. A cabeça é feral, de focinho alongado. Tem pele marrom-avermelhada, olhos amarelos de leoa, uma cauda fina e escamada, e uma crista de cores vivas. Veste uma tanga leve e adornos feitos de ossos, garras e dentes. Uma mão empunha uma adaga serrilhada enquanto a outra exibe garras negras. \n Também conhecidas como “caçadoras”, voracis estão entre os humanoides mais agressivos de Arton, temidas até pelos outros thera. São as rainhas de seus territórios, o topo da cadeia alimentar — aquelas que caçam todos, sem serem caçadas por ninguém. Arrogância, orgulho e confiança encarnados, voracis são quase incapazes de acreditar na própria derrota: atacam qualquer inimigo sem medir consequências. Como demonstração de sua supremacia, capturam e conservam membros de outras raças como “mascotes”, por assim dizer. \n A sociedade voracis é rígida e matriarcal. As mulheres caçam, lutam e lideram. Os machos da espécie são raros, quase nunca vistos; suas vidas são consideradas valiosas, sendo incomum que abandonem a segurança da aldeia. Alguns acabam se tornando druidas. Outros, rebeldes, escapam de suas “protetoras” em busca de aventura — ou pelo menos um pouco de liberdade até que sejam recapturados. \n Voracis habitam vilas nas copas das árvores, em grandes tablados de madeira com cabanas semi-esféricas, feitas de ossos e decoradas com troféus de caça. Elevadores de cordas com roldanas de pedra (um dos mais espantosos avanços técnicos vistos entre os povos thera) conectam a vila ao solo; uma vez que as próprias caçadoras são exímias em escaladas, os elevadores são usados apenas para transportar cargas e prisioneiros. \n Voracis escolhem sua líder em combate, não raras vezes até a morte. Desafios pela liderança são comuns (chega a ser raro que uma líder mantenha seu posto por mais que algumas semanas). Seguem uma hierarquia baseada em força e intimidação — as mais fortes humilham as mais fracas para demarcar seu status.",
+    abilities: [
+      {
+        name: "Garras",
+        description: "Suas mãos são duas armas naturais de garras (dano 1d6 cada, crítico x2, corte). Uma vez por rodada, quando usa a ação agredir para atacar com uma arma, você pode gastar 1 PM para fazer um ataque corpo a corpo extra com uma das garras, desde que ela esteja livre e não tenha sido usada para atacar neste turno. Como alternativa, se tiver habilidades que exijam uma arma secundária (como Estilo de Duas Armas), você pode usá-las com suas garras."
+      },
+      {
+        name: "Rainha da Selva",
+        description: "Você recebe deslocamento de escalada 9m, +2 em Atletismo e recupera +1 PV por nível quando descansa."
+      },
+      {
+        name: "Sentidos Selvagens",
+        description: "Você recebe +2 em Sobrevivência, visão na penumbra e faro (contra inimigos em alcance curto que não possa ver, você não fica desprevenido e camuflagem total lhe causa apenas 20% de chance de falha)."
+      }
+    ],
+    attributeModifiers: [
+      { attribute: "des", modifier: 2 },
+      { attribute: "con", modifier: 1 },
+      { attribute: "int", modifier: -1 }
+    ],
+    longevidade: "Normal",
+    devotos: "Allihanna, Arsenal, Megalokk"
   },
   
   
