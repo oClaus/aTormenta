@@ -54,7 +54,7 @@ export const enchantments: Enchantment[] = [
 ];
 
 export const accessories: SpecificAccessory[] = [
-  // Dragão Brasil
+  // Dragão Brasil - 
   { id: "Luvas de Controle",
     name: "Luvas de Controle",
     description: "Essas luvas feitas do corpo de Zedian se assentam nas mãos de forma incômoda. Ao vesti-las, você recebe Força +2, uma arma natural de pancada (impacto, 1d10) e controle mental do filho renascido de Aslothia.",
@@ -62,19 +62,22 @@ export const accessories: SpecificAccessory[] = [
     size: "Maior",
     origin: "Dragão Brasil"
   },
-  { id: "Coroa da Encoratriz",
-    name: "Coroa da Encoratriz",
-    description: "Essa bela coroa ornamentada tem dimensões exageradas, fazendo seu usuário parecer muito mais alto. Parece ser feita de madeira, mas o tipo de madeira muda a partir dos ângulos — pode ser mogno claro, a madeira tollon mais escura ou alguma árvore multicolorida nativa apenas de Al-Gazara. Se há qualquer música ambiente, a coroa parece tremer com vontade de ser usada, “dançando” sozinha se deixada em uma superfície. Dizem que a alma do humanoide transformado em encoratriz reside na coroa. A Coroa da Encoratriz concede Carisma +1 e treinamento em Atuação, mas seu usuário passa a sofrer os efeitos das obrigações e restrições de Nimb. Caso já seja um devoto de Nimb, fica confuso com um resultado de 1 ou 2 no d6 (em vez de apenas 1).",
-    origin: "Dragão Brasil",
-    price: "T$ 9.000",
-    size: "Menor",
-  },
+ 
+
+  // Dragão Brasil - 214
   { id: "Manto do Emissário Arcano",
     name: "Manto do Emissário Arcano",
     description: "Estes mantos coloridos e ornamentados são estilizados de acordo com o usuário. Vesti-los é uma grande honra para um ubaneri, marcando-o como um emissário de seu povo. O manto concede +5 em Misticismo e Sobrevivência, além de +10 PM (somente após um dia de uso).",
-    origin: "Dragão Brasil",
+    origin: "Dragão Brasil - 214",
     price: "T$ 70.000",
     size: "Maior",
+  },
+  { id: "Coroa da Encoratriz",
+    name: "Coroa da Encoratriz",
+    description: "Essa bela coroa ornamentada tem dimensões exageradas, fazendo seu usuário parecer muito mais alto. Parece ser feita de madeira, mas o tipo de madeira muda a partir dos ângulos — pode ser mogno claro, a madeira tollon mais escura ou alguma árvore multicolorida nativa apenas de Al-Gazara. Se há qualquer música ambiente, a coroa parece tremer com vontade de ser usada, “dançando” sozinha se deixada em uma superfície. Dizem que a alma do humanoide transformado em encoratriz reside na coroa. A Coroa da Encoratriz concede Carisma +1 e treinamento em Atuação, mas seu usuário passa a sofrer os efeitos das obrigações e restrições de Nimb. Caso já seja um devoto de Nimb, fica confuso com um resultado de 1 ou 2 no d6 (em vez de apenas 1).",
+    origin: "Dragão Brasil - 214",
+    price: "T$ 9.000",
+    size: "Menor",
   },
 
   // Duelo de Dragões

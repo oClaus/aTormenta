@@ -1607,6 +1607,33 @@ export const races: Race[] = [
     longevidade: "Normal",
     devotos: "Allihanna, Arsenal, Megalokk"
   },
+  { id: "Tabrachi",
+    name: "Tabrachi",
+    origin: "Ameaças de Arton",
+    image: "/racas/Tabrachi.png",
+    description: "“Tenham cuidado. Soube que um povo-sapo maldito ronda por estes pântanos.”\n— Hyakunen, o Imortal (emboscado)\nEmbora humanoide, a criatura tem o aspecto de um grande sapo. Veste uma armadura rústica de couro e empunha uma lança. Da boca larga e rasgada pende uma língua grossa, mas ligeira, que lambe um dos olhos grandes e salientes.\nOs tabrachi, mais conhecidos como “homens-sapos”, são encontrados em pequenos bandos, sempre à procura de vítimas, para roubar seus pertences e oferecê-las como sacrifício a Inghlblhphollstgt, o Grande Deus Sapo. Embora sejam mais numerosos no infame Pântano dos Juncos, entre Deheon e Wynlla, podem ser encontrados por todo o Reinado. Sua tática favorita é manter-se à espreita sob as águas do pântano ou nas copas das árvores, usando sua furtividade para atacar transeuntes de surpresa.",
+    abilities: [
+      {
+      name: "Batráquio",
+      description: "Você recebe visão na penumbra e deslocamento de natação igual ao seu deslocamento terrestre.",
+      },
+      {
+      name: "Linguarudo",
+      description: "Sua língua é uma arma natural que pode atacar inimigos a até 3m (dano 1d4, crítico x2, impacto). Ela é uma arma versátil, fornecendo +2 em testes para desarmar e derrubar. Uma vez por rodada, quando usa a ação agredir com outra arma, você pode gastar 1 PM para fazer um ataque corpo a corpo extra com a língua.",
+      },
+      {
+      name: "Saltador",
+      description: "Você recebe +10 em testes de Atletismo para saltar.",
+      },
+    ],
+    attributeModifiers: [
+      { attribute: "con", modifier: 2 },
+      { attribute: "for", modifier: 1 },
+      { attribute: "car", modifier: -1 }
+    ],
+    longevidade: "Normal",
+    devotos: "Allihanna, Megalokk, Nimb, Sszzaas, Tenebra."
+  },
   
   
   { id: "Qunari",
@@ -2121,33 +2148,7 @@ export const races: Race[] = [
     ],
   },
   
-  { id: "Tabrachi",
-    name: "Tabrachi",
-    origin: "Ameaças de Arton",
-    image: "/racas/Tabrachi.png",
-    description: "“Tenham cuidado. Soube que um povo-sapo maldito ronda por estes pântanos.”\n— Hyakunen, o Imortal (emboscado)\nEmbora humanoide, a criatura tem o aspecto de um grande sapo. Veste uma armadura rústica de couro e empunha uma lança. Da boca larga e rasgada pende uma língua grossa, mas ligeira, que lambe um dos olhos grandes e salientes.\nOs tabrachi, mais conhecidos como “homens-sapos”, são encontrados em pequenos bandos, sempre à procura de vítimas, para roubar seus pertences e oferecê-las como sacrifício a Inghlblhphollstgt, o Grande Deus Sapo. Embora sejam mais numerosos no infame Pântano dos Juncos, entre Deheon e Wynlla, podem ser encontrados por todo o Reinado. Sua tática favorita é manter-se à espreita sob as águas do pântano ou nas copas das árvores, usando sua furtividade para atacar transeuntes de surpresa.",
-    abilities: [
-      {
-      name: "Batráquio",
-      description: "Você recebe visão na penumbra e deslocamento de natação igual ao seu deslocamento terrestre.",
-      },
-      {
-      name: "Linguarudo",
-      description: "Sua língua é uma arma natural que pode atacar inimigos a até 3m (dano 1d4, crítico x2, impacto). Ela é uma arma versátil, fornecendo +2 em testes para desarmar e derrubar. Uma vez por rodada, quando usa a ação agredir com outra arma, você pode gastar 1 PM para fazer um ataque corpo a corpo extra com a língua.",
-      },
-      {
-      name: "Saltador",
-      description: "Você recebe +10 em testes de Atletismo para saltar.",
-      },
-    ],
-    attributeModifiers: [
-      { attribute: "con", modifier: 2 },
-      { attribute: "for", modifier: 1 },
-      { attribute: "car", modifier: -1 }
-    ],
-    longevidade: "Normal",
-    devotos: "Allihanna, Megalokk, Nimb, Sszzaas, Tenebra."
-  },
+  
   
   
   

@@ -1,7 +1,7 @@
 import { Origin } from "@/types/origin";
 
 export const origins: Origin[] = [
-  // Dragão Brasil
+  // Dragão Brasil - 214
   { id: "Iniciado Verdugo (Ubani)",
     name: "Iniciado Verdugo (Ubani)",
     description: "Em Ubani, os ofícios da morte eram ensinados na cidade perdida de Ojumajele. Depois de sua queda diante da Tormenta, estes assuntos se tornaram cada vez mais tabu. Ainda existem aqueles, porém, devotados a cuidar dos ritos fúnebres e eliminar mortos-vivos.",
@@ -18,7 +18,7 @@ export const origins: Origin[] = [
       name: "",
       description: ""
     },
-    source: "Dragão Brasil"
+    source: "Dragão Brasil - 214"
   },
 
 
