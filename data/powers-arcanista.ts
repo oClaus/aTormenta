@@ -142,6 +142,20 @@ export const powersArcanista: Power[] = [
     origin: "Dragão Brasil"
   },
 
+  // Dragão Brasil - 200
+  { id: "Gerador Elemental",
+    name: "Gerador Elemental",
+    description: "Você passa a gerar uma pequena quantidade de energia elemental no seu corpo, mesmo sendo incapaz de conter esse poder. No começo de cada turno, você pode optar por receber uma quantidade de PM temporários igual ao seu Carisma. Caso o faça, cada PM gasto nesse turno faz com que você perca 5 pontos de vida.",
+    prerequisite: "Coração de Dragão, 13º nível.",
+    origin: "Dragão Brasil - 200"
+  },
+  { id: "Sopro Elemental",
+    name: "Sopro Elemental",
+    description: "Quando usa Raio Arcano, você pode gastar mais PM para usar o poder como um sopro, afetando uma área de linha. O tamanho dessa linha é de 3m por PM gasto, limitado pelo alcance do seu Raio Arcano.",
+    prerequisite: "Coração de Dragão, Raio Elemental.",
+    origin: "Dragão Brasil - 200"
+  },
+
 
   { id: "Agrilhoar os Caídos",
     name: "Agrilhoar os Caídos",

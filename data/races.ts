@@ -1634,6 +1634,75 @@ export const races: Race[] = [
     longevidade: "Normal",
     devotos: "Allihanna, Megalokk, Nimb, Sszzaas, Tenebra."
   },
+  {
+  id: "Moreau",
+  name: "Moreau",
+  origin: "Ameaças de Arton",
+  image: "/racas/moreau.png",
+  description: "“Você não tá esperando que eu faça ‘miau’, né?”\n — Jayle, herdeira da raposa \n\n É um bando curioso, para dizer o mínimo. Uma atrevida mulher-raposa em trajes coloridos de bucaneira, um robusto homem-búfalo em armadura pesada e um homem-coruja que poderia ser um druida. Poderia ser um bando de aventureiros. Ou bandidos dispostos a saquear. \n De acordo com sua própria mitologia, esta raça teria se originado de Doze Animais míticos, não existindo moreau de outras espécies. Exceto pela aparência incomum, os moreau são totalmente humanos em cultura e comportamento — e seus aventureiros adotam as mesmas carreiras. Uma diferença é que quase todos os moreau demonstram grande amor ou respeito à natureza; até os mais urbanos ficam à vontade na presença de animais. Em sua terra, é comum conviver com animais diversos no ambiente familiar, mesmo entre membros da nobreza. O típico moreau se considera civilizado, sofisticado, mas mesmo assim não vê grande distância entre sua raça e os animais de que vieram. \n Muitos moreau têm aparência quase humana. Trazem apenas traços bestiais mínimos, como orelhas levemente pontiagudas, dentes caninos salientes, unhas um pouco escuras, manchas leves sobre a pele, olhos ou cabelos de cores incomuns… Detalhes perceptíveis apenas com um exame atento. Apenas aqueles conhecidos como Herdeiros possuem atributos ferais mais acentuados. \n Entre os moreau encontrados no continente, os mais comuns são druidas, bucaneiros e cavaleiros, por refletirem as culturas de suas três maiores cidades na terra natal. Grupos moreau podem se opor a aventureiros do Reinado pelas mesmas razões que levariam humanos a fazê-lo — afinal, eles receberam dos Irmãos Selvagens a capacidade de escolher entre o bem e o mal. \n\n “As crianças da Dama, atemorizadas, pediram para nunca mais sofrer tanto. Esses somos nós.”\n — Alvorrrais Hvanholdt, herdeiro do coelho bucaneiro",
+  abilities: [
+    {
+      name: "Herança",
+      description: "Escolha uma das heranças descritas a seguir. Ela representa sua ascendência e determina suas demais habilidades de raça. Além disso, você é considerado também um humano para quaisquer fins.",
+      subAbilities: [
+        {
+          name: "Herança da Coruja",
+          description: "Sabedoria +1, +1 em dois atributos.\n Espreitador. Você recebe visão no escuro e +2 em Percepção e Vontade.\n Garras. Você tem duas armas naturais de garra (dano 1d6, crítico x2, corte), uma em cada mão. Uma vez por rodada, quando usa a ação agredir para atacar com uma arma, você pode gastar 1 PM para fazer um ataque corpo a corpo extra com uma das garras, desde que ela esteja livre e não tenha sido usada para atacar neste turno. Como alternativa, se tiver habilidades que exijam uma arma secundária (como Estilo de Duas Armas), você pode usá-las com suas garras.\n Sapiência. Você pode lançar uma magia de 1º círculo de adivinhação a sua escolha (atributo-chave Sabedoria). Caso aprenda novamente essa magia, seu custo diminui em –1 PM."
+        },
+        {
+          name: "Herança da Hiena",
+          description: "Sabedoria +1, +1 em dois atributos.\n Destemor. Você recebe +2 em rolagens de dano e em testes de resistência contra criaturas maiores que você.\n Faro. Você tem olfato apurado. Contra inimigos em alcance curto que não possa ver, você não fica desprevenido e camuflagem total lhe causa apenas 20% de chance de falha.\n Mordida. Você possui uma arma natural de mordida (dano 1d6, crítico x2, perfuração). Uma vez por rodada, quando usa a ação agredir para atacar com outra arma, pode gastar 1 PM para fazer um ataque corpo a corpo extra com a mordida."
+        },
+        {
+          name: "Herança da Raposa",
+          description: "Inteligência +1, +1 em dois atributos.\n Agarra-me Se Puderes. Seu deslocamento é 12m (em vez de 9m) e você tem visão na penumbra.\n Esperteza Vulpina. Você recebe +2 em duas perícias originalmente baseadas em Inteligência ou Carisma, a sua escolha.\n Faro. Você tem olfato apurado. Contra inimigos em alcance curto que não possa ver, você não fica desprevenido e camuflagem total lhe causa apenas 20% de chance de falha."
+        },
+        {
+          name: "Herança da Serpente",
+          description: "Inteligência +1, +1 em dois atributos.\n Arborícola. Você recebe deslocamento de escalada 6m e +2 em Furtividade.\n Constritor. Você recebe +2 em testes para agarrar e em rolagens de dano contra criaturas que estiver agarrando.\n Instintos Traiçoeiros. Você recebe visão no escuro e +2 em Diplomacia e na CD de seus efeitos mentais."
+        },
+        {
+          name: "Herança do Búfalo",
+          description: "Força +1, +1 em dois atributos.\n Chifres. Você possui uma arma natural de chifres (dano 1d6, crítico x2, perfuração). Uma vez por rodada, quando usa a ação agredir para atacar com outra arma, pode gastar 1 PM para fazer um ataque corpo a corpo extra com os chifres.\n Faro. Você tem olfato apurado. Contra inimigos em alcance curto que não possa ver, você não fica desprevenido e camuflagem total lhe causa apenas 20% de chance de falha.\n Marrada Impressionante. Você recebe +2 em ataques em investida e em testes para empurrar, e pode usar Força como atributo-chave de Intimidação (em vez de Carisma)."
+        },
+        {
+          name: "Herança do Coelho",
+          description: "Destreza +1, +1 em dois atributos.\n Patas Ligeiras. Seu deslocamento é 12m e, quando faz uma investida ou um teste de Atletismo para correr, você não precisa percorrer uma linha reta.\n Pé de Coelho. Quando faz um teste de uma perícia baseada em Destreza (exceto testes de ataque), você pode gastar 1 PM para rolar dois dados e usar o melhor resultado.\n Senso de Preservação. Você recebe visão na penumbra e +2 em Percepção e Reflexos."
+        },
+        {
+          name: "Herança do Crocodilo",
+          description: "Constituição +1, +1 em dois atributos.\n Mordida Poderosa. Você possui uma arma natural de mordida (dano 1d6, crítico x2, perfuração), com a qual recebe +2 em testes de agarrar. Uma vez por rodada, quando usa a ação agredir para atacar com outra arma, pode gastar 1 PM para fazer um ataque corpo a corpo extra com a mordida.\n Predador Aquático. Você tem deslocamento de natação 6m e recebe +1 na Defesa e +2 em Furtividade.\n Surto Reptiliano. Uma vez por cena, você pode gastar 1 PM para realizar uma ação de movimento adicional em seu turno."
+        },
+        {
+          name: "Herança do Gato",
+          description: "Carisma +1, +1 em dois atributos.\n As Muitas Vidas de um Gato. Você soma seu Carisma em testes de Constituição para estabilizar sangramento e em Acrobacia e, se estiver consciente em uma queda, reduz o dano dela em 3d6.\n Garras. Você tem duas armas naturais de garra (dano 1d6, crítico x2, corte), uma em cada mão. Uma vez por rodada, quando usa a ação agredir para atacar com uma arma, você pode gastar 1 PM para fazer um ataque corpo a corpo extra com uma das garras, desde que ela esteja livre e não tenha sido usada para atacar neste turno. Como alternativa, se tiver habilidades que exijam uma arma secundária (como Estilo de Duas Armas), você pode usá-las com suas garras.\n Sentidos Felinos. Você recebe visão na penumbra e +2 em Furtividade e Percepção."
+        },
+        {
+          name: "Herança do Leão",
+          description: "Força +1, +1 em dois atributos.\n Mordida. Você possui uma arma natural de mordida (dano 1d8, crítico x2, perfuração). Uma vez por rodada, quando usa a ação agredir para atacar com outra arma, pode gastar 1 PM para fazer um ataque corpo a corpo extra com a mordida.\n Rugido Imponente. Você pode gastar uma ação de movimento e 1 PM para emitir um rugido assustador. Todos os inimigos em alcance curto sofrem -2 em rolagens de dano por 1 rodada. Medo.\n Sentidos da Realeza. Você recebe visão na penumbra e +2 em Intimidação e Percepção."
+        },
+        {
+          name: "Herança do Lobo",
+          description: "Carisma +1, +1 em dois atributos.\n Faro. Você tem olfato apurado. Contra inimigos em alcance curto que não possa ver, você não fica desprevenido e camuflagem total lhe causa apenas 20% de chance de falha.\n Mordida. Você possui uma arma natural de mordida (dano 1d6, crítico x2, perfuração). Uma vez por rodada, quando usa a ação agredir para atacar com outra arma, pode gastar 1 PM para fazer um ataque corpo a corpo extra com a mordida.\n Táticas de Matilha. Você recebe +2 nas rolagens de dano e na margem de ameaça em ataques contra oponentes que esteja flanqueando."
+        },
+        {
+          name: "Herança do Morcego",
+          description: "Destreza +1, +1 em dois atributos.\n Asas. Você pode pairar a 1,5m do chão com deslocamento 9m. Isso permite que você ignore terreno difícil e o torna imune a dano por queda (a menos que esteja inconsciente). Se não estiver usando armadura pesada, você pode gastar 1 PM por rodada para voar com deslocamento de 12m. Você precisa de espaço para abrir suas asas; quando paira ou voa, ocupa o espaço de uma criatura de uma categoria de tamanho maior que a sua.\n Criatura da Noite. Você recebe visão no escuro e +2 em Furtividade e Percepção.\n Ecolocalização. Você pode gastar 1 PM para receber percepção às cegas em alcance médio por 1 rodada."
+        },
+        {
+          name: "Herança do Urso",
+          description: "Constituição +1, +1 em dois atributos.\n Abraço de Urso. Você é Grande e pode usar Constituição como atributo-chave de Intimidação (em vez de Carisma).\n Faro. Você tem olfato apurado. Contra inimigos em alcance curto que não possa ver, você não fica desprevenido e camuflagem total lhe causa apenas 20% de chance de falha.\n Mordida. Você possui uma arma natural de mordida (dano 1d8, crítico x2, perfuração). Uma vez por rodada, quando usa a ação agredir para atacar com outra arma, pode gastar 1 PM para fazer um ataque corpo a corpo extra com a mordida."
+        }
+      ]
+    }
+  ],
+  attributeModifiers: [
+    { description: "Os modificadores variam de acordo com a Herança escolhida (+1 em um atributo fixo e +1 em dois atributos a sua escolha)" }
+  ],
+  longevidade: "Normal",
+  devotos: "Qualquer",
+  extra: "Mais Humanos que Humanos: Nem todos os moreau são herdeiros completos. Alguns lembram humanos artonianos mais comuns, com traços físicos de animais que não concedem nenhuma habilidade. Para representar isso, ao criar um personagem humano de Moreania, você pode definir que ele possui traços cosméticos de algum animal, como escamas em alguns pontos do corpo, orelhas de gato e outros. Em termos de características de raça, entretanto, ele será um humano."
+},
   
   
   { id: "Qunari",

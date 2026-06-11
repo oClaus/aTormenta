@@ -243,6 +243,24 @@ export const alchemy: Alchemy[] = [
     spaces: "0,5",
   },
 
+  // Dragão Brasil - 200
+  { id: "Escama Companheira",
+    name: "Escama Companheira",
+    type: "Preparados",
+    description: "Essa escama de dragão tratada alquimicamente pode ser usada como uma ação padrão, encostando-a na região do peito, próximo ao coração. Concede 1d10 PM temporários, ou 2d10 caso o usuário tenha o poder Coração de Dragão, seja um feiticeiro de linhagem dracônica ou um kallyanach. Só pode ser criado por alquimistas que tenham um dragão como mestre ou como parceiro.",
+    origin: "Dragão Brasil - 200",
+    price: "T$ 2.000",
+    spaces: "0,5",
+  },
+  { id: "Vitória Líquida",
+    name: "Vitória Líquida",
+    type: "Preparados",
+    description: "Esse composto exige, além dos elementos alquímicos, o dispêndio permanente de 2 PM de uma criatura com o subtipo dragão. Ao consumi-lo, o usuário é preenchido de poder, recebendo +5 em testes de ataque e rolagens de dano, +5 na Defesa, +3m de deslocamento, +5 na CD de suas habilidades, 50 pontos de vida temporários e 25 pontos de mana temporários até o final da cena.",
+    origin: "Dragão Brasil - 200",
+    price: "T$ 6.000",
+    spaces: "0,5",
+  },
+
 
 
 

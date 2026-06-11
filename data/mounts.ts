@@ -474,6 +474,17 @@ export const mounts: Mount[] = [
       mestre: "Você recebe +2 em testes de ataque para atropelar e, quando faz essa manobra, seu oponente não tem a opção de sair do caminho (mas ele ainda pode resistir com um teste oposto). Quando atropela uma criatura com essa manobra, você pode gastar 1 PM para fazer um ataque extra contra ela."
     }
   },
+  { id: "Búfalo-de-Guerra",
+    name: "Búfalo-de-Guerra",
+    size: "Grande",
+    description: "Também conhecido como búfalo-cafre, este colossal e agressivo bovídeo nativo de Moreania possui chifres massivos e couro escuro. Extremamente difíceis de domesticar, costumam servir como imponentes montarias quase exclusivamente para paladinos de Bullton, druidas e heróis excepcionais.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 9m e seu limite de carga aumenta em 5 espaços. Uma vez por rodada, quando faz uma investida montada, você recebe +1d8 em uma rolagem de dano corpo a corpo.",
+      veterano: "Seu deslocamento muda para 12m e ignora terreno difícil.",
+      mestre: "O bônus em rolagens de dano corpo a corpo muda para +2d8 e você recebe uma ação de movimento extra por turno (apenas para se deslocar)."
+    }
+  },
 
   
 

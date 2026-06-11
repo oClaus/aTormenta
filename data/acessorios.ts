@@ -63,7 +63,28 @@ export const accessories: SpecificAccessory[] = [
     origin: "Dragão Brasil"
   },
  
-
+  // Dragão Brasil - 200
+  { id: "Amuleto do Servo",
+    name: "Amuleto do Servo",
+    description: "Esse amuleto consiste de uma pedra preciosa envolta em uma rede de fios de ouro. Dentro dessa pedra reside uma fagulha do poder de um dragão. O usuário do amuleto recebe redução 5 contra o tipo de dano do sopro deste dragão e -5 em testes de resistência contra suas habilidades ou em qualquer teste de ações ofensivas contra ele. Além disso, o servo pode lançar a magia Aviso para enviar mensagens para seu mestre.",
+    price: "T$ 3.000",
+    size: "Menor",
+    origin: "Dragão Brasil - 200"
+  },
+  { id: "Braceletes do Guerreiro Dragão",
+    name: "Braceletes do Guerreiro Dragão",
+    description: "Esses grossos braceletes de couro escuro contam com uma grande gema incrustada em sua superfície, como o olho de um dragão vigilante. Uma vez por rodada, quando obtiver um acerto crítico com garras, você pode gastar 1 PM para fazer um ataque adicional com garras como uma ação livre.",
+    price: "T$ 9.000",
+    size: "Menor",
+    origin: "Dragão Brasil - 200"
+  },
+  { id: "Colar do General Dragão",
+    name: "Colar do General Dragão",
+    description: "Esse amuleto é feito das presas de um dragão. Seu usuário pode usar Servos do Dragão como uma ação padrão e direcionar os kobolds invocados uma vez por rodada como uma ação livre.",
+    price: "T$ 9.000",
+    size: "Menor",
+    origin: "Dragão Brasil - 200"
+  },
   // Dragão Brasil - 214
   { id: "Manto do Emissário Arcano",
     name: "Manto do Emissário Arcano",
@@ -79,6 +100,7 @@ export const accessories: SpecificAccessory[] = [
     price: "T$ 9.000",
     size: "Menor",
   },
+  
 
   // Duelo de Dragões
   { id: "Cetro do Poder Usurpado",

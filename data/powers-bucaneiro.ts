@@ -130,6 +130,14 @@ export const powersBucaneiro: Power[] = [
     origin: "Dragão Brasil"
   },
 
+  // Dragão Brasil - 200
+  { id: "Orgulhoso como um Dragão",
+    name: "Orgulhoso como um Dragão",
+    description: "Você pode gastar uma ação de movimento e 1 PM para exacerbar suas qualidades em voz alta. Faça um teste de Intimidação: para cada 10 pontos no resultado de seu teste, você recebe +1 em testes de ataque e rolagens de dano por uma rodada.",
+    prerequisite: "treinado em Intimidação, Coração de Dragão.",
+    origin: "Dragão Brasil - 200"
+  },
+
   
   { id: "Ardil Afiado",
     name: "Ardil Afiado",

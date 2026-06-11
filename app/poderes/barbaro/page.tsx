@@ -97,6 +97,7 @@ export default function BarbaroPodersPage() {
                   <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Raposa: </span><span className="font-medium">A sagaz raposa nunca está onde se espera. Você pode lançar Imagem Espelhada.</span></p>
                   <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Tartaruga: </span><span className="font-medium">A tartaruga protege os seus. Você pode lançar Armadura Arcana.</span></p>
                   <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Urso: </span><span className="font-medium">O vigoroso urso permite que você lance Vitalidade Fantasma e possa usar seus aprimoramentos como se tivesse acesso aos mesmos círculos de magia que um druida de seu nível.</span></p>
+                  <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Dragão: </span><span className="font-medium">Dragões não são animais, mas algumas tribos bárbaras veneram dragões e os adotam como seu totem. Isso os torna uma opção para animal totêmico. Implacável, o dragão permite que seus bárbaros lancem Arma Mágica. (Dragão Brasil - 200) </span></p>
                 </div>
               </section>
               

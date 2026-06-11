@@ -128,6 +128,20 @@ export const powersCavaleiro: Power[] = [
     origin: "Dragão Brasil"
   },
 
+  // Dragão Brasil - 200
+  { id: "Estandarte do Dragão",
+    name: "Estandarte do Dragão",
+    description: "No início de cada cena, você e todos os aliados que possam ver seu estandarte podem jurar lealdade a um dragão como uma reação. Caso o façam, os PMs temporários recebidos por Estandarte são dobrados e sofrem –2 em testes de resistência contra habilidades de dragões.",
+    prerequisite: "Coração de Dragão, Estandarte.",
+    origin: "Dragão Brasil - 200"
+  },
+  { id: "Postura de Combate: Dragão Incansável",
+    name: "Postura de Combate: Dragão Incansável",
+    description: "Enquanto esta postura estiver ativa, você aumenta sua margem de crítico em dois. Sempre que obtém um acerto crítico, recupera 1 PM.",
+    prerequisite: "Coração de Dragão.",
+    origin: "Dragão Brasil - 200"
+  },
+
 
 
   { id: "Armas da Cavalaria",

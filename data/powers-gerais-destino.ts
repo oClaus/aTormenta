@@ -143,7 +143,79 @@ export const powersGeraisDestino: Power[] = [
     origin: "Ameaças de Arton"
   },
 
-  // Dragão Brasil
+  // Dragão Brasil - 200
+  { id: "Asas do Dragão",
+    name: "Asas do Dragão",
+    description: "Você desenvolve asas dracônicas e recebe deslocamento de voo igual à metade do seu deslocamento. Você sofre –1 nos testes de resistência contra habilidades de dragões.",
+    prerequisite: "Coração de Dragão, 7º nível de personagem.",
+    origin: "Dragão Brasil - 200"
+  },
+  { id: "Conhecimento Dracônico",
+    name: "Conhecimento Dracônico",
+    description: "Você recebe +2 em Misticismo e resistência a magia +2. Você sofre –1 nos testes de resistência contra habilidades de dragões.",
+    prerequisite: "Coração de Dragão.",
+    origin: "Dragão Brasil - 200"
+  },
+  { id: "Garras Dracônicas",
+    name: "Garras Dracônicas",
+    description: "Suas garras causam +1d6 pontos de dano. Esse dano é do mesmo tipo do sopro de energia do dragão ao qual você serve. Você sofre –1 nos testes de resistência contra habilidades de dragões.",
+    prerequisite: "garras, Coração de Dragão.",
+    origin: "Dragão Brasil - 200"
+  },
+  { id: "Senhor dos Céus",
+    name: "Senhor dos Céus",
+    description: "Você recebe +5 na Defesa e em Reflexos se voou pelo menos 3m no último turno.",
+    prerequisite: "deslocamento de voo, Coração de Dragão.",
+    origin: "Dragão Brasil - 200"
+  },
+  { id: "Instinto Dracônico",
+    name: "Instinto Dracônico",
+    description: "Você recebe +2 em Iniciativa e na margem de ameaça das suas garras.",
+    prerequisite: "garras, Coração de Dragão.",
+    origin: "Dragão Brasil - 200"
+  },
+  { id: "Competência Servil",
+    name: "Competência Servil",
+    description: "Você pode gastar 1 PM para somar um d4 ao resultado de qualquer jogada de d20 que realizar. Esse d4 aumenta em um passo sempre que seu bônus de treinamento aumenta, para d6 no nível 7 e para d8 no nível 11. Você sofre –1 nos testes de resistência contra habilidades de dragões.",
+    prerequisite: "Coração de Dragão.",
+    origin: "Dragão Brasil - 200"
+  },
+  { id: "Covil Portátil",
+    name: "Covil Portátil",
+    description: "Você desenvolve um segundo estômago, onde pode armazenar itens que engole. Esse estômago contém uma quantidade de espaços igual ao seu Carisma.",
+    prerequisite: "Coração de Dragão.",
+    origin: "Dragão Brasil - 200"
+  },
+  { id: "Servo da Proteção",
+    name: "Servo da Proteção",
+    description: "Você recebe +5 PV e +2 na Defesa. Você sofre –1 nos testes de resistência contra habilidades de dragões.",
+    prerequisite: "Coração de Dragão.",
+    origin: "Dragão Brasil - 200"
+  },
+  { id: "Servo do Ocaso",
+    name: "Servo do Ocaso",
+    description: "Você é imune à condição alquebrado. Quando obtém um acerto crítico, você pode gastar 1 PM para deixar o alvo lento por 1 rodada (CD Car). Você sofre –1 nos testes de resistência contra habilidades de dragões.",
+    prerequisite: "Coração de Dragão.",
+    origin: "Dragão Brasil - 200"
+  },
+  { id: "Sentidos Dracônicos",
+    name: "Sentidos Dracônicos",
+    description: "Você recebe +5 em Percepção e percepção às cegas. Você sofre –1 nos testes de resistência contra habilidades de dragões.",
+    prerequisite: "Coração de Dragão, 7º nível de personagem.",
+    origin: "Dragão Brasil - 200"
+  },
+  { id: "Servo dos Segredos",
+    name: "Servo dos Segredos",
+    description: "Você recebe +2 em Enganação, Furtividade e Ladinagem. Você sofre –1 nos testes de resistência contra habilidades de dragões.",
+    prerequisite: "Coração de Dragão.",
+    origin: "Dragão Brasil - 200"
+  },
+  { id: "Vigor Dracônico",
+    name: "Vigor Dracônico",
+    description: "Você recebe +5 PV e +2 em Fortitude. Você sofre –1 nos testes de resistência contra habilidades de dragões.",
+    prerequisite: "Coração de Dragão.",
+    origin: "Dragão Brasil - 200"
+  },
 
 
   { id: "Alma Livre",
