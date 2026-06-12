@@ -5407,7 +5407,8 @@ export const spells: Spell[] = [
       },
     ],
   },
-  // Dragão Brasil
+
+  // Dragão Brasil - 219
   { id: "Armadura Gélida",
     name: "Armadura Gélida",
     type: "Universal",
@@ -5419,7 +5420,7 @@ export const spells: Spell[] = [
     duration: "Cena",
     resistance: "Reflexos (veja texto)",
     description: "Esta magia cria uma grossa armadura feita de gelo, protegendo o corpo do usuário, que sofre todos os efeitos de ficar congelado, menos a paralisia. Se ficar em chamas ou sofrer dano de fogo enquanto estiver sob efeito desta magia, o usuário deve fazer um teste de Reflexos (CD 20). Se passar, o efeito da magia se mantém; se falhar, a armadura derrete e você fica arrefecido.",
-    origin: "Dragão Brasil",
+    origin: "Dragão Brasil - 219",
     enhancements: [
       {
         cost: "+1 PM",
@@ -5446,7 +5447,7 @@ export const spells: Spell[] = [
     duration: "Sustentada",
     resistance: "Nenhuma",
     description: "Você evoca uma aura poderosíssima de energia positiva. Aliados que terminarem seus turnos dentro da aura ficam restaurando e absorvendo até o fim do próximo turno deles (se continuarem dentro da área, continuam sob efeito das condições enquanto a magia durar).",
-    origin: "Dragão Brasil",
+    origin: "Dragão Brasil - 219",
     enhancements: [
       {
         cost: "+5 PM",
@@ -5465,7 +5466,7 @@ export const spells: Spell[] = [
     duration: "Sustentada",
     resistance: "Nenhuma",
     description: "Esta magia só pode ser usada em ambientes abertos. A área é coberta por nuvens, que derramam uma chuva fraca. As intempéries climáticas não são fortes o suficiente para causar penalidades, mas deixam todas as criaturas e objetos dentro da área molhados até que gastem uma ação padrão (ou sofram dano de fogo) para se secar.",
-    origin: "Dragão Brasil",
+    origin: "Dragão Brasil - 219",
     enhancements: [
       {
         cost: "+2 PM",
@@ -5484,7 +5485,7 @@ export const spells: Spell[] = [
     duration: "Instantânea",
     resistance: "Reflexos parcial",
     description: "Você toca o chão, fazendo-o irromper em chamas profanas. Criaturas na área sofrem 3d6 pontos de dano de fogo e 3d6 pontos de dano de trevas. Alvos que passarem na resistência reduzem o dano à metade; alvos que falharem ficam decaídos e sangrando (se curar da condição decaído também cura a condição sangrando).",
-    origin: "Dragão Brasil",
+    origin: "Dragão Brasil - 219",
     enhancements: [
       {
         cost: "+2 PM",
@@ -5507,7 +5508,7 @@ export const spells: Spell[] = [
     duration: "Instantânea",
     resistance: "Fortitude parcial",
     description: "Uma névoa gélida envolve sua mão, causando 2d8+2 pontos de dano de frio. Se passar na resistência, o alvo reduz o dano à metade; se falhar, além de sofrer dano, fica arrefecido. Se estiver molhado, o alvo sofre uma penalidade de –5 no teste de resistência.",
-    origin: "Dragão Brasil",
+    origin: "Dragão Brasil - 219",
     enhancements: [
       {
         cost: "+1 PM",
@@ -5534,7 +5535,7 @@ export const spells: Spell[] = [
     duration: "Instantânea",
     resistance: "Nenhuma",
     description: "Você conjura ventos fortes repletos de magia, limpando condições das criaturas dentro da área. Criaturas arrefecidas, eletrificadas, em chamas ou molhadas perdem essas condições; criaturas congeladas ficam arrefecidas; criaturas eletrizadas ficam eletrificadas ou molhadas (à escolha do mestre).",
-    origin: "Dragão Brasil",
+    origin: "Dragão Brasil - 219",
     enhancements: [],
   },
 

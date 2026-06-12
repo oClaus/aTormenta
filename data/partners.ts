@@ -5,7 +5,7 @@ export const partners: Partner[] = [
   { id: "Dranniko",
   name: "D’ranniko (Fortão)",
   description: "Um inseto gigante semelhante a um louva-a-deus branco de olhos vermelhos. Valente e implacável, é temido nas cavernas próximas a Doherimm e valorizado como feroz parceiro de combate.",
-  origin: "Dragão Brasil",
+  origin: "Dragão Brasil - 220",
   benefits: {
     iniciante: "Você recebe resistência a medo +2 e +2 em testes de manobra para quebrar.",
     veterano: "Os bônus aumentam para +3 e, quando faz um acerto crítico, você pode fazer uma manobra quebrar como ação livre contra o mesmo alvo.",

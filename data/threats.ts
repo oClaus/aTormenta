@@ -22398,8 +22398,7 @@ export const threats: Threat[] = [
   //#endregion
 
   //#region Reinos da Moreania
-  {
-    id: "Búfalo-de-Guerra",
+  { id: "Búfalo-de-Guerra",
     name: "Búfalo-de-Guerra",
     description: "“Trocaria um olho e um braço por uma cavalaria desses bichos na Guerra Artoniana.”\n— Prescott de Deheon, veterano de guerra\nO animal tem quase o dobro da altura de um humano na cernelha e deve pesar tanto quanto dois ou três touros. A cabeçorra ostenta chifres massivos, o couro é escuro como piche. Mas o mais surpreendente em sua figura talvez seja o fato de servir como montaria a um cavaleiro em armadura, que parece minúsculo comparado à besta.\nTambém conhecido como búfalo-cafre, este nobre e poderoso bovídeo vive em imensas manadas junto a grandes rios dos Reinos de Moreania. São animais poderosos e temidos, com poucos inimigos naturais — mesmo os leões e ursos só atacam filhotes, ou búfalos que estejam muito velhos ou feridos. As maiores manadas são lideradas por um imenso macho atroz.\nAgressivos e mal-humorados, búfalos-de-guerra são quase impossíveis de domesticar. Eles aceitam servir apenas aos Paladinos de Bullton, como uma dádiva oferecida pela Dama Altiva a esses guerreiros sagrados. Ocasionalmente também atuam como companheiros para druidas e caçadores, e diz-se que alguns exemplares trazidos para o Reinado também se tornaram montarias para grandes heróis.",
     image: "/ameacas/bufalo-de-guerra.png",

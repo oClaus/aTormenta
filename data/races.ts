@@ -531,10 +531,10 @@ export const races: Race[] = [
     ]
   },
 
-  // Dragão Brasil
+  // Dragão Brasil - 220
   { id: "Vampiro",
     name: "Vampiro",
-    origin: "Dragão Brasil",
+    origin: "Dragão Brasil - 220",
     image: "/racas/vampiro.png",
     description: "Vampiros são considerados monstros terríveis, predadores que espreitam à noite em busca do sangue de outras pessoas. E, embora essa descrição possa se aplicar à maioria dos vampiros, a verdade é que nem todos aqueles que sofrem a maldição do vampirismo sucumbem aos seus instintos ferais. Alguns, de fato, lutam contra sua nova natureza, apegando-se à sua humanidade e buscando uma existência o mais próximo possível de sua vida anterior. \n Personagens vampiros são indivíduos que foram transformados no início de suas carreiras ou que, por alguma razão, perderam suas memórias como parte de sua transformação. Alguns buscam uma vida de aventuras como forma de compensar os pecados causados por sua fome, ou como um caminho para dominar sua fera interior ou mesmo encontrar uma cura para sua condição. \n\n Tornando-se um Vampiro \n As regras para personagens vampiros assumem a criação de um vampiro jovem, em início de carreira. Entretanto, mesmo aventureiros veteranos podem ser transformados em vampiros — geralmente como resultado de um embate mal-sucedido contra uma dessas criaturas mais poderosas. \n Para transformar um personagem já existente em um vampiro, troque todas as características raciais do personagem (incluindo modificadores de atributos) pelas características de vampiro. Se o personagem não for humano, escolha uma das habilidades de sua raça original (aprovada pelo mestre) para sua habilidade Resquícios da Outra Vida. Por fim, para cada patamar do personagem, você pode substituir um de seus poderes de classe por um poder de Bênção Vampírica. Ao substituir esses poderes, tenha em mente poderes que são pré-requisitos de outros poderes do personagem. Você deve continuar cumprindo quaisquer pré-requisitos dos poderes restantes.",
     abilities: [
@@ -573,7 +573,6 @@ export const races: Race[] = [
       { description: "Escolha +1 em dois atributos diferentes (exceto Constituição)" },
     ],
   },
-  
   // Dragão Brasil - 224
   { id: "Anão da Superfície",
     name: "Anão da Superfície",

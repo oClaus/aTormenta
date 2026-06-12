@@ -203,117 +203,118 @@ export const conditions: Condition[] = [
     description: "O personagem sofre –2 na Defesa.",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  // Dragão Brasil
+
+  // Dragão Brasil - 219
   { id: "abencoado",
     name: "Abençoado",
     description: "O personagem foi momentaneamente tocado por uma força divina, se torna imune a efeitos de metabolismo, metamorfose, trevas e veneno. Se ficar decaído, em vez disso perde as duas condições.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 219"
   },
   { id: "absorvendo",
     name: "Absorvendo",
     description: "O personagem recupera PV em uma quantidade igual à metade de todo dano que causa (limitado pelo nível).",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 219"
   },
   { id: "alentado",
     name: "Alentado",
     description: "O personagem recebe +5 em testes de Inteligência, Sabedoria e Carisma e de perícias baseadas nesses atributos.",
-    origin: "Dragão Brasil",
+    origin: "Dragão Brasil - 219",
     efeito: "Mental"
   },
   { id: "arrefecido",
     name: "Arrefecido",
     description: "O personagem tem a temperatura corporal reduzida, tem seu movimento reduzido em –1,5m, não pode usar habilidades que exijam liberdade de movimentos e tem vulnerabilidade a frio, mas também recebe resistência a fogo +2. Se ficar molhado ou for arrefecido uma segunda vez, fica congelado. Se ficar em chamas enquanto estiver arrefecido, em vez disso perde as duas condições.",
-    origin: "Dragão Brasil",
+    origin: "Dragão Brasil - 219",
     efeito: "Metabolismo"
   },
   { id: "audacioso",
     name: "Audacioso",
     description: "O personagem recebe +2 em testes de perícia. Se ficar audacioso novamente, em vez disso fica intrépido.",
-    origin: "Dragão Brasil",
+    origin: "Dragão Brasil - 219",
     efeito: "Mental"
   },
   { id: "congelado",
     name: "Congelado",
     description: "O personagem é coberto por uma camada grossa de gelo que o deixa paralisado e concede vulnerabilidade a frio, mas também concede resistência a fogo +2 e imunidade a arrefecido, cansaço, eletrizado, enfeitiçado, medo, sangrando e veneno. Se ficar em chamas enquanto estiver congelado, perde as duas condições e fica arrefecido.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 219"
   },
   { id: "decaido",
     name: "Decaído",
     description: "O personagem sofre dano por efeitos mágicos de cura de luz, mas dano de trevas recupera seus PV. Em mortos-vivos, tem o efeito inverso (dano de trevas causa dano normal e efeitos mágicos de cura de luz recuperam PV). Se ficar abençoado, em vez disso perde as duas condições.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 219"
   },
   { id: "disposto",
     name: "Disposto",
     description: "O personagem recebe +2 em testes de Inteligência, Sabedoria e Carisma e de perícias baseadas nesses atributos. Se ficar disposto novamente, em vez disso fica alentado.",
-    origin: "Dragão Brasil",
+    origin: "Dragão Brasil - 219",
     efeito: "Mental"
   },
   { id: "eletrificado",
     name: "Eletrificado",
     description: "O personagem tem correntes elétricas poderosas correndo pelo seu corpo. No início de seus turnos, sofre 1d6 pontos de dano de eletricidade. O personagem pode gastar uma ação padrão para descarregar a eletricidade ao tocar em metais ou no chão de terra. Se ficar molhado ou for eletrificado uma segunda vez, fica eletrizado.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 219"
   },
   { id: "eletrizado",
     name: "Eletrizado",
     description: "O personagem fica paralisado por uma corrente elétrica, o que concede vulnerabilidade a eletricidade, mas também resistência a ácido +2 e imunidade a cansaço, congelado, eletrificado, enfeitiçado, medo, sangrando e veneno. Esta condição permanece até o fim da cena ou até que o personagem tenha contato com um objeto livre de metal ou algum tipo de óleo (como pela magia Área Escorregadia), o que acontecer primeiro.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 219"
   },
   { id: "fedido",
     name: "Fedido",
     description: "O personagem sofre –5 em testes de Carisma e de perícias baseadas nesse atributo, pois está exalando um cheiro forte e é quase impossível ficar perto dele.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 219"
   },
   { id: "fortalecido",
     name: "Fortalecido",
     description: "O personagem recebe +2 em testes de Força, Destreza e Constituição e de perícias baseadas nesses atributos. Se ficar fortalecido novamente, em vez disso fica vigoroso.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 219"
   },
   { id: "intrepido",
     name: "Intrépido",
     description: "O personagem sofre +5 em testes de perícias e recebe imunidade a medo.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 219"
   },
   { id: "leve",
     name: "Leve",
     description: "O personagem não aplica penalidade de armadura em testes de Acrobacia e Furtividade e seu deslocamento é aumentado em +3m.",
-    origin: "Dragão Brasil",
+    origin: "Dragão Brasil - 219",
     efeito: "Movimento"
   },
   { id: "molhado",
     name: "Molhado",
     description: "O personagem se torna vulnerável a eletricidade e frio, mas recebe resistência a fogo. Qualquer criatura fica molhada se estiver imersa ou em contato com uma superfície de água. Se ficar arrefecido, fica congelado. Se ficar eletrificado, fica eletrizado. Se ficar em chamas enquanto estiver molhado, em vez disso perde as duas condições.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 219"
   },
   { id: "poderoso",
     name: "Poderoso",
     description: "O custo em pontos de mana das habilidades do personagem diminui em –1.",
-    origin: "Dragão Brasil",
+    origin: "Dragão Brasil - 219",
     efeito: "Mental"
   },
   { id: "prevenido",
     name: "Prevenido",
     description: "O personagem recebe +2 na Defesa durante a primeira rodada de combate.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 219"
   },
   { id: "relaxado",
     name: "Relaxado",
     description: "O personagem fica fortalecido, prevenido e veloz durante uma rodada.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 219"
   },
   { id: "restaurando",
     name: "Restaurando",
     description: "O personagem recebe cura acelerada igual aos PV que recebe por nível da sua classe com mais níveis.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 219"
   },
   { id: "veloz",
     name: "Veloz",
     description: "Todas as formas de deslocamento do personagem são duplicadas (arredonde para baixo para o primeiro incremento de 1,5m) e ele recebe imunidade a efeitos negativos de movimento.",
-    origin: "Dragão Brasil",
+    origin: "Dragão Brasil - 219",
     efeito: "Movimento"
   },
   { id: "vigoroso",
     name: "Vigoroso",
     description: "O personagem recebe +5 em testes de Força, Destreza e Constituição e de perícias baseadas nesses atributos.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 219"
   }
 ];

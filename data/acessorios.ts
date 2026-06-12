@@ -54,15 +54,6 @@ export const enchantments: Enchantment[] = [
 ];
 
 export const accessories: SpecificAccessory[] = [
-  // Dragão Brasil - 
-  { id: "Luvas de Controle",
-    name: "Luvas de Controle",
-    description: "Essas luvas feitas do corpo de Zedian se assentam nas mãos de forma incômoda. Ao vesti-las, você recebe Força +2, uma arma natural de pancada (impacto, 1d10) e controle mental do filho renascido de Aslothia.",
-    price: "T$ 100.000",
-    size: "Maior",
-    origin: "Dragão Brasil"
-  },
- 
   // Dragão Brasil - 200
   { id: "Amuleto do Servo",
     name: "Amuleto do Servo",
@@ -99,6 +90,14 @@ export const accessories: SpecificAccessory[] = [
     origin: "Dragão Brasil - 214",
     price: "T$ 9.000",
     size: "Menor",
+  },
+  // Dragão Brasil - 218
+  { id: "Luvas de Controle",
+    name: "Luvas de Controle",
+    description: "Essas luvas feitas do corpo de Zedian se assentam nas mãos de forma incômoda. Ao vesti-las, você recebe Força +2, uma arma natural de pancada (impacto, 1d10) e controle mental do filho renascido de Aslothia.",
+    price: "T$ 100.000",
+    size: "Maior",
+    origin: "Dragão Brasil - 218"
   },
   
 

@@ -107,6 +107,21 @@ export const weapons: Weapon[] = [
     type: "Essência",
     spaces: 0.5,
   },
+  // Dragão Brasil - 219
+  { id: "Agulha",
+    name: "Agulha",
+    description: "Uma longa agulha de metal prateado, amarrada a um fio de seda etérea que nunca se rompe nem se desgasta. Quando empunhada, a Agulha se adequa magicamente ao tamanho do usuário, ajustando seu tamanho adequado sem sofrer nenhuma mudança em suas estatísticas.\nSeu portador pode usar da seda para fazer ataques corpo a corpo em alcance curto, puxando a arma de volta como ação livre ou reação. Além disso, recebe +5 em testes de manobras e em testes de Acrobacia e Atletismo em que Agulha possa ser útil (como alcançar um local alto).\nA Agulha também fornece as seguintes habilidades mágicas:\nDisparo de Seda: você pode gastar uma ação padrão e 3 PM para fazer um ataque corpo a corpo em alcance longo com a Agulha.\nLaço de Seda: você pode gastar uma ação padrão e 1 PM ou mais para curar 1d8+1 PV para cada PM gasto (até o limite de 10 PM), de si mesmo ou de um aliado adjacente.\nTeia de Seda: você pode gastar uma ação padrão e 4 PM para criar um cubo de terreno difícil de 6m em alcance curto. Criaturas na área, ou que comecem seu turno em seu interior, ficam enredadas e imóveis (Reflexos CD Des evita). Uma criatura pode se libertar com uma ação padrão e um teste de Acrobacia ou Atletismo (CD Des).",
+    origin: "Dragão Brasil - 219",
+    purpose: "Corpo a Corpo",
+    proficiency: "Exótica",
+    grip: "Duas Mãos",
+    price: "T$ 50.000",
+    damage: "1d12",
+    critical: "18/x3",
+    range: "Curto",
+    type: "Perfuração",
+    spaces: 2,
+  },
 
 
   // Tormenta20 - Jogo do Ano
