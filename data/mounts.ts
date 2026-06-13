@@ -485,6 +485,28 @@ export const mounts: Mount[] = [
       mestre: "O bônus em rolagens de dano corpo a corpo muda para +2d8 e você recebe uma ação de movimento extra por turno (apenas para se deslocar)."
     }
   },
+  { id: "Hippossauro",
+    name: "Hippossauro",
+    size: "Grande",
+    description: "Também conhecido como hippo, é uma criatura exótica que combina traços de cavalo, ave e dinossauro. Forte, rápido e excepcionalmente leal quando domesticado. Suas garras superam terrenos acidentados e seu bico ossudo permite o uso de arreios. Machos ostentam plumagem vibrante, enquanto as fêmeas possuem cores sóbrias ideais para camuflagem.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 12m e você recebe +2 em Diplomacia (hippossauro macho) ou em Furtividade (hipossauro fêmea).",
+      veterano: "Seu deslocamento muda para 15m e, uma vez por rodada, você recebe +1d8 em uma rolagem de dano corpo a corpo.",
+      mestre: "Muda o bônus na perícia para +4 e você recebe uma ação de movimento extra (apenas para se deslocar)."
+    }
+  },
+  { id: "Platan",
+    name: "Platan",
+    size: "Grande",
+    description: "Um golfinho ágil e inteligente encontrado em rios, lagos e mares de Arton, reconhecido por sua fronte proeminente e focinho alongado em forma de bico. Dóceis e amigáveis, são aliados comuns de sereias, tritões e elfos-do-mar, mas possuem a surpreendente habilidade de emitir poderosos ataques sônicos para atordoar presas ou dizimar inimigos se acuados.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para natação 9m e você recebe uma ação de movimento extra (apenas para se deslocar).",
+      veterano: "Uma vez por rodada, você pode gastar 1 PM para causar 2d6 pontos de dano de impacto em uma criatura em alcance curto.",
+      mestre: "Seu deslocamento de natação muda para 15m e você pode também gastar 4 PM para causar 6d6 pontos de dano de impacto em uma criatura em alcance curto."
+    }
+  },
 
   
 
