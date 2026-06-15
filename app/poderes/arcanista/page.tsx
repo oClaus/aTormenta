@@ -107,6 +107,7 @@ export default function ArcanistaPodersPage() {
                   <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Homúnculo: </span><span className="font-medium">O homúnculo fornece +1 PM para gastar em aprimoramentos sempre que você lança uma magia de transmutação ou veneno.</span></p>
                   <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Tentacute: </span><span className="font-medium">Um tentacute familiar pode ser usado, uma vez por rodada, para sacar ou guardar um item, ou para pegar um item solto Pequeno ou menor (1 espaço ou menos) em alcance curto e que ele consiga alcançar.</span></p>
                   <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Asa-Assassina: </span><span className="font-medium">Uma asa-assassina permite que você gaste 1 PM quando causa dano de corte ou perfuração a uma criatura para deixá-la sangrando.</span></p>
+                  <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Stagh: </span><span className="font-medium">Um stagh concede +1 na CD de suas magias de frio.</span></p>
                   <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Escorpião de Madeira: </span><span className="font-medium">Um escorpião de madeira familiar fornece resistência a magia e venenos +2. (Dragão Brasil)</span></p>
                 </div>
               </section>

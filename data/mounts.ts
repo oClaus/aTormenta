@@ -507,6 +507,50 @@ export const mounts: Mount[] = [
       mestre: "Seu deslocamento de natação muda para 15m e você pode também gastar 4 PM para causar 6d6 pontos de dano de impacto em uma criatura em alcance curto."
     }
   },
+  { id: "Selako",
+    name: "Selako",
+    size: "Grande",
+    description: "O tipo de tubarão mais comum em Arton, um predador letal de mar aberto. Costumam realizar um único e decisivo ataque para causar sangramento severo. Apesar de sua ferocidade letal, são domesticados por povos submarinos e devotos do Grande Oceano como perigosas bestas de guerra e montarias aquáticas.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para natação 15m e, uma vez por rodada, você recebe +1d6 em uma rolagem de dano corpo a corpo.",
+      veterano: "O bônus de dano aumenta para +2d6.",
+      mestre: "Seu deslocamento de natação muda para 18m e, quando você usa o bônus de dano do selako contra uma criatura, ela fica sangrando."
+    }
+  },
+  { id: "Troll Montaria",
+    name: "Troll",
+    size: "Grande",
+    description: "Um predador feroz e sanguinário originalmente domado através de técnicas secretas dos finntroll. Caso seu mestre sombrio seja derrotado, a criatura pode ser domada e transformada em uma montaria brutal e incrivelmente forte para o combate.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 12m e, uma vez por rodada, você recebe +1d8 em uma rolagem de dano corpo a corpo.",
+      veterano: "O bônus em rolagens aumenta para +1d10 e você recebe +2 em testes para agarrar e derrubar.",
+      mestre: "O bônus em rolagens aumenta para +2d8 e o bônus para agarrar e derrubar aumenta para +5."
+    }
+  },
+  { id: "Mamute",
+    name: "Mamute",
+    size: "Enorme",
+    description: "Uma imensa besta pré-histórica semelhante a um elefante, porém maior e com uma farta pelagem escura adaptada ao frio das Uivantes. Sustento de diversas tribos bárbaras, pode ser domesticado como uma colossal besta de carga e montaria de batalha.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 12m e ignora terreno difícil.",
+      veterano: "Uma vez por rodada, você pode sacar um item ou pegar um objeto solto em alcance de 4,5m como ação livre.",
+      mestre: "Você recebe +5 em testes de manobra para atropelar e, uma vez por rodada, se vencer o teste para atropelar uma criatura, pode pagar 1 PM para fazer um ataque contra ela."
+    }
+  },
+  { id: "Urso das Neves",
+    name: "Urso das Neves",
+    size: "Grande",
+    description: "Uma versão glacial do urso das cavernas, ostentando pelagem branca, garras vermelhas e protuberâncias dorsais afiadas que lembram cristais de gelo. Predadores ágeis e excelentes nadadores das Uivantes, que podem ser domados como montarias exóticas montando-se na área desguarnecida próxima à cabeça.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 12m e você recebe redução de frio 5.",
+      veterano: "Seu deslocamento muda para 12m (normal e de natação) e a redução de frio aumenta para 10.",
+      mestre: "A redução de frio aumenta para 20."
+    }
+  },
 
   
 

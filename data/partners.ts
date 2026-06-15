@@ -307,6 +307,36 @@ export const partners: Partner[] = [
       mestre: "Os sangramentos que você provoca exigem dois sucessos em testes para serem removidos."
     }
   },
+  { id: "Perdigueiro Troll",
+    name: "Perdigueiro Troll (Perseguidor)",
+    description: "Um animal-planta criado pelos finntroll para atuar como cão de caça. Com o corpo fibroso revestido de musgo e uma juba de tentáculos para imobilizar presas, alguns exemplares fugiram e se tornaram selvagens, podendo ser domados por devotos de Allihanna e dahllan.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Você recebe +2 em Percepção e Sobrevivência.",
+      veterano: "Você recebe +2 em testes para agarrar e derrubar, e pode manter uma criatura Grande ou menor agarrada sem ocupar uma mão.",
+      mestre: "Muda os bônus para +5 e, uma vez por rodada, quando acerta um ataque corpo a corpo, você pode usar a manobra agarrar como uma reação."
+    }
+  },
+  { id: "Carcaju",
+    name: "Carcaju (Fortão)",
+    description: "Também conhecido como glutão ou wolverine, é um predador pequeno, porém incrivelmente forte, agressivo e resiliente. Quando ferido ou encurralado, entra em uma cólera ensandecida, servindo como um companheiro feroz que destrói inimigos com brutalidade.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "Uma vez por rodada você recebe +1d6 em uma rolagem de dano corpo a corpo. Se rolar um 6 nesse dado extra de dano, você pode rolar +1d6 e somar ao resultado uma vez.",
+      veterano: "Sua margem de ameaça com armas corpo a corpo aumenta em +1.",
+      mestre: "Quando sofre dano, você recebe +2 em testes de ataque e rolagens de dano até o fim de seu próximo turno."
+    }
+  },
+  { id: "Elemental do Veneno",
+    name: "Elemental do Veneno",
+    description: "Um ser extraplanar amorfo composto por cristais escuros mantidos por um muco esverdeado e altamente tóxico. Oriundo dos pântanos de Venomia, exala vapores corrosivos capazes de liquefazer tecidos e corroer até mesmo golens. Aterrorizantes e imprevisíveis, são frequentemente associados a planos nefastos de Sszzaas.",
+    origin: "Ameaças de Arton",
+    benefits: {
+      iniciante: "A CD para resistir aos seus efeitos de veneno aumenta em +2 e, uma vez por rodada, você pode gastar 1 PM para envenenar uma arma que esteja usando. No próximo ataque que acertar com ela nesta cena, a arma causa perda de 1d12 PV.",
+      veterano: "Você também pode gastar 3 PM para aplicar um veneno que causa perda de 2d12 PV.",
+      mestre: "Seus efeitos de veneno ignoram imunidade a veneno e você também pode gastar 5 PM para aplicar um veneno que causa perda de 3d12 PV."
+    }
+  },
   
 
   // Dragão Brasil

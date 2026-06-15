@@ -1754,6 +1754,98 @@ export const races: Race[] = [
     longevidade: "x2",
     devotos: "Allihanna, Arsenal, Hyninn, Megalokk, Oceano"
   },
+  { id: "Nagah",
+    name: "Nagah",
+    origin: "Ameaças de Arton",
+    image: "/ameacas/nagah.png",
+    description: "“Belas cimitarras. Vejamos se sabe usá-las tão bem quanto uso as minhas!”\n — Orib, o Dançarino de Sangue \n\n O templo secreto de Sszzaas parece enfim desprotegido, seus poucos cultistas restantes correm para salvar suas peles. Ou não? Como tudo ligado a esse deus, isto também é uma armadilha. Vocês se percebem cercados por poderosos homens-serpente empunhando cimitarras reluzentes. \n Na sociedade nagah, enquanto as mulheres são clérigas ou arcanistas que lideram, os homens quase sempre são guerreiros. Nagahs defensores atuam como soldados e guarda-costas para sszzaazitas. Muitos estão plenamente cientes de sua situação, procurando se manter úteis para evitar serem descartados. Outros, tolos e ingênuos, de fato acreditam ser recompensados por sua lealdade.",
+    abilities: [
+      {
+        name: "Cauda",
+        description: "Você possui uma arma natural de cauda (dano 1d6, crítico x2, impacto). Uma vez por rodada, quando usa a ação agredir para atacar com outra arma, pode gastar 1 PM para fazer um ataque corpo a corpo extra com a cauda."
+      },
+      {
+        name: "Inocência Dissimulada",
+        description: "Você recebe +2 em Enganação e pode gastar 2 PM para substituir um teste de perícia originalmente baseada em Inteligência, Sabedoria ou Carisma por Enganação."
+      },
+      {
+        name: "Presentes de Sszzaas",
+        description: "Você recebe visão na penumbra, +1 na Defesa e resistência a veneno +5."
+      },
+      {
+        name: "Fraquezas Ofídicas",
+        description: "Você sofre 1 ponto de dano adicional para cada dado de dano de frio e –5 em testes de resistência contra Músicas de bardo."
+      }
+    ],
+    attributeModifiers: [
+      { description: "Força +1, Destreza +1 e Constituição +1 (macho) ou Inteligência +1, Sabedoria +1 e Carisma +1 (fêmea)" }
+    ],
+    longevidade: "Normal",
+    devotos: "Allihanna, Hyninn, Kally, Megalokk, Sszzaas, Tenebra, Wynna"
+  },
+  { id: "Finntroll",
+    name: "Finntroll",
+    origin: "Ameaças de Arton",
+    image: "/ameacas/finntroll.png",
+    description: "“Sou fascinado por magia, é verdade. Mas para tudo existe limite, canalha!”\n — Gabrix A’ Leirb, o Capuz \n\n Pouco da pele pálida pode ser visto sob o manto negro e elegante, adornado com bordas prateadas e esmeraldas cintilantes. Sem que ele desvie os olhos profundos, a boca de lábios finos vocifera palavras arcanas enquanto a mão de dedos longos e unhas escuras gesticula uma conjuração. \n Exceto pelos caçadores e feitores, a maioria dos trolls nobres não usa armas, nem exerce qualquer forma de combate físico. Por se considerarem mentalmente superiores, delegam essas “tarefas braçais rústicas” a soldados trolls e outros servos. \n Isso não significa que sejam inofensivos em combate, muito pelo contrário. Por seu elevado intelecto e tradições arcanas, finntroll são praticantes de magia exímios, até capazes de rivalizar com as artes élficas em seu auge. Arcanistas finntroll estão entre os conjuradores arcanos mais perigosos de Arton. Em geral dispensam magias de dano direto por achá-las “primitivas e deselegantes”, preferindo efeitos incapacitantes, paralisia, controle mental e morte instantânea. \n É bastante raro que um arcanista abandone o conforto de sua torre luxuosa e seus escravos mentalmente dominados. Quando forçado a viajar pela necessidade, está sempre acompanhado por um séquito de servos e soldados. E caso seja de alguma forma apanhado sem trolls para protegê-lo, vai simplesmente conjurar alguns.",
+    abilities: [
+      {
+        name: "Corpo Vegetal",
+        description: "Você é uma criatura do tipo monstro e recebe natureza vegetal e visão no escuro."
+      },
+      {
+        name: "Presença Arcana",
+        description: "Você recebe +2 em Misticismo e resistência a magia +2."
+      },
+      {
+        name: "Regeneração Vegetal",
+        description: "Uma vez por rodada, você pode gastar 1 PM para recuperar 5 PV. Esta habilidade não cura dano de ácido ou fogo."
+      },
+      {
+        name: "Intolerância a Luz",
+        description: "Você recebe sensibilidade a luz e, quando exposto à luz do sol ou similar, não consegue ativar sua Regeneração Vegetal."
+      }
+    ],
+    attributeModifiers: [
+      { attribute: "int", modifier: 2 },
+      { attribute: "con", modifier: 1 },
+      { attribute: "for", modifier: -1 }
+    ],
+    longevidade: "Normal",
+    devotos: "Kallyanadroch, Megalokk, Sszzaas, Tenebra. Finntroll que rejeitam a maldade do Império Trollkyrka podem ser devotos de qualquer divindade.",
+    extra: "Personagens jogadores finntroll são sempre membros da raça que abandonaram o Império Trollkyrka e rejeitam suas práticas escravistas."
+  },
+  { id: "Soterrado",
+    name: "Soterrado",
+    origin: "Ameaças de Arton",
+    image: "/ameacas/soterrado.png",
+    description: "“Está morto há semanas. O pobre coitado não teve a menor — AHH, CUIDADO!”\n — Sigbert Claydenn, lefou paladino de Thyatis \n\n Aquilo que pareciam ser ossadas presas no gelo logo se revela como algo diferente e terrível. Os seres macabros parecem a esqueletos humanos, enegrecidos, mas sob armaduras translúcidas de gelo azulado. Luzes azuis pálidas brilham nas órbitas vazias. \n Soterrados são esqueletos revestidos com grossas camadas de gelo que os tornam mais resistentes. Permanecem imóveis no gelo e na neve, até que qualquer criatura viva se aproxime: talvez por guardarem recordação de sua morte horrível — ou movidos por uma necessidade desesperada do calor dos vivos —, buscam agarrar vítimas para sugar sua energia vital. \n Supõe-se que estes mortos-vivos surgem a partir de vítimas soterradas em avalanches, explicando seu nome. Contudo, também é verdade que alguns necromantes conseguem conjurá-los. Uns poucos, ainda, manifestam inteligência e vontade próprias; acabam integrando a curiosa raça osteon, muito embora não sejam particularmente queridos entre aventureiros. \n Esqueletos sempre foram temidos como monstros profanos, movidos por puro rancor pelos vivos. Isso mudou; conhecidos como osteon, estes esqueletos demonstram a inteligência e a consciência das raças vivas, sendo capazes de adotar quaisquer de suas profissões e devoções.",
+    abilities: [
+      {
+        name: "Abraço Gélido",
+        description: "Você recebe +2 em testes para agarrar. Além disso, seus ataques desarmados e com armas naturais causam 2 pontos de dano de frio extras."
+      },
+      {
+        name: "Esquife de Gelo",
+        description: "Você recebe redução de corte e perfuração 5 e redução de frio 10. Entretanto, sofre 1 ponto de dano adicional por dado de dano de fogo."
+      },
+      {
+        name: "Natureza Esquelética",
+        description: "Você é uma criatura do tipo morto-vivo. Recebe visão no escuro e imunidade a efeitos de cansaço, metabólicos, de trevas e de veneno. Além disso, não precisa respirar, alimentar-se ou dormir. Por fim, efeitos mágicos de cura de luz causam dano a você e você não se beneficia de itens da categoria alimentação, mas dano de trevas recupera seus PV."
+      },
+      {
+        name: "Preço da Não Vida",
+        description: "Você precisa passar oito horas sob a luz de estrelas ou no subterrâneo. Se fizer isso, recupera PV e PM por descanso em condições normais (osteon não são afetados por condições boas ou ruins de descanso). Caso contrário, sofre os efeitos de fome."
+      }
+    ],
+    attributeModifiers: [
+      { attribute: "con", modifier: -1 },
+      { description: "Escolha +1 em três atributos diferentes (exceto Constituição)" }
+    ],
+    longevidade: "Indefinida",
+    devotos: "Qualquer",
+    extra: "Raça Variante: Soterrado é uma variante da raça osteon. Para criar um personagem desta raça, são usadas as habilidades de osteon, mas substituindo Armadura Óssea e Memória Póstuma por Abraço Gélido e Esquife de Gelo."
+  },
   
   
   { id: "Qunari",
