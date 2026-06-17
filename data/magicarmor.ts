@@ -333,7 +333,12 @@ export const specificWeapons: SpecificWeapon[] = [
     origin: "Tormenta20 - Jogo do Ano",
   },
 
-
+  { id: "grilhao-de-descrenca",
+      name: "Grilhão de Descrença",
+      description: "Esta armadura completa reforçada e selada contém uma forte maldição divina: uma vez vestida, não pode ser retirada. Qualquer criatura que chegue a 0 PV vestindo esta armadura não pode ser ressuscitada e se torna um guerreiro perpétuo (veja p. 139). Se de alguma forma a maldição for removida (como por dissipar o item ou quebrar a maldição), ela se transforma numa armadura completa reforçada e selada com um encanto aleatório (veja Tormenta20, p. 338). Uma armadura grilhão de descrença não pode ser fabricada e é encontrada apenas em guerreiros perpétuos.",
+      price: "T$ 24.000",
+      origin: "Ameaças de Arton"
+    },
   
   {
     id: "armadura-das-sombras-profundas",

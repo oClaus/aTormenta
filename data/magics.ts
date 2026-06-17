@@ -413,6 +413,20 @@ export const specificWeapons: SpecificWeapon[] = [
     price: "200.000",
     origin: "Tormenta20 - Jogo do Ano",
   },
+
+  // Ameaças de Arton
+  { id: "pistola-demoniaca",
+    name: "Pistola Demoníaca",
+    description: "Esta pistola ameaçadora formidável e profana não pode ser fabricada por nenhum meio conhecido por mortais e só pode ser obtida através de um pacto com um demônio da pólvora (veja p. 255). Uma pistola demoníaca está sempre carregada e não precisa de munição. Uma vez por dia, em um momento escolhido pelo mestre (ou na primeira ocasião em que houver outras pessoas próximas), o portador da arma é atingido pelo impulso homicida de disparar contra uma criatura inteligente aleatória à vista (incluindo aliados). O portador pode resistir a esse impulso por este dia passando em um teste de Vontade (CD 25). Qualquer medida para evitar acidentes (manter a pistola guardada, descarregada ou mesmo trancada e fora de alcance) fracassa automaticamente; quando o portador cede ao impulso assassino, a arma surge magicamente em suas mãos. Caso o portador da pistola seja morto, a arma desaparece.",
+    price: "T$ 72.250",
+    origin: "Ameaças de Arton"
+  },
+  { id: "uyzrrak-daukthra",
+    name: "Uyzrrak Da’ukthra",
+    description: "Este machado de guerra magnífico aumentado atroz de adamante é marcado com escrita goblinoide em sua lâmina e aparenta já ter visto inúmeras batalhas. Quando empunhado por um duyshidakk, causa +2d8 pontos de dano contra qualquer criatura não duyshidakk e recebe um encanto adicional, conforme o elemento do círculo intermediário do Akzath mais próximo do portador: Luz, Sagrado; Nós, Piedoso; Dentro, Defensor; Estagnação, Excruciante; Trevas, Profano; Fora, Arremesso; Eles, Dilacerante; Movimento, Energético. A critério do mestre, se o portador do machado se tornar mais próximo de outro elemento, o encanto muda de acordo.",
+    price: "T$ 78.050",
+    origin: "Ameaças de Arton"
+  },
   
   
   {

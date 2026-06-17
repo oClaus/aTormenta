@@ -79,7 +79,7 @@ const SpecificAccessoryCard = ({ weapon }: { weapon: SpecificAccessory }) => {
         </div>
       </div>
 
-      <div className="text-sm pt-1 text-amber-950/85 flex-grow font-serif font-medium leading-relaxed">
+      <div className="text-sm pt-1 text-amber-950/85 flex-grow font-serif font-medium leading-relaxed whitespace-pre-line">
         {formatTextWithBreaks(weapon.description)}
       </div>
       

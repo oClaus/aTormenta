@@ -1,5 +1,6 @@
 import { SpecificAccessory, Enchantment } from "@/types/acessorio";
-
+//#region Tormenta20 - Jogo do Ano
+//#endregion
 export const enchantments: Enchantment[] = [
   // Tormenta20 - Jogo do Ano
 
@@ -111,7 +112,7 @@ export const accessories: SpecificAccessory[] = [
   },
 
 
-  // Tormenta20 - Jogo do Ano
+  //#region Tormenta20 - Jogo do Ano
   { id: "anel-da-protecao",
     name: "Anel da Proteção",
     description: "Este anel desvia ataques contra seu usuário. Você recebe +2 de Defesa.",
@@ -567,7 +568,32 @@ export const accessories: SpecificAccessory[] = [
     size: "Maior",
     origin: "Tormenta20 - Jogo do Ano"
   },
-  
+  //#endregion
+
+  //#region Ameaças de Arton
+  { id: "chifre-de-unicornio",
+    name: "Chifre de Unicórnio",
+    description: "Um chifre de unicórnio é um poderoso item mágico de cura. Se estiver empunhando o chifre, você pode lançar Curar Ferimentos e Purificação; caso já conheça essas magias, seu custo diminui em –1 PM, cumulativo com outras reduções. Ele também pode ser usado para lançar a magia Segunda Chance, mas perde todos os poderes após isso. Por fim, ele pode ser empunhado como uma espada curta formidável. \nMesmo sem seus poderes, o chifre pode ser transformado em 12 doses de pó de chifre, um poderoso ingrediente para preparados e poções. Misturar uma dose desse pó aos ingredientes de um preparado ou poção aumenta cada dado de cura do efeito do item em dois passos (até um máximo de d12).\nAinda que o simples ato de portar um chifre de unicórnio não seja necessariamente maligno, muitos devotos, sobretudo de Allihanna e Marah, poderão questionar a origem do chifre. Chifres de unicórnio não podem ser fabricados, e são obtidos apenas de um unicórnio morto.",
+    price: "T$ 120.000",
+    size: "Maior",
+    origin: "Ameaças de Arton"
+  },
+  { id: "fragmento-de-filacterio",
+    name: "Fragmento de Filactério",
+    description: "Mesmo após a destruição do filactério de um lich, uma parte do poder mágico da criatura pode permanecer, geralmente em seu maior fragmento. Um fragmento de filactério conta como uma costela de lich poderosa que fornece +20 PM (somente após um dia de uso). Um fragmento só pode ser obtido de um filactério estilhaçado e não pode ser fabricado.",
+    price: "T$ 90.000",
+    size: "Maior",
+    origin: "Ameaças de Arton"
+  },
+  { id: "pilao-conspurcado",
+    name: "Pilão Conspurcado",
+    description: "Este pequeno pilão de madeira de aparência sinistra é decorado com símbolos místicos entalhados e fragmentos de ossos encravados. Conta como uma costela de lich. Além dos benefícios desse esotérico, o custo de suas magias de encantamento e necromancia lançadas pela varinha diminui em –1 PM e a CD para resistir a elas aumenta em +2.",
+    price: "T$ 21.000",
+    size: "Médio",
+    origin: "Ameaças de Arton"
+  },
+  //#endregion
+
   {
     id: "algibeira-mordedora",
     name: "Algibeira Mordedora",
