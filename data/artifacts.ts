@@ -1,5 +1,6 @@
 import { Artifact } from "@/types/artifact";
-
+//#region Tormenta20 - Jogo do Ano
+//#endregion
 export const artifacts: Artifact[] = [
   // Duelo de Dragões
   { id: "Pentalépide de Kryzzaorin",
@@ -83,7 +84,7 @@ export const artifacts: Artifact[] = [
   },
 
 
-  // Tormenta20 - Jogo do Ano
+  //#region Tormenta20 - Jogo do Ano
   { id: "A Espada-Deus",
     name: "A Espada-Deus",
     description: "Poucos duvidam: as divindades estão presentes em cada aspecto da vida em Arton. Uma das provas disso é a capacidade dos mortais de se tornarem deuses menores. Contudo, tão forte é o poder divino que até mesmo objetos podem ser deuses.\nA Espada-Deus não é um objeto sagrado. Não é poderosa porque foi abençoada por um deus. A espada-deus é, ela própria, cultuada. Ela oferece bênçãos, possui clérigos, ouve preces. Alguns têm dificuldade de entender como um objeto pode ser alvo de adoração — mas, ao olhar pela janela, qualquer um é capaz de ver alguém que venera o ouro ou uma bandeira. Pessoas veneram objetos o tempo todo.\nA Espada-Deus é a melhor arma já forjada por Rhond, o Deus Menor das Armas. Foi empunhada por incontáveis heróis e vilões, mas os nomes desses mortais foram esquecidos — a arma é maior que todos. Após ser usada por algum tempo, sempre acaba em algum local inóspito de onde só pode ser tirada por um mortal digno. Pode estar no fundo de um lago, sendo entregue por uma fada, ou cravada em uma pedra, selecionando quem pode arrancá-la. A arma foi vista pela última vez nas mãos de Orion Drake, na batalha contra a Tormenta em Tamu-ra.\nA Espada-Deus é uma espada longa atroz precisa pungente ameaçadora magnífica veloz, com dano básico de 2d12. Alguns estudiosos e armeiros dizem que seu fio é tão fino que pode cortar qualquer coisa e em todos os Planos de existência simultaneamente. Por isso, a espada-deus ignora redução de dano e seus acertos críticos afetam até mesmo criaturas imunes a acertos críticos. A espada-deus é indestrutível.\nQuando há chance de combate, a Espada-Deus vibra na mão do usuário, ou mesmo na bainha. Apenas personagens com pelo menos 15 níveis em classes com Luta como perícia inicial podem usar a espada-deus. Os demais erram todos os ataques com a arma. Quando está aguardando seu próximo usuário, a Espada-Deus não permite que um personagem que não cumpra esse pré-requisito tire-a de onde está.\nFisicamente, a Espada-Deus é surpreendentemente simples. Seu cabo é forrado com couro, seu guarda-mão é uma barra de metal simples, sua lâmina não possui adornos. Seu poder real não se revela na aparência — apenas na luta.",
@@ -109,6 +110,22 @@ export const artifacts: Artifact[] = [
     description: "Criados para selar um pacto entre os deuses do Panteão, os Rubis da Virtude quase foram a causa de sua morte. Cada um, se destruído, destruiria também o deus que estivesse secretamente ligado a ele — sem que fosse possível descobrir qual rubi pertencia a quem. Entregues a cada deus após sua criação, seriam mantidos como provas de confiança, garantias de que os deuses, mesmo aqueles envolvidos em disputas, jamais tentariam destruir uns aos outros.\nAs gemas não podem ser danificadas por mortais ou mesmo por deuses menores; apenas um deus do Panteão pode destruí-las. Além disso, não podem ser detectadas por meios mágicos.\nMesmo sem saber a quem estava ligada, cada deus guardou em lugar seguro a gema em sua posse. No entanto, conseguindo o que parecia ser impossível, Sszzaas — o mais traiçoeiro e furtivo dos seres — roubou todos os rubis. Ele foi descoberto e julgado antes de descobrir como utilizá-los, mas teve tempo de escondê-los em Arton. E os Rubis, protegidos de qualquer detecção mágica, não puderam ser encontrados.\nComo castigo, Sszzaas foi transformado em avatar e condenado a vagar pelo mundo até ser destruído ou aceito de volta. Os Rubis estavam desaparecidos, mas nenhum mortal poderia danificá-los. Mesmo assim, para evitar riscos, Khalmyr decretou que as ligações vitais entre os rubis e os deuses fossem rompidas. E assim foi feito.\nMesmo sem essa conexão, as gemas ainda eram poderosas, pois traziam parte da essência divina dos vinte deuses. Sabendo que poderia utilizá-las de alguma forma, Sszzaas tratou de mantê-las longe dos olhos dos deuses, até o último instante.\nOs Rubis da Virtude trazem grande poder a quem encontrá-los. Cada Rubi fornece a seu portador um nível de experiência em uma classe que ele já possua. Para isso, a gema deve ser incrustada no corpo da criatura, o que exige um teste de Cura (CD 25). O efeito leva um dia para se manifestar. Por sua invulnerabilidade, cada Rubi fornece redução de dano 2 e +1 em testes de resistência, cumulativos com efeitos já existentes — incluindo outros rubis. Por fim, por sua indetectabilidade, cada rubi torna o portador mais difícil de observar por meios mágicos. Um conjurador que lance uma magia de adivinhação contra o portador de um destes artefatos deve passar em um teste de Misticismo (CD 30 + a quantidade de rubis) ou a magia não terá efeito.",
     origin: "Tormenta20 - Jogo do Ano"
   },
+  //#endregion
+
+  //#region Ameaças de Arton
+  { id: "amuleto-do-abutre",
+    name: "Amuleto do Abutre",
+    description: "Este pingente de ouro em formato de abutre é um poderoso amuleto arcano, cuja origem sombria é cercada de mistério. Sabe-se que ele surgiu na mesma época em que Ferren Asloth realizou seu famigerado ritual e que é um dos mais poderosos itens do Arquilich Ferren Asloth. Capaz de conceder habilidades arcanas incríveis fornece ao usuário +50 PM (somente após um dia de uso), aumenta em +5 a CD para resistir a suas magias arcanas e permite utilizar a habilidade Conhecimento Sequestrado (CD Int, veja p. 294).\nTamanho poder, entretanto, não passa de uma armadilha. Em sua obsessão pela vida eterna, Ferren aprisionou uma pequena parte de sua essência neste amuleto, fazendo com que ele funcione como um segundo filactério. No início de cada dia em que estiver usando o amuleto, o portador deve fazer um teste de Vontade (CD 20 + 1 por dia adicional). Se falhar, começa a ter pensamentos cruéis, que o incentivam a buscar mais poder a qualquer custo. Se falhar uma segunda vez, torna-se dependente do amuleto e não consegue mais removê-lo por vontade própria (e fica agressivo caso outra pessoa tente fazê-lo). Por fim, se falhar uma terceira vez, sua alma é destruída. Quando isso acontecer, se Ferren estiver destruído, o fragmento de sua alma armazenado no amuleto se apossa do corpo do portador, trazendo o Arquilich de volta à existência. O portador passa automaticamente no teste de Vontade sempre que tiver matado um conjurador arcano no dia anterior.",
+    origin: "Ameaças de Arton"
+  },
+  { id: "rompedor-da-realidade",
+    name: "Rompedor da Realidade",
+    description: "Este artefato lefeu é um machado de guerra gigante atroz pungente anticriatura (não lefeu) magnífico de matéria vermelha. Ataques com ele ignoram redução de dano, fortificação e imunidade a acertos críticos. Além disso, seus golpes distorcem a vítima: uma criatura atingida pela arma perde 1 ponto cumulativo de um atributo aleatório permanentemente (Fort CD For evita). Um não lefeu que empunhe o Rompedor fica debilitado até o fim da cena.",
+    origin: "Ameaças de Arton"
+  },
+  //#endregion
+
+  
 
 
   

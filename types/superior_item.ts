@@ -18,7 +18,15 @@ export type MaterialType =
   "Madeira Tollon" | 
   "Matéria Vermelha" | 
   "Couro de Dragão" | 
-  "Mitral";
+  "Mitral"
+  | "Casco de Monstro"
+  | "Couraça de Kaiju"
+  | "Couro de Bulette"
+  | "Cristal de Sol"
+  | "Lanajuste"
+  | "Pena de Kraken"
+  | "Prata"
+  | "Quitina Razza";
 
 export type MaterialItemCategory = 
   "Arma" | 

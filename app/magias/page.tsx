@@ -144,11 +144,11 @@ const SpellModal = ({ spell, onClose }: { spell: Spell; onClose: () => void }) =
             <h4 className="text-lg font-bold text-red-800 mb-4 tracking-wide flex items-center gap-2">
               <span className="text-red-800/60 text-xl">❖</span> Aprimoramentos
             </h4>
-            <ul className="text-sm md:text-base text-amber-950/85 font-serif divide-y divide-amber-900/10 bg-[#e8dac1]/30 rounded-xl border border-amber-900/20 p-4">
+            <ul className="text-sm md:text-base text-amber-950/85 font-serif divide-y divide-amber-900/10 bg-[#e8dac1]/30 rounded-xl border border-amber-900/20 p-4" >
           {spell.enhancements.map((enh, index) => (
             <li key={index} className="flex flex-col sm:flex-row gap-2 sm:gap-3 py-3 first:pt-1 last:pb-1">
               <span className="font-bold text-red-800 whitespace-nowrap">{enh.cost}:</span> 
-              <span className="italic leading-relaxed font-medium">{enh.effect}</span>
+              <span className="italic leading-relaxed font-medium whitespace-pre-wrap" >{enh.effect}</span>
             </li>
           ))}
         </ul>
@@ -238,7 +238,7 @@ const SpellCard = ({ spell, onClick }: { spell: Spell; onClick: () => void }) =>
           {spell.enhancements.map((enh, index) => (
             <li key={index} className="flex flex-col gap-0.5 py-1.5 first:pt-0 last:pb-0">
               <span className="font-bold text-red-800 whitespace-nowrap">{enh.cost}:</span> 
-              <span className="italic leading-relaxed font-medium">{enh.effect}</span>
+              <span className="italic leading-relaxed font-medium whitespace-pre-wrap">{enh.effect}</span>
             </li>
           ))}
         </ul>

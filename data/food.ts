@@ -1,7 +1,8 @@
 import { Gear } from "@/types/comidas";
-
+//#region Tormenta20 - Jogo do Ano
+//#endregion
 export const food: Gear[] = [
-  // Tormenta20 - Jogo do Ano
+  //#region Tormenta20 - Jogo do Ano
   { id: "Batata Valkariana",
     name: "Batata Valkariana",
     description: "Batatas cortadas em tiras e mergulhadas em óleo fervente. Gordurentas e pouco nutritivas, são o tipo de prato que só é servido numa metrópole como Valkaria. Apesar disso, são saborosas e deixam qualquer um empolgado. Você recebe +1d6 em um teste a sua escolha realizado até o fim do dia. Para não esquecer, deixe 1d6 em cima da sua ficha. De preferência, amarelo.",
@@ -73,8 +74,67 @@ export const food: Gear[] = [
     cookingCost: "T$ 8",
     cookingDC: "15"
   },
+  //#endregion
 
-
+  //#region Ameaças de Arton
+  { id: "Algravia",
+    name: "Algravia",
+    description: "Bebida alcoólica adocicada feita da seiva de feras-cactos. Você recebe +1 em perícias baseadas em Carisma, cumulativo com outros itens. Múltiplas doses são cumulativas entre si, mas intoxicantes; para cada dose além da primeira no mesmo dia, você deve fazer um teste de Fortitude (CD 15 + 5 para cada dose anterior). Em caso de falha, você fica enjoado e perde todos os bônus de alimentação até o fim do dia.",
+    origin: "Ameaças de Arton",
+    price: "T$ 3",
+    spaces: "-",
+    category: "Bebida"
+  },
+  { id: "Banquete de Canceronte",
+    name: "Banquete de Canceronte",
+    description: "Um canceronte adulto é suficiente para produzir um pequeno banquete. Você recebe 1d4+1 dados de auxílio. Sempre que realizar um teste de perícia, você pode gastar 1d4 e adicionar o resultado como bônus no teste. Se o banquete for preparado por um personagem com o poder Mestre Cuca, os dados de auxílio se tornam d6. Este prato requer carne fresca de canceronte, sendo assim raramente encontrado longe de grandes cidades costeiras.",
+    origin: "Ameaças de Arton",
+    price: "T$ 36",
+    spaces: "-",
+    category: "Alimentação"
+  },
+  { id: "Coc-au-Triz",
+    name: "Coc-au-Triz",
+    description: "Ovos de cocatriz são ingredientes mágicos poderosos, e esta guloseima reflete esse poder; é um ninho de fios de ovos assados e gratinados. Ao consumir, escolha uma habilidade com custo em PM. Seu custo diminui em –1 PM.",
+    origin: "Ameaças de Arton",
+    price: "T$ 54",
+    spaces: "-",
+    category: "Alimentação"
+  },
+  { id: "Cozido de Serpe",
+    name: "Cozido de Serpe",
+    description: "Quando cozida por várias horas em uma sopa específica, a carne da serpe fica livre de seu veneno natural. Diferente de outros alimentos, preparar este cozido é um teste estendido de Ofício (cozinheiro) com CD 20, que requer 3 sucessos antes de 3 falhas. Se preparado com sucesso, fornece+1 em todos os testes de perícia, cumulativo com outros itens. Se falhar, os ingredientes são consumidos e você é envenenado (perde 1d12 pontos de vida por rodada durante 3 rodadas; Fort CD 20 reduz para 1 rodada).",
+    origin: "Ameaças de Arton",
+    price: "T$ 12",
+    spaces: "-",
+    category: "Alimentação",
+    cookingDC: "20"
+  },
+  { id: "Gorlogg Ensopado",
+    name: "Gorlogg Ensopado",
+    description: "Criado nas cozinhas de Yuvalin por Rizzelena, chef élfica de grande talento, este é um ensopado altamente nutritivo. Em sua próxima noite de sono, você aumenta a sua recuperação de PV e PM em +1 por nível.",
+    origin: "Ameaças de Arton",
+    price: "T$ 6",
+    spaces: "-",
+    category: "Alimentação"
+  },
+  { id: "Omelete Monstruosa",
+    name: "Omelete Monstruosa",
+    description: "Dizem que este prato foi inventado por aventureiros presos em uma caverna cheia de ovos. Desde então, tornou-se popular entre aqueles de baixa seletividade alimentar, ou muita coragem. É feita com ovos de qualquer praga monstruosa, mas variações mais refinadas usam ovos de corcel de Kally e outras feras dracônicas menores. Você recebe +2 em rolagens de dano e –2 em testes de perícias baseadas em Sabedoria, cumulativo com outros itens. Se feita com ovos de dragão, muda para +5 e –5. E garante que você será caçado por uma mamãe dragoa furiosa…",
+    origin: "Ameaças de Arton",
+    price: "T$ 3",
+    spaces: "-",
+    category: "Alimentação"
+  },
+  { id: "Sashimi de Kraken",
+    name: "Sashimi de Kraken",
+    description: "Esta iguaria exótica foi criada pelos maiores chefs de Tamu-ra. Você recebe +2 em Diplomacia, cumulativo com outros itens, e 5 PM temporários. Dificilmente encontrada em cidades longe do mar.",
+    origin: "Ameaças de Arton",
+    price: "T$ 60",
+    spaces: "-",
+    category: "Alimentação"
+  },
+  //#endregion
 
   {
     id: "Assado de carnes",
@@ -511,16 +571,6 @@ export const food: Gear[] = [
     price: "—",
     spaces: "0,5",
     category: "Alimentação"
-  },
-  {
-    id: "Cozido de Serpe",
-    name: "Cozido de Serpe",
-    description: "Quando cozida por várias horas em uma sopa específica, a carne da serpe fica livre de seu veneno natural. Diferente de outros alimentos, preparar este cozido é um teste estendido de Ofício (cozinheiro) com CD 20, que requer 3 sucessos antes de 3 falhas. Se preparado com sucesso, fornece +1 em todos os testes de perícia, cumulativo com outros itens. Se falhar, os ingredientes são consumidos e você é envenenado (perde 1d12 pontos de vida por rodada durante 3 rodadas; Fort CD 20 reduz para 1 rodada).",
-    origin: "Dragão Brasil - Culinária Sckharjagar",
-    price: "T$ 12",
-    spaces: "0,5",
-    category: "Alimentação",
-    cookingDC: "20"
   },
   {
     id: "Treckodimm",

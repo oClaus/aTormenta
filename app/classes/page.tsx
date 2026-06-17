@@ -525,6 +525,23 @@ export default function ClassesPage() {
                   </table>
                 </div>
               </div>
+
+              {/* IMAGEM (NO FINAL) */}
+              {selectedClass.image && (
+                <section className="mt-8 pt-8 border-t-2 border-amber-900/20">
+                  <h3 className="text-amber-950/50 text-xs md:text-sm uppercase tracking-widest mb-6 text-center font-bold">
+                    Registro Visual
+                  </h3>
+                  <div className="relative w-full rounded-xl overflow-hidden border-2 border-amber-900/30 shadow-md bg-[#e8dac1] max-w-2xl mx-auto">
+                    <img
+                      src={selectedClass.image}
+                      alt={selectedClass.name}
+                      className="w-full h-auto object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#e8dac1]/50 via-transparent to-transparent pointer-events-none"></div>
+                  </div>
+                </section>
+              )}
               
               <div className="mt-12 flex items-center justify-center gap-4 opacity-50">
                     <div className="h-[2px] w-12 md:w-20 bg-amber-900/60"></div>

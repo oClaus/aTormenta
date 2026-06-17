@@ -1,7 +1,9 @@
 import { Spell } from "@/types/speel";
-
+//#region Tormenta20 - Jogo do Ano
+//#endregion
 export const spells: Spell[] = [
-  // Tormenta20 - Jogo do Ano
+
+  //#region Tormenta20 - Jogo do Ano
   { id: "abencoar-alimentos",
     name: "Abençoar Alimentos",
     type: "Divina",
@@ -847,12 +849,14 @@ export const spells: Spell[] = [
     origin: "Tormenta20 - Jogo do Ano",
     enhancements: [
       { cost: "+2 PM", effect: "Aumenta o número de mortos-vivos conjurados em +1." },
-      { cost: "+3 PM", effect: "Em vez de esqueletos, conjura carniçais. Requer 3º círculo." },
-      { cost: "+7 PM", effect: "Em vez de esqueletos, conjura sombras. Requer 4º círculo." },
-      { cost: "Carniçal", effect: "Como esqueletos, mas têm For 3, Des 3, Defesa 27 e causam 1d8+3 pontos de dano de trevas mais perda de 1d8 PV por veneno. Além disso, criaturas atingidas por um carniçal devem passar num teste de Fortitude ou ficam paralisadas por 1 rodada. Uma criatura que passe no teste de resistência fica imune à paralisia dos carniçais por um dia." },
-      { cost: "Sombra", effect: "Como esqueletos, mas têm Des 4, Defesa 35, são incorpóreas e causam 2d10 pontos de dano de trevas. Além disso, criaturas vivas atingidas por uma sombra devem passar num teste de Fortitude ou perdem 1d4 PM. Sombras perdem a habilidade incorpóreo quando expostas à luz do sol." },
+      { cost: "+3 PM", effect: "Em vez de esqueletos, conjura carniçais. Requer 3º círculo. \n\nCarniçal: Como esqueletos, mas têm For 3, Des 3, Defesa 27 e causam 1d8+3 pontos de dano de trevas mais perda de 1d8 PV por veneno. Além disso, criaturas atingidas por um carniçal devem passar num teste de Fortitude ou ficam paralisadas por 1 rodada. Uma criatura que passe no teste de resistência fica imune à paralisia dos carniçais por um dia." },
+      { cost: "+7 PM", effect: "Em vez de esqueletos, conjura sombras. Requer 4º círculo. \n\nSombra: Como esqueletos, mas têm Des 4, Defesa 35, são incorpóreas e causam 2d10 pontos de dano de trevas. Além disso, criaturas vivas atingidas por uma sombra devem passar num teste de Fortitude ou perdem 1d4 PM. Sombras perdem a habilidade incorpóreo quando expostas à luz do sol." },
       { cost: "+1 PM", effect: "Em vez de um monstro, você invoca 4 kobolds Pequenos, que têm For 1, Des 1, Def 12, 1 PV cada e causam, cada um, 1d6-1 pontos de dano com uma ordem atacar. Você pode comandar todos os kobolds com a mesma ação padrão, mas eles devem receber o mesmo tipo de ordem e não podem seguir a ordem lançar magia. Você pode usar este aprimoramento mais vezes para aumentar o número de kobolds em +1, mas não pode usá-lo em conjunto com outros aprimoramentos." },
       { cost: "+3 PM", effect: "Como acima, mas cada kobold tem For 4, Des 1, Def 19, 15 PV e causa 2d6+1 pontos de dano de corte com uma ordem atacar. Requer 2º círculo." },
+      { cost: "+2 PM (Apenas Arcanos)", effect: "Em vez de esqueletos, conjura soterrados. Requer 3° círculo. \n\nSoterrado: como esqueletos, mas causam dano de frio. Além disso, criaturas atingidas por um soterrado devem passar num teste de Fortitude ou ficam enredadas por 1 rodada." },
+      { cost: "+3 PM", effect: "Em vez de esqueletos, conjura fúrias de Tauron. Requer 3º círculo.\n\nFúria de Tauron: como esqueletos, mas têm tamanho Pequeno, deslocamento de voo 12m, a habilidade incorpóreo, Des 5, Defesa 18 e causam 1d6 pontos de dano de trevas mais 1d6 pontos de dano de fogo. Além disso, criaturas vivas atingidas ficam desprevenidas por 1 rodada e em chamas (Fort CD igual à da magia evita)." },
+      { cost: "+3 PM (Apenas Devotos de Arsenal)", effect: "Em vez de esqueletos, conjura guerreiros perpétuos. Requer 3º círculo.\n\nGuerreiro Perpétuo: como esqueletos, mas têm For 5, Des 4, Defesa 33, a habilidade incorpóreo e causam 3d6 pontos de dano de impacto duas vezes por ação." },
+      { cost: "+3 PM (Apenas Devotos de Sszzaas)", effect: "Em vez de esqueletos, conjura zumbis peçonha. Requer 3º círculo.\n\nZumbi Peçonha: como esqueletos, mas têm For 3, Des 1, Defesa 25 e causam 1d8+1 pontos de dano de trevas mais perda de 2d6 PV por veneno. Além disso, criaturas atingidas por um zumbi peçonha ficam atordoadas por 1 rodada (apenas uma vez por cena) e depois fracas (Fort reduz para fracas por 1 rodada)." },
     ],
   },
   { id: "Consagrar",
@@ -4014,8 +4018,192 @@ export const spells: Spell[] = [
     },
   ],
   },
-
+  //#endregion
   
+  //#region Ameaças de Arton
+  { id: "Açoite Flamejante",
+    name: "Açoite Flamejante",
+    type: "Arcana",
+    school: "Convocação",
+    circle: 1,
+    execution: "Padrão",
+    range: "Pessoal",
+    target: "Efeito: açoite de chamas criado em sua mão (veja texto)",
+    duration: "Sustentada",
+    resistance: "Reflexos parcial",
+    description: "Um açoite de fogo surge em uma de suas mãos com a qual possa empunhar uma arma (essa mão fica ocupada pela duração da magia). Você pode usar uma ação padrão para causar 2d6 pontos de dano de fogo com o açoite em uma criatura em alcance curto e deixá-la em chamas e enredada enquanto estiver em chamas dessa forma. Passar na resistência reduz o dano à metade e evita as chamas.",
+    origin: "Ameaças de Arton",
+    enhancements: [
+      {
+        cost: "+2 PM",
+        effect: "Muda a execução para movimento.",
+      },
+      {
+        cost: "+2 PM",
+        effect: "Muda o dano para 4d6. Requer 2° círculo.",
+      },
+      {
+        cost: "+5 PM",
+        effect: "Muda o dano para 6d6. Requer 3° círculo.",
+      },
+    ],
+  },
+  { id: "Dardo Gélido",
+    name: "Dardo Gélido",
+    type: "Arcana",
+    school: "Evocação",
+    circle: 1,
+    execution: "Padrão",
+    range: "Curto",
+    target: "1 criatura",
+    duration: "Instantânea",
+    resistance: "Fortitude parcial",
+    description: "Você dispara um dardo de gelo contra o alvo, que sofre 2d6 pontos de dano de frio e fica lento por 1 rodada. Passar no teste de resistência reduz o dano à metade e evita a condição.",
+    origin: "Ameaças de Arton",
+    enhancements: [
+      {
+        cost: "+1 PM",
+        effect: "Aumenta o dano em +1d6.",
+      },
+      {
+        cost: "+1 PM",
+        effect: "Aumenta o número de alvos em +1 (total de alvos limitado pelo círculo máximo de magia que você pode lançar).",
+      },
+    ],
+  },
+  { id: "Invocar Fagulha Elemental",
+    name: "Invocar Fagulha Elemental",
+    type: "Arcana",
+    school: "Convocação",
+    circle: 2,
+    execution: "Completa",
+    range: "Curto",
+    target: "Efeito: familiar elemental",
+    duration: "Sustentada",
+    resistance: "Nenhuma",
+    description: "Você transforma uma porção de um elemento inerte em uma criatura elemental Pequena do tipo do elemento alvo. Por exemplo, lançar esta magia em um copo de água cria um elemental da água. Você pode criar elementais do ar, da água, do fogo e da terra com esta magia. O elemental obedece a todos os seus comandos e funciona como um familiar comum (veja Familiares, em Tormenta20, p. 38) ou elemental (veja Elementais). O elemental auxilia apenas você e não conta em seu limite de parceiros.",
+    origin: "Ameaças de Arton",
+    enhancements: [
+      {
+        cost: "+1 PM",
+        effect: "Além do normal, o elemental fornece redução 10 contra o dano correspondente a seu tipo.",
+      },
+      {
+        cost: "+2 PM",
+        effect: "Em vez do normal, o elemental recebe a habilidade de dois familiares, um comum e um elemental.",
+      },
+    ],
+  },
+  { id: "Jato Corrosivo",
+    name: "Jato Corrosivo",
+    type: "Arcana",
+    school: "Evocação",
+    circle: 1,
+    execution: "Padrão",
+    range: "Pessoal",
+    target: "Área: linha de 9m",
+    duration: "Instantânea",
+    resistance: "Reflexos reduz à metade",
+    description: "Você dispara um jato, que causa 2d6 pontos de dano de ácido às criaturas na área. Contra construtos e objetos soltos, a magia causa +1 ponto de dano por dado.",
+    origin: "Ameaças de Arton",
+    enhancements: [
+      {
+        cost: "+1 PM",
+        effect: "Aumenta o dano em +1d6.",
+      },
+      {
+        cost: "+1 PM",
+        effect: "Muda a resistência para Reflexos parcial. Se passar, a criatura reduz o dano à metade; se falhar, fica vulnerável.",
+      },
+    ],
+  },
+  { id: "Katana Celestial",
+    name: "Katana Celestial",
+    type: "Divina",
+    school: "Evocação",
+    circle: 5,
+    execution: "Padrão",
+    range: "Pessoal",
+    target: "Área: linha de 60m ou duas linhas de 30m",
+    duration: "Instantânea",
+    resistance: "Reflexos parcial",
+    description: "Um golpe vindo dos céus risca o campo de batalha. Se escolher duas linhas, cada uma deve seguir em uma direção diferente, criando um corte em “V”. Criaturas na área sofrem 12d8 pontos de dano de luz (ou 12d12, se forem mortos-vivos) e ficam cegas e surdas até o fim da cena (Reflexos reduz à metade e evita as condições).",
+    origin: "Ameaças de Arton",
+    enhancements: [
+      {
+        cost: "+3 PM",
+        effect: "Aumenta o dano em +2d8 (ou +2d12 contra mortos-vivos).",
+      },
+      {
+        cost: "+6 PM",
+        effect: "Muda a área para uma linha de 120m ou quatro linhas de 30m em direções opostas, formando um “X”.",
+      },
+    ],
+  },
+  { id: "Momento de Tormenta",
+    name: "Momento de Tormenta",
+    type: "Universal",
+    school: "Convocação",
+    circle: 2,
+    execution: "Completa",
+    range: "Pessoal",
+    target: "Área: cubo de 30m",
+    duration: "Sustentada",
+    resistance: "Veja texto",
+    description: "Uma nuvem rubra surge acima do conjurador. Uma vez por turno, você pode gastar uma ação de movimento para fazer a nuvem manifestar um dos fenômenos a seguir.\nChuva ácida. Gotas corrosivas causam 6d4 pontos de dano de ácido em todas as criaturas na área.\nNeblina venenosa. Uma neblina faz com que todas as criaturas na área percam 2d12 PV por veneno (Fortitude evita).\nRaios escarlates. Até 6 inimigos aleatórios na área sofrem 6d8 pontos de dano de eletricidade (Reflexos reduz à metade).\nPesadelos reais. Cada criatura na área sofre 4d6 pontos de dano psíquico e perde 1d4 PM (Vontade reduz o dano à metade e evita a perda de PM).\nEsta magia só pode ser aprendida e lançada por conjuradores que tenham observado uma área de Tormenta pelo menos uma vez. Sua divulgação é proibida e seu uso é permitido apenas em áreas controladas na Academia Arcana e outros lugares restritos, para estudar o fenômeno da Tormenta. Usar esta magia em qualquer outro ponto do Reinado é um crime enquadrado na décima-primeira infração do Vigintílogo.",
+    origin: "Ameaças de Arton",
+    enhancements: [
+      {
+        cost: "+3 PM",
+        effect: "Aumenta o dano em +1 dado do mesmo tipo.",
+      },
+      {
+        cost: "+5 PM",
+        effect: "Além do normal, criaturas na área ficam alquebradas enquanto permanecerem na área.",
+      },
+      {
+        cost: "+5 PM",
+        effect: "(Apenas Devotos de Aharadak) Muda a área para círculo de 1km de raio.",
+      },
+    ],
+  },
+  { id: "Transformação em Dragão",
+    name: "Transformação em Dragão",
+    type: "Arcana",
+    school: "Transmutação",
+    circle: 4,
+    execution: "Completa",
+    range: "Pessoal",
+    target: "Você",
+    duration: "Sustentada",
+    resistance: "Reflexos reduz à metade (veja texto)",
+    description: "Esta magia invoca o poder de um dragão, causando mutações no conjurador que o tornam semelhante a uma criatura dracônica. Você recebe +2 em Força, Constituição, Inteligência e Carisma (esse aumento não oferece PV, PM ou perícias adicionais), +5 na Defesa e redução 30 contra o elemento do sopro do dragão cujo componente material você usou. Uma vez por rodada, você pode gastar uma ação padrão para exalar um sopro que causa 8d6+8 pontos de dano do elemento correspondente em um cone de 9m (Reflexos reduz à metade).\nComponente Material: uma peça de couro de dragão ou uma escama de dragão no valor de T$ 1.000.",
+    origin: "Ameaças de Arton",
+    enhancements: [
+      {
+        cost: "+2 PM",
+        effect: "Aumenta o dano do sopro em +1d6+1.",
+      },
+      {
+        cost: "+2 PM",
+        effect: "Aumenta o bônus na Defesa em +1.",
+      },
+      {
+        cost: "+6 PM",
+        effect: "Além do normal, asas de couro brotam de suas costas. Você recebe deslocamento de voo 18m.",
+      },
+      {
+        cost: "+3 PM",
+        effect: "Você recebe uma arma natural de mordida (1d6, crítico x2, corte). Uma vez por rodada, quando usa a ação agredir para atacar com outra arma, você pode gastar 1 PM para fazer um ataque corpo a corpo extra com a mordida. Se já possuir uma mordida, em vez disso seu dano aumenta em dois passos.",
+      },
+      {
+        cost: "+3 PM",
+        effect: "O bônus em atributos se torna +4.",
+      },
+    ],
+  },
+  //#endregion
+
 
   { id: "Armadura Elemental",
   name: "Armadura Elemental",

@@ -1,7 +1,9 @@
 import { Gear } from "@/types/gear";
-
+//#region Tormenta20 - Jogo do Ano
+//#endregion
 export const clothing: Gear[] = [
-  // Tormenta20 - Jogo do Ano
+
+  //#region  Tormenta20 - Jogo do Ano
   { id: "Andrajos de Aldeão",
     name: "Andrajos de Aldeão",
     description: "Roupas típicas de camponês. Consiste de camisa larga e calças soltas ou blusa e saia e não inclui botas — os mais pobres andam descalços. Fornece +2 em testes de Investigação para interrogar (ninguém se importa com o que um aldeão escuta) e, se você possuir o poder Aparência Inofensiva, a CD para resistir a ele aumenta em +2. Porém, impõe –2 em perícias baseadas em Carisma contra pessoas que se importam com classe social.",
@@ -149,8 +151,45 @@ export const clothing: Gear[] = [
     price: "T$ 25",
     spaces: "1",
   },
+  //#endregion
 
-
+  //#region Ameaças de Arton
+  { id: "garra-feroz",
+    name: "Garra Feroz",
+    description: "Estas pinças de insetos gigantes, presas com tiras de couro, funcionam como uma manopla, mas seus benefícios também se aplicam a uma garra ou a uma arma natural de um personagem sob efeito de habilidades como Forma Selvagem.",
+    origin: "Ameaças de Arton",
+    price: "T$ 60",
+    spaces: "1"
+  },
+  { id: "manto-do-mantor",
+    name: "Manto do Mantor",
+    description: "Este manto, feito a partir do couro de um mantor, oferece parte de sua furtividade. Na escuridão completa fornece camuflagem total, mesmo contra criaturas que vejam no escuro.",
+    origin: "Ameaças de Arton",
+    price: "T$ 450",
+    spaces: "1"
+  },
+  { id: "manto-pesado",
+    name: "Manto Pesado",
+    description: "Estas vestes pesadas com um grande capuz oferecem proteção contra o sol e contra claridade em excesso. Você recebe imunidade a condição ofuscado e, mesmo durante o dia, não é considerado sob luz solar ou semelhante.",
+    origin: "Ameaças de Arton",
+    price: "T$ 10",
+    spaces: "1"
+  },
+  { id: "sombreiro",
+    name: "Sombreiro",
+    description: "Tipo de chapéu com abas muito largas, comum nas proximidades de Smokestone. Fornece resistência a efeitos de sentidos +2.",
+    origin: "Ameaças de Arton",
+    price: "T$ 10",
+    spaces: "1"
+  },
+  { id: "traje-selako",
+    name: "Traje Selako",
+    description: "Feito com couro de selako, este traje fornece parte das capacidades desses predadores. Você recebe +2 em testes de Atletismo para nadar e +3m em seu deslocamento de natação.",
+    origin: "Ameaças de Arton",
+    price: "T$ 90",
+    spaces: "1"
+  },
+  //#endregion
   
   {
     id: "avental-de-forja",

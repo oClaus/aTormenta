@@ -1,5 +1,6 @@
 import { Weapon, DamageProgression } from "@/types/weapon";
-
+//#region Tormenta20 - Jogo do Ano
+//#endregion
 export const damageProgressionTable: DamageProgression[][] = [
   // Linha 1
   [
@@ -1041,20 +1042,6 @@ export const weapons: Weapon[] = [
     damage: "1d6",
     critical: "x4",
     range: "—",
-    type: "Perfuração",
-    spaces: 1,
-  },
-  { id: "Arpão",
-    name: "Arpão",
-    description: "Instrumento de pesca convertido em arma, esta haste tem rebarbas em uma extremidade e uma corda na outra. Se causar dano com um ataque, o arpão fica preso no alvo. Enquanto você segura a corda, sempre que o alvo se move, você pode fazer um teste de Atletismo oposto. Se você vencer, o alvo só pode se mover até o limite da corda (9m). Ele pode se soltar gastando uma ação de movimento, mas perde 1d10 PV. O arpão é uma arma de arremesso; pode ser usado como arma corpo a corpo, mas com penalidade de –5 no teste de ataque. Esta arma é permitida para devotos do Oceano e se beneficia de poderes concedidos que afetam essas armas.",
-    origin: "Dragão Brasil",
-    purpose: "Corpo a Corpo",
-    proficiency: "Exótica",
-    grip: "Uma Mão",
-    price: "T$ 30",
-    damage: "1d10",
-    critical: "x3",
-    range: "Curto",
     type: "Perfuração",
     spaces: 1,
   },

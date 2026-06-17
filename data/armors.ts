@@ -1,7 +1,8 @@
 import { Armor, ArmorType } from "@/types/armors";
-
+//#region Tormenta20 - Jogo do Ano
+//#endregion
 export const armors: Armor[] = [
-  // Tormenta20 - Jogo do Ano
+  //#region Tormenta20 - Jogo do Ano
   { id: "armadura-acolchoada",
     name: "Armadura acolchoada",
     type: "Leve",
@@ -134,8 +135,56 @@ export const armors: Armor[] = [
     spaces: 2,
     image: "/armadura/escudo-pesado.png",
   },
+  //#endregion
 
-
+  //#region Ameaças de Arton
+  { id: "armadura-de-ossos",
+    name: "Armadura de ossos",
+    type: "Leve",
+    description: "Os nezumi e outros povos são conhecidos por produzir estas armaduras sinistras. Combinando um aspecto assustador e energias negativas de ossadas, esta armadura fornece +1 em Intimidação e na CD de seus efeitos de medo (cumulativo com a melhoria macabra).",
+    origin: "Ameaças de Arton",
+    price: "T$ 120",
+    defenseBonus: 3,
+    armorPenalty: -2,
+    spaces: 2,
+    image: "/armadura/armadura-de-ossos.png",
+  },
+  { id: "veste-de-teia-de-aranha",
+    name: "Veste de teia de aranha",
+    type: "Leve",
+    description: "Feita com teia de aranha gigante, esta veste é cinza-escura, maleável e silenciosa, mas também forte como aço. Fornece +5 em Furtividade, mas não pode receber a melhoria material especial.",
+    origin: "Ameaças de Arton",
+    price: "T$ 3.000",
+    defenseBonus: 4,
+    armorPenalty: 0,
+    spaces: 2,
+    image: "/armadura/veste-de-teia-de-aranha.png",
+  },
+  { id: "armadura-de-quitina",
+    name: "Armadura de quitina",
+    type: "Pesada",
+    description: "Feita com carapaças selecionadas de grandes insetos, esta armadura dos povos-trovão é mais leve que suas contrapartes metálicas. Embora seja uma armadura pesada, não reduz o deslocamento do usuário.",
+    origin: "Ameaças de Arton",
+    price: "T$ 350",
+    defenseBonus: 7,
+    armorPenalty: -3,
+    spaces: 5,
+    image: "/armadura/armadura-de-quitina.png",
+  },
+  { id: "escudo-de-couro",
+    name: "Escudo de couro",
+    type: "Escudo",
+    description: "Por sua leveza, este escudo é popular entre velocis e ubaneri. É feito com uma armação de madeira esticando uma membrana de couro (ou outro material flexível) e amarrado ao braço, impedindo o uso dessa mão. Contra ataques à distância, o bônus na Defesa do escudo aumenta em +2. Entretanto, ele é muito leve para ser usado como arma.",
+    origin: "Ameaças de Arton",
+    price: "T$ 3",
+    defenseBonus: 1,
+    armorPenalty: -1,
+    spaces: 1,
+    image: "/armadura/escudo-de-couro.png",
+  },
+  //#endregion
+  
+  
   {
     id: "armadura-sensual",
     name: "Armadura sensual",

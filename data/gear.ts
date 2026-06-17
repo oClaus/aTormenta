@@ -1,7 +1,9 @@
 import { Gear } from "@/types/gear";
-
+//#region Tormenta20 - Jogo do Ano
+//#endregion
 export const gear: Gear[] = [
-  // Tormenta20 - Jogo do Ano
+  
+  //#region Tormenta20 - Jogo do Ano
   { id: "agua-benta",
     name: "Água benta",
     description: "Produzida com a magia Abençoar Alimentos, esta água sagrada é um poderoso recurso na luta contra o mal. Para usar a água benta, você gasta uma ação padrão e escolhe um morto-vivo, demônio ou diabo em alcance curto (a água benta é inofensiva contra outras criaturas). O alvo sofre 2d10 pontos de dano de luz (Reflexos CD Sab reduz à metade).",
@@ -121,6 +123,39 @@ export const gear: Gear[] = [
     price: "T$ 0,2",
     spaces: "1",
   },
+  //#endregion
+
+  //#region Ameaças de Arton
+  { id: "caixa-de-voz",
+    name: "Caixa de Voz",
+    description: "Este complexo mecanismo tem 1d4 cargas: quando usa uma habilidade de bardo ou nobre com alcance curto ou médio, você pode gastar uma carga para aumentar seu alcance em um passo. Segredo de engenharia da Supremacia Purista, este item não pode ser fabricado, sendo encontrado apenas nos destroços de corcéis e carruagens de comando.",
+    origin: "Ameaças de Arton",
+    price: "T$ 50",
+    spaces: "1"
+  },
+  { id: "corda-de-teia",
+    name: "Corda de Teia",
+    description: "Feita de teia de aranha gigante, esta corda de 10m funciona como uma corda normal, mas é mais resistente. Arrebentá-la exige 5 pontos de dano de corte ou um teste de Força (CD 28).",
+    origin: "Ameaças de Arton",
+    price: "T$ 100",
+    spaces: "1"
+  },
+  { id: "dente-de-wisphago",
+    name: "Dente de Wisphago",
+    description: "Um dente de wisphago pode ser vestido como um amuleto. Quando faz um teste de resistência contra uma magia arcana, você pode gastar o amuleto para rolar novamente esse teste com um bônus de +2. Uma vez ativado, o amuleto se desfaz. Um dente de wisphago não pode ser fabricado.",
+    origin: "Ameaças de Arton",
+    price: "T$ 100",
+    spaces: "1"
+  },
+  { id: "gema-de-forca",
+    name: "Gema de Força",
+    description: "Parte de certos engenhos da Supremacia, esta gema tem 1d4 cargas. Empunhando a gema, você pode gastar uma ação padrão e uma carga para produzir um domo semelhante ao efeito básico da magia Campo de Força. Alternativamente, quando lança essa magia, você pode empulhá-lo e usar uma carga para reduzir seu custo em –2 PM. Encontrada nos destroços de corcéis e carruagens de comando, esta gema não pode ser fabricada.",
+    origin: "Ameaças de Arton",
+    price: "-",
+    spaces: "1"
+  },
+  //#endregion
+
 
   // Dragão Brasil
 

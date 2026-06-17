@@ -1,5 +1,6 @@
 import { Gear } from "@/types/gear";
-
+//#region Tormenta20 - Jogo do Ano
+//#endregion
 export const esoteric: Gear[] = [
   // Duelo de Dragões
   { id: "Tomo de Guerra",
@@ -11,7 +12,7 @@ export const esoteric: Gear[] = [
   },
 
 
-  // Tormenta20 - Jogo do Ano
+  //#region Tormenta20 - Jogo do Ano
   { id: "Bolsa de Pó",
     name: "Bolsa de Pó",
     description: "Uma bolsa com pó multicolorido, fabricado a partir das pétalas trituradas de flores que nascem apenas na Pondsmânia. Quando lança uma magia de encantamento ou ilusão, você recebe +2 PM para gastar em aprimoramentos.",
@@ -82,8 +83,31 @@ export const esoteric: Gear[] = [
     price: "T$ 100",
     spaces: "1",
   },
+  //#endregion
 
-
+  //#region Ameaças de Arton
+  { id: "ankh-solar",
+    name: "Ankh Solar",
+    description: "Este item raro é encontrado em corpos embalsamados no Deserto da Perdição. Pode ser usado como arma leve simples corpo a corpo (dano 1d6, crítico 19, corte). Suas magias que tenham testes de resistência recebem o seguinte aprimoramento: +2 PM. Além do normal, criaturas que falham na resistência não podem recuperar PV por 1 rodada.",
+    origin: "Ameaças de Arton",
+    price: "T$ 450",
+    spaces: "1"
+  },
+  { id: "tomo-de-guerra",
+    name: "Tomo de Guerra",
+    description: "Quando lança uma magia de evocação, você recebe +1 PM para gastar em aprimoramentos.",
+    origin: "Ameaças de Arton",
+    price: "T$ 300",
+    spaces: "1"
+  },
+  { id: "tomo-do-rancor",
+    name: "Tomo do Rancor",
+    description: "Suas magias de dano recebem o seguinte aprimoramento: +2 PM. Além do normal, quando lança uma magia de dano, ela causa +2d8+2 pontos de dano de corte, impacto ou perfuração, a sua escolha.",
+    origin: "Ameaças de Arton",
+    price: "T$ 750",
+    spaces: "1"
+  },
+  //#endregion
 
 
   {

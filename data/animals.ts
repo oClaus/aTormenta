@@ -1,7 +1,9 @@
 import { Gear } from "@/types/gear";
-
+//#region Tormenta20 - Jogo do Ano
+//#endregion
 export const animals: Gear[] = [
-  // Tormenta20 - Jogo do Ano
+
+  //#region Tormenta20 - Jogo do Ano
   { id: "Alforje",
     name: "Alforje",
     description: "Sacos de couro feitos para serem presos em uma sela. Permitem que um parceiro montaria carregue até 10 espaços de item para você.",
@@ -58,8 +60,73 @@ export const animals: Gear[] = [
     price: "T$ 30",
     spaces: "—",
   },
+  //#endregion
 
-
+  //#region Ameaças de Arton
+  { id: "bulette",
+    name: "Bulette",
+    description: "Temperamental e feroz, esta fera pode ser adquirida de mercadores na Grande Savana, no Deserto da Perdição ou em Doherimm — em outros lugares, atinge o dobro do preço. Pode ser usado como um parceiro montaria.",
+    origin: "Ameaças de Arton",
+    price: "T$ 500",
+    spaces: "—"
+  },
+  { id: "capivara",
+    name: "Capivara",
+    description: "Simpática, amistosa e dotada de longos e afiados dentes, a capivara é muito apreciada por ginetes Pequenos como hynne e goblins. Pode ser usado como um parceiro montaria por personagens Pequenos e Minúsculos.",
+    origin: "Ameaças de Arton",
+    price: "T$ 60",
+    spaces: "—"
+  },
+  { id: "corcel-do-deserto",
+    name: "Corcel do Deserto",
+    description: "Tipo de cavalo insetoide encontrado na Grande Savana e no Deserto da Perdição. Pode ser usado como um parceiro montaria.",
+    origin: "Ameaças de Arton",
+    price: "T$ 150",
+    spaces: "—"
+  },
+  { id: "dromedario",
+    name: "Dromedário",
+    description: "Disponível em regiões áridas ou montanhosas, pode ser um parceiro montaria.",
+    origin: "Ameaças de Arton",
+    price: "T$ 75",
+    spaces: "—"
+  },
+  { id: "elefante",
+    name: "Elefante",
+    description: "Grande demais para ambientes urbanos, é empregado como animal de trabalho em áreas abertas, como fazendas e áreas de mineração. Pode ser usado como um parceiro montaria.",
+    origin: "Ameaças de Arton",
+    price: "T$ 1.500",
+    spaces: "—"
+  },
+  { id: "hiena",
+    name: "Hiena",
+    description: "Embora sejam mais comuns entre gnolls, hienas podem ocasionalmente ser domesticadas por outros povos. Uma hiena pode ser usada como um parceiro especial (veja p. 119) por personagens treinados em Adestramento, ou montaria por personagens Pequenos e Minúsculos.",
+    origin: "Ameaças de Arton",
+    price: "T$ 220",
+    spaces: "—"
+  },
+  { id: "leao",
+    name: "Leão",
+    description: "Considerado símbolo de nobreza e força, o majestoso leão pode ser treinado para aceitar um cavaleiro, sendo usado como um parceiro montaria.",
+    origin: "Ameaças de Arton",
+    price: "T$ 800",
+    spaces: "—"
+  },
+  { id: "rinoceronte",
+    name: "Rinoceronte",
+    description: "Eram animais de gado dos anões quando estes ainda viviam na superfície; hoje são selvagens e perigosos, de difícil domesticação. Podem ser usados como parceiros montaria, mas raramente são encontrados à venda.",
+    origin: "Ameaças de Arton",
+    price: "T$ 600",
+    spaces: "—"
+  },
+  { id: "urso-pardo",
+    name: "Urso Pardo",
+    description: "Este robusto predador pode ser encontrado em várias regiões de Arton. Ainda que incomum, pode ser empregado como um parceiro montaria.",
+    origin: "Ameaças de Arton",
+    price: "T$ 300",
+    spaces: "—"
+  },
+  //#endregion
   
   {
     id: "armadura-de-montaria-leve",

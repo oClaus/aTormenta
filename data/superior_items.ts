@@ -1,5 +1,3 @@
-// data/superior_items.ts
-
 import { Improvement, ItemCategory, PriceImprovement, MaterialPriceRow, MaterialItemCategory, MaterialType } from "@/types/superior_item";
 
 export const priceImprovements: PriceImprovement[] = [
@@ -9,8 +7,12 @@ export const priceImprovements: PriceImprovement[] = [
   { level: 4, priceIncrease: "+ T$ 18.000", cdIncrease: "+20" },
 ];
 
+//#region Tormenta20 - Jogo do Ano
+//#endregion
+
 export const materialPrices: MaterialPriceRow[] = [
-  // Tormenta20 - Jogo do Ano
+
+  //#region Tormenta20 - Jogo do Ano
   { material: "Aço-Rubi",
     Arma: "+ T$ 6.000",
     "Armadura Leve": "+ T$ 6.000",
@@ -83,8 +85,6 @@ export const materialPrices: MaterialPriceRow[] = [
     description_esoterico: "Permite que você pague +2 PM ao lançar uma magia para aumentar a CD dela em +2.",
     origin: "Tormenta20 - Jogo do Ano",
   },
-
-  
   { material: "Couro de Dragão",
     Arma: "—",
     "Armadura Leve": "—",
@@ -97,11 +97,119 @@ export const materialPrices: MaterialPriceRow[] = [
     description_esoterico: "Quando lança uma magia que cause dano do mesmo tipo do sopro do dragão, você pode gastar 1 PM para aumentar o dano da magia em +1 por dado.",
     origin: "Tormenta20 - Jogo do Ano",
   },
+  //#endregion
+
+  //#region Ameaças de Arton
+  { material: "Casco de Monstro",
+    Arma: "+ T$ 750",
+    "Armadura Leve": "+ T$ 750",
+    "Armadura Pesada": "+ T$ 6.000",
+    Escudo: "+ T$ 750",
+    Esotéricos: "+ T$ 6.000",
+    description: "Os cascos protetores de certos monstros podem substituir aço e outros materiais rígidos, embora sejam mais frágeis; ao sofrer dano de impacto, um item mundano feito de casco de monstro sofre 1 ponto a mais por dado de dano.",
+    description_arma: "Conta como uma arma primitiva para a magia Armamento da Natureza e efeitos semelhantes.",
+    description_armadura: "Têm sua penalidade de armadura diminuída em 1. Armaduras pesadas de casco permitem aplicar 1 ponto de Destreza na Defesa.",
+    description_escudo: "Têm sua penalidade de armadura diminuída em 1.",
+    description_esoterico: "Quando lança uma magia, você recebe redução de dano 5 contra o próximo dano que sofrer até sua próxima rodada.",
+    origin: "Ameaças de Arton"
+  },
+  { material: "Couraça de Kaiju",
+    Arma: "-",
+    "Armadura Leve": "-",
+    "Armadura Pesada": "-",
+    Escudo: "-",
+    Esotéricos: "-",
+    description: "Ainda mais raro que couro dracônico, este material pode ser empregado para fabricar itens superiores de grande poder. Jamais encontrado à venda, sendo obtido apenas a partir de um kaiju abatido.",
+    description_arma: "Arma (exige uma peça). O dano aumenta um passo. Além disso, quando faz um ataque, se o alvo usar um effect que reduz o dano desse ataque (como Durão ou Escamas Supremas), você pode gastar 2 PM para ignorar o effect. Isso não se aplica a RD.",
+    description_armadura: "Armadura leve e escudo (exigem uma peça): RD 10/mágico. Armadura pesada (exige três peças): RD 20/mágico.",
+    description_escudo: "Armadura leve e escudo (exigem uma peça): RD 10/mágico.",
+    description_esoterico: "Esotérico (exige uma peça). Quando lança uma magia que causa dano, você pode gastar 2 PM para ignorar effects dos alvos que reduzem o dano dessa magia, como Durão ou Evasão (exceto redução de dano e o effect de passar no teste de resistência contra a magia).",
+    origin: "Ameaças de Arton"
+  },
+  { material: "Couro de Bulette",
+    Arma: "-",
+    "Armadura Leve": "-",
+    "Armadura Pesada": "-",
+    Escudo: "-",
+    Esotéricos: "-",
+    description: "Este couro raramente é encontrado à venda; quando não é curtido e tratado logo após a extração, perde suas qualidades especiais.",
+    description_armadura: "Armadura leve (exige uma peça): fornece deslocamento de escavação igual à metade de seu deslocamento normal e redução de ácido 5. Armadura pesada (exige três peças): como acima, mas a redução de ácido é 10.",
+    description_esoterico: "Esotérico (exige uma peça). Quando lança uma magia de ácido que causa dano, você pode rolar novamente qualquer resultado 1 nas rolagens de dano (mesmo em rodadas subsequentes).",
+    origin: "Ameaças de Arton"
+  },
+  { material: "Cristal de Sol",
+    Arma: "-",
+    "Armadura Leve": "-",
+    "Armadura Pesada": "-",
+    Escudo: "-",
+    Esotéricos: "-",
+    description: "Utilizados pelos ursos das neves para armazenar calor, estes cristais perdem suas propriedades em algumas semanas quando não utilizados, tornando difícil encontrá-los à venda.",
+    description_arma: "Arma (exige uma peça). Só pode ser aplicado a armas de corte ou perfuração. A arma causa +2 pontos de dano por fogo.",
+    description_armadura: "Armadura e Escudo (exige uma peça). Quando faz um teste de resistência contra um effect de frio, você pode rolar dois dados e usar o melhor resultado.",
+    description_escudo: "Armadura e Escudo (exige uma peça). Quando faz um teste de resistência contra um effect de frio, você pode rolar dois dados e usar o melhor resultado.",
+    description_esoterico: "Esotérico (exige uma peça). Quando lança uma magia de fogo, você pode gastar 1 PM. Se fizer isso, criaturas que falhem em seu teste de resistência contra a magia ficam em chamas (se a magia já deixa a vítima em chamas, em vez disso o dano das chamas aumenta em +1d6 cumulativo).",
+    origin: "Ameaças de Arton"
+  },
+  { material: "Lanajuste",
+    Arma: "+ T$ 600",
+    "Armadura Leve": "+ T$ 1.500",
+    "Armadura Pesada": "+ T$ 3.000",
+    Escudo: "+ T$ 1.500",
+    Esotéricos: "+ T$ 3.000",
+    description: "Também chamado de coral-de-ferro, é encontrado em paredões afiados banhados pelo mar em Khubar. Mais conhecido por seu uso em lâminas afiadas, o lanajuste também é empregado em outros itens.",
+    description_arma: "Ataques com a arma ignoram penalidades por combate submerso. Além disso, pode ser utilizada por devotos do Oceano sem violar suas obrigações e restrições.",
+    description_armadura: "Fornece redução de corte: armaduras leves e escudos, redução 5; armaduras pesadas, redução 10.",
+    description_escudo: "Fornece redução de corte: armaduras leves e escudos, redução 5; armaduras pesadas, redução 10.",
+    description_esoterico: "Quando lança uma magia que causa dano de corte, você pode rolar novamente qualquer resultado 1 na rolagem de dano.",
+    origin: "Ameaças de Arton"
+  },
+  { material: "Pena de Kraken",
+    Arma: "-",
+    "Armadura Leve": "-",
+    "Armadura Pesada": "-",
+    Escudo: "-",
+    Esotéricos: "-",
+    description: "Esse material vítreo extraído da concha interna de um kraken é extremamente afiado. Em seu estado bruto, é quebradiço e difícil de transportar sem equipamento adequado, sendo assim raramente encontrado à venda.",
+    description_arma: "Arma (exige uma peça). Quando faz um acerto crítico, o dano aumenta dois passos (antes de ser multiplicado).",
+    description_armadura: "Armadura leve e escudo (exigem uma peça): quando uma criatura erra um ataque corpo a corpo contra você, perde 5 pontos de vida. Armadura pesada (exige três peças): quando uma criatura erra um ataque corpo a corpo contra você, perde 10 pontos de vida.",
+    description_escudo: "Armadura leve e escudo (exigem uma peça): quando uma criatura erra um ataque corpo a corpo contra você, perde 5 pontos de vida. Armadura pesada (exige três peças): quando uma criatura erra um ataque corpo a corpo contra você, perde 10 pontos de vida.",
+    description_esoterico: "Esotérico (exige uma peça). Se o item fornece algum bônus numérico, ele aumenta em +1.",
+    origin: "Ameaças de Arton"
+  },
+  { material: "Prata",
+    Arma: "+ T$ 600",
+    "Armadura Leve": "+ T$ 1.500",
+    "Armadura Pesada": "+ T$ 3.000",
+    Escudo: "+ T$ 1.500",
+    Esotéricos: "+ T$ 400",
+    description: "Embora seja muito maleável, a prata pode ser usada para revestir objetos e conceder propriedades quase mágicas. Por ser usada como revestimento, prata pode ser combinada com um segundo material especial (cada um contando como uma melhoria separada).",
+    description_arma: "Causa +2 pontos de dano em espíritos e mortos-vivos e é considerada mágica para atacar essas criaturas.",
+    description_armadura: "Fornece redução de dano causado por espíritos e mortos-vivos: armaduras leves e escudos, RD 5; armaduras pesadas, RD 10.",
+    description_escudo: "Fornece redução de dano causado por espíritos e mortos-vivos: armaduras leves e escudos, RD 5; armaduras pesadas, RD 10.",
+    description_esoterico: "Suas magias causam +2 pontos de dano em espíritos e mortos-vivos.",
+    origin: "Ameaças de Arton"
+  },
+  { material: "Quitina Razza",
+    Arma: "-",
+    "Armadura Leve": "-",
+    "Armadura Pesada": "-",
+    Escudo: "-",
+    Esotéricos: "-",
+    description: "Cobiçada por caçadores de monstros, que a consideram um grande troféu, esta quitina raramente é encontrada à venda; a única forma de obter este material é abater um razza’kham.",
+    description_arma: "Arma (exige uma peça). Sempre que rolar o resultado máximo em um dado do dano básico da arma, role um dado extra, repetindo o processo a cada resultado máximo.",
+    description_armadura: "Armadura leve e escudo (exigem uma peça): concede +2 em Percepção e seu bônus na Defesa aumenta em 1. Armadura pesada (exigem três peças): concede +5 em Percepção e seu bônus na Defesa aumenta em 2.",
+    description_escudo: "Armadura leve e escudo (exigem uma peça): concede +2 em Percepção e seu bônus na Defesa aumenta em 1. Armadura pesada (exigem três peças): concede +5 em Percepção e seu bônus na Defesa aumenta em 2.",
+    description_esoterico: "Esotérico (exige uma peça). Sempre que rolar o resultado máximo em um dado do dano básico da magia (sem contar aprimoramentos e outros effects), role um dado extra, repetindo o processo a cada resultado máximo.",
+    origin: "Ameaças de Arton"
+  },
+  //#endregion
+
 ];
 
 
 export const improvements: Improvement[] = [
-  // Tormenta20 - Jogo do Ano
+
+  //#region Tormenta20 - Jogo do Ano
   { id: "certeira", 
     name: "Certeira", 
     effect: "+1 nos testes de ataque", 
@@ -305,7 +413,25 @@ export const improvements: Improvement[] = [
     description: "O macabro é pintado com sangue seco, esculpido na forma de uma caveira ou decorado com pedaços de orelhas, dedos e olhos. Essa aparência assustadora fornece +2 em Intimidação, mas impõe uma penalidade de –2 em Diplomacia.", 
     origin: "Tormenta20 - Jogo do Ano" 
   },
+//#endregion
 
+  //#region Ameaças de Arton
+  { id: "multifuncional", 
+      name: "Multifuncional", 
+      effect: "Item funciona para uma segunda perícia com o mesmo atributo", 
+      category: ["Ferramenta", "Vestuário"], 
+      description: "Esta melhoria só pode ser aplicada em um item que modifica uma perícia (fornecendo bônus ou reduzindo penalidade). Escolha outra perícia que usa o mesmo atributo-chave; o item passa a funcionar também para a segunda perícia escolhida (mas não se aplica a testes de ataque).", 
+      origin: "Ameaças de Arton" 
+  },
+  { id: "penetrante", 
+      name: "Penetrante", 
+      effect: "Ignora 5 pontos de redução de dano", 
+      category: ["Arma"], 
+      description: "A arma ignora 5 pontos da redução de dano. Pré-requisito: cruel.", 
+      origin: "Ameaças de Arton" 
+  },
+  //#endregion
+  
 
   { id: "Agulha", 
     name: "Agulha", 

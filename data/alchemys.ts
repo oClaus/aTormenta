@@ -1,7 +1,9 @@
 import { Alchemy, AlchemyType } from "@/types/alchemy";
-
+//#region Tormenta20 - Jogo do Ano
+//#endregion
 export const alchemy: Alchemy[] = [
-  // Tormenta20 - Jogo do Ano
+
+  //#region Tormenta20 - Jogo do Ano
   { id: "Ácido",
     name: "Ácido",
     type: "Preparados",
@@ -242,6 +244,146 @@ export const alchemy: Alchemy[] = [
     price: "T$ 150",
     spaces: "0,5",
   },
+  //#endregion
+
+  //#region Ameaças de Arton
+  { id: "Bálsamo de Drogadora",
+    name: "Bálsamo de Drogadora",
+    type: "Preparados",
+    description: "Produzido por curandeiras dos povos-trovão, este pote de cerâmica contém uma pasta gosmenta. Aplicá-la é uma ação completa e cura 4d6+4 PV.",
+    origin: "Ameaças de Arton",
+    price: "T$ 60",
+    spaces: "0,5"
+  },
+  { id: "Bomba de Fumaça",
+    name: "Bomba de Fumaça",
+    type: "Preparados",
+    description: "Saco de estopa com pavio, contendo uma pólvora especial que produz mais fumaça do que fogo. Segue as mesmas regras da bomba, mas, em vez de causar dano, emite uma nuvem de fumaça espessa com 6m de raio, que obscurece toda a visão e dura até o fim da cena. Criaturas a até 1,5m têm camuflagem leve e criaturas a partir de 3m têm camuflagem total.",
+    origin: "Ameaças de Arton",
+    price: "T$ 15",
+    spaces: "0,5"
+  },
+  { id: "Elixir Quimérico",
+    name: "Elixir Quimérico",
+    type: "Preparados",
+    description: "Beber este elixir é uma ação padrão; até o fim da cena, você ganha uma arma natural de mordida (dano 1d6, crítico x2, perfuração). Uma vez por rodada, quando usa a ação agredir para atacar com outra arma, pode gastar 1 PM para fazer um ataque corpo a corpo extra com a mordida. Se já possui uma mordida, seu dano aumenta em um passo.",
+    origin: "Ameaças de Arton",
+    price: "T$ 120",
+    spaces: "0,5"
+  },
+  { id: "Éter Elemental",
+    name: "Éter Elemental",
+    type: "Preparados",
+    description: "Extraído de elementais, este líquido viscoso tem cor e textura relacionados ao elemento de origem. Uma dose é suficiente para cobrir uma arma corpo a corpo ou 20 munições; aplicá-lo é uma ação padrão e faz a arma (ou as munições) causar +1d4 pontos de dano do tipo do dano elemental até o fim da cena. Múltiplas doses não são cumulativas.",
+    origin: "Ameaças de Arton",
+    price: "T$ 60",
+    spaces: "0,5"
+  },
+  { id: "Isca Putrefata",
+    name: "Isca Putrefata",
+    type: "Preparados",
+    description: "Frasco de restos mortais diluídos em uma solução macabra. Você pode gastar uma ação padrão para arremessar a isca em um local ou criatura em alcance médio. A isca se gruda ao alvo (Ref CD Des evita) e dura 1d6 rodadas. Durante esse tempo, cada morto-vivo não inteligente em alcance curto é atraído (Von CD Des evita), gastando todas as suas ações para se deslocar até a isca. Quando a alcança, fica fascinado ou, se a isca estiver presa a uma criatura, a ataca.",
+    origin: "Ameaças de Arton",
+    price: "T$ 60",
+    spaces: "0,5"
+  },
+  { id: "Lágrima Pétrea",
+    name: "Lágrima Pétrea",
+    type: "Preparados",
+    description: "Este líquido cristalino tem o poder de devolver criaturas à sua forma original. Você pode gastar uma ação padrão para aplicá-lo em uma criatura adjacente ou arremessá-lo em uma criatura em alcance curto; uma dose remove todos os efeitos de metamorfose (Ref CD Des evita).",
+    origin: "Ameaças de Arton",
+    price: "T$ 30",
+    spaces: "0,5"
+  },
+  { id: "Óleo de Baleia",
+    name: "Óleo de Baleia",
+    type: "Preparados",
+    description: "Este antigo preparado é um destilado de gordura de baleia. Você pode usar uma ação padrão para aplicar o óleo em uma arma ou pacote de munições para ignorar penalidades de combate submerso com esse item até o fim da cena.",
+    origin: "Ameaças de Arton",
+    price: "T$ 30",
+    spaces: "0,5"
+  },
+  { id: "Óleo de Besouro",
+    name: "Óleo de Besouro",
+    type: "Preparados",
+    description: "O líquido do terrível besouro-do-óleo pode ser usado em lampiões (dobro da duração e área de iluminação) e explosivos. Para usar um frasco, você precisa empunhá-lo, gastar uma ação de movimento para acender seu pavio e uma ação padrão para arremessá-lo em alcance curto. Criaturas a até 3m do ponto atingido sofrem 4d6 pontos de dano de fogo e ficam em chamas (Ref CD Des reduz o dano à metade e evita a condição).",
+    origin: "Ameaças de Arton",
+    price: "T$ 50",
+    spaces: "0,5"
+  },
+  { id: "Pó Azul",
+    name: "Pó Azul",
+    type: "Preparados",
+    description: "Saquinho de couro com pó feito a partir de uma planta exótica de Galrasia, capaz de absorver energia mágica ambiente. Inalar o pó é uma ação completa e recupera 2d4 PM.",
+    origin: "Ameaças de Arton",
+    price: "T$ 150",
+    spaces: "0,5"
+  },
+  { id: "Corrosivo Mineral",
+    name: "Corrosivo Mineral",
+    type: "Catalisadores",
+    description: "Pasta mineral corrosiva produzida com ingredientes naturais. Aumenta os dados de dano de magias de ácido em uma categoria: d4 para d6, d6 para d8, d8 para d10 e d10 para d12 (máximo).",
+    origin: "Ameaças de Arton",
+    price: "T$ 150",
+    spaces: "0,5"
+  },
+  { id: "Gelo Extremo",
+    name: "Gelo Extremo",
+    type: "Catalisadores",
+    description: "Cristais minerais que eliminam todo o calor ao redor. Aumenta os dados de dano de magias de frio em uma categoria: d4 para d6, d6 para d8, d8 para d10 e d10 para d12 (máximo).",
+    origin: "Ameaças de Arton",
+    price: "T$ 150",
+    spaces: "0,5"
+  },
+  { id: "Pedaço de Língua",
+    name: "Pedaço de Língua",
+    type: "Catalisadores",
+    description: "Glândulas que podem ser usadas como um catalisador que fornece +1 na CD dos testes de Fortitude para resistir a suas magias.",
+    origin: "Ameaças de Arton",
+    price: "T$ 30",
+    spaces: "0,5"
+  },
+  { id: "Raio Cristalizado",
+    name: "Raio Cristalizado",
+    type: "Catalisadores",
+    description: "Eletricidade gerada por elementais e outros seres mágicos pode ser solidificada na forma de pequenos cristais. Aumenta os dados de dano de magias de eletricidade em uma categoria: d4 para d6, d6 para d8, d8 para d10 e d10 para d12 (máximo).",
+    origin: "Ameaças de Arton",
+    price: "T$ 150",
+    spaces: "0,5"
+  },
+  { id: "Esporos de Cogumelo",
+    name: "Esporos de Cogumelo",
+    type: "Venenos",
+    description: "Extraído de certos cogumelos e criaturas aparentadas, causa breve mas perigosa paralisia. Inalação, vítima fica paralisada (lenta) por 1 rodada, depois imune a paralisia por este veneno pela cena.",
+    origin: "Ameaças de Arton",
+    price: "T$ 75",
+    spaces: "0,5"
+  },
+  { id: "Peçonha Anciã",
+    name: "Peçonha Anciã",
+    type: "Venenos",
+    description: "Veneno poderoso, extraído de serpes anciãs, capaz de afetar até criaturas imunes. Contato, perde 3d12 PV por rodada durante 3 rodadas e ignora imunidade a venenos (perde 3d12 PV).",
+    origin: "Ameaças de Arton",
+    price: "T$ 1.800",
+    spaces: "0,5"
+  },
+  { id: "Peçonha Irritante",
+    name: "Peçonha Irritante",
+    type: "Venenos",
+    description: "Este veneno leve, produzido por diversas criaturas, tem efeito brando mas que não pode ser resistido. Contato, perde 1d6 PV.",
+    origin: "Ameaças de Arton",
+    price: "T$ 10",
+    spaces: "0,5"
+  },
+  { id: "Veneno Batráquio",
+    name: "Veneno Batráquio",
+    type: "Venenos",
+    description: "Produzida a partir da saliva de sapos gigantes, esta gosma machuca e enjoa. Contato, perde 1d12 PV e fica enjoado por 1 rodada (perde 1d6 PV).",
+    origin: "Ameaças de Arton",
+    price: "T$ 30",
+    spaces: "0,5"
+  },
+  //#endregion
 
   // Dragão Brasil - 200
   { id: "Escama Companheira",
