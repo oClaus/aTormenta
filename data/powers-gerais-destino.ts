@@ -1,7 +1,9 @@
 import { Power } from "@/types/power";
-
+//#region Tormenta20 - Jogo do Ano
+//#endregion
 export const powersGeraisDestino: Power[] = [
-  // Tormenta20 - Jogo do Ano
+
+  //#region Tormenta20 - Jogo do Ano
   { id: "Acrobático",
     name: "Acrobático",
     description: "Você pode usar sua Destreza em vez de Força em testes de Atletismo. Além disso, terreno difícil não reduz seu deslocamento nem o impede de realizar investidas. ",
@@ -122,8 +124,9 @@ export const powersGeraisDestino: Power[] = [
     prerequisite: "Sab 1.",
     origin: "Tormenta20 - Jogo do Ano"
   },
+  //#endregion
 
-  // Ameaças de Arton
+  //#region Ameaças de Arton
   { id: "Coração de Dragão",
     name: "Coração de Dragão",
     description: "Você recebe +2 PV e +2 PM. Além disso, para você, um dragão jovem conta como um único parceiro para seu limite de parceiros.",
@@ -142,7 +145,17 @@ export const powersGeraisDestino: Power[] = [
     prerequisite: "Ginete.",
     origin: "Ameaças de Arton"
   },
+  //#endregion
 
+  //#region Dragão Brasil
+
+  // Dragão Brasil - 199
+  { id: "Cozinheiro Aventureiro",
+    name: "Cozinheiro Aventureiro",
+    description: "Você recebe +2 em Ofício (cozinheiro) e em testes de outras perícias para extrair itens de criaturas abatidas. Além disso, toda vez que prepara uma refeição, pode escolher um aditivo na lista a seguir, e somar seus efeitos a todas as porções do alimento preparado. Um prato não pode ter mais de um aditivo.\nErvas Medicinais: remove uma condição entre enjoado, envenenado ou fatigado. Além disso, quando faz um teste de Fortitude para resistir a uma doença, pode rolar 2 dados e escolher o melhor resultado.\nRestos da Última Refeição: recebe +2 PV temporários.\nRaiz de Mandrágora: recebe +4 PM temporários. Exige uma mandrágora.\nMiúdos de Slime Curados: esse prato tem seu bônus numérico aumentado em +1. Exige miúdos de slime.",
+    prerequisite: "Foco em Perícia: Ofício (cozinheiro).",
+    origin: "Dragão Brasil - 199"
+  },
   // Dragão Brasil - 200
   { id: "Asas do Dragão",
     name: "Asas do Dragão",
@@ -216,6 +229,7 @@ export const powersGeraisDestino: Power[] = [
     prerequisite: "Coração de Dragão.",
     origin: "Dragão Brasil - 200"
   },
+  //#endregion
 
 
   { id: "Alma Livre",

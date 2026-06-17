@@ -124,6 +124,12 @@ export const powerCategories: PowerCategory[] = [
     description: "Poderes exclusivos de Vampiro.",
     origin: "Dragão Brasil"
   },
+  { id: "Mistico",
+    name: "Místico",
+    slug: "mistico",
+    description: "Poderes exclusivos de Místico.",
+    origin: "Dragão Brasil"
+  },
 
   
   

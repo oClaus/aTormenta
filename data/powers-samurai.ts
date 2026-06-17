@@ -255,204 +255,163 @@ export const powersSamurai: Power[] = [
     origin: "Dragão Brasil - 201"
   },
 
-
-
+  // Dragão Brasil - 199
   { id: "Arma Ancestral Adicional",
     name: "Arma Ancestral Adicional",
     description: "Você recebe uma arma ancestral adicional de um tipo à sua escolha. Esta arma segue a mesma progressão de melhorias e encantos de sua primeira arma ancestral, mas você pode escolher benefícios diferentes para ela.",
     prerequisite: "",
-    origin: "Dragão Brasil"
-  },
-  { id: "Daisho",
-    name: "Daisho",
-    description: "Você recebe proficiência com wakizashi e recebe uma dessas armas como uma arma ancestral adicional. Esta arma segue a mesma progressão de melhorias e encantos de sua primeira arma ancestral, mas você pode escolher benefícios diferentes para ela.",
-    prerequisite: "",
-    origin: "Dragão Brasil"
-  },
-  { id: "Espírito Incisivo",
-    name: "Espírito Incisivo",
-    description: "Você recebe +1 no multiplicador de crítico em ataques com sua arma ancestral.",
-    prerequisite: "",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 199"
   },
   { id: "Arma Reverberante",
     name: "Arma Reverberante",
     description: "Quando usa Grito de Kiai para atacar com sua arma ancestral, você pode gastar +1 PM para aumentar o bônus de dano em +1 dado do mesmo tipo concedido por seu grito. ",
     prerequisite: "5º nível de samurai.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Corte da Correnteza",
-    name: "Corte da Correnteza",
-    description: "Se estiver usando sua arma ancestral em corpo a corpo em uma das mãos e nada na outra, você recebe +2 na margem de ameaça e causa +1d6 pontos de dano com acertos críticos.",
-    prerequisite: "",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 199"
   },
   { id: "Arma Veloz",
     name: "Arma Veloz",
     description: "Uma vez por rodada, quando usa a ação agredir com sua arma ancestral, você pode gastar 2 PM para realizar um ataque adicional com essa mesma arma.",
     prerequisite: "6º nível de samurai.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 199"
   },
-  { id: "Iaijutsu",
-    name: "Iaijutsu",
-    description: "Você soma sua Sabedoria em Iniciativa e pode sacar ou guardar armas como uma ação livre (em vez de ação de movimento). Além disso, quando faz um teste de Iniciativa para agir, para cada 10 pontos no resultado de seu teste, você recebe +1 em testes de ataque e rolagens de dano com arma na primeira rodada de combate. ",
-    prerequisite: "treinado em Iniciativa.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Kiai Estremecedor",
-    name: "Kiai Estremecedor",
-    description: "Quando usa Grito de Kiai, você pode pagar 1 PM. Se acertar o ataque, todos os oponentes em alcance curto do alvo do ataque ficam caídos (Fortitude CD Sab evita).",
-    prerequisite: "",
-    origin: "Dragão Brasil"
-  },
-  { id: "Nuvem Serena",
-    name: "Nuvem Serena",
-    description: "Enquanto tiver pontos de vida temporários fornecidos por Serenidade dos Kami, o dano de sua arma ancestral aumenta em um passo.",
-    prerequisite: "Dois Céus, Serenidade dos Kami.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Ronin",
-    name: "Ronin",
-    description: "Você não precisa mais seguir seu Código do Samurai. Além disso, você pode trocar sua katana por outro tipo de arma, e não está limitado a katanas como sua arma ancestral",
-    prerequisite: "",
-    origin: "Dragão Brasil"
-  },
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  { id: "Equilíbrio Interior",
-    name: "Equilíbrio Interior",
-    description: "Quando rola um 1 natural em um teste, você pode rolar novamente o dado. Você só pode usar este poder uma vez por teste. ",
-    prerequisite: "treinado em Vontade.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Honra Inabalável",
-    name: "Honra Inabalável",
-    description: "Você soma sua Sabedoria em seu total de pontos de vida e se torna imune a efeitos de medo. Este poder não elimina fobias raciais (como o medo de altura dos minotauros). ",
-    prerequisite: "Sab 1.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Kiai Assustador",
-    name: "Kiai Assustador",
-    description: "Quando usa Grito de Kiai, você pode pagar 1 PM. Se acertar o ataque, todos os oponentes em alcance curto ficam abalados por 1 rodada. ",
-    prerequisite: "treinado em Intimidação.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Kyudo",
-    name: "Kyudo",
-    description: "Você pode usar Grito de Kiai com ataques à distância. Quando usa uma arma de ataque à distância, pode usar sua Sabedoria em vez de Destreza nos testes de ataque (e, caso possua o poder Estilo de Disparo, nas rolagens de dano). ",
-    prerequisite: "treinado em Pontaria.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Rio Sereno",
-    name: "Rio Sereno",
-    description: "Enquanto tiver pontos de vida temporários fornecidos por Serenidade dos Kami, seu deslocamento aumenta em +3m e não é reduzido por terreno difícil natural.",
-    prerequisite: "Corte da Correnteza, Serenidade dos Kami.",
-    origin: "Dragão Brasil"
-  },
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  { id: "Avalanche das Três Mãos",
-    name: "Avalanche das Três Mãos",
-    description: "Se estiver usando sua arma ancestral com as duas mãos, você soma sua Constituição nas rolagens de dano (limitado pelo seu nível). ",
-    prerequisite: "Con 1.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Emblema do Império de Jade",
-    name: "Emblema do Império de Jade",
-    description: "Você soma sua Sabedoria em Diplomacia, Guerra e Nobreza. ",
-    prerequisite: "Sab 1.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Honra dos Ancestrais",
-    name: "Honra dos Ancestrais",
-    description: "O nome de sua família invoca a honra e tradição de seus antepassados. Uma vez por cena, você pode gastar uma ação de movimento para fazer um teste de Diplomacia, Intimidação ou Nobreza (CD 10) e impressionar os presentes. Se passar, você recebe +1 em todos os seus testes de perícias baseadas em Carisma até o fim da cena. Esse bônus aumenta em +1 para cada 5 pontos pelos quais o resultado do teste exceder a CD (+2 para um resultado 15, +3 para 20 e assim por diante). Como alternativa, você pode aplicar esse bônus em seu próximo teste de ataque nesta cena. ",
-    prerequisite: "12º nível de samurai.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Meditação Artística",
-    name: "Meditação Artística",
-    description: "Você pode gastar 1 hora e 5 PM escrevendo um pequeno poema enquanto medita sobre os desafios por vir. Você recebe 5d6 dados de concentração. Pelas próximas 24 horas, sempre que for realizar um teste de perícia, você pode gastar um desses d6 e adicionar o resultado rolado como um bônus no teste. ",
-    prerequisite: "8º nível de samurai, treinado em Ofício (calígrafo).",
-    origin: "Dragão Brasil"
-  },
-  { id: "Serenidade dos Kami",
-    name: "Serenidade dos Kami",
-    description: "Você pode gastar uma ação de movimento e 3 PM para receber uma quantidade de PV temporários igual ao seu nível + sua Sabedoria. Se usar este poder na primeira rodada de um combate, você não precisa gastar PM.",
-    prerequisite: "",
-    origin: "Dragão Brasil"
-  },
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   { id: "Ataque Disciplinado",
     name: "Ataque Disciplinado",
     description: "Quando ataca com sua arma ancestral, você soma sua Sabedoria nas rolagens de dano (limitado pelo seu nível). ",
     prerequisite: "Sab 1.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 199"
+  },
+  { id: "Avalanche das Três Mãos",
+    name: "Avalanche das Três Mãos",
+    description: "Se estiver usando sua arma ancestral com as duas mãos, você soma sua Constituição nas rolagens de dano (limitado pelo seu nível). ",
+    prerequisite: "Con 1.",
+    origin: "Dragão Brasil - 199"
+  },
+  { id: "Corte da Correnteza",
+    name: "Corte da Correnteza",
+    description: "Se estiver usando sua arma ancestral em corpo a corpo em uma das mãos e nada na outra, você recebe +2 na margem de ameaça e causa +1d6 pontos de dano com acertos críticos.",
+    prerequisite: "",
+    origin: "Dragão Brasil - 199"
+  },
+  { id: "Daisho",
+    name: "Daisho",
+    description: "Você recebe proficiência com wakizashi e recebe uma dessas armas como uma arma ancestral adicional. Esta arma segue a mesma progressão de melhorias e encantos de sua primeira arma ancestral, mas você pode escolher benefícios diferentes para ela.",
+    prerequisite: "",
+    origin: "Dragão Brasil - 199"
   },
   { id: "Aumento de Atributo.",
     name: "Aumento de Atributo.",
     description: "Você recebe +1 em um atributo. Você pode escolher este poder várias vezes, mas apenas uma vez por patamar para um mesmo atributo.",
     prerequisite: "",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 199"
   },
   { id: "Dois Céus",
     name: "Dois Céus",
     description: "Se estiver empunhando sua arma ancestral e uma segunda arma (e pelo menos uma delas for leve) e fizer a ação agredir, você pode fazer dois ataques, um com cada arma. Se fizer isso, sofre –2 em todos os testes de ataque até o seu próximo turno. Se possuir Estilo de Duas Armas, quando usa Grito de Kiai você pode gastar +1 PM para aplicar seu efeito a ambas as armas. ",
     prerequisite: "Des 2",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 199"
+  },
+  { id: "Emblema do Império de Jade",
+    name: "Emblema do Império de Jade",
+    description: "Você soma sua Sabedoria em Diplomacia, Guerra e Nobreza. ",
+    prerequisite: "Sab 1.",
+    origin: "Dragão Brasil - 199"
+  },
+  { id: "Equilíbrio Interior",
+    name: "Equilíbrio Interior",
+    description: "Quando rola um 1 natural em um teste, você pode rolar novamente o dado. Você só pode usar este poder uma vez por teste. ",
+    prerequisite: "treinado em Vontade.",
+    origin: "Dragão Brasil - 199"
+  },
+  { id: "Espírito Incisivo",
+    name: "Espírito Incisivo",
+    description: "Você recebe +1 no multiplicador de crítico em ataques com sua arma ancestral.",
+    prerequisite: "",
+    origin: "Dragão Brasil - 199"
+  },
+  { id: "Honra Inabalável",
+    name: "Honra Inabalável",
+    description: "Você soma sua Sabedoria em seu total de pontos de vida e se torna imune a efeitos de medo. Este poder não elimina fobias raciais (como o medo de altura dos minotauros). ",
+    prerequisite: "Sab 1.",
+    origin: "Dragão Brasil - 199"
+  },
+  { id: "Honra dos Ancestrais",
+    name: "Honra dos Ancestrais",
+    description: "O nome de sua família invoca a honra e tradição de seus antepassados. Uma vez por cena, você pode gastar uma ação de movimento para fazer um teste de Diplomacia, Intimidação ou Nobreza (CD 10) e impressionar os presentes. Se passar, você recebe +1 em todos os seus testes de perícias baseadas em Carisma até o fim da cena. Esse bônus aumenta em +1 para cada 5 pontos pelos quais o resultado do teste exceder a CD (+2 para um resultado 15, +3 para 20 e assim por diante). Como alternativa, você pode aplicar esse bônus em seu próximo teste de ataque nesta cena. ",
+    prerequisite: "12º nível de samurai.",
+    origin: "Dragão Brasil - 199"
+  },
+  { id: "Iaijutsu",
+    name: "Iaijutsu",
+    description: "Você soma sua Sabedoria em Iniciativa e pode sacar ou guardar armas como uma ação livre (em vez de ação de movimento). Além disso, quando faz um teste de Iniciativa para agir, para cada 10 pontos no resultado de seu teste, você recebe +1 em testes de ataque e rolagens de dano com arma na primeira rodada de combate. ",
+    prerequisite: "treinado em Iniciativa.",
+    origin: "Dragão Brasil - 199"
   },
   { id: "Ira Gentil",
     name: "Ira Gentil",
     description: "Enquanto tiver pontos de vida temporários fornecidos por Serenidade dos Kami, você soma seu bônus de Olhar Assustador em testes de ataque e rolagens de dano com sua arma ancestral. ",
     prerequisite: "Serenidade dos Kami",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 199"
+  },
+  { id: "Kiai Estremecedor",
+    name: "Kiai Estremecedor",
+    description: "Quando usa Grito de Kiai, você pode pagar 1 PM. Se acertar o ataque, todos os oponentes em alcance curto do alvo do ataque ficam caídos (Fortitude CD Sab evita).",
+    prerequisite: "",
+    origin: "Dragão Brasil - 199"
+  },
+  { id: "Kiai Assustador",
+    name: "Kiai Assustador",
+    description: "Quando usa Grito de Kiai, você pode pagar 1 PM. Se acertar o ataque, todos os oponentes em alcance curto ficam abalados por 1 rodada. ",
+    prerequisite: "treinado em Intimidação.",
+    origin: "Dragão Brasil - 199"
   },
   { id: "Limiar da Tempestade",
     name: "Limiar da Tempestade",
     description: "Quando faz um ataque, você pode gastar todos os PV temporários fornecidos por Serenidade dos Kami. Se fizer isso, você recebe um bônus na rolagem de dano deste ataque igual à metade dos PV gastos. ",
     prerequisite: "Serenidade dos Kami.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 199"
+  },
+  { id: "Kyudo",
+    name: "Kyudo",
+    description: "Você pode usar Grito de Kiai com ataques à distância. Quando usa uma arma de ataque à distância, pode usar sua Sabedoria em vez de Destreza nos testes de ataque (e, caso possua o poder Estilo de Disparo, nas rolagens de dano). ",
+    prerequisite: "treinado em Pontaria.",
+    origin: "Dragão Brasil - 199"
+  },
+  { id: "Meditação Artística",
+    name: "Meditação Artística",
+    description: "Você pode gastar 1 hora e 5 PM escrevendo um pequeno poema enquanto medita sobre os desafios por vir. Você recebe 5d6 dados de concentração. Pelas próximas 24 horas, sempre que for realizar um teste de perícia, você pode gastar um desses d6 e adicionar o resultado rolado como um bônus no teste. ",
+    prerequisite: "8º nível de samurai, treinado em Ofício (calígrafo).",
+    origin: "Dragão Brasil - 199"
   },
   { id: "Montanha Serena",
     name: "Montanha Serena",
     description: "Enquanto tiver pontos de vida temporários fornecidos por Serenidade dos Kami, você soma sua Constituição em testes de manobra e na CD para resistir às suas habilidades de samurai. ",
     prerequisite: "Avalanche das Três Mãos, Serenidade dos Kami.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 199"
   },
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  { id: "Nuvem Serena",
+    name: "Nuvem Serena",
+    description: "Enquanto tiver pontos de vida temporários fornecidos por Serenidade dos Kami, o dano de sua arma ancestral aumenta em um passo.",
+    prerequisite: "Dois Céus, Serenidade dos Kami.",
+    origin: "Dragão Brasil - 199"
+  },
+  { id: "Rio Sereno",
+    name: "Rio Sereno",
+    description: "Enquanto tiver pontos de vida temporários fornecidos por Serenidade dos Kami, seu deslocamento aumenta em +3m e não é reduzido por terreno difícil natural.",
+    prerequisite: "Corte da Correnteza, Serenidade dos Kami.",
+    origin: "Dragão Brasil - 199"
+  },
+  { id: "Ronin",
+    name: "Ronin",
+    description: "Você não precisa mais seguir seu Código do Samurai. Além disso, você pode trocar sua katana por outro tipo de arma, e não está limitado a katanas como sua arma ancestral",
+    prerequisite: "",
+    origin: "Dragão Brasil - 199"
+  },
+  { id: "Serenidade dos Kami",
+    name: "Serenidade dos Kami",
+    description: "Você pode gastar uma ação de movimento e 3 PM para receber uma quantidade de PV temporários igual ao seu nível + sua Sabedoria. Se usar este poder na primeira rodada de um combate, você não precisa gastar PM.",
+    prerequisite: "",
+    origin: "Dragão Brasil - 199"
+  },  
   
   
 ];

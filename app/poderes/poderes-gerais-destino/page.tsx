@@ -206,7 +206,7 @@ export default function GeraisPodersPage() {
 
                 {/* Descrição */}
                 <div className="flex-1 mb-4">
-                  <p className="text-amber-950/85 text-sm md:text-base leading-relaxed font-medium">
+                  <p className="text-amber-950/85 text-sm md:text-base leading-relaxed font-medium whitespace-pre-wrap">
                       {power.description}
                   </p>
                 </div>

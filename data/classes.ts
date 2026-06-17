@@ -1,8 +1,10 @@
 import { GameClass } from "@/types/class";
 import { title } from "process";
-
+//#region Tormenta20 - Jogo do Ano
+//#endregion
 export const classes: GameClass[] = [
-    // Tormenta20 - Jogo do Ano
+
+    //#region Tormenta20 - Jogo do Ano
     { id: "Arcanista",
   name: "Arcanista",
   powersUrl: "/poderes/arcanista",
@@ -1475,12 +1477,15 @@ export const classes: GameClass[] = [
   }
 ]
     },
+    //#endregion
 
-    // Dragão Brasil
+    //#region Dragão Brasil
+
+    // Dragão Brasil - 199
     { id: "Miragem",
     name: "Miragem (Caçador)",
     powersUrl: "/poderes/cacador",
-    origin: "Dragão Brasil",
+    origin: "Dragão Brasil - 199",
     image: "/classes/miragem.png",
     description: "Miragens são combatentes praticantes da Dança da Areia, um estilo de luta criado pelos ferani, o povo réptil do Planalto de Sukala. Baseada em velocidade, furtividade e mobilidade, a Dança da Areia combina movimentos acrobáticos e técnicas de guerrilha em uma forma de combate única. Seus praticantes mesclam agilidade e magia para executar feitos marciais impressionantes que confundem, desorientam e surpreendem seus oponentes.\nEntre os ferani, os miragens são considerados guerreiros de elite, cujo papel vai além das divisões tribais. Praticamente uma ordem de combatentes sagrados, eles são o principal laço que une as tribos deste povo. Em tempos de paz, vivem em suas respectivas tribos como líderes e caçadores. Entretanto, quando um inimigo externo ameaça seu povo, estes guerreiros se unem como principal linha de defesa dos territórios ferani.\nGeralmente, o treinamento de um miragem começa na infância. Os jovens que demonstram a aptidão física e espiritual para se tornarem bher’duins são levados para um local sagrado, onde passam por uma cerimônia de iniciação secreta. Aqueles aceitos são indicados a um kuathor, um mestre e tutor, que irá treiná-los na arte da Dança da Areia. Um kuathor e seu discípulo sempre devem pertencer a tribos diferentes; uma forma de fortalecer o papel dos caçador como protetores de todos.\nEmbora seja considerada um segredo dos ferani, a Dança da Areia acabou se espalhando por Andória. Os primeiros a revelarem suas técnicas foram bher’duins desgarrados, que caíram em desgraça por algum crime e fugiram de Sukala. Posteriormente, certas tribos ferani abriram exceções para indivíduos de grande valor e ensinaram a eles os segredos da Dança.\nHoje, embora os miragens ainda sejam fortemente associados aos ferani, é cada vez mais comum encontrar indivíduos de outras raças trilhando esse caminho.",
     characteristics: {
@@ -1555,7 +1560,212 @@ export const classes: GameClass[] = [
       { level: 20, abilities: "Mestre do deserto, poder de caçador" }
     ],
     },
+    { id: "Mistico",
+      name: "Místico",
+      powersUrl: "/poderes/mistico",
+      origin: "Dragão Brasil - 199",
+      image: "/classes/mistico.png",
+      description: "Os elementos primordiais existiam antes mesmo da criação da magia e da espada. Água, ar, fogo, luz, terra e trevas são considerados a essência da arte arcana na cultura artoniana, sendo utilizados pelos deuses como base para moldar o mundo de Arton e todos os demais componentes da criação. No entanto, para os místicos, os elementos vão além disso, sendo o foco e a dedicação de toda a sua prática mágica. Os místicos são conjuradores especializados que dominam as forças primordiais por meio de uma magia extremamente específica, encontrados principalmente entre os ubaneri da Grande Savana, os sar-allan do Deserto da Perdição e os geomantes de Doherimm.\nPara os místicos, os elementos são extremamente importantes e alguns deles podem optar por se dedicar a um único elemento, enquanto outros preferem diversificar sua prática com mais de um. Buscam entender a composição primordial do mundo para aprimorar suas magias e as diferentes forças primordiais que influenciam sua disposição e seu comportamento. Aqueles que têm afinidade com a água costumam ser amigáveis e falantes, enquanto os que possuem afinidade com as trevas tendem a ser extremamente solitários e soturnos. Místicos relacionados ao fogo são mais ativos fisicamente, mas a afinidade com a terra pode torná-los introspectivos. Além disso, algumas culturas consideram os místicos da luz criaturas santificadas devido às suas habilidades de cura, mas muitas histórias associam a esperteza dos místicos do ar com fadas e outros seres trapaceiros.\nAlgumas culturas associam os elementos à personalidade dos místicos. Em Ubani, diz-se que a afinidade com a água gera místicos amigáveis e falantes e admira-se a pretensa pureza de caráter daqueles alinhados com a luz. Em Doherimm, os geomantes são conhecidos como teimosos e irascíveis, tão imóveis quanto as rochas com as quais interagem, enquanto a afinidade com o ar é vista com desconfiança e relacionada com trapaceiros. Em Halak-Tûr, espera-se que os místicos do fogo sejam mais ativos fisicamente, enquanto aqueles que demonstram afinidade com as trevas são vistos com muita desconfiança. Nenhuma dessas afirmações é completamente verdadeira, mas isso não impede a formação de estereótipos entre os próprios místicos.\nA magia do místico pode parecer pouco sofisticada se comparada com a enorme versatilidade dos arcanistas ou com a conexão divina dos clérigos, pois suas habilidades são extremamente focadas em sua área de estudo, os elementos primordiais. Não há muito espaço para inovação dentro das práticas de um místico, e por isso se apegam às tradições de sua comunidade, normalmente passadas adiante através das gerações exclusivamente pela oralidade. A jornada de um místico não costuma afastá-lo de tarefas práticas como defesa pessoal ou trabalho comunitário, tornando-o mais centrado e acessível que outros conjuradores. O místico é um homem do povo — não é raro encontrar um deles ajudando na colheita, trabalhando como guarda ou fazendo trabalho braçal.\nOs místicos entendem que os elementos primordiais são as forças básicas da natureza e se esforçam para compreendê-los em toda extensão de seu mistério e profundidade. Através do estudo e da meditação, aprimoram sua conexão com essas forças, aprendendo a controlá-las e a usá-las para realizar feitos incríveis. Tornam-se capazes de moldar as forças elementais à sua vontade, usando-as para conquistar seus objetivos, seja criando barreiras de terra para proteção ou invocando rajadas elétricas para afastar seus inimigos. Esse desejo por aprendizado e compreensão do mundo ao seu redor leva muitos místicos a viverem aventuras em Arton e além.",
+      famousExamples: [],
+      characteristics: {
+        pvBase: "16 + Constituição",
+        pvPerLevel: "4 + Constituição",
+        pmPerLevel: "4 PM por nível"
+      },
+      skills: {
+        mandatory: ["Misticismo (Int)", "Vontade (Sab)"],
+        optional: {
+          skills: [
+            "Acrobacia (Des)", "Atletismo (For)", "Conhecimento (Int)", "Cura (Sab)", "Diplomacia (Car)", "Fortitude (Con)", "Iniciativa (Des)", "Luta (For)", "Ofício (Int)", "Percepção (Sab)", "Pontaria (Des)", "Reflexos (Des)"
+          ],
+          count: 4
+        }
+      },
+      proficiency: "Armas marciais.",
+      abilities: [
+        {
+          name: "Afinidade",
+          description: "Escolha um elemento entre água, ar, fogo, luz, terra e trevas. Uma vez feita, essa escolha não pode ser mudada. Para cada círculo de magia que pode lançar, você recebe redução 5 contra o tipo de dano associado ao elemento escolhido (veja o quadro abaixo). Além disso, quando lança uma magia que causa dano de um tipo associado a outro elemento, você pode gastar 1 PM para transformar esse dano no tipo associado ao seu elemento. Por fim, cada elemento concede uma perícia treinada."
+        },
+        {
+          name: "Ataque Elemental",
+          description: "Quando faz um ataque corpo a corpo, você pode gastar uma quantidade de PM limitada pelo círculo máximo de magia que pode lançar para infundir a arma com energia elemental. Cada PM gasto concede +1 no teste de ataque e +1d8 pontos de dano do tipo associado à sua Afinidade."
+        },
+        {
+          name: "Magias",
+          description: "Você pode lançar magias arcanas de 1º círculo de Evocação, de uma segunda escola definida por sua Afinidade e de uma terceira escola à sua escolha (uma vez feita, essa escolha não pode ser mudada). À medida que sobe de nível, pode lançar magias de círculos maiores (2º círculo no 6º nível, 3º círculo no 10º nível e 4º círculo no 14º nível). Você começa com Criar Elementos e duas outras magias de 1º círculo à sua escolha. A cada nível par (2º, 4º etc.), aprende uma magia de qualquer círculo e escola que possa lançar. Você pode lançar essas magias vestindo armaduras leves sem precisar de testes de Misticismo. Seu atributo-chave para lançar magias é Sabedoria e você soma sua Sabedoria no seu total de PM."
+        },
+        {
+          name: "Língua Primordial",
+          description: "No 2º nível, você pode se comunicar com espíritos ligados ao elemento de sua Afinidade, como o efeito básico da magia Voz Divina, e recebe +5 em testes de Carisma e de perícias originalmente baseadas em Carisma com essas criaturas. O mestre define exatamente quais criaturas se encaixam nessa descrição mas, como regra geral, qualquer criatura do tipo espírito com imunidade ao tipo de dano associado à sua Afinidade é considerada ligada ao seu elemento."
+        },
+        {
+          name: "Poder de Místico",
+          description: "No 2º nível, e a cada nível seguinte, você escolhe um dos poderes de místico ou Gerais."
+        },
+        {
+          name: "Tradição Oral",
+          description: "No 3º nível, você recebe +2 em Misticismo. Esse bônus aumenta para +4 no 9º nível e para +6 no 13º nível."
+        },
+        {
+          name: "Sexto Sentido",
+          description: "No 4º nível, você soma sua Sabedoria, limitada pelo seu nível, à sua Defesa. Esta habilidade exige liberdade de movimentos; você não pode usá-la se estiver de armadura pesada ou na condição imóvel."
+        },
+        {
+          name: "Afinidade Evoluída",
+          description: "No 6º nível, escolha uma das seguintes opções.",
+          subAbilities: [
+            {
+              name: "Afinidade Concentrada",
+              description: "Você recebe +2 na CD de suas habilidades de místico e em testes de ataque usando Ataque Elemental."
+            },
+            {
+              name: "Afinidade Expandida",
+              description: "Escolha um segundo elemento para sua habilidade Afinidade. Você se torna treinado na perícia relacionada a este segundo elemento e recebe todos os benefícios de Afinidade relativos a ele, incluindo redução de dano e acesso a sua escola associada."
+            }
+          ]
+        },
+        {
+          name: "Comunhão Suprema",
+          description: "No 20º nível, você desenvolve uma comunhão perfeita com seu elemento. Você se torna imune ao tipo de dano da sua Afinidade e o custo em PM de suas magias que causem dano desse tipo ou façam parte da escola associada é reduzido à metade (após aplicar aprimoramentos e quaisquer outros efeitos que reduzam custo)."
+        },
+      ],
+      levelProgression: [
+        { level: 1, abilities: "Afinidade, Ataque elemental +1d8, Magias (1º Círculo)" },
+      { level: 2, abilities: "Língua primordial, Poder de místico" },
+      { level: 3, abilities: "Poder de místico, Tradição Oral +2" },
+      { level: 4, abilities: "Poder de místico, Sexto sentido" },
+      { level: 5, abilities: "Poder de místico" },
+      { level: 6, abilities: "Ataque elemental +2d8, Magias (2º Círculo), Poder de místico" },
+      { level: 7, abilities: "Poder de místico" },
+      { level: 8, abilities: "Poder de místico" },
+      { level: 9, abilities: "Poder de místico, Tradição oral +4" },
+      { level: 10, abilities: "Ataque elemental +3d8, Magias (3º Círculo), Poder de místico" },
+      { level: 11, abilities: "Poder de místico" },
+      { level: 12, abilities: "Poder de místico" },
+      { level: 13, abilities: "Poder de místico, Tradição oral +6" },
+      { level: 14, abilities: "Ataque elemental +4d8, Magias (4º Círculo), Poder de místico" },
+      { level: 15, abilities: "Poder de místico" },
+      { level: 16, abilities: "Poder de místico" },
+      { level: 17, abilities: "Poder de místico" },
+      { level: 18, abilities: "Poder de místico" },
+      { level: 19, abilities: "Poder de místico" },
+      { level: 20, abilities: "Comunhão suprema, Poder de místico" }
+      ],
+      extras: [
+        {
+          title: "Os Seis Elementos",
+          description: "Detalhes sobre o tipo de dano, escola de magia e perícia associados a cada elemento primordial.",
+          sections: [
+            {
+              title: "Elementos",
+              content: [
+                {
+                  name: "Água",
+                  description: "Tipo de Dano: Frio | Escola de Magia: Encantamento | Perícia: Diplomacia (Car)"
+                },
+                {
+                  name: "Ar",
+                  description: "Tipo de Dano: Eletricidade | Escola de Magia: Ilusão | Perícia: Enganação (Car)"
+                },
+                {
+                  name: "Fogo",
+                  description: "Tipo de Dano: Fogo | Escola de Magia: Transmutação | Perícia: Acrobacia (Des)"
+                },
+                {
+                  name: "Luz",
+                  description: "Tipo de Dano: Luz | Escola de Magia: Abjuração | Perícia: Cura (Sab)"
+                },
+                {
+                  name: "Terra",
+                  description: "Tipo de Dano: Ácido | Escola de Magia: Convocação | Perícia: Investigação (Int)"
+                },
+                {
+                  name: "Trevas",
+                  description: "Tipo de Dano: Trevas | Escola de Magia: Necromancia | Perícia: Intimidação (Car)"
+                }
+              ]
+            }
+          ]
+        },
+      ]
+    },
+    { id: "Samurai",
+    name: "Samurai",
+    powersUrl: "/poderes/samurai",
+    origin: "Dragão Brasil - 199",
+    image: "/classes/samurai.png",
+    description: "Antes do Império, antes da grande unificação, havia os poderosos senhores da guerra — os xogum. Tamu-ra vivia em conflito, cada província tentando conquistar as demais, cada regente buscando a supremacia. Nos tempos em que os militares governavam, quando a própria aristocracia era formada por combatentes, surgiu o lendário guerreiro poeta. Surgiu o samurai. \n Nascidos na nobreza, treinados pelos melhores mestres, equipados com as mais finas armas e armaduras, até hoje os samurais são a elite guerreira de Tamu-ra. Exceto pelo próprio Imperador e seu círculo de conselheiros shugenja, não há homens e mulheres mais prestigiados. Ainda assim, apesar de sua elevada posição social, o samurai vive para servir — seu próprio nome significa “aquele que serve”. Sua espada e perícia pertencem a Lin-Wu, pertencem ao Império. Ele protege os plebeus que o reverenciam. E sem essa devoção, sem um senhor ou causa a quem servir, o samurai está perdido. \n Com a destruição da ilha, milhares de samurais perderam seus senhores, falharam em protegê-los. Para preservar a honra, muitos cometeram suicídio ritual. Outros, desonrados, vagaram sem rumo como ronin — samurais sem mestres. Hoje, o sol volta a nascer em Tamu-ra. A terra natal dos samurais pode ser recuperada. Assim como sua honra. \n O “exílio” imposto aos samurai pela Tormenta em Tamu-ra fez com que membros desta classe se espalhassem pelo mundo. Isso permitiu que diversos outros povos entrassem em contato com as técnicas e tradições desses guerreiros, fazendo surgir samurais entre membros de outras raças e culturas. Estes samurais não tamurianos trouxeram para este caminho também elementos de suas próprias vivências e costumes marciais. Alguns até romperam com a tradição da katana como arma símbolo, empunhando suas próprias armas típicas de forma igualmente honrada e tradicional.",
+    characteristics: {
+      pvBase: "20 + Constituição",
+      pvPerLevel: "5 + Constituição",
+      pmPerLevel: "3 PM por nível"
+    },
+    skills: {
+    mandatory: ["Luta (For)", "Vontade (Sab)"],
+    optional: {
+      skills: [      
+        'Acrobacia (Des)', 'Adestramento (Car)', 'Atletismo (For)', 'Cavalgar (Des)', 'Conhecimento (Int)', 'Diplomacia (Car)', 'Fortitude (Con)', 'Guerra (Int)', 'Iniciativa (Des)', 'Intimidação (Car)', 'Intuição (Sab)', 'Nobreza (Int)', 'Ofício (Int)', 'Percepção (Sab)', 'Pontaria (Des)'
+      ],
+      count: 2
+      }
+    },
+    proficiency: "Armas marciais e armaduras pesadas",
+    abilities: [
+      {
+        name: "Arma Ancestral",
+        description: "Você recebe proficiência em katana e começa o jogo com uma arma ancestral, uma katana superior com uma melhoria com preço total de até T$ 500. Nos níveis 4, 6 e 8, sua arma ancestral recebe uma nova melhoria à sua escolha. Nas mãos de qualquer outra pessoa, sua arma ancestral funciona como uma arma normal (sem benefícios por melhorias ou encantamentos). Se perder sua arma ancestral, você perde todos os seus PM e só pode recuperá-los no dia seguinte. Você pode reforjar uma arma ancestral perdida ou destruída com uma semana de trabalho e o gasto de tibares em valor igual ao preço básico da arma."
+      },
+      {
+        name: "Código do Samurai",
+        description: "Você deve sempre manter sua palavra e nunca pode recusar um pedido de ajuda de alguém inocente. Além disso, nunca pode mentir, trapacear ou roubar. Se violar o código, você perde todos os seus PM e só pode recuperá-los a partir do próximo dia."
+      },
+      {
+        name: "Grito de Kiai",
+        description: "Quando faz um ataque corpo a corpo, você pode gastar 2 PM para rolar dois dados e usar o melhor resultado. Se acertar esse ataque, você recebe +1d4 na rolagem de dano. Esse dano extra é multiplicado em caso de acerto crítico. A cada quatro níveis, o bônus de dano aumenta conforme indicado na tabela da classe."
+      },
+      {
+        name: "Poder de Samurai",
+        description: "No 2º nível, e a cada nível seguinte, você escolhe um poder."
+      },
+      {
+        name: "Olhar Assustador",
+        description: "No 3º nível, você recebe +1 em Intimidação e Intuição. A cada seis níveis, esse bônus aumenta em +1."
+      },
+      {
+        name: "Arma Espiritual",
+        description: "No 10º nível, sua arma ancestral se torna uma arma mágica com um encanto à sua escolha. Nos níveis 12 e 14 ela recebe um novo encanto à sua escolha."
+      },
+      {
+        name: "Shogun",
+        description: "No 20º nível, o multiplicador de crítico da sua arma ancestral aumenta em dois. Além disso, recupera uma quantidade de pontos de vida igual a esse dano extra."
+      },
+    ],
+    levelProgression: [
+      { level: 1, abilities: "Arma ancestral (1 Melhoria), Código do samurai, Grito de kiai (+1d4)" },
+      { level: 2, abilities: "Poder de samurai" },
+      { level: 3, abilities: "Olhar assustador +1, Poder de samurai" },
+      { level: 4, abilities: "Arma ancestral (2 Melhorias), Poder de samurai" },
+      { level: 5, abilities: "Grito de kiai (+1d6), Poder de samurai" },
+      { level: 6, abilities: "Arma ancestral (3 Melhorias), Poder de samurai" },
+      { level: 7, abilities: "Poder de samurai" },
+      { level: 8, abilities: "Arma ancestral (4 Melhorias), Poder de samurai" },
+      { level: 9, abilities: "Grito de kiai (+1d8), Olhar assustador +2, Poder de samurai" },
+      { level: 10, abilities: "Arma espiritual (1 Encanto), Poder de samurai" },
+      { level: 11, abilities: "Poder de samurai" },
+      { level: 12, abilities: "Arma espiritual (2 Encantos), Poder de samurai" },
+      { level: 13, abilities: "Grito de kiai (+1d10), Poder de samurai" },
+      { level: 14, abilities: "Arma espiritual (3 Encantos), Poder de samurai" },
+      { level: 15, abilities: "Olhar assustador +3, Poder de samurai" },
+      { level: 16, abilities: "Poder de samurai" },
+      { level: 17, abilities: "Grito de kiai (+1d12), Poder de samurai" },
+      { level: 18, abilities: "Poder de samurai" },
+      { level: 19, abilities: "Poder de samurai" },
+      { level: 20, abilities: "Poder de samurai, Shogun" }
+    ],
+    },
 
+    
     // Dragão Brasil - 222
     { id: "Comandante (Nobre)",
     name: "Comandante (Nobre)",
@@ -1916,6 +2126,7 @@ export const classes: GameClass[] = [
       { level: 20, abilities: "Guerreiro Santificado, poder de clérigo" }
     ],
     },
+    //#endregion
     
     
     
@@ -1923,80 +2134,7 @@ export const classes: GameClass[] = [
     
     
     
-    { id: "Samurai",
-    name: "Samurai",
-    powersUrl: "/poderes/samurai",
-    origin: "Dragão Brasil",
-    image: "/classes/samurai.png",
-    description: "Antes do Império, antes da grande unificação, havia os poderosos senhores da guerra — os xogum. Tamu-ra vivia em conflito, cada província tentando conquistar as demais, cada regente buscando a supremacia. Nos tempos em que os militares governavam, quando a própria aristocracia era formada por combatentes, surgiu o lendário guerreiro poeta. Surgiu o samurai. \n Nascidos na nobreza, treinados pelos melhores mestres, equipados com as mais finas armas e armaduras, até hoje os samurais são a elite guerreira de Tamu-ra. Exceto pelo próprio Imperador e seu círculo de conselheiros shugenja, não há homens e mulheres mais prestigiados. Ainda assim, apesar de sua elevada posição social, o samurai vive para servir — seu próprio nome significa “aquele que serve”. Sua espada e perícia pertencem a Lin-Wu, pertencem ao Império. Ele protege os plebeus que o reverenciam. E sem essa devoção, sem um senhor ou causa a quem servir, o samurai está perdido. \n Com a destruição da ilha, milhares de samurais perderam seus senhores, falharam em protegê-los. Para preservar a honra, muitos cometeram suicídio ritual. Outros, desonrados, vagaram sem rumo como ronin — samurais sem mestres. Hoje, o sol volta a nascer em Tamu-ra. A terra natal dos samurais pode ser recuperada. Assim como sua honra. \n O “exílio” imposto aos samurai pela Tormenta em Tamu-ra fez com que membros desta classe se espalhassem pelo mundo. Isso permitiu que diversos outros povos entrassem em contato com as técnicas e tradições desses guerreiros, fazendo surgir samurais entre membros de outras raças e culturas. Estes samurais não tamurianos trouxeram para este caminho também elementos de suas próprias vivências e costumes marciais. Alguns até romperam com a tradição da katana como arma símbolo, empunhando suas próprias armas típicas de forma igualmente honrada e tradicional.",
-    characteristics: {
-      pvBase: "20 + Constituição",
-      pvPerLevel: "5 + Constituição",
-      pmPerLevel: "3 PM por nível"
-    },
-    skills: {
-    mandatory: ["Luta (For)", "Vontade (Sab)"],
-    optional: {
-      skills: [      
-        'Acrobacia (Des)', 'Adestramento (Car)', 'Atletismo (For)', 'Cavalgar (Des)', 'Conhecimento (Int)', 'Diplomacia (Car)', 'Fortitude (Con)', 'Guerra (Int)', 'Iniciativa (Des)', 'Intimidação (Car)', 'Intuição (Sab)', 'Nobreza (Int)', 'Ofício (Int)', 'Percepção (Sab)', 'Pontaria (Des)'
-      ],
-      count: 2
-      }
-    },
-    proficiency: "Armas marciais e armaduras pesadas",
-    abilities: [
-      {
-        name: "Arma Ancestral",
-        description: "Você recebe proficiência em katana e começa o jogo com uma arma ancestral, uma katana superior com uma melhoria com preço total de até T$ 500. Nos níveis 4, 6 e 8, sua arma ancestral recebe uma nova melhoria à sua escolha. Nas mãos de qualquer outra pessoa, sua arma ancestral funciona como uma arma normal (sem benefícios por melhorias ou encantamentos). Se perder sua arma ancestral, você perde todos os seus PM e só pode recuperá-los no dia seguinte. Você pode reforjar uma arma ancestral perdida ou destruída com uma semana de trabalho e o gasto de tibares em valor igual ao preço básico da arma."
-      },
-      {
-        name: "Código do Samurai",
-        description: "Você deve sempre manter sua palavra e nunca pode recusar um pedido de ajuda de alguém inocente. Além disso, nunca pode mentir, trapacear ou roubar. Se violar o código, você perde todos os seus PM e só pode recuperá-los a partir do próximo dia."
-      },
-      {
-        name: "Grito de Kiai",
-        description: "Quando faz um ataque corpo a corpo, você pode gastar 2 PM para rolar dois dados e usar o melhor resultado. Se acertar esse ataque, você recebe +1d4 na rolagem de dano. Esse dano extra é multiplicado em caso de acerto crítico. A cada quatro níveis, o bônus de dano aumenta conforme indicado na tabela da classe."
-      },
-      {
-        name: "Poder de Samurai",
-        description: "No 2º nível, e a cada nível seguinte, você escolhe um poder."
-      },
-      {
-        name: "Olhar Assustador",
-        description: "No 3º nível, você recebe +1 em Intimidação e Intuição. A cada seis níveis, esse bônus aumenta em +1."
-      },
-      {
-        name: "Arma Espiritual",
-        description: "No 10º nível, sua arma ancestral se torna uma arma mágica com um encanto à sua escolha. Nos níveis 12 e 14 ela recebe um novo encanto à sua escolha."
-      },
-      {
-        name: "Shogun",
-        description: "No 20º nível, o multiplicador de crítico da sua arma ancestral aumenta em dois. Além disso, recupera uma quantidade de pontos de vida igual a esse dano extra."
-      },
-    ],
-    levelProgression: [
-      { level: 1, abilities: "Arma ancestral (1 Melhoria), Código do samurai, Grito de kiai (+1d4)" },
-      { level: 2, abilities: "Poder de samurai" },
-      { level: 3, abilities: "Olhar assustador +1, Poder de samurai" },
-      { level: 4, abilities: "Arma ancestral (2 Melhorias), Poder de samurai" },
-      { level: 5, abilities: "Grito de kiai (+1d6), Poder de samurai" },
-      { level: 6, abilities: "Arma ancestral (3 Melhorias), Poder de samurai" },
-      { level: 7, abilities: "Poder de samurai" },
-      { level: 8, abilities: "Arma ancestral (4 Melhorias), Poder de samurai" },
-      { level: 9, abilities: "Grito de kiai (+1d8), Olhar assustador +2, Poder de samurai" },
-      { level: 10, abilities: "Arma espiritual (1 Encanto), Poder de samurai" },
-      { level: 11, abilities: "Poder de samurai" },
-      { level: 12, abilities: "Arma espiritual (2 Encantos), Poder de samurai" },
-      { level: 13, abilities: "Grito de kiai (+1d10), Poder de samurai" },
-      { level: 14, abilities: "Arma espiritual (3 Encantos), Poder de samurai" },
-      { level: 15, abilities: "Olhar assustador +3, Poder de samurai" },
-      { level: 16, abilities: "Poder de samurai" },
-      { level: 17, abilities: "Grito de kiai (+1d12), Poder de samurai" },
-      { level: 18, abilities: "Poder de samurai" },
-      { level: 19, abilities: "Poder de samurai" },
-      { level: 20, abilities: "Poder de samurai, Shogun" }
-    ],
-    },
+    
     
     { id: "Treinador",
     name: "Treinador",
