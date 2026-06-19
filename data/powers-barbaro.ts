@@ -1,7 +1,9 @@
 import { Power } from "@/types/power";
-
+//#region Tormenta20 - Jogo do Ano
+//#endregion
 export const powersBarbaro: Power[] = [
-  // Tormenta20 - Jogo do Ano
+
+  //#region Tormenta20 - Jogo do Ano
   { id: "Alma de Bronze",
     name: "Alma de Bronze ",
     description: "Quando entra em fúria, você recebe uma quantidade de pontos de vida temporários igual a seu nível + sua Força.",
@@ -108,26 +110,29 @@ export const powersBarbaro: Power[] = [
     description: "Você pode gastar uma ação de movimento e uma quantidade de PM limitada por sua Constituição. Para cada PM que gastar, você recupera 1d12 pontos de vida.",
     origin: "Tormenta20 - Jogo do Ano"
   },
+  //#endregion
 
-  // Dragão Brasil
+  //#region Dragão Brasil
+  // Dragão Brasil - 212
   { id: "Fúria do Gigante",
     name: "Fúria do Gigante",
     description: "Quando você entra em Fúria, inimigos em alcance curto ficam abalados por 1d4 rodadas (Von CD Con reduz para abalado por 1 rodada).",
     prerequisite: "galokk ou ogro.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 212"
   },
   { id: "Fúria Primordial",
     name: "Fúria Primordial",
     description: "Quando está em Fúria, o bônus de dano com armas corpo a corpo e de arremesso concedido pela habilidade Feroz aumenta em +2. Quando sofre dano de um inimigo, esse aumento se torna +4 até o fim de seu próximo turno.",
     prerequisite: "Orc.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 212"
   },
   { id: "Fúria Trog",
     name: "Fúria Trog",
     description: "Trogs, por natureza, sabem ceder particularmente bem à ira animalesca. Quando está em Fúria você pode, uma vez por rodada, fazer um ataque corpo a corpo extra com sua Mordida sem gastar PM.",
     prerequisite: "Trog.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 212"
   },
+  //#endregion
 
 
   { id: "Alma Inabalável",

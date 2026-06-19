@@ -1,7 +1,9 @@
 import { Power } from "@/types/power";
-
+//#region Tormenta20 - Jogo do Ano
+//#endregion
 export const powersGuerreiro: Power[] = [
-  // Tormenta20 - Jogo do Ano
+
+  //#region Tormenta20 - Jogo do Ano
   { id: "Ambidestria",
     name: "Ambidestria",
     description: "Se estiver empunhando duas armas (e pelo menos uma delas for leve) e fizer a ação agredir, você pode fazer dois ataques, um com cada arma. Se fizer isso, sofre –2 em todos os testes de ataque até o seu próximo turno.",
@@ -107,26 +109,29 @@ export const powersGuerreiro: Power[] = [
     description: "Você recebe +2 em testes de ataque e rolagens de dano contra oponentes caídos, desprevenidos, flanqueados ou indefesos.",
     origin: "Tormenta20 - Jogo do Ano"
   },
+  //#endregion
 
-  // Dragão Brasil
+  //#region Dragão Brasil
+  // Dragão Brasil - 212
   { id: "Estilo Clássico",
     name: "Estilo Clássico",
     description: "Um clichê só é clichê porque funciona! Quando usa Ataque Especial, se estiver empunhando um escudo e uma espada longa, você recebe +2 na Defesa e em rolagens de dano até o início do seu próximo turno.",
     prerequisite: "humano, Estilo de Arma e Escudo.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 212"
   },
   { id: "Duro Como Aço",
     name: "Duro Como Aço",
     description: "Você vem de uma linhagem de anões da infantaria. Se estiver usando armadura pesada, você pode somar sua Constituição na Defesa, limitado pelo seu nível. Se fizer isso, não pode somar sua Destreza, mesmo que outras habilidades ou efeitos o façam.",
     prerequisite: "anão, Encouraçado, 8º nível de guerreiro.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 212"
   },
   { id: "Herdeiro dos Gigantes",
     name: "Herdeiro dos Gigantes",
     description: "Poucos são capazes de equiparar sua força. Quando usa Ataque Especial e Força dos Titãs em um mesmo ataque, você aumenta o dano extra concedido por Força dos Titãs em +1d12.",
     prerequisite: "galokk.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 212"
   },
+  //#endregion
 
   
   { id: "Análise Tática",

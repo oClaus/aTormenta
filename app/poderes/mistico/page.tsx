@@ -81,7 +81,7 @@ export default function MisticosPoderesPage() {
             </span>
           </button>
 
-          <div className={`overflow-hidden transition-all duration-500 ease-in-out border-x-2 border-b-2 border-amber-900/30 rounded-b-xl bg-[#fbf5e6] ${isIntroOpen ? 'max-h-[3500px] opacity-100' : 'max-h-0 opacity-0 border-transparent'}`}>
+          <div className={`overflow-hidden transition-all duration-500 ease-in-out border-x-2 border-b-2 border-amber-900/30 rounded-b-xl bg-[#fbf5e6] ${isIntroOpen ? 'max-h-[350000px] opacity-100' : 'max-h-0 opacity-0 border-transparent'}`}>
             <div className="p-5 md:p-10 font-serif text-amber-950/85 text-base md:text-lg text-left md:text-justify leading-relaxed flex flex-col gap-10">
               
               <section>

@@ -175,88 +175,353 @@ export default function AmeacasPage() {
             </span>
           </button>
 
-          <div className={`overflow-hidden transition-all duration-500 ease-in-out border-x-2 border-b-2 border-amber-900/30 rounded-b-xl bg-[#fbf5e6] ${isIntroOpen ? 'max-h-[500000px] opacity-100' : 'max-h-0 opacity-0 border-transparent'}`}>
+          <div className={`overflow-hidden transition-all duration-500 ease-in-out border-x-2 border-b-2 border-amber-900/30 rounded-b-xl bg-[#fbf5e6] ${isIntroOpen ? 'max-h-[5000000px] opacity-100' : 'max-h-0 opacity-0 border-transparent'}`}>
   
   {/* Contêiner Principal: Padroniza fonte, cor, responsividade e alinhamento */}
   <div className="p-5 md:p-10 font-serif text-amber-950/85 text-base md:text-lg text-left md:text-justify leading-relaxed flex flex-col gap-8">
-    
-    <section className="border-t-2 border-amber-900/20 pt-8 first:border-0 first:pt-0">
-      <h3 className="text-xl md:text-2xl font-bold text-red-800 mb-4 tracking-wide">Nome e ND</h3>
-      <p>O nome e o nível de desafio (ND) da criatura. O ND funciona como o nível da criatura (mas uma criatura terá sempre pelo menos 1 nível).</p>
-    </section>
 
-    <section className="border-t-2 border-amber-900/20 pt-8 first:border-0 first:pt-0">
-      <h3 className="text-xl md:text-2xl font-bold text-red-800 mb-4 tracking-wide">Tipo e tamanho</h3>
-      <p>O tipo (e subtipo, quando houver) representa a natureza da criatura dentro do mundo. Ele determina que habilidades podem afetar a criatura. Além disso, alguns tipos fornecem habilidades específicas.</p>
-    </section>
+  <section>
+                <h2 className="text-3xl md:text-4xl font-bold text-red-800 mb-8 tracking-wide">Fichas de Criaturas</h2>
+                
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Nome & ND</h3>
+                    <p>O nome e o nível de desafio (ND) da criatura. O ND funciona como o nível da criatura (mínimo 1). Criaturas de ND “S” e “S+” são casos especiais. Contam como ND 20, mas são ainda mais perigosas — os seres mais poderosos da Criação.</p>
+                  </div>
 
-    <section className="border-t-2 border-amber-900/20 pt-8 first:border-0 first:pt-0">
-      <h3 className="text-xl md:text-2xl font-bold text-red-800 mb-4 tracking-wide">Papel de Combate</h3>
-      <p className="mb-6">O papel de combate da criatura indica como ela deve ser usada pelo mestre. Existem três papeis: solo, lacaio e especial, indicados por um ícone (no livro, aqui constará apenas a informação).</p>
-      
-      <div className="space-y-4 pl-4 md:pl-5 border-l-4 border-amber-900/30 text-base md:text-lg text-left">
-          <p><strong className="block text-red-800 font-bold mb-1">Solo: </strong>A criatura foi construída para enfrentar os personagens sozinha. Ela possui estatísticas equilibradas; especialmente, possui muitos pontos de vida, para garantir que o combate dure um tempo bom (por volta de 3 a 5 rodadas). Este papel é ocupado principalmente por grandes monstros e vilões.</p>
-          <p><strong className="block text-red-800 font-bold mb-1">Lacaio: </strong>A criatura foi construída para enfrentar os personagens em grandes quantidades. Por conta disso, você normalmente usará lacaios de ND menor do que o nível do grupo. Por exemplo, um grupo de 5º nível pode enfrentar um bando de lacaios de ND 1. Lacaios possuem valores de ataque e dano mais altos, para garantir que continuem sendo uma ameaça real para personagens, mesmo considerando que seu ND será menor que o nível deles, mas menos pontos de vida, para serem derrotadas mais rapidamente e não deixarem o combate excessivamente lento. Este papel é ocupado primariamente por humanoides e monstros pequenos.</p>
-          <p><strong className="block text-red-800 font-bold mb-1">Especial: </strong>A criatura possui diversas habilidades especiais e/ou foi feita para ser usada em situações fora de combate direto (por exemplo, pode ser usada para enganar ou roubar os personagens). Este papel é ocupado também por conjuradores ou líderes (criaturas cujas habilidades fortalecem outras, e consequentemente devem ser usadas em conjunto com lacaios). Procure analisar a ficha de uma criatura especial antes de usá-la!</p>
-      </div>
-    </section>
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Tipo</h3>
+                    <p>O tipo (e subtipo, quando houver) representa a natureza da criatura dentro do mundo e determina que efeitos podem afetá-la. Além disso, alguns tipos fornecem habilidades específicas.</p>
+                  </div>
 
-    <section className="border-t-2 border-amber-900/20 pt-8 first:border-0 first:pt-0">
-      <h3 className="text-xl md:text-2xl font-bold text-red-800 mb-4 tracking-wide">Iniciativa e percepção</h3>
-      <p>Os valores de Iniciativa e Percepção da criatura e quaisquer habilidades relacionadas a sentidos.</p>
-    </section>
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Tamanho</h3>
+                    <p>O tamanho determina o espaço que a criatura ocupa, seu alcance natural e seu modificador em Furtividade e manobras de combate. A Tabela 1-1 traz os modificadores por tamanho.</p>
+                  </div>
+                  <div className="my-6 shadow-sm rounded-xl border-2 border-amber-900/20 overflow-x-auto bg-[#e8dac1]">
+                    <table className="w-full min-w-max divide-y-2 divide-amber-900/20">
+                      <thead className="bg-[#d9c8a9] text-amber-950/80">
+                        <tr>
+                          <th scope="col" className="px-4 py-3 text-left text-xs sm:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">
+                            Categoria de Tamanho
+                          </th>
+                          <th scope="col" className="px-4 py-3 text-left text-xs sm:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">
+                            Exemplos
+                          </th>
+                          <th scope="col" className="px-4 py-3 text-center text-xs sm:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">
+                            Espaço Ocupado¹/<br/>Alcance Natural
+                          </th>
+                          <th scope="col" className="px-4 py-3 text-center text-xs sm:text-sm font-bold uppercase tracking-widest">
+                            Modificador de<br/>Furtividade/Manobras
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-amber-900/10 bg-[#fbf5e6] font-medium text-amber-950/85">
+                        <tr className="transition-colors hover:bg-[#e8dac1]/50 bg-[#fbf5e6]">
+                          <td className="px-4 py-3 font-bold border-r-2 border-amber-900/10 text-amber-950 text-left">Minúsculo</td>
+                          <td className="px-4 py-3 border-r-2 border-amber-900/10 text-left">Falcão, rato, sílfide</td>
+                          <td className="px-4 py-3 border-r-2 border-amber-900/10 text-center">1,5m</td>
+                          <td className="px-4 py-3 text-center">+5/–5</td>
+                        </tr>
+                        <tr className="transition-colors hover:bg-[#e8dac1]/50 bg-[#e8dac1]/30">
+                          <td className="px-4 py-3 font-bold border-r-2 border-amber-900/10 text-amber-950 text-left">Pequeno</td>
+                          <td className="px-4 py-3 border-r-2 border-amber-900/10 text-left">Cão, goblin, hynne</td>
+                          <td className="px-4 py-3 border-r-2 border-amber-900/10 text-center">1,5m</td>
+                          <td className="px-4 py-3 text-center">+2/–2</td>
+                        </tr>
+                        <tr className="transition-colors hover:bg-[#e8dac1]/50 bg-[#fbf5e6]">
+                          <td className="px-4 py-3 font-bold border-r-2 border-amber-900/10 text-amber-950 text-left">Médio</td>
+                          <td className="px-4 py-3 border-r-2 border-amber-900/10 text-left">Humano, anão, elfo</td>
+                          <td className="px-4 py-3 border-r-2 border-amber-900/10 text-center">1,5m</td>
+                          <td className="px-4 py-3 text-center">0</td>
+                        </tr>
+                        <tr className="transition-colors hover:bg-[#e8dac1]/50 bg-[#e8dac1]/30">
+                          <td className="px-4 py-3 font-bold border-r-2 border-amber-900/10 text-amber-950 text-left">Grande</td>
+                          <td className="px-4 py-3 border-r-2 border-amber-900/10 text-left">Cavalo, ogro, serpe</td>
+                          <td className="px-4 py-3 border-r-2 border-amber-900/10 text-center">3m</td>
+                          <td className="px-4 py-3 text-center">–2/+2</td>
+                        </tr>
+                        <tr className="transition-colors hover:bg-[#e8dac1]/50 bg-[#fbf5e6]">
+                          <td className="px-4 py-3 font-bold border-r-2 border-amber-900/10 text-amber-950 text-left">Enorme</td>
+                          <td className="px-4 py-3 border-r-2 border-amber-900/10 text-left">Ente, gigante, hidra</td>
+                          <td className="px-4 py-3 border-r-2 border-amber-900/10 text-center">4,5m</td>
+                          <td className="px-4 py-3 text-center">–5/+5</td>
+                        </tr>
+                        <tr className="transition-colors hover:bg-[#e8dac1]/50 bg-[#e8dac1]/30">
+                          <td className="px-4 py-3 font-bold border-r-2 border-amber-900/10 text-amber-950 text-left">Colossal</td>
+                          <td className="px-4 py-3 border-r-2 border-amber-900/10 text-left">Colosso, dragão, kraken</td>
+                          <td className="px-4 py-3 border-r-2 border-amber-900/10 text-center">9m</td>
+                          <td className="px-4 py-3 text-center">–10/+10</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div className="bg-[#d9c8a9] p-3 text-xs md:text-sm text-left text-amber-950/80 font-medium border-t-2 border-amber-900/20">
+                      ¹Espaço ocupado pela criatura. “3m”, por exemplo, significa que a criatura ocupa um espaço de 3m x 3m, ou seja, 2x2 quadrados num mapa.
+                    </div>
+                  </div>
 
-    <section className="border-t-2 border-amber-900/20 pt-8 first:border-0 first:pt-0">
-      <h3 className="text-xl md:text-2xl font-bold text-red-800 mb-4 tracking-wide">Defesa e Resistências</h3>
-      <p>A Defesa e os valores de Fortitude, Reflexos e Vontade da criatura, além de quaisquer habilidades especiais defensivas, como redução de dano.</p>
-    </section>
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Papel de Combate</h3>
+                    <p className="mb-3">O papel de combate da criatura indica como ela deve ser usada pelo mestre. Existem três papéis: solo, lacaio e especial, cada um indicado por um ícone.</p>
+                    <ul className="space-y-3 pl-4 border-l-2 border-amber-900/20">
+                      <li>
+                        <strong className="text-amber-950">Solo.</strong> A criatura foi construída para enfrentar os personagens sozinha. Ela possui estatísticas equilibradas; em especial possui muitos pontos de vida, para garantir que o combate dure um tempo bom (por volta de 3 a 5 rodadas). Este papel é ocupado principalmente por grandes monstros e vilões.
+                      </li>
+                      <li>
+                        <strong className="text-amber-950">Lacaio.</strong> A criatura foi construída para enfrentar os personagens em grandes quantidades. Assim, ao usar lacaios, normalmente você usará várias criaturas de ND menor que o nível do grupo, em vez de uma única criatura de ND igual ao nível do grupo. Por exemplo, um grupo de 5º nível pode enfrentar quatro lacaios de ND 1 (o que gera um encontro de ND 5). Lacaios possuem valores de ataque e dano mais altos, para garantir que continuem sendo um risco real para os personagens, mesmo considerando que seu ND será menor que o nível deles, mas menos pontos de vida, para serem derrotados rapidamente, mantendo o combate acelerado. Este papel é ocupado primariamente por humanoides e monstros pequenos.
+                      </li>
+                      <li>
+                        <strong className="text-amber-950">Especial.</strong> A criatura possui diversas habilidades especiais e/ou foi feita para ser usada em situações fora de combate direto (por exemplo, para enganar ou roubar os personagens). Este papel é ocupado também por conjuradores ou líderes — criaturas cujas habilidades fortalecem outras, e consequentemente devem ser usadas em conjunto com lacaios.
+                      </li>
+                    </ul>
+                  </div>
 
-    <section className="border-t-2 border-amber-900/20 pt-8 first:border-0 first:pt-0">
-      <h3 className="text-xl md:text-2xl font-bold text-red-800 mb-4 tracking-wide">Pontos de Vida</h3>
-      <p>O total de pontos de vida da criatura.</p>
-    </section>
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Iniciativa & Percepção</h3>
+                    <p>Os valores de Iniciativa e Percepção da criatura e quaisquer habilidades relacionadas a seus sentidos.</p>
+                  </div>
 
-    <section className="border-t-2 border-amber-900/20 pt-8 first:border-0 first:pt-0">
-      <h3 className="text-xl md:text-2xl font-bold text-red-800 mb-4 tracking-wide">Deslocamento</h3>
-      <p>A quantidade de metros que a criatura consegue percorrer com uma ação de movimento (e, entre parênteses, a quantidade de quadrados de 1,5m). O número padrão é o deslocamento terrestre da criatura. Uma criatura pode possuir outras formas de deslocamento, como voo e natação.</p>
-    </section>
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Defesa & Resistências</h3>
+                    <p>A Defesa e os valores de Fortitude, Reflexos e Vontade da criatura, além de quaisquer habilidades especiais defensivas, como redução de dano.</p>
+                  </div>
 
-    <section className="border-t-2 border-amber-900/20 pt-8 first:border-0 first:pt-0">
-      <h3 className="text-xl md:text-2xl font-bold text-red-800 mb-4 tracking-wide">Pontos de Mana</h3>
-      <p>A quantidade de PM que a criatura possui. Caso a criatura não possua habilidades com custo em PM, esta linha não aparecerá.</p>
-    </section>
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Pontos de Vida</h3>
+                    <p>O total de pontos de vida da criatura.</p>
+                  </div>
 
-    <section className="border-t-2 border-amber-900/20 pt-8 first:border-0 first:pt-0">
-      <h3 className="text-xl md:text-2xl font-bold text-red-800 mb-4 tracking-wide">Ações</h3>
-      <p>Todos os ataques e habilidades que a criatura pode fazer (e, entre parênteses, a ação necessária e seu custo em PM, se houver). Habilidades sem ação exigida são passivas (estão sempre ativas). Algumas habilidades terminam com o termo “recarga” e um tipo de ação. Nesse caso, sempre que usar a habilidade, a criatura precisará gastar a ação determinada para recarregá-la antes de poder usá-la novamente.</p>
-    </section>
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Deslocamento</h3>
+                    <p>A quantidade de metros que a criatura consegue percorrer com uma ação de movimento (e, entre parênteses, a quantidade de quadrados de 1,5m). O número padrão é o deslocamento terrestre da criatura. Uma criatura pode possuir outras formas de deslocamento, como voo e natação.</p>
+                  </div>
 
-    <section className="border-t-2 border-amber-900/20 pt-8 first:border-0 first:pt-0">
-      <h3 className="text-xl md:text-2xl font-bold text-red-800 mb-4 tracking-wide">Atributos</h3>
-      <p>Os valores de atributos da criatura. Algumas criaturas possuem um valor de atributo nulo (–). Nesse caso, a criatura não possui o atributo em questão e não pode usá-lo. Uma criatura com “For –” não pode exercer força física sobre o mundo; uma criatura com “Des –” não pode se mover, e uma criatura com “Int –” não é capaz de pensar, agindo apenas conforme uma programação prévia.</p>
-    </section>
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Pontos de Mana</h3>
+                    <p>A quantidade de PM que a criatura possui. A maior parte das criaturas não possui pontos de mana, pois gerenciar esse recurso para diversas fichas ao mesmo tempo seria bastante trabalhoso para o mestre. Via de regra, apenas conjuradores possuem PM. Caso a criatura não possua pontos de mana, esta linha não aparecerá.</p>
+                  </div>
 
-    <section className="border-t-2 border-amber-900/20 pt-8 first:border-0 first:pt-0">
-      <h3 className="text-xl md:text-2xl font-bold text-red-800 mb-4 tracking-wide">Perícias</h3>
-      <p>Os valores totais das demais perícias da criatura (além de Iniciativa, Percepção, Fortitude, Reflexos e Vontade, que já apareceram). Caso a criatura não possua outras perícias, esta linha não aparecerá.</p>
-    </section>
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Ações</h3>
+                    <p>Todos os ataques e habilidades que a criatura pode fazer (e, entre parênteses, a ação necessária e seu custo em PM, se houver). Habilidades sem ação exigida são passivas (estão sempre ativas). Algumas habilidades terminam com o termo “recarga”. Nesse caso, sempre que usar a habilidade, a criatura precisará gastar a ação determinada, ou cumprir a condição descrita, antes de poder usá-la novamente.</p>
+                  </div>
 
-    <section className="border-t-2 border-amber-900/20 pt-8 first:border-0 first:pt-0">
-      <h3 className="text-xl md:text-2xl font-bold text-red-800 mb-4 tracking-wide">Equipamento e Tesouro</h3>
-      <p>Itens utilizados pela criatura, se houver. Após os itens, a categoria de tesouro da criatura. Algumas criaturas possuem recursos que podem ser extraídos de seu corpo. Extrair um recurso exige uma hora de trabalho e um teste de Sobrevivência, ou de um Ofício relacionado ao recurso, com CD 15 + ND da criatura. Em caso de falha, os recursos são estragados.</p>
-    </section>
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Atributos</h3>
+                    <p>Os valores de atributos da criatura. Algumas criaturas possuem um valor de atributo nulo (–). Nesse caso, a criatura não possui o atributo em questão e não pode usá-lo. Uma criatura com “For –” não pode exercer força física sobre o mundo; uma criatura com “Des –” não pode se mover e uma criatura com “Int –” não é capaz de pensar, agindo apenas conforme uma programação prévia.</p>
+                  </div>
 
-    <section className="border-t-2 border-amber-900/20 pt-8 first:border-0 first:pt-0">
-      <h3 className="text-xl md:text-2xl font-bold text-red-800 mb-6 tracking-wide">Tipos de criaturas</h3>
-      <div className="space-y-4 pl-4 md:pl-5 border-l-4 border-amber-900/30 text-base md:text-lg text-left">
-          <p><strong className="text-red-800 font-bold">Animais: </strong>Bestas e feras irracionais (Int –5 ou –4), sem poderes mágicos.</p>
-          <p><strong className="text-red-800 font-bold">Construtos: </strong>Objetos animados ou criaturas artificiais. Possuem visão no escuro e imunidade a efeitos de cansaço, metabólicos e de veneno, não recuperam PV por descanso e efeitos de cura, e a perícia Cura não funciona com eles — mas Ofício (artesão) pode ser usada no lugar dela com os mesmos efeitos.</p>
-          <p><strong className="text-red-800 font-bold">Espíritos: </strong>Nativos de outros planos.</p>
-          <p><strong className="text-red-800 font-bold">Humanoides: </strong>Seres parecidos com os humanos: racionais e com culturas próprias. Este tipo é subdivido em raças (humano, anão, goblin...).</p>
-          <p><strong className="text-red-800 font-bold">Monstros: </strong>Criaturas de anatomia estranha e/ ou com habilidades fantásticas.</p>
-          <p><strong className="text-red-800 font-bold">Mortos-vivos: </strong>Cadáveres animados por energia negativa. Mortos-vivos possuem visão no escuro; imunidade a efeitos de cansaço, metabólicos, de trevas e de veneno; sofrem dano por efeitos mágicos de cura de luz (Vontade CD do efeito reduz à metade) e recuperam PV com dano de trevas.</p>
-      </div>
-    </section>
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Perícias</h3>
+                    <p>Os valores totais das demais perícias da criatura (além de Iniciativa, Percepção, Fortitude, Reflexos e Vontade). Caso a criatura não possua outras perícias, esta linha não aparecerá. Assim como personagens, criaturas podem usar perícias que não exijam treinamento. Nesse caso, seu valor na perícia será igual à metade de seu ND + o atributo-chave da perícia.</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Equipamento e Tesouro</h3>
+                    <p>Itens utilizados pela criatura, se houver. Após os itens, a categoria de tesouro da criatura. Algumas criaturas possuem recursos que podem ser extraídos de seu corpo. Extrair um recurso exige uma hora de trabalho e um teste de Sobrevivência ou de um Ofício relacionado ao recurso (CD 15 + ND da criatura). Em caso de falha, os recursos são estragados.</p>
+                  </div>
+                </div>
+              </section>
+
+              {/* Tipos de Criaturas */}
+              <section className="border-t-2 border-amber-900/20 pt-8">
+                <h2 className="text-3xl md:text-4xl font-bold text-red-800 mb-6 drop-shadow-sm font-serif tracking-wider">Tipos de Criaturas</h2>
+                <p className="mb-8">Todas as criaturas pertencem a um dos seguintes tipos, que também determinam habilidades inerentes.</p>
+                
+                <div className="space-y-8">
+                  <div>
+                    <h3 className="text-2xl font-bold text-red-800 mb-3 tracking-wide">Animais</h3>
+                    <p className="mb-3">A maior parte dos animais reais (cães, gatos, cavalos…) também existe em Arton. No entanto, a influência de forças mágicas e deuses caprichosos também provocou o surgimento de bestas espantosas. De lagartos-trovão a insetos gigantes, Arton é habitada por um sem número de feras fantásticas — que, no entanto, ainda são consideradas animais normais. Mesmo que tenham sido criadas por forças mágicas no passado, hoje elas se reproduzem e fazem parte do mundo natural.</p>
+                    <p>De modo geral, animais são seres vivos sem inteligência suficiente para desenvolver um idioma (Int –5 ou –4) e sem habilidades sobrenaturais. Um animal inteligente ou com poderes mágicos é considerado um monstro, mas muitos animais têm habilidades “naturais” como venenos e toxinas, apêndices adaptados (tentáculos, ferrões, chifres) ou órgãos especializados, como estômagos enormes capazes de engolir e digerir criaturas de seu tamanho.</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-2xl font-bold text-red-800 mb-3 tracking-wide">Construtos</h3>
+                    <p className="mb-3">Objetos animados ou criaturas fabricadas artificialmente, seja por magia, seja por ciência. Normalmente, construtos não possuem inteligência real; em vez disso, são programados para realizar apenas certas tarefas (como proteger um lugar).</p>
+                    <p>Construtos possuem as seguintes habilidades: visão no escuro; imunidade a cansaço, efeitos de metabolismo e veneno; não recuperam PV por descanso, e efeitos de cura e a perícia Cura não funcionam com eles — mas a perícia Ofício (artesão) pode ser usada no lugar dela com os mesmos efeitos.</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-2xl font-bold text-red-800 mb-3 tracking-wide">Espíritos</h3>
+                    <p>Seres nativos de outros Planos — dimensões muito além de Arton. Têm uma profunda conexão com as energias primais da Criação, desde os próprios elementos até as forças primordiais do Bem, do Mal, da Ordem e do Caos, passando por aspectos dos próprios deuses. Espíritos geralmente possuem visão no escuro, mas isso não é uma característica inerente do tipo.</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-2xl font-bold text-red-800 mb-3 tracking-wide">Humanoides</h3>
+                    <p>Este grupo inclui membros de raças que lembram os humanos, com a mesma anatomia básica. Têm cabeça, tronco, dois braços e duas pernas. Ou quase isso. Todos os humanoides são inteligentes, com sua próprias culturas e sociedades. Todo humanoide possui uma raça (como humano, anão etc.) ou subtipo (como gigante etc.).</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-2xl font-bold text-red-800 mb-3 tracking-wide">Monstros</h3>
+                    <p>Dos majestosos dragões aos aberrantes lefeu, monstros são criaturas de anatomia estranha ou com habilidades mágicas. Muitos têm origem ligada à Tormenta, mesmo que não tenham características lefeu — a própria existência da Tempestade Rubra causa o surgimento de seres aberrantes. Outros, como dragões e entes, são criações dos deuses.</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-2xl font-bold text-red-800 mb-3 tracking-wide">Mortos-Vivos</h3>
+                    <p className="mb-3">Duvidosa “dádiva” oferecida por Tenebra e outros deuses, mortos-vivos são cadáveres animados por meio de energia negativa. A maior parte dos mortos-vivos perde toda e qualquer capacidade de pensar. Outros ficam insanos, presos a recordações passadas. Alguns poucos, porém, conservam — ou mesmo superam — a inteligência que tinham em vida.</p>
+                    <p className="mb-3">Debates sobre a “moralidade” dos mortos-vivos são constantes. Muitas destas criaturas não são capazes de pensamento racional — portanto, não fazem escolhas boas ou más, só agem de acordo com as ordens de seus criadores. No entanto, quando não estão sob controle de alguém, sua tendência é atacar e devorar os vivos. Este é o caso de mortos-vivos encontrados em masmorras e lugares assombrados. Devotos de Tenebra e certos arcanistas, porém, argumentam que mortos-vivos deveriam ser empregados como soldados e força de trabalho, deixando os vivos livres para as artes e ciências.</p>
+                    <p>Mortos-vivos possuem as seguintes habilidades: visão no escuro; imunidade a cansaço, efeitos de metabolismo, trevas e veneno; sofrem dano por efeitos mágicos de cura de luz (Von CD do efeito reduz à metade), e recuperam PV com dano de trevas.</p>
+                  </div>
+                </div>
+              </section>
+
+              <section className="border-t-2 border-amber-900/20 pt-8">
+                <h2 className="text-3xl md:text-4xl font-bold text-red-800 mb-6 drop-shadow-sm font-serif tracking-wider">Habilidades Gerais</h2>
+                <p className="mb-8 font-medium">Estas são habilidades comuns a várias ameaças.</p>
+                
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Agarrar Aprimorado</h3>
+                    <p>Se a criatura acertar um ataque com uma arma natural (especificada na habilidade), poderá fazer a manobra agarrar com esta arma como uma ação livre. Enquanto está usando a arma natural para agarrar, a criatura não pode usá-la para desferir outros ataques. A descrição da habilidade pode limitar o tipo ou tamanho de criatura que pode ser agarrada desta forma e também descrever efeitos adicionais.</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Ataque Furtivo</h3>
+                    <p>A criatura é capaz de desferir ataques furtivos, como um ladino. Uma vez por rodada, ela causa a quantidade de dano adicional indicada com ataques corpo a corpo, ou à distância em alcance curto, contra alvos desprevenidos ou que ela esteja flanqueando. Se o ataque furtivo da ameaça tiver qualquer efeito adicional, ele também será descrito aqui.</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Bando</h3>
+                    <p>A criatura é formada por um grupo de indivíduos, geralmente seres do mesmo tipo, embora possam existir bandos mistos. Se um ataque do bando exceder a Defesa do inimigo por 10 ou mais, ele causa o dobro do dano. Se um ataque do bando errar, ele ainda assim causa metade do dano. Um bando é imune a manobras de combate e efeitos que afetam apenas uma criatura e não causam dano, mas tem vulnerabilidade a dano de área. Um personagem com o poder Trespassar que acerte a criatura pode usá-lo para fazer um ataque adicional contra ela (mas apenas uma vez por turno). Criaturas com esta habilidade possuem o ícone em sua linha de tipo.</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Cura Acelerada</h3>
+                    <p>No início de seu turno, a criatura recupera pontos de vida iguais ao seu valor de cura acelerada (por exemplo, 5 PV com cura acelerada 5). Se houver algum tipo de dano listado após uma barra, esta habilidade não recupera dano do tipo listado. Por exemplo, uma criatura com cura acelerada 10/ácido recupera 10 PV no início de seu turno, a menos que o dano tenha sido causado por ácido. Cura acelerada não cura perda de PV, apenas dano.</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Derrubar</h3>
+                    <p>Se a criatura acertar um ataque com uma arma (especificada na habilidade), poderá fazer a manobra derrubar com esta arma como uma ação livre. A descrição da habilidade pode limitar o tipo ou tamanho de criatura que pode ser derrubada desta forma e também descrever efeitos adicionais.</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-3">Deslocamento Especial</h3>
+                    <p className="mb-3">A criatura possui um ou mais modos de deslocamento especiais, listados após seu deslocamento básico. Se não houver um deslocamento básico, a criatura só pode usar os modos especiais listados.</p>
+                    <ul className="space-y-4 pl-4 border-l-2 border-amber-900/20">
+                      <li>
+                        <strong className="text-amber-950">Escalada.</strong> Pode caminhar por superfícies verticais ou mesmo de cabeça para baixo. Isso segue as demais regras de movimento e é afetado pelas características da superfície (uma parede acidentada pode ser considerada terreno difícil, por exemplo). Uma criatura que esteja escalando e perca seu deslocamento de escalada ou a capacidade de realizar ações (como por ficar inconsciente ou paralisada) cai.
+                      </li>
+                      <li>
+                        <strong className="text-amber-950">Escavação.</strong> Pode se mover sob terreno granular, como terra e areia (mas não rocha sólida). Após a passagem da criatura, o terreno atrás dela se fecha devido aos restos de material deixados para trás. Deslocamento de escavação pode ser afetado pelas características do solo: por exemplo, solo pedregoso pode ser considerado terreno difícil.
+                      </li>
+                      <li>
+                        <strong className="text-amber-950">Natação.</strong> Pode se deslocar na água sem precisar fazer testes de Atletismo. Porém, assim como criaturas terrestres precisam de testes de Acrobacia e Atletismo em certas circunstâncias (como um terremoto), uma criatura com deslocamento de natação pode precisar desses testes em circunstâncias como correnteza forte ou redemoinho. A criatura pode respirar debaixo d’água, mas não fora dela, a menos que tenha outra forma de deslocamento. Ela pode falar e lançar magias debaixo d’água e não sofre as penalidades de –2 em testes de ataque e –5 em Percepção por estar submersa, nem a redução no dano de suas armas naturais. Para mais informações, veja “Personagens Submersos” em Tormenta20, p. 269.
+                      </li>
+                      <li>
+                        <strong className="text-amber-950">Voo.</strong> Pode voar. Uma criatura com deslocamento de voo pode encerrar seu deslocamento em pleno ar. Uma criatura que esteja voando e perca seu deslocamento de voo ou a capacidade de realizar ações cai 150m por rodada. Uma criatura que esteja voando e sofra uma manobra derrubar bem-sucedida cai 1d6 x 1,5m antes de recuperar o voo.
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Doença</h3>
+                    <p>Um dos ataques da criatura transmite uma doença. Um personagem que sofra dano desse ataque deve passar num teste de Fortitude ou é contaminado. Uma vez que contraia a doença, o personagem não sofre efeitos adicionais por ser atingido novamente.</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Engolir</h3>
+                    <p>Se a ameaça começar seu turno agarrando uma criatura uma ou mais categorias de tamanho menor, poderá fazer um teste de agarrar contra ela. Se vencer, engole a criatura. Uma criatura engolida continua agarrada, fica cega, tem cobertura total contra efeitos vindos do lado de fora da ameaça (e vice-versa) e sofre o dano indicado no início de cada turno da ameaça. Ela pode escapar vencendo um teste de agarrar ou de Acrobacia contra o valor de agarrar da ameaça ou causando dano à ameaça até atingir o valor indicado (exceto quando descrito o contrário, o interior da ameaça tem todas as suas habilidades). Isso faz com que a ameaça regurgite todas as criaturas engolidas, que ficam caídas em espaços adjacentes desocupados na frente dela, e reinicia a contagem de dano. A menos que indicado o contrário, a ameaça só pode manter uma criatura engolida por vez.</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Enxame</h3>
+                    <p>A criatura é um aglomerado de seres menores que agem em conjunto. Pode entrar no espaço ocupado por um personagem e, no fim de seu turno, causa um efeito (geralmente dano) indicado em sua descrição a qualquer personagem em seu espaço, automaticamente. Um enxame é imune a manobras de combate e efeitos que afetam apenas uma criatura e não causam dano, mas tem vulnerabilidade a dano de área. Além disso, sofre apenas metade do dano de ataques com armas. Estar dentro de um enxame conta como condição ruim para lançar magias. Enxames possuem o ícone em sua linha de tipo.</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Evasão</h3>
+                    <p>Quando sofre um efeito que permite um teste de Reflexos para reduzir o dano à metade, a criatura não sofre dano algum se passar. Ela ainda sofre dano normal se falhar no teste de Reflexos. Esta habilidade exige liberdade de movimentos; a criatura não pode usá-la se estiver de armadura pesada ou imóvel.</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Evasão Aprimorada</h3>
+                    <p>Como Evasão, mas, se a criatura falhar no teste de Reflexos, sofre apenas metade do dano.</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Familiar</h3>
+                    <p>A criatura pode ser invocada como um familiar. Veja o poder Familiar.</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Faro</h3>
+                    <p>A criatura tem olfato apurado. Contra inimigos que não possa ver, ela não fica desprevenida e camuflagem total lhe causa apenas 20% de chance de falha em alcance curto.</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Fortificação</h3>
+                    <p>A criatura tem uma chance (indicada por uma porcentagem) de ignorar o dano adicional de acertos críticos e ataques furtivos. Jogue 1d100 sempre que a criatura sofrer um acerto crítico ou ataque furtivo. Se o resultado for igual ou menor que seu valor de fortificação, a criatura ignora o dano adicional do ataque, exatamente como se tivesse Imunidade a esse efeito.</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Imunidade</h3>
+                    <p>A criatura é imune a um tipo de efeito ou outro elemento (como um tipo de dano, uma condição ou uma habilidade). Ela não sofre nenhuma consequência direta daquilo contra a qual é imune. Ela ainda pode ser afetada indiretamente — por exemplo, uma criatura imune a efeitos mágicos ainda é afetada por terreno difícil criado por magias. Imunidade a acertos críticos e/ou ataques furtivos os transforma em acertos normais.</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Incorpóreo</h3>
+                    <p>A criatura não tem corpo físico. Só pode ser afetada por armas e efeitos mágicos ou outras criaturas incorpóreas. Ela pode atravessar objetos sólidos, mas não manipulá-los, e tem Força nula.</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Magias</h3>
+                    <p className="mb-3">A criatura lança magias. A descrição da habilidade indica o nível e classe de conjurador da criatura, a CD para resistir às suas magias e seu limite de PM (se nenhum limite for indicado, use o ND da criatura). A criatura segue todas as regras de magias, bem como as regras e limitações específicas de sua classe (por exemplo, se lança magias como um bruxo, ela possui um foco arcano e deve empunhá-lo). Considere que a criatura tem todos os componentes materiais para suas magias. Além disso, a habilidade também apresenta regras específicas das magias da criatura. Algumas criaturas possuem um tipo de conjurador (arcano ou divino) em vez de uma classe. Neste caso, suas magias são do tipo indicado, mas ela não sofre nenhuma limitação específica de classe.</p>
+                    <p>Criaturas com a habilidade Magias possuem uma lista de magias. Esta lista é apresentada para conveniência do mestre e descreve as magias mais comumente conhecidas pela criatura, descritas na forma como ela costuma lançá-las. Ela pode lançar essas magias em outras versões (dentro de seu nível de conjurador) e, a critério do mestre, pode conhecer magias diferentes.</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Maior que a morte</h3>
+                    <p>Enquanto tiver pelo menos metade de seus PV, a criatura é imune a habilidades de “morte instantânea”. Isso inclui efeitos que reduzem seus PV a 0 ou menos instantaneamente (como Assassino Fantasmagórico), que aprisionam ou destroem sua alma ou corpo (como Roubar a Alma e Buraco Negro) e similares. O mestre tem a palavra final se um efeito é ou não de morte instantânea. A criatura ainda pode ser reduzida a 0 PV ou menos por dano ou perda de vida.</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Natureza Vegetal</h3>
+                    <p>A criatura é um vegetal senciente, ou possui traços vegetais em sua fisiologia. Ela é imune a atordoamento e metamorfose, mas é afetada especificamente por efeitos que afetem plantas monstruosas. No caso de magias sem teste de resistência, ela tem direito a um teste de Fortitude (CD da magia) para evitar o efeito.</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Parceiro</h3>
+                    <p>A criatura pode ser empregada como um parceiro.</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Percepção às Cegas</h3>
+                    <p>A criatura usa sentidos diferentes da visão (como radar, sonar, sensibilidade a vibrações etc.). Efeitos relacionados à visão, como escuridão e invisibilidade, não a afetam. Ela pode fazer testes de Percepção para observar usando estes sentidos, em vez da visão. Esta habilidade tem alcance curto (a menos que especificado em contrário).</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Redução de Dano (RD)</h3>
+                    <p>A criatura ignora parte do dano que sofre. Por exemplo, se uma criatura com RD 5 sofre um ataque que causa 8 pontos de dano, perde apenas 3 PV. A redução pode ser contra um ou mais tipos de dano específicos. Assim, uma criatura com redução de fogo 10 ignora 10 pontos de dano de fogo, mas sofre dano de outros tipos normalmente. Caso haja um ou mais tipos de dano listados após uma barra, a RD não se aplica àqueles tipos. Por exemplo, uma criatura com RD 10/mágico ignora 10 pontos de dano de todos os ataques que sofrer — exceto dano causado por habilidades e armas mágicas.</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Resistência a &lt;Efeito&gt;</h3>
+                    <p>A criatura recebe um bônus em testes de resistência contra efeitos do tipo especificado. Por exemplo, resistência a magia +2 fornece +2 em testes de Fortitude, Reflexos e Vontade contra efeitos mágicos.</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Sensibilidade a Luz</h3>
+                    <p>A criatura é suscetível a luz. Quando exposta à luz do sol ou similar, ela fica ofuscada.</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Visão na Penumbra</h3>
+                    <p>A criatura enxerga em escuridão leve em alcance curto (exceto mágica). Ela ignora camuflagem leve por esse tipo de escuridão (veja Tormenta20, p. 238).</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Visão no Escuro</h3>
+                    <p>A criatura enxerga em escuridão total em alcance curto (exceto mágica). Ela ignora camuflagem total por esse tipo de escuridão (veja Tormenta20, p. 238).</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-bold text-red-800 tracking-wide mb-2">Vulnerabilidade a &lt;Efeito&gt;</h3>
+                    <p>A criatura sofre +50% de dano ou de perda de vida (conforme apropriado) de um tipo ou característica específicos. Por exemplo, se uma criatura com vulnerabilidade a frio sofre um ataque que causa 15 pontos de dano de frio, ela sofre 22 pontos de dano (15 x 1,5 = 22).</p>
+                  </div>
+
+                </div>
+              </section>
 
     <section className="border-t-2 border-amber-900/20 pt-8 first:border-0 first:pt-0">
       <h3 className="text-xl md:text-2xl font-bold text-red-800 mb-4 tracking-wide">Aspectos e Avatares</h3>
@@ -293,6 +558,8 @@ export default function AmeacasPage() {
           <p>A única constante é: quando o aspecto de um deus está presente, coisas extraordinárias tendem a acontecer...</p>
       </div>
     </section>
+
+    
 
   </div>
 </div>

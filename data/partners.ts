@@ -1,7 +1,9 @@
 import { Partner } from "@/types/partner";
-
+//#region Tormenta20 - Jogo do Ano
+//#endregion
 export const partners: Partner[] = [
-  // Monster Chefe
+
+  //#region Monster Chefe
   { id: "Dranniko",
   name: "D’ranniko (Fortão)",
   description: "Um inseto gigante semelhante a um louva-a-deus branco de olhos vermelhos. Valente e implacável, é temido nas cavernas próximas a Doherimm e valorizado como feroz parceiro de combate.",
@@ -15,15 +17,16 @@ export const partners: Partner[] = [
   { id: "Jaata",
   name: "Jäätä (Fortão)",
   description: "Uma criatura elemental de gelo semelhante a um pangolim gigante, coberta por escamas brancas afiadas e envolta em névoa congelante. Forte e agressiva, espalha frio intenso ao seu redor.",
-  origin: "Dragão Brasil",
+  origin: "Dragão Brasil - 216",
   benefits: {
     iniciante: "Você tem redução de frio 5.",
     veterano: "Como iniciante, e seus ataques causam +2 pontos de dano de frio.",
     mestre: "Você recebe a habilidade Aura Congelante.",
   },
   },
+  //#endregion
 
-  // Tormenta20 - Jogo do Ano
+  //#region Tormenta20 - Jogo do Ano
   { id: "atirador",
     name: "Atirador",
     description: "Um arqueiro, besteiro ou outro combatente à distância.",
@@ -144,9 +147,9 @@ export const partners: Partner[] = [
       mestre: "Você pode usar Olhos nas Costas.",
     },
   },
+  //#endregion
 
-
-  // Ameaças de Arton
+  //#region Ameaças de Arton
   { id: "Hiena",
     name: "Hiena (Perseguidor)",
     description: "Uma hiena astuta e resistente, famosa por sua mordida poderosa e habilidade de rastrear presas. Muito usada por gnolls como animal de caça e guarda.",
@@ -337,9 +340,10 @@ export const partners: Partner[] = [
       mestre: "Seus efeitos de veneno ignoram imunidade a veneno e você também pode gastar 5 PM para aplicar um veneno que causa perda de 3d12 PV."
     }
   },
+  //#endregion
   
 
-  // Dragão Brasil
+  //#region Dragão Brasil
   { id: "Aberrante",
   name: "Aberrante",
   description: "Uma criatura corrompida pela Tormenta, de aparência perturbadora e mente alienígena. Apenas devotos de Aharadak podem ter este tipo de parceiro.",
@@ -350,6 +354,7 @@ export const partners: Partner[] = [
   mestre: "Você também pode gastar 4 PM para causar 6d6 pontos de dano psíquico ou perda de 1d8 PM.",
   },
   },
+  //#endregion
 
 
 

@@ -1,7 +1,9 @@
 import { Power } from "@/types/power";
-
+//#region Tormenta20 - Jogo do Ano
+//#endregion
 export const powersArcanista: Power[] = [
-  // Tormenta20 - Jogo do Ano
+
+  //#region Tormenta20 - Jogo do Ano
   { id: "Arcano de Batalha",
     name: "Arcano de Batalha",
     description: "Quando lança uma magia, você soma seu atributo-chave na rolagem de dano.",
@@ -120,28 +122,31 @@ export const powersArcanista: Power[] = [
     description: "Você possui um animal de estimação mágico. Veja no início da página sobre.",
     origin: "Tormenta20 - jogo do ano"
   },
+  //#endregion
 
 
-  // Dragão Brasil
+  //#region  Dragão Brasil
+
+  // Dragão Brasil - 212
   { id: "Encanto Feérico",
     name: "Encanto Feérico",
     description: "Escolha uma das suas magias de encantamento de 1º círculo. Uma vez por cena, você pode lançar a versão básica desta magia sem custo em PM (você ainda pode gastar PM para aprimorá-la).",
     prerequisite: "eiradaan, qareen ou sílfide",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 212"
   },
   { id: "Familiar Elemental",
     name: "Familiar Elemental",
     description: "Se seu familiar tiver o mesmo elemento da sua Resistência Elemental, a redução de dano recebida por essa habilidade aumenta para 15.",
     prerequisite: "qareen; um Familiar aquin’ne, paak, terrier ou t’peel; 5º nível de arcanista.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 212"
   },
   { id: "Herança Erudita",
     name: "Herança Erudita",
     description: "Seu sangue não carrega apenas a fagulha arcana que lhe dá poder, mas o conhecimento do dragão ou criatura feérica de quem você descende. Escolha uma perícia de Inteligência. Você soma seu Carisma nos testes dessa perícia.",
     prerequisite: "eiradaan, kallyanach ou sílfide, Feiticeiro.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 212"
   },
-
+  
   // Dragão Brasil - 200
   { id: "Gerador Elemental",
     name: "Gerador Elemental",
@@ -155,6 +160,7 @@ export const powersArcanista: Power[] = [
     prerequisite: "Coração de Dragão, Raio Elemental.",
     origin: "Dragão Brasil - 200"
   },
+  //#endregion
 
 
   { id: "Agrilhoar os Caídos",

@@ -1,7 +1,9 @@
 import { Power } from "@/types/power";
-
+//#region Tormenta20 - Jogo do Ano
+//#endregion
 export const powersDruida: Power[] = [
-  // Tormenta20 - Jogo do Ano
+
+  //#region Tormenta20 - Jogo do Ano
   { id: "Aspecto do Inverno",
     name: "Aspecto do Inverno",
     description: "Você aprende e pode lançar uma magia de convocação ou evocação, arcana ou divina, de qualquer círculo que possa lançar. Além disso, recebe redução de frio 5 e suas magias que causam dano de frio causam +1 ponto de dano por dado.",
@@ -123,26 +125,30 @@ export const powersDruida: Power[] = [
     description: "Você recebe +2 em Vontade. Se estiver portando um recipiente com água (não precisa estar empunhando), uma vez por rodada, quando faz um teste de resistência, pode pagar 1 PM para refazer a rolagem.",
     origin: "Tormenta20 - Jogo do Ano"
   },
+  //#endregion
 
-  // Dragão Brasil
+  //#region Dragão Brasil
+  // Dragão Brasil - 212
   { id: "Anatomia Natural",
     name: "Anatomia Natural",
     description: "A ligação do seu corpo com a natureza é mais do que especial. Quando lança uma magia, você pode gastar uma ação de movimento e 1 PM para usar Armadura de Allihanna. Se fizer isso, o bônus na Defesa concedido por esta habilidade aumenta para +4.",
     prerequisite: "dahllan.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 212"
   },
   { id: "Coragem dos Pampas",
     name: "Coragem dos Pampas",
     description: "Estar em contato com sua divindade acalenta seus medos. Enquanto estiver em terreno natural, você não sofre os efeitos da habilidade Medo de Altura.",
     prerequisite: "centauro ou minotauro.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 212"
   },
   { id: "Sangue Ofídico",
     name: "Sangue Ofídico",
     description: "Para cada círculo de magia que você é capaz de lançar, a CD para resistir a seus efeitos de veneno aumenta em +2 (cumulativos com o aumento de Coração da Selva) e a resistência a veneno dos seus Presentes de Sszzaas também aumenta em +2.",
     prerequisite: "nagah, Coração da Selva.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 212"
   },
+
+  // Dragão Brasil
   { id: "Auspício da Lua Cheia",
     name: "Auspício da Lua Cheia",
     description: "Se você estiver sob efeito de escuridão ou forma selvagem, seus ataques corpo a corpo causam +1d6 pontos de dano de trevas.",
@@ -179,6 +185,7 @@ export const powersDruida: Power[] = [
     prerequisite: "Conjurar Mortos-Vivos, devoto de Tenebra.",
     origin: "Dragão Brasil"
   },
+  //#endregion
 
 
 

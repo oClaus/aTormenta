@@ -1,7 +1,9 @@
 import { Power } from "@/types/power";
-
+//#region Tormenta20 - Jogo do Ano
+//#endregion
 export const powersInventor: Power[] = [
-  // Tormenta20 - Jogo do Ano
+
+  //#region Tormenta20 - Jogo do Ano
   { id: "Agite Antes de Usar",
     name: "Agite Antes de Usar",
     description: "Quando usa um preparado alquímico que cause dano, você pode gastar uma quantidade de PM à sua escolha (limitado por sua Inteligência). Para cada PM que gastar, o item causa um dado extra de dano do mesmo tipo.",
@@ -180,20 +182,23 @@ export const powersInventor: Power[] = [
     prerequisite: "Alquimista Iniciado.",
     origin: "Tormenta20 - Jogo do Ano"
   },
+  //#endregion
 
-  // Dragão Brasil
+  //#region Dragão Brasil
+  // Dragão Brasil - 212
   { id: "Armadura de Suporte",
     name: "Armadura de Suporte",
     description: "Se estiver usando armadura pesada, você pode gastar 1 PM para ignorar o dano adicional que sofreria por conta da habilidade Ossos Frágeis.",
     prerequisite: "kliren, Couraceiro.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 212"
   },
   { id: "Síntese Goblin",
     name: "Síntese Goblin",
     description: "Quando fabrica um item alquímico ou poção, você pode fabricar uma dose a mais (pagando metade do seu custo em matéria-prima); mas o item é feito de forma rápida e desleixada; ao ser usado, tem 25% de chance (1 em 1d4) de não surtir efeito.",
     prerequisite: "goblin, Síntese Alquímica.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 212"
   },
+  //#endregion
 
   
   { id: "Alquimista Exímio",

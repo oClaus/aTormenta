@@ -1,7 +1,9 @@
 import { Power } from "@/types/power";
-
+//#region Tormenta20 - Jogo do Ano
+//#endregion
 export const powersCacador: Power[] = [
-  // Tormenta20 - Jogo do Ano
+
+  //#region Tormenta20 - Jogo do Ano
   { id: "Ambidestria",
     name: "Ambidestria",
     description: "Se estiver empunhando duas armas (e pelo menos uma delas for leve) e fizer a ação agredir, você pode fazer dois ataques, um com cada arma. Se fizer isso, sofre –2 em todos os testes de ataque até o seu próximo turno.",
@@ -128,45 +130,49 @@ export const powersCacador: Power[] = [
     description: "Quando usa a habilidade Marca da Presa, seus ataques contra a criatura marcada recebem +2 na margem de ameaça. Esse bônus dobra com a habilidade Inimigo.",
     origin: "Tormenta20 - Jogo do Ano"
   },
+  //#endregion
 
-  // Dragão Brasil
+  //#region Dragão Brasil
+  // Dragão Brasil - 211
+  { id: "Arsenal do Deserto",
+    name: "Arsenal do Deserto",
+    description: "Você recebe +2 nas rolagens de dano com azagaias, cimitarras e lanças. Para você, essas armas são armas leves.",
+    origin: "Dragão Brasil - 211"
+  },
+  { id: "Escaramuça Distante",
+    name: "Escaramuça Distante",
+    description: "Você pode usar Escaramuça e Dança da Areia contra alvos em alcance médio.",
+    origin: "Dragão Brasil - 211"
+  },
+  { id: "Passo Duplo",
+    name: "Passo Duplo",
+    description: "Se estiver usando Escaramuça ou Dança da Areia e usar a ação agredir para fazer um ataque corpo a corpo com uma arma leve, você pode gastar 2PM para fazer um ataque adicional.",
+    origin: "Dragão Brasil - 211"
+  },
+  { id: "Passos Precisos",
+    name: "Passos Precisos",
+    description: "Enquanto estiver usando Escaramuça ou Dança da Areia, você recebe +2 na margem de ameaça de seus ataques.",
+    origin: "Dragão Brasil - 211"
+  },
+  { id: "Tesouros da Natureza",
+    name: "Tesouros da Natureza",
+    description: "Sempre que for bem-sucedido em montar um acampamento em terreno natural, você encontra frutos, insetos ou outros recursos naturais que recuperam 1 PM por  patamar de cada personagem acampado.",
+    origin: "Dragão Brasil - 211"
+  },
+  // Dragão Brasil - 212
   { id: "Emboscada Oportuna",
     name: "Emboscada Oportuna",
     description: "Um gnoll que não sabe aproveitar uma brecha não é um gnoll de verdade. Quando ataca uma criatura analisada com Marca da Presa, o bônus em rolagens de dano concedido por sua habilidade Oportunista aumenta para +5.",
     prerequisite: "gnoll.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 212"
   },
   { id: "Faro de Caçador",
     name: "Faro de Caçador",
     description: "Seu olfato é ainda mais aguçado, treinado para caça. Você recebe +5 em testes de Sobrevivência para rastrear e identificar criatura usando seu Faro. Se usar Marca da Presa contra o alvo dessas ações, seu custo diminui em –1 PM.",
     prerequisite: "qualquer raça (ou herança moreau) que conceda a habilidade Faro.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 212"
   },
-  { id: "Arsenal do Deserto",
-    name: "Arsenal do Deserto",
-    description: "Você recebe +2 nas rolagens de dano com azagaias, cimitarras e lanças. Para você, essas armas são armas leves.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Escaramuça Distante",
-    name: "Escaramuça Distante",
-    description: "Você pode usar Escaramuça e Dança da Areia contra alvos em alcance médio.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Passo Duplo",
-    name: "Passo Duplo",
-    description: "Se estiver usando Escaramuça ou Dança da Areia e usar a ação agredir para fazer um ataque corpo a corpo com uma arma leve, você pode gastar 2PM para fazer um ataque adicional.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Passos Precisos",
-    name: "Passos Precisos",
-    description: "Enquanto estiver usando Escaramuça ou Dança da Areia, você recebe +2 na margem de ameaça de seus ataques.",
-    origin: "Dragão Brasil"
-  },
-  { id: "Tesouros da Natureza",
-    name: "Tesouros da Natureza",
-    description: "Sempre que for bem-sucedido em montar um acampamento em terreno natural, você encontra frutos, insetos ou outros recursos naturais que recuperam 1 PM por  patamar de cada personagem acampado.",
-    origin: "Dragão Brasil"
-  },
+  //#endregion
 
   
   { id: "Armadilha Alquímica",

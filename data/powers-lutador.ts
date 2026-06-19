@@ -1,7 +1,8 @@
 import { Power } from "@/types/power";
-
+//#region Tormenta20 - Jogo do Ano
+//#endregion
 export const powersLutador: Power[] = [
-  // Tormenta20 - Jogo do Ano
+  //#region Tormenta20 - Jogo do Ano
   { id: "Arma Improvisada",
     name: "Arma Improvisada",
     description: "Para você, atacar com armas improvisadas conta como fazer um ataque desarmado, mas seu dano aumenta em um passo. Você pode gastar uma ação de movimento para procurar uma pedra, cadeira, garrafa ou qualquer coisa que possa usar como arma. Faça um teste de Percepção (CD 20). Se você passar, encontra uma arma improvisada. Armas improvisadas são frágeis; se você errar um ataque e o resultado do d20 for um número ímpar, a arma quebra.",
@@ -128,26 +129,29 @@ export const powersLutador: Power[] = [
     description: "Quando faz uma investida desarmada, você pode gastar 2 PM. Se fizer isso, recebe +1d6 no dano para cada 3m que se deslocar até chegar ao oponente, limitado pelo seu nível.",
     origin: "Tormenta20 - Jogo do Ano"
   },
+  //#endregion
 
-  // Dragão Brasil
+  //#region Dragão Brasil
+  // Dragão Brasil - 212
   { id: "Cascos Caprinos",
     name: "Cascos Caprinos",
     description: "Você tem cascos poderosos e letais. Quando faz um ataque desarmado, você pode gastar 1 PM para usar seus cascos em vez das mãos. Se fizer isso, causa +1 dado de dano do mesmo tipo, mas não pode escolher causar dano não letal.",
     prerequisite: "centauro ou sátiro.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 212"
   },
   { id: "Pele Grudenta",
     name: "Pele Grudenta",
     description: "Um muco viscoso é expelido por sua pele e língua, fazendo tudo grudar! Quando acerta um ataque corpo a corpo desarmado ou com sua arma natural, você pode gastar 1 PM para fazer uma manobra desarmar como ação livre com um bônus de +2.",
     prerequisite: "tabrachi.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 212"
   },
   { id: "Sangue Humano",
     name: "Sangue Humano",
     description: "Seu corpo, esculpido para as lutas, se tornou mais resistente do que os dos seus ancestrais élficos. Quando faz um teste de resistência, você pode gastar 1 PM para somar sua Constituição ao resultado do teste.",
     prerequisite: "meio-elfo, Sarado.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 212"
   },
+  //#endregion
 
   
   { id: "Aquecimento",

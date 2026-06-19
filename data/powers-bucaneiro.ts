@@ -1,7 +1,9 @@
 import { Power } from "@/types/power";
-
+//#region Tormenta20 - Jogo do Ano
+//#endregion
 export const powersBucaneiro: Power[] = [
-  // Tormenta20 - Jogo do Ano
+
+  //#region Tormenta20 - Jogo do Ano
   { id: "Abusar dos Fracos",
     name: "Abusar dos Fracos",
     description: "Quando ataca uma criatura sob efeito de uma condição de medo, seu dano aumenta em um passo.",
@@ -109,25 +111,27 @@ export const powersBucaneiro: Power[] = [
     prerequisite: "Esgrimista, 10º nível de bucaneiro.",
     origin: "Tormenta20 - Jogo do Ano"
   },
+  //#endregion
 
-  // Dragão Brasil
+  //#region Dragão Brasil
+  // Dragão Brasil - 212
   { id: "Amigo do Passado",
     name: "Amigo do Passado",
     description: "Você conhece alguém poderoso da época em que ainda estava vivo. Uma vez por aventura, o amigo fornecido por Amigos no Porto é um parceiro mestre, em vez de veterano.",
     prerequisite: "osteon, Amigos no Porto, 11º nível de bucaneiro.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 212"
   },
   { id: "Pirata Oceânico",
     name: "Pirata Oceânico",
     description: "A sagacidade dos piratas elfos-do-mar é notória. Para você, arpões e tridentes são consideradas armas ágeis.",
     prerequisite: "elfo-do-mar, Esgrimista.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 212"
   },
   { id: "Salmoura",
     name: "Salmoura",
     description: "Você foi um réptil entre os piratas, aprendendo suas táticas mais traiçoeiras. Seus ataques corpo a corpo causam +1d6 pontos de dano de ácido; criaturas que sofram esse dano também sofrem –2 em testes de perícia por 1 rodada.",
     prerequisite: "trog, Pernas do Mar",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 212"
   },
 
   // Dragão Brasil - 200
@@ -137,6 +141,7 @@ export const powersBucaneiro: Power[] = [
     prerequisite: "treinado em Intimidação, Coração de Dragão.",
     origin: "Dragão Brasil - 200"
   },
+  //#endregion
 
   
   { id: "Ardil Afiado",

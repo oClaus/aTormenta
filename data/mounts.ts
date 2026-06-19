@@ -1,7 +1,9 @@
 import { Mount } from "@/types/mount";
-
+//#region Tormenta20 - Jogo do Ano
+//#endregion
 export const mounts: Mount[] = [
-  // Duelo de Dragões
+
+  //#region Duelo de Dragões
   { id: "Corcel de Comando ",
     name: "Corcel de Comando ",
     size: "Grande",
@@ -13,20 +15,23 @@ export const mounts: Mount[] = [
       mestre: "O alcance de suas habilidades baseadas em som (como Músicas de Bardo) aumenta em um passo (de curto para médio e de médio para longo).",
     },
   },
+  //#endregion
 
-
-  // Dragão Brasil
+  //#region Dragão Brasil
+  // Dragão Brasil - 212
   { id: "Javali Doherita",
     name: "Javali Doherita ",
     size: "Grande",
     description: "Apenas doheritas da Guilda dos Provedores ou da Guilda dos Guerreiros têm permissão para montar estes animais.",
-    origin: "Dragão Brasil",
+    origin: "Dragão Brasil - 212",
     benefits: {
       iniciante: "Você pode usar o poder Carga de Cavalaria. Caso possua este poder, o bônus no dano fornecido por ele aumenta em +1d8.",
       veterano: "Seu deslocamento muda para 9m e o bônus de dano de Carga de Cavalaria aumenta em +1d8.",
       mestre: "Seu deslocamento muda para 12m e, quando faz uma investida, você ignora 10 pontos de redução de dano do alvo.",
     },
   },
+
+  // Dragão Brasil
   { id: "Acquarella",
   name: "Acquarella",
   size: "Enorme",
@@ -49,9 +54,9 @@ export const mounts: Mount[] = [
     mestre: "Você pode lançar a magia Miragem (CD Int). Se aprender essa magia, seu custo é reduzido em –1 PM.",
   },
   },
+  //#endregion
 
-
-  // Tormenta20 - Jogo do Ano
+  //#region Tormenta20 - Jogo do Ano
   { id: "Cavalo ",
     name: "Cavalo ",
     size: "Grande",
@@ -98,8 +103,9 @@ export const mounts: Mount[] = [
       mestre: "Como acima, mas você recebe uma ação de movimento extra por turno (apenas para se deslocar).",
     },
   },
+  //#endregion
 
-  //Ameaças de Arton
+  //#region Ameaças de Arton
   { id: "Sapo Atroz ",
     name: "Sapo Atroz ",
     size: "Grande",
@@ -551,6 +557,7 @@ export const mounts: Mount[] = [
       mestre: "A redução de frio aumenta para 20."
     }
   },
+  //#endregion
 
   
 

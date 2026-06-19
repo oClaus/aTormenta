@@ -7,7 +7,11 @@ import { gods } from "@/data/gods";
 
 // --- Componente de Galeria ---
 function ImageGallery({ images, alt }: { images: string | string[]; alt: string }) {
-  const imageList = Array.isArray(images) ? images : [images];
+  // Transforma em array e filtra valores vazios ou falsy (ex: "")
+  const imageList = (Array.isArray(images) ? images : [images]).filter(
+    (img) => img && img.trim() !== ""
+  );
+  
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -17,6 +21,18 @@ function ImageGallery({ images, alt }: { images: string | string[]; alt: string 
     }, 4000); // 4 segundos
     return () => clearInterval(interval);
   }, [imageList.length]);
+
+  // Se não houver imagens válidas, exibe o fallback
+  if (imageList.length === 0) {
+    return (
+      <div className="w-full h-full flex flex-col items-center justify-center text-amber-900/40 bg-[#e8dac1]/20">
+        <span className="text-5xl opacity-40 mb-3 filter sepia-[0.2]">🏛️</span>
+        <span className="text-xs font-bold uppercase tracking-widest opacity-60">
+          Sem Imagem Oficial
+        </span>
+      </div>
+    );
+  }
 
   return (
     <div className="relative w-full h-full overflow-hidden">

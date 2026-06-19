@@ -1,7 +1,9 @@
 import { Power } from "@/types/power";
-
+//#region Tormenta20 - Jogo do Ano
+//#endregion
 export const powersGeraisConcedido: Power[] = [
-  // Tormenta20 - Jogo do Ano
+
+  //#region Tormenta20 - Jogo do Ano
    { id: "Afinidade com a Tormenta (Aharadak)",
     name: "Afinidade com a Tormenta (Aharadak)",
     description: "Você recebe +10 em testes de resistência contra efeitos da Tormenta, de suas criaturas e de devotos de Aharadak. Além disso, seu primeiro poder da Tormenta não conta para perda de Carisma",
@@ -434,7 +436,35 @@ export const powersGeraisConcedido: Power[] = [
     prerequisite: "",
     origin: "Tormenta20 - Jogo do Ano"
   },
+  //#endregion
 
+  //#region Guia dos Deuses Menores
+  { id: "Espadachim Divino (A Espada-Deus)",
+    name: "Espadachim Divino (A Espada-Deus)",
+    description: "Você recebe +1 nas rolagens de dano e no multiplicador de crítico com espadas e, para você, todas as espadas marciais são armas simples.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Espírito da Alcateia (Akok)",
+    name: "Espírito da Alcateia (Akok)",
+    description: "Você pode se comunicar livremente com todos os tipos de cães e lobos, como se estivesse sob efeito da magia Voz Divina. Além disso, quando ataca um inimigo que você esteja flanqueando, você recebe +2 na rolagem de dano.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Liberdade das Montanhas (Altair)",
+    name: "Liberdade das Montanhas (Altair)",
+    description: "Quando faz um teste de Atletismo para escalar, você rola dois dados e usa o melhor resultado. Além disso, se você estiver em terreno elevado, recebe +2 em testes de perícia contra criaturas em terreno inferior.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Inspiração Concedida (Anilatir)",
+    name: "Inspiração Concedida (Anilatir)",
+    description: "Você pode gastar 2 PM para evocar o poder da criatividade. Até o fim da cena, sempre que fizer um teste de perícia, você recebe um bônus cumulativo de +1 nesse teste (ou seja, +1 no primeiro teste, +2 no segundo teste, +3 no terceiro e assim por diante). Esse bônus dura até o fim da cena ou até você fazer um teste de uma perícia que já tenha usado nesta cena.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Chamado da Colmeia (Apis)",
+    name: "Chamado da Colmeia (Apis)",
+    description: "Você pode gastar 1 PM e uma ação padrão para invocar um enxame de abelhas Grande com duração sustentada, que surge em um espaço a sua escolha em alcance médio. O enxame pode passar pelo espaço de outras criaturas e não impede que outras criaturas entrem no espaço dele. No final de seus turnos, o enxame causa 2d6 pontos de dano de perfuração a qualquer criatura em seu espaço (Reflexos CD Sab reduz à metade). Você pode gastar uma ação de movimento para mover o enxame 12m. A cada patamar além de iniciante, você pode gastar +1 PM quando invoca o enxame para aumentar seu dano em +2d6.",
+    origin: "Guia dos Deuses Menores"
+  },
+  //#endregion
 
 
   { id: "Abraço da Fênix (Thyatis)",
@@ -887,12 +917,7 @@ export const powersGeraisConcedido: Power[] = [
     prerequisite: "",
     origin: "Deuses de Arton"
   },
-  { id: "Espírito da Alcateia (Akok)",
-    name: "Espírito da Alcateia (Akok)",
-    description: "Você pode se comunicar livremente com todos os tipos de cães e lobos, como se estivesse sob efeito da magia Voz Divina. Além disso, quando ataca um inimigo que você esteja flanqueando, você recebe +2 na rolagem de dano.",
-    prerequisite: "",
-    origin: "Deuses Menores"
-  },
+  
   { id: "Liberdade Irrestrita (Gwendolynn)",
     name: "Liberdade Irrestrita (Gwendolynn)",
     description: "Você recebe +2 em testes de manobra para evitar ser agarrado e de resistência contra efeitos mentais, de medo, de metamorfose e de movimento. Além disso, se falhar num desses testes, pode rolá-lo novamente. Se ainda assim falhar, no início de cada um de seus turnos pode rolar esse teste novamente, como uma ação livre e com um bônus cumulativo de +2, até se libertar.",

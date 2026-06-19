@@ -1,17 +1,20 @@
 import { Gear } from "@/types/gear";
-
+//#region Tormenta20 - Jogo do Ano
+//#endregion
 export const music: Gear[] = [
 
-  // Dragão Brasil
+  //#region Dragão Brasil
+  // Dragão Brasil - 209
   { id: "Maracas Estelares",
     name: "Maracas Estelares",
     description: "Quando usado em conjunto, este par de instrumentos musicais diminui o custo de suas Músicas de Bardo em –1 PM. Além disso, cada maraca conta como uma arma simples corpo a corpo leve (dano 1d6, x2, impacto) que, quando empunhada por um bardo, recebe o encanto Veloz. Por fim, as maracas podem receber melhorias e encantos tanto de armas quanto de ferramentas (exceto material especial), até o limite normal de melhorias e encantos.",
-    origin: "Dragão Brasil",
+    origin: "Dragão Brasil - 209",
     price: "T$ 19000",
     spaces: "1",
   },
+  //#endregion
 
-  // Tormenta20 - Jogo do Ano
+  //#region Tormenta20 - Jogo do Ano
   { id: "instrumento_musical",
     name: "Instrumento Musical",
     description: "Um instrumento típico, como um bandolim, flauta ou lira. Veja o quadro acima para as regras deste item.",
@@ -40,6 +43,7 @@ export const music: Gear[] = [
     price: "T$ 80",
     spaces: "1",
   },
+  //#endregion
 
 
 

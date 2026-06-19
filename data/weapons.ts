@@ -77,7 +77,8 @@ export const damageProgressionTable: DamageProgression[][] = [
 ];
 
 export const weapons: Weapon[] = [
-  // Duelo de Dragões
+
+  //#region Duelo de Dragões
   { id: "espada enigma",
     name: "Espada Enigma",
     description: "Essa espada segmentada é capaz de assumir várias formas dependendo de como é empunhada. A arma é um verdadeiro quebra-cabeças marcial e exige uma mente tão afiada quanto a lâmina. \nA espada enigma é uma arma híbrida, mas mudar de uma forma para a outra é mais complexo: uma ação padrão em vez de uma ação de movimento. A mudança pode ser feita como uma ação de movimento com sucesso em um teste de Conhecimento (CD 20). Se tiver Saque Rápido, você pode mudar as formas com uma ação de movimento ou uma ação livre com o teste de Conhecimento. Todas as formas são ágeis e desbalanceadas.\n\n**Serpente:** A forma básica da espada enigma é uma arma ágil e alongada.\n\n**Escudo:** A lâmina se enrola em formato de círculo, funcionando como um escudo leve. Você perde o bônus na Defesa do escudo por uma rodada se atacar com a espada enigma. Mesmo nesta forma, a arma não pode receber melhorias e encantos específicos para escudos.\n\n**Lua:** A lâmina fica na forma de uma letra C. Nesta forma, pode ser arremessada em alcance curto. Se fizer um acerto crítico, ela ricocheteia e volta para a sua mão.\n\n**Pilar:** Todos os segmentos ficam travados na forma de uma haste pontiaguda; é uma arma adaptável e alongada.",
@@ -92,8 +93,10 @@ export const weapons: Weapon[] = [
     type: "Corte",
     spaces: 1,
   },
+  //#endregion
 
-  // Dragão Brasil
+  //#region Dragão Brasil
+  
   { id: "lâmina de essência",
     name: "Lâmina de Essência",
     description: "A lâmina de essência é um bracelete metálico que, ao ser acionado, projeta uma lâmina de energia. Acionar o bracelete é o equivalente a sacar a arma e, uma vez acionada, a lâmina ocupa a mão do usuário. A lâmina é uma arma ágil mas, devido à sua ausência de peso, requer um treinamento especial para ser usada (por isso é uma arma exótica). Você pode usar uma lâmina de essência como uma arma marcial desbalanceada.",

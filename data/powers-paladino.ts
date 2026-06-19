@@ -1,7 +1,8 @@
 import { Power } from "@/types/power";
-
+//#region Tormenta20 - Jogo do Ano
+//#endregion
 export const powersPaladino: Power[] = [
-  // Tormenta20 - Jogo do Ano
+  //#region Tormenta20 - Jogo do Ano
   { id: "Arma Sagrada",
     name: "Arma Sagrada",
     description: "Quando usa Golpe Divino para atacar com a arma preferida de sua divindade, o dado de dano que você rola por Golpe Divino aumenta para d12.",
@@ -118,26 +119,29 @@ export const powersPaladino: Power[] = [
     description: "Quando ingere um alimento, item alquímico ou poção, você consome apenas metade do item. Na prática, cada item desses rende duas “doses” para você.",
     origin: "Tormenta20 - Jogo do Ano"
   },
+  //#endregion
 
-  // Dragão Brasil
+  //#region Dragão Brasil
+  // Dragão Brasil - 212
   { id: "Aura de Arrependimento",
     name: "Aura de Arrependimento",
     description: "Você foi criado para proteger os inocentes a todo custo. Enquanto sua aura estiver ativa, você pode gastar 2 PM no início de cada um dos seus turnos. Em cada rodada que fizer isso, toda vez que um inimigo dentro da aura atacar, ele deve fazer um teste de Vontade (CD Car). Se falhar, fica atordoado por uma rodada. Uma criatura só pode ser atordoada por este poder uma vez por cena.",
     prerequisite: "golem, Julgamento Divino: Arrependimento, 6º nível de paladino.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 212"
   },
   { id: "Devoção de Muitos",
     name: "Devoção de Muitos",
     description: "Como paladino escolhido por sua divindade, vocês não sofrem mais os efeitos da habilidade de raça Sensibilidade a Luz e se tornam imunes a ofuscado.",
     prerequisite: "kobolds, Fulgor Divino.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 212"
   },
   { id: "Protetor",
     name: "Protetor",
     description: "Minotauros cruéis oprimem, minotauros bondosos protegem. Uma vez por rodada, quando um aliado adjacente sofrer um ataque, você pode gastar 1 PM como uma reação para se tornar o alvo do ataque.",
     prerequisite: "minotauro.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 212"
   },
+  //#endregion
 
   
   { id: "Arma Juramentada",

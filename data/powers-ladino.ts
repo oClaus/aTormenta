@@ -1,7 +1,9 @@
 import { Power } from "@/types/power";
-
+//#region Tormenta20 - Jogo do Ano
+//#endregion
 export const powersLadino: Power[] = [
-  // Tormenta20 - Jogo do Ano
+
+  //#region Tormenta20 - Jogo do Ano
   { id: "Assassinar",
     name: "Assassinar",
     description: "Você pode gastar uma ação de movimento e 3 PM para analisar uma criatura em alcance curto. Até o fim de seu próximo turno, seu primeiro Ataque Furtivo que causar dano a ela tem seus dados de dano extras dessa habilidade dobrados",
@@ -117,26 +119,29 @@ export const powersLadino: Power[] = [
     prerequisite: "treinado em Ofício (alquimista).",
     origin: "tormenta20 - jogo do ano"
   },
+  //#endregion
 
-  // Dragão Brasil
+  //#region Dragão Brasil
+  // Dragão Brasil - 212
   { id: "Furtividade Murídea",
     name: "Furtividade Murídea",
     description: "Você é ágil e esguio, difícil de capturar. Para o bônus de Furtividade concedido pelo seu tamanho, você é considerado uma categoria de tamanho menor.",
     prerequisite: "nezumi.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 212"
   },
   { id: "Papinho",
     name: "Papinho",
     description: "Goblins costumam saber se virar para se aproveitar dos outros e conseguir o que querem, mas você foi além. Escolha uma perícia de Carisma. Você muda o atributo-chave dessa perícia para Inteligência.",
     prerequisite: "goblin.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 212"
   },
   { id: "Táticas Hobgoblin",
     name: "Táticas Hobgoblin",
     description: "Muitas gerações de hobgoblins fizeram parte da Infinita Guerra contra os elfos. Quando usa Guerra para analisar terreno, você também pode descobrir uma brecha na organização tática dos seus oponentes. Se passar, o alvo do seu próximo ataque corpo a corpo é considerado desprevenido.",
     prerequisite: "hobgoblin.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 212"
   },
+  //#endregion
 
   
   { id: "Ameaça Brutal",

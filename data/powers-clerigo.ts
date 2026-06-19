@@ -1,7 +1,8 @@
 import { Power } from "@/types/power";
-
+//#region Tormenta20 - Jogo do Ano
+//#endregion
 export const powersClerigo: Power[] = [
-  // Tormenta20 - Jogo do Ano
+  //#region  Tormenta20 - Jogo do Ano
   { id: "Abençoar Arma",
     name: "Abençoar Arma",
     description: "Você se torna proficiente na arma preferida de sua divindade. Se estiver empunhando essa arma, pode gastar uma ação de movimento e 3 PM para infundi-la com poder divino. Até o final da cena, a arma é considerada mágica e emite luz dourada ou púrpura (como uma tocha). Além disso, o dano da arma aumenta em um passo e você pode usar sua Sabedoria em testes de ataque e rolagens de dano com ela, em vez do atributo padrão (não cumulativo com efeitos que somam este atributo).",
@@ -96,20 +97,23 @@ export const powersClerigo: Power[] = [
     description: "Você pode gastar uma ação de movimento e 1 PM para fazer uma prece e energizar seu símbolo sagrado até o fim da cena. Um símbolo sagrado energizado emite uma luz dourada ou prateada (se sua divindade canaliza energia positiva) ou púrpura ou avermelhada (se canaliza energia negativa) que ilumina como uma tocha. Enquanto você estiver empunhando um símbolo sagrado energizado, o custo em PM para lançar suas magias divinas diminui em 1.",
     origin: "Tormenta20 - Jogo do Ano"
   },
+  //#endregion
 
-  // Dragão Brasil
+  //#region Dragão Brasil
+  // Dragão Brasil - 212
   { id: "Devoção Finntroll",
     name: "Devoção Finntroll",
     description: "Renegando os deuses do Império Trollkyrka, você se tornou um dos devotos mais fervorosos de sua nova divindade. Uma vez por dia, você pode gastar uma hora e 3 PM para trocar um poder concedido do seu deus por outro. Esse benefício dura um dia, quando perde o novo poder e recebe novamente o antigo.",
     prerequisite: "finntroll, não ser devoto de Kallyadranoch, Megalokk, Sszzaas ou Tenebra.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 212"
   },
   { id: "Exaltação do Rejeitado",
     name: "Exaltação do Rejeitado",
     description: "Muitos acreditam que você não merece sua divindade, mas ela prova o contrário. Quando lança uma magia divina, você recebe resistência a magia igual ao círculo da magia lançada.",
     prerequisite: "lefou.",
-    origin: "Dragão Brasil"
+    origin: "Dragão Brasil - 212"
   },
+  //#endregion
 
 
   

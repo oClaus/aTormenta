@@ -1,7 +1,9 @@
 import { God } from "@/types/god";
-
+//#region Tormenta20 - Jogo do Ano
+//#endregion
 export const gods: God[] = [
-  // Tormenta20 - Jogo do Ano
+
+  //#region Tormenta20 - Jogo do Ano
   { id: "Aharadak",
     name: "Aharadak",
     subtitle: "Deus da Tormenta",
@@ -592,8 +594,105 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: "Assim como a magia jamais deva ser negada para quem a busca, devotos de Wynna devem praticar a bondade e a generosidade de sua deusa, jamais recusando um pedido de ajuda de alguém inocente. Além disso, devotos de Wynna são proibidos de matar seres mágicos (elfos, qareen, sílfides e outros a critério do mestre) e conjuradores arcanos."
   },
+  //#endregion
 
-
+  //#region Guia de Deuses Menores
+  { id: "Akok",
+    name: "Akok",
+    subtitle: "O Deus dos Lobos",
+    rank: "Mortal ascendido, status divino 3",
+    image: [
+      "/deuses/akok.png"
+    ],
+    status: "menor",
+    history: "Um enorme lobo com dentes que se projetam fora da mandíbula, Akok é o Deus dos Lobos, mas também governa certas raças de cães, principalmente de guerra, de guarda e de caça. É cultuado por goblinoides e outros humanoides que usam lobos como montaria, mas também por soldados responsáveis por bandos de cães de guerra, caçadores que só contam com seus cães ou lobos como companheiros e até mesmo por humanoides criados nos ermos por lobos. Devotos de Akok, entretanto, não são meros ginetes ou “donos”: são parte da alcateia e veem os lobos como seus irmãos peludos. São abençoados com instintos para lutar e agir em bando como lobos.\nSendo um deus animalesco, Akok nunca revelou sua origem (não tendo capacidade ou interesse para isso). Também não existem registros de quando teria ascendido. No entanto, uma lenda afirma que Akok foi o primeiro lobo a se aproximar de uma comunidade humanoide — talvez pressentindo que um dia poderia haver cooperação entre essas espécies, talvez apenas ferido e precisando de ajuda. Segundo essa história, teria sido esse gesto que deu origem à domesticação de lobos que levou à existência dos cães.",
+    beliefs: "Reverenciar Akok como o único grande alfa. Trabalhar em equipe. Proteger alcateias. Promover harmonia entre matilhas e a civilização. Combater ameaças que perturbam o equilíbrio natural.",
+    sacredSymbol: "Uma grande pata de lobo rodeada por patas menores.",
+    channelEnergy: "Positiva",
+    preferredWeapon: "Espada curta",
+    devotees: "Centauros, dahllan, elfos, gnolls, goblins, kobolds, bárbaros, caçadores, druidas, guerreiros, ladinos, lutadores, treinadores.",
+    grantedPowers: [
+      "Espírito da Alcateia"
+    ],
+    obligationsRestrictions: "Devotos de Akok não podem aprisionar ou matar lobos de qualquer tipo (como lobos-das-cavernas), nem permitir que outros o façam. Além disso, o grupo ao qual o devoto pertence (família, aventureiros, guilda…) é considerado sua alcateia. Ele não pode enganá-la, traí-la ou abandoná-la."
+  },
+  { id: "AEspadaDeus",
+    name: "A Espada-Deus",
+    rank: "Objeto desperto, status divino 1",
+    image: [
+      ""
+    ],
+    status: "menor",
+    history: "A Espada-Deus é a obra-prima de Rhond (ele próprio o Deus das Armas), uma arma lendária que transcende seus portadores. Já esteve nas mãos de guerreiros valentes, heróis gloriosos, assassinos astutos e santos devotos, mas os nomes desses mortais se perderam no tempo — pois a espada é maior que qualquer um deles. Sempre que cumpria seu propósito, acabava esquecida em locais remotos, esperando por um novo destino. Podia estar presa em algum lugar de onde só seria tirada por um mortal digno. Ou no fundo de um lago, sendo entregue por uma náiade, ou cravada em uma pedra, selecionando quem pode arrancá-la.\nAlém de guerreiros de uma aldeia no antigo Reino de Yudennach, a Espada-Deus tem poucos devotos em estruturas organizadas, sendo adorada mais comumente por clérigos nômades que migram de batalha em batalha. A Espada-Deus não rege um portfólio definido. Em vez disso, ela apenas é adorada, apenas é a ferramenta, a instigadora e a protagonista em inúmeras histórias de batalha e heroísmo. A última dessas foi a batalha em que Orion Drake liderou um exército de deuses menores para derrotar Crânio Negro e expulsar a Tormenta de Tamu-ra, conquistando a primeira vitória de Arton contra os lefeu. Até onde se sabe, a Espada-Deus ainda se encontra de posse do cavaleiro, mas a qualquer momento ela pode ser “perdida”, para que seja encontrada por um novo campeão valoroso.",
+    beliefs: "Estar pronto para cortar, perfurar e matar. Defender-se, defender aqueles que se ama, defender sua honra e orgulho. Estar sempre pronto para empunhar uma espada — e usá-la. Realizar grandes feitos. Provar-se digno.",
+    sacredSymbol: "Uma espada.",
+    channelEnergy: "Qualquer.",
+    preferredWeapon: "Espada longa.",
+    devotees: "Anões, elfos, minotauros, bárbaros, caçadores, cavaleiros, guerreiros.",
+    grantedPowers: [
+      "Espadachim Divino"
+    ],
+    obligationsRestrictions: "As únicas armas empunhadas que o devoto da Espada-Deus pode usar são espadas. Além disso, para atacar com outras armas (como naturais), ele deve fazer ao menos um ataque com espada na rodada."
+  },
+  { id: "Altair",
+    name: "Altair",
+    subtitle: "Deus das Montanhas",
+    rank: "Mortal ascendido, status divino 2",
+    image: [
+      ""
+    ],
+    status: "menor",
+    history: "Este deus bárbaro era um homem alto, forte e musculoso. Usava apenas uma tanga, exibia o corpo cheio de cicatrizes e a cabeleira escura que parecia a juba de uma fera. Padroeiro dos que desafiam o mundo selvagem, escalou e venceu desafios nas maiores montanhas de Arton, além de ser associado à caça e à sobrevivência.\nEmbora seja o Deus Menor das Montanhas, Altair é mais do que isso: é o padroeiro do modo de vida das montanhas, da resiliência necessária para sobreviver e prosperar nesse tipo de ambiente, dos povos que nunca se dobraram à necessidade de erguer cidades em terrenos planos, mas mantiveram seus costumes ancestrais. Para muitos, as montanhas são território de monstros ou algo a ser “vencido” em uma escalada. Para os devotos de Altair, as montanhas são um lar desafiador, que acolhe seus habitantes ao mesmo tempo em que exige muito deles.\nA ascensão de Altair já se perdeu no tempo. Ele surge como um herói folclórico em vários povos montanheses, desde as Lannestul até as Uivantes, e inclusive em algumas aldeias das Sanguinárias. Contudo, é consenso que não se trata de uma entidade, mas de um humano que ascendeu. Em todos os relatos, Altair aparece interagindo com a população, espreitando com bandos de caçadores e conversando com chefes. Mesmo entre seus devotos, parece ser uma pessoa quase comum. Existem inclusive histórias em que Altair obedece às ordens de um devoto, sendo mais um guerreiro em seu grupo!\nAltair foi encontrado pela última vez nas Montanhas Lannestul, quando Orion Drake reuniu seu Exército de Deuses. Contudo, seu machado enorme foi usado pela última vez defendendo Betsumial, o Deus dos Vigias, quando então um vulcão surgiu sob seus pés e a horda lefeu conseguiu sobrepujá-lo na Batalha de Tamu-ra, em 1405.",
+    beliefs: "Reverenciar Altair e as cadeias montanhosas de Arton. Desafiar as montanhas e seus perigos. Proteger as montanhas. Nunca recuar perante as dificuldades da natureza.",
+    sacredSymbol: "Uma montanha com um machado cravado.",
+    channelEnergy: "Qualquer",
+    preferredWeapon: "Machado de guerra",
+    devotees: "Anões, minotauros, naidoras, trogs, bárbaros, caçadores, druidas, guerreiros, lutadores.",
+    grantedPowers: [
+      "Liberdade das Montanhas"
+    ],
+    obligationsRestrictions: "Devotos de Altair nunca podem recusar uma missão que envolva escalar ou desbravar uma montanha. Além disso, a cada 1d4+2 meses o devoto deve escalar a maior montanha da região onde está e passar um dia meditando em seu cume, para se reconectar com a natureza e com sua divindade."
+  },
+  { id: "Anilatir",
+    name: "Anilatir",
+    subtitle: "Deusa da Inspiração",
+    rank: "Mortal ascendido, status divino 3",
+    image: [
+      "/deuses/anilatir.png"
+    ],
+    status: "menor",
+    history: "Anilatir, quando ainda era uma jovem mortal, trancou-se numa torre para que fosse resgatada por heróis. Ela mesma inventou uma série de perigos e desafios para seus salvadores e prometeu se casar com quem a libertasse. Muitos o fizeram, e ela viveu feliz para sempre por algumas semanas com cada um, até que se trancava de novo num lugar ainda mais inóspito, com mais perigos, para instigar heróis mais valorosos. Quando enfim, depois de alguns anos, cansou-se do jogo, foi ela mesma uma aventureira, tendo sido clériga de Khalmyr, Thyatis, Lena, Nimb e Oceano.\nApós ter roubado uma fortuna de um dragão, decidiu entregá-la ao bardo que compusesse a melhor balada. Escolheu crianças que julgava terem potencial e arranjou para que suas famílias fossem chacinadas, impulsionando-as assim ao caminho de aventuras. Depois decidiu ser vilã, maquinando planos ilógicos de dominação e destruição para que heróis se levantassem para detê-la. Enfim, após essas e muitas outras peripécias, acabou ascendendo a Deusa da Inspiração, musa de bardos e centro de um minúsculo mas imaginativo culto.\nA história de Anilatir é tão curiosa quanto improvável. Segundo esses relatos, ela parecia agir como uma divindade, decidida a inspirar mortais e sem qualquer preocupação com a própria segurança, mesmo muito jovem. Talvez isso seja sinal de que tais histórias não passam de mentiras. Ou talvez Anilatir tenha inspirado alguém (talvez seu paladino, o indefectível Tex Scorpion Mako) a desenvolver alguma técnica mágica que direcionasse sua própria inspiração a ela mesma, desafiando as barreiras do tempo. Impossível? Dizem que alguns clérigos de Anilatir já se interessaram pelo conceito do Akzath de Thwor…\nOs clérigos de Anilatir se organizam (de forma bastante solta) em uma conspiração pela liberdade de Arton, eternamente combatendo a conspiração inimiga perpetrada pelos clérigos de Yasshara, a Deusa da Opressão, que desejam enclausurar o mundo em parâmetros rígidos e ordenados. Além disso, vivem aventuras, dançam, criam novas filosofias, entregam-se a todas as formas de expressão artística, traem o culto, arrependem-se, sagram-se cavaleiros, entram em guildas de ladrões… Fazem tudo que for diferente e inesperado. Serão seus melhores amigos, por pelo menos uma noite na taverna, desde que você aguente.",
+    beliefs: "Reverenciar Anilatir com intensidade. Criar coisas novas. Estudar coisas novas. Tornar-se algo novo. Reinventar-se de tempos em tempos. Evoluir sempre e inspirar outros a fazer o mesmo.",
+    sacredSymbol: "Um escorpião, uma máscara, uma estrela, um pincel… — seu símbolo muda a cada 2d10+10 dias, mas seus devotos estão sempre cientes da mudança.",
+    channelEnergy: "Qualquer.",
+    preferredWeapon: "Adaga, espada, arco longo… — muda na mesma frequência que seu símbolo sagrado.",
+    devotees: "Quaisquer. Anilatir não rejeita ninguém que queira criar ou ser algo novo.",
+    grantedPowers: [
+      "Inspiração Concedida"
+    ],
+    obligationsRestrictions: "Devotos de Anilatir devem trocar pelo menos um item vestido ou empunhado por outro que ainda não tenham usado a cada 2d10+10 dias. (Para este efeito, versões aprimoradas ou encantadas de itens contam como itens diferentes.) Além disso, deve estar sempre atento às tramas de Yasshara, a Deusa Menor da Opressão, inimiga mortal de Anilatir."
+  },
+  { id: "Apis",
+    name: "Apis",
+    subtitle: "Deusa das Abelhas",
+    rank: "Mortal ascendido, status divino 3",
+    image: [
+      ""
+    ],
+    status: "menor",
+    history: "Também conhecida como Abelha-Imperatriz, Apis é a rainha de todas as abelhas de Arton. Ela vive em Tzeh’collmah, uma gigantesca colmeia no coração das Montanhas Lannestul, com milhares de abelhas gigantes como suas operárias. Alguns bárbaros das Lannestul aprenderam a temer e venerar Apis ao longo das eras. Nas redondezas, vários druidas, da mesma forma que os insetos gigantes, são considerados abelhas operárias ou campeiras, responsáveis pela proteção da colmeia e coleta de recursos, como néctar, pólen, resina e água.\nAlguns sábios fazem uma relação curiosa: Apis habita as Lannestul, onde também ficava a antiga nação de Ked’Rach, dos gigantes. Sabe-se que os gigantes escravizaram os minotauros durante muitos séculos, e que os minotauros só conseguiram se libertar usando trabalho em equipe e organização meticulosa. Segundo esses sábios, Goratikis, o líder minotauro responsável por unir seu povo, teria se inspirado em Apis, após encontrar por acaso Tzeh’collmah e observar a organização e união metódica das abelhas. Caso haja alguma verdade nisso, esta deusa, mesmo pouco conhecida, teria tido um impacto decisivo na história de Arton.\nDe fato, algumas pessoas acreditam que peregrinar a Tzeh’collmah e vislumbrar Apis, talvez trazendo mel de volta, seja um rito que garanta o sucesso na formação de qualquer ordem, guilda, companhia mercenária ou organização com hierarquia rígida. Além de garantir que o peregrino nunca mais seja picado por abelhas…",
+    beliefs: "Reverenciar Apis e as abelhas. Proteger a colmeia e o futuro das abelhas. Promover harmonia entre as abelhas e a civilização, e combater ameaças a essa harmonia.",
+    sacredSymbol: "Uma abelha em um hexágono imitando um favo de mel.",
+    channelEnergy: "Qualquer.",
+    preferredWeapon: "Lança.",
+    devotees: "Dahllan, hobgoblins, kobolds, sílfides, trogs, bárbaros, caçadores, druidas.",
+    grantedPowers: [
+      "Chamado da Colmeia"
+    ],
+    obligationsRestrictions: "Devotos de Apis não podem aprisionar ou matar abelhas de qualquer tipo (como abelhas monstruosas), nem permitir que outros o façam. Além disso, devem consumir T$ 1 por nível em mel todos os dias."
+  },
+  
+  //#endregion
   
   
   { id: "Morte - Sandman",
@@ -632,24 +731,7 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: "Sem informações"
   },
-  { id: "Akok",
-    name: "Akok",
-    subtitle: "Deus dos Lobos",
-    image: [
-    "/deuses/Akok.png",
-    ],
-    status: "menor",
-    sacredSymbol: "Uma grande pata de lobo rodeada por patas menores.",
-    channelEnergy: "Positiva",
-    preferredWeapon: "Espada curta",
-    history: "Um enorme lobo com dentes que se projetam fora da mandíbula, Akok é o Deus dos Lobos, mas também governa certas raças de cães, principalmente de guerra, de guarda e de caça. É cultuado por goblinoides e outros humanoides que usam lobos como montaria, mas também por soldados responsáveis por bandos de cães de guerra, caçadores que só contam com seus cães ou lobos como companheiros e até mesmo por humanoides criados nos ermos por lobos. Devotos de Akok, entretanto, não são meros ginetes ou “donos”: são parte da alcateia e veem os lobos como seus irmãos peludos. São abençoados com instintos para lutar e agir em bando como lobos.\nSendo um deus animalesco, Akok nunca revelou sua origem (não tendo capacidade ou interesse para isso). Também não existem registros de quando teria ascendido. No entanto, uma lenda afirma que Akok foi o primeiro lobo a se aproximar de uma comunidade humanoide — talvez pressentindo que um dia poderia haver cooperação entre essas espécies, talvez apenas ferido e precisando de ajuda. Segundo essa história, teria sido esse gesto que deu origem à domesticação de lobos que levou à existência dos cães.",
-    beliefs: "Reverenciar Akok como o único grande alfa. Trabalhar em equipe. Proteger alcateias. Promover harmonia entre matilhas e a civilização. Combater ameaças que perturbam o equilíbrio natural.",
-    devotees: "Centauros, dahllan, elfos, gnolls, goblins, kobolds, bárbaros, caçadores, druidas, guerreiros, ladinos, lutadores, treinadores.",
-    grantedPowers: [
-      "Espírito da Alcateia",
-    ],
-    obligationsRestrictions: "Devotos de Akok não podem aprisionar ou matar lobos de qualquer tipo (como lobos-das-cavernas), nem permitir que outros o façam. Além disso, o grupo ao qual o devoto pertence (família, aventureiros, guilda…) é considerado sua alcateia. Ele não pode enganá-la, traí-la ou abandoná-la."
-  },
+  
   { id: "Gwendolynn",
     name: "Gwendolynn",
     subtitle: "Deusa da Liberdade",
