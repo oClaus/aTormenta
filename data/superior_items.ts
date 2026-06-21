@@ -232,6 +232,16 @@ export const materialPrices: MaterialPriceRow[] = [
 
 export const improvements: Improvement[] = [
 
+  //#region Duelo de Dragões
+  { id: "Tesoura", 
+    name: "Tesoura", 
+    effect: "Acertos críticos causam sangramento", 
+    category: ["Arma"], 
+    description: "A lâmina da arma se abre e aumenta o ferimento. Uma criatura atingida por um acerto crítico desta arma fica sangrando. Pré-requisito: arma perfurante.",
+    origin: "Duelo de Dragões"
+   },
+  //#endregion
+
   //#region Tormenta20 - Jogo do Ano
   { id: "certeira", 
     name: "Certeira", 

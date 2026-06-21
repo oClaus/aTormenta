@@ -37,6 +37,141 @@ export const distinctions: Distinction[] = [
   //#endregion
 
   //#region Dragão Brasil
+  // Dragão Brasil - 205
+  { id: "Xerife de Azgher",
+    name: "Xerife de Azgher",
+    origin: "Dragão Brasil - 205",
+    image: "/distincoes/XerifedeAzgher.png",
+    introduction: `Dentro das fronteiras do Reinado, a justiça é vigilante e afiada como a espada de Khalmyr. Mas em regiões distantes, longe de castelos e cavaleiros, a lei se torna cada vez mais nublada.\nNessas fronteiras sem lei, criminosos e malfeitores se sentem cada vez mais seguros. Distantes da justiça de Khalmyr, se tornam mais ousados em seus trambiques e mais frequentes em seus achaques. O povo inocente sofre em silêncio, mas a verdade é que ninguém consegue se esconder do olhar implacável do Deus-Sol. Onde os bandidos gargalham crentes em sua impunidade, Azgher atua através de seus xerifes.\nMeio benfeitor, meio homem da lei, o xerife de Azgher é um viajante, missionário, caçador e juiz. Ele vaga de cidade em cidade, de vila em vila, caçando criminosos pela lei dos mortais e do Deus-Sol, protegendo os inocentes em nome de um poder superior. Muitos trazem o rosto oculto por um lenço ou máscara; alguns o fazem para proteger seus entes queridos contra a vingança dos criminosos, enquanto outros são devotos do deus Azgher e obedecem suas obrigações e restrições. Todos ostentam um broche mágico na forma de um sol dourado como símbolo de sua autoridade, conhecido como Sol Vigilante.\nOs xerifes de Azgher são uma organização afiliada à igreja do Deus-Sol que sagra oficiais para proteger o povo e garantir o cumprimento da lei. Operam frequentemente sozinhos, confiando em sua habilidade e retidão para garantir sua sobrevivência, por vezes com o apoio de grupos de aventureiros. São autorizados a usar armas de fogo mesmo dentro do Reinado, com uma predileção pela pistola, rivalizada pela a cimitarra tradicional entre devotos de Azgher.\nAlgumas cidades têm um xerife de Azgher residente, mas isso só acontece nas piores pocilgas de Arton, tão infestadas pelo crime que exigem um guardião permanente.`,
+    admission: `O candidato precisa encontrar, prender e entregar às autoridades um criminoso que tenha cometido um crime grave contra um inocente. O momento da entrega às autoridades deve acontecer às claras, sob a luz de Azgher. Depois que esta missão estiver cumprida, quando o candidato for dormir, terá um sonho mostrando o caminho para a sede dos xerifes, no Império de Tauron.\nApós visitar a sede e se identificar, o candidato deve provar seu valor para a ordem. Dependendo da notoriedade do criminoso preso pelo candidato, isso pode ser o suficiente. Caso contrário, a ordem pode designar alguns testes locais para avaliar sua habilidade. De qualquer forma, mesmo depois de considerado apto, o candidato precisa ajudar um xerife em um caso antes de ser sagrado.\nNormalmente se trata de uma aventura, na qual o xerife acompanha o candidato e permite que ele tome a iniciativa sempre que possível, atuando apenas como observador na maior parte do tempo. Ao longo dessa aventura, o xerife julgará principalmente a conduta do candidato. De certa forma, o teste na sede dos xerifes testa a habilidade e o caso acompanhando o xerife testa o caráter.\nCaso seja finalmente considerado digno, o candidato recebe um Sol Vigilante e é sagrado xerife de Azgher pela Ordem. É de bom tom que o candidato faça uma oferenda aos xerifes de pelo menos T$ 2.000 antes de ir embora.`,
+    mark: `**Sol Vigilante**\nA insígnia dos xerifes de Azgher é um broche de ouro em formato de sol. Mais do que a marca de uma ordem religiosa, o Sol Vigilante é um símbolo de autoridade, lei e ordem.\nVocê recebe um Sol Vigilante, uma insígnia de ouro que conta como um símbolo sagrado de Azgher. Enquanto ostentá-lo, você recebe +2 em testes de Diplomacia com devotos de Azgher e agentes da lei, como cavaleiros, paladinos, nobres e guardas, e +2 em Intimidação com criminosos, malfeitores e outros indivíduos que, a critério do mestre, tenham problemas com a justiça. Além disso, você é considerado oficialmente uma figura de autoridade, o que inclui autorização para portar armas de fogo no Reinado. Se perder seu Sol Vigilante, você pode obter outro após um dia de orações a Azgher e uma oferenda de T$ 500.`,
+    powers: [
+      {
+        name: "Destruir o Crime",
+        description: `O poder sagrado de Azgher flui por suas armas.\nQuando faz um ataque corpo a corpo, ou à distância com uma arma de fogo, você pode gastar 2 PM para fortalecer esse ataque com o poder de Azgher. Você soma seu Carisma no teste de ataque e +1d8 na rolagem de dano. Se possuir a habilidade Golpe Divino, em vez disso ela causa 1 dado extra de dano e pode ser usada com armas de fogo.\nPré-requisitos: treinado em Intuição, proficiência em armas de fogo, devoto de Azgher.`,
+      },
+      {
+        name: "Caçador de Bandidos",
+        description: `Uma vez que o xerife de Azgher esteja em seu encalço, resta aos malfeitores apenas a rendição.\nVocê pode gastar uma ação de movimento e uma quantidade de PM (limitada pelo número de poderes de xerife de Azgher que possui) para recitar em voz alta os crimes de uma criatura em alcance médio. Até o final da cena, ou até a criatura se render, para cada 1 PM gasto você recebe +1 na Defesa, em testes de perícia e em rolagens de dano contra esta criatura.\nPré-requisito: Destruir o Crime.`,
+      },
+      {
+        name: "O Longo Braço da Lei",
+        description: `Nenhum bandido está fora do alcance de um xerife de Azgher.\nUma vez por rodada, quando uma criatura a até 9m se move voluntariamente mais de 1,5m, você pode gastar 2 PM para fazer um ataque com arma de fogo ou cimitarra (se a criatura estiver em seu alcance natural) contra ela. Você pode sacar a arma com que vai atacar como parte dessa reação.\nPré-requisitos: Olho de Azgher, Saque Rápido.`,
+      },
+      {
+        name: "Olho de Azgher",
+        description: `Persistente como o sol do deserto, o xerife de Azgher sempre encontra os criminosos.\nVocê aprende e pode lançar Localização. Se tiver mais dois outros poderes de xerife de Azgher, aprende e pode lançar também Visão da Verdade. Caso aprenda novamente uma dessas magias, seu custo diminui em –1 PM.\nPré-requisito: Pistoleiro Solar.`,
+      },
+      {
+        name: "Pistoleiro Solar",
+        description: `Oficialmente sagrado, o xerife de Azgher recebe as bênçãos do Deus-Sol sobre suas armas.\nVocê passa a considerar todas as armas de fogo como armas preferidas de Azgher (além da cimitarra). Além disso, você pode usar o poder Espada Solar em armas de fogo e, para cada dois outros poderes de xerife de Azgher que possui, o dado de dano de fogo concedido por este poder aumenta em um passo.\nPré-requisitos: Destruir o Crime, Espada Solar.`,
+      },
+    ],
+  },
+  // Dragão Brasil - 206
+  { id: "Presa de Coral",
+  name: "Presa de Coral",
+  origin: "Dragão Brasil - 206",
+  image: "/distincoes/PresadeCoral.png",
+  introduction: `O reino arquipélago de Khubar tem um guardião sem igual. Ao longo dos séculos Benthos, o Dragão-Rei dos Mares, protegeu seus habitantes das mais variadas e perigosas ameaças. Entretanto, os khubarianos não são um povo que se sente confortável de viver sob a sombra de ninguém, seja homem ou dragão.\nCom o primeiro contato entre os khubarianos e Benthos, começou a surgir entre os habitantes do arquipélago uma poderosa tradição guerreira, dedicada a emular o poder bélico do Dragão-Rei. Chamados de Presas de Coral, os membros desta tradição acumularam poder político e militar, mantendo-se aliados de todos governos locais, mas sempren dependentes. Orgulhosos e dedicados, os Presas de Coral veem em Benthos uma fonte de poder e inspiração. Entretanto, ainda que alguns destes guerreiros venerem o Dragão-Rei como um deus, eles não se contentam apenas com preces. Como parte de seus ritos e treinamentos, eles se valem de um preparado alquímico especial para desenvolver habilidades mágicas que os permitem emular os poderes do próprio Dragão-Rei.\nUm Presa de Coral é um guerreiro de elite khubariano, um feroz campeão de seu povo. Ele empunha azagaia, espada e lança em combinações letais e invoca poderes mágicos assombrosos de sua conexão com Benthos e com o mar que cerca sua terra natal.`,
+  admission: `Para começar o processo de admissão, um candidato deve impressionar um capitão dos Presas de Coral e ser convidado pessoalmente a integrar a ordem. Feitos que normalmente impressionam os capitães incluem derrotar um grande número de oponentes desafiadores sozinho, ou vencer, sozinho ou em grupo, um oponente de poder claramente superior. Uma vez que tenha atraído a atenção de um capitão e aceito o convite, o candidato passa a treinar com um grupo de candidatos ou, dependendo das circunstâncias, com outros Presas de Coral. Este treinamento inclui testes de coragem, aptidão física, habilidade marcial e comprometimento com Khubar e pode se estender por várias semanas. Por fim, após participar do treinamento, o candidato é enviado em uma missão em que deverá provar sua lealdade a Benthos, ao arquipélago e, sobretudo, aos Presas de Coral. Se for bem-sucedido nessa missão, o candidato é convidado a passar pela cerimônia de iniciação, que envolve consumo de sangue do Dragão-Rei (veja caixa). Se sobreviver, se tornará um Presa de Coral.`,
+  mark: `**Sangue do Dragão-Rei**\nParte do ritual de iniciação de um Presa de Coral, o consumo de Sangue do Dragão-Rei é também a etapa mais perigosa da preparação destes combatentes.\nA poção alquímica conhecida como Sangue do Dragão-Rei é feita com veneno de serpentes marinhas, ervas locais de Khubar, água do mar e (dizem) uma gota de sangue de dragão. Sua fórmula exata, entretanto, é o segredo mais bem guardado dos Presas de Coral. Como parte do ritual de iniciação, você deve ingerir um gole de Sangue do Dragão-Rei e fazer um teste estendido de Fortitude (CD 20, 3 sucessos). Para cada falha, você perde 2d12 pontos de vida por veneno e, em uma falha total, sofre uma morte agonizante e dolorida. Se passar no teste estendido, completa o ritual de iniciação e recebe a capacidade de imbuir suas armas com poder dracônico. Você pode gastar 2 PM e uma ação de movimento para que as armas que você empunha causem +1d4 pontos de dano de ácido até o fim da cena.`,
+  powers: [
+    {
+      name: "Arsenal de Coral",
+      description: `O Presa de Coral se torna mestre no uso das armas tradicionais de sua ordem. \nVocê recebe +1 na margem de ameaça com armas do arsenal de coral (cimitarras, espadas curtas, espadas longas, azagaias e lanças). Além disso, quando usa Sangue do Dragão-Rei, o dano extra de ácido com essas armas aumenta em 1 passo, +1 passo para cada três outros poderes de Presa de Coral que você possuir. \nPré-requisitos: treinado em Atletismo e Luta.`,
+    },
+    {
+      name: "Presa Distante: Azagaia de Água",
+      description: `Os Presas de Coral aprendem a usar lanças e azagaias para invocar a fúria do mar. \nVocê não sofre a penalidade em ataque por empunhar azagaias como armas corpo a corpo e o alcance de seus ataques à distância com azagaias e lanças aumenta em um passo. Além disso, se estiver empunhando uma dessas armas, você pode gastar uma ação padrão e 2 PM para disparar uma rajada de água salgada que percorre uma linha de 9m e usa as mesmas características da arma empunhada. Faça um teste de ataque à distância com a arma e compare o resultado com a Defesa de cada criatura nesta área. Então, faça uma rolagem de dano e aplique o resultado a cada inimigo atingido. Criaturas que sofram dano dessa forma também ficam lentas por 1 rodada. \nPré-requisitos: Arsenal de Coral, Estilo de Arremesso.`,
+    },
+    {
+      name: "Presa Dupla: Corte da Correnteza",
+      description: `Os Presas de Coral aprendem a usar armas em pares para atacar de forma implacável e replicar a intensidade da correnteza marítima. \nSe estiver empunhando duas armas do arsenal de coral, você não sofre a penalidade em testes de ataque pelo poder Estilo de Duas Armas. Além disso, você pode gastar uma ação padrão e 3 PM para girar suas armas em um arco e invocar um redemoinho de água salgada. Faça um ataque corpo a corpo com cada uma das armas e compare-os com a Defesa de cada inimigo em seu alcance natural. Então, faça uma rolagem de dano para cada ataque e aplique o resultado correspondente a cada inimigo atingido. Criaturas atingidas por ambos os ataques ficam sangrando. \nPré-requisitos: Arsenal de Coral, Estilo de Duas Armas.`,
+    },
+    {
+      name: "Presa Suprema: Arquipélago de Dor",
+      description: `Da mesma forma que o mar envolve Khubar, um Presa de Coral pode se mover em volta de um oponente, preparando um golpe feroz. \nVocê pode gastar uma ação completa e 3 PM para desferir um ataque especial contra um oponente adjacente. Você pode percorrer qualquer distância, até o seu deslocamento, desde que se mantenha sempre adjacente ao alvo e não passe pelo mesmo espaço mais de uma vez. Ao final deste movimento, você faz uma ação agredir contra o alvo com um bônus de +1 no teste de ataque, na rolagem de dano e na margem de ameaça de seus ataques com armas do arsenal de coral para cada 1,5m percorrido desta forma. \nPré-requisito: Três Se Tornam Um.`,
+    },
+    {
+      name: "Manobra Maremoto",
+      description: `Quando um guerreiro khubariano de elite decide que vai atingir um alvo, nada pode detê-lo. \nQuando faz uma investida empunhando pelo menos uma arma de seu arsenal de coral, você pode gastar 3 PM para se transformar em um maremoto vivo. Durante esta investida, seu deslocamento aumenta em +6m e você ignora terreno difícil natural. Além disso, pode passar por objetos como se fosse água e empurra criaturas em seu caminho; faça um teste da manobra empurrar e compare o resultado com o teste de cada criatura afetada. Criaturas que perderem o teste de manobra são empurradas 1,5m para um lado à sua escolha. \nPré-requisito: Salto Oceânico.`,
+    },
+    {
+      name: "Salto Oceânico",
+      description: `Os Presas de Coral são tão integrados ao oceano que podem nadar até mesmo em terra firme. \nVocê recebe deslocamento de natação igual ao seu deslocamento (se já tiver deslocamento de natação, em vez disso ele aumenta em 3 metros). Além disso, você aprende e pode lançar a magia Salto Dimensional (apenas em você). Caso esteja sob a chuva ou com pelo menos metade do corpo imerso em água, você pode lançar esta magia como uma ação de movimento. \nPré-requisito: Arsenal de Coral.`,
+    },
+    {
+      name: "Três Se Tornam Um",
+      description: `O estilo de luta dos Presas de Coral usa lanças e espadas. Os mais habilidosos entre esses guerreiros de elite aprendem a extrair o máximo de cada uma dessas armas. \nVocê pode gastar uma ação de movimento e 1 PM para combinar suas técnicas de luta. Até o fim da cena, cada arma do arsenal de coral que você empunhar recebe as habilidades adaptável, alongada, ágil e/ou arremessável (curto), à sua escolha, e se beneficia de bônus específicos de armas que você possua para qualquer arma do arsenal (como a habilidade Mestre do Tridente). \nPré-requisito: Arsenal de Coral.`,
+    },
+  ],
+  },
+  { id: "Menestrel Maldito",
+  name: "Menestrel Maldito",
+  origin: "Dragão Brasil - 206",
+  image: "/distincoes/MenestrelMaldito.png",
+  introduction: `Existe uma história sussurrada em tons de cautela e inveja nos conservatórios de música ou entre os bardos que frequentam as cortes dos nobres. Ela fala sobre uma figura trajada de azul que surge em uma encruzilhada diante de um músico que perdeu tudo e oferece a ele uma chance de começar de novo. É uma história de redenção e maldição, pois aqueles que aceitam a barganha do estranho de azul aceitam o maior dos preços por uma segunda chance em suas vidas.\nO mesmo relato pode ser ouvido nos mais diferentes lugares, nos mais variados tons. Ela pode ser um causo engraçado, contado entre risadas e bater de canecas em estalagens portuárias ou como uma fábula assustadora, recitada com seriedade diante de músicos aspirantes. Muitos que a ouvem acreditam ser apenas uma lenda, um conto feito para amedrontar os bem-sucedidos e levar uma módica esperança para aqueles que não têm nada. A realidade, entretanto, é que a história do Estranho de Azul é verdadeira; uma trágica narrativa que, independente de como seja contada, carrega mistério, suspense, esperança, maldição, arte e, inevitavelmente, morte.\nO menestrel maldito é um artista que perdeu tudo, ou ao menos aquilo que mais importava. Desiludido, ele perseguiu a história do Estranho de Azul até ser encontrado por ele. Em troca de uma porção de sua alma, este artista desesperado recebeu uma breve, mas redentora, segunda chance. Reencontrando sua arte, o menestrel maldito aprende que o pouco tempo que lhe resta é sua última chance de deixar uma marca indelével e emocionante na mente e na alma de seu público.`,
+  admission: `O candidato precisa ter sofrido uma tragédia pessoal terrível. Pode ter sido abandonado por um grande amor, presenciado a morte de um amigo próximo, perdido uma posição de destaque ou algum outro evento similar. Depois disso, deve ir até uma encruzilhada levando seu instrumento musical, cair de joelhos e se lamentar para o vazio. Após horas de choro, surgirá um demônio na forma de um indivíduo alto e esguio, vestindo um manto azul, com longos cabelos que caem por cima de seu rosto, deixando visível apenas o brilho soturno de seus cinco olhos. A figura estenderá a mão, pedindo o instrumento do músico. Caso entregue, o Estranho de Azul afinará o instrumento, usando fragmentos da alma do próprio candidato, e o oferecerá de volta. Se o músico aceitar esse instrumento, se tornará um menestrel maldito até o resto dos seus breves dias.`,
+  mark: `**A Maldição do Menestrel**\nComo pagamento pelo pacto com o Estranho de Azul, o menestrel cede uma pequena, mas importante, parte de sua alma.\nUm instrumento musical à sua escolha se torna afinado com uma porção de sua própria alma. Quando usa esse instrumento, você recebe +1 em Atuação e a CD para resistir às suas habilidades de bardo aumenta em +1. Se perder seu instrumento, o Estranho de Azul irá afinar outro, desde que você passe uma noite em claro em uma encruzilhada.\nTer firmado esse pacto, entretanto, significa que seu tempo em Arton será mais breve que o normal. Sempre que estiver com 0 PV ou menos, sua alma fica à mercê do Estranho de Azul; no início de cada um dos seus turnos, você deve fazer um teste de Sabedoria (CD 15). Se passar, evita o Estranho e não precisa mais fazer esse teste até sofrer dano que o deixe com 0 PV ou menos novamente. Caso termine três rodadas (não necessariamente consecutivas) na mesma cena nessa situação, você morre e é levado pelo Estranho de Azul para as profundezas de Venomia. Lá, passará sua existência em eterna miséria, tocando suas desgraças para o deleite de Sszzass, e nunca poderá ser revivido.`,
+  powers: [
+    {
+      name: "Técnica Endiabrada",
+      description: `Para um menestrel maldito, sua alma não é apenas uma moeda de barganha; ela é a energia que fortalece suas notas e torna sua música tão poderosa. \nQuando usa Inspiração ou uma música de bardo empunhando seu instrumento afinado, o alcance desta habilidade aumenta em um passo (de curto para médio e de médio para longo). Além disso, quando faz um teste de Atuação com seu instrumento afinado, você pode gastar 1 PM para escolher 10, ou 5 PM para escolher 20, em qualquer situação, exceto testes de ataque. Se escolher 20 dessa forma, você fica alquebrado. \nPré-requisitos: treinado em Atuação, Inspiração.`,
+    },
+    {
+      name: "Celeridade Cerúlea",
+      description: `Não basta ser mais preciso que qualquer outro músico, um menestrel maldito é também mais rápido. \nUma vez por rodada, quando usa uma música de bardo empunhando seu instrumento afinado, você pode gastar 2 PM para usar esta música como uma ação livre. \nPré-requisito: Técnica Endiabrada.`,
+    },
+    {
+      name: "Composição Mágica",
+      description: `O menestrel maldito aprende a entrelaçar suas magias com a tristeza de suas notas musicais. \nQuando lança uma magia de bardo com um teste de resistência, você pode gastar 2 PM para fazer um teste de Atuação (CD 10). Se passar, você aumenta a CD da magia em +1, +1 para cada 10 pontos que seu teste de Atuação passar a CD. \nPré-requisitos: treinado em Misticismo, Técnica Endiabrada.`,
+    },
+    {
+      name: "Música: Ária da Tristeza",
+      description: `Impregnada por sua própria tragédia, a música do menestrel maldito carrega tanta tristeza que pode até paralisar seus ouvintes. \nFaça um teste de Atuação oposto ao teste de Vontade de cada criatura à sua escolha dentro do alcance (você faz um único teste). Alvos que falhem ficam atordoados por uma rodada (uma criatura só pode ser atordoada por este poder uma vez por cena) e frustrados. \nPré-requisito: Técnica Endiabrada.`,
+    },
+    {
+      name: "Música: Nota Azul",
+      description: `É um risco se deixar levar pela música de um menestrel maldito. Os acordes hipnóticos podem não apenas conquistar sua atenção, mas também consumir sua mente e levar à morte. \nFaça um teste de Atuação oposto pelo teste de Vontade de cada criatura à sua escolha dentro do alcance (você faz um único teste). Alvos que falhem sofrem 1d8 pontos de dano mental (ou 1d12, se estiverem sofrendo alguma condição mental). Para cada outro poder de menestrel maldito que você possui, o dano de sua Nota Azul aumenta em +1d8 ou +1d12, conforme apropriado. \nPré-requisito: Técnica Endiabrada.`,
+    },
+  ],
+  },
+  // Dragão Brasil - 208
+  { id: "Furioso Cinzento",
+  name: "Furioso Cinzento",
+  origin: "Dragão Brasil - 208",
+  image: "/distincoes/FuriosoCinzento.png",
+  introduction: `O rocambolesco e, vamos admitir, pouco confiável mito de Texugo, reserva um lugar especial para os furiosos cinzentos, os kobolds chocados pelo Texugo e que herdaram dele o poder da fúria. Estes primeiros membros da Tribo Cinzenta teriam apreendido como canalizar essa fúria para receber diversas habilidades de seu pai alado.\nPor mais que nada disso faça muito sentido, o fato é que existem kobolds que aprendem a canalizar sua fúria em uma variedade de poderes texugais. Mais do que isso, sob a liderança de Grund e sua propensão a aceitar membros de outras raças como “kobolds honorários”, os segredos dos furiosos cinzentos alcançaram outros povos.\nUm furioso cinzento é um guerreiro tribal que aprende a canalizar sua fúria para emular algumas habilidades do Texugo. Esse é um caminho exigente, pois requer que o candidato possua a capacidade de entrar em fúria, a habilidade de voar (de qualquer forma) e a concentração necessária para usar ambas em combate. Mais do que isso, o candidato precisa acreditar em um texugo voador!`,
+  admission: `O processo de admissão de um furioso cinzento é algo que ainda está sendo debatido e “refinado” pela Tribo. Entretanto, alguns pontos já foram definidos e colocados em prática.\nSeguindo a tradição de Grund e seus primeiros furiosos cinzentos, o candidato deve primeiro obter, de alguma maneira, uma forma de voar. Pode ser uma habilidade natural (como o voo das sílfides), uma magia ou um aparato (como asas de texugo). O importante é que o candidato consiga arrastar seu traseiro pelos céus. Depois de obter suas asas e executar um voo de combate, o candidato deve se apresentar a um xamã de Tukala, que irá guiar o restante do processo.\nUma vez que o candidato se apresente e comprove sua capacidade de voar, o xamã irá propor uma série de desafios (geralmente três, mas pode ser que ele erre as contas e peça mais, ou menos). Exemplos de desafios incluem comer um barril de bugulentos sem passar mal, invadir o covil de um inimigo, roubar uma escama do sovaco de um dragão, desenhar um texugo na testa de uma estátua de Khalmyr… o Texugo é um animal bravo, ousado e engenhoso, e seus furiosos também devem sê-lo.\nUma vez que tenha cumprido seus três (ou quatro, ou doze) desafios, o candidato deve apresentar as provas de seus feitos ao xamã encarregado de sua admissão. Se ele julgar as provas adequadas, o candidato poderá passar à última etapa do processo, em que deverá encontrar um texugo selvagem e oferecer comida a ele. Se o texugo aceitar a oferenda, o candidato terá cumprido todos os requisitos e se tornará um furioso cinzento.`,
+  mark: `**Voo do Texugo**\nSeu deslocamento de voo aumenta em +3m e, enquanto estiver voando, você recebe +1 em rolagens de dano.`,
+  powers: [
+    {
+      name: "Fúria Alada",
+      description: `O Texugo ensina a combinar asas e fúria para dominar os céus. Enquanto está sob efeito de Fúria e voando, você soma o bônus de sua Fúria na margem de ameaça de seus ataques em corpo a corpo e com armas de arremesso. \nPré-requisitos: Revoada de Texugos, Fúria.`,
+    },
+    {
+      name: "Escamas do Texugo",
+      description: `Os primeiros filhos do Texugo aprenderam a usar suas próprias escamas como armadura. Enquanto está sob efeito de Fúria, você soma o bônus de sua Fúria na Defesa e em testes de resistência. \nPré-requisito: Fúria Alada.`,
+    },
+    {
+      name: "Escolhido de Tukala",
+      description: `Quando você chama, muitos texugos ouvem. O custo de sua Revoada de Texugos é reduzido em 1 PM e, para cada poder de furioso cinzento que você tiver, a quantidade de texugos invocados aumenta em um passo (de 1d4+1 para 1d6+1, por exemplo). \nPré-requisito: Fúria Alada.`,
+    },
+    {
+      name: "Presas do Texugo",
+      description: `Em sua sabedoria celeste, o Texugo lhe concedeu dentes afiados. Quando entra em fúria, você recebe uma arma natural de mordida (1d6) na forma de lobisomem. Além disso, uma vez por rodada, quando usa a ação agredir para atacar com outra arma, pode gastar 1 PM para fazer um ataque corpo a corpo extra com a mordida. \nPré-requisito: Fúria Alada.`,
+    },
+    {
+      name: "Retaliação do Texugo",
+      description: `Atacar um furioso cinzento só serve para alimentar sua fúria. Enquanto está em fúria, na primeira vez em cada rodada que sofrer dano de um inimigo, seu bônus pela Fúria aumenta em +1 até a fúria terminar. Este efeito é cumulativo e limitado ao seu total de poderes de furioso cinzento. \nPré-requisito: Fúria Alada.`,
+    },
+    {
+      name: "Texugo de Rapina",
+      description: `Não há dúvidas de que o Texugo foi a primeira ave de rapina! Você pode fazer testes de Furtividade em Fúria e, quando faz uma investida alada, pode fazer uma ação agredir (em vez de um único ataque corpo a corpo) contra o alvo da investida. \nPré-requisito: Presas do Texugo.`,
+    },
+  ],
+  },
   // Dragão Brasil - 215
   { id: "Campeão das Guildas",
   name: "Campeão das Guildas",
@@ -122,104 +257,9 @@ export const distinctions: Distinction[] = [
   ],
   },
 
-  { id: "Presa de Coral",
-  name: "Presa de Coral",
-  origin: "Dragão Brasil",
-  image: "/distincoes/PresadeCoral.png",
-  introduction: `O reino arquipélago de Khubar tem um guardião sem igual. Ao longo dos séculos Benthos, o Dragão-Rei dos Mares, protegeu seus habitantes das mais variadas e perigosas ameaças. Entretanto, os khubarianos não são um povo que se sente confortável de viver sob a sombra de ninguém, seja homem ou dragão.\nCom o primeiro contato entre os khubarianos e Benthos, começou a surgir entre os habitantes do arquipélago uma poderosa tradição guerreira, dedicada a emular o poder bélico do Dragão-Rei. Chamados de Presas de Coral, os membros desta tradição acumularam poder político e militar, mantendo-se aliados de todos governos locais, mas sempren dependentes. Orgulhosos e dedicados, os Presas de Coral veem em Benthos uma fonte de poder e inspiração. Entretanto, ainda que alguns destes guerreiros venerem o Dragão-Rei como um deus, eles não se contentam apenas com preces. Como parte de seus ritos e treinamentos, eles se valem de um preparado alquímico especial para desenvolver habilidades mágicas que os permitem emular os poderes do próprio Dragão-Rei.\nUm Presa de Coral é um guerreiro de elite khubariano, um feroz campeão de seu povo. Ele empunha azagaia, espada e lança em combinações letais e invoca poderes mágicos assombrosos de sua conexão com Benthos e com o mar que cerca sua terra natal.`,
-  admission: `Para começar o processo de admissão, um candidato deve impressionar um capitão dos Presas de Coral e ser convidado pessoalmente a integrar a ordem. Feitos que normalmente impressionam os capitães incluem derrotar um grande número de oponentes desafiadores sozinho, ou vencer, sozinho ou em grupo, um oponente de poder claramente superior. Uma vez que tenha atraído a atenção de um capitão e aceito o convite, o candidato passa a treinar com um grupo de candidatos ou, dependendo das circunstâncias, com outros Presas de Coral. Este treinamento inclui testes de coragem, aptidão física, habilidade marcial e comprometimento com Khubar e pode se estender por várias semanas. Por fim, após participar do treinamento, o candidato é enviado em uma missão em que deverá provar sua lealdade a Benthos, ao arquipélago e, sobretudo, aos Presas de Coral. Se for bem-sucedido nessa missão, o candidato é convidado a passar pela cerimônia de iniciação, que envolve consumo de sangue do Dragão-Rei (veja caixa). Se sobreviver, se tornará um Presa de Coral.`,
-  mark: `**Sangue do Dragão-Rei**\nParte do ritual de iniciação de um Presa de Coral, o consumo de Sangue do Dragão-Rei é também a etapa mais perigosa da preparação destes combatentes.\nA poção alquímica conhecida como Sangue do Dragão-Rei é feita com veneno de serpentes marinhas, ervas locais de Khubar, água do mar e (dizem) uma gota de sangue de dragão. Sua fórmula exata, entretanto, é o segredo mais bem guardado dos Presas de Coral. Como parte do ritual de iniciação, você deve ingerir um gole de Sangue do Dragão-Rei e fazer um teste estendido de Fortitude (CD 20, 3 sucessos). Para cada falha, você perde 2d12 pontos de vida por veneno e, em uma falha total, sofre uma morte agonizante e dolorida. Se passar no teste estendido, completa o ritual de iniciação e recebe a capacidade de imbuir suas armas com poder dracônico. Você pode gastar 2 PM e uma ação de movimento para que as armas que você empunha causem +1d4 pontos de dano de ácido até o fim da cena.`,
-  powers: [
-    {
-      name: "Arsenal de Coral",
-      description: `O Presa de Coral se torna mestre no uso das armas tradicionais de sua ordem. \nVocê recebe +1 na margem de ameaça com armas do arsenal de coral (cimitarras, espadas curtas, espadas longas, azagaias e lanças). Além disso, quando usa Sangue do Dragão-Rei, o dano extra de ácido com essas armas aumenta em 1 passo, +1 passo para cada três outros poderes de Presa de Coral que você possuir. \nPré-requisitos: treinado em Atletismo e Luta.`,
-    },
-    {
-      name: "Presa Distante: Azagaia de Água",
-      description: `Os Presas de Coral aprendem a usar lanças e azagaias para invocar a fúria do mar. \nVocê não sofre a penalidade em ataque por empunhar azagaias como armas corpo a corpo e o alcance de seus ataques à distância com azagaias e lanças aumenta em um passo. Além disso, se estiver empunhando uma dessas armas, você pode gastar uma ação padrão e 2 PM para disparar uma rajada de água salgada que percorre uma linha de 9m e usa as mesmas características da arma empunhada. Faça um teste de ataque à distância com a arma e compare o resultado com a Defesa de cada criatura nesta área. Então, faça uma rolagem de dano e aplique o resultado a cada inimigo atingido. Criaturas que sofram dano dessa forma também ficam lentas por 1 rodada. \nPré-requisitos: Arsenal de Coral, Estilo de Arremesso.`,
-    },
-    {
-      name: "Presa Dupla: Corte da Correnteza",
-      description: `Os Presas de Coral aprendem a usar armas em pares para atacar de forma implacável e replicar a intensidade da correnteza marítima. \nSe estiver empunhando duas armas do arsenal de coral, você não sofre a penalidade em testes de ataque pelo poder Estilo de Duas Armas. Além disso, você pode gastar uma ação padrão e 3 PM para girar suas armas em um arco e invocar um redemoinho de água salgada. Faça um ataque corpo a corpo com cada uma das armas e compare-os com a Defesa de cada inimigo em seu alcance natural. Então, faça uma rolagem de dano para cada ataque e aplique o resultado correspondente a cada inimigo atingido. Criaturas atingidas por ambos os ataques ficam sangrando. \nPré-requisitos: Arsenal de Coral, Estilo de Duas Armas.`,
-    },
-    {
-      name: "Presa Suprema: Arquipélago de Dor",
-      description: `Da mesma forma que o mar envolve Khubar, um Presa de Coral pode se mover em volta de um oponente, preparando um golpe feroz. \nVocê pode gastar uma ação completa e 3 PM para desferir um ataque especial contra um oponente adjacente. Você pode percorrer qualquer distância, até o seu deslocamento, desde que se mantenha sempre adjacente ao alvo e não passe pelo mesmo espaço mais de uma vez. Ao final deste movimento, você faz uma ação agredir contra o alvo com um bônus de +1 no teste de ataque, na rolagem de dano e na margem de ameaça de seus ataques com armas do arsenal de coral para cada 1,5m percorrido desta forma. \nPré-requisito: Três Se Tornam Um.`,
-    },
-    {
-      name: "Manobra Maremoto",
-      description: `Quando um guerreiro khubariano de elite decide que vai atingir um alvo, nada pode detê-lo. \nQuando faz uma investida empunhando pelo menos uma arma de seu arsenal de coral, você pode gastar 3 PM para se transformar em um maremoto vivo. Durante esta investida, seu deslocamento aumenta em +6m e você ignora terreno difícil natural. Além disso, pode passar por objetos como se fosse água e empurra criaturas em seu caminho; faça um teste da manobra empurrar e compare o resultado com o teste de cada criatura afetada. Criaturas que perderem o teste de manobra são empurradas 1,5m para um lado à sua escolha. \nPré-requisito: Salto Oceânico.`,
-    },
-    {
-      name: "Salto Oceânico",
-      description: `Os Presas de Coral são tão integrados ao oceano que podem nadar até mesmo em terra firme. \nVocê recebe deslocamento de natação igual ao seu deslocamento (se já tiver deslocamento de natação, em vez disso ele aumenta em 3 metros). Além disso, você aprende e pode lançar a magia Salto Dimensional (apenas em você). Caso esteja sob a chuva ou com pelo menos metade do corpo imerso em água, você pode lançar esta magia como uma ação de movimento. \nPré-requisito: Arsenal de Coral.`,
-    },
-    {
-      name: "Três Se Tornam Um",
-      description: `O estilo de luta dos Presas de Coral usa lanças e espadas. Os mais habilidosos entre esses guerreiros de elite aprendem a extrair o máximo de cada uma dessas armas. \nVocê pode gastar uma ação de movimento e 1 PM para combinar suas técnicas de luta. Até o fim da cena, cada arma do arsenal de coral que você empunhar recebe as habilidades adaptável, alongada, ágil e/ou arremessável (curto), à sua escolha, e se beneficia de bônus específicos de armas que você possua para qualquer arma do arsenal (como a habilidade Mestre do Tridente). \nPré-requisito: Arsenal de Coral.`,
-    },
-  ],
-  },
-  { id: "Menestrel Maldito",
-  name: "Menestrel Maldito",
-  origin: "Dragão Brasil",
-  image: "/distincoes/MenestrelMaldito.png",
-  introduction: `Existe uma história sussurrada em tons de cautela e inveja nos conservatórios de música ou entre os bardos que frequentam as cortes dos nobres. Ela fala sobre uma figura trajada de azul que surge em uma encruzilhada diante de um músico que perdeu tudo e oferece a ele uma chance de começar de novo. É uma história de redenção e maldição, pois aqueles que aceitam a barganha do estranho de azul aceitam o maior dos preços por uma segunda chance em suas vidas.\nO mesmo relato pode ser ouvido nos mais diferentes lugares, nos mais variados tons. Ela pode ser um causo engraçado, contado entre risadas e bater de canecas em estalagens portuárias ou como uma fábula assustadora, recitada com seriedade diante de músicos aspirantes. Muitos que a ouvem acreditam ser apenas uma lenda, um conto feito para amedrontar os bem-sucedidos e levar uma módica esperança para aqueles que não têm nada. A realidade, entretanto, é que a história do Estranho de Azul é verdadeira; uma trágica narrativa que, independente de como seja contada, carrega mistério, suspense, esperança, maldição, arte e, inevitavelmente, morte.\nO menestrel maldito é um artista que perdeu tudo, ou ao menos aquilo que mais importava. Desiludido, ele perseguiu a história do Estranho de Azul até ser encontrado por ele. Em troca de uma porção de sua alma, este artista desesperado recebeu uma breve, mas redentora, segunda chance. Reencontrando sua arte, o menestrel maldito aprende que o pouco tempo que lhe resta é sua última chance de deixar uma marca indelével e emocionante na mente e na alma de seu público.`,
-  admission: `O candidato precisa ter sofrido uma tragédia pessoal terrível. Pode ter sido abandonado por um grande amor, presenciado a morte de um amigo próximo, perdido uma posição de destaque ou algum outro evento similar. Depois disso, deve ir até uma encruzilhada levando seu instrumento musical, cair de joelhos e se lamentar para o vazio. Após horas de choro, surgirá um demônio na forma de um indivíduo alto e esguio, vestindo um manto azul, com longos cabelos que caem por cima de seu rosto, deixando visível apenas o brilho soturno de seus cinco olhos. A figura estenderá a mão, pedindo o instrumento do músico. Caso entregue, o Estranho de Azul afinará o instrumento, usando fragmentos da alma do próprio candidato, e o oferecerá de volta. Se o músico aceitar esse instrumento, se tornará um menestrel maldito até o resto dos seus breves dias.`,
-  mark: `**A Maldição do Menestrel**\nComo pagamento pelo pacto com o Estranho de Azul, o menestrel cede uma pequena, mas importante, parte de sua alma.\nUm instrumento musical à sua escolha se torna afinado com uma porção de sua própria alma. Quando usa esse instrumento, você recebe +1 em Atuação e a CD para resistir às suas habilidades de bardo aumenta em +1. Se perder seu instrumento, o Estranho de Azul irá afinar outro, desde que você passe uma noite em claro em uma encruzilhada.\nTer firmado esse pacto, entretanto, significa que seu tempo em Arton será mais breve que o normal. Sempre que estiver com 0 PV ou menos, sua alma fica à mercê do Estranho de Azul; no início de cada um dos seus turnos, você deve fazer um teste de Sabedoria (CD 15). Se passar, evita o Estranho e não precisa mais fazer esse teste até sofrer dano que o deixe com 0 PV ou menos novamente. Caso termine três rodadas (não necessariamente consecutivas) na mesma cena nessa situação, você morre e é levado pelo Estranho de Azul para as profundezas de Venomia. Lá, passará sua existência em eterna miséria, tocando suas desgraças para o deleite de Sszzass, e nunca poderá ser revivido.`,
-  powers: [
-    {
-      name: "Técnica Endiabrada",
-      description: `Para um menestrel maldito, sua alma não é apenas uma moeda de barganha; ela é a energia que fortalece suas notas e torna sua música tão poderosa. \nQuando usa Inspiração ou uma música de bardo empunhando seu instrumento afinado, o alcance desta habilidade aumenta em um passo (de curto para médio e de médio para longo). Além disso, quando faz um teste de Atuação com seu instrumento afinado, você pode gastar 1 PM para escolher 10, ou 5 PM para escolher 20, em qualquer situação, exceto testes de ataque. Se escolher 20 dessa forma, você fica alquebrado. \nPré-requisitos: treinado em Atuação, Inspiração.`,
-    },
-    {
-      name: "Celeridade Cerúlea",
-      description: `Não basta ser mais preciso que qualquer outro músico, um menestrel maldito é também mais rápido. \nUma vez por rodada, quando usa uma música de bardo empunhando seu instrumento afinado, você pode gastar 2 PM para usar esta música como uma ação livre. \nPré-requisito: Técnica Endiabrada.`,
-    },
-    {
-      name: "Composição Mágica",
-      description: `O menestrel maldito aprende a entrelaçar suas magias com a tristeza de suas notas musicais. \nQuando lança uma magia de bardo com um teste de resistência, você pode gastar 2 PM para fazer um teste de Atuação (CD 10). Se passar, você aumenta a CD da magia em +1, +1 para cada 10 pontos que seu teste de Atuação passar a CD. \nPré-requisitos: treinado em Misticismo, Técnica Endiabrada.`,
-    },
-    {
-      name: "Música: Ária da Tristeza",
-      description: `Impregnada por sua própria tragédia, a música do menestrel maldito carrega tanta tristeza que pode até paralisar seus ouvintes. \nFaça um teste de Atuação oposto ao teste de Vontade de cada criatura à sua escolha dentro do alcance (você faz um único teste). Alvos que falhem ficam atordoados por uma rodada (uma criatura só pode ser atordoada por este poder uma vez por cena) e frustrados. \nPré-requisito: Técnica Endiabrada.`,
-    },
-    {
-      name: "Música: Nota Azul",
-      description: `É um risco se deixar levar pela música de um menestrel maldito. Os acordes hipnóticos podem não apenas conquistar sua atenção, mas também consumir sua mente e levar à morte. \nFaça um teste de Atuação oposto pelo teste de Vontade de cada criatura à sua escolha dentro do alcance (você faz um único teste). Alvos que falhem sofrem 1d8 pontos de dano mental (ou 1d12, se estiverem sofrendo alguma condição mental). Para cada outro poder de menestrel maldito que você possui, o dano de sua Nota Azul aumenta em +1d8 ou +1d12, conforme apropriado. \nPré-requisito: Técnica Endiabrada.`,
-    },
-  ],
-  },
-  { id: "Xerife de Azgher",
-    name: "Xerife de Azgher",
-    origin: "Dragão Brasil",
-    image: "/distincoes/XerifedeAzgher.png",
-    introduction: `Dentro das fronteiras do Reinado, a justiça é vigilante e afiada como a espada de Khalmyr. Mas em regiões distantes, longe de castelos e cavaleiros, a lei se torna cada vez mais nublada.\nNessas fronteiras sem lei, criminosos e malfeitores se sentem cada vez mais seguros. Distantes da justiça de Khalmyr, se tornam mais ousados em seus trambiques e mais frequentes em seus achaques. O povo inocente sofre em silêncio, mas a verdade é que ninguém consegue se esconder do olhar implacável do Deus-Sol. Onde os bandidos gargalham crentes em sua impunidade, Azgher atua através de seus xerifes.\nMeio benfeitor, meio homem da lei, o xerife de Azgher é um viajante, missionário, caçador e juiz. Ele vaga de cidade em cidade, de vila em vila, caçando criminosos pela lei dos mortais e do Deus-Sol, protegendo os inocentes em nome de um poder superior. Muitos trazem o rosto oculto por um lenço ou máscara; alguns o fazem para proteger seus entes queridos contra a vingança dos criminosos, enquanto outros são devotos do deus Azgher e obedecem suas obrigações e restrições. Todos ostentam um broche mágico na forma de um sol dourado como símbolo de sua autoridade, conhecido como Sol Vigilante.\nOs xerifes de Azgher são uma organização afiliada à igreja do Deus-Sol que sagra oficiais para proteger o povo e garantir o cumprimento da lei. Operam frequentemente sozinhos, confiando em sua habilidade e retidão para garantir sua sobrevivência, por vezes com o apoio de grupos de aventureiros. São autorizados a usar armas de fogo mesmo dentro do Reinado, com uma predileção pela pistola, rivalizada pela a cimitarra tradicional entre devotos de Azgher.\nAlgumas cidades têm um xerife de Azgher residente, mas isso só acontece nas piores pocilgas de Arton, tão infestadas pelo crime que exigem um guardião permanente.`,
-    admission: `O candidato precisa encontrar, prender e entregar às autoridades um criminoso que tenha cometido um crime grave contra um inocente. O momento da entrega às autoridades deve acontecer às claras, sob a luz de Azgher. Depois que esta missão estiver cumprida, quando o candidato for dormir, terá um sonho mostrando o caminho para a sede dos xerifes, no Império de Tauron.\nApós visitar a sede e se identificar, o candidato deve provar seu valor para a ordem. Dependendo da notoriedade do criminoso preso pelo candidato, isso pode ser o suficiente. Caso contrário, a ordem pode designar alguns testes locais para avaliar sua habilidade. De qualquer forma, mesmo depois de considerado apto, o candidato precisa ajudar um xerife em um caso antes de ser sagrado.\nNormalmente se trata de uma aventura, na qual o xerife acompanha o candidato e permite que ele tome a iniciativa sempre que possível, atuando apenas como observador na maior parte do tempo. Ao longo dessa aventura, o xerife julgará principalmente a conduta do candidato. De certa forma, o teste na sede dos xerifes testa a habilidade e o caso acompanhando o xerife testa o caráter.\nCaso seja finalmente considerado digno, o candidato recebe um Sol Vigilante e é sagrado xerife de Azgher pela Ordem. É de bom tom que o candidato faça uma oferenda aos xerifes de pelo menos T$ 2.000 antes de ir embora.`,
-    mark: `**Sol Vigilante**\nA insígnia dos xerifes de Azgher é um broche de ouro em formato de sol. Mais do que a marca de uma ordem religiosa, o Sol Vigilante é um símbolo de autoridade, lei e ordem.\nVocê recebe um Sol Vigilante, uma insígnia de ouro que conta como um símbolo sagrado de Azgher. Enquanto ostentá-lo, você recebe +2 em testes de Diplomacia com devotos de Azgher e agentes da lei, como cavaleiros, paladinos, nobres e guardas, e +2 em Intimidação com criminosos, malfeitores e outros indivíduos que, a critério do mestre, tenham problemas com a justiça. Além disso, você é considerado oficialmente uma figura de autoridade, o que inclui autorização para portar armas de fogo no Reinado. Se perder seu Sol Vigilante, você pode obter outro após um dia de orações a Azgher e uma oferenda de T$ 500.`,
-    powers: [
-      {
-        name: "Destruir o Crime",
-        description: `O poder sagrado de Azgher flui por suas armas.\nQuando faz um ataque corpo a corpo, ou à distância com uma arma de fogo, você pode gastar 2 PM para fortalecer esse ataque com o poder de Azgher. Você soma seu Carisma no teste de ataque e +1d8 na rolagem de dano. Se possuir a habilidade Golpe Divino, em vez disso ela causa 1 dado extra de dano e pode ser usada com armas de fogo.\nPré-requisitos: treinado em Intuição, proficiência em armas de fogo, devoto de Azgher.`,
-      },
-      {
-        name: "Caçador de Bandidos",
-        description: `Uma vez que o xerife de Azgher esteja em seu encalço, resta aos malfeitores apenas a rendição.\nVocê pode gastar uma ação de movimento e uma quantidade de PM (limitada pelo número de poderes de xerife de Azgher que possui) para recitar em voz alta os crimes de uma criatura em alcance médio. Até o final da cena, ou até a criatura se render, para cada 1 PM gasto você recebe +1 na Defesa, em testes de perícia e em rolagens de dano contra esta criatura.\nPré-requisito: Destruir o Crime.`,
-      },
-      {
-        name: "O Longo Braço da Lei",
-        description: `Nenhum bandido está fora do alcance de um xerife de Azgher.\nUma vez por rodada, quando uma criatura a até 9m se move voluntariamente mais de 1,5m, você pode gastar 2 PM para fazer um ataque com arma de fogo ou cimitarra (se a criatura estiver em seu alcance natural) contra ela. Você pode sacar a arma com que vai atacar como parte dessa reação.\nPré-requisitos: Olho de Azgher, Saque Rápido.`,
-      },
-      {
-        name: "Olho de Azgher",
-        description: `Persistente como o sol do deserto, o xerife de Azgher sempre encontra os criminosos.\nVocê aprende e pode lançar Localização. Se tiver mais dois outros poderes de xerife de Azgher, aprende e pode lançar também Visão da Verdade. Caso aprenda novamente uma dessas magias, seu custo diminui em –1 PM.\nPré-requisito: Pistoleiro Solar.`,
-      },
-      {
-        name: "Pistoleiro Solar",
-        description: `Oficialmente sagrado, o xerife de Azgher recebe as bênçãos do Deus-Sol sobre suas armas.\nVocê passa a considerar todas as armas de fogo como armas preferidas de Azgher (além da cimitarra). Além disso, você pode usar o poder Espada Solar em armas de fogo e, para cada dois outros poderes de xerife de Azgher que possui, o dado de dano de fogo concedido por este poder aumenta em um passo.\nPré-requisitos: Destruir o Crime, Espada Solar.`,
-      },
-    ],
-  },
+
+  
+  
   //#endregion
 
 
@@ -2195,40 +2235,7 @@ Os materiais especiais que podem ser empregados em ornitópteros, bem como seu c
     },
   ],
   },
-  { id: "Furioso Cinzento",
-  name: "Furioso Cinzento",
-  origin: "Dragão Brasil",
-  image: "/distincoes/FuriosoCinzento.png",
-  introduction: `O rocambolesco e, vamos admitir, pouco confiável mito de Texugo, reserva um lugar especial para os furiosos cinzentos, os kobolds chocados pelo Texugo e que herdaram dele o poder da fúria. Estes primeiros membros da Tribo Cinzenta teriam apreendido como canalizar essa fúria para receber diversas habilidades de seu pai alado.\nPor mais que nada disso faça muito sentido, o fato é que existem kobolds que aprendem a canalizar sua fúria em uma variedade de poderes texugais. Mais do que isso, sob a liderança de Grund e sua propensão a aceitar membros de outras raças como “kobolds honorários”, os segredos dos furiosos cinzentos alcançaram outros povos.\nUm furioso cinzento é um guerreiro tribal que aprende a canalizar sua fúria para emular algumas habilidades do Texugo. Esse é um caminho exigente, pois requer que o candidato possua a capacidade de entrar em fúria, a habilidade de voar (de qualquer forma) e a concentração necessária para usar ambas em combate. Mais do que isso, o candidato precisa acreditar em um texugo voador!`,
-  admission: `O processo de admissão de um furioso cinzento é algo que ainda está sendo debatido e “refinado” pela Tribo. Entretanto, alguns pontos já foram definidos e colocados em prática.\nSeguindo a tradição de Grund e seus primeiros furiosos cinzentos, o candidato deve primeiro obter, de alguma maneira, uma forma de voar. Pode ser uma habilidade natural (como o voo das sílfides), uma magia ou um aparato (como asas de texugo). O importante é que o candidato consiga arrastar seu traseiro pelos céus. Depois de obter suas asas e executar um voo de combate, o candidato deve se apresentar a um xamã de Tukala, que irá guiar o restante do processo.\nUma vez que o candidato se apresente e comprove sua capacidade de voar, o xamã irá propor uma série de desafios (geralmente três, mas pode ser que ele erre as contas e peça mais, ou menos). Exemplos de desafios incluem comer um barril de bugulentos sem passar mal, invadir o covil de um inimigo, roubar uma escama do sovaco de um dragão, desenhar um texugo na testa de uma estátua de Khalmyr… o Texugo é um animal bravo, ousado e engenhoso, e seus furiosos também devem sê-lo.\nUma vez que tenha cumprido seus três (ou quatro, ou doze) desafios, o candidato deve apresentar as provas de seus feitos ao xamã encarregado de sua admissão. Se ele julgar as provas adequadas, o candidato poderá passar à última etapa do processo, em que deverá encontrar um texugo selvagem e oferecer comida a ele. Se o texugo aceitar a oferenda, o candidato terá cumprido todos os requisitos e se tornará um furioso cinzento.`,
-  mark: `**Voo do Texugo**\nSeu deslocamento de voo aumenta em +3m e, enquanto estiver voando, você recebe +1 em rolagens de dano.`,
-  powers: [
-    {
-      name: "Fúria Alada",
-      description: `O Texugo ensina a combinar asas e fúria para dominar os céus. Enquanto está sob efeito de Fúria e voando, você soma o bônus de sua Fúria na margem de ameaça de seus ataques em corpo a corpo e com armas de arremesso. \nPré-requisitos: Revoada de Texugos, Fúria.`,
-    },
-    {
-      name: "Escamas do Texugo",
-      description: `Os primeiros filhos do Texugo aprenderam a usar suas próprias escamas como armadura. Enquanto está sob efeito de Fúria, você soma o bônus de sua Fúria na Defesa e em testes de resistência. \nPré-requisito: Fúria Alada.`,
-    },
-    {
-      name: "Escolhido de Tukala",
-      description: `Quando você chama, muitos texugos ouvem. O custo de sua Revoada de Texugos é reduzido em 1 PM e, para cada poder de furioso cinzento que você tiver, a quantidade de texugos invocados aumenta em um passo (de 1d4+1 para 1d6+1, por exemplo). \nPré-requisito: Fúria Alada.`,
-    },
-    {
-      name: "Presas do Texugo",
-      description: `Em sua sabedoria celeste, o Texugo lhe concedeu dentes afiados. Quando entra em fúria, você recebe uma arma natural de mordida (1d6) na forma de lobisomem. Além disso, uma vez por rodada, quando usa a ação agredir para atacar com outra arma, pode gastar 1 PM para fazer um ataque corpo a corpo extra com a mordida. \nPré-requisito: Fúria Alada.`,
-    },
-    {
-      name: "Retaliação do Texugo",
-      description: `Atacar um furioso cinzento só serve para alimentar sua fúria. Enquanto está em fúria, na primeira vez em cada rodada que sofrer dano de um inimigo, seu bônus pela Fúria aumenta em +1 até a fúria terminar. Este efeito é cumulativo e limitado ao seu total de poderes de furioso cinzento. \nPré-requisito: Fúria Alada.`,
-    },
-    {
-      name: "Texugo de Rapina",
-      description: `Não há dúvidas de que o Texugo foi a primeira ave de rapina! Você pode fazer testes de Furtividade em Fúria e, quando faz uma investida alada, pode fazer uma ação agredir (em vez de um único ataque corpo a corpo) contra o alvo da investida. \nPré-requisito: Presas do Texugo.`,
-    },
-  ],
-  },
+  
   { id: "Lobo Lunar",
   name: "Lobo Lunar",
   origin: "Dragão Brasil",

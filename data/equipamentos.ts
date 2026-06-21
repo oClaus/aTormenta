@@ -15,7 +15,9 @@ import {
   Crown, 
   Unplug,
   BookOpen,
-  Dna
+  Dna,
+  ScrollText, 
+  Flame,
 } from "lucide-react";
 
 
@@ -172,6 +174,22 @@ export const equipmentCategories: EquipmentCategory[] = [
     icon: Dna,
     color: "from-amber-600 to-amber-900",
     href: "/equipamentos/dadivas-aharadak",
+  },
+  {
+    id: "pocoes",
+    title: "Poções & Pergaminhos",
+    description: "Magias engarrafadas e escrituras antigas de uso único.",
+    icon: ScrollText,
+    color: "from-green-600 to-green-900",
+    href: "/equipamentos/pocoes",
+  },
+  {
+    id: "artefatos",
+    title: "Artefatos",
+    description: "Relíquias lendárias, únicas e de poder incomensurável.",
+    icon: Flame, // Flame combina com a temática da Tormenta/Rubi
+    color: "from-amber-600 to-amber-900",
+    href: "/equipamentos/artefatos",
   },
   
 ];

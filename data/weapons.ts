@@ -93,24 +93,24 @@ export const weapons: Weapon[] = [
     type: "Corte",
     spaces: 1,
   },
+  { id: "Katar",
+    name: "Katar",
+    description: "Uma das armas preferidas dos rebeldes de Sckharshantallas, o katar é uma arma discreta (fornece +5 em testes de Ladinagem para ocultá-la) e de golpes poderosos. O katar é preferido por artistas marciais pela facilidade de integração com técnicas desarmadas; para personagens com a habilidade Briga ou o poder Estilo Desarmado, o katar é uma arma simples.",
+    origin: "Duelo de Dragões",
+    purpose: "Corpo a Corpo",
+    proficiency: "Exótica",
+    grip: "Leve",
+    price: "T$ 50",
+    damage: "1d6",
+    critical: "x4",
+    range: "—",
+    type: "Perfuração",
+    spaces: 1,
+    image: "/armas/katar.png",
+  },
   //#endregion
 
   //#region Dragão Brasil
-  
-  { id: "lâmina de essência",
-    name: "Lâmina de Essência",
-    description: "A lâmina de essência é um bracelete metálico que, ao ser acionado, projeta uma lâmina de energia. Acionar o bracelete é o equivalente a sacar a arma e, uma vez acionada, a lâmina ocupa a mão do usuário. A lâmina é uma arma ágil mas, devido à sua ausência de peso, requer um treinamento especial para ser usada (por isso é uma arma exótica). Você pode usar uma lâmina de essência como uma arma marcial desbalanceada.",
-    origin: "Dragão Brasil",
-    purpose: "Corpo a Corpo",
-    proficiency: "Exótica",
-    grip: "Uma Mão",
-    price: "T$ 500",
-    damage: "1d10",
-    critical: "19/x3",
-    range: "Curto",
-    type: "Essência",
-    spaces: 0.5,
-  },
   // Dragão Brasil - 199
   { id: "Wakizashi",
     name: "Wakizashi",
@@ -125,6 +125,21 @@ export const weapons: Weapon[] = [
     range: "Curto",
     type: "Corte",
     spaces: 1,
+  },
+  // Dragão Brasil - 205
+  { id: "lâmina de essência",
+    name: "Lâmina de Essência",
+    description: "A lâmina de essência é um bracelete metálico que, ao ser acionado, projeta uma lâmina de energia. Acionar o bracelete é o equivalente a sacar a arma e, uma vez acionada, a lâmina ocupa a mão do usuário. A lâmina é uma arma ágil mas, devido à sua ausência de peso, requer um treinamento especial para ser usada (por isso é uma arma exótica). Você pode usar uma lâmina de essência como uma arma marcial desbalanceada.",
+    origin: "Dragão Brasil - 205",
+    purpose: "Corpo a Corpo",
+    proficiency: "Exótica",
+    grip: "Uma Mão",
+    price: "T$ 500",
+    damage: "1d10",
+    critical: "19/x3",
+    range: "Curto",
+    type: "Essência",
+    spaces: 0.5,
   },
   // Dragão Brasil - 219
   { id: "Agulha",
@@ -141,7 +156,7 @@ export const weapons: Weapon[] = [
     type: "Perfuração",
     spaces: 2,
   },
-
+  //#endregion
 
   //#region Tormenta20 - Jogo do Ano
   { id: "adaga",
@@ -1049,20 +1064,7 @@ export const weapons: Weapon[] = [
   //#endregion
 
 
-  { id: "Katar",
-    name: "Katar",
-    description: "Uma das armas preferidas dos rebeldes de Sckharshantallas, o katar é uma arma discreta (fornece +5 em testes de Ladinagem para ocultá-la) e de golpes poderosos. O katar é preferido por artistas marciais pela facilidade de integração com técnicas desarmadas; para personagens com a habilidade Briga ou o poder Estilo Desarmado, o katar é uma arma simples.",
-    origin: "Dragão Brasil",
-    purpose: "Corpo a Corpo",
-    proficiency: "Exótica",
-    grip: "Leve",
-    price: "T$ 50",
-    damage: "1d6",
-    critical: "x4",
-    range: "—",
-    type: "Perfuração",
-    spaces: 1,
-  },
+  
   
   { id: "Bastão Lúdico",
     name: "Bastão Lúdico",

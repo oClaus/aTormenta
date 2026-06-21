@@ -160,7 +160,7 @@ export default function AmeacasPage() {
             className="w-full flex items-center justify-between p-6 bg-[#e8dac1] border-2 border-amber-900/30 rounded-t-xl hover:border-amber-700/80 transition-all group shadow-sm"
           >
             <div className="flex items-center gap-3">
-              <span className="text-2xl opacity-70">📜</span>
+              <span className="text-2xl opacity-70">❖</span>
               <div className="text-left">
                 <h2 className="text-xl font-bold text-amber-950 group-hover:text-red-800 transition-colors font-serif tracking-wide">
                   Regras de Ameaças

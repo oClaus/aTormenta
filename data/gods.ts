@@ -786,8 +786,7 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: "Devotos de Betsumial sempre se oferecem e nunca se recusam a vigiar um local, objeto ou criatura por pelo menos um dia."
   },
-  {
-    id: "Blinar",
+  { id: "Blinar",
     name: "Blinar",
     subtitle: "o Deus das Máscaras",
     rank: "Mortal ascendido, status divino 2",
@@ -806,8 +805,7 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: "Devotos de Blinar devem sempre usar máscaras em público, por mais simples que a máscara seja. A máscara conta como um item vestido, mesmo que não forneça bônus. Além disso, uma vez por semana devem fazer um estranho acreditar que sua identidade é outra."
   },
-  {
-    id: "Caerdellach",
+  { id: "Caerdellach",
     name: "Caerdellach",
     subtitle: "o Deus dos Unicórnios",
     rank: "Mortal ascendido, status divino 3",
@@ -826,8 +824,7 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: "Devotos de Caerdellach devem ser sacros e castos, recusando-se a se casar ou ter relações íntimas com outras pessoas. Além disso, não podem recusar pedidos de ajuda de pessoas inocentes ou animais em perigo."
   },
-  {
-    id: "Canastra",
+  { id: "Canastra",
     name: "Canastra",
     subtitle: "o Deus das Armadilhas",
     rank: "Mortal ascendido, status divino 2",
@@ -846,8 +843,7 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: "Devotos de Canastra devem sempre estar um passo à frente de seus adversários. Uma vez por dia (ou por sessão de jogo, o que demorar mais), devem executar uma armadilha ou uma emboscada com sucesso."
   },
-  {
-    id: "Canora",
+  { id: "Canora",
     name: "Canora",
     subtitle: "a Deusa da Canção",
     rank: "Mortal ascendido, status divino 2",
@@ -866,8 +862,7 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: "Devotos de Canora nunca recusam uma oportunidade de cantar. Além disso, uma vez por dia (ou por sessão de jogo, o que demorar mais), devem passar um tempo ensaiando ou cantando como oferenda a Canora. Em termos de jogo, uma ação exigindo um teste de Atuação com CD mínima 15 + metade do seu nível."
   },
-  {
-    id: "Cette",
+  { id: "Cette",
     name: "Cette",
     subtitle: "o Deus dos Arqueiros",
     rank: "Mortal ascendido, status divino 3",
@@ -886,8 +881,7 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: "Devotos de Cette devem combater usando um arco uma vez por dia, ou passar pelo menos uma hora por dia fazendo manutenção de seu arco ou treinando com essa arma. Além disso, devem manter sua palavra, nunca podendo mentir, trapacear ou roubar."
   },
-  {
-    id: "Champarr",
+  { id: "Champarr",
     name: "Champarr",
     subtitle: "o Deus dos Jogos",
     rank: "Mortal ascendido, status divino 3",
@@ -906,8 +900,7 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: "Devotos de Champarr devem vencer um jogo por dia (ou por sessão de jogo, o que demorar mais). Em termos de regras, devem vencer um teste oposto de Jogatina, Luta ou Pontaria contra um oponente digno (a critério do mestre). Outras perícias podem ser usadas para atender essa obrigação, também a critério do mestre."
   },
-  {
-    id: "Dahriol",
+  { id: "Dahriol",
     name: "Dahriol",
     subtitle: "o Deus dos Selos",
     rank: "Mortal ascendido, status divino 1",
@@ -926,8 +919,7 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: "Devotos de Dahriol não podem recusar pedidos de ajuda para entregar mensagens ou impedir que selos sejam abertos. Além disso, não podem abrir selos sem permissão. Para estes fins, um “selo” é qualquer barreira, como uma porta, tranca ou fechadura, mundana ou mágica."
   },
-  {
-    id: "Drumak",
+  { id: "Drumak",
     name: "Drumak",
     subtitle: "o Deus do Duelo",
     rank: "Conceito vivo, status divino 1",
@@ -1121,15 +1113,21 @@ export const gods: God[] = [
     ],
     status: "caido",
     otherNames: "Hullaim, entre os anões; Glada, entre os minotauros; Hrumork, entre os orcs; Gorak, entre certos povos bárbaros.",
-    sacredSymbol: "Sem informação",
-    channelEnergy: "Sem informação",
-    preferredWeapon: "Sem informação",
+    sacredSymbol: "Escudo cruzado por uma espada longa, um martelo de guerra e um machado de batalha.",
+    channelEnergy: "Negativa.",
+    preferredWeapon: "Machado de batalha.",
     history: "Guerra. Parte indispensável do amadurecimento normal de uma civilização, dizem alguns. Flagelo terrível que deve ser eliminado em nome de um futuro melhor, afirmam outros. Não importando tais crenças, os povos de Arton sempre fizeram guerra, entre si ou contra ameaças externas. Da antiga Grande Batalha de Lamnor à ainda recente e dolorosa Guerra Artoniana, a história deste mundo tem sido escrita por seus vastos conflitos armados.\nDesde tempos ancestrais, Keenn teria sido o responsável por inflamar tais conflagrações. Violento e selvagem, quase tanto quanto o próprio Megalokk. Ainda assim, muito popular entre as grandes nações, algumas chegando a acolhê-lo como sua divindade principal — como o antigo Reino de Yudennach, que erguia templos em sua honra. Seus clérigos não apenas brandiam armas no campo de batalha, mas também atuavam como conselheiros, instigando regentes a travar conflitos. Sempre que alguém buscava destruir um inimigo, o nome de Keenn era entoado em cânticos de batalha.\nEntre os deuses, Keenn nem sempre era respeitado, considerado um bárbaro cruel e sanguinário, deliciando-se com massacres, sequer permitindo que seus devotos desfrutassem de curas mágicas. Rivalizava em suas áreas de influência com Khalmyr, também um deus da guerra, mas justo e piedoso. Em resposta a olhares reprovadores, Keenn apenas gargalhava, arrogante. Era muitas coisas, mas não covarde.\nFoi assim por séculos, até que um infame clérigo da guerra ousou desafiá-lo.\nComo hoje é bem sabido, o vilão Mestre Arsenal — escolhido como sumo-sacerdote de Keenn — amealhou armamentos mágicos poderosos durante longas campanhas. Por considerar o Deus da Guerra falho, inadequado para confrontar os inimigos por vir, Arsenal decidiu que tomaria seu lugar. Graças a um pacto com Sszzaas, obteve a espada mágica Holy Avenger, tão poderosa que podia matar deuses. Confrontou então o patrono em seu próprio torneio planar, cujo vencedor seria declarado o próximo Deus da Guerra. E assim aconteceu.\nAs escrituras sagradas da Igreja de Arsenal revelam que Keenn, secretamente, sabia de suas próprias falhas. Sabia ser impotente contra um perigo futuro que se aproximava, o mesmo adversário misterioso que dizimou o mundo nativo de Arsenal. Uma vez que deuses são incapazes de mudar, Keenn orquestrou a própria derrota em duelo, sacrificando-se pelo futuro de Arton. Talvez fosse mesmo um bárbaro sanguinário e cruel. Mas morreu com a nobreza de um deus.\nA morte de Keenn é ainda muito recente. Por isso, vários de seus devotos ainda não tiveram tempo de mudar seu modo de viver — o que inclui cultuar o deus. Entre fiéis que não possuíam poder divino, pode-se achar batalhões inteiros que ainda praticam os mesmos rituais, entoam a mesma litania, sussurram as mesmas orações. Para eles, a devoção sempre foi mais uma ferramenta de união entre soldados do que uma relação pessoal com a divindade. Assim, a existência do deus não faz tanta diferença.\nContudo, muitos clérigos e devotos se converteram a Arsenal imediatamente. Isso porque, sendo fiéis de um deus de tática e estratégia, notaram que o melhor curso de ação era se aliar ao vencedor. Não se trata de oportunismo: a Guerra enquanto conceito fundamental da Criação envolve a mudança de generais, a reformulação de planos, as decisões repentinas no campo de batalha. Eles continuaram devotados à Guerra… Apenas a outra faceta.\nAssim, mesmo com pouco tempo para se estabelecer como um deus, Arsenal foi prontamente aceito. Devotos de Keenn existem em número cada vez menor. Em geral, aqueles que restam (e que não prezavam apenas pelo aspecto da comunidade em torno da religião) nutrem grande inveja de Arsenal, consideram que deveriam eles mesmos ter ascendido. Muitas vezes essas palavras não passam de bravatas bêbadas num canto da taverna, para que não sejam escutadas por nenhum clérigo de Arsenal. Mas, quando são ouvidas e defendidas com armas, é frequente que o antigo devoto de Keenn acabe convertido. Afinal, o novo Deus da Guerra precisa de guerreiros bravos para a próxima batalha. E, se não há um meio de vencer, ele sabe que deve criar um meio.",
-    beliefs: "Sem informações",
-    devotees: "Sem informações",
+    beliefs: "Reverenciar o conflito e a guerra, pois a paz é para os fracos e covardes e apenas em batalhas podemos provar nosso valor. Nunca oferecer ou aceitar rendição, e jamais demonstrar fraqueza ou temor. Persistir por meio da agressividade, do combate e da guerra.",
+    devotees: "Anões, minotauros, bárbaros, guerreiros, lutadores, nobres.",
     grantedPowers: [
+      "Aura Bélica",
+      "Coragem Total",
+      "Cura Desafiadora",
+      "Desprezar Cura",
+      "Fúria Divina",
+      "Sede de Batalha"
     ],
-    obligationsRestrictions: "Sem informações"
+    obligationsRestrictions: "Devotos de Keenn não podem se negar a participar de uma luta ou impedir que ela aconteça. Também são proibidos de fugir de qualquer batalha — quando derrotados, aceitam a morte ou captura, mas nunca recuam. Por fim, nunca podem lançar magias de cura."
   },
   { id: "Ragnar",
     name: "Ragnar",
@@ -1140,15 +1138,21 @@ export const gods: God[] = [
     ],
     status: "caido",
     otherNames: "Deus dos Bugbears; Deus da Morte dos Goblinoides; Leen, entre os humanos; Krogathar, entre os elfos; Rakur, entre os anões; Morkhul, entre os gnolls; Maz'korak, entre os trogs.",
-    sacredSymbol: "Sem informação",
-    channelEnergy: "Sem informação",
-    preferredWeapon: "Sem informação",
+    sacredSymbol: "Um círculo branco eclipsado por um círculo negro.",
+    channelEnergy: "Negativa",
+    preferredWeapon: "Maça.",
     history: "Muitas raças e espécies têm sua própria divindade padroeira, em muitos casos também sua criadora. Ragnar era o Deus Menor dos Bugbears, os assassinos brutais também conhecidos como “goblins gigantes”. Sua ascensão ao Panteão ocorreu quando Tilliann e Kallyadranoch foram expulsos, após a Revolta dos Três. Mesmo assim, era mais conhecido por outra faceta: Leen, uma divindade sombria e sutil. Foi apenas com a vitória da Aliança Negra dos goblinoides sobre os elfos de Lenórienn, sob a liderança do general bugbear Thwor Khoshkothruk, que o nome “Ragnar” ganhou notoriedade entre outras raças. Ragnar se tornaria então a divindade principal dos goblins, hobgoblins, bugbears e outros humanoides monstruosos, elevando muito seu status divino.\nRagnar desfrutou da divindade maior por longos anos, refestelando-se nas conquistas e matanças perpetradas pelos duyshidakk. Ainda que não fosse exatamente um devoto, seu arauto Thwor arrebatava legiões de novos seguidores com suas vitórias. Além disso, seu então sumo-sacerdote, o bugbear Gaardalok, estava entre os clérigos mais poderosos de Arton — chegando a se transformar em lich, dádiva concedida pelo Deus da Morte. Nada parecia capaz de impedir o avanço de sua religião.\nÉ interessante que cultos humanos também reverenciavam Ragnar, mas sob a égide de Leen, sem qualquer relação com Thwor e as profecias que o tangenciam. Empunhando grandes e temíveis foices, os Ceifeiros de Leen louvaram a ascensão do Deus da Morte com rituais de autoflagelação, tortura e sacrifícios humanos, trazendo terror ao Reinado. Por vezes seus crimes atraíram grupos de aventureiros.\nRagnar na verdade tinha um grande plano, elaborado sob a faceta de Leen — astúcia e brutalidade na mesma medida. Menos de um século após sua ascensão, procurou Thyatis para que ele escrevesse uma profecia que mudaria os rumos de Arton. Segundo o estratagema do Deus da Morte, chegaria o “arauto da destruição” (mais tarde revelado como Thwor), que uniria os goblinoides e só seria morto pela “Flecha de Fogo”. A Flecha, por sua vez, seria um cometa em rota de colisão com o continente de Lamnor. Sua queda devastaria os goblinoides, depois que esses já tivessem chacinado os demais povos do continente. Tudo seria, na verdade, o maior sacrifício da Criação, o assassinato de civilizações inteiras em nome de Ragnar, elevando seu poder a níveis inimagináveis.\nContudo, Thyatis, ao escrever a profecia, inseriu limitações. Talvez por isso Thwor, mesmo sendo o arauto de Ragnar, mesmo tendo sido criado por seus clérigos, nunca tenha sido um devoto verdadeiro. Usando a genialidade e a força bruta que haviam sido profetizadas, o Ayrrak de Lamnor foi capaz de alterar o curso dos eventos, colocando o próprio Ragnar numa armadilha.\nO Deus da Morte havia encarnado em Arton como um humano, para garantir que a profecia fosse cumprida. No ponto culminante desses eventos, os dois estavam lutando e um fragmento da Flecha de Fogo caiu sobre eles. Ragnar assim morreu — e Thwor ascendeu à divindade, como Deus dos Goblinoides. Os fragmentos da Flecha de Fogo caíram não sobre Lamnor em sua maioria, mas sobre o antigo reino de Tyrondir. Parte do Istmo de Hangpharstyth, que conectava os continentes de Arton Norte e Lamnor, acabou despedaçada. A região dos destroços é hoje conhecida como a Ossada de Ragnar.\nA ausência do Deus da Morte causou um fenômeno bizarro — um período em que ninguém morreu em Arton. Hoje em dia, o ciclo de nascimento e morte voltou a existir em Arton de forma normal, mas a Morte não é um conceito cultuado por si só. Ou seja, embora faça parte da existência de tudo que é vivo, não é algo visto pela maioria das pessoas como essencialmente sagrado, como um objetivo por si só. Diz-se que Tenebra está tentando assumir esse portfólio, mas não há certeza sobre isso.\nContudo, o culto a Ragnar era muito arraigado entre os goblinoides. Existem muitas seitas, principalmente entre os bugbears, que continuam adorando o Deus da Morte e praticando seus rituais, sem receber poderes por isso. Alguns desses se recusam a aceitar que Ragnar teve um fim — afinal, se ele governava sobre a Morte, como pode ter se dobrado a ela? São sacerdotes arrogantes, que garantem que, mais cedo ou mais tarde, haverá uma nova profecia, anunciando a derrocada de Thwor e a volta de seu senhor sombrio.\nTambém devido à prevalência do culto a Ragnar entre os duyshidakk, existem vários grupos de devotos de Thwor que não fazem grande diferença entre os dois. Assim, cultuam o Deus dos Goblinoides usando rituais e paramentos do Deus da Morte dos Goblinoides. Isso é algo absolutamente contrário ao que Thwor prega, mas o deus concede poderes a esses hereges mesmo assim. Talvez nos recônditos de Lamnor existam devotos de Ragnar que nem sabem que o deus foi substituído! Afinal, se Leen era uma faceta, por que Thwor também não poderia ser…?\nPor fim, existem os cultistas humanos. Esses, sem nenhuma ligação com os duyshidakk, viram-se sem poderes subitamente. Seus sacrifícios a Leen de repente não ofereciam mais recompensas. Contudo, o nível de vilania de alguém que cultuava a própria Morte não é algo que pode ser abandonado com facilidade. Muitos cultistas de Leen passaram a adorar outros deuses que aceitam sacrifícios, como Tenebra ou mesmo Kallyadranoch.",
-    beliefs: "Sem informações",
-    devotees: "Sem informações",
+    beliefs: "Promover a morte cruel, brutal e absoluta. Impedir o desenvolvimento e perpetuar a morte caótica. Jamais negar a alguém o direito de uma morte definitiva. Devotar-se a ideia de que a vida é uma ilusão, um pesadelo e a morte é o verdadeiro despertar. Destruir os elfos, humanos e anões.",
+    devotees: "Bugbears, goblins, hobgoblins, ogros, orcs, bárbaros, caçadores, guerreiros, ladinos.",
     grantedPowers: [
+      "Arma de Morte",
+      "Carícia Sombria",
+      "Fúria Divina",
+      "Olhar Amedrontador",
+      "Rejeição Divina",
+      "Toque da Ruína"
     ],
-    obligationsRestrictions: "Sem informações"
+    obligationsRestrictions: "Devotos de Ragnar não podem agir contra a morte; principalmente se for a morte de elfos, humanos e anões, os maiores inimigos da Aliança Negra. Por conta disso, nunca podem causar dano não letal. Além disso, devotos especialmente malignos de Ragnar devem sacrificar uma vítima élfica, humana ou anã a seu deus todos os meses (não permitido para personagens jogadores)."
   },
   { id: "Tauron",
     name: "Tauron",
@@ -1159,15 +1163,21 @@ export const gods: God[] = [
     ],
     status: "caido",
     otherNames: "Deus dos Minotauros; Deus da Coragem; Grande Rei Horkkon, entre os orcs e os gigantes; Li-Chak, entre os trogs.",
-    sacredSymbol: "Sem informação",
-    channelEnergy: "Sem informação",
-    preferredWeapon: "Sem informação",
+    sacredSymbol: "Uma cabeça de touro em chamas.",
+    channelEnergy: "Qualquer",
+    preferredWeapon: "Machado de guerra.",
     history: "Presente desde a criação do Panteão, este deus táurico concebeu um povo guerreiro e orgulhoso, que ergueria uma das mais maiores civilizações na história. Tapista seria uma força militar vasta e influente no Reinado. Tão poderosos eram os minotauros que praticavam abertamente a escravidão de outras raças. Intimidados e lidando com outras ameaças, os reinos humanos se viam forçados a fechar os olhos para tais abusos. Se os minotauros enxergaram essa leniência como fraqueza, não se sabe. O fato é que suas legiões avançariam sobre as nações humanas, deflagrando as temíveis Guerras Táuricas, conquistando e anexando os reinos vizinhos do oeste. Foi o início do Império de Tauron. Diz-se que, incapaz de impedir essa grande injustiça, Khalmyr teria renunciado à liderança do Panteão. O próprio Tauron, agora mais influente, tomaria seu lugar. Nenhum outro deus o desafiou.\nExistem versões dessa história que afirmam que Khalmyr abdicou como um estratagema inteligente, impedindo que Tauron triunfasse através da força bruta e, assim, limitando seu poder. Mas os devotos do Deus dos Minotauros rejeitam tal blasfêmia.\nTauron seguiu no comando dos deuses por longos anos. Seus devotos o consideravam orgulhoso e corajoso, senhor da dominação dos fortes sobre os fracos, e da proteção dos fracos pelos fortes. Esses dogmas, ainda que opostos, levavam Tauron a aceitar devotos bondosos que protegiam — e malignos que escravizavam. Acima de tudo, era um deus de bravura, determinação, força física e interior. Temido pelos dóceis e puros, venerado pelos pujantes e corajosos.\nEm sua compulsão por dominar e proteger os fracos, Tauron acolheu Glórienn, a derrotada Deusa dos Elfos, como uma prisioneira escravizada. Espelhando seu patrono, o Império de Tauron também acolheu elfos refugiados de Lenórienn em sua sociedade, como “escravos de elite”. Muitos acabaram nas legiões tapistanas como arqueiros, visto que os próprios minotauros achavam desonrado usar armas de projéteis.\nEssa situação mudaria com a chegada de Gwendolynn, uma clériga de Tanna-Toh determinada a colocar fim à escravidão de sua gente. Após atuar na Revolta da Lavoura, a elfa testemunhou o titânico combate final entre Tauron e Aharadak, o Lorde da Tormenta, na capital imperial. Flechado por Glórienn, o Deus da Força caiu morto, enquanto o Deus da Tormenta ascendia, para o horror de toda Arton.\nO corpo gigantesco de Tauron ainda jaz entre os escombros de Tiberus. Dizem que sua presença mantém a Tormenta afastada no horizonte, mas é incerto por quanto tempo. Aparições fantasmagóricas conhecidas como fúrias de Tauron rondam as vizinhanças — diz-se que clérigos podem controlar esses mortos-vivos.\nPor ser tão mesclada à cultura do Império, a religião de Tauron continua existindo em muitos lugares. Vários sacerdotes e filósofos dizem que adorar o deus sem receber poderes é a maior prova de força e lealdade possível, o verdadeiro teste de seus dogmas. Segundo esses estoicos, apenas se mostrando fortes e independentes, sem precisar de nenhuma “recompensa”, podem honrar o sacrifício de seu senhor. E, sendo fortes, cabe a eles proteger os fracos, como sempre foi.\nPor outro lado, muitos minotauros malignos encararam a morte do Deus da Força como o fim de todas as limitações, o início de uma era de anarquia, a permissão tácita para cometer qualquer crime, dar vazão a qualquer instinto. Justamente porque o culto de Tauron sempre foi parte fundamental da cultura dos minotauros, esses renegados se recusam a admitir que outros deuses importam. E, se não há ninguém vigiando e julgando, não há por que não se entregar a todas as depravações. É claro que alguém que só deixava de praticar o mal porque era vigiado já era maligno desde o começo…",
-    beliefs: "Sem informações",
-    devotees: "Sem informações",
+    beliefs: "Venerar a força, a coragem e a determinação. Dominar os seres mansos e dóceis do mundo e exigir tributo e servidão deles, mas também protegê-los — com sua vida, se necessário.",
+    devotees: "Anões, elfos, medusas, minotauros, cavaleiros, guerreiros, lutadores, paladinos.",
     grantedPowers: [
+      "Coragem Total",
+      "Fúria Divina",
+      "Legião Tapistana",
+      "Músculos Divinos",
+      "Proteger os Fracos",
+      "Sangue de Ferro"
     ],
-    obligationsRestrictions: "Sem informações"
+    obligationsRestrictions: "Devotos de Tauron devem demonstrar coragem e honra em combate, jamais lutando contra um oponente em desvantagem numérica (em termos de regras, não podem se beneficiar do bônus de flanquear) ou incapaz de lutar. Também são proibidos de usar armas de ataque à distância e magias ofensivas com alcance maior que toque (só podem atacar com armas corpo a corpo e com magias de toque).\nAlém disso, os devotos do Deus da Força devem sempre manter sua palavra e nunca recusar um pedido de ajuda de uma criatura mais fraca (com ND igual ou inferior a metade do ND do próprio devoto).\nEm regiões mais distantes de Arton, há outra obrigação para devotos de Tauron: encontrar e adotar uma criatura mais fraca (veja acima) e protegê-la pelo resto da vida — ou até que ela supere sua força. O devoto jamais deve aceitar qualquer ajuda do seu protegido, assim como deve ser honrado e respeitado por ele."
   },
   { id: "Tilliann",
     name: "Tilliann",

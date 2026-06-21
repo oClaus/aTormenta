@@ -329,7 +329,13 @@ export const specificWeapons: SpecificWeapon[] = [
     price: "6.000",
     origin: "Dragão Brasil - 183",
   },
-
+  // Dragão Brasil - 205
+  { id: "CUTELO DE AHARADAK",
+    name: "Cutelo de Aharadak",
+    description: "É uma arma mágica específica, uma espada curta atroz sanguinária de matéria vermelha. Para aqueles que não forem lefou, devotos de Aharadak ou personagens que possuam três poderes da Tormenta, a presença dela em alcance curto causa terríveis pesadelos (Vontade CD 20 ou acorda alquebrado por um dia).",
+    price: "00",
+    origin: "Dragão Brasil",
+  },
   // Dragão Brasil - 221
   { id: "Katana de Papel",
     name: "Katana de Papel",
@@ -339,23 +345,14 @@ export const specificWeapons: SpecificWeapon[] = [
   },
   //#endregion
 
-  
-
-
-  { id: "CUTELO DE AHARADAK",
-    name: "Cutelo de Aharadak",
-    description: "É uma arma mágica específica, uma espada curta atroz sanguinária de matéria vermelha. Para aqueles que não forem lefou, devotos de Aharadak ou personagens que possuam três poderes da Tormenta, a presença dela em alcance curto causa terríveis pesadelos (Vontade CD 20 ou acorda alquebrado por um dia).",
-    price: "00",
-    origin: "Dragão Brasil",
-  },
-
-  // Duelo de Dragões
+  //#region Duelo de Dragões
   { id: "Lança do guerreiro dragão",
     name: "Lança do Guerreiro Dragão",
     description: "A lança do guerreiro dragão é uma arma concedida por Kallyadranoch como recompensa para dracomantes de inclinação marcial. Se estiver empunhando esta lança formidável quando lança uma magia, ela recebe +2 nas rolagens de dano e sua CD aumenta em +2.",
     price: "24.000",
     origin: "Duelo de Dragões",
   },
+  //#endregion
 
   //#region Tormenta20 - Jogo do Ano
   { id: "arco-do-poder",
@@ -468,7 +465,7 @@ export const specificWeapons: SpecificWeapon[] = [
   },
   //#endregion
 
-  // Ameaças de Arton
+  //#region Ameaças de Arton
   { id: "pistola-demoniaca",
     name: "Pistola Demoníaca",
     description: "Esta pistola ameaçadora formidável e profana não pode ser fabricada por nenhum meio conhecido por mortais e só pode ser obtida através de um pacto com um demônio da pólvora (veja p. 255). Uma pistola demoníaca está sempre carregada e não precisa de munição. Uma vez por dia, em um momento escolhido pelo mestre (ou na primeira ocasião em que houver outras pessoas próximas), o portador da arma é atingido pelo impulso homicida de disparar contra uma criatura inteligente aleatória à vista (incluindo aliados). O portador pode resistir a esse impulso por este dia passando em um teste de Vontade (CD 25). Qualquer medida para evitar acidentes (manter a pistola guardada, descarregada ou mesmo trancada e fora de alcance) fracassa automaticamente; quando o portador cede ao impulso assassino, a arma surge magicamente em suas mãos. Caso o portador da pistola seja morto, a arma desaparece.",
@@ -481,6 +478,7 @@ export const specificWeapons: SpecificWeapon[] = [
     price: "T$ 78.050",
     origin: "Ameaças de Arton"
   },
+  //#endregion
   
   
   {

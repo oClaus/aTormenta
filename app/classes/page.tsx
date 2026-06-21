@@ -65,7 +65,7 @@ export default function ClassesPage() {
             className="w-full flex items-center justify-between p-6 bg-[#e8dac1] border-2 border-amber-900/30 rounded-t-xl hover:border-amber-700/80 transition-all group shadow-sm"
           >
             <div className="flex items-center gap-3">
-              <span className="text-2xl opacity-70">📜</span>
+              <span className="text-2xl opacity-70">❖</span>
               <div className="text-left">
                 <h2 className="text-xl font-bold text-amber-950 group-hover:text-red-800 transition-colors font-serif tracking-wide">
                   Regras de Classes
@@ -199,6 +199,9 @@ export default function ClassesPage() {
         </div>
 
         {/* Grid de Classes */}
+        <h2 className="text-2xl font-bold text-red-800 mb-6 font-serif border-b-2 border-amber-900/20 pb-2 tracking-wide">
+          {filteredClasses.length} Classes Encontradas
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-6 w-full mb-16">
           {filteredClasses.map((cls) => (
             <div
@@ -439,7 +442,7 @@ export default function ClassesPage() {
               {selectedClass.extras && selectedClass.extras.length > 0 && (
                 <div className="mb-12 p-5 md:p-8 bg-[#e8dac1] rounded-xl border-2 border-amber-900/20 shadow-inner">
                   <h3 className="text-xl md:text-2xl font-bold text-red-800 mb-6 flex items-center gap-3 tracking-wide border-b-2 border-amber-900/10 pb-4">
-                    📜 Regras Especiais & Notas
+                    ❖ Regras Especiais & Notas
                   </h3>
                   
                   <div className="space-y-8">

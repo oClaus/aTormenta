@@ -59,7 +59,7 @@ export default function RacasPage() {
       className="w-full flex items-center justify-between p-6 bg-[#e8dac1] border-2 border-amber-900/30 rounded-t-xl hover:border-amber-700/80 transition-all group shadow-sm hover:shadow-[0_4px_20px_rgba(69,26,3,0.1)]"
     >
       <div className="flex items-center gap-3">
-        <span className="text-2xl opacity-70">📜</span>
+        <span className="text-2xl opacity-70">❖</span>
         <div className="text-left">
           <h2 className="text-xl font-bold text-amber-950 group-hover:text-red-800 transition-colors font-serif tracking-wide">
             Regras das Raças
@@ -178,6 +178,9 @@ export default function RacasPage() {
       </div>
 
         {/* Grid de Raças */}
+        <h2 className="text-2xl font-bold text-red-800 mb-6 font-serif border-b-2 border-amber-900/20 pb-2 tracking-wide">
+          {filteredRaces.length} Raças Encontradas
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-6 w-full mb-16">
         {filteredRaces.map((race) => (
           <div

@@ -18,6 +18,30 @@ export const mounts: Mount[] = [
   //#endregion
 
   //#region Dragão Brasil
+  // Dragão Brasil - 205
+  { id: "Khanoa",
+  name: "Khan’Oa",
+  size: "Grande",
+  description: "Um navio vivo e monstruoso formado por restos de embarcações e rancor sobrenatural. Essa criatura marinha busca inventores para completar sua própria construção.",
+  origin: "Dragão Brasil - 205",
+  benefits: {
+    iniciante: "Seu deslocamento muda para natação 15m e você ignora a penalidade por terreno natural difícil em águas. O Khan’Oa só se desloca sob a água e você usa Pilotagem no lugar de Cavalgar.",
+    veterano: "Você pode utilizar o canhão do Khan’Oa como um arcabuz e, uma vez por rodada, pode usá-lo para fazer um ataque como uma ação livre.",
+    mestre: "Você pode lançar a magia Miragem (CD Int). Se aprender essa magia, seu custo é reduzido em –1 PM.",
+  },
+  },
+  // Dragão Brasil - 208
+  { id: "Acquarella",
+  name: "Acquarella",
+  size: "Enorme",
+  description: "Uma criatura marinha sagrada semelhante a uma arraia gigante translúcida, com tentáculos e veias multicoloridas. Inteligente e tímida, carrega consigo uma pequena porção do mar e serve como montaria para devotos de Oceano.",
+  origin: "Dragão Brasil - 208",
+  benefits: {
+    iniciante: "Você recebe deslocamento de natação 9m e uma ação de movimento extra (apenas para se deslocar).",
+    veterano: "Uma vez por rodada, você pode gastar 1 PM para causar 2d6 pontos de dano de eletricidade em uma criatura em alcance curto. Além disso, você pode entrar na acquarella como uma ação de movimento (ela pode conter até 40 espaços e criaturas em seu interior ficam sob efeito de Suportar Elementos).",
+    mestre: "Seu deslocamento de natação muda para 15m e você pode gastar uma ação padrão e 3 PM para usar a habilidade Tinta Multicolorida.",
+  },
+  },
   // Dragão Brasil - 212
   { id: "Javali Doherita",
     name: "Javali Doherita ",
@@ -29,30 +53,6 @@ export const mounts: Mount[] = [
       veterano: "Seu deslocamento muda para 9m e o bônus de dano de Carga de Cavalaria aumenta em +1d8.",
       mestre: "Seu deslocamento muda para 12m e, quando faz uma investida, você ignora 10 pontos de redução de dano do alvo.",
     },
-  },
-
-  // Dragão Brasil
-  { id: "Acquarella",
-  name: "Acquarella",
-  size: "Enorme",
-  description: "Uma criatura marinha sagrada semelhante a uma arraia gigante translúcida, com tentáculos e veias multicoloridas. Inteligente e tímida, carrega consigo uma pequena porção do mar e serve como montaria para devotos de Oceano.",
-  origin: "Dragão Brasil",
-  benefits: {
-    iniciante: "Você recebe deslocamento de natação 9m e uma ação de movimento extra (apenas para se deslocar).",
-    veterano: "Uma vez por rodada, você pode gastar 1 PM para causar 2d6 pontos de dano de eletricidade em uma criatura em alcance curto. Além disso, você pode entrar na acquarella como uma ação de movimento (ela pode conter até 40 espaços e criaturas em seu interior ficam sob efeito de Suportar Elementos).",
-    mestre: "Seu deslocamento de natação muda para 15m e você pode gastar uma ação padrão e 3 PM para usar a habilidade Tinta Multicolorida.",
-  },
-  },
-  { id: "Khanoa",
-  name: "Khan’Oa",
-  size: "Grande",
-  description: "Um navio vivo e monstruoso formado por restos de embarcações e rancor sobrenatural. Essa criatura marinha busca inventores para completar sua própria construção.",
-  origin: "Dragão Brasil",
-  benefits: {
-    iniciante: "Seu deslocamento muda para natação 15m e você ignora a penalidade por terreno natural difícil em águas. O Khan’Oa só se desloca sob a água e você usa Pilotagem no lugar de Cavalgar.",
-    veterano: "Você pode utilizar o canhão do Khan’Oa como um arcabuz e, uma vez por rodada, pode usá-lo para fazer um ataque como uma ação livre.",
-    mestre: "Você pode lançar a magia Miragem (CD Int). Se aprender essa magia, seu custo é reduzido em –1 PM.",
-  },
   },
   //#endregion
 

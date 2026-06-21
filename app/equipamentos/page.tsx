@@ -147,7 +147,7 @@ export default function EquipamentosPage() {
             className="w-full flex items-center justify-between p-6 bg-[#e8dac1] border-2 border-amber-900/30 rounded-t-xl hover:border-red-800/40 transition-all group shadow-sm"
           >
             <div className="flex items-center gap-3">
-              <span className="text-2xl opacity-70">📜</span>
+              <span className="text-2xl opacity-70">❖</span>
               <div className="text-left">
                 <h2 className="text-xl font-bold text-amber-950 group-hover:text-red-800 transition-colors font-serif uppercase tracking-wide">
                   Regras de Equipamentos
@@ -280,8 +280,10 @@ export default function EquipamentosPage() {
                 <span className="text-red-800 text-3xl">❖</span> Categorias
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full">
-                {equipmentCategories.map((category) => (
-                <CategoryCard key={category.id} category={category} />
+                {[...equipmentCategories]
+                  .sort((a, b) => a.title.localeCompare(b.title))
+                  .map((category) => (
+                    <CategoryCard key={category.id} category={category} />
                 ))}
             </div>
         </section>

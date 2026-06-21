@@ -342,12 +342,12 @@ export const partners: Partner[] = [
   },
   //#endregion
   
-
   //#region Dragão Brasil
+  // Dragão Brasil - 204
   { id: "Aberrante",
   name: "Aberrante",
   description: "Uma criatura corrompida pela Tormenta, de aparência perturbadora e mente alienígena. Apenas devotos de Aharadak podem ter este tipo de parceiro.",
-  origin: "Dragão Brasil",
+  origin: "Dragão Brasil - 204",
   benefits: {
   iniciante: "Uma vez por rodada, você pode gastar 1 PM para causar 2d6 pontos de dano psíquico ou perda de 1d4 PM em uma criatura em alcance curto (efeito mental).",
   veterano: "Você também pode gastar 2 PM para causar 4d6 pontos de dano psíquico ou perda de 1d6 PM.",
