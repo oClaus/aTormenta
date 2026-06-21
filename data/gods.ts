@@ -602,7 +602,7 @@ export const gods: God[] = [
     subtitle: "O Deus dos Lobos",
     rank: "Mortal ascendido, status divino 3",
     image: [
-      "/deuses/akok.png"
+      "/deuses/Akok2.png", "/deuses/Akok.png"
     ],
     status: "menor",
     history: "Um enorme lobo com dentes que se projetam fora da mandíbula, Akok é o Deus dos Lobos, mas também governa certas raças de cães, principalmente de guerra, de guarda e de caça. É cultuado por goblinoides e outros humanoides que usam lobos como montaria, mas também por soldados responsáveis por bandos de cães de guerra, caçadores que só contam com seus cães ou lobos como companheiros e até mesmo por humanoides criados nos ermos por lobos. Devotos de Akok, entretanto, não são meros ginetes ou “donos”: são parte da alcateia e veem os lobos como seus irmãos peludos. São abençoados com instintos para lutar e agir em bando como lobos.\nSendo um deus animalesco, Akok nunca revelou sua origem (não tendo capacidade ou interesse para isso). Também não existem registros de quando teria ascendido. No entanto, uma lenda afirma que Akok foi o primeiro lobo a se aproximar de uma comunidade humanoide — talvez pressentindo que um dia poderia haver cooperação entre essas espécies, talvez apenas ferido e precisando de ajuda. Segundo essa história, teria sido esse gesto que deu origem à domesticação de lobos que levou à existência dos cães.",
@@ -620,7 +620,7 @@ export const gods: God[] = [
     name: "A Espada-Deus",
     rank: "Objeto desperto, status divino 1",
     image: [
-      ""
+      "/deuses/espadadeus.png"
     ],
     status: "menor",
     history: "A Espada-Deus é a obra-prima de Rhond (ele próprio o Deus das Armas), uma arma lendária que transcende seus portadores. Já esteve nas mãos de guerreiros valentes, heróis gloriosos, assassinos astutos e santos devotos, mas os nomes desses mortais se perderam no tempo — pois a espada é maior que qualquer um deles. Sempre que cumpria seu propósito, acabava esquecida em locais remotos, esperando por um novo destino. Podia estar presa em algum lugar de onde só seria tirada por um mortal digno. Ou no fundo de um lago, sendo entregue por uma náiade, ou cravada em uma pedra, selecionando quem pode arrancá-la.\nAlém de guerreiros de uma aldeia no antigo Reino de Yudennach, a Espada-Deus tem poucos devotos em estruturas organizadas, sendo adorada mais comumente por clérigos nômades que migram de batalha em batalha. A Espada-Deus não rege um portfólio definido. Em vez disso, ela apenas é adorada, apenas é a ferramenta, a instigadora e a protagonista em inúmeras histórias de batalha e heroísmo. A última dessas foi a batalha em que Orion Drake liderou um exército de deuses menores para derrotar Crânio Negro e expulsar a Tormenta de Tamu-ra, conquistando a primeira vitória de Arton contra os lefeu. Até onde se sabe, a Espada-Deus ainda se encontra de posse do cavaleiro, mas a qualquer momento ela pode ser “perdida”, para que seja encontrada por um novo campeão valoroso.",
@@ -639,7 +639,7 @@ export const gods: God[] = [
     subtitle: "Deus das Montanhas",
     rank: "Mortal ascendido, status divino 2",
     image: [
-      ""
+      "/deuses/altair.png"
     ],
     status: "menor",
     history: "Este deus bárbaro era um homem alto, forte e musculoso. Usava apenas uma tanga, exibia o corpo cheio de cicatrizes e a cabeleira escura que parecia a juba de uma fera. Padroeiro dos que desafiam o mundo selvagem, escalou e venceu desafios nas maiores montanhas de Arton, além de ser associado à caça e à sobrevivência.\nEmbora seja o Deus Menor das Montanhas, Altair é mais do que isso: é o padroeiro do modo de vida das montanhas, da resiliência necessária para sobreviver e prosperar nesse tipo de ambiente, dos povos que nunca se dobraram à necessidade de erguer cidades em terrenos planos, mas mantiveram seus costumes ancestrais. Para muitos, as montanhas são território de monstros ou algo a ser “vencido” em uma escalada. Para os devotos de Altair, as montanhas são um lar desafiador, que acolhe seus habitantes ao mesmo tempo em que exige muito deles.\nA ascensão de Altair já se perdeu no tempo. Ele surge como um herói folclórico em vários povos montanheses, desde as Lannestul até as Uivantes, e inclusive em algumas aldeias das Sanguinárias. Contudo, é consenso que não se trata de uma entidade, mas de um humano que ascendeu. Em todos os relatos, Altair aparece interagindo com a população, espreitando com bandos de caçadores e conversando com chefes. Mesmo entre seus devotos, parece ser uma pessoa quase comum. Existem inclusive histórias em que Altair obedece às ordens de um devoto, sendo mais um guerreiro em seu grupo!\nAltair foi encontrado pela última vez nas Montanhas Lannestul, quando Orion Drake reuniu seu Exército de Deuses. Contudo, seu machado enorme foi usado pela última vez defendendo Betsumial, o Deus dos Vigias, quando então um vulcão surgiu sob seus pés e a horda lefeu conseguiu sobrepujá-lo na Batalha de Tamu-ra, em 1405.",
@@ -658,7 +658,7 @@ export const gods: God[] = [
     subtitle: "Deusa da Inspiração",
     rank: "Mortal ascendido, status divino 3",
     image: [
-      "/deuses/anilatir.png"
+      "/deuses/anilatir2.png", "/deuses/anilatir.png"
     ],
     status: "menor",
     history: "Anilatir, quando ainda era uma jovem mortal, trancou-se numa torre para que fosse resgatada por heróis. Ela mesma inventou uma série de perigos e desafios para seus salvadores e prometeu se casar com quem a libertasse. Muitos o fizeram, e ela viveu feliz para sempre por algumas semanas com cada um, até que se trancava de novo num lugar ainda mais inóspito, com mais perigos, para instigar heróis mais valorosos. Quando enfim, depois de alguns anos, cansou-se do jogo, foi ela mesma uma aventureira, tendo sido clériga de Khalmyr, Thyatis, Lena, Nimb e Oceano.\nApós ter roubado uma fortuna de um dragão, decidiu entregá-la ao bardo que compusesse a melhor balada. Escolheu crianças que julgava terem potencial e arranjou para que suas famílias fossem chacinadas, impulsionando-as assim ao caminho de aventuras. Depois decidiu ser vilã, maquinando planos ilógicos de dominação e destruição para que heróis se levantassem para detê-la. Enfim, após essas e muitas outras peripécias, acabou ascendendo a Deusa da Inspiração, musa de bardos e centro de um minúsculo mas imaginativo culto.\nA história de Anilatir é tão curiosa quanto improvável. Segundo esses relatos, ela parecia agir como uma divindade, decidida a inspirar mortais e sem qualquer preocupação com a própria segurança, mesmo muito jovem. Talvez isso seja sinal de que tais histórias não passam de mentiras. Ou talvez Anilatir tenha inspirado alguém (talvez seu paladino, o indefectível Tex Scorpion Mako) a desenvolver alguma técnica mágica que direcionasse sua própria inspiração a ela mesma, desafiando as barreiras do tempo. Impossível? Dizem que alguns clérigos de Anilatir já se interessaram pelo conceito do Akzath de Thwor…\nOs clérigos de Anilatir se organizam (de forma bastante solta) em uma conspiração pela liberdade de Arton, eternamente combatendo a conspiração inimiga perpetrada pelos clérigos de Yasshara, a Deusa da Opressão, que desejam enclausurar o mundo em parâmetros rígidos e ordenados. Além disso, vivem aventuras, dançam, criam novas filosofias, entregam-se a todas as formas de expressão artística, traem o culto, arrependem-se, sagram-se cavaleiros, entram em guildas de ladrões… Fazem tudo que for diferente e inesperado. Serão seus melhores amigos, por pelo menos uma noite na taverna, desde que você aguente.",
@@ -677,7 +677,7 @@ export const gods: God[] = [
     subtitle: "Deusa das Abelhas",
     rank: "Mortal ascendido, status divino 3",
     image: [
-      ""
+      "/deuses/apis.png"
     ],
     status: "menor",
     history: "Também conhecida como Abelha-Imperatriz, Apis é a rainha de todas as abelhas de Arton. Ela vive em Tzeh’collmah, uma gigantesca colmeia no coração das Montanhas Lannestul, com milhares de abelhas gigantes como suas operárias. Alguns bárbaros das Lannestul aprenderam a temer e venerar Apis ao longo das eras. Nas redondezas, vários druidas, da mesma forma que os insetos gigantes, são considerados abelhas operárias ou campeiras, responsáveis pela proteção da colmeia e coleta de recursos, como néctar, pólen, resina e água.\nAlguns sábios fazem uma relação curiosa: Apis habita as Lannestul, onde também ficava a antiga nação de Ked’Rach, dos gigantes. Sabe-se que os gigantes escravizaram os minotauros durante muitos séculos, e que os minotauros só conseguiram se libertar usando trabalho em equipe e organização meticulosa. Segundo esses sábios, Goratikis, o líder minotauro responsável por unir seu povo, teria se inspirado em Apis, após encontrar por acaso Tzeh’collmah e observar a organização e união metódica das abelhas. Caso haja alguma verdade nisso, esta deusa, mesmo pouco conhecida, teria tido um impacto decisivo na história de Arton.\nDe fato, algumas pessoas acreditam que peregrinar a Tzeh’collmah e vislumbrar Apis, talvez trazendo mel de volta, seja um rito que garanta o sucesso na formação de qualquer ordem, guilda, companhia mercenária ou organização com hierarquia rígida. Além de garantir que o peregrino nunca mais seja picado por abelhas…",
@@ -691,27 +691,171 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: "Devotos de Apis não podem aprisionar ou matar abelhas de qualquer tipo (como abelhas monstruosas), nem permitir que outros o façam. Além disso, devem consumir T$ 1 por nível em mel todos os dias."
   },
+  { id: "Artaphan",
+    name: "Artaphan",
+    subtitle: "O Deus da Amizade",
+    rank: "Conceito vivo, status divino 2",
+    image: [
+      "/deuses/artaphan.png", "/deuses/artaphan2.png"
+    ],
+    status: "menor",
+    history: "Artaphan talvez seja único entre os deuses menores de Arton. Enquanto pessoas e até mesmo objetos foram elevados à divindade durante o período em que o Panteão estava incompleto, Artaphan foi criado a partir do nada.\nDarien, um trambiqueiro (antes bandoleiro, depois Cavaleiro do Corvo e depois o infame Cavaleiro Risonho), inventou-o para ludibriar os cidadãos de Roschfallen e impedir que cultuassem a Tormenta ou deuses malignos. De fato, o próprio nome do deus é um anagrama de “patranha” — um sinônimo de mentira. O resultado foi um deus pequeno, esquálido, fraco… mas ainda assim um deus. Artaphan não era nada antes de se tornar divino. Nasceu capaz de falar, compreender e abençoar o mundo, imortal, formado de crença pura. Tem consciência de que Darien o inventou e sente gratidão, mas não é um servo dele.\nTudo indica que, pelo menos durante o início de sua vida, Artaphan seja extremamente maleável, afetado pela crença de seus devotos. Assim, caso o consenso geral diga que ele é um deus masculino, assumirá essa forma. Se o povo decidir que é feminino, assim será. Humanoide, animal, objeto... Artaphan é argila espiritual nas mãos de seus fiéis. Nasceu na União Púrpura, fruto das lembranças de Darien a respeito de suas amizades da juventude. Por isso, Artaphan é fortemente associado à amizade juvenil e inconsequente.",
+    beliefs: "Reverenciar Artaphan e a amizade. Espalhar a amizade. Ajudar os outros. Aproveitar a vida em comunidade ou com um grupo seleto.",
+    sacredSymbol: "Um par de mãos dadas.",
+    channelEnergy: "Positiva.",
+    preferredWeapon: "Funda.",
+    devotees: "Gnolls, goblins, hynne, qareen, sílfides, bardos, cavaleiros, nobres, treinadores, paladino.",
+    grantedPowers: [
+      "Poder da Amizade"
+    ],
+    obligationsRestrictions: "Devotos de Artaphan devem espalhar a amizade. Uma vez por dia (ou por sessão de jogo, o que demorar mais), o devoto deve aproximar pessoas. Ele pode convencer alguém a ajudar outrem, passar um recado com uma mensagem positiva, colocar duas pessoas para beber juntas… Em termos de jogo, uma ação exigindo um teste de Diplomacia com CD mínima 15 + metade do seu nível."
+  },
+  { id: "Ayllana",
+    name: "Ayllana",
+    subtitle: "a Deusa das Sereias",
+    rank: "Mortal ascendido, status divino 3",
+    image: [
+      "/deuses/ayllana.png"
+    ],
+    status: "menor",
+    history: "Nas profundezas cintilantes dos recifes, Ayllana destacou-se desde a infância por sua conexão com as forças arcanas do oceano. Superando os demais membros de sua raça, dominava os feitiços que controlavam as marés e invocavam feras dos abismos marinhos, transformando campos de batalha em uma tempestades místicas. Durante a eterna guerra das sereias e dos tritões contra os elfos-do-mar, sua habilidade mágica foi decisiva em numerosas batalhas. Em um confronto memorável, Ayllana enfrentou Tessalus, o feroz guerreiro dos elfos-do-mar — que acreditava que a força bruta superava qualquer encantamento. Naquele dia, os dois colidiram em duelo mortal: o tridente mágico de Tessalus contra as invocações arcanas de Ayllana. Mesmo com a fúria do adversário, a feiticeira reverteu o ataque com feitiços potentes, selando uma vitória que marcou a história do conflito. Esse embate não apenas fortaleceu sua reputação, como também alimentou uma rivalidade que perduraria. Após o feito heroico, Ayllana foi elevada à posição divina. Seu culto é conduzido por feiticeiras- -sacerdotisas, celebrando sua mente arguta e dons arcanistas — exercido não apenas sob as ondas de Arton, mas também no próprio Reino do Oceano. Devotas da Deusa das Sereias acreditam que seus encantamentos as fortalecem, renovando sua meta de governar os mares com magia e colocar os elfos em merecida submissão.",
+    beliefs: "Proteger as sereias e sua soberania. Enaltecer a magia arcana. Dominar os oceanos. Derrotar os elfos-do-mar.",
+    sacredSymbol: "Uma barbatana dorsal multicolorida.",
+    channelEnergy: "Positiva.",
+    preferredWeapon: "Não há. Devotos desta deusa não podem usar a magia Arma Espiritual e similares.",
+    devotees: "Qareen, sereias/tritões, arcanistas, bardos, bucaneiros.",
+    grantedPowers: [
+      "Canção dos Mares"
+    ],
+    obligationsRestrictions: "Devotos de Ayllana são proibidos de matar sereias e tritões, recusar-se a ajudar esses seres e recusar missões para resgatar ou proteger sereias/tritões e sua cultura."
+  },
+  { id: "Beluhga",
+    name: "Beluhga",
+    subtitle: "a Dragoa-Rainha do Gelo",
+    rank: "Dragão-Real, status divino 3",
+    image: [
+      "/deuses/beluhga.png", "/deuses/beluhga2.png"
+    ],
+    status: "menor",
+    history: "Tão majestosa quanto as próprias Montanhas Uivantes, Beluhga é venerada pelos povos que habitam a região. Ao contrário de quase todos os Dragões-Reais (e da maioria dos dragões em geral), Beluhga é uma presença do bem. Sua magia era capaz de curar, embora ela também fosse uma senhora tão exigente quanto as próprias Uivantes.\nSua história é trágica — na verdade, tão trágica que pode ser duvidosa, e coloca em xeque a benevolência de um dos deuses do Panteão. Diz-se que, há mais de 100.000 anos, Beluhga foi aprisionada nas Uivantes pelo próprio Khalmyr. Essa seria a verdadeira causa do clima na região: apenas a presença da Dragoa-Rainha do Gelo poderia tornar toda a cordilheira tão fria. Mas, se Beluhga não era maligna, por que foi punida? Segundo ao menos uma versão, Khalmyr estava apaixonado por Beluhga, mas ela o rejeitou. O Deus da Justiça teria então cometido uma injustiça suprema, apenas por seu orgulho ferido. Sabe-se que os deuses do Panteão não são perfeitos, mas Khalmyr não poderia ser tão imperfeito… ou poderia? Outras versões afirmam que a punição seria justa: Beluhga teria conspirado contra o Panteão, junto a Sckhar. Mas isso leva à pergunta de por que então Sckhar não foi punido…\nMesmo confinada às Uivantes como punição, Beluhga tomou para si o dever de proteger a região. Foi uma das divindades menores mais atuantes de Arton, e rivalizou apenas com Sckhar como Dragoa-Rainha mais influente nas vidas dos mortais. Contudo, sua tragédia não havia acabado. Quando o Paladino de Arton se ergueu contra os deuses, tomou a Dragoa-Rainha como montaria, apenas para matá-la quando ela se tornou inútil para ele. Morta, Beluhga não retornou a sua forma dracônica; em vez disso, permaneceu como humanoide. Nessa forma — semelhante a uma meia-elfa de pele azulada, com cabelos roxos adornados por diademas cristalinos —, seu cadáver pôde ser levado de volta às Uivantes, onde repousa até hoje em um caixão de gelo eterno, impedindo o degelo da região. Dizem que um fantasma da Dragoa-Rainha foi visto nas montanhas; outros afirmam que não se trata de um fantasma, mas da própria Beluhga, retornada da morte para retomar seu reino gelado.",
+    beliefs: "Reverenciar o cadáver congelado de Beluhga e impedir que ele seja profanado. Perpetuar as tradições criadas no território da Dragoa-Rainha do Gelo. Combater quaisquer criaturas que ameacem pessoas, animais e outros seres nativos das Montanhas Uivantes.",
+    sacredSymbol: "Uma lágrima azul cristalizada.",
+    channelEnergy: "Positiva.",
+    preferredWeapon: "Machado de guerra.",
+    devotees: "Anões, hynne, galokk, golens, kallyanach, minotauros, ogros, bárbaros, caçadores, druidas, guerreiros, paladino.",
+    grantedPowers: [
+      "Bênção do Frio"
+    ],
+    obligationsRestrictions: "Devotos de Beluhga não devem permitir que não nativos das Uivantes adentrem a caverna onde repousa o corpo da Dragoa-Rainha. Não podem negar pedidos de ajuda feitos por um nativo das Uivantes. Além disso, devem retornar às Uivantes para prestar seus respeitos a Beluhga a cada 1d4+2 meses."
+  },
+  { id: "Benthos",
+    name: "Benthos",
+    subtitle: "o Dragão-Rei dos Mares",
+    rank: "Dragão-Real, status divino 4",
+    image: [
+      "/deuses/benthos.png", "/deuses/benthos2.png"
+    ],
+    status: "menor",
+    history: "Pouco se sabe a respeito de Benthos, já que são raras suas visitas ao mundo seco. Para ele, nada importa além da vastidão submersa que habita e as inúmeras ilhas que defende. Quase nunca visto em terra firme, este Dragão-Rei interveio em um punhado de vezes na história dos bípedes do continente — e todas deixaram consequências que ecoam por séculos, como a retaliação contra Thomas Lendilkar e a batalha contra o Dragão da Tormenta.\nEmbora não seja uma figura benevolente, Benthos é o grande protetor de Khubar, o reino Arquipélago. Os xamãs khubarianos possuem rituais secretos, capazes de invocar Benthos para combater ameaças às ilhas como um todo. Benthos é adorado em Khubar tanto quanto os deuses do Panteão, considerado por muitos a divindade principal, por sua proximidade e fisicalidade. Quase todos em Khubar lembram de alguma intervenção de Benthos, ou têm na família alguém que lembra. Assim, os ritos de adoração cotidiana ao Dragão-Rei têm um elemento de autopreservação e gratidão.\nEm sua forma humanoide, Benthos costuma aparecer como um tritão robusto de pele azulada, com roupas feitas de conchas e algas. Em forma dracônica, exibe um corpanzil esguio, com escamas brilhantes em tons de azul claro e verde-água, barbatanas emergindo ao longo do corpo e uma longa cauda bifurcada. As asas, em forma de leque, são utilizadas para voar e nadar.",
+    beliefs: "Reverenciar a magnificência de Benthos. Promover harmonia entre Khubar e o domínio submerso do Dragão-Rei dos Mares. Respeitar as dádivas providas pelas criaturas marinhas, além de retribuí-las sempre que possível. Proclamar a superioridade do Mar do Dragão-Rei e de suas ilhas. Vingar transgressões contra Khubar.",
+    sacredSymbol: "Uma coroa feita de conchas e pérolas.",
+    channelEnergy: "Qualquer.",
+    preferredWeapon: "Tridente.",
+    devotees: "Elfos-do-mar, kallyanach, sereias/tritões, tabrachi, bucaneiros, caçadores, druidas, guerreiros, ladinos.",
+    grantedPowers: [
+      "Investida Tempestade"
+    ],
+    obligationsRestrictions: "Devotos de Benthos não podem recusar pedidos de ajuda feitos por criaturas marinhas ou khubarianos. Além disso, não podem permanecer mais de um dia sem contato com água."
+  },
   
   //#endregion
   
-  
-  { id: "Morte - Sandman",
-    name: "Morte - Sandman",
-    image: "/deuses/morte.png",
-    status: "normal",
-    history: "A matéria apresenta novos elementos de jogo para aqueles que desejam usar personagens devotos inspirados pela mitologia de Sandman, mas é declaradamente uma adaptação com bastante licença poética. Um exercício de imaginação. A presença dos seres e artefatos apresentados NÃO é oficial em Arton. \n Dito isso, se crossovers não são sua praia, ou a mesa em que você joga usa alguns materiais de maneira mais estrita, converse com o grupo. É perfeitamente possível adaptar mecânicas ou conceitos apresentados aqui a outras divindades, ou aspectos da mitologia artoniana. Não é um material canônico. E sim herético. Use por sua conta e risco! Representando tanto o fim quanto o começo, dizem que essa perpétua era amada por todos em tempos antigos. Os mortais lembravam-se tanto da sua primeira visita: quando ela os insuflava com a centelha da vida, quanto de sua última e derradeira aparição. Mas com o passar dos séculos começaram a se esquecer disso e passaram a temê-la. Isso deixou a Morte cada vez mais ressentida e fria. Tudo mudou quando ela resolveu habitar um corpo mortal a cada cem anos, para entender sua perspectiva. Assim tornou-se a mais humana entre os perpétuos. A mais sábia até. Embora raramente demonstre, também é aquela de maior poder. Está destinada a testemunhar o fim de todas as coisas, quando apagará as luzes no céu e trancará os portões da existência atrás de si. É plenamente devotada a sua função, pois percebeu que um universo assolado pela imortalidade seria pior do que o fardo de ceifar almas. A morte trabalha em colaboração com outras divindades mortuárias, chamada por ela de “psicopompos”, que também têm função de coletar os espíritos e levá-los até seu descanso final. Em Arton, A Morte em Lamnor ainda é bastante associada ao hediondo deus Ragnar, uma divindade da extinção que sucumbiu durante os eventos da Flecha de Fogo. E no Reinado, a Leen, seu aspecto humano. Mas cultos da perpétua têm ganhado adesão para suprir essa ausência. Fala-se mesmo de um paladino que a representa, dado a partidas de xadrez com estranhos. Ex-sacerdotes de Leen também têm encontrado acolhimento nesse novo culto, embora sejam vistos com desconfiança e caçados pela maioria das outras ordens religiosas. Clérigos de Tenebra costumam hostilizar devotos da Morte, pois sentem que eles não compreendem as bênçãos da verdadeira mãe-noite, e consideram hipócritas aqueles que abraçam a imortalidade para caçar mortos-vivos. Ironicamente, o mesmo desprezo é demonstrado pelos devotos de Azgher, que os confundem com adoradores da noite, ou não aprovam seus métodos, tidos como profanos.",
-    beliefs: "Ajudar a celebrar ritos fúnebres e confortar pessoas passando por luto. Combater assombrações e outras entidades que tentem trapacear a morte, para manter o equilíbrio no universo, mesmo que para isso seja necessário se sujeitar a uma existência eterna. ",
+  //#region Dragão Brasil
+  // Dragão Brasil - 183
+  { id: "Morte",
+    name: "Morte (Sandman)",
+    image: [
+      "/deuses/morte.png"
+    ],
+    status: "crossover",
+    otherNames: "Desencarnação, Teleute, Vovó Morte, Nossa Irmã (entre os perpétuos).",
+    history: "Representando tanto o fim quanto o começo, dizem que essa perpétua era amada por todos em tempos antigos. Os mortais lembravam-se tanto da sua primeira visita: quando ela os insuflava com a centelha da vida, quanto de sua última e derradeira aparição. Mas com o passar dos séculos começaram a se esquecer disso e passaram a temê-la. Isso deixou a Morte cada vez mais ressentida e fria. Tudo mudou quando ela resolveu habitar um corpo mortal a cada cem anos, para entender sua perspectiva. Assim tornou-se a mais humana entre os perpétuos. A mais sábia até. Embora raramente demonstre, também é aquela de maior poder. Está destinada a testemunhar o fim de todas as coisas, quando apagará as luzes no céu e trancará os portões da existência atrás de si. É plenamente devotada a sua função, pois percebeu que um universo assolado pela imortalidade seria pior do que o fardo de ceifar almas. A morte trabalha em colaboração com outras divindades mortuárias, chamada por ela de “psicopompos”, que também têm função de coletar os espíritos e levá-los até seu descanso final.\nEm Arton…\nA Morte em Lamnor ainda é bastante associada ao hediondo deus Ragnar, uma divindade da extinção que sucumbiu durante os eventos da Flecha de Fogo. E no Reinado, a Leen, seu aspecto humano. Mas cultos da perpétua têm ganhado adesão para suprir essa ausência. Fala-se mesmo de um paladino que a representa, dado a partidas de xadrez com estranhos. Ex-sacerdotes de Leen também têm encontrado acolhimento nesse novo culto, embora sejam vistos com desconfiança e caçados pela maioria das outras ordens religiosas.\nClérigos de Tenebra costumam hostilizar devotos da Morte, pois sentem que eles não compreendem as bênçãos da verdadeira mãe-noite, e consideram hipócritas aqueles que abraçam a imortalidade para caçar mortos-vivos. Ironicamente, o mesmo desprezo é demonstrado pelos devotos de Azgher, que os confundem com adoradores da noite, ou não aprovam seus métodos, tidos como profanos.",
+    beliefs: "Ajudar a celebrar ritos fúnebres e confortar pessoas passando por luto. Combater assombrações e outras entidades que tentem trapacear a morte, para manter o equilíbrio no universo, mesmo que para isso seja necessário se sujeitar a uma existência eterna.",
     sacredSymbol: "Ankh de prata.",
-    channelEnergy: "Qualquer",
+    channelEnergy: "Qualquer.",
     preferredWeapon: "Gadanho.",
     devotees: "Quaisquer. Cedo ou tarde, toda criatura contempla seu fim.",
     grantedPowers: [
       "Aparência Adaptável",
       "Caçador de Imortais",
-      "Dom do Psicopompo",
+      "Dom do Psicopompo"
     ],
     obligationsRestrictions: "Um devoto da Morte é proibido de saquear tumbas ou templos consagrados à patrona que servem e às demais divindades que cuidam dos mortos. Podem permitir que outras pessoas retirem objetos desses lugares, mas não podem partilhar do espólio. Em um combate, seu primeiro ato deve ser gastar uma ação de movimento em oração, dedicando as mortes que vierem a ocorrer durante a batalha à sua deusa."
   },
+  { id: "Sonho",
+    name: "Sonho (Sandman)",
+    image: [
+      "/deuses/sonho.png"
+    ],
+    status: "crossover",
+    otherNames: "Devaneio, Morpheus, Kai’ckul, Oneiros, Neruite (entre os artonianos), e demais intermináveis apelidos.",
+    history: "O Lorde do Sonhar e Príncipe das Histórias tem muitas formas e nomes. É conhecido em praticamente todas as culturas, pois está presente como protetor do sono dos mortais. Mas aqueles que despertarem sua ira impiedosa, têm a certeza de encarar atrozes pesadelos. Sonho não rege apenas os devaneios, mas também seu aspecto oposto, a realidade. Algo bastante simbólico, pois demonstra o poder que narrativas têm de inspirar os povos e remodelar seus mundos.\nUm ser sombrio devotado ao seu papel, ele nutre pouca empatia por outros seres e demora milênios para perdoar ofensas, sendo conhecido por suas paixões trágicas com mulheres mortais. Os devotos de Sonho parecem resignados a cumprir seus deveres com a mesma obstinação de seu patrono, mas tal qual o próprio, parecem um tanto descolados dos demais seres do mundo desperto.\nEm Arton…\nNos reinos artonianos, Sonho é conhecido como Neruite em determinadas regiões, e é também representado como um aspecto feminino. É o perpétuo que mais se aproxima de ter templos convencionais, mas eles se assemelham a simples cabanas para viajantes desavisados, com um único leito: o verdadeiro templo está em um reino onírico e só pode ser acessado por quem dorme dentro da cabana.\nClérigos do Sonhar costumam ser bem recebidos por bardos, tratados como irmãos e acolhidos pelos templos de Tanna-Toh e Tenebra. Alguns de seus feitos heroicos são amplamente reconhecidos nas Repúblicas Livres de Sambúrdia onde, anos atrás, uma clériga teria ajudado a derrotar a ameaça da hedionda Torre dos Pesadelos. Se essa história é verdade, ou uma lenda local ninguém sabe, mas como os clérigos de Morpheus costumam dizer: é uma história, e como todas as histórias, ela tem sua importância.",
+    beliefs: "Preservar e proteger as histórias criadas pelos mortais. Defender as fronteiras entre o reino dos sonhos e a realidade.",
+    sacredSymbol: "Elmo em forma de máscara cerimonial.",
+    channelEnergy: "Qualquer.",
+    preferredWeapon: "Não há. Devotos deste deus não podem lançar a magia Arma Espiritual e similares.",
+    devotees: "Qareen, suragell, sílfides, sereias, trogs, arcanistas, bardos, inventores e nobres.",
+    grantedPowers: [
+      "Aparência Adaptável",
+      "Corvo do Sonhar",
+      "Fantasmas ou Quimeras"
+    ],
+    obligationsRestrictions: "Devotos do Sonhar só conseguem usar seus poderes concedidos durante a noite, ou se estiverem nas redondezas de um lugar onde mais de 1000 criaturas do mesmo tipo durmam e sonhem. Jamais podem despertar alguém que esteja dormindo nem permitir que o outro o faça."
+  },
+  { id: "Desejo",
+    name: "Desejo (Sandman)",
+    image: [
+      "/deuses/desejo.png"
+    ],
+    status: "crossover",
+    otherNames: "Epithumia.",
+    history: "Personificação daquilo que é capaz de intoxicar e sacudir a vontade de viver em cada criatura que existe, movendo o mundo: amor, paixão avassaladora e obsessão. Também rege a satisfação, e o domínio das próprias emoções. Um manipulador nato é também multiardilosa: Desejo transcende definições.\nNem sempre aparece como uma entidade vilanesca, mas costuma levar diversos seres ao desespero, domínio de sua irmã gêmea. Embora não tenham formas físicas semelhantes, parecem se complementar — como as faces de uma moeda.\nEm Arton…\nClérigos de Desejo costumam ser confundidos com devotos de Lena, Marah, Wynna, Valkaria, ou, até mesmo, Sszzaas. Em todos os casos, aqueles que lidam com esses sacerdotes costumam cometer o erro de subestimá-los, pois não têm uma compreensão plena de como seus poderes funcionam, e manipulam quem está ao seu redor. Como são hedonistas desavergonhados, não têm escrúpulos em tirar proveito desse tipo de situação.",
+    beliefs: "Ajudar os mortais a fazer a ponte entre seus anseios e a satisfação. Entender melhor as emoções alheias (e como manipulá-las). Mas mais importante: colocar aquilo que você deseja acima de todo o resto.",
+    sacredSymbol: "Coração de vidro.",
+    channelEnergy: "Negativa.",
+    preferredWeapon: "Arco longo.",
+    devotees: "Qareen, hynne, sílfides, surragell, elfos, arcanistas, bardos, ladinos, bucaneiros, caçadores, nobres.",
+    grantedPowers: [
+      "Aparência Adaptável",
+      "Flecha Cúpida",
+      "Mestre de Si"
+    ],
+    obligationsRestrictions: "Quem venera Desejo precisa cativar alguém a cada dia (ou por sessão de jogo, o que for mais longo). Isso significa avançar a categoria de atitude de determinada criatura de indiferente ou pior para prestativa. Opcionalmente, pode ajudar uma criatura na mesma tarefa: o alvo precisa ter sua categoria elevada até prestativa em relação a uma outra criatura. Se um devoto de Desejo for manipulado por alguém (falhar em um teste de Vontade) perde seus poderes concedidos até o fim da cena."
+  },
+  { id: "Desespero",
+    name: "Desespero (Sandman)",
+    image: [
+      "/deuses/desespero.png"
+    ],
+    status: "crossover",
+    otherNames: "Aponoia, A gêmea (entre clérigos de Desejo).",
+    history: "Há uma força que se segue a todo destino inevitável, morte fatídica, pesadelo, cataclisma, coração partido ou ilusão perdida: a agonia daqueles que não têm mais dentro de si qualquer gota de esperança. Desespero representa a dor que paralisa e arrasta tudo para a inércia, com a intensidade de uma colossal estrela morta.\nSegundo as lendas, foi a primeira e única entre os perpétuos a ter seu aspecto destruído. Voltou em uma nova forma, tão decadente e maldosa quanto antes. Enquanto houver sofrimento no universo, ela viverá.\nEm Arton…\nAssociados com devotos de Aharadak, Tenebra, Kallyadranoch, Sszzaas e outros deuses considerados malignos no Reinado, clérigos de Desespero costumam manter um perfil discreto, nunca se dispondo a confirmar ou negar a divindade que veneram. Alguns até mesmo se fazem passar por arcanistas.\nA exceção é quando têm a chance de desafiar clérigos de outro deus, especialmente dos demais perpétuos. Algo que não costumam resistir. Afinal, é um dos poucos prazeres em sua vida.",
+    beliefs: "Derivar alegria observando a dor alheia. Desafiar devotos de outras divindades a tentar ajudar os outros, sabendo que isto é em vão.",
+    sacredSymbol: "Gancho ensanguentado.",
+    channelEnergy: "Negativa.",
+    preferredWeapon: "Foice.",
+    devotees: "Lefou, suragell, golens, osteons, arcanistas, druidas, caçadores, ladinos e nobres.",
+    grantedPowers: [
+      "Detectar Desesperança",
+      "Drenar Delusão",
+      "Espelhos Distantes"
+    ],
+    obligationsRestrictions: "Por causa de sua personalidade fatalista e mau humor constante, os devotos de Desespero estão sempre sob efeito da condição lento. Essa condição não pode ser removida por meios mundanos ou mágicos, a menos que o devoto abandone sua fé. Além disso, uma vez por sessão, precisam causar algum tipo de condição negativa a outra criatura ou também ficam alquebrados durante a sessão seguinte."
+  },
+
+  //#endregion
+  
+  
   { id: "Glórienn",
     name: "Glórienn",
     subtitle: "Deusa dos Elfos",

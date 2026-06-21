@@ -91,13 +91,37 @@ const ImprovementTable = ({ allImprovements }: { allImprovements: Improvement[] 
   return (
     <div className="space-y-6">
        
-      <div className="mb-8 p-6 rounded-xl bg-[#e8dac1] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] font-serif">
+      {/* Filtros e Busca agrupados num Card */}
+      <div className="mb-8 p-6 rounded-xl bg-[#e8dac1] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] font-serif w-full">
         <label className="block text-sm font-bold text-amber-950/70 mb-4 uppercase tracking-widest">
             Filtros e Busca
         </label>
         
         <div className="flex flex-col gap-6">
-            <div className="p-4 bg-[#e8dac1]/50 rounded-xl border border-amber-900/20 shadow-sm">
+            
+            <div className="relative">
+                <input type="text"
+                    placeholder="Buscar melhoria por nome, efeito ou descrição..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full px-5 py-3 pr-12 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-lg text-amber-950/85 placeholder-amber-900/40 focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
+                />
+                {searchTerm ? (
+                  <button 
+                    onClick={() => setSearchTerm("")}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 text-red-800 font-bold hover:scale-110 transition-transform text-lg"
+                    title="Limpar busca"
+                  >
+                    ✕
+                  </button>
+                ) : (
+                  <div className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/40 text-lg">
+                      🔍
+                  </div>
+                )}
+            </div>
+
+            <div className="pt-2">
                 <h4 className="text-xs font-bold text-red-800 uppercase tracking-widest mb-3">Filtrar por Categoria de Item</h4>
                 <div className="flex flex-wrap gap-2">
                 <button
@@ -126,27 +150,6 @@ const ImprovementTable = ({ allImprovements }: { allImprovements: Improvement[] 
                 </div>
             </div>
 
-            <div className="relative">
-                <input type="text"
-                    placeholder="Buscar melhoria por nome, efeito ou descrição..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full px-5 py-3 pr-12 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-lg text-amber-950/85 placeholder-amber-900/40 focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
-                />
-                {searchTerm ? (
-                  <button 
-                    onClick={() => setSearchTerm("")}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 text-red-800 font-bold hover:scale-110 transition-transform text-lg"
-                    title="Limpar busca"
-                  >
-                    ✕
-                  </button>
-                ) : (
-                  <div className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/40 text-lg">
-                      🔍
-                  </div>
-                )}
-            </div>
         </div>
       </div>
 
@@ -154,10 +157,10 @@ const ImprovementTable = ({ allImprovements }: { allImprovements: Improvement[] 
         <table className="min-w-full divide-y-2 divide-amber-900/20 table-fixed">
           <thead className="bg-[#d9c8a9] text-amber-950/80 font-serif">
             <tr>
-              <th scope="col" className="w-[20%] px-4 py-4 text-left text-xs md:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">
+              <th scope="col" className="w-[25%] px-4 py-4 text-left text-xs md:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">
                   Melhoria & Categorias
               </th>
-              <th scope="col" className="w-[80%] px-4 py-4 text-left text-xs md:text-sm font-bold uppercase tracking-widest">
+              <th scope="col" className="w-[75%] px-4 py-4 text-left text-xs md:text-sm font-bold uppercase tracking-widest">
                   Efeito & Descrição Detalhada
               </th>
             </tr>
@@ -165,27 +168,27 @@ const ImprovementTable = ({ allImprovements }: { allImprovements: Improvement[] 
           <tbody className="divide-y divide-amber-900/10 font-serif">
             {filteredImprovements.map((item, index) => (
               <tr key={item.id} className={`transition-colors hover:bg-[#e8dac1]/50 ${index % 2 === 0 ? "bg-[#fbf5e6]" : "bg-[#e8dac1]/30"}`}>
-                <td className="px-4 py-4 align-top border-r-2 border-amber-900/10">
-                  <div className="text-base md:text-lg font-bold text-amber-950 mb-2">
+                <td className="px-4 py-5 align-top border-r-2 border-amber-900/10">
+                  <div className="text-base md:text-lg font-bold text-red-800 mb-2">
                       {item.name}
                   </div>
-                  <div className="flex flex-wrap gap-1.5 mb-3">
+                  <div className="flex flex-wrap gap-1.5 mb-4">
                     {item.category.map((cat, i) => (
-                        <span key={i} className="text-[10px] md:text-xs px-2 py-0.5 rounded bg-amber-900/10 border border-amber-900/20 text-amber-950/80 font-bold">
+                        <span key={i} className="text-[10px] md:text-xs px-2 py-0.5 rounded bg-[#e8dac1]/50 border border-amber-900/20 text-amber-950/80 font-bold uppercase tracking-wider shadow-sm">
                             {cat}
                         </span>
                     ))}
                   </div>
-                  <div className="text-[9px] md:text-[10px] inline-block px-2 py-1 rounded bg-[#e8dac1]/50 border border-amber-900/20 text-amber-950/60 uppercase tracking-widest shadow-sm font-bold">
+                  <div className="text-[9px] md:text-[10px] inline-block px-2 py-1 rounded bg-[#e8dac1]/80 border border-amber-900/20 text-amber-950/60 uppercase tracking-widest shadow-sm font-bold">
                       {item.origin}
                   </div>
                 </td>
                 
-                <td className="px-4 py-4 align-top">
-                  <div className="text-sm md:text-base text-amber-950/90 font-bold italic mb-2 pb-2 border-b border-amber-900/10">
-                      Efeito: {item.effect}
+                <td className="px-4 py-5 align-top">
+                  <div className="text-sm md:text-base text-amber-950 font-bold italic mb-3 pb-3 border-b-2 border-amber-900/10">
+                      <span className="text-red-800 not-italic uppercase tracking-widest text-xs mr-2">Efeito:</span> {item.effect}
                   </div>
-                  <p className="text-sm md:text-base text-amber-950/80 whitespace-pre-line font-medium leading-relaxed">
+                  <p className="text-sm md:text-base text-amber-950/85 whitespace-pre-line font-medium leading-relaxed">
                       {item.description}
                   </p>
                 </td>
@@ -203,7 +206,7 @@ const ImprovementTable = ({ allImprovements }: { allImprovements: Improvement[] 
   );
 };
 
-// 3. Tabela de Preço Adicional de Materiais Especiais (Tabela 3-9) - TOTALMENTE REFEITA
+// 3. Tabela de Preço Adicional de Materiais Especiais (Tabela 3-9)
 const MaterialPriceTable = ({ allPrices }: { allPrices: MaterialPriceRow[] }) => {
   const [selectedItemCategory, setSelectedItemCategory] = useState<MaterialItemCategory | "Todos">("Todos");
   const [searchTerm, setSearchTerm] = useState("");
@@ -241,13 +244,36 @@ const MaterialPriceTable = ({ allPrices }: { allPrices: MaterialPriceRow[] }) =>
     <div className="space-y-6">
       
       {/* Filtros e Busca agrupados num Card */}
-      <div className="mb-8 p-6 rounded-xl bg-[#e8dac1] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] font-serif">
+      <div className="mb-8 p-6 rounded-xl bg-[#e8dac1] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] font-serif w-full">
         <label className="block text-sm font-bold text-amber-950/70 mb-4 uppercase tracking-widest">
             Filtros e Busca
         </label>
         
         <div className="flex flex-col gap-6">
-            <div className="p-4 bg-[#e8dac1]/50 rounded-xl border border-amber-900/20 shadow-sm">
+            
+            <div className="relative">
+                <input type="text"
+                    placeholder="Buscar material por nome ou descrição..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full px-5 py-3 pr-12 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-lg text-amber-950/85 placeholder-amber-900/40 focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
+                />
+                {searchTerm ? (
+                  <button 
+                    onClick={() => setSearchTerm("")}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 text-red-800 font-bold hover:scale-110 transition-transform text-lg"
+                    title="Limpar busca"
+                  >
+                    ✕
+                  </button>
+                ) : (
+                  <div className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/40 text-lg">
+                      🔍
+                  </div>
+                )}
+            </div>
+
+            <div className="pt-2">
                 <h4 className="text-xs font-bold text-red-800 uppercase tracking-widest mb-3">Filtrar por Categoria de Item</h4>
                 <div className="flex flex-wrap gap-2">
                 <button
@@ -276,27 +302,6 @@ const MaterialPriceTable = ({ allPrices }: { allPrices: MaterialPriceRow[] }) =>
                 </div>
             </div>
 
-            <div className="relative">
-                <input type="text"
-                    placeholder="Buscar material por nome ou descrição..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full px-5 py-3 pr-12 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-lg text-amber-950/85 placeholder-amber-900/40 focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
-                />
-                {searchTerm ? (
-                  <button 
-                    onClick={() => setSearchTerm("")}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 text-red-800 font-bold hover:scale-110 transition-transform text-lg"
-                    title="Limpar busca"
-                  >
-                    ✕
-                  </button>
-                ) : (
-                  <div className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/40 text-lg">
-                      🔍
-                  </div>
-                )}
-            </div>
         </div>
       </div>
 
@@ -308,11 +313,10 @@ const MaterialPriceTable = ({ allPrices }: { allPrices: MaterialPriceRow[] }) =>
           </caption>
           <thead className="bg-[#d9c8a9] text-amber-950/80 font-serif">
             <tr>
-              {/* O tamanho da coluna principal foi ajustado para manter a proporção correta */}
-              <th scope="col" className="w-[60%] lg:w-[70%] px-4 py-3 text-left text-xs md:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">
+              <th scope="col" className="w-[60%] lg:w-[70%] px-4 py-4 text-left text-xs md:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">
                 Material & Propriedades
               </th>
-              <th scope="col" className="w-[40%] lg:w-[30%] px-4 py-3 text-left md:text-center text-xs md:text-sm font-bold uppercase tracking-widest">
+              <th scope="col" className="w-[40%] lg:w-[30%] px-4 py-4 text-left md:text-center text-xs md:text-sm font-bold uppercase tracking-widest">
                 {selectedItemCategory === "Todos" ? "Custos Adicionais" : `Custo Adicional`}
               </th>
             </tr>
@@ -322,7 +326,7 @@ const MaterialPriceTable = ({ allPrices }: { allPrices: MaterialPriceRow[] }) =>
               <tr key={priceRow.material} className={`transition-colors hover:bg-[#e8dac1]/50 ${index % 2 === 0 ? "bg-[#fbf5e6]" : "bg-[#e8dac1]/30"}`}>
                 
                 {/* Coluna 1: Nome, Descrição e Efeitos Específicos */}
-                <td className="px-4 py-4 align-top border-r-2 border-amber-900/10">
+                <td className="px-4 py-5 align-top border-r-2 border-amber-900/10">
                   <div className="flex flex-col items-start gap-2 mb-3">
                     <span className="text-lg md:text-xl font-bold text-amber-950">
                         {priceRow.material}
@@ -369,7 +373,6 @@ const MaterialPriceTable = ({ allPrices }: { allPrices: MaterialPriceRow[] }) =>
                   <div className="flex flex-col gap-3">
                     {columnsToShow.map(category => {
                       const currentPrice = priceRow[category as keyof MaterialPriceRow];
-                      // Se por acaso um material não tiver preço para a categoria, podemos ignorar, mas assumindo que tem:
                       if (!currentPrice || currentPrice === "-") return null;
 
                       return (
@@ -405,6 +408,7 @@ const MaterialPriceTable = ({ allPrices }: { allPrices: MaterialPriceRow[] }) =>
 
 export default function SuperiorItemsPage() {
   const [isIntroOpen, setIsIntroOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState<'melhorias' | 'materiais'>('melhorias'); // Estado das Abas
 
   return (
     <div className="min-h-screen bg-[#f5e6d0] text-amber-950 font-serif selection:bg-amber-800 selection:text-amber-50 relative overflow-x-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#f5e6d0] to-[#e6d5b8]">
@@ -429,7 +433,7 @@ export default function SuperiorItemsPage() {
                   Equipamentos
                 </Link>
                 <span className="text-amber-900/40">/</span>
-                <span className="text-red-800">Itens Superiores</span>
+                <span className="text-red-800 whitespace-nowrap">Itens Superiores</span>
             </div>
         </div>
       </header>
@@ -496,32 +500,228 @@ export default function SuperiorItemsPage() {
                 <p className="font-medium">É possível adicionar melhorias a um item. Você paga a diferença de acordo com o novo número de melhorias. Por exemplo, para adicionar a terceira melhoria a um item que já possui duas, você precisa pagar mais T$ 2.000 (um terço da diferença de três para duas melhorias). Além disso, deve fazer um teste de Ofício contra a CD do número de melhorias que o item passará a ter e, se falhar por 5 ou mais, estraga o item.</p>
               </section>
 
+              {/* Seção 6: Recursos Naturais */}
+              <section className="border-t-2 border-amber-900/20 pt-8">
+                <h2 className="text-2xl md:text-3xl font-bold text-red-800 mb-4 tracking-wide">Recursos Naturais</h2>
+                <p className="mb-4">
+                  Certas criaturas, como dragões, elementais e monstros peçonhentos, fornecem recursos específicos como parte de seus tesouros. Entretanto, existem outros materiais de grande utilidade que podem ser extraídos de ameaças. Esta seção apresenta regras opcionais para mestres que desejam usar esse tipo de tesouro em suas aventuras.
+                </p>
+                <p className="mb-4">
+                  Recursos naturais podem ser incluídos em qualquer criatura que já não possua um recurso especial, e podem complementar seu tesouro normal ou substituí-lo (a critério do mestre). Para usar um desses recursos, escolha um tipo apropriado à criatura em questão. Alternativamente, você pode rolar na linha referente ao tipo da criatura na Tabela 3-5: Recursos Naturais. A quantidade de recursos fornecida depende do tamanho da criatura; criaturas Pequenas e Médias fornecem 1 unidade do recurso, criaturas Grandes e Enormes fornecem 2 unidades e criaturas Colossais fornecem 5 unidades. Criaturas Minúsculas são muito pequenas para produzir recursos. Embora seja possível extrair recursos de criaturas inteligentes, isso pode ser considerado um tabu, um crime ou simplesmente um ato hediondo, dependendo de onde os aventureiros estiverem.
+                </p>
+                <p className="mb-8">
+                  Recursos naturais são extraídos como recursos especiais; exigem uma hora de trabalho e um sucesso em um teste de Sobrevivência ou de um Ofício relacionado ao recurso, com CD 15 + ND da criatura. Em caso de falha, os recursos são estragados.
+                </p>
+
+                {/* Tabela 3-5: Recursos Naturais */}
+                <div className="mb-8 shadow-sm rounded-xl border-2 border-amber-900/20 overflow-x-auto bg-[#e8dac1]">
+                  <table className="w-full min-w-max divide-y-2 divide-amber-900/20">
+                    <thead className="bg-[#d9c8a9] text-amber-950/80">
+                      <tr>
+                        <th colSpan={8} className="px-6 py-4 text-center text-lg font-bold uppercase tracking-widest border-b-2 border-amber-900/20 text-red-800">
+                          Tabela 3-5: Recursos Naturais
+                        </th>
+                      </tr>
+                      <tr>
+                        <th scope="col" className="px-4 py-3 text-center text-xs sm:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">Tipo de Criatura (1d6)</th>
+                        <th scope="col" className="px-4 py-3 text-center text-xs sm:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">Carapaça</th>
+                        <th scope="col" className="px-4 py-3 text-center text-xs sm:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">Couro</th>
+                        <th scope="col" className="px-4 py-3 text-center text-xs sm:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">Fonte</th>
+                        <th scope="col" className="px-4 py-3 text-center text-xs sm:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">Ingrediente</th>
+                        <th scope="col" className="px-4 py-3 text-center text-xs sm:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">Mantimento</th>
+                        <th scope="col" className="px-4 py-3 text-center text-xs sm:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">Osso</th>
+                        <th scope="col" className="px-4 py-3 text-center text-xs sm:text-sm font-bold uppercase tracking-widest">Sucata</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-amber-900/10 bg-[#fbf5e6] text-center font-medium">
+                      <tr className="transition-colors hover:bg-[#e8dac1]/50 bg-[#fbf5e6]">
+                        <td className="px-4 py-3 font-bold border-r-2 border-amber-900/10 text-amber-950 text-left">Animal</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">1</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">2-3</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">—</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">—</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">4-5</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">6</td>
+                        <td className="px-4 py-3 text-amber-950/85">—</td>
+                      </tr>
+                      <tr className="transition-colors hover:bg-[#e8dac1]/50 bg-[#e8dac1]/30">
+                        <td className="px-4 py-3 font-bold border-r-2 border-amber-900/10 text-amber-950 text-left">Construto</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">1-2</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">—</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">3</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">—</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">—</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">—</td>
+                        <td className="px-4 py-3 text-amber-950/85">6</td>
+                      </tr>
+                      <tr className="transition-colors hover:bg-[#e8dac1]/50 bg-[#fbf5e6]">
+                        <td className="px-4 py-3 font-bold border-r-2 border-amber-900/10 text-amber-950 text-left">Espírito*</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">—</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">—</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">1-3</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">4-6</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">—</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">—</td>
+                        <td className="px-4 py-3 text-amber-950/85">—</td>
+                      </tr>
+                      <tr className="transition-colors hover:bg-[#e8dac1]/50 bg-[#e8dac1]/30">
+                        <td className="px-4 py-3 font-bold border-r-2 border-amber-900/10 text-amber-950 text-left">Humanoide</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">1</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">2</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">3</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">—</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">4</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">5-6</td>
+                        <td className="px-4 py-3 text-amber-950/85">—</td>
+                      </tr>
+                      <tr className="transition-colors hover:bg-[#e8dac1]/50 bg-[#fbf5e6]">
+                        <td className="px-4 py-3 font-bold border-r-2 border-amber-900/10 text-amber-950 text-left">Monstro</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">1</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">2</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">3</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">4</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">5</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">6</td>
+                        <td className="px-4 py-3 text-amber-950/85">—</td>
+                      </tr>
+                      <tr className="transition-colors hover:bg-[#e8dac1]/50 bg-[#e8dac1]/30">
+                        <td className="px-4 py-3 font-bold border-r-2 border-amber-900/10 text-amber-950 text-left">Morto-vivo</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">1</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">—</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">2-3</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">—</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">—</td>
+                        <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">4-6</td>
+                        <td className="px-4 py-3 text-amber-950/85">—</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div className="bg-[#d9c8a9] p-3 text-xs md:text-sm text-right text-amber-950 font-bold border-t-2 border-amber-900/20">
+                    * Use essa linha para criaturas Incorpóreas de qualquer tipo.
+                  </div>
+                </div>
+
+                <h3 className="text-xl md:text-2xl font-bold text-red-800 uppercase tracking-wide mb-3">Tipos de Recursos</h3>
+                <p className="mb-4">
+                  A variedade de recursos existentes em Arton é tão vasta quanto sua fauna. A seguir são descritos os mais comuns, mas você pode expandir esta lista conforme adequado à sua campanha. Use os recursos descritos aqui e nas fichas de ameaças como base para suas ideias.
+                </p>
+                <p className="mb-8">
+                  A descrição de cada recurso indica seus usos. Para recursos que podem ser empregados como matéria-prima, seu valor, bem como o grau de qualidade dos itens que podem ser fabricados com ele, depende do patamar da ameaça da qual foi extraído.
+                </p>
+
+                {/* Tabela 3-6: Tipos de Recursos Naturais */}
+                <div className="mb-8 max-w-3xl mx-auto shadow-sm rounded-xl border-2 border-amber-900/20 overflow-hidden bg-[#e8dac1]">
+                  <table className="w-full divide-y-2 divide-amber-900/20">
+                    <thead className="bg-[#d9c8a9] text-amber-950/80">
+                      <tr>
+                        <th colSpan={2} className="px-6 py-4 text-center text-lg font-bold uppercase tracking-widest border-b-2 border-amber-900/20 text-red-800">
+                          Tabela 3-6: Tipos de Recursos Naturais
+                        </th>
+                      </tr>
+                      <tr>
+                        <th scope="col" className="px-6 py-3 text-left text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">Patamar da Ameaça</th>
+                        <th scope="col" className="px-6 py-3 text-left pl-8 text-sm font-bold uppercase tracking-widest">Valor/Qualidade</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-amber-900/10 bg-[#fbf5e6] text-left font-medium">
+                      <tr className="transition-colors hover:bg-[#e8dac1]/50 bg-[#fbf5e6]">
+                        <td className="px-6 py-3 font-bold border-r-2 border-amber-900/10 text-amber-950">Iniciante</td>
+                        <td className="px-6 py-3 pl-8 text-amber-950/85">T$ 20 para itens normais</td>
+                      </tr>
+                      <tr className="transition-colors hover:bg-[#e8dac1]/50 bg-[#e8dac1]/30">
+                        <td className="px-6 py-3 font-bold border-r-2 border-amber-900/10 text-amber-950">Veterano</td>
+                        <td className="px-6 py-3 pl-8 text-amber-950/85">T$ 100 para itens superiores</td>
+                      </tr>
+                      <tr className="transition-colors hover:bg-[#e8dac1]/50 bg-[#fbf5e6]">
+                        <td className="px-6 py-3 font-bold border-r-2 border-amber-900/10 text-amber-950">Campeão</td>
+                        <td className="px-6 py-3 pl-8 text-amber-950/85">T$ 500 para itens mágicos</td>
+                      </tr>
+                      <tr className="transition-colors hover:bg-[#e8dac1]/50 bg-[#e8dac1]/30">
+                        <td className="px-6 py-3 font-bold border-r-2 border-amber-900/10 text-amber-950">Lenda</td>
+                        <td className="px-6 py-3 pl-8 text-amber-950/85">T$ 2.500 para itens mágicos</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <span className="text-[10px] text-red-800/60 mt-2">◆</span>
+                    <span><strong className="font-bold text-red-800">Carapaça.</strong> Diversos tipos de carapaças servem como matéria-prima para couraças, lorigas segmentadas, meias armaduras, armaduras completas e escudos pesados. Esses itens contam como itens naturais para devotos de Allihanna, mas são mais frágeis que metal; cada vez que você sofre um acerto crítico, há 10% (1 em 1d10) de chance de que o item seja destruído. Um item mágico ou feito inteiramente de peças de uma criatura lenda não sofre esse efeito.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[10px] text-red-800/60 mt-2">◆</span>
+                    <span><strong className="font-bold text-red-800">Couro.</strong> Serve como matéria-prima para armaduras acolchoadas, armaduras de couro, gibões de peles e escudos leves. Ao fabricar uma versão mágica desses itens, você pode gastar 10 peças de couro de lendas para reduzir o custo do item em –1 PM.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[10px] text-red-800/60 mt-2">◆</span>
+                    <span><strong className="font-bold text-red-800">Fonte.</strong> Das penas de uma fênix às presas de um vampiro, várias criaturas carregam uma fagulha mística que pode ser usada como matéria-prima de itens esotéricos. Além disso, ao fabricar um acessório mágico, você pode gastar 10 fontes de lendas para reduzir o custo do item em –1 PM.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[10px] text-red-800/60 mt-2">◆</span>
+                    <span><strong className="font-bold text-red-800">Ingrediente.</strong> Diversas criaturas produzem substâncias que podem ser empregadas como ingredientes para itens alquímicos e poções mágicas, independente de seu patamar.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[10px] text-red-800/60 mt-2">◆</span>
+                    <span><strong className="font-bold text-red-800">Mantimento.</strong> Carne, leite, ovos e outros materiais podem ser usados como alimentos. Cada porção alimenta quatro pessoas; mantimentos de uma criatura iniciante contam como uma refeição comum, de uma criatura veterana ou campeã contam como um prato especial (determinado pelo mestre) e de uma criatura lenda contam como dois pratos especiais (com efeitos cumulativos).</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[10px] text-red-800/60 mt-2">◆</span>
+                    <span><strong className="font-bold text-red-800">Osso.</strong> Ossos das mais variadas partes de criaturas servem como matéria-prima de armas. Peças de patamar veterano também podem ser usadas nas melhorias espinhoso ou macabro. Além disso, ao fabricar uma maça do terror ou um item tumular ou assustador, você pode pode gastar 10 peças de osso de lendas para reduzir o custo do item em –1 PM.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[10px] text-red-800/60 mt-2">◆</span>
+                    <span><strong className="font-bold text-red-800">Sucata.</strong> Partes de golens e outras criaturas artificiais servem como matéria-prima de engenhocas e itens de metal. Além disso, quando fabrica uma engenhoca, você pode gastar uma peça de sucata para receber um bônus no teste de Ofício (cumulativo com bônus de outros itens), conforme o patamar da criatura: veterano, +2; campeão, +5; lenda, +10.</span>
+                  </li>
+                </ul>
+              </section>
+
             </div>
           </div>
         </div>
 
-        {/* Tabela de Melhorias */}
-        <section className="mb-16 w-full">
-            <h2 className="text-3xl font-bold text-red-800 mb-6 flex items-center gap-3 tracking-wide">
-                <span className="text-red-800 text-3xl">❖</span> Acervo de Melhorias
-            </h2>
-            <ImprovementTable allImprovements={improvements} />
-        </section>
+        {/* Sistema de Abas */}
+        <div className="flex flex-wrap gap-2 mb-8 bg-[#e8dac1] p-2 rounded-xl border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] w-fit">
+            <button 
+                onClick={() => setActiveTab('melhorias')} 
+                className={`px-6 py-2.5 rounded-lg font-bold uppercase text-[10px] md:text-xs tracking-widest transition-all ${activeTab === 'melhorias' ? 'bg-red-800 text-[#fbf5e6] shadow-md' : 'text-amber-950/70 hover:text-red-800 hover:bg-[#e8dac1]/50'}`}
+            >
+                Acervo de Melhorias
+            </button>
+            <button 
+                onClick={() => setActiveTab('materiais')} 
+                className={`px-6 py-2.5 rounded-lg font-bold uppercase text-[10px] md:text-xs tracking-widest transition-all ${activeTab === 'materiais' ? 'bg-red-800 text-[#fbf5e6] shadow-md' : 'text-amber-950/70 hover:text-red-800 hover:bg-[#e8dac1]/50'}`}
+            >
+                Materiais Especiais
+            </button>
+        </div>
 
-        {/* Tabela de Materiais Especiais */}
-        <section className="w-full">
-            <h2 className="text-3xl font-bold text-red-800 mb-6 flex items-center gap-3 tracking-wide pt-8 border-t-2 border-amber-900/20">
-                <span className="text-red-800 text-3xl">❖</span> Acervo de Materiais Especiais
-            </h2>
-            <MaterialPriceTable allPrices={materialPrices} />
-        </section>
+        {/* Tabela de Melhorias (ABA) */}
+        {activeTab === 'melhorias' && (
+          <section className="animate-in fade-in duration-500 w-full mb-16">
+              <h2 className="text-2xl sm:text-3xl font-bold text-red-800 mb-6 flex items-center gap-3 tracking-wide border-b-2 border-amber-900/10 pb-2 font-serif">
+                  <span className="text-red-800 text-3xl">❖</span> Acervo de Melhorias
+              </h2>
+              <ImprovementTable allImprovements={improvements} />
+          </section>
+        )}
+
+        {/* Tabela de Materiais Especiais (ABA) */}
+        {activeTab === 'materiais' && (
+          <section className="animate-in fade-in duration-500 w-full mb-16">
+              <h2 className="text-2xl sm:text-3xl font-bold text-red-800 mb-6 flex items-center gap-3 tracking-wide border-b-2 border-amber-900/10 pb-2 font-serif">
+                  <span className="text-red-800 text-3xl">❖</span> Acervo de Materiais Especiais
+              </h2>
+              <MaterialPriceTable allPrices={materialPrices} />
+          </section>
+        )}
       </main>
 
       {/* Footer */}
       <footer className="relative z-10 mt-20 p-8 border-t-4 border-double border-amber-900/40 bg-[#2a1810] text-center font-serif shadow-[0_-4px_20px_rgba(0,0,0,0.15)] flex flex-col items-center justify-center">
         <span className="text-red-900/40 text-2xl mb-3">❖</span>
         <p className="mb-2 text-[#e8dac1]/60 text-sm md:text-base tracking-widest uppercase font-bold">
-          Compêndio Tormenta RPG © 2025 • Feito por um fã para fãs
+          Compêndio Tormenta RPG © 2026 • Feito por um fã para fãs
         </p>
         <p className="text-[#e8dac1]/40 text-xs md:text-sm tracking-wide">
           Tormenta 20 pertence a Jambo Editora. Todos os direitos são reservados a editora.

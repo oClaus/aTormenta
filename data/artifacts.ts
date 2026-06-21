@@ -2,15 +2,17 @@ import { Artifact } from "@/types/artifact";
 //#region Tormenta20 - Jogo do Ano
 //#endregion
 export const artifacts: Artifact[] = [
-  // Duelo de Dragões
+
+  //#region Duelo de Dragões
   { id: "Pentalépide de Kryzzaorin",
     name: "Pentalépide de Kryzzaorin",
     description: "Kryzzaorin foi um poderoso sumo-sacerdote de Kallyadranoch. Nascido em uma tribo humana das Montanhas Sanguinárias, Kryzzaorin e seu povo veneravam o Deus dos Dragões e suas crias. A cada lua cheia, em um grande ritual, tributos eram oferecidos a Kallyadranoch. Se havia valor em algo, deveria ser entregue no altar ensanguentado. Este valor não precisava ser monetário. As armas favoritas de um guerreiro, os olhos de um vigia, a honra de um paladino: tudo isso servia, fosse a vontade de seus donos ou não.\nAinda mais fanático que seus pares, Kryzzaorin dedicou sua vida a oferecer aquilo que conhecia de mais valioso a Kallyadranoch: os dragões artonianos. Sua ousadia lhe rendeu muitas riquezas e seu nome se espalhou pelas Sanguinárias. Até mesmo os dragões tremiam ao ouvir o nome do implacável caçador. Sua dedicação e ferocidade fizeram com que fosse finalmente reconhecido como o sumo-sacerdote de Kallyadranoch. Como símbolo de seu fervor, recebeu esse artefato do próprio Deus dos Dragões.\nDepois de anos de um reino de terror, Kryzzaorin se arriscou demais. Enfrentou uma horda de dragões ao mesmo tempo e não esperava que as criaturas se unissem contra ele. Mesmo com as dádivas de seu deus, mesmo com a ajuda do artefato recebido de suas garras, mesmo com os seus anos de experiência… Kryzzaorin ainda era humano. E, como um humano, morreu.\nO Deus dos Dragões entendeu muito cedo como seu sumo-sacerdote representava bem seus ideais, mas também considerava sua matança constante de dragões algo que beirava o sacrilégio. Enquanto o humano vencia, provava que seus filhos estavam errados, fracos demais, vulneráveis demais. Mas a partir do momento que perdeu, Kryzzaorin deixou de ser importante. Superado, se tornou só mais um caçador de dragões. E, como tal, deveria ser punido por seus crimes.\nA alma de Kryzzaorin foi aprisionada na estatueta, agora conhecida como o Pentalépide de Kryzzaorin. O antigo sumo-sacerdote não consegue exercer sua influência, projetar sua voz ou mesmo reconhecer o mundo ao seu redor. Depois de tantos séculos aprisionado, perdeu sua identidade. Hoje é apenas uma força mágica presa dentro do artefato.\nO Pentalépide de Kryzzaorin é uma estatueta que pode ser empunhada como um item esotérico. Ela fornece resistência a dragões +2 e +2 na Defesa e na CD de magias arcanas. Se o portador for um humanoide e derramar sangue de dragão sobre o item, os bônus concedidos pelo Pentalépide são aumentados para +5 por um dia e seu limite de PM para magias arcanas aumenta em +5 pelo mesmo tempo. Por outro lado, se o portador for um dragão e derramar seu próprio sangue sobre a estatueta, além dos benefícios normais do item, ele recebe também as habilidades de um dragão de uma categoria de idade acima da sua. ",
     origin: "Duelo de Dragões",
     image: "/artefatos/Kryzzaorin.png",
   },
+  //#endregion
 
-  // Dragão Brasil
+  //#region Dragão Brasil
   { id: "Bastão Mágico",
     name: "Bastão Mágico",
     description: "O pilar utilizado como bastão por Sun Wukong é um bordão atroz pungente magnífico. Como uma ação livre, seu usuário pode mudar seu tamanho, desde pequeno o bastante para ser indetectável quanto grande o bastante para atingir oponentes em alcance longo. Na prática, isso permite fazer ataques corpo a corpo em alcance longo e sacar o bastão com uma ação livre. Uma vítima atingida duas vezes pelo bastão na mesma rodada fica atordoada por uma rodada (Fort CD For evita). Uma vítima atordoada pelo Bastão Mágico não pode ser atordoada novamente por ele na mesma cena.",
@@ -20,6 +22,57 @@ export const artifacts: Artifact[] = [
     name: "Nuvem Voadora",
     description: "A Nuvem Voadora concede deslocamento de voo 24m para seu usuário, com possibilidade de carregar um passageiro Grande ou menor. Uma vez por cena, o usuário pode lançar Teleporte. Mesmo quando não está com seu dono, a nuvem pode ser invocada com um grito, chegando imediatamente para atender seus pedidos.",
     origin: "Dragão Brasil",
+  },
+  // Dragão Brasil - 183
+  { id: "elmo-de-morpheus",
+    name: "Elmo de Morpheus",
+    description: "Este elmo completamente fechado lembra uma estranha máscara cerimonial. Foi forjado a partir do crânio e ossos de um deus morto, ele tem visores que parecem dois grandes olhos negros e uma espinha óssea se projetando para fora como um bico. Você recebe +5 PV, +5 PM, +1 na Defesa, +1 em testes de perícia e +5 em testes Diplomacia com criaturas do tipo espírito. Além disso, você pode lançar a magia Sonho sem gastar PMs (atributo-chave Carisma). Os efeitos do elmo só se ativam após um dia de uso.\nClérigos ou paladinos de Sonho equipados com o elmo podem usar seus poderes concedidos mesmo durante o dia, e quando estão adjacentes ao objeto, sempre descansam como se estivessem em uma estalagem luxuosa.",
+    origin: "Dragão Brasil - 183"
+  },
+  { id: "algibeira-das-areias",
+    name: "Algibeira das Areias",
+    description: "Este simples e diminuto saco de couro é fechado por um fio encantado. Pouquíssimas pessoas, além do próprio criador do artefato, conseguem desfazer o nó intrincado que protege seu conteúdo. Desatar o nó requer um 20 natural em um teste de Conhecimento, Intuição ou Ofício (artesanato). Falhar torna você incapaz de passar no teste durante um mês. É também possível cortar o nó para abrir a algibeira, ou furar o tecido, embora isso não seja uma tarefa fácil aos mortais! (Def 20, RD 20, PV 50) Uma vez aberta, a essência onírica depositada dentro da algibeira passa a se conectar ao seu portador, que recebe +5 PV, +5 PM e +1 em testes de perícia, enquanto tiver o objeto consigo.\nCom uma ação padrão é possível jogar areia sobre os olhos ou face de uma criatura em alcance curto, que cai inconsciente pelas próximas 1d12 horas (Vontade CD 30 evita, este é um efeito de cansaço). Enquanto dorme, ela tem os melhores sonhos possíveis, vendo aquilo que mais deseja, porém o sono é agitado, e não recupera PV ou PM. Se a criatura passar no teste, fica em um transe sublime pelo mesmo período de tempo. Nessa condição, ela recebe +4 em testes de Vontade e –4 em testes baseados em Destreza e Sabedoria e não pode realizar qualquer ação que exija concentração (como lançar magias ou usar a perícia Furtividade).\nSe a algibeira permanece em alcance curto de alguém que tenha sofrido seus efeitos, essa criatura precisa fazer um novo teste de Vontade para parar de usar a areia sobre si. A cada semana, ela repete o teste com uma penalidade cumulativa de –2. Se falhar, ela continua usando a areia sem si, e se torna hostil contra quem tenta afastá-la do artefato. A partir da quarta semana, a saúde e ligação de quem utiliza as areias mágicas começa a se deteriorar: a criatura se torna fraca de maneira permanente e irreversível. Na quinta semana, ela se torna debilitada e, na sétima, morre.\nVocê pode soprar a areia da algibeira como uma ação de movimento, para revelar a localização exata dos seus artefatos irmãos (Elmo de Morpheus e Joia de Dee), desde que estes se encontrem em alcance longo. Essa ação também pode ser utilizada para detectar a presença de criaturas do tipo espírito, como o efeito básico da magia Detectar ameaça.",
+    origin: "Dragão Brasil - 183"
+  },
+  { id: "rubi-de-dee",
+    name: "Rubi de Dee",
+    description: "Uma das lendárias “gemas dos sonhos”, este artefato contém poder onírico dentro de si, mas foi roubado e corrompido por um feiticeiro; outros dizem que foi por Dee, o infame sumo-sacerdote do caos… mas só os deuses sabem a verdade! Tentar alterar essa joia para que ela reconfigure-se à energia de quem pretende usá-la requer um teste de Misticismo ou Ladinagem (CD 30). Se falhar, a criatura perde 100 pontos de vida. Uma vez reconfigurado, o rubi passa a obedecer o novo dono, mas outras criaturas precisarão repetir o mesmo teste se quiserem se apossar dele. Enquanto alguém portar o rubi, receberá +5 PVs, +5 PMs e +1 em todas as perícias.\nO artefato projeta uma aura invisível em alcance longo que impede as criaturas na área de mentirem. Alguns afirmam que alguém capaz de desvendar os segredos da joia poderia estender essa área mágica ao mundo todo, mas esse ritual se perdeu no tempo.\nA habilidade, porém, não elimina apenas a mentira, mas também a capacidade de produzir ficção… e de sonhar! Isso tem um efeito terrível sobre a mente dos mortais, que revelam seu lado mais animalesco, já que não há nada para contrapor ou atenuar, levando a uma espiral crescente de morte e caos. A cada quatro horas sob influência do rubi, uma criatura precisa fazer um teste de Vontade (CD 30) ou sua atitude em relação a outras criaturas com as quais tenha convivido durante esse período será piorada em uma categoria. O rubi também permite lançar as magias Enfeitiçar Pessoa e Marionete.\nComposto da matéria da qual os sonhos são feitos, o artefato não é particularmente resistente; ele possui Def 30, RD 0, PV 1. Seu portador pode gastar uma ação padrão para esmagá-lo entre as mãos.",
+    origin: "Dragão Brasil - 183"
+  },
+  { id: "amuleto-da-protecao",
+    name: "Amuleto da Proteção",
+    description: "Recebido em escambo com um demônio, em troca de um dos poderosos artefatos do Sonhar, este colar aparentemente simples protege quem o carrega de perigos e da própria passagem do tempo.\nSeu portador torna-se efetivamente imortal, ignorando a longevidade máxima da sua raça e modificadores de idade, enquanto continuar a usá-lo. Além disso, passa automaticamente em qualquer teste de resistência.\nSempre que uma criatura tenta fazer um ataque contra o portador do artefato, o ataque falha e, em vez disso, ela sofre o dano que causaria se o ataque acertasse. Magias ou habilidades que tenham o portador como alvo também são redirecionadas.\nApesar disso, o amuleto não protege a si mesmo: pode ser roubado normalmente ou destruído com um golpe perfeito que apenas o tenha como alvo (um 20 natural em um ataque).",
+    origin: "Dragão Brasil - 183"
+  },
+  { id: "anel-da-agonia",
+    name: "Anel da Agonia",
+    description: "Este anel possui um pequeno gancho acoplado, enferrujado e coberto por sangue seco. Pode ser usado como uma arma simples leve, que causa 1 ponto de dano por corte. Caso alguém seja atingido pelo ataque, é possível dar um comando para que o gancho perfure o coração da criatura atingida (na verdade, sua alma). Se isso for feito, ela sofre os efeitos da magia Desespero Esmagador (atributo-chave Carisma).",
+    origin: "Dragão Brasil - 183"
+  },
+  { id: "ankh-argenteo",
+    name: "Ankh Argentêo",
+    description: "Este talismã é semelhante a uma cruz, mas tem um laço em forma de lágrima no lugar da barra superior vertical. Representa o renascimento. É imbuído por uma poderosa energia mística.\nQuem o carrega consigo sempre se lembra da primeira vez que teve a vida soprada para dentro de seu corpo — recebendo cura acelerada 10. Além disso, recebe todos os poderes concedidos de um clérigo da morte, mas sem precisar seguir obrigações e restrições. Esses efeitos só se ativam após um dia de uso. Porém, contar com os poderes do ankh pode não ser uma boa ideia. A menos que se encontre impossibilitada de fazer isso por algum motivo, a Morte cria outro ankh após 1d4 sessões desde que o artefato foi obtido, e o Ankh Argênteo se torna um ankh de prata comum. Mas veja o lado bom… ainda pode ser vendido por uns cinco tibares!",
+    origin: "Dragão Brasil - 183"
+  },
+  { id: "coracao-vitreo",
+    name: "Coração Vítreo",
+    description: "Símbolo das consequências trágicas da paixão entre um dos perpétuos e uma humana, este artefato representa a crueldade do desejo.\nPerdido nas areias, só pode ser encontrado em regiões desérticas e apenas com uma boa dose de sorte (o personagem obter um 20 natural em um teste de Sobrevivência para encontrar o Coração Vítreo em uma região tomada por dunas). Esse teste só pode ser feito uma vez por ano. Quem encontra o Coração Vítreo pela primeira vez recebe um bônus permanente de +5 em Vontade. Uma vez encontrado, ele se perde novamente em um deserto indefinido.",
+    origin: "Dragão Brasil - 183"
+  },
+  { id: "cranio-do-pesadelo",
+    name: "Crânio do Pesadelo",
+    description: "Dizem que uma terrível criatura onírica foi aprisionada nesse crânio em miniatura, que tem fileiras de dentes sorrindo em suas órbitas. Uma vez por cena, é possível gastar 10 PM e uma ação completa para fazer o crânio sumir e invocar o espírito que habita dentro dele.\nA criatura tem a aparência de um humano comum, que sempre cobre seus olhos. Tem as mesmas estatísticas que um devorador de medos (Tormenta20, p.287), mas é uma criatura do tipo espírito. Está equipada com uma adaga de aço rubi atroz, e possui o dobro de PV normais. Ela é leal e obedece quem a invocou, mas ao fim da cena existe 50% de chance que se recuse a voltar à forma de crânio e fuja para espalhar sofrimento pelo mundo.\nMatar a criatura não a aprisiona novamente, uma vez que ela ressurgirá a partir dos pesadelos de alguém. A única maneira de fazê-la voltar à forma de crânio é usar a magia Roubar Alma com um objeto adequado para conter o poder da criatura (veja a descrição da magia). Quando a magia é completada, o objeto torna-se um novo Crânio do Pesadelo.",
+    origin: "Dragão Brasil - 183"
+  },
+  { id: "o-viridario-do-violinista",
+    name: "O Viridário do Violinista",
+    description: "Também conhecido como “O Jardim do Rabequeiro” ou “O Paraíso dos Piratas” este não é bem um artefato e tão pouco uma pessoa, e sim um lugar. Segundo lendas, fica no reino dos sonhos, mas sua posição na vastidão cosmológica e seus pontos de acesso não são claros. Para os marinheiros esse local seria uma espécie de pós-vida. Reza a lenda que um bucaneiro pode encontrá-lo enquanto ainda respira, se resolver vagar pelo interior de um continente empunhando um remo. Não poderá largar o objeto até concluir sua busca, ou ela falhará. Quando finalmente se deparar com uma pessoa desconhecida que, por iniciativa própria, aponte para o objeto e pergunte o que é, terá chegado ao seu destino (para que isso aconteça, é preciso um 20 natural em um teste de Sobrevivência enquanto o portador do remo viaja pelo interior de uma terra que não tenha acesso ao mar). Apenas alguém com a classe bucaneiro (ou a origem marujo) pode realizar esse teste. Caso falhe, o teste só poderá ser repetido em outra sessão, mas apenas se o personagem continuar a segurar o remo!\nPessoas que visitam o Viridário do Violinista têm qualquer doença ou maldição que carreguem consigo automaticamente removida e se enchem de inspiração duradoura: elas recebem +1 em todos os atributos de maneira permanente.\nO Viridário é um pequeno vilarejo arborizado, com um imenso jardim em seu centro, onde ninfas e faunos dançam ao som de um homem tocando rabeca. Há árvores onde crescem garrafas de rum, uma pequena venda, guarnecida como a de uma metrópole (T20, p.251), e uma estalagem luxuosa onde se pode descansar e morar gratuitamente. Aqui também habitam os espíritos de todos os marujos mortos, que tenham completado mais de cinquenta viagens marítimas em vida. O tempo não passa no vilarejo e ninguém jamais envelhece.\nQuem assim desejar, pode deixá-lo, mas jamais retornará a ele em vida ou morte.",
+    origin: "Dragão Brasil - 183"
+  },
+  { id: "colar-de-neruite",
+    name: "Colar de Neruite",
+    description: "Neruite, a Deusa do Sono e dos Sonhos, é identificada como uma das centenas de divindades menores cultuadas em Arton — e também inimiga dos Lordes do Pesadelo (o que quer que essas criaturas sejam). Este é um colar de mitral adornado com luas e estrelas, supostamente forjado pela própria Neruite. Aquele que o usa terá seu sono totalmente protegido pela deusa. Enquanto está dormindo ou inconsciente (e APENAS nesses casos!) não poderá ser ferido por nenhum tipo de arma ou ataque, nem afetado por gases, veneno, ou magia mental. Sua condição de descanso também funciona como se dormisse em uma estalagem luxuosa.\nSempre que o portador do colar adormece, vai despertar apenas após oito horas — e nenhum poder do mundo poderá acordá-lo antes disso. Durante o sono é impossível mover o usuário, remover o colar, ou quaisquer outros itens que ele carregue consigo.\nNenhum desses efeitos se manifesta enquanto o usuário está acordado, e o colar não cancela magias, condições ou efeitos de habilidades que tenham sido recebidos antes de dormir. O portador também pode lançar a magia Sono.",
+    origin: "Dragão Brasil - 183"
   },
   // Dragão Brasil - 222
   { id: "gladio-da-alvorada",
@@ -82,6 +135,7 @@ export const artifacts: Artifact[] = [
     image: "/artefatos/brilhantefeerica.png",
     origin: "Dragão Brasil - 222"
   },
+  //#endregion
 
 
   //#region Tormenta20 - Jogo do Ano

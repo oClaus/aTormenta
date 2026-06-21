@@ -11,22 +11,6 @@ import {
 
 export const equipmentCategories: EquipmentCategory[] = [
   {
-    id: "armas",
-    title: "Armas",
-    description: "Espadas, machados e arcos imbuídos com poder arcano ou divino.",
-    icon: Swords,
-    color: "from-red-600 to-red-900", // Mantido para compatibilidade, mesmo se não usar direto
-    href: "/itens-magicos/armas",
-  },
-  {
-    id: "armaduras",
-    title: "Armaduras & Escudos",
-    description: "Proteções forjadas com encantamentos para defletir os golpes mais mortais.",
-    icon: Shield,
-    color: "from-blue-600 to-blue-900",
-    href: "/itens-magicos/armaduras",
-  },
-  {
     id: "pocoes",
     title: "Poções & Pergaminhos",
     description: "Magias engarrafadas e escrituras antigas de uso único.",

@@ -26,6 +26,8 @@ export type MaterialType =
   | "Lanajuste"
   | "Pena de Kraken"
   | "Prata"
+  | "Chifre de Monstro"
+  | "Hajalbar"
   | "Quitina Razza";
 
 export type MaterialItemCategory = 

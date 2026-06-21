@@ -268,6 +268,69 @@ const RulesSection = () => {
                   <p className="text-amber-950/85 font-medium mb-2">As regras para se tornar um deus menor e promover sua divindade descritas aqui se destinam apenas a personagens jogadores que sejam deuses menores ou guardiões divinos. Demais deuses menores (ou seja, NPCs) dispensam estas regras.</p>
               </div>
           </div>
+                {/* Seção Crossovers */}
+                <section>
+                <h2 className="text-3xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/20 pb-2">Crossovers</h2>
+                <p className="mb-4">
+                    A matéria apresenta novos elementos de jogo para aqueles que desejam usar personagens devotos inspirados pela mitologia de Sandman, mas é declaradamente uma adaptação com bastante licença poética. Um exercício de imaginação. A presença dos seres e artefatos apresentados NÃO é oficial em Arton.
+                </p>
+                <p className="mb-6">
+                    Dito isso, se crossovers não são sua praia, ou a mesa em que você joga usa alguns materiais de maneira mais estrita, converse com o grupo. É perfeitamente possível adaptar mecânicas ou conceitos apresentados aqui a outras divindades, ou aspectos da mitologia artoniana.
+                </p>
+                
+                {/* Alerta de Conteúdo Não Oficial */}
+                <div className="p-5 bg-[#e8dac1]/50 rounded-xl border-l-4 border-l-red-800 mb-2">
+                    <p className="font-bold text-red-800 text-center tracking-wide uppercase">
+                    Não é um material canônico. E sim herético. Use por sua conta e risco!
+                    </p>
+                </div>
+                </section>
+
+                {/* Seção O Panteão dos Perpétuos */}
+                <section className="border-t-2 border-amber-900/20 pt-8 mt-8">
+                <h2 className="text-3xl md:text-4xl font-bold text-red-800 mb-6 tracking-wide">O panteão dos perpétuos</h2>
+                
+                <p className="mb-4">
+                    No começo, havia apenas a Noite e o Tempo. Da conjunção dessas entidades distantes, antes mesmo de que os seres vivos existissem, materializou-se o primeiro perpétuo. Como os demais seres desse tipo, não exatamente um deus. Algo mais. Não tinha nem mesmo nome real — era uma função fundamental do universo, tão duradoura quanto.
+                </p>
+                
+                <p className="mb-4">
+                    Da mesma maneira que deuses maiores esculpem o mundo com sua personalidade e caprichos, e seres com poder e seguidores o bastante se tornam deuses menores, perpétuos são capazes de imbuir os mortais que os seguem com poderes e dádivas.
+                </p>
+                
+                <p className="mb-4">
+                    Sua suposta existência é apenas especulada entre os intrigados teólogos de Arton, que atribuem os poderes dos clérigos dessas divindades a outras fontes, ou criam complexas teorias quanto à posição do panteão forasteiro na ordem cosmológica das coisas. Em termos práticos, alguém que não seja treinado em Religião, não consegue distinguir um perpétuo de divindades maiores, mas há diferenças sutis e marcantes.
+                </p>
+                
+                <p className="mb-4">
+                    Perpétuos são mais vulneráveis do que os deuses do panteão artoniano. Se forem afastados de seus reinos, e suas fontes de poder usurpadas, esses aspectos-vivos podem ser vencidos com relativa facilidade por criaturas poderosas. Mas logo são substituídos por um novo ser distinto. Outro ponto de vista do mesmíssimo aspecto ou função, com o mesmo nome.
+                </p>
+                
+                <p className="mb-6">
+                    Não são só as materializações de um conceito, mas o próprio conceito em si. Estão a serviço dos mortais, e diferente dos membros do Panteão, suas personalidades podem evoluir e mudar. Mesmo que isso demore milênios. Nenhuma pessoa prudente, contudo, jamais vislumbrará a possibilidade de matá-los. Pois se o sangue de um perpétuo for derramado, caberá àqueles que também o trazem em suas veias vingá-lo.
+                </p>
+
+                <h3 className="text-xl md:text-2xl font-bold text-red-800 uppercase tracking-wide mb-3">Cultos de Mistério</h3>
+                <p className="mb-4">
+                    Ao contrário de outras deidades artonianas, também não existem templos de acesso público consagrados a eles, ou religiões convencionais girando ao seu redor. Essas entidades são celebradas através dos chamados “cultos de mistério”: espécie de irmandades secretas que apenas os iniciados podem frequentar. Adentrar uma delas sempre envolve passar por algum tipo de ritual ou provação. Às vezes, isso é bastante dificultoso e complexo. Em outras, trilhar esse caminho é tão simples quanto conversar com o mestre de um séquito e pedir sua autorização.
+                </p>
+                <p className="mb-6">
+                    Os templos dos perpétuos ficam em cavernas ou outros lugares escondidos. Os fiéis se identificam por meio de tatuagens, senhas e apertos de mão conhecidos apenas entre eles. O motivo da discrição é que nem todos os clérigos de Arton aceitam essa nova crença, que enxergam como herética. Outro motivo é serem seitas pequenas, sem o espaço e recurso de igrejas já estabelecidas. A última e principal distinção entre perpétuos e deuses são seus paladinos.
+                </p>
+
+                <h3 className="text-xl md:text-2xl font-bold text-red-800 uppercase tracking-wide mb-3">Os Paladinos dos Perpétuos</h3>
+                <p className="mb-4">
+                    Perpétuos podem ter quantos paladinos desejarem, como qualquer deus maior, mas esse tipo de herói a seu serviço é muito raro, pois só surgem em determinada ocasião: quando um perpétuo é removido da existência temporariamente, sendo aprisionado por um ritual, ou afastado de alguma outra maneira de seu reino.
+                </p>
+                <p className="mb-4">
+                    Nesse caso, a realidade tenta compensar o vácuo deixado para trás. Forja um campeão especial, que reproduz a aparência do perpétuo (adaptada à sua própria cultura) e age inspirado pela entidade — mesmo que, muitas vezes, o próprio paladino não tenha consciência disso. Entre os perpétuos listados a seguir, apenas Morte e Sonho podem ter paladinos.
+                </p>
+                <p>
+                    Segundo alguns viajantes extraplanares, existem sete perpétuos ao todo. Mas até hoje apenas o culto de quatro deles foi identificado nas terras do Reinado. O que não quer dizer que não existam outros escondidos por aí...
+                </p>
+
+                </section>
+          
         </div>
       </div>
     </div>

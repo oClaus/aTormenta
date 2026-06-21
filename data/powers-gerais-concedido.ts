@@ -3,6 +3,60 @@ import { Power } from "@/types/power";
 //#endregion
 export const powersGeraisConcedido: Power[] = [
 
+  //#region Dragão Brasil
+  // Dragão Brasil - 183
+  { id: "Aparência Adaptável (Desejo, Morte, Sonho)",
+    name: "Aparência Adaptável (Desejo, Morte, Sonho)",
+    description: "Você aparece de uma maneira diferente para cada criatura, assumindo um aspecto familiar a ela, ou aparecendo de forma idealizada, como se estivesse sempre sob o efeito básico de Disfarce Ilusório (CD Car desacredita). Além disso, na primeira vez que interage com uma criatura, você recebe +10 no teste de Diplomacia para tentar mudar a atitude dela.",
+    origin: "Dragão Brasil - 183"
+  },
+  { id: "Dom do Psicopompo (Morte)",
+    name: "Dom do Psicopompo (Morte)",
+    description: "Você é imortal. O limite de longevidade máxima da sua raça e modificadores de idade deixam de se aplicar. Sempre que morre, não importando o motivo, você volta à vida após 3d6 dias. Caso seja humanoide, você é ressuscitado como um osteon. Se você for um monstro, ressuscita normalmente, mas seu tipo de criatura muda para morto-vivo. Se for um construto, espírito, ou morto-vivo volta à vida, mas perde 2 PM permanentemente. Apenas clérigos e paladinos podem obter esse poder.",
+    origin: "Dragão Brasil - 183"
+  },
+  { id: "Caçador de Imortais (Morte)",
+    name: "Caçador de Imortais (Morte)",
+    description: "Você recebe +2 em testes de perícia e em rolagens de dano envolvendo criaturas que não envelheçam, como construtos, espíritos e mortos-vivos, e pode falar com estas criaturas como se estivesse sob o efeito básico da magia Voz Divina.",
+    origin: "Dragão Brasil - 183"
+  },
+  { id: "Espelhos Distantes (Desespero)",
+    name: "Espelhos Distantes (Desespero)",
+    description: "Você pode pagar 2 PM para conjurar a magia Vidência e espionar um alvo através de qualquer superfície espelhada que esteja em alcance longo. Para fazer isso, você mesmo deve estar diante de uma superfície espelhada. Se você pagar 5 PM adicionais, pode se deslocar de uma superfície a outra usando uma ação de movimento.",
+    origin: "Dragão Brasil - 183"
+  },
+  { id: "Corvo do Sonhar (Sonho)",
+    name: "Corvo do Sonhar (Sonho)",
+    description: "Você recebe um pássaro onírico como familiar (veja o poder de arcanista). Você pode gastar uma ação de movimento para enviar seu pássaro para dentro dos sonhos de alguém adormecido em alcance médio. Isso permite que você veja o que está acontecendo nos sonhos desta criatura, como o efeito básico da magia Sonho. Além disso, seu pássaro também pode voar livremente para outros mundos que você já visitou (como se sob efeito de Viagem Planar), mas este último uso é mais arriscado. Role 1d6: 1, ele retorna na noite seguinte; 2-4, ele retorna após três dias; 5, ele retorna após uma semana; 6, ele encontrou uma ameaça. Neste caso, role mais 1d6: se o resultado for novamente 6, ele morre e você fica esmorecido até o próximo anoitecer.",
+    origin: "Dragão Brasil - 183"
+  },
+  { id: "Fantasmas ou Quimeras (Sonho)",
+    name: "Fantasmas ou Quimeras (Sonho)",
+    description: "Você aprende e pode lançar uma magia à sua escolha entre Amedrontar ou Sono. Além disso, você pode aprender Sonho como uma magia universal de 3º círculo.",
+    origin: "Dragão Brasil - 183"
+  },
+  { id: "Detectar Desesperança (Desespero)",
+    name: "Detectar Desesperança (Desespero)",
+    description: "Você está sempre sob o efeito da magia Detectar Ameaças, mas em vez dos efeitos normais, detecta criaturas que estejam sob efeito de uma condição de medo ou mental.",
+    origin: "Dragão Brasil - 183"
+  },
+  { id: "Drenar Delusão (Desespero)",
+    name: "Drenar Delusão (Desespero)",
+    description: "Você pode gastar 1 PM e uma ação padrão para cobrir sua mão com uma aura mágica e tocar outra criatura em alcance corpo a corpo. Se a criatura tiver condições de medo ou mentais, você pode remover uma delas e curar 2d4 de seus próprios PV. Você sofre os efeitos da condição durante seu próximo turno, a menos que passe em um teste de Vontade (CD 20).",
+    origin: "Dragão Brasil - 183"
+  },
+  { id: "Flecha Cúpida (Desejo)",
+    name: "Flecha Cúpida (Desejo)",
+    description: "Se for treinado em Misticismo ou Ofício (alquimia), você pode para imbuir uma flecha com um encantamento especial. Isso requer uma noite de trabalho e o gasto de T$ 10, para imbuir uma flecha com ouro, ou T$ 20, para imbuir uma flecha com chumbo. Uma criatura atingida por uma flecha de ouro irá se apaixonar automaticamente pela próxima criatura com Inteligência 3 ou mais que perceber (sua categoria de atitude torna-se prestativa em relação à criatura, como se estivesse sob efeito da magia Enfeitiçar). Uma criatura atingida por uma flecha de chumbo fica apavorada. Em ambos os casos, um teste de Vontade (CD Car) evita o efeito. O efeito dura até o fim da sessão, mas a criatura não necessariamente retornará à condição anterior, pois isso dependerá de sua personalidade, a critério do mestre. Você só pode ter uma flecha cúpida por vez, se criar uma nova, a anterior perde seu encantamento.",
+    origin: "Dragão Brasil - 183"
+  },
+  { id: "Mestre de Si (Desejo)",
+    name: "Mestre de Si (Desejo)",
+    description: "Você costuma estar no controle da situação, e truques para manipulá-lo não surtem efeito. Você passa automaticamente no primeiro teste de Vontade que fizer a cada cena.",
+    origin: "Dragão Brasil - 183"
+  },
+  //#endregion
+
   //#region Tormenta20 - Jogo do Ano
    { id: "Afinidade com a Tormenta (Aharadak)",
     name: "Afinidade com a Tormenta (Aharadak)",
@@ -462,6 +516,26 @@ export const powersGeraisConcedido: Power[] = [
   { id: "Chamado da Colmeia (Apis)",
     name: "Chamado da Colmeia (Apis)",
     description: "Você pode gastar 1 PM e uma ação padrão para invocar um enxame de abelhas Grande com duração sustentada, que surge em um espaço a sua escolha em alcance médio. O enxame pode passar pelo espaço de outras criaturas e não impede que outras criaturas entrem no espaço dele. No final de seus turnos, o enxame causa 2d6 pontos de dano de perfuração a qualquer criatura em seu espaço (Reflexos CD Sab reduz à metade). Você pode gastar uma ação de movimento para mover o enxame 12m. A cada patamar além de iniciante, você pode gastar +1 PM quando invoca o enxame para aumentar seu dano em +2d6.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Poder da Amizade (Artaphan)",
+    name: "Poder da Amizade (Artaphan)",
+    description: "Escolha um personagem para ser seu melhor amigo. Se estiver em alcance médio dele e vocês puderem, pelo menos, trocar olhares, você recebe +1 em todos os testes de perícia. Entretanto, se ele morrer, seus pontos de mana máximos diminuem em 1 por nível até o fim da aventura. Se perder seu melhor amigo, você pode escolher outro entre os demais personagens no início da próxima aventura.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Canção dos Mares (Ayllana)",
+    name: "Canção dos Mares (Ayllana)",
+    description: "Você adquire a habilidade Canção dos Mares das sereias/tritões. Se já tiver essa habilidade, você pode escolher as mesmas magias novamente para diminuir seu custo.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Bênção do Frio (Beluhga)",
+    name: "Bênção do Frio (Beluhga)",
+    description: "Você recebe redução de frio 5 e pode gastar uma ação padrão e 1 PM para soprar um dardo gélido. Todas as criaturas em uma esfera de 3m em alcance curto sofrem 2d12 pontos de dano de frio e ficam lentas por 1d4 rodadas (Ref CD Sab reduz à metade e evita a condição).",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Investida Tempestade (Benthos)",
+    name: "Investida Tempestade (Benthos)",
+    description: "Quando faz uma investida, você pode gastar 2 PM para cobrir seu corpo com eletricidade. Se fizer isso, seu ataque causa +2d8 pontos de dano de eletricidade. Além disso, criaturas adjacentes ao caminho que você percorre na investida sofrem 2d8 pontos de dano de eletricidade e ficam ofuscadas por 1 rodada (Ref CD Sab reduz à metade e evita a condição).",
     origin: "Guia dos Deuses Menores"
   },
   //#endregion

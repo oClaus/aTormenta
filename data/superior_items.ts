@@ -51,8 +51,8 @@ export const materialPrices: MaterialPriceRow[] = [
   },
   { material: "Madeira Tollon",
     Arma: "+ T$ 1.500",
-    "Armadura Leve": "—",
-    "Armadura Pesada": "—",
+    "Armadura Leve": "-",
+    "Armadura Pesada": "-",
     Escudo: "+ T$ 1.500",
     Esotéricos: "+ T$ 3.000",
     description: "A Floresta de Tollon produz um tipo de madeira negra, dura como aço e dotada de propriedades mágicas. Apenas armas de madeira — arcos, bordões, clavas, lanças, piques e tacapes —, escudos leves e esotéricos podem ser feitos com madeira Tollon.",
@@ -86,11 +86,11 @@ export const materialPrices: MaterialPriceRow[] = [
     origin: "Tormenta20 - Jogo do Ano",
   },
   { material: "Couro de Dragão",
-    Arma: "—",
-    "Armadura Leve": "—",
-    "Armadura Pesada": "—",
-    Escudo: "—",
-    Esotéricos: "—",
+    Arma: "-",
+    "Armadura Leve": "-",
+    "Armadura Pesada": "-",
+    Escudo: "-",
+    Esotéricos: "-",
     description: "Cobiçado por artesãos em toda Arton, o couro escamado de um dragão verdadeiro é um material especial que pode ser empregado para fabricar certos itens superiores. Tanto o couro bruto quanto itens de couro de dragão não existem à venda; a única maneira de obter esse material é derrotar um dragão.",
     description_armadura: "Armaduras leves e escudos (exigem uma peça): Defesa +1, RD 10 contra o tipo de dano do sopro do dragão e resistência a magia +2. Armaduras pesadas (exigem três peças): Defesa +2, redução de dano 20 contra o tipo de dano do sopro do dragão e resistência a magia +5.",
     description_escudo: "Armaduras leves e escudos (exigem uma peça): Defesa +1, RD 10 contra o tipo de dano do sopro do dragão e resistência a magia +2. Armaduras pesadas (exigem três peças): Defesa +2, redução de dano 20 contra o tipo de dano do sopro do dragão e resistência a magia +5.",
@@ -204,6 +204,29 @@ export const materialPrices: MaterialPriceRow[] = [
   },
   //#endregion
 
+  //#region Dragão Brasil
+  // Dragão Brasil - 183
+  { material: "Chifre de Monstro",
+    Arma: "+T$ 9.000",
+    "Armadura Leve": "-",
+    "Armadura Pesada": "-",
+    Escudo: "-",
+    Esotéricos: "-",
+    description: "Quando polido e tratado de forma adequada, o chifre de certos monstros pode ser utilizado para confeccionar armas capazes de cortes ainda mais letais. Extrair o chifre intacto de qualquer criatura do tipo monstro requer um teste de Sobrevivência (CD 15 + ND do monstro). Chifres de monstros Pequenos ou menores fazem espadas leves; Médios e Grandes, espadas de uma mão; e Enormes ou maiores, espadas de duas mãos.",
+    description_arma: "Apenas espadas podem ser feitas deste material. Uma espada de chifre de monstro tem seu multiplicador de crítico aumentado em 1.",
+    origin: "Dragão Brasil - 183"
+  },
+  { material: "Hajalbar",
+    Arma: "+T$ 3.000",
+    "Armadura Leve": "-",
+    "Armadura Pesada": "-",
+    Escudo: "-",
+    Esotéricos: "-",
+    description: "Um material especial místico utilizado na forja de armamentos. Suas propriedades energéticas impregnam a lâmina com poder puro.",
+    description_arma: "Apenas espadas que causem dano de corte podem ser fabricadas com este material. Uma espada de hajalbar é considerada mágica para propósitos de redução de dano e imunidades, e causa +2 pontos de dano de essência.",
+    origin: "Dragão Brasil - 183"
+  },
+  //#endregion
 ];
 
 
@@ -431,8 +454,32 @@ export const improvements: Improvement[] = [
       origin: "Ameaças de Arton" 
   },
   //#endregion
-  
 
+  //#region Dragão Brasil
+  // Dragão Brasil - 183
+  { id: "quelicera", 
+    name: "Quelícera", 
+    effect: "+2 na CD de qualquer veneno aplicado na arma", 
+    category: ["Arma"], 
+    description: "Esta modificação só pode ser aplicada em espadas curtas. A lâmina é mergulhada por dias em uma mistura secreta de venenos, tornando-se escura e porosa, sem perder seu fio ou tenacidade. Qualquer veneno aplicado na arma tem sua CD aumentada em +2.",
+    origin: "Dragão Brasil - 183"
+  },
+  { id: "lamina_runica", 
+    name: "Lâmina Rúnica", 
+    effect: "Arma é considerada item esotérico (cetro ou varinha)", 
+    category: ["Arma"], 
+    description: "Geralmente aplicada em espadas curtas por conta do preço e aproveitamento de material, esta modificação pode ser aplicada em qualquer espada. As runas na lâmina fazem a arma ser considerada um item esotérico com as mesmas propriedades de um cetro elemental ou de uma varinha arcana (escolhido na criação). Além disso, a arma é considerada tanto uma arma quanto um item esotérico.",
+    origin: "Dragão Brasil - 183"
+  },
+  { id: "luminosa", 
+    name: "Luminosa", 
+    effect: "1 PM para emitir luz; ofusca inimigos adjacentes ao ativar", 
+    category: ["Arma"], 
+    description: "Uma arma com esta modificação possui uma reserva de neon que pode ser ativada para gerar uma luz forte e intensa. Você pode gastar 1 PM para fazer a arma emitir luz azulada como uma tocha até o fim da cena. Se fizer isso em combate, criaturas adjacentes quando você ativa o neon ficam ofuscadas por uma rodada.",
+    origin: "Dragão Brasil - 183"
+  },
+
+  // Dragão Brasil
   { id: "Agulha", 
     name: "Agulha", 
     effect: "Ignora 5 pontos de redução de dano", 
@@ -440,6 +487,12 @@ export const improvements: Improvement[] = [
     description: "Uma munição de ponta muito afiada, pensada para penetrar entre as frestas de placas ou através de malhas resistentes. Ignora 5 pontos de redução de dano.",
     origin: "Dragão Brasil"
    },
+  //#endregion
+  
+
+  
+
+  
    {
     id: "farpada",
     name: "Farpada",

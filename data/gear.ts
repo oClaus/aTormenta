@@ -156,8 +156,16 @@ export const gear: Gear[] = [
   },
   //#endregion
 
-
-  // Dragão Brasil
+  //#region Dragão Brasil
+  // Dragão Brasil - 183
+  { id: "Semente-Espada",
+    name: "Semente-Espada",
+    description: "Essa semente verde de formato losangular é leve e resistente, tendo de 3 a 5 cm de comprimento, e é vendida em sacos com 10 unidades que ocupam um espaço cada. Você pode gastar 1 PM e uma ação de movimento para energizar a semente e lançá-la ao chão, fazendo brotar quase instantâneamente uma espada curta ou longa, dependendo do tipo de semente. A espada fornece +1 em testes de ataque e conta como uma arma de madeira para efeitos como a magia Armamento da Natureza. Ela dura até o final do dia, quando murcha e resseca, sendo destruída. Os preços listados são para Lysianassa; fora da cidade-floresta, sacos de semente-espada podem alcançar preços bem mais elevados.",
+    origin: "Dragão Brasil - 183",
+    price: "T$ 30 (espada curta) e T$ 50 (espada longa)",
+    spaces: "1"
+  },
+  //#endregion
 
 
   

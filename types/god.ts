@@ -1,4 +1,4 @@
-export type GodStatus = "normal" | "caido" | "menor";
+export type GodStatus = "normal" | "caido" | "crossover" | "menor";
 
 export interface God {
   id: string;
@@ -35,6 +35,8 @@ export function getStatusLabel(status?: GodStatus): string {
       return "Menor";
     case "normal":
       return "Panteão";
+    case "crossover":
+      return "Crossover";
     default:
       return "";
   }
@@ -46,6 +48,8 @@ export function getStatusColor(status?: GodStatus): string {
       return "bg-[#7f1d1d] border-red-900"; // Vermelho
     case "menor":
       return "bg-amber-700 border-amber-900"; // Âmbar
+    case "crossover":
+      return "bg-stone-700 border-stone-900"; // Âmbar
     case "normal":
     default:
       return "bg-purple-800 border-purple-950"; // Roxo para Panteão

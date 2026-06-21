@@ -1,7 +1,9 @@
 import { Enchantment, SpecificWeapon } from "@/types/magic";
-
+//#region Tormenta20 - Jogo do Ano
+//#endregion
 export const enchantments: Enchantment[] = [
-  // Tormenta20 - Jogo do Ano
+
+  //#region Tormenta20 - Jogo do Ano
   { id: "ameacadora",
     name: "Ameaçadora",
     description: "A margem de ameaça da arma duplica. Por exemplo, uma espada longa ameaçadora tem margem de ameaça 17. Efeitos que duplicam a margem de ameaça são aplicados antes de quaisquer efeitos que a aumentem.",
@@ -142,7 +144,7 @@ export const enchantments: Enchantment[] = [
     description: "Uma vez por rodada, quando ataca, você pode gastar 2 PM. Se fizer isso e acertar o ataque, a vítima fica envenenada, perdendo 1d12 pontos de vida por rodada durante 3 rodadas. Uma arma venenosa verte um líquido verde e viscoso.",
     origin: "Tormenta20 - Jogo do Ano",
   },
-
+  //#endregion
 
 
   {
@@ -280,6 +282,54 @@ export const enchantments: Enchantment[] = [
 ];
 
 export const specificWeapons: SpecificWeapon[] = [
+  //#region Tormenta20 - Jogo do Ano
+  //#endregion
+
+  //#region Dragão Brasil
+  // Dragão Brasil - 183
+  { id: "Valete de Nimb",
+    name: "Valete de Nimb",
+    description: "Essa espada longa causa o dano de uma espada longa. Ou não! Sempre que acertar um ataque, antes de rolar o dano da arma, role 1d4. A arma causa o dano da arma rolada: 1) adaga; 2) espada longa; 3) montante; 4) machado táurico.",
+    price: "30.000",
+    origin: "Dragão Brasil - 183",
+  },
+  { id: "Guarda Esquelética",
+    name: "Guarda Esquelética",
+    description: "O usuário dessa espada curta defensora pode gastar uma ação de padrão e 3 PM para fincar a espada no chão e fazê-la se transformar até o final da cena em um esqueleto guarda-costas que funciona como um aliado guardião mestre que não conta em seu limite de aliados.",
+    price: "60.000",
+    origin: "Dragão Brasil - 183",
+  },
+  { id: "Gwurthun",
+    name: "Gwurthun",
+    description: "Enquanto empunhada, essa espada longa conjuradora confere ao usuário resistência a magia +4. Além disso, sempre que seu portador passar em um teste de resistência contra um efeito mágico, a lâmina absorve 1 PM, até um máximo de 10 PM. O usuário pode usar os PM absorvidos para lançar a magia armazenada na espada sem que ela seja perdida.",
+    price: "135.000",
+    origin: "Dragão Brasil - 183",
+  },
+  { id: "Pilar Primordial",
+    name: "Pilar Primordial",
+    description: "Esse montante formidável pode alternar suas características de acordo com o elemental manifestado. Água: se torna uma arma congelante; Ar: se torna uma arma ágil e dançarina; Fogo: se torna uma arma flamejante; Terra: se torna uma arma defensora. Trocar o elemental manifestado requer uma ação de movimento. Além disso, o usuário pode evocar um ou mais dos elementais da arma, como na magia Conjurar Elemental, mas invocando apenas um elemental de cada tipo. Enquanto um elemental estiver fora da arma, ela não pode assumir suas propriedades.",
+    price: "270.000",
+    origin: "Dragão Brasil - 183",
+  },
+  { id: "Kiri",
+    name: "Kiri",
+    description: "A lâmina lendária conhecida apenas como “Kiri” é uma katana ameaçadora formidável. Ela permite a seu usuário a gastar uma ação padrão e 6 PM para evocar uma fumaça branca densa, que tem as mesmas propriedades da magia Névoa com o aprimoramento de deixar a nuvem espessa. O usuário não é afetado pela magia enquanto empunhar a espada.",
+    price: "150.000",
+    origin: "Dragão Brasil - 183",
+  },
+  { id: "Espada da Herança Heróica",
+    name: "Espada da Herança Heróica",
+    description: "Essa espada longa formidável contém o último desejo de um cavaleiro ou paladino morto. Nas mãos de um personagem com Código de Honra ou Código do Herói, ela fornece visões do objetivo de seu antigo dono e forma um pacto com o novo portador. A critério do mestre, sempre que o personagem estiver cumprindo a tarefa do antigo proprietário da arma, ela se torna uma espada magnífica defensora que permite que seu portador lance a magia Círculo da Justiça.",
+    price: "210.000",
+    origin: "Dragão Brasil - 183",
+  },
+  { id: "Lâmina de Espinhos",
+    name: "Lâmina de Espinhos",
+    description: "Esta arma, feita de material vegetal, é extremamente afiada, com vários espinhos curtos e resistentes que crescem ao longo de sua lâmina. Ela conta como uma espada longa que fornece +5 em suas rolagens de dano. Entretanto, ela requer cuidados diários, que incluem meio litro de água e pelo menos duas horas de luz do sol direta. Sem isso, ela começa a murchar, diminuindo seu bônus em rolagens de dano em –1 para cada dois dias sem cuidados. Se o bônus chegar a zero, a espada morre e apodrece. A lâmina de espinhos não pode receber modificações ou encantos.",
+    price: "6.000",
+    origin: "Dragão Brasil - 183",
+  },
+
   // Dragão Brasil - 221
   { id: "Katana de Papel",
     name: "Katana de Papel",
@@ -287,6 +337,9 @@ export const specificWeapons: SpecificWeapon[] = [
     price: "22.000",
     origin: "Dragão Brasil - 221",
   },
+  //#endregion
+
+  
 
 
   { id: "CUTELO DE AHARADAK",
@@ -304,7 +357,7 @@ export const specificWeapons: SpecificWeapon[] = [
     origin: "Duelo de Dragões",
   },
 
-  // Tormenta20 - Jogo do Ano
+  //#region Tormenta20 - Jogo do Ano
   { id: "arco-do-poder",
     name: "Arco do Poder",
     description: "O arco do poder conta como um arco longo formidável, mas parece apenas o corpo de um arco — não tem corda e não aceita flechas. Contudo, quando você o empunha e faz o gesto de puxar a corda inexistente, o arco cria uma corda e uma flecha de energia dourada. O arco do poder é capaz de ler suas intenções, produzindo diferentes tipos de flechas energéticas a sua escolha.\n\n- *Flecha Normal.* 3d8 pontos de dano de essência.\n- *Flecha Piedosa.* 4d8 pontos de dano de essência não letal.\n- *Flecha Explosiva.* 3d6 pontos de dano de fogo no alvo e em todas as criaturas adjacentes a ele. Essas têm direito a um teste de Reflexos (CD Des) para reduzir o dano à metade.\n- *Flecha-Rede.* Não causa dano, mas deixa a vítima agarrada por uma rede de energia. A criatura pode se soltar passando em um teste de Força ou Acrobacia (CD 25). A rede se dissipa quando a criatura se solta ou no fim da cena.",
@@ -413,6 +466,7 @@ export const specificWeapons: SpecificWeapon[] = [
     price: "200.000",
     origin: "Tormenta20 - Jogo do Ano",
   },
+  //#endregion
 
   // Ameaças de Arton
   { id: "pistola-demoniaca",

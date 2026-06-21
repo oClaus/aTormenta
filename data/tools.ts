@@ -1,7 +1,9 @@
 import { Gear } from "@/types/gear";
-
+//#region Tormenta20 - Jogo do Ano
+//#endregion
 export const tool: Gear[] = [
-  // Tormenta20 - Jogo do Ano
+
+  //#region Tormenta20 - Jogo do Ano
   { id: "Coleção de Livros",
     name: "Coleção de Livros",
     description: "Uma pequena coleção de tomos e tratados sobre um assunto. Fornece +1 em Conhecimento, Guerra, Misticismo, Nobreza ou Religião (definido quando o item é comprado ou fabricado).",
@@ -58,8 +60,20 @@ export const tool: Gear[] = [
     price: "T$ 20",
     spaces: "1",
   },
+  //#endregion
 
-  
+  //#region Dragão Brasil
+  // Dragão Brasil - 183
+  { id: "MPP",
+    name: "MPP",
+    description: "Esse bastão de ferro denso tem um conjunto de engrenagens e mecanismos que permite reconfigurar suas várias peças entre duas funções: arma e ferramenta. Como arma, a MPP conta como uma espada curta e, como ferramenta, conta como um kit de Ofício (definido em sua fabricação). Mudar sua configuração é uma ação padrão. Uma MPP pode receber melhorias tanto de armas quanto de ferramentas.",
+    origin: "Dragão Brasil - 183",
+    price: "T$ 150",
+    spaces: "1"
+  },
+  //#endregion
+
+
   { id: "apito-de-caca",
     name: "Apito de Caça",
     description: "Este pequeno apito fornece +1 em Adestramento e permite usar manejar animal com um parceiro não inteligente (Int –4 ou –5) como ação livre uma vez por rodada.",
