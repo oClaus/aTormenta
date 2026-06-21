@@ -538,6 +538,51 @@ export const powersGeraisConcedido: Power[] = [
     description: "Quando faz uma investida, você pode gastar 2 PM para cobrir seu corpo com eletricidade. Se fizer isso, seu ataque causa +2d8 pontos de dano de eletricidade. Além disso, criaturas adjacentes ao caminho que você percorre na investida sofrem 2d8 pontos de dano de eletricidade e ficam ofuscadas por 1 rodada (Ref CD Sab reduz à metade e evita a condição).",
     origin: "Guia dos Deuses Menores"
   },
+  { id: "Olhos do Vigia (Betsumial)",
+    name: "Olhos do Vigia (Betsumial)",
+    description: "Você recebe +2 em Percepção, não fica surpreendido e desprevenido contra inimigos que não possa perceber e, sempre que erra um ataque devido a camuflagem, pode rolar mais uma vez o dado da chance de falha.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Máscara Mística (Blinar)",
+    name: "Máscara Mística (Blinar)",
+    description: "Você aprende e pode lançar a magia Disfarce Ilusório (atributo-chave Carisma). Caso aprenda novamente essa magia, seu custo diminui em –1 PM",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Pureza Corporal (Caerdellach)",
+    name: "Pureza Corporal (Caerdellach)",
+    description: "Você pode gastar uma ação de movimento e 1 PM para cobrir sua mão com luz e tocar uma criatura em alcance corpo a corpo. A criatura recupera 2d4+2 PV. Além disso, se aprender a magia Purificação, o custo dela diminui em –1 PM.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Dom de Armadilheiro (Canastra)",
+    name: "Dom de Armadilheiro (Canastra)",
+    description: "Você aprende e pode lançar a magia Conjurar Armadilha. Caso aprenda novamente essa magia, seu custo diminui em –1 PM.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Canção Divina (Canora)",
+    name: "Canção Divina (Canora)",
+    description: "Você pode usar Sabedoria para Atuação (em vez de Carisma) e como atributo-chave de suas magias de bardo (se as tiver). Além disso, aprende e pode lançar a magia Despedaçar. Caso aprenda novamente essa magia, seu custo diminui em –1 PM.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Disparo Sublime (Cette)",
+    name: "Disparo Sublime (Cette)",
+    description: "Você pode gastar uma ação de movimento e 3 PM para fazer um teste de Percepção (CD igual à Defesa da criatura) contra uma criatura em alcance médio. Se passar no teste e acertar um ataque com arco contra o alvo na mesma rodada, esse ataque é um acerto crítico automático. Se for o paladino de Cette, você pode usar Golpe Divino com ataques com arco.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Jogada Decisiva (Champarr)",
+    name: "Jogada Decisiva (Champarr)",
+    description: "Uma vez por dia, quando faz um teste, você pode gastar 3 PM para somar seu nível de personagem no teste.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Selo Impedidor (Dahriol)",
+    name: "Selo Impedidor (Dahriol)",
+    description: "Você pode gastar uma ação padrão e 3 PM para impedir uma criatura em alcance curto de usar uma habilidade a sua escolha até o fim da cena (Von CD Sab evita). Você só pode escolher uma habilidade que tenha visto a criatura usar ou que tenha identificado com um teste de perícia (como um teste de Misticismo para identificar criatura). Você não pode escolher a habilidade Magias (ou habilidades equivalentes), mas pode escolher uma magia específica. Uma mesma criatura só pode ser afetada por este poder uma vez por cena.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Um Contra Um (Drumak)",
+    name: "Um Contra Um (Drumak)",
+    description: "Você pode gastar 1 PM para escolher um oponente em alcance curto e receber +1 em testes de ataque e na margem de ameaça contra ele até o fim da cena. Se atacar outro oponente, o bônus termina.",
+    origin: "Guia dos Deuses Menores"
+  },
   //#endregion
 
 

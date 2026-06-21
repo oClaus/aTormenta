@@ -767,6 +767,185 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: "Devotos de Benthos não podem recusar pedidos de ajuda feitos por criaturas marinhas ou khubarianos. Além disso, não podem permanecer mais de um dia sem contato com água."
   },
+  { id: "Betsumial",
+    name: "Betsumial",
+    subtitle: "o Deus dos Vigias",
+    rank: "Mortal ascendido, status divino 1",
+    image: [
+      "/deuses/betsumial.png", "/deuses/betsumial2.png"
+    ],
+    status: "menor",
+    history: "Betsumial era uma divindade de pequena importância há cerca de 300 anos. Nasceu em Petrynia, marcado por ter um único enorme olho no meio da face, capaz de enxergar a enormes distâncias. Seu nariz era deformado, para dar espaço ao olho ciclópico, resultando em uma voz fanhosa. Devido a seus poderes, ainda na infância começou a ser cultuado por aqueles que dependiam da visão para sobreviver. Os primeiros devotos foram vigias. Logo vieram guardas, exploradores, patrulheiros e outros. Ainda jovem, como um aventureiro errante, era disputado por lordes que desejavam tê-lo a seu serviço e por cidades que o queriam como seu guardião. Assim, Betsumial ascendeu a deus menor.\nSeu culto foi sempre obscuro — dominado por uma irmandade de guardas e outros “vigilantes”. Ele mesmo nunca se preocupou em angariar seguidores, mas sempre concedeu sua bênção a todos que vinham procurá-lo. Sua religião nunca teve um centro definido, até a queda de Glórienn, em 1405. Na época, formou-se uma espécie de sítio de peregrinação nas colinas próximas à antiga Malpetrim, onde seus devotos controlavam a chegada de novos seguidores, mas as peregrinações acabaram quando Betsumial encontrou seu fim na Batalha de Tamu-ra, mais tarde no mesmo ano. Suas representações póstumas mostram um jovem magriço que usava uma venda cobrindo seu único olho — mas essa venda, curiosamente, muitas vezes traz um olho enorme pintado no tecido.",
+    beliefs: "Vigiar os arredores. Manter-se sempre alerta. Preparar-se para os perigos e reagir a eles com antecipação. Proteger os mais fracos e indefesos.",
+    sacredSymbol: "Um olho aberto.",
+    channelEnergy: "Qualquer.",
+    preferredWeapon: "Arco longo.",
+    devotees: "Anões, elfos, hynne, kliren, naidoras, bárbaros, bucaneiros, caçadores, cavaleiros, guerreiros, ladinos, paladino.",
+    grantedPowers: [
+      "Olhos do Vigia"
+    ],
+    obligationsRestrictions: "Devotos de Betsumial sempre se oferecem e nunca se recusam a vigiar um local, objeto ou criatura por pelo menos um dia."
+  },
+  {
+    id: "Blinar",
+    name: "Blinar",
+    subtitle: "o Deus das Máscaras",
+    rank: "Mortal ascendido, status divino 2",
+    image: [
+      "/deuses/blinar.png"
+    ],
+    status: "menor",
+    history: "Um deus dissimulado, com rosto na forma de uma máscara de porcelana que se transforma constantemente, Blinar é uma figura enigmática e extravagante. Sempre veste roupas elaboradas que parecem fantasias — ou talvez também façam parte de seu corpo. Reverenciado em inúmeros bailes da corte e (secretamente) entre espiões, Blinar ensina seus devotos a jamais mostrar quem realmente são. Muito popular em Ahlen, é considerado por muitos o padroeiro da festa do Dia das Máscaras que acontece no Palácio Rishantor de Thartann, a capital do Reino da Intriga.\nBlinar governa sobre todos os aspectos das máscaras, desde sua função festiva e brincalhona até seu uso como disfarce e mesmo seu lado ritualístico. O deus ensina que, sob uma máscara, um mortal (ou mesmo uma divindade) pode ser qualquer um, ou qualquer coisa. A máscara seria a maior das defesas, pois protegeria a identidade, algo que engloba corpo, mente e alma. Paradoxalmente, as pessoas também mostram quem são de verdade ao usar uma máscara. Afinal, não há vergonha quando se usa um rosto que não é o seu próprio. Com sua identidade oculta, o que está em seu interior pode aflorar…",
+    beliefs: "Nunca mostrar sua verdadeira face. Provar-se mais esperto do que os demais. Deixar todos imaginando quem você é. Fazer aquilo que só é possível com anonimato total.",
+    sacredSymbol: "Uma máscara de baile.",
+    channelEnergy: "Qualquer.",
+    preferredWeapon: "Adaga.",
+    devotees: "Goblins, hynne, medusas, osteon, sílfides, sulfure, bardos, bucaneiros, ladinos, nobres.",
+    grantedPowers: [
+      "Máscara Mística"
+    ],
+    obligationsRestrictions: "Devotos de Blinar devem sempre usar máscaras em público, por mais simples que a máscara seja. A máscara conta como um item vestido, mesmo que não forneça bônus. Além disso, uma vez por semana devem fazer um estranho acreditar que sua identidade é outra."
+  },
+  {
+    id: "Caerdellach",
+    name: "Caerdellach",
+    subtitle: "o Deus dos Unicórnios",
+    rank: "Mortal ascendido, status divino 3",
+    image: [
+      "/deuses/caerdellach.png"
+    ],
+    status: "menor",
+    history: "Talvez exista um unicórnio mais antigo que Caerdellach, mas ninguém se lembra. Sendo, presumivelmente, a mais ancestral dessas criaturas, desde sempre foi procurado por outros de sua espécie, como conselheiro e sábio. Não demorou para começar a ser cultuado e se tornar um verdadeiro deus menor.\nCaerdellach é uma divindade muito distante dos artonianos “civilizados”. Embora existam (raros) unicórnios que se associam a bípedes, o Deus Menor dos Unicórnios não costuma participar desse tipo de aliança. Prefere permanecer em existência reclusa, na Floresta de Tollon, sendo procurado por aqueles que necessitam de conselhos ou a miraculosa cura que seu chifre concede. Sua clareira é muitas vezes chamada de Refúgio dos Unicórnios, pois diz-se que nenhum mortal é capaz de alcançá-la sem sua permissão, e todos esses seres delicados encontram lá abrigo e proteção.\nEm vários pontos de Arton, a figura do unicórnio é relacionada ao conceito de pureza. Algumas pessoas (principalmente em culturas rígidas) associam isso à castidade. Assim, existem artonianos de todos os sexos e gêneros que cultuam Caerdellach porque, por alguma razão, valorizam e desejam preservar sua “inocência”.",
+    beliefs: "Preservar e pregar a sacralidade de corpo, mente e espírito. Proteger os bosques, as florestas, as clareiras pacíficas, os córregos límpidos e outros locais onde os unicórnios habitam. Curar os feridos.",
+    sacredSymbol: "Um chifre dourado.",
+    channelEnergy: "Positiva.",
+    preferredWeapon: "Lança.",
+    devotees: "Aggelus, centauros, dahllan, eiradaan, elfos, meios-elfos, sílfides, cavaleiros, druidas, treinadores, paladino.",
+    grantedPowers: [
+      "Pureza Corporal"
+    ],
+    obligationsRestrictions: "Devotos de Caerdellach devem ser sacros e castos, recusando-se a se casar ou ter relações íntimas com outras pessoas. Além disso, não podem recusar pedidos de ajuda de pessoas inocentes ou animais em perigo."
+  },
+  {
+    id: "Canastra",
+    name: "Canastra",
+    subtitle: "o Deus das Armadilhas",
+    rank: "Mortal ascendido, status divino 2",
+    image: [
+      "/deuses/canastra.png", "/deuses/canastra2.png"
+    ],
+    status: "menor",
+    history: "Um deus pequeno e esguio, com personalidade teatral, Canastra esconde sua inteligência e o perigo que representa, fingindo ser indefeso. Protege aqueles que usam de esperteza e artimanhas para vencer e diverte-se com devotos capazes de encontrar um jeitinho de se virar em situações perigosas. Embora possua muitos servos em palácios, também é reverenciado por todo tipo de caçadores, desde meros aldeões que usam de armadilhas para capturar pequenos animais até caçadores de monstros ou recompensas, que guiam suas presas para as mais mortais emboscadas.\nCanastra também tem outros devotos mais sofisticados… e mais perigosos. Em várias partes de Arton, projetistas de masmorras cultuam este deus, em busca de inspiração para suas criações mortíferas e engenhosas. De fato, alguns teólogos especulam que o próprio Hyninn possa sentir algum “ciúme” desse culto. Outros afirmam que Canastra é um fantoche de Hyninn, para que o Deus da Trapaça possa influenciar o mundo ainda mais, mantendo sua fachada “inofensiva”.",
+    beliefs: "Planejar adiante. Estar sempre um passo à frente. Emboscar inimigos. Preparar armadilhas. Manipular outros a seu favor.",
+    sacredSymbol: "Uma armadilha arataca.",
+    channelEnergy: "Qualquer.",
+    preferredWeapon: "Rede.",
+    devotees: "Finntroll, gnolls, goblins, harpias, hynne, kliren, kobolds, nezumi, sílfides, trogs, bardos, caçadores, inventores, ladinos.",
+    grantedPowers: [
+      "Dom de Armadilheiro"
+    ],
+    obligationsRestrictions: "Devotos de Canastra devem sempre estar um passo à frente de seus adversários. Uma vez por dia (ou por sessão de jogo, o que demorar mais), devem executar uma armadilha ou uma emboscada com sucesso."
+  },
+  {
+    id: "Canora",
+    name: "Canora",
+    subtitle: "a Deusa da Canção",
+    rank: "Mortal ascendido, status divino 2",
+    image: [
+      "/deuses/canora.png"
+    ],
+    status: "menor",
+    history: "Com a aparência de uma donzela esguia, pálida e com olheiras, esta deusa é capaz de modular a voz como quiser, da melodia mais doce a um guincho doloroso ou mesmo mortal. Suas canções são capazes de agradar os mais distintos gostos e seu repertório é infinito — desde as mais delicadas melodias élficas até as mais poderosas óperas anãs. Do canto suave de pássaros aos berros agonizantes dos moribundos. Seus devotos são ensinados a fazer o mesmo, usando suas vozes para incitar todos os tipos de emoções.\nA voz de Canora pode ressoar com materiais específicos, destruindo-os com a mesma facilidade com que ela encanta seu público. A deusa não aprecia o uso de sua arte como arma, mas sabe que às vezes isso é necessário.",
+    beliefs: "A melodia é a perfeição. Treino vocal é imprescindível. O canto é a mais perfeita forma de arte e o jeito certo de conquistar corações. A voz é a mais poderosa das armas.",
+    sacredSymbol: "Uma flor em forma de nota musical.",
+    channelEnergy: "Qualquer.",
+    preferredWeapon: "Florete.",
+    devotees: "Anões, elfos, harpias, hynne, qareen, sereias/tritões, sílfides, arcanistas, bardos, bucaneiros, nobres, paladino.",
+    grantedPowers: [
+      "Canção Divina"
+    ],
+    obligationsRestrictions: "Devotos de Canora nunca recusam uma oportunidade de cantar. Além disso, uma vez por dia (ou por sessão de jogo, o que demorar mais), devem passar um tempo ensaiando ou cantando como oferenda a Canora. Em termos de jogo, uma ação exigindo um teste de Atuação com CD mínima 15 + metade do seu nível."
+  },
+  {
+    id: "Cette",
+    name: "Cette",
+    subtitle: "o Deus dos Arqueiros",
+    rank: "Mortal ascendido, status divino 3",
+    image: [
+      "/deuses/cette.png"
+    ],
+    status: "menor",
+    history: "Cette era um deus antigo, que transcendeu até mesmo a extrema longevidade élfica muito antes da queda de Lenórienn — alguns dizem que já era uma divindade menor quando os elfos chegaram a Arton. Suas maneiras, seu estilo de luta e sua própria aparência remetem a um tempo em que os elfos nunca haviam sido humilhados, mas também a uma época ainda sem a arrogância e a autoconfiança excessiva que foram sua perdição. De certa forma, Cette foi um símbolo de tudo que os elfos deveriam ter sido: perfeitos, mas sem nenhuma noção de superioridade.\nEmbora representasse uma das maiores tradições élficas, Cette não parecia ter grande ligação com Glórienn. De alguma forma, ao personificar a disciplina do arco e flecha, Cette se concentrou na arma e se afastou de todo o resto. Também adquiriu certas características do arco (flexível, adquire força sob pressão) e da flecha (direto, rápido, sem meandros). Assim, continuava apresentando a típica postura élfica de séculos atrás: refinamento, delicadeza e tranquilidade, sem empáfia.\nCette perdeu muitos seguidores no período entre a chegada dos elfos a Arton e a queda de Glórienn — pois, durante esse tempo, a raça se voltou cada vez mais para sua deusa padroeira, de forma quase exclusiva. Mesmo assim, o Deus dos Arqueiros não parecia se abalar. Continuava pronto para defender as tradições élficas, como sempre fizera.\nDe certa forma, Cette era uma divindade simples: não desafiava a compreensão nem adquiria formas metafísicas. Era um elfo esguio, de longos cabelos verdes presos em tranças, tão leve que ao andar seus pés mal tocavam o chão. Seu arco era tão alto quanto ele mesmo. Vestia-se com a mais fina malha élfica, trançada com folhas vivas. Era um guerreiro eficiente, franco e até mesmo bem-humorado. Sua morte na Batalha de Tamu-ra em 1405 foi uma grande perda para Arton.",
+    beliefs: "Manter vivas as tradições de arquearia élficas. Treinar e aperfeiçoar-se nas artes do tiro e da guerra. Honrar juramentos. Lutar por causas justas. Demonstrar força sob pressão e franqueza nas palavras.",
+    sacredSymbol: "Uma flecha com folhas verdes.",
+    channelEnergy: "Qualquer.",
+    preferredWeapon: "Arco longo.",
+    devotees: "Elfos, medusas, naidoras, caçadores, inventores, guerreiros, nobres, paladino.",
+    grantedPowers: [
+      "Disparo Sublime"
+    ],
+    obligationsRestrictions: "Devotos de Cette devem combater usando um arco uma vez por dia, ou passar pelo menos uma hora por dia fazendo manutenção de seu arco ou treinando com essa arma. Além disso, devem manter sua palavra, nunca podendo mentir, trapacear ou roubar."
+  },
+  {
+    id: "Champarr",
+    name: "Champarr",
+    subtitle: "o Deus dos Jogos",
+    rank: "Mortal ascendido, status divino 3",
+    image: [
+      "/deuses/champarr.png", "/deuses/champarr2.png"
+    ],
+    status: "menor",
+    history: "Patrono dos torneios, dos conflitos e dos jogos, Champarr é a divindade favorita dos atletas, duelistas, jogadores e guerreiros entre os moreau. É o juiz de todas as disputas, desde duelos de espadas até guerras entre reinos, desde jogos de cartas até corridas de cavalos nos Reinos de Moreania. Ele abençoa os vencedores e perdoa (ou amaldiçoa) os perdedores.\nOs adoradores de Champarr conseguem traçar sua origem até os mais distantes domínios extraplanares. Há milhares de anos ele teria participado de um torneio cósmico promovido por um poderoso Deus da Guerra — com certeza Keenn, a menos que todas as escrituras sagradas estejam erradas e tenha havido um Deus da Guerra antes dele! Esse presumivelmente foi o Torneio do Deus Guerreiro, a mesma disputa que rendeu a Arsenal o título de Deus da Guerra. Na ocasião, após sucessivas vitórias, Champarr chegou à grande final e duelou contra o deus em pessoa, mas foi derrotado. No entanto, por sua tenacidade, teria recebido a imortalidade e o título de Deus dos Jogos.\nChamparr tem a aparência de um poderoso gladiador, usando um elmo fechado que mantém suas emoções indecifráveis. Está sempre armado com duas espadas curtas idênticas: uma delas concede a bênção da vitória e a outra, a maldição da derrota.\nChamparr é querido em Moreania, especialmente no reino de Brando, onde flâmulas em sua homenagem são hasteadas antes de cada grande torneio, e seus clérigos atuam como juízes. Moreau diante de provações muitas vezes rogam seu nome, para assegurar a vitória.",
+    beliefs: "Reverenciar os jogos. Incitar disputas. Derrotar inimigos. Desafiar a si mesmo. Superar limites. Promover e participar de torneios e jogos. Vencer em condições justas.",
+    sacredSymbol: "Um troféu.",
+    channelEnergy: "Qualquer.",
+    preferredWeapon: "Espada curta.",
+    devotees: "Anões, elfos, hynne, moreau, sátiros, sílfides, bardos, bucaneiros, guerreiros, ladinos, lutadores, nobres.",
+    grantedPowers: [
+      "Jogada Decisiva"
+    ],
+    obligationsRestrictions: "Devotos de Champarr devem vencer um jogo por dia (ou por sessão de jogo, o que demorar mais). Em termos de regras, devem vencer um teste oposto de Jogatina, Luta ou Pontaria contra um oponente digno (a critério do mestre). Outras perícias podem ser usadas para atender essa obrigação, também a critério do mestre."
+  },
+  {
+    id: "Dahriol",
+    name: "Dahriol",
+    subtitle: "o Deus dos Selos",
+    rank: "Mortal ascendido, status divino 1",
+    image: [
+      "/deuses/dahriol.png"
+    ],
+    status: "menor",
+    history: "Dahriol foi um grande herói eras atrás, responsável por atravessar verdadeiros infernos para entregar mensagens de suma importância que mudaram o destino de reinos inteiros. Qualquer um que quisesse garantir a entrega de sua carta buscava Dahriol e o herói nunca rompeu um selo que não devia — fosse o simples selo de cera de um pergaminho confidencial, fosse o selo místico de uma porta. Admirado por milhares, arrebanhou tanto poder que começou a ser considerado um deus por muitas pessoas ajudadas por seus feitos, além de ter inspirado outros mensageiros a se comportar da mesma forma.\nNum mundo em que vencer limites, quebrar barreiras e desvendar segredos são demonstrações de heroísmo valorizadas por quase todos, Dahriol é um defensor daquilo que deve ser mantido fechado, protegido e seguro. Desde entidades malignas que não podem escapar de suas prisões até informações sensíveis que não podem chegar aos olhos e ouvidos de inimigos, tudo que deve ficar selado é domínio de Dahriol. Assim, mesmo sem a fama de outros deuses menores, esta divindade carrega um grande fardo.\nComo recompensa pelas suas ações e seu senso de dever, Dahriol costuma servir como mensageiro de Tanna-Toh, a Deusa do Conhecimento e, ocasionalmente, também de Khalmyr. Além disso, já foi enviado para Arton em missões envolvendo reunir aventureiros e garantir que selos amaldiçoados continuassem intactos. Durante sua participação na saga do Disco dos Três, ajudando a impedir que o deus menor Sartan viesse ao mundo, Dahriol foi o instigador de uma das primeiras expedições registradas de aventureiros do continente às proximidades de Galrasia. Assim, também é cultuado por alguns exploradores da ilha. Costuma se mostrar aos mortais como um homem velho com longos cabelos e barba branca, vestido com roupas simples e empunhando um cajado de madeira em uma das mãos.",
+    beliefs: "Proteger os selos. Impedir que ameaças seladas causem mal a Arton. Estudar selos místicos e manter o mal afastado através deles.",
+    sacredSymbol: "Um selo de cera.",
+    channelEnergy: "Qualquer.",
+    preferredWeapon: "Bordão.",
+    devotees: "Anões, elfos, qareen, arcanistas, bardos, cavaleiros, guerreiros, nobres, paladino.",
+    grantedPowers: [
+      "Selo Impedidor"
+    ],
+    obligationsRestrictions: "Devotos de Dahriol não podem recusar pedidos de ajuda para entregar mensagens ou impedir que selos sejam abertos. Além disso, não podem abrir selos sem permissão. Para estes fins, um “selo” é qualquer barreira, como uma porta, tranca ou fechadura, mundana ou mágica."
+  },
+  {
+    id: "Drumak",
+    name: "Drumak",
+    subtitle: "o Deus do Duelo",
+    rank: "Conceito vivo, status divino 1",
+    image: [
+      "/deuses/drumak.png"
+    ],
+    status: "menor",
+    history: "Diferente da imensa maioria de deuses artonianos, o Deus do Duelo não é uma criatura, mas um título. A cada ano é realizado o Torneio Deus do Duelo, um campeonato secreto no qual lutadores de toda Arton desafiam uns aos outros em duelos formais, em diferentes arenas, muitas vezes mascarando essa competição como simples brigas de rua ou lutas entre aventureiros. O vencedor, que fica conhecido como o “Guerreiro de Arton”, é então desafiado pelo Drumak atual. Se o Guerreiro de Arton vence o duelo, ele se torna o novo Deus do Duelo e parte da personalidade da divindade se une à do campeão.\nO segredo do Torneio Deus do Duelo é mantido para que só aqueles que são convidados (ou seja, apenas aventureiros considerados “combatentes” e que honrem a tradição das competições) saibam de sua existência. Os participantes do torneio formam uma grande confraria, respeitando-se ainda que sejam oponentes ferrenhos. Assim como o deus, seus devotos honram e respeitam duelos formais, jamais se intrometendo na luta de outros — mas também nunca se acovardam, sempre resolvendo suas disputas pessoalmente. Nem todos os competidores do torneio são devotos de Drumak, mas todos os devotos do Deus do Duelo competem.\nO torneio é realizado no outono. Isso deriva das condições dos aventureiros no passado. A primavera e o verão eram considerados “época de aventuras”, quando os grupos de heróis eram contratados para desbravar locais inexplorados e invadir covis de monstros, quando os exércitos marchavam e os reis faziam seus movimentos agressivos. Assim, as duas estações eram reservadas às missões importantes. No outono, os grupos de aventureiros costumavam estar menos ocupados. Assim, os combatentes desses grupos podiam se dedicar a sua competição secreta. Contudo, não há uma data definida para o início do torneio.\nAté hoje, nunca houve um caso em que a luta contra Drumak não tenha sido a mais difícil de todo o torneio. O deus menor usa todas as técnicas, truques e poderes a sua disposição, e poucos lutadores são capazes de fazer frente. Assim, é comum que o Guerreiro de Arton não chegue a sagrar-se Deus do Duelo, e o posto permaneça com o hospedeiro atual da divindade. Dizem que a atual Deusa do Duelo, a bárbara Drusilla, está desaparecida há muitos anos. Vários competidores do torneio têm como objetivo encontrá-la — por serem seus devotos ou apenas para poder desafiá-la!",
+    beliefs: "Honrar duelos individuais. Aventurar-se. Aperfeiçoar a arte do combate. Participar do Torneio Deus do Duelo. Ir ao encontro do mais forte.",
+    sacredSymbol: "Duas espadas se cruzando.",
+    channelEnergy: "Qualquer.",
+    preferredWeapon: "Espada longa.",
+    devotees: "Quaisquer “combatentes”. A critério do mestre, qualquer personagem que use o combate físico como tática principal pode ser convidado para o Torneio Deus do Duelo e, assim também pode ser devoto de Drumak.",
+    grantedPowers: [
+      "Um Contra Um"
+    ],
+    obligationsRestrictions: "Devotos de Drumak devem competir no Torneio Deus do Duelo e não podem interromper ou recusar lutas justas entre dois oponentes."
+  },
   
   //#endregion
   
