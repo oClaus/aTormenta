@@ -7,6 +7,10 @@ import { Threat } from "@/types/threat";
 import { Condition } from "@/types/condition";
 import { threats as allThreats } from "@/data/threats";
 import { conditions as allConditions } from "@/data/conditions";
+import CreatureWizard from "./creature-wizard";
+import EncounterGeneratorModal from "./encounter-generator-modal";
+import { GeneratedEncounterEntry } from "./encounter-generator";
+import TreasureModal from "./treasure-modal";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -54,11 +58,8 @@ const extractPmCost = (text: string): number | null => {
 };
 
 const getHabilityTitle = (hab: string): string => {
-  // Separa no primeiro ponto, parêntese ou dois-pontos que venha APÓS pelo menos 3 chars
-  // Evita partir "Fort CD 14" etc no meio
   const match = hab.match(/^(.+?)(?:\s*[:(]|\.[\s]|\.$)/);
   if (match) return match[1].trim();
-  // Fallback: tudo antes do primeiro ponto ou parêntese
   return hab.split(/[.(]/)[0].trim();
 };
 
@@ -70,6 +71,13 @@ const POSITIVE_CONDITIONS = new Set([
   "fortalecido", "intrepido", "leve", "poderoso", "prevenido",
   "relaxado", "restaurando", "veloz", "vigoroso",
 ]);
+
+const ND_ORDER_MAP: Record<string, number> = {
+  "1/4": 0.25, "1/2": 0.5, "1": 1, "2": 2, "3": 3, "4": 4, "5": 5, "6": 6, "7": 7,
+  "8": 8, "9": 9, "10": 10, "11": 11, "12": 12, "13": 13, "14": 14, "15": 15,
+  "16": 16, "17": 17, "18": 18, "19": 19, "20": 20, "S": 21, "S+": 22,
+};
+const ndOrderValue = (nd: string): number => ND_ORDER_MAP[nd] ?? (parseFloat(nd) || 1);
 
 const blankThreat = (): Threat => ({
   id: uid(), name: "", tipo: "Monstro", tamanho: "Médio", papel: "", nd: "1",
@@ -550,9 +558,9 @@ function ParticipantCard({ participant, isActive, onUpdate, onEdit, onRemove, on
   );
 }
 
-// ─── Formulário de Monstro Personalizado ─────────────────────────────────────
+// ─── Formulário de Monstro Personalizado (manual, rápido) ────────────────────
 
-function CustomMonsterForm({ onAdd }: { onAdd: (m: MonsterParticipant) => void }) {
+function CustomMonsterForm({ onAdd, onOpenWizard }: { onAdd: (m: MonsterParticipant) => void; onOpenWizard: () => void }) {
   const [open, setOpen] = useState(false);
   const [t, setT] = useState<Threat>(blankThreat());
   const [ini, setIni] = useState(0);
@@ -574,16 +582,23 @@ function CustomMonsterForm({ onAdd }: { onAdd: (m: MonsterParticipant) => void }
 
   if (!open) {
     return (
-      <button onClick={() => setOpen(true)} className="w-full py-3 mt-2 border-2 border-dashed border-amber-900/30 text-amber-950/60 bg-[#fbf5e6]/50 rounded-xl text-xs uppercase tracking-widest font-bold hover:border-red-800/40 hover:text-red-800 hover:bg-[#fbf5e6] transition-all">
-        + Monstro Personalizado
-      </button>
+      <div className="flex gap-2 mt-2">
+        <button onClick={onOpenWizard}
+          className="flex-1 py-3 border-2 border-red-800/30 text-red-800 bg-red-800/5 rounded-xl text-xs uppercase tracking-widest font-bold hover:border-red-800/50 hover:bg-red-800/10 transition-all flex items-center justify-center gap-2">
+          Criar criatura (Assistente Guiado)
+        </button>
+        <button onClick={() => setOpen(true)}
+          className="flex-1 py-3 border-2 border-dashed border-amber-900/30 text-amber-950/60 bg-[#fbf5e6]/50 rounded-xl text-xs uppercase tracking-widest font-bold hover:border-amber-700/50 hover:text-amber-950 hover:bg-[#fbf5e6] transition-all">
+          Criar criatura (Manual)
+        </button>
+      </div>
     );
   }
 
   return (
     <div className="mt-4 bg-[#e8dac1] border-2 border-amber-900/20 rounded-xl p-5 shadow-sm space-y-4 font-serif">
       <div className="flex items-center justify-between border-b-2 border-amber-900/10 pb-3 mb-2">
-        <p className="text-base font-bold text-red-800 tracking-wide flex items-center gap-2"><span>☠</span> Novo Monstro</p>
+        <p className="text-base font-bold text-red-800 tracking-wide flex items-center gap-2"><span>☠</span> Novo Monstro (Manual)</p>
         <button onClick={() => setOpen(false)} className="text-amber-950/40 hover:text-red-800 text-xl leading-none transition-colors">✕</button>
       </div>
       <div className="grid grid-cols-2 gap-3">
@@ -626,10 +641,11 @@ function CustomMonsterForm({ onAdd }: { onAdd: (m: MonsterParticipant) => void }
 
 // ─── Seletor de Criaturas ─────────────────────────────────────────────────────
 
-function CreatureSelector({ selected, onToggle, extra = [] }: {
+function CreatureSelector({ selected, onToggle, extra = [], onAdjust }: {
   selected: Set<string>;
   onToggle: (id: string) => void;
   extra?: Threat[];
+  onAdjust: (threat: Threat) => void;
 }) {
   const [search, setSearch] = useState("");
   const allEntries = [...allThreats, ...extra];
@@ -645,22 +661,28 @@ function CreatureSelector({ selected, onToggle, extra = [] }: {
       />
       <div className="h-72 overflow-y-auto space-y-1.5 pr-2 custom-scrollbar border-2 border-amber-900/10 p-2 rounded-xl bg-[#e8dac1]/50">
         {filtered.map((t) => (
-          <button key={t.id} onClick={() => onToggle(t.id)}
-            className={`w-full text-left px-4 py-2.5 rounded-lg border-2 transition-all flex items-center gap-3 text-sm shadow-sm ${
+          <div key={t.id}
+            className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg border-2 transition-all text-sm shadow-sm ${
               selected.has(t.id)
                 ? "bg-red-800/10 border-red-800/40 text-red-900"
                 : "bg-[#fbf5e6] border-amber-900/10 text-amber-950/85 hover:border-amber-900/30 hover:bg-[#f5e6d0]"
             }`}
           >
-            {selected.has(t.id) ? <span className="text-red-800 shrink-0 text-sm font-bold">✓</span> : <span className="w-3 shrink-0" />}
-            <span className="font-bold flex-1 truncate">{t.name}</span>
+            <button onClick={() => onToggle(t.id)} className="flex items-center gap-2 flex-1 min-w-0 text-left">
+              {selected.has(t.id) ? <span className="text-red-800 shrink-0 text-sm font-bold">✓</span> : <span className="w-3 shrink-0" />}
+              <span className="font-bold flex-1 truncate">{t.name}</span>
+            </button>
             <div className="flex items-center gap-1.5 shrink-0">
               {extra.some((e) => e.id === t.id) && (
                 <span className="text-[9px] font-bold uppercase tracking-widest text-emerald-800 bg-emerald-700/15 border border-emerald-700/30 px-1.5 py-0.5 rounded">xlsx</span>
               )}
               <span className="text-[10px] font-bold uppercase tracking-widest text-amber-950/50 bg-[#e8dac1] px-2 py-0.5 rounded">ND {t.nd}</span>
+              <button onClick={() => onAdjust(t)} title="Ajustar de forma guiada"
+                className="w-6 h-6 flex items-center justify-center rounded-md border border-amber-900/15 bg-[#fbf5e6] text-amber-950/40 hover:text-red-800 hover:border-red-800/40 transition-all text-xs">
+                🧙
+              </button>
             </div>
-          </button>
+          </div>
         ))}
         {!filtered.length && <p className="text-center text-amber-950/50 italic py-8 text-sm">Nenhuma criatura encontrada.</p>}
       </div>
@@ -685,6 +707,13 @@ export default function CombatePage() {
   const [newPlayerIni, setNewPlayerIni] = useState("");
   const [importError, setImportError] = useState("");
 
+  const [wizardOpen, setWizardOpen] = useState(false);
+  const [wizardMode, setWizardMode] = useState<"create" | "adjust">("create");
+  const [wizardBaseThreat, setWizardBaseThreat] = useState<Threat | undefined>(undefined);
+  const [encounterGenOpen, setEncounterGenOpen] = useState(false);
+  const [treasureModalOpen, setTreasureModalOpen] = useState(false);
+  const [treasureSuggestedNd, setTreasureSuggestedNd] = useState<string | undefined>(undefined);
+
   const activeCardRef = useRef<HTMLDivElement>(null);
   const xlsxInputRef = useRef<HTMLInputElement>(null);
 
@@ -704,8 +733,72 @@ export default function CombatePage() {
     setNewPlayerName(""); setNewPlayerIni("");
   };
 
+  const openCreateWizard = () => {
+    setWizardMode("create");
+    setWizardBaseThreat(undefined);
+    setWizardOpen(true);
+  };
+
+  const openAdjustWizard = (threat: Threat) => {
+    setWizardMode("adjust");
+    setWizardBaseThreat(threat);
+    setWizardOpen(true);
+  };
+
+  const handleEncounterAccept = (entries: GeneratedEncounterEntry[]) => {
+    const fullLibrary = [...allThreats, ...importedThreats, ...customMonsters.map((m) => m.threat)];
+    const newCustom: MonsterParticipant[] = [];
+    const newSelected = new Set(selectedThreatIds);
+
+    entries.forEach(({ threat, quantity }) => {
+      const isFromLibrary = allThreats.some((t) => t.id === threat.id) || importedThreats.some((t) => t.id === threat.id);
+      if (isFromLibrary) {
+        // Da biblioteca/importadas: apenas seleciona (1x). Se quantity > 1, duplica como personalizado extra.
+        newSelected.add(threat.id);
+        for (let i = 1; i < quantity; i++) {
+          newCustom.push({
+            id: uid(), name: threat.name, type: "monster", initiativeRoll: threat.iniciativa,
+            threat: { ...threat, id: uid() },
+            pvMax: threat.pv, pvCurrent: threat.pv, pmMax: threat.pm ?? 0, pmCurrent: threat.pm ?? 0,
+            conditions: [],
+          });
+        }
+      } else {
+        // Monstro personalizado (criado no wizard, por exemplo): duplica conforme quantity
+        for (let i = 0; i < quantity; i++) {
+          newCustom.push({
+            id: uid(), name: threat.name, type: "monster", initiativeRoll: threat.iniciativa,
+            threat: { ...threat, id: uid() },
+            pvMax: threat.pv, pvCurrent: threat.pv, pmMax: threat.pm ?? 0, pmCurrent: threat.pm ?? 0,
+            conditions: [],
+          });
+        }
+      }
+    });
+
+    setSelectedThreatIds(newSelected);
+    setCustomMonsters((prev) => [...prev, ...newCustom]);
+    setEncounterGenOpen(false);
+  };
+
+  const handleWizardComplete = (threat: Threat) => {
+    const monster: MonsterParticipant = {
+      id: uid(),
+      name: threat.name,
+      type: "monster",
+      initiativeRoll: threat.iniciativa,
+      threat,
+      pvMax: threat.pv,
+      pvCurrent: threat.pv,
+      pmMax: threat.pm ?? 0,
+      pmCurrent: threat.pm ?? 0,
+      conditions: [],
+    };
+    setCustomMonsters((prev) => [...prev, monster]);
+    setWizardOpen(false);
+  };
+
   const exportXlsx = () => {
-    // Combina criaturas do compêndio + importadas + personalizadas
     const allEntries: Threat[] = [
       ...allThreats,
       ...importedThreats,
@@ -754,7 +847,6 @@ export default function CombatePage() {
       "origin": t.origin ?? "Compêndio",
     }));
 
-    // Monta planilha: 3 linhas decorativas + cabeçalho + dados
     const decorRows = [
       ["\u2694  TORMENTA 20 — Compêndio de Criaturas  ☠"],
       ["Preencha os dados · Habilidades separadas por | (pipe) · PM 0 = sem magias"],
@@ -782,7 +874,6 @@ export default function CombatePage() {
       const threats = await parseXlsxThreats(file);
       if (!threats.length) { setImportError("Nenhuma criatura encontrada na planilha."); return; }
       setImportedThreats(threats);
-      // Auto-seleciona todas as criaturas importadas
       setSelectedThreatIds((prev) => {
         const next = new Set(prev);
         threats.forEach((t) => next.add(t.id));
@@ -834,7 +925,6 @@ export default function CombatePage() {
   };
 
   const saveEditedMonster = (updated: MonsterParticipant) => {
-    // Garante que o nome do participante reflita o nome editado na threat
     const synced: MonsterParticipant = { ...updated, name: updated.threat.name };
     setParticipants((prev) => prev.map((p) => (p.id === synced.id ? synced : p)));
     addLog(`✎ ${synced.name} editado`);
@@ -842,9 +932,23 @@ export default function CombatePage() {
 
   const endCombat = () => {
     if (!confirm("Encerrar o combate?")) return;
+
+    // Determina o ND mais alto entre as criaturas do combate, para sugerir no tesouro
+    const monsterThreats = participants
+      .filter((p) => p.type === "monster")
+      .map((p) => (p as MonsterParticipant).threat.nd);
+    const highestNd = monsterThreats.length
+      ? monsterThreats.reduce((max, nd) => (ndOrderValue(nd) > ndOrderValue(max) ? nd : max), monsterThreats[0])
+      : undefined;
+
     setParticipants([]); setCustomMonsters([]); setImportedThreats([]);
     setSelectedThreatIds(new Set()); setRound(1); setActiveIndex(0); setLog([]);
     setPhase("setup");
+
+    if (highestNd) {
+      setTreasureSuggestedNd(highestNd);
+      setTreasureModalOpen(true);
+    }
   };
 
   const playersAdded = participants.filter((p) => p.type === "player");
@@ -939,7 +1043,15 @@ export default function CombatePage() {
                     </span>
                   )}
                 </div>
-                <p className="text-sm text-amber-950/60 italic mb-4 border-b-2 border-amber-900/10 pb-4 font-medium">Adicione do acervo ou crie ameaças customizadas.</p>
+                <p className="text-sm text-amber-950/60 italic mb-4 border-b-2 border-amber-900/10 pb-4 font-medium">Adicione do acervo, importe uma planilha, ou crie do zero.</p>
+
+                {/* Gerador de encontros aleatórios */}
+                <button
+                  onClick={() => setEncounterGenOpen(true)}
+                  className="w-full py-3 mb-4 flex items-center justify-center gap-2 border-2 border-red-800/40 bg-red-800/10 text-red-800 rounded-xl text-sm font-black uppercase tracking-widest hover:border-red-800/60 hover:bg-red-800/15 hover:-translate-y-0.5 transition-all shadow-sm"
+                >
+                  Gerar Encontro Aleatório
+                </button>
 
                 {/* Botões de planilha */}
                 <div className="flex gap-2 mb-4">
@@ -948,7 +1060,7 @@ export default function CombatePage() {
                     onClick={() => xlsxInputRef.current?.click()}
                     className="flex-1 py-2.5 flex items-center justify-center gap-2 border-2 border-dashed border-amber-700/40 text-amber-950/60 bg-[#fbf5e6]/60 rounded-xl text-xs font-bold uppercase tracking-widest hover:border-red-800/50 hover:text-red-800 hover:bg-[#fbf5e6] transition-all shadow-sm"
                   >
-                    📥 Importar Planilha
+                    Importar Planilha
                   </button>
                   <a
                     href="/criaturas_tormenta.xlsx"
@@ -956,7 +1068,7 @@ export default function CombatePage() {
                     title="Baixar modelo de planilha"
                     className="py-2.5 px-4 flex items-center justify-center gap-1.5 border-2 border-amber-900/20 text-amber-950/50 bg-[#fbf5e6]/60 rounded-xl text-xs font-bold uppercase tracking-widest hover:border-emerald-700/50 hover:text-emerald-800 hover:bg-[#fbf5e6] transition-all shadow-sm whitespace-nowrap"
                   >
-                    📄 Modelo
+                    Modelo
                   </a>
                 </div>
 
@@ -971,8 +1083,8 @@ export default function CombatePage() {
                   </div>
                 )}
 
-                {/* Monstro personalizado */}
-                <CustomMonsterForm onAdd={(m) => setCustomMonsters((prev) => [...prev, m])} />
+                {/* Criação: Wizard ou Manual */}
+                <CustomMonsterForm onAdd={(m) => setCustomMonsters((prev) => [...prev, m])} onOpenWizard={openCreateWizard} />
 
                 {/* Monstros personalizados adicionados */}
                 {customMonsters.length > 0 && (
@@ -984,7 +1096,11 @@ export default function CombatePage() {
                           <span className="font-bold text-red-800 truncate">{m.name}</span>
                           <span className="text-amber-950/50 text-[10px] font-bold uppercase tracking-widest mt-0.5">{m.pvMax} PV · ND {m.threat.nd}</span>
                         </div>
-                        <button onClick={() => setCustomMonsters((prev) => prev.filter((x) => x.id !== m.id))} className="text-amber-900/40 hover:text-red-800 text-sm w-6 h-6 flex items-center justify-center bg-[#e8dac1] rounded border border-amber-900/20 transition-colors">✕</button>
+                        <div className="flex items-center gap-1.5">
+                          <button onClick={() => openAdjustWizard(m.threat)} title="Ajustar de forma guiada"
+                            className="w-6 h-6 flex items-center justify-center rounded-md border border-amber-900/15 bg-[#e8dac1] text-amber-950/40 hover:text-red-800 hover:border-red-800/40 transition-all text-xs">🧙</button>
+                          <button onClick={() => setCustomMonsters((prev) => prev.filter((x) => x.id !== m.id))} className="text-amber-900/40 hover:text-red-800 text-sm w-6 h-6 flex items-center justify-center bg-[#e8dac1] rounded border border-amber-900/20 transition-colors">✕</button>
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -993,7 +1109,8 @@ export default function CombatePage() {
                 {/* Biblioteca */}
                 <div className="mt-6 border-t-2 border-amber-900/10 pt-5 flex-grow flex flex-col">
                   <p className="text-[10px] uppercase tracking-widest text-red-800/80 font-bold mb-2 flex items-center gap-1"><span className="text-[8px] text-red-800/40">◆</span> Acervo do Compêndio</p>
-                  <CreatureSelector selected={selectedThreatIds} onToggle={toggleThreat} extra={importedThreats} />
+                  <p className="text-[10px] text-amber-950/40 italic mb-2">Clique no 🧙 ao lado de uma criatura para ajustá-la de forma guiada.</p>
+                  <CreatureSelector selected={selectedThreatIds} onToggle={toggleThreat} extra={importedThreats} onAdjust={openAdjustWizard} />
                 </div>
               </div>
             </div>
@@ -1136,6 +1253,30 @@ export default function CombatePage() {
 
       {editingMonster && (
         <EditMonsterModal monster={editingMonster} onSave={saveEditedMonster} onClose={() => setEditingMonster(null)} />
+      )}
+
+      {encounterGenOpen && (
+        <EncounterGeneratorModal
+          pool={[...allThreats, ...importedThreats, ...customMonsters.map((m) => m.threat)]}
+          onAccept={handleEncounterAccept}
+          onClose={() => setEncounterGenOpen(false)}
+        />
+      )}
+
+      {wizardOpen && (
+        <CreatureWizard
+          mode={wizardMode}
+          baseThreat={wizardBaseThreat}
+          onComplete={handleWizardComplete}
+          onCancel={() => setWizardOpen(false)}
+        />
+      )}
+
+      {treasureModalOpen && (
+        <TreasureModal
+          suggestedNd={treasureSuggestedNd}
+          onClose={() => setTreasureModalOpen(false)}
+        />
       )}
 
       <footer className="relative z-10 mt-20 p-8 border-t-4 border-double border-amber-900/40 bg-[#2a1810] text-center font-serif text-[#e8dac1]/60 text-sm flex flex-col items-center justify-center">
