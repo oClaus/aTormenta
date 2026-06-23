@@ -938,6 +938,827 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: "Devotos de Drumak devem competir no Torneio Deus do Duelo e não podem interromper ou recusar lutas justas entre dois oponentes."
   },
+  {
+    id: "Elrophin",
+    name: "Elrophin",
+    subtitle: "o Deus da Vaidade",
+    rank: "Mortal ascendido, status divino 3",
+    image: [
+    "/deuses/elrophin.png", "/deuses/elrophin2.png"
+    ],
+    status: "menor",
+    history: "Não se sabe muito sobre a origem de Elrophin. Alguns dizem que seria filho de Valkaria, e assim um semideus. Também correm histórias de que teria sido um grande bardo, um poderoso guerreiro, ou ambos. Também dizem que Elrophin foi um antigo sumo-sacerdote da Deusa da Ambição, atuante quando Arton Norte ainda não havia sido desbravada. As histórias afirmam que Elrophin era tão seguro de si em tudo que fazia que aos poucos foi conquistando tudo que desejava: poderes, vitórias, domínios, amores. Sua lábia e autoconfiança eram lendárias. E assim foi crescendo e conquistando uma legião de admiradores e seguidores, até que acabou por se transformar em um deus menor. Talvez esse feito tenha recebido ajuda e bênção da própria Valkaria, que sempre admirou pessoas ambiciosas; outros pensam que Elrophin alcançou a divindade justamente por dar as costas a ela — pois a maior ambição (e a maior vaidade) seria não precisar nem mesmo dos deuses. Muitas lendas correm em torno deste deus — que, embora um tanto obscuro, não deixa de ser poderoso e influente.",
+    beliefs: "Conhecer seu próprio valor e demonstrá-lo. Conquistar o que deseja através da lábia ou da força. Admirar-se e ser a maior prioridade de si mesmo.",
+    sacredSymbol: "Uma espada bastarda entre rosas.",
+    channelEnergy: "Qualquer.",
+    preferredWeapon: "Espada bastarda.",
+    devotees: "Elfos, goblins, medusas, minauros, minotauros, naidoras, qareen, suraggel, tabrachi, bardos, bucaneiros, cavaleiros, guerreiros, lutadores, nobres.",
+    grantedPowers: [
+    "Vanglória"
+    ],
+    obligationsRestrictions: "Devotos de Elrophin devem pregar o quanto seu deus — e eles mesmos — são incríveis e convencer pessoas de seus feitos pelo menos uma vez por dia (ou por sessão de jogo, o que demorar mais). Em termos de jogo, devem aumentar a categoria de atitude de um NPC em pelo menos um passo."
+    },
+    {
+      id: "Sartan",
+      name: "Sartan",
+      subtitle: "o Deus da Desolação",
+      rank: "Entidade primordial, status divino 4",
+      image: [
+      "/deuses/sartan.png", "/deuses/sartan2.png"
+      ],
+      status: "menor",
+      history: "Milênios atrás, quando o mundo ainda era jovem e os deuses também, o Panteão precisou enfrentar inúmeras entidades que surgiam espontaneamente ou até vinham de outros mundos, com a intenção de dominar Arton. Algumas dessas entidades eram elas mesmas deuses menores, enquanto outras eram demônios e diabos extremamente poderosos. No entanto, todas foram derrotadas e repelidas. O mundo viveu em paz por algum tempo, até que o maligno Deus Menor da Desolação, Sartan, conseguiu retornar a Arton, trazendo consigo guerra, fome, doenças e destruição.\nNaquela época, os deuses maiores há muito tinham criado e estabelecido seus próprios povos. Não andavam no mundo em suas formas verdadeiras, mas contavam com campeões mortais. Então escolheram entre os mortais um grupo de heróis para banir Sartan, usando um objeto sagrado: o Disco dos Três. O deus diabólico foi derrotado, mas não completamente destruído. Ele esperou pacientemente até que os astros se alinhassem e, quando tal fenômeno ocorreu, fez uma nova tentativa de retornar.\nMais uma vez um grupo de heróis foi convocado por Dahriol, o Deus Menor dos Selos, mensageiro do Panteão, na antiga cidade de Malpetrim. Esses heróis reuniram as partes do Disco dos Três e encontraram o local onde os cultistas do Deus da Desolação tentavam trazer Sartan de volta a Arton. Eles se depararam com um horror indescritível: uma cabeça imensa e demoníaca, cheia de chifres e espinhos, com inúmeros vermes rastejando sobre sua pele repugnante. Apesar disso, o grupo triunfou e Sartan foi banido mais uma vez. Com o banimento de Sartan, seu culto se encolheu nas sombras, esperando pela oportunidade de invocá-lo novamente.\nAo longo das eras, este deus passou pouco tempo em Arton, pois sempre foi repelido. Assim, nem mesmo seus cultistas sabem muito sobre ele. Contudo, a obsessão de Sartan por vir a este mundo é motivação suficiente para que seja cultuado. A proibição de sua permanência em Arton, sem que ninguém saiba exatamente quais seriam as consequências disso, parece seduzir cultistas. Muitos dizem que, se Sartan efetivamente viesse, Arton seria destruída… Mas isso só pode ser um exagero. Ou não?",
+      beliefs: "Trazer Sartan de volta a Arton. Preparar-se para o retorno do Deus da Desolação. Espalhar a guerra, a morte, a fome e doenças pelo mundo, até que restem apenas os eleitos. Praticar a devassidão e a perversão. Deturpar tudo que é comum. Abraçar a agonia e a crueldade.",
+      sacredSymbol: "Uma cabeça de demônio com a bocarra arreganhada.",
+      channelEnergy: "Negativa.",
+      preferredWeapon: "Maça.",
+      devotees: "Quaisquer. Sartan não rejeita ninguém que queira ajudá-lo a retornar a Arton.",
+      grantedPowers: [
+      "Inimigo dos Deuses"
+      ],
+      obligationsRestrictions: "Devotos de Sartan jamais podem se recusar a participar de tentativas de trazer seu padroeiro de volta para Arton. Eles devem estar sempre estudando os alinhamentos dos astros para antecipar seu retorno. Além disso, devem praticar o mal através de algum ato de crueldade, como ferir uma criatura indefesa, pelo menos uma vez por dia (ou por sessão de jogo, o que demorar mais), como oferenda a Sartan. Esta divindade menor não é permitida para jogadores."
+      },
+      {
+        id: "Inghlblhpholstgt",
+        name: "Inghlblhpholstgt",
+        subtitle: "a Grande Divindade Anfíbia",
+        rank: "Entidade primordial, status divino 3",
+        image: [
+        "/deuses/inghlblhpholstgt.png", "/deuses/inghlblhpholstgt2.png"
+        ],
+        status: "menor",
+        history: "Esta divindade menor possui um nome impronunciável para a maioria dos mortais, sendo conhecida como o Grande Deus Sapo entre os povos tabrachi. Nos antigos murais, é retratado como o primeiro ser marinho a pisar em terra firme, parte das criaturas que atenderam ao chamado de Allihanna, a Mãe Natureza, para deixar as profundezas oceânicas e migrar para o continente. Outras retratações históricas o descrevem como uma das inúmeras crias de Megalokk, o Deus dos Monstros. Existem até relatos afirmando que sua semente veio do éter divino, entre os mundos, precedendo a própria existência da vida em Arton.\nO templo mais conhecido dedicado a essa divindade encontra-se no Pântano dos Juncos, em Deheon. O local é protegido por uma criatura chamada catoblepas, capaz de transformar qualquer criatura em um ser batráquio com um simples olhar. Diz-se que essa habilidade do monstro sagrado é responsável por aumentar lentamente, mas de forma constante, a população tabrachi na região, que vem crescendo desde os primeiros tempos de ocupação do continente norte.\nNão se sabe ao certo quais são as intenções de Inghlblhpholtsgt. Existem rumores sobre uma antiga profecia que fala de uma inundação em escala mundial, que transformará todas as terras de Arton em pântanos. Mas, como o culto à Grande Divindade Anfíbia não é especialmente organizado, nem possui grandes registros, isso pode ser apenas um boato.\nOs locais de adoração a Inghlblhpholstgt podem ser meros vestígios de uma era em que pântanos dominavam os continentes e libélulas gigantes voavam pelos céus, ou talvez o deus busque espalhar sua bênção anfíbia por todo o mundo. O fato é: mesmo após milênios, sua presença ainda persiste.",
+        beliefs: "Reverenciar Inghlblhpholstgt. Proteger o povo-sapo e os demais anfíbios. Pregar a evolução e a transformação do mundo em um grande pântano. Auxiliar a vinda do grande dilúvio profetizado eras atrás.",
+        sacredSymbol: "Um sapo sobre uma pirâmide.",
+        channelEnergy: "Qualquer.",
+        preferredWeapon: "Lança.",
+        devotees: "Dahllan, goblins, lefou, sereias/tritões, tabrachi, trogs, arcanistas, bárbaros, caçadores, druidas, ladinos, treinadores.",
+        grantedPowers: [
+        "Salto Anurídeo"
+        ],
+        obligationsRestrictions: "Devotos de Inghlblhpholstgt devem espalhar sua fé com afinco, angariando pelo menos um novo devoto por mês. Além disso, devem ajudar e proteger criaturas anfíbias, desde que não prejudique seus aliados."
+        },
+        {
+          id: "Lamashtu",
+          name: "Lamashtu",
+          subtitle: "a Deusa da Matança",
+          rank: "Entidade primordial, status divino 4",
+          image: [
+          "/deuses/lamashtu.png", "/deuses/lamashtu2.png"
+          ],
+          status: "menor",
+          history: "Uma das divindades mais temidas nos reinos dos deuses, Lamashtu é também conhecida como a Deusa da Matança, a Senhora do Genocídio e outros títulos igualmente horrendos. Venerada por cultos secretos, é descrita como uma belíssima mulher-serpente com seis braços, cada um empunhando uma arma mortífera.\nLamashtu é uma divindade de morte, mal e destruição. Criaturas de coração sombrio fazem cerimônias e oferendas profanas à deusa-serpente, buscando atrair suas graças a qualquer preço — os cultistas de Lamashtu estão entre os vilões mais odiados e temidos, reunindo-se em células mercenárias para oferecer seus serviços a clientes com bolsos fundos o suficiente. Além disso, Lamashtu comanda legiões demoníacas nos domínios de Werra, o Reino de Arsenal, um mundo de guerra e matança. Avançando diante das tropas, sua fúria em batalha é indomável.\nA Senhora do Genocídio se deleita com sacrifícios humanos, mas também pode ser seduzida por belas joias, sua única fraqueza conhecida. Entre aventureiros, como forma de bravata exagerada, é comum dizer que “posso até mesmo roubar o tesouro de Lamashtu”.",
+          beliefs: "Praticar a violência em nome da Rainha dos Massacres. Jamais reprimir os próprios instintos e desejos. Jamais ser domado. Jamais oferecer perdão ou rendição. Destruir seus inimigos. Reunir joias e pedras preciosas para a Senhora do Genocídio.",
+          sacredSymbol: "Uma joia ensanguentada.",
+          channelEnergy: "Negativa.",
+          preferredWeapon: "Cimitarra.",
+          devotees: "Medusas, minotauros, osteon, sulfure, trogs, bárbaros, bucaneiros, guerreiros, ladinos, lutadores, nobres.",
+          grantedPowers: [
+          "Furacão de Lâminas"
+          ],
+          obligationsRestrictions: "Uma vez por nível, o personagem deve consagrar uma de suas vítimas fatais à Lamashtu. Essa vítima pode ser qualquer criatura inteligente (Int –3 ou maior) que o personagem tenha matado (para criaturas que o grupo inteiro enfrentou em combate, o devoto deve ter sido responsável pelo golpe fatal). Para devotar a criatura, o personagem deve executar um ritual, com a presença do corpo da vítima, e sacrificar um valor em joias igual a 10% da diferença do dinheiro inicial do nível atual para o seguinte (por exemplo, T$ 400 para subir para o 4° nível)."
+          },
+          {
+id: "Laan",
+name: "Laan",
+subtitle: "o Deus das Viagens",
+rank: "Entidade primordial, status divino 3",
+image: [
+"/deuses/laan.png", "/deuses/laan2.png"
+],
+status: "menor",
+history: "Talvez o deus menor mais antigo de que se tem notícia, Laan é um deus tão ancestral que parece sempre ter existido. Alguns especulam que nasceu numa era muito primordial de Arton, quando conceitos como “raças” ainda não eram tão definidos, e criaturas únicas surgiam e desapareciam de tempos em tempos. Alguns teólogos afirmam que Laan surgiu logo após as primeiras criaturas vivas deixarem os oceanos, impulsionadas por Allihanna — essa jornada primordial teria provocado o surgimento do deus. Assim, embora segundo essa hipótese não tenha “sempre existido”, Laan ainda seria mais velho do que quase qualquer outra coisa em Arton.\nLaan é um deus menor inquieto e curioso, em constante movimento. Governa não apenas as viagens, mas os viajantes e o próprio conceito de deslocamento de um lugar a outro. Também tem influência sobre comunicação e mensageiros. De alguma forma, Laan parece ter domínio sobre todos os tipos de jornadas — desde a viagem de Azgher pelos céus todos os dias até a passagem das almas de Arton aos reinos dos deuses após a morte. Seu propósito é desbravar novos terrenos, espalhar a necessidade de migração entre as criaturas. Laan nunca está onde as pessoas estão paradas, e ninguém nunca permanece parado após sua passagem.\nO Deus Menor das Viagens possui a estranha capacidade de abrir uma “estrada reta” à sua frente — um caminho que ignora todos os tipos de obstáculos físicos, por onde os viajantes progridem com muito mais rapidez, sem necessidade de paradas. Fisicamente, é um homem alto, largo e musculoso, com voz ribombante e risada monumental. Veste uma toga solta, uma tiara dourada e não usa sapatos, enfrentando o chão com seus enormes pés descalços.",
+beliefs: "Viajar. Deslocar-se de um lugar a outro. Explorar. Conhecer o mundo. Descobrir novos locais. Entregar mensagens. Levar pessoas e objetos até onde são necessários.",
+sacredSymbol: "Uma estrada que se perde no horizonte.",
+channelEnergy: "Positiva.",
+preferredWeapon: "Bordão.",
+devotees: "Goblins, golens, kliren, lefou, moreau, naidoras, bardos, bucaneiros, caçadores, guerreiros, paladino.",
+grantedPowers: [
+"Pé na Estrada"
+],
+obligationsRestrictions: "Devotos de Laan são proibidos de fixar moradia, não podendo permanecer mais de 1d10+10 dias na mesma cidade (ou vila, aldeia, povoado...) ou 1d4+1 meses no mesmo reino."
+},
+{
+id: "Gratissa",
+name: "Gratissa",
+subtitle: "a Deusa da Hospitalidade",
+rank: "Mortal ascendido, status divino 2",
+image: [
+"/deuses/gratissa.png", "/deuses/gratissa2.png"
+],
+status: "menor",
+history: "Outrora humana, Gratissa foi elevada à divindade por seu empenho em receber bem qualquer um que batesse à sua porta. Sua boa vontade comoveu criminosos, acolheu doentes e evitou conflitos, fazendo de sua imagem um símbolo de paz e aliança. A virtude, venerada por milhares de fiéis, rendeu-lhe a imortalidade.\nA história de Gratissa se confunde com a própria tradição da hospitalidade no Reinado. Alguns historiadores afirmam que, enquanto mortal, Gratissa foi a maior defensora dessa tradição. Sua família descendia de muitos povos nativos de Arton Norte e da Caravana dos Exilados. Assim, foram capazes de notar que essa tradição estava presente em diversas culturas, sendo algo inerente aos costumes humanos. Gratissa teria sido o produto de gerações de educação voltada à hospitalidade. Outros, contudo, afirmam que Gratissa deu origem a essa tradição! Ao receber as comitivas de dois lordes inimigos em sua casa durante uma tempestade, a anfitriã obrigou-os (com educação, simplicidade e palavras duras) a deixar de lado suas desavenças enquanto estivessem sob seu teto. O costume ancestral teria se espalhado a partir daí.\nAtualmente, a deusa menor perambula pelo mundo ensinando sobre hospitalidade. Imagens suas podem ser encontradas na entrada de estalagens e residências, um culto ao bom anfitrião. Além disso, viajantes, aventureiros e caravaneiros também aprendem e utilizam as práticas do bom anfitrião mesmo em acampamentos. Assim, não é incomum encontrar na estrada grupos muito hospitaleiros e dispostos a oferecer um lugar em suas fogueiras. Na verdade, os devotos de Gratissa afirmam que, no instante em que um grupo de viajantes qualquer prepara uma fogueira e ergue tendas, tem obrigação de acolher qualquer um que peça por sua hospitalidade. Da mesma forma, o acampamento deve ser considerado sua casa e respeitado. A tradição da hospitalidade deve ser preservada, e aqueles que contrariam-na não passam de selvagens.\nEntre as muitas aparências que Gratissa adota, a que mais se destaca é a de uma mulher humana com vestes aconchegantes, olhar convidativo e palavras que acalmam a mente e o coração. Sua chegada em qualquer local é capaz de apaziguar os ânimos e promover convivência pacífica, pelo menos enquanto dois ou mais lados em conflito estiverem sob o mesmo teto.",
+beliefs: "Servir bem a todos os que buscam descanso. Pregar o cuidado. Acolher outros da melhor maneira possível. Praticar e ensinar a tradição da hospitalidade.",
+sacredSymbol: "Uma lareira.",
+channelEnergy: "Positiva.",
+preferredWeapon: "Não há. Devotos desta deusa não podem lançar a magia Arma Espiritual e similares.",
+devotees: "Anões, centauros, elfos, hynne, minotauros, qareen, bardos, bucaneiros, caçadores, druidas, nobres, paladino.",
+grantedPowers: [
+"Igual ao Lar"
+],
+obligationsRestrictions: "Devotos de Gratissa não podem causar dano, perda de PV e condições (exceto as condições enfeitiçado, fascinado e pasmo) a criaturas que estejam ocupando o mesmo local (incluindo o mesmo grupo de viagem, como uma caravana), nem podem fornecer bônus em dano contra essas criaturas. Além disso, não podem recusar hospitalidade a ninguém."
+},
+{
+id: "Garth",
+name: "Garth",
+subtitle: "o Deus da Pólvora",
+rank: "Mortal ascendido, status divino 2",
+image: [
+"", "/deuses/garth2.png"
+],
+status: "menor",
+history: "Garth é um caso triste de um deus menor que odeia aquilo que governa. A maioria daqueles que usam armas de pólvora conhece a história de seu passado. Garth foi o pistoleiro mais sanguinário que já existiu. Era um bandido terrível, mas relutava em matar pessoas indefesas (embora tenha feito isso algumas vezes). Exceto por esses casos, se a morte fosse o caminho mais fácil ou eficiente, mesmo que desnecessário, Garth sempre escolhia-o e, assim, tornou-se temido e caçado nas infindáveis planícies de Petrynia, antes que esse território fizesse parte do Império de Tauron.\nContudo, pelo amor a uma mulher capaz de ver bondade dentro dele, Garth cansou da vida sem sentido e tentou se regenerar. Ambos se casaram, tiveram um filho e viveram em paz numa pequena fazenda por alguns anos, sem que Garth disparasse um único tiro. O temido pistoleiro passou a ver que as armas de fogo tinham sido uma prisão, uma maldição.\nInfelizmente, o destino tinha outros planos para ele. Um bando de pistoleiros surgiu na fazenda, aproveitando sua ausência. Roubaram todo o pouco dinheiro que a família possuía. Mataram sua mulher e filho. Ao chegar em casa, Garth não parou sequer para enterrar os cadáveres. Pegou as pistolas e saiu em busca dos assassinos, caçando-os um a um.\nSua alma voltou a endurecer e ele aceitou que nunca teria redenção verdadeira. Garth odiava suas pistolas, mas elas eram tudo que ele tinha. Sua história se espalhou, pistoleiros passaram a cultuá-lo e logo se tornou o Deus Menor da Pólvora. Como uma divindade, poderia trazer sua família de volta à vida — mas sabe ser tarde para isso. Suas mortes, e a jornada de vingança que ele empreendeu, transformaram-no. Hoje em dia, Garth existe apenas para espalhar mais morte, difundir a ciência letal das armas de pólvora que ele tanto odeia, com pistolas que nunca precisam ser recarregadas. Em seu coração, apenas ódio.",
+beliefs: "Matar. Matar rápido. Matar sempre. Jamais oferecer perdão ou rendição. Vingar-se de tudo e todos.",
+sacredSymbol: "Uma pistola.",
+channelEnergy: "Negativa.",
+preferredWeapon: "Pistola.",
+devotees: "Anões, goblins, hobgoblins, kliren, meios-orcs, minauros, osteon, sulfure, bucaneiros, caçadores, inventores, ladinos.",
+grantedPowers: [
+"Pólvora Sagrada"
+],
+obligationsRestrictions: "Devotos de Garth não podem poupar inimigos nem aceitar ou oferecer perdão. Além disso, devem se vingar (de forma letal, usando armas de pólvora) de qualquer um que os prejudique seriamente."
+},
+{
+id: "Dunsark",
+name: "Dunsark",
+subtitle: "o Deus dos Mercenários",
+rank: "Mortal ascendido, status divino 2",
+image: [
+""
+],
+status: "menor",
+history: "Dunsark é um deus guerreiro, um combatente que carrega uma quantidade aparentemente infinita de armas pendendo de seu corpo, sempre interessado em lutar por dinheiro e arriscar-se por lucro. É o protetor das batalhas sem motivos pessoais, dos conflitos sem moralidade. Protege a noção de risco e ganho, a luta por puro interesse.\nReza a lenda que Dunsark foi um mercenário abençoado que já teve tanto ouro quanto os cofres de Sambúrdia e tantos itens mágicos quanto Arsenal. Seus devotos agarram-se a ele como uma esperança de riqueza e glória, anunciando seu nome após cada vitória em batalha, cada ataque bem-sucedido a um castelo, cada contrato lucrativo. Mesmo os mercenários que não acreditam na lenda contam suas histórias ao redor das fogueiras. Sua última grande vitória foi na Batalha de Tamu-ra, em 1405, onde Dunsark enfrentou a Tormenta e escapou para contar a história.\nApesar de ser viciado em risco e campeão de incontáveis guerras, sua aparência é comum. Soldados supersticiosos desconfiam que qualquer mercenário poderoso sem vínculos de lealdade possa ser Dunsark disfarçado, buscando um novo contrato, uma nova guerra. Durante a Guerra Artoniana, Dunsark foi “visto” inúmeras vezes. Talvez algumas dessas não sejam mera boataria de acampamento.",
+beliefs: "Lutar por dinheiro. Planejar e arriscar tudo por ouro, joias e espólios. Usar estratégias e técnicas superiores sempre. Colocar lucro acima de lealdade. Assumir grandes riscos por grandes recompensas.",
+sacredSymbol: "Uma espada longa entre joias.",
+channelEnergy: "Qualquer.",
+preferredWeapon: "Espada longa.",
+devotees: "Gnolls, goblins, kobolds, lefou, nezumi, orcs, osteon, suraggel, trogs, bárbaros, bucaneiros, caçadores, guerreiros, ladinos, lutadores, nobres.",
+grantedPowers: [
+"Armas e Espólios"
+],
+obligationsRestrictions: "Devotos de Dunsark não podem recusar aventuras que envolvam uma recompensa em dinheiro e não podem aceitar aventuras que não tenham esse tipo de recompensa. Além disso, não podem ajudar alguém sem receber algo em troca e devem ajudar quem estiver disposto a pagar mais."
+},
+{
+id: "Escamandra",
+name: "Escamandra",
+subtitle: "a Deusa da Permanência",
+rank: "Mortal ascendido, status divino 1",
+image: [
+""
+],
+status: "menor",
+history: "Antes de ser uma deusa, Escamandra foi uma grande líder entre as medusas, acolhendo aquelas que eram caçadas como monstros séculos atrás. Na Floresta dos Basiliscos, em certa área que passou a ser conhecida como Santuário das Estátuas Eternas, Escamandra criou um ambiente seguro para abrigar suas irmãs e, por esse feito, passou a ser adorada.\nAos poucos, a área ao redor do Santuário passou a abrigar mais e mais “estátuas de pedra”, na verdade pretensos intrusos que eram petrificados por Escamandra antes que pudessem ameaçar suas protegidas. Para contribuir com os objetivos de sua deusa, as medusas devotas de Escamandra passaram a domesticar os basiliscos da região — e até mesmo outros lagartos enormes sem poderes de petrificação —, usando-os para reduzir as suspeitas sobre as frequentes transformações de visitantes da floresta em estátuas.\nA deusa Escamandra, uma medusa belíssima, de olhar fulminante e cabelos serpentinos cor de mármore, despreza invasores e envia seus devotos para atacar qualquer um que se aproxime demais de seu santuário — petrificando-os e transformando-os em mais das “estátuas eternas” que dão nome ao local. No entanto, há registros de pessoas que conseguiram dialogar com Escamandra e até mesmo se converteram à sua causa, passando a espalhar sua palavra por Arton.",
+beliefs: "Proteger as medusas e sua cultura. Proteger o Santuário das Estátuas Eternas e manter sua localização em sigilo, exceto de medusas em busca de abrigo. Lutar pela permanência e defender a imutabilidade.",
+sacredSymbol: "Olhos de cobra em uma face de mármore.",
+channelEnergy: "Qualquer.",
+preferredWeapon: "Arco curto.",
+devotees: "Anões, centauros, elfos, golens, medusas, osteon, arcanistas, bárbaros, caçadores, cavaleiros, druidas, nobres.",
+grantedPowers: [
+"Olhar Atordoante"
+],
+obligationsRestrictions: "Devotos de Escamandra não podem causar dano letal ou perda de PV a medusas, nagahs, trogs e outras criaturas relacionadas com cobras (fornecer bônus em dano letal contra elas também é proibido) a critério do mestre. Podem causar dano não letal e prejudicar essas criaturas (em termos de jogo, impondo condições), desde que não causem dano letal ou perda de PV. Além disso, não podem recusar pedidos de ajuda de medusas."
+},
+{
+id: "Esmeralda",
+name: "Esmeralda",
+subtitle: "a Deusa das Joias",
+rank: "Mortal ascendido, status divino 2",
+image: [
+"/deuses/esmeralda.png"
+],
+status: "menor",
+history: "Quando ainda era apenas humana, Esmeralda já atuava como uma excelente joalheira e ourives, procurada por especialistas em joias de todo o Reinado. Em meio a infindável batalha entre falsificadores de preciosidades e nobres exigentes, dizia-se que ninguém era mais confiável que Esmeralda para atestar a fidelidade de uma joia. Contudo, apesar de famosa, a ourives era misteriosa e enigmática; sabia que, se sua verdadeira identidade fosse descoberta por contrabandistas e falsificadores, sua vida estaria em risco.\nInevitavelmente, Esmeralda desapareceu e, na ausência de alguém igualmente competente, vários comerciantes e até mesmo nobres ergueram templos e passaram a orar por seu retorno — uma medida desesperada para evitar que suas joalherias fossem à falência, ou apenas para que não precisassem estar privados de suas obras. Aos poucos, as joias fabricadas enquanto Esmeralda estava desaparecida passaram a ser consideradas falsas, ou ao menos de qualidade inferior. Sem Esmeralda, nada podia ser realmente precioso. Todos desejavam a volta de Esmeralda que, inesperadamente, atendeu aos desejos daqueles que, a essa altura, já eram seus fiéis. Mas, quando retornou, não era mais a mesma.\nEla agora lembrava uma aristocrata humana, mas sua pele era feita de diamante e seus olhos eram gemas coloridas. Vendo nisso um sinal claro do significado transcendental da ourives, seus devotos passaram a espalhar sua palavra. Após seu retorno, podia haver mais uma vez joias “verdadeiras”.\nOs devotos de Esmeralda aprendem as nuances dos metais valiosos e pedras preciosas, reconhecem o valor potencial de gemas brutas e honram sua deusa usando ou fabricando as mais deslumbrantes joias. Contudo, desprezam de forma quase irracional as joias fabricadas durante o curto período em que ela esteve desaparecida. Para eles, peças dessa época infeliz são como itens malditos.",
+beliefs: "Fabricar joias. Identificar pedras preciosas. Usar as mais finas preciosidades. Exalar a nobreza. Exibir a riqueza dos minérios.",
+sacredSymbol: "Um colar de ouro com um pingente de esmeralda.",
+channelEnergy: "Qualquer.",
+preferredWeapon: "Picareta.",
+devotees: "Anões, elfos, qareen, sílfides, arcanistas, bardos, bucaneiros, inventores, ladinos, nobres.",
+grantedPowers: [
+"Toque de Esmeralda"
+],
+obligationsRestrictions: "Devotos de Esmeralda devem usar um item na forma de uma joia — que sempre será considerado um item vestido. A joia deve estar exposta. Se não estiver usando uma joia por motivo justificável (se for furtado ou preso, por exemplo), o devoto tem um dia para voltar a usar uma joia antes de descumprir estas Obrigações & Restrições."
+},
+{
+id: "Garanaam",
+name: "Garanaam",
+subtitle: "o Deus das Charadas",
+rank: "Mortal ascendido, status divino 2",
+image: [
+"/deuses/garanaam.png"
+],
+status: "menor",
+history: "Um homem com traços de esfinge, que sempre falava em metáforas, enigmas e perguntas, Garanaam pregava que as respostas só poderiam ser obtidas vendo as coisas por outro ponto de vista e que as mais importantes verdades se escondem da obviedade. Ao mesmo tempo, ensinava a seus devotos que só aqueles capazes de pensar fora dos padrões comuns e ver o que não é evidente eram dignos de suas bênçãos.\nDiz-se que, apesar de um dia ter sido um mortal, Garanaam não guarda nenhuma semelhança com a pessoa que era antes de ascender. Sua aparência, sotaque, maneirismos e até mesmo seu nome teriam sido totalmente diferentes. De fato, talvez haja uma charada no próprio nome de Garanaam, além de um prêmio místico para quem for capaz de decifrá-la. Ao se tornar um deus menor, Garanaam virou ele mesmo uma charada, um enigma em forma de divindade.\nGaranaam foi recrutado por Orion Drake para o Exército de Deuses e lutou na Batalha de Tamu-ra. Contudo, diferente da maioria das divindades menores que participaram desse conflito, o Deus das Charadas não está morto! Ao entrar na área de Tormenta de Tamu-ra, Garanaam se deparou com os lefeu e enlouqueceu. Em sua mente surgia a charada suprema: o que são aquelas criaturas? Qual a forma real dos demônios da Tormenta, meramente traduzidos pelos cérebros artonianos em quelíceras e carapaças rubras? O Deus das Charadas agarrou as têmporas e caiu de joelhos, gargalhando insanamente.\nQuando a batalha acabou e a Tormenta foi sugada de volta para a Anticriação, Garanaam foi resgatado e levado de volta ao continente junto com os deuses feridos, mas carregava em sua mente a loucura que vivenciou. Hoje se veste com panos sujos e puídos. Seu cajado com a forma de um ponto de interrogação está quebrado. No entanto, suas charadas são ainda mais elaboradas: por trás de sua loucura, Garanaam mantém uma lógica em seus enigmas.",
+beliefs: "Testar a inteligência dos artonianos. Jogar com as palavras. Compreender significados. Propor enigmas. Esconder o que é óbvio.",
+sacredSymbol: "Um ponto de interrogação.",
+channelEnergy: "Qualquer.",
+preferredWeapon: "Bordão.",
+devotees: "Goblins, kliren, qareen, arcanistas, bardos, bucaneiros, inventores, ladinos.",
+grantedPowers: [
+"Na Ponta da Língua"
+],
+obligationsRestrictions: "Um devoto de Garanaam deve, pelo menos uma vez por cena, responder a uma pergunta com um enigma, uma charada ou um jogo de palavras que devem ser decifrados por quem perguntou."
+},
+{
+id: "Goharom",
+name: "Goharom",
+subtitle: "o Deus dos Machados",
+rank: "Mortal ascendido, status divino 2",
+image: [
+""
+],
+status: "menor",
+history: "Goharom era um dos deuses anões mais antigos e, à primeira vista, poderia ser confundido com um simples guerreiro da raça. Sua aparência não entregava a verdadeira natureza divina. Era um anão forte, de estatura impressionante, barbudo, sempre trajando armadura pesada e empunhando um imenso machado. Conta-se que, ocasionalmente, Goharom visitava Doherimm apenas para beber grandes quantidades de cerveja nas tavernas, e os outros frequentadores não percebiam estar na presença de um deus até notarem sua resistência fora do comum. Quando essas visitas terminavam, várias tavernas estavam sem estoque e a Guilda dos Cervejeiros precisava enviar carregamentos emergenciais.\nEm sua vida mortal, Goharom era um habilidoso armeiro e guerreiro anão, especializado no uso de machados. Sua devoção a Rhond, o Deus das Armas, era evidente, mas ele próprio passou a ser cultuado quando suas criações se mostraram incomparáveis, superando tudo que os anões conheciam. Goharom poderia ter se tornado grão-mestre da Guilda dos Armeiros ou até mesmo rei, se quisesse. Contudo, essa nunca foi sua ambição. Após transcender a mortalidade, deixou Doherimm para espalhar a paixão pelos machados por toda Arton.\nGoharom tinha uma ligação profunda com as armas que governava. Ao se concentrar, conseguia sentir e até visualizar qualquer criatura que empunhava um machado em Arton. Ele acreditava que o machado é uma arma essencialmente anã e seu uso propaga a cultura e estilo de vida dos anões. Isso se devia, em parte, à natureza do machado: uma arma que nunca é embainhada, está sempre pronta para ser usada. Contudo, nem mesmo seu poderoso machado pode protegê-lo da Tormenta, tendo seu fim nas mãos da tempestade rubra em 1405, na Batalha de Tamu-ra.",
+beliefs: "Forjar e usar os melhores machados. Honrar e proteger a raça, a cultura e as tradições anãs. Admirar machados como obras de arte, mas respeitá-los e usá-los como as ferramentas de trabalho ou guerra que são.",
+sacredSymbol: "Um machado.",
+channelEnergy: "Qualquer.",
+preferredWeapon: "Machado anão.",
+devotees: "Anões, galokk, trogs, bárbaros, caçadores, cavaleiros, guerreiros, inventores.",
+grantedPowers: [
+"Amor ao Machado"
+],
+obligationsRestrictions: "Devotos de Goharom devem combater empunhando um machado uma vez por dia, ou passar pelo menos uma hora por dia limpando e afiando um machado, ou treinando com uma dessas armas."
+},
+{
+id: "Granto",
+name: "Granto",
+subtitle: "o Deus dos Escultores",
+rank: "Mortal ascendido, status divino 2",
+image: [
+""
+],
+status: "menor",
+history: "Granto era um anão robusto e entroncado, cuja presença impunha respeito e admiração. Sua figura era uma verdadeira representação da força e resiliência da raça anã, com músculos visíveis sob a pele áspera e firme. Sua barba era longa e espessa, de um cinza profundo, cuidadosamente moldada em formas minuciosas que narravam a grandiosa história de seu povo. Cada mecha carregava símbolos e figuras que representavam feitos heroicos, batalhas épicas e lendas passadas, desde os primeiros dias de sua civilização até os eventos mais recentes que marcaram sua história.\nAs cicatrizes que atravessavam seu corpo tinham um caráter especial, pois, observadas mais de perto, revelavam formas surpreendentemente belas, como se cada uma fosse testemunho da resistência e coragem que o anão acumulou ao longo da vida. Granto, embora fosse um anão (e não um golem ou outro construto), era uma escultura viva, mais estátua do que gente.\nTudo que Granto tocava tinha o potencial de assumir uma forma bela, incluindo o que golpeava com seu estonteante martelo, fosse um objeto ou uma criatura. Até mesmo rachaduras em superfícies que ele martelava adquiriam formas artísticas. Mas, verdadeiro ao espírito anão de praticidade e utilitarismo, tudo que Granto fazia também tinha um propósito. Quando fez parte do Exército de Deuses de Orion Drake, Granto propôs construir uma imensa ponte do continente até Tamu-ra, para que não precisassem usar navios. E, quando esse plano foi rejeitado, Granto esculpiu os acrostólios que o general requisitou para adornar as proas das naus.\nGranto foi morto pelas forças lefeu durante a Batalha de Tamu-ra. No entanto, muitas de suas obras continuam adornando os salões de Doherimm, além de vários lugares da superfície.",
+beliefs: "Esculpir as mais belas obras de arte. Valorizar e pregar a importância do trabalho duro. Honrar e proteger a cultura e as tradições dos escultores. Unir estética e função.",
+sacredSymbol: "Um cinzel e um martelo.",
+channelEnergy: "Qualquer.",
+preferredWeapon: "Martelo leve (Heróis de Arton, p. 221).",
+devotees: "Anões, golens, kliren, qareen, bárbaros, cavaleiros, guerreiros, inventores, lutadores, nobres.",
+grantedPowers: [
+"Âmago de Escultor"
+],
+obligationsRestrictions: "Devotos de Granto devem fabricar ou consertar uma escultura (um item não consumível simples de T$ 100) pelo menos uma vez por aventura."
+},
+{
+id: "Hippion",
+name: "Hippion",
+subtitle: "o Deus dos Cavalos",
+rank: "Mortal ascendido, status divino 3",
+image: [
+"/deuses/hippion.png"
+],
+status: "menor",
+history: "Hippion é um dos poucos deuses menores cultuados como divindade principal de uma nação inteira no Reinado. Em Namalkah, ele é mais venerado até mesmo que Allihanna e Valkaria. Quando os primeiros colonos vindos do continente sul chegaram ao reino, seu contato com o povo nativo que vivia lá foi relativamente pacífico — daí surgiu boa parte da cultura de tropeiros e nomadismo de Namalkah, inspirada nos centauros. E os povos nativos dessa região já cultuavam o senhor de todos os cavalos, chamado Hippion.\nA origem do culto a Hippion se perde no tempo; ninguém sabe quando ele começou a ser cultuado, apenas que sua religião (chamada “culto hippionte”) sempre pareceu fazer parte da cultura local. Hippion era venerado pelos centauros (e também por cavalos inteligentes) antes que o primeiro humano pisasse nas terras que viriam a ser Namalkah. Diz a tradição que Hippion era um cavalo imortal mesmo antes de se tornar um deus, tendo servido como montaria ou líder para incontáveis heróis durante a história dos povos originais das coxilhas. Hippion era a única constante em todas essas histórias tradicionais. A conclusão era simples: guerreiros, tanto centauros quanto bípedes, surgiam e desapareciam, mas o cavalo era eterno.\nQuando a Caravana dos Exilados chegou a Arton Norte, um dos primeiros povos a fazer contato pacífico com os refugiados foram as Amazonas de Hippion, em uma peregrinação periódica para a estátua de Valkaria. A rainha amazona se casou com o líder da caravana, formando uma tradição de ajuda mútua que perdura até hoje. Assim, Hippion é um dos deuses menores mais influentes em toda a história do mundo conhecido.\nA devoção a Hippion nunca diminuiu em Namalkah com a integração de povos nativos e exilados de Lamnor apenas aumentou. Os habitantes do reino (especialmente ginetes e tropeiros) consideram-no sua principal divindade. Como é o modo de Namalkah, às vezes chamam-no por apelidos grosseiros mas afetuosos (“o bagual eterno”). Diz-se que Hippion muitas vezes galopa incógnito, deixando-se ser montado apenas pelos maiores heróis — sempre em pelo, nunca admitindo uma sela.\nContudo, também é possível identificá-lo: sua presença provoca vontade de correr pelas planícies, mesmo nos bípedes, e ele é seguido por um enorme bando de corcéis. Outros cavalos parecem potros perto de seu tamanho. Seu pelo é castanho e branco, sua crina é longa, espalhando-se em todas as direções. Hippion é capaz de falar e encarna tudo aquilo que os cavalos são: fortes, rápidos, selvagens, leais. Hippion, assim como a maioria dos humanos e cavalos em Namalkah, acredita que cada coisa tem seu lugar: o cavalo deve ser montado e o cavaleiro deve montar. O cavalo deve carregar seu companheiro em batalha, o cavaleiro deve lutar. Um não deve tentar assumir o papel do outro.",
+beliefs: "Reverenciar Hippion e respeitar os cavalos. Defender o vínculo e promover a harmonia entre montarias e ginetes. Combater monstros, mortos-vivos e outras criaturas que perturbam o equilíbrio natural. Galopar.",
+sacredSymbol: "Um cavalo galopando.",
+channelEnergy: "Positiva.",
+preferredWeapon: "Lança.",
+devotees: "Aggelus, centauros, eiradaan, bárbaros, caçadores, cavaleiros, druidas, guerreiros, nobres, treinadores, paladino.",
+grantedPowers: [
+"Ginete Altivo"
+],
+obligationsRestrictions: "Devotos de Hippion jamais podem matar cavalos, nem mesmo suas variantes monstruosas (como cavalos glaciais). Além disso, não podem permitir que cavalos sejam assassinados ou maltratados. Também nunca podem usar selas ou outros equipamentos de montaria enquanto estiverem montados."
+},
+{
+id: "Hurlaagh",
+name: "Hurlaagh",
+subtitle: "o Deus dos Hobgoblins",
+rank: "Entidade primordial, status divino 3",
+image: [
+"/deuses/hurlaagh.png"
+],
+status: "menor",
+history: "Um hobgoblin imponente, com ares de nobreza e sempre trajado com roupas militares, Hurlaagh representa o auge da cultura militarista que ele mesmo ajudou a forjar. Ninguém sabe sua origem, mas era parte de um trio de entidades irmãs de guerra, conflito, violência e brutalidade — deuses menores antes mesmo que houvesse alguém para cultuá-los. Seus dois irmãos eram Ragnar, que mais tarde ascendeu a Deus da Morte, e Graolak. Cada um dos três criou uma raça mortal que encarnava seus valores e sua personalidade. Ragnar deu origem aos bugbears. Graolak fez os goblins. Hurlaagh forjou os hobgoblins.\nOs hobgoblins, embora por muito tempo tenham sido considerados meros monstros por grande parte dos povos do norte, são uma raça muito mais antiga que a humanidade (precedendo-a em dezenas de milhares de anos!). De fato, talvez sejam a primeira raça de Lamnor a estabelecer fronteiras e tomar terras como “suas”. Pela influência de Hurlaagh, os hobgoblins seriam os conquistadores e donos por direito de grande parte do continente.\nCuriosamente, o culto a Hurlaagh aumentou em fervor e intensidade com a chegada dos elfos a Lamnor. Com o início da Infinita Guerra, um inimigo poderoso fez com que os hobgoblins se unissem ainda mais sob seu deus. A influência de Hurlaagh em Lamnor só diminuiu significativamente quando seu irmão Ragnar ascendeu a deus maior, dando início a um plano que tornou-o a divindade principal de todos os povos goblinoides. Hurlaagh então travou uma aliança com um grupo de deuses menores que buscava destronar o Deus da Morte dos Goblinoides, para que um deles ocupasse seu posto. Diz-se que, antes da queda de Khalifor, alguns de seus cultistas estavam infiltrados no exército de Thwor, com a intenção de provocar um levante. No entanto, foram descobertos e detidos por Gaardalok, o sumo-sacerdote de Ragnar, que os desmantelou utilizando espiões de Khalifor.\nA queda da Flecha de Fogo frustrou todos os planos de Hurlaagh. Ninguém sabe ao certo se sua aliança de deuses menores ainda existe ou desistiu de sua tentativa de tomar o posto de Thwor.\nEmbora ainda seja adorado por algumas comunidades hobgoblins espalhadas pelo sul de Arton, há muito tempo Hurlaagh não lidera batalhões hobgoblins em campanhas militares ou incursões de guerra. O Deus dos Hobgoblins permanece uma figura distante da linha de frente das batalhas que tanto definiram seu passado.",
+beliefs: "Promover a guerra e o conflito. Vencer a qualquer custo, por força ou estratégia. Jamais oferecer ou aceitar rendição. Jamais demonstrar fraquezas. Proteger a cultura e o modo de vida hobgoblin a qualquer custo.",
+sacredSymbol: "Tambor de guerra hobgoblin.",
+channelEnergy: "Negativa.",
+preferredWeapon: "Espada longa.",
+devotees: "Goblins, hobgoblins, minotauros, orcs, bárbaros, caçadores, cavaleiros, guerreiros.",
+grantedPowers: [
+"Selvageria Marcial"
+],
+obligationsRestrictions: "Devotos de Hurlaagh jamais podem desobedecer à ordem de um superior (devoto de Hurlaagh de nível maior ou hobgoblin de patente militar superior). Além disso, devem lutar contra “o Mundo Como Deve Ser” proposto por Thwor."
+},
+{
+id: "Hydora",
+name: "Hydora",
+subtitle: "o Dragão-Rei das Nuvens",
+rank: "Dragão-Real, status divino 4",
+image: [
+"/deuses/hydora.png"
+],
+status: "menor",
+history: "Encarnação das tempestades, Hydora é um dos mais poderosos Dragões-Reais de Arton, superado apenas por Tarso e Sckhar e equiparando-se a Benthos. Isso explicaria como uma criatura tão instável conseguiu sobreviver por tanto tempo. Marcial e guerreiro como todos os dragões do ar, Hydora também tem humor volúvel como os raios e trovões. Muitas vezes já negou coisas que havia proferido, quebrou promessas, não reconheceu aliados e apoiou antigos inimigos. Uma promessa feita por Hydora é tão sólida quanto uma bolha de sabão.\nEspecula-se que o Dragão-Rei das Nuvens tenha transcendido a necessidade de pisar em terra firme. Voa durante a maior parte do tempo, sem parar para descansar, comer ou dormir. Tem forte predileção por tempestades elétricas: gosta de voar através das nuvens carregadas como quem aprecia a brisa da manhã. Em Arton, costuma-se dizer que, quando cai uma tempestade, Hydora está por perto.\nHydora também é criador de todo um povo: de sua união com uma heroína élfica surgiram os naidora, também chamados de elfos-do-céu. Existem versões da história que dizem que o Dragão-Rei raptou a elfa, mas ninguém até hoje foi capaz de determinar se isso é verdade. Conhecendo-se a inconstância de Hydora, talvez ele alterne entre amor genuíno e tirania.\nSua forma humanoide lembra um naidora com belíssimas asas que mudam conforme seu humor, pele clara e cabelos azuis longos e esvoaçantes. Sua forma dracônica tem corpo longo e asas que misturam aspectos de morcegos e pássaros; uma coroa de penas circunda sua cabeça, criando algo parecido com uma juba. Em ambas as formas Hydora tem olhos em tons diferentes de azul — um mais claro que o outro.",
+beliefs: "Reverenciar a altivez de Hydora. Reverenciar os céus, o vento e a liberdade. Jamais ceder ao conformismo. Evitar descer dos céus. Promover o progresso e a inventividade. Agir conforme os próprios instintos, jamais deixando-se influenciar pelos outros.",
+sacredSymbol: "Uma nuvem negra em forma de asa cuspindo três raios.",
+channelEnergy: "Qualquer.",
+preferredWeapon: "Cimitarra.",
+devotees: "Elfos, kallyanach, kliren, naidoras, qareen, sílfides, suraggel, tengu, arcanistas, bardos, caçadores, cavaleiros, guerreiros, inventores.",
+grantedPowers: [
+"Alcançar os Céus"
+],
+obligationsRestrictions: "Devotos de Hydora devem ser inquietos e inconstantes como os ventos, proibidos de passar mais de um dia com os pés no chão — escalar uma montanha ou voar por uma rodada é suficiente para agradar ao Dragão-Rei. Além disso, não podem fixar moradia exceto em local mais próximo dos céus do que da terra."
+},
+{
+id: "Zakharov",
+name: "Zakharov",
+subtitle: "o Deus da Bravura",
+rank: "Mortal ascendido, status divino 2",
+image: [
+""
+],
+status: "menor",
+history: "Uma das várias divindades anãs, Zakharov era um anão imensamente forte e musculoso, com um corpo tão robusto e duro que parecia uma estátua esculpida em mármore. Sua pele dava a impressão de ser feita de pedra. Ao contrário dos demais anões, ele não costumava ser visto com armadura alguma protegendo seu torso. Os equipamentos de batalha deste herói lendário se resumem ao seu elmo aberto, que sempre revelava sua farta e cobreada barba, e ao seu inseparável machado mágico, o Zakharin. Enfrentando todos os desafios de peito aberto, sem demonstrar hesitação ou mesmo necessidade de autopreservação, Zakharov passou a ser mais do que admirado — tornou-se adorado. Ascendeu à divindade, como Deus da Bravura.\nSão muitas as histórias contadas sobre a coragem de Zakharov. Tantas, na verdade, que chegam a entrar em contradição: na mesma época Zakharov teria estado tanto vários níveis abaixo de Doherimm, enfrentando sozinho um clã de gigantes do fogo, quanto na superfície, caçando uma coluna finntroll. Teria olhado nos olhos da Rainha das Medusas (uma entidade que não existe exceto em algumas lendas), fazendo com que ela se transformasse em pedra, e desembaraçado suas serpentes, conquistando sua amizade eterna. Teria domado todos os javalis doheritas e criado ele mesmo essa espécie, ao desafiar um rinoceronte para que fosse mais compacto e adequado ao subterrâneo!\nSeja como for, algo é constante em quase todas as histórias: Zakharov é uma figura despojada e simples. Não seria nem um pouco apegado a seu lendário machado, às vezes esquecendo-o ao voltar para casa depois de mais uma aventura. Numa dessas ocasiões, quando mais uma vez uma comitiva de devotos veio lhe devolver a arma, Zakharov teria dito para que ficassem com ela e “usassem para alguma coisa útil um dia”. Essa seria a razão pela qual Zakharin foi presenteado de forma tão livre e surpreendente pelos anões aos humanos que colonizaram o reino de Zakharov.\nÉ justamente em honra a este deus que a nação humana de Zakharov e sua capital, Zakharin, receberam seus nomes. No entanto, devido a uma desavença ocorrida décadas atrás, considerada pelos anões como um desrespeito à divindade, as relações entre o reino humano e o reino anão nunca mais foram as mesmas.\nNão se sabe o paradeiro atual de Zakharov. Alguns afirmam que ele está escavando um túnel para o outro lado do mundo, apenas porque isso é algo muito perigoso. Outros garantem que anda pela superfície em busca de desafios. Há quem diga que ele morreu na Batalha de Tamu-ra, em 1405, enquanto outros afirmam que está vivendo tranquilamente em Doher e pode ser visto bebendo cerveja em várias tavernas da cidade.",
+beliefs: "Honrar e proteger a raça, a cultura e as tradições anãs. Combater os finntroll e quaisquer outros inimigos da raça anã. Lutar o bom combate. Demonstrar coragem. Não se proteger demais. Encarar desafios — quanto mais difíceis, melhor.",
+sacredSymbol: "Um braço segurando o machado Zakharin.",
+channelEnergy: "Qualquer.",
+preferredWeapon: "Machado anão.",
+devotees: "Anões, centauros, golens, minotauros, trogs, bárbaros, cavaleiros, guerreiros, lutadores, paladino.",
+grantedPowers: [
+"Irmão da Coragem"
+],
+obligationsRestrictions: "Devotos de Zakharov devem fazer pelo menos uma demonstração de coragem por aventura (ou por mês, de acordo com o mestre). Para este efeito, uma demonstração de coragem é qualquer ato no qual o personagem possa morrer ou sofrer uma consequência grave e/ou permanente, que seja realizado sem nenhuma preparação que garanta sua segurança. Por exemplo, lutar contra um ogro sozinho, tentar escalar uma montanha sem equipamento ou tomar para si um item mágico que provavelmente é amaldiçoado são demonstrações de coragem. Enfrentar o mesmo ogro com seu grupo, escalar a montanha devidamente equipado ou tomar paar si um item mágico qualquer não são. O mestre tem a palavra final sobre o que configura uma demonstração de coragem."
+},
+{
+id: "Irione",
+name: "Irione",
+subtitle: "o Deus da Sedução",
+rank: "Mortal ascendido, status divino 3",
+image: [
+"/deuses/irione.png"
+],
+status: "menor",
+history: "Irione é uma entidade que levou suas habilidades ao extremo, alcançando a divindade como resultado desse processo. Originalmente, ele era um duplo — uma criatura humanoide sem características fixas, capaz de assumir qualquer forma. Normalmente, os duplos se infiltram nas sociedades, assassinando humanos e membros de outras raças civilizadas. No entanto, Irione logo percebeu que seu maior poder estava na sedução. Ao adotar diversas formas, experimentou o prazer de ser adorado, de ver homens e mulheres se atirando aos seus pés. Essa experiência se tornou viciante e Irione passou a buscar cada vez mais pretendentes. O próximo passo natural foi alcançar a divindade.\nIrione tem a habilidade de se transformar na figura que mais seduz cada pessoa. Sua transformação não é física, como os duplos, mas acontece na mente de quem o observa. Por isso, ao enxergá-lo, dois indivíduos podem ver, ouvir e até sentir coisas completamente diferentes ao mesmo tempo. Por exemplo, para Orion Drake, Irione parecia sua esposa Vanessa.\nOutra habilidade surpreendente de Irione é sua capacidade de se tornar inalcançável. Pessoas de todas as origens e modos de vida se veem seduzidas por ele, tentando alcançar sua presença para oferecer presentes e devoção, mas Irione sempre permanece distante, como se estivesse na próxima esquina ou um andar acima. Contudo, ele é uma divindade obcecada por atenção e mimos. Acostumado a seduzir, não tolera ser ignorado. A única maneira de convencê-lo a fazer algo que não seja para seu próprio benefício é justamente não lhe dar atenção ou importância. Nesse caso, Irione fará de tudo para conquistar seus alvos.",
+beliefs: "Provar seu valor, tornando-se alvo de desejo. Seduzir os outros para obter favores e adulações. Gerar suspiros de pretendentes. Tornar-se inalcançável para que todos venham atrás de você.",
+sacredSymbol: "Marca de beijo.",
+channelEnergy: "Qualquer.",
+preferredWeapon: "Chicote.",
+devotees: "Elfos, harpias, medusas, nagahs, naidoras, sereias/tritões, sílfides, suraggel, arcanistas, bardos, bucaneiros, ladinos, lutadores, nobres.",
+grantedPowers: [
+"Fisgar Corações"
+],
+obligationsRestrictions: "Devotos de Irione devem obter a adoração de uma pessoa que originalmente não era prestativa, pelo menos uma vez por dia (ou por sessão de jogo, o que demorar mais), como forma de honrar sua divindade. Isso significa tornar um NPC prestativo e, após isso, tornar-se objeto da admiração e adoração desse personagem."
+},
+{
+id: "Kurur Lianth",
+name: "Kurur Lianth",
+subtitle: "o Deus Vulcão de Khubar",
+rank: "Objeto desperto, status divino 1",
+image: [
+""
+],
+status: "menor",
+history: "Muitas lendas cercam Kurur Lianth, o maior e mais temido vulcão ativo de Khubar, o Reino Arquipélago. Localizado no coração da ilha de Hurtka, a mais próxima da costa de Bielefeld, Kurur Lianth é uma força da natureza cuja fúria não pode ser ignorada. Este vulcão expele fogo e explosões durante intensos períodos de uma semana ou mais, antes de se acalmar temporariamente, repousando por alguns meses.\nÉ dito, nas histórias antigas, que a única maneira de acalmar o “Velho Furiosoˮ, como é chamado por seus devotos, é através de um sacrifício humanoide voluntário, realizado quando o vulcão desperta de seu sono. Caso contrário, Kurur Lianth tomará todas as vidas que julgar necessárias.\nAlgumas lendas atribuem essa necessidade de sacrifícios ao fato de que, no interior do vulcão, está aprisionado um antigo deus menor do fogo, derrotado por Thyatis em tempos imemoriais. Cada vez que o vulcão entra em erupção, acredita-se que o deus aprisionado desperta, provocando as explosões cataclísmicas que ameaçam a terra. Outras histórias sugerem que a cratera de Kurur Lianth é, na verdade, a bocarra de um monstruoso dragão do fogo, cuja magnitude colossal o impede de escapar do interior da terra, forçando-o a liberar sua fúria nas erupções. Seja qual for a verdadeira origem dessas lendas, o fato permanece: o vulcão é tratado como uma entidade viva, consciente. Com o passar dos séculos, os sacrifícios oferecidos ao vulcão fizeram com que ele fosse considerado algo sagrado, o que provocou sua ascensão a deus menor. Para seus seguidores, Kurur Lianth não é apenas um agente de destruição, mas uma divindade que protege a terra contra males ainda maiores, previstos para surgir em Khubar no futuro.",
+beliefs: "Cultuar o Velho Furioso. Proteger o povo da ilha de Hurtka e de Khubar em geral. Pregar a renovação que Kurur Lianth traz e a proteção que ele fará contra o grande mal descrito nas antigas profecias.",
+sacredSymbol: "Um vulcão em erupção.",
+channelEnergy: "Negativa.",
+preferredWeapon: "Lança.",
+devotees: "Qareen, suraggel, trogs, bárbaros, bardos, druidas, guerreiros, lutadores.",
+grantedPowers: [
+"Alma em Erupção"
+],
+obligationsRestrictions: "Devotos de Kurur Lianth devem se reunir com seu deus uma vez por ano para sacrificar um humanoide voluntário. Na ausência de um voluntário, o devoto mais velho deve se oferecer de imediato. Se não o fizer, deixa de ser um devoto imediatamente e seu destino como sacrifício passa para outro devoto mais velho."
+},
+{
+id: "Luvithy",
+name: "Luvithy",
+subtitle: "a Deusa da Peste",
+rank: "Mortal ascendido, status divino 2",
+image: [
+""
+],
+status: "menor",
+history: "Uma deusa de comunidades isoladas e nações hoje em dia quase esquecidas, Luvithy foi uma bruxa humana na época em que os nativos de Lamnor ainda não ousavam desbravar Arton Norte. Naquele período, a aldeia de Luvithy estava à beira da destruição devido à guerra com outros povos. Mas a bruxa lançou uma praga que adoeceu e matou todos os inimigos da região. Os povos que não estavam em confronto direto ficaram temerosos e prestaram respeito e devoção a Luvithy, que se tornou a Deusa Menor da Peste.\nAo longo dos séculos, o culto a Luvithy se espalhou por todo o continente e chegou também a Lamnor. Todos aqueles que, frente a uma grande peste, suplicavam pela piedade da doença em vez de procurar sua cura acabavam, mesmo sem saber, adorando esta deusa menor. A devoção a Luvithy é um segredo em várias famílias, uma religião praticada em particular por pais e mães que têm medo de perder seus filhos por doenças, por servos que tentam manter vivos senhores moribundos, por pessoas que temem adoecer.\nLuvithy ganhou muitos devotos depois do surgimento da Praga Coral em Lomatubar. Mesmo sem relação nenhuma com essa doença mágica, a Deusa da Peste passou a ouvir as preces de várias comunidades desesperadas, que imaginavam que a Praga só podia ser obra de uma entidade da pestilência. Com a morte de Ragnar e a ascensão de Thwor, o culto a Luvithy tem se renovado, com fé revigorada e a ambição de conquistar o título de Deusa da Morte para sua padroeira.",
+beliefs: "Espalhar doenças. Trazer de volta a antiga glória de Luvithy.",
+sacredSymbol: "Um crânio encapuzado.",
+channelEnergy: "Negativa.",
+preferredWeapon: "Gadanho.",
+devotees: "Dahllan, kobolds, nezumi, orcs, osteon, sulfure, trogs, arcanistas, bárbaros, caçadores, druidas, guerreiros, ladinos.",
+grantedPowers: [
+"Toque Pestilento"
+],
+obligationsRestrictions: "Devotos de Luvithy devem contaminar pelo menos uma criatura Pequena ou maior com uma doença por semana. Na falta de uma vítima adequada, um devoto pode contaminar a si mesmo."
+},
+{
+id: "Mzzileyn",
+name: "Mzzileyn",
+subtitle: "o Dragão-Rei das Trevas",
+rank: "Dragão-Real, status divino 3",
+image: [
+"/deuses/mzzileyn.png"
+],
+status: "menor",
+history: "Dotado de uma inteligência comparável apenas a sua crueldade, Mzzileyn tece planos dentro de planos. Seus objetivos são cada vez mais perversos, mas todos espalham intriga, morte e destruição pelo mundo. Esta é uma divindade que se diverte com a desgraça e a infelicidade alheias, provocando catástrofes como passatempo.\nEm eras remotas, o Dragão-Rei das Trevas colaborou com os seguidores de Sszzaas. Em contrapartida, diz-se que o Deus da Traição nutre certa simpatia por ele (dentro do que é possível). Na verdade, alguns acadêmicos suspeitam de que Mzzileyn seja criação do próprio Sszzaas — uma teoria provada falsa com o ressurgimento de Kallyadranoch, mas ainda popular.\nMzzileyn conheceu ele mesmo o gosto da traição quando seus devotos dragões o abandonaram para seguir o Dragão da Tormenta. Isso, embora tenha sido uma lição de humildade, não mudou sua personalidade. Pelo contrário: Mzzileyn aprendeu que não pode contar com a lealdade de ninguém. Assim, deve trair todos antes que eles mesmos o traiam. Hoje em dia, busca reerguer seu culto, mas sacrificaria qualquer um de seus devotos se isso pudesse lhe trazer uma ínfima vantagem. Um dos únicos atos de bravura que já realizou foi enfrentar os lefeu diretamente, durante a Batalha de Tamu-ra.\nDiferente dos outros Dragões-Reais, Mzzileyn costuma assumir várias formas humanoides que mostram simpatia ou confiabilidade: o mercador da vila, o taverneiro, o pedinte… Todas, no entanto, têm cabelos e olhos escuros. Nas raras vezes em que assume sua forma verdadeira, o Dragão-Rei das Trevas lembra um longo réptil serpentino, com escamas sombrias e uma face que parece mais um crânio de dragão descarnado; suas asas reais foram arrancadas tempos atrás, substituídas por asas feitas de sombra.",
+beliefs: "Reverenciar a sagacidade de Mzzileyn. Praticar a mentira, a traição e a trapaça. Propagar caos, desordem e destruição. Usar dos recursos de qualquer um para alcançar seus próprios objetivos. Promover a soberania das sombras e da escuridão.",
+sacredSymbol: "O crânio de um dragão vertendo sombras.",
+channelEnergy: "Negativa.",
+preferredWeapon: "Adaga.",
+devotees: "Finntroll, gnolls, goblins, kallyanach, nagah, tengu, arcanistas, bardos, bucaneiros, ladinos.",
+grantedPowers: [
+"Sombras Venenosas"
+],
+obligationsRestrictions: "Sempre que estiver diante de um desafio (um combate, um perigo complexo ou outra cena que envolva vencer ou superar algo desafiador) você deve passar em pelo menos um teste de Enganação que seja útil contra esse desafio. O mestre tem a palavra final sobre que ações se encaixam nessa descrição."
+},
+{
+id: "O Deus Cristal de Urielka",
+name: "O Deus Cristal de Urielka",
+subtitle: "",
+rank: "Objeto desperto, status divino 1",
+image: [
+"/deuses/o_deus_cristal_de_urielka.png"
+],
+status: "menor",
+history: "Este foi um dos primeiros casos registrados de deuses criados a partir de objetos inanimados, apenas pela vontade dos mortais. A aldeia de Urielka, nos ermos de Tyrondir, antes que a região se tornasse uma devastação com a queda da Flecha de Fogo, nunca teve muito de que se orgulhar. No entanto, possuía um imenso cristal, que atraía viajantes de tempos em tempos. O cristal nunca demonstrou nenhum poder mágico até que uma aldeã elfa chamada Dealla notou que era estranho que ele não fosse divino.\nAfetada pela queda de Glórienn, a Deusa dos Elfos, Dealla procurava algo para cultuar. Começou a deixar oferendas para o cristal e a espalhar sua crença secreta. Os demais aldeões, também ansiosos por algo que preenchesse o vazio que sentiam, logo distorceram fatos do passado para que parecessem milagres realizados pelo cristal. O culto nasceu. Viajantes de passagem por Urielka se juntaram, espalharam a notícia e logo o objeto angariou muitos seguidores até despertar como um deus menor, brilhando e falando com seus protegidos.\nO Deus Cristal passou a proteger a vila de Urielka. Não fazia muito além de oferecer consolo, aceitar oferendas e tranquilizar o povo, mas era amado como se fosse o mais poderoso deus maior. Depois da queda da Flecha de Fogo, a aldeia de Urielka chegou perto de desaparecer do mapa, mas sobreviveu, e o Deus Cristal continuou intacto. Isso passou a atrair ainda mais peregrinos e devotos. Hoje em dia, muitos que ousam desbravar as Ruínas de Tyrondir encontram em Urielka um ponto de descanso, um local intocado pelo lodo negro, onde um deus pode curá-los e abençoá-los para que continuem a jornada. Talvez isso aumente ainda mais o poder e o culto deste estranho deus menor.",
+beliefs: "Proteger a vila de Urielka e sua população. Abençoar viajantes e forasteiros que visitam o local. Espalhar a palavra e as bênçãos do Cristal.",
+sacredSymbol: "Um cristal.",
+channelEnergy: "Positiva.",
+preferredWeapon: "Lança.",
+devotees: "Aggelus, elfos, hynne, qareen, bardos, caçadores, cavaleiros, nobres, paladino.",
+grantedPowers: [
+"Proteção do Cristal"
+],
+obligationsRestrictions: "Devotos do Deus Cristal de Urielka devem peregrinar até a aldeia pelo menos uma vez por aventura (ou tempo entre aventuras) e, pelo menos uma vez por ano, devem fazer essa peregrinação levando consigo um novo devoto convertido."
+},
+{
+id: "Klangor",
+name: "Klangor",
+subtitle: "o Deus das Armaduras",
+rank: "Mortal ascendido, status divino 2",
+image: [
+""
+],
+status: "menor",
+history: "Klangor se destaca entre as várias divindades anãs como uma figura imponente e admirada. Ele não é apenas um deus de metais, mas um verdadeiro símbolo de resistência e resiliência. Seu corpo, recoberto por uma couraça de pedra e metal, desperta o temor e a admiração dos que o contemplam. É difícil discernir se essa armadura é uma construção criada pelo próprio Klangor ou se faz parte intrínseca de seu ser, um mistério que apenas ele pode responder.\nSua origem está nos primórdios de Doherimm. Klangor foi um dos primeiros membros da Guilda dos Armeiros do Reino dos Anões, responsável por muitas das inovações que há séculos fazem parte da arte tradicional da fabricação de armaduras entre essa raça. Contudo, ao longo dos séculos as técnicas de Klangor se tornaram tão precisas e intrincadas que ele não era mais capaz de ensiná-las a ninguém. Suas armaduras eram mais fortes que o aço, mas leves como seda. Assim, o ferreiro deixou de ser apenas um mestre e passou a ser considerado uma figura mítica, ainda em vida. Passou a ser cultuado e se tornou um deus.\nEm 1405, a resiliência de Klangor foi testada nas chamas da batalha mais sangrenta que já presenciou. Como sobrevivente do ataque devastador do exército de deuses menores à área de Tormenta de Tamu-ra, o Deus das Armaduras suportou os horrores dessa cataclísmica invasão que matou vários de seus companheiros. A batalha deixou cicatrizes profundas no mundo, mas Klangor se ergueu das cinzas.\nApós a batalha, o deus menor se dedica a um propósito nobre e altruísta: forjar armaduras metafísicas para aqueles que enfrentam as forças malignas que assolam Arton. Ele pode ser encontrado tanto no subterrâneo quanto na superfície, fabricando suas obras-primas para guerreiros valorosos.",
+beliefs: "Forjar as melhores armaduras. Honrar e proteger a raça, a cultura e as tradições anãs. Defender a vida de guerreiros e soldados, dando-lhes as ferramentas para se protegerem.",
+sacredSymbol: "Um elmo anão.",
+channelEnergy: "Positiva.",
+preferredWeapon: "Martelo de guerra.",
+devotees: "Aggelus, anões, cavaleiros, guerreiros, inventores, paladino.",
+grantedPowers: [
+"Manutenção Sagrada"
+],
+obligationsRestrictions: "Devotos de Klangor devem passar pelo menos uma hora por dia limpando, consertando ou polindo uma armadura, ou treinando enquanto traja uma armadura. Além disso, pelo menos uma vez por aventura o devoto deve fabricar uma armadura qualquer."
+},
+{
+id: "Nerelim",
+name: "Nerelim",
+subtitle: "a Deusa da Água Doce",
+rank: "Mortal ascendido, status divino 2",
+image: [
+""
+],
+status: "menor",
+history: "Uma deusa de origem ancestral, cujo culto foi abraçado pelos colonos que fundaram o antigo reino de Callistia, Nerelim foi a divindade mais cultuada nessa nação, antes de ser absorvida pelas Repúblicas Livres de Sambúrdia. De fato, antigamente nenhuma família que não cultuasse Nerelim nesse reino era considerada “respeitável”, ao menos na capital.\nNerelim costuma se apresentar na forma de uma mulher com cabelos imensos, trançados de modo a parecer uma rede de pesca. É também a padroeira dos rios e pescadores. Diz-se que é filha de Oceano e teria ensinado os primeiros habitantes da região que viria a ser Callistia a pescar e sobreviver dos inúmeros rios dessas terras. Os nerelitas (nome dado aos devotos da deusa) por sua vez ensinam a população a respeitar os rios e não poluí-los, além de pescar apenas nas épocas certas para que nunca falte alimento.\nDepois que Callistia passou a fazer parte das Repúblicas Livres de Sambúrdia, o culto a Nerelim se expandiu. O antigo reino era notoriamente provinciano e um pouco xenófobo. Assim, sua deusa não era especialmente difundida em outros lugares. Agora que os Príncipes Mercantes trafegam pelas águas da região, a proteção de Nerelim é ainda mais valorizada e sua religião, mais conhecida.",
+beliefs: "Reverenciar e proteger os rios, os lagos e os seres que ali habitam. Promover harmonia entre os seres das águas e o mundo seco. Proteger os seres fluviais. Exigir devido respeito às águas correntes.",
+sacredSymbol: "Um rio cortando a várzea.",
+channelEnergy: "Qualquer.",
+preferredWeapon: "Arpão (Ameaças de Arton, p. 392).",
+devotees: "Elfos, elfos-do-mar, hynne, kappa, minotauros, qareen, sereias/tritões, bárbaros, bucaneiros, caçadores, druidas, treinadores.",
+grantedPowers: [
+"Cauda de Água Doce"
+],
+obligationsRestrictions: "Devotos de Nerelim não podem se manter afastados de um grande corpo de água doce (como um lago ou rio) por mais de um mês. Além disso, devem pescar em um rio ou outro corpo de água doce pelo menos uma vez por semana."
+},
+{
+id: "O Deus das Cidades",
+name: "O Deus das Cidades",
+subtitle: "",
+rank: "Conceito vivo, status divino 4",
+image: [
+""
+],
+status: "menor",
+history: "À primeira vista, esta divindade parece não ter nome. No entanto, o oposto é verdade: o Deus das Cidades tem infinitos nomes, batizado de novo e de novo sempre que uma nova comunidade é formada. Chama-se Nova Malpetrim, Smokestone, Norm, Roschfallen, Var Raan, Gallien, Ghallystryx… Chama-se até mesmo Valkaria e Rhond. O Deus Menor das Cidades é composto por todos os centros urbanos de Arton. Em parte, ele é cada cidade do mundo. Portanto, uma divindade de grande poder.\nHá quem diga que o Deus das Cidades já foi um mortal; um mendigo que vagava de comunidade em comunidade. No entanto, a corrente de pensamento mais aceita afirma que isso nunca ocorreu — o Deus das Cidades apenas se formou espontaneamente quando os grandes centros urbanos do continente floresceram (ou até mesmo antes). Ele é uma manifestação do modo de vida dos artonianos urbanos, uma coleção de tudo que significa viver em cidades.\nSeu corpo é formado por ruas, prédios, cercas e telhados. Embora seja uma criatura enorme, sua aparência é incongruente, pois não é tão grande a ponto de abrigar tudo isso dentro de si. Alguns afirmam que a forma física do deus é como um portal para várias comunidades em Arton. Além disso, seu corpanzil é avassalador em combate, capaz de fazer frente aos mais ferozes deuses guerreiros. Fica mais poderoso com a concentração urbana — o próprio ato de viver em comunidade é uma forma de adoração.\nO Deus das Cidades pode ser encontrado nos esgotos, subterrâneos ou outros lugares ocultos de metrópoles como Valkaria. Contudo, alguns dizem que ele está presente ao mesmo tempo em todas as cidades de Arton. Basta encontrá-lo.",
+beliefs: "Formar comunidades e ajudar a desenvolvê-las. Estabelecer caravanas em entrepostos comerciais. Proteger o modo de vida das pessoas nos grandes centros.",
+sacredSymbol: "Torres amontoadas atrás de um muro.",
+channelEnergy: "Qualquer.",
+preferredWeapon: "Martelo de guerra.",
+devotees: "Anões, elfos, goblins, hynne, kliren, minotauros, arcanistas, bardos, inventores, ladinos, lutadores, nobres.",
+grantedPowers: [
+"Manha da Cidade"
+],
+obligationsRestrictions: "Devotos do Deus das Cidades jamais podem se manter afastados de um centro urbano por mais 2d10+10 dias, nem se recusar a auxiliar uma comunidade."
+},
+{
+id: "Rhond",
+name: "Rhond",
+subtitle: "o Deus das Armas",
+rank: "Mortal ascendido, status divino 3",
+image: [
+"/deuses/rhond.png"
+],
+status: "menor",
+history: "Rhond é um dos deuses menores mais acessíveis — e sua história é uma das mais conhecidas. Ele reside na Cidade de Rhond, no reino de Zakharov, que também abriga seu templo mais importante e boa parte de seus clérigos.\nRhond teria sido um dos mais antigos clérigos de Keenn, o antigo Deus da Guerra. Tanto um armeiro supremo quanto um aventureiro poderoso, Rhond forjou incontáveis armas, transcendendo a mera habilidade mundana para fabricar verdadeiros itens mágicos. Acumulou tanto poder e artefatos de sua própria criação que acreditou ser capaz de vencer o próprio Deus da Guerra e ocupar seu posto. E efetivamente viajou até o Reino de Keenn para desafiá-lo, mas foi vencido.\nNo entanto, Keenn não puniu o desafiante. Orgulhoso da coragem de seu clérigo, recompensou-o com a imortalidade, o poder mágico de forjar as mais poderosas e magníficas ferramentas de morte. Contudo, também o puniu por sua arrogância: prendeu-o numa forma monstruosa de seis braços e obrigou-o a forjar armas pela eternidade. Assim, pensava Keenn, o poderoso desafiante estaria para sempre servindo a ele.\nContudo, Rhond viu a recompensa/castigo como uma grande injustiça, o capricho de um deus arbitrário. Perdeu a fé e abandonou o sacerdócio, continuando em sua tarefa eterna. Com o passar dos séculos, sua fama como armeiro se tornou tão grande que ele próprio começou a ser cultuado, ascendendo a Deus Menor das Armas.\nRhond trabalha sem cessar em uma caverna, na oficina que é também seu templo. A forja é um pequeno vulcão, borbulhando de lava, e todas as paredes são recobertas dos mais variados tipos de armamentos. Ao redor da caverna existe a Cidade de Rhond, onde o martelar incessante do deus pode ser ouvido dia e noite, em qualquer lugar.\nRhond não é conhecido por sua paciência ou generosidade, mas às vezes contribui com suas magníficas criações quando acredita que o objetivo é importante o bastante. Teve papel decisivo na Batalha de Tamu-ra, por exemplo. Vários outros deuses menores governam meros aspectos do portfólio de Rhond — o Deus da Pólvora e o Deus dos Machados são alguns exemplos. Rhond é um dos mais poderosos deuses menores, com um dos portfólios mais abrangentes.",
+beliefs: "Forjar e usar as melhores armas. Honrar e respeitar as armas como obras de arte. Vencer pela força ou estratégia. Realizar grandes feitos. Derrotar monstros e inimigos usando suas próprias criações.",
+sacredSymbol: "Uma espada, um machado de batalha e um martelo de guerra cruzados sobre uma bigorna.",
+channelEnergy: "Qualquer.",
+preferredWeapon: "Martelo de guerra.",
+devotees: "Anões, elfos, golens, minotauros, bárbaros, bucaneiros, caçadores, cavaleiros, guerreiros, inventores, nobres.",
+grantedPowers: [
+"Artista das Armas"
+],
+obligationsRestrictions: "Devotos de Rhond devem passar pelo menos uma hora por dia limpando, consertando ou afiando uma arma, ou treinando com uma arma. Além disso, pelo menos uma vez por aventura o devoto deve fabricar uma arma qualquer."
+},
+{
+id: "Lupan",
+name: "Lupan",
+subtitle: "o Deus dos Caçadores",
+rank: "Mortal ascendido, status divino 2",
+image: [
+""
+],
+status: "menor",
+history: "Um dos deuses menores mais antigos de Arton, cultuado e respeitado desde antes da ascensão das grandes civilizações, Lupan era um deus furtivo e arredio, que podia assumir forma humanoide ou animal, sempre espreitando alguma presa. Diz-se que era filho da própria Allihanna, parte essencial do ciclo da vida. Segundo essas hipóteses, embora matasse seus irmãos, outros filhos da Mãe Natureza, Lupan sabia exatamente quais presas abater para que as populações nunca diminuíssem.\nSabendo da necessidade da morte como parte do Grande Ciclo de Allihanna, em 1405 Lupan aceitou se unir a Orion Drake em seu exército de deuses para devolver a Tamu-ra e seus habitantes às leis da natureza. Seguiu em frente, matando lefeu, atirando com seu arco e cortando com sua adaga, até que o exército avançou para o centro da área de Tormenta para enfrentar o Lorde. Mas Crânio Negro era implacável, e sua mira, infalível. O Lorde da Tormenta chegou ao topo de uma colina com um arco de matéria vermelha, fez mira e disparou uma flecha mortal — a primeira de muitas.\nA primeira vítima foi justamente Lupan. A seta rubra atingiu sua testa, atravessando-a e saindo pela nuca, fazendo seu corpo divino despencar inerte. Assim, o Deus Menor dos Caçadores encontrou seu fim.",
+beliefs: "Reverenciar os seres da natureza. Proteger o equilíbrio da vida selvagem. Promover harmonia entre a natureza e a civilização. Combater monstros, mortos-vivos e outras criaturas que perturbam o equilíbrio natural. Caçar para o próprio sustento.",
+sacredSymbol: "Um cão de caça.",
+channelEnergy: "Positiva.",
+preferredWeapon: "Arco curto.",
+devotees: "Dahllan, elfos, medusas, sereias/tritões, trogs, bárbaros, caçadores, druidas, ladinos, treinadores.",
+grantedPowers: [
+"Passo do Caçador"
+],
+obligationsRestrictions: "Devotos de Lupan não podem matar criaturas não inteligentes (Int –4 ou –5) grávidas ou filhotes, nem permitir que estes sejam mortos. Além disso, devem extrair algo de útil de qualquer criatura dessas que matarem (em termos de jogo, devem passar em um teste de Sobrevivência com CD 15 + ND da criatura). Alternativamente, se você tiver o suplemento Ameaças de Arton, o devoto deve extrair pelo menos um recurso natural da criatura (veja p. 401)."
+},
+{
+id: "Sunnary",
+name: "Sunnary",
+subtitle: "a Deusa da Culinária",
+rank: "Mortal ascendido, status divino 2",
+image: [
+""
+],
+status: "menor",
+history: "Dona Sunnary, como ficou conhecida, nasceu em uma pequena vila desconhecida, não se casou e nem teve filhos, mas adotou toda a vila como sua família. Sempre com uma refeição deliciosa e uma palavra amiga, resolvia todas as disputas e desavenças em torno da mesa farta. Era devota de Marah e representava muito bem o lado gentil e tranquilo da Deusa da Paz. Sua fama como cozinheira e mediadora de conflitos se espalhou pela região e logo a pequena vila recebia viajantes em busca da comida de Dona Sunnary.\nA vida transcorria tranquila até que o vilarejo foi ameaçado por um terrível dragão. Sem recursos para enfrentar a ameaça mortal, os aldeões entraram em pânico, rezando aos deuses por misericórdia e implorando por uma solução. No entanto, como a maioria dos artonianos sabe, os deuses não resolvem seus problemas diretamente, mas enviam campeões para isso. Nesse caso, a campeã não foi nenhuma aventureira.\nEmocionada pela situação e com fé inabalável nas próprias habilidades, a talentosa cozinheira decidiu intervir. Dona Sunnary escolheu suas melhores receitas e fez um banquete magnífico em honra ao seu “convidado” dragão, chamando-o para conversar e partilhar a refeição. Ao fim da sobremesa, o dragão já estava apaziguado e desistiu de destruir a vila. Adotou o vilarejo como seu protegido em troca de banquetes periódicos feitos pelas mãos divinas de Dona Sunnary. Curiosamente, logo a ameaça implícita nisso se dissipou. O dragão passou a ser apenas mais um conviva. A história se espalhou e logo começaram as peregrinações para conhecer a lendária cozinheira. E assim, Dona Sunnary, a simpática aldeã, ascendeu como divindade menor da culinária, abençoando a boa comida e aqueles que a produzem.\nComo deusa, Dona Sunnary costuma parecer uma senhora baixa de cabelos grisalhos, sempre presos em coque (para que seu cabelo não caia nas panelas), com olhos gentis, cintura roliça e nariz aquilino, sempre sorridente.",
+beliefs: "Reverenciar a arte da culinária. Alimentar os necessitados. Cozinhar com prazer. Criar novas receitas. Espalhar a palavra da boa culinária.",
+sacredSymbol: "Panela sobre uma fogueira.",
+channelEnergy: "Positiva.",
+preferredWeapon: "Adaga.",
+devotees: "Aggelus, anões, elfos, hynne, qareen, bardos, druidas, nobres, paladino.",
+grantedPowers: [
+"Alimento da Alma"
+],
+obligationsRestrictions: "Devotos de Sunnary não podem se negar a atender um pedido para cozinhar para alguém, e devem preparar pelo menos um prato especial por semana."
+},
+{
+id: "Ur",
+name: "Ur",
+subtitle: "o Deus dos Carvalhos",
+rank: "Entidade primordial, status divino 3",
+image: [
+""
+],
+status: "menor",
+history: "Ur é uma das criaturas mais antigas de Arton. Lembra-se do mundo antes da Revolta dos Três e até mesmo antes da chegada dos elfos. Não se sabe se era um carvalho que adquiriu consciência por ser adorado ou se é um ente. O próprio Ur diz que isso não importa — quando se é tão velho quanto ele, lembrar de pormenores do passado pode tomar o resto da vida.\nSe as árvores possuem consciência, as florestas de Tollon cultuam Ur. Os entes certamente são seus seguidores. Alguns sábios afirmam que todos os entes de Arton estão em uma peregrinação até Ur — mas são tão lentos e pacientes que os humanos (e até mesmo os elfos!) não notam seus movimentos vagarosos e deliberados.\nUr prefere passar seus dias em contemplação silenciosa. Mesmo quando é abordado por seus fiéis, passa longo tempo sem dizer nada, deixando que seu silêncio e placidez tragam as respostas. Apenas em casos de grande emergência (como um incêndio fora de controle) desloca-se e fala ativamente.",
+beliefs: "Reverenciar Ur, as árvores e os seres da natureza. Proteger as florestas e a vida selvagem. Combater incêndios, desmatamentos desenfreados, monstros, mortos-vivos e outras situações ou criaturas que perturbam o equilíbrio natural das florestas. Peregrinar até Ur.",
+sacredSymbol: "Um carvalho com uma face.",
+channelEnergy: "Positiva.",
+preferredWeapon: "Bordão.",
+devotees: "Anões, dahllan, eiradaan, elfos, sílfides, bárbaros, caçadores, druidas.",
+grantedPowers: [
+"Trilhas das Árvores Antigas"
+],
+obligationsRestrictions: "Devotos de Ur não podem causar dano de fogo direta ou indiretamente a nenhuma criatura. Além disso, não podem descansar em nenhuma comunidade maior que uma aldeia (não perdem seus poderes, mas também não recuperam pontos de vida ou mana)."
+},
+{
+id: "Tukala",
+name: "Tukala",
+subtitle: "a Deusa dos Texugos Alados",
+rank: "Mortal ascendido, status divino 1",
+image: [
+"/deuses/tukala.png"
+],
+status: "menor",
+history: "Nascida nos Ermos Púrpuras e expulsa da região após uma série de conflitos contra criaturas da Tormenta, a Tribo do Texugo Cinzento possui um mito de criação próprio, em que a figura central é o Texugo, um ser alado (?!?) cujas asas foram roubadas por Sszzaas, que as deu de presente aos seus filhos, criando assim as serpes. Como vingança, o Texugo roubou os ovos das serpentes e os chocou ele mesmo. Quando os filhotes nasceram, ele deu aos rebentos sua fúria, criando assim os primeiros kobolds.\nNinguém sabe se há algo de real nesse mito (na verdade, qualquer pessoa sã diria que o mito é tão irreal que, cada vez que ele é repetido, algumas coisas reais se tornam fictícias). Mas, se por um milagre houver uma migalha factual nessa história, ela se relaciona apenas aos kobolds dessa tribo. O que implicaria que existe uma tribo de kobolds que difere de todo o resto dessas criaturas, e que descende de um texugo alado que… Não, melhor não pensar nisso. Verdadeira ou não, a história é contada com orgulho pelos membros dos Texugos Cinzentos e deu origem até a uma ordem de bravos bárbaros alados que ostentam o título de Furiosos Cinzentos.\nDescendente direta do Texugo, a poderosa e exaltada Tukala herdou a força e a fúria de seu antepassado divino. Como Deusa Menor dos Texugos Alados, ela protege todos aqueles que erguem sua visão aos céus em busca de ajuda do Texugo.\n“Tukala”, na verdade, é uma fêmea de texugo que a Tribo trouxe consigo dos Ermos Púrpuras como uma de suas mascotes. Não há nenhuma evidência de que ela tenha alguma ascendência divina. Mas nossos diminutos heróis acreditam nisso com força suficiente para que, de alguma forma, a magia aconteça. Sustentada à base de besouros e guloseimas, Tukala de fato abençoa a tribo e permite que Grund, o chefe da Tribo, evoque uma revoada de texugos espectrais em seu auxílio. Em retribuição, a Tribo espalha a palavra (?!?) de Tukala entre todos aqueles que buscam de alguma forma alcançar os céus.",
+beliefs: "Proteger todos os texugos e outros pequenos mamíferos escavadores e permitir que eles voem livres pelos céus. Combater Sszzaas e todas as formas de mentira. Impedir que qualquer ser inocente tenha suas asas roubadas. Voar, como é natural para todos os texugos.",
+sacredSymbol: "Contorno cinza do rosto de um texugo sobreposto a um par de asas de morcego.",
+channelEnergy: "Qualquer.",
+preferredWeapon: "Espada curta.",
+devotees: "Duendes, goblins, kobolds, sílfides, bárbaros, bardos, caçadores, druidas, inventores, treinadores.",
+grantedPowers: [
+"Revoada de Texugos"
+],
+obligationsRestrictions: "Devotos de Tukala não podem trilhar os caminhos de Sszzaas; eles são proibidos de mentir ou usar qualquer forma de Enganação. Eles também são proibidos de matar texugos e outros pequenos mamíferos escavadores (incluindo carcajus, raposas, tatus e canídeos). Jamais podem negar o desejo de voar de outras criaturas, a menos que isso seja usado para a mentira ou o mal."
+},
+{
+id: "Jandra",
+name: "Jandra",
+subtitle: "a Deusa das Boas Maneiras",
+rank: "Mortal ascendido, status divino 2",
+image: [
+""
+],
+status: "menor",
+history: "Uma dama de elegância impressionante, quase sempre ostentando penteado alto e vestido sofisticado, adornado com joias, Jandra é uma divindade que exala comedimento, altivez e requinte. Sua presença imponente é tamanha que poucos conseguem imaginar que, no passado, foi uma simples governanta.\nQuando era mortal, Jandra se dedicou a ensinar jovens nobres, criados e até plebeus sobre o comportamento adequado diante das pessoas de alta posição. Assim, criou uma verdadeira escola de boas maneiras e etiqueta. Boa parte de suas “regras” podia parecer arbitrária, mas quase todas tinham um fundo prático — destinavam-se a garantir que ninguém consumisse comida estragada, conferir se nenhum conviva trazia armas a uma reunião social, impedir a ativação de maldições…\nApós anos de ensino em um único local — uma mansão no antigo condado de Portsmouth — ela decidiu partir e viajar por todo o Reinado, espalhando seus conhecimentos de etiqueta a todos. Graças aos seus esforços, incontáveis conflitos foram evitados, pois as pessoas sabiam como se portar. Muitos notavam que, ainda que não soubessem a razão de todas as normas de etiqueta, sentiam estar dando importância a um evento (e às pessoas presentes) apenas por segui-las. Isso começou a adquirir um componente ritualístico, sagrado. Todos eram muito gratos e oravam por Jandra, até que tanta adoração foi suficiente para torná-la uma deusa.\nHoje, Jandra segue percorrendo Arton, sendo uma convidada de honra em bailes e jantares — principalmente onde decisões importantes de cortes serão tomadas —, conquistando ainda mais seguidores ao ensinar os mortais sobre o valor das boas maneiras. Ao seguir certos padrões de comportamento, todos estão honrando a si mesmos, seus convivas… e a Deusa das Boas Maneiras.",
+beliefs: "Ensinar boas maneiras. Julgar a etiqueta dos presentes em ocasiões formais. Educar futuros aristocratas sobre as formas corretas de se portar entre os nobres. Ensinar servos a cumprir seu dever de maneira elegante e ao mesmo tempo imperceptível. Tratar cada convidado como o mais importante de um evento.",
+sacredSymbol: "Uma xícara.",
+channelEnergy: "Qualquer.",
+preferredWeapon: "Adaga.",
+devotees: "Aggelus, anões, elfos, golens, hynne, minotauros, bardos, cavaleiros, nobres.",
+grantedPowers: [
+"Etiqueta à Toda Hora"
+],
+obligationsRestrictions: "Devotos de Jandra nunca deixam de fazer testes de Diplomacia ou Nobreza quando socialmente adequado. Além disso, não suportam falta de modos e desconhecimento de etiqueta; quando presencia uma falha em um teste de Diplomacia ou Nobreza, o devoto deve corrigir a pessoa que falhou (em termos de jogo, deve passar em um teste da perícia apropriada com a mesma CD, enquanto explica ao “falhante” onde ela errou). Dependendo das circunstâncias e da receptividade da outra pessoa a críticas, isso pode gerar situações bastante delicadas."
+},
+{
+id: "Tamagrah",
+name: "Tamagrah",
+subtitle: "o Deus da Ilha Viva",
+rank: "Entidade primordial, status divino 3",
+image: [
+""
+],
+status: "menor",
+history: "Em Moreania há criaturas enormes — mas poucas se comparam a Tamagrah. O monstro se assemelha a um peixe achatado, com boca de bagre e olhos esbugalhados. Possui seis nadadeiras e uma cauda curta, porém vigorosa. Suas costas são protegidas por uma grossa carapaça, guarnecida por longos espinhos.\nApesar da aparência demoníaca, Tamagrah é ainda mais assustador por seu tamanho: seu casco tem 12km de diâmetro, mantendo uma superfície de 8km emersa. Uma vez que a criatura flutua lentamente pelos mares, sem jamais submergir, vegetação floresceu em sua carapaça e vida animal passou a habitar Tamagrah como se fosse uma ilha.\nNem todos conhecem a verdadeira natureza de Tamagrah: a maioria das pessoas acredita ser apenas uma ilhota peculiar. Mas aqueles que sabem do segredo cultuam o monstro como um deus. E são correspondidos.\nTamagrah concede poderes a seus devotos — mas, exceto por esse fato, pouco interfere em assuntos dos mortais. Sua existência é milenar, suas preocupações são mistérios profundos como os mares: o monstro tanto ajuda aos que pedem seu auxílio em orações, como causa maremotos e catástrofes com um simples movimento de nadadeira.",
+beliefs: "Reverenciar Tamagrah. Proteger a vida selvagem e o povo da Ilha Viva. Combater monstros, mortos-vivos e invasores que perturbam o equilíbrio natural do ecossistema da Ilha Viva.",
+sacredSymbol: "Um casco de tartaruga com seis nadadeiras de peixe.",
+channelEnergy: "Qualquer.",
+preferredWeapon: "Lança.",
+devotees: "Anões, dahllan, elfos, hynne, moreau, sílfides, bárbaros, bucaneiros, caçadores, druidas, treinadores.",
+grantedPowers: [
+"Casco de Tartaruga"
+],
+obligationsRestrictions: "Devotos de Tamagrah devem proteger seu deus e, consequentemente, seu habitat, por meio de missões além mar para prevenir ameaças (pelo menos uma missão a cada 1d4+2 meses), mas não podem permanecer mais de 1d4+2 meses longe de Tamagrah."
+},
+{
+id: "Teldiskan",
+name: "Teldiskan",
+subtitle: "o Gigante Máximo",
+rank: "Entidade primordial, status divino 1",
+image: [
+"/deuses/teldiskan.png"
+],
+status: "menor",
+history: "Em Deheon, o Reino Capital, há uma cordilheira chamada de Montanhas Teldiskan, que ocupa boa parte do território a noroeste do reino. Apesar de fazerem parte da mesma formação das Montanhas Uivantes, o local tem sua própria identidade por ser lar de Teldiskan, o Gigante Máximo.\nProvavelmente a criatura mais alta de Arton, dizem que quando se levanta, Teldiskan consegue ver as nuvens que se formam em todos os reinos do que sobrou do Reinado, conseguindo prever o clima de semanas e até meses à frente. Por esse motivo os humanos há muitos séculos cultuam a criatura como a divindade menor do clima.\nMas nem sempre Teldiskan foi bondoso ou pacífico — e talvez não o seja hoje em dia. Teldiskan, o Gigante Máximo, atacou a cidade de Valkaria, quando era um mero assentamento de refugiados, pouco depois da chegada da Caravana dos Exilados a Arton Norte. Na ocasião, a Rainha Yvanna das Amazonas e Roramar Pruss, o Rei Profeta, derrotaram juntos o gigante, banindo-o para as montanhas e assim selando a aliança entre o que viria a ser o reino de Deheon e as nações amazonas. Teldiskan teria se arrependido e, desde então, se tornado uma divindade pastoril, que protege as pequenas aldeias que existem no sopé das montanhas. Um deus pacato, que pouco faz além de garantir bom tempo.\nOu apenas um vilão dotado de enorme paciência.\nAtualmente, devotos de Teldiskan se espalham pelas diversas aldeias nas encostas das montanhas e usam de rituais para prever o clima e auxiliar o povo com suas criações de cabras, carneiros e outros animais montanheses. Entre os devotos, há um grupo chamado Pastores de Teldiskan que viaja por Deheon pregando como seu padroeiro é uma divindade bondosa que trará bom tempo, chuvas adequadas e colheitas abundantes para o povo. Enquanto pregam que seu patrono se arrependeu e cumpre sua pena, os Pastores de Teldiskan arrebanham cada vez mais fiéis na tentativa de conseguir poder o suficiente para que o Gigante Máximo seja capaz de romper seu confinamento e dominar (ou destruir!) Deheon, vingando-se pela derrota de séculos atrás. Alguns dos mais fanáticos fazem sacrifícios humanos para seu deus, na tentativa de instigar sua sede de sangue.\nAssim, Teldiskan é uma divindade ambígua. Muitas gerações já o cultuaram como o deus do clima que ele parece ser, e suas preces foram atendidas. Mas vilões sanguinários servem a ele. Será Teldiskan um monstro arrependido ou uma ameaça futura? Ambos? Nenhum?",
+beliefs: "Vigiar o céu e prever o clima. Reverenciar e proteger as Montanhas Teldiskan. Ajudar o Gigante Máximo a alcançar liberdade. Pregar sobre a benevolência do Gigante Máximo e como suas bênçãos podem trazer prosperidade. Vingar-se do reino de Deheon.",
+sacredSymbol: "Vários picos de montanhas surgindo por cima das nuvens.",
+channelEnergy: "Qualquer.",
+preferredWeapon: "Tacape.",
+devotees: "Dahllan, gnolls, harpias, hynne, kallyanach, medusas, ogros, trogs, bárbaros, caçadores, druidas, lutadores.",
+grantedPowers: [
+"Despertar do Gigante"
+],
+obligationsRestrictions: "Devotos de Teldiskan devem pregar a benevolência de sua divindade por meio de seus atos e previsões climáticas. Uma vez por dia (ou por sessão de jogo, o que demorar mais), o devoto precisa convencer outra pessoa de que Teldiskan é um salvador ou prever o clima da região. Em termos de jogo, um teste de Enganação ou Sobrevivência com CD mínima 15 + metade do seu nível."
+},
+{
+id: "Yasshara",
+name: "Yasshara",
+subtitle: "a Deusa da Opressão",
+rank: "Mortal ascendido, status divino 3",
+image: [
+""
+],
+status: "menor",
+history: "Inimiga mortal de Anilatir, a Deusa da Inspiração, Yasshara é uma divindade marcada por uma história trágica. Quando jovem, seus pais foram mortos por uma mulher desequilibrada, que desejava forjar jovens “com potencialˮ para se tornarem aventureiros. Devastada, Yasshara se uniu ao clero de Khalmyr, na busca por algo nos dogmas do Deus da Justiça que pudesse explicar a insanidade que destruiu sua vida e a de tantas outras pessoas. No entanto, nada conseguiu aliviar sua alma.\nApós descobrir a identidade de sua algoz e enfrentar no clero de Nimb inimigos tão cruéis quanto ela, Yasshara assumiu como missão pessoal erradicar o caos do mundo e transformar a realidade em algo rígido e ordenado. Embora à primeira vista sua causa parecesse nobre, com o tempo a busca de Yasshara e de seu séquito se afastou dos preceitos de justiça de Khalmyr, focando unicamente em “consertarˮ a realidade, tornando-a estável e “compreensívelˮ.\nIsso é uma das versões da história de Yasshara. Outra versão da história, difundida pelos devotos de Anilatir, diz que Yasshara foi uma nobre que, desde sempre, teve uma necessidade doentia de monitorar e controlar as vidas de seus servos. Precisava que tudo fosse ordenado, previsível e igual, sempre. Teria sido devota de Khalmyr, mas perdeu a fé quando notou que o Deus da Justiça não era capaz de impor a verdadeira estabilidade. Proibiu a entrada de aventureiros em seu feudo, pois eles traziam coisas novas. Proibiu quaisquer inventos ou inovações que não existissem quando ela própria era uma criança. Por fim, passou a controlar de tal modo as vidas de seu povo que esse controle adquiriu características sagradas e ela ascendeu à divindade. Em sua busca obsessiva por eliminar tudo que é novo e diferente, por tornar Arton segura, constante e estanque, ela expandiu seu culto para além de suas fronteiras, criando uma verdadeira rede de devotos conspiradores, dedicados à opressão.\nEm ambas as versões, e em muitas outras, o clero de Yasshara teria entrado em conflito com o clero de Anilatir, e ambas existiriam numa eterna guerra pelo futuro de Arton.\nExiste ainda outra versão, sussurrada por poucos: Yasshara e Anilatir seriam a mesma pessoa, inimiga de si mesma. Afinal, para que exista inspiração para heróis, é preciso haver vilões. E, para que possa haver opressão e controle, é preciso que haja alguém ameaçando essa estabilidade.",
+beliefs: "Destruir o caos e a aleatoriedade. Pregar a ordem e a estabilidade. Fazer com que tudo seja igual, sempre. Moldar a realidade em padrões simplistas e compreensíveis até mesmo por aqueles de mente mais fechada. Impedir inovações.",
+sacredSymbol: "Uma balança dentro de um círculo perfeito.",
+channelEnergy: "Negativa.",
+preferredWeapon: "Espada longa.",
+devotees: "Anões, elfos, finntroll, minotauros, cavaleiros, guerreiros, nobres.",
+grantedPowers: [
+"Oprimir Escolhas"
+],
+obligationsRestrictions: "Devotos de Yasshara devem escolher o destino dos outros para que o mundo tenha ordem óbvia. Eles precisam garantir que, pelo menos uma vez por dia (ou por sessão de jogo, o que demorar mais), uma criatura obedeça a suas ordens. Em termos de jogo, uma ação exigindo um teste de Diplomacia ou Intimidação com CD mínima 15 + metade do seu nível. Além disso, o devoto deve estar sempre atento às tramas de Anilatir, a Deusa Menor da Inspiração, inimiga mortal de Yasshara. Por último, sempre que houver possibilidade de escolher 10 em um teste, o devoto deve fazer isso."
+},
+{
+id: "Neruíte",
+name: "Neruíte",
+subtitle: "a Deusa do Sono",
+rank: "Mortal ascendido, status divino 2",
+image: [
+""
+],
+status: "menor",
+history: "Neruíte é uma deusa maternal, de voz suave e melodiosa, que convida todos a relaxar em um sono tranquilo e reparador. Sua presença de aparência inconstante traz uma paz inexplicável, envolvendo os corações aflitos com serenidade e aconchego. Suas canções de ninar são mágicas e possuem o poder de adormecer qualquer criatura, independente de seu tamanho ou natureza. Uma vez adormecida pela melodia de Neruíte, a criatura não acordará até ter um descanso adequado, segundo os ensinamentos da deusa.\nDevotos de Neruíte acreditam que o sono, quando adequado e tranquilo, é um ritual sagrado. São ensinados a respeitar o ciclo natural do descanso, evitando excessos e buscando sempre a harmonia entre o dia e a noite. Os sacerdotes de Neruíte, conhecidos como “Sonhadoresˮ, passam seus dias compartilhando as lições de equilíbrio e de cuidados com o corpo e a mente, realizando cerimônias que celebram a importância do descanso.\nNão se sabe a origem exata de Neruíte, apenas que a deusa é muito antiga. Certas histórias falam de uma princesa de um reino ancestral, que teria adormecido num sono de décadas, sem envelhecer ou sofrer qualquer efeito do tempo. Seus súditos teriam começado a peregrinar para velar seu sono, aos poucos transformando-se em seus devotos… Infelizmente, ninguém conhece o final da história, pois todos adormecem ao ouvi-la, então não se sabe se tem algum fundo de verdade.\nOs templos de Neruíte são conhecidos por sua atmosfera serena e acolhedora. Decorados com tecidos suaves, almofadas e velas perfumadas, esses santuários são considerados locais ideais para descansar e se reconectar com o divino.",
+beliefs: "Ensinar a importância de um bom sono. Auxiliar as pessoas a obterem o descanso adequado. Velar pelo sono alheio. Desvendar pesadelos. Interpretar sonhos. Sonhar.",
+sacredSymbol: "Uma vela apagada.",
+channelEnergy: "Qualquer.",
+preferredWeapon: "Maça.",
+devotees: "Aggelus, elfos, qareen, sereias/tritões, sílfides, arcanistas, bardos, caçadores, nobres.",
+grantedPowers: [
+"Sono Reparador"
+],
+obligationsRestrictions: "Devotos de Neruíte jamais podem acordar intencionalmente alguém que esteja dormindo, ou permitir que outros o façam. Além disso, sempre que acorda, o devoto fica pasmo por 1 rodada, enquanto seu espírito lentamente desperta de seu sono sagrado."
+},
+{
+id: "Marina",
+name: "Marina",
+subtitle: "a Deusa dos Marinheiros",
+rank: "Mortal ascendido, status divino 3",
+image: [
+""
+],
+status: "menor",
+history: "As histórias sobre a origem e a verdadeira aparência desta deusa são tão variadas quanto as histórias de pescadores, marinheiros e piratas. Uns dizem que ela foi uma sereia que se apaixonou por um marinheiro, abrindo mão de sua própria raça para ficar mais perto dele. Outros, que foi a maior capitã pirata do Mar Negro, conquistando a devoção de incontáveis tripulações. Há quem diga que foi uma jovem donzela capturada por piratas e jogada ao mar para morrer, mas que foi salva por Oceano. Outros ainda afirmam que ela foi um bebê que caiu no mar, mas sobreviveu ao ser levado para uma área de “ar molhado” (águas mágicas onde é possível respirar) e foi criada por peixes. Por fim, existem versões que afirmam que ela é a princesa de um antigo império submarino, e até mesmo aqueles que afirmam que Marina era um mero acrostólio (uma decoração de proa de navio) tão adorada pela tripulação que ganhou vida.\nQuando alguém pergunta diretamente à deusa qual das histórias é real, ela apenas responde: “sim”. A verdadeira personificação das histórias de marinheiros, Marina abençoa oficiais respeitáveis, piratas, pescadores e exploradores sem distinção, pois é a deusa de todos que desbravam o mar. É capaz de invocar incontáveis navios de todos os tipos e tamanhos, mais rápidos, resistentes e poderosos do que qualquer embarcação já vista em Arton. Ninguém sabe de onde vêm esses navios — o que leva alguns a especular que ela realmente possui um império subaquático. Também é capaz de construir navios, sozinha ou com a ajuda de misteriosas equipes que surgem apenas à noite. No convés de uma nau capitânia, é capaz de guiar uma frota inteira, domando as ondas e fazendo soprar os ventos mais favoráveis. Marina recebe devoção absoluta porque não é uma deusa do mar ou de suas criaturas, mas dos homens e mulheres que o desbravam. Seus fiéis não precisam apaziguar uma deusa imprevisível como o próprio mar, não precisam implorar permissão para singrá-lo: sob Marina, o mar pertence a eles.\nÉ comum que navios sejam dedicados a Marina antes de sua primeira viagem. Esse costume ficou ainda mais arraigado depois do papel decisivo desta deusa no combate à Tempestade Rubra: foi nos navios de Marina que o exército de deuses menores de Orion Drake chegou à área de Tormenta de Tamu-ra em 1405, libertando o Império de Jade de sua corrupção.",
+beliefs: "Explorar o mar. Desafiar as ondas. Desbravar o oceano. Enfrentar tempestades. Vencer limites. Desafiar o impossível. Construir, consertar e pilotar embarcações.",
+sacredSymbol: "Um redemoinho marinho.",
+channelEnergy: "Qualquer.",
+preferredWeapon: "Florete.",
+devotees: "Elfos, elfos-do-mar, hynne, kappa, minotauros, qareen, sereias/tritões, arcanistas, bárbaros, bucaneiros, caçadores, druidas, ladinos.",
+grantedPowers: [
+"Mar Aberto"
+],
+obligationsRestrictions: "Devotos de Marina devem sempre carregar consigo um recipiente fechado com água do mar (em termos de jogo, um item que ocupa 0,5 espaço). Além disso, uma vez por aventura, devem passar pelo menos uma noite em uma embarcação no mar."
+},
+{
+id: "Piscigeros",
+name: "Piscigeros",
+subtitle: "o Deus dos Homens-Peixes",
+rank: "Conceito vivo, status divino 1",
+image: [
+""
+],
+status: "menor",
+history: "Também chamado entre os homens-peixes de Pai Peixe, esta divindade possui uma história curiosa. Originalmente, o Pai Peixe não passava de uma mentira dos thalassothan, monstros aquáticos inteligentes e cruéis, capazes de herdar memórias de seus progenitores e absorvê-las de suas vítimas. Esses algozes das águas convenceram os homens-peixes da existência do deus Piscigeros para obter controle sobre eles, afirmando ser arautos dessa divindade.\nEntretanto, o poder da crença em Arton é tão forte — e a farsa durou tantas gerações — que há relatos de um indivíduo solto nas profundezas marítimas que afirma ser Piscigeros, e que está sendo cultuado pelos homens-peixes. Os thalassothan foram pegos desprevenidos por isso. Vários homens-peixes já se revoltaram contra seus mestres ao perceber que os “arautos do Pai Peixe” pareciam saber menos sobre o deus do que seus servos!\nSe o tal “Piscigeros” é um ser que tomou a identidade do Pai Peixe para si ou se de fato surgiu espontaneamente devido à crença dos fiéis, ninguém da superfície sabe ainda. O que se sabe é que a fé dos homens-peixes é genuína, e que seus devotos são os comandantes dessa raça submarina — alguns até mesmo desafiando o controle thalassothan.",
+beliefs: "Obedecer aos arautos do Pai Peixe acima de tudo. Vencer a qualquer custo, pela força ou estratégia. Proteger a cultura e o modo de vida dos homens-peixes. Dominar os mares e os seres sob as ondas.",
+sacredSymbol: "Um peixe imenso em um cardume de peixes menores.",
+channelEnergy: "Negativa.",
+preferredWeapon: "Tridente.",
+devotees: "Dahllan, elfos-do-mar, hynne, kappa, minotauros, sereias/tritões, bárbaros, bucaneiros, caçadores, druidas, treinadores.",
+grantedPowers: [
+"Resistência Submarina"
+],
+obligationsRestrictions: "Devotos de Piscigeros jamais podem ignorar um pedido de ajuda de um homem-peixe e devem proteger qualquer membro de seu povo até a morte, se preciso. Além disso, devotos do Pai Peixe jamais podem desobedecer às ordens dos arautos de sua divindade ou causar dano letal ou perda de PV a eles (habilidades que forneçam bônus em dano letal ou em perda de vida para criaturas em combate contra eles também são proibidas). Esse último dogma vem sendo contestado por alguns sacerdotes de Piscigeros, mas não se sabe ainda as consequências de fazer isso."
+},
+{
+id: "Zadbblein",
+name: "Zadbblein",
+subtitle: "a Dragoa-Rainha das Florestas",
+rank: "Dragão-Real, status divino 4",
+image: [
+"/deuses/zadbblein.png"
+],
+status: "menor",
+history: "Havia outro Dragão-Real não muitos anos atrás — Heart, o Dragão-Rei das Montanhas. Depois de sua morte nas mãos do Paladino de Arton, muitos pensaram passaria a haver um Dragão-Real a menos. Não conheciam Zadbblein, a Dragoa-Rainha das Florestas.\nZadbblein é a irmã gêmea de Heart — fisicamente mais fraca, mas ardilosa e hábil na magia. Tem personalidade oposta à de seu irmão: enquanto Heart era pacato e preguiçoso, preferindo maldades menores como escravizar e torturar, Zadbblein sempre foi agressiva. Com a morte de Heart, Zadbblein voltou a se sentir à vontade para fazer suas aparições, principalmente na Floresta das Escamas Verdes, considerando essa e todas as florestas da região sua propriedade. Protege e defende grandes áreas florestais e seu equilíbrio natural.\nPara irritá-la, Heart costumava chamá-la de “falsa druida”, lembrando que Allihanna nunca iria aceitá-la. No entanto, acredita-se que a energia vital de Zadbblein é tão poderosa que faz as florestas onde passa a maior parte de seu tempo espalharem-se com mais rapidez. Alguns druidas e xamãs deram boas-vindas à Dragoa-Rainha das Florestas, acreditando que poderia ser sinal de uma reconciliação entre Allihanna e seu irmão Megalokk. No entanto, outros apontam atos de destruição e crueldade praticados por Zadbblein contra qualquer criatura que pise em suas florestas — especialmente monstros e seres não naturais, como construtos e mortos-vivos. Podem ser atos de proteção ou vingança, ninguém sabe ao certo. E a própria Zadbblein, mesmo antes da volta de Kallyadranoch, sempre soube que Megalokk nunca poderia ser o deus criador dos dragões. Quando o Deus dos Dragões voltou, preso no corpo da elfa Yadallina, Zadbblein ofereceu a ele sua magia e sua esperteza.\nA aptidão de Zadbblein para a magia às vezes parece contradizer seu amor pela natureza — mas tudo fica claro quando lembramos que, como a maioria dos dragões, ela é acima de tudo maligna. Zadbblein odeia seres não naturais, mas acredita poder “aperfeiçoar” a natureza. Afinal, se a presença de um dragão pode impulsionar o crescimento das florestas, um pouco de intervenção arcana poderia beneficiar seus habitantes…\nZadbblein por vezes assume a forma de uma bela elfa com longos cabelos negros e olhos verdes. Usa roupas que lembram as escamas de sua forma natural, mas também pode ser vista vestindo folhagens, como uma dríade. Está quase sempre acompanhada por animais selvagens, que não a temem. Sua forma dracônica é graciosa. Comparativamente, é pequena (embora ainda impressionante). Tem escamas tão verdes quanto esmeraldas.",
+beliefs: "Reverenciar Zadbblein. Promover harmonia entre todas as criaturas vivas nas florestas. Aperfeiçoar as criaturas das florestas. Reverenciar a superioridade dos dragões da terra. Combater quaisquer criaturas que invadam o território da Dragoa-Rainha das Florestas. Promover a expansão e a evolução dos domínios de Zadbblein.",
+sacredSymbol: "Árvore cujas folhas são escamas verdes.",
+channelEnergy: "Negativa.",
+preferredWeapon: "Bordão.",
+devotees: "Centauros, dahllan, eiradann, elfos, kallyanach, sátiros, tabrachi, trogs, arcanistas, bárbaros, caçadores, druidas, guerreiros, treinadores.",
+grantedPowers: [
+"Natureza Gloriosa"
+],
+obligationsRestrictions: "Devotos de Zadbblein devem proteger a Floresta das Escamas Verdes e não podem ferir nenhum animal ou dragão nativo dessa floresta, ou de outras florestas que sejam território de Zadbblein. Além disso, uma vez por mês, devem expandir os domínios ou a influência da Dragoa-Rainha significativamente."
+},
+{
+id: "O Deus do Medo",
+name: "O Deus do Medo",
+subtitle: "",
+rank: "Conceito vivo, status divino 4",
+image: [
+""
+],
+status: "menor",
+history: "Um deus sem nome, cuja presença é sempre sentida, mas jamais vista diretamente — pois tudo é mais amedrontador quando não é visto, e mais terrível quando não pode ser nomeado. O Deus do Medo se encontra sempre fora do ângulo de visão de um observador, como se estivesse à beira da percepção, nunca completamente revelado, mas sua influência é inegável. Sua natureza misteriosa e evasiva reflete o instinto primitivo que representa: o medo. Por ser padroeiro desse instinto básico, que está presente em todo ser vivo, esta divindade é extremamente poderosa e imortalizada nos corações dos mortais. O medo, em suas mais variadas formas, é infinito, uma força que governa a vida e a morte, a ação e a inação, e o deus sem nome compreende isso melhor do que qualquer outro ser.\nOs devotos do Deus Menor do Medo são aqueles que veem essa emoção como uma ferramenta a ser manipulada. Eles exploram cada nuance dos medos dos outros para alcançar seus próprios objetivos, seja em batalhas psicológicas, seja em estratégias para obter poder, controle ou influência. Ao alimentar e amplificar o medo, esses seguidores aumentam ainda mais o poder e a autoridade de sua divindade. Cada suspiro de pavor, cada sombra que se move de forma inesperada, serve para fortalecer o vínculo com o deus sem nome, aproximando-os cada vez mais de sua essência. Não ter medo é impossível.\nTambém há outros devotos, esses involuntários: aqueles tomados pelo medo. Medo da morte, medo de uma tragédia, medo de um grande inimigo… Até mesmo medo da felicidade, do sucesso, de tentar alguma coisa. Pessoas paralisadas pelo medo muitas vezes acabam considerando esse sentimento sagrado e cultuando o Deus do Medo sem saber. Para piorar as coisas, isso pode fazer com que este deus se manifeste sempre atrás desses devotos. Mas, quando o infeliz se vira para olhar, a divindade não está mais lá.",
+beliefs: "Espalhar o medo e o terror. Afugentar inimigos. Amedrontar a todos. Fazer com que ninguém se sinta em segurança, nem mesmo em casa. Apavorar crianças. Temer.",
+sacredSymbol: "Uma silhueta sombria.",
+channelEnergy: "Negativa.",
+preferredWeapon: "Corrente de espinhos.",
+devotees: "Bugbears, lefou, minotauros, medusas, osteon, sulfure, trogs, voracis, arcanistas, bárbaros, bardos, bucaneiros, guerreiros, ladinos, lutadores.",
+grantedPowers: [
+"Medo Verdadeiro"
+],
+obligationsRestrictions: "Devotos do Deus do Medo devem deixar uma criatura sob qualquer efeito de medo pelo menos uma vez por dia (ou por sessão de jogo, o que demorar mais) em adoração a sua divindade."
+},
+{
+id: "Sckhar",
+name: "Sckhar",
+subtitle: "o Dragão-Rei do Fogo",
+rank: "Dragão-Real, status divino 5",
+image: [
+"/deuses/sckhar.png"
+],
+status: "menor",
+history: "De várias formas, Sckhar representa tudo aquilo que define um dragão — força, influência, orgulho, perigo… —, sempre ao extremo. Sua expressão é intimidadora mesmo quando está calmo, e ele se enfurece com facilidade. Seus acessos de raiva são notórios, pois assassina seus servos, guardas e esposas diante da menor transgressão. Com uma nação inteira à sua disposição e nenhuma das preocupações “mundanas” de um regente (como intrigas, rivais ou ameaças de invasões), Sckhar devota grande parte do tempo e dos recursos de Sckharshantallas à sua adoração.\nExistem inúmeros relatos sobre Sckhar como um rei (ou tirano): sobre como considera todo o reino seu covil e tudo que está dentro de suas fronteiras como seu tesouro. Existem histórias sobre Sckhar como oponente: poucos sobrevivem a sua fúria, e ele teve papel decisivo na luta contra o Dragão da Tormenta. Existem até mesmo boatos sobre os sentimentos de Sckhar: ele teria se apaixonado por Beluhga no passado, sendo capaz de uma forma de amor. Teria também feito um pacto com o cavaleiro Lothar Algherulff, mostrando astúcia e dando ouvidos a uma “criatura inferior”.\nMas e Sckhar como divindade?\nSckhar é um dos deuses menores mais presentes nas vidas de seus devotos. Eles sentem o toque do deus sempre que acordam sob o calor escaldante do reino. Festivais são realizados em sua honra, sacrifícios ritualísticos de prisioneiros ocorrem todos os anos, no feriado do Dia da Execução, após o Sckharal (também um feriado em honra ao deus). O culto a Sckhar é a religião oficial de Sckharshantallas. A devoção faz parte da vida de qualquer sckharjagar, como são chamados os nativos do reino. Alguém que não seja devoto de Sckhar é visto com desconfiança, um esquisito que provavelmente está escondendo outras “infrações”.\nSckhar cobra pesados tributos, mas também lhes fornece uma fruta extremamente nutritiva, garantindo que seus súditos/devotos não passem fome. Sckhar é absoluto. Ao mesmo tempo, seus filhos ocupam quase todas as posições de alto poder, tornando a figura física do deus estranhamente próxima. Para um sckharjagar médio, Sckhar é muito mais poderoso (ou ao menos perigoso) que Khalmyr ou mesmo Valkaria!\nNa forma humanoide, Sckhar aparenta ser um elfo de cabelos vermelhos e porte altivo. Sempre usa vestimentas soberbas, em tons quentes como vermelho e dourado. Poderia ser confundido com um nobre elfo qualquer, não fosse um traço particular — seu olho esquerdo é cego, trazendo três cicatrizes alinhadas que cruzam sua extensão. Em sua forma dracônica, o Dragão-Rei é uma das mais impressionantes e aterradoras criaturas de Arton. Suas escamas são de um escarlate profundo, entremeadas com algumas douradas e cor de rubi, com garras enormes e poderosas, e a cabeça coroada com chifres espiralados.",
+beliefs: "Reverenciar a soberania de Sckhar. Reverenciar os filhos do Dragão-Rei do Fogo. Enfrentar heresia ou transgressão às leis, domínios e à honra de Sckhar. Combater as criaturas que ameacem os súditos de Sckharshantallas. Caçar quaisquer dragões que invadam o território sckharjagar.",
+sacredSymbol: "Chamas vermelhas com uma coroa dourada no centro.",
+channelEnergy: "Negativa.",
+preferredWeapon: "Lança.",
+devotees: "Elfos, kallyanach, meios-elfos, arcanistas, bardos, cavaleiros, nobres, treinadores.",
+grantedPowers: [
+"Ego"
+],
+obligationsRestrictions: "Devotos de Sckhar devem obedecer cegamente às ordens do seu Dragão-Rei, especialmente quando convocados para expulsar dragões e outras criaturas aparentadas do território de Sckharshantallas. Além disso, uma vez por mês, os devotos devem doar 20% de todo seu tesouro para os cofres de Sckhar. Essa doação deve ser feita em ouro."
+},
+{
+id: "Toris",
+name: "Toris",
+subtitle: "a Deusa de Jallar",
+rank: "Entidade primordial, status divino 1",
+image: [
+"/deuses/toris.png"
+],
+status: "menor",
+history: "Pouquíssimas pessoas sabem da existência de Jallar, um minúsculo reino nos limites do Reinado. Isso se deve à paranoia de Toris, a deusa menor que fundou e protege o local desde sua origem. Seus devotos são praticamente toda a população do reino, seus clérigos são poucos e, anos atrás, ela possuía um paladino que era seu grande orgulho.\nO paladino passava os dias cavalgando e patrulhando as fronteiras do reino, e foi responsável por livrar Jallar da maioria dos monstros e animais perigosos que havia por lá. Entretanto, um dia esse homem santo passou uma noite com uma donzela que conhecia seus feitos e o admirava há muito tempo. Como recompensa, ao amanhecer foi fulminado por um relâmpago lançado por sua própria deusa.\nO corpo do paladino foi encontrado por um necromante e o resto é história. Quanto a Toris, após perder seu mais íntimo fiel, a deusa ficou ainda mais reclusa e paranoica. Com medo de perder fiéis para deuses mais poderosos ou para outros mortais, lançou um feitiço para esconder Jallar do restante do mundo.\nAlgumas pessoas duvidam da existência de Jallar e dizem que Toris não passa de uma lenda. De fato, ninguém sabe como esta deusa teria surgido (ela parece ser uma entidade que existe desde sempre) ou qual seria seu portfólio. É uma deusa do reino de Jallar, e Jallar é um reino que existe (será?) basicamente para adorar esta deusa. O tal feitiço que escondeu o reino teria sido lançado há algumas décadas, mas não existe registro de ninguém que tenha visitado Jallar, nem de nenhum habitante do reino fora de suas fronteiras, exceto pelo Paladino de Jallar. O destino desse paladino é ainda mais duvidoso. A história mais aceita do Paladino de Jallar envolve sua morte em um covil de Sckhar, não fulminado pela deusa. Será que o mesmo paladino morreu mais de uma vez? Se a história for falsa, por que ele se chamaria “Paladino de Jallar”? Teriam sido dois paladinos (talvez o mesmo guerreiro sagrado copiado magicamente de alguma forma)? Mas como uma deusa menor poderia ter dois paladinos? É possível que essas contradições e esse ceticismo sejam incentivados pela própria Toris. Afinal, ninguém pode tentar descobrir um reino que não acredita existir…",
+beliefs: "Proteger Jallar, seu povo e suas fronteiras. Conscientizar a população de que Jallar é seguro, e que o restante do mundo é perigoso e implacável.",
+sacredSymbol: "Um castelo dentro de um círculo.",
+channelEnergy: "Qualquer.",
+preferredWeapon: "Espada longa.",
+devotees: "Caçadores, cavaleiros, guerreiros, ladinos, nobres, paladino.",
+grantedPowers: [
+"Véu de Toris"
+],
+obligationsRestrictions: "Devotos de Toris jamais podem ignorar um pedido de ajuda de um cidadão de Jallar e devem proteger qualquer membro de seu povo até a morte, se preciso. Além disso, mesmo nas raras ocasiões em que deve sair do reino para realizar alguma missão a pedido de sua deusa, o devoto deve manter contato com ela, não podendo permanecer mais de 2d10+10 dias sem conversar com ela (seja por meios mundanos ou mágicos) e nem passar 1d4+2 meses sem voltar a Jallar para se reportar pessoalmente. Toris é infame por seus ciúmes. Qualquer atenção demasiada que um devoto dê a qualquer outra pessoa, coisa ou entidade pode valer sua fúria (contando como um descumprimentos das Obrigações & Restrições ou valendo um relâmpago na cabeça…)."
+},
+
   
   //#endregion
   

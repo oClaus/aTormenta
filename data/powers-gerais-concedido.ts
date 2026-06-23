@@ -629,6 +629,211 @@ export const powersGeraisConcedido: Power[] = [
     description: "Você pode gastar 1 PM para escolher um oponente em alcance curto e receber +1 em testes de ataque e na margem de ameaça contra ele até o fim da cena. Se atacar outro oponente, o bônus termina.",
     origin: "Guia dos Deuses Menores"
   },
+  { id: "Armas e Espólios (Dunsark)",
+    name: "Armas e Espólios (Dunsark)",
+    description: "Você recebe uma proficiência a sua escolha entre armaduras pesadas, armas de fogo, armas marciais ou escudos. Se já tiver proficiência com armas marciais, pode escolher armas exóticas. Além disso, quando rolar na tabela de Tesouro por Nível de Desafio, você pode rolar duas vezes para cada coluna apropriada e escolher entre os dois resultados",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Vanglória (Elrophin)",
+    name: "Vanglória (Elrophin)",
+    description: "Uma vez por cena, quando faz um teste de perícia, você pode gastar 2 PM para somar +1d6 como um bônus no teste. Se rolar o valor máximo nesse dado de bônus, role um segundo d6 e adicione ao resultado. Você não pode usar esta habilidade em testes de ataque.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Olhar Atordoante (Escamandra)",
+    name: "Olhar Atordoante (Escamandra)",
+    description: "Você pode gastar uma ação de movimento e 1 PM para forçar uma criatura em alcance curto a fazer um teste de Fortitude (CD Car). Se falhar, a criatura fica atordoada por 1 rodada (apenas uma vez por cena). Se você já tiver esta habilidade, em vez disso seu alcance aumenta em um passo (de curto para médio, de médio para longo) e a CD para resistir a ela aumenta em +2.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Toque de Esmeralda (Esmeralda)",
+    name: "Toque de Esmeralda (Esmeralda)",
+    description: "Você pode lançar Transmutar Objetos como uma magia divina (atributo-chave Sabedoria). Caso aprenda essa magia novamente , seu custo diminui em –1 PM. Se você usar a magia em uma joia ou um item que queira transformar em uma joia, seu custo diminui em –1 PM (cumulativo com outras reduções).",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Na Ponta da Língua (Garanaam)",
+    name: "Na Ponta da Língua (Garanaam)",
+    description: "Sempre que fizer um teste de Vontade para resistir a uma habilidade de uma criatura inteligente (Int –3 ou maior), você pode gastar 2 PM para propor uma charada à ela. Faça um teste de Enganação, oposto pelo Conhecimento ou Intuição da criatura. Se você vencer o teste, passa automaticamente no teste de Vontade. Caso contrário, faça o teste de Vontade normalmente.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Pólvora Sagrada (Garth)",
+    name: "Pólvora Sagrada (Garth)",
+    description: "Você recebe proficiência com armas de fogo. Além disso, pode gastar uma ação de movimento e 2 PM para abençoar até 10 balas. Até o fim da cena, ataques com armas de fogo usando essa munição recebem +1 na margem de ameaça e causam +2 pontos de dano.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Amor ao Machado (Goharom)",
+    name: "Amor ao Machado (Goharom)",
+    description: "Você pode gastar uma ação padrão e 3 PM para tocar um machado e colocar nele um encanto de arma a sua escolha. O encanto não pode ter pré-requisitos e dura até o fim da cena ou até você usar este poder novamente.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Âmago de Escultor (Granto)",
+    name: "Âmago de Escultor (Granto)",
+    description: "Você recebe +2 em testes de perícia relacionados a rochas (como investigar uma caverna, esculpir uma estátua de mármore ou atacar uma gárgula). Além disso, você sabe identificar quando uma aparente estátua se trata de uma criatura petrificada, construto, gárgula ou qualquer criatura semelhante.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Igual ao Lar (Gratissa)",
+    name: "Igual ao Lar (Gratissa)",
+    description: "Uma vez por dia, você pode gastar alguns minutos para transformar um espaço de descanso em um lar provisório por um dia. Todas as criaturas que descansarem nesse local recuperam seu nível em pontos de vida ou pontos de mana (a escolha da criatura) e, enquanto estiverem nesse lar, recebem +1 em testes de perícias.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Ginete Altivo (Hippion)",
+    name: "Ginete Altivo (Hippion)",
+    description: "Enquanto está montado sobre um cavalo, você recebe +2 em testes de ataque e em Cavalgar. Além disso, você passa automaticamente em testes de Cavalgar para não cair do cavalo quando sofre dano e não sofre penalidades para atacar à distância ou lançar magias quando montado em cavalos. Este poder conta como o poder Ginete para efeitos de pré-requisitos de outras habilidades. Se você é um centauro, os benefícios deste poder mudam para: +2 em testes de ataque e rolagens de dano com investidas, não sofre –2 na Defesa quando faz uma investida e pode fazer investidas em terreno difícil.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Selvageria Marcial (Hurlaagh)",
+    name: "Selvageria Marcial (Hurlaagh)",
+    description: "Você pode usar Sobrevivência no lugar de Guerra. Além disso, você se torna treinado em Guerra. Caso já seja treinado, em vez disso recebe +2 em testes dessa perícia. Além disso, na primeira vez em cada cena em que passa em um teste para analisar terreno, além das vantagens descobertas, você fornece um bônus de +1 em testes de ataque e rolagens de dano de seus aliados em alcance curto por 1 rodada.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Alcançar os Céus (Hydora)",
+    name: "Alcançar os Céus (Hydora)",
+    description: "Você pode gastar uma quantidade de PM limitada por sua Sabedoria (mínimo de 1) para receber deslocamento de voo até o fim do seu turno. Esse deslocamento é igual a 12m, +3m para cada PM gasto além do primeiro.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Salto Anurídeo (Inghlblhpholstgt)",
+    name: "Salto Anurídeo (Inghlblhpholstgt)",
+    description: "Você pode gastar uma ação de movimento e 2 PM para saltar 9m em qualquer direção. Se terminar o salto em alcance corpo a corpo de uma criatura e atacá-la no mesmo turno, você recebe os benefícios e as penalidades de uma investida e sua arma causa um dado extra de dano do mesmo tipo durante esse ataque. Você pode aprender Primor Atlético como uma magia divina. Se fizer isso, o custo dela diminui em –1 PM.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Fisgar Corações (Irione)",
+    name: "Fisgar Corações (Irione)",
+    description: "Você aprende e pode lançar a magia Enfeitiçar (atributo-chave Carisma) usando apenas concentração, sem necessidade de gestos ou palavras (como se sob efeito do poder Magia Discreta). Caso aprenda novamente essa magia, seu custo diminui em –1 PM.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Etiqueta à Toda Hora (Jandra)",
+    name: "Etiqueta à Toda Hora (Jandra)",
+    description: "Uma vez por cena, você pode gastar uma ação de movimento e 1 PM para fazer um teste de Nobreza para ajudar. Cada aliado em alcance curto pode usar o bônus de ajuda fornecido por este teste em um de seus testes de perícia feito até o fim da cena.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Manutenção Sagrada (Klangor)",
+    name: "Manutenção Sagrada (Klangor)",
+    description: "Uma vez por dia, você pode gastar 10 minutos ajustando sua própria armadura. Faça um teste de Ofício (armeiro) para ajudar. Enquanto estiver trajando esta armadura, você recebe um bônus na Defesa igual ao bônus de ajuda fornecido pelo teste. Entretanto, a cada vez que for atingido por um ataque, esse bônus diminui em 1 (até um mínimo de 0).",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Alma em Erupção (Kurur Lianth)",
+    name: "Alma em Erupção (Kurur Lianth)",
+    description: "Você recebe redução de fogo 10 e, quando causa dano, pode sacrificar 2 pontos de vida (exceto PV temporários) para causar +1d6 pontos de dano de fogo.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Pé na Estrada (Laan)",
+    name: "Pé na Estrada (Laan)",
+    description: "Você pode gastar 3 PM para fornecer o dom da caminhada a criaturas escolhidas em alcance curto. Até o fim da cena, as criaturas afetadas recebem +3m em deslocamento e passam automaticamente em testes de Fortitude para marcha forçada.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Furacão de Lâminas (Lamashtu)",
+    name: "Furacão de Lâminas (Lamashtu)",
+    description: "Quando erra um ataque corpo a corpo, você pode gastar 2 PM para repetir esse ataque contra outra criatura ao seu alcance.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Passo do Caçador (Lupan)",
+    name: "Passo do Caçador (Lupan)",
+    description: "Você recebe +2 em Sobrevivência e soma sua Sabedoria em Furtividade. Além disso, contra criaturas desprevenidas ou surpreendidas, seus ataques causam +1d6 pontos de dano.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Toque Pestilento (Luvithy)",
+    name: "Toque Pestilento (Luvithy)",
+    description: "Você aprende e pode lançar Infligir Ferimentos e, quando usa essa magia, se o alvo falhar no teste de resistência, ele também é exposto à doença maldição pegajosa. Caso aprenda novamente essa magia, seu custo diminui em –1 PM.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Mar Aberto (Marina)",
+    name: "Mar Aberto (Marina)",
+    description: "Você aprende e pode lançar Caminhos da Natureza. Você só pode lançar essa magia em ambientes aquáticos, mas pode aplicar seu bônus em deslocamento em qualquer embarcação em que esteja. Caso aprenda novamente essa magia, pode usá-la em qualquer ambiente e seu custo diminui em –1 PM.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Sombras Venenosas (Mzzileyn)",
+    name: "Sombras Venenosas (Mzzileyn)",
+    description: "Você pode gastar uma ação de movimento e 1 PM para envenenar uma arma que esteja usando. A arma causa perda de 1d12 PV por veneno. O veneno dura até você acertar um ataque ou até o fim da cena (o que acontecer primeiro). Além disso, se estiver em uma área de escuridão, a CD para resistir aos seus venenos aumenta em +2 e a perda de vida deles aumenta em +2 por dado.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Cauda de Água Doce (Nerelim)",
+    name: "Cauda de Água Doce (Nerelim)",
+    description: "Você pode respirar debaixo d'água e, quando está submerso, pode transformar suas pernas em uma cauda que fornece deslocamento de natação 12m. Se já faz isso (como pela habilidade Transformação Anfíbia) ou se já possui deslocamento de natação, em vez disso ele aumenta em +6m.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Sono Reparador (Neruíte)",
+    name: "Sono Reparador (Neruíte)",
+    description: "Se descansar (dormindo) em condições normais ou melhores, você pode melhorar sua recuperação de PV ou PM em um passo. Alternativamente, você pode ter um sonho inspirador: você recebe +1d6 em um teste de perícia a sua escolha realizado até o fim do dia.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Proteção do Cristal (O Deus Cristal de Urielka)",
+    name: "Proteção do Cristal (O Deus Cristal de Urielka)",
+    description: "Você aprende e pode lançar Proteção Divina. Caso aprenda novamente essa magia, seu custo diminui em –1 PM.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Manha da Cidade (O Deus das Cidades)",
+    name: "Manha da Cidade (O Deus das Cidades)",
+    description: "Quando está em uma comunidade, você soma sua Sabedoria (mínimo de 1) em testes de Conhecimento, Investigação, Ladinagem e Nobreza, e pode fazer testes dessas perícias mesmo sem ser treinado. Além disso, em comunidades pode fazer testes para interrogar sem precisar falar com pessoas ou gastar tibares, questionando a própria cidade.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Medo Verdadeiro (O Deus do Medo)",
+    name: "Medo Verdadeiro (O Deus do Medo)",
+    description: "Você aprende e pode lançar Amedrontar. Caso aprenda novamente essa magia, seu custo diminui em –1 PM.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Resistência Submarina (Piscigeros)",
+    name: "Resistência Submarina (Piscigeros)",
+    description: "Você aprende e pode lançar Suporte Ambiental. Caso aprenda novamente essa magia, seu custo diminui em –1 PM.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Artista das Armas (Rhond)",
+    name: "Artista das Armas (Rhond)",
+    description: "Você aprende e pode lançar Arma Mágica. Caso aprenda novamente essa magia, seu custo diminui em –1 PM.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Inimigo dos Deuses (Sartan)",
+    name: "Inimigo dos Deuses (Sartan)",
+    description: "Você recebe resistência a magia divina +5 e, contra devotos de outros deuses, a CD de suas habilidades aumenta em +2.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Ego (Sckhar)",
+    name: "Ego (Sckhar)",
+    description: "Quando faz um teste, você pode gastar 1 PM para receber +5 nesse teste. Se fizer isso e falhar no teste, até o fim da cena você sofre uma penalidade de –2 em testes e não pode usar este poder.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Alimento da Alma (Sunnary)",
+    name: "Alimento da Alma (Sunnary)",
+    description: "Você recebe treinamento em Ofício (cozinheiro) e aprende e pode lançar Abençoar Alimentos. Caso aprenda novamente essa magia, seu custo diminui em –1 PM.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Casco de Tartaruga (Tamagrah)",
+    name: "Casco de Tartaruga (Tamagrah)",
+    description: "Uma vez por rodada, quando sofre dano, você pode gastar 2 PM para receber RD 20 contra esse dano.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Despertar do Gigante (Teldiskan)",
+    name: "Despertar do Gigante (Teldiskan)",
+    description: "Você pode gastar uma ação de padrão e 3 PM para se tornar fisicamente mais imponente. Até o fim da cena você recebe +1 em Força e é considerado uma categoria de tamanho maior para modificadores de manobra de combate.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Véu de Toris (Toris)",
+    name: "Véu de Toris (Toris)",
+    description: "Você recebe +5 em Furtividade e não sofre penalidade de armadura em testes dessa perícia. Além disso, você sempre sabe em que direção está Jallar, sendo capaz de encontrar o pequeno reino mesmo com a magia de proteção contra detecção invocada pela deusa.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Revoada de Texugos (Tukala)",
+    name: "Revoada de Texugos (Tukala)",
+    description: "Você pode gastar uma ação padrão e 3 PM para invocar uma revoada de 1d4+1 texugos alados espirituais que ficam ao seu redor até o fim da cena. Enquanto estiverem ao seu redor, os texugos fornecem +2 em rolagens de dano corpo a corpo e na Defesa. Além disso, quando sofre dano, você pode “gastar” um dos texugos alados para receber RD 5 contra esse dano.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Trilhas das Árvores Antigas (Ur)",
+    name: "Trilhas das Árvores Antigas (Ur)",
+    description: "Uma vez por rodada, você pode gastar 1 PM para entrar em uma árvore adjacente de tamanho igual ou maior que o seu e sair em outra árvore em alcance longo (também de tamanho igual ou maior que o seu). Você não precisa de linha de visão para a árvore de saída, mas deve estar ciente de sua existência. Você pode usar este poder como parte de uma ação para movimentar-se.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Oprimir Escolhas (Yasshara)",
+    name: "Oprimir Escolhas (Yasshara)",
+    description: "Quando uma criatura em alcance curto faz um teste de perícia, você pode gastar 3 PM para forçar essa criatura a escolher 10 nesse teste (mesmo que isso não seja possível). A criatura tem direito a um teste de Vontade (CD Sab) para resistir a esse efeito. Você só pode usar este poder uma vez por criatura em cada cena.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Natureza Gloriosa (Zadbblein)",
+    name: "Natureza Gloriosa (Zadbblein)",
+    description: "Você pode gastar uma ação completa e 3 PM para que uma parte de seu corpo assuma uma forma animalesca até o fim da cena. Quando faz isso, você recebe dois benefícios a sua escolha entre os seguintes: uma arma natural à sua escolha; +1 passo de dano em uma de suas armas naturais; +2 na Defesa; +3m de deslocamento; deslocamento de natação 9m; faro; ou +2 em Atletismo e Fortitude.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Irmão da Coragem (Zakharov)",
+    name: "Irmão da Coragem (Zakharov)",
+    description: "Você se torna imune a medo (se já for imune, em vez disso recebe +2 em Vontade). Além disso, uma vez por cena envolvendo um perigo, você pode gastar 2 PM para substituir um teste de perícia por um teste de Vontade.",
+    origin: "Guia dos Deuses Menores"
+  },
   //#endregion
 
 
