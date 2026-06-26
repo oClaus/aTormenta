@@ -56,6 +56,7 @@ const blankThreat = (): Threat => ({
 
 interface WizardState {
   // Passo 0
+  nome: string;
   conceito: string;
   // Passo 1
   tipo: string;
@@ -92,6 +93,7 @@ interface WizardState {
 }
 
 const initialState: WizardState = {
+  nome: "",
   conceito: "",
   tipo: "Monstro",
   tamanho: "Médio",
@@ -166,6 +168,7 @@ export default function CreatureWizard({
     if (mode === "adjust" && baseThreat) {
       return {
         ...initialState,
+        nome: baseThreat.name || "",
         conceito: baseThreat.description || "",
         tipo: baseThreat.tipo || "Monstro",
         tamanho: (baseThreat.tamanho as CreatureSize) || "Médio",
@@ -225,7 +228,7 @@ export default function CreatureWizard({
 
     return {
       id: Math.random().toString(36).slice(2, 9),
-      name: state.conceito.split(/[,.]/)[0].trim() || "Nova Ameaça",
+      name: state.nome.trim() || "Nova Ameaça",
       tipo: state.tipo,
       tamanho: state.tamanho,
       papel: fn?.label ?? "",
@@ -307,15 +310,24 @@ export default function CreatureWizard({
                 palavras — por exemplo, um dragão é um "réptil alado que cospe fogo".
               </p>
               <div>
-                <label className={lc}>Conceito e Nome</label>
+                <label className={lc}>Nome da Criatura *</label>
+                <input
+                  className={fc}
+                  placeholder="Ex: Goblin Xamã"
+                  value={state.nome}
+                  onChange={(e) => update({ nome: e.target.value })}
+                />
+              </div>
+              <div>
+                <label className={lc}>Conceito / Descrição</label>
                 <textarea
                   className={`${fc} min-h-[100px] resize-y`}
-                  placeholder="Ex: Goblin Xamã, um pequeno humanoide que canaliza a fúria da natureza..."
+                  placeholder="Ex: Um pequeno humanoide que canaliza a fúria da natureza, vivendo nas tribos do sul de Arton..."
                   value={state.conceito}
                   onChange={(e) => update({ conceito: e.target.value })}
                 />
                 <p className={helpText}>
-                  A primeira palavra (ou frase até a primeira vírgula/ponto) será usada como nome da criatura.
+                  Esse texto vira a descrição/história da criatura. O nome acima é o que aparece nos cards de combate.
                 </p>
               </div>
               {mode === "adjust" && baseThreat && (
@@ -700,7 +712,11 @@ export default function CreatureWizard({
               </button>
             )}
             {step < 7 ? (
-              <button onClick={goNext} className="px-8 py-2.5 bg-red-800 text-[#fbf5e6] rounded-xl font-black text-xs uppercase tracking-widest hover:bg-red-900 hover:-translate-y-0.5 transition-all shadow-md">
+              <button
+                onClick={goNext}
+                disabled={step === 0 && !state.nome.trim()}
+                className="px-8 py-2.5 bg-red-800 text-[#fbf5e6] rounded-xl font-black text-xs uppercase tracking-widest hover:bg-red-900 hover:-translate-y-0.5 transition-all shadow-md disabled:opacity-40 disabled:hover:translate-y-0 disabled:cursor-not-allowed"
+              >
                 Próximo →
               </button>
             ) : (

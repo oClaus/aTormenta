@@ -20,6 +20,10 @@ interface PlayerParticipant {
   type: "player";
   initiativeRoll: number;
   conditions: string[];
+  pvMax?: number;
+  pvCurrent?: number;
+  pmMax?: number;
+  pmCurrent?: number;
 }
 
 interface MonsterParticipant {
@@ -299,48 +303,73 @@ function ParticipantCard({ participant, isActive, onUpdate, onEdit, onRemove, on
 
   const isMonster = participant.type === "monster";
   const m = isMonster ? (participant as MonsterParticipant) : null;
+  const p = !isMonster ? (participant as PlayerParticipant) : null;
+  const playerHasHp = p !== null && p.pvMax !== undefined && p.pvMax > 0;
+  const playerHasMp = p !== null && p.pmMax !== undefined && p.pmMax > 0;
 
-  const pvPct = m ? Math.round((m.pvCurrent / m.pvMax) * 100) : 100;
+  const pvPct = m ? Math.round((m.pvCurrent / m.pvMax) * 100) : (playerHasHp ? Math.round(((p!.pvCurrent ?? 0) / p!.pvMax!) * 100) : 100);
   const pvColor = pvPct > 60 ? "bg-emerald-700" : pvPct > 30 ? "bg-amber-600" : "bg-red-700";
-  const pmPct = m && m.pmMax > 0 ? Math.round((m.pmCurrent / m.pmMax) * 100) : 0;
+  const pmPct = m && m.pmMax > 0
+    ? Math.round((m.pmCurrent / m.pmMax) * 100)
+    : (playerHasMp ? Math.round(((p!.pmCurrent ?? 0) / p!.pmMax!) * 100) : 0);
 
   const applyDamage = () => {
-    if (!m) return;
     const v = parseInt(dmgInput);
     if (!v || v <= 0) return;
-    const newPv = Math.max(0, m.pvCurrent - v);
-    onLog(`💥 ${m.name} sofreu ${v} de dano → ${newPv}/${m.pvMax} PV${newPv === 0 ? " — INCAPACITADO!" : ""}`);
-    onUpdate({ ...m, pvCurrent: newPv });
+    if (m) {
+      const newPv = Math.max(0, m.pvCurrent - v);
+      onLog(`💥 ${m.name} sofreu ${v} de dano → ${newPv}/${m.pvMax} PV${newPv === 0 ? " — INCAPACITADO!" : ""}`);
+      onUpdate({ ...m, pvCurrent: newPv });
+    } else if (playerHasHp && p) {
+      const newPv = Math.max(0, (p.pvCurrent ?? 0) - v);
+      onLog(`💥 ${p.name} sofreu ${v} de dano → ${newPv}/${p.pvMax} PV${newPv === 0 ? " — INCAPACITADO!" : ""}`);
+      onUpdate({ ...p, pvCurrent: newPv });
+    }
     setDmgInput("");
   };
 
   const applyHeal = () => {
-    if (!m) return;
     const v = parseInt(healInput);
     if (!v || v <= 0) return;
-    const newPv = Math.min(m.pvMax, m.pvCurrent + v);
-    onLog(`💚 ${m.name} curou ${newPv - m.pvCurrent} PV → ${newPv}/${m.pvMax} PV`);
-    onUpdate({ ...m, pvCurrent: newPv });
+    if (m) {
+      const newPv = Math.min(m.pvMax, m.pvCurrent + v);
+      onLog(`💚 ${m.name} curou ${newPv - m.pvCurrent} PV → ${newPv}/${m.pvMax} PV`);
+      onUpdate({ ...m, pvCurrent: newPv });
+    } else if (playerHasHp && p) {
+      const newPv = Math.min(p.pvMax!, (p.pvCurrent ?? 0) + v);
+      onLog(`💚 ${p.name} curou ${newPv - (p.pvCurrent ?? 0)} PV → ${newPv}/${p.pvMax} PV`);
+      onUpdate({ ...p, pvCurrent: newPv });
+    }
     setHealInput("");
   };
 
   const spendPm = () => {
-    if (!m) return;
     const v = parseInt(pmInput);
     if (!v || v <= 0) return;
-    const newPm = Math.max(0, m.pmCurrent - v);
-    onLog(`🔵 ${m.name} gastou ${v} PM → ${newPm}/${m.pmMax} PM`);
-    onUpdate({ ...m, pmCurrent: newPm });
+    if (m) {
+      const newPm = Math.max(0, m.pmCurrent - v);
+      onLog(`🔵 ${m.name} gastou ${v} PM → ${newPm}/${m.pmMax} PM`);
+      onUpdate({ ...m, pmCurrent: newPm });
+    } else if (playerHasMp && p) {
+      const newPm = Math.max(0, (p.pmCurrent ?? 0) - v);
+      onLog(`🔵 ${p.name} gastou ${v} PM → ${newPm}/${p.pmMax} PM`);
+      onUpdate({ ...p, pmCurrent: newPm });
+    }
     setPmInput("");
   };
 
   const restorePm = () => {
-    if (!m) return;
     const v = parseInt(pmInput);
     if (!v || v <= 0) return;
-    const newPm = Math.min(m.pmMax, m.pmCurrent + v);
-    onLog(`🔷 ${m.name} recuperou ${newPm - m.pmCurrent} PM → ${newPm}/${m.pmMax} PM`);
-    onUpdate({ ...m, pmCurrent: newPm });
+    if (m) {
+      const newPm = Math.min(m.pmMax, m.pmCurrent + v);
+      onLog(`🔷 ${m.name} recuperou ${newPm - m.pmCurrent} PM → ${newPm}/${m.pmMax} PM`);
+      onUpdate({ ...m, pmCurrent: newPm });
+    } else if (playerHasMp && p) {
+      const newPm = Math.min(p.pmMax!, (p.pmCurrent ?? 0) + v);
+      onLog(`🔷 ${p.name} recuperou ${newPm - (p.pmCurrent ?? 0)} PM → ${newPm}/${p.pmMax} PM`);
+      onUpdate({ ...p, pmCurrent: newPm });
+    }
     setPmInput("");
   };
 
@@ -411,24 +440,27 @@ function ParticipantCard({ participant, isActive, onUpdate, onEdit, onRemove, on
         )}
 
         {/* Barras PV / PM */}
-        {m && (
+        {(m || playerHasHp || playerHasMp) && (
           <div className="space-y-3 mb-5">
-            <div>
-              <div className="flex justify-between text-xs font-bold mb-1.5 uppercase tracking-widest">
-                <span className="text-amber-950/50 text-[10px]">Pontos de Vida</span>
-                <span className={m.pvCurrent === 0 ? "text-red-800 font-black" : "text-amber-950/80"}>
-                  {m.pvCurrent} / {m.pvMax}{m.pvCurrent === 0 ? " — INCAPACITADO" : ""}
-                </span>
+            {(m || playerHasHp) && (
+              <div>
+                <div className="flex justify-between text-xs font-bold mb-1.5 uppercase tracking-widest">
+                  <span className="text-amber-950/50 text-[10px]">Pontos de Vida</span>
+                  <span className={(m ? m.pvCurrent : p!.pvCurrent ?? 0) === 0 ? "text-red-800 font-black" : "text-amber-950/80"}>
+                    {m ? `${m.pvCurrent} / ${m.pvMax}` : `${p!.pvCurrent ?? 0} / ${p!.pvMax}`}
+                    {(m ? m.pvCurrent : p!.pvCurrent ?? 0) === 0 ? " — INCAPACITADO" : ""}
+                  </span>
+                </div>
+                <div className="h-3 bg-[#fbf5e6] border border-amber-900/10 rounded-full overflow-hidden shadow-inner">
+                  <div className={`h-full rounded-full transition-all duration-500 ${pvColor}`} style={{ width: `${pvPct}%` }} />
+                </div>
               </div>
-              <div className="h-3 bg-[#fbf5e6] border border-amber-900/10 rounded-full overflow-hidden shadow-inner">
-                <div className={`h-full rounded-full transition-all duration-500 ${pvColor}`} style={{ width: `${pvPct}%` }} />
-              </div>
-            </div>
-            {m.pmMax > 0 && (
+            )}
+            {((m && m.pmMax > 0) || playerHasMp) && (
               <div>
                 <div className="flex justify-between text-xs font-bold mb-1.5 uppercase tracking-widest">
                   <span className="text-blue-800/60 text-[10px]">Pontos de Mana</span>
-                  <span className="text-blue-800/80">{m.pmCurrent} / {m.pmMax}</span>
+                  <span className="text-blue-800/80">{m ? `${m.pmCurrent} / ${m.pmMax}` : `${p!.pmCurrent ?? 0} / ${p!.pmMax}`}</span>
                 </div>
                 <div className="h-2.5 bg-[#fbf5e6] border border-amber-900/10 rounded-full overflow-hidden shadow-inner">
                   <div className="h-full rounded-full bg-blue-700 transition-all duration-500" style={{ width: `${pmPct}%` }} />
@@ -448,7 +480,7 @@ function ParticipantCard({ participant, isActive, onUpdate, onEdit, onRemove, on
         )}
 
         {/* Dano / Cura / Condição */}
-        {m && (
+        {(m || playerHasHp) && (
           <div className="flex flex-wrap items-center gap-3 mb-4">
             <div className="flex items-center gap-2">
               <input type="number" min="0" placeholder="0" value={dmgInput}
@@ -473,8 +505,8 @@ function ParticipantCard({ participant, isActive, onUpdate, onEdit, onRemove, on
           </div>
         )}
 
-        {/* Controles de PM (apenas monstros com PM) */}
-        {m && m.pmMax > 0 && (
+        {/* Controles de PM (monstros com PM, ou jogadores com PM preenchido) */}
+        {((m && m.pmMax > 0) || playerHasMp) && (
           <div className="flex items-center gap-3 mb-4">
             <span className="text-[10px] uppercase tracking-widest text-blue-800/60 font-bold">PM</span>
             <div className="flex items-center gap-1.5">
@@ -488,7 +520,7 @@ function ParticipantCard({ participant, isActive, onUpdate, onEdit, onRemove, on
           </div>
         )}
 
-        {!m && (
+        {!m && !playerHasHp && !playerHasMp && (
           <div className="mb-2">
             <button
               onClick={() => setShowCondSelector((v) => !v)}
@@ -585,11 +617,11 @@ function CustomMonsterForm({ onAdd, onOpenWizard }: { onAdd: (m: MonsterParticip
       <div className="flex gap-2 mt-2">
         <button onClick={onOpenWizard}
           className="flex-1 py-3 border-2 border-red-800/30 text-red-800 bg-red-800/5 rounded-xl text-xs uppercase tracking-widest font-bold hover:border-red-800/50 hover:bg-red-800/10 transition-all flex items-center justify-center gap-2">
-          Criar criatura (Assistente Guiado)
+          <span>🧙</span> Assistente Guiado
         </button>
         <button onClick={() => setOpen(true)}
           className="flex-1 py-3 border-2 border-dashed border-amber-900/30 text-amber-950/60 bg-[#fbf5e6]/50 rounded-xl text-xs uppercase tracking-widest font-bold hover:border-amber-700/50 hover:text-amber-950 hover:bg-[#fbf5e6] transition-all">
-          Criar criatura (Manual)
+          + Manual Rápido
         </button>
       </div>
     );
@@ -641,9 +673,9 @@ function CustomMonsterForm({ onAdd, onOpenWizard }: { onAdd: (m: MonsterParticip
 
 // ─── Seletor de Criaturas ─────────────────────────────────────────────────────
 
-function CreatureSelector({ selected, onToggle, extra = [], onAdjust }: {
-  selected: Set<string>;
-  onToggle: (id: string) => void;
+function CreatureSelector({ quantities, onChangeQuantity, extra = [], onAdjust }: {
+  quantities: Map<string, number>;
+  onChangeQuantity: (id: string, delta: number) => void;
   extra?: Threat[];
   onAdjust: (threat: Threat) => void;
 }) {
@@ -660,30 +692,37 @@ function CreatureSelector({ selected, onToggle, extra = [], onAdjust }: {
         className="w-full px-4 py-2.5 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-xl text-amber-950 placeholder-amber-900/40 focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 text-sm transition-all shadow-sm"
       />
       <div className="h-72 overflow-y-auto space-y-1.5 pr-2 custom-scrollbar border-2 border-amber-900/10 p-2 rounded-xl bg-[#e8dac1]/50">
-        {filtered.map((t) => (
-          <div key={t.id}
-            className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg border-2 transition-all text-sm shadow-sm ${
-              selected.has(t.id)
-                ? "bg-red-800/10 border-red-800/40 text-red-900"
-                : "bg-[#fbf5e6] border-amber-900/10 text-amber-950/85 hover:border-amber-900/30 hover:bg-[#f5e6d0]"
-            }`}
-          >
-            <button onClick={() => onToggle(t.id)} className="flex items-center gap-2 flex-1 min-w-0 text-left">
-              {selected.has(t.id) ? <span className="text-red-800 shrink-0 text-sm font-bold">✓</span> : <span className="w-3 shrink-0" />}
-              <span className="font-bold flex-1 truncate">{t.name}</span>
-            </button>
-            <div className="flex items-center gap-1.5 shrink-0">
-              {extra.some((e) => e.id === t.id) && (
-                <span className="text-[9px] font-bold uppercase tracking-widest text-emerald-800 bg-emerald-700/15 border border-emerald-700/30 px-1.5 py-0.5 rounded">xlsx</span>
-              )}
-              <span className="text-[10px] font-bold uppercase tracking-widest text-amber-950/50 bg-[#e8dac1] px-2 py-0.5 rounded">ND {t.nd}</span>
-              <button onClick={() => onAdjust(t)} title="Ajustar de forma guiada"
-                className="w-6 h-6 flex items-center justify-center rounded-md border border-amber-900/15 bg-[#fbf5e6] text-amber-950/40 hover:text-red-800 hover:border-red-800/40 transition-all text-xs">
-                🧙
-              </button>
+        {filtered.map((t) => {
+          const qty = quantities.get(t.id) ?? 0;
+          return (
+            <div key={t.id}
+              className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg border-2 transition-all text-sm shadow-sm ${
+                qty > 0
+                  ? "bg-red-800/10 border-red-800/40 text-red-900"
+                  : "bg-[#fbf5e6] border-amber-900/10 text-amber-950/85 hover:border-amber-900/30 hover:bg-[#f5e6d0]"
+              }`}
+            >
+              <span className="font-bold flex-1 truncate min-w-0">{t.name}</span>
+              <div className="flex items-center gap-1.5 shrink-0">
+                {extra.some((e) => e.id === t.id) && (
+                  <span className="text-[9px] font-bold uppercase tracking-widest text-emerald-800 bg-emerald-700/15 border border-emerald-700/30 px-1.5 py-0.5 rounded">xlsx</span>
+                )}
+                <span className="text-[10px] font-bold uppercase tracking-widest text-amber-950/50 bg-[#e8dac1] px-2 py-0.5 rounded">ND {t.nd}</span>
+                <button onClick={() => onAdjust(t)} title="Ajustar de forma guiada"
+                  className="w-6 h-6 flex items-center justify-center rounded-md border border-amber-900/15 bg-[#fbf5e6] text-amber-950/40 hover:text-red-800 hover:border-red-800/40 transition-all text-xs">
+                  🧙
+                </button>
+                <div className="flex items-center gap-1 bg-[#fbf5e6] border border-amber-900/20 rounded-md overflow-hidden">
+                  <button onClick={() => onChangeQuantity(t.id, -1)} disabled={qty === 0}
+                    className="w-6 h-6 flex items-center justify-center text-amber-950/60 hover:text-red-800 hover:bg-red-800/10 disabled:opacity-30 disabled:cursor-not-allowed transition-all text-sm font-bold">−</button>
+                  <span className={`w-6 text-center text-xs font-black ${qty > 0 ? "text-red-800" : "text-amber-950/30"}`}>{qty}</span>
+                  <button onClick={() => onChangeQuantity(t.id, 1)}
+                    className="w-6 h-6 flex items-center justify-center text-amber-950/60 hover:text-emerald-700 hover:bg-emerald-700/10 transition-all text-sm font-bold">+</button>
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
         {!filtered.length && <p className="text-center text-amber-950/50 italic py-8 text-sm">Nenhuma criatura encontrada.</p>}
       </div>
     </div>
@@ -694,7 +733,7 @@ function CreatureSelector({ selected, onToggle, extra = [], onAdjust }: {
 
 export default function CombatePage() {
   const [phase, setPhase] = useState<CombatPhase>("setup");
-  const [selectedThreatIds, setSelectedThreatIds] = useState<Set<string>>(new Set());
+  const [threatQuantities, setThreatQuantities] = useState<Map<string, number>>(new Map());
   const [customMonsters, setCustomMonsters] = useState<MonsterParticipant[]>([]);
   const [importedThreats, setImportedThreats] = useState<Threat[]>([]);
   const [participants, setParticipants] = useState<Participant[]>([]);
@@ -705,6 +744,8 @@ export default function CombatePage() {
   const [rollValues, setRollValues] = useState<Record<string, number>>({});
   const [newPlayerName, setNewPlayerName] = useState("");
   const [newPlayerIni, setNewPlayerIni] = useState("");
+  const [newPlayerPv, setNewPlayerPv] = useState("");
+  const [newPlayerPm, setNewPlayerPm] = useState("");
   const [importError, setImportError] = useState("");
 
   const [wizardOpen, setWizardOpen] = useState(false);
@@ -723,14 +764,28 @@ export default function CombatePage() {
     }
   }, [activeIndex, phase]);
 
-  const toggleThreat = (id: string) => {
-    setSelectedThreatIds((prev) => { const next = new Set(prev); next.has(id) ? next.delete(id) : next.add(id); return next; });
+  const changeThreatQuantity = (id: string, delta: number) => {
+    setThreatQuantities((prev) => {
+      const next = new Map(prev);
+      const current = next.get(id) ?? 0;
+      const updated = Math.max(0, current + delta);
+      if (updated === 0) next.delete(id);
+      else next.set(id, updated);
+      return next;
+    });
   };
 
   const addPlayer = () => {
     if (!newPlayerName.trim()) return;
-    setParticipants((prev) => [...prev, { id: uid(), name: newPlayerName.trim(), type: "player", initiativeRoll: parseInt(newPlayerIni) || 0, conditions: [] }]);
-    setNewPlayerName(""); setNewPlayerIni("");
+    const pv = newPlayerPv.trim() ? parseInt(newPlayerPv) : undefined;
+    const pm = newPlayerPm.trim() ? parseInt(newPlayerPm) : undefined;
+    setParticipants((prev) => [...prev, {
+      id: uid(), name: newPlayerName.trim(), type: "player",
+      initiativeRoll: parseInt(newPlayerIni) || 0, conditions: [],
+      pvMax: pv, pvCurrent: pv,
+      pmMax: pm, pmCurrent: pm,
+    }]);
+    setNewPlayerName(""); setNewPlayerIni(""); setNewPlayerPv(""); setNewPlayerPm("");
   };
 
   const openCreateWizard = () => {
@@ -746,38 +801,25 @@ export default function CombatePage() {
   };
 
   const handleEncounterAccept = (entries: GeneratedEncounterEntry[]) => {
-    const fullLibrary = [...allThreats, ...importedThreats, ...customMonsters.map((m) => m.threat)];
-    const newCustom: MonsterParticipant[] = [];
-    const newSelected = new Set(selectedThreatIds);
+    const newQuantities = new Map(threatQuantities);
+    const newlyVisible: Threat[] = [];
 
     entries.forEach(({ threat, quantity }) => {
       const isFromLibrary = allThreats.some((t) => t.id === threat.id) || importedThreats.some((t) => t.id === threat.id);
       if (isFromLibrary) {
-        // Da biblioteca/importadas: apenas seleciona (1x). Se quantity > 1, duplica como personalizado extra.
-        newSelected.add(threat.id);
-        for (let i = 1; i < quantity; i++) {
-          newCustom.push({
-            id: uid(), name: threat.name, type: "monster", initiativeRoll: threat.iniciativa,
-            threat: { ...threat, id: uid() },
-            pvMax: threat.pv, pvCurrent: threat.pv, pmMax: threat.pm ?? 0, pmCurrent: threat.pm ?? 0,
-            conditions: [],
-          });
-        }
+        newQuantities.set(threat.id, (newQuantities.get(threat.id) ?? 0) + quantity);
       } else {
-        // Monstro personalizado (criado no wizard, por exemplo): duplica conforme quantity
-        for (let i = 0; i < quantity; i++) {
-          newCustom.push({
-            id: uid(), name: threat.name, type: "monster", initiativeRoll: threat.iniciativa,
-            threat: { ...threat, id: uid() },
-            pvMax: threat.pv, pvCurrent: threat.pv, pmMax: threat.pm ?? 0, pmCurrent: threat.pm ?? 0,
-            conditions: [],
-          });
-        }
+        // Criatura sorteada que ainda não existe na lista (ex: personalizada gerada à parte):
+        // torna ela visível na biblioteca como "importada" e já marca a quantidade sorteada.
+        newlyVisible.push(threat);
+        newQuantities.set(threat.id, (newQuantities.get(threat.id) ?? 0) + quantity);
       }
     });
 
-    setSelectedThreatIds(newSelected);
-    setCustomMonsters((prev) => [...prev, ...newCustom]);
+    if (newlyVisible.length) {
+      setImportedThreats((prev) => [...prev, ...newlyVisible]);
+    }
+    setThreatQuantities(newQuantities);
     setEncounterGenOpen(false);
   };
 
@@ -874,9 +916,9 @@ export default function CombatePage() {
       const threats = await parseXlsxThreats(file);
       if (!threats.length) { setImportError("Nenhuma criatura encontrada na planilha."); return; }
       setImportedThreats(threats);
-      setSelectedThreatIds((prev) => {
-        const next = new Set(prev);
-        threats.forEach((t) => next.add(t.id));
+      setThreatQuantities((prev) => {
+        const next = new Map(prev);
+        threats.forEach((t) => { if (!next.has(t.id)) next.set(t.id, 1); });
         return next;
       });
     } catch {
@@ -887,9 +929,16 @@ export default function CombatePage() {
 
   const goToRolling = () => {
     const fullLibrary = [...allThreats, ...importedThreats];
-    const libraryMonsters: MonsterParticipant[] = Array.from(selectedThreatIds).map((id) => {
-      const t = fullLibrary.find((x) => x.id === id)!;
-      return { id: uid(), name: t.name, type: "monster", initiativeRoll: t.iniciativa, threat: t, pvMax: t.pv, pvCurrent: t.pv, pmMax: t.pm ?? 0, pmCurrent: t.pm ?? 0, conditions: [] };
+    const libraryMonsters: MonsterParticipant[] = [];
+    threatQuantities.forEach((qty, id) => {
+      const t = fullLibrary.find((x) => x.id === id);
+      if (!t) return;
+      for (let i = 0; i < qty; i++) {
+        libraryMonsters.push({
+          id: uid(), name: t.name, type: "monster", initiativeRoll: t.iniciativa,
+          threat: t, pvMax: t.pv, pvCurrent: t.pv, pmMax: t.pm ?? 0, pmCurrent: t.pm ?? 0, conditions: [],
+        });
+      }
     });
     const all: Participant[] = [...participants, ...libraryMonsters, ...customMonsters];
     setParticipants(all);
@@ -942,7 +991,7 @@ export default function CombatePage() {
       : undefined;
 
     setParticipants([]); setCustomMonsters([]); setImportedThreats([]);
-    setSelectedThreatIds(new Set()); setRound(1); setActiveIndex(0); setLog([]);
+    setThreatQuantities(new Map()); setRound(1); setActiveIndex(0); setLog([]);
     setPhase("setup");
 
     if (highestNd) {
@@ -952,6 +1001,7 @@ export default function CombatePage() {
   };
 
   const playersAdded = participants.filter((p) => p.type === "player");
+  const totalThreatQuantity = Array.from(threatQuantities.values()).reduce((sum, q) => sum + q, 0);
 
   return (
     <div className="min-h-screen bg-[#f5e6d0] text-amber-950 font-serif selection:bg-amber-800 selection:text-amber-50 relative overflow-x-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#f5e6d0] to-[#e6d5b8]">
@@ -978,151 +1028,205 @@ export default function CombatePage() {
 
         {/* ── SETUP ─────────────────────────────────────────────── */}
         {phase === "setup" && (
-          <div className="max-w-5xl mx-auto">
-            <div className="mb-10 md:mb-14">
+          <div className="max-w-7xl mx-auto">
+            <div className="mb-8">
               <h2 className="text-4xl sm:text-5xl font-bold text-red-800 mb-4 drop-shadow-sm tracking-wider">Preparar Combate</h2>
               <div className="w-32 h-1 bg-gradient-to-r from-red-800 to-transparent rounded-full mb-6" />
-              <p className="text-amber-950/85 font-medium text-lg leading-relaxed max-w-3xl">Adicione os jogadores e selecione as criaturas para iniciar a rolagem de iniciativas do encontro.</p>
+              <p className="text-amber-950/85 font-medium text-lg leading-relaxed max-w-3xl">Adicione os jogadores e selecione as criaturas. A lista à direita mostra tudo que já foi incluído.</p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-8">
-              {/* Jogadores */}
-              <div className="bg-[#e8dac1]/50 border-2 border-amber-900/20 rounded-2xl p-6 md:p-8 shadow-sm flex flex-col h-fit">
-                <h3 className="text-2xl font-bold text-red-800 mb-2 tracking-wide flex items-center gap-3">
-                  <span className="text-red-800/60 text-2xl">⚔</span> Jogadores
-                </h3>
-                <p className="text-sm text-amber-950/60 italic mb-6 border-b-2 border-amber-900/10 pb-4 font-medium">Insira nome e bônus de iniciativa.</p>
-                <div className="space-y-4 mb-6">
-                  <div>
-                    <label className="text-[10px] uppercase tracking-widest text-amber-950/60 font-bold mb-1 block">Nome do Personagem</label>
-                    <input type="text" placeholder="Ex: Khalmyr" value={newPlayerName}
-                      onChange={(e) => setNewPlayerName(e.target.value)}
-                      onKeyDown={(e) => e.key === "Enter" && addPlayer()}
-                      className="w-full px-4 py-2.5 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-xl text-amber-950 placeholder-amber-900/40 font-serif text-sm focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
-                    />
+            <div className="grid lg:grid-cols-[1fr_380px] gap-8 items-start">
+
+              {/* ── COLUNA ESQUERDA: formulários de adição ───────────────── */}
+              <div className="space-y-8 min-w-0">
+
+                {/* Jogadores */}
+                <div className="bg-[#e8dac1]/50 border-2 border-amber-900/20 rounded-2xl p-6 md:p-8 shadow-sm">
+                  <h3 className="text-2xl font-bold text-red-800 mb-2 tracking-wide flex items-center gap-3">
+                    <span className="text-red-800/60 text-2xl">⚔</span> Jogadores
+                  </h3>
+                  <p className="text-sm text-amber-950/60 italic mb-6 border-b-2 border-amber-900/10 pb-4 font-medium">Nome e iniciativa obrigatórios. PV e PM são opcionais — preencha se quiser controlar dano/cura e mana dos jogadores também.</p>
+                  <div className="grid sm:grid-cols-4 gap-3">
+                    <div className="sm:col-span-1">
+                      <label className="text-[10px] uppercase tracking-widest text-amber-950/60 font-bold mb-1 block">Nome</label>
+                      <input type="text" placeholder="Ex: Khalmyr" value={newPlayerName}
+                        onChange={(e) => setNewPlayerName(e.target.value)}
+                        onKeyDown={(e) => e.key === "Enter" && addPlayer()}
+                        className="w-full px-4 py-2.5 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-xl text-amber-950 placeholder-amber-900/40 font-serif text-sm focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-[10px] uppercase tracking-widest text-amber-950/60 font-bold mb-1 block">Iniciativa</label>
+                      <input type="number" placeholder="d20 + Bônus" value={newPlayerIni}
+                        onChange={(e) => setNewPlayerIni(e.target.value)}
+                        onKeyDown={(e) => e.key === "Enter" && addPlayer()}
+                        className="w-full px-4 py-2.5 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-xl text-amber-950 placeholder-amber-900/40 font-serif text-sm focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-[10px] uppercase tracking-widest text-amber-950/60 font-bold mb-1 block">PV (opcional)</label>
+                      <input type="number" placeholder="Ex: 32" value={newPlayerPv}
+                        onChange={(e) => setNewPlayerPv(e.target.value)}
+                        onKeyDown={(e) => e.key === "Enter" && addPlayer()}
+                        className="w-full px-4 py-2.5 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-xl text-amber-950 placeholder-amber-900/40 font-serif text-sm focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-[10px] uppercase tracking-widest text-amber-950/60 font-bold mb-1 block">PM (opcional)</label>
+                      <input type="number" placeholder="Ex: 18" value={newPlayerPm}
+                        onChange={(e) => setNewPlayerPm(e.target.value)}
+                        onKeyDown={(e) => e.key === "Enter" && addPlayer()}
+                        className="w-full px-4 py-2.5 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-xl text-amber-950 placeholder-amber-900/40 font-serif text-sm focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
+                      />
+                    </div>
                   </div>
-                  <div>
-                    <label className="text-[10px] uppercase tracking-widest text-amber-950/60 font-bold mb-1 block">Rolagem Final de Iniciativa</label>
-                    <input type="number" placeholder="Resultado d20 + Bônus" value={newPlayerIni}
-                      onChange={(e) => setNewPlayerIni(e.target.value)}
-                      onKeyDown={(e) => e.key === "Enter" && addPlayer()}
-                      className="w-full px-4 py-2.5 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-xl text-amber-950 placeholder-amber-900/40 font-serif text-sm focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
-                    />
-                  </div>
-                  <button onClick={addPlayer} className="w-full py-3 mt-2 bg-[#fbf5e6] text-amber-950/70 border-2 border-amber-900/20 rounded-xl font-bold text-xs uppercase tracking-widest hover:border-red-800/40 hover:text-red-800 hover:bg-[#e8dac1] transition-all shadow-sm">
+                  <button onClick={addPlayer} className="w-full py-3 mt-4 bg-[#fbf5e6] text-amber-950/70 border-2 border-amber-900/20 rounded-xl font-bold text-xs uppercase tracking-widest hover:border-red-800/40 hover:text-red-800 hover:bg-[#e8dac1] transition-all shadow-sm">
                     + Adicionar Jogador
                   </button>
                 </div>
-                <div className="space-y-2 flex-grow">
-                  {playersAdded.map((p) => (
-                    <div key={p.id} className="flex items-center justify-between px-4 py-3 bg-[#e8dac1] rounded-xl border border-amber-900/20 text-sm shadow-sm">
-                      <span className="font-bold text-amber-950 text-base">{p.name}</span>
-                      <div className="flex items-center gap-3">
-                        <span className="text-amber-950/60 font-bold text-[10px] bg-[#fbf5e6] px-2 py-1 rounded border border-amber-900/10 uppercase tracking-widest">INI {p.initiativeRoll}</span>
-                        <button onClick={() => setParticipants((prev) => prev.filter((x) => x.id !== p.id))} className="text-amber-900/40 hover:text-red-800 text-sm w-6 h-6 flex items-center justify-center bg-[#fbf5e6] rounded border border-amber-900/10 transition-colors">✕</button>
-                      </div>
-                    </div>
-                  ))}
-                  {!playersAdded.length && (
-                    <div className="text-center bg-[#e8dac1]/50 border-2 border-dashed border-amber-900/20 rounded-xl py-8">
-                      <p className="text-amber-950/50 italic text-sm font-medium">Nenhum jogador na mesa.</p>
+
+                {/* Ameaças */}
+                <div className="bg-[#e8dac1]/50 border-2 border-amber-900/20 rounded-2xl p-6 md:p-8 shadow-sm">
+                  <h3 className="text-2xl font-bold text-red-800 mb-2 tracking-wide flex items-center gap-3">
+                    <span className="text-red-800/60 text-2xl">☠</span> Ameaças
+                  </h3>
+                  <p className="text-sm text-amber-950/60 italic mb-4 border-b-2 border-amber-900/10 pb-4 font-medium">Adicione do acervo, importe uma planilha, sorteie um encontro, ou crie do zero.</p>
+
+                  {/* Gerador de encontros aleatórios */}
+                  <button
+                    onClick={() => setEncounterGenOpen(true)}
+                    className="w-full py-3 mb-4 flex items-center justify-center gap-2 border-2 border-red-800/40 bg-red-800/10 text-red-800 rounded-xl text-sm font-black uppercase tracking-widest hover:border-red-800/60 hover:bg-red-800/15 hover:-translate-y-0.5 transition-all shadow-sm"
+                  >
+                    🎲 Gerar Encontro Aleatório
+                  </button>
+
+                  {/* Botões de planilha */}
+                  <div className="flex gap-2 mb-4">
+                    <input ref={xlsxInputRef} type="file" accept=".xlsx,.xls" onChange={handleXlsxImport} className="hidden" />
+                    <button
+                      onClick={() => xlsxInputRef.current?.click()}
+                      className="flex-1 py-2.5 flex items-center justify-center gap-2 border-2 border-dashed border-amber-700/40 text-amber-950/60 bg-[#fbf5e6]/60 rounded-xl text-xs font-bold uppercase tracking-widest hover:border-red-800/50 hover:text-red-800 hover:bg-[#fbf5e6] transition-all shadow-sm"
+                    >
+                      📥 Importar Planilha
+                    </button>
+                    <a
+                      href="/criaturas_tormenta.xlsx"
+                      download
+                      title="Baixar modelo de planilha"
+                      className="py-2.5 px-4 flex items-center justify-center gap-1.5 border-2 border-amber-900/20 text-amber-950/50 bg-[#fbf5e6]/60 rounded-xl text-xs font-bold uppercase tracking-widest hover:border-emerald-700/50 hover:text-emerald-800 hover:bg-[#fbf5e6] transition-all shadow-sm whitespace-nowrap"
+                    >
+                      📄 Modelo
+                    </a>
+                  </div>
+
+                  {/* Feedback importação */}
+                  {importError && (
+                    <p className="text-xs text-red-800 font-bold bg-red-800/10 border border-red-800/20 rounded-lg px-3 py-2 mb-3">{importError}</p>
+                  )}
+                  {importedThreats.length > 0 && (
+                    <div className="flex items-center justify-between px-3 py-2 bg-emerald-700/10 border border-emerald-700/25 rounded-xl mb-4">
+                      <span className="text-emerald-800 text-xs font-bold">✓ {importedThreats.length} criatura{importedThreats.length > 1 ? "s" : ""} adicionada{importedThreats.length > 1 ? "s" : ""} à biblioteca</span>
+                      <button onClick={() => { setImportedThreats([]); setThreatQuantities((prev) => { const next = new Map(prev); importedThreats.forEach((t) => next.delete(t.id)); return next; }); }} className="text-emerald-800/50 hover:text-red-800 text-xs font-bold ml-3">✕ Limpar</button>
                     </div>
                   )}
+
+                  {/* Criação: Wizard ou Manual */}
+                  <CustomMonsterForm onAdd={(m) => setCustomMonsters((prev) => [...prev, m])} onOpenWizard={openCreateWizard} />
+
+                  {/* Biblioteca */}
+                  <div className="mt-6 border-t-2 border-amber-900/10 pt-5">
+                    <p className="text-[10px] uppercase tracking-widest text-red-800/80 font-bold mb-2 flex items-center gap-1"><span className="text-[8px] text-red-800/40">◆</span> Acervo do Compêndio</p>
+                    <p className="text-[10px] text-amber-950/40 italic mb-2">Use os botões − / + para escolher a quantidade de cada criatura. Clique no 🧙 para ajustar de forma guiada.</p>
+                    <CreatureSelector quantities={threatQuantities} onChangeQuantity={changeThreatQuantity} extra={importedThreats} onAdjust={openAdjustWizard} />
+                  </div>
                 </div>
               </div>
 
-              {/* Criaturas */}
-              <div className="bg-[#e8dac1]/50 border-2 border-amber-900/20 rounded-2xl p-6 md:p-8 shadow-sm flex flex-col h-fit">
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-2xl font-bold text-red-800 tracking-wide flex items-center gap-3">
-                    <span className="text-red-800/60 text-2xl">☠</span> Ameaças
-                  </h3>
-                  {(selectedThreatIds.size + customMonsters.length) > 0 && (
-                    <span className="bg-red-800 text-[#fbf5e6] text-xs font-bold px-2.5 py-1 rounded-md shadow-sm">
-                      {selectedThreatIds.size + customMonsters.length} Selecionadas
-                    </span>
-                  )}
-                </div>
-                <p className="text-sm text-amber-950/60 italic mb-4 border-b-2 border-amber-900/10 pb-4 font-medium">Adicione do acervo, importe uma planilha, ou crie do zero.</p>
-
-                {/* Gerador de encontros aleatórios */}
-                <button
-                  onClick={() => setEncounterGenOpen(true)}
-                  className="w-full py-3 mb-4 flex items-center justify-center gap-2 border-2 border-red-800/40 bg-red-800/10 text-red-800 rounded-xl text-sm font-black uppercase tracking-widest hover:border-red-800/60 hover:bg-red-800/15 hover:-translate-y-0.5 transition-all shadow-sm"
-                >
-                  Gerar Encontro Aleatório
-                </button>
-
-                {/* Botões de planilha */}
-                <div className="flex gap-2 mb-4">
-                  <input ref={xlsxInputRef} type="file" accept=".xlsx,.xls" onChange={handleXlsxImport} className="hidden" />
-                  <button
-                    onClick={() => xlsxInputRef.current?.click()}
-                    className="flex-1 py-2.5 flex items-center justify-center gap-2 border-2 border-dashed border-amber-700/40 text-amber-950/60 bg-[#fbf5e6]/60 rounded-xl text-xs font-bold uppercase tracking-widest hover:border-red-800/50 hover:text-red-800 hover:bg-[#fbf5e6] transition-all shadow-sm"
-                  >
-                    Importar Planilha
-                  </button>
-                  <a
-                    href="/criaturas_tormenta.xlsx"
-                    download
-                    title="Baixar modelo de planilha"
-                    className="py-2.5 px-4 flex items-center justify-center gap-1.5 border-2 border-amber-900/20 text-amber-950/50 bg-[#fbf5e6]/60 rounded-xl text-xs font-bold uppercase tracking-widest hover:border-emerald-700/50 hover:text-emerald-800 hover:bg-[#fbf5e6] transition-all shadow-sm whitespace-nowrap"
-                  >
-                    Modelo
-                  </a>
-                </div>
-
-                {/* Feedback importação */}
-                {importError && (
-                  <p className="text-xs text-red-800 font-bold bg-red-800/10 border border-red-800/20 rounded-lg px-3 py-2 mb-3">{importError}</p>
-                )}
-                {importedThreats.length > 0 && (
-                  <div className="flex items-center justify-between px-3 py-2 bg-emerald-700/10 border border-emerald-700/25 rounded-xl mb-4">
-                    <span className="text-emerald-800 text-xs font-bold">✓ {importedThreats.length} criatura{importedThreats.length > 1 ? "s" : ""} adicionada{importedThreats.length > 1 ? "s" : ""} automaticamente</span>
-                    <button onClick={() => { setImportedThreats([]); setSelectedThreatIds((prev) => { const next = new Set(prev); importedThreats.forEach((t) => next.delete(t.id)); return next; }); }} className="text-emerald-800/50 hover:text-red-800 text-xs font-bold ml-3">✕ Limpar</button>
+              {/* ── COLUNA DIREITA: lista consolidada sempre visível ─────── */}
+              <div className="lg:sticky lg:top-28 space-y-4">
+                <div className="bg-[#2a1810] rounded-2xl shadow-xl border border-amber-900/40 flex flex-col max-h-[calc(100vh-180px)]">
+                  <div className="p-5 border-b-2 border-red-900/30">
+                    <h3 className="text-sm font-bold uppercase tracking-widest text-red-400 flex items-center gap-2">
+                      <span>📋</span> Participantes do Combate
+                    </h3>
+                    <p className="text-[11px] text-[#fbf5e6]/40 mt-1">{playersAdded.length} jogador{playersAdded.length !== 1 ? "es" : ""} · {totalThreatQuantity + customMonsters.length} criatura{(totalThreatQuantity + customMonsters.length) !== 1 ? "s" : ""}</p>
                   </div>
-                )}
 
-                {/* Criação: Wizard ou Manual */}
-                <CustomMonsterForm onAdd={(m) => setCustomMonsters((prev) => [...prev, m])} onOpenWizard={openCreateWizard} />
-
-                {/* Monstros personalizados adicionados */}
-                {customMonsters.length > 0 && (
-                  <div className="mt-4 space-y-2">
-                    <p className="text-[10px] uppercase tracking-widest text-red-800/80 font-bold mb-2 flex items-center gap-1"><span className="text-[8px] text-red-800/40">◆</span> Personalizados Adicionados</p>
-                    {customMonsters.map((m) => (
-                      <div key={m.id} className="flex items-center justify-between px-4 py-3 bg-[#fbf5e6] rounded-xl border border-red-800/20 text-sm shadow-sm">
-                        <div className="flex flex-col">
-                          <span className="font-bold text-red-800 truncate">{m.name}</span>
-                          <span className="text-amber-950/50 text-[10px] font-bold uppercase tracking-widest mt-0.5">{m.pvMax} PV · ND {m.threat.nd}</span>
+                  <div className="overflow-y-auto custom-scrollbar p-4 space-y-2 flex-1">
+                    {/* Jogadores na lista */}
+                    {playersAdded.map((pl) => (
+                      <div key={pl.id} className="flex items-center justify-between gap-2 px-3 py-2.5 bg-[#1f100a] rounded-lg border border-amber-900/20">
+                        <div className="flex items-center gap-2 min-w-0">
+                          <span className="text-base shrink-0">⚔</span>
+                          <div className="min-w-0">
+                            <p className="text-sm font-bold text-[#fbf5e6] truncate">{pl.name}</p>
+                            <p className="text-[10px] text-[#fbf5e6]/40">INI {pl.initiativeRoll}{pl.pvMax ? ` · ${pl.pvMax} PV` : ""}{pl.pmMax ? ` · ${pl.pmMax} PM` : ""}</p>
+                          </div>
                         </div>
-                        <div className="flex items-center gap-1.5">
-                          <button onClick={() => openAdjustWizard(m.threat)} title="Ajustar de forma guiada"
-                            className="w-6 h-6 flex items-center justify-center rounded-md border border-amber-900/15 bg-[#e8dac1] text-amber-950/40 hover:text-red-800 hover:border-red-800/40 transition-all text-xs">🧙</button>
-                          <button onClick={() => setCustomMonsters((prev) => prev.filter((x) => x.id !== m.id))} className="text-amber-900/40 hover:text-red-800 text-sm w-6 h-6 flex items-center justify-center bg-[#e8dac1] rounded border border-amber-900/20 transition-colors">✕</button>
+                        <button onClick={() => setParticipants((prev) => prev.filter((x) => x.id !== pl.id))} className="text-[#fbf5e6]/30 hover:text-red-400 text-sm w-6 h-6 flex items-center justify-center shrink-0">✕</button>
+                      </div>
+                    ))}
+
+                    {/* Criaturas da biblioteca/importadas selecionadas, com quantidade */}
+                    {Array.from(threatQuantities.entries()).map(([id, qty]) => {
+                      if (qty <= 0) return null;
+                      const t = [...allThreats, ...importedThreats].find((x) => x.id === id);
+                      if (!t) return null;
+                      return (
+                        <div key={id} className="flex items-center justify-between gap-2 px-3 py-2.5 bg-[#1f100a] rounded-lg border border-amber-900/20">
+                          <div className="flex items-center gap-2 min-w-0">
+                            <span className="text-base shrink-0">☠</span>
+                            <div className="min-w-0">
+                              <p className="text-sm font-bold text-[#fbf5e6] truncate">{t.name}</p>
+                              <p className="text-[10px] text-[#fbf5e6]/40">ND {t.nd} · {t.tipo}</p>
+                            </div>
+                          </div>
+                          <div className="flex items-center gap-2 shrink-0">
+                            <div className="flex items-center gap-1 bg-[#2a1810] border border-amber-900/20 rounded-md overflow-hidden">
+                              <button onClick={() => changeThreatQuantity(id, -1)} className="w-5 h-5 flex items-center justify-center text-[#fbf5e6]/50 hover:text-red-400 text-xs font-bold">−</button>
+                              <span className="w-5 text-center text-xs font-black text-red-400">{qty}</span>
+                              <button onClick={() => changeThreatQuantity(id, 1)} className="w-5 h-5 flex items-center justify-center text-[#fbf5e6]/50 hover:text-emerald-400 text-xs font-bold">+</button>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+
+                    {/* Monstros personalizados */}
+                    {customMonsters.map((cm) => (
+                      <div key={cm.id} className="flex items-center justify-between gap-2 px-3 py-2.5 bg-[#1f100a] rounded-lg border border-red-900/30">
+                        <div className="flex items-center gap-2 min-w-0">
+                          <span className="text-base shrink-0">☠</span>
+                          <div className="min-w-0">
+                            <p className="text-sm font-bold text-red-400 truncate">{cm.name}</p>
+                            <p className="text-[10px] text-[#fbf5e6]/40">{cm.pvMax} PV · ND {cm.threat.nd} · Personalizado</p>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-1.5 shrink-0">
+                          <button onClick={() => openAdjustWizard(cm.threat)} title="Ajustar" className="w-6 h-6 flex items-center justify-center rounded-md border border-amber-900/20 bg-[#2a1810] text-[#fbf5e6]/50 hover:text-red-400 transition-all text-xs">🧙</button>
+                          <button onClick={() => setCustomMonsters((prev) => prev.filter((x) => x.id !== cm.id))} className="text-[#fbf5e6]/30 hover:text-red-400 text-sm w-6 h-6 flex items-center justify-center">✕</button>
                         </div>
                       </div>
                     ))}
-                  </div>
-                )}
 
-                {/* Biblioteca */}
-                <div className="mt-6 border-t-2 border-amber-900/10 pt-5 flex-grow flex flex-col">
-                  <p className="text-[10px] uppercase tracking-widest text-red-800/80 font-bold mb-2 flex items-center gap-1"><span className="text-[8px] text-red-800/40">◆</span> Acervo do Compêndio</p>
-                  <p className="text-[10px] text-amber-950/40 italic mb-2">Clique no 🧙 ao lado de uma criatura para ajustá-la de forma guiada.</p>
-                  <CreatureSelector selected={selectedThreatIds} onToggle={toggleThreat} extra={importedThreats} onAdjust={openAdjustWizard} />
+                    {!playersAdded.length && totalThreatQuantity === 0 && !customMonsters.length && (
+                      <div className="text-center py-10">
+                        <p className="text-[#fbf5e6]/30 italic text-sm">Nada adicionado ainda.</p>
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="p-4 border-t-2 border-red-900/30">
+                    <button
+                      onClick={goToRolling}
+                      disabled={playersAdded.length === 0 && totalThreatQuantity === 0 && customMonsters.length === 0}
+                      className="w-full py-3.5 bg-red-800 text-[#fbf5e6] rounded-xl font-black text-sm tracking-widest uppercase hover:bg-red-700 hover:-translate-y-0.5 transition-all shadow-lg disabled:opacity-30 disabled:hover:translate-y-0 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    >
+                      Rolar Iniciativas <span>→</span>
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div className="mt-12 flex justify-center border-t-2 border-amber-900/10 pt-10">
-              <button
-                onClick={goToRolling}
-                disabled={playersAdded.length === 0 && selectedThreatIds.size === 0 && customMonsters.length === 0}
-                className="px-12 py-4 bg-red-800 text-[#fbf5e6] rounded-xl font-bold text-lg tracking-widest uppercase hover:bg-red-900 hover:-translate-y-1 transition-all shadow-lg disabled:opacity-40 disabled:hover:translate-y-0 disabled:cursor-not-allowed flex items-center gap-3"
-              >
-                Rolar Iniciativas <span>→</span>
-              </button>
             </div>
           </div>
         )}
