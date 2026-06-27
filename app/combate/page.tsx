@@ -1316,7 +1316,7 @@ export default function CombatePage() {
               </div>
               <div className="bg-[#2a1810] rounded-2xl p-6 shadow-xl sticky top-64 border border-amber-900/40">
                 <h3 className="text-xs uppercase tracking-widest text-red-400 font-bold mb-4 border-b-2 border-red-900/30 pb-3 flex items-center gap-2">
-                  <span className="text-lg opacity-80">📜</span> Log de Combate
+                  Log de Combate
                 </h3>
                 <div className="space-y-3 max-h-[55vh] overflow-y-auto custom-scrollbar pr-2">
                   {log.map((entry, i) => (
