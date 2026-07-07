@@ -6,6 +6,8 @@ import { food } from "@/data/food";
 import { Gear } from "@/types/comidas";
 import ThemeToggle from "@/components/ThemeToggle";
 
+// --- Componentes Auxiliares ---
+
 function SearchGlyph({ className = "" }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true" className={className}>
@@ -25,15 +27,13 @@ function PageGlyph({ className = "" }: { className?: string }) {
   );
 }
 
-// --- Componentes Auxiliares ---
-
 interface GearTableProps {
   allGear: Gear[];
   title?: string;
-  showCookingStats?: boolean; // Nova prop para ativar colunas de culinária
+  showCookingStats?: boolean;
 }
 
-// 2. Componente para a Tabela Filtrável de Equipamentos
+// 2. Componente para a Tabela Filtrável de Equipamentos (Padronizado para Pergaminho)
 const GearFilterableTable = ({ allGear, title, showCookingStats = false }: GearTableProps) => {
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -53,16 +53,20 @@ const GearFilterableTable = ({ allGear, title, showCookingStats = false }: GearT
   }, [allGear, searchTerm]);
 
   return (
-    <div className="space-y-6 w-full relative">
+    <div className="space-y-6 w-full relative animate-in fade-in duration-500">
+
       {/* Título Opcional da Seção */}
       {title && (
-        <h2 className="font-display text-3xl font-bold text-red-800 mb-6 flex items-center gap-3 tracking-wide">
+        <h2 className="font-display text-2xl sm:text-3xl font-bold text-red-800 mb-6 flex items-center gap-3 tracking-wide border-b-2 border-amber-900/10 pb-2">
             <span className="text-red-800 text-3xl">❖</span> {title}
         </h2>
       )}
 
       {/* Barra de Busca - ESTILO CAIXA PADRÃO */}
       <div className="mb-8 p-6 rounded-xl bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)]">
+        <label className="font-display block text-sm font-bold text-amber-950/70 mb-3 uppercase tracking-widest">
+            Buscar Item
+        </label>
         <div className="relative">
           <input
             type="text"
@@ -95,19 +99,19 @@ const GearFilterableTable = ({ allGear, title, showCookingStats = false }: GearT
         <table className="min-w-full divide-y-2 divide-amber-900/20 table-fixed font-serif">
           <thead className="bg-[rgb(var(--bg-edge-rgb))] text-amber-950/80 border-b-2 border-amber-900/20">
             <tr>
-              <th scope="col" className={`${showCookingStats ? 'w-[40%]' : 'w-[60%]'} px-4 py-4 text-left text-xs font-bold uppercase tracking-widest border-r-2 border-amber-900/20 font-display`}>Item</th>
+              <th scope="col" className={`font-display ${showCookingStats ? 'w-[40%]' : 'w-[85%]'} px-4 py-4 text-left text-xs font-bold uppercase tracking-widest border-r-2 border-amber-900/20`}>Item</th>
 
               {/* Colunas Condicionais de Culinária */}
               {showCookingStats && (
                 <>
-                  <th scope="col" className="w-[20%] px-4 py-4 text-left text-xs font-bold uppercase tracking-widest border-r-2 border-amber-900/20 font-display">Ingredientes</th>
-                  <th scope="col" className="w-[5%] px-4 py-4 text-center text-xs font-bold uppercase tracking-widest border-r-2 border-amber-900/20 font-display"><span className="hidden sm:inline">Custo (Fabr.)</span><span className="sm:hidden">Custo</span></th>
-                  <th scope="col" className="w-[5%] px-4 py-4 text-center text-xs font-bold uppercase tracking-widest border-r-2 border-amber-900/20 font-display">CD</th>
+                  <th scope="col" className="font-display w-[30%] px-4 py-4 text-left text-xs font-bold uppercase tracking-widest border-r-2 border-amber-900/20">Ingredientes</th>
+                  <th scope="col" className="font-display w-[10%] px-3 py-4 text-center text-xs font-bold uppercase tracking-widest border-r-2 border-amber-900/20"><span className="hidden sm:inline">Custo (Fabr.)</span><span className="sm:hidden">Custo</span></th>
+                  <th scope="col" className="font-display w-[5%] px-3 py-4 text-center text-xs font-bold uppercase tracking-widest border-r-2 border-amber-900/20">CD</th>
                 </>
               )}
 
-              <th scope="col" className="w-[5%] px-4 py-4 text-center text-xs font-bold uppercase tracking-widest border-r-2 border-amber-900/20 font-display">Preço</th>
-              <th scope="col" className="w-[5%] px-4 py-4 text-center text-xs font-bold uppercase tracking-widest font-display">Espaços</th>
+              <th scope="col" className={`font-display ${showCookingStats ? 'w-[10%]' : 'w-[10%]'} px-3 py-4 text-center text-xs font-bold uppercase tracking-widest border-r-2 border-amber-900/20`}>Preço</th>
+              <th scope="col" className={`font-display ${showCookingStats ? 'w-[5%]' : 'w-[5%]'} px-3 py-4 text-center text-xs font-bold uppercase tracking-widest`}>Esp.</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-amber-900/10 bg-[rgb(var(--bg-inset-rgb))]">
@@ -118,7 +122,7 @@ const GearFilterableTable = ({ allGear, title, showCookingStats = false }: GearT
                 <tr key={item.id} className={`${rowClass} hover:bg-[rgb(var(--bg-card-rgb))]/60 transition-colors group`}>
                   <td className="px-4 py-4 border-r-2 border-amber-900/10 align-top">
                     <div className="font-display font-bold text-amber-950 text-lg group-hover:text-red-800 transition-colors">{item.name}</div>
-                    <div className="text-sm text-amber-950/85 break-words font-serif font-medium mt-1 leading-relaxed">{item.description}</div>
+                    <div className="text-sm text-amber-950/85 break-words font-medium mt-1 leading-relaxed">{item.description}</div>
                     <div className="font-display mt-4 text-[10px] inline-block px-2 py-1 rounded bg-[rgb(var(--bg-inset-rgb))] border border-amber-900/20 text-amber-950/70 uppercase tracking-widest shadow-sm font-bold">
                         {item.origin}
                     </div>
@@ -127,20 +131,20 @@ const GearFilterableTable = ({ allGear, title, showCookingStats = false }: GearT
                   {/* Células Condicionais de Culinária */}
                   {showCookingStats && (
                     <>
-                      <td className="px-4 py-4 text-sm text-amber-950/85 font-serif font-medium border-r-2 border-amber-900/10 align-middle italic">
+                      <td className="px-4 py-4 text-sm text-amber-950/85 font-medium border-r-2 border-amber-900/10 align-middle italic">
                          {item.ingredients || "—"}
                       </td>
-                      <td className="px-4 py-4 text-center text-sm text-amber-950/85 font-serif font-medium border-r-2 border-amber-900/10 align-middle">
+                      <td className="px-3 py-4 text-center text-sm text-amber-950/85 font-medium border-r-2 border-amber-900/10 align-middle">
                          {item.cookingCost || "—"}
                       </td>
-                      <td className="px-4 py-4 text-center text-sm font-serif border-r-2 border-amber-900/10 align-middle text-red-800 font-bold">
+                      <td className="px-3 py-4 text-center text-sm border-r-2 border-amber-900/10 align-middle text-red-800 font-bold">
                          {item.cookingDC || "—"}
                       </td>
                     </>
                   )}
 
-                  <td className="px-4 py-4 text-center text-sm text-red-800 font-bold font-serif align-middle border-r-2 border-amber-900/10">{item.price}</td>
-                  <td className="px-4 py-4 text-center text-sm text-amber-950/85 font-serif font-medium align-middle">{item.spaces}</td>
+                  <td className="px-3 py-4 text-center text-sm text-red-800 font-bold align-middle border-r-2 border-amber-900/10">{item.price}</td>
+                  <td className="px-3 py-4 text-center text-sm text-amber-950/85 font-medium align-middle">{item.spaces}</td>
                 </tr>
                )
             })}
@@ -160,8 +164,9 @@ const GearFilterableTable = ({ allGear, title, showCookingStats = false }: GearT
 
 // --- Página Principal ---
 
-export default function GearPage() {
+export default function AlimentacaoPage() {
   const [isIntroOpen, setIsIntroOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState<'pratos' | 'bebidas' | 'ingredientes'>('pratos');
 
   // Separar dados por categoria
   const foods = food.filter(item => item.category === 'Alimentação');
@@ -299,28 +304,53 @@ export default function GearPage() {
           </div>
         </div>
 
-        {/* Tabelas Separadas */}
-        <section className="w-full space-y-16">
-            {/* Tabela de Pratos (Com colunas de Culinária ativas) */}
-            <GearFilterableTable
-                allGear={foods}
-                title="Pratos Especiais"
-                showCookingStats={true}
-            />
+        {/* Sistema de Abas */}
+        <div className="flex flex-wrap gap-2 mb-10 bg-[rgb(var(--bg-card-rgb))] p-2 rounded-xl border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] w-fit">
+            <button
+                onClick={() => setActiveTab('pratos')}
+                className={`font-display px-6 py-2.5 rounded-lg font-bold uppercase text-[10px] md:text-xs tracking-widest transition-all ${activeTab === 'pratos' ? 'bg-red-800 text-[rgb(var(--bg-inset-rgb))] shadow-md' : 'text-amber-950/70 hover:text-red-800 hover:bg-[rgb(var(--bg-card-rgb))]/50'}`}
+            >
+                Pratos Especiais
+            </button>
+            <button
+                onClick={() => setActiveTab('bebidas')}
+                className={`font-display px-6 py-2.5 rounded-lg font-bold uppercase text-[10px] md:text-xs tracking-widest transition-all ${activeTab === 'bebidas' ? 'bg-red-800 text-[rgb(var(--bg-inset-rgb))] shadow-md' : 'text-amber-950/70 hover:text-red-800 hover:bg-[rgb(var(--bg-card-rgb))]/50'}`}
+            >
+                Bebidas
+            </button>
+            <button
+                onClick={() => setActiveTab('ingredientes')}
+                className={`font-display px-6 py-2.5 rounded-lg font-bold uppercase text-[10px] md:text-xs tracking-widest transition-all ${activeTab === 'ingredientes' ? 'bg-red-800 text-[rgb(var(--bg-inset-rgb))] shadow-md' : 'text-amber-950/70 hover:text-red-800 hover:bg-[rgb(var(--bg-card-rgb))]/50'}`}
+            >
+                Ingredientes
+            </button>
+        </div>
 
-            {/* Tabela de Bebidas */}
-            <GearFilterableTable
-                allGear={drinks}
-                title="Bebidas"
-                showCookingStats={true} // Algumas bebidas também têm CD de fabricação
-            />
+        {/* Conteúdo das Abas (Tabelas) */}
+        <section className="w-full">
+            {activeTab === 'pratos' && (
+              <GearFilterableTable
+                  allGear={foods}
+                  title="Acervo de Pratos Especiais"
+                  showCookingStats={true}
+              />
+            )}
 
-            {/* Tabela de Ingredientes */}
-            <GearFilterableTable
-                allGear={ingredients}
-                title="Ingredientes"
-                showCookingStats={false}
-            />
+            {activeTab === 'bebidas' && (
+              <GearFilterableTable
+                  allGear={drinks}
+                  title="Acervo de Bebidas"
+                  showCookingStats={true}
+              />
+            )}
+
+            {activeTab === 'ingredientes' && (
+              <GearFilterableTable
+                  allGear={ingredients}
+                  title="Acervo de Ingredientes"
+                  showCookingStats={false}
+              />
+            )}
         </section>
 
       </main>
@@ -329,7 +359,7 @@ export default function GearPage() {
       <footer className="relative z-10 mt-20 p-8 border-t-4 border-double border-amber-900/40 bg-[rgb(var(--void-rgb))] text-center shadow-[0_-4px_20px_rgba(0,0,0,0.15)] flex flex-col items-center justify-center">
         <span className="text-red-900/40 text-2xl mb-3">❖</span>
         <p className="font-display mb-2 text-white/60 text-sm md:text-base tracking-widest uppercase font-bold">
-          Compêndio Tormenta RPG © 2025 • Feito por um fã para fãs
+          Compêndio Tormenta RPG © 2026 • Feito por um fã para fãs
         </p>
         <p className="text-white/40 text-xs md:text-sm tracking-wide">
           Tormenta 20 pertence a Jambo Editora. Todos os direitos são reservados a editora.
