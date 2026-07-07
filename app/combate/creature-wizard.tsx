@@ -259,16 +259,16 @@ export default function CreatureWizard({
     };
   };
 
-  const fc = "w-full bg-[#fbf5e6] border-2 border-amber-900/20 rounded-lg px-3 py-2 text-amber-950 font-serif text-sm focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm";
+  const fc = "w-full bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-lg px-3 py-2 text-amber-950 font-serif text-sm focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm";
   const lc = "text-[10px] uppercase tracking-widest text-amber-950/60 font-bold mb-1 block";
   const helpText = "text-xs text-amber-950/55 italic leading-relaxed mt-2 border-l-2 border-red-800/30 pl-3";
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#2a1810]/70 backdrop-blur-sm">
-      <div className="bg-[#f5e6d0] border-2 border-amber-900/40 rounded-2xl shadow-2xl w-full max-w-3xl max-h-[92vh] flex flex-col font-serif">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[rgb(var(--void-rgb))]/70 backdrop-blur-sm">
+      <div className="bg-[rgb(var(--bg-rgb))] border-2 border-amber-900/40 rounded-2xl shadow-2xl w-full max-w-3xl max-h-[92vh] flex flex-col font-serif">
 
         {/* Header */}
-        <div className="p-6 border-b-2 border-amber-900/20 bg-[#e8dac1] rounded-t-2xl">
+        <div className="p-6 border-b-2 border-amber-900/20 bg-[rgb(var(--bg-card-rgb))] rounded-t-2xl">
           <div className="flex items-center justify-between mb-3">
             <h2 className="text-2xl font-bold text-red-800 tracking-wide flex items-center gap-2">
               <span>☠</span> {mode === "create" ? "Criar Nova Ameaça" : "Ajustar Ameaça Existente"}
@@ -283,10 +283,10 @@ export default function CreatureWizard({
                   onClick={() => setStep(i as WizardStep)}
                   className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-black border-2 transition-all ${
                     i === step
-                      ? "bg-red-800 border-red-900 text-[#fbf5e6]"
+                      ? "bg-red-800 border-red-900 text-white"
                       : i < step
-                      ? "bg-emerald-700/20 border-emerald-700/50 text-emerald-800"
-                      : "bg-[#fbf5e6] border-amber-900/20 text-amber-950/40"
+                      ? "bg-emerald-700/20 border-emerald-700/50 text-emerald-500"
+                      : "bg-[rgb(var(--bg-inset-rgb))] border-amber-900/20 text-amber-950/40"
                   }`}
                 >
                   {i < step ? "✓" : i}
@@ -347,7 +347,7 @@ export default function CreatureWizard({
                   {TYPES.map((t) => (
                     <button key={t} onClick={() => update({ tipo: t })}
                       className={`px-3 py-1.5 rounded-lg text-xs font-bold border-2 transition-all ${
-                        state.tipo === t ? "bg-red-800/15 border-red-800/40 text-red-900" : "bg-[#fbf5e6] border-amber-900/20 text-amber-950/70 hover:border-amber-700/40"
+                        state.tipo === t ? "bg-red-800/15 border-red-800/40 text-red-900" : "bg-[rgb(var(--bg-inset-rgb))] border-amber-900/20 text-amber-950/70 hover:border-amber-700/40"
                       }`}>{t}</button>
                   ))}
                 </div>
@@ -359,7 +359,7 @@ export default function CreatureWizard({
                   {SIZES.map((s) => (
                     <button key={s} onClick={() => update({ tamanho: s })}
                       className={`px-3 py-1.5 rounded-lg text-xs font-bold border-2 transition-all ${
-                        state.tamanho === s ? "bg-red-800/15 border-red-800/40 text-red-900" : "bg-[#fbf5e6] border-amber-900/20 text-amber-950/70 hover:border-amber-700/40"
+                        state.tamanho === s ? "bg-red-800/15 border-red-800/40 text-red-900" : "bg-[rgb(var(--bg-inset-rgb))] border-amber-900/20 text-amber-950/70 hover:border-amber-700/40"
                       }`}>{s}</button>
                   ))}
                 </div>
@@ -372,7 +372,7 @@ export default function CreatureWizard({
                     <button key={f.id}
                       onClick={() => update({ functionId: f.id, combatRole: f.suggestedRole })}
                       className={`text-left p-3 rounded-xl border-2 transition-all ${
-                        state.functionId === f.id ? "bg-red-800/10 border-red-800/40" : "bg-[#fbf5e6] border-amber-900/15 hover:border-amber-700/40"
+                        state.functionId === f.id ? "bg-red-800/10 border-red-800/40" : "bg-[rgb(var(--bg-inset-rgb))] border-amber-900/15 hover:border-amber-700/40"
                       }`}>
                       <p className="font-bold text-sm text-red-800">{f.label}</p>
                       <p className="text-[11px] text-amber-950/60 leading-snug mt-0.5">{f.description}</p>
@@ -387,7 +387,7 @@ export default function CreatureWizard({
                   {(Object.keys(ROLE_DESCRIPTIONS) as CombatRole[]).map((r) => (
                     <button key={r} onClick={() => update({ combatRole: r })}
                       className={`text-left p-3 rounded-xl border-2 transition-all ${
-                        state.combatRole === r ? "bg-red-800/10 border-red-800/40" : "bg-[#fbf5e6] border-amber-900/15 hover:border-amber-700/40"
+                        state.combatRole === r ? "bg-red-800/10 border-red-800/40" : "bg-[rgb(var(--bg-inset-rgb))] border-amber-900/15 hover:border-amber-700/40"
                       }`}>
                       <p className="font-bold text-sm text-red-800">{ROLE_DESCRIPTIONS[r].label}</p>
                       <p className="text-[11px] text-amber-950/60 leading-snug mt-0.5">{ROLE_DESCRIPTIONS[r].description}</p>
@@ -451,23 +451,23 @@ export default function CreatureWizard({
                   {ALL_ND_OPTIONS.map((nd) => (
                     <button key={nd} onClick={() => update({ nd })}
                       className={`px-3 py-1.5 rounded-lg text-xs font-bold border-2 transition-all ${
-                        state.nd === nd ? "bg-red-800 border-red-900 text-[#fbf5e6]" : "bg-[#fbf5e6] border-amber-900/20 text-amber-950/70 hover:border-amber-700/40"
+                        state.nd === nd ? "bg-red-800 border-red-900 text-white" : "bg-[rgb(var(--bg-inset-rgb))] border-amber-900/20 text-amber-950/70 hover:border-amber-700/40"
                       }`}>{nd}</button>
                   ))}
                 </div>
               </div>
               {params && (
-                <div className="bg-[#e8dac1] border-2 border-amber-900/20 rounded-xl p-4">
+                <div className="bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/20 rounded-xl p-4">
                   <p className="text-xs font-bold uppercase tracking-widest text-red-800 mb-2">
                     Patamar: {params.patamar} · Papel: {ROLE_DESCRIPTIONS[role].label}
                   </p>
                   <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 text-center">
-                    <div className="bg-[#fbf5e6] rounded-lg p-2"><p className="text-[9px] text-amber-950/50 uppercase">Ataque</p><p className="font-black text-red-800">+{params.valorAtaque}</p></div>
-                    <div className="bg-[#fbf5e6] rounded-lg p-2"><p className="text-[9px] text-amber-950/50 uppercase">Dano Médio</p><p className="font-black text-red-800">{params.danoMedio}</p></div>
-                    <div className="bg-[#fbf5e6] rounded-lg p-2"><p className="text-[9px] text-amber-950/50 uppercase">Defesa</p><p className="font-black text-red-800">{params.defesa}</p></div>
-                    <div className="bg-[#fbf5e6] rounded-lg p-2"><p className="text-[9px] text-amber-950/50 uppercase">PV</p><p className="font-black text-red-800">{params.pv}</p></div>
-                    <div className="bg-[#fbf5e6] rounded-lg p-2"><p className="text-[9px] text-amber-950/50 uppercase">CD Efeito</p><p className="font-black text-red-800">{params.cdEfeitoPadrao}</p></div>
-                    <div className="bg-[#fbf5e6] rounded-lg p-2"><p className="text-[9px] text-amber-950/50 uppercase">Resist.</p><p className="font-black text-red-800 text-xs">{params.resistenciaForte}/{params.resistenciaMedia}/{params.resistenciaFraca}</p></div>
+                    <div className="bg-[rgb(var(--bg-inset-rgb))] rounded-lg p-2"><p className="text-[9px] text-amber-950/50 uppercase">Ataque</p><p className="font-black text-red-800">+{params.valorAtaque}</p></div>
+                    <div className="bg-[rgb(var(--bg-inset-rgb))] rounded-lg p-2"><p className="text-[9px] text-amber-950/50 uppercase">Dano Médio</p><p className="font-black text-red-800">{params.danoMedio}</p></div>
+                    <div className="bg-[rgb(var(--bg-inset-rgb))] rounded-lg p-2"><p className="text-[9px] text-amber-950/50 uppercase">Defesa</p><p className="font-black text-red-800">{params.defesa}</p></div>
+                    <div className="bg-[rgb(var(--bg-inset-rgb))] rounded-lg p-2"><p className="text-[9px] text-amber-950/50 uppercase">PV</p><p className="font-black text-red-800">{params.pv}</p></div>
+                    <div className="bg-[rgb(var(--bg-inset-rgb))] rounded-lg p-2"><p className="text-[9px] text-amber-950/50 uppercase">CD Efeito</p><p className="font-black text-red-800">{params.cdEfeitoPadrao}</p></div>
+                    <div className="bg-[rgb(var(--bg-inset-rgb))] rounded-lg p-2"><p className="text-[9px] text-amber-950/50 uppercase">Resist.</p><p className="font-black text-red-800 text-xs">{params.resistenciaForte}/{params.resistenciaMedia}/{params.resistenciaFraca}</p></div>
                   </div>
                 </div>
               )}
@@ -486,7 +486,7 @@ export default function CreatureWizard({
                 <label className={lc}>Distribuição de Resistências</label>
                 <div className="grid sm:grid-cols-3 gap-3">
                   {(["fort", "ref", "von"] as const).map((attr) => (
-                    <div key={attr} className="bg-[#e8dac1] rounded-xl p-3 border border-amber-900/15">
+                    <div key={attr} className="bg-[rgb(var(--bg-card-rgb))] rounded-xl p-3 border border-amber-900/15">
                       <p className="text-xs font-bold text-red-800 uppercase mb-2">{attr === "fort" ? "Fortitude" : attr === "ref" ? "Reflexos" : "Vontade"}</p>
                       <div className="space-y-1.5">
                         {(["resistenciaPrincipal", "resistenciaMediana", "resistenciaFraca"] as const).map((field) => {
@@ -504,7 +504,7 @@ export default function CreatureWizard({
                                 } as Partial<WizardState>);
                               }}
                               className={`w-full text-left px-2.5 py-1.5 rounded-lg text-[11px] font-bold border transition-all ${
-                                isSelected ? "bg-red-800/20 border-red-800/40 text-red-900" : "bg-[#fbf5e6] border-amber-900/15 text-amber-950/60 hover:border-amber-700/40"
+                                isSelected ? "bg-red-800/20 border-red-800/40 text-red-900" : "bg-[rgb(var(--bg-inset-rgb))] border-amber-900/15 text-amber-950/60 hover:border-amber-700/40"
                               }`}>
                               {labels[field]}
                             </button>
@@ -553,7 +553,7 @@ export default function CreatureWizard({
                     {(["corpoacorpo", "distancia", "ambos"] as const).map((t) => (
                       <button key={t} onClick={() => update({ tipoAtaquePrincipal: t })}
                         className={`flex-1 px-2 py-2 rounded-lg text-xs font-bold border-2 transition-all ${
-                          state.tipoAtaquePrincipal === t ? "bg-red-800/15 border-red-800/40 text-red-900" : "bg-[#fbf5e6] border-amber-900/20 text-amber-950/70"
+                          state.tipoAtaquePrincipal === t ? "bg-red-800/15 border-red-800/40 text-red-900" : "bg-[rgb(var(--bg-inset-rgb))] border-amber-900/20 text-amber-950/70"
                         }`}>{t === "corpoacorpo" ? "Corpo a corpo" : t === "distancia" ? "Distância" : "Ambos"}</button>
                     ))}
                   </div>
@@ -564,7 +564,7 @@ export default function CreatureWizard({
                     {[1, 2, 3].map((n) => (
                       <button key={n} onClick={() => update({ numAtaques: n })}
                         className={`flex-1 px-2 py-2 rounded-lg text-xs font-bold border-2 transition-all ${
-                          state.numAtaques === n ? "bg-red-800/15 border-red-800/40 text-red-900" : "bg-[#fbf5e6] border-amber-900/20 text-amber-950/70"
+                          state.numAtaques === n ? "bg-red-800/15 border-red-800/40 text-red-900" : "bg-[rgb(var(--bg-inset-rgb))] border-amber-900/20 text-amber-950/70"
                         }`}>{n}x</button>
                     ))}
                   </div>
@@ -584,7 +584,7 @@ export default function CreatureWizard({
               {(() => {
                 const { bonus, danoMedioPorAtaque } = splitDamage(params.danoMedio, state.numAtaques, state.dadoDano);
                 return (
-                  <div className="bg-[#e8dac1] border-2 border-amber-900/20 rounded-xl p-4">
+                  <div className="bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/20 rounded-xl p-4">
                     <p className="text-xs font-bold uppercase tracking-widest text-red-800 mb-2">Resultado calculado</p>
                     <p className="text-sm text-amber-950/85">
                       <strong>{state.nomeArma || "Ataque"}</strong> +{params.valorAtaque} ({state.dadoDano}{bonus > 0 ? `+${bonus}` : ""}
@@ -605,7 +605,7 @@ export default function CreatureWizard({
               {(() => {
                 const est = estimateHabilityCount(role, params.patamar);
                 return (
-                  <div className="bg-[#e8dac1] border-2 border-amber-900/20 rounded-xl p-4">
+                  <div className="bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/20 rounded-xl p-4">
                     <p className="text-xs font-bold uppercase tracking-widest text-red-800 mb-1">Quantidade recomendada</p>
                     <p className="text-sm text-amber-950/80">
                       Entre <strong>{est.min}</strong> e <strong>{est.max}</strong> habilidades para um {ROLE_DESCRIPTIONS[role].label.toLowerCase()} de patamar {params.patamar}.
@@ -667,7 +667,7 @@ export default function CreatureWizard({
                   {["Nenhum", "Metade", "Padrão", "Dobro"].map((t) => (
                     <button key={t} onClick={() => update({ tesouro: t })}
                       className={`flex-1 px-3 py-2 rounded-lg text-xs font-bold border-2 transition-all ${
-                        state.tesouro === t ? "bg-red-800/15 border-red-800/40 text-red-900" : "bg-[#fbf5e6] border-amber-900/20 text-amber-950/70"
+                        state.tesouro === t ? "bg-red-800/15 border-red-800/40 text-red-900" : "bg-[rgb(var(--bg-inset-rgb))] border-amber-900/20 text-amber-950/70"
                       }`}>{t}</button>
                   ))}
                 </div>
@@ -678,20 +678,20 @@ export default function CreatureWizard({
               </div>
 
               {/* Resumo final */}
-              <div className="bg-[#2a1810] text-[#fbf5e6] rounded-xl p-5 mt-2">
+              <div className="bg-[rgb(var(--void-rgb))] text-white rounded-xl p-5 mt-2">
                 <p className="text-xs uppercase tracking-widest text-red-400 font-bold mb-3">Resumo da Ficha</p>
                 {(() => {
                   const t = buildFinalThreat();
                   return (
                     <div className="space-y-1 text-sm">
-                      <p className="font-bold text-base">{t.name} <span className="text-[#fbf5e6]/50 text-xs">ND {t.nd}</span></p>
-                      <p className="text-[#fbf5e6]/70 text-xs">{t.tipo} · {t.tamanho} · {t.papel}</p>
-                      <p className="text-[#fbf5e6]/85">DEF {t.defesa} · Fort +{t.fort} · Ref +{t.ref} · Von +{t.von} · PV {t.pv}</p>
-                      <p className="text-[#fbf5e6]/85">Iniciativa {t.iniciativa >= 0 ? "+" : ""}{t.iniciativa}</p>
-                      <p className="text-[#fbf5e6]/85">Desl. {t.deslocamento}</p>
-                      {t.ataqueCorpoACorpo && <p className="text-[#fbf5e6]/85">CaC: {t.ataqueCorpoACorpo}</p>}
-                      {t.ataqueDistancia && <p className="text-[#fbf5e6]/85">Dist: {t.ataqueDistancia}</p>}
-                      <p className="text-[#fbf5e6]/60 text-xs">{t.habilidades.length} habilidade(s)</p>
+                      <p className="font-bold text-base">{t.name} <span className="text-white/50 text-xs">ND {t.nd}</span></p>
+                      <p className="text-white/70 text-xs">{t.tipo} · {t.tamanho} · {t.papel}</p>
+                      <p className="text-white/85">DEF {t.defesa} · Fort +{t.fort} · Ref +{t.ref} · Von +{t.von} · PV {t.pv}</p>
+                      <p className="text-white/85">Iniciativa {t.iniciativa >= 0 ? "+" : ""}{t.iniciativa}</p>
+                      <p className="text-white/85">Desl. {t.deslocamento}</p>
+                      {t.ataqueCorpoACorpo && <p className="text-white/85">CaC: {t.ataqueCorpoACorpo}</p>}
+                      {t.ataqueDistancia && <p className="text-white/85">Dist: {t.ataqueDistancia}</p>}
+                      <p className="text-white/60 text-xs">{t.habilidades.length} habilidade(s)</p>
                     </div>
                   );
                 })()}
@@ -701,7 +701,7 @@ export default function CreatureWizard({
         </div>
 
         {/* Footer */}
-        <div className="p-5 border-t-2 border-amber-900/20 bg-[#e8dac1] rounded-b-2xl flex items-center justify-between gap-3">
+        <div className="p-5 border-t-2 border-amber-900/20 bg-[rgb(var(--bg-card-rgb))] rounded-b-2xl flex items-center justify-between gap-3">
           <button onClick={onCancel} className="px-5 py-2.5 rounded-xl border-2 border-amber-900/20 text-amber-950/60 font-bold text-xs uppercase tracking-widest hover:border-red-800/40 hover:text-red-800 transition-all">
             Cancelar
           </button>
@@ -715,7 +715,7 @@ export default function CreatureWizard({
               <button
                 onClick={goNext}
                 disabled={step === 0 && !state.nome.trim()}
-                className="px-8 py-2.5 bg-red-800 text-[#fbf5e6] rounded-xl font-black text-xs uppercase tracking-widest hover:bg-red-900 hover:-translate-y-0.5 transition-all shadow-md disabled:opacity-40 disabled:hover:translate-y-0 disabled:cursor-not-allowed"
+                className="px-8 py-2.5 bg-red-800 text-white rounded-xl font-black text-xs uppercase tracking-widest hover:bg-red-900 hover:-translate-y-0.5 transition-all shadow-md disabled:opacity-40 disabled:hover:translate-y-0 disabled:cursor-not-allowed"
               >
                 Próximo →
               </button>

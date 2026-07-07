@@ -15,14 +15,6 @@ export const equipmentCategories: EquipmentCategory[] = [
     href: "/itens-magicos/acessorios",
   },
   {
-    id: "esotericos",
-    title: "Esotéricos",
-    description: "Similar as Armas Mágicas.",
-    icon: Sparkle,
-    color: "from-amber-600 to-amber-900",
-    href: "/itens-magicos/esotericos",
-  },
-  {
     id: "amaldicoados",
     title: "Amaldiçoados",
     description: "Objetos mágicos que receberam efeitos negativos.",

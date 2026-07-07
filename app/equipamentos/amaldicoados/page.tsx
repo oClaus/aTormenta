@@ -98,8 +98,8 @@ export default function AcessoriosMagicosPage() {
                   Início
                 </Link>
                 <span className="text-stone-700">/</span>
-                <Link href="/itens-magicos" className="text-stone-500 hover:text-amber-600 transition-colors whitespace-nowrap">
-                  Itens Mágicos
+                <Link href="/equipamentos" className="text-stone-500 hover:text-amber-600 transition-colors whitespace-nowrap">
+                  Equipamentos
                 </Link>
                 <span className="text-stone-700">/</span>
                 <span className="text-red-700">Amaldiçoados</span>

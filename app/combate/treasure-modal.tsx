@@ -64,7 +64,7 @@ function NumberPad({ label, hint, value, onChange }: {
           type="number" min={1} max={100} value={value}
           onChange={(e) => onChange(e.target.value)}
           placeholder="01–100"
-          className="w-28 px-3 py-2 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-lg text-red-800 font-mono font-bold text-lg text-center focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 placeholder:text-amber-900/30 shadow-sm transition-all"
+          className="w-28 px-3 py-2 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-lg text-red-800 font-mono font-bold text-lg text-center focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 placeholder:text-amber-900/30 shadow-sm transition-all"
         />
         {value && (
           <button onClick={() => onChange("")} className="text-amber-900/40 hover:text-red-800 hover:bg-red-800/10 rounded-full w-6 h-6 flex items-center justify-center transition-colors text-sm" title="Limpar">✕</button>
@@ -78,7 +78,7 @@ function ResultBadge({ label, roll, result, sub }: { label: string; roll: number
   const empty = result === "—";
   return (
     <div className={`flex flex-wrap items-center gap-2 px-4 py-2.5 rounded-lg border-2 text-sm font-medium font-serif shadow-sm ${
-      empty ? "bg-[#e8dac1]/50 border-amber-900/20 text-amber-950/50" : "bg-[#fbf5e6] border-red-800/30 text-red-800"
+      empty ? "bg-[rgb(var(--bg-card-rgb))]/50 border-amber-900/20 text-amber-950/50" : "bg-[rgb(var(--bg-inset-rgb))] border-red-800/30 text-red-800"
     }`}>
       <span className="font-mono font-bold text-base px-2 py-0.5 bg-red-800/10 rounded">{roll}</span>
       <span className="text-red-800/40 text-lg">→</span>
@@ -97,7 +97,7 @@ function MiniRollTable<T extends AnyEntry>({ table, selected, onSelect, extraCol
   table: readonly T[]; selected: number | null; onSelect?: (v: number) => void; extraCol?: (e: T) => string | null;
 }) {
   return (
-    <div className="border-2 border-amber-900/15 rounded-lg overflow-hidden shadow-sm bg-[#fbf5e6] max-h-48 overflow-y-auto custom-scrollbar">
+    <div className="border-2 border-amber-900/15 rounded-lg overflow-hidden shadow-sm bg-[rgb(var(--bg-inset-rgb))] max-h-48 overflow-y-auto custom-scrollbar">
       <table className="w-full text-xs">
         <tbody className="divide-y divide-amber-900/10">
           {table.map((entry, i) => {
@@ -106,7 +106,7 @@ function MiniRollTable<T extends AnyEntry>({ table, selected, onSelect, extraCol
             return (
               <tr key={i}
                 onClick={() => onSelect?.(entry.min)}
-                className={`transition-all ${onSelect ? "cursor-pointer" : ""} ${isHit ? "bg-red-800/10 border-l-3 border-l-red-800" : onSelect ? "hover:bg-[#e8dac1]/50" : ""}`}>
+                className={`transition-all ${onSelect ? "cursor-pointer" : ""} ${isHit ? "bg-red-800/10 border-l-3 border-l-red-800" : onSelect ? "hover:bg-[rgb(var(--bg-card-rgb))]/50" : ""}`}>
                 <td className={`px-3 py-1.5 font-mono w-16 ${isHit ? "text-red-800 font-bold" : "text-amber-950/60"}`}>
                   {entry.min === entry.max ? String(entry.min).padStart(2, "0") : `${String(entry.min).padStart(2, "0")}-${String(entry.max).padStart(2, "0")}`}
                 </td>
@@ -253,11 +253,11 @@ export default function TreasureModal({
   const magGrauLabel = grauMag === "maior" ? "Maior" : grauMag === "medio" ? "Médio" : "Menor";
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#2a1810]/70 backdrop-blur-sm">
-      <div className="bg-[#f5e6d0] border-2 border-amber-900/40 rounded-2xl shadow-2xl w-full max-w-3xl max-h-[92vh] flex flex-col font-serif">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[rgb(var(--void-rgb))]/70 backdrop-blur-sm">
+      <div className="bg-[rgb(var(--bg-rgb))] border-2 border-amber-900/40 rounded-2xl shadow-2xl w-full max-w-3xl max-h-[92vh] flex flex-col font-serif">
 
         {/* Header */}
-        <div className="p-6 border-b-2 border-amber-900/20 bg-[#e8dac1] rounded-t-2xl flex items-center justify-between">
+        <div className="p-6 border-b-2 border-amber-900/20 bg-[rgb(var(--bg-card-rgb))] rounded-t-2xl flex items-center justify-between">
           <h2 className="text-2xl font-bold text-red-800 tracking-wide flex items-center gap-2">
             <span>🎁</span> Tesouro do Combate
           </h2>
@@ -273,7 +273,7 @@ export default function TreasureModal({
               <div className="grid grid-cols-4 sm:grid-cols-6 gap-2">
                 {tesouros.map((t) => (
                   <button key={t.nd} onClick={() => selectND(t.nd)}
-                    className="py-3 px-2 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-lg shadow-sm hover:border-red-800/50 hover:bg-[#e8dac1] transition-all text-center font-bold text-amber-950 text-sm">
+                    className="py-3 px-2 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-lg shadow-sm hover:border-red-800/50 hover:bg-[rgb(var(--bg-card-rgb))] transition-all text-center font-bold text-amber-950 text-sm">
                     <span className="block text-[9px] font-bold uppercase tracking-widest text-red-800/60 mb-0.5">ND</span>
                     {t.nd}
                   </button>
@@ -283,18 +283,18 @@ export default function TreasureModal({
           ) : (
             <>
               {/* ND selecionado + trocar */}
-              <div className="flex items-center justify-between bg-[#e8dac1] p-4 rounded-xl border-2 border-amber-900/20">
+              <div className="flex items-center justify-between bg-[rgb(var(--bg-card-rgb))] p-4 rounded-xl border-2 border-amber-900/20">
                 <div>
                   <p className="text-[10px] font-bold tracking-widest uppercase text-red-800 mb-0.5">Nível de Desafio</p>
                   <h3 className="text-2xl font-bold text-amber-950">ND {selectedND}</h3>
                 </div>
-                <button onClick={() => setSelectedND(null)} className="px-4 py-2 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-lg text-xs text-amber-950/70 hover:text-red-800 hover:border-red-800/50 transition-all font-bold uppercase tracking-wide flex items-center gap-1.5">
+                <button onClick={() => setSelectedND(null)} className="px-4 py-2 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-lg text-xs text-amber-950/70 hover:text-red-800 hover:border-red-800/50 transition-all font-bold uppercase tracking-wide flex items-center gap-1.5">
                   <span>↺</span> Trocar
                 </button>
               </div>
 
               {/* Rolagem principal */}
-              <div className="bg-[#e8dac1]/50 border-2 border-amber-900/20 rounded-xl p-5">
+              <div className="bg-[rgb(var(--bg-card-rgb))]/50 border-2 border-amber-900/20 rounded-xl p-5">
                 <MiniHeader title="Tabela 8-1: Dinheiro & Itens" />
                 <div className="flex flex-wrap gap-5 mb-4">
                   <NumberPad label="D% — Dinheiro" value={rollDinheiro} onChange={setRollDinheiro} />
@@ -316,7 +316,7 @@ export default function TreasureModal({
 
               {/* Riqueza */}
               {needsRiqueza && (
-                <div className="bg-[#e8dac1]/50 border-2 border-amber-900/20 rounded-xl p-5">
+                <div className="bg-[rgb(var(--bg-card-rgb))]/50 border-2 border-amber-900/20 rounded-xl p-5">
                   <MiniHeader title={`Riqueza ${grauLabel}`} />
                   <div className="flex flex-wrap items-end gap-3 mb-3">
                     <NumberPad label="D% — Riqueza" value={rollRiqueza} onChange={setRollRiqueza} />
@@ -328,7 +328,7 @@ export default function TreasureModal({
 
               {/* Diverso */}
               {needsDiverso && (
-                <div className="bg-[#e8dac1]/50 border-2 border-amber-900/20 rounded-xl p-5">
+                <div className="bg-[rgb(var(--bg-card-rgb))]/50 border-2 border-amber-900/20 rounded-xl p-5">
                   <MiniHeader title="Item Diverso" />
                   <div className="flex flex-wrap items-end gap-3 mb-3">
                     <NumberPad label="D% — Diverso" value={rollDiverso} onChange={setRollDiverso} />
@@ -340,7 +340,7 @@ export default function TreasureModal({
 
               {/* Equipamento */}
               {needsEquip && (
-                <div className="bg-[#e8dac1]/50 border-2 border-amber-900/20 rounded-xl p-5 space-y-4">
+                <div className="bg-[rgb(var(--bg-card-rgb))]/50 border-2 border-amber-900/20 rounded-xl p-5 space-y-4">
                   <MiniHeader title="Equipamento" />
                   <NumberPad label="D% — Categoria" hint="01-60 Arma · 61-90 Armadura · 91-100 Esotérico" value={rollEqCat} onChange={(v) => { setRollEqCat(v); setRollEqItem(""); }} />
                   <MiniRollTable table={EQUIPAMENTO_CATEGORIAS} selected={eqCatNum} onSelect={(v) => { setRollEqCat(String(v)); setRollEqItem(""); }} />
@@ -358,7 +358,7 @@ export default function TreasureModal({
 
               {/* Superior */}
               {needsSuperior && (
-                <div className="bg-[#e8dac1]/50 border-2 border-amber-900/20 rounded-xl p-5 space-y-4">
+                <div className="bg-[rgb(var(--bg-card-rgb))]/50 border-2 border-amber-900/20 rounded-xl p-5 space-y-4">
                   <MiniHeader title={`Superior (${numMelhorias} melhoria${numMelhorias > 1 ? "s" : ""})`} />
                   <NumberPad label="D% — Categoria" hint="01-60 Arma · 61-90 Armadura/Escudo · 91-100 Esotérico" value={rollSupCat} onChange={(v) => { setRollSupCat(v); setRollSupBase(""); setRollSupItem(""); }} />
                   <MiniRollTable table={SUPERIOR_CATEGORIAS} selected={supCatNum} onSelect={(v) => { setRollSupCat(String(v)); setRollSupBase(""); setRollSupItem(""); }} />
@@ -386,7 +386,7 @@ export default function TreasureModal({
 
               {/* Poção */}
               {needsPocao && (
-                <div className="bg-[#e8dac1]/50 border-2 border-amber-900/20 rounded-xl p-5">
+                <div className="bg-[rgb(var(--bg-card-rgb))]/50 border-2 border-amber-900/20 rounded-xl p-5">
                   <MiniHeader title="Poção" />
                   <div className="flex flex-wrap items-end gap-3 mb-3">
                     <NumberPad label="D% — Poção" value={rollPocao} onChange={setRollPocao} />
@@ -398,7 +398,7 @@ export default function TreasureModal({
 
               {/* Mágico */}
               {needsMagico && (
-                <div className="bg-[#e8dac1]/50 border-2 border-amber-900/20 rounded-xl p-5 space-y-4">
+                <div className="bg-[rgb(var(--bg-card-rgb))]/50 border-2 border-amber-900/20 rounded-xl p-5 space-y-4">
                   <MiniHeader title={`Mágico (${magGrauLabel})`} />
                   <NumberPad label="1d6 — Categoria" hint="1-2 Arma · 3 Armadura/Escudo · 4-6 Acessório" value={rollMagCat} onChange={(v) => { setRollMagCat(v); setRollMagItem(""); setRollMagEsp(""); }} />
                   {magEncantosTable && magCatLabel && (
@@ -421,7 +421,7 @@ export default function TreasureModal({
                   )}
                   {magNeedsEspecifica && (
                     <div className="pt-3 border-t-2 border-amber-900/10 space-y-3">
-                      <p className="text-xs font-medium text-red-800 bg-[#fbf5e6] rounded-lg px-3 py-2 border border-red-800/20">O encanto remete a uma tabela específica. Role mais um D%:</p>
+                      <p className="text-xs font-medium text-red-800 bg-[rgb(var(--bg-inset-rgb))] rounded-lg px-3 py-2 border border-red-800/20">O encanto remete a uma tabela específica. Role mais um D%:</p>
                       <div className="flex flex-wrap items-end gap-3">
                         <NumberPad label="D% — Item Específico" value={rollMagEsp} onChange={setRollMagEsp} />
                         {magEspRes && magEspNum !== null && <ResultBadge label="Item Específico" roll={magEspNum} result={getDisplay(magEspRes)} sub={"preco" in magEspRes ? String(magEspRes.preco) : undefined} />}
@@ -436,8 +436,8 @@ export default function TreasureModal({
         </div>
 
         {/* Footer */}
-        <div className="p-5 border-t-2 border-amber-900/20 bg-[#e8dac1] rounded-b-2xl flex justify-end">
-          <button onClick={onClose} className="px-6 py-2.5 bg-red-800 text-[#fbf5e6] rounded-xl font-bold text-sm uppercase tracking-widest hover:bg-red-900 transition-all shadow-md">
+        <div className="p-5 border-t-2 border-amber-900/20 bg-[rgb(var(--bg-card-rgb))] rounded-b-2xl flex justify-end">
+          <button onClick={onClose} className="px-6 py-2.5 bg-red-800 text-white rounded-xl font-bold text-sm uppercase tracking-widest hover:bg-red-900 transition-all shadow-md">
             Fechar
           </button>
         </div>

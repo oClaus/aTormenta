@@ -90,6 +90,10 @@ export default function PequenasAventurasPage() {
                     Início
                 </Link>
                 <span className="text-amber-900/40">/</span>
+                <Link href="/mundo-de-arton" className="text-amber-950/70 hover:text-red-800 transition-colors whitespace-nowrap">
+                    Mundo de Arton
+                </Link>
+                <span className="text-amber-900/40">/</span>
                 <span className="text-red-800 whitespace-nowrap">Pequenas Aventuras</span>
             </div>
         </div>

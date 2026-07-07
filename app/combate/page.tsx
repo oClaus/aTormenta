@@ -11,6 +11,7 @@ import CreatureWizard from "./creature-wizard";
 import EncounterGeneratorModal from "./encounter-generator-modal";
 import { GeneratedEncounterEntry } from "./encounter-generator";
 import TreasureModal from "./treasure-modal";
+import ThemeToggle from "@/components/ThemeToggle";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -164,17 +165,17 @@ function ConditionTag({ conditionId, onRemove }: { conditionId: string; onRemove
         title="Clique para remover"
         className={`px-2.5 py-1 rounded-md text-[11px] font-bold border transition-all select-none shadow-sm flex items-center gap-1 ${
           isPositive
-            ? "bg-emerald-700/15 border-emerald-700/30 text-emerald-900 hover:bg-emerald-700/30 hover:border-emerald-700/50"
+            ? "bg-emerald-700/15 border-emerald-700/30 text-emerald-500 hover:bg-emerald-700/30 hover:border-emerald-700/50"
             : "bg-red-800/15 border-red-800/30 text-red-900 hover:bg-red-800/30 hover:border-red-800/50"
         }`}
       >
         {cond.name} <span className="opacity-60 hover:opacity-100 ml-1">✕</span>
       </button>
       {open && (
-        <div className="absolute bottom-full left-0 mb-2 z-[60] w-64 bg-[#2a1810] text-[#fbf5e6] text-xs rounded-xl p-4 shadow-2xl border-2 border-amber-900/40 pointer-events-none font-serif">
+        <div className="absolute bottom-full left-0 mb-2 z-[60] w-64 bg-[rgb(var(--void-rgb))] text-white text-xs rounded-xl p-4 shadow-2xl border-2 border-amber-900/40 pointer-events-none font-serif">
           <p className="font-bold text-red-400 mb-1.5 text-sm">{cond.name}</p>
           {cond.efeito && <p className="text-amber-400/70 text-[10px] mb-2 uppercase tracking-widest font-bold">{cond.efeito}</p>}
-          <p className="leading-relaxed text-[#fbf5e6]/80 whitespace-pre-line">{cond.description}</p>
+          <p className="leading-relaxed text-white/80 whitespace-pre-line">{cond.description}</p>
         </div>
       )}
     </div>
@@ -189,14 +190,14 @@ function ConditionSelector({ active, onToggle }: { active: string[]; onToggle: (
     c.name.toLowerCase().includes(search.toLowerCase())
   );
   return (
-    <div className="mt-3 bg-[#e8dac1]/70 border-2 border-amber-900/20 rounded-xl p-4 shadow-inner">
+    <div className="mt-3 bg-[rgb(var(--bg-card-rgb))]/70 border-2 border-amber-900/20 rounded-xl p-4 shadow-inner">
       <input
         autoFocus
         type="text"
         placeholder="Buscar condição..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
-        className="w-full px-3 py-2 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-lg text-amber-950 placeholder-amber-900/40 font-serif text-xs focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all mb-3 shadow-sm"
+        className="w-full px-3 py-2 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-lg text-amber-950 placeholder-amber-900/40 font-serif text-xs focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all mb-3 shadow-sm"
       />
       <div className="flex flex-wrap gap-2 max-h-40 overflow-y-auto custom-scrollbar pr-2">
         {filtered.map((c) => {
@@ -209,9 +210,9 @@ function ConditionSelector({ active, onToggle }: { active: string[]; onToggle: (
               className={`px-3 py-1.5 rounded-md text-[11px] font-bold border-2 transition-all shadow-sm flex items-center gap-1 ${
                 isActive
                   ? isPos
-                    ? "bg-emerald-700/25 border-emerald-700/50 text-emerald-900"
+                    ? "bg-emerald-700/25 border-emerald-700/50 text-emerald-500"
                     : "bg-red-800/25 border-red-800/50 text-red-900"
-                  : "bg-[#fbf5e6] border-amber-900/20 text-amber-950/70 hover:border-amber-700/50 hover:text-amber-950"
+                  : "bg-[rgb(var(--bg-inset-rgb))] border-amber-900/20 text-amber-950/70 hover:border-amber-700/50 hover:text-amber-950"
               }`}
             >
               {isActive ? "✓ " : ""}{c.name}
@@ -235,17 +236,17 @@ function EditMonsterModal({ monster, onSave, onClose }: {
   const [pvMax, setPvMax] = useState(monster.pvMax);
   const [pmMax, setPmMax] = useState(monster.pmMax);
 
-  const fc = "w-full bg-[#fbf5e6] border-2 border-amber-900/20 rounded-lg px-4 py-2.5 text-amber-950 font-serif focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all text-sm shadow-sm";
+  const fc = "w-full bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-lg px-4 py-2.5 text-amber-950 font-serif focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all text-sm shadow-sm";
   const lc = "text-[10px] uppercase tracking-widest text-amber-950/60 font-bold font-serif mb-1 block";
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#2a1810]/60 backdrop-blur-sm">
-      <div className="bg-[#e8dac1] border-2 border-amber-900/40 rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] flex flex-col font-serif">
-        <div className="p-6 border-b-2 border-amber-900/20 flex items-center justify-between bg-[#fbf5e6] rounded-t-xl">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[rgb(var(--void-rgb))]/60 backdrop-blur-sm">
+      <div className="bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/40 rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] flex flex-col font-serif">
+        <div className="p-6 border-b-2 border-amber-900/20 flex items-center justify-between bg-[rgb(var(--bg-inset-rgb))] rounded-t-xl">
           <h2 className="text-xl md:text-2xl font-bold text-red-800 tracking-wide">Editar: {monster.threat.name}</h2>
           <button onClick={onClose} className="text-amber-950/40 hover:text-red-800 text-2xl leading-none transition-colors">✕</button>
         </div>
-        <div className="overflow-y-auto p-6 flex flex-col gap-5 custom-scrollbar bg-[#e8dac1]/50">
+        <div className="overflow-y-auto p-6 flex flex-col gap-5 custom-scrollbar bg-[rgb(var(--bg-card-rgb))]/50">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div><label className={lc}>Nome</label><input className={fc} value={draft.name} onChange={(e) => setDraft({ ...draft, name: e.target.value })} /></div>
             <div><label className={lc}>ND</label><input className={fc} value={draft.nd} onChange={(e) => setDraft({ ...draft, nd: e.target.value })} /></div>
@@ -274,11 +275,11 @@ function EditMonsterModal({ monster, onSave, onClose }: {
             <textarea className={`${fc} min-h-[120px] resize-y`} value={draft.habilidades.join("\n")} onChange={(e) => setDraft({ ...draft, habilidades: e.target.value.split("\n") })} />
           </div>
         </div>
-        <div className="p-6 border-t-2 border-amber-900/20 flex gap-4 justify-end bg-[#fbf5e6] rounded-b-xl">
+        <div className="p-6 border-t-2 border-amber-900/20 flex gap-4 justify-end bg-[rgb(var(--bg-inset-rgb))] rounded-b-xl">
           <button onClick={onClose} className="px-6 py-2.5 rounded-xl border-2 border-amber-900/30 text-amber-950/70 font-serif font-bold hover:border-red-800 hover:text-red-800 hover:bg-red-800/5 transition-all">Cancelar</button>
           <button
             onClick={() => { onSave({ ...monster, name: (draft as Threat).name, threat: draft as Threat, pvMax, pvCurrent: Math.min(monster.pvCurrent, pvMax), pmMax, pmCurrent: Math.min(monster.pmCurrent, pmMax) }); onClose(); }}
-            className="px-8 py-2.5 rounded-xl bg-red-800 text-[#fbf5e6] font-serif font-bold hover:bg-red-900 hover:-translate-y-0.5 transition-all shadow-md"
+            className="px-8 py-2.5 rounded-xl bg-red-800 text-white font-serif font-bold hover:bg-red-900 hover:-translate-y-0.5 transition-all shadow-md"
           >Salvar Alterações</button>
         </div>
       </div>
@@ -395,13 +396,13 @@ function ParticipantCard({ participant, isActive, onUpdate, onEdit, onRemove, on
     onUpdate({ ...participant, conditions: has ? participant.conditions.filter((c) => c !== condId) : [...participant.conditions, condId] });
   };
 
-  const ic = "w-20 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-lg px-3 py-2 text-amber-950 font-serif text-sm font-bold focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 text-center shadow-sm transition-all";
+  const ic = "w-20 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-lg px-3 py-2 text-amber-950 font-serif text-sm font-bold focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 text-center shadow-sm transition-all";
 
   return (
     <div className={`relative border-2 rounded-2xl transition-all duration-300 font-serif overflow-visible ${
       isActive
-        ? "bg-[#fbf5e6] border-red-800 shadow-[0_0_0_3px_rgba(153,27,27,0.1),0_4px_24px_rgba(153,27,27,0.15)] transform scale-[1.01]"
-        : "bg-[#e8dac1] border-amber-900/25 shadow-sm hover:shadow-md hover:border-amber-900/40"
+        ? "bg-[rgb(var(--bg-inset-rgb))] border-red-800 shadow-[0_0_0_3px_rgba(153,27,27,0.1),0_4px_24px_rgba(153,27,27,0.15)] transform scale-[1.01]"
+        : "bg-[rgb(var(--bg-card-rgb))] border-amber-900/25 shadow-sm hover:shadow-md hover:border-amber-900/40"
     }`}>
       {isActive && <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-red-800 via-amber-600 to-red-800 rounded-t-xl" />}
 
@@ -410,7 +411,7 @@ function ParticipantCard({ participant, isActive, onUpdate, onEdit, onRemove, on
         <div className="flex items-start justify-between gap-2 mb-4 border-b-2 border-amber-900/10 pb-4">
           <div className="flex items-center gap-3 flex-1 min-w-0">
             <span className={`shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-lg shadow-sm border-2 ${
-              isActive ? "bg-red-800 border-red-900 text-[#fbf5e6]" : "bg-[#fbf5e6] border-amber-900/20 text-amber-950/50"
+              isActive ? "bg-red-800 border-red-900 text-white" : "bg-[rgb(var(--bg-inset-rgb))] border-amber-900/20 text-amber-950/50"
             }`}>{isMonster ? "☠" : "⚔"}</span>
             <div className="min-w-0">
               <h3 className={`font-bold text-lg md:text-xl leading-tight truncate tracking-wide ${isActive ? "text-red-800" : "text-amber-950"}`}>{participant.name}</h3>
@@ -418,17 +419,17 @@ function ParticipantCard({ participant, isActive, onUpdate, onEdit, onRemove, on
             </div>
           </div>
           <div className="flex items-center gap-2 shrink-0">
-            <span className="text-[10px] md:text-xs text-amber-950/70 font-bold bg-[#fbf5e6] px-2.5 py-1.5 rounded-md border border-amber-900/20 shadow-sm uppercase tracking-widest">INI {participant.initiativeRoll}</span>
+            <span className="text-[10px] md:text-xs text-amber-950/70 font-bold bg-[rgb(var(--bg-inset-rgb))] px-2.5 py-1.5 rounded-md border border-amber-900/20 shadow-sm uppercase tracking-widest">INI {participant.initiativeRoll}</span>
             {isMonster && onEdit && (
-              <button onClick={onEdit} title="Editar criatura" className="w-8 h-8 flex items-center justify-center rounded-md border border-amber-900/20 bg-[#fbf5e6] text-amber-950/50 hover:text-red-800 hover:border-red-800/40 hover:bg-red-800/5 transition-all text-sm shadow-sm">✎</button>
+              <button onClick={onEdit} title="Editar criatura" className="w-8 h-8 flex items-center justify-center rounded-md border border-amber-900/20 bg-[rgb(var(--bg-inset-rgb))] text-amber-950/50 hover:text-red-800 hover:border-red-800/40 hover:bg-red-800/5 transition-all text-sm shadow-sm">✎</button>
             )}
-            <button onClick={onRemove} title="Remover" className="w-8 h-8 flex items-center justify-center rounded-md border border-amber-900/20 bg-[#fbf5e6] text-amber-950/50 hover:text-red-800 hover:border-red-800/40 hover:bg-red-800/5 transition-all text-sm shadow-sm">✕</button>
+            <button onClick={onRemove} title="Remover" className="w-8 h-8 flex items-center justify-center rounded-md border border-amber-900/20 bg-[rgb(var(--bg-inset-rgb))] text-amber-950/50 hover:text-red-800 hover:border-red-800/40 hover:bg-red-800/5 transition-all text-sm shadow-sm">✕</button>
           </div>
         </div>
 
         {/* Stats */}
         {m && (
-          <div className="flex flex-wrap gap-x-4 gap-y-1 mb-4 text-xs font-bold bg-[#fbf5e6]/50 p-3 rounded-xl border border-amber-900/10">
+          <div className="flex flex-wrap gap-x-4 gap-y-1 mb-4 text-xs font-bold bg-[rgb(var(--bg-inset-rgb))]/50 p-3 rounded-xl border border-amber-900/10">
             <span className="text-amber-950/50 uppercase tracking-widest text-[10px]">DEF <span className="text-red-800 text-xs ml-0.5">{m.threat.defesa}</span></span>
             <span className="text-amber-950/50 uppercase tracking-widest text-[10px]">Fort <span className="text-red-800 text-xs ml-0.5">+{m.threat.fort}</span></span>
             <span className="text-amber-950/50 uppercase tracking-widest text-[10px]">Ref <span className="text-red-800 text-xs ml-0.5">+{m.threat.ref}</span></span>
@@ -451,7 +452,7 @@ function ParticipantCard({ participant, isActive, onUpdate, onEdit, onRemove, on
                     {(m ? m.pvCurrent : p!.pvCurrent ?? 0) === 0 ? " — INCAPACITADO" : ""}
                   </span>
                 </div>
-                <div className="h-3 bg-[#fbf5e6] border border-amber-900/10 rounded-full overflow-hidden shadow-inner">
+                <div className="h-3 bg-[rgb(var(--bg-inset-rgb))] border border-amber-900/10 rounded-full overflow-hidden shadow-inner">
                   <div className={`h-full rounded-full transition-all duration-500 ${pvColor}`} style={{ width: `${pvPct}%` }} />
                 </div>
               </div>
@@ -459,10 +460,10 @@ function ParticipantCard({ participant, isActive, onUpdate, onEdit, onRemove, on
             {((m && m.pmMax > 0) || playerHasMp) && (
               <div>
                 <div className="flex justify-between text-xs font-bold mb-1.5 uppercase tracking-widest">
-                  <span className="text-blue-800/60 text-[10px]">Pontos de Mana</span>
-                  <span className="text-blue-800/80">{m ? `${m.pmCurrent} / ${m.pmMax}` : `${p!.pmCurrent ?? 0} / ${p!.pmMax}`}</span>
+                  <span className="text-blue-500/60 text-[10px]">Pontos de Mana</span>
+                  <span className="text-blue-500/80">{m ? `${m.pmCurrent} / ${m.pmMax}` : `${p!.pmCurrent ?? 0} / ${p!.pmMax}`}</span>
                 </div>
-                <div className="h-2.5 bg-[#fbf5e6] border border-amber-900/10 rounded-full overflow-hidden shadow-inner">
+                <div className="h-2.5 bg-[rgb(var(--bg-inset-rgb))] border border-amber-900/10 rounded-full overflow-hidden shadow-inner">
                   <div className="h-full rounded-full bg-blue-700 transition-all duration-500" style={{ width: `${pmPct}%` }} />
                 </div>
               </div>
@@ -487,7 +488,7 @@ function ParticipantCard({ participant, isActive, onUpdate, onEdit, onRemove, on
                 onChange={(e) => setDmgInput(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && applyDamage()}
                 className={ic} />
-              <button onClick={applyDamage} className="px-4 py-2 bg-red-800 text-[#fbf5e6] rounded-lg text-xs uppercase tracking-widest font-black hover:bg-red-900 hover:-translate-y-0.5 transition-all shadow-sm">Dano</button>
+              <button onClick={applyDamage} className="px-4 py-2 bg-red-800 text-white rounded-lg text-xs uppercase tracking-widest font-black hover:bg-red-900 hover:-translate-y-0.5 transition-all shadow-sm">Dano</button>
             </div>
             <div className="flex items-center gap-2">
               <input type="number" min="0" placeholder="0" value={healInput}
@@ -499,7 +500,7 @@ function ParticipantCard({ participant, isActive, onUpdate, onEdit, onRemove, on
             <button
               onClick={() => setShowCondSelector((v) => !v)}
               className={`px-4 py-2 rounded-lg border-2 text-xs uppercase tracking-widest font-bold transition-all shadow-sm ${
-                showCondSelector ? "border-red-800/40 bg-red-800/10 text-red-900" : "bg-[#fbf5e6] border-amber-900/20 text-amber-950/60 hover:border-amber-700/50 hover:text-amber-950"
+                showCondSelector ? "border-red-800/40 bg-red-800/10 text-red-900" : "bg-[rgb(var(--bg-inset-rgb))] border-amber-900/20 text-amber-950/60 hover:border-amber-700/50 hover:text-amber-950"
               }`}
             >{showCondSelector ? "▲ Ocultar" : "+ Condição"}</button>
           </div>
@@ -508,12 +509,12 @@ function ParticipantCard({ participant, isActive, onUpdate, onEdit, onRemove, on
         {/* Controles de PM (monstros com PM, ou jogadores com PM preenchido) */}
         {((m && m.pmMax > 0) || playerHasMp) && (
           <div className="flex items-center gap-3 mb-4">
-            <span className="text-[10px] uppercase tracking-widest text-blue-800/60 font-bold">PM</span>
+            <span className="text-[10px] uppercase tracking-widest text-blue-500/60 font-bold">PM</span>
             <div className="flex items-center gap-1.5">
               <input type="number" min="0" placeholder="0" value={pmInput}
                 onChange={(e) => setPmInput(e.target.value)}
                 onKeyDown={(e) => { if (e.key === "Enter") spendPm(); }}
-                className="w-16 bg-[#fbf5e6] border-2 border-blue-800/20 rounded-lg px-2 py-1.5 text-amber-950 font-serif text-sm font-bold focus:outline-none focus:border-blue-700/50 text-center shadow-sm transition-all" />
+                className="w-16 bg-[rgb(var(--bg-inset-rgb))] border-2 border-blue-800/20 rounded-lg px-2 py-1.5 text-amber-950 font-serif text-sm font-bold focus:outline-none focus:border-blue-700/50 text-center shadow-sm transition-all" />
               <button onClick={spendPm} className="px-3 py-1.5 bg-blue-800 text-white rounded-lg text-xs uppercase tracking-widest font-black hover:bg-blue-900 hover:-translate-y-0.5 transition-all shadow-sm">−PM</button>
               <button onClick={restorePm} className="px-3 py-1.5 bg-blue-600 text-white rounded-lg text-xs uppercase tracking-widest font-black hover:bg-blue-700 hover:-translate-y-0.5 transition-all shadow-sm">+PM</button>
             </div>
@@ -525,7 +526,7 @@ function ParticipantCard({ participant, isActive, onUpdate, onEdit, onRemove, on
             <button
               onClick={() => setShowCondSelector((v) => !v)}
               className={`px-4 py-2 rounded-lg border-2 text-xs uppercase tracking-widest font-bold transition-all shadow-sm ${
-                showCondSelector ? "border-red-800/40 bg-red-800/10 text-red-900" : "bg-[#fbf5e6] border-amber-900/20 text-amber-950/60 hover:border-amber-700/50 hover:text-amber-950"
+                showCondSelector ? "border-red-800/40 bg-red-800/10 text-red-900" : "bg-[rgb(var(--bg-inset-rgb))] border-amber-900/20 text-amber-950/60 hover:border-amber-700/50 hover:text-amber-950"
               }`}
             >{showCondSelector ? "▲ Ocultar" : "+ Condição"}</button>
           </div>
@@ -544,16 +545,16 @@ function ParticipantCard({ participant, isActive, onUpdate, onEdit, onRemove, on
                 const canUse = cost === null || m.pmCurrent >= cost;
                 const rest = hab.replace(title, "").replace(/^[\s:]+|^\.\s*/, "").trim();
                 return (
-                  <div key={i} className="flex items-start gap-3 group bg-[#fbf5e6]/50 p-2.5 rounded-xl border border-amber-900/5 hover:border-amber-900/20 transition-colors">
+                  <div key={i} className="flex items-start gap-3 group bg-[rgb(var(--bg-inset-rgb))]/50 p-2.5 rounded-xl border border-amber-900/5 hover:border-amber-900/20 transition-colors">
                     <button
                       onClick={() => useAbility(hab)}
                       disabled={cost !== null && !canUse}
                       className={`shrink-0 mt-0.5 px-3 py-1.5 rounded-lg text-[10px] uppercase tracking-widest font-black border-2 transition-all shadow-sm ${
                         cost !== null
                           ? canUse
-                            ? "bg-blue-700/10 border-blue-700/30 text-blue-900 hover:bg-blue-700/20 hover:border-blue-700/50 cursor-pointer"
-                            : "bg-[#e8dac1] border-amber-900/10 text-amber-950/30 cursor-not-allowed"
-                          : "bg-[#fbf5e6] border-amber-900/20 text-amber-950/60 hover:border-red-800/40 hover:text-red-800 cursor-pointer"
+                            ? "bg-blue-700/10 border-blue-700/30 text-blue-500 hover:bg-blue-700/20 hover:border-blue-700/50 cursor-pointer"
+                            : "bg-[rgb(var(--bg-card-rgb))] border-amber-900/10 text-amber-950/30 cursor-not-allowed"
+                          : "bg-[rgb(var(--bg-inset-rgb))] border-amber-900/20 text-amber-950/60 hover:border-red-800/40 hover:text-red-800 cursor-pointer"
                       }`}
                     >{cost !== null ? `−${cost} PM` : "Usar"}</button>
                     <div className="flex-1 min-w-0 pt-0.5">
@@ -597,7 +598,7 @@ function CustomMonsterForm({ onAdd, onOpenWizard }: { onAdd: (m: MonsterParticip
   const [t, setT] = useState<Threat>(blankThreat());
   const [ini, setIni] = useState(0);
 
-  const fc = "w-full bg-[#fbf5e6] border-2 border-amber-900/20 rounded-lg px-3 py-2 text-amber-950 font-serif text-sm focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm";
+  const fc = "w-full bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-lg px-3 py-2 text-amber-950 font-serif text-sm focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm";
   const lc = "text-[10px] uppercase tracking-widest text-amber-950/60 font-bold mb-1 block";
 
   const handleAdd = () => {
@@ -620,7 +621,7 @@ function CustomMonsterForm({ onAdd, onOpenWizard }: { onAdd: (m: MonsterParticip
           <span>🧙</span> Assistente Guiado
         </button>
         <button onClick={() => setOpen(true)}
-          className="flex-1 py-3 border-2 border-dashed border-amber-900/30 text-amber-950/60 bg-[#fbf5e6]/50 rounded-xl text-xs uppercase tracking-widest font-bold hover:border-amber-700/50 hover:text-amber-950 hover:bg-[#fbf5e6] transition-all">
+          className="flex-1 py-3 border-2 border-dashed border-amber-900/30 text-amber-950/60 bg-[rgb(var(--bg-inset-rgb))]/50 rounded-xl text-xs uppercase tracking-widest font-bold hover:border-amber-700/50 hover:text-amber-950 hover:bg-[rgb(var(--bg-inset-rgb))] transition-all">
           + Manual Rápido
         </button>
       </div>
@@ -628,7 +629,7 @@ function CustomMonsterForm({ onAdd, onOpenWizard }: { onAdd: (m: MonsterParticip
   }
 
   return (
-    <div className="mt-4 bg-[#e8dac1] border-2 border-amber-900/20 rounded-xl p-5 shadow-sm space-y-4 font-serif">
+    <div className="mt-4 bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/20 rounded-xl p-5 shadow-sm space-y-4 font-serif">
       <div className="flex items-center justify-between border-b-2 border-amber-900/10 pb-3 mb-2">
         <p className="text-base font-bold text-red-800 tracking-wide flex items-center gap-2"><span>☠</span> Novo Monstro (Manual)</p>
         <button onClick={() => setOpen(false)} className="text-amber-950/40 hover:text-red-800 text-xl leading-none transition-colors">✕</button>
@@ -664,7 +665,7 @@ function CustomMonsterForm({ onAdd, onOpenWizard }: { onAdd: (m: MonsterParticip
         />
       </div>
       <button onClick={handleAdd} disabled={!t.name.trim()}
-        className="w-full py-3 mt-2 bg-red-800 text-[#fbf5e6] rounded-xl font-bold uppercase tracking-widest text-xs hover:bg-red-900 hover:-translate-y-0.5 transition-all shadow-md disabled:opacity-40 disabled:hover:translate-y-0 disabled:cursor-not-allowed">
+        className="w-full py-3 mt-2 bg-red-800 text-white rounded-xl font-bold uppercase tracking-widest text-xs hover:bg-red-900 hover:-translate-y-0.5 transition-all shadow-md disabled:opacity-40 disabled:hover:translate-y-0 disabled:cursor-not-allowed">
         Adicionar ao Combate
       </button>
     </div>
@@ -689,9 +690,9 @@ function CreatureSelector({ quantities, onChangeQuantity, extra = [], onAdjust }
     <div className="flex flex-col gap-3 font-serif mt-2">
       <input type="text" placeholder="Buscar criatura na biblioteca..." value={search}
         onChange={(e) => setSearch(e.target.value)}
-        className="w-full px-4 py-2.5 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-xl text-amber-950 placeholder-amber-900/40 focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 text-sm transition-all shadow-sm"
+        className="w-full px-4 py-2.5 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-xl text-amber-950 placeholder-amber-900/40 focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 text-sm transition-all shadow-sm"
       />
-      <div className="h-72 overflow-y-auto space-y-1.5 pr-2 custom-scrollbar border-2 border-amber-900/10 p-2 rounded-xl bg-[#e8dac1]/50">
+      <div className="h-72 overflow-y-auto space-y-1.5 pr-2 custom-scrollbar border-2 border-amber-900/10 p-2 rounded-xl bg-[rgb(var(--bg-card-rgb))]/50">
         {filtered.map((t) => {
           const qty = quantities.get(t.id) ?? 0;
           return (
@@ -699,20 +700,20 @@ function CreatureSelector({ quantities, onChangeQuantity, extra = [], onAdjust }
               className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg border-2 transition-all text-sm shadow-sm ${
                 qty > 0
                   ? "bg-red-800/10 border-red-800/40 text-red-900"
-                  : "bg-[#fbf5e6] border-amber-900/10 text-amber-950/85 hover:border-amber-900/30 hover:bg-[#f5e6d0]"
+                  : "bg-[rgb(var(--bg-inset-rgb))] border-amber-900/10 text-amber-950/85 hover:border-amber-900/30 hover:bg-[rgb(var(--bg-rgb))]"
               }`}
             >
               <span className="font-bold flex-1 truncate min-w-0">{t.name}</span>
               <div className="flex items-center gap-1.5 shrink-0">
                 {extra.some((e) => e.id === t.id) && (
-                  <span className="text-[9px] font-bold uppercase tracking-widest text-emerald-800 bg-emerald-700/15 border border-emerald-700/30 px-1.5 py-0.5 rounded">xlsx</span>
+                  <span className="text-[9px] font-bold uppercase tracking-widest text-emerald-500 bg-emerald-700/15 border border-emerald-700/30 px-1.5 py-0.5 rounded">xlsx</span>
                 )}
-                <span className="text-[10px] font-bold uppercase tracking-widest text-amber-950/50 bg-[#e8dac1] px-2 py-0.5 rounded">ND {t.nd}</span>
+                <span className="text-[10px] font-bold uppercase tracking-widest text-amber-950/50 bg-[rgb(var(--bg-card-rgb))] px-2 py-0.5 rounded">ND {t.nd}</span>
                 <button onClick={() => onAdjust(t)} title="Ajustar de forma guiada"
-                  className="w-6 h-6 flex items-center justify-center rounded-md border border-amber-900/15 bg-[#fbf5e6] text-amber-950/40 hover:text-red-800 hover:border-red-800/40 transition-all text-xs">
+                  className="w-6 h-6 flex items-center justify-center rounded-md border border-amber-900/15 bg-[rgb(var(--bg-inset-rgb))] text-amber-950/40 hover:text-red-800 hover:border-red-800/40 transition-all text-xs">
                   🧙
                 </button>
-                <div className="flex items-center gap-1 bg-[#fbf5e6] border border-amber-900/20 rounded-md overflow-hidden">
+                <div className="flex items-center gap-1 bg-[rgb(var(--bg-inset-rgb))] border border-amber-900/20 rounded-md overflow-hidden">
                   <button onClick={() => onChangeQuantity(t.id, -1)} disabled={qty === 0}
                     className="w-6 h-6 flex items-center justify-center text-amber-950/60 hover:text-red-800 hover:bg-red-800/10 disabled:opacity-30 disabled:cursor-not-allowed transition-all text-sm font-bold">−</button>
                   <span className={`w-6 text-center text-xs font-black ${qty > 0 ? "text-red-800" : "text-amber-950/30"}`}>{qty}</span>
@@ -1004,22 +1005,25 @@ export default function CombatePage() {
   const totalThreatQuantity = Array.from(threatQuantities.values()).reduce((sum, q) => sum + q, 0);
 
   return (
-    <div className="min-h-screen bg-[#f5e6d0] text-amber-950 font-serif selection:bg-amber-800 selection:text-amber-50 relative overflow-x-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#f5e6d0] to-[#e6d5b8]">
-      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(69,26,3,0.15)_100%)]" />
+    <div className="min-h-screen bg-[rgb(var(--bg-rgb))] text-amber-950 font-serif selection:bg-amber-800 selection:text-amber-50 relative overflow-x-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[rgb(var(--bg-rgb))] to-[rgb(var(--bg-edge-rgb))]">
+      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(var(--bg-rgb),0.15)_100%)]" />
 
-      <header className="relative z-10 w-full p-6 border-b-4 border-double border-amber-900/40 bg-[#e8dac1]/90 backdrop-blur-md shadow-sm mb-8 md:mb-12 sticky top-0 font-serif">
+      <header className="relative z-10 w-full p-6 border-b-4 border-double border-amber-900/40 bg-[rgb(var(--bg-card-rgb))]/90 backdrop-blur-md shadow-sm mb-8 md:mb-12 sticky top-0 font-serif">
         <div className="max-w-screen-2xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
           <Link href="/" className="inline-block group self-start md:self-auto">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-700 via-red-800 to-red-950 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: "0 1px 2px rgba(69,26,3,0.1)" }}>
+            <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-700 via-red-800 to-red-950 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: "0 0 28px rgba(127,29,29,0.3)" }}>
               a-Tormenta
             </h1>
           </Link>
-          <div className="flex items-center gap-2 flex-wrap text-xs sm:text-sm font-bold tracking-widest uppercase self-end md:self-auto">
-            <Link href="/" className="text-amber-950/70 hover:text-red-800 transition-colors whitespace-nowrap">Início</Link>
-            <span className="text-amber-900/40">/</span>
-            <Link href="/ameacas" className="text-amber-950/70 hover:text-red-800 transition-colors whitespace-nowrap">Ameaças</Link>
-            <span className="text-amber-900/40">/</span>
-            <span className="text-red-800 whitespace-nowrap">Combate</span>
+          <div className="flex items-center gap-3 self-end md:self-auto">
+            <div className="font-display flex items-center gap-2 flex-wrap text-xs sm:text-sm font-bold tracking-widest uppercase">
+              <Link href="/" className="text-amber-950/70 hover:text-red-800 transition-colors whitespace-nowrap">Início</Link>
+              <span className="text-amber-900/40">/</span>
+              <Link href="/ameacas" className="text-amber-950/70 hover:text-red-800 transition-colors whitespace-nowrap">Ameaças</Link>
+              <span className="text-amber-900/40">/</span>
+              <span className="text-red-800 whitespace-nowrap">Combate</span>
+            </div>
+            <ThemeToggle />
           </div>
         </div>
       </header>
@@ -1041,7 +1045,7 @@ export default function CombatePage() {
               <div className="space-y-8 min-w-0">
 
                 {/* Jogadores */}
-                <div className="bg-[#e8dac1]/50 border-2 border-amber-900/20 rounded-2xl p-6 md:p-8 shadow-sm">
+                <div className="bg-[rgb(var(--bg-card-rgb))]/50 border-2 border-amber-900/20 rounded-2xl p-6 md:p-8 shadow-sm">
                   <h3 className="text-2xl font-bold text-red-800 mb-2 tracking-wide flex items-center gap-3">
                     <span className="text-red-800/60 text-2xl">⚔</span> Jogadores
                   </h3>
@@ -1052,7 +1056,7 @@ export default function CombatePage() {
                       <input type="text" placeholder="Ex: Khalmyr" value={newPlayerName}
                         onChange={(e) => setNewPlayerName(e.target.value)}
                         onKeyDown={(e) => e.key === "Enter" && addPlayer()}
-                        className="w-full px-4 py-2.5 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-xl text-amber-950 placeholder-amber-900/40 font-serif text-sm focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
+                        className="w-full px-4 py-2.5 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-xl text-amber-950 placeholder-amber-900/40 font-serif text-sm focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
                       />
                     </div>
                     <div>
@@ -1060,7 +1064,7 @@ export default function CombatePage() {
                       <input type="number" placeholder="d20 + Bônus" value={newPlayerIni}
                         onChange={(e) => setNewPlayerIni(e.target.value)}
                         onKeyDown={(e) => e.key === "Enter" && addPlayer()}
-                        className="w-full px-4 py-2.5 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-xl text-amber-950 placeholder-amber-900/40 font-serif text-sm focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
+                        className="w-full px-4 py-2.5 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-xl text-amber-950 placeholder-amber-900/40 font-serif text-sm focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
                       />
                     </div>
                     <div>
@@ -1068,7 +1072,7 @@ export default function CombatePage() {
                       <input type="number" placeholder="Ex: 32" value={newPlayerPv}
                         onChange={(e) => setNewPlayerPv(e.target.value)}
                         onKeyDown={(e) => e.key === "Enter" && addPlayer()}
-                        className="w-full px-4 py-2.5 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-xl text-amber-950 placeholder-amber-900/40 font-serif text-sm focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
+                        className="w-full px-4 py-2.5 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-xl text-amber-950 placeholder-amber-900/40 font-serif text-sm focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
                       />
                     </div>
                     <div>
@@ -1076,17 +1080,17 @@ export default function CombatePage() {
                       <input type="number" placeholder="Ex: 18" value={newPlayerPm}
                         onChange={(e) => setNewPlayerPm(e.target.value)}
                         onKeyDown={(e) => e.key === "Enter" && addPlayer()}
-                        className="w-full px-4 py-2.5 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-xl text-amber-950 placeholder-amber-900/40 font-serif text-sm focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
+                        className="w-full px-4 py-2.5 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-xl text-amber-950 placeholder-amber-900/40 font-serif text-sm focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
                       />
                     </div>
                   </div>
-                  <button onClick={addPlayer} className="w-full py-3 mt-4 bg-[#fbf5e6] text-amber-950/70 border-2 border-amber-900/20 rounded-xl font-bold text-xs uppercase tracking-widest hover:border-red-800/40 hover:text-red-800 hover:bg-[#e8dac1] transition-all shadow-sm">
+                  <button onClick={addPlayer} className="w-full py-3 mt-4 bg-[rgb(var(--bg-inset-rgb))] text-amber-950/70 border-2 border-amber-900/20 rounded-xl font-bold text-xs uppercase tracking-widest hover:border-red-800/40 hover:text-red-800 hover:bg-[rgb(var(--bg-card-rgb))] transition-all shadow-sm">
                     + Adicionar Jogador
                   </button>
                 </div>
 
                 {/* Ameaças */}
-                <div className="bg-[#e8dac1]/50 border-2 border-amber-900/20 rounded-2xl p-6 md:p-8 shadow-sm">
+                <div className="bg-[rgb(var(--bg-card-rgb))]/50 border-2 border-amber-900/20 rounded-2xl p-6 md:p-8 shadow-sm">
                   <h3 className="text-2xl font-bold text-red-800 mb-2 tracking-wide flex items-center gap-3">
                     <span className="text-red-800/60 text-2xl">☠</span> Ameaças
                   </h3>
@@ -1105,7 +1109,7 @@ export default function CombatePage() {
                     <input ref={xlsxInputRef} type="file" accept=".xlsx,.xls" onChange={handleXlsxImport} className="hidden" />
                     <button
                       onClick={() => xlsxInputRef.current?.click()}
-                      className="flex-1 py-2.5 flex items-center justify-center gap-2 border-2 border-dashed border-amber-700/40 text-amber-950/60 bg-[#fbf5e6]/60 rounded-xl text-xs font-bold uppercase tracking-widest hover:border-red-800/50 hover:text-red-800 hover:bg-[#fbf5e6] transition-all shadow-sm"
+                      className="flex-1 py-2.5 flex items-center justify-center gap-2 border-2 border-dashed border-amber-700/40 text-amber-950/60 bg-[rgb(var(--bg-inset-rgb))]/60 rounded-xl text-xs font-bold uppercase tracking-widest hover:border-red-800/50 hover:text-red-800 hover:bg-[rgb(var(--bg-inset-rgb))] transition-all shadow-sm"
                     >
                       📥 Importar Planilha
                     </button>
@@ -1113,7 +1117,7 @@ export default function CombatePage() {
                       href="/criaturas_tormenta.xlsx"
                       download
                       title="Baixar modelo de planilha"
-                      className="py-2.5 px-4 flex items-center justify-center gap-1.5 border-2 border-amber-900/20 text-amber-950/50 bg-[#fbf5e6]/60 rounded-xl text-xs font-bold uppercase tracking-widest hover:border-emerald-700/50 hover:text-emerald-800 hover:bg-[#fbf5e6] transition-all shadow-sm whitespace-nowrap"
+                      className="py-2.5 px-4 flex items-center justify-center gap-1.5 border-2 border-amber-900/20 text-amber-950/50 bg-[rgb(var(--bg-inset-rgb))]/60 rounded-xl text-xs font-bold uppercase tracking-widest hover:border-emerald-700/50 hover:text-emerald-500 hover:bg-[rgb(var(--bg-inset-rgb))] transition-all shadow-sm whitespace-nowrap"
                     >
                       📄 Modelo
                     </a>
@@ -1125,8 +1129,8 @@ export default function CombatePage() {
                   )}
                   {importedThreats.length > 0 && (
                     <div className="flex items-center justify-between px-3 py-2 bg-emerald-700/10 border border-emerald-700/25 rounded-xl mb-4">
-                      <span className="text-emerald-800 text-xs font-bold">✓ {importedThreats.length} criatura{importedThreats.length > 1 ? "s" : ""} adicionada{importedThreats.length > 1 ? "s" : ""} à biblioteca</span>
-                      <button onClick={() => { setImportedThreats([]); setThreatQuantities((prev) => { const next = new Map(prev); importedThreats.forEach((t) => next.delete(t.id)); return next; }); }} className="text-emerald-800/50 hover:text-red-800 text-xs font-bold ml-3">✕ Limpar</button>
+                      <span className="text-emerald-500 text-xs font-bold">✓ {importedThreats.length} criatura{importedThreats.length > 1 ? "s" : ""} adicionada{importedThreats.length > 1 ? "s" : ""} à biblioteca</span>
+                      <button onClick={() => { setImportedThreats([]); setThreatQuantities((prev) => { const next = new Map(prev); importedThreats.forEach((t) => next.delete(t.id)); return next; }); }} className="text-emerald-500/50 hover:text-red-800 text-xs font-bold ml-3">✕ Limpar</button>
                     </div>
                   )}
 
@@ -1144,26 +1148,26 @@ export default function CombatePage() {
 
               {/* ── COLUNA DIREITA: lista consolidada sempre visível ─────── */}
               <div className="lg:sticky lg:top-28 space-y-4">
-                <div className="bg-[#2a1810] rounded-2xl shadow-xl border border-amber-900/40 flex flex-col max-h-[calc(100vh-180px)]">
+                <div className="bg-[rgb(var(--void-rgb))] rounded-2xl shadow-xl border border-amber-900/40 flex flex-col max-h-[calc(100vh-180px)]">
                   <div className="p-5 border-b-2 border-red-900/30">
                     <h3 className="text-sm font-bold uppercase tracking-widest text-red-400 flex items-center gap-2">
                       <span>📋</span> Participantes do Combate
                     </h3>
-                    <p className="text-[11px] text-[#fbf5e6]/40 mt-1">{playersAdded.length} jogador{playersAdded.length !== 1 ? "es" : ""} · {totalThreatQuantity + customMonsters.length} criatura{(totalThreatQuantity + customMonsters.length) !== 1 ? "s" : ""}</p>
+                    <p className="text-[11px] text-white/40 mt-1">{playersAdded.length} jogador{playersAdded.length !== 1 ? "es" : ""} · {totalThreatQuantity + customMonsters.length} criatura{(totalThreatQuantity + customMonsters.length) !== 1 ? "s" : ""}</p>
                   </div>
 
                   <div className="overflow-y-auto custom-scrollbar p-4 space-y-2 flex-1">
                     {/* Jogadores na lista */}
                     {playersAdded.map((pl) => (
-                      <div key={pl.id} className="flex items-center justify-between gap-2 px-3 py-2.5 bg-[#1f100a] rounded-lg border border-amber-900/20">
+                      <div key={pl.id} className="flex items-center justify-between gap-2 px-3 py-2.5 bg-[rgb(var(--void-rgb))] rounded-lg border border-amber-900/20">
                         <div className="flex items-center gap-2 min-w-0">
                           <span className="text-base shrink-0">⚔</span>
                           <div className="min-w-0">
-                            <p className="text-sm font-bold text-[#fbf5e6] truncate">{pl.name}</p>
-                            <p className="text-[10px] text-[#fbf5e6]/40">INI {pl.initiativeRoll}{pl.pvMax ? ` · ${pl.pvMax} PV` : ""}{pl.pmMax ? ` · ${pl.pmMax} PM` : ""}</p>
+                            <p className="text-sm font-bold text-white truncate">{pl.name}</p>
+                            <p className="text-[10px] text-white/40">INI {pl.initiativeRoll}{pl.pvMax ? ` · ${pl.pvMax} PV` : ""}{pl.pmMax ? ` · ${pl.pmMax} PM` : ""}</p>
                           </div>
                         </div>
-                        <button onClick={() => setParticipants((prev) => prev.filter((x) => x.id !== pl.id))} className="text-[#fbf5e6]/30 hover:text-red-400 text-sm w-6 h-6 flex items-center justify-center shrink-0">✕</button>
+                        <button onClick={() => setParticipants((prev) => prev.filter((x) => x.id !== pl.id))} className="text-white/30 hover:text-red-400 text-sm w-6 h-6 flex items-center justify-center shrink-0">✕</button>
                       </div>
                     ))}
 
@@ -1173,19 +1177,19 @@ export default function CombatePage() {
                       const t = [...allThreats, ...importedThreats].find((x) => x.id === id);
                       if (!t) return null;
                       return (
-                        <div key={id} className="flex items-center justify-between gap-2 px-3 py-2.5 bg-[#1f100a] rounded-lg border border-amber-900/20">
+                        <div key={id} className="flex items-center justify-between gap-2 px-3 py-2.5 bg-[rgb(var(--void-rgb))] rounded-lg border border-amber-900/20">
                           <div className="flex items-center gap-2 min-w-0">
                             <span className="text-base shrink-0">☠</span>
                             <div className="min-w-0">
-                              <p className="text-sm font-bold text-[#fbf5e6] truncate">{t.name}</p>
-                              <p className="text-[10px] text-[#fbf5e6]/40">ND {t.nd} · {t.tipo}</p>
+                              <p className="text-sm font-bold text-white truncate">{t.name}</p>
+                              <p className="text-[10px] text-white/40">ND {t.nd} · {t.tipo}</p>
                             </div>
                           </div>
                           <div className="flex items-center gap-2 shrink-0">
-                            <div className="flex items-center gap-1 bg-[#2a1810] border border-amber-900/20 rounded-md overflow-hidden">
-                              <button onClick={() => changeThreatQuantity(id, -1)} className="w-5 h-5 flex items-center justify-center text-[#fbf5e6]/50 hover:text-red-400 text-xs font-bold">−</button>
+                            <div className="flex items-center gap-1 bg-[rgb(var(--void-rgb))] border border-amber-900/20 rounded-md overflow-hidden">
+                              <button onClick={() => changeThreatQuantity(id, -1)} className="w-5 h-5 flex items-center justify-center text-white/50 hover:text-red-400 text-xs font-bold">−</button>
                               <span className="w-5 text-center text-xs font-black text-red-400">{qty}</span>
-                              <button onClick={() => changeThreatQuantity(id, 1)} className="w-5 h-5 flex items-center justify-center text-[#fbf5e6]/50 hover:text-emerald-400 text-xs font-bold">+</button>
+                              <button onClick={() => changeThreatQuantity(id, 1)} className="w-5 h-5 flex items-center justify-center text-white/50 hover:text-emerald-400 text-xs font-bold">+</button>
                             </div>
                           </div>
                         </div>
@@ -1194,24 +1198,24 @@ export default function CombatePage() {
 
                     {/* Monstros personalizados */}
                     {customMonsters.map((cm) => (
-                      <div key={cm.id} className="flex items-center justify-between gap-2 px-3 py-2.5 bg-[#1f100a] rounded-lg border border-red-900/30">
+                      <div key={cm.id} className="flex items-center justify-between gap-2 px-3 py-2.5 bg-[rgb(var(--void-rgb))] rounded-lg border border-red-900/30">
                         <div className="flex items-center gap-2 min-w-0">
                           <span className="text-base shrink-0">☠</span>
                           <div className="min-w-0">
                             <p className="text-sm font-bold text-red-400 truncate">{cm.name}</p>
-                            <p className="text-[10px] text-[#fbf5e6]/40">{cm.pvMax} PV · ND {cm.threat.nd} · Personalizado</p>
+                            <p className="text-[10px] text-white/40">{cm.pvMax} PV · ND {cm.threat.nd} · Personalizado</p>
                           </div>
                         </div>
                         <div className="flex items-center gap-1.5 shrink-0">
-                          <button onClick={() => openAdjustWizard(cm.threat)} title="Ajustar" className="w-6 h-6 flex items-center justify-center rounded-md border border-amber-900/20 bg-[#2a1810] text-[#fbf5e6]/50 hover:text-red-400 transition-all text-xs">🧙</button>
-                          <button onClick={() => setCustomMonsters((prev) => prev.filter((x) => x.id !== cm.id))} className="text-[#fbf5e6]/30 hover:text-red-400 text-sm w-6 h-6 flex items-center justify-center">✕</button>
+                          <button onClick={() => openAdjustWizard(cm.threat)} title="Ajustar" className="w-6 h-6 flex items-center justify-center rounded-md border border-amber-900/20 bg-[rgb(var(--void-rgb))] text-white/50 hover:text-red-400 transition-all text-xs">🧙</button>
+                          <button onClick={() => setCustomMonsters((prev) => prev.filter((x) => x.id !== cm.id))} className="text-white/30 hover:text-red-400 text-sm w-6 h-6 flex items-center justify-center">✕</button>
                         </div>
                       </div>
                     ))}
 
                     {!playersAdded.length && totalThreatQuantity === 0 && !customMonsters.length && (
                       <div className="text-center py-10">
-                        <p className="text-[#fbf5e6]/30 italic text-sm">Nada adicionado ainda.</p>
+                        <p className="text-white/30 italic text-sm">Nada adicionado ainda.</p>
                       </div>
                     )}
                   </div>
@@ -1220,7 +1224,7 @@ export default function CombatePage() {
                     <button
                       onClick={goToRolling}
                       disabled={playersAdded.length === 0 && totalThreatQuantity === 0 && customMonsters.length === 0}
-                      className="w-full py-3.5 bg-red-800 text-[#fbf5e6] rounded-xl font-black text-sm tracking-widest uppercase hover:bg-red-700 hover:-translate-y-0.5 transition-all shadow-lg disabled:opacity-30 disabled:hover:translate-y-0 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                      className="w-full py-3.5 bg-red-800 text-white rounded-xl font-black text-sm tracking-widest uppercase hover:bg-red-700 hover:-translate-y-0.5 transition-all shadow-lg disabled:opacity-30 disabled:hover:translate-y-0 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                     >
                       Rolar Iniciativas <span>→</span>
                     </button>
@@ -1238,24 +1242,24 @@ export default function CombatePage() {
               <h2 className="text-4xl sm:text-5xl font-bold text-red-800 mb-4 drop-shadow-sm tracking-wider">Iniciativas</h2>
               <p className="text-amber-950/85 font-medium text-lg">Confirme e ajuste o resultado final de cada participante.</p>
             </div>
-            <div className="space-y-4 mb-10 bg-[#e8dac1]/50 p-6 md:p-8 rounded-2xl border-2 border-amber-900/20 shadow-sm">
+            <div className="space-y-4 mb-10 bg-[rgb(var(--bg-card-rgb))]/50 p-6 md:p-8 rounded-2xl border-2 border-amber-900/20 shadow-sm">
               {participants.map((p) => {
                 const bonus = p.type === "monster" ? (p as MonsterParticipant).threat.iniciativa : null;
                 return (
-                  <div key={p.id} className="flex items-center gap-4 bg-[#fbf5e6] border-2 border-amber-900/10 rounded-xl p-4 md:p-5 shadow-sm hover:border-amber-900/30 transition-colors">
-                    <span className={`w-12 h-12 rounded-full flex items-center justify-center text-xl shrink-0 border-2 shadow-sm ${p.type === "monster" ? "bg-red-800 text-[#fbf5e6] border-red-900" : "bg-[#e8dac1] text-amber-950/60 border-amber-900/20"}`}>
+                  <div key={p.id} className="flex items-center gap-4 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/10 rounded-xl p-4 md:p-5 shadow-sm hover:border-amber-900/30 transition-colors">
+                    <span className={`w-12 h-12 rounded-full flex items-center justify-center text-xl shrink-0 border-2 shadow-sm ${p.type === "monster" ? "bg-red-800 text-white border-red-900" : "bg-[rgb(var(--bg-card-rgb))] text-amber-950/60 border-amber-900/20"}`}>
                       {p.type === "monster" ? "☠" : "⚔"}
                     </span>
                     <div className="flex-1 min-w-0">
                       <div className="font-bold text-amber-950 text-lg md:text-xl truncate tracking-wide">{p.name}</div>
-                      {bonus !== null && <div className="text-[10px] md:text-xs text-amber-950/50 font-bold uppercase tracking-widest mt-1 bg-[#e8dac1] inline-block px-2 py-0.5 rounded border border-amber-900/10">Bônus original: {bonus >= 0 ? "+" : ""}{bonus}</div>}
+                      {bonus !== null && <div className="text-[10px] md:text-xs text-amber-950/50 font-bold uppercase tracking-widest mt-1 bg-[rgb(var(--bg-card-rgb))] inline-block px-2 py-0.5 rounded border border-amber-900/10">Bônus original: {bonus >= 0 ? "+" : ""}{bonus}</div>}
                     </div>
-                    <div className="flex flex-col items-center gap-1 shrink-0 bg-[#e8dac1]/50 p-2 rounded-lg border border-amber-900/10">
+                    <div className="flex flex-col items-center gap-1 shrink-0 bg-[rgb(var(--bg-card-rgb))]/50 p-2 rounded-lg border border-amber-900/10">
                       <span className="text-[10px] text-amber-950/60 font-bold uppercase tracking-widest">Total</span>
                       <input type="number"
                         value={rollValues[p.id] ?? 0}
                         onChange={(e) => setRollValues((prev) => ({ ...prev, [p.id]: parseInt(e.target.value) || 0 }))}
-                        className="w-16 md:w-20 text-center px-2 py-1.5 bg-[#fbf5e6] border-2 border-amber-900/30 rounded-md font-black text-lg md:text-xl text-red-800 focus:outline-none focus:border-red-800/60 focus:ring-1 focus:ring-red-800/50 shadow-inner"
+                        className="w-16 md:w-20 text-center px-2 py-1.5 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/30 rounded-md font-black text-lg md:text-xl text-red-800 focus:outline-none focus:border-red-800/60 focus:ring-1 focus:ring-red-800/50 shadow-inner"
                       />
                     </div>
                   </div>
@@ -1264,11 +1268,11 @@ export default function CombatePage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-between items-center border-t-2 border-amber-900/10 pt-8">
               <button onClick={() => { setParticipants((prev) => prev.filter((p) => p.type === "player")); setPhase("setup"); }}
-                className="w-full sm:w-auto px-8 py-3.5 border-2 border-amber-900/30 bg-[#e8dac1] rounded-xl font-bold text-amber-950/70 hover:border-red-800/50 hover:text-red-800 transition-all uppercase tracking-widest text-sm">
+                className="w-full sm:w-auto px-8 py-3.5 border-2 border-amber-900/30 bg-[rgb(var(--bg-card-rgb))] rounded-xl font-bold text-amber-950/70 hover:border-red-800/50 hover:text-red-800 transition-all uppercase tracking-widest text-sm">
                 ← Voltar
               </button>
               <button onClick={startCombat}
-                className="w-full sm:w-auto px-10 py-3.5 bg-red-800 text-[#fbf5e6] rounded-xl font-black text-sm tracking-widest uppercase hover:bg-red-900 hover:-translate-y-1 transition-all shadow-lg flex items-center justify-center gap-3">
+                className="w-full sm:w-auto px-10 py-3.5 bg-red-800 text-white rounded-xl font-black text-sm tracking-widest uppercase hover:bg-red-900 hover:-translate-y-1 transition-all shadow-lg flex items-center justify-center gap-3">
                 <span className="text-xl">⚔</span> Iniciar Combate
               </button>
             </div>
@@ -1278,23 +1282,23 @@ export default function CombatePage() {
         {/* ── COMBAT ────────────────────────────────────────────── */}
         {phase === "combat" && (
           <div className="flex flex-col gap-8">
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 bg-[#2a1810] text-[#fbf5e6] rounded-2xl p-6 md:p-8 shadow-2xl border-b-4 border-red-800 sticky top-28 z-40">
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 bg-[rgb(var(--void-rgb))] text-white rounded-2xl p-6 md:p-8 shadow-2xl border-b-4 border-red-800 sticky top-28 z-40">
               <div className="flex items-center gap-6 md:gap-10">
-                <div className="flex flex-col items-center bg-[#1f100a] px-5 py-3 rounded-xl border border-red-900/30 shadow-inner">
+                <div className="flex flex-col items-center bg-[rgb(var(--void-rgb))] px-5 py-3 rounded-xl border border-red-900/30 shadow-inner">
                   <div className="text-[10px] uppercase tracking-widest text-red-400 font-bold mb-1">Rodada</div>
-                  <div className="text-4xl md:text-5xl font-black text-[#fbf5e6] drop-shadow-md">{round}</div>
+                  <div className="text-4xl md:text-5xl font-black text-white drop-shadow-md">{round}</div>
                 </div>
-                <div className="w-px h-16 bg-gradient-to-b from-transparent via-[#fbf5e6]/20 to-transparent hidden sm:block" />
+                <div className="w-px h-16 bg-gradient-to-b from-transparent via-[rgb(var(--bg-inset-rgb))]/20 to-transparent hidden sm:block" />
                 <div className="flex flex-col">
-                  <div className="text-[10px] md:text-xs uppercase tracking-widest text-[#fbf5e6]/50 font-bold mb-1">Turno Atual</div>
+                  <div className="text-[10px] md:text-xs uppercase tracking-widest text-white/50 font-bold mb-1">Turno Atual</div>
                   <div className="text-2xl md:text-3xl font-bold text-red-400 tracking-wide">{participants[activeIndex]?.name ?? "—"}</div>
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row w-full md:w-auto gap-3">
-                <button onClick={nextTurn} className="w-full sm:w-auto px-8 py-3.5 bg-red-800 hover:bg-red-700 text-[#fbf5e6] font-black tracking-widest uppercase rounded-xl transition-all shadow-[0_0_15px_rgba(153,27,27,0.4)] hover:shadow-[0_0_25px_rgba(153,27,27,0.6)] text-xs md:text-sm flex items-center justify-center gap-2">
+                <button onClick={nextTurn} className="w-full sm:w-auto px-8 py-3.5 bg-red-800 hover:bg-red-700 text-white font-black tracking-widest uppercase rounded-xl transition-all shadow-[0_0_15px_rgba(153,27,27,0.4)] hover:shadow-[0_0_25px_rgba(153,27,27,0.6)] text-xs md:text-sm flex items-center justify-center gap-2">
                   Encerrar Turno <span>→</span>
                 </button>
-                <button onClick={endCombat} className="w-full sm:w-auto px-6 py-3.5 border-2 border-[#fbf5e6]/10 bg-[#1f100a] text-[#fbf5e6]/60 hover:text-red-400 hover:border-red-900/50 font-bold uppercase tracking-widest rounded-xl transition-all text-xs md:text-sm">
+                <button onClick={endCombat} className="w-full sm:w-auto px-6 py-3.5 border-2 border-[rgb(var(--bg-inset-rgb))]/10 bg-[rgb(var(--void-rgb))] text-white/60 hover:text-red-400 hover:border-red-900/50 font-bold uppercase tracking-widest rounded-xl transition-all text-xs md:text-sm">
                   Encerrar Luta
                 </button>
               </div>
@@ -1314,17 +1318,17 @@ export default function CombatePage() {
                   </div>
                 ))}
               </div>
-              <div className="bg-[#2a1810] rounded-2xl p-6 shadow-xl sticky top-64 border border-amber-900/40">
+              <div className="bg-[rgb(var(--void-rgb))] rounded-2xl p-6 shadow-xl sticky top-64 border border-amber-900/40">
                 <h3 className="text-xs uppercase tracking-widest text-red-400 font-bold mb-4 border-b-2 border-red-900/30 pb-3 flex items-center gap-2">
                   Log de Combate
                 </h3>
                 <div className="space-y-3 max-h-[55vh] overflow-y-auto custom-scrollbar pr-2">
                   {log.map((entry, i) => (
-                    <div key={i} className={`text-xs md:text-sm font-medium leading-relaxed font-serif p-2.5 rounded-lg ${i === 0 ? "bg-[#1f100a] text-[#fbf5e6] border border-red-900/30 shadow-sm" : "text-[#fbf5e6]/50 border border-transparent"}`}>
+                    <div key={i} className={`text-xs md:text-sm font-medium leading-relaxed font-serif p-2.5 rounded-lg ${i === 0 ? "bg-[rgb(var(--void-rgb))] text-white border border-red-900/30 shadow-sm" : "text-white/50 border border-transparent"}`}>
                       {entry}
                     </div>
                   ))}
-                  {!log.length && <p className="text-sm text-[#fbf5e6]/30 italic font-serif p-4 text-center">Nenhum evento registrado ainda.</p>}
+                  {!log.length && <p className="text-sm text-white/30 italic font-serif p-4 text-center">Nenhum evento registrado ainda.</p>}
                 </div>
               </div>
             </div>
@@ -1335,20 +1339,20 @@ export default function CombatePage() {
 
       {/* Barra flutuante inferior — apenas durante o combate */}
       {phase === "combat" && (
-        <div className="fixed bottom-0 left-0 right-0 z-50 flex items-center justify-between gap-4 px-6 py-3 bg-[#1f100a]/95 backdrop-blur-md border-t-2 border-red-900/40 shadow-2xl">
+        <div className="fixed bottom-0 left-0 right-0 z-50 flex items-center justify-between gap-4 px-6 py-3 bg-[rgb(var(--void-rgb))]/95 backdrop-blur-md border-t-2 border-red-900/40 shadow-2xl">
           <div className="flex items-center gap-4 min-w-0">
-            <div className="flex flex-col items-center bg-[#2a1810] px-4 py-1.5 rounded-lg border border-red-900/30 shrink-0">
+            <div className="flex flex-col items-center bg-[rgb(var(--void-rgb))] px-4 py-1.5 rounded-lg border border-red-900/30 shrink-0">
               <span className="text-[9px] uppercase tracking-widest text-red-400/70 font-bold">Rodada</span>
-              <span className="text-xl font-black text-[#fbf5e6]">{round}</span>
+              <span className="text-xl font-black text-white">{round}</span>
             </div>
             <div className="min-w-0">
-              <span className="text-[9px] uppercase tracking-widest text-[#fbf5e6]/40 font-bold block">Turno de</span>
+              <span className="text-[9px] uppercase tracking-widest text-white/40 font-bold block">Turno de</span>
               <span className="text-sm font-bold text-red-400 truncate block">{participants[activeIndex]?.name ?? "—"}</span>
             </div>
           </div>
           <button
             onClick={nextTurn}
-            className="shrink-0 px-6 py-2.5 bg-red-800 hover:bg-red-700 text-[#fbf5e6] font-black tracking-widest uppercase rounded-xl transition-all shadow-lg text-xs flex items-center gap-2"
+            className="shrink-0 px-6 py-2.5 bg-red-800 hover:bg-red-700 text-white font-black tracking-widest uppercase rounded-xl transition-all shadow-lg text-xs flex items-center gap-2"
           >
             Próximo Turno →
           </button>
@@ -1383,9 +1387,9 @@ export default function CombatePage() {
         />
       )}
 
-      <footer className="relative z-10 mt-20 p-8 border-t-4 border-double border-amber-900/40 bg-[#2a1810] text-center font-serif text-[#e8dac1]/60 text-sm flex flex-col items-center justify-center">
+      <footer className="relative z-10 mt-20 p-8 border-t-4 border-double border-amber-900/40 bg-[rgb(var(--void-rgb))] text-center text-white/60 text-sm flex flex-col items-center justify-center">
         <span className="text-red-900/40 text-2xl mb-3">❖</span>
-        <p className="mb-2 tracking-widest uppercase font-bold text-xs md:text-sm">Compêndio Tormenta RPG © 2026 • Feito por um fã para fãs</p>
+        <p className="font-display mb-2 tracking-widest uppercase font-bold text-xs md:text-sm">Compêndio Tormenta RPG © 2026 • Feito por um fã para fãs</p>
         <p className="text-xs tracking-wide opacity-50">Tormenta 20 pertence a Jambo Editora. Todos os direitos são reservados a editora.</p>
       </footer>
     </div>
