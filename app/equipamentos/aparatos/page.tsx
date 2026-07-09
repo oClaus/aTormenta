@@ -4,10 +4,30 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import { aparatos } from "@/data/aparatos";
 import { Gear } from "@/types/gear";
+import ThemeToggle from "@/components/ThemeToggle";
+
+function SearchGlyph({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true" className={className}>
+      <circle cx="10" cy="10" r="6.5" />
+      <path d="M19 19l-4.5-4.5" />
+    </svg>
+  );
+}
+
+function PageGlyph({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className={className}>
+      <path d="M6 3h9l4 4v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" />
+      <path d="M15 3v4h4" />
+      <path d="M8.5 11h7M8.5 14h7M8.5 17h4" />
+    </svg>
+  );
+}
 
 // --- Componentes Auxiliares ---
 
-// 2. Componente para a Tabela Filtrável de Equipamentos
+// Componente para a Tabela Filtrável de Equipamentos (Estilo Pergaminho)
 const GearFilterableTable = ({ allGear }: { allGear: Gear[] }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -15,7 +35,7 @@ const GearFilterableTable = ({ allGear }: { allGear: Gear[] }) => {
     let filtered = allGear;
     const lowerCaseSearch = searchTerm.toLowerCase();
 
-    // 1. Filtrar por Nome ou Descrição
+    // 1. Filtrar por Nome, Origem ou Descrição
     if (lowerCaseSearch) {
       filtered = filtered.filter(item =>
         item.name.toLowerCase().includes(lowerCaseSearch) ||
@@ -29,52 +49,75 @@ const GearFilterableTable = ({ allGear }: { allGear: Gear[] }) => {
   }, [allGear, searchTerm]);
 
   return (
-    <div className="space-y-6 w-full">
-      {/* Barra de Busca - Fundo mais escuro (#dcc8a9) */}
-      <div className="p-4 rounded bg-[#dcc8a9] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)]">
+    <div className="space-y-6 w-full relative">
+
+      {/* Barra de Busca - ESTILO CAIXA PADRÃO */}
+      <div className="mb-8 p-6 rounded-xl bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)]">
+        <label className="font-display block text-sm font-bold text-amber-950/70 mb-3 uppercase tracking-widest">
+            Buscar Aparato
+        </label>
         <div className="relative">
           <input
             type="text"
             placeholder="Buscar equipamento por nome ou descrição..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            // Input com fundo bege médio (#efe5d5)
-            className="w-full px-5 py-3 bg-[#efe5d5] border-2 border-amber-900/20 rounded text-amber-950 placeholder-amber-900/50 focus:outline-none focus:border-amber-800 focus:ring-1 focus:ring-amber-800 transition-all font-serif shadow-sm"
+            className="w-full px-5 py-3 pr-12 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-lg text-amber-950/85 placeholder-amber-900/40 focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
           />
-          <div className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/50">
-              🔍
-          </div>
+          {searchTerm ? (
+            <button
+              onClick={() => setSearchTerm("")}
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-red-800 font-bold hover:scale-110 transition-transform text-lg"
+              title="Limpar busca"
+            >
+              ✕
+            </button>
+          ) : (
+            <SearchGlyph className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/40 pointer-events-none" />
+          )}
         </div>
+        {searchTerm && (
+          <p className="text-xs font-medium text-amber-950/70 mt-3 italic tracking-wide">
+            Exibindo {filteredGear.length} resultado(s) para "{searchTerm}".
+          </p>
+        )}
       </div>
 
       {/* Tabela de Equipamentos */}
-      <div className="overflow-x-auto rounded border-2 border-amber-900/40 shadow-lg w-full">
-        <table className="min-w-full divide-y divide-amber-900/20 text-left font-serif">
-          {/* Header mais escuro (#c4b090) */}
-          <thead className="bg-[#c4b090] text-amber-950 border-b-2 border-amber-900/30">
+      <div className="overflow-x-auto rounded-xl border-2 border-amber-900/20 shadow-sm w-full bg-[rgb(var(--bg-card-rgb))]">
+        <table className="min-w-full divide-y-2 divide-amber-900/20 table-fixed font-serif">
+          <thead className="bg-[rgb(var(--bg-edge-rgb))] text-amber-950/80 border-b-2 border-amber-900/20">
             <tr>
-              <th scope="col" className="px-4 py-4 text-left text-xs font-bold uppercase tracking-wider border-r border-amber-900/20">Item</th>
-              <th scope="col" className="w-24 px-4 pr-4 py-4 text-right text-xs font-bold uppercase tracking-wider border-r border-amber-900/20">Preço</th>
-              <th scope="col" className="w-20 px-4 pr-4 py-4 text-center text-xs font-bold uppercase tracking-wider">Espaços</th>
+              <th scope="col" className="font-display w-[85%] px-4 py-4 text-left text-xs font-bold uppercase tracking-widest border-r-2 border-amber-900/20">Item</th>
+              <th scope="col" className="font-display w-[10%] px-4 py-4 text-center text-xs font-bold uppercase tracking-widest border-r-2 border-amber-900/20">Preço</th>
+              <th scope="col" className="font-display w-[5%] px-4 py-4 text-center text-xs font-bold uppercase tracking-widest">Espaços</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-amber-900/10">
-            {filteredGear.map((item, index) => (
-              // Alternância de cores suave: #e6dcc5 (par) e #dbcfb4 (ímpar)
-              <tr key={item.id} className={`transition-colors hover:bg-[#c9bb9e] ${index % 2 === 0 ? "bg-[#e6dcc5]" : "bg-[#dbcfb4]"}`}>
-                <td className="px-4 py-3 text-sm font-medium text-amber-950 border-r border-amber-900/20 align-top">
-                  <div className="font-bold text-amber-900 font-serif text-lg">{item.name}</div>
-                  <div className="text-sm text-amber-900/90 break-words font-serif italic mt-1">{item.description}</div>
-                  <div className="mt-2 text-xs text-amber-800 font-bold uppercase tracking-widest opacity-80">{item.origin}</div>
-                </td>
-                <td className="w-24 px-4 pr-4 py-3 text-right text-sm text-red-900 font-bold font-serif align-top border-r border-amber-900/20">{item.price}</td>
-                <td className="w-20 px-4 pr-4 py-3 text-center text-sm text-amber-950 font-serif align-top">{item.spaces}</td>
-              </tr>
-            ))}
+          <tbody className="divide-y divide-amber-900/10 bg-[rgb(var(--bg-inset-rgb))]">
+            {filteredGear.map((item, index) => {
+               const rowClass = index % 2 === 0 ? "bg-[rgb(var(--bg-inset-rgb))]" : "bg-[rgb(var(--bg-card-rgb))]/30";
+
+               return (
+                <tr key={item.id} className={`${rowClass} hover:bg-[rgb(var(--bg-card-rgb))]/60 transition-colors group`}>
+                  <td className="px-4 py-4 border-r-2 border-amber-900/10 align-top">
+                    <div className="font-display font-bold text-amber-950 text-lg group-hover:text-red-800 transition-colors">{item.name}</div>
+                    <div className="text-sm text-amber-950/85 break-words font-serif font-medium mt-1 leading-relaxed">{item.description}</div>
+                    <div className="font-display mt-4 text-[10px] inline-block px-2 py-1 rounded bg-[rgb(var(--bg-inset-rgb))] border border-amber-900/20 text-amber-950/70 uppercase tracking-widest shadow-sm font-bold">
+                        {item.origin}
+                    </div>
+                  </td>
+                  <td className="px-4 py-4 text-center text-sm text-red-800 font-bold font-serif align-middle border-r-2 border-amber-900/10">{item.price}</td>
+                  <td className="px-4 py-4 text-center text-sm text-amber-950/85 font-serif font-medium align-middle">{item.spaces}</td>
+                </tr>
+               )
+            })}
           </tbody>
         </table>
         {filteredGear.length === 0 && (
-          <div className="text-center py-12 text-amber-900/70 bg-[#e6dcc5] border-t border-amber-900/20 italic">Nenhum equipamento encontrado com os filtros aplicados.</div>
+          <div className="text-center py-12 text-amber-950/70 bg-[rgb(var(--bg-inset-rgb))] italic text-lg border-t-2 border-amber-900/20 flex flex-col items-center gap-3">
+            <PageGlyph className="text-amber-950/40" />
+            Nenhum aparato encontrado com os filtros aplicados.
+          </div>
         )}
       </div>
     </div>
@@ -84,64 +127,120 @@ const GearFilterableTable = ({ allGear }: { allGear: Gear[] }) => {
 
 // --- Página Principal ---
 
-export default function GearPage() {
+export default function AparatosPage() {
+  const [isIntroOpen, setIsIntroOpen] = useState(false);
+
   return (
-    // Fundo escurecido #e0d2b4
-    <div className="min-h-screen bg-[#e0d2b4] text-amber-950 font-serif selection:bg-amber-900 selection:text-amber-100 relative overflow-x-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#e0d2b4] to-[#cbbba0]">
+    <div className="min-h-screen bg-[rgb(var(--bg-rgb))] text-amber-950 font-serif selection:bg-amber-800 selection:text-amber-50 relative overflow-x-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[rgb(var(--bg-rgb))] to-[rgb(var(--bg-edge-rgb))]">
 
       {/* Background Effect */}
-      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(60,30,10,0.10)_100%)]" />
+      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(var(--bg-rgb),0.15)_100%)]" />
 
-      {/* Header */}
-      <header className="relative z-10 w-full p-6 border-b-4 border-double border-amber-900/40 bg-[#d6c6aa]/95 backdrop-blur-md shadow-md">
-        <div className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4">
-            <Link href="/" className="inline-block group">
-                <h1 className="text-4xl font-bold tracking-wider uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-800 via-red-900 to-black drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 1px 2px rgba(69,26,3,0.1)' }}>
+      {/* Header Responsivo */}
+      <header className="relative z-10 w-full p-6 border-b-4 border-double border-amber-900/40 bg-[rgb(var(--bg-card-rgb))]/90 backdrop-blur-md shadow-sm mb-8 md:mb-12 sticky top-0">
+        <div className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4 max-w-screen-2xl mx-auto">
+            <Link href="/" className="inline-block group self-start md:self-auto">
+                <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-700 via-red-800 to-red-950 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 0 28px rgba(127,29,29,0.3)' }}>
                     a-Tormenta
                 </h1>
             </Link>
-            <div className="flex items-center gap-3 text-sm font-bold tracking-wide uppercase">
-                <Link href="/" className="text-amber-900/70 hover:text-red-800 transition-colors">
-                    Início
-                </Link>
-                <span className="text-amber-900/40">/</span>
-                <Link href="/equipamentos" className="text-amber-900/70 hover:text-red-800 transition-colors">
-                    Equipamentos
-                </Link>
-                <span className="text-amber-900/40">/</span>
-                <span className="text-red-900">Aparatos</span>
+            <div className="flex items-center gap-3 self-end md:self-auto">
+              <div className="font-display flex items-center gap-2 flex-wrap text-xs sm:text-sm font-bold tracking-widest uppercase">
+                  <Link href="/" className="text-amber-950/70 hover:text-red-800 transition-colors whitespace-nowrap">
+                      Início
+                  </Link>
+                  <span className="text-amber-900/40">/</span>
+                  <Link href="/equipamentos" className="text-amber-950/70 hover:text-red-800 transition-colors whitespace-nowrap">
+                      Equipamentos
+                  </Link>
+                  <span className="text-amber-900/40">/</span>
+                  <span className="text-red-800 whitespace-nowrap">Aparatos</span>
+              </div>
+              <ThemeToggle />
             </div>
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="relative z-10 w-full px-6 py-12">
+      <main className="relative z-10 w-full px-6 py-12 max-w-screen-2xl mx-auto">
 
-        {/* Seção de Texto Introdutório */}
-        <section className="mb-12 p-8 bg-[#dcc8a9]/60 rounded border border-amber-900/30 shadow-sm w-full">
-      
-        <div className="space-y-4 text-amber-950 leading-relaxed font-serif">
-          <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-900 via-amber-800 to-red-900 mb-4 drop-shadow-sm">
-            Aparatos
-          </h1>
-          <p className="text-amber-900/90 text-lg font-medium italic">
-           Aparatos são itens utilizados por inventores para modificar o funcionamento de suas engenhocas. Um aparato é acoplado a uma engenhoca e, enquanto estiver acoplado, não ocupa espaços. Cada engenhoca pode ter até dois aparatos diferentes. Usar um aparato aumenta a CD para ativar a engenhoca em +2. Usar dois aparatos aumenta em +5. Certos aparatos podem ser acoplados a mais de uma engenhoca. Nesses casos, você paga o custo de um único aparato, mas ele conta no limite (e no modificador da CD de ativação) de cada uma das engenhocas às quais estiver acoplado. Acoplar ou remover um aparato exige 1 hora de trabalho. Aparatos são fabricados com Ofício (engenhoqueiro) e a CD para fabricá-los é 20.
-        </p>
-
+        {/* Título Principal */}
+        <div className="mb-10 md:mb-12 w-full flex flex-col items-start">
+            <h1 className="font-display text-4xl sm:text-5xl font-bold text-red-800 mb-3 drop-shadow-sm tracking-wider" style={{ textShadow: '0 0 28px rgba(127,29,29,0.3)' }}>
+                Aparatos
+            </h1>
+            <div className="flex items-center gap-3 w-full mb-6">
+              <svg width="22" height="14" viewBox="0 0 22 14" fill="none" stroke="rgb(var(--accent-rgb))" strokeWidth="1" className="opacity-60 shrink-0">
+                <path d="M1 7c4-6 8-6 10 0s6 6 10 0" />
+                <circle cx="11" cy="7" r="1.4" fill="rgb(var(--accent-rgb))" stroke="none" />
+              </svg>
+              <div className="h-px max-w-36 flex-1 bg-gradient-to-r from-[rgba(var(--accent-rgb),0.55)] to-transparent" />
+            </div>
         </div>
-      </section>
 
-      {/* Tabela Completa e Filtrável */}
-      <section className="w-full">
-        <h2 className="text-3xl font-bold text-amber-900 mb-6 border-b border-amber-900/30 pb-2">Tabela Completa de Aparatos</h2>
-        <GearFilterableTable allGear={aparatos} />
-      </section>
-    </main>
-    {/* Footer */}
-    <footer className="mt-12 py-8 border-t-4 border-double border-amber-900/40 bg-[#2a231d] text-center text-amber-200/50 text-sm relative z-10 font-serif">
-        <p>Compêndio Tormenta RPG © 2025 • Feito por um fã para fãs</p>
-        <p>Tormenta 20 pertence a Jambo Editora. Todos os direitos são reservados a editora.</p>
-    </footer>
+        {/* Acordeão de Regras */}
+        <div className="mb-12 w-full">
+          <button
+            onClick={() => setIsIntroOpen(!isIntroOpen)}
+            className="w-full flex items-center justify-between p-6 bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/30 rounded-t-xl hover:border-red-800/40 transition-all group shadow-sm"
+          >
+            <div className="flex items-center gap-3">
+              <PageGlyph className="text-red-800/70 shrink-0 mt-1" />
+              <div className="text-left">
+                <h2 className="font-display text-xl font-bold text-amber-950 group-hover:text-red-800 transition-colors uppercase tracking-wide">
+                  Regras de Aparatos
+                </h2>
+                <p className="text-sm text-amber-950/70 italic font-bold">
+                  Clique para expandir informações sobre funcionamento e acoplagem.
+                </p>
+              </div>
+            </div>
+            <span className={`text-red-800 text-2xl transition-transform duration-300 ${isIntroOpen ? 'rotate-180' : ''}`}>
+              ▼
+            </span>
+          </button>
+
+          <div className={`overflow-hidden transition-all duration-500 ease-in-out border-x-2 border-b-2 border-amber-900/30 rounded-b-xl bg-[rgb(var(--bg-inset-rgb))] ${isIntroOpen ? 'max-h-[8000px] opacity-100' : 'max-h-0 opacity-0 border-transparent'}`}>
+            <div className="p-5 md:p-10 font-serif text-amber-950/85 text-base md:text-lg text-left md:text-justify leading-relaxed flex flex-col gap-6">
+
+              <section>
+                <p className="font-medium text-lg leading-relaxed">
+                  Aparatos são itens utilizados por inventores para modificar o funcionamento de suas engenhocas. Um aparato é acoplado a uma engenhoca e, enquanto estiver acoplado, não ocupa espaços. Cada engenhoca pode ter até dois aparatos diferentes.
+                </p>
+                <p className="font-medium text-lg leading-relaxed mt-4">
+                  Usar um aparato aumenta a CD para ativar a engenhoca em <strong className="text-red-800">+2</strong>. Usar dois aparatos aumenta em <strong className="text-red-800">+5</strong>. Certos aparatos podem ser acoplados a mais de uma engenhoca. Nesses casos, você paga o custo de um único aparato, mas ele conta no limite (e no modificador da CD de ativação) de cada uma das engenhocas às quais estiver acoplado.
+                </p>
+                <div className="mt-6 p-6 bg-[rgb(var(--bg-card-rgb))]/50 rounded-xl border border-amber-900/20 shadow-sm border-l-4 border-l-red-800">
+                    <p className="font-bold text-amber-950 italic">
+                        Acoplar ou remover um aparato exige 1 hora de trabalho. Aparatos são fabricados com Ofício (engenhoqueiro) e a CD para fabricá-los é <span className="text-red-800 text-xl not-italic">20</span>.
+                    </p>
+                </div>
+              </section>
+
+            </div>
+          </div>
+        </div>
+
+        {/* Tabela Completa e Filtrável */}
+        <section className="w-full">
+            <h2 className="font-display text-3xl font-bold text-red-800 mb-6 flex items-center gap-3 tracking-wide border-b-2 border-amber-900/10 pb-2">
+                <span className="text-red-800 text-3xl">❖</span> Acervo de Aparatos
+            </h2>
+            <GearFilterableTable allGear={aparatos} />
+        </section>
+
+      </main>
+
+      {/* Footer */}
+      <footer className="relative z-10 mt-20 p-8 border-t-4 border-double border-amber-900/40 bg-[rgb(var(--void-rgb))] text-center shadow-[0_-4px_20px_rgba(0,0,0,0.15)] flex flex-col items-center justify-center">
+        <span className="text-red-900/40 text-2xl mb-3">❖</span>
+        <p className="font-display mb-2 text-white/60 text-sm md:text-base tracking-widest uppercase font-bold">
+          Compêndio Tormenta RPG © 2026 • Feito por um fã para fãs
+        </p>
+        <p className="text-white/40 text-xs md:text-sm tracking-wide">
+          Tormenta 20 pertence a Jambo Editora. Todos os direitos são reservados a editora.
+        </p>
+      </footer>
     </div>
   );
 }
