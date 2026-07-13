@@ -88,39 +88,43 @@ const InitialMoneyTable = ({ data }: { data: InitialMoneyEntry[] }) => {
   );
 };
 
-// Componente para o Card de Categoria (Grid)
+// Componente para o Card de Categoria (Grid) — alinhado ao padrão visual dos cards de Poderes
 const CategoryCard = ({ category }: { category: EquipmentCategory }) => {
   const IconComponent = category.icon;
 
   return (
     <Link
       href={category.href}
-      className="card-grain group relative flex flex-col items-start p-6 rounded-xl bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/30 transition-all duration-300 hover:border-red-800/50 hover:-translate-y-1 hover:shadow-[0_4px_20px_rgba(153,27,27,0.15)] font-serif"
+      className="card-grain group relative mt-6 rounded-md bg-[radial-gradient(ellipse_at_50%_0%,rgba(var(--accent-rgb),0.07),transparent_60%),rgb(var(--bg-card-rgb))] border border-amber-900/20 outline outline-1 outline-offset-4 outline-amber-900/5 p-5 md:p-6 hover:border-[rgb(var(--accent-rgb))]/55 transition-all duration-300 hover:shadow-[0_8px_30px_rgba(var(--accent-rgb),0.18)] flex flex-col h-full hover:-translate-y-1 shadow-sm"
     >
-      <CornerOrnament className="absolute -top-px -left-px z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
-      <CornerOrnament className="absolute -top-px -right-px z-10 rotate-90 opacity-0 group-hover:opacity-100 transition-opacity" />
-      <CornerOrnament className="absolute -bottom-px -right-px z-10 rotate-180 opacity-0 group-hover:opacity-100 transition-opacity" />
-      <CornerOrnament className="absolute -bottom-px -left-px z-10 -rotate-90 opacity-0 group-hover:opacity-100 transition-opacity" />
+      <CornerOrnament className="absolute -top-px -left-px opacity-50 group-hover:opacity-100 transition-opacity" />
+      <CornerOrnament className="absolute -top-px -right-px rotate-90 opacity-50 group-hover:opacity-100 transition-opacity" />
+      <CornerOrnament className="absolute -bottom-px -right-px rotate-180 opacity-50 group-hover:opacity-100 transition-opacity" />
+      <CornerOrnament className="absolute -bottom-px -left-px -rotate-90 opacity-50 group-hover:opacity-100 transition-opacity" />
 
-      {/* Container do Ícone com Efeito */}
-      <div className="mb-5 p-3 rounded-lg bg-[rgb(var(--bg-inset-rgb))] border border-amber-900/20 group-hover:border-red-800/30 transition-colors shadow-sm">
-        <IconComponent
-          className="w-8 h-8 md:w-10 md:h-10 text-amber-900/70 group-hover:text-red-800 transition-all duration-300 group-hover:scale-110"
-          strokeWidth={1.5}
-        />
-      </div>
+      <div className="relative z-10 flex flex-col h-full items-center text-center">
+        <div className="mb-4 p-3 rounded-lg bg-[rgb(var(--bg-inset-rgb))] border border-amber-900/20 group-hover:border-red-800/30 transition-colors shadow-sm">
+          <IconComponent
+            className="w-8 h-8 md:w-10 md:h-10 text-amber-900/70 group-hover:text-red-800 transition-all duration-300 group-hover:scale-110"
+            strokeWidth={1.5}
+          />
+        </div>
 
-      <h3 className="font-display text-xl md:text-2xl font-bold text-red-800 mb-2 group-hover:text-red-700 transition-colors tracking-wide break-words">
-        {category.title}
-      </h3>
+        <h3 className="font-display text-lg font-bold text-red-800 mb-3 group-hover:text-red-700 transition-colors tracking-wide break-words">
+          {category.title}
+        </h3>
 
-      <p className="text-amber-950/80 text-sm font-medium leading-relaxed line-clamp-3">
-        {category.description}
-      </p>
+        <div className="flex-1 mb-4">
+          <p className="text-amber-950/70 leading-relaxed text-sm">
+            {category.description}
+          </p>
+        </div>
 
-      {/* Indicador de clique suave (Seta) */}
-      <div className="absolute bottom-6 right-6 text-amber-900/30 group-hover:text-red-800 text-xl font-bold transition-colors">
-         →
+        <div className="relative flex items-center justify-center pt-4 w-full border-t border-amber-900/15 group-hover:border-[rgb(var(--accent-rgb))]/30 transition-colors">
+          <span className="absolute right-0 text-red-800 opacity-0 group-hover:opacity-100 transition-opacity text-lg font-bold">
+            →
+          </span>
+        </div>
       </div>
     </Link>
   );
@@ -138,10 +142,10 @@ export default function EquipamentosPage() {
 
       {/* Header Responsivo */}
       <header className="relative z-10 w-full p-6 border-b-4 border-double border-amber-900/40 bg-[rgb(var(--bg-card-rgb))]/90 backdrop-blur-md shadow-sm mb-8 md:mb-12 sticky top-0 font-serif">
-        <div className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4 max-w-screen-2xl mx-auto">
+        <div className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4">
 
             <Link href="/" className="inline-block group self-start md:self-auto">
-                <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-700 via-red-800 to-red-950 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 0 28px rgba(127,29,29,0.3)' }}>
+                <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-700 via-red-800 to-red-950 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 1px 2px rgba(var(--bg-rgb),0.1)' }}>
                     a-Tormenta
                 </h1>
             </Link>
@@ -167,7 +171,7 @@ export default function EquipamentosPage() {
             <h1 className="font-display text-4xl sm:text-5xl font-bold text-red-800 mb-3 drop-shadow-sm tracking-wider" style={{ textShadow: '0 0 28px rgba(127,29,29,0.3)' }}>
             Equipamentos
             </h1>
-            <div className="flex items-center gap-3 w-full mb-6">
+            <div className="flex items-center gap-3 w-full">
               <svg width="22" height="14" viewBox="0 0 22 14" fill="none" stroke="rgb(var(--accent-rgb))" strokeWidth="1" className="opacity-60 shrink-0">
                 <path d="M1 7c4-6 8-6 10 0s6 6 10 0" />
                 <circle cx="11" cy="7" r="1.4" fill="rgb(var(--accent-rgb))" stroke="none" />
@@ -447,7 +451,7 @@ export default function EquipamentosPage() {
             <h2 className="font-display text-2xl md:text-3xl font-bold text-amber-950 mb-6 flex items-center gap-3 tracking-wide">
                 <span className="text-red-800 text-3xl">❖</span> Categorias
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-x-6 gap-y-10 items-stretch w-full">
                 {[...equipmentCategories]
                   .sort((a, b) => a.title.localeCompare(b.title))
                   .map((category) => (

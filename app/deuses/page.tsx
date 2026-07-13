@@ -23,6 +23,23 @@ function godBadgeClass(status: GodStatus | undefined): string {
   }
 }
 
+// Variante "hex-badge" (inspirada no badge de origem de Poderes) usada nos
+// cards da grade: borda + texto colorido sobre fundo neutro, em vez de um
+// bloco sólido cheio.
+function godBadgeAccent(status: GodStatus | undefined): string {
+  switch (status) {
+    case "caido":
+      return "border-red-800/40 text-red-800";
+    case "crossover":
+      return "border-yellow-600/50 text-yellow-700";
+    case "menor":
+      return "border-emerald-700/40 text-emerald-800";
+    case "normal":
+    default:
+      return "border-violet-600/40 text-violet-700"; // Panteão
+  }
+}
+
 function CornerOrnament({ className = "" }: { className?: string }) {
   return (
     <svg viewBox="0 0 32 32" width="26" height="26" fill="none" aria-hidden="true" className={className}>
@@ -396,10 +413,10 @@ export default function DeusesPage() {
       <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(var(--bg-rgb),0.15)_100%)]" />
 
       {/* Header */}
-      <header className="relative z-10 w-full p-6 border-b-4 border-double border-amber-900/40 bg-[rgb(var(--bg-card-rgb))]/90 backdrop-blur-md shadow-sm mb-8 md:mb-12 sticky top-0">
+      <header className="relative z-10 w-full p-6 border-b-4 border-double border-amber-900/40 bg-[rgb(var(--bg-card-rgb))]/90 backdrop-blur-md shadow-sm mb-8 md:mb-12 sticky top-0 font-serif">
         <div className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4">
           <Link href="/" className="inline-block group self-start md:self-auto">
-            <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-700 via-red-800 to-red-950 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 0 28px rgba(127,29,29,0.3)' }}>
+            <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-700 via-red-800 to-red-950 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 1px 2px rgba(var(--bg-rgb),0.1)' }}>
               a-Tormenta
             </h1>
           </Link>
@@ -436,22 +453,35 @@ export default function DeusesPage() {
         <RulesSection />
 
         {/* Busca */}
-        <div className="mb-12 p-6 rounded-xl bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] w-full">
-          <div className="flex flex-col">
-            <label className="font-display block text-sm font-bold text-amber-950/70 mb-3 uppercase tracking-widest">
-              Buscar Divindade
-            </label>
-            <div className="relative flex items-center">
-              <input
-                type="text"
-                placeholder="Buscar por nome ou doutrinas..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-5 py-3 pr-12 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-lg text-amber-950/85 placeholder-amber-900/40 focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
-              />
-              <SearchGlyph className="absolute right-4 text-amber-900/40 pointer-events-none" />
-            </div>
+        <div className="mb-12 p-6 rounded-xl bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] w-full font-serif">
+          <label className="font-display block text-sm font-bold text-amber-950/70 mb-3 uppercase tracking-widest">
+            Buscar Divindade
+          </label>
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Buscar por nome ou doutrinas..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full px-5 py-3 pr-12 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-lg text-amber-950/85 placeholder-amber-900/40 focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
+            />
+            {searchTerm ? (
+              <button
+                onClick={() => setSearchTerm("")}
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-red-800 font-bold hover:scale-110 transition-transform text-lg"
+                title="Limpar busca"
+              >
+                ✕
+              </button>
+            ) : (
+              <SearchGlyph className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/40" />
+            )}
           </div>
+          {searchTerm && (
+            <p className="text-xs font-medium text-amber-950/70 mt-3 italic tracking-wide">
+              Exibindo {filteredGods.length} resultado(s) para "{searchTerm}".
+            </p>
+          )}
         </div>
 
         {/* Grid de Deuses */}
@@ -460,12 +490,12 @@ export default function DeusesPage() {
             <button
               key={god.id}
               onClick={() => setSelectedGod(god)}
-              className="card-grain group relative mt-6 rounded-md bg-[rgb(var(--bg-card-rgb))] border border-amber-900/20 hover:border-[rgb(var(--accent-rgb))]/55 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgba(var(--accent-rgb),0.18)] text-left flex flex-col"
+              className="card-grain group relative mt-6 rounded-md bg-[radial-gradient(ellipse_at_50%_0%,rgba(var(--accent-rgb),0.07),transparent_60%),rgb(var(--bg-card-rgb))] border border-amber-900/20 outline outline-1 outline-offset-4 outline-amber-900/5 hover:border-[rgb(var(--accent-rgb))]/55 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(var(--accent-rgb),0.18)] text-left flex flex-col shadow-sm"
             >
-              <CornerOrnament className="absolute -top-px -left-px z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
-              <CornerOrnament className="absolute -top-px -right-px z-10 rotate-90 opacity-0 group-hover:opacity-100 transition-opacity" />
-              <CornerOrnament className="absolute -bottom-px -right-px z-10 rotate-180 opacity-0 group-hover:opacity-100 transition-opacity" />
-              <CornerOrnament className="absolute -bottom-px -left-px z-10 -rotate-90 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <CornerOrnament className="absolute -top-px -left-px z-10 opacity-50 group-hover:opacity-100 transition-opacity" />
+              <CornerOrnament className="absolute -top-px -right-px z-10 rotate-90 opacity-50 group-hover:opacity-100 transition-opacity" />
+              <CornerOrnament className="absolute -bottom-px -right-px z-10 rotate-180 opacity-50 group-hover:opacity-100 transition-opacity" />
+              <CornerOrnament className="absolute -bottom-px -left-px z-10 -rotate-90 opacity-50 group-hover:opacity-100 transition-opacity" />
 
               {/* Imagem */}
               <div className="w-full h-56 rounded-t-md border-b border-amber-900/15 bg-[rgb(var(--portrait-rgb))] flex items-center justify-center relative overflow-hidden">
@@ -473,7 +503,7 @@ export default function DeusesPage() {
               </div>
 
               {/* Conteúdo do Card */}
-              <div className="p-5 flex-1 flex flex-col bg-[rgb(var(--bg-card-rgb))] rounded-b-md">
+              <div className="relative z-10 p-5 flex-1 flex flex-col rounded-b-md">
                 <h3 className="font-display text-xl sm:text-2xl font-bold text-amber-950 group-hover:text-red-800 transition-colors mb-2 tracking-wide break-words leading-tight">
                   {god.name}
                 </h3>
@@ -483,9 +513,11 @@ export default function DeusesPage() {
                   </p>
                 )}
                 {god.status && (
-                  <div className={`self-start px-2 py-1 rounded text-[10px] font-display font-bold uppercase tracking-widest text-white mb-4 shadow-sm ${godBadgeClass(god.status)}`}>
+                  <span
+                    className={`hex-badge self-start font-display text-[10px] font-bold uppercase tracking-widest px-3 py-1 bg-[rgb(var(--bg-inset-rgb))] border rounded-sm mb-4 shadow-sm ${godBadgeAccent(god.status)}`}
+                  >
                     {getStatusLabel(god.status)}
-                  </div>
+                  </span>
                 )}
                 <p className="text-amber-950/85 text-sm line-clamp-3 leading-relaxed font-medium">
                   {god.history}

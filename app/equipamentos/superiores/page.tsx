@@ -14,26 +14,46 @@ import {
   MaterialPriceRow,
   MaterialItemCategory
 } from "@/types/superior_item";
+import ThemeToggle from "@/components/ThemeToggle";
+
+function SearchGlyph({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true" className={className}>
+      <circle cx="10" cy="10" r="6.5" />
+      <path d="M19 19l-4.5-4.5" />
+    </svg>
+  );
+}
+
+function PageGlyph({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className={className}>
+      <path d="M6 3h9l4 4v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" />
+      <path d="M15 3v4h4" />
+      <path d="M8.5 11h7M8.5 14h7M8.5 17h4" />
+    </svg>
+  );
+}
 
 // --- Componentes Auxiliares ---
 
 // 1. Tabela de Preço de Melhorias (Tabela 3-7)
 const PriceTable = ({ data }: { data: PriceImprovement[] }) => (
-  <div className="overflow-x-auto shadow-sm rounded-xl border-2 border-amber-900/20 w-full bg-[#e8dac1]">
+  <div className="overflow-x-auto shadow-sm rounded-xl border-2 border-amber-900/20 w-full bg-[rgb(var(--bg-card-rgb))]">
     <table className="min-w-full divide-y-2 divide-amber-900/20">
-      <caption className="p-4 md:p-5 text-xl font-bold text-red-800 bg-[#e8dac1] border-b-2 border-amber-900/20 uppercase tracking-widest text-left font-serif">
+      <caption className="font-display p-4 md:p-5 text-xl font-bold text-red-800 bg-[rgb(var(--bg-card-rgb))] border-b-2 border-amber-900/20 uppercase tracking-widest text-left">
         Tabela: Preço de Melhorias
       </caption>
-      <thead className="bg-[#d9c8a9] text-amber-950/80 font-serif">
+      <thead className="bg-[rgb(var(--bg-edge-rgb))] text-amber-950/80 font-serif">
         <tr>
-          <th scope="col" className="px-4 py-3 text-center text-xs md:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">Número de Melhorias</th>
-          <th scope="col" className="px-4 py-3 text-center text-xs md:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">Aumento no Preço</th>
-          <th scope="col" className="px-4 py-3 text-center text-xs md:text-sm font-bold uppercase tracking-widest">Aumento na CD</th>
+          <th scope="col" className="font-display px-4 py-3 text-center text-xs md:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">Número de Melhorias</th>
+          <th scope="col" className="font-display px-4 py-3 text-center text-xs md:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">Aumento no Preço</th>
+          <th scope="col" className="font-display px-4 py-3 text-center text-xs md:text-sm font-bold uppercase tracking-widest">Aumento na CD</th>
         </tr>
       </thead>
       <tbody className="divide-y divide-amber-900/10 font-serif">
         {data.map((item, index) => (
-          <tr key={item.level} className={`transition-colors hover:bg-[#e8dac1]/50 ${index % 2 === 0 ? "bg-[#fbf5e6]" : "bg-[#e8dac1]/30"}`}>
+          <tr key={item.level} className={`transition-colors hover:bg-[rgb(var(--bg-card-rgb))]/50 ${index % 2 === 0 ? "bg-[rgb(var(--bg-inset-rgb))]" : "bg-[rgb(var(--bg-card-rgb))]/30"}`}>
             <td className="px-4 py-3 whitespace-nowrap text-base md:text-lg font-bold text-amber-950 text-center border-r-2 border-amber-900/10">{item.level}</td>
             <td className="px-4 py-3 whitespace-nowrap text-sm md:text-base text-red-800 font-bold text-center border-r-2 border-amber-900/10">{item.priceIncrease}</td>
             <td className="px-4 py-3 whitespace-nowrap text-sm md:text-base text-amber-950/85 font-medium text-center">{item.cdIncrease}</td>
@@ -92,8 +112,8 @@ const ImprovementTable = ({ allImprovements }: { allImprovements: Improvement[] 
     <div className="space-y-6">
        
       {/* Filtros e Busca agrupados num Card */}
-      <div className="mb-8 p-6 rounded-xl bg-[#e8dac1] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] font-serif w-full">
-        <label className="block text-sm font-bold text-amber-950/70 mb-4 uppercase tracking-widest">
+      <div className="mb-8 p-6 rounded-xl bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] w-full">
+        <label className="font-display block text-sm font-bold text-amber-950/70 mb-4 uppercase tracking-widest">
             Filtros e Busca
         </label>
         
@@ -104,7 +124,7 @@ const ImprovementTable = ({ allImprovements }: { allImprovements: Improvement[] 
                     placeholder="Buscar melhoria por nome, efeito ou descrição..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full px-5 py-3 pr-12 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-lg text-amber-950/85 placeholder-amber-900/40 focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
+                    className="w-full px-5 py-3 pr-12 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-lg text-amber-950/85 placeholder-amber-900/40 focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
                 />
                 {searchTerm ? (
                   <button 
@@ -115,21 +135,19 @@ const ImprovementTable = ({ allImprovements }: { allImprovements: Improvement[] 
                     ✕
                   </button>
                 ) : (
-                  <div className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/40 text-lg">
-                      🔍
-                  </div>
+                  <SearchGlyph className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/40 pointer-events-none" />
                 )}
             </div>
 
             <div className="pt-2">
-                <h4 className="text-xs font-bold text-red-800 uppercase tracking-widest mb-3">Filtrar por Categoria de Item</h4>
+                <h4 className="font-display text-xs font-bold text-red-800 uppercase tracking-widest mb-3">Filtrar por Categoria de Item</h4>
                 <div className="flex flex-wrap gap-2">
                 <button
                     onClick={() => setSelectedCategory("Todos")}
-                    className={`px-3 py-1.5 text-xs rounded-md transition-colors font-serif font-bold uppercase tracking-wide border shadow-sm ${
+                    className={`font-display px-3 py-1.5 text-xs rounded-md transition-colors font-bold uppercase tracking-wide border shadow-sm ${
                     selectedCategory === "Todos"
-                        ? "bg-red-800 text-[#fbf5e6] border-red-900 shadow-inner"
-                        : "bg-[#fbf5e6] text-amber-950/70 border-amber-900/20 hover:border-red-800/50 hover:text-red-800"
+                        ? "bg-red-800 text-[rgb(var(--bg-inset-rgb))] border-red-900 shadow-inner"
+                        : "bg-[rgb(var(--bg-inset-rgb))] text-amber-950/70 border-amber-900/20 hover:border-red-800/50 hover:text-red-800"
                     }`}
                 >
                     Todos
@@ -138,10 +156,10 @@ const ImprovementTable = ({ allImprovements }: { allImprovements: Improvement[] 
                     <button
                     key={category}
                     onClick={() => setSelectedCategory(category)}
-                    className={`px-3 py-1.5 text-xs rounded-md transition-colors font-serif font-bold uppercase tracking-wide border shadow-sm ${
+                    className={`font-display px-3 py-1.5 text-xs rounded-md transition-colors font-bold uppercase tracking-wide border shadow-sm ${
                         selectedCategory === category
-                            ? "bg-red-800 text-[#fbf5e6] border-red-900 shadow-inner"
-                            : "bg-[#fbf5e6] text-amber-950/70 border-amber-900/20 hover:border-red-800/50 hover:text-red-800"
+                            ? "bg-red-800 text-[rgb(var(--bg-inset-rgb))] border-red-900 shadow-inner"
+                            : "bg-[rgb(var(--bg-inset-rgb))] text-amber-950/70 border-amber-900/20 hover:border-red-800/50 hover:text-red-800"
                     }`}
                     >
                     {category}
@@ -153,40 +171,40 @@ const ImprovementTable = ({ allImprovements }: { allImprovements: Improvement[] 
         </div>
       </div>
 
-      <div className="overflow-x-auto shadow-sm rounded-xl border-2 border-amber-900/20 w-full bg-[#e8dac1]">
+      <div className="overflow-x-auto shadow-sm rounded-xl border-2 border-amber-900/20 w-full bg-[rgb(var(--bg-card-rgb))]">
         <table className="min-w-full divide-y-2 divide-amber-900/20 table-fixed">
-          <thead className="bg-[#d9c8a9] text-amber-950/80 font-serif">
+          <thead className="bg-[rgb(var(--bg-edge-rgb))] text-amber-950/80 font-serif">
             <tr>
-              <th scope="col" className="w-[25%] px-4 py-4 text-left text-xs md:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">
+              <th scope="col" className="font-display w-[25%] px-4 py-4 text-left text-xs md:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">
                   Melhoria & Categorias
               </th>
-              <th scope="col" className="w-[75%] px-4 py-4 text-left text-xs md:text-sm font-bold uppercase tracking-widest">
+              <th scope="col" className="font-display w-[75%] px-4 py-4 text-left text-xs md:text-sm font-bold uppercase tracking-widest">
                   Efeito & Descrição Detalhada
               </th>
             </tr>
           </thead>
           <tbody className="divide-y divide-amber-900/10 font-serif">
             {filteredImprovements.map((item, index) => (
-              <tr key={item.id} className={`transition-colors hover:bg-[#e8dac1]/50 ${index % 2 === 0 ? "bg-[#fbf5e6]" : "bg-[#e8dac1]/30"}`}>
+              <tr key={item.id} className={`transition-colors hover:bg-[rgb(var(--bg-card-rgb))]/50 ${index % 2 === 0 ? "bg-[rgb(var(--bg-inset-rgb))]" : "bg-[rgb(var(--bg-card-rgb))]/30"}`}>
                 <td className="px-4 py-5 align-top border-r-2 border-amber-900/10">
-                  <div className="text-base md:text-lg font-bold text-red-800 mb-2">
+                  <div className="font-display text-base md:text-lg font-bold text-red-800 mb-2">
                       {item.name}
                   </div>
                   <div className="flex flex-wrap gap-1.5 mb-4">
                     {item.category.map((cat, i) => (
-                        <span key={i} className="text-[10px] md:text-xs px-2 py-0.5 rounded bg-[#e8dac1]/50 border border-amber-900/20 text-amber-950/80 font-bold uppercase tracking-wider shadow-sm">
+                        <span key={i} className="font-display text-[10px] md:text-xs px-2 py-0.5 rounded bg-[rgb(var(--bg-card-rgb))]/50 border border-amber-900/20 text-amber-950/80 font-bold uppercase tracking-wider shadow-sm">
                             {cat}
                         </span>
                     ))}
                   </div>
-                  <div className="text-[9px] md:text-[10px] inline-block px-2 py-1 rounded bg-[#e8dac1]/80 border border-amber-900/20 text-amber-950/60 uppercase tracking-widest shadow-sm font-bold">
+                  <div className="font-display text-[9px] md:text-[10px] inline-block px-2 py-1 rounded bg-[rgb(var(--bg-card-rgb))]/80 border border-amber-900/20 text-amber-950/60 uppercase tracking-widest shadow-sm font-bold">
                       {item.origin}
                   </div>
                 </td>
                 
                 <td className="px-4 py-5 align-top">
                   <div className="text-sm md:text-base text-amber-950 font-bold italic mb-3 pb-3 border-b-2 border-amber-900/10">
-                      <span className="text-red-800 not-italic uppercase tracking-widest text-xs mr-2">Efeito:</span> {item.effect}
+                      <span className="font-display text-red-800 not-italic uppercase tracking-widest text-xs mr-2">Efeito:</span> {item.effect}
                   </div>
                   <p className="text-sm md:text-base text-amber-950/85 whitespace-pre-line font-medium leading-relaxed">
                       {item.description}
@@ -197,7 +215,8 @@ const ImprovementTable = ({ allImprovements }: { allImprovements: Improvement[] 
           </tbody>
         </table>
         {filteredImprovements.length === 0 && (
-          <div className="text-center py-12 text-amber-950/70 bg-[#fbf5e6] italic text-lg border-t-2 border-amber-900/20">
+          <div className="text-center py-12 text-amber-950/70 bg-[rgb(var(--bg-inset-rgb))] italic text-lg border-t-2 border-amber-900/20 flex flex-col items-center gap-3">
+            <PageGlyph className="text-amber-950/40" />
             Nenhuma melhoria encontrada com os filtros aplicados.
           </div>
         )}
@@ -244,8 +263,8 @@ const MaterialPriceTable = ({ allPrices }: { allPrices: MaterialPriceRow[] }) =>
     <div className="space-y-6">
       
       {/* Filtros e Busca agrupados num Card */}
-      <div className="mb-8 p-6 rounded-xl bg-[#e8dac1] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] font-serif w-full">
-        <label className="block text-sm font-bold text-amber-950/70 mb-4 uppercase tracking-widest">
+      <div className="mb-8 p-6 rounded-xl bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] w-full">
+        <label className="font-display block text-sm font-bold text-amber-950/70 mb-4 uppercase tracking-widest">
             Filtros e Busca
         </label>
         
@@ -256,7 +275,7 @@ const MaterialPriceTable = ({ allPrices }: { allPrices: MaterialPriceRow[] }) =>
                     placeholder="Buscar material por nome ou descrição..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full px-5 py-3 pr-12 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-lg text-amber-950/85 placeholder-amber-900/40 focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
+                    className="w-full px-5 py-3 pr-12 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-lg text-amber-950/85 placeholder-amber-900/40 focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
                 />
                 {searchTerm ? (
                   <button 
@@ -267,21 +286,19 @@ const MaterialPriceTable = ({ allPrices }: { allPrices: MaterialPriceRow[] }) =>
                     ✕
                   </button>
                 ) : (
-                  <div className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/40 text-lg">
-                      🔍
-                  </div>
+                  <SearchGlyph className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/40 pointer-events-none" />
                 )}
             </div>
 
             <div className="pt-2">
-                <h4 className="text-xs font-bold text-red-800 uppercase tracking-widest mb-3">Filtrar por Categoria de Item</h4>
+                <h4 className="font-display text-xs font-bold text-red-800 uppercase tracking-widest mb-3">Filtrar por Categoria de Item</h4>
                 <div className="flex flex-wrap gap-2">
                 <button
                     onClick={() => setSelectedItemCategory("Todos")}
-                    className={`px-3 py-1.5 text-xs rounded-md transition-colors font-serif font-bold uppercase tracking-wide border shadow-sm ${
+                    className={`font-display px-3 py-1.5 text-xs rounded-md transition-colors font-bold uppercase tracking-wide border shadow-sm ${
                     selectedItemCategory === "Todos"
-                        ? "bg-red-800 text-[#fbf5e6] border-red-900 shadow-inner"
-                        : "bg-[#fbf5e6] text-amber-950/70 border-amber-900/20 hover:border-red-800/50 hover:text-red-800"
+                        ? "bg-red-800 text-[rgb(var(--bg-inset-rgb))] border-red-900 shadow-inner"
+                        : "bg-[rgb(var(--bg-inset-rgb))] text-amber-950/70 border-amber-900/20 hover:border-red-800/50 hover:text-red-800"
                     }`}
                 >
                     Todos
@@ -290,10 +307,10 @@ const MaterialPriceTable = ({ allPrices }: { allPrices: MaterialPriceRow[] }) =>
                     <button
                     key={category}
                     onClick={() => setSelectedItemCategory(category)}
-                    className={`px-3 py-1.5 text-xs rounded-md transition-colors font-serif font-bold uppercase tracking-wide border shadow-sm ${
+                    className={`font-display px-3 py-1.5 text-xs rounded-md transition-colors font-bold uppercase tracking-wide border shadow-sm ${
                         selectedItemCategory === category
-                        ? "bg-red-800 text-[#fbf5e6] border-red-900 shadow-inner"
-                        : "bg-[#fbf5e6] text-amber-950/70 border-amber-900/20 hover:border-red-800/50 hover:text-red-800"
+                        ? "bg-red-800 text-[rgb(var(--bg-inset-rgb))] border-red-900 shadow-inner"
+                        : "bg-[rgb(var(--bg-inset-rgb))] text-amber-950/70 border-amber-900/20 hover:border-red-800/50 hover:text-red-800"
                     }`}
                     >
                     {category}
@@ -306,32 +323,32 @@ const MaterialPriceTable = ({ allPrices }: { allPrices: MaterialPriceRow[] }) =>
       </div>
 
       {/* Tabela de Preços de Materiais */}
-      <div className="overflow-x-auto shadow-sm rounded-xl border-2 border-amber-900/20 w-full bg-[#e8dac1]">
+      <div className="overflow-x-auto shadow-sm rounded-xl border-2 border-amber-900/20 w-full bg-[rgb(var(--bg-card-rgb))]">
         <table className="min-w-full divide-y-2 divide-amber-900/20 table-fixed">
-          <caption className="p-4 md:p-5 text-xl md:text-2xl font-bold text-red-800 bg-[#e8dac1] border-b-2 border-amber-900/20 uppercase tracking-widest text-left font-serif">
+          <caption className="font-display p-4 md:p-5 text-xl md:text-2xl font-bold text-red-800 bg-[rgb(var(--bg-card-rgb))] border-b-2 border-amber-900/20 uppercase tracking-widest text-left">
             Tabela: Preço Adicional de Materiais Especiais
           </caption>
-          <thead className="bg-[#d9c8a9] text-amber-950/80 font-serif">
+          <thead className="bg-[rgb(var(--bg-edge-rgb))] text-amber-950/80 font-serif">
             <tr>
-              <th scope="col" className="w-[60%] lg:w-[70%] px-4 py-4 text-left text-xs md:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">
+              <th scope="col" className="font-display w-[60%] lg:w-[70%] px-4 py-4 text-left text-xs md:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">
                 Material & Propriedades
               </th>
-              <th scope="col" className="w-[40%] lg:w-[30%] px-4 py-4 text-left md:text-center text-xs md:text-sm font-bold uppercase tracking-widest">
+              <th scope="col" className="font-display w-[40%] lg:w-[30%] px-4 py-4 text-left md:text-center text-xs md:text-sm font-bold uppercase tracking-widest">
                 {selectedItemCategory === "Todos" ? "Custos Adicionais" : `Custo Adicional`}
               </th>
             </tr>
           </thead>
           <tbody className="divide-y divide-amber-900/10 font-serif">
             {filteredPrices.map((priceRow, index) => (
-              <tr key={priceRow.material} className={`transition-colors hover:bg-[#e8dac1]/50 ${index % 2 === 0 ? "bg-[#fbf5e6]" : "bg-[#e8dac1]/30"}`}>
+              <tr key={priceRow.material} className={`transition-colors hover:bg-[rgb(var(--bg-card-rgb))]/50 ${index % 2 === 0 ? "bg-[rgb(var(--bg-inset-rgb))]" : "bg-[rgb(var(--bg-card-rgb))]/30"}`}>
                 
                 {/* Coluna 1: Nome, Descrição e Efeitos Específicos */}
                 <td className="px-4 py-5 align-top border-r-2 border-amber-900/10">
                   <div className="flex flex-col items-start gap-2 mb-3">
-                    <span className="text-lg md:text-xl font-bold text-amber-950">
+                    <span className="font-display text-lg md:text-xl font-bold text-amber-950">
                         {priceRow.material}
                     </span>
-                    <span className="text-[9px] md:text-[10px] px-2 py-1 rounded bg-[#e8dac1]/50 border border-amber-900/20 text-amber-950/60 uppercase tracking-widest shadow-sm font-bold">
+                    <span className="font-display text-[9px] md:text-[10px] px-2 py-1 rounded bg-[rgb(var(--bg-card-rgb))]/50 border border-amber-900/20 text-amber-950/60 uppercase tracking-widest shadow-sm font-bold">
                         {priceRow.origin}
                     </span>
                   </div>
@@ -376,8 +393,8 @@ const MaterialPriceTable = ({ allPrices }: { allPrices: MaterialPriceRow[] }) =>
                       if (!currentPrice || currentPrice === "-") return null;
 
                       return (
-                        <div key={category} className="flex flex-col xl:flex-row justify-between xl:items-center bg-[#fbf5e6] p-3 rounded-lg border border-amber-900/20 shadow-sm transition-transform hover:scale-[1.02]">
-                          <span className="text-[10px] md:text-xs font-bold text-amber-950/60 uppercase tracking-wider mb-1 xl:mb-0">
+                        <div key={category} className="flex flex-col xl:flex-row justify-between xl:items-center bg-[rgb(var(--bg-inset-rgb))] p-3 rounded-lg border border-amber-900/20 shadow-sm transition-transform hover:scale-[1.02]">
+                          <span className="font-display text-[10px] md:text-xs font-bold text-amber-950/60 uppercase tracking-wider mb-1 xl:mb-0">
                             {category}
                           </span>
                           <span className="text-sm md:text-base font-bold text-red-800 whitespace-nowrap">
@@ -394,7 +411,8 @@ const MaterialPriceTable = ({ allPrices }: { allPrices: MaterialPriceRow[] }) =>
           </tbody>
         </table>
         {filteredPrices.length === 0 && (
-          <div className="text-center py-12 text-amber-950/70 bg-[#fbf5e6] italic text-lg border-t-2 border-amber-900/20">
+          <div className="text-center py-12 text-amber-950/70 bg-[rgb(var(--bg-inset-rgb))] italic text-lg border-t-2 border-amber-900/20 flex flex-col items-center gap-3">
+            <PageGlyph className="text-amber-950/40" />
             Nenhum material encontrado com os filtros aplicados.
           </div>
         )}
@@ -411,29 +429,32 @@ export default function SuperiorItemsPage() {
   const [activeTab, setActiveTab] = useState<'melhorias' | 'materiais'>('melhorias'); // Estado das Abas
 
   return (
-    <div className="min-h-screen bg-[#f5e6d0] text-amber-950 font-serif selection:bg-amber-800 selection:text-amber-50 relative overflow-x-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#f5e6d0] to-[#e6d5b8]">
+    <div className="min-h-screen bg-[rgb(var(--bg-rgb))] text-amber-950 font-serif selection:bg-amber-800 selection:text-amber-50 relative overflow-x-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[rgb(var(--bg-rgb))] to-[rgb(var(--bg-edge-rgb))]">
 
       {/* Background Effect */}
-      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(69,26,3,0.15)_100%)]" />
+      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(var(--bg-rgb),0.15)_100%)]" />
 
       {/* Header */}
-      <header className="relative z-10 w-full p-6 border-b-4 border-double border-amber-900/40 bg-[#e8dac1]/90 backdrop-blur-md shadow-sm mb-8 md:mb-12 sticky top-0 font-serif">
+      <header className="relative z-10 w-full p-6 border-b-4 border-double border-amber-900/40 bg-[rgb(var(--bg-card-rgb))]/90 backdrop-blur-md shadow-sm mb-8 md:mb-12 sticky top-0">
         <div className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4 max-w-screen-2xl mx-auto">
             <Link href="/" className="inline-block group self-start md:self-auto">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-700 via-red-800 to-red-950 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 1px 2px rgba(69,26,3,0.1)' }}>
+                <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-700 via-red-800 to-red-950 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 0 28px rgba(127,29,29,0.3)' }}>
                     a-Tormenta
                 </h1>
             </Link>
-            <div className="flex items-center gap-2 flex-wrap text-xs sm:text-sm font-bold tracking-widest uppercase self-end md:self-auto">
-                <Link href="/" className="text-amber-950/70 hover:text-red-800 transition-colors whitespace-nowrap">
-                  Início
-                </Link>
-                <span className="text-amber-900/40">/</span>
-                <Link href="/equipamentos" className="text-amber-950/70 hover:text-red-800 transition-colors whitespace-nowrap">
-                  Equipamentos
-                </Link>
-                <span className="text-amber-900/40">/</span>
-                <span className="text-red-800 whitespace-nowrap">Itens Superiores</span>
+            <div className="flex items-center gap-3 self-end md:self-auto">
+              <div className="font-display flex items-center gap-2 flex-wrap text-xs sm:text-sm font-bold tracking-widest uppercase">
+                  <Link href="/" className="text-amber-950/70 hover:text-red-800 transition-colors whitespace-nowrap">
+                    Início
+                  </Link>
+                  <span className="text-amber-900/40">/</span>
+                  <Link href="/equipamentos" className="text-amber-950/70 hover:text-red-800 transition-colors whitespace-nowrap">
+                    Equipamentos
+                  </Link>
+                  <span className="text-amber-900/40">/</span>
+                  <span className="text-red-800 whitespace-nowrap">Itens Superiores</span>
+              </div>
+              <ThemeToggle />
             </div>
         </div>
       </header>
@@ -443,25 +464,31 @@ export default function SuperiorItemsPage() {
 
         {/* Título Principal */}
         <div className="mb-10 md:mb-12 w-full flex flex-col items-start">
-            <h1 className="text-4xl sm:text-5xl font-bold text-red-800 mb-3 drop-shadow-sm font-serif tracking-wider">
+            <h1 className="font-display text-4xl sm:text-5xl font-bold text-red-800 mb-3 drop-shadow-sm tracking-wider" style={{ textShadow: '0 0 28px rgba(127,29,29,0.3)' }}>
                 Itens Superiores
             </h1>
-            <div className="w-32 h-1 bg-gradient-to-r from-red-800 to-transparent rounded-full mb-6"></div>
+            <div className="flex items-center gap-3 w-full mb-6">
+              <svg width="22" height="14" viewBox="0 0 22 14" fill="none" stroke="rgb(var(--accent-rgb))" strokeWidth="1" className="opacity-60 shrink-0">
+                <path d="M1 7c4-6 8-6 10 0s6 6 10 0" />
+                <circle cx="11" cy="7" r="1.4" fill="rgb(var(--accent-rgb))" stroke="none" />
+              </svg>
+              <div className="h-px max-w-36 flex-1 bg-gradient-to-r from-[rgba(var(--accent-rgb),0.55)] to-transparent" />
+            </div>
         </div>
 
         {/* Acordeão de Regras */}
         <div className="mb-12 w-full">
           <button 
             onClick={() => setIsIntroOpen(!isIntroOpen)}
-            className="w-full flex items-center justify-between p-6 bg-[#e8dac1] border-2 border-amber-900/30 rounded-t-xl hover:border-red-800/40 transition-all group shadow-sm"
+            className="w-full flex items-center justify-between p-6 bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/30 rounded-t-xl hover:border-red-800/40 transition-all group shadow-sm"
           >
             <div className="flex items-center gap-3">
-              <span className="text-2xl opacity-70">📜</span>
+              <PageGlyph className="text-red-800/70 shrink-0 mt-1" />
               <div className="text-left">
-                <h2 className="text-xl font-bold text-amber-950 group-hover:text-red-800 transition-colors font-serif uppercase tracking-wide">
+                <h2 className="font-display text-xl font-bold text-amber-950 group-hover:text-red-800 transition-colors uppercase tracking-wide">
                   Regras Gerais e Fabricação
                 </h2>
-                <p className="text-sm text-amber-950/70 font-serif italic font-bold">
+                <p className="text-sm text-amber-950/70 italic font-bold">
                   Clique para expandir o guia de fabricação, materiais e a tabela de preços extras.
                 </p>
               </div>
@@ -471,7 +498,7 @@ export default function SuperiorItemsPage() {
             </span>
           </button>
 
-          <div className={`overflow-hidden transition-all duration-500 ease-in-out border-x-2 border-b-2 border-amber-900/30 rounded-b-xl bg-[#fbf5e6] ${isIntroOpen ? 'max-h-[8000px] opacity-100' : 'max-h-0 opacity-0 border-transparent'}`}>
+          <div className={`overflow-hidden transition-all duration-500 ease-in-out border-x-2 border-b-2 border-amber-900/30 rounded-b-xl bg-[rgb(var(--bg-inset-rgb))] ${isIntroOpen ? 'max-h-[8000px] opacity-100' : 'max-h-0 opacity-0 border-transparent'}`}>
             <div className="p-5 md:p-10 font-serif text-amber-950/85 text-base md:text-lg text-left md:text-justify leading-relaxed flex flex-col gap-8">
               
               <section>
@@ -480,7 +507,7 @@ export default function SuperiorItemsPage() {
               </section>
 
               <section className="border-t-2 border-amber-900/20 pt-8">
-                <h2 className="text-2xl md:text-3xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/10 pb-2">Melhorias</h2>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/10 pb-2">Melhorias</h2>
                 <p className="font-medium mb-6">Apenas itens das categorias armas, armaduras e escudos, ferramentas, vestuário e esotéricos podem receber melhorias (Outras melhorias são retiradas da Dragão Brasil). As melhorias para cada categoria de item estão listadas na Tabela <strong>Melhorias</strong>. Cada melhoria só pode ser aplicada uma vez a um mesmo item.</p>
                 
                 <div className="mb-6 max-w-3xl mx-auto">
@@ -489,12 +516,12 @@ export default function SuperiorItemsPage() {
               </section>
 
               <section className="border-t-2 border-amber-900/20 pt-8">
-                <h2 className="text-2xl md:text-3xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/10 pb-2">Materiais Especiais</h2>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/10 pb-2">Materiais Especiais</h2>
                 <p className="font-medium">Armas, armaduras, escudos e esotéricos podem ser feitos ou banhados de um material especial. Para isso, o item precisa ter a melhoria material especial e você precisa pagar o preço extra do material escolhido.</p>
               </section>
 
               <section className="border-t-2 border-amber-900/20 pt-8">
-                <h2 className="text-2xl md:text-3xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/10 pb-2">Fabricando Itens Superiores</h2>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/10 pb-2">Fabricando Itens Superiores</h2>
                 <p className="font-medium mb-4">Itens superiores só podem ser fabricados por personagens com a habilidade Fabricar Item Superior. A fabricação deles segue a mesma regra de itens normais, porém, de acordo com o número de melhorias, o preço e a CD do teste de Ofício aumentam.</p>
                 <p className="font-medium mb-4">Por exemplo, o preço de uma couraça é T$ 500. Fabricá-la exige um gasto de T$ 166 (um terço do preço) e um teste de Ofício contra CD 15. Já o preço de uma couraça com duas melhorias é T$ 3.500 (T$ 500 + T$ 3.000 das duas melhorias). Fabricá-la exige um gasto de T$ 1.166 (um terço do preço) e um teste de Ofício contra CD 25 (15 da CD base + 10 das duas melhorias).</p>
                 <p className="font-medium">É possível adicionar melhorias a um item. Você paga a diferença de acordo com o novo número de melhorias. Por exemplo, para adicionar a terceira melhoria a um item que já possui duas, você precisa pagar mais T$ 2.000 (um terço da diferença de três para duas melhorias). Além disso, deve fazer um teste de Ofício contra a CD do número de melhorias que o item passará a ter e, se falhar por 5 ou mais, estraga o item.</p>
@@ -502,7 +529,7 @@ export default function SuperiorItemsPage() {
 
               {/* Seção 6: Recursos Naturais */}
               <section className="border-t-2 border-amber-900/20 pt-8">
-                <h2 className="text-2xl md:text-3xl font-bold text-red-800 mb-4 tracking-wide">Recursos Naturais</h2>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-red-800 mb-4 tracking-wide">Recursos Naturais</h2>
                 <p className="mb-4">
                   Certas criaturas, como dragões, elementais e monstros peçonhentos, fornecem recursos específicos como parte de seus tesouros. Entretanto, existem outros materiais de grande utilidade que podem ser extraídos de ameaças. Esta seção apresenta regras opcionais para mestres que desejam usar esse tipo de tesouro em suas aventuras.
                 </p>
@@ -514,27 +541,27 @@ export default function SuperiorItemsPage() {
                 </p>
 
                 {/* Tabela 3-5: Recursos Naturais */}
-                <div className="mb-8 shadow-sm rounded-xl border-2 border-amber-900/20 overflow-x-auto bg-[#e8dac1]">
+                <div className="mb-8 shadow-sm rounded-xl border-2 border-amber-900/20 overflow-x-auto bg-[rgb(var(--bg-card-rgb))]">
                   <table className="w-full min-w-max divide-y-2 divide-amber-900/20">
-                    <thead className="bg-[#d9c8a9] text-amber-950/80">
+                    <thead className="bg-[rgb(var(--bg-edge-rgb))] text-amber-950/80">
                       <tr>
-                        <th colSpan={8} className="px-6 py-4 text-center text-lg font-bold uppercase tracking-widest border-b-2 border-amber-900/20 text-red-800">
+                        <th colSpan={8} className="font-display px-6 py-4 text-center text-lg font-bold uppercase tracking-widest border-b-2 border-amber-900/20 text-red-800">
                           Tabela 3-5: Recursos Naturais
                         </th>
                       </tr>
                       <tr>
-                        <th scope="col" className="px-4 py-3 text-center text-xs sm:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">Tipo de Criatura (1d6)</th>
-                        <th scope="col" className="px-4 py-3 text-center text-xs sm:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">Carapaça</th>
-                        <th scope="col" className="px-4 py-3 text-center text-xs sm:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">Couro</th>
-                        <th scope="col" className="px-4 py-3 text-center text-xs sm:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">Fonte</th>
-                        <th scope="col" className="px-4 py-3 text-center text-xs sm:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">Ingrediente</th>
-                        <th scope="col" className="px-4 py-3 text-center text-xs sm:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">Mantimento</th>
-                        <th scope="col" className="px-4 py-3 text-center text-xs sm:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">Osso</th>
-                        <th scope="col" className="px-4 py-3 text-center text-xs sm:text-sm font-bold uppercase tracking-widest">Sucata</th>
+                        <th scope="col" className="font-display px-4 py-3 text-center text-xs sm:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">Tipo de Criatura (1d6)</th>
+                        <th scope="col" className="font-display px-4 py-3 text-center text-xs sm:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">Carapaça</th>
+                        <th scope="col" className="font-display px-4 py-3 text-center text-xs sm:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">Couro</th>
+                        <th scope="col" className="font-display px-4 py-3 text-center text-xs sm:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">Fonte</th>
+                        <th scope="col" className="font-display px-4 py-3 text-center text-xs sm:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">Ingrediente</th>
+                        <th scope="col" className="font-display px-4 py-3 text-center text-xs sm:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">Mantimento</th>
+                        <th scope="col" className="font-display px-4 py-3 text-center text-xs sm:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">Osso</th>
+                        <th scope="col" className="font-display px-4 py-3 text-center text-xs sm:text-sm font-bold uppercase tracking-widest">Sucata</th>
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-amber-900/10 bg-[#fbf5e6] text-center font-medium">
-                      <tr className="transition-colors hover:bg-[#e8dac1]/50 bg-[#fbf5e6]">
+                    <tbody className="divide-y divide-amber-900/10 bg-[rgb(var(--bg-inset-rgb))] text-center font-medium">
+                      <tr className="transition-colors hover:bg-[rgb(var(--bg-card-rgb))]/50 bg-[rgb(var(--bg-inset-rgb))]">
                         <td className="px-4 py-3 font-bold border-r-2 border-amber-900/10 text-amber-950 text-left">Animal</td>
                         <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">1</td>
                         <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">2-3</td>
@@ -544,7 +571,7 @@ export default function SuperiorItemsPage() {
                         <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">6</td>
                         <td className="px-4 py-3 text-amber-950/85">—</td>
                       </tr>
-                      <tr className="transition-colors hover:bg-[#e8dac1]/50 bg-[#e8dac1]/30">
+                      <tr className="transition-colors hover:bg-[rgb(var(--bg-card-rgb))]/50 bg-[rgb(var(--bg-card-rgb))]/30">
                         <td className="px-4 py-3 font-bold border-r-2 border-amber-900/10 text-amber-950 text-left">Construto</td>
                         <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">1-2</td>
                         <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">—</td>
@@ -554,7 +581,7 @@ export default function SuperiorItemsPage() {
                         <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">—</td>
                         <td className="px-4 py-3 text-amber-950/85">6</td>
                       </tr>
-                      <tr className="transition-colors hover:bg-[#e8dac1]/50 bg-[#fbf5e6]">
+                      <tr className="transition-colors hover:bg-[rgb(var(--bg-card-rgb))]/50 bg-[rgb(var(--bg-inset-rgb))]">
                         <td className="px-4 py-3 font-bold border-r-2 border-amber-900/10 text-amber-950 text-left">Espírito*</td>
                         <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">—</td>
                         <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">—</td>
@@ -564,7 +591,7 @@ export default function SuperiorItemsPage() {
                         <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">—</td>
                         <td className="px-4 py-3 text-amber-950/85">—</td>
                       </tr>
-                      <tr className="transition-colors hover:bg-[#e8dac1]/50 bg-[#e8dac1]/30">
+                      <tr className="transition-colors hover:bg-[rgb(var(--bg-card-rgb))]/50 bg-[rgb(var(--bg-card-rgb))]/30">
                         <td className="px-4 py-3 font-bold border-r-2 border-amber-900/10 text-amber-950 text-left">Humanoide</td>
                         <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">1</td>
                         <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">2</td>
@@ -574,7 +601,7 @@ export default function SuperiorItemsPage() {
                         <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">5-6</td>
                         <td className="px-4 py-3 text-amber-950/85">—</td>
                       </tr>
-                      <tr className="transition-colors hover:bg-[#e8dac1]/50 bg-[#fbf5e6]">
+                      <tr className="transition-colors hover:bg-[rgb(var(--bg-card-rgb))]/50 bg-[rgb(var(--bg-inset-rgb))]">
                         <td className="px-4 py-3 font-bold border-r-2 border-amber-900/10 text-amber-950 text-left">Monstro</td>
                         <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">1</td>
                         <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">2</td>
@@ -584,7 +611,7 @@ export default function SuperiorItemsPage() {
                         <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">6</td>
                         <td className="px-4 py-3 text-amber-950/85">—</td>
                       </tr>
-                      <tr className="transition-colors hover:bg-[#e8dac1]/50 bg-[#e8dac1]/30">
+                      <tr className="transition-colors hover:bg-[rgb(var(--bg-card-rgb))]/50 bg-[rgb(var(--bg-card-rgb))]/30">
                         <td className="px-4 py-3 font-bold border-r-2 border-amber-900/10 text-amber-950 text-left">Morto-vivo</td>
                         <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">1</td>
                         <td className="px-4 py-3 border-r-2 border-amber-900/10 text-amber-950/85">—</td>
@@ -596,12 +623,12 @@ export default function SuperiorItemsPage() {
                       </tr>
                     </tbody>
                   </table>
-                  <div className="bg-[#d9c8a9] p-3 text-xs md:text-sm text-right text-amber-950 font-bold border-t-2 border-amber-900/20">
+                  <div className="bg-[rgb(var(--bg-edge-rgb))] p-3 text-xs md:text-sm text-right text-amber-950 font-bold border-t-2 border-amber-900/20">
                     * Use essa linha para criaturas Incorpóreas de qualquer tipo.
                   </div>
                 </div>
 
-                <h3 className="text-xl md:text-2xl font-bold text-red-800 uppercase tracking-wide mb-3">Tipos de Recursos</h3>
+                <h3 className="font-display text-xl md:text-2xl font-bold text-red-800 uppercase tracking-wide mb-3">Tipos de Recursos</h3>
                 <p className="mb-4">
                   A variedade de recursos existentes em Arton é tão vasta quanto sua fauna. A seguir são descritos os mais comuns, mas você pode expandir esta lista conforme adequado à sua campanha. Use os recursos descritos aqui e nas fichas de ameaças como base para suas ideias.
                 </p>
@@ -610,33 +637,33 @@ export default function SuperiorItemsPage() {
                 </p>
 
                 {/* Tabela 3-6: Tipos de Recursos Naturais */}
-                <div className="mb-8 max-w-3xl mx-auto shadow-sm rounded-xl border-2 border-amber-900/20 overflow-hidden bg-[#e8dac1]">
+                <div className="mb-8 max-w-3xl mx-auto shadow-sm rounded-xl border-2 border-amber-900/20 overflow-hidden bg-[rgb(var(--bg-card-rgb))]">
                   <table className="w-full divide-y-2 divide-amber-900/20">
-                    <thead className="bg-[#d9c8a9] text-amber-950/80">
+                    <thead className="bg-[rgb(var(--bg-edge-rgb))] text-amber-950/80">
                       <tr>
-                        <th colSpan={2} className="px-6 py-4 text-center text-lg font-bold uppercase tracking-widest border-b-2 border-amber-900/20 text-red-800">
+                        <th colSpan={2} className="font-display px-6 py-4 text-center text-lg font-bold uppercase tracking-widest border-b-2 border-amber-900/20 text-red-800">
                           Tabela 3-6: Tipos de Recursos Naturais
                         </th>
                       </tr>
                       <tr>
-                        <th scope="col" className="px-6 py-3 text-left text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">Patamar da Ameaça</th>
-                        <th scope="col" className="px-6 py-3 text-left pl-8 text-sm font-bold uppercase tracking-widest">Valor/Qualidade</th>
+                        <th scope="col" className="font-display px-6 py-3 text-left text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">Patamar da Ameaça</th>
+                        <th scope="col" className="font-display px-6 py-3 text-left pl-8 text-sm font-bold uppercase tracking-widest">Valor/Qualidade</th>
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-amber-900/10 bg-[#fbf5e6] text-left font-medium">
-                      <tr className="transition-colors hover:bg-[#e8dac1]/50 bg-[#fbf5e6]">
+                    <tbody className="divide-y divide-amber-900/10 bg-[rgb(var(--bg-inset-rgb))] text-left font-medium">
+                      <tr className="transition-colors hover:bg-[rgb(var(--bg-card-rgb))]/50 bg-[rgb(var(--bg-inset-rgb))]">
                         <td className="px-6 py-3 font-bold border-r-2 border-amber-900/10 text-amber-950">Iniciante</td>
                         <td className="px-6 py-3 pl-8 text-amber-950/85">T$ 20 para itens normais</td>
                       </tr>
-                      <tr className="transition-colors hover:bg-[#e8dac1]/50 bg-[#e8dac1]/30">
+                      <tr className="transition-colors hover:bg-[rgb(var(--bg-card-rgb))]/50 bg-[rgb(var(--bg-card-rgb))]/30">
                         <td className="px-6 py-3 font-bold border-r-2 border-amber-900/10 text-amber-950">Veterano</td>
                         <td className="px-6 py-3 pl-8 text-amber-950/85">T$ 100 para itens superiores</td>
                       </tr>
-                      <tr className="transition-colors hover:bg-[#e8dac1]/50 bg-[#fbf5e6]">
+                      <tr className="transition-colors hover:bg-[rgb(var(--bg-card-rgb))]/50 bg-[rgb(var(--bg-inset-rgb))]">
                         <td className="px-6 py-3 font-bold border-r-2 border-amber-900/10 text-amber-950">Campeão</td>
                         <td className="px-6 py-3 pl-8 text-amber-950/85">T$ 500 para itens mágicos</td>
                       </tr>
-                      <tr className="transition-colors hover:bg-[#e8dac1]/50 bg-[#e8dac1]/30">
+                      <tr className="transition-colors hover:bg-[rgb(var(--bg-card-rgb))]/50 bg-[rgb(var(--bg-card-rgb))]/30">
                         <td className="px-6 py-3 font-bold border-r-2 border-amber-900/10 text-amber-950">Lenda</td>
                         <td className="px-6 py-3 pl-8 text-amber-950/85">T$ 2.500 para itens mágicos</td>
                       </tr>
@@ -681,16 +708,16 @@ export default function SuperiorItemsPage() {
         </div>
 
         {/* Sistema de Abas */}
-        <div className="flex flex-wrap gap-2 mb-8 bg-[#e8dac1] p-2 rounded-xl border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] w-fit">
+        <div className="flex flex-wrap gap-2 mb-8 bg-[rgb(var(--bg-card-rgb))] p-2 rounded-xl border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] w-fit">
             <button 
                 onClick={() => setActiveTab('melhorias')} 
-                className={`px-6 py-2.5 rounded-lg font-bold uppercase text-[10px] md:text-xs tracking-widest transition-all ${activeTab === 'melhorias' ? 'bg-red-800 text-[#fbf5e6] shadow-md' : 'text-amber-950/70 hover:text-red-800 hover:bg-[#e8dac1]/50'}`}
+                className={`font-display px-6 py-2.5 rounded-lg font-bold uppercase text-[10px] md:text-xs tracking-widest transition-all ${activeTab === 'melhorias' ? 'bg-red-800 text-[rgb(var(--bg-inset-rgb))] shadow-md' : 'text-amber-950/70 hover:text-red-800 hover:bg-[rgb(var(--bg-card-rgb))]/50'}`}
             >
                 Acervo de Melhorias
             </button>
             <button 
                 onClick={() => setActiveTab('materiais')} 
-                className={`px-6 py-2.5 rounded-lg font-bold uppercase text-[10px] md:text-xs tracking-widest transition-all ${activeTab === 'materiais' ? 'bg-red-800 text-[#fbf5e6] shadow-md' : 'text-amber-950/70 hover:text-red-800 hover:bg-[#e8dac1]/50'}`}
+                className={`font-display px-6 py-2.5 rounded-lg font-bold uppercase text-[10px] md:text-xs tracking-widest transition-all ${activeTab === 'materiais' ? 'bg-red-800 text-[rgb(var(--bg-inset-rgb))] shadow-md' : 'text-amber-950/70 hover:text-red-800 hover:bg-[rgb(var(--bg-card-rgb))]/50'}`}
             >
                 Materiais Especiais
             </button>
@@ -699,7 +726,7 @@ export default function SuperiorItemsPage() {
         {/* Tabela de Melhorias (ABA) */}
         {activeTab === 'melhorias' && (
           <section className="animate-in fade-in duration-500 w-full mb-16">
-              <h2 className="text-2xl sm:text-3xl font-bold text-red-800 mb-6 flex items-center gap-3 tracking-wide border-b-2 border-amber-900/10 pb-2 font-serif">
+              <h2 className="font-display text-2xl sm:text-3xl font-bold text-red-800 mb-6 flex items-center gap-3 tracking-wide border-b-2 border-amber-900/10 pb-2">
                   <span className="text-red-800 text-3xl">❖</span> Acervo de Melhorias
               </h2>
               <ImprovementTable allImprovements={improvements} />
@@ -709,7 +736,7 @@ export default function SuperiorItemsPage() {
         {/* Tabela de Materiais Especiais (ABA) */}
         {activeTab === 'materiais' && (
           <section className="animate-in fade-in duration-500 w-full mb-16">
-              <h2 className="text-2xl sm:text-3xl font-bold text-red-800 mb-6 flex items-center gap-3 tracking-wide border-b-2 border-amber-900/10 pb-2 font-serif">
+              <h2 className="font-display text-2xl sm:text-3xl font-bold text-red-800 mb-6 flex items-center gap-3 tracking-wide border-b-2 border-amber-900/10 pb-2">
                   <span className="text-red-800 text-3xl">❖</span> Acervo de Materiais Especiais
               </h2>
               <MaterialPriceTable allPrices={materialPrices} />
@@ -718,12 +745,12 @@ export default function SuperiorItemsPage() {
       </main>
 
       {/* Footer */}
-      <footer className="relative z-10 mt-20 p-8 border-t-4 border-double border-amber-900/40 bg-[#2a1810] text-center font-serif shadow-[0_-4px_20px_rgba(0,0,0,0.15)] flex flex-col items-center justify-center">
+      <footer className="relative z-10 mt-20 p-8 border-t-4 border-double border-amber-900/40 bg-[rgb(var(--void-rgb))] text-center shadow-[0_-4px_20px_rgba(0,0,0,0.15)] flex flex-col items-center justify-center">
         <span className="text-red-900/40 text-2xl mb-3">❖</span>
-        <p className="mb-2 text-[#e8dac1]/60 text-sm md:text-base tracking-widest uppercase font-bold">
+        <p className="font-display mb-2 text-white/60 text-sm md:text-base tracking-widest uppercase font-bold">
           Compêndio Tormenta RPG © 2026 • Feito por um fã para fãs
         </p>
-        <p className="text-[#e8dac1]/40 text-xs md:text-sm tracking-wide">
+        <p className="text-white/40 text-xs md:text-sm tracking-wide">
           Tormenta 20 pertence a Jambo Editora. Todos os direitos são reservados a editora.
         </p>
       </footer>
