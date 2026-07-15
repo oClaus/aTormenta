@@ -347,52 +347,52 @@ const DistinctionModal = ({ distinction, onClose }: { distinction: Distinction; 
   );
 };
 
-// --- Card de Distinção ---
+// --- Card de Distinção (mesmo padrão visual dos cards de Classes) ---
 const DistinctionCard = ({ distinction, onClick }: { distinction: Distinction; onClick: (d: Distinction) => void }) => {
   return (
-    <button onClick={() => onClick(distinction)} className="w-full h-full group text-left outline-none mt-6">
-      <div className="card-grain relative h-full bg-[rgb(var(--bg-card-rgb))] border border-amber-900/20 rounded-xl overflow-hidden shadow-sm hover:border-[rgb(var(--accent-rgb))]/55 hover:shadow-[0_8px_30px_rgba(var(--accent-rgb),0.18)] transition-all duration-300 hover:-translate-y-1 flex flex-col">
+    <div
+      onClick={() => onClick(distinction)}
+      className="card-grain group relative mt-6 rounded-md bg-[rgb(var(--bg-card-rgb))] border border-amber-900/20 hover:border-[rgb(var(--accent-rgb))]/55 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgba(var(--accent-rgb),0.18)] cursor-pointer flex flex-col"
+    >
+      <CornerOrnament className="absolute -top-px -left-px z-10 opacity-50 group-hover:opacity-100 transition-opacity" />
+      <CornerOrnament className="absolute -top-px -right-px z-10 rotate-90 opacity-50 group-hover:opacity-100 transition-opacity" />
+      <CornerOrnament className="absolute -bottom-px -right-px z-10 rotate-180 opacity-50 group-hover:opacity-100 transition-opacity" />
+      <CornerOrnament className="absolute -bottom-px -left-px z-10 -rotate-90 opacity-50 group-hover:opacity-100 transition-opacity" />
 
-        <CornerOrnament className="absolute -top-px -left-px z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
-        <CornerOrnament className="absolute -top-px -right-px z-10 rotate-90 opacity-0 group-hover:opacity-100 transition-opacity" />
-        <CornerOrnament className="absolute -bottom-px -right-px z-10 rotate-180 opacity-0 group-hover:opacity-100 transition-opacity" />
-        <CornerOrnament className="absolute -bottom-px -left-px z-10 -rotate-90 opacity-0 group-hover:opacity-100 transition-opacity" />
+      <div className="crest z-20">
+        <span>{distinction.name.charAt(0)}</span>
+      </div>
 
-        <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-red-800/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10" />
+      {/* Fundo da imagem usando a cor mais clara do pergaminho para dar contraste */}
+      <div className="relative w-full h-72 rounded-t-md bg-[rgb(var(--portrait-rgb))] border-b border-amber-900/15 overflow-hidden flex items-center justify-center">
+        {distinction.image ? (
+          <Image
+            src={distinction.image}
+            alt={distinction.name}
+            layout="fill"
+            objectFit="contain"
+            className="p-3 group-hover:scale-105 transition-transform duration-500 mix-blend-multiply opacity-95 group-hover:opacity-100"
+          />
+        ) : (
+          <MedalGlyph className="text-[rgb(60,55,50)]/35" />
+        )}
+      </div>
 
-        {/* Imagem */}
-        <div className="relative w-full h-56 bg-[rgb(var(--portrait-rgb))] border-b border-amber-900/15 overflow-hidden flex items-center justify-center rounded-t-xl">
-          {distinction.image ? (
-            <Image
-              src={distinction.image}
-              alt={distinction.name}
-              layout="fill"
-              objectFit="contain"
-              className="transition-transform duration-500 group-hover:scale-105 mix-blend-multiply opacity-90 p-4"
-            />
-          ) : (
-            <div className="w-full h-full flex flex-col items-center justify-center text-[rgb(60,55,50)]/35">
-              <MedalGlyph />
-              <span className="font-display text-xs font-bold uppercase tracking-widest mt-2 opacity-60">Sem Ilustração</span>
-            </div>
-          )}
+      <div className="relative p-5 text-center flex-1 flex flex-col justify-between bg-[rgb(var(--bg-card-rgb))]">
+        <div className="w-full flex flex-col items-center">
+          <h3 className="font-display text-lg font-bold text-amber-950 group-hover:text-red-800 transition-colors mt-1 mb-3 tracking-wide">
+            {distinction.name}
+          </h3>
         </div>
 
-        {/* Conteúdo */}
-        <div className="p-6 flex-1 flex flex-col bg-[rgb(var(--bg-card-rgb))] rounded-b-xl">
-          <div className="mb-4">
-            <h3 className="font-display text-xl md:text-2xl font-bold text-red-800 group-hover:text-red-700 transition-colors tracking-wide">
-              {distinction.name}
-            </h3>
-          </div>
-          <div className="mt-auto pt-4 border-t border-amber-900/15 group-hover:border-[rgb(var(--accent-rgb))]/30 transition-colors text-right">
-            <span className="hex-badge font-display inline-block px-2 py-1 bg-[rgb(var(--bg-inset-rgb))] border border-[rgb(var(--accent-rgb))]/25 text-[10px] uppercase tracking-widest text-amber-950/70 font-bold shadow-sm">
-              {distinction.origin}
-            </span>
-          </div>
+        <div>
+          {/* Tag de origem em formato de selo hexagonal */}
+          <span className="hex-badge font-display inline-block px-4 py-1.5 bg-[rgb(var(--bg-inset-rgb))] text-xs font-bold uppercase tracking-widest text-amber-950/75 border border-[rgb(var(--accent-rgb))]/30 group-hover:border-[rgb(var(--accent-rgb))]/60 group-hover:text-red-800/90 transition-colors">
+            {distinction.origin}
+          </span>
         </div>
       </div>
-    </button>
+    </div>
   );
 };
 
@@ -494,9 +494,12 @@ export default function DistincoesPage() {
           )}
         </div>
 
-        {/* Grid */}
+        {/* Grid de Distinções */}
+        <h2 className="font-display text-2xl font-bold text-red-800 mb-6 border-b-2 border-amber-900/20 pb-2 tracking-wide">
+          {filteredDistinctions.length} Distinções Encontradas
+        </h2>
         {filteredDistinctions.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-10 items-stretch mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-x-6 gap-y-10 items-stretch mb-16">
             {filteredDistinctions.map((d) => (
               <DistinctionCard key={d.id} distinction={d} onClick={setSelectedDistinction} />
             ))}
