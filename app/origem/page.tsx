@@ -4,6 +4,37 @@ import { useState } from "react";
 import Link from "next/link";
 import { origins } from "@/data/origins";
 import { formatOrigin } from "@/types/power";
+import ThemeToggle from "@/components/ThemeToggle";
+
+function SearchGlyph({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true" className={className}>
+      <circle cx="10" cy="10" r="6.5" />
+      <path d="M19 19l-4.5-4.5" />
+    </svg>
+  );
+}
+
+function PageGlyph({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className={className}>
+      <path d="M6 3h9l4 4v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" />
+      <path d="M15 3v4h4" />
+      <path d="M8.5 11h7M8.5 14h7M8.5 17h4" />
+    </svg>
+  );
+}
+
+function CornerOrnament({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 32 32" width="26" height="26" fill="none" aria-hidden="true" className={className}>
+      <path d="M3 29V12C3 6.48 7.48 2 13 2H29" stroke="rgb(var(--accent-rgb))" strokeWidth="1.6" strokeLinecap="round" />
+      <path d="M3 21c5 0 8 3 8 8" stroke="rgb(var(--accent-rgb))" strokeWidth="1" strokeLinecap="round" opacity="0.55" />
+      <circle cx="3" cy="2" r="4" fill="none" stroke="rgb(var(--accent-rgb))" strokeWidth="1" opacity="0.5" />
+      <circle cx="3" cy="2" r="2.2" fill="rgb(var(--accent-rgb))" />
+    </svg>
+  );
+}
 
 export default function OrigemPage() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -19,27 +50,30 @@ export default function OrigemPage() {
     .sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
 
   return (
-    <div className="min-h-screen bg-[#f5e6d0] text-amber-950 font-serif selection:bg-amber-800 selection:text-amber-50 relative overflow-x-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#f5e6d0] to-[#e6d5b8]">
-      
+    <div className="min-h-screen bg-[rgb(var(--bg-rgb))] text-amber-950 font-serif selection:bg-amber-800 selection:text-amber-50 relative overflow-x-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[rgb(var(--bg-rgb))] to-[rgb(var(--bg-edge-rgb))]">
+
       {/* Background Effect */}
-      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(69,26,3,0.15)_100%)]" />
+      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(var(--bg-rgb),0.15)_100%)]" />
 
       {/* Header Responsivo */}
-      <header className="relative z-10 w-full p-6 border-b-4 border-double border-amber-900/40 bg-[#e8dac1]/90 backdrop-blur-md shadow-sm mb-8 md:mb-12 sticky top-0 font-serif">
-        <div className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4">
-            
+      <header className="relative z-10 w-full p-6 border-b-4 border-double border-amber-900/40 bg-[rgb(var(--bg-card-rgb))]/90 backdrop-blur-md shadow-sm mb-8 md:mb-12 sticky top-0">
+        <div className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4 max-w-screen-2xl mx-auto">
+
             <Link href="/" className="inline-block group self-start md:self-auto">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-700 via-red-800 to-red-950 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 1px 2px rgba(69,26,3,0.1)' }}>
+                <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-700 via-red-800 to-red-950 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 0 28px rgba(127,29,29,0.3)' }}>
                     a-Tormenta
                 </h1>
             </Link>
-            
-            <div className="flex items-center gap-2 flex-wrap text-xs sm:text-sm font-bold tracking-widest uppercase self-end md:self-auto">
-                <Link href="/" className="text-amber-950/70 hover:text-red-800 transition-colors whitespace-nowrap">
-                  Início
-                </Link>
-                <span className="text-amber-900/40">/</span>
-                <span className="text-red-800">Origens</span>
+
+            <div className="flex items-center gap-3 self-end md:self-auto">
+              <div className="font-display flex items-center gap-2 flex-wrap text-xs sm:text-sm font-bold tracking-widest uppercase">
+                  <Link href="/" className="text-amber-950/70 hover:text-red-800 transition-colors whitespace-nowrap">
+                    Início
+                  </Link>
+                  <span className="text-amber-900/40">/</span>
+                  <span className="text-red-800">Origens</span>
+              </div>
+              <ThemeToggle />
             </div>
         </div>
       </header>
@@ -49,25 +83,31 @@ export default function OrigemPage() {
 
         {/* Título Principal */}
         <div className="mb-10 md:mb-12 w-full flex flex-col items-start">
-          <h1 className="text-4xl sm:text-5xl font-bold text-red-800 mb-3 drop-shadow-sm font-serif tracking-wider">
+          <h1 className="font-display text-4xl sm:text-5xl font-bold text-red-800 mb-3 drop-shadow-sm tracking-wider" style={{ textShadow: '0 0 28px rgba(127,29,29,0.3)' }}>
             Origens
           </h1>
-          <div className="w-32 h-1 bg-gradient-to-r from-red-800 to-transparent rounded-full"></div>
+          <div className="flex items-center gap-3 w-full">
+            <svg width="22" height="14" viewBox="0 0 22 14" fill="none" stroke="rgb(var(--accent-rgb))" strokeWidth="1" className="opacity-60 shrink-0">
+              <path d="M1 7c4-6 8-6 10 0s6 6 10 0" />
+              <circle cx="11" cy="7" r="1.4" fill="rgb(var(--accent-rgb))" stroke="none" />
+            </svg>
+            <div className="h-px max-w-36 flex-1 bg-gradient-to-r from-[rgba(var(--accent-rgb),0.55)] to-transparent" />
+          </div>
         </div>
 
         {/* Acordeão de Introdução */}
         <div className="mb-12 w-full">
-          <button 
+          <button
             onClick={() => setIsIntroOpen(!isIntroOpen)}
-            className="w-full flex items-center justify-between p-6 bg-[#e8dac1] border-2 border-amber-900/30 rounded-t-xl hover:border-red-800/40 transition-all group shadow-sm"
+            className="w-full flex items-center justify-between p-6 bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/30 rounded-t-xl hover:border-red-800/40 transition-all group shadow-sm"
           >
             <div className="flex items-center gap-3">
-              <span className="text-2xl opacity-70">📜</span>
+              <PageGlyph className="text-red-800/70 shrink-0 mt-1" />
               <div className="text-left">
-                <h2 className="text-xl font-bold text-amber-950 group-hover:text-red-800 transition-colors font-serif uppercase tracking-wide">
+                <h2 className="font-display text-xl font-bold text-amber-950 group-hover:text-red-800 transition-colors uppercase tracking-wide">
                   Regras de Origem
                 </h2>
-                <p className="text-sm text-amber-950/70 font-serif italic font-bold">
+                <p className="text-sm text-amber-950/70 italic font-bold">
                   Clique para expandir ou recolher as informações básicas.
                 </p>
               </div>
@@ -77,9 +117,9 @@ export default function OrigemPage() {
             </span>
           </button>
 
-          <div className={`overflow-hidden transition-all duration-500 ease-in-out border-x-2 border-b-2 border-amber-900/30 rounded-b-xl bg-[#fbf5e6] ${isIntroOpen ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0 border-transparent'}`}>
+          <div className={`overflow-hidden transition-all duration-500 ease-in-out border-x-2 border-b-2 border-amber-900/30 rounded-b-xl bg-[rgb(var(--bg-inset-rgb))] ${isIntroOpen ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0 border-transparent'}`}>
             <div className="p-5 md:p-10 font-serif text-amber-950/85 text-base md:text-lg text-left md:text-justify leading-relaxed flex flex-col gap-8">
-              
+
               <section>
                 <p className="font-medium mb-4">
                   Enquanto sua raça diz como você nasceu e sua classe diz o que se tornou, sua origem revela sua ocupação antes de ser aventureiro. É o que você fazia até ganhar seu primeiro nível em uma classe.
@@ -90,7 +130,7 @@ export default function OrigemPage() {
               </section>
 
               <section className="border-t-2 border-amber-900/20 pt-8">
-                <h3 className="text-2xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/10 pb-2">
+                <h3 className="font-display text-2xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/10 pb-2">
                   Itens de Origem
                 </h3>
                 <p className="font-medium">
@@ -99,13 +139,13 @@ export default function OrigemPage() {
               </section>
 
               <section className="border-t-2 border-amber-900/20 pt-8">
-                <h3 className="text-2xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/10 pb-2">
+                <h3 className="font-display text-2xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/10 pb-2">
                   Benefícios de Origem
                 </h3>
                 <p className="font-medium mb-6">
                   Cada origem possui uma lista de benefícios que inclui perícias e poderes gerais. Você escolhe dois benefícios da lista — duas perícias, dois poderes ou uma perícia e um poder. Se preferir regras mais rápidas, escolha apenas perícias.
                 </p>
-                
+
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-start gap-3">
                     <span className="text-[10px] text-red-800/60 mt-2">◆</span>
@@ -127,7 +167,7 @@ export default function OrigemPage() {
                   </li>
                 </ul>
 
-                <div className="mt-6 p-4 md:p-6 bg-[#fbf5e6] rounded-xl border border-amber-900/20 shadow-sm border-l-4 border-l-red-800">
+                <div className="mt-6 p-4 md:p-6 bg-[rgb(var(--bg-card-rgb))]/50 rounded-xl border border-amber-900/20 shadow-sm border-l-4 border-l-red-800">
                   <p className="italic text-amber-950/85">
                     O humano clérigo Pivas, que cresceu isolado nas florestas de Tollon, escolhe a origem eremita. Ele começa com os seguintes itens: uma barraca e uma maleta de medicamentos. Pivas então pode escolher dois benefícios: ele escolhe a perícia Religião e o poder único Busca Interior.
                   </p>
@@ -139,8 +179,8 @@ export default function OrigemPage() {
         </div>
 
         {/* Busca - ESTILO CAIXA */}
-        <div className="mb-12 p-6 rounded-xl bg-[#e8dac1] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] w-full font-serif">
-            <label className="block text-sm font-bold text-amber-950/70 mb-3 uppercase tracking-widest">
+        <div className="mb-12 p-6 rounded-xl bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] w-full">
+            <label className="font-display block text-sm font-bold text-amber-950/70 mb-3 uppercase tracking-widest">
                 Buscar Origem
             </label>
             <div className="relative">
@@ -149,11 +189,9 @@ export default function OrigemPage() {
                   placeholder="Buscar por nome, descrição ou fonte..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full px-5 py-3 pr-12 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-lg text-amber-950/85 placeholder-amber-900/40 focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
+                  className="w-full px-5 py-3 pr-12 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-lg text-amber-950/85 placeholder-amber-900/40 focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
                 />
-                <div className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/40 text-lg">
-                    🔍
-                </div>
+                <SearchGlyph className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/40 pointer-events-none" />
             </div>
         </div>
 
@@ -162,10 +200,15 @@ export default function OrigemPage() {
             {filteredOrigins.map((origin) => (
             <div
                 key={origin.id}
-                className="rounded-xl bg-[#e8dac1] border-2 border-amber-900/30 p-5 md:p-6 hover:border-red-800/50 hover:shadow-[0_4px_20px_rgba(153,27,27,0.15)] transition-all duration-300 flex flex-col h-full group hover:-translate-y-1 font-serif"
+                className="card-grain group relative rounded-xl bg-[rgb(var(--bg-card-rgb))] border border-amber-900/20 p-5 md:p-6 hover:border-[rgb(var(--accent-rgb))]/55 hover:shadow-[0_8px_30px_rgba(var(--accent-rgb),0.18)] transition-all duration-300 flex flex-col h-full hover:-translate-y-1"
             >
+                <CornerOrnament className="absolute -top-px -left-px z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <CornerOrnament className="absolute -top-px -right-px z-10 rotate-90 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <CornerOrnament className="absolute -bottom-px -right-px z-10 rotate-180 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <CornerOrnament className="absolute -bottom-px -left-px z-10 -rotate-90 opacity-0 group-hover:opacity-100 transition-opacity" />
+
                 {/* Nome da Origem */}
-                <h3 className="text-xl font-bold text-red-800 mb-3 group-hover:text-red-800 transition-colors tracking-wide border-b-2 border-amber-900/10 pb-2">
+                <h3 className="font-display text-xl font-bold text-red-800 mb-3 group-hover:text-red-700 transition-colors tracking-wide border-b-2 border-amber-900/10 pb-2 break-words">
                   {origin.name}
                 </h3>
 
@@ -178,16 +221,16 @@ export default function OrigemPage() {
 
                 {/* Bloco de Informações Dinâmicas (Itens, Benefícios, Poder Único) */}
                 <div className="flex flex-col flex-1 gap-4">
-                  
+
                   {/* Itens */}
                   {origin.items && origin.items.length > 0 && (
                     <div className="pt-3 border-t border-amber-900/10">
-                      <p className="text-xs font-bold text-red-800 mb-2 uppercase tracking-widest">Itens</p>
+                      <p className="font-display text-xs font-bold text-red-800 mb-2 uppercase tracking-widest">Itens</p>
                       <div className="flex flex-wrap gap-2">
                           {origin.items.map((item, index) => (
                           <span
                               key={index}
-                              className="text-xs px-2 py-1 rounded bg-[#fbf5e6] border border-amber-900/20 text-amber-950/80 font-bold shadow-sm"
+                              className="text-xs px-2 py-1 rounded bg-[rgb(var(--bg-inset-rgb))] border border-amber-900/20 text-amber-950/80 font-bold shadow-sm"
                           >
                               {item}
                           </span>
@@ -199,7 +242,7 @@ export default function OrigemPage() {
                   {/* Benefícios */}
                   {origin.benefits && origin.benefits.length > 0 && (
                     <div className="pt-3 border-t border-amber-900/10">
-                      <p className="text-xs font-bold text-red-800 mb-2 uppercase tracking-widest">Benefícios</p>
+                      <p className="font-display text-xs font-bold text-red-800 mb-2 uppercase tracking-widest">Benefícios</p>
                       <ul className="text-sm md:text-base text-amber-950/85 font-medium space-y-1">
                           {origin.benefits.map((benefit, index) => (
                           <li key={index} className="flex items-start gap-2">
@@ -214,7 +257,7 @@ export default function OrigemPage() {
                   {/* Poder Único - CORRIGIDO AQUI PARA NÃO APARECER QUANDO NÃO TIVER NOME */}
                   {origin.uniquePower && origin.uniquePower.name && (
                     <div className="pt-3 border-t border-amber-900/10 mt-auto">
-                      <p className="text-xs font-bold text-red-800 mb-1 uppercase tracking-widest">
+                      <p className="font-display text-xs font-bold text-red-800 mb-1 uppercase tracking-widest">
                           Poder Único: {origin.uniquePower.name}
                       </p>
                       <p className="text-sm text-amber-950/75 leading-relaxed font-medium">
@@ -227,7 +270,7 @@ export default function OrigemPage() {
 
                 {/* Rodapé (Fonte) */}
                 <div className="mt-4 pt-4 border-t-2 border-amber-900/20 group-hover:border-red-800/30 transition-colors flex items-center justify-end">
-                  <span className="text-[10px] px-2 py-1 rounded bg-[#fbf5e6] border border-amber-900/20 text-amber-950/70 uppercase tracking-widest shadow-sm font-bold">
+                  <span className="font-display text-[10px] px-2 py-1 rounded bg-[rgb(var(--bg-inset-rgb))] border border-amber-900/20 text-amber-950/70 uppercase tracking-widest shadow-sm font-bold">
                     {formatOrigin(origin.source)}
                   </span>
                 </div>
@@ -238,22 +281,22 @@ export default function OrigemPage() {
 
         {/* Empty State */}
         {filteredOrigins.length === 0 && (
-            <div className="text-center py-20 border-2 border-dashed border-amber-900/30 rounded-xl bg-[#e8dac1]/50 font-serif flex flex-col items-center justify-center mt-8">
-              <span className="text-4xl opacity-40 mb-4">📜</span>
-              <p className="text-amber-950/70 text-lg italic tracking-wide">
+            <div className="text-center py-20 border-2 border-dashed border-amber-900/30 rounded-xl bg-[rgb(var(--bg-card-rgb))]/50 flex flex-col items-center justify-center mt-8 gap-3">
+              <PageGlyph className="text-amber-950/40" />
+              <p className="font-display text-amber-950/70 text-lg italic tracking-wide">
                 Nenhuma origem encontrada.
               </p>
             </div>
         )}
       </div>
-      
+
       {/* Footer */}
-      <footer className="relative z-10 mt-20 p-8 border-t-4 border-double border-amber-900/40 bg-[#2a1810] text-center font-serif shadow-[0_-4px_20px_rgba(0,0,0,0.15)] flex flex-col items-center justify-center">
+      <footer className="relative z-10 mt-20 p-8 border-t-4 border-double border-amber-900/40 bg-[rgb(var(--void-rgb))] text-center shadow-[0_-4px_20px_rgba(0,0,0,0.15)] flex flex-col items-center justify-center">
         <span className="text-red-900/40 text-2xl mb-3">❖</span>
-        <p className="mb-2 text-[#e8dac1]/60 text-sm md:text-base tracking-widest uppercase font-bold">
+        <p className="font-display mb-2 text-white/60 text-sm md:text-base tracking-widest uppercase font-bold">
           Compêndio Tormenta RPG © 2025 • Feito por um fã para fãs
         </p>
-        <p className="text-[#e8dac1]/40 text-xs md:text-sm tracking-wide">
+        <p className="text-white/40 text-xs md:text-sm tracking-wide">
           Tormenta 20 pertence a Jambo Editora. Todos os direitos são reservados a editora.
         </p>
       </footer>
