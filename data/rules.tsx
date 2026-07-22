@@ -208,22 +208,22 @@ export const groupRoles: GroupRole[] = [
 ];
 
 const CreatureSizeTable = ({ data, footnote }: { data: typeof creatureSizeTable, footnote: string }) => (
-  <div className="overflow-x-auto shadow-md rounded-xl border-2 border-amber-900/20 mt-4 bg-[#e8dac1]">
+  <div className="overflow-x-auto shadow-md rounded-xl border-2 border-amber-900/20 mt-4 bg-[rgb(var(--bg-card-rgb))]">
     <table className="min-w-full divide-y divide-amber-900/20 font-serif text-sm">
-      <caption className="p-4 text-xl font-bold text-red-800 bg-[#d9c8a9] border-b-2 border-amber-900/20 text-left uppercase tracking-wide">
+      <caption className="font-display p-4 text-xl font-bold text-red-800 bg-[rgb(var(--bg-edge-rgb))] border-b-2 border-amber-900/20 text-left uppercase tracking-wide">
         Tabela: Tamanho de Criaturas
       </caption>
-      <thead className="bg-[#d9c8a9] text-red-800">
+      <thead className="bg-[rgb(var(--bg-edge-rgb))] text-red-800">
         <tr>
-          <th className="px-4 py-3 text-left font-bold uppercase">Categoria</th>
-          <th className="px-4 py-3 text-left font-bold uppercase">Exemplos</th>
-          <th className="px-4 py-3 text-left font-bold uppercase">Espaço / Alcance</th>
-          <th className="px-4 py-3 text-left font-bold uppercase">Furtividade / Manobras</th>
+          <th className="font-display px-4 py-3 text-left font-bold uppercase">Categoria</th>
+          <th className="font-display px-4 py-3 text-left font-bold uppercase">Exemplos</th>
+          <th className="font-display px-4 py-3 text-left font-bold uppercase">Espaço / Alcance</th>
+          <th className="font-display px-4 py-3 text-left font-bold uppercase">Furtividade / Manobras</th>
         </tr>
       </thead>
       <tbody className="divide-y divide-amber-900/10">
         {data.map((row, index) => (
-          <tr key={row.category} className={index % 2 === 0 ? "bg-[#fbf5e6]" : "bg-[#f5e6d0] hover:bg-[#e8dac1] transition-colors"}>
+          <tr key={row.category} className={index % 2 === 0 ? "bg-[rgb(var(--bg-inset-rgb))]" : "bg-[rgb(var(--bg-card-rgb))]/40 hover:bg-[rgb(var(--bg-card-rgb))]/70 transition-colors"}>
             <td className="px-4 py-2 font-bold text-amber-950">{row.category}</td>
             <td className="px-4 py-2 text-amber-900/80 italic">{row.examples}</td>
             <td className="px-4 py-2 text-red-700 font-bold font-mono">{row.spaceAndReach}</td>
@@ -232,25 +232,25 @@ const CreatureSizeTable = ({ data, footnote }: { data: typeof creatureSizeTable,
         ))}
       </tbody>
     </table>
-    <p className="p-3 text-xs text-amber-900/70 bg-[#d9c8a9] border-t-2 border-amber-900/20 italic font-medium">
+    <p className="p-3 text-xs text-amber-900/70 bg-[rgb(var(--bg-edge-rgb))] border-t-2 border-amber-900/20 italic font-medium">
       {footnote}
     </p>
   </div>
 );
 
 const DifficultyTable = ({ data }: { data: any[] }) => (
-  <div className="overflow-x-auto shadow-md rounded-xl border-2 border-amber-900/20 mt-4 mb-4 bg-[#e8dac1]">
+  <div className="overflow-x-auto shadow-md rounded-xl border-2 border-amber-900/20 mt-4 mb-4 bg-[rgb(var(--bg-card-rgb))]">
     <table className="min-w-full divide-y divide-amber-900/20 font-serif">
-      <thead className="bg-[#d9c8a9] text-red-800">
+      <thead className="bg-[rgb(var(--bg-edge-rgb))] text-red-800">
         <tr>
-          <th className="px-4 py-3 text-left text-xs font-bold uppercase tracking-wider">Tarefa</th>
-          <th className="px-4 py-3 text-left text-xs font-bold uppercase tracking-wider">CD</th>
-          <th className="px-4 py-3 text-left text-xs font-bold uppercase tracking-wider">Exemplo</th>
+          <th className="font-display px-4 py-3 text-left text-xs font-bold uppercase tracking-wider">Tarefa</th>
+          <th className="font-display px-4 py-3 text-left text-xs font-bold uppercase tracking-wider">CD</th>
+          <th className="font-display px-4 py-3 text-left text-xs font-bold uppercase tracking-wider">Exemplo</th>
         </tr>
       </thead>
       <tbody className="divide-y divide-amber-900/10">
         {data.map((item, index) => (
-          <tr key={index} className={index % 2 === 0 ? "bg-[#fbf5e6]" : "bg-[#f5e6d0]"}>
+          <tr key={index} className={index % 2 === 0 ? "bg-[rgb(var(--bg-inset-rgb))]" : "bg-[rgb(var(--bg-card-rgb))]/40"}>
             <td className="px-4 py-2 text-sm font-bold text-amber-950">{item.task}</td>
             <td className="px-4 py-2 text-sm text-red-700 font-bold">{item.cd}</td>
             <td className="px-4 py-2 text-sm text-amber-900/80 italic font-medium">{item.example}</td>
@@ -262,18 +262,18 @@ const DifficultyTable = ({ data }: { data: any[] }) => (
 );
 
 const ExtendedTestTable = ({ data }: { data: any[] }) => (
-  <div className="overflow-x-auto shadow-md rounded-xl border-2 border-amber-900/20 mt-4 mb-4 bg-[#e8dac1]">
+  <div className="overflow-x-auto shadow-md rounded-xl border-2 border-amber-900/20 mt-4 mb-4 bg-[rgb(var(--bg-card-rgb))]">
     <table className="min-w-full divide-y divide-amber-900/20 font-serif">
-      <thead className="bg-[#d9c8a9] text-red-800">
+      <thead className="bg-[rgb(var(--bg-edge-rgb))] text-red-800">
         <tr>
-          <th className="px-4 py-3 text-left text-xs font-bold uppercase tracking-wider">Sucessos Exigidos</th>
-          <th className="px-4 py-3 text-left text-xs font-bold uppercase tracking-wider">Complexidade</th>
-          <th className="px-4 py-3 text-left text-xs font-bold uppercase tracking-wider">Exemplos</th>
+          <th className="font-display px-4 py-3 text-left text-xs font-bold uppercase tracking-wider">Sucessos Exigidos</th>
+          <th className="font-display px-4 py-3 text-left text-xs font-bold uppercase tracking-wider">Complexidade</th>
+          <th className="font-display px-4 py-3 text-left text-xs font-bold uppercase tracking-wider">Exemplos</th>
         </tr>
       </thead>
       <tbody className="divide-y divide-amber-900/10">
         {data.map((item, index) => (
-          <tr key={index} className={index % 2 === 0 ? "bg-[#fbf5e6]" : "bg-[#f5e6d0]"}>
+          <tr key={index} className={index % 2 === 0 ? "bg-[rgb(var(--bg-inset-rgb))]" : "bg-[rgb(var(--bg-card-rgb))]/40"}>
             <td className="px-4 py-2 text-sm font-bold text-amber-950">{item.successes}</td>
             <td className="px-4 py-2 text-sm text-red-700 font-bold">{item.complexity}</td>
             <td className="px-4 py-2 text-sm text-amber-900/80 italic font-medium">{item.example}</td>
@@ -293,9 +293,9 @@ export const ruleSections: RuleSection[] = [
         <p>Sempre que um personagem tenta fazer uma ação cujo resultado é incerto, o jogador faz um teste. Um teste é uma rolagem de 1d20 + um modificador.</p>
         <p>Testes são classificados pela característica utilizada (atributo ou perícia) e pelo que define sua CD (comuns ou opostos).</p>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Testes de Atributo</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Testes de Atributo</h4>
         <p>Você usa testes de atributo para tarefas básicas, para as quais nenhuma perícia se aplica. Para fazer um teste de atributo, role 1d20 e some o valor do atributo apropriado.</p>
-        <p className="p-3 bg-[#fbf5e6] rounded-lg border-2 border-amber-900/10 font-bold text-red-800 text-center font-serif shadow-sm">
+        <p className="p-3 bg-[rgb(var(--bg-inset-rgb))] rounded-lg border-2 border-amber-900/10 font-bold text-red-800 text-center font-display shadow-sm">
           TESTE DE ATRIBUTO = 1D20 + ATRIBUTO
         </p>
         <p>Aqui estão alguns exemplos de testes de atributo, seguidos pelo atributo testado:</p>
@@ -308,27 +308,27 @@ export const ruleSections: RuleSection[] = [
           <li><strong>Causar boa impressão</strong> (Carisma).</li>
         </ul>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Testes de Perícia</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Testes de Perícia</h4>
         <p>Um teste de perícia funciona como um teste de atributo. Porém, você soma o valor da perícia em questão.</p>
-        <p className="p-3 bg-[#fbf5e6] rounded-lg border-2 border-amber-900/10 font-bold text-red-800 text-center font-serif shadow-sm">
+        <p className="p-3 bg-[rgb(var(--bg-inset-rgb))] rounded-lg border-2 border-amber-900/10 font-bold text-red-800 text-center font-display shadow-sm">
           TESTE DE PERÍCIA = 1D20 + VALOR DE PERÍCIA
         </p>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Testes Comuns</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Testes Comuns</h4>
         <p>Testes comuns são usados quando um personagem está competindo contra o ambiente. Eles são realizados contra uma CD determinada pelo mestre, de acordo com a tarefa sendo realizada. Consulte a TABELA: DIFICULDADES para exemplos.</p>
         <p>O mestre pode estipular as dificuldades de todos os testes usando a tabela abaixo como guia.</p>
         <DifficultyTable data={difficulties} />
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Testes Opostos</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Testes Opostos</h4>
         <p>Testes opostos são usados quando dois ou mais personagens estão competindo entre si. Cada personagem envolvido faz seu teste. Aquele com maior valor é o vencedor. Em caso de empate, aquele com o maior valor vence. Se os valores forem iguais, outra rolagem deve ser feita.</p>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Misturando Testes Comuns e Opostos</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Misturando Testes Comuns e Opostos</h4>
         <p>Um teste pode ser comum e oposto ao mesmo tempo. Por exemplo, se três personagens estão disputando para ver quem atravessa um lago primeiro, todos devem fazer um teste de Atletismo contra uma CD. Aqueles que passarem atravessam o lago. Dentre esses, aquele com o maior resultado chega primeiro.</p>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Sucessos e Falhas Automáticos</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Sucessos e Falhas Automáticos</h4>
         <p>Ao fazer um teste, um 20 natural (quando o resultado do d20 é 20) sempre é um sucesso, e um 1 natural (quando o resultado do d20 é 1) sempre é uma falha, não importando o valor a ser alcançado.</p>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Condições Favoráveis e Desfavoráveis</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Condições Favoráveis e Desfavoráveis</h4>
         <p>Certas situações podem tornar um teste mais fácil ou mais difícil. Para representar isso, o mestre pode alterar o teste de duas maneiras.</p>
         <p>Aqui estão alguns exemplos de testes de atributo, seguidos pelo atributo testado:</p>
         <ul className="list-disc ml-6 space-y-2 text-amber-900/90 font-medium">
@@ -336,17 +336,17 @@ export const ruleSections: RuleSection[] = [
           <li>Impor ao personagem uma penalidade de –2 ou mais para representar circunstâncias que atrapalham seu desempenho, como procurar por um frasco específico em um laboratório bagunçado com um teste de Investigação.</li>
         </ul>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Novas Tentativas</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Novas Tentativas</h4>
         <p>Em geral, você pode tentar um teste de novo em caso de falha e continuar tentando por toda a eternidade. Contudo, alguns testes acarretam penalidades (ou problemas!) em caso de falha. Por exemplo, um personagem que falhe em um teste de Atletismo para subir uma encosta pode tentar novamente. Mas, se falhar por 5 ou mais, cairá. Ele pode se levantar e tentar de novo, supondo que a queda não tenha sido muito dolorida...</p>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Ferramentas</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Ferramentas</h4>
         <p>Algumas perícias requerem ferramentas. Se isso for necessário, será mencionado na descrição da perícia. Se você não possui o item apropriado, ainda pode usar a perícia, mas sofre uma penalidade de –5 no teste.</p>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Ajudar</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Ajudar</h4>
         <p>Às vezes, os personagens trabalham juntos e se ajudam. Um personagem (normalmente aquele com o maior bônus) é considerado o líder, e faz o teste normal, enquanto cada ajudante faz um teste contra CD 10 (usando a mesma perícia ou outra que faça sentido). Um teste de ajuda concede ao líder um bônus de +1, e +1 adicional para cada 10 pontos acima da CD (+2 para um resultado 20, +3 para 30 e assim por diante).</p>
         <p>Em muitos casos, ajuda externa não traz benefícios — você não pode ajudar um colega a ser mais silencioso em seu teste de Furtividade. Ou então apenas um número limitado de ajudantes pode auxiliar alguém ao mesmo tempo (não há espaço para muitas pessoas à volta de uma mesma fechadura). O mestre limita a ajuda como achar melhor, de acordo com a tarefa e as condições.</p>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Testes sem Rolagens</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Testes sem Rolagens</h4>
         <p>Um teste representa a realização de uma tarefa desafiadora — com alta dificuldade ou feita em situação de perigo. Quando este não é o caso, você pode usar as opções a seguir para dispensar as rolagens. Elas são úteis para acelerar o jogo e não interromper a história com rolagens desnecessárias.</p>
         <ul className="list-disc ml-6 space-y-2 text-amber-900/90 font-medium">
           <li><strong>Escolher 0</strong> Quando seu bônus total em um teste é igual ou maior que a CD, você não precisa fazer o teste — você automaticamente passa. A tarefa é trivial para alguém com suas habilidades. Por exemplo, um personagem com Sobrevivência +15 não precisa fazer testes para montar acampamento em uma planície (uma tarefa com CD 15). Caso o teste tenha variados graus de sucesso, você obtém o mínimo possível. Você ainda pode fazer uma rolagem para alcançar um grau maior de sucesso, se quiser, mas arrisca falhar se rolar um 1 natural.</li>
@@ -366,25 +366,25 @@ export const ruleSections: RuleSection[] = [
         <p>Testes estendidos podem envolver mais de uma perícia. Por exemplo, infiltrar-se em uma base purista pode exigir um sucesso em Atletismo, para escalar o muro, e dois em Furtividade, para não ser visto pelas sentinelas. Um julgamento pode exigir dois sucessos em Nobreza, para conhecer a lei, mais três em Diplomacia, para convencer o magistrado.</p>
         <ExtendedTestTable data={extendedTests} />
         
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Testes Estendidos Abertos</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Testes Estendidos Abertos</h4>
         <p>O mestre pode permitir que os jogadores decidam quais perícias vão usar em um teste estendido. O jogador escolhe a perícia, então explica como vai utilizá-la para resolver o desafio.</p>
         <p>Por exemplo, em um julgamento, um personagem poderia usar Enganação (“vou corromper o magistrado”); Intimidação (“vou assustar os jurados para que decidam em meu favor”); Intuição (“vou analisar a situação para determinar qual o melhor argumento”) etc.</p>
         <p>Permitir que os jogadores descrevam quais perícias vão usar irá envolvê-los mais com a cena. Se o mestre permitir isso, cada teste avulso dentro do teste estendido precisa ser feito com uma perícia diferente. Se combinada com as opções que dificultam os testes estendidos (veja abaixo), essa opção exige pensamento tático por parte do grupo!</p>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Testes Estendidos em Grupo</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Testes Estendidos em Grupo</h4>
         <p>Por serem feitos ao longo do tempo, testes estendidos podem ser feitos por mais de um personagem, ou mesmo pelo grupo todo. De fato, colocar o grupo inteiro para fazer um único teste estendido é uma ótima forma de unir os jogadores!</p>
         <p>Caso mais de um personagem esteja participando do teste estendido, resolva o teste por “rodadas”; a cada rodada, cada jogador faz um teste. Some os sucessos e falhas de todos para definir se o teste estendido é bem-sucedido ou não.</p>
         <p>Fazer testes estendidos em grupo é muito útil em testes estendidos abertos (veja acima), nas quais cada perícia só pode ser usada uma vez. Com vários personagens participando do teste, a chance deles terem mais perícias treinadas diferentes é maior.</p>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Ajuda e Testes Estendidos</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Ajuda e Testes Estendidos</h4>
         <p>Personagens podem ajudar em testes estendidos, usando a regra de ajuda padrão. Porém, uma perícia usada para ajudar não poderá ser usada novamente no teste estendido, seja para ajudar, seja para realizar o teste principal.</p>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Dificultando testes estendidos</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Dificultando testes estendidos</h4>
         <p>Para testes estendidos especialmente desafiadores, o mestre pode usar dificuldades cumulativas e penalidades por falhas.</p>
         <p>No primeiro caso, a CD aumenta em +2 a cada teste (independentemente de o teste ser um sucesso ou uma falha), representando a dificuldade crescente. Por exemplo, num teste estendido para se infiltrar até os aposentos reais do castelo, a CD pode aumentar a cada teste, pois quanto mais perto do quarto do rei, maior a segurança.</p>
         <p>No segundo caso, o mestre aplica uma penalidade para cada falha — isto é, além de chegar mais perto da falha total. Digamos que um personagem esteja envolvido em uma negociação intrincada com um aristocrata, exigindo um teste estendido de Diplomacia. Cada vez que falha, pode sofrer uma penalidade cumulativa de –2 nos testes seguintes — isso significa que o aristocrata está ficando cada vez mais ofendido. Da mesma forma, um personagem escalando uma montanha com um teste estendido de Atletismo pode sofrer 3d6 pontos de dano para cada falha, representando ferimentos durante a subida.</p>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Interrupções e Novas Tentativas</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Interrupções e Novas Tentativas</h4>
         <p>A maioria dos testes estendidos pode ser interrompida sem problemas. Entretanto, o mestre pode determinar que uma interrupção conte como uma falha ou até mesmo como uma falha completa no teste estendido.</p>
         <p>Normalmente pode-se fazer novas tentativas de testes estendidos. Entretanto, da mesma forma que com testes normais, alguns testes estendidos têm consequências que devem ser levadas em conta. Por exemplo, uma armadilha que exige um teste estendido de Ladinagem pode disparar em caso de falha.</p>
       </div>
@@ -396,10 +396,10 @@ export const ruleSections: RuleSection[] = [
       <>
         <p>Além de atributos e perícias, personagens possuem habilidades fornecidas por sua raça, origem, classe, itens e outras fontes.</p>
         
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Usando Habilidades</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Usando Habilidades</h4>
         <p>Habilidades podem ser passivas (seus efeitos estão sempre funcionando) ou ativadas (precisam ser usadas para gerar seus efeitos). O poder Coração da Selva, do druida é uma habilidade passiva, enquanto a Fúria do bárbaro é uma habilidade ativada. Para usar habilidades ativadas você precisa gastar uma ação e, provavelmente, pontos de mana.</p>
         
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Ação Necessária</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Ação Necessária</h4>
         <p>Habilidades podem ser passivas (seus efeitos estão sempre funcionando) ou ativadas (precisam ser usadas para gerar seus efeitos). O poder Coração da Selva, do druida é uma habilidade passiva, enquanto a Fúria do bárbaro é uma habilidade ativada. Para usar habilidades ativadas você precisa gastar uma ação e, provavelmente, pontos de mana.</p>
         <p className="mt-4">
           <strong>Habilidades Engatilhadas:</strong> Habilidades ativadas por decorrência de outro evento (como fazer um ataque), são ativadas como uma <strong>reação</strong> e somente uma vez por instância do evento.
@@ -408,7 +408,7 @@ export const ruleSections: RuleSection[] = [
           A habilidade Frenesi, do bárbaro, diz que quando você usa a ação agredir, pode gastar 2 PM para realizar um ataque adicional. Ativar Frenesi é uma reação que só pode ser feita uma vez por ação agredir.
         </blockquote>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Custo de Pontos de Mana</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Custo de Pontos de Mana</h4>
         <p>A descrição da habilidade determina se são necessários PM para usá-la. Nesse caso, você gasta os PM <strong>mesmo em caso de falha</strong>. Por exemplo, se um guerreiro usa Ataque Especial e erra o ataque, ainda assim gasta os pontos de mana.</p>
         <p className="mt-2">Para habilidades com custo variável, o máximo de PM que você pode gastar por uso é igual ao seu <strong>nível na classe</strong> que fornece a habilidade (mas você sempre pode usar a habilidade em seu custo mínimo). Para habilidades de raça, origem ou poderes gerais, o limite é o seu <strong>nível de personagem</strong>.</p>
         
@@ -419,7 +419,7 @@ export const ruleSections: RuleSection[] = [
           <li><strong>Sacrifício de PM:</strong> Você deve sacrificar <strong>permanentemente</strong> certa quantidade de PM para usá-las.</li>
         </ul>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Alcance</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Alcance</h4>
         <p>Muitas habilidades possuem um alcance, isto é, a distância máxima a partir do personagem da qual o efeito pode se originar. Caso alguma parte da área da habilidade esteja além do alcance, a área é afetada normalmente.</p>
         <ul className="list-none space-y-2 mt-2">
           <li><strong>Pessoal:</strong> A habilidade afeta somente o personagem e/ou objetos que ele esteja carregando. Também pode ser uma habilidade de área que se inicia a partir do personagem e só o afeta se mencionar</li>
@@ -430,7 +430,7 @@ export const ruleSections: RuleSection[] = [
           <li><strong>Ilimitado:</strong> A habilidade alcança qualquer lugar no mesmo mundo. A maioria das habilidade com este alcance exige que você conheça e/ou já tenha estado no ponto de origem da habilidade.</li>
         </ul>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Alvos & Áreas</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Alvos & Áreas</h4>
         <p>Toda habilidade gera um efeito — causar dano em um alvo, fornecer um bônus a você ou qualquer outra coisa. A seguir estão regras gerais para efeitos. Muitos efeitos possuem um tipo.</p>
         <p><strong>Linha de Efeito:</strong> Um caminho direto e sem obstruções até onde a habilidade pode ter efeito. Você deve ter linha de efeito para qualquer alvo ou ponto de origem da área que queira afetar, ou para qualquer espaço onde queira criar um efeito. Qualquer barreira sólida, visível ou não, anula a linha de efeito.</p>
         <p className="mt-2"><strong>Alvo:</strong> A habilidade afeta um ou mais alvos, que podem ser criaturas ou objetos. Você usa a habilidade sobre os alvos e deve ser capaz de percebê-los. Uma habilidade usada sobre um tipo de alvo errado falha automaticamente. Por exemplo, a magia Tranca Arcana não tem efeito se lançada sobre algo que não seja uma porta, baú ou semelhante.</p>
@@ -439,7 +439,7 @@ export const ruleSections: RuleSection[] = [
         
         {/* IMAGEM INJETADA DIRETAMENTE NO DATA.TS! */}
         <div className="mt-8 flex flex-col items-center w-full">
-          <div className="relative group w-full max-w-2xl bg-[#e8dac1] rounded-lg p-2 border-2 border-amber-900/30 shadow-md">
+          <div className="relative group w-full max-w-2xl bg-[rgb(var(--bg-inset-rgb))] rounded-lg p-2 border-2 border-amber-900/30 shadow-md">
             <div className="absolute -inset-1 bg-gradient-to-r from-red-800 to-amber-900 rounded-lg blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
             <img 
               src="/regras/area.png" 
@@ -447,7 +447,7 @@ export const ruleSections: RuleSection[] = [
               className="relative rounded border border-amber-900/20 w-full h-auto object-contain mix-blend-multiply filter sepia-[0.2]"
             />
           </div>
-          <p className="text-center text-xs text-amber-900/70 mt-3 italic font-serif font-bold">
+          <p className="text-center text-xs text-amber-900/70 mt-3 italic font-display font-bold">
             Diagrama: Tipos de Áreas de Efeito e Posicionamento no Grid.
           </p>
         </div>
@@ -464,15 +464,15 @@ export const ruleSections: RuleSection[] = [
         <p className="mt-2"><strong>Criação:</strong> Caso a habilidade crie ou invoque alguma coisa, a coisa aparece em um local a sua escolha dentro do alcance e para o qual você tenha linha de efeito. Após surgir, a coisa pode se mover ou ser movida para fora da linha de efeito. Por exemplo, você não pode conjurar um monstro dentro de uma sala fechada. Mas, uma vez conjurado, o monstro pode entrar na sala, mesmo que você ainda não tenha linha de efeito para o interior dela.</p>
         <p className="mt-2"><strong>Redirecionando Efeitos:</strong> Algumas habilidades permitem redirecionar seu efeito para novos alvos ou áreas após serem usadas. Quando isso for possível, redirecionar a habilidade é uma ação padrão.</p>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Clarificações de Regras</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Clarificações de Regras</h4>
         <p><strong>Arredondando:</strong> A menos que indicado o contrário, sempre que um efeito indica uma divisão, arredonde para baixo. Por exemplo, se um ataque causa 7 pontos de dano e um efeito reduz esse dano à metade, o ataque causa apenas 3 pontos de dano.</p>
         <p className="mt-2"><strong>Ordem:</strong> Se mais de um efeito afetar um valor, siga a ordem de operações padrão. Ou seja, aplique primeiro multiplicações e divisões, depois somas e subtrações. O resultado de um teste de resistência é sempre o primeiro a ser aplicado.</p>
-        <blockquote className="border-l-4 border-red-800 pl-4 bg-[#e8dac1] p-3 my-4 text-sm font-medium italic text-amber-950 shadow-sm">
+        <blockquote className="border-l-4 border-red-800 pl-4 bg-[rgb(var(--bg-card-rgb))] p-3 my-4 text-sm font-medium italic text-amber-950 shadow-sm">
           Por exemplo: um guerreiro usando uma armadura incandescente (que fornece redução de fogo 10) é atingido por uma Bola de Fogo que causa 26 pontos de dano. Primeiro, ele faz seu teste de Reflexos. Se passar, reduz o dano à metade, para 13 (26/2=13). Então, o guerreiro pode usar a habilidade Durão. Se tiver passado no teste de resistência, sofrerá 6 pontos de dano (13/2=6). Se tiver falhado, sofrerá 13 pontos de dano (26/2=13). Por fim, ele aplica sua RD 10. Se tiver passado no teste de resistência e usado a habilidade Durão, não sofrerá dano. Se tiver passado no teste de resistência ou usado a habilidade Durão, sofrerá 3 pontos de dano (13–10=3). Por fim, se não tiver passado no teste nem usado Durão, sofrerá 16 pontos de dano (26–10=16).
         </blockquote>
         <p><strong>Multiplicações:</strong> Se mais de um efeito fizer você multiplicar um valor, combine-os em um único multiplicador, com cada efeito além do primeiro adicionando seu multiplicador –1. Por exemplo, dois efeitos que dobrem o valor (x2 + x2) irão triplicar o valor (2 + [2–1] = 3) em vez de quadruplicá-lo.</p>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Acumulando Efeitos</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Acumulando Efeitos</h4>
         <p>A interação entre diferentes efeitos depende de sua origem. As fontes de efeitos são habilidades, perícias, itens, magias, parceiros e o ambiente.</p>
         <p>Efeitos de habilidades e perícias acumulam entre si, exceto quando vierem da mesma habilidade ou perícia. Assim, o bônus na Defesa da Pele de Ferro do bárbaro acumula com o bônus na Defesa da Esquiva Sagaz do bucaneiro. Isso não inclui magias.</p>
         <p>Efeitos de itens, magias, parceiros e o ambiente acumulam com os de outras fontes, mas não entre si. Assim, um personagem com um item que forneça +1 em Fortitude e uma magia que também forneça +1 em Fortitude terá um bônus de +2 nessa perícia. Porém, um personagem com dois itens ou duas magias que forneçam +1 em Fortitude não terá +2 — como os efeitos são da mesma fonte, não acumulam.</p>
@@ -483,15 +483,15 @@ export const ruleSections: RuleSection[] = [
           <li><strong>Reduções de Custo:</strong> Reduções no custo de PM não são cumulativas. Uma habilidade nunca pode ter seu custo reduzido para menos de 1 PM.</li>
         </ul>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Efeitos que Afetam Testes</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Efeitos que Afetam Testes</h4>
         <p>Efeitos que fornecem um bônus a um teste ou modificam sua dificuldade devem ser usados antes de rolar o dado. Efeitos que permitem que você role novamente o dado devem ser usados antes de o mestre declarar se você passou ou não no teste (e você deve ficar com o segundo valor rolado, mesmo que seja pior que o primeiro).</p>
         <p>A habilidade Orgulho, do nobre, que fornece um bônus para um teste, deve ser usada antes de rolar o teste. A habilidade Mestre em Arma, do guerreiro, que permite que você role novamente um ataque recém realizado, deve ser usada antes de o mestre declarar se o ataque acertou ou não.</p>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Limites de Nível</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Limites de Nível</h4>
         <p>Algumas habilidades são limitadas pelo seu nível. Para classes, use seu nível naquela classe. Para outros casos, seu nível de personagem.</p>
         <p className="text-sm italic">A habilidade Insolência, do bucaneiro, permite que você some seu Carisma na Defesa, limitado pelo seu nível. Assim, um bucaneiro de 2º nível com Car 3 soma +2 na Defesa. Quando subir para o 3º nível, passará a somar +3. Da mesma forma, um lutador de 4º nível usando a habilidade Voadora soma no máximo +4d6 de dano, mesmo que tenha se deslocado mais de 8 quadrados.</p>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Duração</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Duração</h4>
         <p>A duração indica por quanto tempo a habilidade mantém seu efeito.</p>
         <ul className="list-disc ml-6 space-y-2 mt-2">
           <li><strong>Instantânea.</strong> O efeito da habilidade termina assim que ela é usada, mas suas consequências podem durar mais tempo. Por exemplo, uma magia <em>Curar Ferimentos</em> age instantaneamente, mas os ferimentos continuam curados.</li>
@@ -505,7 +505,7 @@ export const ruleSections: RuleSection[] = [
         <p><strong>Encerrando suas habilidades.</strong> Um personagem pode encerrar uma habilidade sua e seus respectivos efeitos como uma ação livre.</p>
         <p><strong>Morte e Duração.</strong> A morte de um personagem não afeta suas habilidades (exceto sustentadas) — elas permanecem até que sua duração termine.</p>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Testes de Resistência</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Testes de Resistência</h4>
         <p>Habilidades prejudiciais normalmente permitem que seus alvos façam um teste de resistência para evitar ou reduzir seus efeitos. O tipo de teste (Fortitude, Reflexos ou Vontade) e a maneira como ele altera o efeito serão descritos na habilidade.</p>
         <p>A CD do teste de resistência para qualquer efeito gerado por um personagem é <strong>10 + metade do nível do personagem + atributo</strong>. O atributo aparecerá entre parênteses na descrição da fonte do efeito (habilidade ou item; para magias, será sempre o atributo-chave da magia).</p>
         <blockquote className="border-l-4 border-red-800 pl-4 italic text-sm text-amber-900/80 my-2">
@@ -521,7 +521,7 @@ export const ruleSections: RuleSection[] = [
         <p><strong>Objetos e Testes de Resistência.</strong> Para habilidades que afetam objetos e permitem testes de resistência: itens mundanos soltos falham automaticamente; itens mundanos carregados usam o bônus do portador; itens mágicos sempre podem fazer teste, usando seu próprio bônus ou o do portador, o que for maior.</p>
         <p><strong>Testes de Perícia.</strong> Algumas habilidades incluem testes de perícia para resistir a efeitos. A dificuldade desses testes é igual à CD para resistir à habilidade, salvo indicação contrária.</p>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Tipos de Efeitos</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Tipos de Efeitos</h4>
         <p>Muitos efeitos são categorizados em um (ou mais de um) dos tipos a seguir. Por si só, a maioria dos tipos não possui efeito em regras. Contudo, indicam como o efeito interage com outros. Por exemplo, uma criatura com imunidade a medo não será afetada por efeitos do tipo medo.</p>
         <ul className="list-disc ml-6 space-y-2 mt-2">
           <li><strong>Arcano.</strong> Gerado pelas energias místicas de Arton. Todos efeitos arcanos são mágicos.</li>
@@ -544,7 +544,7 @@ export const ruleSections: RuleSection[] = [
           <li><strong>Veneno.</strong> Efeitos gerados por venenos. Construtos e mortos-vivos são imunes.</li>
         </ul>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Habilidades Gerais</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Habilidades Gerais</h4>
         <p>As habilidades a seguir podem ser fornecidas por diversas fontes, como raça ou magias.</p>
         <ul className="list-disc ml-6 space-y-2 mt-2">
           <li><strong>Agarrar Aprimorado.</strong> Se a criatura acertar um ataque com uma arma natural (especificada na habilidade), poderá fazer a manobra agarrar com esta arma como uma ação livre. Enquanto usa a arma natural para agarrar, não pode usá-la para outros ataques.</li>
@@ -572,7 +572,7 @@ export const ruleSections: RuleSection[] = [
       <>
         <p>Embora seja possível superar obstáculos e vencer inimigos de muitas formas, às vezes os heróis ficam sem escolha além de sacar suas armas, preparar suas magias e partir para a batalha.</p>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Estatísticas de Combate</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Estatísticas de Combate</h4>
         <p>A seguir estão as explicações das estatísticas usadas em combate.</p>
 
         <h4 className="mt-4 font-bold text-red-800">Teste de Ataque</h4>
@@ -610,7 +610,7 @@ export const ruleSections: RuleSection[] = [
         <p>Você faz um acerto crítico quando acerta um ataque rolando um valor igual ou maior que a margem de ameaça da arma. Neste caso, multiplica os dados de dano do ataque pelo multiplicador da arma. Bônus numéricos de dano e dados extras (como *Ataque Furtivo*) <strong>não são multiplicados</strong>.</p>
         <p>Certas criaturas são imunes a acertos críticos. Um alvo imune ainda sofre o dano de um ataque normal.</p>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Como funciona o combate?</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Como funciona o combate?</h4>
         <p>O combate acontece em uma série de rodadas. Uma rodada é o tempo necessário para que todos os personagens no combate tenham seu turno. Um turno é o tempo que cada personagem tem para agir. Um combate obedece aos seguintes passos:</p>
         <ul className="list-disc ml-6 space-y-1 mt-2">
           <li><strong>Passo 1.</strong> Cada personagem faz um teste de Iniciativa. O mestre faz um único teste para os inimigos.</li>
@@ -653,7 +653,7 @@ export const ruleSections: RuleSection[] = [
           <li><strong>Usar uma Habilidade ou Item Mágico.</strong> Algumas habilidades e itens, como poções, exigem uma ação padrão.</li>
         </ul>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Manobras de Combate</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Manobras de Combate</h4>
         <p>Uma manobra é um ataque corpo a corpo para fazer algo diferente de causar dano — como arrancar a arma do oponente ou empurrá-lo para um abismo. <strong>Não é possível fazer manobras de combate com ataques à distância.</strong></p>
         <p>Faça um <strong>teste de manobra</strong> (um teste de ataque corpo a corpo) oposto com a criatura. Mesmo que ela esteja usando uma arma de ataque à distância, deve fazer o teste usando seu valor de Luta. Em caso de empate, vence quem tiver maior bônus; se persistir, outro teste deve ser feito. Em geral, você pode usar qualquer arma corpo a corpo para fazer manobras.</p>
         <ul className="list-disc ml-6 space-y-2 mt-2">
@@ -664,7 +664,7 @@ export const ruleSections: RuleSection[] = [
           <li><strong>Quebrar.</strong> Atinge um item que a criatura esteja segurando.</li>
         </ul>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Ações de Movimento</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Ações de Movimento</h4>
         <p>Uma ação de movimento serve para mudar algo de posição — seja você, seja um item.</p>
         <ul className="list-disc ml-6 space-y-2 mt-2">
           <li><strong>Levantar-se.</strong> Levantar do chão exige uma ação de movimento.</li>
@@ -674,7 +674,7 @@ export const ruleSections: RuleSection[] = [
           <li><strong>Sacar ou Guardar Item.</strong> Sacar ou guardar um item exige ação de movimento. Com Ambidestria, pode sacar todas as armas.</li>
         </ul>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Ações Completas</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Ações Completas</h4>
         <p>Ações completas exigem muito tempo e esforço.</p>
         <ul className="list-disc ml-6 space-y-2 mt-2">
           <li><strong>Corrida.</strong> Corre mais rápido que o deslocamento normal. Veja Atletismo.</li>
@@ -683,7 +683,7 @@ export const ruleSections: RuleSection[] = [
           <li><strong>Lançar uma Magia.</strong> Magias com execução maior que uma ação completa exigem ação completa a cada rodada.</li>
         </ul>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Ações Livres</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Ações Livres</h4>
         <p>Uma ação livre demanda pouco ou nenhum tempo, esforço ou atenção.</p>
         <ul className="list-disc ml-6 space-y-2 mt-2">
           <li><strong>Atrasar.</strong> Age mais tarde na ordem de Iniciativa. É o mesmo que reduzir voluntariamente sua Iniciativa. Limite: até –10 menos seu valor. Se vários atrasarem, o de maior Iniciativa original age primeiro.</li>
@@ -692,7 +692,7 @@ export const ruleSections: RuleSection[] = [
           <li><strong>Largar um Item.</strong> Deixar cair um item segurado é ação livre. (Lançar para acertar algo é ação padrão; lançar para alguém agarrar é ação de movimento).</li>
         </ul>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Ferimentos & Morte</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Ferimentos & Morte</h4>
         <p>Sempre que você sofre dano, subtrai este valor de seus pontos de vida. O dano não o impede de agir até que seus PV cheguem a <strong>0 ou menos</strong>.</p>
         <ul className="list-disc ml-6 space-y-2 mt-2">
           <li><strong>Inconsciência e Sangramento.</strong> Com 0 PV ou menos, cai inconsciente e sangra. No início do turno, faça Constituição (CD 15). Sucesso: estabiliza. Falha: perde 1d6 PV e repete na próxima rodada.</li>
@@ -711,7 +711,7 @@ export const ruleSections: RuleSection[] = [
           <li><strong>Ataques Desarmados.</strong> Causam dano não letal. Podem causar dano letal sofrendo –5 no ataque.</li>
         </ul>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg font-serif">Movimentação</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b-2 border-amber-900/20 pb-2 text-lg">Movimentação</h4>
         <ul className="list-disc ml-6 space-y-2 mt-2">
           <li><strong>Deslocamento.</strong> Medida de quantos metros você percorre com uma ação de movimento (padrão 9m).</li>
           <li><strong>Atravessar Espaço Ocupado.</strong> Você pode atravessar o espaço de um aliado. Espaço de inimigo só pode ser atravessado se ele estiver caído/indefeso, se houver diferença de três categorias de tamanho, ou via <em>Acrobacia</em>/<em>Atropelar</em>. Espaço de inimigo conta como <strong>terreno difícil</strong>.</li>
@@ -730,21 +730,21 @@ export const ruleSections: RuleSection[] = [
     title: "Situações Especiais",
     content: (
       <>
-        <h4 className="mt-4 font-bold text-red-300">Camuflagem</h4>
+        <h4 className="mt-4 font-display font-bold text-red-800">Camuflagem</h4>
         <p>Dificulta a visão do alvo (neblina, escuridão leve).</p>
         <ul className="list-disc ml-6 space-y-1">
           <li><strong>Leve:</strong> 20% de chance de falha (1 ou 2 no d10).</li>
           <li><strong>Total:</strong> 50% de chance de falha (1 a 5 no d10).</li>
         </ul>
 
-        <h4 className="mt-4 font-bold text-red-300">Cobertura</h4>
+        <h4 className="mt-4 font-display font-bold text-red-800">Cobertura</h4>
         <p>Bloqueio físico entre atacante e alvo (árvores, muralhas).</p>
         <ul className="list-disc ml-6 space-y-1">
           <li><strong>Leve:</strong> Fornece +5 na Defesa.</li>
           <li><strong>Total:</strong> Impede que você seja atacado.</li>
         </ul>
 
-        <h4 className="mt-4 font-bold text-red-300">Flanquear</h4>
+        <h4 className="mt-4 font-display font-bold text-red-800">Flanquear</h4>
         <p>
           Quando você e um aliado estão em lados opostos de um inimigo no corpo a corpo. 
           Ambos recebem <strong>+2 nos testes de ataque</strong>. Não se flanqueia à distância.
@@ -773,26 +773,26 @@ export const ruleSections: RuleSection[] = [
         <p>Você pode considerar a idade de seu personagem um fator puramente descritivo, sem efeito em jogo. Se não quiser complicar as coisas, esse é o melhor caminho. Contudo, na vida real a idade é um fator determinante para diversas características pessoais — uma criança dificilmente terá a mesma força física de um adulto, por exemplo.</p>
         <p>Se você quiser que sua faixa etária tenha consequências em jogo (ou se simplesmente quiser mais um elemento mecânico com o qual construir sua ficha), pode usar as regras opcionais desta seção. Estas regras substituem os modificadores de atributos para personagens mais velhos descritos no livro básico (Tormenta20, p. 108).</p>
         
-        <h4 className="font-bold text-red-800 mt-6 border-b border-amber-900/20 pb-2 text-lg">Personagens de Idades Variadas</h4>
+        <h4 className="font-display font-bold text-red-800 mt-6 border-b border-amber-900/20 pb-2 text-lg">Personagens de Idades Variadas</h4>
         <p className="mt-2">Para criar um personagem de idade variada, escolha uma faixa etária para ele e aplique os efeitos dela. Existem sete faixas etárias: criança, adolescente, jovem, adulto, maduro, velho e ancião. A faixa etária padrão é jovem, a única que não altera sua ficha — todas as outras trazem benefícios e penalidades.</p>
         <p>Os efeitos de faixas etárias não são necessariamente equilibrados. No geral, crianças são menos poderosas que adultos, e os efeitos refletem isso. Se você quer um jogo balanceado, sugerimos que não use estas regras — elas são opcionais justamente por trazerem certo desequilíbrio!</p>
 
         {/* Tabela de Referência */}
-        <div className="overflow-x-auto shadow-md rounded-xl border-2 border-amber-900/20 mt-6 mb-8 bg-[#e8dac1]">
+        <div className="overflow-x-auto shadow-md rounded-xl border-2 border-amber-900/20 mt-6 mb-8 bg-[rgb(var(--bg-card-rgb))]">
           <table className="min-w-full divide-y divide-amber-900/20 font-serif">
-            <caption className="p-4 text-xl font-bold text-red-800 bg-[#d9c8a9] border-b-2 border-amber-900/20 text-left uppercase tracking-wide">
+            <caption className="font-display p-4 text-xl font-bold text-red-800 bg-[rgb(var(--bg-edge-rgb))] border-b-2 border-amber-900/20 text-left uppercase tracking-wide">
               Tabela: Faixas Etárias
             </caption>
-            <thead className="bg-[#d9c8a9] text-red-800">
+            <thead className="bg-[rgb(var(--bg-edge-rgb))] text-red-800">
               <tr>
-                <th className="px-4 py-3 text-left text-xs font-bold uppercase tracking-wider">Faixa Etária</th>
-                <th className="px-4 py-3 text-left text-xs font-bold uppercase tracking-wider">Idade</th>
-                <th className="px-4 py-3 text-left text-xs font-bold uppercase tracking-wider">Modificadores</th>
+                <th className="font-display px-4 py-3 text-left text-xs font-bold uppercase tracking-wider">Faixa Etária</th>
+                <th className="font-display px-4 py-3 text-left text-xs font-bold uppercase tracking-wider">Idade</th>
+                <th className="font-display px-4 py-3 text-left text-xs font-bold uppercase tracking-wider">Modificadores</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-amber-900/10 text-sm">
               {ageGroups.map((group, idx) => (
-                <tr key={group.name} className={idx % 2 === 0 ? "bg-[#fbf5e6]" : "bg-[#f5e6d0] hover:bg-[#e8dac1] transition-colors"}>
+                <tr key={group.name} className={idx % 2 === 0 ? "bg-[rgb(var(--bg-inset-rgb))]" : "bg-[rgb(var(--bg-card-rgb))]/40 hover:bg-[rgb(var(--bg-card-rgb))]/70 transition-colors"}>
                   <td className="px-4 py-2 font-bold text-amber-950 whitespace-nowrap">{group.name}</td>
                   <td className="px-4 py-2 text-red-700 font-bold whitespace-nowrap">{group.age}</td>
                   <td className="px-4 py-2 text-amber-900/80 italic font-medium">{group.modifiers}</td>
@@ -806,7 +806,7 @@ export const ruleSections: RuleSection[] = [
         <div className="space-y-6 mt-6 text-amber-900/90 font-medium">
           
           <div className="pb-4 border-b border-amber-900/20">
-            <strong className="text-xl text-red-800 block mb-2 font-serif font-bold">Criança (9 a 12 anos)</strong>
+            <strong className="text-xl text-red-800 block mb-2 font-display font-bold">Criança (9 a 12 anos)</strong>
             <p>A menor faixa etária possível para personagens jogadores. Obviamente existem pessoas mais novas no mundo, mas não recomendamos jogar com personagens com menos de 9 anos. Crianças nasceram durante a Guerra Artoniana, ou logo antes, mas eram muito pequenas para terem participado do conflito — provavelmente nem lembram dele. Embora não tenham se envolvido diretamente, podem ter sofrido suas consequências. Por exemplo, podem ser órfãos da guerra ou filhos de refugiados. Ou, se tiverem sorte, filhos de soldados que enriqueceram com espólios, ou mesmo de nobres que ganharam terras com as mudanças políticas.</p>
             <ul className="list-disc ml-6 space-y-2 mt-3 text-amber-900/80">
               <li><strong>Atributos:</strong> Força –2, Constituição –1, Sabedoria –1. Crianças são fisicamente mais fracas e frágeis que adultos, além de menos capazes de entender as sutilezas do mundo.</li>
@@ -817,7 +817,7 @@ export const ruleSections: RuleSection[] = [
           </div>
 
           <div className="pb-4 border-b border-amber-900/20">
-            <strong className="text-xl text-red-800 block mb-2 font-serif font-bold">Adolescente (13 a 17 anos)</strong>
+            <strong className="text-xl text-red-800 block mb-2 font-display font-bold">Adolescente (13 a 17 anos)</strong>
             <p>Muitos aventureiros começam suas carreiras nesta idade. Adolescentes viram a Guerra Artoniana, mas dificilmente terão participado dela. Esta é a categoria de idade mais velha para um personagem que nasceu em Tamu-ra após a libertação da ilha.</p>
             <ul className="list-disc ml-6 space-y-2 mt-3 text-amber-900/80">
               <li><strong>Atributos:</strong> Sabedoria –1. Adolescentes são conhecidos por sua impetuosidade.</li>
@@ -827,12 +827,12 @@ export const ruleSections: RuleSection[] = [
           </div>
 
           <div className="pb-4 border-b border-amber-900/20">
-            <strong className="text-xl text-red-800 block mb-2 font-serif font-bold">Jovem (18 a 24 anos)</strong>
+            <strong className="text-xl text-red-800 block mb-2 font-display font-bold">Jovem (18 a 24 anos)</strong>
             <p>A idade padrão. Heróis jovens usam as regras básicas de construção de personagem, sem modificadores. Jovens podem ter participado da Guerra Artoniana, mas provavelmente em postos iniciais. Eles podem se lembrar de fatos históricos como as Guerras Táuricas, a Marcha de Arsenal, a batalha dos deuses em Tamu-ra, a Libertação de Valkaria e a coroação de Shivara como Rainha-Imperatriz, mas serão muito novos para terem efetivamente participado desses eventos.</p>
           </div>
 
           <div className="pb-4 border-b border-amber-900/20">
-            <strong className="text-xl text-red-800 block mb-2 font-serif font-bold">Adulto (25 a 39 anos)</strong>
+            <strong className="text-xl text-red-800 block mb-2 font-display font-bold">Adulto (25 a 39 anos)</strong>
             <p>Uma idade comum para aventureiros — pelo menos para aqueles que não morreram em sua primeira caverna infestada de glops! Um personagem adulto pode ter participado dos últimos grandes acontecimentos do mundo, como a Guerra Artoniana, a queda da Flecha de Fogo ou a rebelião de escravos no Império de Tauron. Mesmo que não tenha se envolvido diretamente, pode ter sofrido as consequências deles. Um personagem desta faixa etária também terá visto acontecimentos mais antigos, como a queda do Paladino de Arton, a primeira batalha contra a Tormenta em Trebuck e a Libertação de Valkaria, mas dificilmente terá participado deles.</p>
             <ul className="list-disc ml-6 space-y-2 mt-3 text-amber-900/80">
               <li><strong>Já Vi Coisas:</strong> Você pode receber um poder geral. Nesse caso, também recebe uma complicação de idade (veja a seguir).</li>
@@ -840,7 +840,7 @@ export const ruleSections: RuleSection[] = [
           </div>
 
           <div className="pb-4 border-b border-amber-900/20">
-            <strong className="text-xl text-red-800 block mb-2 font-serif font-bold">Maduro (40 a 59 anos)</strong>
+            <strong className="text-xl text-red-800 block mb-2 font-display font-bold">Maduro (40 a 59 anos)</strong>
             <p>Muitas figuras de autoridade, como burgomestres e capitães da guarda, são desta faixa etária. Elas talvez não tenham o vigor de pessoas mais novas, mas compensam isso com experiência. Um personagem maduro já terá visto muitas coisas. Além de tudo descrito em “Adulto”, acima, ele poderá se lembrar de eventos como a chegada de Mestre Arsenal ao mundo de Arton, a guerra civil de Bielefeld e o surgimento da Tormenta no Império de Jade. Será muito novo para ter participado desses eventos, mas poderá ter lutado contra Arsenal ou nas Guerras Táuricas, e novamente na Guerra Artoniana, sendo um veterano de diversos grandes conflitos.</p>
              <ul className="list-disc ml-6 space-y-2 mt-3 text-amber-900/80">
               <li><strong>Veterano Calejado:</strong> Você começa o jogo com um nível adicional em relação aos personagens mais novos do grupo. Por exemplo, se o grupo vai começar no 1º nível, você começa no 2º. Contudo, essa experiência tem seu preço — você recebe duas complicações de idade.</li>
@@ -848,7 +848,7 @@ export const ruleSections: RuleSection[] = [
           </div>
 
           <div className="pb-4 border-b border-amber-900/20">
-            <strong className="text-xl text-red-800 block mb-2 font-serif font-bold">Velho (60 a 79 anos)</strong>
+            <strong className="text-xl text-red-800 block mb-2 font-display font-bold">Velho (60 a 79 anos)</strong>
             <p>Num mundo de problemas como Arton, nem todos chegam a esta idade respeitável. Aqueles que a alcançam muitas vezes assumem posições de respeito, como mestres de guildas, alto sacerdotes ou conselheiros reais. Claro, nem todos atingem tamanha eminência. Alguns, ao chegar a esta idade, serão fazendeiros, artesãos ou estarão descansando em suas casas. Um artoniano velho terá muitas histórias para contar! Ele poderá se lembrar de eventos considerados lendários na era atual, como o eclipse solar no qual Thwor nasceu e a coroação do Rei-Imperador Thormy. Um personagem desta idade poderia até mesmo ter lutado no Dia dos Gigantes, em Valkaria, uma batalha hoje envolta em lendas e mistérios!</p>
              <ul className="list-disc ml-6 space-y-2 mt-3 text-amber-900/80">
               <li><strong>Ai Minhas Costas:</strong> Você começa o jogo com dois níveis adicionais. Contudo, perde 1 ponto em todos os atributos físicos (Força, Destreza e Constituição) e recebe três complicações de idade. Além disso, não pode escolher o poder Aumento de Atributo para nenhum atributo físico — infelizmente, os tempos de vigor ficaram para trás. A partir deste ponto, mesmo o mais saudável dos aventureiros começa a sentir que a idade é um caminho sem volta…</li>
@@ -856,7 +856,7 @@ export const ruleSections: RuleSection[] = [
           </div>
 
            <div className="pb-4">
-            <strong className="text-xl text-red-800 block mb-2 font-serif font-bold">Ancião (80+ anos)</strong>
+            <strong className="text-xl text-red-800 block mb-2 font-display font-bold">Ancião (80+ anos)</strong>
             <p>A última faixa etária. Em Arton, poucas pessoas chegam até aqui — mesmo aqueles que não encontram um fim violento normalmente acabam morrendo de simples velhice antes de se tornarem anciões. Contudo, entre aqueles ricos o bastante para adquirir poções e magias milagrosas (ou tratamento médico de Salistick), atingir este patamar é mais comum. Um ancião é tão velho quanto o antigo Rei-Imperador Thormy. Ele terá visto diversas mudanças no mundo, como os primeiros contatos formais entre o Reinado e Tamu-ra e a chegada de Lorde Niebling a Arton. As histórias que um ancião escutava quando criança já foram praticamente esquecidas hoje, e falavam sobre o primeiro encontro de Talude e Vectorius, a fundação da Ordem da Luz e a luta contra um antigo deus chamado Sartan.</p>
              <ul className="list-disc ml-6 space-y-2 mt-3 text-amber-900/80">
               <li><strong>O Inverno da Vida:</strong> Você começa o jogo com três níveis adicionais. Porém, perde 2 pontos em todos os atributos físicos (Força, Destreza e Constituição) e recebe quatro complicações de idade. Assim como velhos, você não pode escolher o poder Aumento de Atributo para atributos físicos.</li>
@@ -865,21 +865,21 @@ export const ruleSections: RuleSection[] = [
 
         </div>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b border-amber-900/20 pb-2 text-lg">O Peso da Idade</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b border-amber-900/20 pb-2 text-lg">O Peso da Idade</h4>
         <p className="mt-2 text-amber-900/90 font-medium">
           Personagens adultos ou mais velhos precisam escolher uma complicação de idade por faixa etária — ou seja, uma para adultos, duas para maduros, três para velhos e quatro para anciões. Como a velhice não atinge todas as pessoas da mesma forma, esta mecânica representa melhor os efeitos do envelhecimento do que os modificadores de atributos da regra padrão. Complicações de idade funcionam como complicações normais (veja p. 282). Seus efeitos se acumulam!
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
           {ageComplications.map((comp) => (
-            <div key={comp.name} className="bg-[#fbf5e6] p-4 rounded-xl border-2 border-amber-900/20 hover:border-red-800/40 transition-colors shadow-sm">
-              <strong className="text-red-800 font-serif text-lg block mb-1 font-bold">{comp.name}</strong>
+            <div key={comp.name} className="bg-[rgb(var(--bg-inset-rgb))] p-4 rounded-xl border-2 border-amber-900/20 hover:border-red-800/40 transition-colors shadow-sm">
+              <strong className="text-red-800 font-display text-lg block mb-1 font-bold">{comp.name}</strong>
               <p className="text-sm text-amber-900/80 font-medium leading-relaxed">{comp.effect}</p>
             </div>
           ))}
         </div>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b border-amber-900/20 pb-2 text-lg">Regras Adicionais</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b border-amber-900/20 pb-2 text-lg">Regras Adicionais</h4>
         <ul className="list-disc ml-6 space-y-3 mt-4 text-amber-900/90 font-medium">
           <li>
             <strong>Envelhecendo:</strong> Quando atinge uma faixa etária maior, você ajusta seus efeitos de idade de acordo. Assim, se for criança e se tornar adolescente, aumenta uma categoria de tamanho e recebe +2 em Força, +1 em Constituição, um benefício de origem e a habilidade Ímpeto Juvenil, mas perde a habilidade Protegido dos Deuses. Se mais tarde se tornar jovem, ganha +1 em Sabedoria e um benefício de origem (completando os dois habituais), mas perde a habilidade Ímpeto Juvenil.
@@ -905,7 +905,7 @@ export const ruleSections: RuleSection[] = [
         <p>Você pode escolher seu objetivo durante a construção do personagem ou com a campanha já em andamento. Um objetivo heroico nunca pode começar já estando perto de ser cumprido. Por exemplo, você não pode esperar até estar em Lamnor para decidir que seu objetivo é ser o novo Ayrrak.</p>
         <p>Em termos de jogo, um personagem com um objetivo heroico recebe certos benefícios quando se aproxima de seu objetivo e sofre penalidades quando se afasta dele.</p>
 
-        <h4 className="font-bold text-red-800 mt-6 border-b border-amber-900/20 pb-2 text-lg">Mecânicas de Objetivo</h4>
+        <h4 className="font-display font-bold text-red-800 mt-6 border-b border-amber-900/20 pb-2 text-lg">Mecânicas de Objetivo</h4>
         
         <div className="space-y-4 mt-4 text-amber-900/90 font-medium">
           <div>
@@ -926,13 +926,13 @@ export const ruleSections: RuleSection[] = [
           </div>
         </div>
 
-        <h4 className="font-bold text-red-800 mt-8 border-b border-amber-900/20 pb-2 text-lg">Tipos de Objetivos</h4>
+        <h4 className="font-display font-bold text-red-800 mt-8 border-b border-amber-900/20 pb-2 text-lg">Tipos de Objetivos</h4>
         <p className="mt-2 mb-4 text-amber-900/90 font-medium">A seguir estão algumas categorias amplas nas quais seu objetivo pode se enquadrar. Se você quiser um objetivo que não se enquadre em nenhuma delas, você e o mestre podem criar uma nova categoria, usando estas como base.</p>
 
         <div className="grid gap-6 mt-6">
           {heroicGoals.map((goal) => (
-            <div key={goal.name} className="bg-[#fbf5e6] border-2 border-amber-900/20 rounded-xl p-5 hover:border-red-800/40 transition-colors shadow-sm">
-              <h5 className="text-xl font-bold text-red-800 font-serif mb-2">{goal.name}</h5>
+            <div key={goal.name} className="bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-xl p-5 hover:border-red-800/40 transition-colors shadow-sm">
+              <h5 className="text-xl font-bold text-red-800 font-display mb-2">{goal.name}</h5>
               <p className="text-amber-900/80 text-sm font-medium mb-4 italic border-l-2 border-amber-900/30 pl-3">
                 "{goal.description}"
               </p>
@@ -954,8 +954,8 @@ export const ruleSections: RuleSection[] = [
           ))}
         </div>
 
-        <div className="mt-8 bg-[#e8dac1] p-5 border-2 border-amber-900/30 rounded-xl shadow-sm">
-          <strong className="text-red-800 font-bold block mb-2 font-serif uppercase tracking-wide">Abandonando um Objetivo</strong>
+        <div className="mt-8 bg-[rgb(var(--bg-card-rgb))] p-5 border-2 border-amber-900/30 rounded-xl shadow-sm">
+          <strong className="text-red-800 font-bold block mb-2 font-display uppercase tracking-wide">Abandonando um Objetivo</strong>
           <p className="text-sm text-amber-900/90 font-medium">Uma vez que um personagem escolha um objetivo, deve se esforçar para cumpri-lo. Alguns objetivos oferecem benefícios significativos apenas por tentar cumpri-los... Mas jogadores espertos podem escolhê-los sem nunca realmente almejar sua conclusão, apenas desfrutando os benefícios de tentar!</p>
           <p className="text-sm text-amber-900/90 font-medium mt-2">Se o mestre julgar que o personagem não está se esforçando para cumprir o objetivo, pode definir que o objetivo foi abandonado. O jogador sofre a penalidade do objetivo por uma aventura, então o perde. Nenhum benefício ou penalidade se aplicam mais, mas ele não pode escolher um novo objetivo.</p>
         </div>
@@ -969,18 +969,18 @@ export const ruleSections: RuleSection[] = [
         <p>Grupos de Tormenta20 normalmente se organizam de forma natural e espontânea, de acordo com a personalidade de cada jogador. Cada pessoa na mesa cuida de seu personagem, incluindo tesouro, condições etc., enquanto o mestre fica responsável pelos NPCs e pelo mundo.</p>
         <p>Contudo, essa forma de organização pode levar a alguns problemas. Um jogador que tenha dificuldade de ordenar suas anotações pode ignorar parte de seu tesouro, ou mesmo algum objetivo que já tinha planejado. Alguém com memória ruim e sem um sistema de controle pode se perder na duração de seus efeitos e nas condições (e bônus!) que afetam seu personagem. O próprio mestre pode se ver sobrecarregado por ter que lembrar de todos os eventos da campanha, além de todas as regras.</p>
         
-        <h4 className="font-bold text-red-800 mt-6 border-b border-amber-900/20 pb-2 text-lg">Como funcionam os Papéis</h4>
+        <h4 className="font-display font-bold text-red-800 mt-6 border-b border-amber-900/20 pb-2 text-lg">Como funcionam os Papéis</h4>
         <p className="mt-2 text-amber-900/90 font-medium">Para resolver esse tipo de situação, os jogadores podem se dividir em papéis. Papéis são funções que cada jogador tem na mesa, auxiliando o bom andamento do jogo. Cada um fica responsável por uma parte “burocrática” ou específica da campanha, garantindo que ninguém acabe sobrecarregado e minimizando os erros. O mestre não tem um papel, já que normalmente cuida de muitos elementos que outros papéis tomam para si.</p>
         <p className="text-amber-900/90 font-medium">Existe um número maior de papéis do que a média de jogadores em um grupo. Isso é proposital: provavelmente alguns desses papéis serão divididos entre todos ou ficarão a cargo do mestre. Nenhum jogador pode assumir mais de um papel. Contudo, caso o grupo decida usar esta regra opcional, todos precisam assumir um. Ninguém fica isento de responsabilidades. O grupo como um todo deve decidir quais papéis são necessários e qual jogador é mais adequado para cada um deles.</p>
         <p className="text-amber-900/90 font-medium">Embora os papéis digam respeito a tarefas da vida real, alguns podem se refletir nos personagens. Por exemplo, o cartógrafo pode interpretar um personagem que também mapeia o terreno — assim garantindo que os mapas existam dentro da campanha. A lista a seguir descreve os papéis disponíveis para personagens jogadores.</p>
 
         <div className="grid grid-cols-1 gap-6 mt-8">
           {groupRoles.map((role) => (
-            <div key={role.name} className="relative bg-[#fbf5e6] border-2 border-amber-900/20 rounded-xl p-6 hover:border-red-800/40 transition-all shadow-md group overflow-hidden">
+            <div key={role.name} className="relative bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-xl p-6 hover:border-red-800/40 transition-all shadow-md group overflow-hidden">
               {/* Decorative Header Line */}
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-800 to-amber-900 opacity-50 group-hover:opacity-100 transition-opacity" />
               
-              <h5 className="text-xl font-bold text-amber-950 font-serif mb-3 flex items-center gap-2">
+              <h5 className="text-xl font-bold text-amber-950 font-display mb-3 flex items-center gap-2">
                 <span className="text-red-800">✦</span> {role.name}
               </h5>
               
@@ -1004,8 +1004,8 @@ export const ruleSections: RuleSection[] = [
       <div className="space-y-12 pb-4">
         {/* Introdução */}
         <div>
-          <div className="p-6 rounded-xl bg-[#e8dac1] border-2 border-amber-900/20 shadow-sm">
-            <p className="text-amber-950 leading-relaxed text-lg mb-4 font-serif font-medium">
+          <div className="p-6 rounded-xl bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/20 shadow-sm">
+            <p className="text-amber-950 leading-relaxed text-lg mb-4 font-medium">
               Todo personagem tem seis atributos, que definem suas competências básicas: Força, Destreza, Constituição, Inteligência, Sabedoria e Carisma.
             </p>
             <p className="text-amber-900/80 leading-relaxed text-md italic font-medium">
@@ -1016,21 +1016,21 @@ export const ruleSections: RuleSection[] = [
 
         {/* Grid de Atributos */}
         <div>
-          <h4 className="text-2xl font-bold text-red-800 mb-6 flex items-center gap-3 border-b-2 border-amber-900/20 pb-2">
+          <h4 className="font-display text-2xl font-bold text-red-800 mb-6 flex items-center gap-3 border-b-2 border-amber-900/20 pb-2">
              <span className="text-red-700">❖</span> Os Seis Atributos
           </h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
             {attributes.map((attr) => (
               <div
                 key={attr.id}
-                className="group relative overflow-hidden rounded-xl bg-[#d9c8a9] border-2 border-amber-900/30 hover:border-red-800/50 transition-all duration-300 shadow-sm p-6"
+                className="group relative overflow-hidden rounded-xl bg-[rgb(var(--bg-edge-rgb))] border-2 border-amber-900/30 hover:border-red-800/50 transition-all duration-300 shadow-sm p-6"
               >
                 {/* Ícone e Nome */}
                 <div className="mb-4 flex justify-between items-start border-b-2 border-amber-900/20 pb-2">
-                  <h5 className="text-xl font-bold text-amber-950 group-hover:text-red-800 transition-colors drop-shadow-sm font-serif">
+                  <h5 className="font-display text-xl font-bold text-amber-950 group-hover:text-red-800 transition-colors drop-shadow-sm">
                     {attr.name}
                   </h5>
-                  <div className="flex flex-col items-center justify-center w-10 h-10 rounded-full bg-[#fbf5e6] border-2 border-amber-900/20 shadow-sm group-hover:border-red-800 transition-colors">
+                  <div className="flex flex-col items-center justify-center w-10 h-10 rounded-full bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 shadow-sm group-hover:border-red-800 transition-colors">
                     <span className="text-red-800 font-black text-sm tracking-tighter">
                         {attr.abbreviation}
                     </span>
@@ -1038,7 +1038,7 @@ export const ruleSections: RuleSection[] = [
                 </div>
 
                 {/* Descrição */}
-                <p className="text-amber-900/90 leading-relaxed text-sm font-serif font-medium">
+                <p className="text-amber-900/90 leading-relaxed text-sm font-medium">
                   {attr.description}
                 </p>
               </div>
@@ -1048,7 +1048,7 @@ export const ruleSections: RuleSection[] = [
 
         {/* Seção de Definição de Status */}
         <div className="space-y-8">
-          <h4 className="text-2xl font-bold text-red-800 mb-4 uppercase tracking-widest drop-shadow-sm border-b-2 border-amber-900/20 pb-2">
+          <h4 className="font-display text-2xl font-bold text-red-800 mb-4 uppercase tracking-widest drop-shadow-sm border-b-2 border-amber-900/20 pb-2">
             Definindo seus atributos
           </h4>
           <p className="text-amber-950 font-medium leading-relaxed text-lg">
@@ -1058,8 +1058,8 @@ export const ruleSections: RuleSection[] = [
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
               {/* Método de Pontos */}
               <div className="flex flex-col gap-4">
-                <h5 className="text-xl font-bold text-amber-950 border-l-4 border-red-800 pl-3">Pontos</h5>
-                <div className="p-6 rounded-xl bg-[#e8dac1] border-2 border-amber-900/20 shadow-sm flex-1">
+                <h5 className="font-display text-xl font-bold text-amber-950 border-l-4 border-red-800 pl-3">Pontos</h5>
+                <div className="p-6 rounded-xl bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/20 shadow-sm flex-1">
                   <p className="text-amber-900/90 leading-relaxed mb-4 font-medium">
                     Você começa com todos os atributos em 0 e recebe 10 pontos para aumentá-los. O custo para aumentar cada atributo está descrito na tabela abaixo. Você também pode reduzir um atributo para –1 para receber 1 ponto adicional.
                   </p>
@@ -1068,12 +1068,12 @@ export const ruleSections: RuleSection[] = [
 
               {/* Método de Rolagens */}
               <div className="flex flex-col gap-4">
-                <h5 className="text-xl font-bold text-amber-950 border-l-4 border-amber-700 pl-3">Rolagens</h5>
-                <div className="p-6 rounded-xl bg-[#e8dac1] border-2 border-amber-900/20 shadow-sm flex-1">
+                <h5 className="font-display text-xl font-bold text-amber-950 border-l-4 border-amber-700 pl-3">Rolagens</h5>
+                <div className="p-6 rounded-xl bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/20 shadow-sm flex-1">
                   <p className="text-amber-900/90 leading-relaxed mb-4 font-medium">
                       Role 4d6, descarte o menor e some os outros três. Anote o resultado. Repita esse processo cinco vezes, até obter um total de seis números. Então, converta esses números em atributos conforme a tabela abaixo. 
                   </p>
-                  <p className="text-amber-900/80 italic text-sm bg-[#d9c8a9]/50 p-3 rounded-lg border border-amber-900/20 font-medium">
+                  <p className="text-amber-900/80 italic text-sm bg-[rgb(var(--bg-edge-rgb))]/50 p-3 rounded-lg border border-amber-900/20 font-medium">
                     Por exemplo, se você rolar 13, 8, 15, 18, 10 e 9, seus atributos serão 1, –1, 2, 4, 0 e –1. Distribua esses valores entre os seis atributos como quiser. Caso seus atributos não somem pelo menos 6, role novamente o menor valor. Repita esse processo até seus atributos somarem 6 ou mais.
                   </p>
                 </div>
@@ -1082,7 +1082,7 @@ export const ruleSections: RuleSection[] = [
 
           {/* Atributo Mínimo */}
           <div className="space-y-4 w-full mt-12">
-            <h5 className="text-xl font-bold text-red-800 flex items-center gap-2">
+            <h5 className="font-display text-xl font-bold text-red-800 flex items-center gap-2">
                 <span className="text-lg">⚠</span> Atributo Mínimo
             </h5>
             <div className="p-6 rounded-xl bg-red-900/10 border-2 border-red-800/20 shadow-sm">
@@ -1092,42 +1092,42 @@ export const ruleSections: RuleSection[] = [
             </div>
 
             {/* Tabela de Atributo Mínimo */}
-            <div className="overflow-x-auto rounded-xl border-2 border-amber-900/20 shadow-md w-full bg-[#e8dac1] mt-6">
+            <div className="overflow-x-auto rounded-xl border-2 border-amber-900/20 shadow-md w-full bg-[rgb(var(--bg-card-rgb))] mt-6">
               <table className="min-w-full divide-y divide-amber-900/20 font-serif">
-                <thead className="bg-[#d9c8a9] text-red-800">
+                <thead className="bg-[rgb(var(--bg-edge-rgb))] text-red-800">
                   <tr>
-                    <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider">Atributo</th>
-                    <th className="px-6 py-4 text-center text-xs font-bold uppercase tracking-wider">Custo</th>
-                    <th className="px-6 py-4 text-center text-xs font-bold uppercase tracking-wider">Rolagem (4d6)</th>
+                    <th className="font-display px-6 py-4 text-left text-xs font-bold uppercase tracking-wider">Atributo</th>
+                    <th className="font-display px-6 py-4 text-center text-xs font-bold uppercase tracking-wider">Custo</th>
+                    <th className="font-display px-6 py-4 text-center text-xs font-bold uppercase tracking-wider">Rolagem (4d6)</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-amber-900/10">
-                  <tr className="bg-[#fbf5e6] hover:bg-[#e8dac1] transition-colors">
+                  <tr className="bg-[rgb(var(--bg-inset-rgb))] hover:bg-[rgb(var(--bg-card-rgb))]/60 transition-colors">
                     <td className="px-6 py-4 text-amber-950 font-bold">-2</td>
                     <td className="px-6 py-4 text-center text-amber-900/60 font-medium">—</td>
                     <td className="px-6 py-4 text-center text-amber-900/80 font-medium">7 ou menos</td>
                   </tr>
-                  <tr className="bg-[#f5e6d0] hover:bg-[#e8dac1] transition-colors">
+                  <tr className="bg-[rgb(var(--bg-card-rgb))]/40 hover:bg-[rgb(var(--bg-card-rgb))]/60 transition-colors">
                     <td className="px-6 py-4 text-amber-950 font-bold">-1</td>
                     <td className="px-6 py-4 text-center text-red-700 font-bold">-1 ponto</td>
                     <td className="px-6 py-4 text-center text-amber-900/80 font-medium">8-9</td>
                   </tr>
-                  <tr className="bg-[#fbf5e6] hover:bg-[#e8dac1] transition-colors">
+                  <tr className="bg-[rgb(var(--bg-inset-rgb))] hover:bg-[rgb(var(--bg-card-rgb))]/60 transition-colors">
                     <td className="px-6 py-4 text-amber-950 font-bold">0</td>
                     <td className="px-6 py-4 text-center text-amber-900/60 font-medium">0 ponto</td>
                     <td className="px-6 py-4 text-center text-amber-900/80 font-medium">10-11</td>
                   </tr>
-                  <tr className="bg-[#f5e6d0] hover:bg-[#e8dac1] transition-colors">
+                  <tr className="bg-[rgb(var(--bg-card-rgb))]/40 hover:bg-[rgb(var(--bg-card-rgb))]/60 transition-colors">
                     <td className="px-6 py-4 text-amber-950 font-bold">1</td>
                     <td className="px-6 py-4 text-center text-amber-700 font-bold">1 ponto</td>
                     <td className="px-6 py-4 text-center text-amber-900/80 font-medium">12-13</td>
                   </tr>
-                  <tr className="bg-[#fbf5e6] hover:bg-[#e8dac1] transition-colors">
+                  <tr className="bg-[rgb(var(--bg-inset-rgb))] hover:bg-[rgb(var(--bg-card-rgb))]/60 transition-colors">
                     <td className="px-6 py-4 text-amber-950 font-bold">2</td>
                     <td className="px-6 py-4 text-center text-amber-700 font-bold">2 pontos</td>
                     <td className="px-6 py-4 text-center text-amber-800 font-bold">14-15</td>
                   </tr>
-                  <tr className="bg-[#f5e6d0] hover:bg-[#e8dac1] transition-colors">
+                  <tr className="bg-[rgb(var(--bg-card-rgb))]/40 hover:bg-[rgb(var(--bg-card-rgb))]/60 transition-colors">
                     <td className="px-6 py-4 text-amber-950 font-bold">3</td>
                     <td className="px-6 py-4 text-center text-amber-700 font-bold">4 pontos</td>
                     <td className="px-6 py-4 text-center text-amber-800 font-bold">16-17</td>
@@ -1147,8 +1147,8 @@ export const ruleSections: RuleSection[] = [
           </div>
 
           {/* Dica Final */}
-          <div className="p-6 rounded-xl bg-[#d9c8a9] border-2 border-amber-900/30 shadow-sm w-full mt-8">
-            <h4 className="text-xl font-bold text-red-800 mb-3 flex items-center gap-2">
+          <div className="p-6 rounded-xl bg-[rgb(var(--bg-edge-rgb))] border-2 border-amber-900/30 shadow-sm w-full mt-8">
+            <h4 className="font-display text-xl font-bold text-red-800 mb-3 flex items-center gap-2">
                 <span>💡</span> Dica do Mestre
             </h4>
             <p className="text-amber-900/90 font-medium leading-relaxed">
@@ -1168,7 +1168,7 @@ export const ruleSections: RuleSection[] = [
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* PV */}
           <div className="space-y-3">
-            <h4 className="text-xl font-bold text-red-800 border-b-2 border-amber-900/20 pb-2 flex items-center gap-2 font-serif">
+            <h4 className="font-display text-xl font-bold text-red-800 border-b-2 border-amber-900/20 pb-2 flex items-center gap-2">
               <span className="text-red-700">♥</span> Pontos de Vida (PV)
             </h4>
             <p className="text-amber-950 font-medium leading-relaxed">
@@ -1181,7 +1181,7 @@ export const ruleSections: RuleSection[] = [
 
           {/* PM */}
           <div className="space-y-3">
-            <h4 className="text-xl font-bold text-blue-800 border-b-2 border-amber-900/20 pb-2 flex items-center gap-2 font-serif">
+            <h4 className="font-display text-xl font-bold text-blue-800 border-b-2 border-amber-900/20 pb-2 flex items-center gap-2">
               <span className="text-blue-700">✦</span> Pontos de Mana (PM)
             </h4>
             <p className="text-amber-950 font-medium leading-relaxed">
@@ -1198,26 +1198,26 @@ export const ruleSections: RuleSection[] = [
            
            {/* Recuperação */}
            <div className="space-y-4">
-             <h4 className="text-xl font-bold text-red-800 border-b-2 border-amber-900/20 pb-2 font-serif">
+             <h4 className="font-display text-xl font-bold text-red-800 border-b-2 border-amber-900/20 pb-2">
                Recuperando PV e PM
              </h4>
              <p className="text-amber-950 font-medium leading-relaxed">
                Com uma noite de descanso (pelo menos oito horas de sono), você recupera PV e PM de acordo com seu nível e condições de descanso.
              </p>
              <div className="space-y-3 mt-4">
-                <div className="p-3 rounded-lg bg-[#e8dac1] border border-amber-900/20 flex gap-3 items-start shadow-sm hover:border-red-800/30 transition-colors">
+                <div className="p-3 rounded-lg bg-[rgb(var(--bg-card-rgb))] border border-amber-900/20 flex gap-3 items-start shadow-sm hover:border-red-800/30 transition-colors">
                   <span className="font-bold text-red-800 min-w-[90px]">• Ruim:</span>
                   <span className="text-amber-900/80 text-sm font-medium">Recuperação = metade do nível. Ex: dormir ao relento sem saco de dormir.</span>
                 </div>
-                <div className="p-3 rounded-lg bg-[#e8dac1] border border-amber-900/20 flex gap-3 items-start shadow-sm hover:border-red-800/30 transition-colors">
+                <div className="p-3 rounded-lg bg-[rgb(var(--bg-card-rgb))] border border-amber-900/20 flex gap-3 items-start shadow-sm hover:border-red-800/30 transition-colors">
                   <span className="font-bold text-amber-950 min-w-[90px]">• Normal:</span>
                   <span className="text-amber-900/80 text-sm font-medium">Recuperação = nível. Ex: dormir em uma estalagem comum.</span>
                 </div>
-                <div className="p-3 rounded-lg bg-[#e8dac1] border border-amber-900/20 flex gap-3 items-start shadow-sm hover:border-red-800/30 transition-colors">
+                <div className="p-3 rounded-lg bg-[rgb(var(--bg-card-rgb))] border border-amber-900/20 flex gap-3 items-start shadow-sm hover:border-red-800/30 transition-colors">
                   <span className="font-bold text-red-700 min-w-[90px]">• Confortável:</span>
                   <span className="text-amber-900/80 text-sm font-medium">Recuperação = dobro do nível.</span>
                 </div>
-                <div className="p-3 rounded-lg bg-[#e8dac1] border border-amber-900/20 flex gap-3 items-start shadow-sm hover:border-red-800/30 transition-colors">
+                <div className="p-3 rounded-lg bg-[rgb(var(--bg-card-rgb))] border border-amber-900/20 flex gap-3 items-start shadow-sm hover:border-red-800/30 transition-colors">
                   <span className="font-bold text-red-800 min-w-[90px]">• Luxuosa:</span>
                   <span className="text-amber-900/80 text-sm font-medium">Recuperação = triplo do nível.</span>
                 </div>
@@ -1230,7 +1230,7 @@ export const ruleSections: RuleSection[] = [
            {/* Temporários, Defesa e Deslocamento */}
            <div className="space-y-8">
              <div className="space-y-2">
-               <h4 className="text-xl font-bold text-red-800 border-b-2 border-amber-900/20 pb-2 font-serif">
+               <h4 className="font-display text-xl font-bold text-red-800 border-b-2 border-amber-900/20 pb-2">
                  Pontos Temporários
                </h4>
                <p className="text-amber-950 font-medium leading-relaxed">
@@ -1239,7 +1239,7 @@ export const ruleSections: RuleSection[] = [
              </div>
              
              <div className="space-y-2">
-               <h4 className="text-xl font-bold text-red-800 border-b-2 border-amber-900/20 pb-2 font-serif">
+               <h4 className="font-display text-xl font-bold text-red-800 border-b-2 border-amber-900/20 pb-2">
                  Deslocamento
                </h4>
                <p className="text-amber-950 font-medium leading-relaxed">
@@ -1248,13 +1248,13 @@ export const ruleSections: RuleSection[] = [
              </div>
              
              <div className="space-y-3">
-               <h4 className="text-xl font-bold text-red-800 border-b-2 border-amber-900/20 pb-2 font-serif">
+               <h4 className="font-display text-xl font-bold text-red-800 border-b-2 border-amber-900/20 pb-2">
                  Defesa
                </h4>
                <p className="text-amber-950 font-medium leading-relaxed">
                  Representa o quão difícil é acertá-lo em combate. Quando você é atacado, a dificuldade (CD) que o inimigo precisa bater é a sua Defesa.
                </p>
-               <p className="text-center p-3 bg-[#fbf5e6] rounded-xl border-2 border-red-800/20 font-bold text-red-800 text-lg font-serif shadow-sm">
+               <p className="text-center p-3 bg-[rgb(var(--bg-inset-rgb))] rounded-xl border-2 border-red-800/20 font-bold text-red-800 text-lg font-display shadow-sm">
                  10 + Destreza + Armadura + Escudo
                </p>
              </div>
@@ -1263,13 +1263,13 @@ export const ruleSections: RuleSection[] = [
 
         {/* Tamanho */}
         <div className="space-y-4 pt-4 border-t-2 border-dashed border-amber-900/20">
-          <h4 className="text-2xl font-bold text-red-800 border-b-2 border-amber-900/20 pb-2 font-serif">
+          <h4 className="font-display text-2xl font-bold text-red-800 border-b-2 border-amber-900/20 pb-2">
             Tamanho
           </h4>
           <p className="text-amber-950 font-medium leading-relaxed">
             O tamanho de uma criatura é classificado em seis categorias. Por padrão, seu tamanho é Médio, mas sua raça pode alterar isso. Criaturas menores recebem bônus em Furtividade e penalidade em manobras. Para criaturas maiores, esses bônus são invertidos.
           </p>
-          <div className="p-5 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-xl text-sm leading-relaxed text-amber-900/90 font-medium flex flex-col md:flex-row gap-6 shadow-sm">
+          <div className="p-5 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-xl text-sm leading-relaxed text-amber-900/90 font-medium flex flex-col md:flex-row gap-6 shadow-sm">
             <div className="flex-1">
               <strong className="text-red-800 block mb-2 text-base">Dano por Tamanho:</strong>
               Criaturas Minúsculas causam um passo a menos de dano. Grandes e Enormes causam um passo a mais, e Colossais causam dois passos a mais.
