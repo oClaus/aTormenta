@@ -16,6 +16,17 @@ import {
   ACESSORIOS_MENORES, ACESSORIOS_MEDIOS, ACESSORIOS_MAIORES,
   type GrauMagico,
 } from "@/data/magicos";
+import ThemeToggle from "@/components/ThemeToggle";
+
+function PageGlyph({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className={className}>
+      <path d="M6 3h9l4 4v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" />
+      <path d="M15 3v4h4" />
+      <path d="M8.5 11h7M8.5 14h7M8.5 17h4" />
+    </svg>
+  );
+}
 
 // ─── tipos locais ─────────────────────────────────────────────────────────────
 
@@ -64,15 +75,15 @@ function NumberPad({
   label: string; hint?: string; value: string; onChange: (v: string) => void;
 }) {
   return (
-    <div className="flex flex-col gap-1 font-serif">
-      <label className="text-[11px] font-bold tracking-widest uppercase text-red-800/80">{label}</label>
+    <div className="flex flex-col gap-1">
+      <label className="font-display text-[11px] font-bold tracking-widest uppercase text-red-800/80">{label}</label>
       {hint && <p className="text-[10px] text-amber-950/60 -mt-0.5 mb-1 font-medium">{hint}</p>}
       <div className="flex items-center gap-2">
         <input
           type="number" min={1} max={100} value={value}
           onChange={(e) => onChange(e.target.value)}
           placeholder="01–100"
-          className="w-28 px-3 py-2 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-lg text-red-800 font-mono font-bold text-lg text-center focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 placeholder:text-amber-900/30 shadow-sm transition-all"
+          className="w-28 px-3 py-2 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-lg text-red-800 font-mono font-bold text-lg text-center focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 placeholder:text-amber-900/30 shadow-sm transition-all"
         />
         {value && (
           <button onClick={() => onChange("")} className="text-amber-900/40 hover:text-red-800 hover:bg-red-800/10 rounded-full w-6 h-6 flex items-center justify-center transition-colors text-sm" title="Limpar">✕</button>
@@ -94,19 +105,19 @@ function RollTable<T extends AnyEntry>({
   extraCol?: (entry: T) => string | null;
 }) {
   return (
-    <div className="border-2 border-amber-900/20 rounded-xl overflow-hidden shadow-sm bg-[#e8dac1] font-serif">
-      <div className="bg-[#d9c8a9] px-4 py-3 border-b-2 border-amber-900/20">
-        <span className="text-[10px] sm:text-xs font-bold tracking-widest uppercase text-amber-950/80">{title}</span>
+    <div className="border-2 border-amber-900/20 rounded-xl overflow-hidden shadow-sm bg-[rgb(var(--bg-card-rgb))] font-serif">
+      <div className="bg-[rgb(var(--bg-edge-rgb))] px-4 py-3 border-b-2 border-amber-900/20">
+        <span className="font-display text-[10px] sm:text-xs font-bold tracking-widest uppercase text-amber-950/80">{title}</span>
       </div>
       <table className="w-full text-sm table-fixed">
-        <thead className="bg-[#e8dac1]">
+        <thead className="bg-[rgb(var(--bg-card-rgb))]">
           <tr>
-            <th className="w-[20%] px-4 py-2.5 text-left text-amber-950/70 text-[10px] uppercase tracking-widest font-bold border-r-2 border-amber-900/10">D%</th>
-            <th className={`${extraCol ? 'w-[40%]' : 'w-[80%]'} px-4 py-2.5 text-left text-amber-950/70 text-[10px] uppercase tracking-widest font-bold ${extraCol ? 'border-r-2 border-amber-900/10' : ''}`}>Resultado</th>
-            {extraCol && <th className="w-[40%] px-4 py-2.5 text-left text-amber-950/70 text-[10px] uppercase tracking-widest font-bold hidden sm:table-cell">Detalhe</th>}
+            <th className="font-display w-[20%] px-4 py-2.5 text-left text-amber-950/70 text-[10px] uppercase tracking-widest font-bold border-r-2 border-amber-900/10">D%</th>
+            <th className={`font-display ${extraCol ? 'w-[40%]' : 'w-[80%]'} px-4 py-2.5 text-left text-amber-950/70 text-[10px] uppercase tracking-widest font-bold ${extraCol ? 'border-r-2 border-amber-900/10' : ''}`}>Resultado</th>
+            {extraCol && <th className="font-display w-[40%] px-4 py-2.5 text-left text-amber-950/70 text-[10px] uppercase tracking-widest font-bold hidden sm:table-cell">Detalhe</th>}
           </tr>
         </thead>
-        <tbody className="divide-y-2 divide-amber-900/10 bg-[#fbf5e6]">
+        <tbody className="divide-y-2 divide-amber-900/10 bg-[rgb(var(--bg-inset-rgb))]">
           {table.map((entry, i) => {
             const isHit = selected !== null && selected >= entry.min && selected <= entry.max;
             const extra = extraCol ? extraCol(entry) : null;
@@ -115,8 +126,8 @@ function RollTable<T extends AnyEntry>({
                 key={i}
                 onClick={() => onSelect?.(entry.min)}
                 className={`transition-all ${onSelect ? "cursor-pointer" : ""} ${
-                  isHit ? "bg-red-800/10 border-l-4 border-l-red-800" : onSelect ? "hover:bg-[#e8dac1]/50" : ""
-                } ${i % 2 !== 0 && !isHit ? "bg-[#e8dac1]/20" : ""}`}
+                  isHit ? "bg-red-800/10 border-l-4 border-l-red-800" : onSelect ? "hover:bg-[rgb(var(--bg-card-rgb))]/50" : ""
+                } ${i % 2 !== 0 && !isHit ? "bg-[rgb(var(--bg-card-rgb))]/20" : ""}`}
               >
                 <td className={`px-4 py-2 font-mono text-sm border-r-2 border-amber-900/10 ${isHit ? "text-red-800 font-bold" : "text-amber-950/60 font-medium"}`}>
                   {fmtRange(entry)}
@@ -124,7 +135,7 @@ function RollTable<T extends AnyEntry>({
                 <td className={`px-4 py-2 font-medium ${extraCol ? 'border-r-2 border-amber-900/10' : ''} ${isHit ? "text-red-800 font-bold" : "text-amber-950/85"}`}>
                   <div className="flex items-center justify-between">
                     <span>{getDisplay(entry)}</span>
-                    {isHit && <span className="text-[10px] text-red-800/60 font-bold uppercase tracking-widest ml-2 bg-red-800/10 px-2 py-0.5 rounded">Sorteado</span>}
+                    {isHit && <span className="font-display text-[10px] text-red-800/60 font-bold uppercase tracking-widest ml-2 bg-red-800/10 px-2 py-0.5 rounded">Sorteado</span>}
                   </div>
                 </td>
                 {extraCol && <td className={`px-4 py-2 text-sm hidden sm:table-cell ${isHit ? "text-red-800/90 font-medium" : "text-amber-950/70"}`}>{extra}</td>}
@@ -142,14 +153,14 @@ function RollTable<T extends AnyEntry>({
 function ResultBadge({ label, roll, result, sub }: { label: string; roll: number; result: string; sub?: string }) {
   const empty = result === "—";
   return (
-    <div className={`flex flex-wrap items-center gap-2 px-4 py-2.5 rounded-lg border-2 text-sm font-medium font-serif shadow-sm ${
+    <div className={`flex flex-wrap items-center gap-2 px-4 py-2.5 rounded-lg border-2 text-sm font-medium shadow-sm ${
       empty
-        ? "bg-[#e8dac1]/50 border-amber-900/20 text-amber-950/50"
-        : "bg-[#fbf5e6] border-red-800/30 text-red-800"
+        ? "bg-[rgb(var(--bg-card-rgb))]/50 border-amber-900/20 text-amber-950/50"
+        : "bg-[rgb(var(--bg-inset-rgb))] border-red-800/30 text-red-800"
     }`}>
       <span className="font-mono font-bold text-base px-2 py-0.5 bg-red-800/10 rounded">{roll}</span>
       <span className="text-red-800/40 text-lg">→</span>
-      <span className="font-bold text-[10px] tracking-widest uppercase text-amber-950/60">{label}:</span>
+      <span className="font-display font-bold text-[10px] tracking-widest uppercase text-amber-950/60">{label}:</span>
       <span className="text-base">{result}</span>
       {sub && <span className="text-xs text-amber-950/70 italic ml-1 border-l border-amber-900/20 pl-2">{sub}</span>}
     </div>
@@ -160,12 +171,12 @@ function ResultBadge({ label, roll, result, sub }: { label: string; roll: number
 
 function SectionHeader({ step, title, subtitle }: { step: number; title: string; subtitle?: string }) {
   return (
-    <div className="mb-6 font-serif">
+    <div className="mb-6">
       <div className="flex items-center gap-3 mb-1">
-        <span className="w-7 h-7 rounded bg-red-800 text-[#fbf5e6] text-sm font-bold flex items-center justify-center shrink-0 shadow-sm">
+        <span className="w-7 h-7 rounded bg-red-800 text-[rgb(var(--bg-inset-rgb))] text-sm font-bold flex items-center justify-center shrink-0 shadow-sm">
           {step}
         </span>
-        <h3 className="text-xl md:text-2xl font-bold text-red-800 tracking-wide">{title}</h3>
+        <h3 className="font-display text-xl md:text-2xl font-bold text-red-800 tracking-wide">{title}</h3>
       </div>
       {subtitle && <p className="text-sm text-amber-950/70 ml-10 font-medium italic">{subtitle}</p>}
     </div>
@@ -191,7 +202,7 @@ function RiquezaSection({ grau, rollVal, onChange }: {
   const hit = rollNum !== null ? findInTable(tableData, rollNum) : null;
 
   return (
-    <div className="bg-[#e8dac1]/50 border-2 border-amber-900/20 rounded-xl p-6 md:p-8 shadow-sm space-y-6">
+    <div className="bg-[rgb(var(--bg-card-rgb))]/50 border-2 border-amber-900/20 rounded-xl p-6 md:p-8 shadow-sm space-y-6">
       <SectionHeader step={3} title={`Tabela 8-2: Riqueza ${grauLabel}`} subtitle="Role um D% para determinar o valor da riqueza encontrada." />
       <div className="flex flex-wrap items-end gap-4">
         <NumberPad label="D% — Riqueza" value={rollVal} onChange={onChange} />
@@ -214,7 +225,7 @@ function DiversoSection({ roll, onChange }: { roll: string; onChange: (v: string
   const n = roll !== "" ? parseInt(roll, 10) : null;
   const res = n !== null ? findInTable(DIVERSO, n) : null;
   return (
-    <div className="bg-[#e8dac1]/50 border-2 border-amber-900/20 rounded-xl p-6 md:p-8 shadow-sm space-y-6">
+    <div className="bg-[rgb(var(--bg-card-rgb))]/50 border-2 border-amber-900/20 rounded-xl p-6 md:p-8 shadow-sm space-y-6">
       <SectionHeader step={3} title="Item Diverso — Tabela 8-3" subtitle='"Diverso" sorteado. Role um D% na tabela abaixo.' />
       <div className="flex flex-wrap items-end gap-4">
         <NumberPad label="D% — Diverso" value={roll} onChange={onChange} />
@@ -243,7 +254,7 @@ function EquipamentoSection({ rollCat, rollItem, onCatChange, onItemChange }: {
   const itemRes = subtable && itemNum !== null ? findInTable(subtable, itemNum) : null;
 
   return (
-    <div className="bg-[#e8dac1]/50 border-2 border-amber-900/20 rounded-xl p-6 md:p-8 shadow-sm space-y-6">
+    <div className="bg-[rgb(var(--bg-card-rgb))]/50 border-2 border-amber-900/20 rounded-xl p-6 md:p-8 shadow-sm space-y-6">
       <SectionHeader step={3} title="Equipamento — Tabela 8-4" subtitle='"Equipamento" sorteado. Role categoria e depois o item.' />
       <div className="space-y-4">
         <NumberPad label="D% — Categoria" hint="01-60 Arma · 61-90 Armadura · 91-100 Esotérico" value={rollCat} onChange={(v) => { onCatChange(v); onItemChange(""); }} />
@@ -290,13 +301,13 @@ function SuperiorSection({
   const itemRes = melhoriaTable && itemNum !== null ? findInTable(melhoriaTable, itemNum) : null;
 
   return (
-    <div className="bg-[#e8dac1]/50 border-2 border-amber-900/20 rounded-xl p-6 md:p-8 shadow-sm space-y-6">
+    <div className="bg-[rgb(var(--bg-card-rgb))]/50 border-2 border-amber-900/20 rounded-xl p-6 md:p-8 shadow-sm space-y-6">
       <SectionHeader
         step={3}
         title={`Superior (${numMelhorias} melhoria${numMelhorias > 1 ? "s" : ""}) — Tabelas 8-4 e 8-5`}
         subtitle="Role a categoria, determine o item base e em seguida suas melhorias."
       />
-      <div className="text-sm font-medium text-red-800 bg-[#fbf5e6] rounded-lg px-4 py-3 border border-red-800/20 shadow-sm flex items-center gap-2">
+      <div className="text-sm font-medium text-red-800 bg-[rgb(var(--bg-inset-rgb))] rounded-lg px-4 py-3 border border-red-800/20 shadow-sm flex items-center gap-2">
         <span className="text-red-800/50">❖</span>
         <span>
           Este item possui <strong>{numMelhorias} melhoria{numMelhorias > 1 ? "s" : ""}</strong>.
@@ -339,7 +350,7 @@ function PocaoSection({ roll, onChange }: { roll: string; onChange: (v: string) 
   const n = roll !== "" ? parseInt(roll, 10) : null;
   const res = n !== null ? findInTable(POCOES, n) : null;
   return (
-    <div className="bg-[#e8dac1]/50 border-2 border-amber-900/20 rounded-xl p-6 md:p-8 shadow-sm space-y-6">
+    <div className="bg-[rgb(var(--bg-card-rgb))]/50 border-2 border-amber-900/20 rounded-xl p-6 md:p-8 shadow-sm space-y-6">
       <SectionHeader step={3} title="Poção — Tabela 8-12" subtitle='"Poção" sorteada. Role um D% para determinar qual poção encontra.' />
       <div className="flex flex-wrap items-end gap-4">
         <NumberPad label="D% — Poção" value={roll} onChange={onChange} />
@@ -399,7 +410,7 @@ function MagicoSection({ grau, rollCat, rollItem, rollEsp, onCatChange, onItemCh
   const grauLabel = grau === "maior" ? "Maior" : grau === "medio" ? "Médio" : "Menor";
 
   return (
-    <div className="bg-[#e8dac1]/50 border-2 border-amber-900/20 rounded-xl p-6 md:p-8 shadow-sm space-y-6">
+    <div className="bg-[rgb(var(--bg-card-rgb))]/50 border-2 border-amber-900/20 rounded-xl p-6 md:p-8 shadow-sm space-y-6">
       <SectionHeader
         step={3}
         title={`Mágico (${grauLabel}) — Tabelas 8-8 a 8-15`}
@@ -413,7 +424,7 @@ function MagicoSection({ grau, rollCat, rollItem, rollEsp, onCatChange, onItemCh
           value={rollCat}
           onChange={(v) => { onCatChange(v); onItemChange(""); onEspChange(""); }}
         />
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 font-serif">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
           {(["1-2 → Arma", "3 → Armadura/Escudo", "4-6 → Acessório"] as const).map((lbl, i) => {
             const active =
               catNum !== null && (
@@ -423,7 +434,7 @@ function MagicoSection({ grau, rollCat, rollItem, rollEsp, onCatChange, onItemCh
               );
             return (
               <div key={i} className={`px-4 py-3 rounded-lg border-2 text-sm text-center font-bold tracking-wide transition-all ${
-                active ? "bg-red-800/10 border-red-800/40 text-red-800 shadow-sm" : "bg-[#fbf5e6] border-amber-900/10 text-amber-950/60"
+                active ? "bg-red-800/10 border-red-800/40 text-red-800 shadow-sm" : "bg-[rgb(var(--bg-inset-rgb))] border-amber-900/10 text-amber-950/60"
               }`}>{lbl}</div>
             );
           })}
@@ -482,7 +493,7 @@ function MagicoSection({ grau, rollCat, rollItem, rollEsp, onCatChange, onItemCh
 
       {needsEspecifica && (
         <div className="space-y-4 pt-6 border-t-2 border-amber-900/10">
-          <div className="text-sm font-medium text-red-800 bg-[#fbf5e6] rounded-lg px-4 py-3 border border-red-800/20 shadow-sm flex items-center gap-2">
+          <div className="text-sm font-medium text-red-800 bg-[rgb(var(--bg-inset-rgb))] rounded-lg px-4 py-3 border border-red-800/20 shadow-sm flex items-center gap-2">
             <span className="text-red-800/50">❖</span>
             <span>O encanto sorteado remete a uma tabela específica. Role mais um D%:</span>
           </div>
@@ -572,33 +583,42 @@ export default function TesourosPage() {
     dRes.includes("médi")  ? "media" : "menor";
 
   return (
-    <div className="min-h-screen bg-[#f5e6d0] text-amber-950 font-serif selection:bg-amber-800 selection:text-amber-50 relative overflow-x-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#f5e6d0] to-[#e6d5b8]">
-      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(69,26,3,0.15)_100%)]" />
+    <div className="min-h-screen bg-[rgb(var(--bg-rgb))] text-amber-950 font-serif selection:bg-amber-800 selection:text-amber-50 relative overflow-x-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[rgb(var(--bg-rgb))] to-[rgb(var(--bg-edge-rgb))]">
+      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(var(--bg-rgb),0.15)_100%)]" />
 
       {/* Header Responsivo */}
-      <header className="relative z-10 w-full p-6 border-b-4 border-double border-amber-900/40 bg-[#e8dac1]/90 backdrop-blur-md shadow-sm mb-8 md:mb-12 sticky top-0 font-serif">
+      <header className="relative z-10 w-full p-6 border-b-4 border-double border-amber-900/40 bg-[rgb(var(--bg-card-rgb))]/90 backdrop-blur-md shadow-sm mb-8 md:mb-12 sticky top-0">
         <div className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4 max-w-screen-2xl mx-auto">
             <Link href="/" className="inline-block group self-start md:self-auto">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-700 via-red-800 to-red-950 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 1px 2px rgba(69,26,3,0.1)' }}>
+                <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-700 via-red-800 to-red-950 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 0 28px rgba(127,29,29,0.3)' }}>
                     a-Tormenta
                 </h1>
             </Link>
-            <div className="flex items-center gap-2 flex-wrap text-xs sm:text-sm font-bold tracking-widest uppercase self-end md:self-auto">
-                <Link href="/" className="text-amber-950/70 hover:text-red-800 transition-colors whitespace-nowrap">
-                    Início
-                </Link>
-                <span className="text-amber-900/40">/</span>
-                <span className="text-red-800">Tesouros</span>
+            <div className="flex items-center gap-3 self-end md:self-auto">
+              <div className="font-display flex items-center gap-2 flex-wrap text-xs sm:text-sm font-bold tracking-widest uppercase">
+                  <Link href="/" className="text-amber-950/70 hover:text-red-800 transition-colors whitespace-nowrap">
+                      Início
+                  </Link>
+                  <span className="text-amber-900/40">/</span>
+                  <span className="text-red-800">Tesouros</span>
+              </div>
+              <ThemeToggle />
             </div>
         </div>
       </header>
 
       <main className="relative z-10 w-full max-w-5xl mx-auto px-6 py-12">
         <div className="mb-10 md:mb-14">
-          <h1 className="text-4xl sm:text-5xl font-bold text-red-800 mb-4 drop-shadow-sm font-serif tracking-wider">
+          <h1 className="font-display text-4xl sm:text-5xl font-bold text-red-800 mb-4 drop-shadow-sm tracking-wider" style={{ textShadow: '0 0 28px rgba(127,29,29,0.3)' }}>
             Consulta de Tesouro
           </h1>
-          <div className="w-32 h-1 bg-gradient-to-r from-red-800 to-transparent rounded-full mb-6"></div>
+          <div className="flex items-center gap-3 w-full mb-6">
+            <svg width="22" height="14" viewBox="0 0 22 14" fill="none" stroke="rgb(var(--accent-rgb))" strokeWidth="1" className="opacity-60 shrink-0">
+              <path d="M1 7c4-6 8-6 10 0s6 6 10 0" />
+              <circle cx="11" cy="7" r="1.4" fill="rgb(var(--accent-rgb))" stroke="none" />
+            </svg>
+            <div className="h-px max-w-36 flex-1 bg-gradient-to-r from-[rgba(var(--accent-rgb),0.55)] to-transparent" />
+          </div>
           <p className="text-amber-950/85 font-medium text-lg leading-relaxed max-w-3xl">
             Role os dados na mesa, selecione o Nível de Desafio, insira os resultados e consulte as tabelas. As linhas correspondentes serão destacadas automaticamente.
           </p>
@@ -609,15 +629,15 @@ export default function TesourosPage() {
           <div className="mb-12 w-full">
             <button 
               onClick={() => setIsRegrasOpen(!isRegrasOpen)}
-              className="w-full flex items-center justify-between p-6 bg-[#e8dac1] border-2 border-amber-900/30 rounded-t-xl hover:border-red-800/40 transition-all group shadow-sm"
+              className="w-full flex items-center justify-between p-6 bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/30 rounded-t-xl hover:border-red-800/40 transition-all group shadow-sm"
             >
               <div className="flex items-center gap-3">
-                <span className="text-2xl opacity-70">📜</span>
+                <PageGlyph className="text-red-800/70 shrink-0 mt-1" />
                 <div className="text-left">
-                  <h2 className="text-xl font-bold text-amber-950 group-hover:text-red-800 transition-colors font-serif uppercase tracking-wide">
+                  <h2 className="font-display text-xl font-bold text-amber-950 group-hover:text-red-800 transition-colors uppercase tracking-wide">
                     Regras
                   </h2>
-                  <p className="text-sm text-amber-950/70 font-serif italic font-bold">
+                  <p className="text-sm text-amber-950/70 italic font-bold">
                     Clique para expandir ou recolher as informações.
                   </p>
                 </div>
@@ -627,12 +647,12 @@ export default function TesourosPage() {
               </span>
             </button>
 
-            <div className={`overflow-hidden transition-all duration-500 ease-in-out border-x-2 border-b-2 border-amber-900/30 rounded-b-xl bg-[#fbf5e6] ${isRegrasOpen ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0 border-transparent'}`}>
+            <div className={`overflow-hidden transition-all duration-500 ease-in-out border-x-2 border-b-2 border-amber-900/30 rounded-b-xl bg-[rgb(var(--bg-inset-rgb))] ${isRegrasOpen ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0 border-transparent'}`}>
               <div className="p-5 md:p-10 font-serif text-amber-950/85 text-base md:text-lg text-left md:text-justify leading-relaxed flex flex-col gap-8">
 
                 {/* Tesouro em Combate */}
                 <section>
-                  <h3 className="text-2xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/20 pb-2">Tesouro em Combate</h3>
+                  <h3 className="font-display text-2xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/20 pb-2">Tesouro em Combate</h3>
                   <p className="font-medium mb-4">
                     Para determinar o tesouro de um combate, faça os jogadores rolarem <strong>duas vezes na Tabela 8-1</strong> — uma na coluna <strong>Dinheiro</strong> e outra na coluna <strong>Itens</strong>, na linha equivalente ao ND da criatura derrotada. Se o grupo derrotou mais de uma criatura, role uma vez para cada criatura ou, de acordo com o mestre, uma vez na linha equivalente ao nível de desafio do combate.
                   </p>
@@ -646,7 +666,7 @@ export default function TesourosPage() {
 
                 {/* Resultados da Tabela */}
                 <section>
-                  <h3 className="text-2xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/20 pb-2">Resultados da Tabela</h3>
+                  <h3 className="font-display text-2xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/20 pb-2">Resultados da Tabela</h3>
                   <p className="font-bold text-red-800/80 uppercase tracking-widest text-sm mb-3">Dinheiro — Moedas ou Riquezas</p>
                   <div className="space-y-3 pl-4 md:pl-5 border-l-4 border-amber-900/30 mb-6 text-base md:text-lg text-left">
                     <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Moedas: </span><span className="font-medium">Descreva o valor ("Vocês encontram 25 TO") ou detalhe mais ("Vocês encontram 25 Tibares de ouro da época do Rei-Imperador Phylidio, o Tranquilo").</span></p>
@@ -664,7 +684,7 @@ export default function TesourosPage() {
 
                 {/* Itens Superiores */}
                 <section>
-                  <h3 className="text-2xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/20 pb-2">Itens Superiores</h3>
+                  <h3 className="font-display text-2xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/20 pb-2">Itens Superiores</h3>
                   <p className="font-medium mb-4">
                     Itens superiores funcionam como itens normais, mas possuem <strong>melhorias</strong>. Primeiro determine a categoria (arma, armadura/escudo ou esotérico). Depois, para <strong>cada melhoria</strong> do item, role uma vez na Tabela 8-5. Um mesmo item pode ser superior e encantado ao mesmo tempo.
                   </p>
@@ -676,7 +696,7 @@ export default function TesourosPage() {
 
                 {/* Itens Mágicos */}
                 <section>
-                  <h3 className="text-2xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/20 pb-2">Itens Mágicos</h3>
+                  <h3 className="font-display text-2xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/20 pb-2">Itens Mágicos</h3>
                   <p className="font-medium mb-4">
                     Itens mágicos permanentes são divididos em <strong>menores</strong> (1 encanto), <strong>médios</strong> (2 encantos) e <strong>maiores</strong> (3 encantos). Recebem bônus de PV e RD: <strong>+10</strong> para menores, <strong>+20</strong> para médios e <strong>+40</strong> para maiores.
                   </p>
@@ -689,16 +709,16 @@ export default function TesourosPage() {
                   <p className="font-bold text-red-800/80 uppercase tracking-widest text-sm mb-3">Tabela 8-7: Preço de Encantos</p>
                   <div className="border-2 border-amber-900/20 rounded-xl overflow-hidden">
                     <table className="w-full text-sm">
-                      <thead className="bg-[#e8dac1]">
+                      <thead className="bg-[rgb(var(--bg-card-rgb))]">
                         <tr>
-                          <th className="px-4 py-2.5 text-left text-amber-950/60 text-xs font-bold uppercase tracking-widest">Nº de Encantos</th>
-                          <th className="px-4 py-2.5 text-left text-amber-950/60 text-xs font-bold uppercase tracking-widest">Aumento no Preço</th>
-                          <th className="px-4 py-2.5 text-left text-amber-950/60 text-xs font-bold uppercase tracking-widest">Aumento na CD</th>
+                          <th className="font-display px-4 py-2.5 text-left text-amber-950/60 text-xs font-bold uppercase tracking-widest">Nº de Encantos</th>
+                          <th className="font-display px-4 py-2.5 text-left text-amber-950/60 text-xs font-bold uppercase tracking-widest">Aumento no Preço</th>
+                          <th className="font-display px-4 py-2.5 text-left text-amber-950/60 text-xs font-bold uppercase tracking-widest">Aumento na CD</th>
                         </tr>
                       </thead>
-                      <tbody className="divide-y-2 divide-amber-900/10 bg-[#fbf5e6]">
+                      <tbody className="divide-y-2 divide-amber-900/10 bg-[rgb(var(--bg-inset-rgb))]">
                         <tr><td className="px-4 py-2 font-bold text-amber-950">1</td><td className="px-4 py-2 font-bold text-red-800">+T$ 18.000</td><td className="px-4 py-2 font-medium text-amber-950/80">+10</td></tr>
-                        <tr className="bg-[#e8dac1]/20"><td className="px-4 py-2 font-bold text-amber-950">2</td><td className="px-4 py-2 font-bold text-red-800">+T$ 36.000</td><td className="px-4 py-2 font-medium text-amber-950/80">+15</td></tr>
+                        <tr className="bg-[rgb(var(--bg-card-rgb))]/20"><td className="px-4 py-2 font-bold text-amber-950">2</td><td className="px-4 py-2 font-bold text-red-800">+T$ 36.000</td><td className="px-4 py-2 font-medium text-amber-950/80">+15</td></tr>
                         <tr><td className="px-4 py-2 font-bold text-amber-950">3</td><td className="px-4 py-2 font-bold text-red-800">+T$ 72.000</td><td className="px-4 py-2 font-medium text-amber-950/80">+20</td></tr>
                       </tbody>
                     </table>
@@ -707,22 +727,22 @@ export default function TesourosPage() {
 
                 {/* Tesouro em Outras Situações */}
                 <section>
-                  <h3 className="text-2xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/20 pb-2">Tesouro em Outras Situações</h3>
+                  <h3 className="font-display text-2xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/20 pb-2">Tesouro em Outras Situações</h3>
                   <p className="font-medium mb-4">
                     O mestre pode fornecer tesouros por situações que não envolvam combate — recompensas por atos realizados pelo grupo. A palavra-chave é <strong>"médio"</strong> — os personagens não precisam ganhar esse valor exato. Um grupo de quatro personagens deve vencer <strong>quatro ameaças de ND igual ao seu nível</strong> para subir para o próximo.
                   </p>
                   <p className="font-bold text-red-800/80 uppercase tracking-widest text-sm mb-3">Tabela 8-6: Tesouro Médio por Cena</p>
                   <div className="border-2 border-amber-900/20 rounded-xl overflow-hidden">
                     <table className="w-full text-sm">
-                      <thead className="bg-[#e8dac1]">
+                      <thead className="bg-[rgb(var(--bg-card-rgb))]">
                         <tr>
-                          <th className="px-3 py-2.5 text-left text-amber-950/60 text-xs font-bold uppercase tracking-widest">Nível</th>
-                          <th className="px-3 py-2.5 text-left text-amber-950/60 text-xs font-bold uppercase tracking-widest border-r-2 border-amber-900/10">Tesouro</th>
-                          <th className="px-3 py-2.5 text-left text-amber-950/60 text-xs font-bold uppercase tracking-widest">Nível</th>
-                          <th className="px-3 py-2.5 text-left text-amber-950/60 text-xs font-bold uppercase tracking-widest">Tesouro</th>
+                          <th className="font-display px-3 py-2.5 text-left text-amber-950/60 text-xs font-bold uppercase tracking-widest">Nível</th>
+                          <th className="font-display px-3 py-2.5 text-left text-amber-950/60 text-xs font-bold uppercase tracking-widest border-r-2 border-amber-900/10">Tesouro</th>
+                          <th className="font-display px-3 py-2.5 text-left text-amber-950/60 text-xs font-bold uppercase tracking-widest">Nível</th>
+                          <th className="font-display px-3 py-2.5 text-left text-amber-950/60 text-xs font-bold uppercase tracking-widest">Tesouro</th>
                         </tr>
                       </thead>
-                      <tbody className="divide-y-2 divide-amber-900/10 bg-[#fbf5e6]">
+                      <tbody className="divide-y-2 divide-amber-900/10 bg-[rgb(var(--bg-inset-rgb))]">
                         {([
                           ["1°","T$ 300","11°","T$ 8.000"],
                           ["2°","T$ 300","12°","T$ 9.000"],
@@ -735,7 +755,7 @@ export default function TesourosPage() {
                           ["9°","T$ 3.000","19°","T$ 60.000"],
                           ["10°","T$ 6.000","20°","T$ 72.000"],
                         ] as [string,string,string,string][]).map(([n1,v1,n2,v2], i) => (
-                          <tr key={i} className={i % 2 !== 0 ? "bg-[#e8dac1]/20" : ""}>
+                          <tr key={i} className={i % 2 !== 0 ? "bg-[rgb(var(--bg-card-rgb))]/20" : ""}>
                             <td className="px-3 py-2 font-bold text-amber-950/80">{n1}</td>
                             <td className="px-3 py-2 font-bold text-red-800 border-r-2 border-amber-900/10">{v1}</td>
                             <td className="px-3 py-2 font-bold text-amber-950/80">{n2}</td>
@@ -749,7 +769,7 @@ export default function TesourosPage() {
 
                 {/* Recompensas Fora de Jogo */}
                 <section>
-                  <h3 className="text-2xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/20 pb-2">Recompensas Fora de Jogo</h3>
+                  <h3 className="font-display text-2xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/20 pb-2">Recompensas Fora de Jogo</h3>
                   <p className="font-medium">
                     Você pode premiar não apenas os personagens, mas os próprios jogadores. Dedicação ao jogo (limpar a sala após a partida, comprar os refrigerantes, mandar mensagens para marcar a sessão…) ou outras contribuições podem valer uma recompensa. Conceda <strong>1 PM temporário</strong> ou outro pequeno bônus aos mais prestativos.
                   </p>
@@ -762,9 +782,9 @@ export default function TesourosPage() {
 
         {/* STEP 1: ND */}
         {!selectedND && (
-          <section className="bg-[#e8dac1]/50 border-2 border-amber-900/20 rounded-xl p-6 md:p-10 shadow-sm">
-            <h2 className="text-2xl md:text-3xl font-bold text-red-800 border-b-2 border-amber-900/10 pb-3 mb-8 tracking-wide flex items-center gap-3">
-              <span className="w-8 h-8 rounded bg-red-800 text-[#fbf5e6] text-sm font-bold flex items-center justify-center shrink-0 shadow-sm">1</span>
+          <section className="bg-[rgb(var(--bg-card-rgb))]/50 border-2 border-amber-900/20 rounded-xl p-6 md:p-10 shadow-sm">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-red-800 border-b-2 border-amber-900/10 pb-3 mb-8 tracking-wide flex items-center gap-3">
+              <span className="w-8 h-8 rounded bg-red-800 text-[rgb(var(--bg-inset-rgb))] text-sm font-bold flex items-center justify-center shrink-0 shadow-sm">1</span>
               Escolha o Nível de Desafio
             </h2>
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3 md:gap-4">
@@ -772,7 +792,7 @@ export default function TesourosPage() {
                 <button
                   key={t.nd}
                   onClick={() => selectND(t.nd)}
-                  className="py-4 px-2 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-xl shadow-sm hover:border-red-800/50 hover:bg-[#e8dac1] hover:-translate-y-1 hover:shadow-[0_4px_20px_rgba(153,27,27,0.15)] transition-all text-center font-bold text-amber-950 text-base md:text-lg tracking-wide font-serif group"
+                  className="font-display py-4 px-2 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-xl shadow-sm hover:border-red-800/50 hover:bg-[rgb(var(--bg-card-rgb))] hover:-translate-y-1 hover:shadow-[0_4px_20px_rgba(153,27,27,0.15)] transition-all text-center font-bold text-amber-950 text-base md:text-lg tracking-wide group"
                 >
                   <span className="block text-[10px] md:text-xs font-bold uppercase tracking-widest text-red-800/60 mb-1 group-hover:text-red-800 transition-colors">ND</span>
                   {t.nd}
@@ -785,21 +805,21 @@ export default function TesourosPage() {
         {/* STEPS 2+: rolagem */}
         {selectedND && tesouro && (
           <section className="space-y-8">
-            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 bg-[#e8dac1] p-6 rounded-xl border-2 border-amber-900/30 shadow-sm">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 bg-[rgb(var(--bg-card-rgb))] p-6 rounded-xl border-2 border-amber-900/30 shadow-sm">
               <div>
-                <p className="text-[10px] md:text-xs font-bold tracking-widest uppercase text-red-800 mb-1">Nível de Desafio Selecionado</p>
-                <h2 className="text-4xl md:text-5xl font-bold text-amber-950 font-serif drop-shadow-sm">ND {selectedND}</h2>
+                <p className="font-display text-[10px] md:text-xs font-bold tracking-widest uppercase text-red-800 mb-1">Nível de Desafio Selecionado</p>
+                <h2 className="font-display text-4xl md:text-5xl font-bold text-amber-950 drop-shadow-sm">ND {selectedND}</h2>
               </div>
               <button
                 onClick={reset}
-                className="px-5 py-2.5 bg-[#fbf5e6] border-2 border-amber-900/20 rounded-lg text-sm text-amber-950/70 hover:text-red-800 hover:border-red-800/50 hover:shadow-sm transition-all font-bold uppercase tracking-wider flex items-center gap-2"
+                className="font-display px-5 py-2.5 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-lg text-sm text-amber-950/70 hover:text-red-800 hover:border-red-800/50 hover:shadow-sm transition-all font-bold uppercase tracking-wider flex items-center gap-2"
               >
                 <span className="text-lg leading-none">↺</span> Trocar ND
               </button>
             </div>
 
             {/* Rolagem principal */}
-            <div className="bg-[#e8dac1]/50 border-2 border-amber-900/20 rounded-xl p-6 md:p-8 shadow-sm">
+            <div className="bg-[rgb(var(--bg-card-rgb))]/50 border-2 border-amber-900/20 rounded-xl p-6 md:p-8 shadow-sm">
               <SectionHeader step={2} title="Insira os resultados dos dados" subtitle="Role 2× D% na mesa — um para Dinheiro, outro para Itens." />
               <div className="flex flex-wrap gap-6 mb-8">
                 <NumberPad label="D% — Dinheiro" value={rollDinheiro} onChange={setRollDinheiro} />
@@ -828,7 +848,7 @@ export default function TesourosPage() {
             {needsMagico   && <MagicoSection   grau={grauMag}        rollCat={rollMagCat}   rollItem={rollMagItem}  rollEsp={rollMagEsp} onCatChange={setRollMagCat} onItemChange={setRollMagItem} onEspChange={setRollMagEsp} />}
 
             {/* Notas */}
-            <div className="text-xs md:text-sm text-amber-950/70 border-t-2 border-amber-900/20 pt-6 mt-8 space-y-2 font-serif font-medium bg-[#e8dac1]/30 p-6 rounded-xl">
+            <div className="text-xs md:text-sm text-amber-950/70 border-t-2 border-amber-900/20 pt-6 mt-8 space-y-2 font-medium bg-[rgb(var(--bg-card-rgb))]/30 p-6 rounded-xl">
               <p className="flex items-start gap-2"><span className="text-red-800 font-bold">*</span> Conta com duas melhorias. Se o item já possuir uma, role novamente.</p>
               <p className="flex items-start gap-2"><span className="text-red-800 font-bold">¹</span> Apenas escudos. Para armaduras, role novamente.</p>
               <p className="flex items-start gap-2"><span className="text-red-800 font-bold">²</span> Conta como dois encantos. Para itens menores, role novamente.</p>
@@ -840,12 +860,12 @@ export default function TesourosPage() {
       </main>
 
       {/* Footer */}
-      <footer className="relative z-10 mt-20 p-8 border-t-4 border-double border-amber-900/40 bg-[#2a1810] text-center font-serif shadow-[0_-4px_20px_rgba(0,0,0,0.15)] flex flex-col items-center justify-center">
+      <footer className="relative z-10 mt-20 p-8 border-t-4 border-double border-amber-900/40 bg-[rgb(var(--void-rgb))] text-center shadow-[0_-4px_20px_rgba(0,0,0,0.15)] flex flex-col items-center justify-center">
         <span className="text-red-900/40 text-2xl mb-3">❖</span>
-        <p className="mb-2 text-[#e8dac1]/60 text-sm md:text-base tracking-widest uppercase font-bold">
+        <p className="font-display mb-2 text-white/60 text-sm md:text-base tracking-widest uppercase font-bold">
           Compêndio Tormenta RPG © 2026 • Feito por um fã para fãs
         </p>
-        <p className="text-[#e8dac1]/40 text-xs md:text-sm tracking-wide">
+        <p className="text-white/40 text-xs md:text-sm tracking-wide">
           Tormenta 20 pertence a Jambo Editora. Todos os direitos são reservados a editora.
         </p>
       </footer>
