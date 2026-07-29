@@ -29,6 +29,7 @@ export const partners: Partner[] = [
   //#region Tormenta20 - Jogo do Ano
   { id: "atirador",
     name: "Atirador",
+    category: "arquetipo",
     description: "Um arqueiro, besteiro ou outro combatente à distância.",
     origin: "Tormenta20 - Jogo do Ano",
     benefits: {
@@ -352,6 +353,19 @@ export const partners: Partner[] = [
   iniciante: "Uma vez por rodada, você pode gastar 1 PM para causar 2d6 pontos de dano psíquico ou perda de 1d4 PM em uma criatura em alcance curto (efeito mental).",
   veterano: "Você também pode gastar 2 PM para causar 4d6 pontos de dano psíquico ou perda de 1d6 PM.",
   mestre: "Você também pode gastar 4 PM para causar 6d6 pontos de dano psíquico ou perda de 1d8 PM.",
+  },
+  },
+
+  // Dragão Brasil - 228
+  { id: "Allihennali",
+  name: "Allihennali",
+  category: "especifico",
+  description: "Estes espíritos feéricos lembram uma pequena esfera de luz com quatro asas finas de inseto.",
+  origin: "Dragão Brasil - 228",
+  benefits: {
+  iniciante: "Uma vez por rodada, você pode gastar 1 PM para curar 2d6 PV de uma criatura em alcance curto.",
+  veterano: "Como acima, mas também reduz o custo de magias que geram efeitos mágicos de cura em –2 PM.",
+  mestre: "Como acima, mas você também pode gastar 3 PM para curar 6d6 PV.",
   },
   },
   //#endregion

@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { partners } from "@/data/partners";
-import { Partner } from "@/types/partner";
+import { Partner, PartnerCategory, formatPartnerCategory } from "@/types/partner";
 import { formatOrigin } from "@/types/power";
 import ThemeToggle from "@/components/ThemeToggle";
 
@@ -41,17 +41,38 @@ function CornerOrnament({ className = "" }: { className?: string }) {
 
 // Componente Card de Parceiro (Estilo Pergaminho)
 const PartnerCard = ({ partner }: { partner: Partner }) => {
+  const isSpecific = partner.category === "especifico";
+  const categoryLabel = formatPartnerCategory(partner.category);
+
   return (
     <div className="card-grain group relative p-6 rounded-xl bg-[rgb(var(--bg-card-rgb))] border border-amber-900/20 hover:border-[rgb(var(--accent-rgb))]/55 hover:shadow-[0_8px_30px_rgba(var(--accent-rgb),0.18)] flex flex-col transition-all duration-300 hover:-translate-y-1 h-full">
-      <CornerOrnament className="absolute -top-px -left-px z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
-      <CornerOrnament className="absolute -top-px -right-px z-10 rotate-90 opacity-0 group-hover:opacity-100 transition-opacity" />
-      <CornerOrnament className="absolute -bottom-px -right-px z-10 rotate-180 opacity-0 group-hover:opacity-100 transition-opacity" />
-      <CornerOrnament className="absolute -bottom-px -left-px z-10 -rotate-90 opacity-0 group-hover:opacity-100 transition-opacity" />
+      <CornerOrnament className="absolute -top-px -left-px z-10 opacity-50 group-hover:opacity-100 transition-opacity" />
+      <CornerOrnament className="absolute -top-px -right-px z-10 rotate-90 opacity-50 group-hover:opacity-100 transition-opacity" />
+      <CornerOrnament className="absolute -bottom-px -right-px z-10 rotate-180 opacity-50 group-hover:opacity-100 transition-opacity" />
+      <CornerOrnament className="absolute -bottom-px -left-px z-10 -rotate-90 opacity-50 group-hover:opacity-100 transition-opacity" />
 
       {/* Header */}
       <div className="mb-4 pb-3 border-b-2 border-amber-900/10">
-        <h3 className="font-display text-xl font-bold text-red-800 group-hover:text-red-700 transition-colors tracking-wide break-words">{partner.name}</h3>
+        <div className="flex items-start justify-between gap-2 mb-1">
+          <h3 className="font-display text-xl font-bold text-red-800 group-hover:text-red-700 transition-colors tracking-wide break-words">{partner.name}</h3>
+          {categoryLabel && (
+            <span
+              className={`shrink-0 font-display text-[9px] px-2 py-1 rounded-full border uppercase tracking-widest font-bold whitespace-nowrap ${
+                isSpecific
+                  ? "bg-red-800/10 border-red-800/30 text-red-800"
+                  : "bg-[rgb(var(--bg-inset-rgb))] border-amber-900/20 text-amber-950/60"
+              }`}
+            >
+              {categoryLabel}
+            </span>
+          )}
+        </div>
         <p className="text-sm text-amber-950/70 italic font-serif mt-1 font-medium">{partner.description}</p>
+        {isSpecific && partner.specificSource && (
+          <p className="mt-2 text-[11px] font-display font-bold uppercase tracking-widest text-red-800/70 flex items-center gap-1">
+            <span className="text-red-800/50">✦</span> {partner.specificSource}
+          </p>
+        )}
       </div>
 
       {/* Benefícios */}
@@ -76,9 +97,11 @@ const PartnerCard = ({ partner }: { partner: Partner }) => {
         </div>
       </div>
 
-      {/* Origem */}
-      <div className="mt-6 pt-4 border-t-2 border-amber-900/10 text-right">
-        <span className="font-display text-[10px] px-2 py-1 rounded bg-[rgb(var(--bg-inset-rgb))] border border-amber-900/20 text-amber-950/70 uppercase tracking-widest shadow-sm font-bold">{formatOrigin(partner.origin)}</span>
+      {/* Origem — selo hex-badge, sempre visível e centralizado, igual ao card de Classes */}
+      <div className="mt-6 pt-4 border-t-2 border-amber-900/10 flex justify-center">
+        <span className="hex-badge font-display inline-block px-4 py-1.5 bg-[rgb(var(--bg-inset-rgb))] text-xs font-bold uppercase tracking-widest text-amber-950/75 border border-[rgb(var(--accent-rgb))]/30 group-hover:border-[rgb(var(--accent-rgb))]/60 group-hover:text-red-800/90 transition-colors">
+          {formatOrigin(partner.origin)}
+        </span>
       </div>
     </div>
   );
@@ -89,11 +112,17 @@ const PartnerCard = ({ partner }: { partner: Partner }) => {
 
 export default function ParceirosPage() {
   const [searchTerm, setSearchTerm] = useState("");
+  const [categoryFilter, setCategoryFilter] = useState<"todos" | PartnerCategory>("todos");
   const [isIntroOpen, setIsIntroOpen] = useState(false);
 
   const filteredPartners = useMemo(() => {
     let filtered = partners;
     const lowerCaseSearch = searchTerm.toLowerCase();
+
+    // Filtrar por Categoria
+    if (categoryFilter !== "todos") {
+      filtered = filtered.filter(partner => partner.category === categoryFilter);
+    }
 
     // Filtrar por Busca (Nome, Descrição, Benefícios)
     if (lowerCaseSearch) {
@@ -101,6 +130,7 @@ export default function ParceirosPage() {
         partner.name.toLowerCase().includes(lowerCaseSearch) ||
         partner.origin.toLowerCase().includes(lowerCaseSearch) ||
         partner.description.toLowerCase().includes(lowerCaseSearch) ||
+        (partner.specificSource?.toLowerCase().includes(lowerCaseSearch) ?? false) ||
         partner.benefits.iniciante.toLowerCase().includes(lowerCaseSearch) ||
         partner.benefits.veterano.toLowerCase().includes(lowerCaseSearch) ||
         partner.benefits.mestre.toLowerCase().includes(lowerCaseSearch)
@@ -109,7 +139,7 @@ export default function ParceirosPage() {
 
     // Ordenação Alfabética
     return filtered.sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
-  }, [searchTerm]);
+  }, [searchTerm, categoryFilter]);
 
   return (
     <div className="min-h-screen bg-[rgb(var(--bg-rgb))] text-amber-950 font-serif selection:bg-amber-800 selection:text-amber-50 relative overflow-x-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[rgb(var(--bg-rgb))] to-[rgb(var(--bg-edge-rgb))]">
@@ -226,7 +256,7 @@ export default function ParceirosPage() {
         </div>
 
         {/* Barra de Busca - ESTILO CAIXA PADRÃO */}
-        <div className="mb-12 p-6 rounded-xl bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)]">
+        <div className="mb-6 p-6 rounded-xl bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)]">
           <label className="font-display block text-sm font-bold text-amber-950/70 mb-3 uppercase tracking-widest">
               Buscar Parceiro
           </label>
@@ -250,6 +280,27 @@ export default function ParceirosPage() {
               <SearchGlyph className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/40 pointer-events-none" />
             )}
           </div>
+        </div>
+
+        {/* Filtro de Categoria */}
+        <div className="mb-12 flex flex-wrap gap-2">
+          {(["todos", "arquetipo", "especifico"] as const).map((option) => {
+            const active = categoryFilter === option;
+            const label = option === "todos" ? "Todos" : formatPartnerCategory(option);
+            return (
+              <button
+                key={option}
+                onClick={() => setCategoryFilter(option)}
+                className={`font-display text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full border-2 transition-all ${
+                  active
+                    ? "bg-red-800 border-red-800 text-amber-50 shadow-sm"
+                    : "bg-[rgb(var(--bg-card-rgb))] border-amber-900/20 text-amber-950/70 hover:border-red-800/40"
+                }`}
+              >
+                {label}
+              </button>
+            );
+          })}
         </div>
 
         {/* Grid de Parceiros */}

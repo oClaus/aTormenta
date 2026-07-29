@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ThemeToggle from "@/components/ThemeToggle";
 
 function CornerOrnament({ className = "" }: { className?: string }) {
   return (
@@ -35,7 +36,7 @@ export default function MundoDeArtonPage() {
   const sections = [
     {
       id: "chefes",
-      title: "Chefes Adaptados",
+      title: "Chefes",
       icon: "/temas/chefes.png",
       color: "from-red-600 to-red-900",
       href: "/chefes",
@@ -47,6 +48,13 @@ export default function MundoDeArtonPage() {
       color: "from-pink-700 to-purple-900",
       href: "/pequenas-aventuras",
     },
+    {
+      id: "organizacoes",
+      title: "Organizações",
+      icon: "/temas/organizacoes.png",
+      color: "from-slate-700 to-zinc-900",
+      href: "/mundo-de-arton/organizacoes",
+    },
   ];
 
   return (
@@ -56,20 +64,23 @@ export default function MundoDeArtonPage() {
       <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(var(--bg-rgb),0.15)_100%)]" />
 
       {/* Header Padronizado */}
-      <header className="relative z-10 w-full p-6 border-b-4 border-double border-amber-900/40 bg-[rgb(var(--bg-card-rgb))]/90 backdrop-blur-md shadow-sm mb-8 md:mb-12 sticky top-0">
+      <header className="relative z-10 w-full p-6 border-b-4 border-double border-amber-900/40 bg-[rgb(var(--bg-card-rgb))]/90 backdrop-blur-md shadow-sm mb-8 md:mb-12 sticky top-0 font-serif">
         <div className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4 max-w-screen-2xl mx-auto">
-            <Link href="/" className="inline-block group self-start md:self-auto">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-700 via-red-800 to-red-950 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 1px 2px rgba(69,26,3,0.1)' }}>
-                    a-Tormenta
-                </h1>
-            </Link>
-            <div className="flex items-center gap-2 flex-wrap text-xs sm:text-sm font-bold tracking-widest uppercase self-end md:self-auto">
-                <Link href="/" className="text-amber-950/70 hover:text-red-800 transition-colors whitespace-nowrap">
-                    Início
-                </Link>
-                <span className="text-amber-900/40">/</span>
-                <span className="text-red-800 whitespace-nowrap">Mundo de Arton</span>
+          <Link href="/" className="inline-block group self-start md:self-auto">
+            <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-700 via-red-800 to-red-950 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 1px 2px rgba(var(--bg-rgb),0.1)' }}>
+              a-Tormenta
+            </h1>
+          </Link>
+          <div className="flex items-center gap-3 self-end md:self-auto">
+            <div className="font-display flex items-center gap-2 flex-wrap text-xs sm:text-sm font-bold tracking-widest uppercase">
+              <Link href="/" className="text-amber-950/70 hover:text-red-800 transition-colors whitespace-nowrap">
+                Início
+              </Link>
+              <span className="text-amber-900/40">/</span>
+              <span className="text-red-800 whitespace-nowrap">Mundo de Arton</span>
             </div>
+            <ThemeToggle />
+          </div>
         </div>
       </header>
 
@@ -141,16 +152,16 @@ export default function MundoDeArtonPage() {
         </div>
 
         <div className="mt-20 w-full p-1 rounded-lg bg-gradient-to-r from-[rgb(var(--bg-card-rgb))] via-amber-900/20 to-[rgb(var(--bg-card-rgb))]">
-            <div className="bg-[rgb(var(--bg-inset-rgb))] p-8 rounded border border-amber-900/20 text-center relative overflow-hidden w-full shadow-sm">
-                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-800/30 to-transparent"></div>
-                <h3 className="font-display text-2xl font-bold text-red-800 mb-4 uppercase tracking-widest drop-shadow-sm">
-                Sobre o Mundo de Arton
-                </h3>
-                <p className="text-amber-950 font-medium leading-relaxed w-full mx-auto">
-                Esta seção reúne conteúdos adaptados de outras fontes para o cenário de Arton: chefes, aventuras curtas e mais material por vir.
-                Os escribas continuam trabalhando para trazer novas lendas a este tomo.
-                </p>
-            </div>
+          <div className="bg-[rgb(var(--bg-inset-rgb))] p-8 rounded border border-amber-900/20 text-center relative overflow-hidden w-full shadow-sm">
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-800/30 to-transparent"></div>
+            <h3 className="font-display text-2xl font-bold text-red-800 mb-4 uppercase tracking-widest drop-shadow-sm">
+              Sobre o Mundo de Arton
+            </h3>
+            <p className="text-amber-950 font-medium leading-relaxed w-full mx-auto">
+              Esta seção reúne conteúdos adaptados de outras fontes para o cenário de Arton: chefes, aventuras curtas e mais material por vir.
+              Os escribas continuam trabalhando para trazer novas lendas a este tomo.
+            </p>
+          </div>
         </div>
       </main>
 
