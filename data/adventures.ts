@@ -6048,5 +6048,279 @@ export const adventures: Adventure[] = [
       content: "— Que comece um novo jogo!"
     }
   ]
+},
+{ id: "Emergir Monstruoso",
+  name: "Emergir Monstruoso",
+  theme: "Fantasia e Caçada a Monstros",
+  image: "/aventuras/emergir-monstruoso.png",
+  summary: "Contratados para investigar desaparecimentos em uma próspera vila de Trebuck, os heróis devem explorar cavernas subterrâneas infestadas de larvas ácidas antes de enfrentar a colossal criatura responsável pela tragédia.",
+  sections: [
+    {
+      type: "text",
+      content: "Arton é um mundo repleto de feras apavorantes. Dragões rondam o mundo, colecionando tesouros e alterando as terras ao seu redor. A Tormenta chove aberrações asquerosas, capazes de destruir a mente e retorcer a matéria. O Deus dos Monstros, Megalokk, espalhou sua prole por todos os lados. Presas, garras e espinhos estraçalham aventureiros despreparados. Heróis que enfrentam monstros são lembrados por sua bravura. Mas este não é um trabalho fácil ou rápido. Cabe a estes aventureiros prepararem-se, coletando o máximo de informações antes mesmo de terem um vislumbre da fera. Afinal, se não souberem exatamente o que enfrentarão, podem tornar-se a próxima refeição de uma besta até então desconhecida."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "RESUMO DA AVENTURA"
+    },
+    {
+      type: "text",
+      content: "Emergir Monstruoso é uma breve jornada, uma aventura curta pensada para uma sessão única, mas que pode ser inserida em uma campanha maior. É ideal para um grupo de quatro personagens de 8º nível, em Tormenta20."
+    },
+    {
+      type: "text",
+      content: "Contratados por um nobre, os aventureiros vão até uma vila onde animais vêm sendo atacados e pessoas estão desaparecendo. A população local fica muito feliz em vê-los. Um fazendeiro anão diz que pode apontar pistas se os personagens lidarem antes com os estranhos monstros que insistem em ocupar seu celeiro."
+    },
+    {
+      type: "text",
+      content: "Os heróis então devem investigar túneis que passam por baixo da região, escondendo inimigos subterrâneos. Ao analisar as cavernas, eles encontram um ninho de larvas ácidas famintas. Assim que são derrotadas, tudo começa a desmoronar, e eles terão de enfrentar na superfície o monstro responsável pelos desaparecimentos."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "CENA 1: NÃO HÁ PAZ EM TREBUCK"
+    },
+    {
+      type: "text",
+      content: "Conhecidos pela sua beleza bucólica, os campos de Barucandor são um dos lugares mais prósperos de Trebuck. Infelizmente, isso não significa tranquilidade. O ajuntamento de feudos faz fronteira com a Tormenta, as Montanhas Sanguinárias e o reino de Sckharshantallas. O barão Marius Valcanti tenta cuidar da população da melhor forma, mas sua idade avançada o força a depender da ajuda constante de aventureiros."
+    },
+    {
+      type: "text",
+      content: "Os personagens, reconhecidos por aventuras anteriores, são convidados à presença do nobre. Todas as pessoas que o grupo encontra no caminho, sejam servos ou guardas, vestem-se de forma elegante, um testemunho da prosperidade da região. O barão senta-se em uma cadeira de espaldar alto, que faz sua figura parecer menor. Administradores aproximam-se, mostram algo e logo partem, num fluxo constante."
+    },
+    {
+      type: "text",
+      content: "O barão Valcanti saúda os personagens em tom formal, parabenizando-os por alguma de suas recentes vitórias, mas tem pouco tempo para conversas paralelas e vai direto ao ponto. A burgomestra de uma vila em seu território vem relatando o desaparecimento e mutilação de animais, e agora pessoas começaram a sumir também. Ele deseja que o grupo vá à comunidade e lide com o que está causando os problemas."
+    },
+    {
+      type: "text",
+      content: "Experiente em negociar com aventureiros, o barão está disposto a oferecer uma recompensa razoável pela missão. Em tibares, pretende entregar T$ 3.000 para cada personagem. Como opção, pode fornecer um item com até três melhorias ao grupo (mas sem a recompensa em dinheiro), ou informação sobre a localização de um acessório menor mágico ou um item com até um encanto (mas não necessariamente os recursos para recuperá-lo)."
+    },
+    {
+      type: "text",
+      content: "Alternativamente, o nobre possui também algum tipo de informação de interesse dos heróis. Talvez saiba onde algum vilão que procuram se esconde, ou então possa oferecer o apoio de que precisam para a continuidade da campanha. De uma forma ou de outra, o barão estará preparado, conhecendo bem o que os personagens desejam e pronto para negociar isso."
+    },
+    {
+      type: "text",
+      content: "Uma vez terminada a conversa, um dos servos se aproxima com os recursos para a aventura: rações de viagem suficientes para todos, um mapa detalhado da região e da vila, 10 essências de mana e 5 poções de Curar Ferimentos (4d8+4 PV). Equipados para o trabalho, os personagens partem em direção à vila."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "CENA 2: PROSPERIDADE E PROBLEMAS"
+    },
+    {
+      type: "text",
+      content: "As estradas são bem cuidadas e as pessoas que passam em viagem parecem felizes. Talvez seja uma impressão enganosa, afinal, vocês sabem que o perigo pode surgir a qualquer momento."
+    },
+    {
+      type: "text",
+      content: "Caso queira tornar a viagem um pouco mais agitada, considere que ela leva cinco dias, e a cada dia há 20% de chance de um encontro aleatório. É possível rolar na tabela “Estradas do Reinado” (Ameaças de Arton, p. 429) ou escolher algum evento que faça sentido. Evite usar criaturas da Tormenta aqui, exceto se for um elemento recorrente em aventuras anteriores."
+    },
+    {
+      type: "text",
+      content: "Se não houver interesse em encontros no caminho, considere que os personagens simplesmente chegam à vila."
+    },
+    {
+      type: "text",
+      content: "Os moradores abrem as janelas, acenam com panos e indicam que devem ir até o salão comunal. Todos estão trajando roupas de camponeses bem cuidadas, e estão sorridentes. Um teste de Intuição ou Investigação (CD 10) mostra que a alegria é genuína, não fruto de desespero. Esta população parece viver bem, e a presença de heróis os convence de que seus problemas, quaisquer que sejam, serão solucionados."
+    },
+    {
+      type: "text",
+      content: "O salão comunal está enfeitado e a burgomestra acena. Há um banquete preparado para os aventureiros. Se questionada sobre o risco de uma aglomeração atrair o que quer que esteja sumindo com as pessoas, ela explica que os desaparecimentos são noturnos e só ocorreram com indivíduos desacompanhados."
+    },
+    {
+      type: "text",
+      content: "Apesar da agitação da maior parte da população, alguns mantêm-se afastados. Conseguir informações é um teste estendido de Diplomacia (CD 20, três sucessos). Uma falha total representa incômodo das pessoas relacionadas ao desaparecimento, ou então excesso de bajuladores impedindo conversas sinceras. A partir do dia seguinte é possível iniciar um novo teste estendido, agora exigindo cinco sucessos. A cada noite há 10% (1 a 10 em 1d100) de chance de haver uma nova vítima."
+    },
+    {
+      type: "text",
+      content: "Ao serem bem-sucedidos, os aventureiros conseguem o relato de um dos fazendeiros locais, o primeiro a sofrer com os ataques de animais. O homem, um anão mal-humorado chamado Korimm, começa a reclamar."
+    },
+    {
+      type: "text",
+      content: "“Primeiro, minhas vacas são atacadas! Ai, apareceram os malditos buracos no meu terreno, fazendo meus animais se machucarem. E agora, pelas ceroulas de mitril de Heredrimm, tem alguma coisa no meu celeiro! Vou mostrar para vocês!”"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "CENA 3: O CELEIRO"
+    },
+    {
+      type: "text",
+      content: "A fazenda está a uma curta caminhada do centro da comunidade. Os campos ao redor da vila são verdejantes, e poucos momentos passam sem que, ao longe, alguém acene e sorria. Entretanto, Korimm passa o caminho inteiro resmungando."
+    },
+    {
+      type: "text",
+      content: "Quando chegam, são recebidos pela esposa do anão, Gertha. Korimm pergunta sobre os animais e ela diz que estão numa parte mais afastada da fazenda. Apesar de não ser ranzinza como seu marido, a anã parece mais preocupada do que o resto do povo na vila. Ela então convida os aventureiros a entrarem para tomar algo enquanto conversam."
+    },
+    {
+      type: "text",
+      content: "Os dois contam que ouviram sobre os ataques há cerca de um mês. Preocupados que pudessem ser monstros ou saqueadores das Sanguinárias, o casal contratou mais ajudantes e reforçou as cercas. Quando a primeira vaca deles foi atacada, eles mesmos passaram a patrulhar a fazenda."
+    },
+    {
+      type: "text",
+      content: "Exceto por estranhos buracos pela propriedade, não viram nada que fosse fora do ordinário. Mas então os animais começaram a evitar o celeiro. Um dos trabalhadores foi gravemente ferido por algo com garras, e, como havia aventureiros a caminho, resolveram selar o lugar e esperar."
+    },
+    {
+      type: "text",
+      content: "Se questionados sobre os buracos, os anões dizem que não parecem formações naturais. De acordo com Gertha, seu marido queria investigá-los, mas ela meteu juízo (e uma panelada) na cabeça dele. Korimm os levará a um dos túneis assim que lidarem com o que quer que esteja no celeiro."
+    },
+    {
+      type: "text",
+      content: "Já se pedirem para ver os corpos mutilados dos animais, o casal os leva até um dos cadáveres. É possível encontrar a metade da frente de uma vaca em avançado estado de decomposição. Um teste de necropsia, da perícia Cura, ou então de Investigação ou Sobrevivência (CD 25), revela que o ataque foi preciso, vindo de baixo, estraçalhando o pobre animal em um golpe só."
+    },
+    {
+      type: "text",
+      content: "Para entrar no celeiro terão apenas de remover a pesada tábua que trava as portas. O ambiente está em escuridão leve, já que todas as possíveis entradas de luz foram lacradas para evitar que o que estivesse ali dentro conseguisse sair. De repente, os personagens ouvem um chiado vindo de cima. Presas no teto, existem seis criaturas humanoides, com aspecto de lagarto, prontas para atacar."
+    },
+    {
+      type: "text",
+      content: "CRIATURAS. Slark x6 (NPCs e Criaturas). Um teste para identificar criatura (CD 16) revela que esses monstros, conhecidos como slarks, vivem no subterrâneo, e costumam fazer emboscadas contra suas presas. Um sucesso também revela que não é comum que venham à superfície, e que isto provavelmente está ligado aos tais buracos misteriosos."
+    },
+    {
+      type: "text",
+      content: "Assim que o grupo lidar com os slarks, Korimm e Gertha ficam muito felizes. Se os personagens quiserem recuperar-se, os dois oferecem quartos na fazenda (descanso confortável, diferente do luxuoso oferecido no centro da vila). Porém, se a ideia for não perder tempo, podem levá-los imediatamente aos misteriosos túneis."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "CENA 4: EM UM BURACO NO CHÃO"
+    },
+    {
+      type: "text",
+      content: "Os tais buracos no chão formam quase uma caverna. Os túneis são largos o suficiente para que duas pessoas andem lado a lado. Não há qualquer forma de iluminação nos corredores, e um cheiro acre muito forte queima suas narinas."
+    },
+    {
+      type: "text",
+      content: "Se não trouxerem qualquer forma de iluminação, os túneis estarão em escuridão total. Alguém com um Ofício apropriado, ou um anão treinado em Conhecimento, pode fazer um teste (CD 20) para perceber que, apesar de não serem corredores “naturais”, isso foi obra de alguma criatura movendo o solo em sua passagem."
+    },
+    {
+      type: "text",
+      content: "Para conseguirem orientar-se nas cavernas, devem ser bem-sucedidos em um teste estendido de Sobrevivência (CD 25, três sucessos). Em caso de falha total, os personagens se perdem, retornando à entrada do túnel, e deverão recomeçar o teste estendido."
+    },
+    {
+      type: "text",
+      content: "Após cada teste, tenham passado ou não, os aventureiros encontram 1d6+2 slarks. As criaturas tentam atacar de surpresa, então os personagens devem superá-las em um teste de Percepção oposto à Furtividade (+8) delas. Aqueles que não superarem o resultado dos monstros ficam surpreendidos na primeira rodada do combate."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "CENA 5: NINHO TÓXICO"
+    },
+    {
+      type: "text",
+      content: "O cheiro nos túneis beira o insuportável. Então vocês chegam a uma câmara mais ampla escavada na terra. Aqueles que conseguem enxergar veem centenas e mais centenas de ovos de inseto cobrindo as paredes da caverna. Restos de cadáveres também são encontrados aqui, parcialmente desintegrados em poças de ácido."
+    },
+    {
+      type: "text",
+      content: "Permita aos personagens um teste de Sobrevivência (CD 19) para identificar os ovos como sendo de uma criatura chamada ankthyr. Nesse estado, são pouco mais que larvas, mas quando crescerem podem se transformar em um monstro perigosíssimo, provavelmente o causador dos desaparecimentos e mutilação de animais."
+    },
+    {
+      type: "text",
+      content: "Após o teste, bem-sucedido ou não, uma enorme quantidade das criaturas famintas eclode de seus ovos. CRIATURAS. Enxame Cáustico x2 (NPCs e Criaturas)."
+    },
+    {
+      type: "text",
+      content: "O chão desta caverna está coberto de ácido, e personagens que caiam sofrem 2d6 pontos de dano de ácido. As criaturas tentam envolver o grupo por inteiro, mas é possível fugir, atraindo-as. Caso fujam, as criaturas vêm à superfície, atacando de modo indiscriminado as pessoas da vila. Se as derrotarem, algo começa a acontecer."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "CENA 6: CORRE!"
+    },
+    {
+      type: "text",
+      content: "Algo faz as paredes das cavernas tremerem. O som da rocha sendo destruída ao seu redor demonstra que os túneis estão colapsando. E vocês suspeitam, por terem derrotado o enxame, que é hora de lidar com a progenitora daquelas criaturas."
+    },
+    {
+      type: "text",
+      content: "Furioso, o ankthyr adulto começa a destruir seus próprios túneis, numa tentativa de soterrar os aventureiros. Cabe aos heróis fugirem usando o perigo complexo a seguir."
+    },
+    {
+      type: "text",
+      content: "DESABAMENTO DOS TÚNEIS (ND 8)\nOs personagens precisam escapar antes que sejam soterrados!\nOBJETIVO: Sair das cavernas.\nEFEITO: Os túneis serão completamente destruídos em 7 rodadas. Para escapar, um personagem precisa acumular 5 sucessos nas ações avançar, correr ou carregar outro. No início de cada rodada, role 1d6 e consulte a lista de efeitos abaixo:\n1-2) Destroços. Destroços caem do teto. Cada personagem deve fazer um teste de Reflexos (CD 25). Se falhar, sofre 4d6 pontos de dano de impacto. Se falhar por 10 ou mais, o dano aumenta para 8d6.\n3-4) Fenda no chão. Rachaduras se abrem no chão. Cada personagem deve fazer um teste de Acrobacia ou Atletismo (CD 25). Se falhar, tropeça e sofre –5 em sua próxima ação contra o perigo. Se falhar por 10 ou mais, cai e perde sua ação nesta rodada.\n5) Bloqueio. Um desabamento vai bloquear o caminho! O personagem pode desistir desta rota e procurar outra (perde a ação nesta rodada, mas age normalmente a partir da próxima) ou tentar correr antes que o desabamento termine. Nesse caso, precisa fazer um teste de Atletismo (CD 25). Se passar, pode fazer sua ação nesta rodada. Se falhar, perde a ação e sofre 8d6 pontos de dano de impacto.\n6) Passagem livre. Este túnel é mais resistente, mas as paredes estão perto de ruir. Os personagens não sofrem qualquer efeito neste turno, mas devem continuar correndo ou serão soterrados.\nAo fim da sétima rodada, qualquer personagem que não tenha acumulado 5 sucessos será atingido pelo desabamento, sofrendo 20d6 pontos de dano de impacto (sem teste de resistência)."
+    },
+    {
+      type: "text",
+      content: "AVANÇAR (ACROBACIA OU REFLEXOS CD 25): O personagem avança com cuidado em direção à saída. Um sucesso por 10 ou mais (ou um 20 natural no teste) conta como 2 sucessos.\nCORRER (ATLETISMO CD 20): O personagem corre em direção à saída sem se preocupar com os perigos em seu caminho. Ele sofre 4d6 pontos de dano de impacto. Um sucesso por 10 ou mais (ou um 20 natural no teste) conta como 2 sucessos.\nCARREGAR OUTRO (ATLETISMO CD 30): O personagem carrega um aliado próximo (com no máximo 1 sucesso de diferença). Isto funciona como a ação avançar. Se passar, o personagem acumula 1 sucesso para si e para o aliado. Se falhar, ambos sofrem dano.\nPROCURAR CAMINHO (PERCEPÇÃO CD 20): O personagem analisa o terreno em busca de uma rota de fuga. Se passar, recebe +5 em todos os testes para avançar, correr e carregar outro realizados durante o perigo."
+    },
+    {
+      type: "text",
+      content: "O túnel que dá acesso à superfície é bem perto do centro da vila. Antes que consigam pensar muito, todos sentem o chão tremer."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "CENA 7: A VINGANÇA DO VERME MALDITO"
+    },
+    {
+      type: "text",
+      content: "O tremor se intensifica, estruturas entortam e pessoas começam a gritar. Logo um par de presas insetoides se projeta da terra, tentando ferir os aventureiros, e poucos segundos depois um corpanzil emerge. Maior que um cavalo, com três pares de patas finas e alongadas, o monstro é coberto por uma carapaça quitinosa. Das quelíceras poderosas pinga um ácido que chia ao tocar no solo. Tão rápido quanto saltou para fora, o monstro afunda novamente no chão de terra batida."
+    },
+    {
+      type: "text",
+      content: "CRIATURA. Ankthyr (NPCs e Criaturas).\nO ataque final do monstro é virulento e descontrolado, e ele luta até sua morte. A estratégia principal da criatura é mergulhar e dar um bote subterrâneo contra um dos personagens. Além disso, pela escavação e os buracos deixados, toda a área conta como terreno difícil para os personagens (o ankthyr pode simplesmente escavar)."
+    },
+    {
+      type: "text",
+      content: "A população da vila está assustada, mas alguns pegam em armas para ajudar. A burgomestra serve como uma parceira destruidora veterana, causando dano de fogo com magias. Korimm e Gertha chegam, portando martelos e servindo como parceiros combatente e fortão iniciantes, respectivamente."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "EPÍLOGO: INFESTAÇÃO"
+    },
+    {
+      type: "text",
+      content: "Os restos do monstro logo atraem a atenção dos aventureiros. A resistente carapaça da criatura poderia ser usada para algo. Mas, antes que consigam pensar muito, a população, tendo percebido a calmaria, vem celebrar a mais nova vitória dos heróis."
+    },
+    {
+      type: "text",
+      content: "Com a derrota do ankthyr, o perigo está resolvido por enquanto. Pensando em tudo o que aconteceu, assim como o ataque no ninho, é possível que haja outro monstro como aquele na região. Talvez sejam necessários mais alguns dias para ter certeza da segurança."
+    },
+    {
+      type: "text",
+      content: "O barão Valcanti está bastante grato, mesmo que continue com suas preocupações costumeiras. Se não retornarem ao nobre logo após a derrota do monstro, ele enviará um representante seu, com o pagamento prometido. Ele também enviará uma nova proposta de missão, para quando estiverem descansados e prontos. Todos avançam para o 9º nível!"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "NPCS E CRIATURAS"
+    },
+    {
+      type: "text",
+      content: "SLARK (ND 1)\nHumanoide (slark) Médio\nINICIATIVA +7, PERCEPÇÃO +4 sensibilidade a luz, visão no escuro\nDEFESA 15, FORT +10, REF +1, VON +5, redução de ácido 5\nPONTOS DE VIDA 9\nDESLOCAMENTO 6m (4q), escalada 6m (4q)\nCORPO A CORPO Garras +11 (2d6+9, 19/x3).\nQUEDA LIVRE (COMPLETA) Se estiver em terreno elevado, o slark cai sobre uma criatura e faz um ataque de garras. Ele recebe o bônus por terreno elevado (+2 no teste de ataque) e, se a criatura estiver surpreendida, causa +2d6 pontos de dano do mesmo tipo.\nSALIVA (PADRÃO) O slark cospe em uma criatura em alcance curto. A criatura fica cega por 1 rodada e qualquer fonte de iluminação mundana que esteja empunhando se apaga (Ref CD 14 evita ambos os efeitos).\nFor –1, Des 3, Con 2, Int –1, Sab 1, Car –2\nPERÍCIAS Furtividade +8.\nTESOURO Nenhum."
+    },
+    {
+      type: "text",
+      content: "ENXAME CÁUSTICO (ND 4)\nAnimal Grande\nINICIATIVA +3, PERCEPÇÃO +2, visão no escuro\nDEFESA 23, FORT +16, REF +4, VON +10, imunidade a ácido\nPONTOS DE VIDA 140\nDESLOCAMENTO 9m (6q), escavação 6m (4q)\nENXAME O enxame cáustico age em conjunto. Ele pode entrar no espaço ocupado por um personagem e, no fim de seu turno, causa 3d8 pontos de dano de ácido a qualquer personagem em seu espaço automaticamente. O enxame é imune a manobras de combate e efeitos que afetam apenas uma criatura e não causam dano, mas sofre 50% a mais de dano de efeitos de área, como Bola de Fogo. Além disso, sofre apenas metade do dano de ataques com armas. Estar dentro do enxame conta como condição ruim para lançar magias.\nGOSMA CORROSIVA O dano de ácido do enxame persiste por mais 1 rodada após uma criatura deixar a área do enxame cáustico.\nSENTIDO SÍSMICO O enxame cáustico tem percepção às cegas em alcance médio, mas apenas para criaturas e objetos em contato com a mesma superfície que ele.\nFOR 3, DES 1, CON 2, INT –5, SAB –2, CAR –4\nTESOURO Nenhum."
+    },
+    {
+      type: "text",
+      content: "ANKTHYR (ND 8)\nAnimal Grande\nINICIATIVA +10, PERCEPÇÃO +8, visão no escuro\nDEFESA 33, FORT +21, REF +8, VON +15, redução de ácido 5, redução de dano 5\nPONTOS DE VIDA 308\nDESLOCAMENTO 12m (8q), escavação 6m (4q)\nCORPO A CORPO Mordida +26 (4d12+24 mais 4d8 ácido).\nAGARRAR APRIMORADO Mordida (teste +28).\nCUSPE ÁCIDO (PADRÃO) O ankthyr cospe ácido em uma criatura a até 9m. A vítima sofre 6d8+6 pontos de dano de ácido e fica coberta por um muco corrosivo (Ref CD 26 reduz à metade e evita o muco). Uma criatura coberta pelo muco sofre mais 3d8+3 pontos de dano de ácido no início dos seus dois próximos turnos. Recarga (movimento).\nESPREITADOR SUBTERRÂNEO (PADRÃO) Se estiver completamente soterrado, o ankthyr pode emergir do solo e atacar uma criatura a até 4,5m do seu ponto de saída. Se fizer isso, ele recebe +2 no teste de ataque e causa +1d12 pontos de dano.\nSENTIDO SÍSMICO O ankthyr tem percepção às cegas em alcance médio, mas apenas para criaturas e objetos em contato com a mesma superfície que ele.\nFor 5, Des 2, Con 4, Int –5, Sab 0, Car –3\nTESOURO Metade."
+    }
+  ]
 }
 ];
