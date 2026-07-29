@@ -229,6 +229,20 @@ export const powersGeraisDestino: Power[] = [
     prerequisite: "Coração de Dragão.",
     origin: "Dragão Brasil - 200"
   },
+
+  // Dragão Brasil - 228
+  { id: "Certificado de Conclusão",
+    name: "Certificado de Conclusão",
+    description: "Especial: após passar um mês estudando na Caravana das Três Chamas, você recebe este poder. Essa é a única forma de adquiri-lo.\n Você recebe +1 PM e pode lançar uma das magias a seguir (atributo-chave Inteligência) à sua escolha: Alarme, Aviso, Criar Elementos e Luz; mas não pode aplicar aprimoramentos. Caso aprenda novamente uma dessas magias, seu custo diminui em –1 PM e você passa a conseguir aplicar aprimoramentos normalmente.",
+    origin: "Dragão Brasil - 228"
+  },
+  { id: "Previdência da Vigília",
+    name: "Previdência da Vigília",
+    description: "Após contribuir com a Vigília das Segundas Chances ou realizar um juramento para Thyatis (o que exige seguir suas Obrigações & Restrições), você recebe o poder Dom da Imortalidade, mas só pode usá-lo na primeira vez que morrer na campanha.",
+    origin: "Dragão Brasil - 228"
+  },
+
+
   //#endregion
 
 

@@ -165,6 +165,15 @@ export const gear: Gear[] = [
     price: "T$ 30 (espada curta) e T$ 50 (espada longa)",
     spaces: "1"
   },
+
+  // Dragão Brasil - 228
+  { id: "Bilhete de Valluk Delsori",
+    name: "Bilhete de Valluk Delsori",
+    description: "Este item mágico é concedido apenas àqueles que conseguirem descobrir onde a companhia irá se apresentar e consigam assistir a cinco de suas apresentações seguidas. Rasgar o bilhete (como se faz ao entrar para assistir a um espetáculo) permite que o usuário se transforme em uma das grandes figuras de Arton — como o herói Orion Drake ou a própria Rainha-Imperatriz Shivara I —, mas com uma característica diferente da verdadeira pessoa. Você poderia, por exemplo, se transformar em sir Alenn Toren, mas seu tapa-olho estaria no olho esquerdo, em vez do direito. Este efeito funciona como a magia Disfarce Ilusório, com direito ao aprimoramento que aumenta o bônus de Enganação para +20 e duração de 1 dia.",
+    origin: "Dragão Brasil - 228",
+    price: "T$ 300",
+    spaces: "1"
+  },
   //#endregion
 
 

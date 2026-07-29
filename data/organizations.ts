@@ -41,7 +41,7 @@ Devotos de Wynna em comunidades isoladas frequentemente celebram a chegada da Ca
 
 Os três irmãos tinham um lema quanto a isso, que reverbera pelos alunos muito tempo depois da caravana deixar um local: "uma chama compartilhada nunca perde seu brilho". Se você estiver num lugar repleto de curiosidade, talento adormecido ou medo da magia, a Caravana das Três Chamas talvez já esteja a caminho.`,
     membros:
-      "Quaisquer criaturas capazes de ensinar magia podem representar professores desta organização, em especial aqueles com bônus elevados de Misticismo e habilidades como as da distinção professor de magia (Heróis de Arton, pp. 205–207).",
+      "Quaisquer criaturas capazes de ensinar magia podem representar professores desta organização, em especial aqueles com bônus elevados de Misticismo e habilidades como as da distinção professor de magia.",
     comoUsar:
       "Aliados. No início de uma campanha com muita presença de magia arcana, a Caravana das Três Chamas se instala temporariamente no vilarejo onde os aventureiros estão, atraindo curiosos e aspirantes a conjuradores. Quando um dos grimórios de sua biblioteca desaparece, os professores pedem aos heróis que os ajudem a encontrá-lo antes que caia em mãos erradas — ou pior: que seja usado erroneamente por alguém inexperiente.",
     mecanica: {
@@ -221,7 +221,7 @@ Por isso, admiram liderança e excelência, desprezando complacência, compaixã
 
 Herdeiros interpretam vitórias como confirmação de superioridade e derrotas como prova de inadequação. Em um mundo povoado por lendas dracônicas, poucos grupos perseguem o poder com tanta devoção ou acreditam merecê-lo com tamanha arrogância.`,
     membros:
-      "Dracomantes, feiticeiros dracônicos, kallyanach, kobolds e devotos de Kallyadranoch, todos com as estatísticas mais altas do ND equivalente ao nível do grupo — essa galera é osso duro de roer —; todas as fichas da seção “Igreja de Kallyadranoch” (Ameaças de Arton, pp. 144–153) representam bem este grupo.",
+      "Dracomantes, feiticeiros dracônicos, kallyanach, kobolds e devotos de Kallyadranoch, todos com as estatísticas mais altas do ND equivalente ao nível do grupo — essa galera é osso duro de roer —; todas as fichas da seção “Igreja de Kallyadranoch” representam bem este grupo.",
     comoUsar:
       "Vilões. Integrantes desta organização veem artefatos, relíquias e magia dracônica como seu direito legítimo. No sopé das Sanguinárias, aventureiros ouvem um pedido de socorro, então sentem cheiro de fumaça e carne queimando. Caso se aproximem, vão encontrar um kallyanach incendiando um pequeno vilarejo. Berrando impropérios, ele diz ser o verdadeiro senhor do local — seu sangue é de dragão, afinal.",
     mecanica: {
@@ -274,7 +274,7 @@ Um mínimo da carga é recolhido para sustentar a tripulação e realizar a manu
 
 As ondas carregam lendas sobre o surgimento desta devota tripulação do reino-arquipélago de Khubar até os ouvidos de integrantes da Frota Áurea, mas nenhuma foi comprovada. No fim das contas, talvez a Hoste Naufragista seja só mais um retrato da devoção cega que às vezes acomete os artonianos. O que se sabe com certeza é que a Hoste é uma das facções mais ferrenhas na busca pelo Coração do Oceano, na tentativa de trazer o deus de volta a Arton. Talvez tudo isso seja um exagero. Ou talvez o Deus dos Mares apenas cuide bem daqueles que se dedicam a devolver seus presentes.`,
     membros:
-      "Piratas, bucaneiros, ladinos e clérigos devotos de Oceano; fichas de piratas da seção “Piratas & Pistoleiros” (Ameaças de Arton, pp. 252–263) representam bem este grupo.",
+      "Piratas, bucaneiros, ladinos e clérigos devotos de Oceano; fichas de piratas da seção “Piratas & Pistoleiros” representam bem este grupo.",
     comoUsar:
       "Vilões. Mercadores do Mar do Dragão-Rei começam a relatar o desaparecimento de embarcações inteiras. Os sobreviventes descrevem um navio adornado com conchas, tridentes e ondas referentes ao Deus dos Mares. Há um pedido de ajuda numa cidade costeira das Repúblicas Livres de Sambúrdia, bem como uma recompensa pelo capitão da embarcação que supostamente é responsável por afundar esses navios.",
     mecanica: {
@@ -407,7 +407,7 @@ Essa postura provoca conflitos constantes. Colonos acusam a fraternidade de prot
 
 Nas Montanhas Sanguinárias, todos sabem o que elas perpetuam: a crença de que o mundo já conhece morte suficiente e seu trabalho é espalhar a vida. Talvez por isso, quando um nativo encontra pegadas humanas ao lado de marcas deixadas por garras gigantes, seu coração sabe que as Parteiras provavelmente estiveram no local.`,
     membros:
-      "Você não vai precisar das fichas de integrantes desta organização, pois eles se recusam a participar de combates. Para representá-los, usar um parceiro médico (Tormenta20, p. 261) pode ser o suficiente.",
+      "Você não vai precisar das fichas de integrantes desta organização, pois eles se recusam a participar de combates. Para representá-los, usar um parceiro médico pode ser o suficiente.",
     comoUsar:
       "Neutros. Uma ninhada de lagartos-trovão desapareceu nas Montanhas Sanguinárias, fazendo uma matriarca enfurecida atacar caravanas da região. As Parteiras estavam no local por outro motivo: uma fêmea de grifo estava prestes a pôr os ovos num local próximo. Elas desejam proteger o ninho, mas não podem fazer isso e acalmar a matriarca ao mesmo tempo, então precisarão da ajuda dos aventureiros para resolver os dois problemas.",
     mecanica: {
@@ -435,7 +435,7 @@ Essa incerteza não enfraquece os Peregrinos. Pelo contrário. Seus integrantes 
 
 Em seus corações, acreditam que a ascensão de Valkaria como líder do Panteão só reflete a importância que tais artefatos devem esconder. Se não funcionam separadas, a deusa provavelmente escondeu um efeito ativado apenas quando todas as Lágrimas forem reunidas. Esse é o principal objetivo da organização no momento.`,
     membros:
-      "Aventureiros de qualquer tipo podem ser membros dos Peregrinos e representá-los. É fácil se tiver acesso ao Guia de NPCs, pois as fichas da seção de mercenários (pp. 76–79) desempenham bem este papel.",
+      "Aventureiros de qualquer tipo podem ser membros dos Peregrinos e representá-los. É fácil se tiver acesso ao Guia de NPCs, pois as fichas da seção de mercenários desempenham bem este papel.",
     comoUsar:
       "Aliados. Um dos Peregrinos estava explorando uma antiga ruína deheoni, mas seu parceiro parou de receber mensagens dele faz um tempo. Então, essa pessoa pediu aos heróis que fossem até a ruína para descobrir o paradeiro do Peregrino e do grupo de aventureiros que fazia sua escolta.",
     mecanica: {
@@ -463,7 +463,7 @@ Apesar da fama provocadora, a organização não se vale de atos revolucionário
 
 Talvez por isso tantos governantes observem o Rastro da Pólvora com cautela. Afinal, Tenebra raramente precisa derrubar muralhas quando pode convencer alguém a explodir os portões.`,
     membros:
-      "Bucaneiros, burgueses, inventores, nobres, políticos, mercadores… praticamente qualquer pessoa que tenha algo a ganhar com a legalização da pólvora pode ser um integrante desta organização; fichas de pistoleiros da seção “Piratas & Pistoleiros” (Ameaças de Arton, pp. 252–263) representam bem este grupo.",
+      "Bucaneiros, burgueses, inventores, nobres, políticos, mercadores… praticamente qualquer pessoa que tenha algo a ganhar com a legalização da pólvora pode ser um integrante desta organização; fichas de pistoleiros da seção “Piratas & Pistoleiros” representam bem este grupo.",
     comoUsar:
       "Vilões. Uma assembleia local em Deheon está prestes a ordenar restrições e rondas ainda mais severas em busca de armas de fogo, mas atentados misteriosos aumentam o medo do povo. Enquanto a milícia local busca pelos culpados, um político do Rastro da Pólvora surge para defender que o uso de armas de fogo poderia ter salvo as vítimas. Quem os aventureiros vão apoiar nessa situação: os milicianos que desejam preservar a lei do Reinado ou o político escuso que promete as maravilhas da pólvora?",
     mecanica: {
@@ -498,7 +498,7 @@ Em tavernas e estradas circula um comentário frequente sobre eles: ter coragem 
       kind: "Novo Poder de Destino",
       name: "Previdência da Vigília",
       description:
-        "Após contribuir com a Vigília das Segundas Chances ou realizar um juramento para Thyatis (o que exige seguir suas Obrigações & Restrições), você recebe o poder Dom da Imortalidade (Tormenta20, p. 133), mas só pode usá-lo na primeira vez que morrer na campanha.",
+        "Após contribuir com a Vigília das Segundas Chances ou realizar um juramento para Thyatis (o que exige seguir suas Obrigações & Restrições), você recebe o poder Dom da Imortalidade, mas só pode usá-lo na primeira vez que morrer na campanha.",
     },
   },
   { id: "zoyrak",
@@ -517,7 +517,7 @@ A tecnologia — em sua maioria fabricada por goblins, mas disseminada entre tod
 
 Zoyrak estão espalhados em pequenas células por oficinas, cortiços e comunidades goblinoides, conectados mais por símbolos e ideias do que por hierarquia formal. Vistos por humanos e outros povos “civilizados” como criminosos ou incendiários políticos, seus membros costumam respondê-los com uma constatação inquietante: aqueles que veem uma semente como ameaça provavelmente temem o que pode crescer a partir dela.`,
     membros:
-      "Goblins, hobgoblins, bugbears, orcs, ogros e outros povos humanoides aceitos pelos goblinoides; todas as fichas da seção “Duyshidakk” (Ameaças de Arton, pp. 78–87) representam bem este grupo.",
+      "Goblins, hobgoblins, bugbears, orcs, ogros e outros povos humanoides aceitos pelos goblinoides; todas as fichas da seção “Duyshidakk” representam bem este grupo.",
     comoUsar:
       "Rivais. Uma série de pichações e sabotagens começa a atingir as mansões de nobres, entre eles um patrono dos aventureiros. Embora parte do povo admire os responsáveis, as autoridades (e os aristocratas afetados) desejam levá-los à justiça. Como os heróis vão agir? Ajudarão os revoltosos ou protegerão os interesses de seu contratante?",
     mecanica: {

@@ -368,6 +368,28 @@ export const partners: Partner[] = [
   mestre: "Como acima, mas você também pode gastar 3 PM para curar 6d6 PV.",
   },
   },
+  { id: "Reabilitador",
+  name: "Reabilitador",
+  category: "arquetipo",
+  description: "É possível encaminhar uma solicitação formal para a Casa dos Desgarrados com o objetivo de contratar um de seus reabilitadores — juízes com treinamento especial para espalhar a justiça de Khalmyr, equilibrando as chances de todos os presentes, como uma ferramenta por meio da qual o Deus da Justiça em pessoa realiza o julgamento — por T$ 1.000.",
+  origin: "Dragão Brasil - 228",
+  benefits: {
+  iniciante: "Um reabilitador é um parceiro especial que acompanha o grupo de personagens até o fim da aventura. Durante uma cena à escolha dos jogadores, ele faz todos os modificadores serem iguais à média dos modificadores de todas as criaturas presentes. No final da cena, o reabilitador se despede do grupo e retorna para a Casa dos Desgarrados.",
+  veterano: "-",
+  mestre: "-",
+  },
+  },
+  { id: "Guaxininjas",
+  name: "Guaxininjas",
+  category: "especifico",
+  description: "Não se sabe ao certo se é possível treinar guaxinins comuns para desempenharem o papel de guaxininjas, mas acredita-se que eles seriam um parceiro capanga especial que fornece os benefícios descritos a seguir",
+  origin: "Dragão Brasil - 228",
+  benefits: {
+  iniciante: "Uma vez por aventura, você pode gastar uma ação de movimento e 2 PM para fazer um assovio e invocar 1d4+1 guaxininjas capangas em espaços desocupados em alcance curto — eles surgem de um beco próximo, por trás de uma pedra ou de maneiras igualmente furtivas. Guaxininjas têm deslocamento 9m, Defesa 17, dano 1d4 de corte cada e Ataque Furtivo +1d6. Eles desaparecem quando morrem ou no fim da cena.",
+  veterano: "-",
+  mestre: "-",
+  },
+  },
   //#endregion
 
 

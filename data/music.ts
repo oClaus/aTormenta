@@ -12,6 +12,15 @@ export const music: Gear[] = [
     price: "T$ 19000",
     spaces: "1",
   },
+  
+  // Dragão Brasil - 228
+  { id: "Cítola da Paz",
+    name: "Cítola da Paz",
+    description: "Feita de madeira de qualidade, com cordas douradas e encantada por um devoto de Marah, esta cítola é entregue por seus tutores como um símbolo de independência para Mestres de Cerimônia. Enquanto seguir as Obrigações & Restrições de Marah, sua Inspiração e suas músicas de bardo custam –1 PM e você recebe um bônus de +5 em testes de perícia para mudar atitude. Conta como um instrumento musical.",
+    origin: "Dragão Brasil - 228",
+    price: "T$ 175",
+    spaces: "1"
+  },
   //#endregion
 
   //#region Tormenta20 - Jogo do Ano

@@ -4226,6 +4226,27 @@ export const spells: Spell[] = [
       },
     ],
   },
+
+  // Dragão Brasil - 228
+  { id: "Memorizar Conhecimento",
+    name: "Memorizar Conhecimento",
+    type: "Universal",
+    school: "Adivinhação",
+    circle: 2,
+    execution: "Padrão",
+    range: "Pessoal",
+    target: "Você",
+    duration: "Permanente até ser descarregada",
+    resistance: "Nenhuma",
+    description: "Esta magia permite que você grave todos os detalhes relacionados a uma cena na sua mente. Enquanto tiver uma memória gravada, você recebe +5 em testes relacionados a informações da cena memorizada (o mestre tem a palavra final sobre esse bônus ser ou não aplicável em um teste). O limite máximo de memórias que você pode gravar é igual a 1 por patamar de personagem (1 enquanto for iniciante, 2 enquanto for veterano e assim por diante) + seu atributo-chave de magias. Se alcançar o limite de memórias, você precisa esquecer uma delas (descarregando o efeito desta magia e perdendo seu bônus) antes de gravar memórias novas.",
+    origin: "Dragão Brasil - 228",
+    enhancements: [
+      {
+        cost: "+3 PM",
+        effect: "Muda o bônus em testes para +10. Requer 4º círculo.",
+      },
+    ],
+  },
   //#endregion
 
 

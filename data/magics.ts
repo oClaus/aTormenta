@@ -343,6 +343,20 @@ export const specificWeapons: SpecificWeapon[] = [
     price: "22.000",
     origin: "Dragão Brasil - 221",
   },
+
+  // Dragão Brasil - 228
+  { id: "Arco dos Arautos",
+    name: "Arco dos Arautos",
+    description: "Arma favorita dos Arautos do Destruidor, este arco longo cruel preciso caçador pode ser encontrado por qualquer aventureiro que vasculhe os equipamentos de um membro desta organização. Você recebe a habilidade Marca da Presa do caçador, mas só pode usá-la com esta arma. Se já possui essa habilidade, em vez disso, o custo para usá-la com esta arma diminui em –1 PM.",
+    price: "39.100",
+    origin: "Dragão Brasil - 228",
+  },
+  { id: "Arma Silente",
+    name: "Arma Silente",
+    description: "Uma arma silente é o espólio obtido por aqueles que derrotam um membro da Lança Silente. Este item é uma arma (escolha entre alabarda, azagaia, lança, lança de falange, lança montada, machado de haste ou pique) certeira equilibrada formidável de adamante que fornece +5 em testes de Conhecimento, Guerra e Nobreza cujo objetivo seja perpetuar a guerra.",
+    price: "31.000",
+    origin: "Dragão Brasil - 228",
+  },
   //#endregion
 
   //#region Duelo de Dragões

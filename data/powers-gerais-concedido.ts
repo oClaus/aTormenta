@@ -101,6 +101,13 @@ export const powersGeraisConcedido: Power[] = [
     description: "Você pode gastar 2 PM para fornecer +2 na Defesa e em testes de resistência de um aliado em alcance curto até o fim da cena, ou até você usar esta habilidade novamente em outro aliado, o que acontecer primeiro.",
     origin: "Dragão Brasil - 203"
   },
+
+  // Dragão Brasil - 228
+  { id: "Percepção de Masmorra (Hynnin)",
+    name: "Percepção de Masmorra (Hynnin)",
+    description: "Uma vez por cena, você tem sucesso automático em testes de Investigação para encontrar armadilhas realizados no subterrâneo ou dentro de uma masmorra.",
+    origin: "Dragão Brasil - 228"
+  },
   //#endregion
 
   //#region Tormenta20 - Jogo do Ano

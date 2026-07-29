@@ -100,6 +100,49 @@ export const accessories: SpecificAccessory[] = [
     size: "Maior",
     origin: "Dragão Brasil - 218"
   },
+  // Dragão Brasil - 228
+  { id: "Chave Mestra",
+    name: "Chave Mestra",
+    description: "Uma chave carregada pelos membros do Claviculário como um símbolo sagrado, este item mágico também é capaz de destrancar qualquer coisa, concedendo sucesso automático em testes de Ladinagem para abrir fechaduras. Contudo, se não for usada por um dos membros do Claviculário ou por um devoto de Sszzaas, um efeito mágico sobre seu material é ativado, reduzindo a Chave Mestra a pó após o primeiro uso.",
+    price: "T$ 25.500",
+    size: "Médio",
+    origin: "Dragão Brasil - 228"
+  },
+  { id: "Máscara do Sol Dourado",
+    name: "Máscara do Sol Dourado",
+    description: "Uma máscara amarela com o desenho de um sorriso e dois tibares de ouro no lugar dos olhos, adornados com raios solares em laranja. Enquanto seguir as Obrigações & Restrições de Azgher, as moedas mágicas que substituem os olhos da máscara fornecem +10 em Ladinagem. Contudo, por ser chamativo demais, uma pessoa vestindo este item recebe –2 em Furtividade.",
+    price: "T$ 9.000",
+    size: "Menor",
+    origin: "Dragão Brasil - 228"
+  },
+  { id: "Pingente Rubro",
+    name: "Pingente Rubro",
+    description: "Este colar de matéria vermelha é estranho e parece estar sempre mudando de forma. Enquanto seguir as Obrigações & Restrições de Aharadak, sendo devoto ou não, você reduz a perda de PM causada por efeitos lefeu e da Tormenta em –1 PM por patamar.",
+    price: "T$ 3.000",
+    size: "Menor",
+    origin: "Dragão Brasil - 228"
+  },
+  { id: "Âncora Naufragista",
+    name: "Âncora Naufragista",
+    description: "Um colar com pingente em forma de âncora, tanto a corrente quanto o pingente são feitos de ferro oxidado, é usado como símbolo sagrado por piratas naufragistas. Enquanto seguir as Obrigações & Restrições de Oceano, sempre que oferecer como tributo para a água do mar um item valioso (com valor mínimo de T$ 100), você recebe um benefício a seguir (à sua escolha) durante 1 dia: deslocamento de natação igual ao seu deslocamento terrestre, +5 em Pilotagem, ou resistência a frio e eletricidade 10. Se você recuperar esse tributo, este item perde todos os seus efeitos e evapora como água do mar.",
+    price: "T$ 3.000",
+    size: "Menor",
+    origin: "Dragão Brasil - 228"
+  },
+  { id: "Bússola das Lágrimas",
+    name: "Bússola das Lágrimas",
+    description: "Desenvolvido por inventores Peregrinos, este item mágico foi um protótipo que acabou se tornando mais famoso do que o planejado: seu objetivo inicial era rastrear as Lágrimas de Valkaria, mas as primeiras versões acabaram alertando seu usuário para a presença de qualquer magia. Hoje em dia, ainda que usem uma versão mais avançada e precisa para buscar pelas Lágrimas, os Peregrinos continuam comercializando este item — afinal, todo mundo precisa pagar as contas, certo? Ao empunhar a Bússola das Lágrimas com uma das mãos, você tem sucesso automático em testes de Misticismo para detectar magia e pode fazê-los mesmo que não seja treinado nesta perícia.",
+    price: "T$ 3.500",
+    size: "Menor",
+    origin: "Dragão Brasil - 228"
+  },
+  { id: "Corso Sombrio",
+    name: "Corso Sombrio",
+    description: "De alguma forma, todo integrante do Rastro da Pólvora tem uma dessas cartas de corso entre seus pertences. Enquanto seguir as Obrigações & Restrições de Tenebra, este item funciona como uma carta de corso comum: concede a você permissão para usar armas de fogo em território do Reinado. Se tais obrigações forem violadas, a carta imediatamente se transforma em um corvo mágico que voa até a autoridade do Reinado mais próxima e denuncia você pelo porte e uso de itens proibidos pelo Vintílogo.",
+    price: "T$ 2.500",
+    size: "Menor",
+    origin: "Dragão Brasil - 228"
+  },
   
 
   // Duelo de Dragões

@@ -11,6 +11,22 @@ export const esoteric: Gear[] = [
     spaces: "1",
   },
 
+  // Dragão Brasil - 228
+  { id: "Alma de Dragão",
+    name: "Alma de Dragão",
+    description: "Uma pedra translúcida, no formato de uma escama de dragão e do tamanho de um punho fechado, que faz parte das posses de todos os Herdeiros da Escama. Quando sofrer dano de um dos tipos a seguir, você pode reduzir o dano sofrido em um dado como uma reação. Então este item deixa de ser translúcido e armazena a energia do dano, tomando a aparência de uma pedra preciosa: diamante (luz), esmeralda (ácido), ônix (trevas), rubi (fogo), safira (frio) ou topázio (eletricidade). Quando lança uma magia que causa dano do tipo da pedra preciosa enquanto tiver uma energia armazenada, você pode descarregar essa energia como uma ação livre para aumentar o dano em um dado do mesmo tipo. Após descarregar a energia, a pedra volta a ser translúcida e precisa armazenar energia outra vez antes de ser usada novamente.",
+    origin: "Dragão Brasil - 228",
+    price: "T$ 250",
+    spaces: "1",
+  },
+  { id: "Rosário da Vida",
+    name: "Rosário da Vida",
+    description: "Este item costuma ser usado por Parteiras das Mandíbulas para aumentar o efeito das suas magias de cura e, assim, diminuir a dor sentida pelas criaturas durante o parto. Quando empunhado por alguém que siga as Obrigações & Restrições de Lena, este rosário aumenta o número de PV recuperados por efeitos de cura mágica de luz em um dado do mesmo tipo por patamar de personagem (1 dado do mesmo tipo no 1º patamar, 2 dados no 2º e assim por diante).",
+    origin: "Dragão Brasil - 228",
+    price: "T$ 750",
+    spaces: "1",
+  },
+
 
   //#region Tormenta20 - Jogo do Ano
   { id: "Bolsa de Pó",

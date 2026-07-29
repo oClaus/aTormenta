@@ -403,6 +403,16 @@ export const alchemy: Alchemy[] = [
     spaces: "0,5",
   },
 
+  // Dragão Brasil - 228
+  { id: "Bomba de Tinta",
+    name: "Bomba de Tinta",
+    type: "Preparados",
+    description: "Favorito entre os Zoyrak, este item segue as mesmas regras da bomba, mas, em vez de causar dano, afeta uma esfera com 6m de raio que fica sob efeito simulado da magia Área Escorregadia até o fim da cena. Criaturas dentro dessa área durante a explosão da bomba também ficam lentas (Reflexos CD Des evita); elas podem gastar uma ação de movimento para fazer um teste de Força (CD Des) para se recuperar da condição.",
+    origin: "Dragão Brasil - 228",
+    price: "T$ 35",
+    spaces: "0,5",
+  },
+
 
 
 
