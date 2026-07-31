@@ -55,6 +55,13 @@ export default function MundoDeArtonPage() {
       color: "from-slate-700 to-zinc-900",
       href: "/mundo-de-arton/organizacoes",
     },
+    {
+      id: "regreiro",
+      title: "Supremo Tribunal Regreiro",
+      icon: "/temas/regreiro.png",
+      color: "from-slate-700 to-zinc-900",
+      href: "/mundo-de-arton/tribunal-regreiro",
+    },
   ];
 
   return (
