@@ -289,6 +289,10 @@ export default function TribunalRegreiroPage() {
                 Início
               </Link>
               <span className="text-amber-900/40">/</span>
+              <Link href="/mundo-de-arton" className="text-amber-950/70 hover:text-red-800 transition-colors">
+                Mundo de Arton
+              </Link>
+              <span className="text-amber-900/40">/</span>
               <span className="text-red-800">Tribunal Regreiro</span>
             </div>
             <ThemeToggle />

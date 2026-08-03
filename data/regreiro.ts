@@ -1,10 +1,6 @@
-// data/regreiro.ts
+//#region Tormenta20 - Jogo do Ano
+//#endregion
 import { RegreiroQA } from "@/types/regreiro";
-
-// Adicione aqui as perguntas e respostas do Supremo Tribunal Regreiro.
-// Só precisa preencher: id, question, answer e magazineNumber (o número da edição).
-// A página monta "Dragão Brasil - XXX" e o filtro de edições sozinha.
-//
 // Formatação suportada em "question" e "answer":
 //   \n\n        -> parágrafo em branco
 //   **texto**   -> negrito
@@ -12,6 +8,142 @@ import { RegreiroQA } from "@/types/regreiro";
 //   > texto     -> bloco de citação (bom pra saudação de abertura)
 
 export const regreiroQAs: RegreiroQA[] = [
+
+  //#region DB - 227
+  {
+    id: "DB227-01",
+    question: "1) Como funciona para usurpadores (*Heróis de Arton*) ascenderem à divindade, já que eles não podem ser devotos de si mesmos?",
+    answer: "> Saudações variantes, conselheiro! Vamos às suas respostas:\n\n1) A verdade é que não funciona! Um usurpador não consegue completar o processo de ascensão para deus menor, pois não pode ser devoto de si mesmo.",
+    magazineNumber: 227,
+  },
+  {
+    id: "DB227-02",
+    question: "2) Um magimarcialista (*Heróis de Arton*) pode usar poderes como *Inspiração Resoluta*? Ele usa o bônus de magificação para o cálculo?",
+    answer: "2) Não pode. O magimarcialista não usa *Inspiração*, apenas é considerado sob efeito de *Inspiração*. Ele pode se beneficiar de poderes como *Esgrima Mágica*, mas não de *Inspiração Resoluta*.",
+    magazineNumber: 227,
+  },
+  {
+    id: "DB227-03",
+    question: "> Boa tarde, meus caros regreiros. Elucidem algumas dúvidas minhas e da minha mesa, por favor!\n\n1) Qual a interação entre o poder concedido *Kiai Divino* com o poder de raça *Força dos Titãs*? Causaria automaticamente dano máximo com o número máximo de dados?",
+    answer: "> Saudações fantásticas, conselheiro! Vamos às suas respostas:\n\n1) Os poderes não interagem. O dado não é rolado com *Kiai Divino*, logo, não ativa *Força dos Titãs*.",
+    magazineNumber: 227,
+  },
+  {
+    id: "DB227-04",
+    question: "2) Um eiradaan feiticeiro dracônico somaria seu atributo-chave (Sabedoria) em seus pontos de vida com a linhagem básica ou continuaria somando seu Carisma?",
+    answer: "2) Somaria Carisma.",
+    magazineNumber: 227,
+  },
+  {
+    id: "DB227-05",
+    question: "3) Quando um personagem com proficiência em armas marciais escolhe o poder *Proficiência* para arma exótica, ele recebe proficiência em todas as armas exóticas ou deve escolher somente uma?",
+    answer: "3) Todas as armas exóticas.",
+    magazineNumber: 227,
+  },
+  {
+    id: "DB227-06",
+    question: "4) O que seriam os três desafios arcanos avançados que devem ser superados para a admissão na distinção da *Ordem do Vazio*?",
+    answer: "4) Estes desafios não são definidos com antecedência. Precisam ser grandes feitos arcanos realizados em consonância com o uso do componente especial.",
+    magazineNumber: 227,
+  },
+  {
+    id: "DB227-07",
+    question: "> Ó Supremo Tribunal Regreiro, elucide-nos com seu infinito conhecimento e saber.\n\n1) A magia *Engenho de Mana* faz uma contramágica contra cada magia feita na área. Se dois arcanistas estiverem presentes na área e cada um deles lançar duas magias, o usuário do *Engenho de Mana* faz um total de quatro contramágicas?",
+    answer: "> Saudações arcanísticas, conselheiros!\nVamos às suas respostas:\n\n1) Um *Engenho de Mana* faz uma contramágica contra cada magia lançada em seu alcance médio. No seu exemplo, seriam de fato quatro contramágicas. Porém, é o engenho quem faz estes testes: ele apenas se utiliza do valor de Misticismo do conjurador.",
+    magazineNumber: 227,
+  },
+  {
+    id: "DB227-08",
+    question: "2) Algumas magias possuem aprimoramentos que têm como pré-requisito círculos maiores de magia, como *Alterar Tamanho*. Usar estes aprimoramentos eleva o círculo da magia?",
+    answer: "2) Não. *Alterar Tamanho* é uma magia de 2º círculo e continua sendo uma magia de 2º círculo quando seus aprimoramentos de +3 PM e +7 PM são usados.",
+    magazineNumber: 227,
+  },
+  {
+    id: "DB227-09",
+    question: "3) Um *Campo Antimagia* não pode ser dissipado por magias que dissipam outras magias. Porém, as magias *Desejo* e *Intervenção Divina* poderiam dissipar um *Campo Antimagia*? Talvez com o sacrificio de 2 PMs? *Intervenção Divina*, em especial, advém de uma divindade, sendo que deuses maiores não são afetados pelo *Campo Antimagia*.",
+    answer: "3) *Campo Antimagia* não pode ser dissipado, mas existem outras formas de remover o efeito de uma magia, especialmente com *Desejo* e *Intervenção Divina*. Talvez as magias até voltem no tempo para fazer com que a conjuração falhe! Como em todo caso de uso criativo destas magias, a resposta final depende do mestre.",
+    magazineNumber: 227,
+  },
+  {
+    id: "DB227-10",
+    question: "> Bom dia, meus caros juízes! Gostaria de uma ajuda sua sobre a interpretação de um ataque e um teste de ataque.\n\nUm teste de ataque é a mesma coisa que um ataque? Por exemplo, se um cavaleiro tem *Duelo* ativo contra um inimigo, mas é alvo de uma manobra realizada por um segundo inimigo, este cavaleiro precisa fazer um teste de ataque para resistir contra a manobra. Isso configura atacar outro oponente e, assim, encerra a duração do *Duelo*? Se um cavaleiro resistir contra uma manobra realizada por um inimigo caído, isso é uma violação do seu código de honra?",
+    answer: "> Saudações honradas, conselheiro! \n\nConforme visto na página 220 de *Tormenta20*, um teste é “uma rolagem de 1d20 + modificador”. Já o ataque, propriamente dito, é a espadada, chute, desarme, etc., resolvido com este teste. Mas outras coisas, como evitar uma manobra de combate, podem requerer tal teste. De qualquer forma, *Duelo* não termina pelo cavaleiro fazer “qualquer teste de ataque”, então ele pode tentar evitar manobras normalmente. *Duelo* só termina se ele realmente atacar outro inimigo (ou seja, fizer algo como dar uma espadada para feri-lo ou usar a manobra derrubar para levá-lo ao chão).",
+    magazineNumber: 227,
+  },
+  {
+    id: "DB227-11",
+    question: "> Excelentíssimo Supremo Tribunal Regreiro venho, respeitosamente, à presença desta augusta corte submeter à apreciação questão de relevante interesse hermenêutico-regreiro, concernente à interpretação do material especial madeira tollon, especialmente no que tange à incidência de redutores de custo em Pontos de Mana (PM). Dos Fatos e da Controvérsia:\n\n• O texto do referido material especial faz menção à redução de custo de “Habilidades”, no plural. Diante disso, questiona-se se tal redação deve ser interpretada de forma ampla, abrangendo todas as habilidades ativadas no contexto de um único ataque ou da ação agredir, de modo que cada uma delas teria seu custo reduzido em –1 PM.",
+    answer: "> Saudações jurídicas, conselheiro! \n\nAntes de mais nada, este tribunal aplaude sua disposição combeira e a apresentação de sua súplica. Quanto às respostas, vamos às boas notícias primeiro. De fato, mais de uma habilidade ativada ao fazer um ataque ou a ação agredir é afetada pela madeira tollon.",
+    magazineNumber: 227,
+  },
+  {
+    id: "DB227-12",
+    question: "• Em caráter exemplificar, indaga-se caso um personagem da classe lutador utilize, em um mesmo ataque, os poderes *Trocação* (custo 3 PM) e *Cabeçada* (custo 2 PM), seria juridicamente correto concluir que o custo total seria reduzido para 3 PM, aplicando-se a redução de –1 PM em cada poder (resultando em 2 PM + 1 PM)?",
+    answer: "O lutador do seu exemplo, porém, não está com sorte. A madeira tollon somente pode ser aplicada a armas de madeira: ou seja, manoplas não se aplicam. Se ele for um campeão do dojo com o poder *Caminho da Mão Armada* e armas de madeira, porém, ainda há uma discrepância. *Trocação* não é elegível para o uso com harmonizada e madeira tollon, pois esta habilidade não é usada “ao fazer um ataque” ou “usar a ação agredir”, mas sim ao “acertar um ataque”. É uma diferença que pode ser desconsiderada por mestres bonzinhos, mas pela fria letra da regra se aplica!",
+    magazineNumber: 227,
+  },
+  {
+    id: "DB227-13",
+    question: "• Subsidiariamente, caso a interpretação acima não seja acolhida por este Egrégio Tribunal, suscita-se a seguinte questão: é admissível a cumulação de redutores distintos, como a melhoria Harmonizada aplicada a um poder específico e madeira tollon aplicada a uma outra habilidade, mesmo que ambas ocorram no contexto de um único ataque? Ou, alternativamente, entende-se que, por se tratar de um único evento de ataque, os redutores não se acumulam ou não se aplicam de forma independente?\n\nDo Pedido:\nDiante do exposto, requer-se a esse colendo Tribunal o devido esclarecimento quanto:\n• à abrangência do termo “Habilidades” no texto da melhoria Madeira de Tollon;\n• à possibilidade de aplicação cumulativa de redutores de PM em múltiplas habilidades no mesmo ataque;\n• e à eventual compatibilidade entre diferentes fontes de redução de custo no mesmo contexto de ação.\n\nNestes termos, pede-se deferimento regreiro.",
+    answer: "Por fim, num vácuo, o benefício de harmonizado se acumularia com madeira tollon, já que benefícios de outras melhorias se acumulam com materiais especiais. Porém, redutores de custo não acumulam. Desta forma, não há acúmulo.\n\nÉ o relatório.",
+    magazineNumber: 227,
+  },
+  {
+    id: "DB227-14",
+    question: "> Saudações, magistrados marciais. Eu, como devoto fundamentalista, não tenho dúvidas sobre os dogmas. Porém, um amigo meu ainda cria esperanças. Devotos fundamentalistas são proibidos de utilizar armas que não sejam a favorita do deus do qual são devotos. Isso se estende a armas naturais e ataques desarmados? Um minotauro fundamentalista de Azgher poderia atacar com seus chifres?",
+    answer: "> Saudações eclesiásticas, conselheiro!\n\n Sim, a restrição do fundamentalista se estende a armas naturais e ataques desarmados. Um minotauro fundamentalista de Azgher não tem permissão de desonrar a nobre fé de sua divindade usando seus chifres! De forma geral, as restrições de fundamentalistas devem ser as mais severas possíveis.",
+    magazineNumber: 227,
+  },
+  {
+    id: "DB227-15",
+    question: "> Boa tarde, caríssimos juízes! Tenho algumas dúvidas sobre a classe treinador, de *Heróis de Arton*.\n\n1) O melhor amigo pode receber beneficios de parceiros?",
+    answer: "> Saudações fraternas, conselheiro!\n\n Vamos às suas respostas:\n\n1) Sim, o melhor amigo tem uma ficha, então pode receber bônus de parceiros.",
+    magazineNumber: 227,
+  },
+  {
+    id: "DB227-16",
+    question: "2) O melhor amigo pode se beneficiar de itens de alimentação?",
+    answer: "2) Sim, normalmente.",
+    magazineNumber: 227,
+  },
+  {
+    id: "DB227-17",
+    question: "3) Em testes estendidos e perigos complexos, quem faz o teste, o treinador ou o melhor amigo?",
+    answer: "3) Depende do caso. Se o grupo está fazendo um teste estendido de Fortitude para resistir a um “veneno natural no ar” enquanto atravessa um pântano putrefato, ambos devem fazer o teste, pois ambos são afetados. Mas em situações com mais liberdade de escolha, como num teste estendido de Atletismo para puxar a carroça quebrada do grupo, o jogador pode decidir quem fará o teste (e poderia até fazê-lo com ambos os personagens, contando o número de sucessos e falhas normalmente – duas falhas para o fim do teste estendido se nenhum tiver sucesso). Em caso de dúvidas se uma situação permite escolha, o mestre decide.",
+    magazineNumber: 227,
+  },
+  {
+    id: "DB227-18",
+    question: "> Meritíssimos, trago uma dúvida de caráter possivelmente combeirístico.\n\nUm usurpador (*Heróis de Arton*) com um bônus de enganação superior à CD da magia que deseje usurpar pode escolher 0 em combate no teste de *Usurpar*?",
+    answer: "> Saudações usurpadas, conselheiro!\n\n Como mencionado anteriormente neste tribunal, a resposta final cabe ao mestre. Pela regra nua e crua, isso seria possível. Mas lidar com os deuses envolve muito mais que meras regras. Nunca é trivial enganar os deuses…",
+    magazineNumber: 227,
+  },
+  {
+    id: "DB227-19",
+    question: "> Saudações, excelentíssimos ministros deste tribunal.\n\n O poder *Tornado da Dor* permite que o guerreiro faça um ataque contra vários inimigos, fazendo um único teste e rolagem de dano para todos. Digamos, porém, que o efeito de uma habilidade como *Touché* ou *Truque da Mão Lesta* aumente o dano do ataque contra apenas parte desses inimigos. Como é feita a rolagem de dano?",
+    answer: "> Saudações rodopiantes, conselheira!\n\n Neste caso em específico, como os dados de dano são diferentes para alvos diferentes, são necessárias rolagens de dano separadas. Uma para o alvo afetado por *Touché* ou habilidades similares e outra para todos os demais. Porém, no caso de *Truque da Mão Lesta*, o personagem poderia usá-lo contra todos os envolvidos, com uma ação livre para cada um. Seria algo muito lesto mesmo!",
+    magazineNumber: 227,
+  },
+  {
+    id: "DB227-20",
+    question: "> Olá, meritíssimos senhores deste tribunal divino! Venho para sanar duas dúvidas que assolam minha mente:\n\n1) Uma criatura com um ataque desarmado e uma arma natural, ou duas armas naturais, poderia agarrar um inimigo mais de uma vez e desta forma em uma rodada subsequente substituir seus dois ataques por manobras de agarrar que causariam dano?",
+    answer: "> Saudações greco-romanas, conselheiro! Vamos às suas respostas:\n\n1) Um mesmo personagem agarrar mais de uma vez um alvo seria irrelevante, pois a condição agarrado já foi aplicada e não será agravada por isso (não há acúmulo nem nenhuma outra consequência). No entanto, um personagem capaz de fazer vários ataques desarmados ou de arma natural pode usar todos eles para esmagar o alvo mesmo assim.",
+    magazineNumber: 227,
+  },
+  {
+    id: "DB227-21",
+    question: "2) Digamos que uma criatura tenha sido agarrada duas vezes, seja pela mesma criatura ou por duas criaturas diferentes. Quando faz um teste oposto de manobra para se livrar da manobra agarrar, a criatura se liberta completamente ou apenas se livra de um ataque de agarrar que a prendia?",
+    answer: "2) Se duas criaturas diferentes agarram o mesmo alvo, este alvo mantém a condição agarrado enquanto permanecer agarrado por qualquer uma das criaturas. O alvo deve se livrar de cada manobra agarrar separadamente.",
+    magazineNumber: 227,
+  },
+  {
+    id: "DB227-22",
+    question: "> Olá, nobres reguladores dos ofícios de Arton!\n\n Venho por meio desta tentar sanar uma dúvida sobre o custo de fabricação de poções. Pela regra de fabricação, a matéria-prima custa um terço do preço do item. Se uma poção de 1 PM custa T$ 30, então o custo para fabricá-la deveria ser T$ 10. Porém, a regra de descrição de poções lista um preço de T$ 30! Qual é o valor correto?",
+    answer: "> Saudações alquímicas, conselheiro.\n\n Não há contradição. O preço de uma poção é definido pela regra apresentada na seção Itens de Uso Único: T$ 30 x o custo em PM da magia ao quadrado. Porém, isso não é custo da matéria-prima! Isso deve ser determinado pela regra normal de fabricação. Ou seja, sim, para fazer uma poção de uma magia de 1 PM, você gasta T$ 10 em matéria-prima.",
+    magazineNumber: 227,
+  },
+  //#endregion
+  //#region DB - 228
   { id: "DB228-01",
     question:
       "Boa noite, conselheiros! Acabei de ter uma situação inusitada na minha mesa. Se eu lançar a magia Tentáculos de Trevas para enfrentar mortos-vivos, os tentáculos conseguem agarrar os mortos-vivos?",
@@ -169,5 +301,6 @@ export const regreiroQAs: RegreiroQA[] = [
     answer: "V. Existem klirens com seis dedos, mas nem todo kliren tem seis dedos.",
     magazineNumber: 228,
   },
+  //#endregion
 
 ];

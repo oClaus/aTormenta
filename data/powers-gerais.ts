@@ -1,3 +1,5 @@
+//#region Tormenta20 - Jogo do Ano
+//#endregion
 import { Power } from "@/types/power";
 
 export const powersGerais: Power[] = [
@@ -243,7 +245,7 @@ export const powersGerais: Power[] = [
     origin: "Tormenta20 - Jogo do Ano"
   },
 
-  // Dragão Brasil - 227
+  //#region Dragão Brasil - 227
   { id: "Ataque com Escudo II",
     name: "Ataque com Escudo II",
     description: "Você nunca perde o bônus do escudo na Defesa por atacar com ele. Além disso, o custo de Ataque com Escudo é reduzido para 0 PM.",
@@ -472,6 +474,7 @@ export const powersGerais: Power[] = [
     prerequisite: "Torrente de Flechas II.",
     origin: "Dragão Brasil - 227"
   },
+  //#endregion
 
   // Ameaças de Arton
   { id: "Combate Montado",

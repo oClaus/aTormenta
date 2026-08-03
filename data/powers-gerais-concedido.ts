@@ -573,7 +573,7 @@ export const powersGeraisConcedido: Power[] = [
   },
   { id: "Poder da Amizade (Artaphan)",
     name: "Poder da Amizade (Artaphan)",
-    description: "Escolha um personagem para ser seu melhor amigo. Se estiver em alcance médio dele e vocês puderem, pelo menos, trocar olhares, você recebe +1 em todos os testes de perícia. Entretanto, se ele morrer, seus pontos de mana máximos diminuem em 1 por nível até o fim da aventura. Se perder seu melhor amigo, você pode escolher outro entre os demais personagens no início da próxima aventura.",
+    description: "Escolha um personagem para ser seu amigo de fé. Se estiver em alcance médio dele e vocês puderem pelo menos trocar olhares, você recebe +2 em todos os testes de perícia e o custo de suas habilidades que tenham ele como alvo diminui em –1 PM (cumulativo com outras reduções). Entretanto, se ele morrer, seus pontos de mana máximos diminuem em 1 por nível até o fim da aventura. Se perder seu amigo de fé, você pode escolher outro entre os demais personagens no início da próxima aventura.",
     origin: "Guia dos Deuses Menores"
   },
   { id: "Canção dos Mares (Ayllana)",
@@ -583,7 +583,7 @@ export const powersGeraisConcedido: Power[] = [
   },
   { id: "Bênção do Frio (Beluhga)",
     name: "Bênção do Frio (Beluhga)",
-    description: "Você recebe redução de frio 5 e pode gastar uma ação padrão e 1 PM para soprar um dardo gélido. Todas as criaturas em uma esfera de 3m em alcance curto sofrem 2d12 pontos de dano de frio e ficam lentas por 1d4 rodadas (Ref CD Sab reduz à metade e evita a condição).",
+    description: "Você recebe redução de frio 5. Além disso, se terminar o seu turno adjacente a um ou mais inimigos, eles ficam enredados por cristais de gelo por 1 rodada. Se já estavam enredados dessa forma, em vez disso ficam imóveis por 1 rodada (Fortitude evita a condição imóvel).",
     origin: "Guia dos Deuses Menores"
   },
   { id: "Investida Tempestade (Benthos)",
@@ -593,22 +593,22 @@ export const powersGeraisConcedido: Power[] = [
   },
   { id: "Olhos do Vigia (Betsumial)",
     name: "Olhos do Vigia (Betsumial)",
-    description: "Você recebe +2 em Percepção, não fica surpreendido e desprevenido contra inimigos que não possa perceber e, sempre que erra um ataque devido a camuflagem, pode rolar mais uma vez o dado da chance de falha.",
+    description: "Você recebe +2 em Percepção, não fica surpreendido e desprevenido contra inimigos que não possa perceber e nunca acerta o alvo errado ao atacar alguém envolvido na manobra agarrar. Quando erra um ataque devido a camuflagem, pode rolar mais uma vez o dado da chance de falha.",
     origin: "Guia dos Deuses Menores"
   },
   { id: "Máscara Mística (Blinar)",
     name: "Máscara Mística (Blinar)",
-    description: "Você aprende e pode lançar a magia Disfarce Ilusório (atributo-chave Carisma). Caso aprenda novamente essa magia, seu custo diminui em –1 PM",
+    description: "Se estiver usando uma máscara, você pode lançar as magias Disfarce Ilusório e Proteção Divina (mas apenas em você mesmo). Caso aprenda uma dessas magias, seu custo diminui em –1 PM enquanto você estiver de máscara.",
     origin: "Guia dos Deuses Menores"
   },
   { id: "Pureza Corporal (Caerdellach)",
     name: "Pureza Corporal (Caerdellach)",
-    description: "Você pode gastar uma ação de movimento e 1 PM para cobrir sua mão com luz e tocar uma criatura em alcance corpo a corpo. A criatura recupera 2d4+2 PV. Além disso, se aprender a magia Purificação, o custo dela diminui em –1 PM.",
+    description: "Você pode gastar uma ação de movimento e 1 PM para cobrir sua mão com luz e tocar uma criatura em alcance corpo a corpo. A criatura recupera 2d6+2 PV. Além disso, aprende e pode lançar a magia Purificação. Se aprender essa magia novamente, o custo dela diminui em –1 PM.",
     origin: "Guia dos Deuses Menores"
   },
   { id: "Dom de Armadilheiro (Canastra)",
     name: "Dom de Armadilheiro (Canastra)",
-    description: "Você aprende e pode lançar a magia Conjurar Armadilha. Caso aprenda novamente essa magia, seu custo diminui em –1 PM.",
+    description: "Você recebe um poder de Armadilha do caçador a sua escolha e a CD de todas as suas armadilhas aumenta em +2. Além disso, você pode aprender Conjurar Armadilha como uma magia divina",
     origin: "Guia dos Deuses Menores"
   },
   { id: "Canção Divina (Canora)",
@@ -618,12 +618,12 @@ export const powersGeraisConcedido: Power[] = [
   },
   { id: "Disparo Sublime (Cette)",
     name: "Disparo Sublime (Cette)",
-    description: "Você pode gastar uma ação de movimento e 3 PM para fazer um teste de Percepção (CD igual à Defesa da criatura) contra uma criatura em alcance médio. Se passar no teste e acertar um ataque com arco contra o alvo na mesma rodada, esse ataque é um acerto crítico automático. Se for o paladino de Cette, você pode usar Golpe Divino com ataques com arco.",
+    description: "Você pode gastar uma ação de movimento e 2 PM para fazer um teste de Percepção (CD 15 + ND da criatura) contra uma criatura em alcance médio. Se passar no teste e acertar um ataque com arco contra o alvo na mesma rodada, esse ataque é um acerto crítico automático. Se for o paladino de Cette, você pode usar Golpe Divino com ataques com arco à distância.",
     origin: "Guia dos Deuses Menores"
   },
   { id: "Jogada Decisiva (Champarr)",
     name: "Jogada Decisiva (Champarr)",
-    description: "Uma vez por dia, quando faz um teste, você pode gastar 3 PM para somar seu nível de personagem no teste.",
+    description: "Uma vez por dia, quando faz um teste, você pode gastar 1 PM para somar +2 por patamar no teste.",
     origin: "Guia dos Deuses Menores"
   },
   { id: "Selo Impedidor (Dahriol)",
@@ -633,7 +633,7 @@ export const powersGeraisConcedido: Power[] = [
   },
   { id: "Um Contra Um (Drumak)",
     name: "Um Contra Um (Drumak)",
-    description: "Você pode gastar 1 PM para escolher um oponente em alcance curto e receber +1 em testes de ataque e na margem de ameaça contra ele até o fim da cena. Se atacar outro oponente, o bônus termina.",
+    description: "Você pode gastar 2 PM para escolher um oponente em alcance curto e receber +2 em testes de ataque e rolagens de dano contra ele até o fim da cena. Se atacar outro oponente, o bônus termina. Se tiver a habilidade Duelo, em vez disso seu custo diminui em –1 PM.",
     origin: "Guia dos Deuses Menores"
   },
   { id: "Armas e Espólios (Dunsark)",
@@ -643,17 +643,17 @@ export const powersGeraisConcedido: Power[] = [
   },
   { id: "Vanglória (Elrophin)",
     name: "Vanglória (Elrophin)",
-    description: "Uma vez por cena, quando faz um teste de perícia, você pode gastar 2 PM para somar +1d6 como um bônus no teste. Se rolar o valor máximo nesse dado de bônus, role um segundo d6 e adicione ao resultado. Você não pode usar esta habilidade em testes de ataque.",
+    description: "Uma vez por cena, quando faz um teste de perícia, você pode gastar 1 PM para somar +1d6 como um bônus no teste. Se rolar o valor máximo nesse dado de bônus, role um segundo d6 e adicione ao resultado. Você não pode usar esta habilidade em testes de ataque.",
     origin: "Guia dos Deuses Menores"
   },
   { id: "Olhar Atordoante (Escamandra)",
     name: "Olhar Atordoante (Escamandra)",
-    description: "Você pode gastar uma ação de movimento e 1 PM para forçar uma criatura em alcance curto a fazer um teste de Fortitude (CD Car). Se falhar, a criatura fica atordoada por 1 rodada (apenas uma vez por cena). Se você já tiver esta habilidade, em vez disso seu alcance aumenta em um passo (de curto para médio, de médio para longo) e a CD para resistir a ela aumenta em +2.",
+    description: "Você pode gastar uma ação de movimento e 1 PM para forçar uma criatura em alcance curto a fazer um teste de Fortitude (CD Car). Se falhar, a criatura fica atordoada por 1 rodada (apenas uma vez por cena). Se você já tiver esta habilidade, em vez disso ela passa a afetar criaturas a sua escolha em alcance curto e a CD para resistir a ela aumenta em +2.",
     origin: "Guia dos Deuses Menores"
   },
   { id: "Toque de Esmeralda (Esmeralda)",
     name: "Toque de Esmeralda (Esmeralda)",
-    description: "Você pode lançar Transmutar Objetos como uma magia divina (atributo-chave Sabedoria). Caso aprenda essa magia novamente , seu custo diminui em –1 PM. Se você usar a magia em uma joia ou um item que queira transformar em uma joia, seu custo diminui em –1 PM (cumulativo com outras reduções).",
+    description: "Se fabricar um item que possa receber as melhorias banhado a ouro ou cravejado de joias, você pode gastar T$ 100 para aplicar uma dessas melhorias automaticamente, sem aumento na CD e sem que ela conte como uma melhoria. Sempre que você encontra uma riqueza aleatória, pode rolar duas vezes na tabela e escolher o melhor valor.",
     origin: "Guia dos Deuses Menores"
   },
   { id: "Na Ponta da Língua (Garanaam)",
@@ -663,7 +663,7 @@ export const powersGeraisConcedido: Power[] = [
   },
   { id: "Pólvora Sagrada (Garth)",
     name: "Pólvora Sagrada (Garth)",
-    description: "Você recebe proficiência com armas de fogo. Além disso, pode gastar uma ação de movimento e 2 PM para abençoar até 10 balas. Até o fim da cena, ataques com armas de fogo usando essa munição recebem +1 na margem de ameaça e causam +2 pontos de dano.",
+    description: "Você recebe proficiência com armas de fogo. Além disso, pode gastar 1 PM para abençoar até 10 balas. Até o fim da cena, estas balas fornecem +1 na margem de ameaça e +2 nas rolagens de dano (cumulativo com outros bônus de itens).",
     origin: "Guia dos Deuses Menores"
   },
   { id: "Amor ao Machado (Goharom)",
@@ -673,12 +673,12 @@ export const powersGeraisConcedido: Power[] = [
   },
   { id: "Âmago de Escultor (Granto)",
     name: "Âmago de Escultor (Granto)",
-    description: "Você recebe +2 em testes de perícia relacionados a rochas (como investigar uma caverna, esculpir uma estátua de mármore ou atacar uma gárgula). Além disso, você sabe identificar quando uma aparente estátua se trata de uma criatura petrificada, construto, gárgula ou qualquer criatura semelhante.",
+    description: "Você paga 20% a menos em aposentos e mobílias de bases e construções de domínios. Além disso, pode construir um aposento ou construção acima do limite definido pelo tamanho da base ou nível do domínio.",
     origin: "Guia dos Deuses Menores"
   },
   { id: "Igual ao Lar (Gratissa)",
     name: "Igual ao Lar (Gratissa)",
-    description: "Uma vez por dia, você pode gastar alguns minutos para transformar um espaço de descanso em um lar provisório por um dia. Todas as criaturas que descansarem nesse local recuperam seu nível em pontos de vida ou pontos de mana (a escolha da criatura) e, enquanto estiverem nesse lar, recebem +1 em testes de perícias.",
+    description: "Uma vez por dia, você pode gastar alguns minutos para transformar um espaço de descanso em um lar provisório por um dia. Todas as criaturas que descansarem nesse local aumentam sua recuperação de PV ou PM em +1 por nível (a escolha da criatura) e, enquanto estiverem nesse lar, recebem +1 em testes de perícias.",
     origin: "Guia dos Deuses Menores"
   },
   { id: "Ginete Altivo (Hippion)",

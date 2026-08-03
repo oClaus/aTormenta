@@ -6322,5 +6322,292 @@ export const adventures: Adventure[] = [
       content: "ANKTHYR (ND 8)\nAnimal Grande\nINICIATIVA +10, PERCEPÇÃO +8, visão no escuro\nDEFESA 33, FORT +21, REF +8, VON +15, redução de ácido 5, redução de dano 5\nPONTOS DE VIDA 308\nDESLOCAMENTO 12m (8q), escavação 6m (4q)\nCORPO A CORPO Mordida +26 (4d12+24 mais 4d8 ácido).\nAGARRAR APRIMORADO Mordida (teste +28).\nCUSPE ÁCIDO (PADRÃO) O ankthyr cospe ácido em uma criatura a até 9m. A vítima sofre 6d8+6 pontos de dano de ácido e fica coberta por um muco corrosivo (Ref CD 26 reduz à metade e evita o muco). Uma criatura coberta pelo muco sofre mais 3d8+3 pontos de dano de ácido no início dos seus dois próximos turnos. Recarga (movimento).\nESPREITADOR SUBTERRÂNEO (PADRÃO) Se estiver completamente soterrado, o ankthyr pode emergir do solo e atacar uma criatura a até 4,5m do seu ponto de saída. Se fizer isso, ele recebe +2 no teste de ataque e causa +1d12 pontos de dano.\nSENTIDO SÍSMICO O ankthyr tem percepção às cegas em alcance médio, mas apenas para criaturas e objetos em contato com a mesma superfície que ele.\nFor 5, Des 2, Con 4, Int –5, Sab 0, Car –3\nTESOURO Metade."
     }
   ]
-}
+},
+{ id: "Memórias das Arma",
+  name: "Memórias das Armas",
+  theme: "Fantasia e Exploração de Masmorra",
+  image: "/aventuras/memorias-das-armas.png",
+  summary: "Contratados por um nobre, os heróis viajam ao sul de Zakharov para recuperar uma maça ancestral perdida em um castelo sitiado por mortos-vivos puristas, a tempo do Ritual das Armas Renascidas.",
+  sections: [
+    {
+      type: "text",
+      content: "O reino das armas, Zakharov, recentemente passou por muitos eventos. Nas estepes ao norte, próximos às Montanhas Uivantes, uma área de Tormenta se manifestou. De lá surgiu Aharadak, que hoje figura como um dos vinte deuses do Panteão. Além disso, a Supremacia Purista marchou sobre o território, deixando para trás também as marcas da guerra. Campos de batalha do conflito ainda existem nos ermos, e diversos catadores buscam o que vender entre os escombros."
+    },
+    {
+      type: "text",
+      content: "Não é de se surpreender que um reino devotado às armas seja a morada de uma divindade relacionada a elas. Rhond, o Deus Menor das Armas, vive em uma cidade com seu nome, isolado em sua caverna, forjando os instrumentos de batalha mais incríveis de todo mundo. Seus sacerdotes defendem a tranquilidade do trabalho de seu senhor. Entretanto, de tempos em tempos, surge um motivo para a deidade deixar seus aposentos e presentear os merecedores com suas dádivas."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "RESUMO DA AVENTURA"
+    },
+    {
+      type: "text",
+      content: "Memórias das Armas é uma breve jornada, uma aventura curta pensada para uma sessão única, mas que pode ser inserida em uma campanha maior. É ideal para um grupo de quatro personagens de 5º nível em Tormenta20."
+    },
+    {
+      type: "text",
+      content: "Motivado pelo Ritual das Armas Renascidas, um nobre zakharoviano contrata o grupo para recuperar a arma de seus ancestrais. Ele explica que o artefato se encontra no castelo ancestral de sua família, ao sul. Também conta que houve uma batalha contra puristas lá, sendo possível ainda haver diversas ameaças na região. Após alguns encontros perigosos, o grupo chega ao local."
+    },
+    {
+      type: "text",
+      content: "Do lado de fora, hordas de mortos-vivos marcham no campo de batalha abandonado. Derrotá-las não resolve o problema, mas permite que passem para o interior da construção. Lá dentro encontrarão armas que lutam sem que ninguém as empunhe, assim como uma besta capaz de enferrujar e destruir qualquer objeto metálico. Finalmente, ao alcançarem o item que vieram buscar, os heróis devem enfrentar um último soldado reerguido pela força de seu ódio."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 1: ARMAS RENASCIDAS"
+    },
+    {
+      type: "text",
+      content: "Arton possui diversas cidades sagradas. A própria existência de deuses menores permite o surgimento de povoados abençoados ou rotas de peregrinação. Mas na Cidade de Rhond, uma deidade brilha nas armas carregadas pela população. Cada uma, de certa forma, um símbolo sagrado do deus que ali habita."
+    },
+    {
+      type: "text",
+      content: "E a cidade está em festa! Pessoas vêm de todos os lados, armas em punho, não em busca de combate, mas sim de benção. O Ritual das Armas Renascidas é uma tradição local, na qual itens podem ser recuperados pelos clérigos de Rhond. Mas, neste ano, aparentemente o próprio deus fará a purificação dos artefatos!"
+    },
+    {
+      type: "text",
+      content: "Os personagens já atraíram a atenção de autoridades com suas aventuras anteriores, sendo reconhecidos como veteranos. Entre elas o Conde Zweihardt. O nobre enviou um de seus servos para convidar os aventureiros à sua morada, onde oferecerá uma missão."
+    },
+    {
+      type: "text",
+      content: "No caminho, os personagens observam diversos tipos de comemoração. Tavernas oferecem bebidas grátis para aqueles com as mais belas obras de ferraria. Forjas diversas abrem para ensinar técnicas para os mais interessados. E, claro, não há uma forma de mostrar ainda mais o amor pelas armas do que o combate! Duelos, liças e outros tipos de competição (normalmente) amistosas ocorrem por todos os lados."
+    },
+    {
+      type: "text",
+      content: "A residência de lorde Zweihardt é um misto de fortificação com forja e, chegando ao local, o grupo encontra o nobre vestindo roupas de ferreiro, trabalhando em alguma arma: “Ah! Bem-vindos, aventureiros, ao meu lar! Peço perdão por não estar mais apresentável, mas não havia como perder a inspiração do momento”. Aqueles treinados em Ofício sabem que o nobre realmente estava trabalhando, em outro lugar isso poderia parecer estranho, mas aqui faz todo sentido."
+    },
+    {
+      type: "text",
+      content: "Terminando o processo em que se encontrava, ele remove as luvas de proteção para cumprimentar os aventureiros, levando-os ao interior de sua propriedade. No caminho, servos vêm remover os trajes de ferreiro, deixando-o mais parecido com o que se espera de alguém em sua posição. Chegando ao seu escritório, Zweihardt senta-se em sua cadeira por poucos segundos e põe-se de pé novamente."
+    },
+    {
+      type: "text",
+      content: "“Bem, como podem ter ouvido, este ano o próprio Rhond será responsável por purificar e restaurar a arma escolhida. E tenho uma em mente que merece isso”. O nobre abre alguns pergaminhos, mostrando uma maça de confecção primorosa."
+    },
+    {
+      type: "text",
+      content: "“Ela foi forjada pelos meus ancestrais, e creio que, se há alguma chance de ser recuperada, seria pelas mãos do próprio Deus das Armas”. Aqueles treinados em Investigação ou Nobreza notam que a maça figura como parte do brasão da família Zweihardt."
+    },
+    {
+      type: "text",
+      content: "“Infelizmente,” ele abre um mapa de Zakharov, “quando os malditos puristas atacaram, fizeram um cerco ao castelo de meus antepassados”, e aponta para o desenho de uma fortificação. “Seu líder era obcecado em tomar a arma para si. O cerco foi longo, mas minha família conseguiu fugir. A maça ficou para trás”."
+    },
+    {
+      type: "text",
+      content: "Ele explica que a fortificação nunca foi tomada pelos puristas, mas que diversos cadáveres ambulantes impediram a recuperação da arma até agora. Conhecendo a reputação dos aventureiros, o conde acredita que serão capazes de lidar com os mortos-vivos e retornar com a relíquia em tempo de que ela seja renascida. Ele também fornece as instruções para abrir um nicho secreto em uma parede onde o artefato está escondido."
+    },
+    {
+      type: "text",
+      content: "Como recompensa, o nobre oferece uma arma com uma melhoria (exceto material especial) para cada personagem, ou uma única arma com duas melhorias. Tanto a arma quanto as melhorias podem ser decididas pelo grupo. Além disso, fornecerá seis essências de mana e quatro frascos com óleo de Arma Mágica."
+    },
+    {
+      type: "text",
+      content: "Caso perguntem sobre uma recompensa em dinheiro, o nobre explica que as armas são muito mais valiosas que simples tibares, mas pode pagar T$ 1.000 quando retornarem."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 2: JORNADA AO SUL"
+    },
+    {
+      type: "text",
+      content: "Apesar do mapa ser bastante detalhado, o caminho não é dos mais fáceis. Existem poucas estradas úteis e as planícies escondem diversos perigos. Apesar de relativamente frio, o clima é bom para a viagem, tornando-se cada vez mais ameno conforme rumam ao sul."
+    },
+    {
+      type: "text",
+      content: "O caminho para o sul é um teste estendido de Sobrevivência (CD 20, 3 sucessos). Em caso de falha total, os personagens saíram de rota, tendo que reiniciar o teste estendido. Após cada teste, role 1d6 ou escolha um dos encontros abaixo. Cada encontro conta como uma cena individual."
+    },
+    {
+      type: "text",
+      content: "1 e 2) Planícies Calmas: O clima parece ainda mais promissor nestes dias, e a jornada se torna mais fácil. Existem sombras no caminho, mas talvez vocês sejam mais intimidadores do que qualquer coisa espreitando. Não há encontros, e é possível acampar tranquilamente."
+    },
+    {
+      type: "text",
+      content: "3) Por que tão sério? Em algum ponto da viagem, vocês começam a ouvir gargalhadas no ar. Logo vocês descobrem que elas vêm de um bando de gnolls salteadores. Seu líder porta uma pistola, ordenando que entreguem tudo o que têm. Os personagens encontram 1d6+1 gnolls saqueadores liderados por um gnoll filibusteiro. Caso o filibusteiro seja derrotado, os outros gnolls se rendem, entregando todo seu tesouro."
+    },
+    {
+      type: "text",
+      content: "4) Enclave Purista: Repentinamente, vocês veem ao longe um acampamento de soldados, todos vestindo armaduras similares escuras. Aqueles com memórias da Guerra Artoniana ficam em prontidão, pois sentem que há algo reconhecível nestes guerreiros. Estes puristas estão mais perdidos do que planejando algo. Entretanto, ao perceberem o grupo, pegam em armas e partem para o combate. São 2d6 soldados puristas e um sargento-mor. Eles lutam até a morte caso haja um personagem não-humano entre os aventureiros."
+    },
+    {
+      type: "text",
+      content: "5) Centaura e Kobolds: Mais a frente vocês veem um amontoado de kobolds sobre algo. Conforme eles berram e golpeiam, é possível perceber que estão, na verdade, atacando uma centaura, capturada em uma rede. Se nada fizerem, ela terá pouco tempo de vida. Os kobolds não prestam atenção na sua aproximação. Um enxame kobold prendeu uma centaura em uma de suas armadilhas e está atacando-a. Os heróis devem enfrentar as criaturinhas se quiserem salvar a vítima. Caso a libertem lidando com a rede, ela auxilia como um parceiro fortão iniciante. Uma vez salva, a centaura ajudará na jornada, fornecendo +5 no próximo teste de Sobrevivência do teste estendido."
+    },
+    {
+      type: "text",
+      content: "6) Pregador da Praga: No meio do nada, há uma figura parada em pé vestindo robes maltrapilhos. Quando vocês se aproximam, ele abre um sorriso anormal, cheio de dentes, e os olhos bastante esbugalhados. “Vocês já ouviram as boas novas de nosso senhor Aharadak?” É um cultista do Deus da Tormenta, falando de profecias profanas e bençãos sinistras que sua divindade espalhará pelo mundo. Nenhuma forma de intimidação o espanta, e ele seguirá o grupo de longe pelo resto da viagem. Caso o ataquem, use a ficha de um maníaco lefou. Se não, ele acompanhará, atrapalhando qualquer descanso que tentem fazer (a condição de descanso será sempre uma abaixo da original). Além disso, ao acordarem todos devem fazer um teste de Vontade (CD 20), ou ficam frustrados até o dia seguinte."
+    },
+    {
+      type: "text",
+      content: "Assim que conquistarem os três sucessos necessários, o grupo vê ao longe a fortificação onde o artefato espera."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 3: ARMAS DOS MORTOS"
+    },
+    {
+      type: "text",
+      content: "Ao longe, o castelo dos Zweihardt se ergue, pedras escuras no horizonte. Entretanto, rodeando-o, existem diversos soldados andando de forma morosa. Mesmo uma aproximação indiscreta não chama atenção, e logo vocês percebem o porquê. Nas redondezas da fortificação, os aparentes soldados são, na verdade, esqueletos vestindo armaduras velhas e puídas. Um teste de Conhecimento, Guerra ou Nobreza (CD 25) revela se tratar de uniformes puristas, provavelmente da época da Guerra Artoniana. A única forma de entrarem é abrindo uma brecha entre as linhas dos mortos."
+    },
+    {
+      type: "text",
+      content: "CRIATURAS. Tropa de Mortos (NPCs e Criaturas)."
+    },
+    {
+      type: "text",
+      content: "Os mortos-vivos não são muito perceptivos, é fácil pegá-los de surpresa. Sem mente, o ódio os mantém combatendo, focando seus ataques principalmente em não-humanos, como se alguma memória raivosa ainda habitasse suas almas. Vencê-los dá algum tempo para fazerem sua próxima ação, mas outra tropa de mortos chegará em 1d6+2 rodadas."
+    },
+    {
+      type: "text",
+      content: "O muro pode ser escalado com uma ação completa e um teste de Atletismo (CD 25). Uma vez do outro lado, é necessária mais uma ação completa para abrir o portão e em seguida fechá-lo. Alternativamente, podem tentar um teste em grupo de Força (CD 30) para abrir o portão o suficiente para que todos passem, ou então arrebentá-lo (Def 8, RD 10, 200 PV)."
+    },
+    {
+      type: "text",
+      content: "Assim que a tropa dos mortos é derrotada, os personagens podem fazer um teste de Investigação, Guerra ou Percepção (CD 25). Se passarem, percebem uma presença ao longe, observando-os. Caso tentem se aproximar, o inumano que era o líder deste pequeno exército se esconde, preparando para atacar em momento mais propício."
+    },
+    {
+      type: "text",
+      content: "Os soldados mortos-vivos não tentam entrar no interior da propriedade."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 4: SALÃO PRINCIPAL"
+    },
+    {
+      type: "text",
+      content: "Este amplo aposento de pé direito alto era provavelmente onde os nobres recebiam seus servos. O salão está bagunçado, armas abandonadas para todos os lados e tapeçarias arruinadas estão caídas próximas às paredes onde estavam penduradas."
+    },
+    {
+      type: "text",
+      content: "CRIATURAS. Enxame de Armas (NPCs e Criaturas)."
+    },
+    {
+      type: "text",
+      content: "Ao entrar no salão principal, todos os personagens devem fazer um teste de Percepção oposto a Furtividade (+8) do enxame de armas, perfeitamente imóveis no chão. Aqueles que falharem ficam surpreendidos na primeira rodada do combate. Movido por uma força invisível, o enxame metálico ataca os aventureiros."
+    },
+    {
+      type: "text",
+      content: "Quando derrotarem o arsenal animado, eles podem explorar outros aposentos do castelo, exceto a sala de armas. Entre as peças do enxame é possível encontrar qualquer arma simples ou marcial. Se decidirem vasculhar os aposentos, podem fazer um teste de Investigação (CD 20), e encontrarão o equivalente ao dobro do tesouro para ND 6."
+    },
+    {
+      type: "text",
+      content: "Assim que o grupo quiser investigar a sala de armas, vá para a próxima cena."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 5: ARSENAL ENFERRUJADO"
+    },
+    {
+      type: "text",
+      content: "Aqui o cheiro de ferrugem é acachapante. O lugar que guardava as armas e armaduras mais valiosas da família Zweihardt agora está coberto pela poeira avermelhada. Um chiado alto vem de uma das paredes, seguido por outro. Do meio da lataria corroída, duas criaturas que parecem a mistura de um réptil com um gafanhoto, com enormes antenas, se aproximam, os olhos estranhos vidrados no aço que vocês carregam."
+    },
+    {
+      type: "text",
+      content: "CRIATURAS. Oxxdon x2 (NPCs e Criaturas)."
+    },
+    {
+      type: "text",
+      content: "Também conhecidos como “monstros da ferrugem”, estas criaturas corroem metal ao seu redor, e fizeram aqui seu ninho. Para zakharovianos, são pesadelos vivos. A única forma de recuperarem seguramente o artefato de lorde Zweihardt é livrando-se destas bestas."
+    },
+    {
+      type: "text",
+      content: "Seguindo as instruções do conde, os aventureiros pressionam alguns dos tijolos na parede, liberando o nicho que guarda o artefato. Trata-se de uma maça de adamante formidável, que infelizmente está avariada pela passagem do tempo, causando uma penalidade de –5 em testes de ataque."
+    },
+    {
+      type: "text",
+      content: "Logo que a recuperam, ouvem passos pesados vindos do mesmo caminho que traçaram para chegar aqui."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 6: GANÂNCIA PÓS-MORTE"
+    },
+    {
+      type: "text",
+      content: "A figura que surge é intimidadora, mesmo para heróis veteranos como vocês. Sua armadura está desgastada pela passagem do tempo, a pele está esticada em todos os pontos visíveis, sua boca é um esgar de ódio permanente. A criatura exala um cheiro insuportável de morte. Quando fala, as palavras saem roucas e arranhadas, devido aos anos sem uso:"
+    },
+    {
+      type: "text",
+      content: "“Malditos... Me entreguem esta arma! Ela é minha por direito... E vocês não são merecedores de tocá-la!”"
+    },
+    {
+      type: "text",
+      content: "CRIATURAS. Inumano (NPCs e Criaturas)."
+    },
+    {
+      type: "text",
+      content: "O inimigo que enfrentam agora é um morto-vivo movido pelo próprio ódio. Mesmo que entregassem a arma, este comandante maldito os massacraria impiedosamente. Porém, é possível usá-la para distraí-lo. Se a arremessarem em uma determinada direção, o inumano usará todas suas ações para ir até a arma e empunhá-la... o que também pode ser vantajoso para os personagens, uma vez que causará uma penalidade de –5 nos testes de ataque dele."
+    },
+    {
+      type: "text",
+      content: "Se tiverem destruído parte do portão, ele estará acompanhado de quatro esqueletos. Caso o inumano seja destruído, os esqueletos automaticamente caem, inertes, assim como todas as tropas dos mortos no exterior da propriedade."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Epílogo: ARMISTÍCIO"
+    },
+    {
+      type: "text",
+      content: "Os mortos finalmente caem. Algumas de suas armas cravam-se no solo, tornando-se marcadores sombrios de tudo que houve aqui. É possível continuar vasculhando o castelo, mas agora ele é apenas uma construção vazia e corroída. Para terminarem sua missão, vocês devem fazer o longo caminho de volta à cidade do Deus das Armas."
+    },
+    {
+      type: "text",
+      content: "Se quiser tornar o retorno tão movimentado quanto a vinda, é possível usar os encontros da cena 2 novamente. Se preferir manter tudo em apenas uma sessão, diga que, conhecendo o caminho, os personagens evitam os perigos. Caso tenham encontrado o cultista de Aharadak, entretanto, ele continuará os seguindo até perto da Cidade de Rhond."
+    },
+    {
+      type: "text",
+      content: "O Conde Zweihardt fica extremamente feliz em ver a relíquia de sua família retornada, e, em gratidão, oferece um banquete aos heróis. Se informado da liberação do castelo de seus ancestrais, ele fica pensativo. Segundo o nobre, seria muito bom retomar a propriedade, e então atrair novos servos. Por outro lado, a possibilidade de restaurar a maça também invocaria o orgulho de seus antepassados."
+    },
+    {
+      type: "text",
+      content: "Expandindo seu reconhecimento, os personagens avançam para o 6º nível!"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "NPCs e Criaturas"
+    },
+    {
+      type: "text",
+      content: "OXXDON (ND 2)\nMonstro Médio\nINICIATIVA +7, PERCEPÇÃO +4, faro, visão no escuro\nDEFESA 20, FORT +7, REF +13, VON +2\nPONTOS DE VIDA 72\nDESLOCAMENTO 12m (8q)\nCORPO A CORPO Antena +12 (ferrugem) e mordida +12 (1d8+10).\nFERRUGEM A antena do oxxdon destrói automaticamente qualquer objeto de metal atingido. Uma arma de metal que cause dano a um oxxdon também é destruída imediatamente (itens mágicos têm direito a um teste de Fortitude contra CD 16 para evitar). Contra criaturas de metal (como golens), a antena deixa o alvo fatigado, então exausto, então paralisado (mesmo que seja imune a estas condições; Fort CD 16 evita). Remover cada uma destas condições da criatura exige uma hora de trabalho, o gasto de T$ 50 em materiais e passar em um teste de Ofício (artesão) contra CD 20.\nFor 0, Des 4, Con 2, Int –4, Sab 1, Car –1\nTESOURO Nenhum."
+    },
+    {
+      type: "text",
+      content: "ENXAME DE ARMAS (ND 6)\nConstruto Grande\nINICIATIVA +6, PERCEPÇÃO +4, percepção às cegas\nDEFESA 22, FORT +15, REF +10, VON +5, redução de dano 5\nPONTOS DE VIDA 140\nDESLOCAMENTO voo 9m (6q)\nENXAME O enxame de armas é um aglomerado de objetos animados que agem em conjunto. Ele pode entrar no espaço ocupado por um personagem e, no fim de seu turno, causa 1d10 pontos de dano de corte, 1d6 pontos de dano de perfuração e 1d8 pontos de dano de impacto a qualquer personagem em seu espaço, automaticamente. O enxame é imune a manobras de combate e efeitos que afetam apenas uma criatura e não causam dano, mas sofrem 50% a mais de dano de efeitos de área, como Bola de Fogo. Além disso, sofre apenas metade do dano de ataques com armas. Estar dentro do enxame conta como condição ruim para lançar magias.\nAPARAR (REAÇÃO) Uma vez por rodada, quando é alvo de um ataque corpo a corpo, o enxame de arma pode fazer um teste de ataque e subtrair seu resultado do dano causado pelo ataque (teste +16).\nFor 4, Des 2, Con 2, Int ––, Sab 0, Car –5\nTESOURO Dobro (apenas armas)."
+    },
+    {
+      type: "text",
+      content: "TROPA DE MORTOS\nMorto-vivo Grande\nINICIATIVA +9, PERCEPÇÃO +5, visão no escuro\nDEFESA 24, FORT +6, REF +11, VON +16, redução de corte, frio e perfuração 5\nPONTOS DE VIDA 40\nDESLOCAMENTO 9m (6q)\nCORPO A CORPO Espada longa x2 +20 (4d8+18, 19).\nBANDO A tropa de mortos é formada por um grupo de esqueletos. Se um ataque da tropa exceder a Defesa do Inimigo por 10 ou mais, ele causa o dobro do dano. Se um ataque da tropa errar, ele ainda causa metade do dano. A falange é imune a manobras de combate e efeitos que afetam apenas uma criatura e não causam dano, mas sofre 50% a mais de dano de efeitos de área, como Bola de Fogo. Um personagem com poder Trespassar que acerte a tropa pode usá-lo para fazer um ataque adicional contra ela (mas apenas uma vez por turno).\nFor 5, Des 3, Con 0, Int —, Sab 0, Car –5.\nEQUIPAMENTO Escudo pesado, espada longa.\nTESOURO Nenhum."
+    },
+    {
+      type: "text",
+      content: "INUMANO (ND 5)\nMorto-vivo Médio\nINICIATIVA +7, PERCEPÇÃO +6, visão no escuro\nDEFESA 26, FORT +17, REF +12, VON +7, imunidade a frio\nPONTOS DE VIDA 48\nDESLOCAMENTO 9m (6q)\nCORPO A CORPO Espada longa x2 +24 (2d8+9, 19, mais 2d12 trevas).\nÀ DISTÂNCIA Azagaia +24 (2d6+9, mais 2d12 trevas).\nDRENAR ENERGIA Uma criatura viva que sofra dano de trevas do inumano combatente sofre uma penalidade cumulativa de −1 em testes de perícia (Fort CD 22 evita). Se acumular uma penalidade igual ou maior que seu próprio nível, a criatura morre e se transforma em um inumano sob controle do mestre. Esta penalidade pode ser removida de uma criatura viva com descanso ou com efeitos mágicos capazes de remover qualquer condição de metabolismo (cada dia de descanso ou efeito mágico diminui a penalidade em 1).\nFor 3, Des 2, Con 1, Int 0, Sab 1, Car −1\nPERÍCIAS Atletismo +8, Furtividade +4, Guerra +5, Intimidação +6.\nEQUIPAMENTO Azagaia x3, escudo pesado, espada longa, meia armadura. Tesouro Padrão."
+    }
+  ]
+},
 ];
