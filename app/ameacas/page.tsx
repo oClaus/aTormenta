@@ -71,6 +71,10 @@ export default function AmeacasPage() {
   const [copiedId, setCopiedId] = useState<string | null>(null);
   const [isIntroOpen, setIsIntroOpen] = useState(false);
 
+  // --- Batch loading / paginação ---
+  const PAGE_SIZE = 60;
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+
   // --- Sistema de URL e Modal ---
   useEffect(() => {
     const handleHashChange = () => {
@@ -96,6 +100,11 @@ export default function AmeacasPage() {
     window.addEventListener('popstate', handleHashChange);
     return () => window.removeEventListener('popstate', handleHashChange);
   }, []);
+
+  // Reseta a paginação sempre que os filtros mudarem
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+  }, [searchTerm, selectedND, selectedRegiao]);
 
   const openModal = (threat: Threat) => {
     setSelectedThreat(threat);
@@ -151,6 +160,10 @@ export default function AmeacasPage() {
       return matchSearch && matchND && matchRegiao;
     })
     .sort((a, b) => a.name.localeCompare(b.name));
+
+  // Fatia visível da lista filtrada (contagem continua usando filteredThreats completo)
+  const visibleThreats = filteredThreats.slice(0, visibleCount);
+  const hasMoreThreats = visibleCount < filteredThreats.length;
 
   const renderFormattedText = (text: string) => {
     if (!text) return "";
@@ -685,7 +698,7 @@ export default function AmeacasPage() {
           {filteredThreats.length} Ameaças Encontradas
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 w-full">
-          {filteredThreats.map((threat) => (
+          {visibleThreats.map((threat) => (
             <div
               key={threat.id}
               id={createUrlSafeId(threat.id)}
@@ -786,6 +799,21 @@ export default function AmeacasPage() {
             </div>
           ))}
         </div>
+
+        {/* Carregar mais (batch loading) */}
+        {hasMoreThreats && (
+          <div className="flex flex-col items-center gap-3 mt-10">
+            <p className="text-sm text-amber-950/60 font-bold tracking-wide">
+              Mostrando {visibleThreats.length} de {filteredThreats.length}
+            </p>
+            <button
+              onClick={() => setVisibleCount((prev) => prev + PAGE_SIZE)}
+              className="font-display px-8 py-3 bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/30 hover:border-red-800/50 rounded-lg text-amber-950/80 hover:text-red-800 font-bold uppercase tracking-widest text-sm transition-all shadow-sm"
+            >
+              Carregar mais Ameaças
+            </button>
+          </div>
+        )}
 
         {/* Mensagem quando não há resultados */}
         {filteredThreats.length === 0 && (

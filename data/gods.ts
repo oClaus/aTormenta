@@ -957,8 +957,7 @@ export const gods: God[] = [
     ],
     obligationsRestrictions: "Devotos de Elrophin devem pregar o quanto eles mesmos — e seu deus — são incríveis e convencer pessoas de seus feitos pelo menos uma vez por dia (ou por sessão de jogo, o que demorar mais). Em termos de jogo, uma ação exigindo um teste de Diplomacia com CD mínima 15 + metade do seu nível."
   },
-    {
-      id: "Sartan",
+  { id: "Sartan",
       name: "Sartan",
       subtitle: "o Deus da Desolação",
       rank: "Entidade primordial, status divino 4",
@@ -976,9 +975,8 @@ export const gods: God[] = [
       "Inimigo dos Deuses"
       ],
       obligationsRestrictions: "Devotos de Sartan jamais podem se recusar a participar de tentativas de trazer seu padroeiro de volta para Arton. Eles devem estar sempre estudando os alinhamentos dos astros para antecipar seu retorno. Além disso, devem praticar o mal através de algum ato de crueldade, como ferir uma criatura indefesa, pelo menos uma vez por dia (ou por sessão de jogo, o que demorar mais), como oferenda a Sartan. Esta divindade menor não é permitida para jogadores."
-      },
-      {
-        id: "Inghlblhpholstgt",
+  },
+  { id: "Inghlblhpholstgt",
         name: "Inghlblhpholstgt",
         subtitle: "a Grande Divindade Anfíbia",
         rank: "Entidade primordial, status divino 3",
@@ -996,9 +994,8 @@ export const gods: God[] = [
         "Salto Anurídeo"
         ],
         obligationsRestrictions: "Devotos de Inghlblhpholstgt devem espalhar sua fé com afinco, angariando pelo menos um novo devoto por mês. Além disso, devem ajudar e proteger criaturas anfíbias, desde que não prejudique seus aliados."
-        },
-        {
-          id: "Lamashtu",
+  },
+  { id: "Lamashtu",
           name: "Lamashtu",
           subtitle: "a Deusa da Matança",
           rank: "Entidade primordial, status divino 4",
@@ -1015,10 +1012,9 @@ export const gods: God[] = [
           grantedPowers: [
           "Furacão de Lâminas"
           ],
-          obligationsRestrictions: "Uma vez por nível, o personagem deve consagrar uma de suas vítimas fatais à Lamashtu. Essa vítima pode ser qualquer criatura inteligente (Int –3 ou maior) que o personagem tenha matado (para criaturas que o grupo inteiro enfrentou em combate, o devoto deve ter sido responsável pelo golpe fatal). Para devotar a criatura, o personagem deve executar um ritual, com a presença do corpo da vítima, e sacrificar um valor em joias igual a 10% da diferença do dinheiro inicial do nível atual para o seguinte (por exemplo, T$ 400 para subir para o 4° nível)."
-          },
-          {
-id: "Laan",
+          obligationsRestrictions: "Uma vez por nível, o personagem deve consagrar uma de suas vítimas fatais à Lamashtu. Essa vítima pode ser qualquer criatura inteligente (Int –3 ou maior) que o personagem tenha matado (para criaturas que o grupo inteiro enfrentou em combate, o devoto deve ter sido responsável pelo golpe fatal). Para devotar a criatura, o personagem deve executar um ritual, com a presença do corpo da vítima, e sacrificar um valor em joias igual a 10% da diferença do dinheiro inicial do nível atual para o seguinte (por exemplo, T$ 40 para subir para o 4° nível)."
+  },
+  { id: "Laan",
 name: "Laan",
 subtitle: "o Deus das Viagens",
 rank: "Entidade primordial, status divino 3",
@@ -1036,7 +1032,7 @@ grantedPowers: [
 "Pé na Estrada"
 ],
 obligationsRestrictions: "Devotos de Laan são proibidos de fixar moradia, não podendo permanecer mais de 1d10+10 dias na mesma cidade (ou vila, aldeia, povoado...) ou 1d4+1 meses no mesmo reino."
-},
+  },
   { id: "Gratissa",
   name: "Gratissa",
   subtitle: "a Deusa da Hospitalidade",
@@ -1189,8 +1185,7 @@ obligationsRestrictions: "Devotos de Dunsark não podem recusar aventuras que en
   ],
   obligationsRestrictions: "Devotos de Granto devem fabricar ou consertar uma escultura (um item não consumível simples com preço de T$ 150 por patamar) pelo menos uma vez por aventura."
   },
-  {
-  id: "Hippion",
+  { id: "Hippion",
   name: "Hippion",
   subtitle: "o Deus dos Cavalos",
   rank: "Mortal ascendido, status divino 3",
@@ -1209,8 +1204,7 @@ obligationsRestrictions: "Devotos de Dunsark não podem recusar aventuras que en
   ],
   obligationsRestrictions: "Devotos de Hippion jamais podem matar cavalos, nem mesmo suas variantes monstruosas (como cavalos glaciais). Além disso, não podem permitir que cavalos sejam assassinados ou maltratados. Também nunca podem usar selas ou outros equipamentos de montaria enquanto estiverem montados."
   },
-  {
-  id: "Hurlaagh",
+  { id: "Hurlaagh",
   name: "Hurlaagh",
   subtitle: "o Deus dos Hobgoblins",
   rank: "Entidade primordial, status divino 3",
@@ -1229,8 +1223,7 @@ obligationsRestrictions: "Devotos de Dunsark não podem recusar aventuras que en
   ],
   obligationsRestrictions: "Devotos de Hurlaagh jamais podem desobedecer à ordem de um superior (devoto de Hurlaagh de nível maior ou hobgoblin de patente militar superior). Além disso, devem lutar contra “o Mundo Como Deve Ser” proposto por Thwor."
   },
-  {
-  id: "Hydora",
+  {  id: "Hydora",
   name: "Hydora",
   subtitle: "o Dragão-Rei das Nuvens",
   rank: "Dragão-Real, status divino 4",
@@ -1249,8 +1242,7 @@ obligationsRestrictions: "Devotos de Dunsark não podem recusar aventuras que en
   ],
   obligationsRestrictions: "Devotos de Hydora devem ser inquietos e inconstantes como os ventos, proibidos de passar mais de um dia com os pés no chão — escalar uma montanha ou voar por uma rodada é suficiente para agradar ao Dragão-Rei. Além disso, não podem fixar moradia exceto em local mais próximo dos céus do que da terra."
   },
-  {
-  id: "Zakharov",
+  { id: "Zakharov",
   name: "Zakharov",
   subtitle: "o Deus da Bravura",
   rank: "Mortal ascendido, status divino 2",
@@ -1269,8 +1261,7 @@ obligationsRestrictions: "Devotos de Dunsark não podem recusar aventuras que en
   ],
   obligationsRestrictions: "Devotos de Zakharov devem fazer pelo menos uma demonstração de coragem por aventura (ou por mês, de acordo com o mestre). Para este efeito, uma demonstração de coragem é qualquer ato no qual o personagem possa morrer ou sofrer uma consequência grave e/ou permanente, que seja realizado sem nenhuma preparação que garanta sua segurança. Por exemplo, lutar contra um ogro sozinho, tentar escalar uma montanha sem equipamento ou tomar para si um item mágico que provavelmente é amaldiçoado são demonstrações de coragem. Enfrentar o mesmo ogro com seu grupo, escalar a montanha devidamente equipado ou tomar paar si um item mágico qualquer não são. O mestre tem a palavra final sobre o que configura uma demonstração de coragem."
   },
-  {
-  id: "Irione",
+  { id: "Irione",
   name: "Irione",
   subtitle: "o Deus da Sedução",
   rank: "Mortal ascendido, status divino 3",
@@ -1287,10 +1278,9 @@ obligationsRestrictions: "Devotos de Dunsark não podem recusar aventuras que en
   grantedPowers: [
   "Fisgar Corações"
   ],
-  obligationsRestrictions: "Devotos de Irione devem obter a adoração de uma pessoa que originalmente não era prestativa, pelo menos uma vez por dia (ou por sessão de jogo, o que demorar mais), como forma de honrar sua divindade. Isso significa tornar um NPC prestativo e, após isso, tornar-se objeto da admiração e adoração desse personagem."
+  obligationsRestrictions: "Devotos de Irione devem obter a adoração de uma pessoa que originalmente não era prestativa, pelo menos uma vez por aventura (ou por mês, o que demorar menos), como forma de honrar sua divindade. Isso significa tornar um NPC prestativo e, após isso, tornar-se objeto da admiração e adoração desse personagem."
   },
-  {
-  id: "Kurur Lianth",
+  { id: "Kurur Lianth",
   name: "Kurur Lianth",
   subtitle: "o Deus Vulcão de Khubar",
   rank: "Objeto desperto, status divino 1",
@@ -1309,8 +1299,7 @@ obligationsRestrictions: "Devotos de Dunsark não podem recusar aventuras que en
   ],
   obligationsRestrictions: "Devotos de Kurur Lianth devem se reunir com seu deus uma vez por ano para sacrificar um humanoide voluntário. Na ausência de um voluntário, o devoto mais velho deve se oferecer de imediato. Se não o fizer, deixa de ser um devoto imediatamente e seu destino como sacrifício passa para outro devoto mais velho."
   },
-  {
-  id: "Luvithy",
+  { id: "Luvithy",
   name: "Luvithy",
   subtitle: "a Deusa da Peste",
   rank: "Mortal ascendido, status divino 2",
@@ -1329,8 +1318,7 @@ obligationsRestrictions: "Devotos de Dunsark não podem recusar aventuras que en
   ],
   obligationsRestrictions: "Devotos de Luvithy devem contaminar pelo menos uma criatura Pequena ou maior com uma doença por semana. Na falta de uma vítima adequada, um devoto pode contaminar a si mesmo."
   },
-  {
-  id: "Mzzileyn",
+  { id: "Mzzileyn",
   name: "Mzzileyn",
   subtitle: "o Dragão-Rei das Trevas",
   rank: "Dragão-Real, status divino 3",
@@ -1349,8 +1337,7 @@ obligationsRestrictions: "Devotos de Dunsark não podem recusar aventuras que en
   ],
   obligationsRestrictions: "Sempre que estiver diante de um desafio (um combate, um perigo complexo ou outra cena que envolva vencer ou superar algo desafiador) você deve passar em pelo menos um teste de Enganação que seja útil contra esse desafio. O mestre tem a palavra final sobre que ações se encaixam nessa descrição."
   },
-  {
-  id: "O Deus Cristal de Urielka",
+  { id: "O Deus Cristal de Urielka",
   name: "O Deus Cristal de Urielka",
   subtitle: "",
   rank: "Objeto desperto, status divino 1",
@@ -1365,12 +1352,11 @@ obligationsRestrictions: "Devotos de Dunsark não podem recusar aventuras que en
   preferredWeapon: "Lança.",
   devotees: "Aggelus, elfos, hynne, qareen, bardos, caçadores, cavaleiros, nobres, paladino.",
   grantedPowers: [
-  "Proteção do Cristal"
+  "Conjurar Cristal"
   ],
   obligationsRestrictions: "Devotos do Deus Cristal de Urielka devem peregrinar até a aldeia pelo menos uma vez por aventura (ou tempo entre aventuras) e, pelo menos uma vez por ano, devem fazer essa peregrinação levando consigo um novo devoto convertido."
   },
-  {
-  id: "Klangor",
+  { id: "Klangor",
   name: "Klangor",
   subtitle: "o Deus das Armaduras",
   rank: "Mortal ascendido, status divino 2",
@@ -1389,8 +1375,7 @@ obligationsRestrictions: "Devotos de Dunsark não podem recusar aventuras que en
   ],
   obligationsRestrictions: "Devotos de Klangor devem passar pelo menos uma hora por dia limpando, consertando ou polindo uma armadura, ou treinando enquanto traja uma armadura. Além disso, pelo menos uma vez por aventura o devoto deve fabricar uma armadura qualquer."
   },
-  {
-  id: "Nerelim",
+  { id: "Nerelim",
   name: "Nerelim",
   subtitle: "a Deusa da Água Doce",
   rank: "Mortal ascendido, status divino 2",
@@ -1402,15 +1387,14 @@ obligationsRestrictions: "Devotos de Dunsark não podem recusar aventuras que en
   beliefs: "Reverenciar e proteger os rios, os lagos e os seres que ali habitam. Promover harmonia entre os seres das águas e o mundo seco. Proteger os seres fluviais. Exigir devido respeito às águas correntes.",
   sacredSymbol: "Um rio cortando a várzea.",
   channelEnergy: "Qualquer.",
-  preferredWeapon: "Arpão (Ameaças de Arton, p. 392).",
+  preferredWeapon: "Arpão.",
   devotees: "Elfos, elfos-do-mar, hynne, kappa, minotauros, qareen, sereias/tritões, bárbaros, bucaneiros, caçadores, druidas, treinadores.",
   grantedPowers: [
-  "Cauda de Água Doce"
+  "Água da Vida"
   ],
   obligationsRestrictions: "Devotos de Nerelim não podem se manter afastados de um grande corpo de água doce (como um lago ou rio) por mais de um mês. Além disso, devem pescar em um rio ou outro corpo de água doce pelo menos uma vez por semana."
   },
-  {
-  id: "O Deus das Cidades",
+  { id: "O Deus das Cidades",
   name: "O Deus das Cidades",
   subtitle: "",
   rank: "Conceito vivo, status divino 4",
@@ -1429,8 +1413,7 @@ obligationsRestrictions: "Devotos de Dunsark não podem recusar aventuras que en
   ],
   obligationsRestrictions: "Devotos do Deus das Cidades jamais podem se manter afastados de um centro urbano por mais 2d10+10 dias, nem se recusar a auxiliar uma comunidade."
   },
-  {
-  id: "Rhond",
+  { id: "Rhond",
   name: "Rhond",
   subtitle: "o Deus das Armas",
   rank: "Mortal ascendido, status divino 3",
@@ -1449,8 +1432,7 @@ obligationsRestrictions: "Devotos de Dunsark não podem recusar aventuras que en
   ],
   obligationsRestrictions: "Devotos de Rhond devem passar pelo menos uma hora por dia limpando, consertando ou afiando uma arma, ou treinando com uma arma. Além disso, pelo menos uma vez por aventura o devoto deve fabricar uma arma qualquer."
   },
-  {
-  id: "Lupan",
+  { id: "Lupan",
   name: "Lupan",
   subtitle: "o Deus dos Caçadores",
   rank: "Mortal ascendido, status divino 2",
@@ -1467,10 +1449,9 @@ obligationsRestrictions: "Devotos de Dunsark não podem recusar aventuras que en
   grantedPowers: [
   "Passo do Caçador"
   ],
-  obligationsRestrictions: "Devotos de Lupan não podem matar criaturas não inteligentes (Int –4 ou –5) grávidas ou filhotes, nem permitir que estes sejam mortos. Além disso, devem extrair algo de útil de qualquer criatura dessas que matarem (em termos de jogo, devem passar em um teste de Sobrevivência com CD 15 + ND da criatura). Alternativamente, se você tiver o suplemento Ameaças de Arton, o devoto deve extrair pelo menos um recurso natural da criatura (veja p. 401)."
+  obligationsRestrictions: "Devotos de Lupan não podem matar criaturas não inteligentes (Int –4 ou –5) grávidas ou filhotes, nem permitir que estes sejam mortos. Além disso, devem extrair algo de útil de qualquer criatura dessas que matarem (em termos de jogo, devem passar em um teste de Sobrevivência com CD 15 + ND da criatura). Alternativamente, se você tiver o suplemento Ameaças de Arton, o devoto deve extrair pelo menos um recurso natural da criatura."
   },
-  {
-  id: "Sunnary",
+  { id: "Sunnary",
   name: "Sunnary",
   subtitle: "a Deusa da Culinária",
   rank: "Mortal ascendido, status divino 2",
@@ -1489,8 +1470,7 @@ obligationsRestrictions: "Devotos de Dunsark não podem recusar aventuras que en
   ],
   obligationsRestrictions: "Devotos de Sunnary não podem se negar a atender um pedido para cozinhar para alguém, e devem preparar pelo menos um prato especial por semana."
   },
-  {
-  id: "Ur",
+  { id: "Ur",
   name: "Ur",
   subtitle: "o Deus dos Carvalhos",
   rank: "Entidade primordial, status divino 3",
@@ -1509,8 +1489,7 @@ obligationsRestrictions: "Devotos de Dunsark não podem recusar aventuras que en
   ],
   obligationsRestrictions: "Devotos de Ur não podem causar dano de fogo direta ou indiretamente a nenhuma criatura. Além disso, não podem descansar em nenhuma comunidade maior que uma aldeia (não perdem seus poderes, mas também não recuperam pontos de vida ou mana)."
   },
-  {
-  id: "Tukala",
+  { id: "Tukala",
   name: "Tukala",
   subtitle: "a Deusa dos Texugos Alados",
   rank: "Mortal ascendido, status divino 1",
@@ -1529,8 +1508,7 @@ obligationsRestrictions: "Devotos de Dunsark não podem recusar aventuras que en
   ],
   obligationsRestrictions: "Devotos de Tukala não podem trilhar os caminhos de Sszzaas; eles são proibidos de mentir ou usar qualquer forma de Enganação. Eles também são proibidos de matar texugos e outros pequenos mamíferos escavadores (incluindo carcajus, raposas, tatus e canídeos). Jamais podem negar o desejo de voar de outras criaturas, a menos que isso seja usado para a mentira ou o mal."
   },
-  {
-  id: "Jandra",
+  { id: "Jandra",
   name: "Jandra",
   subtitle: "a Deusa das Boas Maneiras",
   rank: "Mortal ascendido, status divino 2",
@@ -1547,10 +1525,9 @@ obligationsRestrictions: "Devotos de Dunsark não podem recusar aventuras que en
   grantedPowers: [
   "Etiqueta à Toda Hora"
   ],
-  obligationsRestrictions: "Devotos de Jandra nunca deixam de fazer testes de Diplomacia ou Nobreza quando socialmente adequado. Além disso, não suportam falta de modos e desconhecimento de etiqueta; quando presencia uma falha em um teste de Diplomacia ou Nobreza, o devoto deve corrigir a pessoa que falhou (em termos de jogo, deve passar em um teste da perícia apropriada com a mesma CD, enquanto explica ao “falhante” onde ela errou). Dependendo das circunstâncias e da receptividade da outra pessoa a críticas, isso pode gerar situações bastante delicadas."
+  obligationsRestrictions: "Devotos de Jandra nunca deixam de fazer testes de Diplomacia ou Nobreza quando isso é socialmente adequado. Além disso, não suportam falta de modos e desconhecimento de etiqueta; quando presencia uma falha em um teste de Diplomacia ou Nobreza, o devoto deve corrigir a pessoa que falhou (em termos de jogo, deve passar em um teste da perícia apropriada com a mesma CD, enquanto explica de forma discreta e elegante onde ela errou)."
   },
-  {
-  id: "Tamagrah",
+  { id: "Tamagrah",
   name: "Tamagrah",
   subtitle: "o Deus da Ilha Viva",
   rank: "Entidade primordial, status divino 3",
@@ -1569,8 +1546,7 @@ obligationsRestrictions: "Devotos de Dunsark não podem recusar aventuras que en
   ],
   obligationsRestrictions: "Devotos de Tamagrah devem proteger seu deus e, consequentemente, seu habitat, por meio de missões além mar para prevenir ameaças (pelo menos uma missão a cada 1d4+2 meses), mas não podem permanecer mais de 1d4+2 meses longe de Tamagrah."
   },
-  {
-  id: "Teldiskan",
+  { id: "Teldiskan",
   name: "Teldiskan",
   subtitle: "o Gigante Máximo",
   rank: "Entidade primordial, status divino 1",
@@ -1589,8 +1565,26 @@ obligationsRestrictions: "Devotos de Dunsark não podem recusar aventuras que en
   ],
   obligationsRestrictions: "Devotos de Teldiskan devem pregar a benevolência de sua divindade por meio de seus atos e previsões climáticas. Uma vez por dia (ou por sessão de jogo, o que demorar mais), o devoto precisa convencer outra pessoa de que Teldiskan é um salvador ou prever o clima da região. Em termos de jogo, um teste de Enganação ou Sobrevivência com CD mínima 15 + metade do seu nível."
   },
-  {
-  id: "Yasshara",
+  { id: "Tessalus",
+    name: "Tessalus",
+    subtitle: "Deus dos Elfos-do-Mar",
+    rank: "Mortal ascendido, status divino 3",
+    image: [
+      ""
+    ],
+    status: "menor",
+    history: "Nas águas turbulentas de Arton, Tessalus cresceu na tradição guerreira dos elfos-do-mar. Treinado desde a infância para a batalha, seu tridente encantado simbolizava a força e bravura desse povo bárbaro. Durante o acirrado conflito contra as sereias, ele se destacou como um líder feroz e destemido.\nUm dia, o destino o colocou frente a frente com Ayllana, a mais poderosa feiticeira entre as sereias. Em um duelo intenso, Tessalus viu seus ataques serem desviados por conjurações que invocavam redemoinhos, feras e tempestades. Aquele confronto, marcado pelo choque entre força bruta e poder místico, se tornaria lendário entre os elfos marinhos — pois Tessalus emergiu vitorioso, colocando a adversária em fuga.\nA admiração desmedida de seu povo elevou Tessalus ao status de Deus dos Elfos-do-Mar. Seu culto, pleno de rituais que exaltam a coragem, mantém viva a memória daquele confronto. Entre cânticos, cerimônias e duelos, seus seguidores espalham-se pelos mares de Arton, também dominando grandes extensões de Pelágia, o Reino de Oceano. Juram superar qualquer adversário, honrar a tradição e a fúria de seu deus bárbaro e, acima de tudo, buscam supremacia sobre as sereias.",
+    beliefs: "Proteger os elfos-do-mar e sua soberania. Levar sua fúria às sereias e aos povos do mundo seco. Dominar os oceanos. Derrotar as sereias.",
+    sacredSymbol: "Um tridente.",
+    channelEnergy: "Qualquer.",
+    preferredWeapon: "Tridente.",
+    devotees: "Elfos-do-mar, qareen, bárbaros, bucaneiros, caçadores.",
+    grantedPowers: [
+      "Arsenal do Oceano"
+    ],
+    obligationsRestrictions: "Devotos de Tessalus são proibidos de matar elfos-do-mar, recusar-se a ajudar elfos-do-mar, e recusar missões para resgatar ou proteger elfos-do-mar e seus ritos."
+  },
+  { id: "Yasshara",
   name: "Yasshara",
   subtitle: "a Deusa da Opressão",
   rank: "Mortal ascendido, status divino 3",
@@ -1609,8 +1603,7 @@ obligationsRestrictions: "Devotos de Dunsark não podem recusar aventuras que en
   ],
   obligationsRestrictions: "Devotos de Yasshara devem escolher o destino dos outros para que o mundo tenha ordem óbvia. Eles precisam garantir que, pelo menos uma vez por dia (ou por sessão de jogo, o que demorar mais), uma criatura obedeça a suas ordens. Em termos de jogo, uma ação exigindo um teste de Diplomacia ou Intimidação com CD mínima 15 + metade do seu nível. Além disso, o devoto deve estar sempre atento às tramas de Anilatir, a Deusa Menor da Inspiração, inimiga mortal de Yasshara. Por último, sempre que houver possibilidade de escolher 10 em um teste, o devoto deve fazer isso."
   },
-  {
-  id: "Neruíte",
+  { id: "Neruíte",
   name: "Neruíte",
   subtitle: "a Deusa do Sono",
   rank: "Mortal ascendido, status divino 2",
@@ -1629,8 +1622,7 @@ obligationsRestrictions: "Devotos de Dunsark não podem recusar aventuras que en
   ],
   obligationsRestrictions: "Devotos de Neruíte jamais podem acordar intencionalmente alguém que esteja dormindo, ou permitir que outros o façam. Além disso, sempre que acorda, o devoto fica pasmo por 1 rodada, enquanto seu espírito lentamente desperta de seu sono sagrado."
   },
-  {
-  id: "Marina",
+  { id: "Marina",
   name: "Marina",
   subtitle: "a Deusa dos Marinheiros",
   rank: "Mortal ascendido, status divino 3",
@@ -1649,8 +1641,7 @@ obligationsRestrictions: "Devotos de Dunsark não podem recusar aventuras que en
   ],
   obligationsRestrictions: "Devotos de Marina devem sempre carregar consigo um recipiente fechado com água do mar (em termos de jogo, um item que ocupa 0,5 espaço). Além disso, uma vez por aventura, devem passar pelo menos uma noite em uma embarcação no mar."
   },
-  {
-  id: "Piscigeros",
+  { id: "Piscigeros",
   name: "Piscigeros",
   subtitle: "o Deus dos Homens-Peixes",
   rank: "Conceito vivo, status divino 1",
@@ -1665,12 +1656,11 @@ obligationsRestrictions: "Devotos de Dunsark não podem recusar aventuras que en
   preferredWeapon: "Tridente.",
   devotees: "Dahllan, elfos-do-mar, hynne, kappa, minotauros, sereias/tritões, bárbaros, bucaneiros, caçadores, druidas, treinadores.",
   grantedPowers: [
-  "Resistência Submarina"
+  "Bolha Hídrica"
   ],
   obligationsRestrictions: "Devotos de Piscigeros jamais podem ignorar um pedido de ajuda de um homem-peixe e devem proteger qualquer membro de seu povo até a morte, se preciso. Além disso, devotos do Pai Peixe jamais podem desobedecer às ordens dos arautos de sua divindade ou causar dano letal ou perda de PV a eles (habilidades que forneçam bônus em dano letal ou em perda de vida para criaturas em combate contra eles também são proibidas). Esse último dogma vem sendo contestado por alguns sacerdotes de Piscigeros, mas não se sabe ainda as consequências de fazer isso."
   },
-  {
-  id: "Zadbblein",
+  { id: "Zadbblein",
   name: "Zadbblein",
   subtitle: "a Dragoa-Rainha das Florestas",
   rank: "Dragão-Real, status divino 4",
@@ -1689,8 +1679,7 @@ obligationsRestrictions: "Devotos de Dunsark não podem recusar aventuras que en
   ],
   obligationsRestrictions: "Devotos de Zadbblein devem proteger a Floresta das Escamas Verdes e não podem ferir nenhum animal ou dragão nativo dessa floresta, ou de outras florestas que sejam território de Zadbblein. Além disso, uma vez por mês, devem expandir os domínios ou a influência da Dragoa-Rainha significativamente."
   },
-  {
-  id: "O Deus do Medo",
+  { id: "O Deus do Medo",
   name: "O Deus do Medo",
   subtitle: "",
   rank: "Conceito vivo, status divino 4",
@@ -1705,12 +1694,11 @@ obligationsRestrictions: "Devotos de Dunsark não podem recusar aventuras que en
   preferredWeapon: "Corrente de espinhos.",
   devotees: "Bugbears, lefou, minotauros, medusas, osteon, sulfure, trogs, voracis, arcanistas, bárbaros, bardos, bucaneiros, guerreiros, ladinos, lutadores.",
   grantedPowers: [
-  "Medo Verdadeiro"
+  "Domínio do Medo"
   ],
   obligationsRestrictions: "Devotos do Deus do Medo devem deixar uma criatura sob qualquer efeito de medo pelo menos uma vez por dia (ou por sessão de jogo, o que demorar mais) em adoração a sua divindade."
   },
-  {
-  id: "Sckhar",
+  { id: "Sckhar",
   name: "Sckhar",
   subtitle: "o Dragão-Rei do Fogo",
   rank: "Dragão-Real, status divino 5",
@@ -1729,8 +1717,7 @@ obligationsRestrictions: "Devotos de Dunsark não podem recusar aventuras que en
   ],
   obligationsRestrictions: "Devotos de Sckhar devem obedecer cegamente às ordens do seu Dragão-Rei, especialmente quando convocados para expulsar dragões e outras criaturas aparentadas do território de Sckharshantallas. Além disso, uma vez por mês, os devotos devem doar 20% de todo seu tesouro para os cofres de Sckhar. Essa doação deve ser feita em ouro."
   },
-  {
-  id: "Toris",
+  { id: "Toris",
   name: "Toris",
   subtitle: "a Deusa de Jallar",
   rank: "Entidade primordial, status divino 1",

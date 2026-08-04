@@ -578,7 +578,7 @@ export const powersGeraisConcedido: Power[] = [
   },
   { id: "Canção dos Mares (Ayllana)",
     name: "Canção dos Mares (Ayllana)",
-    description: "Você adquire a habilidade Canção dos Mares das sereias/tritões. Se já tiver essa habilidade, você pode escolher as mesmas magias novamente para diminuir seu custo.",
+    description: "Você adquire a habilidade Canção dos Mares das sereias/tritões. Se já tiver essa habilidade, você pode escolher outras magia da lista da habilidade, ou as mesmas para diminuir seu custo.",
     origin: "Guia dos Deuses Menores"
   },
   { id: "Bênção do Frio (Beluhga)",
@@ -683,12 +683,12 @@ export const powersGeraisConcedido: Power[] = [
   },
   { id: "Ginete Altivo (Hippion)",
     name: "Ginete Altivo (Hippion)",
-    description: "Enquanto está montado sobre um cavalo, você recebe +2 em testes de ataque e em Cavalgar. Além disso, você passa automaticamente em testes de Cavalgar para não cair do cavalo quando sofre dano e não sofre penalidades para atacar à distância ou lançar magias quando montado em cavalos. Este poder conta como o poder Ginete para efeitos de pré-requisitos de outras habilidades. Se você é um centauro, os benefícios deste poder mudam para: +2 em testes de ataque e rolagens de dano com investidas, não sofre –2 na Defesa quando faz uma investida e pode fazer investidas em terreno difícil.",
+    description: "Enquanto está montado sobre um cavalo, você recebe +2 em testes de ataque e em Cavalgar. Além disso, você passa automaticamente em testes de Cavalgar para não cair do cavalo quando sofre dano e não sofre penalidades para atacar à distância ou lançar magias quando montado em cavalos. Este poder conta como o poder Ginete para efeitos de pré-requisitos de outras habilidades. Se você é um centauro, os benefícios deste poder mudam para: você pode fazer investidas em terreno difícil e não sofre a penalidade de –2 na Defesa por fazer uma investida. Por fim, recebe +2 nas rolagens de dano com armas em investidas.",
     origin: "Guia dos Deuses Menores"
   },
   { id: "Selvageria Marcial (Hurlaagh)",
     name: "Selvageria Marcial (Hurlaagh)",
-    description: "Você pode usar Sobrevivência no lugar de Guerra. Além disso, você se torna treinado em Guerra. Caso já seja treinado, em vez disso recebe +2 em testes dessa perícia. Além disso, na primeira vez em cada cena em que passa em um teste para analisar terreno, além das vantagens descobertas, você fornece um bônus de +1 em testes de ataque e rolagens de dano de seus aliados em alcance curto por 1 rodada.",
+    description: "Você pode usar Sobrevivência no lugar de Guerra. Além disso, se passar em um teste para analisar terreno, além das vantagens descobertas, você fornece um bônus de +1 em testes de ataque e rolagens de dano de seus aliados em alcance curto até o fim da cena.",
     origin: "Guia dos Deuses Menores"
   },
   { id: "Alcançar os Céus (Hydora)",
@@ -718,17 +718,17 @@ export const powersGeraisConcedido: Power[] = [
   },
   { id: "Alma em Erupção (Kurur Lianth)",
     name: "Alma em Erupção (Kurur Lianth)",
-    description: "Você recebe redução de fogo 10 e, quando causa dano, pode sacrificar 2 pontos de vida (exceto PV temporários) para causar +1d6 pontos de dano de fogo.",
+    description: "Você recebe redução de fogo 10 e, quando causa dano, pode perder 2 pontos de vida (exceto PV temporários) para causar +1d8 pontos de dano de fogo.",
     origin: "Guia dos Deuses Menores"
   },
   { id: "Pé na Estrada (Laan)",
     name: "Pé na Estrada (Laan)",
-    description: "Você pode gastar 3 PM para fornecer o dom da caminhada a criaturas escolhidas em alcance curto. Até o fim da cena, as criaturas afetadas recebem +3m em deslocamento e passam automaticamente em testes de Fortitude para marcha forçada.",
+    description: "Você pode gastar 3 PM para fornecer o dom da caminhada a criaturas escolhidas em alcance curto. Até o fim da cena, as criaturas afetadas recebem +3m em deslocamento, ficam imunes às condições imóvel e lento e passam automaticamente em testes de Fortitude para marcha forçada.",
     origin: "Guia dos Deuses Menores"
   },
   { id: "Furacão de Lâminas (Lamashtu)",
     name: "Furacão de Lâminas (Lamashtu)",
-    description: "Quando erra um ataque corpo a corpo, você pode gastar 2 PM para repetir esse ataque contra outra criatura ao seu alcance.",
+    description: "Uma vez por rodada, quando erra um ataque corpo a corpo, você pode gastar 2 PM para fazer um novo ataque (com a mesma arma) contra outra criatura ao seu alcance.",
     origin: "Guia dos Deuses Menores"
   },
   { id: "Passo do Caçador (Lupan)",
@@ -738,7 +738,7 @@ export const powersGeraisConcedido: Power[] = [
   },
   { id: "Toque Pestilento (Luvithy)",
     name: "Toque Pestilento (Luvithy)",
-    description: "Você aprende e pode lançar Infligir Ferimentos e, quando usa essa magia, se o alvo falhar no teste de resistência, ele também é exposto à doença maldição pegajosa. Caso aprenda novamente essa magia, seu custo diminui em –1 PM.",
+    description: "Você aprende e pode lançar Infligir Ferimentos e, quando você usa essa magia, se o alvo falhar no teste de resistência, ele também é exposto à doença maldição pegajosa e sofre seu efeito inicial imediadamente. Caso aprenda novamente essa magia, seu custo diminui em –1 PM.",
     origin: "Guia dos Deuses Menores"
   },
   { id: "Mar Aberto (Marina)",
@@ -751,9 +751,9 @@ export const powersGeraisConcedido: Power[] = [
     description: "Você pode gastar uma ação de movimento e 1 PM para envenenar uma arma que esteja usando. A arma causa perda de 1d12 PV por veneno. O veneno dura até você acertar um ataque ou até o fim da cena (o que acontecer primeiro). Além disso, se estiver em uma área de escuridão, a CD para resistir aos seus venenos aumenta em +2 e a perda de vida deles aumenta em +2 por dado.",
     origin: "Guia dos Deuses Menores"
   },
-  { id: "Cauda de Água Doce (Nerelim)",
-    name: "Cauda de Água Doce (Nerelim)",
-    description: "Você pode respirar debaixo d'água e, quando está submerso, pode transformar suas pernas em uma cauda que fornece deslocamento de natação 12m. Se já faz isso (como pela habilidade Transformação Anfíbia) ou se já possui deslocamento de natação, em vez disso ele aumenta em +6m.",
+  { id: "Água da Vida (Nerelim)",
+    name: "Água da Vida (Nerelim)",
+    description: "Uma vez por dia, você pode transformar um jarro (ou outro recipiente equivalente que ocupe 0,5 espaço) de água doce em uma poção mágica. Beber essa água mágica é uma ação padrão e recupera 2d8+2 PV e 1d4+1 PM. A água mantém suas propriedades mágicas por 1 semana ou até ser bebida.",
     origin: "Guia dos Deuses Menores"
   },
   { id: "Sono Reparador (Neruíte)",
@@ -761,9 +761,9 @@ export const powersGeraisConcedido: Power[] = [
     description: "Se descansar (dormindo) em condições normais ou melhores, você pode melhorar sua recuperação de PV ou PM em um passo. Alternativamente, você pode ter um sonho inspirador: você recebe +1d6 em um teste de perícia a sua escolha realizado até o fim do dia.",
     origin: "Guia dos Deuses Menores"
   },
-  { id: "Proteção do Cristal (O Deus Cristal de Urielka)",
-    name: "Proteção do Cristal (O Deus Cristal de Urielka)",
-    description: "Você aprende e pode lançar Proteção Divina. Caso aprenda novamente essa magia, seu custo diminui em –1 PM.",
+  { id: "Conjurar Cristal (O Deus Cristal de Urielka)",
+    name: "Conjurar Cristal (O Deus Cristal de Urielka)",
+    description: "Você pode gastar uma ação de movimento e 3 PM para conjurar um cristal azul, verde ou vermelho. Conforme a cor do cristal, você pode quebrá-lo para gerar um efeito: azul (recebe RD 20 contra um dano recém-sofrido); verde (rola novamente um teste de resistência recém-realizado); vermelho (ganha uma ação de movimento nesse turno). O cristal dura até o fim da cena, até ser usado ou até você conjurar outro cristal.",
     origin: "Guia dos Deuses Menores"
   },
   { id: "Manha da Cidade (O Deus das Cidades)",
@@ -771,24 +771,24 @@ export const powersGeraisConcedido: Power[] = [
     description: "Quando está em uma comunidade, você soma sua Sabedoria (mínimo de 1) em testes de Conhecimento, Investigação, Ladinagem e Nobreza, e pode fazer testes dessas perícias mesmo sem ser treinado. Além disso, em comunidades pode fazer testes para interrogar sem precisar falar com pessoas ou gastar tibares, questionando a própria cidade.",
     origin: "Guia dos Deuses Menores"
   },
-  { id: "Medo Verdadeiro (O Deus do Medo)",
-    name: "Medo Verdadeiro (O Deus do Medo)",
-    description: "Você aprende e pode lançar Amedrontar. Caso aprenda novamente essa magia, seu custo diminui em –1 PM.",
+  { id: "Domínio do Medo (O Deus do Medo)",
+    name: "Domínio do Medo (O Deus do Medo)",
+    description: "Você recebe +2 em Intimidação e na CD de seus efeitos de medo, e pode escolher poderes relacionados a efeitos de medo sem necessidade de cumprir pré-requisitos de classe ou devoção. Por fim, pode aprender magias de medo como magias divinas.",
     origin: "Guia dos Deuses Menores"
   },
-  { id: "Resistência Submarina (Piscigeros)",
-    name: "Resistência Submarina (Piscigeros)",
-    description: "Você aprende e pode lançar Suporte Ambiental. Caso aprenda novamente essa magia, seu custo diminui em –1 PM.",
+  { id: "Bolha Hídrica (Piscigeros)",
+    name: "Bolha Hídrica (Piscigeros)",
+    description: "Uma vez por rodada, quando você ou um aliado em alcance curto faz um teste de resistência ou sofre dano, você pode gastar 2 PM para cuspir uma bolha de água protetora que fornece +5 nesse teste de resistência ou RD 15 contra esse dano. Estes benefícios são dobrados contra efeitos de fogo.",
     origin: "Guia dos Deuses Menores"
   },
   { id: "Artista das Armas (Rhond)",
     name: "Artista das Armas (Rhond)",
-    description: "Você aprende e pode lançar Arma Mágica. Caso aprenda novamente essa magia, seu custo diminui em –1 PM.",
+    description: "Você pode infundir armas com uma fagulha divina. Gaste uma semana e T$ 100 e faça um teste de Ofício (armeiro) com CD igual à de fabricação da arma. Se passar, a arma se torna mágica e recebe uma melhoria cujos pré-requisitos cumpra (exceto material especial), que não conta em seu limite de melhorias.",
     origin: "Guia dos Deuses Menores"
   },
   { id: "Inimigo dos Deuses (Sartan)",
     name: "Inimigo dos Deuses (Sartan)",
-    description: "Você recebe resistência a magia divina +5 e, contra devotos de outros deuses, a CD de suas habilidades aumenta em +2.",
+    description: "Você recebe resistência a magia divina +5 e, contra devotos de outros deuses, recebe +2 em testes de ataque e na CD de suas habilidades.",
     origin: "Guia dos Deuses Menores"
   },
   { id: "Ego (Sckhar)",
@@ -808,7 +808,12 @@ export const powersGeraisConcedido: Power[] = [
   },
   { id: "Despertar do Gigante (Teldiskan)",
     name: "Despertar do Gigante (Teldiskan)",
-    description: "Você pode gastar uma ação de padrão e 3 PM para se tornar fisicamente mais imponente. Até o fim da cena você recebe +1 em Força e é considerado uma categoria de tamanho maior para modificadores de manobra de combate.",
+    description: "Você pode gastar uma ação de movimento e 3 PM para se tornar fisicamente mais imponente. Até o fim da cena você recebe +1 em Força e é considerado uma categoria de tamanho maior para modificadores de manobra de combate.",
+    origin: "Guia dos Deuses Menores"
+  },
+  { id: "Arsenal do Oceano (Tessalus)",
+    name: "Arsenal do Oceano (Tessalus)",
+    description: "Você recebe proficiência em tridente e recebe +1 em testes de ataque e na margem de ameaça com essa arma. Se já for proficiente em tridente, seu dano aumenta em um passo.",
     origin: "Guia dos Deuses Menores"
   },
   { id: "Véu de Toris (Toris)",
@@ -818,27 +823,27 @@ export const powersGeraisConcedido: Power[] = [
   },
   { id: "Revoada de Texugos (Tukala)",
     name: "Revoada de Texugos (Tukala)",
-    description: "Você pode gastar uma ação padrão e 3 PM para invocar uma revoada de 1d4+1 texugos alados espirituais que ficam ao seu redor até o fim da cena. Enquanto estiverem ao seu redor, os texugos fornecem +2 em rolagens de dano corpo a corpo e na Defesa. Além disso, quando sofre dano, você pode “gastar” um dos texugos alados para receber RD 5 contra esse dano.",
+    description: "Você pode gastar uma ação de movimento e 3 PM para invocar uma revoada de 1d4+1 texugos alados espirituais que ficam ao seu redor até o fim da cena. Enquanto estiverem ao seu redor, os texugos fornecem +2 em rolagens de dano corpo a corpo e na Defesa. Além disso, quando sofre dano, você pode “gastar” um dos texugos alados para receber RD 5 contra esse dano.",
     origin: "Guia dos Deuses Menores"
   },
   { id: "Trilhas das Árvores Antigas (Ur)",
     name: "Trilhas das Árvores Antigas (Ur)",
-    description: "Uma vez por rodada, você pode gastar 1 PM para entrar em uma árvore adjacente de tamanho igual ou maior que o seu e sair em outra árvore em alcance longo (também de tamanho igual ou maior que o seu). Você não precisa de linha de visão para a árvore de saída, mas deve estar ciente de sua existência. Você pode usar este poder como parte de uma ação para movimentar-se.",
+    description: "Uma vez por rodada, você pode gastar 1 PM para entrar em uma árvore adjacente de tamanho igual ou maior que o seu e sair em outra árvore em alcance longo (também de tamanho igual ou maior que o seu). Você não precisa de linha de visão para a árvore de saída, mas deve estar ciente de sua existência.",
     origin: "Guia dos Deuses Menores"
   },
   { id: "Oprimir Escolhas (Yasshara)",
     name: "Oprimir Escolhas (Yasshara)",
-    description: "Quando uma criatura em alcance curto faz um teste de perícia, você pode gastar 3 PM para forçar essa criatura a escolher 10 nesse teste (mesmo que isso não seja possível). A criatura tem direito a um teste de Vontade (CD Sab) para resistir a esse efeito. Você só pode usar este poder uma vez por criatura em cada cena.",
+    description: "Quando uma criatura em alcance curto faz um teste de perícia, você pode gastar 2 PM para forçar essa criatura a escolher 10 nesse teste (mesmo que isso não seja possível). A criatura tem direito a um teste de Vontade (CD Sab) para resistir a esse efeito. Você só pode usar este poder uma vez por criatura em cada cena.",
     origin: "Guia dos Deuses Menores"
   },
   { id: "Natureza Gloriosa (Zadbblein)",
     name: "Natureza Gloriosa (Zadbblein)",
-    description: "Você pode gastar uma ação completa e 3 PM para que uma parte de seu corpo assuma uma forma animalesca até o fim da cena. Quando faz isso, você recebe dois benefícios a sua escolha entre os seguintes: uma arma natural à sua escolha; +1 passo de dano em uma de suas armas naturais; +2 na Defesa; +3m de deslocamento; deslocamento de natação 9m; faro; ou +2 em Atletismo e Fortitude.",
+    description: "Você pode gastar 2 PM para que uma parte de seu corpo assuma uma forma animalesca até você ficar inconsciente ou escolher encerrá-la (uma ação livre). Quando faz isso, você recebe dois benefícios a sua escolha entre os seguintes: uma arma natural à sua escolha (dano 1d6, crítico x2, a sua escolha entre corte, impacto ou perfuração); +1 passo de dano em uma de suas armas naturais; +2 na Defesa; +6m de deslocamento; deslocamento de natação 9m; faro; ou +5 em Atletismo e Fortitude.",
     origin: "Guia dos Deuses Menores"
   },
   { id: "Irmão da Coragem (Zakharov)",
     name: "Irmão da Coragem (Zakharov)",
-    description: "Você se torna imune a medo (se já for imune, em vez disso recebe +2 em Vontade). Além disso, uma vez por cena envolvendo um perigo, você pode gastar 2 PM para substituir um teste de perícia por um teste de Vontade.",
+    description: "Você se torna imune a medo (se já for imune, em vez disso recebe +2 em Vontade). Além disso, uma vez por cena envolvendo um perigo, você pode substituir um teste de perícia por um teste de Vontade.",
     origin: "Guia dos Deuses Menores"
   },
   //#endregion
