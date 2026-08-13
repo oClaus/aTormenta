@@ -1,7 +1,111 @@
 import { Gear } from "@/types/gear";
-//#region Tormenta20 - Jogo do Ano
-//#endregion
+
 export const gear: Gear[] = [
+
+  //#region Uma visita a Vectora
+  { id: "Armadilha Comum",
+    name: "Armadilha Comum",
+    description: "Permite que o personagem use um poder de Armadilha do caçador, escolhido quando o item é comprado.",
+    origin: "Uma visita a Vectora",
+    price: "T$ 150",
+    spaces: "1"
+  },
+  { id: "Armadilha Rara.",
+    name: "Armadilha Rara",
+    description: "Permite que o personagem use uma das armadilhas do armadilheiro, escolhido quando o item é comprado.",
+    origin: "Uma visita a Vectora",
+    price: "T$ 300",
+    spaces: "1"
+  },
+  { id: "Peça Letal",
+    name: "Peça Letal",
+    description: "Pode ser usada como parte da preparação de uma armadilha para aumentar a CD dela em +2 e o dano dela em +1 por dado.",
+    origin: "Uma visita a Vectora",
+    price: "T$ 90",
+    spaces: "0,5"
+  },
+  { id: "Instante Engarrafado",
+    name: "Instante Engarrafado",
+    description: "Um frasco com uma névoa espiralante que pulsa com todas as cores da criação — é um pouco de tempo. Usar o instante engarrafado é uma ação padrão. Você recebe uma ação padrão adicional na rodada em que o usa e na rodada seguinte.",
+    origin: "Uma visita a Vectora",
+    price: "T$ 1.200",
+    spaces: "1"
+  },
+  { id: "Relógio da Memória.",
+    name: "Relógio da Memória",
+    description: "Este pequeno relógio de bolso enferrujado consegue gravar o que você fez. Se você fizer uma ação igual a outra que já tenha feito na mesma cena (atacar com a mesma arma, lançar a mesma magia…) e que exija rolagens, pode gastar o relógio da memória para repetir uma rolagem realizada na ação anterior (por exemplo, um teste de ataque, o dano da magia…).",
+    origin: "Uma visita a Vectora",
+    price: "T$ 900",
+    spaces: "1"
+  },
+  { id: "Bússola do Desejo",
+    name: "Bússola do Desejo",
+    description: "Ao comprar esta pequena bússola de bronze, escolha uma pessoa ou objeto que você já tenha visto pessoalmente. O item irá apontar o caminho até o alvo escolhido. O efeito dele dura por uma aventura (ou por um mês), quando então se esvai para sempre.",
+    origin: "Uma visita a Vectora",
+    price: "T$ 600",
+    spaces: "1"
+  },
+  { id: "Espelho do Futuro.",
+    name: "Espelho do Futuro",
+    description: "Empunhar este espelho de mão permite que você veja o futuro próximo e reaja de acordo. Você pode rolar novamente um teste recém realizado que não tenha sido uma falha crítica. Fazer isso quebra o espelho. Apenas um espelho do futuro pode ser usado por cena.",
+    origin: "Uma visita a Vectora",
+    price: "T$ 350",
+    spaces: "1"
+  },
+  { id: "Orbe da Visão Remota",
+    name: "Orbe da Visão Remota",
+    description: "Uma esfera de cristal do tamanho de uma maçã. Você pode gastar uma ação completa para olhar para dentro da esfera e escolher um ponto qualquer em alcance longo mesmo que não tenha linha de visão para ele. Por uma rodada, você consegue enxergar como se estivesse nesse ponto. O orbe é útil para enxergar pontos que normalmente estariam fora do alcance, como dentro de salas fechadas ou além de esquinas.",
+    origin: "Uma visita a Vectora",
+    price: "T$ 150",
+    spaces: "1"
+  },
+  { id: "Areia de Halak-Tûr",
+    name: "Areia de Halak-Tûr",
+    description: "Um frasco com areia carregada da energia dos portais do Deserto da Perdição. Você pode gastar uma ação padrão para quebrar o vidro e despejar a areia dele sob os pés de uma criatura em alcance curto. O alvo então se teletransporta para qualquer ponto desocupado e que você possa ver em alcance longo; alvos involuntários têm direito a um teste de Reflexos (CD Des).",
+    origin: "Uma visita a Vectora",
+    price: "T$ 600",
+    spaces: "0,5"
+  },
+  { id: "Chave Dimensional",
+    name: "Chave Dimensional",
+    description: "Esta pequena chave de bronze pode ser girada no ar com uma ação padrão para criar uma porta de madeira em pleno ar. A porta dura uma rodada, durante a qual qualquer criatura pode cruzá-la para entrar em um bolsão dimensional similar a uma gruta vazia e escura. Quando a rodada termina, a porta desaparece e ninguém mais pode entrar ou sair do bolsão. O bolsão dura algumas horas (suficiente para uma noite de sono em condições normais), quando então se desfaz, devolvendo todas as pessoas dentro dele para o espaço onde a porta foi conjurada. É possível empurrar alguém pela porta à força; isso exige um vencer um teste de manobra (empurrar), mas a criatura ainda tem direito a um teste de Reflexos (CD For) para se segurar no batente da porta.",
+    origin: "Uma visita a Vectora",
+    price: "T$ 1.000",
+    spaces: "0,5"
+  },
+  { id: "Reagente Instável",
+    name: "Reagente Instável",
+    description: "Quando ativa uma engenhoca, como parte da ativação dela, você pode usar o reagente instável. Ele aumenta qualquer efeito numérico variável da engenhoca em +1 por dado ou a CD para resistir a seus efeitos em +2, à sua escolha. Porém, também aumenta a CD para ativá-la em +5.",
+    origin: "Uma visita a Vectora",
+    price: "T$ 120",
+    spaces: "0,5"
+  },
+  { id: "essencia-de-medo",
+    name: "Essência de Medo",
+    description: "Um frasco com uma névoa escura e espiralante. Você pode gastar uma ação padrão para atirar o frasco em qualquer ponto em alcance curto. Criaturas a até 3m do ponto escolhido ficam apavoradas por 1d4+1 rodadas e então abaladas pela cena (Von CD Des diminui para abaladas pela cena).",
+    origin: "Uma visita a Vectora",
+    price: "T$ 300",
+    spaces: "0,5"
+  },
+  { id: "maldicao-fisica-engarrafada",
+    name: "Maldição Física Engarrafada",
+    description: "Uma garrafa metálica enferrujada. Abri-la com uma ação padrão libera uma maldição, na forma de um uivo agonizante, sobre uma criatura à sua escolha em alcance curto. A criatura fica debilitada por 1 semana (Von CD Car reduz para fraca por 1d4 rodadas).",
+    origin: "Uma visita a Vectora",
+    price: "T$ 360",
+    spaces: "0,5"
+  },
+  { id: "Maldição Mental Engarrafada",
+    name: "Maldição Mental Engarrafada",
+    description: "Uma garrafa metálica enferrujada. Abri-la com uma ação padrão libera uma maldição, na forma de um uivo agonizante, sobre uma criatura à sua escolha em alcance curto.A criatura fica esmorecida por 1 semana (Fort CD Car reduz para frustrada por 1d4 rodadas).",
+    origin: "Uma visita a Vectora",
+    price: "T$ 360",
+    spaces: "0,5"
+  },
+  //#endregion
+
+
+
+
   
   //#region Tormenta20 - Jogo do Ano
   { id: "agua-benta",
@@ -124,6 +228,10 @@ export const gear: Gear[] = [
     spaces: "1",
   },
   //#endregion
+
+
+
+
 
   //#region Ameaças de Arton
   { id: "caixa-de-voz",

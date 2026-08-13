@@ -3,6 +3,20 @@ import { Gear } from "@/types/gear";
 //#endregion
 export const clothing: Gear[] = [
 
+  //#region Uma visita a Vectora
+  { id: "Pijama Hynne",
+    name: "Pijama Hynne",
+    description: "Este conjunto de calça e camisa fofas e aconchegantes torna o sono ainda mais revigorante. Dormir com um pijama hynne e nenhum outro item vestido fornece +1 PM temporário por patamar no dia seguinte.",
+    origin: "Uma visita a Vectora",
+    price: "T$ 300",
+    spaces: "1"
+  },
+  //#endregion
+
+
+
+
+
   //#region  Tormenta20 - Jogo do Ano
   { id: "Andrajos de Aldeão",
     name: "Andrajos de Aldeão",
@@ -153,6 +167,10 @@ export const clothing: Gear[] = [
   },
   //#endregion
 
+
+
+
+  
   //#region Ameaças de Arton
   { id: "garra-feroz",
     name: "Garra Feroz",

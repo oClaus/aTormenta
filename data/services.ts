@@ -1,6 +1,112 @@
 import { Gear } from "@/types/gear";
 
 export const services: Gear[] = [
+
+  //#region Uma visita a Vectora
+  { id: "Hospedagem Divina",
+    name: "Hospedagem Divina",
+    description: "Você se hospeda na Reinos dos Deuses. As acomodações incluem quartos imensos, mobília suntuosa, banquetes exuberantes e um batalhão de servos pertencentes a raças variadas. A noite divina conta como descanso luxuoso e, mais do que isso, lhe dá motivação para grandes façanhas — você recebe +10% de XP por uma aventura ou por um mês (se a campanha não utilizar XP, em vez disso você recebe um benefício do próximo nível por uma aventura ou por um mês).",
+    origin: "Uma visita a Vectora",
+    price: "T$ 2.000",
+    spaces: "—"
+  },
+  { id: "Festival de Música",
+    name: "Festival de Música",
+    description: "Até o fim desta aventura (ou por um mês), você recebe um poder de Música para o qual cumpra os pré-requisitos ou aumenta em +2 a CD para resistir a todos os seus poderes de Música, à sua escolha.",
+    origin: "Uma visita a Vectora",
+    price: "T$ 200",
+    spaces: "—"
+  },
+  { id: "Consulta na Biblioteca das Respostas",
+    name: "Consulta na Biblioteca das Respostas",
+    description: "Você pode fazer um teste de Investigação com bônus de +5 para receber uma informação sobre um assunto qualquer à sua escolha. A CD varia conforme a complexidade do assunto (veja a perícia Conhecimento). A informação recebida é escolhida pelo mestre.",
+    origin: "Uma visita a Vectora",
+    price: "T$ 250",
+    spaces: "—"
+  },
+  { id: "Festa na Dança de Marah",
+    name: "Festa na Dança de Marah",
+    description: "Festejar nessa taverna deixa você extremamente amável. Uma vez até o fim desta aventura (ou por um mês), você pode gastar uma ação padrão para melhorar em um passo a categoria de atitude de um NPC com o qual esteja interagindo.",
+    origin: "Uma visita a Vectora",
+    price: "T$ 600",
+    spaces: "—"
+  },
+  { id: "Noite no Teatro",
+    name: "Noite no Teatro",
+    description: "Além de um ótimo entretenimento, assistir a uma peça é uma aula de como modelar expressões, falas e trejeitos. Role 1d4; você recebe o resultado dessa rolagem em d4 de auxílio. Até o fim da aventura, quando faz um teste de perícia baseada em Carisma, você pode gastar 1d4 e adicionar o resultado como bônus no teste (cumulativo com bônus de outros itens).",
+    origin: "Uma visita a Vectora",
+    price: "T$ 300",
+    spaces: "—"
+  },
+  { id: "Rito da Troca Vital",
+    name: "Rito da Troca Vital",
+    description: "A dahllan oferece um ritual no qual o praticante oferece parte de seu vigor ao solo e este lhe devolve energia espiritual. Há duas modalidades: T$ 600 menor e T$ 1.500 maior. Na primeira, o personagem perde 2d4 PV e ganha 1d4+2 PM permanentemente. Na segunda, perde 2d8 PV e ganha 2d4+4 PM.",
+    origin: "Uma visita a Vectora",
+    price: "T$ 600 ou T$ 1.500",
+    spaces: "—"
+  },
+  { id: "Treinar Criatura",
+    name: "Treinar Criatura",
+    description: "Tibbo treina um parceiro animal ou monstro que o personagem possua e ensina um truque novo a ele. A criatura passa a fornecer o bônus de um tipo de parceiro iniciante, escolhido entre ajudante, combatente, fortão, guardião ou perseguidor, além de seus bônus normais. Uma mesma criatura só pode ser treinada uma vez por Tibbo.",
+    origin: "Uma visita a Vectora",
+    price: "T$ 3.000",
+    spaces: "—"
+  },
+  { id: "Leitura na Ampulheta",
+    name: "Leitura na Ampulheta",
+    description: "Você procura um livro de um assunto que lhe interesse entre Conhecimento, Guerra, Misticismo, Nobreza ou Religião. Role 1d4. Em um resultado 1, o tempo passa mais rápido para você; você não consegue terminar o livro e ainda perde sua próxima ação de exploração. Em um resultado 2, o tempo passa em sua velocidade normal; você lê um pouco do livro, quando então se cansa e vai fazer outra coisa (não recebe nenhum benefício, mas também não perde nada). Por fim, em um resultado 3 ou 4, o tempo passa mais devagar para você, permitindo que você termine o livro e receba um bônus permanente de +1 na perícia escolhida (não cumulativo).",
+    origin: "Uma visita a Vectora",
+    price: "T$ 300",
+    spaces: "—"
+  },
+  { id: "Clarividência",
+    name: "Clarividência",
+    description: "Por alguns tibares, Vessara pode ver seu futuro. Role 1d10–3. Se o resultado for positivo, seu futuro é otimista. Escolha uma cena até o fim da aventura (ou do mês). Nessa cena, você recebe o número rolado em d6 de auxílio e, sempre que fizer um teste de perícia, pode gastar até 2d6 desses dados e adicionar o resultado deles como bônus no teste. Quando definir a cena, você deve descrever a previsão que Vessara fez e usar os dados de auxílio para tentar torná-la realidade. Se o resultado for negativo, seu futuro é pessimista; o mestre define qual cena será e poderá usar os dados como penalidade em seus testes. Por fim, se o resultado for 0, Vessara não conseguiu ver seu futuro — a adivinhação é uma arte misteriosa, que nem sempre funciona.",
+    origin: "Uma visita a Vectora",
+    price: "T$ 150",
+    spaces: "—"
+  },
+  { id: "Viagem Rápida",
+    name: "Viagem Rápida",
+    description: "Por uma taxa, Harrun Vol prepara uma das portas de sua loja para levar os personagens a qualquer lugar em Arton ou em um reino divino que não esteja protegido por magia.",
+    origin: "Uma visita a Vectora",
+    price: "T$ 800",
+    spaces: "—"
+  },
+  { id: "Cirurgia de Aprimoramento",
+    name: "Cirurgia de Aprimoramento",
+    description: "Golens (e outros construtos) podem ser aprimorados por Lyasis. Você recebe +2 em uma perícia à sua escolha, mas perde 2 PV permanentemente. Você pode fazer mais de uma cirurgia de aprimoramento, mas apenas para perícias diferentes.",
+    origin: "Uma visita a Vectora",
+    price: "T$ 1.000",
+    spaces: "—"
+  },
+  { id: "Autoforja.",
+    name: "Autoforja",
+    description: "Você pode alugar a autoforja para reduzir o tempo de fabricação de um item para poucas horas (em termos de regras, a ação de exploração que você já gastou para visitar a Oficina). Você ainda deve passar no teste de perícia e gastar a matéria-prima - o único benefício da autoforja é reduzir o tempo de fabricação. A autoforja só pode ser usada uma vez por visita à Vectora — ela quebra após o uso e demora para ser consertada.",
+    origin: "Uma visita a Vectora",
+    price: "T$ 1/10 do preço do item",
+    spaces: "—"
+  },
+  { id: "Noite no Vapor & Café",
+    name: "Noite no Vapor & Café",
+    description: "Você passa a noite conversando com outros inventores e tomando bebidas energéticas. No dia seguinte, acorda com uma ideia genial na cabeça, mas um pouco menos saudável do que era antes… Você pode fabricar uma engenhoca (e apenas uma) que, quando ativada, além de seu efeito normal, gera o efeito de uma magia de 1º círculo. Porém, perde permanentemente 1 PV e 1 PM.",
+    origin: "Uma visita a Vectora",
+    price: "T$ 200",
+    spaces: "—"
+  },
+  { id: "Noite de Prazeres.",
+    name: "Noite de Prazeres",
+    description: "Na Véu Escarlate, o “amor” está à venda. Algumas horas de carícias lascivas fornecem 2d6 PM temporários.",
+    origin: "Uma visita a Vectora",
+    price: "T$ 150",
+    spaces: "—"
+  },
+  //#endregion
+
+
+
+
+
   // Tormenta20 - Jogo do Ano
   { id: "Hospedagem (Comum)",
     name: "Hospedagem (Comum)",

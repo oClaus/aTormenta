@@ -10,6 +10,7 @@ export interface Partner {
   // NOVO — preenchido apenas quando category === "especifico"
   // Ex: "Vilão derrotado na campanha 'Galhos que Nunca Soltam'"
   specificSource?: string;
+  archetype?: string;
 
   // Benefícios por nível
   benefits: {

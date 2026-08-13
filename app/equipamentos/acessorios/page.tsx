@@ -110,8 +110,7 @@ const SpecificAccessoryCard = ({ weapon }: { weapon: SpecificAccessory }) => {
             Preço: {weapon.price}
           </span>
           <span className={`font-display inline-block px-2.5 py-1 bg-[rgb(var(--bg-inset-rgb))] border border-amber-900/20 shadow-sm rounded text-[10px] font-bold uppercase tracking-widest flex items-center gap-1.5 ${sizeColorClass}`}>
-            <span className="inline-block w-1.5 h-1.5 rounded-full bg-current opacity-70"></span>
-            {weapon.size}
+          {weapon.size}
           </span>
         </div>
       </div>

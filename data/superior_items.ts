@@ -232,6 +232,48 @@ export const materialPrices: MaterialPriceRow[] = [
 
 export const improvements: Improvement[] = [
 
+  //#region Uma visita a Vectora
+  { id: "Bolsos Internos", 
+    name: "Bolsos Internos", 
+    effect: "+2 espaços de carga", 
+    category: ["Vestuário"], 
+    description: "O item aumenta sua capacidade de carga em 2 espaços (ele continua ocupando seu espaço).", 
+    origin: "Uma visita a Vectora" 
+  },
+  { id: "Tarimbado", 
+    name: "Tarimbado", 
+    effect: "+1 em uma perícia", 
+    category: ["Ferramenta", "Vestuário", "Aventura"], 
+    description: "O item já foi usado, “amaciado” e aprovado. Ele fornece +1 em uma perícia (determinada quando o item é comprado). Esse bônus só é aplicado se o item estiver sendo empunhado ou vestido, mas é cumulativo com quaisquer bônus fornecidos pelo item. Por exemplo, é possível comprar uma mochila de aventureiro tarimbada que forneça +1 em Iniciativa, ou uma capa pesada aprimorada e tarimbada que forneça +3 em Fortitude.", 
+    origin: "Uma visita a Vectora" 
+  },
+  { id: "Reforjado.", 
+    name: "Reforjado", 
+    effect: "Força inimigo a rolar um ataque", 
+    category: ["Armadura", "Escudo"], 
+    description: "O item já viu inúmeros embates e provou ser capaz de resistir a todo tipo de golpe. Uma vez por cena, você pode forçar um inimigo a rolar novamente um teste de ataque recém-feito contra você. Pré-requisito: uma melhoria qualquer.", 
+    origin: "Uma visita a Vectora" 
+  },
+  { id: "Bênção da Guerra.", 
+    name: "Bênção da Guerra", 
+    effect: "+2 em teste de ataque e dano, -2 vontade", 
+    category: ["Arma"], 
+    description: "A arma fornece +2 em testes de ataque e rolagens de dano, mas impõe uma penalidade de –2 em Vontade. Pré-requisito: cruel.", 
+    origin: "Uma visita a Vectora" 
+  },
+  { id: "Eletrificada", 
+    name: "Eletrificada", 
+    effect: "+1d6 de dano de eletricidade", 
+    category: ["Arma"], 
+    description: "A arma causa +1d6 de dano de eletricidade, mas o torna vulnerável a esse mesmo elemento. Pré-requisitos: certeira e precisa.", 
+    origin: "Uma visita a Vectora" 
+  },
+  //#endregion
+
+
+
+
+
   //#region Duelo de Dragões
   { id: "Tesoura", 
     name: "Tesoura", 
@@ -241,6 +283,10 @@ export const improvements: Improvement[] = [
     origin: "Duelo de Dragões"
    },
   //#endregion
+
+
+
+
 
   //#region Tormenta20 - Jogo do Ano
   { id: "certeira", 

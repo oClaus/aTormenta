@@ -55,6 +55,18 @@ export const enchantments: Enchantment[] = [
 ];
 
 export const accessories: SpecificAccessory[] = [
+
+  //#region Uma visita a Vectora
+  { id: "Figurino Teatral",
+    name: "Figurino Teatral",
+    description: "Esta roupa encantada muda de aparência conforme o que você está tentando fazer. Se você for treinado em Atuação e Enganação, uma vez por cena ela fornece +5 em um teste de perícia qualquer.",
+    price: "T$ 3.600",
+    size: "Menor",
+    origin: "Uma visita a Vectora"
+  },
+  //#endregion
+
+
   // Dragão Brasil - 200
   { id: "Amuleto do Servo",
     name: "Amuleto do Servo",

@@ -67,6 +67,14 @@ const PartnerCard = ({ partner }: { partner: Partner }) => {
             </span>
           )}
         </div>
+        {/* Tipo (arquétipo) — tag simples, sem hex-badge, logo abaixo dos benefícios */}
+        {partner.archetype && (
+          <div className="mt-4 flex justify-left">
+            <span className="font-display inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-amber-900/5 text-[10px] font-bold uppercase tracking-widest text-amber-950/55 border border-amber-900/15">
+              <span className="text-amber-950/35">◆</span> {partner.archetype}
+            </span>
+          </div>
+        )}
         <p className="text-sm text-amber-950/70 italic font-serif mt-1 font-medium">{partner.description}</p>
         {isSpecific && partner.specificSource && (
           <p className="mt-2 text-[11px] font-display font-bold uppercase tracking-widest text-red-800/70 flex items-center gap-1">
@@ -113,7 +121,26 @@ const PartnerCard = ({ partner }: { partner: Partner }) => {
 export default function ParceirosPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [categoryFilter, setCategoryFilter] = useState<"todos" | PartnerCategory>("todos");
+  const [typeFilter, setTypeFilter] = useState<string>("todos");
+  const [originFilter, setOriginFilter] = useState<string>("todos");
   const [isIntroOpen, setIsIntroOpen] = useState(false);
+
+  // Lista de arquétipos disponíveis (arquétipos "puros" usam o próprio nome,
+  // parceiros específicos usam o archetype herdado), em ordem alfabética
+  const availableTypes = useMemo(() => {
+    const types = new Set<string>();
+    partners.forEach((p) => {
+      if (p.archetype) types.add(p.archetype);
+    });
+    return Array.from(types).sort((a, b) => a.localeCompare(b, "pt-BR"));
+  }, []);
+
+  // Lista de origens disponíveis, em ordem alfabética
+  const availableOrigins = useMemo(() => {
+    const origins = new Set<string>();
+    partners.forEach((p) => origins.add(p.origin));
+    return Array.from(origins).sort((a, b) => a.localeCompare(b, "pt-BR"));
+  }, []);
 
   const filteredPartners = useMemo(() => {
     let filtered = partners;
@@ -124,6 +151,16 @@ export default function ParceirosPage() {
       filtered = filtered.filter(partner => partner.category === categoryFilter);
     }
 
+    // Filtrar por Tipo (arquétipo — próprio ou herdado)
+    if (typeFilter !== "todos") {
+      filtered = filtered.filter(partner => partner.archetype === typeFilter);
+    }
+
+    // Filtrar por Origem
+    if (originFilter !== "todos") {
+      filtered = filtered.filter(partner => partner.origin === originFilter);
+    }
+
     // Filtrar por Busca (Nome, Descrição, Benefícios)
     if (lowerCaseSearch) {
       filtered = filtered.filter(partner =>
@@ -131,6 +168,7 @@ export default function ParceirosPage() {
         partner.origin.toLowerCase().includes(lowerCaseSearch) ||
         partner.description.toLowerCase().includes(lowerCaseSearch) ||
         (partner.specificSource?.toLowerCase().includes(lowerCaseSearch) ?? false) ||
+        (partner.archetype?.toLowerCase().includes(lowerCaseSearch) ?? false) ||
         partner.benefits.iniciante.toLowerCase().includes(lowerCaseSearch) ||
         partner.benefits.veterano.toLowerCase().includes(lowerCaseSearch) ||
         partner.benefits.mestre.toLowerCase().includes(lowerCaseSearch)
@@ -139,7 +177,7 @@ export default function ParceirosPage() {
 
     // Ordenação Alfabética
     return filtered.sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
-  }, [searchTerm, categoryFilter]);
+  }, [searchTerm, categoryFilter, typeFilter, originFilter]);
 
   return (
     <div className="min-h-screen bg-[rgb(var(--bg-rgb))] text-amber-950 font-serif selection:bg-amber-800 selection:text-amber-50 relative overflow-x-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[rgb(var(--bg-rgb))] to-[rgb(var(--bg-edge-rgb))]">
@@ -251,6 +289,13 @@ export default function ParceirosPage() {
                 <p className="font-medium italic border-l-4 border-red-800 pl-4 py-2 bg-[rgb(var(--bg-card-rgb))]/50 rounded-r">Com esta variante, parceiros podem se ferir e morrer. Sempre que um personagem sofre dano, deve rolar um dado para cada parceiro. Com um resultado “1”, o parceiro fica ferido. Por si só, isso não tem efeito em jogo. Porém, caso o jogador role um novo 1 para um parceiro que já esteja ferido, esse parceiro morre. O dado rolado depende do poder do parceiro: d4 para iniciantes, d6 para veteranos e d8 para mestres. Esta variante coloca sobre o jogador a decisão de continuar ou não usando um parceiro ferido — o personagem abre mão da ajuda para não arriscar o amigo? Recomendamos esta variante apenas para parceiros circunstanciais, não aqueles recebidos por habilidades de classe.</p>
               </section>
 
+              <section className="border-t-2 border-amber-900/20 pt-8">
+                <h1 className="font-display text-2xl md:text-3xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/10 pb-2">
+                  Comprar Parceiros (Uma visita a Vectora)
+                </h1>
+                <p className="font-medium">A seguir estão algumas das criaturas à venda no Empório das Garras. Qualquer personagem pode comprar criaturas de nível iniciante, mas apenas personagens treinados em Adestramento podem comprar criaturas de nível veterano ou mestre — são “bichinhos” que precisam de cuidados avançados e Tibbo os venderá apenas para quem puder cuidar deles. Todas as criaturas contam como parceiros e seguem todas as regras descritas em Tormenta20, p. 260 (incluindo o limite de parceiros). T$ 600 (parceiro iniciante), T$ 3.000 (veterano) e T$ 15.000 (mestre).</p>
+              </section>
+
             </div>
           </div>
         </div>
@@ -282,8 +327,8 @@ export default function ParceirosPage() {
           </div>
         </div>
 
-        {/* Filtro de Categoria */}
-        <div className="mb-12 flex flex-wrap gap-2">
+        {/* Filtros: Categoria, Tipo (arquétipo) e Origem */}
+        <div className="mb-12 flex flex-wrap items-center gap-3">
           {(["todos", "arquetipo", "especifico"] as const).map((option) => {
             const active = categoryFilter === option;
             const label = option === "todos" ? "Todos" : formatPartnerCategory(option);
@@ -301,6 +346,33 @@ export default function ParceirosPage() {
               </button>
             );
           })}
+
+          {/* Divisor sutil entre categoria e os selects de tipo/origem */}
+          <span className="h-6 w-px bg-amber-900/20 mx-1 hidden sm:block" />
+
+          {/* Select de Tipo (arquétipo) */}
+          <select
+            value={typeFilter}
+            onChange={(e) => setTypeFilter(e.target.value)}
+            className="font-display text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full border-2 bg-[rgb(var(--bg-card-rgb))] border-amber-900/20 text-amber-950/70 hover:border-red-800/40 focus:outline-none focus:border-red-800/50 transition-all cursor-pointer"
+          >
+            <option value="todos">Todos os Tipos</option>
+            {availableTypes.map((type) => (
+              <option key={type} value={type}>{type}</option>
+            ))}
+          </select>
+
+          {/* Select de Origem */}
+          <select
+            value={originFilter}
+            onChange={(e) => setOriginFilter(e.target.value)}
+            className="font-display text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full border-2 bg-[rgb(var(--bg-card-rgb))] border-amber-900/20 text-amber-950/70 hover:border-red-800/40 focus:outline-none focus:border-red-800/50 transition-all cursor-pointer"
+          >
+            <option value="todos">Todas as Origens</option>
+            {availableOrigins.map((origin) => (
+              <option key={origin} value={origin}>{formatOrigin(origin)}</option>
+            ))}
+          </select>
         </div>
 
         {/* Grid de Parceiros */}

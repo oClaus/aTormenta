@@ -9,6 +9,7 @@ export type ItemCategory =
   "Vestuário" | 
   "Ferramenta" | 
   "Munição" | 
+  "Aventura" |
   "Qualquer";
 
 export type MaterialType = 

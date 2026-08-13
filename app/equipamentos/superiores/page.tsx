@@ -74,6 +74,7 @@ const ImprovementTable = ({ allImprovements }: { allImprovements: Improvement[] 
     "Armadura",
     "Escudo",
     "Esotérico",
+    "Aventura",
     "Vestuário",
     "Ferramenta",
     "Munição",

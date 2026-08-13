@@ -1,7 +1,37 @@
 import { Partner } from "@/types/partner";
-//#region Tormenta20 - Jogo do Ano
-//#endregion
+
 export const partners: Partner[] = [
+
+  //#region Uma visita a Vectora
+  { id: "Coruja Conselheira",
+    name: "Coruja Conselheira",
+    archetype: "Ajudante",
+    category: "especifico",
+    description: "Uma coruja sábia que voa ao redor de você piando dicas úteis. A coruja conselheira é um parceiro ajudante que fornece o benefício a seguir. No início de cada cena, a coruja fornece um número de dados de auxílio. Sempre que for realizar um teste de perícia, você pode gastar um ou mais desses dados e adicionar o resultado deles como bônus no teste.",
+    origin: "Uma visita a Vectora",
+    benefits: {
+      iniciante: "Você recebe 1d4.",
+      veterano: "Você recebe 2d4.",
+      mestre: "Você recebe 3d6."
+    }
+  },
+  { id: "Glop de Guarda",
+    name: "Glop de Guarda",
+    archetype: "Guardião",
+    category: "especifico",
+    description: "Este pingo verde fica na sua frente, absorvendo ataques contra você. O glop de guarda é um parceiro guardião que fornece os benefícios a seguir:",
+    origin: "Uma visita a Vectora",
+    benefits: {
+      iniciante: "Você recebe redução de dano 1.",
+      veterano: "Muda para redução de dano 2 e, sempre que uma criatura adjacente a você atacá-lo, ela sofre 1d6 pontos de dano de ácido.",
+      mestre: "Muda para redução de dano 3 e 2d6 pontos de dano de ácido. Além disso, quando sofre dano, você pode fazer o glop absorvê-lo. Você sofre apenas metade do dano, mas o glop se divide em vários glopinhos e não pode mais ajudá-lo até a próxima cena, quando cresce de volta ao seu tamanho normal."
+    }
+  },
+  //#endregion
+
+
+
+
 
   //#region Monster Chefe
   { id: "Dranniko",
@@ -26,10 +56,16 @@ export const partners: Partner[] = [
   },
   //#endregion
 
+
+
+
+
+
   //#region Tormenta20 - Jogo do Ano
   { id: "atirador",
     name: "Atirador",
     category: "arquetipo",
+    archetype: "Atirador",
     description: "Um arqueiro, besteiro ou outro combatente à distância.",
     origin: "Tormenta20 - Jogo do Ano",
     benefits: {

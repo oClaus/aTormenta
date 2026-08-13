@@ -246,6 +246,10 @@ export const alchemy: Alchemy[] = [
   },
   //#endregion
 
+
+
+
+
   //#region Ameaças de Arton
   { id: "Bálsamo de Drogadora",
     name: "Bálsamo de Drogadora",
@@ -385,7 +389,11 @@ export const alchemy: Alchemy[] = [
   },
   //#endregion
 
-  // Dragão Brasil - 200
+
+
+
+
+  //#region Dragão Brasil - 200
   { id: "Escama Companheira",
     name: "Escama Companheira",
     type: "Preparados",
@@ -402,8 +410,13 @@ export const alchemy: Alchemy[] = [
     price: "T$ 6.000",
     spaces: "0,5",
   },
+  //#endregion
 
-  // Dragão Brasil - 228
+
+
+
+
+  //#region Dragão Brasil - 228
   { id: "Bomba de Tinta",
     name: "Bomba de Tinta",
     type: "Preparados",
@@ -412,8 +425,62 @@ export const alchemy: Alchemy[] = [
     price: "T$ 35",
     spaces: "0,5",
   },
+  //#endregion
 
 
+
+
+
+  //#region Uma visita a Vectora
+  { id: "Cabelo de Fada",
+    name: "Cabelo de Fada",
+    type: "Catalisadores",
+    description: "Diminui o custo da magia em –1d4 PM e permite usar aprimoramentos para os quais você não cumpre os pré-requisitos.",
+    origin: "Uma visita a Vectora",
+    price: "T$ 600",
+    spaces: "0,5",
+  },
+  { id: "Cinzas de Pergaminho Ancestral",
+    name: "Cinzas de Pergaminho Ancestral",
+    type: "Catalisadores",
+    description: "Guarda ecos de magias esquecidas. Permite lançar uma segunda magia como uma ação livre.",
+    origin: "Uma visita a Vectora",
+    price: "T$ 600",
+    spaces: "0,5",
+  },
+  { id: "Fragmento de Mana Condensada",
+    name: "Fragmento de Mana Condensada",
+    type: "Catalisadores",
+    description: "Brilha como um pequeno sol. Fornece 5 pontos de mana para usar em aprimoramentos; esses PM podem ultrapassar o seu limite.",
+    origin: "Uma visita a Vectora",
+    price: "T$ 900",
+    spaces: "0,5",
+  },
+  { id: "Nuvem Engarrafada",
+    name: "Nuvem Engarrafada",
+    type: "Catalisadores",
+    description: "Fornece deslocamento de voo de 12m por 1d4 rodadas.",
+    origin: "Uma visita a Vectora",
+    price: "T$ 300",
+    spaces: "0,5",
+  },
+  { id: "Pó de Estrela Cadente",
+    name: "Pó de Estrela Cadente",
+    type: "Catalisadores",
+    description: "Extremamente raro e caro, traz o poder do éter para suas magias. Fornece +2 na CD da magia, além de aumentar todos os dados dela em um passo e todos os efeitos numéricos variáveis em +1 por dado.",
+    origin: "Uma visita a Vectora",
+    price: "T$ 1.200",
+    spaces: "0,5",
+  },
+  { id: "Mapa Planar",
+    name: "Mapa Planar",
+    type: "Catalisadores",
+    description: "Este pedaço de pergaminho rasgado mostra caminhos entre Arton e outros planos de existência. Olhar para essas rotas enquanto lança uma magia de convocação aumenta a CD para resistir a ela em +2 e todos os seus efeitos numéricos variáveis em +1 por dado.",
+    origin: "Uma visita a Vectora",
+    price: "T$ 300",
+    spaces: "0,5",
+  },
+  //#endregion
 
 
   {
