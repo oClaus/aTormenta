@@ -1,6 +1,10 @@
 import { Gear } from "@/types/gear";
 //#region Tormenta20 - Jogo do Ano
 //#endregion
+
+
+
+
 export const clothing: Gear[] = [
 
   //#region Uma visita a Vectora

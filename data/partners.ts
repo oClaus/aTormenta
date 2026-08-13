@@ -186,6 +186,10 @@ export const partners: Partner[] = [
   },
   //#endregion
 
+
+
+
+  
   //#region Ameaças de Arton
   { id: "Hiena",
     name: "Hiena (Perseguidor)",
@@ -379,6 +383,10 @@ export const partners: Partner[] = [
   },
   //#endregion
   
+
+
+
+
   //#region Dragão Brasil
   // Dragão Brasil - 204
   { id: "Aberrante",
@@ -425,6 +433,68 @@ export const partners: Partner[] = [
   veterano: "-",
   mestre: "-",
   },
+  },
+
+  // Dragão Brasil - 229
+  { id: "Arius Gorgonius Dubitatius",
+    name: "Arius Gorgonius Dubitatius",
+    archetype: "Especial",
+    category: "especifico",
+    description: "Um minotauro erudito e devoto de Tanna-Toh que rejeitou o caminho militar de sua poderosa família para buscar o conhecimento. Embora inseguro em sua postura, sua eloquência e dedicação intelectual o tornam um conselheiro e companheiro de inestimável valor acadêmico.",
+    origin: "Dragão Brasil - 229",
+    benefits: {
+      iniciante: "Você recebe +2 em Conhecimento, Nobreza, Misticismo e Religião.",
+      veterano: "O bônus muda para +3 e também se aplica a testes de resistência.",
+      mestre: "O bônus muda para +4 e também se aplica a rolagens de dano."
+    }
+  },
+  { id: "Ayla",
+    name: "Ayla, A Fada Mais Honesta de Arton",
+    description: "Aylarianna Purpúrea, ou apenas Ayla, é uma fada esperta que usa sua aparência inofensiva para vender maravilhas alquímicas — algumas eficazes, outras de procedência e efeito bastante duvidosos. Após ser cobrada por um cliente insatisfeito, culpou sua misteriosa \"irmã gêmea\" e agora busca expandir o Empório Purpúrea, uma organização de vendas embasada em um modelo de negócio muito parecido com um esquema de pirâmide.",
+    origin: "Dragão Brasil - 229",
+    category: "especifico",
+    archetype: "Especial",
+    benefits: {
+      iniciante: "Você recebe +2 em Enganação e Ladinagem. Além disso, uma vez por aventura, pode receber um preparado alquímico de até T$ 150.",
+      veterano: "Como acima, mas o bônus muda para +3 e você também pode receber uma poção de até T$ 300.",
+      mestre: "Como acima, mas o bônus muda para +4 e o custo para lançar suas magias de ilusão diminui em –1 PM (cumulativa com outras reduções). Além disso, quando comprar ou vender preparados alquímicos e poções, você muda o preço em 20% a seu favor. Se tiver acesso aos itens do encarte “O Empório Purpúrea é…” da Coleção Arton, você muda o preço deles em 30% a seu favor."
+    }
+  },
+  { id: "Ignis",
+    name: "Ignis, PALADINO DE THYATIS E FUNDADOR DA ORDEM DA REDENÇÃO",
+    description: "Um golem de metal forjado em fogo pelo inventor Austerion Victtus. Apesar de ter despertado inicialmente sob a influência serena de Marah, o fogo em seu interior o conectou às chamas eternas de Thyatis. Ignis aceitou seu destino como um paladino da ressurreição, devotando sua existência mecânica a redimir os mortais e conceder-lhes uma segunda chance.",
+    origin: "Dragão Brasil - 229",
+    category: "especifico",
+    archetype: "Especial",
+    benefits: {
+      iniciante: "Você recebe +2 na Defesa, testes de resistência e redução de dano.",
+      veterano: "Como acima, mas o bônus muda para +3.",
+      mestre: "Como acima, mas o bônus muda para +5, exceto o bônus em RD, que muda para +10. Além disso, um aliado adjacente a você também recebe esses benefícios."
+    }
+  },
+  { id: "Kiki",
+    name: "Kiki, a Medusa Barda",
+    description: "Kir’zanaath Odello, mais conhecida como Kiki, é uma medusa disfarçada que viaja como barda em busca de histórias e fama. Traumatizada pelo sequestro misterioso de sua mãe e por ter sido aprisionada em um navio pirata, ela foi criada em uma taverna. Lá, tornou-se uma excelente cozinheira e investigadora sagaz, embora ainda carregue o peso da insegurança sobre sua natureza monstruosa.",
+    origin: "Dragão Brasil - 229",
+    category: "especifico",
+    archetype: "Especial",
+    benefits: {
+      iniciante: "Você recebe +2 em Atuação, Investigação e Ofício (cozinheiro).",
+      veterano: "Como acima, mas o bônus muda para +3 e você pode substituir testes de Percepção e Intuição por testes de Investigação.",
+      mestre: "Como acima, mas o bônus muda para +4 e você pode usar a habilidade Inspiração como um bardo de mesmo nível."
+    }
+  },
+  { id: "Rexthor",
+    name: "Rexthor, o Campeão do Abismo",
+    description: "Um guerreiro brutal capturado nos Ermos Púrpuras por magos de Wynlla para servir como gladiador. Submetido a experimentos arcanos e forçado a lutar pela sobrevivência, escapou da letal arena do Abismo graças a um acordo misterioso. Hoje livre, ele luta com ferocidade e lealdade incontestáveis, guiado por uma fé inabalável no acaso, nas Deusas da Sorte e no Caos.",
+    origin: "Dragão Brasil - 229",
+    category: "especifico",
+    archetype: "Especial",
+    benefits: {
+      iniciante: "Você recebe +2 em Luta e uma vez por rodada, você recebe +1d8 em uma rolagem de dano.",
+      veterano: "Como acima, mas o bônus muda para +3 e também se aplica a Furtividade e Percepção.",
+      mestre: "Como acima, mas o bônus muda para +4, você nunca fica surpreendido e não pode ser flanqueado."
+    }
   },
   //#endregion
 

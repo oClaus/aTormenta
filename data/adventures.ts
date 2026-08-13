@@ -6610,4 +6610,307 @@ export const adventures: Adventure[] = [
     }
   ]
 },
+{ id: "O Olho do Basilisco",
+  name: "O Olho do Basilisco",
+  theme: "Fantasia e Caçada a Monstros",
+  image: "/aventuras/o-olho-do-basilisco.png",
+  summary: "Para salvar uma aventureira transformada em estátua viva, os heróis são contratados pela Guilda dos Caça-Monstros para rastrear e derrotar um basilisco ancestral nas temíveis Montanhas Sanguinárias.",
+  sections: [
+    {
+      type: "text",
+      content: "Arton é um mundo cheio de perigos e, ainda assim, as Montanhas Sanguinárias revelam-se um dos locais mais desafiadores existentes. Seus picos colossais estendem-se rasgando o céu como garras de monstros imensos. Toda sorte de feras existe aqui e as crias de Megalokk prosperam, atingindo tamanhos nunca vistos."
+    },
+    {
+      type: "text",
+      content: "Mais do que monstros, as Sanguinárias são também o lar daqueles que os caçam. Sob as sombras das costelas de alguma besta colossal, a cidade de Trag’Merah é procurada por diversos aventureiros em busca de fama ou de suprimentos. A Guilda Mon’han auxilia fornecendo todo tipo de apoio para os intrépidos que partem para sua próxima expedição."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "RESUMO DA AVENTURA"
+    },
+    {
+      type: "text",
+      content: "O Olho do Basilisco é uma breve jornada, uma aventura curta pensada para uma sessão única, mas que pode ser inserida em uma campanha maior. É ideal para um grupo de quatro personagens de 8º nível em Tormenta20."
+    },
+    {
+      type: "text",
+      content: "Quando uma estranha estátua de pedra causa confusão, os aventureiros percebem não se tratar apenas de um construto perdido. Investigando o “monstro”, percebem que este já foi uma pessoa, mas foi transformado em pedra por uma medusa monstruosa. Agora, precisa da ajuda dos personagens para encontrar algo que reverta seu corpo para o estado original."
+    },
+    {
+      type: "text",
+      content: "O líder da Guilda dos Caça-Monstros se interessa pelo caso e diz que o olho de um basilisco ancestral seria capaz de reverter a petrificação. Os aventureiros terão de rastrear o monstro pelas Sanguinárias, evitando perigos, encontrando aliados inusitados e enfrentando outras feras e cultistas. Finalmente, terão de usar estratégia para enfrentar a criatura... antes que se tornem sua próxima refeição!"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "CENA 1: ALTAS CONFUSÕES EM TRAG’MERAH"
+    },
+    {
+      type: "text",
+      content: "A imensa ossada sempre à vista no horizonte em Trag’Merah lembra a todos a escala das ameaças que podem ser encontradas nas Montanhas Sanguinárias. Lojas, barracas e ambulantes de todos os tipos oferecem produtos para aqueles prontos a sair em expedição. Passando pelo meio da rua, um grupo coberto de sangue e vísceras comemora, trazendo em sua carroça a cabeçorra de alguma fera abatida."
+    },
+    {
+      type: "text",
+      content: "Tudo em Trag’Merah é relacionado à caça de monstros. Servindo de sede da Guilda Mon’han, a cidade se tornou um dos poucos pontos capazes de permitir descanso e reposição de recursos nas Sanguinárias. Mesmo sendo o lugar de mais fácil acesso à cadeia montanhosa, os personagens estão aqui já como aventureiros experientes."
+    },
+    {
+      type: "text",
+      content: "No meio da relativa normalidade, uma confusão começa. Barracas são derrubadas e pessoas são empurradas por uma estranha figura cinzenta. À primeira vista, parece uma estátua de uma mulher carregando um escudo e espada, mas ela está se movendo apesar de suas feições rochosas permanecerem imutáveis."
+    },
+    {
+      type: "text",
+      content: "Os personagens são os mais próximos do incidente e, se não agirem logo, mais inocentes estarão em perigo."
+    },
+    {
+      type: "text",
+      content: "CRIATURAS. Defensor Rochoso Desperto (NPCs e Criaturas)."
+    },
+    {
+      type: "text",
+      content: "No início do turno de cada personagem, peça um teste de Intuição (CD 20). Aqueles que passarem notam que o defensor rochoso está atacando por medo e confusão. Acalmá-lo requer vencer em dois testes de Diplomacia opostos à Vontade do construto. A magia Tranquilidade, lançada com o aprimoramento que afeta criaturas, também encerra o combate."
+    },
+    {
+      type: "text",
+      content: "Caso não notem as intenções do defensor e tentem resolver através do combate, ele cessa seu ataque quando chega à metade dos PV e foge. Se for acalmado ou encontrado após escapar da luta, fica muito claro que não se trata de um autômato sem mente."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "CENA 2: CORAÇÃO EMPEDRADO"
+    },
+    {
+      type: "text",
+      content: "Menos confuso, o defensor rochoso não ataca, mostrando-se capaz de pensamentos complexos. Apesar de não conseguir se comunicar verbalmente, ele faz o possível, apontando para coisas e meneando a cabeça. Se questionado, responde assentindo ou negando."
+    },
+    {
+      type: "text",
+      content: "Compreendê-lo requer um teste de Intuição (CD 20). De forma rudimentar, ele consegue expressar que algo o transformou em pedra. Um teste de Investigação (CD 20) revela que a pessoa que era o defensor rochoso passou por Trag’Merah com seu grupo há alguns meses. Os aventureiros que estavam com ele nunca retornaram. Nenhum método é capaz de desfazer a petrificação ou metamorfose."
+    },
+    {
+      type: "text",
+      content: "Para descobrir mais sobre a expedição, será necessário um teste estendido de Diplomacia, Intuição ou outra perícia apropriada (CD 25, três sucessos). Falha total representa apenas que as informações coletadas não eram relevantes, e é necessário recomeçar o teste estendido. Entretanto, passando nos testes, os aventureiros descobrem que o grupo que o acompanhava estava buscando um monstro misterioso: uma euríade."
+    },
+    {
+      type: "text",
+      content: "Informações sobre o que são euríades são raras. Um teste de Conhecimento, Misticismo, Religião ou Sobrevivência (CD 26) revela histórias sobre um grupo de medusas devotadas a Megalokk que se transformaram em versões mais monstruosas e violentas. Um resultado 29 ou maior também revela que as mais antigas entre elas são capazes não apenas de petrificar os inimigos, mas de transformá-los em defensores rochosos sob seu controle."
+    },
+    {
+      type: "text",
+      content: "Essa informação pode fazer com que o grupo se pergunte se o defensor à sua frente está agindo por vontade própria. Qualquer teste mostra que o construto está sim livre de qualquer controle."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "CENA 3: CONTRATO DE CAÇA"
+    },
+    {
+      type: "text",
+      content: "Após conseguirem as informações, uma pessoa se aproxima dos personagens. É um kliren de idade avançada e olhar carregado de muita experiência."
+    },
+    {
+      type: "text",
+      content: "“Soube que estão procurando informações para ajudar sua amiga de pedra aí. Triste ver uma pessoa em um estado desses, mas é impressionante que uma criatura tenha o poder de não só transformar carne em pedra, mas animá-la.” Ele solta uma risada alta e confiante. “Os monstros nunca deixam de nos surpreender.”"
+    },
+    {
+      type: "text",
+      content: "O kliren falando com os personagens é ninguém menos que o fundador da Guilda dos Caça-Monstros, Mon’han Galldo’han. Interessado nos acontecimentos, convida os aventureiros para uma conversa na sede de sua organização."
+    },
+    {
+      type: "text",
+      content: "“Vocês precisam de algo potente para desfazer o olhar da euríade matriarca. E eu tenho justamente a presa certa para isso!”"
+    },
+    {
+      type: "text",
+      content: "Mon’han mostra o esboço de um lagarto com vários pares de patas. Olhando mais atentamente para a escala das pinturas, percebe-se que é uma criatura enorme. As notas ao redor falam sobre olhar petrificante e veneno."
+    },
+    {
+      type: "text",
+      content: "“Um basilisco ancestral, maior e mais violento que os que existem nos ermos de Arton. Se o derrotarem e trouxerem o olho dele, será possível reverter a transformação de sua amiga empedrada.”"
+    },
+    {
+      type: "text",
+      content: "Nas anotações há também um mapa, marcando a posição da criatura em um ponto distante da cordilheira."
+    },
+    {
+      type: "text",
+      content: "“Esse maldito tem devorado vários outros seres, incluindo membros da Guilda! Se derem um jeito no bicho e trouxerem sua cabeça, ou outra prova de que o derrotaram, terão nossa admiração... e uma bela recompensa, claro.”"
+    },
+    {
+      type: "text",
+      content: "Além de salvar o defensor rochoso, a caçada vale o prêmio de T$ 5000, uma verdadeira fortuna. Pelo que Mon’han disse, também há uma oportunidade de juntar-se à Guilda dos Caça-Monstros, ou, para aqueles que já fazem parte da organização, de ter mais reconhecimento entre seus pares."
+    },
+    {
+      type: "text",
+      content: "Ao pegarem o contrato de caça deste basilisco ancestral, todos devem preparar-se para uma longa jornada pelas Sanguinárias. E o próprio terreno pode se mostrar a maior ameaça."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "CENA 4: RASTROS"
+    },
+    {
+      type: "text",
+      content: "Apesar de haver diversas trilhas por entre as montanhas, não há forma de seguir apenas por elas. Ao longe, o horizonte se move, revelando a passagem de uma criatura tão colossal que se confunde com a própria cordilheira. Por sorte, a fera está tão distante que não há chance nem mesmo de ela percebê-los. Após algum tempo, ela some, camuflando-se novamente na paisagem."
+    },
+    {
+      type: "text",
+      content: "As Montanhas Sanguinárias são impiedosas e rastrear a localização do basilisco ancestral requer vários dias de investigação cuidadosa. Isso é um teste estendido de Sobrevivência (CD 25, cinco sucessos)."
+    },
+    {
+      type: "text",
+      content: "Cada rolagem representa um dia de viagem, e apenas um dos personagens faz o teste, enquanto o resto do grupo só pode ajudá-lo, fazendo-o com perícias adequadas. Uma falha causa perda de 2d6 pontos de vida para todos, devido às agruras do caminho. Em caso de falha total, ficam completamente perdidos, tendo que recomeçar o teste estendido, mas longe da cidade de Trag’Merah."
+    },
+    {
+      type: "text",
+      content: "A cada teste, role 1d6 para definir um dos encontros abaixo, ou escolha um que seja apropriado."
+    },
+    {
+      type: "text",
+      content: "1) Escalada Perigosa: Não há outra forma de avançar que não seja para cima. O trecho exige que escalem o paredão rochoso ou encontrem formas criativas de ascender pela encosta. Os personagens devem passar em três testes de Atletismo (CD 25). Falhar representa uma queda que causa 3d6 pontos de dano de impacto, +3d6 por sucesso obtido anteriormente. Personagens com deslocamento de voo podem ignorar os testes, mas, se quiserem levar outras pessoas consigo, devem se atentar aos limites de carga (Tormenta20, p. 141). Se for necessário fazer várias viagens, devem gastar os PM apropriados (considere que subir ou descer requer deslocar-se por 10 metros para cima)."
+    },
+    {
+      type: "text",
+      content: "2) Ninho Vazio: Mais à frente no caminho, vocês avistam um ninho enorme de algum monstro local. Talvez haja algo de valor em seu interior. Dentro do ninho, vocês encontram 1d4 ovos de grifo. Se cuidados adequadamente, eles eclodem, fornecendo um grifo parceiro montaria iniciante. Caso este encontro seja rolado novamente, o grupo é atacado por dois grifos adultos (Tormenta20, p. 292). Devolver os ovos faz os grifos partirem sem combate."
+    },
+    {
+      type: "text",
+      content: "3) Revoada de Serpes: O som de dezenas de asas batendo agressivamente se faz audível mesmo a muitos metros de distância. Uma nuvem de répteis alados se aproxima, cheia de fúria e fome. Uma revoada de serpes (NPCs e Criaturas) chegará na área em que os personagens estão em 1d4 rodadas, havendo tempo para que eles se preparem, seja para lutarem ou se esconderem."
+    },
+    {
+      type: "text",
+      content: "4) Peregrinação Druida: Vocês avistam ao longe duas figuras humanoides e um grande felino. Ambas as mulheres, uma elfa e a outra humana, vestem peles e exibem no corpo pintas semelhantes às do jaguar que as acompanha. Uma delas acena para que se aproximem. Estas druidisas servem a Mãe Jaguar (um aspecto de Allihanna) e prestam ajuda a viajantes. Quando o grupo acampar, o descanso contará como uma condição de descanso superior. Se tiverem enfrentado algum monstro antes desse encontro, elas curam 4d8+4 pontos de vida de cada personagem."
+    },
+    {
+      type: "text",
+      content: "5) Kemooz Pensativo: Em algum ponto do dia, vocês notam o que parece uma grande estátua sentada com o queixo apoiado sobre um punho. Ao se aproximarem, percebem que parece uma pessoa coberta de tatuagens arcanas. Se qareens fizerem parte do grupo, sentem uma estranha familiaridade com ela. Este kemooz, um gênio da terra, está sentado aqui há séculos admirando a paisagem que ajudou a construir. Entretanto, ele não se move, pois não possui um amo há muito tempo. Passar em três testes de Diplomacia opostos à Vontade dele (+15) convence o gênio a servir a um dos aventureiros. O kemooz é um parceiro iniciante que fornece o seguinte benefício: uma vez por rodada, você pode criar um cubo de terra de 1,5m de lado em um espaço desocupado a até 9m. O cubo tem RD 5 e 30 PV, e dura até o fim da cena ou até você acumular 4 cubos. Para mais informações, veja Deuses de Arton, p. 304."
+    },
+    {
+      type: "text",
+      content: "6) Rastejante Voraz: O chão começa a tremer e, por um momento, a preocupação sobre um possível deslizamento ou terremoto surge em suas mentes. Entretanto, o que vem de baixo é ainda pior: uma criatura dotada de uma infinidade de patas emerge, pronta a devorar vocês. Uma centopeia-dragão (Tormenta20, p. 287) escava abaixo dos pés dos personagens, tentando engoli-los."
+    },
+    {
+      type: "text",
+      content: "Assim que conseguirem os cinco sucessos, encontram uma trilha deixada pelo monstro. Entretanto, uma outra coisa parece ter se interessado pela jornada dos personagens."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "CENA 5: PRESAS PEÇONHENTAS"
+    },
+    {
+      type: "text",
+      content: "Na última noite antes de chegarem ao local em que o basilisco ancestral se encontra, sombras sinistras movem-se ao redor do acampamento. Uma emboscada começa!"
+    },
+    {
+      type: "text",
+      content: "As figuras ao redor do acampamento são cultistas que sincretizam Megalokk e Sszzaas. Apesar de serem deuses tão distintos – um, selvageria monstruosa; o outro, traição ardilosa –, estes devotos fazem botes com armas envenenadas, inspirados nas presas de bestas peçonhentas."
+    },
+    {
+      type: "text",
+      content: "CRIATURAS. Presas do Grande Basilisco x4 (NPCs e Criaturas)."
+    },
+    {
+      type: "text",
+      content: "Os presas do Grande Basilisco aproximam-se discretamente durante à noite, realizando testes de Furtividade opostos a Percepção dos personagens. O ataque é rápido e virulento, tentando envenenar os aventureiros com seus golpes. Eles também se posicionam de forma a flanquear sempre que possível."
+    },
+    {
+      type: "text",
+      content: "A qualquer momento, os cultistas podem virar-se uns contra os outros, mas, na verdade, os cortes envenenados de suas lâminas os fazem recuperar vida em vez de perdê-la. Além disso, se três deles forem derrotados, o quarto fugirá, ressurgindo no combate contra o basilisco ancestral."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "CENA 6: PREDADOR PREDADO"
+    },
+    {
+      type: "text",
+      content: "Um dos rastros mais exóticos deixado pela passagem do basilisco ancestral são os monstros menores transformados em pedra. Serpes, mantícoras e até mesmo gigantes, eternamente petrificados e destruídos. O aumento na ocorrência dessas estátuas indica claramente a proximidade do refúgio da criatura."
+    },
+    {
+      type: "text",
+      content: "A região em que chegam mais parece um pântano no interior de uma ravina. Por todos os lados, estátuas se espalham, e claramente não foram criadas por artistas mortais. O defensor rochoso toca uma dessas criaturas com seus membros, talvez ponderando a similaridade entre ele e essas vítimas."
+    },
+    {
+      type: "text",
+      content: "É possível simplesmente seguir o rastro do basilisco, pois seu corpanzil não deixa dúvidas de por onde passou. Além disso, um ataque frontal parece a forma mais direta de enfrentá-lo. Caso optem por essa abordagem, devem fazer um teste de Percepção ou Sobrevivência oposto à Furtividade do basilisco ancestral, ou estarão surpreendidos na primeira rodada do combate."
+    },
+    {
+      type: "text",
+      content: "Entretanto, é possível também surpreender o monstro. Primeiro, um personagem deve fazer um teste de Sobrevivência (CD 25) para encontrar o ponto ideal para a emboscada. Segundo, é necessário fazer um teste de Furtividade oposto à Percepção do basilisco ancestral, em que um aventureiro faz o teste e o resto do grupo ajuda. Finalmente, se alguém tiver uma habilidade de classe de armadilha, é possível colocá-las em um determinado ponto antes do confronto."
+    },
+    {
+      type: "text",
+      content: "CRIATURA. Basilisco Ancestral (NPCs e Criaturas)."
+    },
+    {
+      type: "text",
+      content: "O monstro deseja sobreviver a qualquer custo, e, se perder metade de seus PV, tentará fugir para se recuperar. Caso ele escape, é possível fazer uma nova emboscada ou rastreá-lo na região com apenas um teste de Sobrevivência (CD 20)."
+    },
+    {
+      type: "text",
+      content: "Ao derrotarem o basilisco, deverão fazer um teste de Sobrevivência (CD 24) ou Cura (CD 30) para extrair o olho. Se o dado no teste for um 1 natural, o olho é destruído, e o grupo tem apenas mais uma chance com o segundo. Caso passem no teste, também conseguem cortar a cabeça da criatura, que ocupa 20 espaços de carga."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "EPÍLOGO: PEDRA EM CARNE"
+    },
+    {
+      type: "text",
+      content: "O percurso de volta é mais tranquilo, porém vocês têm a incômoda sensação de estarem sendo observados. Voltando a Trag’Merah, as pessoas ficam animadas ao vê-los, especialmente Mon’han. Os aventureiros são recompensados pela caçada e celebrados pelos membros da Guilda dos Caça-Monstros. O olho do basilisco é levado para ser preparado para o ritual que devolverá o defensor rochoso à sua forma original."
+    },
+    {
+      type: "text",
+      content: "No caminho para a cidade, uma figura observa, à distância. Assemelha-se a um centauro, mas a porção inferior de seu corpo é similar a um grande lagarto quadrúpede. Sua metade superior, entretanto, é de uma mulher belíssima, porém com mãos que terminam em garras e cabelos de serpentes venenosas. Apesar da vitória dos heróis, ela sorri com uma boca cheia de presas afiadas."
+    },
+    {
+      type: "text",
+      content: "Assim que o ritual termina, os personagens e o defensor rochoso são levados para um ambiente público. O olho é esmagado sobre a cabeça da estátua viva, despejando um líquido verde. O que era rocha torna-se pele de novo e a aventureira está feliz de poder novamente sentir a brisa e expressar-se plenamente."
+    },
+    {
+      type: "text",
+      content: "Os aventureiros avançam para o 9º nível!"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "NPCS E CRIATURAS"
+    },
+    {
+      type: "text",
+      content: "DEFENSOR ROCHOSO DESPERTO ND 8\nConstruto Médio\nINICIATIVA +8, PERCEPÇÃO +8, visão no escuro\nDEFESA 33, FORT +20, REF +9, VON +15, imunidade a atordoado e petrificado, redução de dano 10\nPONTOS DE VIDA 320\nDESLOCAMENTO 6m (4q)\nCORPO A CORPO Duas pancadas +26 (4d8+19, x3).\nIMOBILIDADE Um defensor rochoso pode permanecer completamente imóvel. Se ele estiver assim, um personagem deve passar num teste de Percepção (CD 35) para perceber que ele é uma criatura e não uma estátua.\nNATUREZA ABASCANTA O defensor tem 50% de chance de ignorar um efeito mágico (como se fosse imune a ele), com exceção da magia Despedaçar.\nPANCADA ATORDOANTE Uma criatura que sofra dano da pancada do defensor rochoso desperto fica atordoada (Fort CD 26 evita). Uma criatura só pode ser atordoada por esta habilidade uma vez por cena.\nFor 6, Des 0, Con 3, Int —, Sab 0, Car –5\nTESOURO Nenhum.\nPARCEIRO O defensor rochoso desperto é um parceiro guardião veterano."
+    },
+    {
+      type: "text",
+      content: "REVOADA DE SERPES ND 8\nMonstro Enorme\nINICIATIVA +9, PERCEPÇÃO +9, faro, visão no escuro\nDEFESA 33, FORT +15, REF +21, VON +8, imunidade a paralisia\nPONTOS DE VIDA 320\nDESLOCAMENTO 9m (6q), voo 18m (12q)\nCORPO A CORPO Mordida +26 (2d6+12) e ferrão +26 (1d8+12 mais veneno).\nAGARRAR APRIMORADO (LIVRE) Mordida +31.\nVENENO Peçonha concentrada (perde 1d12 pontos de vida por rodada durante 3 rodadas, Fortitude CD 26 reduz a duração para uma rodada).\nFor 7, Des 1, Con 6, Int –2, Sab 1, Car –1\nTESOURO 8d4 doses de peçonha concentrada (CD 23 para extrair)."
+    },
+    {
+      type: "text",
+      content: "PRESA DO GRANDE BASILISCO ND 3\nHumanoide (humano) Médio\nINICIATIVA +5, PERCEPÇÃO +5\nDEFESA 20, FORT +9, REF +4, VON +14\nPONTOS DE VIDA 21\nDESLOCAMENTO 9m (6q)\nCORPO A CORPO Machado de batalha +10 (1d8+5 mais veneno).\nÓDIO SÓRDIDO O presa do Grande Basilisco recebe +2 em testes de ataque e +1d6 em rolagens de dano contra criaturas flanqueadas ou sob efeito de alguma condição.\nVITALIDADE PEÇONHENTA Quando sofre perda de pontos de vida por causa de um efeito de veneno, em vez disso o presa recupera 1d12 PV.\nVENENO Peçonha concentrada (perde 1d12 pontos de vida durante 3 rodadas, Fort CD 19 reduz a duração para 1 rodada).\nFor 3, Des 2, Con 3, Int 1, Sab 2, Car –1\nPERÍCIAS Furtividade +3, Intimidação +2.\nTESOURO Padrão."
+    },
+    {
+      type: "text",
+      content: "BASILISCO ANCESTRAL ND 9\nMonstro Enorme\nINICIATIVA +10, PERCEPÇÃO +9, visão no escuro\nDEFESA 33, FORT +21, REF +14, VON +10, imunidade a metamorfose, redução de dano 10, resistência a veneno +10\nPONTOS DE VIDA 370\nDESLOCAMENTO 9m (6q), natação 9m (6q)\nCORPO A CORPO Mordida +27 (4d8+25 mais veneno).\nOLHAR PETRIFICANTE No início de seu turno, cada personagem em alcance curto do basilisco deve fazer um teste de Reflexos (CD 28). Se passar, desvia o olhar. Se falhar, fica lento. Se já estiver lento, fica petrificado permanentemente. Um personagem pode fechar os olhos como uma reação para ficar imune a esta habilidade, mas sofrerá os efeitos de estar cego por uma rodada. Efeitos que removem paralisia revertem a petrificação. Metamorfose.\nSOPRO Todas as criaturas em um cone de 9m perdem 3d12 pontos de vida e ficam envenenadas, perdendo 3d12 PV, por 3 rodadas (Fort CD 28 reduz a perda de vida à metade e evita a condição). Recarga (movimento).\nVENENO Peçonha potente (perde 2d12 pontos de vida por rodada durante 3 rodadas, Fort CD 28 reduz a duração para uma rodada).\nFor 6, Des 2, Con 5, Int –4, Sab 3, Car 0\nPERÍCIAS Furtividade +10.\nTESOURO 2d4 doses de peçonha potente (CD 24 para extrair), couro de basilisco (CD 24 para extrair, conta como T$ 2.000 como matéria-prima para fabricar uma armadura superior)."
+    }
+  ]
+},
 ];

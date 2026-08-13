@@ -2,7 +2,7 @@ import { Threat } from "@/types/threat";
 
 export const threats: Threat[] = [
 
-  //#region Masmorras
+  //#region Uma Visita a Vectora
   { id: "Vigilante",
     name: "Vigilante",
     description: "Guardas empunhando espadas de adamante e vestindo cotas de mitral com túnicas ostentando o brasão de Vectora (uma nuvem “chovendo” moedas de ouro). Além de equipamento extraordinário, possuem postura exemplar, sempre atentos e altivos. São de todas as raças imagináveis: humanos, hynne, anões, osteon, sulfure, tabrachis...",
