@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import * as XLSX from "xlsx";
+import jsPDF from "jspdf";
 import Link from "next/link";
 import { Threat } from "@/types/threat";
 import { Condition } from "@/types/condition";
@@ -94,7 +95,7 @@ const blankThreat = (): Threat => ({
 
 // ─── Importar XLSX ────────────────────────────────────────────────────────────
 
-const parseXlsxThreats = (file: File): Promise<Threat[]> =>
+const parseXlsxThreats = (file: File): Promise<{ threats: Threat[]; quantities: Map<string, number> }> =>
   new Promise((resolve, reject) => {
     const reader = new FileReader();
     reader.onload = (e) => {
@@ -104,10 +105,18 @@ const parseXlsxThreats = (file: File): Promise<Threat[]> =>
         const rows: any[] = XLSX.utils.sheet_to_json(ws, { range: 3, defval: "" });
         const splitPipe = (v: any) =>
           String(v || "").split("|").map((s: string) => s.trim()).filter(Boolean);
+        const quantities = new Map<string, number>();
         const threats: Threat[] = rows
           .filter((r) => (r["name *"] || r["name"] || "").toString().trim())
-          .map((r) => ({
-            id: String(r["id"] || uid()).trim() || uid(),
+          .map((r) => {
+            const id = String(r["id"] || uid()).trim() || uid();
+            const qtyRaw = r["quantidade"];
+            if (qtyRaw !== undefined && qtyRaw !== "") {
+              const qty = Math.max(1, parseInt(qtyRaw) || 1);
+              quantities.set(id, qty);
+            }
+            return {
+            id,
             name: String(r["name *"] || r["name"] || "").trim(),
             tipo: String(r["tipo"] || "Monstro").trim(),
             tamanho: String(r["tamanho"] || "Médio").trim(),
@@ -137,8 +146,9 @@ const parseXlsxThreats = (file: File): Promise<Threat[]> =>
             equipamentos: splitPipe(r["equipamentos"]),
             tesouro: String(r["tesouro"] || "Nenhum").trim(),
             origin: String(r["origin"] || "Planilha").trim(),
-          }));
-        resolve(threats);
+            };
+          });
+        resolve({ threats, quantities });
       } catch (err) {
         reject(err);
       }
@@ -909,17 +919,236 @@ export default function CombatePage() {
     XLSX.writeFile(wb, "criaturas_tormenta.xlsx");
   };
 
+  // Consolida as criaturas atualmente montadas para o combate (biblioteca/importadas com
+  // quantidade > 0 + personalizadas do assistente), uma entrada por ameaça com sua quantidade total.
+  const getCombatListEntries = (): { threat: Threat; quantity: number }[] => {
+    const fullLibrary = [...allThreats, ...importedThreats];
+    const map = new Map<string, { threat: Threat; quantity: number }>();
+
+    threatQuantities.forEach((qty, id) => {
+      if (qty <= 0) return;
+      const t = fullLibrary.find((x) => x.id === id);
+      if (!t) return;
+      map.set(id, { threat: t, quantity: qty });
+    });
+
+    customMonsters.forEach((cm) => {
+      const existing = map.get(cm.threat.id);
+      if (existing) existing.quantity += 1;
+      else map.set(cm.threat.id, { threat: cm.threat, quantity: 1 });
+    });
+
+    return Array.from(map.values());
+  };
+
+  // ── Exportar o encontro atual (as criaturas já selecionadas para o combate) em Excel ──
+  // Mesmo modelo usado na importação, com uma coluna extra "quantidade" — pode ser
+  // reimportado depois em "Importar Planilha" para recarregar o encontro inteiro.
+  const exportEncounterXlsx = () => {
+    const entries = getCombatListEntries();
+    if (!entries.length) return;
+
+    const header = [
+      "id", "name *", "tipo", "tamanho", "papel", "nd", "quantidade",
+      "pv *", "pm", "defesa *", "iniciativa", "percepcao", "deslocamento", "resistenciaDano", "tesouro",
+      "fort *", "ref *", "von *", "description",
+      "FOR", "DES", "CON", "INT", "SAB", "CAR",
+      "ataqueCorpoACorpo", "ataqueDistancia",
+      "habilidades", "pericias", "equipamentos", "origin",
+    ];
+
+    const rows = entries.map(({ threat: t, quantity }) => ({
+      "id": t.id,
+      "name *": t.name,
+      "tipo": t.tipo,
+      "tamanho": t.tamanho,
+      "papel": t.papel ?? "",
+      "nd": t.nd,
+      "quantidade": quantity,
+      "pv *": t.pv,
+      "pm": t.pm ?? 0,
+      "defesa *": t.defesa,
+      "iniciativa": t.iniciativa,
+      "percepcao": t.percepcao,
+      "deslocamento": t.deslocamento,
+      "resistenciaDano": t.resistenciaDano ?? "",
+      "tesouro": t.tesouro,
+      "fort *": t.fort,
+      "ref *": t.ref,
+      "von *": t.von,
+      "description": t.description,
+      "FOR": String(t.for),
+      "DES": String(t.des),
+      "CON": String(t.con),
+      "INT": String(t.int),
+      "SAB": String(t.sab),
+      "CAR": String(t.car),
+      "ataqueCorpoACorpo": t.ataqueCorpoACorpo ?? "",
+      "ataqueDistancia": t.ataqueDistancia ?? "",
+      "habilidades": t.habilidades.join("|"),
+      "pericias": t.pericias.join("|"),
+      "equipamentos": t.equipamentos.join("|"),
+      "origin": t.origin ?? "Compêndio",
+    }));
+
+    const decorRows = [
+      ["\u2694  TORMENTA 20 — Encontro Salvo  ☠"],
+      ["Reimporte este arquivo em \"Importar Planilha\" para recarregar o encontro, já com as quantidades."],
+      [],
+    ];
+    const wsData = [
+      ...decorRows,
+      header,
+      ...rows.map((r) => header.map((k) => (r as any)[k])),
+    ];
+    const ws = XLSX.utils.aoa_to_sheet(wsData);
+    const colWidths = [14, 22, 18, 12, 14, 8, 10, 8, 8, 8, 8, 8, 8, 14, 16, 16, 8, 8, 8, 30, 8, 8, 8, 8, 8, 8, 24, 24, 40, 28, 24, 16];
+    ws["!cols"] = colWidths.map((w) => ({ wch: w }));
+
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "Encontro");
+    const dateSuffix = new Date().toISOString().slice(0, 10);
+    XLSX.writeFile(wb, `encontro_tormenta_${dateSuffix}.xlsx`);
+  };
+
+  // ── Exportar o encontro atual em PDF, como uma "ficha" com o bloco de estatísticas de cada criatura ──
+  const exportEncounterPdf = () => {
+    const entries = getCombatListEntries();
+    if (!entries.length) return;
+
+    const doc = new jsPDF({ unit: "mm", format: "a4" });
+    const pageWidth = doc.internal.pageSize.getWidth();
+    const pageHeight = doc.internal.pageSize.getHeight();
+    const margin = 15;
+    const contentWidth = pageWidth - margin * 2;
+    let y = margin;
+
+    const RED: [number, number, number] = [153, 27, 27];
+    const DARK: [number, number, number] = [35, 25, 15];
+    const GRAY: [number, number, number] = [95, 85, 75];
+    const LINE: [number, number, number] = [222, 200, 175];
+
+    const ensureSpace = (needed: number) => {
+      if (y + needed > pageHeight - margin) {
+        doc.addPage();
+        y = margin;
+      }
+    };
+
+    const addWrapped = (text: string, x: number, maxWidth: number, size: number, color: [number, number, number], bold = false) => {
+      doc.setFont("helvetica", bold ? "bold" : "normal");
+      doc.setFontSize(size);
+      doc.setTextColor(...color);
+      const wrapped: string[] = doc.splitTextToSize(text, maxWidth);
+      ensureSpace(wrapped.length * (size * 0.42) + 1);
+      doc.text(wrapped, x, y);
+      y += wrapped.length * (size * 0.42) + 1;
+    };
+
+    // ── Capa ──
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(24);
+    doc.setTextColor(...RED);
+    doc.text("Ficha de Encontro", margin, y + 3);
+    y += 12;
+
+    const totalQty = entries.reduce((sum, e) => sum + e.quantity, 0);
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(9.5);
+    doc.setTextColor(...GRAY);
+    doc.text(
+      `Tormenta 20  ·  ${entries.length} tipo${entries.length > 1 ? "s" : ""} de criatura  ·  ${totalQty} criatura${totalQty > 1 ? "s" : ""} no total  ·  Gerado em ${new Date().toLocaleDateString("pt-BR")}`,
+      margin, y
+    );
+    y += 8;
+    doc.setDrawColor(...RED);
+    doc.setLineWidth(0.7);
+    doc.line(margin, y, pageWidth - margin, y);
+    y += 10;
+
+    // ── Um bloco por criatura ──
+    entries.forEach(({ threat: t, quantity }) => {
+      ensureSpace(26);
+
+      doc.setFont("helvetica", "bold");
+      doc.setFontSize(15);
+      doc.setTextColor(...RED);
+      doc.text(`${t.name}${quantity > 1 ? `   ×${quantity}` : ""}`, margin, y);
+      y += 5.5;
+
+      doc.setFont("helvetica", "italic");
+      doc.setFontSize(9.5);
+      doc.setTextColor(...GRAY);
+      doc.text(`${t.tipo} ${t.tamanho}  ·  ${t.papel || "—"}  ·  ND ${t.nd}`, margin, y);
+      y += 6;
+
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(9);
+      doc.setTextColor(...DARK);
+      const statsLine = [
+        `Defesa ${t.defesa}`,
+        `PV ${t.pv}`,
+        t.pm ? `PM ${t.pm}` : null,
+        `Iniciativa ${t.iniciativa >= 0 ? "+" : ""}${t.iniciativa}`,
+        `Percepção ${t.percepcao}`,
+        `Desl. ${t.deslocamento}`,
+      ].filter(Boolean).join("   ·   ");
+      doc.text(statsLine, margin, y);
+      y += 5;
+
+      const savesLine = `Fort +${t.fort}   Ref +${t.ref}   Von +${t.von}` + (t.resistenciaDano ? `   ·   ${t.resistenciaDano}` : "");
+      doc.text(savesLine, margin, y);
+      y += 5;
+
+      doc.text(`FOR ${t.for}   DES ${t.des}   CON ${t.con}   INT ${t.int}   SAB ${t.sab}   CAR ${t.car}`, margin, y);
+      y += 6.5;
+
+      if (t.ataqueCorpoACorpo) addWrapped(`Corpo a Corpo: ${t.ataqueCorpoACorpo}`, margin, contentWidth, 8.5, DARK);
+      if (t.ataqueDistancia) addWrapped(`À Distância: ${t.ataqueDistancia}`, margin, contentWidth, 8.5, DARK);
+      if (t.ataqueCorpoACorpo || t.ataqueDistancia) y += 1;
+
+      if (t.habilidades.length) {
+        ensureSpace(6);
+        doc.setFont("helvetica", "bold");
+        doc.setFontSize(8.5);
+        doc.setTextColor(...RED);
+        doc.text("Habilidades", margin, y);
+        y += 4.5;
+        t.habilidades.forEach((h) => addWrapped(`•  ${h}`, margin + 1.5, contentWidth - 1.5, 8.5, DARK));
+        y += 1;
+      }
+
+      if (t.pericias.length) addWrapped(`Perícias: ${t.pericias.join(", ")}`, margin, contentWidth, 8.5, DARK);
+      if (t.equipamentos.length) addWrapped(`Equipamentos: ${t.equipamentos.join(", ")}`, margin, contentWidth, 8.5, DARK);
+      if (t.tesouro && t.tesouro !== "Nenhum") addWrapped(`Tesouro: ${t.tesouro}`, margin, contentWidth, 8.5, DARK);
+      if (t.description) addWrapped(t.description, margin, contentWidth, 8.5, GRAY);
+
+      y += 3;
+      ensureSpace(4);
+      doc.setDrawColor(...LINE);
+      doc.setLineWidth(0.3);
+      doc.line(margin, y, pageWidth - margin, y);
+      y += 8;
+    });
+
+    const dateSuffix = new Date().toISOString().slice(0, 10);
+    doc.save(`ficha_encontro_${dateSuffix}.pdf`);
+  };
+
   const handleXlsxImport = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
     setImportError("");
     try {
-      const threats = await parseXlsxThreats(file);
+      const { threats, quantities } = await parseXlsxThreats(file);
       if (!threats.length) { setImportError("Nenhuma criatura encontrada na planilha."); return; }
       setImportedThreats(threats);
       setThreatQuantities((prev) => {
         const next = new Map(prev);
-        threats.forEach((t) => { if (!next.has(t.id)) next.set(t.id, 1); });
+        threats.forEach((t) => {
+          if (quantities.has(t.id)) next.set(t.id, quantities.get(t.id)!);
+          else if (!next.has(t.id)) next.set(t.id, 1);
+        });
         return next;
       });
     } catch {
@@ -1154,6 +1383,24 @@ export default function CombatePage() {
                       <span>📋</span> Participantes do Combate
                     </h3>
                     <p className="text-[11px] text-white/40 mt-1">{playersAdded.length} jogador{playersAdded.length !== 1 ? "es" : ""} · {totalThreatQuantity + customMonsters.length} criatura{(totalThreatQuantity + customMonsters.length) !== 1 ? "s" : ""}</p>
+                    {(totalThreatQuantity > 0 || customMonsters.length > 0) && (
+                      <div className="flex gap-2 mt-3">
+                        <button
+                          onClick={exportEncounterXlsx}
+                          title="Baixar as criaturas deste encontro em Excel (reimportável)"
+                          className="flex-1 py-2 flex items-center justify-center gap-1.5 border-2 border-emerald-700/40 text-emerald-500 bg-emerald-700/10 rounded-lg text-[11px] font-bold uppercase tracking-widest hover:bg-emerald-700/20 hover:border-emerald-700/60 transition-all"
+                        >
+                          📊 Excel
+                        </button>
+                        <button
+                          onClick={exportEncounterPdf}
+                          title="Baixar uma ficha em PDF com o bloco de estatísticas de cada criatura"
+                          className="flex-1 py-2 flex items-center justify-center gap-1.5 border-2 border-amber-700/40 text-amber-400 bg-amber-700/10 rounded-lg text-[11px] font-bold uppercase tracking-widest hover:bg-amber-700/20 hover:border-amber-700/60 transition-all"
+                        >
+                          📄 PDF
+                        </button>
+                      </div>
+                    )}
                   </div>
 
                   <div className="overflow-y-auto custom-scrollbar p-4 space-y-2 flex-1">
