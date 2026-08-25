@@ -1,7 +1,33 @@
 import { Power } from "@/types/power";
-//#region Tormenta20 - Jogo do Ano
-//#endregion
+
 export const powersBardo: Power[] = [
+  //#region A Lenda de Ghanor
+  { id: "Artista Versátil",
+    name: "Artista Versátil",
+    description: "Você recebe um poder de outra classe (como um poder de bucaneiro ou um poder de nobre) a sua escolha. Você deve cumprir todos os pré-requisitos do poder escolhido e, para esse efeito, considere que seu nível na classe original do poder é seu nível de bardo –5.",
+    prerequisite: "Int 2, 6° nível de bardo.",
+    origin: "A Lenda de Ghanor"
+  },
+  { id: "Inspiração Célere",
+    name: "Inspiração Célere",
+    description: "Quando você usa Inspiração, o deslocamento das criaturas afetadas aumenta em +3m.",
+    origin: "A Lenda de Ghanor"
+  },
+  { id: "Música: Melidua Encorajadora",
+    name: "Música: Melidua Encorajadora",
+    description: "Criaturas a sua escolha no alcance se tornam imunes a efeitos de medo e recebem 1d6 pontos de vida temporários. Quando usa esta habilidade, você pode gastar mais pontos de mana. Para cada PM extra, o total de PV temporários aumenta em +1d6.",
+    origin: "A Lenda de Ghanor"
+  },
+  { id: "Projetar a Voz",
+    name: "Projetar a Voz",
+    description: "Quando usa uma habilidade de bardo, você pode gastar +2 PM para aumentar seu alcance em um passo (de curto para médio, de médio para longo) ou dobrar sua área de efeito. Se usado em uma magia, este poder conta como um aprimoramento.",
+    origin: "A Lenda de Ghanor"
+  },
+  //#endregion
+
+
+
+
 
   //#region  Tormenta20 - Jogo do Ano
   { id: "Arte Mágica",

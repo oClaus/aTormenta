@@ -1,7 +1,18 @@
 import { Power } from "@/types/power";
-//#region Tormenta20 - Jogo do Ano
-//#endregion
 export const powersCacador: Power[] = [
+  //#region A Lenda de Ghanor
+  { id: "Mestre Armadilheiro",
+    name: "Mestre Armadilheiro",
+    description: "CD de suas armadilhas aumenta em +2. Você pode gastar uma ação completa e 5 PM para preparar duas armadilhas ao mesmo tempo.",
+    prerequisite: "Armadilheiro, dois poderes de armadilha.",
+    origin: "A Lenda de Ghanor"
+  },
+  
+  //#endregion
+
+
+
+
 
   //#region Tormenta20 - Jogo do Ano
   { id: "Ambidestria",

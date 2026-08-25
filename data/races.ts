@@ -1,7 +1,206 @@
 import { Race } from "@/types/race";
 
 export const races: Race[] = [
-  // Tormenta20 - Jogo do Ano
+
+  //#region A Lenda de Ghanor
+  { id: "Aberrante",
+    name: "Aberrante (A Lenda de Ghanor) Ω",
+    origin: "A Lenda de Ghanor",
+    image: "/racas/aberrante.png",
+    description: "“O DEVORADOR DE MUNDOS. O MONSTRO TINHA UMA COURAÇA IMPENETRÁVEL, FEITA DE ROCHA VITRIFICADA. SEU SANGUE ERA UM ÓLEO NEGRO COM PROPRIEDADES MÁGICAS IMPREVISÍVEIS. NADA QUE AS CIVILIZAÇÕES DOS HOMENS POSSUÍAM ERA CAPAZ DE DETER A FERA. INCONTESTADO, O MONSTRO AVANÇOU LIVRE POR PRADARIAS, MONTANHAS E FLORESTAS. TRANSFORMAVA O VIVO E VERDE EM ARIDEZ ESTÉRIL.”\n O Devorador de Mundos foi destruído, mas seu corpo colossal até hoje verte um óleo negro capaz de alterar o corpo de quem o toca. Aberrantes são pessoas que tocaram esse óleo. Os efeitos do sangue mágico sobre cada criatura variam. Algumas sofrem pequenas alterações, enquanto outras são modificadas de forma tão profunda que se tornam irreconhecíveis. \n Aberrantes não são uma raça no sentido tradicional — não possuem cultura nem comunidades próprias. Cada aberrante é um indivíduo singular. Aqueles com alterações discretas geralmente tentam retomar suas vidas ou viver disfarçados em meio a seu antigo povo. Aqueles que sofrem mudanças profundas se escondem nos ermos ou em ruínas, ou passam sua vida na estrada, à margem da civilização. Não é raro que um aberrante se torne um aventureiro, pois este é um caminho que tende a aceitar com mais facilidade indivíduos exóticos como eles.",
+    abilities: [
+      {
+        name: "Mutações",
+        description: "Escolha quatro mutações da lista a seguir. Quando recebe um novo poder de classe, pode trocar este poder por uma mutação. Cada mutação só pode ser escolhida uma vez.",
+        subAbilities: [
+          {
+            name: "Ascético",
+            description: "Você recebe +1 em Sabedoria e +3 PM."
+          },
+          {
+            name: "Couro Rochoso",
+            description: "Você recebe +2 em Defesa."
+          },
+          {
+            name: "Magia Bizarra",
+            description: "Você pode lançar uma magia arcana de 1º círculo a sua escolha (atributo-chave Inteligência ou Carisma). Se aprender novamente esta magia, seu custo diminui em –1 PM."
+          },
+          {
+            name: "Metamorfose",
+            description: "Você pode lançar Disfarce Ilusório (atributo-chave Carisma)."
+          },
+          {
+            name: "Mordida",
+            description: "Você possui uma arma natural de mordida (dano 1d6, crítico x2, perfuração). Uma vez por rodada, quando usa a ação agredir para atacar com outra arma corpo a corpo, pode gastar 1 PM para fazer um ataque extra com a mordida."
+          },
+          {
+            name: "Musculoso",
+            description: "Você recebe +1 em Força e +5 de capacidade de carga."
+          },
+          {
+            name: "Resistente",
+            description: "Você recebe +1 em Constituição e resistência a magia +2."
+          },
+          {
+            name: "Sentidos Aguçados",
+            description: "Você recebe visão no escuro e +2 em Percepção."
+          },
+          {
+            name: "Veloz",
+            description: "Você recebe +1 em Destreza e deslocamento +3m."
+          },
+          {
+            name: "Venenoso",
+            description: "Você recebe resistência a veneno +5 e pode gastar uma ação de movimento e 1 PM para envenenar uma arma que esteja empunhando. A arma causa perda de 1d12 pontos de vida. O veneno dura até você acertar um ataque ou até o fim da cena (o que acontecer primeiro)."
+          }
+        ]
+      }
+    ],
+    attributeModifiers: [
+      { attribute: "car", modifier: -2 },
+      { description: "Mutações podem fornecer bônus adicionais de atributo (+1 em Sabedoria, Força, Constituição ou Destreza, dependendo das escolhas)" }
+    ],
+    longevidade: "Normal",
+    devotos: "Qualquer"
+  },
+  { id: "Anaoghanor",
+    name: "Anão (A Lenda de Ghanor) Ω",
+    origin: "A Lenda de Ghanor",
+    image: "/racas/anaoghanor.png",
+    description: "“O CLÉRIGO NÃO EVITOU UM SORRISO. LERA SOBRE AS DIVERSAS RAÇAS QUE HABITAVAM O MUNDO, COMO OS ANÕES. ANÕES ERAM EXÍMIOS MINERADORES, FERREIROS E CERVEJEIROS. DIZIAM AS HISTÓRIAS QUE ELES VIVIAM NOS SUBTERRÂNEOS, SEMPRE À PROCURA DE RIQUEZAS PARA SACIAR SUA GANÂNCIA INFINITA. MAS OS RELATOS SOBRE CIDADES DE ANÕES ERAM POUCOS E DUVIDOSOS. HÁ MUITO NINGUÉM OUVIA FALAR DE UMA VERDADEIRA COMUNIDADE ANÃ.”\n Habitantes das profundezas, anões são um povo antigo, de tradições tão rígidas quanto o aço que forjam. Exímios ferreiros, mineradores e guerreiros, são reconhecidos pela dedicação com que usam suas ferramentas e pela coragem com que brandem suas armas. \n A marca de um anão é a determinação — ou teimosia, segundo alguns. Este é um povo obstinado e taciturno, que tem o trabalho como pilar de sua cultura. Isso faz com que cada anão leve seu ofício muito a sério. Ao longo das gerações, esta seriedade se expandiu para outros aspectos de suas vidas. A relação dos anões com o trabalho é tão intensa que muitas vezes eles não percebem as consequências de suas ações. A compulsão dos anões por trabalhar, modificar e construir é tamanha que às vezes beira a destruição. Um ditado anão diz que “nenhum túnel é fundo o bastante” e, de fato, regiões inteiras já colapsaram porque, sob a terra, os anões escavavam descontroladamente. No passado, houve povos humanos que consideraram os anões uma praga. Por outro lado, eles são determinados, competentes e corajosos e, uma vez que sua amizade seja conquistada, mostram-se amigos fiéis. \n Anões são baixos e atarracados, mas seus corpos robustos são até mais pesados que os humanos. Anões concentram sua vaidade nos longos cabelos e barbas, que adornam com tranças, anéis e correntes finamente trabalhadas. Anões têm tanta variedade quanto os humanos em termos de tom da pele, cabelos e olhos. \n As cidadelas anãs são construídas nos subterrâneos, distantes de outras raças. Apesar dessa natureza reclusa, existem anões que partem de suas terras. Alguns o fazem por um desejo de aprimorar seu ofício de escolha. Outros, por não se ajustarem aos rígidos costumes de seu povo. Anões aventureiros muitas vezes trilham caminhos marciais, tornando-se soldados ou campeões.",
+    abilities: [
+      {
+        name: "Busca pela Perfeição",
+        description: "Você recebe +2 em Ofício e, se for treinado nesta perícia, pode fabricar itens superiores com uma melhoria (cumulativo com outras habilidades que permitam fabricar itens superiores)."
+      },
+      {
+        name: "Devagar e Sempre",
+        description: "Seu deslocamento é 6m (em vez de 9m). Porém, seu deslocamento não é reduzido por uso de armadura ou excesso de carga."
+      },
+      {
+        name: "Moldado nas Rochas",
+        description: "Você recebe visão no escuro e +1 ponto de vida por nível."
+      }
+    ],
+    attributeModifiers: [
+      { attribute: "con", modifier: 2 },
+      { attribute: "int", modifier: 1 },
+      { attribute: "car", modifier: -1 }
+    ]
+  },
+  { id: "Elfoghanor",
+    name: "Elfo (A Lenda de Ghanor) Ω",
+    origin: "A Lenda de Ghanor",
+    image: "/racas/elfoghanor.png",
+    description: "“O ELFO DESCEU COM UM SALTO ÁGIL. TINHA LONGOS CABELOS CASTANHOS E SOBRANCELHAS ARQUEADAS. CARREGAVA UM ARCO QUASE TÃO ALTO QUANTO ELE MESMO E DUAS ALJAVAS CHEIAS DE FLECHAS.”\n Seres mágicos e ancestrais, elfos possuem uma história rica e antiga, marcada por grandes triunfos... E também por grandes tragédias, que deixaram feridas permanentes em sua sociedade. \n Elfos são esguios e ligeiramente mais baixos e leves que humanos. Seus traços são belos e delicados, e seus rostos possuem ângulos suaves e elegantes, complementados por orelhas longas e pontudas. Elfos possuem uma grande variedade de cores de pele, cabelos e olhos, em tons que lembram as cores da natureza, como as tonalidades das madeiras e das folhas da floresta. \n Tão marcante quanto a aparência de um elfo é o seu espírito. Estes são seres místicos, que possuem uma ligação inata com a natureza. Essa conexão exerceu uma profunda influência na história deste povo, sendo ao mesmo tempo fonte de sua força e de suas fraquezas. Graças à Pedra da Utopia, um poderoso artefato, por muitas gerações os elfos puderam descartar seus sentimentos negativos, usufruindo de uma vida de paz, tranquilidade e harmonia. Agora, com a pedra destruída, os elfos estão reaprendendo, com muita dificuldade, a conviver com o lado mais sombrio de suas almas. \n As cidades élficas se erguem em meio a grandes florestas e são protegidas por uma combinação de natureza e magia. Os elfos possuem uma forma própria de ver o mundo e organizar sua sociedade, o que faz com que outras raças tenham dificuldade em compreendê-los. Esta visão, agora, é confrontada com a necessidade de conviver com emoções outrora ocultas pela Pedra da Utopia. Na busca por se reconectar com seus sentimentos, alguns elfos partem de seus domínios, procurando em outras raças as respostas para seus próprios dilemas espirituais.",
+    abilities: [
+      {
+        name: "Armas da Floresta",
+        description: "Para você, todos os arcos são armas simples, e você recebe +2 em rolagens de dano com estas armas."
+      },
+      {
+        name: "Magia Antiga",
+        description: "Você recebe +1 ponto de mana por nível e usa Sabedoria como atributo-chave de Misticismo e de magias arcanas (em vez de Inteligência)."
+      },
+      {
+        name: "Passo Leve",
+        description: "Você recebe +2 em Furtividade e seu deslocamento é 12m (em vez de 9m)."
+      },
+      {
+        name: "Sentidos Élficos",
+        description: "Você recebe visão na penumbra e +2 em Percepção."
+      },
+      {
+        name: "Sentimentos Conflitantes",
+        description: "Você sofre –5 em Diplomacia e Vontade. Consumir uma dose de turlin anula esta penalidade por uma cena."
+      }
+    ],
+    attributeModifiers: [
+      { attribute: "sab", modifier: 2 },
+      { attribute: "des", modifier: 1 },
+      { attribute: "con", modifier: -1 }
+    ]
+  },
+  { id: "Giganteghanor",
+    name: "Gigante (A Lenda de Ghanor) Ω",
+    origin: "A Lenda de Ghanor",
+    image: "/racas/giganteghanor.png",
+    description: "“SEU VULTO TAPOU A VISÃO DO CLÉRIGO. ERA UM HUMANOIDE, MAS MUITO MAIOR QUE UM HUMANO OU MESMO UM HOBGOBLIN. ENTRE TRÊS E QUATRO METROS DE ALTURA. SEUS OMBROS ERAM LARGOS, MUSCULOSOS, QUASE DESPROPORCIONAIS À CINTURA. O PEITO INCHADO FAZIA A CABEÇORRA PARECER PEQUENA. OS OLHOS DO GIGANTE ERAM PONTINHOS NEGROS NO MEIO DE UMA CONFUSÃO DE CABELOS E BARBA. OS DENTES ARREGANHADOS ERAM SURPREENDENTEMENTE BRANCOS, NUM ESGAR FEROZ. ELE VESTIA TRAPOS — PELES DE VÁRIAS CRIATURAS COSTURADAS DE FORMA TOSCA.”\n Ferozes, incansáveis e fisicamente poderosos, gigantes são limitados apenas por suas próprias mentes simplórias e animalescas. \n Gigantes adultos possuem três metros de altura. Porém, nunca param de crescer ao longo de suas vidas — lendas falam de gigantes anciões tão altos quanto torres. Seus corpos possuem proporções diferentes dos humanos; seus ombros e peito são largos, seus braços são grossos e suas cabeças são proporcionalmente pequenas, marcadas por olhos minúsculos que exprimem uma expressão ingênua diante das complexidades do mundo civilizado, mas se acendem em brilho selvagem frente a um combate. Gigantes normalmente se vestem apenas com peles e brandem galhos e pedras como armas. \n Em contraste com seus corpos impressionantes, a mente de um gigante é extremamente rudimentar. São seres primitivos, que vivem de caça e coleta. Sua sociedade é praticamente inexistente; seres desta raça têm mais em comum com ursos selvagens do que com outros povos humanoides. Gigantes têm muita dificuldade em entender tudo que existe além de seu mundo, desde a tecnologia até a forma como os povos civilizados se organizam. Apesar de todas essas limitações, podem se tornar aliados fiéis para aqueles que tiverem a paciência (e a coragem) de transformá-los em amigos.",
+    abilities: [
+      {
+        name: "Grandão",
+        description: "Seu tamanho é Grande (veja a página 71) e você soma sua Força em seu total de pontos de vida. Você pode usar armas normais ou aumentadas, mas só pode vestir armaduras especialmente feitas para seu tamanho."
+      },
+      {
+        name: "Primitivo",
+        description: "Você sofre –5 em Diplomacia, Intuição e Ofício e em testes de ataque com armas marciais ou exóticas."
+      }
+    ],
+    attributeModifiers: [
+      { attribute: "for", modifier: 3 },
+      { attribute: "con", modifier: 2 },
+      { attribute: "int", modifier: -2 },
+      { attribute: "sab", modifier: -1 },
+      { attribute: "car", modifier: -1 }
+    ]
+  },
+  { id: "Hobgoblinghanor",
+    name: "Hobgoblin (A Lenda de Ghanor) Ω",
+    origin: "A Lenda de Ghanor",
+    image: "/racas/hobgoblinghanor.png",
+    description: "“CRIATURAS HUMANOIDES, MAIS ALTAS QUE QUALQUER ADULTO DA VILA. PELE AMARELADA E COBERTA DE PELOS. ORELHAS ANIMALESCAS E FOCINHOS. PRESAS PROJETANDO-SE DA MANDÍBULA. MAS NÃO ERAM BESTIAIS: MARCHAVAM COM O RIGOR DE VERDADEIROS SOLDADOS, TRAJAVAM ARMADURAS E EMPUNHAVAM LANÇAS. NAS COSTAS, LEVAVAM ESCUDOS, E TINHAM ESPADAS LONGAS E CURVAS NA CINTURA.”\n Humanoides monstruosos e agressivos, hobgoblins viveram por muitas gerações como mercenários, sempre a serviço de algum tipo de senhor ou senhora. Temidos e odiados por seus anos a serviço de Zamir, estes seres agora travam um outro tipo de batalha, para serem aceitos como parte dos povos de Ghanor e dos reinos. \n Hobgoblins são mais altos e robustos que humanos. Sua pele é amarelada, completamente coberta por uma pelagem castanha curta. O rosto, liso e sem pelos, é marcado por um focinho animalesco, orelhas bestiais e presas inferiores à mostra. Suas mãos possuem dedos grossos que terminam em unhas resistentes e afiadas, quase como as garras de um predador. Hobgoblins não têm nenhum senso de moda, trajando roupas simples e funcionais, geralmente de couro ou tecidos grossos. Quando usam algum tipo de adorno, é o símbolo de seu líder ou um troféu conquistado em batalha. \n Por muito tempo, hobgoblins foram vistos como criaturas puramente sádicas e opressoras. Porém, conforme mais hobgoblins convivem com outros povos, percebe-se que há mais neles do que se pode ver à superfície. Embora aqueles que serviam a Zamir e outros tiranos realmente fossem violentos e cruéis, recentemente muitos hobgoblins têm demonstrado que este povo também pode gerar indivíduos corajosos, leais e até heroicos.",
+    abilities: [
+      {
+        name: "Couro Duro",
+        description: "Você recebe redução de dano igual a sua Constituição, limitada por seu nível."
+      },
+      {
+        name: "Dependência de Liderança",
+        description: "Você possui uma necessidade instintiva de seguir uma figura de liderança. Escolha outro personagem (geralmente aquele de maior Carisma) como o líder. Embora não seja forçado a obedecê-lo, você tem a tendência de ouvir os conselhos e opiniões do líder de maneira mais favorável. Você nunca age antes do líder, e sofre –1 em testes de perícia se estiver distante dele (além de alcance médio)."
+      },
+      {
+        name: "Militarista",
+        description: "Você recebe um poder de combate à sua escolha."
+      },
+      {
+        name: "Natureza Bestial",
+        description: "Você recebe visão no escuro e usa Constituição em Intimidação (em vez de Carisma)."
+      }
+    ],
+    attributeModifiers: [
+      { attribute: "for", modifier: 1 },
+      { attribute: "des", modifier: 1 },
+      { attribute: "con", modifier: 1 },
+      { attribute: "car", modifier: -1 }
+    ]
+  },
+  { id: "Meio-Elfoghanor",
+    name: "Meio-Elfo (A Lenda de Ghanor) Ω",
+    origin: "A Lenda de Ghanor",
+    image: "/racas/meio-elfoghanor.png",
+    description: "“SEU ROSTO ESTAVA MAQUIADO COM ARTE, RESSALTANDO O VERDE DE SEUS OLHOS. SEUS CABELOS LOIROS TAMBÉM ERAM QUASE BRANCOS E CONFUNDIAM-SE COM A PELE ALVA. RUFF ACHOU QUE HAVIA ALGO DE INUMANAMENTE BELO NA DUQUESA E LEMBROU-SE DE BELLITZ, O ANJO. MAS A ASCENDÊNCIA DE LUDMILLA REVELOU-SE EM SUAS ORELHAS: ERAM PONTUDAS E COMPRIDAS. HAVIA SANGUE ÉLFICO NAS VEIAS DA DUQUESA”.\n No passado, antes dos elfos tentarem esconder seus sentimentos na Pedra da Utopia, a relação entre este povo e a humanidade era diferente, mais amigável e mais próxima. Desta amizade surgiram os primeiros filhos de humanos e elfos, seres que viriam a ser conhecidos como meio-elfos. \n Mais do que mestiços entre elfos e humanos, meio-elfos são herdeiros de uma linhagem élfica que remonta ao distante passado dessa raça. Vivendo em meio aos seus parentes humanos ou élficos, estes seres não formam um povo à parte. Mesmo hoje, passado tanto tempo desde a época em que estas duas raças conviveram em harmonia, a herança de sangue dos meio-elfos surge de tempos em tempos em famílias compostas apenas por humanos ou elfos. \n Um meio-elfo reúne algumas das características mais marcantes dos humanos e elfos que serviram como seus antepassados. A combinação das raças gerou indivíduos de beleza marcante, dotados de presença e altivez quase divina. Meio-elfos possuem a estatura de humanos, mas a beleza diáfana dos elfos, com suas orelhas pontudas e traços suaves. Como as duas raças de que descendem, meio-elfos exibem uma grande variedade de características físicas, mas tendem às tonalidades e texturas mais comuns aos humanos. \n Meio-elfos possuem personalidade marcante, como se tivessem nascido para o protagonismo. Dos elfos, herdaram os sentidos aguçados e a capacidade de perceber os aspectos místicos do mundo. Como humanos, possuem uma curiosidade sobre o mundo e um ímpeto para a exploração e a conquista, um traço que para muitos pode ser confundido com uma ambição desmedida. Existem poucos meio-elfos nos reinos, mas mesmo aqueles nascidos nas famílias mais humildes e isoladas deixam sua marca no mundo.",
+    abilities: [
+      {
+        name: "Longa Infância",
+        description: "Você escolhe uma origem adicional, recebendo o benefício mas não os itens desta segunda origem."
+      },
+      {
+        name: "Sentidos Ancestrais",
+        description: "Você recebe visão na penumbra e +2 em Intuição e Percepção."
+      }
+    ],
+    attributeModifiers: [
+      { attribute: "car", modifier: 2 },
+      { description: "Escolha +1 em outro atributo" }
+    ]
+  },
+  //#endregion
+
+
+
+  
+
+   //#region Tormenta20 - Jogo do Ano
   { id: "Humano",
     name: "Humano",
     origin: "tormenta20 - jogo do ano",
@@ -530,6 +729,7 @@ export const races: Race[] = [
       { attribute: "int", modifier: -1 }
     ]
   },
+  //#endregion
 
   // Dragão Brasil - 220
   { id: "Vampiro",

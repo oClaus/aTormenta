@@ -4,6 +4,8 @@ import { title } from "process";
 //#endregion
 export const classes: GameClass[] = [
 
+  
+
     //#region Tormenta20 - Jogo do Ano
     { id: "Arcanista",
   name: "Arcanista",

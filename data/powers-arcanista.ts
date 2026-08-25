@@ -7,24 +7,24 @@ export const powersArcanista: Power[] = [
   { id: "Arcano de Batalha",
     name: "Arcano de Batalha",
     description: "Quando lança uma magia, você soma seu atributo-chave na rolagem de dano.",
-    origin: "tormenta20 - jogo do ano"
+    origin: "Tormenta20 - jogo do ano"
   },
   { id: "Aumento de Atributo",
     name: "Aumento de Atributo",
     description: "Você recebe +1 em um atributo. Você pode escolher este poder várias vezes, mas apenas uma vez por patamar para um mesmo atributo.",
-    origin: "tormenta20 - jogo do ano"
+    origin: "Tormenta20 - jogo do ano"
   },
   { id: "Fluxo de Mana",
     name: "Fluxo de Mana",
     description: "Você pode manter dois efeitos sustentados ativos simultaneamente com apenas uma ação livre, pagando o custo de cada efeito separadamente.",
     prerequisite: "10º nível de arcanista.",
-    origin: "tormenta20 - jogo do ano"
+    origin: "Tormenta20 - jogo do ano"
   },
   { id: "Foco Vital",
     name: "Foco Vital",
     description: "Se você estiver segurando seu foco e sofrer dano que o levaria a 0 PV ou menos, você fica com 1 PV e o foco perde PV igual ao valor excedente ou até ser destruído (se o foco for destruído, você sofre o dano excedente).",
     prerequisite: "Bruxo.",
-    origin: "tormenta20 - jogo do ano"
+    origin: "Tormenta20 - jogo do ano"
   },
   { id: "Mestre em Escola",
     name: "Mestre em Escola",

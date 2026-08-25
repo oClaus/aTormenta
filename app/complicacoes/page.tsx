@@ -3,7 +3,9 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { complications } from "@/data/complicacoes";
+import { ageComplications, ruleSections } from "@/data/rules";
 import { Condition } from "@/types/condition";
+import { AgeComplication } from "@/types/rule";
 import ThemeToggle from "@/components/ThemeToggle";
 
 function CornerOrnament({ className = "" }: { className?: string }) {
@@ -62,8 +64,8 @@ const formatTextWithBreaks = (text: string) => {
   });
 };
 
-// --- Componente: Seção de Regras (Acordeão Padronizado) ---
-const RulesSection = () => {
+// --- Componente: Seção de Regras Gerais (Acordeão Padronizado) ---
+const GeneralRulesSection = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -123,7 +125,47 @@ const RulesSection = () => {
   );
 };
 
-// --- Componente: Card de Complicação ---
+// --- Componente: Seção de Regras de Idade (Acordeão) ---
+// Reaproveita o conteúdo completo de "idades-variadas" definido em data/rules.ts,
+// para garantir que o texto fique idêntico ao da página de Regras (nada resumido).
+const AgeRulesSection = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const idadesVariadasSection = ruleSections.find((s) => s.id === "idades-variadas");
+
+  return (
+    <div className="mb-12 w-full">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full flex items-center justify-between p-6 bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/30 rounded-t-xl hover:border-red-800/40 transition-all group shadow-sm"
+      >
+        <div className="flex items-center gap-3">
+          <PageGlyph className="text-red-800/70 shrink-0 mt-1" />
+          <div className="text-left">
+            <h2 className="font-display text-xl font-bold text-amber-950 group-hover:text-red-800 transition-colors uppercase tracking-wide">
+              Idades Variadas (Opcional — Heróis de Arton)
+            </h2>
+            <p className="text-sm text-amber-950/70 italic font-bold">
+              Clique para expandir as faixas etárias, seus modificadores e o peso da idade.
+            </p>
+          </div>
+        </div>
+        <span className={`text-red-800 text-2xl transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
+          ▼
+        </span>
+      </button>
+
+      <div className={`overflow-hidden transition-all duration-500 ease-in-out border-x-2 border-b-2 border-amber-900/30 rounded-b-xl bg-[rgb(var(--bg-inset-rgb))] ${isOpen ? 'max-h-[20000px] opacity-100' : 'max-h-0 opacity-0 border-transparent'}`}>
+        <div className="p-5 md:p-10 font-serif text-amber-950/85 text-base md:text-lg text-left md:text-justify leading-relaxed">
+          <div className="markdown-content">
+            {idadesVariadasSection?.content}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// --- Componente: Card de Complicação Geral ---
 const ComplicationCard = ({ item }: { item: Condition }) => {
   // Verifica se é comportamental procurando o símbolo na descrição
   const isBehavioral = item.description.includes("†");
@@ -167,10 +209,45 @@ const ComplicationCard = ({ item }: { item: Condition }) => {
   );
 };
 
+// --- Componente: Card de Complicação de Idade ---
+const AgeComplicationCard = ({ item }: { item: AgeComplication }) => {
+  return (
+    <div className="card-grain group relative p-6 rounded-xl bg-[rgb(var(--bg-card-rgb))] border border-amber-900/20 hover:border-[rgb(var(--accent-rgb))]/55 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(var(--accent-rgb),0.18)] flex flex-col h-full w-full">
+
+      <CornerOrnament className="absolute -top-px -left-px z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
+      <CornerOrnament className="absolute -top-px -right-px z-10 rotate-90 opacity-0 group-hover:opacity-100 transition-opacity" />
+      <CornerOrnament className="absolute -bottom-px -right-px z-10 rotate-180 opacity-0 group-hover:opacity-100 transition-opacity" />
+      <CornerOrnament className="absolute -bottom-px -left-px z-10 -rotate-90 opacity-0 group-hover:opacity-100 transition-opacity" />
+
+      {/* Cabeçalho do Card */}
+      <div className="mb-4 pb-3 border-b-2 border-amber-900/10 group-hover:border-amber-900/30 transition-colors">
+        <h3 className="font-display text-xl font-bold text-red-800 group-hover:text-red-700 transition-colors break-words tracking-wide">
+          {item.name}
+        </h3>
+      </div>
+
+      {/* Efeito */}
+      <div className="flex-grow font-serif text-amber-950/85 text-sm md:text-base leading-relaxed font-medium">
+        {item.effect}
+      </div>
+
+      {/* Rodapé */}
+      <div className="mt-6 pt-4 border-t-2 border-amber-900/10 flex justify-end items-center w-full">
+        <span className="text-xs text-amber-900/60 italic flex items-center gap-1 font-medium">
+          <span className="text-red-800">◆</span>
+          <span className="font-display text-amber-950 font-bold">Herois de Arton</span>
+        </span>
+      </div>
+    </div>
+  );
+};
+
 // --- Página Principal ---
 
 export default function ComplicacoesPage() {
+  const [activeTab, setActiveTab] = useState<'gerais' | 'idade'>('gerais');
   const [search, setSearch] = useState("");
+  const [ageSearch, setAgeSearch] = useState("");
 
   const filteredItems = useMemo(() => {
     const term = search.toLowerCase();
@@ -184,6 +261,18 @@ export default function ComplicacoesPage() {
         return a.name.localeCompare(b.name);
     });
   }, [search]);
+
+  const filteredAgeItems = useMemo(() => {
+    const term = ageSearch.toLowerCase();
+
+    return ageComplications.filter(item => {
+      return item.name.toLowerCase().includes(term) ||
+             item.effect.toLowerCase().includes(term);
+    })
+    .sort((a, b) => {
+        return a.name.localeCompare(b.name, 'pt-BR');
+    });
+  }, [ageSearch]);
 
   return (
     <div className="min-h-screen bg-[rgb(var(--bg-rgb))] text-amber-950 font-serif selection:bg-amber-800 selection:text-amber-50 relative overflow-x-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[rgb(var(--bg-rgb))] to-[rgb(var(--bg-edge-rgb))]">
@@ -230,60 +319,183 @@ export default function ComplicacoesPage() {
           </p>
         </div>
 
-        {/* Acordeão de Regras */}
-        <RulesSection />
-
-        {/* Busca */}
-        <div className="mb-12 p-6 rounded-xl bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] w-full">
-          <div className="flex flex-col">
-            <label className="font-display block text-sm font-bold text-amber-950/70 mb-3 uppercase tracking-widest">
-              Buscar Complicação
-            </label>
-            <div className="relative flex items-center">
-              <input
-                type="text"
-                placeholder="Buscar por nome, classe ou descrição..."
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                className="w-full px-5 py-3 pr-12 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-lg text-amber-950/85 placeholder-amber-900/40 focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
-              />
-              {search ? (
-                <button
-                  onClick={() => setSearch("")}
-                  className="absolute right-4 text-red-800 font-bold hover:scale-110 transition-transform text-lg"
-                  title="Limpar busca"
-                >
-                  ✕
-                </button>
-              ) : (
-                <SearchGlyph className="absolute right-4 text-amber-900/40 pointer-events-none" />
-              )}
-            </div>
-            {search && (
-              <p className="text-xs font-medium text-amber-950/70 mt-3 italic tracking-wide">
-                Exibindo {filteredItems.length} resultado(s) para "{search}".
-              </p>
-            )}
-          </div>
+        {/* Sistema de Abas */}
+        <div className="flex flex-wrap gap-2 mb-10 bg-[rgb(var(--bg-card-rgb))] p-2 rounded-xl border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] w-fit">
+            <button
+                onClick={() => setActiveTab('gerais')}
+                className={`font-display px-6 py-2.5 rounded-lg font-bold uppercase text-[10px] md:text-xs tracking-widest transition-all ${activeTab === 'gerais' ? 'bg-red-800 text-[rgb(var(--bg-inset-rgb))] shadow-md' : 'text-amber-950/70 hover:text-red-800 hover:bg-[rgb(var(--bg-card-rgb))]/50'}`}
+            >
+                Complicações Gerais
+            </button>
+            <button
+                onClick={() => setActiveTab('idade')}
+                className={`font-display px-6 py-2.5 rounded-lg font-bold uppercase text-[10px] md:text-xs tracking-widest transition-all ${activeTab === 'idade' ? 'bg-red-800 text-[rgb(var(--bg-inset-rgb))] shadow-md' : 'text-amber-950/70 hover:text-red-800 hover:bg-[rgb(var(--bg-card-rgb))]/50'}`}
+            >
+                Complicações de Idade
+            </button>
         </div>
 
-        {/* Grid de Complicações */}
-        {filteredItems.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 items-stretch">
-            {filteredItems.map((item) => (
-              <ComplicationCard key={item.id} item={item} />
-            ))}
+        {/* --- ABA 1: COMPLICAÇÕES GERAIS --- */}
+        {activeTab === 'gerais' && (
+          <div className="animate-in fade-in duration-500">
+            {/* Acordeão de Regras */}
+            <GeneralRulesSection />
+
+            {/* Busca */}
+            <div className="mb-12 p-6 rounded-xl bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] w-full">
+              <div className="flex flex-col">
+                <label className="font-display block text-sm font-bold text-amber-950/70 mb-3 uppercase tracking-widest">
+                  Buscar Complicação
+                </label>
+                <div className="relative flex items-center">
+                  <input
+                    type="text"
+                    placeholder="Buscar por nome, classe ou descrição..."
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                    className="w-full px-5 py-3 pr-12 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-lg text-amber-950/85 placeholder-amber-900/40 focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
+                  />
+                  {search ? (
+                    <button
+                      onClick={() => setSearch("")}
+                      className="absolute right-4 text-red-800 font-bold hover:scale-110 transition-transform text-lg"
+                      title="Limpar busca"
+                    >
+                      ✕
+                    </button>
+                  ) : (
+                    <SearchGlyph className="absolute right-4 text-amber-900/40 pointer-events-none" />
+                  )}
+                </div>
+                {search && (
+                  <p className="text-xs font-medium text-amber-950/70 mt-3 italic tracking-wide">
+                    Exibindo {filteredItems.length} resultado(s) para "{search}".
+                  </p>
+                )}
+              </div>
+            </div>
+
+            {/* Grid de Complicações */}
+            {filteredItems.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 items-stretch">
+                {filteredItems.map((item) => (
+                  <ComplicationCard key={item.id} item={item} />
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-20 border-2 border-dashed border-amber-900/30 rounded-xl bg-[rgb(var(--bg-card-rgb))]/50 flex flex-col items-center justify-center mt-8 gap-3">
+                <PageGlyph className="text-amber-950/40" />
+                <p className="font-display text-amber-950/70 text-lg italic tracking-wide">
+                  Nenhuma complicação encontrada com o termo aplicado.
+                </p>
+              </div>
+            )}
           </div>
-        ) : (
-          <div className="text-center py-20 border-2 border-dashed border-amber-900/30 rounded-xl bg-[rgb(var(--bg-card-rgb))]/50 flex flex-col items-center justify-center mt-8 gap-3">
-            <PageGlyph className="text-amber-950/40" />
-            <p className="font-display text-amber-950/70 text-lg italic tracking-wide">
-              Nenhuma complicação encontrada com o termo aplicado.
-            </p>
+        )}
+
+        {/* --- ABA 2: COMPLICAÇÕES DE IDADE --- */}
+        {activeTab === 'idade' && (
+          <div className="animate-in fade-in duration-500">
+            {/* Acordeão de Regras (conteúdo completo, igual à página de Regras) */}
+            <AgeRulesSection />
+
+            {/* Busca */}
+            <div className="mb-12 p-6 rounded-xl bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] w-full">
+              <div className="flex flex-col">
+                <label className="font-display block text-sm font-bold text-amber-950/70 mb-3 uppercase tracking-widest">
+                  Buscar Complicação de Idade
+                </label>
+                <div className="relative flex items-center">
+                  <input
+                    type="text"
+                    placeholder="Buscar por nome ou efeito..."
+                    value={ageSearch}
+                    onChange={(e) => setAgeSearch(e.target.value)}
+                    className="w-full px-5 py-3 pr-12 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-lg text-amber-950/85 placeholder-amber-900/40 focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
+                  />
+                  {ageSearch ? (
+                    <button
+                      onClick={() => setAgeSearch("")}
+                      className="absolute right-4 text-red-800 font-bold hover:scale-110 transition-transform text-lg"
+                      title="Limpar busca"
+                    >
+                      ✕
+                    </button>
+                  ) : (
+                    <SearchGlyph className="absolute right-4 text-amber-900/40 pointer-events-none" />
+                  )}
+                </div>
+                {ageSearch && (
+                  <p className="text-xs font-medium text-amber-950/70 mt-3 italic tracking-wide">
+                    Exibindo {filteredAgeItems.length} resultado(s) para "{ageSearch}".
+                  </p>
+                )}
+              </div>
+            </div>
+
+            {/* Grid de Complicações de Idade */}
+            {filteredAgeItems.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 items-stretch">
+                {filteredAgeItems.map((item) => (
+                  <AgeComplicationCard key={item.name} item={item} />
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-20 border-2 border-dashed border-amber-900/30 rounded-xl bg-[rgb(var(--bg-card-rgb))]/50 flex flex-col items-center justify-center mt-8 gap-3">
+                <PageGlyph className="text-amber-950/40" />
+                <p className="font-display text-amber-950/70 text-lg italic tracking-wide">
+                  Nenhuma complicação de idade encontrada com o termo aplicado.
+                </p>
+              </div>
+            )}
           </div>
         )}
 
       </main>
+
+      <style jsx global>{`
+          .markdown-content h4 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #991b1b;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-family: var(--font-cinzel), Cambria, serif;
+            border-bottom: 2px solid rgba(120, 53, 15, 0.2);
+            padding-bottom: 0.5rem;
+            letter-spacing: 0.025em;
+          }
+          .markdown-content strong {
+            color: #991b1b;
+            font-weight: bold;
+          }
+          .markdown-content p {
+            margin-bottom: 1.25rem;
+            line-height: 1.75;
+            color: rgb(var(--ink-rgb) / 0.85);
+            font-weight: 500;
+          }
+          .markdown-content ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            margin-bottom: 1.25rem;
+            color: rgb(var(--ink-rgb) / 0.85);
+            font-weight: 500;
+          }
+          .markdown-content li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+          }
+          .markdown-content code {
+             background-color: rgba(120, 53, 15, 0.1);
+             padding: 0.15rem 0.4rem;
+             border-radius: 0.375rem;
+             color: #991b1b;
+             font-size: 0.9em;
+             font-weight: bold;
+             border: 1px solid rgba(120, 53, 15, 0.15);
+          }
+      `}</style>
 
       {/* Footer */}
       <footer className="relative z-10 mt-20 p-8 border-t-4 border-double border-amber-900/40 bg-[rgb(var(--void-rgb))] text-center shadow-[0_-4px_20px_rgba(0,0,0,0.15)] flex flex-col items-center justify-center">

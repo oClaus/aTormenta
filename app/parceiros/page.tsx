@@ -4,7 +4,7 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import { partners } from "@/data/partners";
 import { Partner, PartnerCategory, formatPartnerCategory } from "@/types/partner";
-import { formatOrigin } from "@/types/power";
+import { formatOrigin, getOriginGroup } from "@/types/power";
 import ThemeToggle from "@/components/ThemeToggle";
 
 function SearchGlyph({ className = "" }: { className?: string }) {
@@ -138,7 +138,7 @@ export default function ParceirosPage() {
   // Lista de origens disponíveis, em ordem alfabética
   const availableOrigins = useMemo(() => {
     const origins = new Set<string>();
-    partners.forEach((p) => origins.add(p.origin));
+    partners.forEach((p) => origins.add(getOriginGroup(p.origin)));
     return Array.from(origins).sort((a, b) => a.localeCompare(b, "pt-BR"));
   }, []);
 
@@ -158,7 +158,7 @@ export default function ParceirosPage() {
 
     // Filtrar por Origem
     if (originFilter !== "todos") {
-      filtered = filtered.filter(partner => partner.origin === originFilter);
+      filtered = filtered.filter(partner => getOriginGroup(partner.origin) === originFilter);
     }
 
     // Filtrar por Busca (Nome, Descrição, Benefícios)

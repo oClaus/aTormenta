@@ -8,7 +8,7 @@ export const powersGerais: Power[] = [
     name: "Acuidade com Arma",
     description: "Quando usa uma arma corpo a corpo leve ou uma arma de arremesso, você pode usar sua Destreza em vez de Força nos testes de ataque e rolagens de dano.",
     prerequisite: "Des 1",
-    origin: "tormenta20 - jogo do ano"
+    origin: "Tormenta20 - Jogo do Ano"
   },
   { id: "Arma Secundária Grande",
     name: "Arma Secundária Grande",

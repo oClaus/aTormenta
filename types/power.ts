@@ -21,3 +21,7 @@ export function formatOrigin(origin: string): string {
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
     .join(" ");
 }
+
+export function getOriginGroup(origin: string): string {
+  return origin.startsWith("Dragão Brasil") ? "Dragão Brasil" : origin;
+}

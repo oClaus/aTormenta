@@ -2,7 +2,19 @@ import { Power } from "@/types/power";
 //#region Tormenta20 - Jogo do Ano
 //#endregion
 export const powersBarbaro: Power[] = [
+  //#region A Lenda de Ghanor
+  { id: "Cicatrizes Ritualísticas",
+    name: "Cicatrizes Ritualísticas ",
+    description: "Seu corpo é coberto de cicatrizes ritualísticas que o tornam mais ameaçador e resistente à dor. Você recebe +2 em Intimidação e redução de dano 2.",
+    prerequisite: "5º nível de bárbaro, treinado em Vontade.",
+    origin: "A Lenda de Ghanor"
+  },
+  //#endregion
 
+
+
+
+  
   //#region Tormenta20 - Jogo do Ano
   { id: "Alma de Bronze",
     name: "Alma de Bronze ",

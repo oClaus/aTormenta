@@ -1,7 +1,33 @@
 import { Power } from "@/types/power";
-//#region Tormenta20 - Jogo do Ano
-//#endregion
+
 export const powersBucaneiro: Power[] = [
+  //#region A Lenda de Ghanor
+  { id: "Charme Salvador",
+    name: "Charme Salvador",
+    description: "Quando usa Audácia em um teste de resistência, o custo desta habilidade é reduzido em –1 PM.",
+    origin: "A Lenda de Ghanor"
+  },
+  { id: "Galanteio Encorajador",
+    name: "Galanteio Encorajador",
+    description: "O sorriso de uma bela dama ou cavalheiro inspira suas façanhas. Uma vez por cena, você pode fazer um teste de Diplomacia oposto no teste de Vontade de uma criatura inteligente (Int –3 ou maior) em alcance curto que você considere atraente. Se passar, você recebe 1d6 PM temporários.",
+    origin: "A Lenda de Ghanor"
+  },
+  { id: "Mão Amiga",
+    name: "Mão Amiga",
+    description: "Seu jeito ousado atrai simpatia. Uma vez por cena, você pode gastar 1 PM para receber o benefício de um parceiro iniciante de um tipo a sua escolha por uma rodada — desde que haja pessoas que possam ajudá-lo por perto. Isto não conta em seu limite de parceiros.",
+    prerequisite: "Car 3.",
+    origin: "A Lenda de Ghanor"
+  },
+  { id: "Ousadia Inconsequente",
+    name: "Ousadia Inconsequente",
+    description: "Uma vez por rodada, quando faz um teste de perícia, você pode rolar 1d6 e adicionar o resultado ao seu teste. Porém, se falhar nesse teste, até o fim da cena você sofre –1 em testes de perícia e não pode mais usar esta habilidade.",
+    origin: "A Lenda de Ghanor"
+  },
+  //#endregion
+
+
+
+
 
   //#region Tormenta20 - Jogo do Ano
   { id: "Abusar dos Fracos",
