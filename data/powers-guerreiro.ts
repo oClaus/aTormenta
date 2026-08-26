@@ -1,7 +1,44 @@
 import { Power } from "@/types/power";
-//#region Tormenta20 - Jogo do Ano
-//#endregion
+
 export const powersGuerreiro: Power[] = [
+
+  //#region A Lenda de Ghanor
+    { id: "Alabardeiro",
+      name: "Alabardeiro",
+      description: "Quando ataca um inimigo com uma arma alongada, você pode gastar 1 PM para fazer um ataque adicional contra um inimigo adjacente ao alvo original, se houver. Você pode atacar este segundo inimigo mesmo que ele esteja fora de seu alcance natural, mas não se ele estiver atrás de cobertura total.",
+      origin: "A Lenda de Ghanor"
+    },
+    { id: "Disciplina Superior",
+      name: "Disciplina Superior",
+      description: "O dado de dano que você rola por Ataque Disciplinado aumenta para 1d8.",
+      prerequisite: "5º nível de soldado.",
+      origin: "A Lenda de Ghanor"
+    },
+    { id: "Equipamento Padrão",
+      name: "Equipamento Padrão",
+      description: "Se estiver empunhando uma arma com a qual tenha o poder Especialização em Arma, e usando uma armadura com a qual tenha o poder Especialista em Armadura, os benefícios desses dois poderes são dobrados.",
+      prerequisite: "Especialista em Armadura, Especialização em Arma.",
+      origin: "A Lenda de Ghanor"
+    },
+    { id: "Golpe Oportunista",
+      name: "Golpe Oportunista",
+      description: "Quando usa a ação agredir e acerta um ataque, você pode pagar 1 PM para fazer um ataque desarmado extra contra o mesmo oponente.",
+      prerequisite: "Treinado em Luta.",
+      origin: "A Lenda de Ghanor"
+    },
+    { id: "Lutador de Taverna",
+      name: "Lutador de Taverna",
+      description: "Seus ataques desarmados causam 1d6 pontos de dano. Quando faz um ataque desarmado, pode gastar 2 PM. Se fizer isso e acertar o ataque, o inimigo deve fazer um teste de Fortitude (CD For). Se ele falhar, fica atordoado por uma rodada. Você só pode usar este poder uma vez por cena contra uma mesma criatura.",
+      origin: "A Lenda de Ghanor"
+    },
+    { id: "Precisão Disciplinada",
+      name: "Precisão Disciplinada",
+      description: "Quando usa Ataque Disciplinado, você pode gastar 1 PM para aumentar a margem de ameaça do ataque em +2 ou para ignorar 10 pontos de redução de dano.",
+      prerequisite: "Soldado.",
+      origin: "A Lenda de Ghanor"
+    },
+    
+    //#endregion
 
   //#region Tormenta20 - Jogo do Ano
   { id: "Ambidestria",

@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Link from "next/link";
 import { powersCavaleiro } from "@/data/powers-cavaleiro";
-import { formatOrigin } from "@/types/power";
+import { formatOrigin, getOriginGroup } from "@/types/power";
 import ThemeToggle from "@/components/ThemeToggle";
 
 function CornerOrnament({ className = "" }: { className?: string }) {
@@ -77,16 +77,28 @@ function PageGlyph({ className = "" }: { className?: string }) {
 
 export default function CavaleiroPodersPage() {
   const [searchTerm, setSearchTerm] = useState("");
+  const [originFilter, setOriginFilter] = useState<string>("todos");
   const [isIntroOpen, setIsIntroOpen] = useState(false);
 
+  const availableOrigins = useMemo(() => {
+  const origins = new Set<string>();
+  powersCavaleiro.forEach((power) => origins.add(getOriginGroup(power.origin))); // troque powersX pelo array da página
+  return Array.from(origins).sort((a, b) => a.localeCompare(b, "pt-BR"));
+  }, []);
+
   const filteredPowers = powersCavaleiro
-    .filter(
-      (power) =>
-        power.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        power.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        power.origin.toLowerCase().includes(searchTerm.toLowerCase())
-    )
-    .sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
+    .filter((power) => {
+     const matchesSearch =
+       power.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+       power.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+       power.origin.toLowerCase().includes(searchTerm.toLowerCase());
+
+     const matchesOrigin =
+       originFilter === "todos" || getOriginGroup(power.origin) === originFilter;
+
+     return matchesSearch && matchesOrigin;
+   })
+   .sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
 
   return (
     <div className="min-h-screen bg-[rgb(var(--bg-rgb))] text-amber-950 font-serif selection:bg-amber-800 selection:text-amber-50 relative overflow-x-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[rgb(var(--bg-rgb))] to-[rgb(var(--bg-edge-rgb))]">
@@ -266,6 +278,25 @@ export default function CavaleiroPodersPage() {
             </p>
           )}
         </div>
+
+        {/* Filtro de Origem */}
+        <div className="mb-8 flex flex-wrap items-center gap-3">
+          <select
+            value={originFilter}
+            onChange={(e) => setOriginFilter(e.target.value)}
+            className="font-display text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full border-2 bg-[rgb(var(--bg-card-rgb))] border-amber-900/20 text-amber-950/70 hover:border-red-800/40 focus:outline-none focus:border-red-800/50 transition-all cursor-pointer"
+          >
+            <option value="todos">Todas as Origens</option>
+            {availableOrigins.map((origin) => (
+              <option key={origin} value={origin}>{formatOrigin(origin)}</option>
+            ))}
+          </select>
+        </div>
+
+        {/* Contador — estilo igual ao da página de Parceiros */}
+        <h2 className="font-display text-2xl md:text-3xl font-bold text-amber-950 mb-6 border-b-2 border-amber-900/10 pb-2 tracking-wide flex items-center gap-3">
+          <span className="text-red-800 text-3xl">❖</span> {filteredPowers.length} Poderes Encontrados
+        </h2>
 
         {/* Grid de Poderes */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-x-6 gap-y-10 items-stretch">

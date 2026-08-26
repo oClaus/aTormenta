@@ -1,7 +1,32 @@
 import { Power } from "@/types/power";
-//#region Tormenta20 - Jogo do Ano
-//#endregion
+
 export const powersClerigo: Power[] = [
+  //#region A Lenda de Ghanor
+    { id: "Canalizar Esperança",
+      name: "Canalizar Esperança",
+      description: "Quando você usa Canalizar Energia, pode gastar +1 PM para anular as condições abalado, apavorado, debilitado, enjoado, exausto, fatigado, fraco ou lento de criaturas a sua escolha.",
+      prerequisite: "Canalizar Energia",
+      origin: "A Lenda de Ghanor"
+    },
+    { id: "Fiéis",
+      name: "Fiéis",
+      description: "Você atrai um pequeno grupo de seguidores religiosos. Você define os detalhes desses seguidores, como quantidade, raça e outras características, mas o mestre deve aprovar qualquer escolha. Seus fiéis funcionam como um parceiro iniciante de um tipo a sua escolha. Eles podem ajudá-lo com seu equipamento (parceiro carregador), rezar para potencializar suas magias (adepto) ou mesmo lutar por você (turba). No 7º nível, eles mudam para veterano e, no 15º nível, para mestre. Se você violar suas normas, ele o abandonam. Se eles o abandonarem ou morrerem, você pode reunir outros com uma semana de pregação.",
+      prerequisite: "Car 1, 5º nível de clérigo.",
+      origin: "A Lenda de Ghanor"
+    },
+    { id: "Incitar os Fiéis",
+      name: "Incitar os Fiéis",
+      description: "Além de seus benefícios normais, seus fiéis se tornam um parceiro destruidor do mesmo nível que pode causar dano de corte, impacto ou perfuração.",
+      prerequisite: "Fiéis",
+      origin: "A Lenda de Ghanor"
+    },
+    
+    //#endregion
+
+
+
+
+
   //#region  Tormenta20 - Jogo do Ano
   { id: "Abençoar Arma",
     name: "Abençoar Arma",

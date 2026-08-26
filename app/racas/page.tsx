@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useMemo } from "react";
+import { getOriginGroup } from "@/types/power";
 import { Race, isFixedModifier, isFlexibleModifier } from "@/types/race";
 import { races } from "@/data/races";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -99,13 +100,26 @@ function RaceGlyph({ className = "" }: { className?: string }) {
 export default function RacasPage() {
   const [selectedRace, setSelectedRace] = useState<Race | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
+  const [originFilter, setOriginFilter] = useState<string>("todos");
+
+  const availableOrigins = useMemo(() => {
+  const origins = new Set<string>();
+  races.forEach((race) => origins.add(getOriginGroup(race.origin)));
+  return Array.from(origins).sort((a, b) => a.localeCompare(b, "pt-BR"));
+  }, []);
 
   const filteredRaces = races
-    .filter(race =>
+    .filter((race) => {
+    const matchesSearch =
       race.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      race.origin.toLowerCase().includes(searchTerm.toLowerCase())
-    )
-    .sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
+      race.origin.toLowerCase().includes(searchTerm.toLowerCase());
+
+    const matchesOrigin =
+      originFilter === "todos" || getOriginGroup(race.origin) === originFilter;
+
+    return matchesSearch && matchesOrigin;
+  })
+  .sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
 
   // Função para obter a cor do modificador (Ajustada para fundo claro)
   const getModifierColor = (modifier: number) => {
@@ -275,6 +289,20 @@ export default function RacasPage() {
           />
           <SearchGlyph className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/40" />
         </div>
+      </div>
+
+      {/* Filtro de Origem */}
+      <div className="mb-8 flex flex-wrap items-center gap-3">
+        <select
+          value={originFilter}
+          onChange={(e) => setOriginFilter(e.target.value)}
+          className="font-display text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full border-2 bg-[rgb(var(--bg-card-rgb))] border-amber-900/20 text-amber-950/70 hover:border-red-800/40 focus:outline-none focus:border-red-800/50 transition-all cursor-pointer"
+        >
+          <option value="todos">Todas as Origens</option>
+          {availableOrigins.map((origin) => (
+            <option key={origin} value={origin}>{origin}</option>
+          ))}
+        </select>
       </div>
 
         {/* Grid de Raças */}

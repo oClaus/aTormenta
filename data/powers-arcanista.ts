@@ -1,7 +1,50 @@
 import { Power } from "@/types/power";
-//#region Tormenta20 - Jogo do Ano
-//#endregion
+
 export const powersArcanista: Power[] = [
+
+  //#region A Lenda de Ghanor
+    { id: "Conhecimento Proibido",
+      name: "Conhecimento Proibido",
+      description: "Você aprende uma magia de qualquer tradição de qualquer círculo que possa lançar.",
+      prerequisite: "Mago (A Lenda de Ghanor), treinado em Conhecimento.",
+      origin: "A Lenda de Ghanor"
+    },
+    { id: "Escudo Mágico",
+      name: "Escudo Mágico",
+      description: "Quando lança uma magia, você recebe um bônus na Defesa igual ao círculo da magia lançada até o início do seu próximo turno.",
+      prerequisite: "Mago (A Lenda de Ghanor)",
+      origin: "A Lenda de Ghanor"
+    },
+    { id: "Geometria Mística",
+      name: "Geometria Mística",
+      description: "Quando lança uma magia com efeito em área, você pode excluir uma quantidade de alvos da área afetada igual a sua Inteligência.",
+      prerequisite: "Mago (A Lenda de Ghanor), treinado em Conhecimento.",
+      origin: "A Lenda de Ghanor"
+    },
+    { id: "Raio da Tradição",
+      name: "Raio da Tradição",
+      description: "Se o alvo de seu raio arcano falhar no teste de resistência, sofre um efeito adicional, conforme sua tradição. Abissal: não pode ser curado por uma rodada. Elemental: sofre um dado adicional de dano. Onírica: ofuscado por uma rodada. Erudita: vulnerável por uma rodada. Rústica: lento por uma rodada.",
+      prerequisite: "Mago (A Lenda de Ghanor), Raio Arcano.",
+      origin: "A Lenda de Ghanor"
+    },
+    { id: "Segredo Aprimorado",
+      name: "Segredo Aprimorado",
+      description: "Você recebe o segredo aprimorado de sua tradição arcana.",
+      prerequisite: "5º nível de Mago (A Lenda de Ghanor)",
+      origin: "A Lenda de Ghanor"
+    },
+    { id: "Segredo Superior",
+      name: "Segredo Superior",
+      description: "Você recebe o segredo superior de sua tradição arcana.",
+      prerequisite: "Segredo Aprimorado, 9º nível de Mago (A Lenda de Ghanor)",
+      origin: "A Lenda de Ghanor"
+    },
+  
+    //#endregion
+
+
+
+
 
   //#region Tormenta20 - Jogo do Ano
   { id: "Arcano de Batalha",

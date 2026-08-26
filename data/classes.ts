@@ -1,13 +1,403 @@
 import { GameClass } from "@/types/class";
 import { title } from "process";
-//#region Tormenta20 - Jogo do Ano
-//#endregion
+
 export const classes: GameClass[] = [
+
+  //#region A Lenda de Ghanor
+    { id: "Mago Ghanor",
+      name: "Mago (A Lenda de Ghanor)",
+      origin: "A Lenda de Ghanor",
+      image: "/classes/mago.png",
+      powersUrl: "/poderes/arcanista",
+      description: "O mago é uma figura de poder e mistério, mestre de segredos antigos. Com seus feitiços, pode controlar diversos aspectos da realidade, desde manifestar chamas e relâmpagos até alterar a forma de objetos e criaturas. \n Por seu enorme poder, a magia é uma força temida e cobiçada. Aqueles que se arvoram por conhecimento e poder arcano têm um caminho árduo a percorrer, muitas vezes perigoso, quase sempre solitário. Mesmo assim, tornar-se capaz de controlar e moldar o mundo ao seu bel prazer usando as artes místicas ainda é o sonho de muitos, e o destino de poucos. Por isso, magos não são apenas raros entre os reinos, mas também respeitados e temidos. A maioria dos conjuradores ocupa uma posição de destaque na sociedade, agindo como conselheiros para regentes ou sendo eles mesmos figuras de autoridade política. \n Muitas são as fontes de poder de um mago, e os meios para acessar a magia seguem tradições obscuras que se ramificaram e se transformaram ao longo das eras. A magia primordial de Utteria, os domínios elementais da magia élfica ancestral, as energias pútridas manipuladas pelas bruxas dos Pântanos Cinzentos e até mesmo os macabros rituais ensinados por demônios antigos — são todos apenas caminhos diferentes para alcançar o mesmo objetivo. Basta saber qual deles o mago está disposto a seguir. \n Apesar de suas várias facetas, algumas menos apreciadas que outras, muitos praticantes arcanos consideram a magia uma arte e, assim como fazem os grandes artesãos e guerreiros, procuram discípulos promissores capazes de passar adiante seu conhecimento e tradição. Para eles, estudar e dominar a magia não é diferente de estudar e dominar a espada, independentemente da fonte de seu poder: o aço que criou a lâmina não é responsável pelo sangue que ela derrama.",
+      characteristics: {
+        pvBase: "8 + Constituição",
+        pvPerLevel: "2 + Constituição",
+        pmPerLevel: "5 PM por nível"
+      },
+      skills: {
+        mandatory: [
+          "Misticismo (Int)",
+          "Vontade (Sab)"
+        ],
+        optional: {
+          skills: [
+            "Conhecimento (Int)",
+            "Diplomacia (Car)",
+            "Enganação (Car)",
+            "Guerra (Int)",
+            "Iniciativa (Des)",
+            "Intimidação (Car)",
+            "Intuição (Sab)",
+            "Investigação (Int)",
+            "Nobreza (Int)",
+            "Ofício (Int)",
+            "Percepção (Sab)"
+          ],
+          count: 2
+        }
+      },
+      proficiency: "Nenhuma",
+      abilities: [
+        {
+          name: "Magias",
+          description: "Você pode lançar magias de sua tradição arcana (veja a seguir) de 1º círculo. A cada quatro níveis, pode lançar magias de um círculo maior (2º círculo no 5º nível, 3º círculo no 9º nível e assim por diante). \n Você começa com três magias de 1º círculo. A cada nível, aprende uma magia de qualquer círculo que possa lançar. \n Seu atributo-chave para lançar magias é Inteligência e você soma sua Inteligência no seu total de PM."
+        },
+        {
+          name: "Tradição Arcana",
+          description: "A magia é um poder incrível, capaz de realizar coisas com as quais a maioria dos mortais apenas sonha. Entretanto, mesmo este poder é regido por regras, que devem ser seguidas por aqueles que pretendem dominá-lo. Escolha uma tradição entre as descritas a seguir. Sua tradição define sua lista de magias, o preço de sua magia e os segredos arcanos que você pode aprender. Uma vez feita, essa escolha não pode ser mudada."
+        },
+        {
+          name: "Poder de Mago",
+          description: "No 2º nível, e a cada nível seguinte, você escolhe um poder de mago a sua escolha. Veja a lista a seguir."
+        },
+        {
+          name: "Alta Arcana",
+          description: "No 20º nível, seu domínio das artes arcanas é total. O custo em PM de suas magias de mago é reduzido à metade (após aplicar aprimoramentos e quaisquer outros efeitos que reduzam custo)."
+        }
+      ],
+      levelProgression: [
+      { level: 1, abilities: "Magias (1º círculo), tradição arcana" },
+      { level: 2, abilities: "Poder de mago" },
+      { level: 3, abilities: "Poder de mago" },
+      { level: 4, abilities: "Poder de mago" },
+      { level: 5, abilities: "Magias (2º círculo), poder de mago" },
+      { level: 6, abilities: "Poder de mago" },
+      { level: 7, abilities: "Poder de mago" },
+      { level: 8, abilities: "Poder de mago" },
+      { level: 9, abilities: "Magias (3º círculo), poder de mago" },
+      { level: 10, abilities: "Poder de mago" },
+      { level: 11, abilities: "Poder de mago" },
+      { level: 12, abilities: "Poder de mago" },
+      { level: 13, abilities: "Magias (4º círculo), poder de mago" },
+      { level: 14, abilities: "Poder de mago" },
+      { level: 15, abilities: "Poder de mago" },
+      { level: 16, abilities: "Poder de mago" },
+      { level: 17, abilities: "Magias (5º círculo), poder de mago" },
+      { level: 18, abilities: "Poder de mago" },
+      { level: 19, abilities: "Poder de mago" },
+      { level: 20, abilities: "Alta arcana, poder de mago" }
+    ],
+      extras: [
+        {
+          title: "Tradições Arcanas",
+          description: "Tradições arcanas representam as diversas formas através das quais um mago pode aprender a controlar a magia. Uma tradição não é um conjunto formal de regras e teorias místicas, tampouco representa uma organização ou ordem. Em vez disso, são um apanhado de técnicas mais ou menos relacionadas, ensinadas de mestre para discípulo, muitas vezes com pequenas diferenças entre seus praticantes. Sua escolha de tradição define sua lista de magias (veja o CAPÍTULO 4) e as características a seguir. \n PREÇO DA MAGIA. Cada tradição impõe um “preço” em troca do poder que fornece. Isso pode ser uma obrigação, um sacrifício ou outra restrição. \n SEGREDOS ARCANOS. Você recebe o segredo básico de sua tradição automaticamente, e pode aprender os demais com poderes de mago.",
+          sections: [
+            {
+              title: "Tradição Abissal",
+              intro: "Por meio de pactos com demônios e outros entidades sombrias, você recebe conhecimento e poder arcano. Esta é uma tradição temida, tanto por suas capacidades nefastas quanto pelo risco que envolve — as criaturas macabras que lhe dão poder também estão sempre tentando se alimentar de sua essência.",
+              content: [
+                {
+                  name: "Preço da Magia",
+                  description: "Sempre que lançar uma magia usando aprimoramentos, faça um teste de Vontade (CD 15 + o custo em PM da magia). Se falhar, você perde 1 PM por círculo da magia (além do custo dela). Se falhar por 5 ou mais, além disso você fica alquebrado até o fim do dia."
+                },
+                {
+                  name: "Segredo Básico",
+                  description: "Você recebe imunidade a medo e pode gastar 1 PM para gerar uma aura nefasta com 9m de raio a partir de você. Inimigos na aura sofrem –2 em seus testes de resistência. A aura dura até o fim da cena."
+                },
+                {
+                  name: "Segredo Aprimorado",
+                  description: "Você recebe um servo abissal — um diabrete ou outra criatura sombria — enviado por seu patrono. O servo abissal é um parceiro que fornece +2 na Defesa e diminui o custo de suas magias em –1 PM. Além disso, quando sofre dano de um efeito, pode sacrificar seu servo para reduzir esse dano à metade. Um servo destruído pode ser reerguido em um ritual que exige um dia e 100 PP em ingredientes."
+                },
+                {
+                  name: "Segredo Superior",
+                  description: "Você se transforma em uma criatura parcialmente abissal. Você adquire redução de dano 5, visão no escuro (ou aumenta seu alcance em 9m, se já possuir) e imunidade a efeitos de cansaço, metabólicos, de trevas e de veneno."
+                },
+                {
+                  name: "Magias de 1º Círculo",
+                  description: "Amedrontar, Armadura Mágica, Aviso, Comando, Conjurar Monstro, Disfarce Ilusório, Escuridão, Infligir Ferimentos, Perdição, Profanar, Proteção Mística, Raio do Enfraquecimento, Resistência a Energia, Visão Mística, Vitalidade Fantasma, Voz Divina."
+                },
+                {
+                  name: "Magias de 2º Círculo",
+                  description: "Amarras Etéreas, Augúrio, Campo de Força, Conjurar Mortos-Vivos, Crânio Voador, Desespero Esmagador, Dissipar Magia, Marca da Obediência, Montaria Mística, Rogar Maldição, Sussurros Insanos, Toque Vampírico."
+                },
+                {
+                  name: "Magias de 3º Círculo",
+                  description: "Anular a Luz, Contato Extraplanar, Manto de Sombras, Proteção contra Magia, Servo Morto-Vivo, Teletransporte, Tentáculos de Trevas, Voo."
+                },
+                {
+                  name: "Magias de 4º Círculo",
+                  description: "Assassino Fantasmagórico, Desintegrar, Forma Etérea, Ligação Sombria, Muralha de Ossos, Sopro de Dragão."
+                },
+                {
+                  name: "Magias de 5º Círculo",
+                  description: "Desejo, Possessão, Sombra Assassina, Toque da Morte."
+                }
+              ]
+            },
+            {
+              title: "Tradição Elemental",
+              intro: "As energias primordiais do mundo possuem grande potencial destrutivo. Você abraçou uma dessas forças, dedicando-se a controlar e reproduzir seu poder para transformá-lo em uma arma devastadora. Por sua capacidade de evocar tamanha destruição, magos elementais são inimigos temidos e aliados cobiçados em todos os reinos.",
+              content: [
+                {
+                  name: "Preço da Magia",
+                  description: "Escolha um tipo de dano entre ácido, eletricidade, fogo ou frio. Você não pode aprender magias que causem dano dos tipos não escolhidos. Por exemplo, se escolheu ácido, não pode aprender magias que causem dano de eletricidade, fogo ou frio (embora ainda possa lançar essas magias de outras formas, como por meio de pergaminhos)."
+                },
+                {
+                  name: "Segredo Básico",
+                  description: "Você recebe redução de dano 5 contra o tipo de dano escolhido e a CD para resistir às suas magias que causem dano deste tipo aumenta em +1."
+                },
+                {
+                  name: "Segredo Aprimorado",
+                  description: "Suas magias que causam dano do tipo escolhido custam –1 PM e causam +1 ponto de dano por dado."
+                },
+                {
+                  name: "Segredo Superior",
+                  description: "Você se torna imune a dano do tipo escolhido. Além disso, sempre que reduz um ou mais inimigos a 0 ou menos PV com uma magia do tipo escolhido, recebe uma quantidade de PM temporários igual ao círculo da magia."
+                },
+                {
+                  name: "Magias de 1º Círculo",
+                  description: "Área Escorregadia, Arma Mágica, Armadura Mágica, Aviso, Criar Elementos, Dardo Gélido, Explosão de Chamas, Luz, Névoa, Proteção Mística, Queda Suave, Resistência a Energia, Suporte Ambiental, Toque Chocante, Visão Mística, Jato Corrosivo."
+                },
+                {
+                  name: "Magias de 2º Círculo",
+                  description: "Bola de Fogo, Campo de Força, Cone de Frio, Controlar Fogo, Dissipar Magia, Flecha Ácida, Garras de Rocha, Montaria Mística, Relâmpago, Salto Dimensional, Tempestade, Velocidade."
+                },
+                {
+                  name: "Magias de 3º Círculo",
+                  description: "Chuva Ácida, Controlar Água, Controlar Terra, Erupção Glacial, Escudo de Chamas, Impacto Fulminante, Muralha Elemental, Voo."
+                },
+                {
+                  name: "Magias de 4º Círculo",
+                  description: "Conjurar Elemental, Controlar o Clima, Poço Vitriólico, Raio Polar, Salto Relâmpago, Sopro de Dragão."
+                },
+                {
+                  name: "Magias de 5º Círculo",
+                  description: "Barragem Elemental, Chuva de Meteoros, Fúria dos Céus, Invulnerabilidade."
+                }
+              ]
+            },
+            {
+              title: "Tradição Erudita",
+              intro: "Para você, a magia é uma ciência, regida por fórmulas e regras quantificáveis que podem ser estudadas e dominadas. Ao se debruçar sobre antigos tomos arcanos, você vasculha os segredos desvendados pelos estudiosos que o precederam, domina antigas equações místicas e transforma conhecimento teórico em prática mágica.",
+              content: [
+                {
+                  name: "Preço da Magia",
+                  description: "Você lança magias através de estudo e memorização de fórmulas arcanas. Você só pode lançar magias memorizadas; suas outras magias não podem ser lançadas, mesmo que você tenha pontos de mana para tal. Para memorizar magias, você precisa estudar seu grimório por uma hora. Quando faz isso, escolhe metade das magias que conhece, arredondado para baixo (por exemplo, se conhece 5 magias, escolhe 2). Essas serão suas magias memorizadas. Você pode memorizar magias uma vez por dia. Caso não possa estudar (por não ter tempo, por ter perdido o grimório...), não poderá trocar suas magias memorizadas. Um grimório tem as mesmas estatísticas de um fetiche (veja Tradição Rústica) e pode ser recuperado da mesma forma."
+                },
+                {
+                  name: "Segredo Básico",
+                  description: "Você começa com uma magia adicional (para um total de 4) e, sempre que ganha acesso a um novo círculo de magias, aprende uma magia adicional daquele círculo."
+                },
+                {
+                  name: "Segredo Aprimorado",
+                  description: "Você pode aprender magias copiando os textos de pergaminhos e grimórios de outros magos. Aprender uma magia dessa forma exige um dia de trabalho e 250 PP em matérias-primas por PM necessário para lançar a magia. Assim, aprender uma magia de 3º círculo (6 PM) exige 6 dias de trabalho e o gasto de 1.500 PP."
+                },
+                {
+                  name: "Segredo Superior",
+                  description: "Uma vez por rodada, quando usa uma ação padrão para lançar uma magia, você pode gastar 2 PM para fazer uma conjuração dupla. Isso permite que você lance uma segunda magia de 1º círculo como parte da mesma ação, pagando seu custo em PM como normal."
+                },
+                {
+                  name: "Magias de 1º Círculo",
+                  description: "Alarme, Arma Mágica, Armadura Mágica, Aviso, Comando, Compreensão, Conjurar Monstro, Detectar Ameaças, Luz, Orientação, Proteção Mística, Resistência a Energia, Seta Infalível, Tranca Arcana, Transmutar Objetos, Visão Mística."
+                },
+                {
+                  name: "Magias de 2º Círculo",
+                  description: "Alterar Tamanho, Amarras Etéreas, Campo de Força, Dissipar Magia, Localização, Mapear, Metamorfose, Refúgio, Runa de Proteção, Salto Dimensional, Servos Invisíveis, Velocidade."
+                },
+                {
+                  name: "Magias de 3º Círculo",
+                  description: "Âncora Dimensional, Convocação Instantânea, Globo de Invulnerabilidade, Pele de Pedra, Proteção contra Magia, Selo de Mana, Telecinesia, Teletransporte."
+                },
+                {
+                  name: "Magias de 4º Círculo",
+                  description: "Campo Antimagia, Controlar a Gravidade, Desintegrar, Forma Etérea, Mão Poderosa, Visão da Verdade."
+                },
+                {
+                  name: "Magias de 5º Círculo",
+                  description: "Desejo, Engenho de Mana, Invulnerabilidade, Palavra Primordial."
+                }
+              ]
+            },
+            {
+              title: "Tradição Onírica",
+              intro: "A cada noite, muitas pessoas entram no mundo dos sonhos... Mas você sabe fazer mais do que apenas visitar essa terra onírica. Seja sozinho, seja com um mestre ou uma entidade, você descobriu como extrair o poder desse lugar mágico, trazê-lo para o mundo desperto e usá-lo de combustível para suas magias. Com esse poder, pode transformar sua vida e a de seus aliados em um verdadeiro sonho — e de seus inimigos, em um pesadelo.",
+              content: [
+                {
+                  name: "Preço da Magia",
+                  description: "Você retira seus poderes do mundo dos sonhos, mas isso tem um preço. Sempre que dormir, precisa pagar esse custo com sua saúde ou com sua essência. A cada noite de descanso, você recupera apenas PV ou PM, a sua escolha."
+                },
+                {
+                  name: "Segredo Básico",
+                  description: "Você pode gastar uma ação de movimento e 1 PM para gerar uma aura onírica com 9m de raio a partir de você e duração sustentada. Dentro da aura, sutis fenômenos mágicos acontecem — insetos falam, flores brilham, pequenos objetos flutuam... — e a CD para resistir a suas magias que exigem um teste de Vontade aumenta em +2."
+                },
+                {
+                  name: "Segredo Aprimorado",
+                  description: "Dentro da aura onírica, suas magias custam –1 PM. Além disso, quando lança uma magia que exige um teste de resistência de Fortitude ou Reflexos dentro da aura, você pode gastar +1 PM para mudar o teste dela para Vontade. Se a magia causar dano, ele muda para psíquico."
+                },
+                {
+                  name: "Segredo Superior",
+                  description: "Sempre que um inimigo falhar em um teste de Vontade contra uma de suas magias dentro da aura onírica, você recebe 1 PM temporário cumulativo. Você pode ganhar um máximo de PM temporários por cena igual ao seu nível. Esses pontos temporários desaparecem no final da cena."
+                },
+                {
+                  name: "Magias de 1º Círculo",
+                  description: "Adaga Mental, Armadura Mágica, Aviso, Criar Ilusão, Disfarce Ilusório, Enfeitiçar, Hipnotismo, Imagem Espelhada, Leque Cromático, Luz, Proteção Mística, Resistência a Energia, Santuário, Sono, Tranquilidade, Visão Mística."
+                },
+                {
+                  name: "Magias de 2º Círculo",
+                  description: "Aparência Perfeita, Augúrio, Campo de Força, Camuflagem Ilusória, Círculo da Justiça, Dissipar Magia, Esculpir Sons, Invisibilidade, Ligação Telepática, Mente Aprimorada, Salto Dimensional, Sussurros Insanos."
+                },
+                {
+                  name: "Magias de 3º Círculo",
+                  description: "Banimento, Contato Extraplanar, Despertar Consciência, Ilusão Lacerante, Miragem, Proteção contra Magia, Teletransporte, Vidência."
+                },
+                {
+                  name: "Magias de 4º Círculo",
+                  description: "Alterar Memória, Duplicata Ilusória, Explosão Caleidoscópica, Libertação, Premonição, Sonho."
+                },
+                {
+                  name: "Magias de 5º Círculo",
+                  description: "Desejo, Legião, Projetar Consciência, Réquiem."
+                }
+              ]
+            },
+            {
+              title: "Tradição Rústica",
+              intro: "Longe dos laboratórios arcanos e das cortes opulentas, existe uma forma de magia que se desenvolveu entre as pessoas simples, baseada em uma mistura de crendices, superstições e ritos diários. Tudo que você precisa para executar sua magia são coisas simples, como alguns cogumelos, uma súplica às fadas dos bosques e uma pitada de lágrimas de um sapo.",
+              content: [
+                {
+                  name: "Preço da Magia",
+                  description: "Você depende de um fetiche para lançar suas magias — um amuleto, um saco de ervas, um cristal místico... Seu fetiche pode ser qualquer item que você possua e possa ser empunhado com uma mão (incluindo um esotérico, se você possuir um). Para lançar uma magia, você precisa empunhar o fetiche com uma mão (e gesticular com a outra) ou fazer um teste de Misticismo (CD 20 + o custo em PM da magia; se falhar, a magia não funciona, mas você gasta os PM mesmo assim). O fetiche tem redução de dano 10 e PV iguais à metade dos seus, independentemente de seu material ou forma. Se for danificado, é totalmente restaurado na próxima vez que você recuperar seus PM. Se for destruído, você fica atordoado por uma rodada. Caso seu fetiche seja destruído (ou perdido), você pode transformar outro item que possua em um fetiche com uma semana de trabalho e 100 PP."
+                },
+                {
+                  name: "Segredo Básico",
+                  description: "Você pode usar até dois catalisadores diferentes quando lança uma magia."
+                },
+                {
+                  name: "Segredo Aprimorado",
+                  description: "Se você estiver empunhando seu fetiche e sofrer dano que o levaria a 0 PV ou menos, você fica com 1 PV e o foco perde pontos de vida igual ao valor excedente ou até ser destruído (se o foco for destruído, você sofre qualquer dano excedente)."
+                },
+                {
+                  name: "Segredo Superior",
+                  description: "Você pode criar poções, como se tivesse o poder geral Preparar Poção (veja a página 93). Se já possuir esse poder, pode criar poções de até 5º círculo."
+                },
+                {
+                  name: "Magias de 1º Círculo",
+                  description: "Acalmar Animal, Área Escorregadia, Armadura Mágica, Armamento da Natureza, Bênção, Caminhos da Natureza, Controlar Plantas, Despedaçar, Luz, Névoa, Orientação, Primor Atlético, Proteção Mística, Resistência a Energia, Suporte Ambiental, Visão Mística."
+                },
+                {
+                  name: "Magias de 2º Círculo",
+                  description: "Aliado Animal, Augúrio, Campo de Força, Condição, Disco Flutuante, Dissipar Magia, Enxame de Pestes, Físico Aprimorado, Localização, Mente Aprimorada, Servos Invisíveis, Toque Vampírico."
+                },
+                {
+                  name: "Magias de 3º Círculo",
+                  description: "Banimento, Comunhão com a Natureza, Contato Extraplanar, Dificultar Detecção, Dispersar as Trevas, Imobilizar, Lendas e Histórias, Proteção contra Magia."
+                },
+                {
+                  name: "Magias de 4º Círculo",
+                  description: "Animar Objetos, Companheiro Fiel, Cúpula de Repulsão, Libertação, Premonição, Visão da Verdade."
+                },
+                {
+                  name: "Magias de 5º Círculo",
+                  description: "Aprisionamento, Desejo, Invulnerabilidade, Toque da Morte."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    { id: "Soldado",
+      name: "Soldado (A Lenda de Ghanor)",
+      origin: "A Lenda de Ghanor",
+      image: "/classes/soldado.png",
+      powersUrl: "/poderes/guerreiro",
+      description: "De lutadores de taverna a guardas palacianos, passando por capangas cruéis e arqueiros sagazes, soldados são especialistas em armas, armaduras e estratégias de combate. Treinados no uso dos mais variados equipamentos marciais e nas mais diversas técnicas de luta, são encontrados em todos os recantos de Ghanor e dos reinos, servindo com oficiais militares, guarda-costas, mercenários ou em qualquer outro papel que possa ser desempenhado pela força das armas. \n À primeira vista, soldados podem parecer simplórios. Mas isso está longe de ser verdade. Um soldado é o combatente por excelência, fruto de uma preparação intensa e especializado em técnicas letais e nos mais diversos instrumentos de guerra. Seu treinamento exaustivo os prepara para resistir aos rigores das mais sangrentas lutas e para sobrepujar os mais perigosos oponentes. \n Existem diversos tipos de soldados. Alguns lutam de forma disciplinada, tendo sido treinados por um mestre de armas no pátio de um castelo. Outros combatem por instinto, tendo aprendido o que sabem em becos escuros e tavernas sujas. Alguns se especializam em armas específicas, enquanto outros lutam com o que estiver à mão. Alguns são verdadeiros encouraçados, trajando armaduras pesadas e empunhando escudos enormes, com os quais resistem aos mais poderosos ataques. Já outros se valem de sua agilidade para manter os inimigos à distância, ou ainda se especializam no uso de arcos, bestas ou outras armas de longo alcance. \n Soldados são tão variados quanto as formas de matar. Todos, entretanto, têm um ponto em comum: a coragem e o treinamento para perseverar em qualquer campo de batalha.",
+      characteristics: {
+        pvBase: "20 + Constituição",
+        pvPerLevel: "5 + Constituição",
+        pmPerLevel: "3 PM por nível"
+      },
+      skills: {
+        mandatory: [
+          "Luta (For) ou Pontaria (Des)",
+          "Fortitude (Con)"
+        ],
+        optional: {
+          skills: [
+            "Adestramento (Car)",
+            "Atletismo (For)",
+            "Cavalgar (Des)",
+            "Guerra (Int)",
+            "Iniciativa (Des)",
+            "Intimidação (Car)",
+            "Luta (For)",
+            "Ofício (Int)",
+            "Percepção (Sab)",
+            "Pontaria (Des)",
+            "Reflexos (Des)"
+          ],
+          count: 2
+        }
+      },
+      proficiency: "Armas marciais e escudos",
+      abilities: [
+        {
+          name: "Ataque Disciplinado",
+          description: "Quando faz um ataque, você pode gastar 1 PM para rolar dois dados e usar o melhor resultado. Se acertar esse ataque, você recebe +1d6 na rolagem de dano. A cada quatro níveis, você pode gastar +1 PM para aumentar o número de dados de dano extras (veja a tabela da classe)."
+        },
+        {
+          name: "Poder de Soldado",
+          description: "No 2º nível, e a cada nível seguinte, você recebe um poder de soldado a sua escolha. Veja a lista a seguir."
+        },
+        {
+          name: "Estratégia de Defesa",
+          description: "No 3º nível, escolha entre Infantaria Leve ou Tropa de Choque.",
+          subAbilities: [
+            {
+              name: "Infantaria Leve",
+              description: "Você recebe +2 na Defesa. Esse bônus aumenta em +2 a cada quatro níveis. Você não pode usar esta habilidade se estiver imóvel ou usando armadura pesada."
+            },
+            {
+              name: "Tropa de Choque",
+              description: "Você recebe proficiência com armaduras pesadas. Quando usa armadura pesada, você recebe redução de dano 2. Esta redução de dano aumenta em +2 a cada quatro níveis."
+            }
+          ]
+        },
+        {
+          name: "Ataque Extra",
+          description: "A partir do 6º nível, quando usa a ação agredir, você pode gastar 2 PM para realizar um ataque adicional uma vez por rodada."
+        },
+        {
+          name: "Supremacia Marcial",
+          description: "A partir do 10º nível, sempre que você faz um ataque e reduz os pontos de vida de um inimigo a 0 ou menos, você recebe 2 pontos de mana temporários (cumulativos). Você pode ganhar um máximo de PM temporários por cena igual ao seu nível. Esses pontos temporários desaparecem no fim da cena."
+        },
+        {
+          name: "Mestre da Batalha",
+          description: "No 20º nível, o dano adicional causado por seu Ataque Disciplinado também é multiplicado em caso de acerto crítico. Além disso, quando acerta um ataque disciplinado, você recupera uma quantidade de pontos de vida igual ao dano extra causado por ele."
+        }
+      ],
+      levelProgression: [
+      { level: 1, abilities: "Ataque disciplinado (+1d6)" },
+      { level: 2, abilities: "Poder de soldado" },
+      { level: 3, abilities: "Estratégia de defesa (Def +2/RD 2), poder de soldado" },
+      { level: 4, abilities: "Poder de soldado" },
+      { level: 5, abilities: "Ataque disciplinado (+2d6), poder de soldado" },
+      { level: 6, abilities: "Ataque extra, poder de soldado" },
+      { level: 7, abilities: "Estratégia de defesa (Def +4/RD 4), poder de soldado" },
+      { level: 8, abilities: "Poder de soldado" },
+      { level: 9, abilities: "Ataque disciplinado (+3d6), poder de soldado" },
+      { level: 10, abilities: "Poder de soldado" },
+      { level: 11, abilities: "Estratégia de defesa (Def +6/RD 6), poder de soldado" },
+      { level: 12, abilities: "Poder de soldado" },
+      { level: 13, abilities: "Ataque disciplinado (+4d6), poder de soldado" },
+      { level: 14, abilities: "Poder de soldado" },
+      { level: 15, abilities: "Estratégia de defesa (Def +8/RD 8), poder de soldado" },
+      { level: 16, abilities: "Poder de soldado" },
+      { level: 17, abilities: "Ataque disciplinado (+5d6), poder de soldado" },
+      { level: 18, abilities: "Poder de soldado" },
+      { level: 19, abilities: "Estratégia de defesa (Def +10/RD 10), poder de soldado" },
+      { level: 20, abilities: "Mestre da batalha, poder de soldado" }
+    ],
+    },
+  
+    //#endregion
 
   
 
-    //#region Tormenta20 - Jogo do Ano
-    { id: "Arcanista",
+
+  //#region Tormenta20 - Jogo do Ano
+  { id: "Arcanista",
   name: "Arcanista",
   powersUrl: "/poderes/arcanista",
   origin: "tormenta20 - jogo do ano",
@@ -1481,6 +1871,10 @@ export const classes: GameClass[] = [
     },
     //#endregion
 
+
+
+
+    
     //#region Dragão Brasil
     // Dragão Brasil - 199
     { id: "Mistico",

@@ -1,7 +1,26 @@
 import { Power } from "@/types/power";
-//#region Tormenta20 - Jogo do Ano
-//#endregion
+
 export const powersLadino: Power[] = [
+
+    //#region A Lenda de Ghanor
+    { id: "Camaleão",
+      name: "Camaleão",
+      description: "Se possuir um estojo de disfarces, você pode lançar a magia Disfarce Ilusório, gastando seu custo normal em pontos de mana. Porém, esta não é uma habilidade mágica (não pode ser detectada, dissipada etc.) e provém de sua habilidade extraordinária com disfarces.",
+      prerequisite: "Car 1, treinado em Enganação.",
+      origin: "A Lenda de Ghanor"
+    },
+    { id: "Mestre Impostor",
+      name: "Mestre Impostor",
+      description: "Uma vez por dia, quando assume um disfarce, você pode gastar 3 PM para se tornar treinado em uma perícia ou receber um poder geral cujos pré-requisitos você cumpra",
+      prerequisite: "Camaleão, 11º nível de ladino.",
+      origin: "A Lenda de Ghanor"
+    },
+  
+    //#endregion
+
+
+
+
 
   //#region Tormenta20 - Jogo do Ano
   { id: "Assassinar",

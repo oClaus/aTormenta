@@ -13,8 +13,8 @@ export const powersBardo: Power[] = [
     description: "Quando você usa Inspiração, o deslocamento das criaturas afetadas aumenta em +3m.",
     origin: "A Lenda de Ghanor"
   },
-  { id: "Música: Melidua Encorajadora",
-    name: "Música: Melidua Encorajadora",
+  { id: "Música: Melodia Encorajadora",
+    name: "Música: Melodia Encorajadora",
     description: "Criaturas a sua escolha no alcance se tornam imunes a efeitos de medo e recebem 1d6 pontos de vida temporários. Quando usa esta habilidade, você pode gastar mais pontos de mana. Para cada PM extra, o total de PV temporários aumenta em +1d6.",
     origin: "A Lenda de Ghanor"
   },

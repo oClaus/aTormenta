@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { GameClass } from "@/types/class";
+import { getOriginGroup } from "@/types/power";
 import { classes } from "@/data/classes";
 import ThemeToggle from "@/components/ThemeToggle";
 
@@ -99,14 +100,27 @@ function WizardGlyph({ className = "" }: { className?: string }) {
 export default function ClassesPage() {
   const [selectedClass, setSelectedClass] = useState<GameClass | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
+  const [originFilter, setOriginFilter] = useState<string>("todos");
   const [isIntroOpen, setIsIntroOpen] = useState(false);
 
+  const availableOrigins = useMemo(() => {
+  const origins = new Set<string>();
+  classes.forEach((cls) => origins.add(getOriginGroup(cls.origin)));
+  return Array.from(origins).sort((a, b) => a.localeCompare(b, "pt-BR"));
+  }, []);
+
   const filteredClasses = classes
-    .filter(cls =>
+    .filter((cls) => {
+    const matchesSearch =
       cls.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      cls.origin.toLowerCase().includes(searchTerm.toLowerCase())
-    )
-    .sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
+      cls.origin.toLowerCase().includes(searchTerm.toLowerCase());
+
+    const matchesOrigin =
+      originFilter === "todos" || getOriginGroup(cls.origin) === originFilter;
+
+    return matchesSearch && matchesOrigin;
+  })
+  .sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
 
   const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) {
@@ -288,6 +302,20 @@ export default function ClassesPage() {
             />
             <SearchGlyph className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/40" />
           </div>
+        </div>
+
+        {/* Filtro de Origem */}
+        <div className="mb-8 flex flex-wrap items-center gap-3">
+          <select
+            value={originFilter}
+            onChange={(e) => setOriginFilter(e.target.value)}
+            className="font-display text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full border-2 bg-[rgb(var(--bg-card-rgb))] border-amber-900/20 text-amber-950/70 hover:border-red-800/40 focus:outline-none focus:border-red-800/50 transition-all cursor-pointer"
+          >
+            <option value="todos">Todas as Origens</option>
+            {availableOrigins.map((origin) => (
+              <option key={origin} value={origin}>{origin}</option>
+            ))}
+          </select>
         </div>
 
         {/* Grid de Classes */}

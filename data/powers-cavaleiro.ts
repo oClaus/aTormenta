@@ -1,7 +1,18 @@
 import { Power } from "@/types/power";
-//#region Tormenta20 - Jogo do Ano
-//#endregion
+
 export const powersCavaleiro: Power[] = [
+    //#region A Lenda de Ghanor
+    { id: "Investida Esmagadora",
+      name: "Investida Esmagadora",
+      description: "Quando faz uma investida e acerta o ataque, você pode gastar 1 PM para fazer uma manobra derrubar contra o alvo.",
+      origin: "A Lenda de Ghanor"
+    },
+    
+    //#endregion
+
+
+
+
 
   //#region Tormenta20 - Jogo do Ano
   { id: "Armadura da Honra",
