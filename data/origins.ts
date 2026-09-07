@@ -1,6 +1,309 @@
 import { Origin } from "@/types/origin";
 
 export const origins: Origin[] = [
+
+  //#region A Lenda de Ghanor
+  {
+    id: "Ajudante de Curandeiro",
+    name: "Ajudante de Curandeiro",
+    description: "Você foi criado como ajudante de um curandeiro — seja um sábio que usava remédios e tratamentos mundanos, seja um clérigo abençoado com o poder da cura milagrosa. Seu tempo ao lado de seu mestre foi bem aproveitado, e você aprendeu a maximizar o efeito de todas as curas que usa, sejam mundanas ou mágicas. Você pode usar seu conhecimento para ajudar inocentes ou mesmo vendê-lo para uma companhia mercenária. De qualquer forma, quando as espadas são sacadas, todos querem tê-lo por perto.",
+    items: [
+      "Bálsamo restaurador x2",
+      "maleta de medicamentos."
+    ],
+    benefits: [
+      "Você é treinado em Cura e seus efeitos de cura curam +1 PV por dado. Por exemplo, se usar um bálsamo restaurador, o alvo recupera 2d4+2 PV."
+    ],
+    uniquePower: {
+      name: "",
+      description: ""
+    },
+    source: "A Lenda de Ghanor"
+  },
+  {
+    id: "Ajudante de Mercador",
+    name: "Ajudante de Mercador",
+    description: "Você foi criado por comerciantes ou mercadores. Talvez sua família possuísse um pequeno estabelecimento comercial, e você tenha crescido entre prateleiras, sacas de grãos e caixas de ferramentas, talvez tenha passado sua infância na boleia de uma carroça, acompanhando um mascate que viajava de vila em vila oferecendo suas mercadorias. Vendo os adultos exercendo esse ofício, encontrando os fregueses mais promissores e procurando as melhores mercadorias, você desenvolveu sua lábia de vendedor. Mais do que isso, aprendeu a lidar com objetos de todos os tipos e, hoje, sabe como manter seu equipamento bem organizado e tirar o máximo proveito dele.",
+    items: [
+      "Burro de carga",
+      "mercadorias para vender (10 espaços, preço de venda T$ 100)."
+    ],
+    benefits: [
+      "Você é treinado em Diplomacia e seu limite de itens vestidos aumenta em +1."
+    ],
+    uniquePower: {
+      name: "",
+      description: ""
+    },
+    source: "A Lenda de Ghanor"
+  },
+  {
+    id: "Aprendiz de Alquimista",
+    name: "Aprendiz de Alquimista",
+    description: "Você serviu a um alquimista, tomando notas, limpando o laboratório, arrumando as ferramentas e vasculhando mercados em busca de ingredientes. A rotina era exaustiva, quando não perigosa, mas lhe deu a chance de aprender um ofício complexo.",
+    items: [
+      "Ácido x2",
+      "fogo alquímico x2",
+      "instrumentos de alquimista."
+    ],
+    benefits: [
+      "Você é treinado em Ofício (alquimista) e, quando usa um item alquímico com efeito definido por uma rolagem de dados, rola um dado extra do mesmo tipo. Por exemplo, se usar um fogo alquímico, rola 2d6 pontos de dano."
+    ],
+    uniquePower: {
+      name: "",
+      description: ""
+    },
+    source: "A Lenda de Ghanor"
+  },
+  {
+    id: "Aprendiz de Artesão",
+    name: "Aprendiz de Artesão",
+    description: "Você passou sua juventude como aprendiz de um artesão habilidoso, como um ferreiro, alfaiate, ourives ou pedreiro. E mesmo que não tenha seguido os passos de seu mestre, pelo menos aprendeu como praticar seu ofício, uma habilidade que pode se mostrar útil em suas aventuras.",
+    items: [
+      "Um item que você possa fabricar de até T$ 50",
+      "instrumentos de ofício (um a sua escolha)."
+    ],
+    benefits: [
+      "Você é treinado em Ofício (um a sua escolha). Além disso, para fabricar um item, precisa pagar apenas um quinto do preço dele em matéria-prima, em vez de um terço. Por exemplo, para fabricar uma armadura completa (preço T$ 3.000), você paga apenas T$ 600, em vez de T$ 1.000."
+    ],
+    uniquePower: {
+      name: "",
+      description: ""
+    },
+    source: "A Lenda de Ghanor"
+  },
+  {
+    id: "Auxiliar de Cozinha",
+    name: "Auxiliar de Cozinha",
+    description: "Das ricas cozinhas dos palácios às tavernas de beira de estrada, há muita demanda por auxiliares, encarregados das tarefas menos nobres da culinária. Você foi um desses ajudantes, e passou sua juventude descascando legumes, lavando panelas e buscando lenha para o fogo. Entre uma tarefa e outra, quando o fogão estava livre, você experimentava suas próprias receitas, imitando o chefe da cozinha ou inventando com o que estivesse à sua mão. Foi uma infância de muito trabalho, mas entre trabalhar e ouvir sermões de seu mestre, você aprendeu alguns truques da cozinha.",
+    items: [
+      "Instrumentos de cozinheiro",
+      "matéria-prima para pratos especiais no valor de T$ 50."
+    ],
+    benefits: [
+      "Você é treinado em Ofício (cozinheiro) e os pratos especiais que você cozinha têm seu bônus numérico aumentado em +1."
+    ],
+    uniquePower: {
+      name: "",
+      description: ""
+    },
+    source: "A Lenda de Ghanor"
+  },
+  {
+    id: "Camponês",
+    name: "Camponês",
+    description: "Você passou sua infância em uma fazenda, lidando com plantações e animais. Era uma vida idílica, mas por algum motivo você a abandonou. Talvez sua fazenda tenha sido atacada? Talvez você tenha partido por conta própria em busca de aventuras? Seja como for, por fora você pode parecer humilde, mas por dentro tem o coração de um herói.",
+    items: [
+      "Uma ferramenta agrícola (mesmas estatísticas de uma lança)",
+      "rações de viagem x10."
+    ],
+    benefits: [
+      "Você recebe +3 pontos de mana. Além disso, quando faz um teste de perícia, pode gastar 1 PM para receber +1d4 nesse teste."
+    ],
+    uniquePower: {
+      name: "",
+      description: ""
+    },
+    source: "A Lenda de Ghanor"
+  },
+  {
+    id: "Criança da Guerra",
+    name: "Criança da Guerra",
+    description: "Você cresceu em um ambiente militar, cercado por soldados e histórias de batalhas e escaramuças. Você pode ser o filho de um oficial, carregado por seu pai ou por sua mãe em uma longa campanha militar, ou um bastardo, filho de um soldado ou soldada e de uma das inúmeras pessoas que seguem os exércitos em marcha. Quem quer que tenham sido seus pais, você cresceu entre acampamentos e fortificações, acompanhando o treinamento dos soldados, tanto em tempos de paz quanto de guerra. Vivendo em meio a militares, você aprendeu técnicas de combate, e se acostumou a estar sempre pronto para a ação.",
+    items: [
+      "Uma arma marcial com uma insígnia do exército ao qual você pertencia."
+    ],
+    benefits: [
+      "Você é treinado em Iniciativa e recebe um poder de combate a sua escolha."
+    ],
+    uniquePower: {
+      name: "",
+      description: ""
+    },
+    source: "A Lenda de Ghanor"
+  },
+  {
+    id: "Discípulo Arcano",
+    name: "Discípulo Arcano",
+    description: "Você passou sua juventude praticando as artes arcanas. Talvez tenha sido aprendiz de um eremita ou de uma bruxa, embrenhando-se na mata para encontrar seu mestre longe dos olhares preconceituosos das outras pessoas. Talvez tenha sido aluno de uma ordem de magos, onde recebeu treinamento formal. Seja como for, seu tempo como discípulo lhe forneceu uma compreensão profunda das artes arcanas.",
+    items: [
+      "Essência de mana x2."
+    ],
+    benefits: [
+      "Você é treinado em Misticismo e a CD para resistir a suas magias arcanas aumenta em +1."
+    ],
+    uniquePower: {
+      name: "",
+      description: ""
+    },
+    source: "A Lenda de Ghanor"
+  },
+  {
+    id: "Escudeiro",
+    name: "Escudeiro",
+    description: "Você serviu como ajudante de um cavaleiro ou nobre. Durante este tempo, entre tarefas mundanas como montar acampamentos, limpar armaduras e cuidar de montarias, você presenciou atos de coragem e nobreza — ou, talvez, de covardia e vergonha — de seu senhor. De qualquer forma, a experiência adquirida auxiliando-o e até mesmo cuidando de sua retaguarda em batalhas o deixou mais preparado para suas próprias aventuras.",
+    items: [
+      "Cota de malha ou escudo pesado e elmo pesado (equipamentos antigos de seu antigo senhor, que ele deixou para você)."
+    ],
+    benefits: [
+      "Você é treinado em Percepção e recebe +2 na Defesa."
+    ],
+    uniquePower: {
+      name: "",
+      description: ""
+    },
+    source: "A Lenda de Ghanor"
+  },
+  {
+    id: "Grumete",
+    name: "Grumete",
+    description: "Você foi aprendiz de marujo em uma embarcação, como um barco pesqueiro, uma galé pirata, um galeão explorador ou uma balsa de carga. Entre as horas que passou descascando batatas, limpando o convés e costurando velas, você andou em meio aos mastros e cordames, o que o deixou mais preparado para as façanhas de um aventureiro.",
+    items: [
+      "Corda",
+      "T$ 2d6 (economizados em seu tempo embarcado)."
+    ],
+    benefits: [
+      "Você recebe +2 em Acrobacia e Atletismo. Quando está se equilibrando ou escalando, você não fica desprevenido e seu deslocamento não é reduzido à metade."
+    ],
+    uniquePower: {
+      name: "",
+      description: ""
+    },
+    source: "A Lenda de Ghanor"
+  },
+  {
+    id: "Isolado",
+    name: "Isolado",
+    description: "Você cresceu afastado da sociedade. Talvez quem o criou estivesse sendo procurado por um crime ou fugindo de um inimigo, talvez você fosse o motivo deste isolamento — uma criança procurada por indivíduos poderosos que precisou ser criada em segredo. Ou, ainda, perdeu-se dos pais em uma região remota, sendo criado por um eremita ou mesmo por animais ou espíritos. Qualquer que seja o motivo, você teve uma infância reclusa, mas aprendeu coisas que poucos de sua idade sabem.",
+    items: [
+      "Equipamento de viagem",
+      "rações de viagem x5."
+    ],
+    benefits: [
+      "Você recebe +3 PM e um poder geral a sua escolha, representando um aprendizado exótico que teve em sua criação reclusa."
+    ],
+    uniquePower: {
+      name: "",
+      description: ""
+    },
+    source: "A Lenda de Ghanor"
+  },
+  {
+    id: "Mascote da Guarda",
+    name: "Mascote da Guarda",
+    description: "Você foi criado por guardas de um castelo ou pela milícia de uma cidade. Talvez seja descendente de um capitão da guarda, talvez tenha sido abandonado quando criança em uma torre ou guarnição. Seja como for, cresceu ouvindo histórias sobre a rotina da guarda, e assim que teve idade suficiente, aprendeu como se defender e manter seus sentidos afiados. Os tempos de histórias da guarda à mesa de jantar podem ter ficado para trás, mas as lições que elas continham o acompanham até hoje.",
+    items: [
+      "Arma marcial com a insígnia da guarda."
+    ],
+    benefits: [
+      "Você é treinado em Atletismo e recebe +2 em testes de ataque."
+    ],
+    uniquePower: {
+      name: "",
+      description: ""
+    },
+    source: "A Lenda de Ghanor"
+  },
+  {
+    id: "Membro de Gangue",
+    name: "Membro de Gangue",
+    description: "Você cresceu em um ambiente de crime e brutalidade. Talvez tenha fugido de casa, talvez seja de uma família desvalida que precisou recorrer ao crime para ter o que comer. Mas enquanto outras crianças na sua situação usavam de furtividade para cometer furtos, você entrou em uma gangue onde aprendeu a língua da violência. Sua infância foi difícil e você teve sua cota de brigas e surras. Porém, aprendeu lições importantes: a se impor sobre os outros e que, quando as armas são sacadas, é melhor agir primeiro e perguntar depois.",
+    items: [
+      "Uma arma simples corpo a corpo."
+    ],
+    benefits: [
+      "Você é treinado em Intimidação e recebe uma ação padrão extra no seu primeiro turno de cada cena de ação."
+    ],
+    uniquePower: {
+      name: "",
+      description: ""
+    },
+    source: "A Lenda de Ghanor"
+  },
+  {
+    id: "Órfão",
+    name: "Órfão",
+    description: "Você era uma criança de rua. Seus pais foram mortos ou você fugiu de casa para evitar maus tratos. Sem muitas escolhas, aprendeu cedo a sobreviver em grandes cidades, pedindo esmolas, furtando bolsas ou fazendo pequenas tarefas. Em sua rotina, aprendeu a subir muros e a correr da guarda. Porém, em algum momento decidiu que queria mais da vida e partiu em busca de um destino melhor. Você pode não ter uma armadura brilhante ou mantos luxuosos, mas sabe se virar nas ruas melhor que ninguém.",
+    items: [
+      "Adaga."
+    ],
+    benefits: [
+      "Você é treinado em Atletismo e recebe +3m em seu deslocamento."
+    ],
+    uniquePower: {
+      name: "",
+      description: ""
+    },
+    source: "A Lenda de Ghanor"
+  },
+  {
+    id: "Predestinado",
+    name: "Predestinado",
+    description: "Seu destino estava traçado antes mesmo de você nascer. Você pode ser o escolhido mencionado em uma profecia ou pode ter nascido com uma marca, fruto de eventos que ocorreram com algum antepassado. Ou talvez seja tudo mentira e seu futuro predito não passe de loucura ou trapaça daqueles que o criaram. Verdade ou não, sua infância foi determinada por uma profecia que influenciou a forma como você foi criado. Você não sabe o que seu futuro realmente lhe reserva, mas sabe que ele definiu seu passado.",
+    items: [
+      "Um item qualquer de até T$ 100 e uma tatuagem ou objeto pequeno, como um lenço, anel ou chave, relacionado ao seu destino predito."
+    ],
+    benefits: [
+      "Você recebe +1 em atributo a sua escolha."
+    ],
+    uniquePower: {
+      name: "",
+      description: ""
+    },
+    source: "A Lenda de Ghanor"
+  },
+  {
+    id: "Rato",
+    name: "Rato",
+    description: "Nas grandes cidades, é comum que criminosos recrutem crianças ou adolescentes. Você foi um desses “ratos”, um jovem ladrão, ensinado desde cedo a furtar bolsas, ajudar em pequenos golpes, rastejar por espaços por onde um adulto não passaria... Todo tipo de ação que ajudasse as atividades criminosas do seu bando. Seu tempo como criminoso ensinou a você algumas habilidades úteis para a vida de aventuras, mas também lhe mostrou o lado mais sombrio dos becos e ruelas dos Sete Reinos.",
+    items: [
+      "Ferramentas de ladrão."
+    ],
+    benefits: [
+      "Você é treinado em Furtividade e Ladinagem."
+    ],
+    uniquePower: {
+      name: "",
+      description: ""
+    },
+    source: "A Lenda de Ghanor"
+  },
+  {
+    id: "Receptáculo",
+    name: "Receptáculo",
+    description: "Anjos, demônios, dragões e espíritos. O mundo está repleto de seres sobrenaturais que, por meio de bênçãos, heranças ou maldições, podem conceder uma fração de seu poder aos mortais. Você é um desses mortais, e recebeu de uma dessas criaturas uma fagulha de magia. Embora útil, esse poder é uma marca de sua ligação com forças místicas, e pode tanto instigar preconceito quanto atrair atenção indesejada.",
+    items: [
+      "Essência de mana",
+      "uma marca de nascença ou tatuagem que indica sua relação com a fonte de sua magia."
+    ],
+    benefits: [
+      "Você pode lançar uma magia de 1º círculo a sua escolha, pagando seu custo normal em PM. Seu atributo-chave para essa magia é Carisma."
+    ],
+    uniquePower: {
+      name: "",
+      description: ""
+    },
+    source: "A Lenda de Ghanor"
+  },
+  {
+    id: "Trapaceiro",
+    name: "Trapaceiro",
+    description: "Desde jovem, você aprendeu a usar sua lábia para conseguir o que queria e se livrar de encrencas. Talvez tenha sido criado por um charlatão profissional, auxiliando-o em seus golpes e aprendendo o “ofício” no caminho. Ou tenha sido uma criança franzina, que precisou compensar a falta de força com a velocidade de suas palavras. Ou então foi criado em uma corte ou outro ambiente de palavras ambíguas, aprendendo a sutil arte da manipulação. Seja como forma de sustento, um meio de escapar de perigos ou apenas uma forma de atender seus próprios caprichos, você transformou suas palavras em uma ferramenta eficiente e poderosa.",
+    items: [
+      "Estojo de disfarces."
+    ],
+    benefits: [
+      "Você é treinado em Enganação, e pode substituir testes de Diplomacia por testes de Enganação."
+    ],
+    uniquePower: {
+      name: "",
+      description: ""
+    },
+    source: "A Lenda de Ghanor"
+  },
+  //#endregion
+
+
   // Dragão Brasil - 214
   { id: "Iniciado Verdugo (Ubani)",
     name: "Iniciado Verdugo (Ubani)",

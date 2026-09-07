@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Link from "next/link";
 import { origins } from "@/data/origins";
-import { formatOrigin } from "@/types/power";
+import { formatOrigin, getOriginGroup } from "@/types/power";
 import ThemeToggle from "@/components/ThemeToggle";
 
 function SearchGlyph({ className = "" }: { className?: string }) {
@@ -38,16 +38,28 @@ function CornerOrnament({ className = "" }: { className?: string }) {
 
 export default function OrigemPage() {
   const [searchTerm, setSearchTerm] = useState("");
+  const [sourceFilter, setSourceFilter] = useState<string>("todos");
   const [isIntroOpen, setIsIntroOpen] = useState(false);
 
+  const availableSources = useMemo(() => {
+  const sources = new Set<string>();
+  origins.forEach((origin) => sources.add(getOriginGroup(origin.source)));
+  return Array.from(sources).sort((a, b) => a.localeCompare(b, "pt-BR"));
+  }, []);
+
   const filteredOrigins = origins
-    .filter(
-      (origin) =>
-        origin.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        origin.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        origin.source.toLowerCase().includes(searchTerm.toLowerCase())
-    )
-    .sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
+  .filter((origin) => {
+    const matchesSearch =
+      origin.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      origin.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      origin.source.toLowerCase().includes(searchTerm.toLowerCase());
+
+    const matchesSource =
+      sourceFilter === "todos" || getOriginGroup(origin.source) === sourceFilter;
+
+    return matchesSearch && matchesSource;
+  })
+  .sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
 
   return (
     <div className="min-h-screen bg-[rgb(var(--bg-rgb))] text-amber-950 font-serif selection:bg-amber-800 selection:text-amber-50 relative overflow-x-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[rgb(var(--bg-rgb))] to-[rgb(var(--bg-edge-rgb))]">
@@ -194,6 +206,24 @@ export default function OrigemPage() {
                 <SearchGlyph className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/40 pointer-events-none" />
             </div>
         </div>
+
+        {/* Filtro de Fonte */}
+        <div className="mb-8 flex flex-wrap items-center gap-3">
+          <select
+            value={sourceFilter}
+            onChange={(e) => setSourceFilter(e.target.value)}
+            className="font-display text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full border-2 bg-[rgb(var(--bg-card-rgb))] border-amber-900/20 text-amber-950/70 hover:border-red-800/40 focus:outline-none focus:border-red-800/50 transition-all cursor-pointer"
+          >
+            <option value="todos">Todas as Fontes</option>
+            {availableSources.map((source) => (
+              <option key={source} value={source}>{formatOrigin(source)}</option>
+            ))}
+          </select>
+        </div>
+
+        <h2 className="font-display text-2xl font-bold text-red-800 mb-6 border-b-2 border-amber-900/20 pb-2 tracking-wide">
+          {filteredOrigins.length} Origens Encontradas
+        </h2>
 
         {/* Grid de Origens */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 items-stretch">
