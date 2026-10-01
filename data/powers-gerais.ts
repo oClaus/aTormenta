@@ -3,7 +3,61 @@
 import { Power } from "@/types/power";
 
 export const powersGerais: Power[] = [
-  // Tormenta20 - Jogo do Ano
+
+  //#region A Lenda de Ghanor
+  { id: "Agarrar Aprimorado",
+    name: "Agarrar Aprimorado",
+    description: "Você recebe +2 em testes de ataque para agarrar. Quando agarra uma criatura, pode gastar 1 PM para fazer um ataque extra contra ela.",
+    prerequisite: "Estilo Desarmado.",
+    origin: "A Lenda de Ghanor"
+  },
+  { id: "Alquimista Exímio",
+    name: "Alquimista Exímio",
+    description: "Quando você usa um preparado alquímico ou poção, a CD para resistir a ele aumenta em +2. Além disso, se ele usar uma rolagem para definir seu efeito, você recebe um bônus de +1 por dado. Por exemplo, se você usar um bálsamo restaurador, ele recupera 2d4+2 PV; se usar um ácido concentrado, ele causa 4d8+4 pontos de dano, e assim por diante.",
+    prerequisite: "Int 1, treinado em Ofício (alquimista).",
+    origin: "A Lenda de Ghanor"
+  },
+  { id: "Alquimista Militar",
+    name: "Alquimista Militar",
+    description: "Quando você usa um preparado alquímico ou poção, o alcance dele aumenta para médio. Além disso, se ele causar dano, você rola dois dados extras do mesmo tipo.",
+    prerequisite: "For 1, treinado em Pontaria, Alquimista Exímio.",
+    origin: "A Lenda de Ghanor"
+  },
+  { id: "Cavaleiro de Torneio",
+    name: "Cavaleiro de Torneio",
+    description: "Se estiver montado e usando equipamento de justa (lança montada e armadura, escudo e elmo pesados) e fizer uma investida, você rola dois dados para o teste de ataque e usa o melhor resultado, e rola novamente qualquer resultado 1 ou 2 da rolagem de dano. Além disso, qualquer pessoa que o veja paramentado dessa forma e goste de torneios de cavalaria (a maior parte dos plebeus e nobres) tem sua categoria de atitude em relação a você melhorada em uma categoria automaticamente.",
+    prerequisite: "Car 1, treinado em Cavalgar e Nobreza.",
+    origin: "A Lenda de Ghanor"
+  },
+  { id: "Gladiador",
+    name: "Gladiador",
+    description: "Acostumado a lutas de exibição, você se tornou habilidoso em armas e movimentos inovadores. Você recebe +2 em testes de manobra e +2 em rolagens de dano com armas exóticas. Além disso, se tiver acesso a uma arena e fizer uma apresentação (veja Atuação, na página 77), recebe o dobro do dinheiro.",
+    prerequisite: "Car 1, treinado em Atuação e Luta.",
+    origin: "A Lenda de Ghanor"
+  },
+  { id: "Inclemente",
+    name: "Inclemente",
+    description: "Você recebe +5 em rolagens de dano contra oponentes caídos, desprevenidos ou indefesos.",
+    origin: "A Lenda de Ghanor"
+  },
+  { id: "Parede de Escudos",
+    name: "Parede de Escudos",
+    description: "Se você estiver usando um escudo, o bônus na Defesa que ele fornece aumenta em +1. Você pode gastar uma ação de movimento para formar uma falange com aliados adjacentes que também estejam usando escudos (mínimo de um aliado, máximo igual ao seu Carisma). Enquanto permanecerem adjacentes, os participantes da falange recebem cobertura leve.",
+    prerequisite: "treinado em Guerra, Estilo de Arma e Escudo.",
+    origin: "A Lenda de Ghanor"
+  },
+  { id: "Sede de Sangue",
+    name: "Sede de Sangue",
+    description: "Sempre que reduz um inimigo a 0 PV, você recupera 5 PV e 1 PM.",
+    origin: "A Lenda de Ghanor"
+  },
+  //#endregion
+
+
+
+
+  //#region Tormenta20 - Jogo do Ano
+  
   { id: "Acuidade com Arma",
     name: "Acuidade com Arma",
     description: "Quando usa uma arma corpo a corpo leve ou uma arma de arremesso, você pode usar sua Destreza em vez de Força nos testes de ataque e rolagens de dano.",
@@ -244,7 +298,12 @@ export const powersGerais: Power[] = [
     prerequisite: "Con 1.",
     origin: "Tormenta20 - Jogo do Ano"
   },
+  //#endregion 
 
+
+
+
+  
   //#region Dragão Brasil - 227
   { id: "Ataque com Escudo II",
     name: "Ataque com Escudo II",

@@ -110,6 +110,9 @@ export const weapons: Weapon[] = [
   },
   //#endregion
 
+
+
+
   //#region Dragão Brasil
   // Dragão Brasil - 199
   { id: "Wakizashi",
@@ -157,6 +160,10 @@ export const weapons: Weapon[] = [
     spaces: 2,
   },
   //#endregion
+
+
+
+
 
   //#region Tormenta20 - Jogo do Ano
   { id: "adaga",
@@ -820,6 +827,9 @@ export const weapons: Weapon[] = [
   },
   //#endregion
 
+
+
+
   //#region Ameaças de Arton
   { id: "Porrete",
     name: "Porrete",
@@ -1063,6 +1073,101 @@ export const weapons: Weapon[] = [
   },
   //#endregion
 
+
+
+
+  //#region A Lenda de Ghanor
+  { id: "Gancho",
+    name: "Gancho",
+    description: "Este gancho curvo de metal com uma empunhadura perpendicular é usado para puxar fardos de feno nos campos, içar cargas em embarcações e, se necessário, causar ferimentos fatais.",
+    origin: "A Lenda de Ghanor",
+    purpose: "Corpo a Corpo",
+    proficiency: "Marcial",
+    grip: "Leve",
+    price: "T$ 3",
+    damage: "1d4",
+    critical: "x4",
+    range: "—",
+    type: "Perfuração",
+    spaces: 1,
+    image: "/armas/gancho.png",
+  },
+  { id: "Khanjar",
+    name: "Khanjar",
+    description: "Este punhal longo e curvo possui um fio preciso, capaz de cortes profundos. É usado em Kottar como ferramenta para abrir cadáveres.",
+    origin: "A Lenda de Ghanor",
+    purpose: "Corpo a Corpo",
+    proficiency: "Marcial",
+    grip: "Leve",
+    price: "T$ 12",
+    damage: "1d4",
+    critical: "18",
+    range: "—",
+    type: "Corte",
+    spaces: 1,
+    image: "/armas/khanjar.png",
+  },
+  { id: "Maca-de-Guerra",
+    name: "Maça de Guerra",
+    description: "Uma versão mais perigosa da maça comum, com grandes placas de metal na ponta. O peso da maça de guerra torna seu golpe poderoso, mas a torna uma arma desbalanceada. Uma maça de guerra é muito pesada para ser usada sem treinamento especial, por isso é uma arma exótica.",
+    origin: "A Lenda de Ghanor",
+    purpose: "Corpo a Corpo",
+    proficiency: "Exótica",
+    grip: "Uma Mão",
+    price: "T$ 30",
+    damage: "1d12",
+    critical: "x3",
+    range: "—",
+    type: "Impacto",
+    spaces: 1,
+    image: "/armas/maca-de-guerra.png",
+  },
+  { id: "Martelo-de-Batalha",
+    name: "Martelo de Batalha",
+    description: "Outra ferramenta adaptada para combate, esta é a arma favorita de quase todos os anões que não usam machados.",
+    origin: "A Lenda de Ghanor",
+    purpose: "Corpo a Corpo",
+    proficiency: "Marcial",
+    grip: "Uma Mão",
+    price: "T$ 12",
+    damage: "1d8",
+    critical: "x3",
+    range: "—",
+    type: "Impacto",
+    spaces: 1,
+    image: "/armas/martelo-de-batalha.png",
+  },
+  { id: "Punhal",
+    name: "Punhal",
+    description: "Esta lâmina fina é usada por cortesãos, aristocratas e outros indivíduos que supostamente não deveriam portar armas. Um punhal é uma arma discreta e ligeira. Uma vez por cena, se você possuir o poder Saque Rápido, sacar um punhal e usá-lo para atacar no mesmo turno, o oponente fica desprevenido contra esse ataque.",
+    origin: "A Lenda de Ghanor",
+    purpose: "Corpo a Corpo",
+    proficiency: "Simples",
+    grip: "Leve",
+    price: "T$ 6",
+    damage: "1d4",
+    critical: "19",
+    range: "—",
+    type: "Perfuração",
+    spaces: 1,
+    image: "/armas/punhal.png",
+  },
+  { id: "Sabre-Elfico",
+    name: "Sabre Élfico",
+    description: "Esta lâmina curva e alongada foi desenvolvida para se valer da agilidade natural dos elfos. É uma arma adaptável e ágil. É muito grande para ser empunhado com uma só mão sem treinamento especial; por isso, é uma arma exótica. Ele pode ser usado como uma arma marcial de duas mãos.",
+    origin: "A Lenda de Ghanor",
+    purpose: "Corpo a Corpo",
+    proficiency: "Exótica",
+    grip: "Uma Mão",
+    price: "T$ 100",
+    damage: "1d8/1d10",
+    critical: "19",
+    range: "—",
+    type: "Corte",
+    spaces: 1,
+    image: "/armas/sabre-elfico.png",
+  },
+  //#endregion
 
   
   

@@ -126,6 +126,9 @@ export const powersGeraisDestino: Power[] = [
   },
   //#endregion
 
+
+
+
   //#region Ameaças de Arton
   { id: "Coração de Dragão",
     name: "Coração de Dragão",
@@ -146,6 +149,9 @@ export const powersGeraisDestino: Power[] = [
     origin: "Ameaças de Arton"
   },
   //#endregion
+
+
+
 
   //#region Dragão Brasil
 
@@ -244,6 +250,56 @@ export const powersGeraisDestino: Power[] = [
 
 
   //#endregion
+
+
+
+
+  //#region A Lenda de Ghanor
+  { id: "Capitão de Tropas",
+    name: "Capitão de Tropas",
+    description: "Seus capangas recebem +5 na Defesa e, sempre que você contrata ou recebe capangas por qualquer motivo, recebe um capanga adicional do mesmo tipo. Se você for do patamar campeão ou superior (11º nível em diante), em vez disso seus capangas recebem +10 na Defesa e você recebe dois capangas adicionais.",
+    prerequisite: "Comandar, 5º nível de personagem.",
+    origin: "A Lenda de Ghanor"
+  },
+  { id: "Chefe Mercenário",
+    name: "Chefe Mercenário",
+    description: "Seus capangas recebem +2 em rolagens de dano e, uma vez por rodada, você pode gastar uma ação livre para fazê-los se movimentar ou atacar (mas continua só podendo fazê-los atacar uma vez por rodada).",
+    prerequisite: "Comandar, 5º nível de personagem.",
+    origin: "A Lenda de Ghanor"
+  },
+  { id: "Estudioso",
+    name: "Estudioso",
+    description: "Uma vez por aventura, se estiver em uma biblioteca ou ambiente similar, você pode gastar um dia estudando para fazer um teste de Conhecimento (CD 15). Se passar, recebe um benefício a sua escolha entre +2 em uma perícia (você pode escolher este benefício mais de uma vez, para perícias diferentes); +2 na Defesa; +2 em testes de resistência; +1 na CD para resistir a suas magias; +3 pontos de mana. Para cada 5 pontos pelos quais o resultado do teste exceder a CD, você recebe um benefício adicional.",
+    prerequisite: "Int 1, treinado em Conhecimento.",
+    origin: "A Lenda de Ghanor"
+  },
+  { id: "Festeiro",
+    name: "Festeiro",
+    description: "Uma vez por aventura, se estiver em uma taverna ou ambiente similar, você pode “torrar” dinheiro em comida, bebida, música, dança e outras diversões. Se gastar T$ 100, recebe +2 em duas perícias a sua escolha. Se gastar T$ 500, recebe +1 PM por nível. E se gastar T$ 1.000, recebe +2 em um atributo a sua escolha. Os benefícios são cumulativos — se você gastar T$ 1.000, recebe +2 em duas perícias, +1 PM por nível e +2 em um atributo — e duram até o fim da aventura, mas você deve se divertir por pelo menos algumas horas para recebê-los.",
+    prerequisite: "Car 1.",
+    origin: "A Lenda de Ghanor"
+  },
+  { id: "Glutão",
+    name: "Glutão",
+    description: "Você recebe +1 PV por nível de personagem e os benefícios que recebe por alimentação são dobrados. Assim, se você comer uma refeição indulgente, recebe +10 PV temporários e, se comer um banquete, recebe +1d6 em dois testes a sua escolha até o fim do próximo dia.",
+    prerequisite: "Con 1, treinado em Fortitude.",
+    origin: "A Lenda de Ghanor"
+  },
+  { id: "Líder Nato",
+    name: "Líder Nato",
+    description: "Seu limite de parceiros aumenta em +1. Se você for de patamar campeão ou superior (11º nível ou maior), em vez disso aumenta em +2.",
+    prerequisite: "Car 2.",
+    origin: "A Lenda de Ghanor"
+  },
+  { id: "Mercador",
+    name: "Mercador",
+    description: "Quando chega em uma nova comunidade, você pode gastar um dia fazendo contatos com o comércio local para fazer um teste de Diplomacia (CD 20). Se passar, pode vender itens nessa comunidade por 60% do seu preço (em vez de 50%). Para cada 10 pontos pelos quais o resultado do teste exceder a CD, você aumenta o preço de venda em +10%.",
+    prerequisite: "Car 1, treinado em Diplomacia e Ofício (qualquer).",
+    origin: "A Lenda de Ghanor"
+  },
+  //#endregion
+
+
 
 
   { id: "Alma Livre",

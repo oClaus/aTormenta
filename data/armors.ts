@@ -2,6 +2,34 @@ import { Armor, ArmorType } from "@/types/armors";
 //#region Tormenta20 - Jogo do Ano
 //#endregion
 export const armors: Armor[] = [
+  //#region A Lenda de Ghanor
+  { id: "cota-de-aneis",
+    name: "Cota de anéis",
+    type: "Leve",
+    description: "Esta armadura consiste de uma série de aneis metálicos costurados em uma base de couro. Reduz seu deslocamento em –1,5m.",
+    origin: "A Lenda de Ghanor",
+    price: "T$ 250",
+    defenseBonus: 5,
+    armorPenalty: -2,
+    spaces: 2,
+    image: "/armadura/cota-de-aneis.png",
+  },
+  { id: "cota-de-talas",
+    name: "Cota de talas",
+    type: "Pesada",
+    description: "Longas tiras de aço — as talas — rebitadas e costuradas em um forro de tecido.",
+    origin: "A Lenda de Ghanor",
+    price: "T$ 250",
+    defenseBonus: 7,
+    armorPenalty: -3,
+    spaces: 5,
+    image: "/armadura/cota-de-talas.png",
+  },
+  //#endregion
+
+
+
+
   //#region Tormenta20 - Jogo do Ano
   { id: "armadura-acolchoada",
     name: "Armadura acolchoada",
