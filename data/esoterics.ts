@@ -2,6 +2,34 @@ import { Gear } from "@/types/gear";
 //#region Tormenta20 - Jogo do Ano
 //#endregion
 export const esoteric: Gear[] = [
+  //#region Tormenta20 - Jogo do Ano
+  { id: "astrolabio",
+    name: "Astrolábio",
+    description: "Este pequeno e delicado cilindro de metal é usado para medições. Quando lança uma magia que afeta uma área, você pode pagar +1 PM para ativar este item e dobrar a área de efeito da magia.",
+    origin: "A Lenda de Ghanor",
+    price: "T$ 450",
+    spaces: "1"
+  },
+  { id: "carrilhao-consagrado",
+    name: "Carrilhão Consagrado",
+    description: "Um sinete de som peculiar, usado em liturgias sagradas. A CD para resistir a suas magias divinas aumenta em +1.",
+    origin: "A Lenda de Ghanor",
+    price: "T$ 100",
+    spaces: "1"
+  },
+  { id: "espinho-de-monstro",
+    name: "Espinho de Monstro",
+    description: "Uma varinha feita a partir do corpo de certos monstros. Suas magias causam +1d6 pontos de dano do mesmo tipo. Porém, sempre que lança uma magia, você perde 1 PV.",
+    origin: "A Lenda de Ghanor",
+    price: "T$ 250",
+    spaces: "1"
+  },
+  //#endregion
+
+
+
+
+
   // Duelo de Dragões
   { id: "Tomo de Guerra",
     name: "Tomo de Guerra",

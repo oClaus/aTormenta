@@ -448,4 +448,108 @@ export const regreiroQAs: RegreiroQA[] = [
     magazineNumber: 229,
   },
   //#endregion
+  //#region DB - 230
+  {
+    id: "DB230-01",
+    question: "> Saudações da mais combeirística índole, meritíssimos.\n\nApresento a seguinte questão: a versão aprimorada da linhagem abençoada, descrita em *Deuses de Arton*, concede redução no custo de magias de círculo igual ou menor que a Sabedoria do feiticeiro. Esta redução se acumula com outras, como por exemplo um medalhão de prata?",
+    answer: "> Saudações beatíficas, conselheiro! Por mais que os deuses despejem suas graças sobre os indivíduos conhecidos como feiticeiros abençoados, a resposta é negativa. Conforme consta da página 226 de *Tormenta20*, reduções de custo não são cumulativas. Existem alguns poucos efeitos que reduzem custos e são cumulativos, mas eles devem expressar isso na própria descrição, como acontece com o poder *Foco em Magia*.",
+    magazineNumber: 230,
+  },
+  {
+    id: "DB230-02",
+    question: "> Salve, salve, descansadíssimos (espero) membros do tribunal. Estava relendo a regra de Custo de Vida (*Tormenta20*, p. 277) e me saltou aos olhos a frase “o custo define a condição de descanso padrão do personagem”. Isso quer dizer que um personagem que utilize esta regra pode pagar T$ 200 para ter um custo de vida luxuoso e, mesmo que esteja se aventurando nos ermos (dormindo no mato), teria uma condição de descanso luxuosa?",
+    answer: "> Saudações oníricas, conselheiro! De fato, os ministros deste tribunal se encontram em perfeitas condições de descanso. Não tanto quanto um personagem usando o custo de vida luxuoso, mas ainda bem! Abstrações como o custo de vida podem levar a algumas confusões, então cabe a nós elucidar essa questão sob a luz da lei de Khalmyr. Antes de mais nada, lembre-se de que custo de vida é uma regra variante. Utilizá-la não é uma decisão apenas do jogador, mas sim do mestre e, frequentemente, da mesa como um todo. Além disso, voltemos à frase em questão: o custo de vida determina a condição de descanso padrão. Como o contexto das descrições explicita, isso se refere ao período no qual o personagem está em cidades, quando poderia pagar por esses serviços. A regra é uma forma de facilitar a contabilidade dos gastos dos aventureiros com hospedagem, alimentação e outros pormenores, não uma forma de carregar uma cama de plumas e uma banheira dentro da mochila para usá-los nos ermos. Ou seja, não, o aventureiro não terá condições de descanso luxuosas enquanto dorme no mato mesmo que pague por um custo de vida luxuoso.",
+    magazineNumber: 230,
+  },
+  {
+    id: "DB230-03",
+    question: "> Saudações, supremos ministros, guardiões dos sagrados textos regrísticos!\n\nTenho uma dúvida que movimentou a comunidade. Um personagem na minha mesa tem o poder *Golpe Pessoal Conjurador*, o poder *Foco em Magia* (*Toque Chocante*), uma manopla harmonizada com *Golpe Pessoal* e um colar harmonizado com *Toque Chocante* (esotérico). Ou seja, há um redutor de custo de –1 para *Golpe Pessoal* e de –1 para *Toque Chocante*, além do *Foco em Magia*. Como um afeta *Toque Chocante* e o outro afeta *Golpe Pessoal*, os dois itens harmonizados se aplicam separadamente? O custo final é reduzido em –3? Em caso de resposta negativa, por que?",
+    answer: "> Saudações custosas, conselheiro! Antes de mais nada, precisamos apontar que não existe nenhum item esotérico chamado colar. Se você permitiu o uso de um item qualquer para receber melhorias e funcionar como esotérico, tome cuidado com as próprias concessões! Os esotéricos costumam ser caros por um motivo. *Foco em Magia* acumula com uma das reduções concedidas pelos itens, mas ambas vêm da mesma fonte (itens). Os PM gastos em *Toque Chocante* fazem parte do custo em PM de *Golpe Pessoal Conjurador*. Dessa forma, apenas uma instância de harmonizado se aplica. O custo final é reduzido em –2, mas isso tem efeito apenas caso o personagem faça um *Toque Chocante* de 3 PM ou mais. Lembre-se ainda de que o custo do *Toque Chocante* faz parte do custo do *Golpe Pessoal*. Ou seja, mesmo que o *Golpe Pessoal* não tenha nenhum outro efeito, a magia ainda está sujeita ao limite de PM do guerreiro –1.",
+    magazineNumber: 230,
+  },
+  {
+    id: "DB230-04",
+    question: "> Bom dia, excelentíssimos! Tenho duas dúvidas.\n\n1) Gostaria de saber mais sobre a habilidade *Defesa Punitiva*, apresentada na DB 216. Caso a ameaça passe pelo teste de ataque, efeitos aplicados quando se acerta um ataque ainda são contabilizados? (Isso para ambos os lados, os efeitos da ameaça caso passe por 5 ou mais, ou do jogador). Dentro da ficção, o dano causado é representado como o atacante se acertando? O tipo de dano se mantém o mesmo? O que acontece se uma parte deste dano for anticriatura? Este efeito é ignorado?",
+    answer: "> Saudações sancionatórias, conselheiro! Vamos às suas respostas:\n\n1) *Defesa Punitiva* tem um efeito bem abstrato para agilizar o jogo. Dentro da ficção, a habilidade é resolvida como um contra-ataque. O dano, porém, é do mesmo tipo do dano causado pelo atacante. Resolva o dano normalmente, apenas ignore-o para a ameaça e aplique metade do mesmo contra o atacante (caso a ameaça vença o ataque por 5 pontos ou mais). Quaisquer efeitos adicionais causados pelo ataque ainda se aplicam: a habilidade ignora apenas dano. Por fim, lembre-se de que todas as habilidades para ameaças descritas no artigo *Reações Ameaçadoras* são pontos de partida! Elas precisam ser adaptadas para cada ameaça de acordo. Por exemplo, um monstro feito de fogo poderia ter uma versão de *Defesa Punitiva* na qual causaria dano por fogo com seu contra-ataque. Um mestre espadachim pode ter uma versão que transforma o acerto em um erro, em vez de apenas ignorar o dano.",
+    magazineNumber: 230,
+  },
+  {
+    id: "DB230-05",
+    question: "2) Se eu faço uma investida e sou atacado no processo, posso ser alvo das manobras de derrubar ou empurrar. Neste caso, eu perco o restante da ação? Ou ainda poderia executar um ataque ou ação padrão?",
+    answer: "2) Se qualquer efeito interrompe a sua investida e o impede de alcançar o alvo, você perde a ação por completo. No entanto, no caso de ser derrubado, a perícia Acrobacia pode ser usada para se levantar rapidamente e evitar isso (veja *Tormenta20*, p. 115).",
+    magazineNumber: 230,
+  },
+  {
+    id: "DB230-06",
+    question: "> Bom dia, caros excelentíssimos! Venho para tirar certas dúvidas.\n\n1) A habilidade de inovador (*Heróis de Arton*) *Sequência Especial* exige o uso de armas diferentes. Armas com melhorias diferentes servem para cumprir este requisito? Por exemplo, uma espada curta precisa e uma espada curta certeira?",
+    answer: "> Saudações sortidíssimas, conselheira! Vamos às suas respostas:\n\n1) Não. O inovador precisa de armas realmente diferentes entre si. Uma melhoria não basta.",
+    magazineNumber: 230,
+  },
+  {
+    id: "DB230-07",
+    question: "2) Deuses menores podem ter apenas um paladino. É possível que um devoto de um deus menor seja um santo (*Heróis de Arton*) mesmo que já exista um devoto paladino?",
+    answer: "2) Uma classe variante ainda é a classe básica para a grande maioria das questões, excetuando apenas os pontos destacados na variante. Desta forma, um deus menor pode ter apenas um paladino, independente da variante.",
+    magazineNumber: 230,
+  },
+  {
+    id: "DB230-08",
+    question: "3) Um feiticeiro da linhagem abençoada escolhe um deus maior para abençoá-lo. Seria possível escolher Keenn, Ragnar, Tauron ou Glórienn?",
+    answer: "3) Depende. Em campanhas situadas em períodos nos quais eles ainda eram deuses maiores, sim, com certeza. Em outros períodos, depende do seu mestre. Para mais informações, consulte a página 245 de *Deuses de Arton*.",
+    magazineNumber: 230,
+  },
+  {
+    id: "DB230-09",
+    question: "4) O poder *Resistência Montada* (*Ameaças de Arton*) e a habilidade *Disciplina Atlética* do atleta (*Heróis de Arton*) permitem substituir a perícia original de um teste de resistência. Bônus em testes de resistência, como do aprimoramento Selada (armadura) ou da habilidade *Baluarte* do cavaleiro, ainda se aplicam quando a perícia é trocada?",
+    answer: "4) Sim. Bônus em testes de resistência são aplicados a perícias de resistência (*Tormenta20*, p. 119), o que normalmente se refere apenas às perícias Fortitude, Reflexos e Vontade, mas que pode ser estendido a quaisquer outras perícias que devido a outros efeitos possam ser usadas para resistir a efeitos negativos.",
+    magazineNumber: 230,
+  },
+  {
+    id: "DB230-10",
+    question: "> Olá, meritíssimos! Gostaria de esclarecer duas dúvidas:\n\n1) O item garra feroz aplica seus benefícios a uma arma natural de um personagem sob efeito de habilidades como *Forma Selvagem*. Isso se estende à magia *Toque de Megalokk* (*Deuses de Arton*)?",
+    answer: "> Saudações indômitas, conselheiro! Vamos às suas respostas:\n\n1) Sim, é exatamente o tipo de habilidade similar a *Forma Selvagem* para o qual este efeito da garra feroz foi pensado.",
+    magazineNumber: 230,
+  },
+  {
+    id: "DB230-11",
+    question: "2) Caso eu seja um osteon, yidishan ou vampiro, ainda posso escolher poderes raciais da raça original, antes da transformação? Por exemplo, um vampiro que antes era elfo pode escolher poderes raciais de elfo?",
+    answer: "2) Pela letra fria da regra, não. Mas este é o tipo de coisa que pode ser conversado com seu mestre, especialmente se for importante para o conceito do personagem.",
+    magazineNumber: 230,
+  },
+  {
+    id: "DB230-12",
+    question: "> Oi, oi, eu tenho uma duvidazinha!\n\nExistem itens que concedem bônus permanentes em atributos, como o *Manual da Saúde Corporal*. Este bônus se acumula com um item mágico que ofereça bônus no mesmo atributo, como um *Torque do Vigor*? Um personagem com o poder *Ao Sabor do Destino* pode usar um desses itens, já que são consumidos?",
+    answer: "> Saudações bibliófilas, conselheiro! Os manuais e tomos aumentam permanentemente o valor do atributo, não exatamente concedem um bônus. É um efeito diferente de itens como o *Torque do Vigor*. Desta forma, podem ser usados em conjunto, já que operam de formas diferentes. Na prática, o personagem aprimora seu atributo duas vezes, um aumento permanente com o Manual e um bônus temporário (embora duradouro) com o Torque.",
+    magazineNumber: 230,
+  },
+  {
+    id: "DB230-13",
+    question: "> Saudações, excelentíssimos! Venho, através desta, submeter algumas dúvidas surgidas em minhas campanhas de T20:\n\n1) Digamos que um personagem com o poder *Ambidestria* realize uma ação Agredir. Com o ataque de sua primeira arma, ele usa uma manobra de combate Empurrar. Ele pode movimentar-se junto com o alvo, gastando sua ação de movimento e, em seguida, realizar seu ataque com a segunda arma?",
+    answer: "> Saudações tripartites, conselheira! Vamos às suas respostas:\n\n1) Em quase todas as situações, esse tipo de movimentação durante uma ação Agredir não seria possível. Uma ação é concluída e seus efeitos realizados, com outra ação acontecendo depois. Porém, a movimentação que acontece na manobra Empurrar é parte da manobra, apesar de consumir uma ação de movimento; não se trata de uma ação Movimentar-se. Dessa forma, sim, o personagem pode concluir sua ação Agredir e realizar seu segundo ataque depois de empurrar e se mover.",
+    magazineNumber: 230,
+  },
+  {
+    id: "DB230-14",
+    question: "2) Um personagem meio-orc com a habilidade *Sangue Orc* (*Ameaças de Arton*) é considerado um orc para efeitos relacionados a raça. Isso permite ao meio-orc escolher poderes raciais de orc, como os listados em *Heróis de Arton*?",
+    answer: "2) Sim. Um meio-orc pode escolher poderes raciais de orc.",
+    magazineNumber: 230,
+  },
+  {
+    id: "DB230-15",
+    question: "3) As habilidades de classe *Mistura Básica* e *Magia Engarrafada*, da classe variante alquimista (*Heróis de Arton*), permitem aplicar uma pluma de algodão (*A Lenda de Ghanor RPG*) a poções?\n\nAgradeço desde já!",
+    answer: "3) Tecnicamente, um alquimista pode sim aplicar pluma de algodão a poções. Porém, como poções não têm alvo, o efeito do catalisador seria desperdiçado.",
+    magazineNumber: 230,
+  },
+  {
+    id: "DB230-16",
+    question: "> Olá, caros juízes, detentores do saber absoluto! Agraciem-me com respostas para as seguintes dúvidas:\n\n1) As magias e perícias listadas para dragões em *Ameaças de Arton* incluem todas as suas habilidades ou é apenas um resumo?",
+    answer: "> Saudações dracoinspiradas, conselheiro! Vamos às suas respostas, sob a graça de Kallyadranoch:\n\n1) Os dragões apresentados no livro básico e em *Ameaças de Arton* são as versões mais comuns, não representam indivíduos em particular. Todas as suas estatísticas podem ser alteradas usando as informações dos manuais como base. É perfeitamente possível que um dragão dedicado às artes arcanas conheça muito mais magias enquanto um menos afeiçoado às mesmas teria menos. O próprio Benthos não lança magias!",
+    magazineNumber: 230,
+  },
+  {
+    id: "DB230-17",
+    question: "2) Alguns Dragões-Reais têm fichas publicadas em *Ameaças de Arton* e no *Guia de NPCs*, como Beluhga, Benthos, Sckhar e Tarso. Mas e os demais? Suas fichas serão publicadas?",
+    answer: "2) Você está com sorte, conselheiro! Não vai precisar esperar para que essas fichas sejam publicadas, porque elas já apareceram nos volumes finais de *Duelo de Dragões*.",
+    magazineNumber: 230,
+  },
+  //#endregion
 ];

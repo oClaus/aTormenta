@@ -5,6 +5,167 @@ import { Alchemy, AlchemyType } from "@/types/alchemy";
 
 
 export const alchemy: Alchemy[] = [
+  //#region A Lenda de Ghanor
+  // PREPARADOS
+  { id: "Antídoto",
+    name: "Antídoto",
+    type: "Preparados",
+    description: "Um pequeno frasco contendo um preparado capaz de combater a maioria dos venenos e toxinas. Beber o antídoto é uma ação padrão e anula qualquer condição envenenado afetando o alvo.",
+    origin: "A Lenda de Ghanor",
+    price: "T$ 15",
+    spaces: "0,5"
+  },
+  { id: "Turlin",
+    name: "Turlin",
+    type: "Preparados",
+    description: "Este pó fino, feito a partir da combinação de ervas e outros ingredientes naturais, é consumido por elfos para equilibrar seus sentimentos e emoções. Você pode inalar uma dose de turlin para ignorar as penalidades pela habilidade Sentimentos Conflitantes por uma cena.",
+    origin: "A Lenda de Ghanor",
+    price: "T$ 25",
+    spaces: "0,5"
+  },
+  { id: "Bálsamo Potente",
+    name: "Bálsamo Potente",
+    type: "Preparados",
+    description: "Como bálsamo restaurador, mas o alvo recupera 4d8 pontos de vida.",
+    origin: "A Lenda de Ghanor",
+    price: "T$ 120",
+    spaces: "0,5"
+  },
+  { id: "Fluido Congelante",
+    name: "Fluido Congelante",
+    type: "Preparados",
+    description: "O líquido leitoso contido nesse frasco congela instantaneamente em contato com o ar. Para usar o fluido, você gasta uma ação padrão e escolhe uma criatura em alcance curto. Essa criatura sofre 2d8 pontos de dano de frio e fica enredada (Fortitude CD Des reduz o dano à metade e evita a condição). Uma criatura enredada pode gastar uma ação padrão para refazer o teste.",
+    origin: "A Lenda de Ghanor",
+    price: "T$ 60",
+    spaces: "0,5"
+  },
+  { id: "Incenso Místico",
+    name: "Incenso Místico",
+    type: "Preparados",
+    description: "Como um incenso normal, mas feito de substâncias raras. Queimá-lo e meditar por uma hora fornece 5 pontos de mana temporários.",
+    origin: "A Lenda de Ghanor",
+    price: "T$ 150",
+    spaces: "0,5"
+  },
+  { id: "Licor de Ervas",
+    name: "Licor de Ervas",
+    type: "Preparados",
+    description: "Um líquido com perfume forte e propriedades curativas. Beber o elixir é uma ação padrão e remove uma condição entre cego, debilitado, enjoado, exausto, fatigado, fraco, paralisado, petrificado e surdo.",
+    origin: "A Lenda de Ghanor",
+    price: "T$ 60",
+    spaces: "0,5"
+  },
+  { id: "Soro Rochoso",
+    name: "Soro Rochoso",
+    type: "Preparados",
+    description: "Este líquido denso e cinzento aumenta a rigidez da pele do usuário. Fornece redução de dano 5 e diminui o deslocamento em –1,5m por uma cena.",
+    origin: "A Lenda de Ghanor",
+    price: "T$ 150",
+    spaces: "0,5"
+  },
+  { id: "Soro Rubro",
+    name: "Soro Rubro",
+    type: "Preparados",
+    description: "Este líquido cor de sangue aumenta a agressividade e capacidade de combate do usuário. Fornece +2 em testes de ataque e de resistência e –2 em perícias baseadas em Inteligência e Carisma por uma cena.",
+    origin: "A Lenda de Ghanor",
+    price: "T$ 90",
+    spaces: "0,5"
+  },
+  { id: "Substrato de Mana",
+    name: "Substrato de Mana",
+    type: "Preparados",
+    description: "Como essência de mana, mas recupera 2d4 pontos de mana.",
+    origin: "A Lenda de Ghanor",
+    price: "T$ 150",
+    spaces: "0,5"
+  },
+  { id: "Frasco do Inferno",
+    name: "Frasco do Inferno",
+    type: "Preparados",
+    description: "Este temido preparado alquímico é proibido em diversos reinos, pois faz o próprio ar pegar fogo. Para usar o frasco do inferno, você gasta uma ação padrão e escolhe um cubo de 3m em alcance curto. Todas as criaturas na área sofrem 6d6 pontos de dano de fogo e ficam em chamas (Reflexos CD Des reduz à metade e evita a condição). As chamas são mais fortes: causam 2d6 pontos de dano por rodada e exigem que a vítima gaste uma ação completa e passe em um teste de Reflexos (CD 20) ou mergulhe em água para apagá-las.",
+    origin: "A Lenda de Ghanor",
+    price: "T$ 300",
+    spaces: "0,5"
+  },
+  // CATALISADORES
+  { id: "Extrato de Noz",
+    name: "Extrato de Noz",
+    type: "Catalisadores",
+    description: "Quando aplicado a uma magia que afeta uma área, aumenta a área em +3m.",
+    origin: "A Lenda de Ghanor",
+    price: "T$ 60",
+    spaces: "0,5"
+  },
+  { id: "Gengibre Amargo",
+    name: "Gengibre Amargo",
+    type: "Catalisadores",
+    description: "Tratada com ácidos específicos, esta raiz potencializa o efeito de magias, aumentando qualquer bônus concedido em +1.",
+    origin: "A Lenda de Ghanor",
+    price: "T$ 60",
+    spaces: "0,5"
+  },
+  { id: "Pernas de Sapo",
+    name: "Pernas de Sapo",
+    type: "Catalisadores",
+    description: "Quando aplicadas a uma magia com alcance curto ou médio, estas pernas de sapo ressecadas aumentam o alcance da magia para médio ou longo, respectivamente.",
+    origin: "A Lenda de Ghanor",
+    price: "T$ 60",
+    spaces: "0,5"
+  },
+  { id: "Pluma de Algodão",
+    name: "Pluma de Algodão",
+    type: "Catalisadores",
+    description: "Quando aplicado a uma magia com alcance maior que pessoal e que afete um ou mais alvos, este catalisador aumenta o número de alvos da magia em +1.",
+    origin: "A Lenda de Ghanor",
+    price: "T$ 60",
+    spaces: "0,5"
+  },
+  // VENENOS
+  { id: "Arictina",
+    name: "Arictina",
+    type: "Venenos",
+    description: "Este veneno feito a partir de monstros como aranhas gigantes deixa sua vítima enfraquecida — e a faz uma presa mais fácil para ser abatida. Contato, vítima fica fraca e vulnerável.",
+    origin: "A Lenda de Ghanor",
+    price: "T$ 30",
+    spaces: "0,5"
+  },
+  { id: "Beijo do Ocaso",
+    name: "Beijo do Ocaso",
+    type: "Venenos",
+    description: "Veneno raríssimo, preparado a partir de peçonha de serpe, sangue de demônio e plantas tóxicas encontradas apenas nos pântanos mais ermos. Contato, vítima perde 4d12 PV por rodada durante 5 rodadas (perde 4d12 PV). A CD para fabricar e para resistir a este veneno aumenta em +5.",
+    origin: "A Lenda de Ghanor",
+    price: "T$ 1.000",
+    spaces: "0,5"
+  },
+  { id: "Fogo Líquido",
+    name: "Fogo Líquido",
+    type: "Venenos",
+    description: "Este líquido avermelhado está sempre quente ao toque. Em contato com o organismo, deixa a vítima suando, ofegante e cansada. Muitos duelos já foram vencidos por cavaleiros “honrados” enfrentando adversários enfraquecidos por fogo líquido... Contato, vítima fica exausta (fatigada).",
+    origin: "A Lenda de Ghanor",
+    price: "T$ 600",
+    spaces: "0,5"
+  },
+  { id: "Valeriana",
+    name: "Valeriana",
+    type: "Venenos",
+    description: "Esta planta tem propriedades calmantes e, na dosagem certa, se torna um sonífero eficaz. Ingestão, vítima fica inconsciente.",
+    origin: "A Lenda de Ghanor",
+    price: "T$ 50",
+    spaces: "0,5"
+  },
+  { id: "Vapor Púrpura",
+    name: "Vapor Púrpura",
+    type: "Venenos",
+    description: "Este gás roxo faz a vítima rir descontroladamente e agir de forma caótica. Inalação, vítima fica confusa (confusa por 1 rodada).",
+    origin: "A Lenda de Ghanor",
+    price: "T$ 150",
+    spaces: "0,5"
+  },
+  //#endregion
+
+
+
+
 
   //#region Tormenta20 - Jogo do Ano
   { id: "Ácido",

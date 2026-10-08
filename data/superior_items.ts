@@ -99,6 +99,10 @@ export const materialPrices: MaterialPriceRow[] = [
   },
   //#endregion
 
+
+
+
+
   //#region Ameaças de Arton
   { material: "Casco de Monstro",
     Arma: "+ T$ 750",
@@ -204,6 +208,10 @@ export const materialPrices: MaterialPriceRow[] = [
   },
   //#endregion
 
+
+
+
+
   //#region Dragão Brasil
   // Dragão Brasil - 183
   { material: "Chifre de Monstro",
@@ -227,10 +235,165 @@ export const materialPrices: MaterialPriceRow[] = [
     origin: "Dragão Brasil - 183"
   },
   //#endregion
+
+
+
+
+
+  //#region A Lenda de Ghanor
+  { material: "Arcanium",
+    Arma: "+T$ 30.000 a +T$ 90.000",
+    "Armadura Leve": "+T$ 30.000 a +T$ 90.000",
+    "Armadura Pesada": "+T$ 30.000 a +T$ 90.000",
+    Escudo: "+T$ 30.000 a +T$ 90.000",
+    Esotéricos: "+T$ 30.000 a +T$ 90.000",
+    description: "O metal mais raro e precioso de Ghanor é lendário por suas propriedades mágicas naturais. Cada item de Arcanium contém uma magia específica. O aumento no preço depende do círculo da magia: +T$ 30.000 para magias de 1º ou 2º círculo, +T$ 60.000 para 3º ou 4º círculo e +T$ 90.000 para 5º círculo. Fabricar o item exige Ofício com CD +10. Pode ser somado a itens superiores.",
+    description_arma: "Fornece +2 em testes de ataque e rolagens de dano. Pode lançar a magia contida no item pagando o custo em PM (Int, Sab ou Car).",
+    description_armadura: "Fornece +2 na Defesa. Pode lançar a magia contida no item pagando o custo em PM (Int, Sab ou Car). Magias arcanas lançadas por meio do item não sofrem limitação pelo uso de armaduras.",
+    description_escudo: "Fornece +2 na Defesa. Pode lançar a magia contida no item pagando o custo em PM (Int, Sab ou Car).",
+    description_esoterico: "Aumenta a CD para resistir a suas magias em +1. Pode lançar a magia contida no item pagando o custo em PM (Int, Sab ou Car).",
+    origin: "A Lenda de Ghanor"
+  },
+  //#endregion
 ];
 
 
 export const improvements: Improvement[] = [
+  //#region A Lenda de Ghanor
+  { id: "ampliador",
+    name: "Ampliador",
+    effect: "Aumenta a área da magia",
+    category: ["Esotérico"],
+    description: "Quando lança uma magia com área em metros, você pode gastar +1 PM para aumentar a área dessa magia em +3m.",
+    origin: "A Lenda de Ghanor"
+  },
+  { id: "armazenador",
+    name: "Armazenador",
+    effect: "Armazena até 5 PM",
+    category: ["Esotérico"],
+    description: "Um esotérico armazenador pode ser carregado com energia mágica. Você pode gastar até 5 PM para armazenar a mesma quantidade de pontos de mana no item. Esses PM podem ser usados para pagar o custo de magias lançadas com o item, e permanecem nele até serem gastos.",
+    origin: "A Lenda de Ghanor"
+  },
+  { id: "runica",
+    name: "Rúnica",
+    effect: "Resistência a magia +2",
+    category: ["Armadura", "Escudo"],
+    description: "O item foi gravado com runas especiais que repelem magias nocivas, fornecendo resistência à magia +2. Pré-requisito: outra melhoria qualquer.",
+    origin: "A Lenda de Ghanor"
+  },
+  { id: "sentinela",
+    name: "Sentinela",
+    effect: "+5 em Defesa, -2 PM",
+    category: ["Esotérico"],
+    description: "O item usa parte de sua mana pessoal para gerar um campo que desvia ataques. Você recebe +5 em Defesa, mas sofre penalidade de –2 PM. Você pode cancelar ou ativar esse efeito com um ritual que dura 10 minutos, mas os PM gastos não são recuperados automaticamente.",
+    origin: "A Lenda de Ghanor"
+  },
+  // --- CEIFADORA (ARMAS) ---
+  {
+    id: "ceifadora_animal",
+    name: "Ceifadora (Animal)",
+    effect: "+1 na margem de ameaça, +1 no multiplicador de crítico", //[cite: 2]
+    category: ["Arma"],
+    description: "Custo: + T$ 9.000. Feita dos dentes, garras e ossos de um animal. A margem de ameaça e o multiplicador de crítico da arma aumentam em 1 ponto.",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "ceifadora_humanoide",
+    name: "Ceifadora (Humanoide)",
+    effect: "Sangramento", //[cite: 2]
+    category: ["Arma"],
+    description: "Custo: + T$ 9.000. Feita dos dentes, garras e ossos de um humanoide. Uma criatura viva atingida fica sangrando. A condição de sangramento é cumulativa (atingida duas vezes perde 2d6 PV por rodada).",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "ceifadora_monstro",
+    name: "Ceifadora (Monstro)",
+    effect: "+1d8 pontos de dano", //[cite: 2]
+    category: ["Arma"],
+    description: "Custo: + T$ 9.000. Feita dos dentes, garras e ossos de um monstro. A arma causa +1d8 pontos de dano.",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "ceifadora_morto_vivo",
+    name: "Ceifadora (Morto-vivo)",
+    effect: "Crítico drena 1d10 PV", //[cite: 2]
+    category: ["Arma"],
+    description: "Custo: + T$ 9.000. Feita dos dentes, garras e ossos de um morto-vivo. Quando faz um acerto crítico em uma criatura viva, role 1d10. A criatura perde PV iguais à rolagem e você ganha PV temporários iguais ao resultado.",
+    origin: "A Lenda de Ghanor"
+  },
+
+  // --- MORTALHA (ARMADURAS) ---
+  {
+    id: "mortalha_animal",
+    name: "Mortalha (Animal)",
+    effect: "Redução de eletricidade, frio e perfuração 10", //[cite: 2]
+    category: ["Armadura", "Escudo"],
+    description: "Custo: + T$ 9.000. Feita do esqueleto e da pele de um animal. Concede Redução de eletricidade, frio e perfuração 10.",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "mortalha_humanoide",
+    name: "Mortalha (Humanoide)",
+    effect: "RD 5", //[cite: 2]
+    category: ["Armadura", "Escudo"],
+    description: "Custo: + T$ 9.000. Feita do esqueleto e da pele de um humanoide. Concede Redução de dano 5.",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "mortalha_monstro",
+    name: "Mortalha (Monstro)",
+    effect: "Redução de ácido, corte e fogo 10", //[cite: 2]
+    category: ["Armadura", "Escudo"],
+    description: "Custo: + T$ 9.000. Feita do esqueleto e da pele de um monstro. Concede Redução de ácido, corte e fogo 10.",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "mortalha_morto_vivo",
+    name: "Mortalha (Morto-vivo)",
+    effect: "Resistência a magia +1", //[cite: 2]
+    category: ["Armadura", "Escudo"],
+    description: "Custo: + T$9.000. Feita do esqueleto e da pele de um morto-vivo. Concede Resistência a magia +1 ",
+    origin: "A Lenda de Ghanor"
+  },
+
+  // --- NECROMÁGICO (ESOTÉRICOS) ---
+  {
+    id: "necromagico_animal",
+    name: "Necromágico (Animal)",
+    effect: "+1 ponto de dano por dado", //[cite: 2]
+    category: ["Esotérico"],
+    description: "Custo: + T$ 9.000. Feito a partir dos olhos, orelhas, língua e órgãos internos de um animal. A magia causa +1 ponto de dano por dado de dano.",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "necromagico_humanoide",
+    name: "Necromágico (Humanoide)",
+    effect: "–1 PM no custo de magias", //[cite: 2]
+    category: ["Esotérico"],
+    description: "Custo: + T$ 9.000. Feito a partir dos olhos, orelhas, língua e órgãos internos de um humanoide. O custo da magia diminui em –1 PM.",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "necromagico_monstro",
+    name: "Necromágico (Monstro)",
+    effect: "Gasta +2 PM por +2 na CD", //[cite: 2]
+    category: ["Esotérico"],
+    description: "Custo: + T$ 9.000. Feito a partir dos olhos, orelhas, língua e órgãos internos de um monstro. Quando lança uma magia, pode gastar +2 PM para aumentar a CD dela em +2.",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "necromagico_morto_vivo",
+    name: "Necromágico (Morto-vivo)",
+    effect: "Gasta +2 PM para ignorar RD, resistências e imunidades", //[cite: 2]
+    category: ["Esotérico"],
+    description: "Custo: + T$ 9.000. Feito a partir dos olhos, orelhas, língua e órgãos internos de um morto-vivo. Quando lança uma magia, pode gastar +2 PM para que ela ignore reduções de dano, resistências e imunidades do alvo.",
+    origin: "A Lenda de Ghanor"
+  },
+  //#endregion
+
+
+
+
 
   //#region Uma visita a Vectora
   { id: "Bolsos Internos", 

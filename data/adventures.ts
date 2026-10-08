@@ -5966,7 +5966,7 @@ export const adventures: Adventure[] = [
     }
   ]
 },
-{ id: "O Fim",
+  { id: "O Fim",
   name: "O Fim",
   theme: "Fantasia e Ilusão Divina",
   image: "/aventuras/o-fim.png",
@@ -6048,869 +6048,1221 @@ export const adventures: Adventure[] = [
       content: "— Que comece um novo jogo!"
     }
   ]
-},
-{ id: "Emergir Monstruoso",
-  name: "Emergir Monstruoso",
-  theme: "Fantasia e Caçada a Monstros",
-  image: "/aventuras/emergir-monstruoso.png",
-  summary: "Contratados para investigar desaparecimentos em uma próspera vila de Trebuck, os heróis devem explorar cavernas subterrâneas infestadas de larvas ácidas antes de enfrentar a colossal criatura responsável pela tragédia.",
-  sections: [
-    {
-      type: "text",
-      content: "Arton é um mundo repleto de feras apavorantes. Dragões rondam o mundo, colecionando tesouros e alterando as terras ao seu redor. A Tormenta chove aberrações asquerosas, capazes de destruir a mente e retorcer a matéria. O Deus dos Monstros, Megalokk, espalhou sua prole por todos os lados. Presas, garras e espinhos estraçalham aventureiros despreparados. Heróis que enfrentam monstros são lembrados por sua bravura. Mas este não é um trabalho fácil ou rápido. Cabe a estes aventureiros prepararem-se, coletando o máximo de informações antes mesmo de terem um vislumbre da fera. Afinal, se não souberem exatamente o que enfrentarão, podem tornar-se a próxima refeição de uma besta até então desconhecida."
-    },
-    {
-      type: "break"
-    },
-    {
-      type: "subtitle",
-      content: "RESUMO DA AVENTURA"
-    },
-    {
-      type: "text",
-      content: "Emergir Monstruoso é uma breve jornada, uma aventura curta pensada para uma sessão única, mas que pode ser inserida em uma campanha maior. É ideal para um grupo de quatro personagens de 8º nível, em Tormenta20."
-    },
-    {
-      type: "text",
-      content: "Contratados por um nobre, os aventureiros vão até uma vila onde animais vêm sendo atacados e pessoas estão desaparecendo. A população local fica muito feliz em vê-los. Um fazendeiro anão diz que pode apontar pistas se os personagens lidarem antes com os estranhos monstros que insistem em ocupar seu celeiro."
-    },
-    {
-      type: "text",
-      content: "Os heróis então devem investigar túneis que passam por baixo da região, escondendo inimigos subterrâneos. Ao analisar as cavernas, eles encontram um ninho de larvas ácidas famintas. Assim que são derrotadas, tudo começa a desmoronar, e eles terão de enfrentar na superfície o monstro responsável pelos desaparecimentos."
-    },
-    {
-      type: "break"
-    },
-    {
-      type: "subtitle",
-      content: "CENA 1: NÃO HÁ PAZ EM TREBUCK"
-    },
-    {
-      type: "text",
-      content: "Conhecidos pela sua beleza bucólica, os campos de Barucandor são um dos lugares mais prósperos de Trebuck. Infelizmente, isso não significa tranquilidade. O ajuntamento de feudos faz fronteira com a Tormenta, as Montanhas Sanguinárias e o reino de Sckharshantallas. O barão Marius Valcanti tenta cuidar da população da melhor forma, mas sua idade avançada o força a depender da ajuda constante de aventureiros."
-    },
-    {
-      type: "text",
-      content: "Os personagens, reconhecidos por aventuras anteriores, são convidados à presença do nobre. Todas as pessoas que o grupo encontra no caminho, sejam servos ou guardas, vestem-se de forma elegante, um testemunho da prosperidade da região. O barão senta-se em uma cadeira de espaldar alto, que faz sua figura parecer menor. Administradores aproximam-se, mostram algo e logo partem, num fluxo constante."
-    },
-    {
-      type: "text",
-      content: "O barão Valcanti saúda os personagens em tom formal, parabenizando-os por alguma de suas recentes vitórias, mas tem pouco tempo para conversas paralelas e vai direto ao ponto. A burgomestra de uma vila em seu território vem relatando o desaparecimento e mutilação de animais, e agora pessoas começaram a sumir também. Ele deseja que o grupo vá à comunidade e lide com o que está causando os problemas."
-    },
-    {
-      type: "text",
-      content: "Experiente em negociar com aventureiros, o barão está disposto a oferecer uma recompensa razoável pela missão. Em tibares, pretende entregar T$ 3.000 para cada personagem. Como opção, pode fornecer um item com até três melhorias ao grupo (mas sem a recompensa em dinheiro), ou informação sobre a localização de um acessório menor mágico ou um item com até um encanto (mas não necessariamente os recursos para recuperá-lo)."
-    },
-    {
-      type: "text",
-      content: "Alternativamente, o nobre possui também algum tipo de informação de interesse dos heróis. Talvez saiba onde algum vilão que procuram se esconde, ou então possa oferecer o apoio de que precisam para a continuidade da campanha. De uma forma ou de outra, o barão estará preparado, conhecendo bem o que os personagens desejam e pronto para negociar isso."
-    },
-    {
-      type: "text",
-      content: "Uma vez terminada a conversa, um dos servos se aproxima com os recursos para a aventura: rações de viagem suficientes para todos, um mapa detalhado da região e da vila, 10 essências de mana e 5 poções de Curar Ferimentos (4d8+4 PV). Equipados para o trabalho, os personagens partem em direção à vila."
-    },
-    {
-      type: "break"
-    },
-    {
-      type: "subtitle",
-      content: "CENA 2: PROSPERIDADE E PROBLEMAS"
-    },
-    {
-      type: "text",
-      content: "As estradas são bem cuidadas e as pessoas que passam em viagem parecem felizes. Talvez seja uma impressão enganosa, afinal, vocês sabem que o perigo pode surgir a qualquer momento."
-    },
-    {
-      type: "text",
-      content: "Caso queira tornar a viagem um pouco mais agitada, considere que ela leva cinco dias, e a cada dia há 20% de chance de um encontro aleatório. É possível rolar na tabela “Estradas do Reinado” (Ameaças de Arton, p. 429) ou escolher algum evento que faça sentido. Evite usar criaturas da Tormenta aqui, exceto se for um elemento recorrente em aventuras anteriores."
-    },
-    {
-      type: "text",
-      content: "Se não houver interesse em encontros no caminho, considere que os personagens simplesmente chegam à vila."
-    },
-    {
-      type: "text",
-      content: "Os moradores abrem as janelas, acenam com panos e indicam que devem ir até o salão comunal. Todos estão trajando roupas de camponeses bem cuidadas, e estão sorridentes. Um teste de Intuição ou Investigação (CD 10) mostra que a alegria é genuína, não fruto de desespero. Esta população parece viver bem, e a presença de heróis os convence de que seus problemas, quaisquer que sejam, serão solucionados."
-    },
-    {
-      type: "text",
-      content: "O salão comunal está enfeitado e a burgomestra acena. Há um banquete preparado para os aventureiros. Se questionada sobre o risco de uma aglomeração atrair o que quer que esteja sumindo com as pessoas, ela explica que os desaparecimentos são noturnos e só ocorreram com indivíduos desacompanhados."
-    },
-    {
-      type: "text",
-      content: "Apesar da agitação da maior parte da população, alguns mantêm-se afastados. Conseguir informações é um teste estendido de Diplomacia (CD 20, três sucessos). Uma falha total representa incômodo das pessoas relacionadas ao desaparecimento, ou então excesso de bajuladores impedindo conversas sinceras. A partir do dia seguinte é possível iniciar um novo teste estendido, agora exigindo cinco sucessos. A cada noite há 10% (1 a 10 em 1d100) de chance de haver uma nova vítima."
-    },
-    {
-      type: "text",
-      content: "Ao serem bem-sucedidos, os aventureiros conseguem o relato de um dos fazendeiros locais, o primeiro a sofrer com os ataques de animais. O homem, um anão mal-humorado chamado Korimm, começa a reclamar."
-    },
-    {
-      type: "text",
-      content: "“Primeiro, minhas vacas são atacadas! Ai, apareceram os malditos buracos no meu terreno, fazendo meus animais se machucarem. E agora, pelas ceroulas de mitril de Heredrimm, tem alguma coisa no meu celeiro! Vou mostrar para vocês!”"
-    },
-    {
-      type: "break"
-    },
-    {
-      type: "subtitle",
-      content: "CENA 3: O CELEIRO"
-    },
-    {
-      type: "text",
-      content: "A fazenda está a uma curta caminhada do centro da comunidade. Os campos ao redor da vila são verdejantes, e poucos momentos passam sem que, ao longe, alguém acene e sorria. Entretanto, Korimm passa o caminho inteiro resmungando."
-    },
-    {
-      type: "text",
-      content: "Quando chegam, são recebidos pela esposa do anão, Gertha. Korimm pergunta sobre os animais e ela diz que estão numa parte mais afastada da fazenda. Apesar de não ser ranzinza como seu marido, a anã parece mais preocupada do que o resto do povo na vila. Ela então convida os aventureiros a entrarem para tomar algo enquanto conversam."
-    },
-    {
-      type: "text",
-      content: "Os dois contam que ouviram sobre os ataques há cerca de um mês. Preocupados que pudessem ser monstros ou saqueadores das Sanguinárias, o casal contratou mais ajudantes e reforçou as cercas. Quando a primeira vaca deles foi atacada, eles mesmos passaram a patrulhar a fazenda."
-    },
-    {
-      type: "text",
-      content: "Exceto por estranhos buracos pela propriedade, não viram nada que fosse fora do ordinário. Mas então os animais começaram a evitar o celeiro. Um dos trabalhadores foi gravemente ferido por algo com garras, e, como havia aventureiros a caminho, resolveram selar o lugar e esperar."
-    },
-    {
-      type: "text",
-      content: "Se questionados sobre os buracos, os anões dizem que não parecem formações naturais. De acordo com Gertha, seu marido queria investigá-los, mas ela meteu juízo (e uma panelada) na cabeça dele. Korimm os levará a um dos túneis assim que lidarem com o que quer que esteja no celeiro."
-    },
-    {
-      type: "text",
-      content: "Já se pedirem para ver os corpos mutilados dos animais, o casal os leva até um dos cadáveres. É possível encontrar a metade da frente de uma vaca em avançado estado de decomposição. Um teste de necropsia, da perícia Cura, ou então de Investigação ou Sobrevivência (CD 25), revela que o ataque foi preciso, vindo de baixo, estraçalhando o pobre animal em um golpe só."
-    },
-    {
-      type: "text",
-      content: "Para entrar no celeiro terão apenas de remover a pesada tábua que trava as portas. O ambiente está em escuridão leve, já que todas as possíveis entradas de luz foram lacradas para evitar que o que estivesse ali dentro conseguisse sair. De repente, os personagens ouvem um chiado vindo de cima. Presas no teto, existem seis criaturas humanoides, com aspecto de lagarto, prontas para atacar."
-    },
-    {
-      type: "text",
-      content: "CRIATURAS. Slark x6 (NPCs e Criaturas). Um teste para identificar criatura (CD 16) revela que esses monstros, conhecidos como slarks, vivem no subterrâneo, e costumam fazer emboscadas contra suas presas. Um sucesso também revela que não é comum que venham à superfície, e que isto provavelmente está ligado aos tais buracos misteriosos."
-    },
-    {
-      type: "text",
-      content: "Assim que o grupo lidar com os slarks, Korimm e Gertha ficam muito felizes. Se os personagens quiserem recuperar-se, os dois oferecem quartos na fazenda (descanso confortável, diferente do luxuoso oferecido no centro da vila). Porém, se a ideia for não perder tempo, podem levá-los imediatamente aos misteriosos túneis."
-    },
-    {
-      type: "break"
-    },
-    {
-      type: "subtitle",
-      content: "CENA 4: EM UM BURACO NO CHÃO"
-    },
-    {
-      type: "text",
-      content: "Os tais buracos no chão formam quase uma caverna. Os túneis são largos o suficiente para que duas pessoas andem lado a lado. Não há qualquer forma de iluminação nos corredores, e um cheiro acre muito forte queima suas narinas."
-    },
-    {
-      type: "text",
-      content: "Se não trouxerem qualquer forma de iluminação, os túneis estarão em escuridão total. Alguém com um Ofício apropriado, ou um anão treinado em Conhecimento, pode fazer um teste (CD 20) para perceber que, apesar de não serem corredores “naturais”, isso foi obra de alguma criatura movendo o solo em sua passagem."
-    },
-    {
-      type: "text",
-      content: "Para conseguirem orientar-se nas cavernas, devem ser bem-sucedidos em um teste estendido de Sobrevivência (CD 25, três sucessos). Em caso de falha total, os personagens se perdem, retornando à entrada do túnel, e deverão recomeçar o teste estendido."
-    },
-    {
-      type: "text",
-      content: "Após cada teste, tenham passado ou não, os aventureiros encontram 1d6+2 slarks. As criaturas tentam atacar de surpresa, então os personagens devem superá-las em um teste de Percepção oposto à Furtividade (+8) delas. Aqueles que não superarem o resultado dos monstros ficam surpreendidos na primeira rodada do combate."
-    },
-    {
-      type: "break"
-    },
-    {
-      type: "subtitle",
-      content: "CENA 5: NINHO TÓXICO"
-    },
-    {
-      type: "text",
-      content: "O cheiro nos túneis beira o insuportável. Então vocês chegam a uma câmara mais ampla escavada na terra. Aqueles que conseguem enxergar veem centenas e mais centenas de ovos de inseto cobrindo as paredes da caverna. Restos de cadáveres também são encontrados aqui, parcialmente desintegrados em poças de ácido."
-    },
-    {
-      type: "text",
-      content: "Permita aos personagens um teste de Sobrevivência (CD 19) para identificar os ovos como sendo de uma criatura chamada ankthyr. Nesse estado, são pouco mais que larvas, mas quando crescerem podem se transformar em um monstro perigosíssimo, provavelmente o causador dos desaparecimentos e mutilação de animais."
-    },
-    {
-      type: "text",
-      content: "Após o teste, bem-sucedido ou não, uma enorme quantidade das criaturas famintas eclode de seus ovos. CRIATURAS. Enxame Cáustico x2 (NPCs e Criaturas)."
-    },
-    {
-      type: "text",
-      content: "O chão desta caverna está coberto de ácido, e personagens que caiam sofrem 2d6 pontos de dano de ácido. As criaturas tentam envolver o grupo por inteiro, mas é possível fugir, atraindo-as. Caso fujam, as criaturas vêm à superfície, atacando de modo indiscriminado as pessoas da vila. Se as derrotarem, algo começa a acontecer."
-    },
-    {
-      type: "break"
-    },
-    {
-      type: "subtitle",
-      content: "CENA 6: CORRE!"
-    },
-    {
-      type: "text",
-      content: "Algo faz as paredes das cavernas tremerem. O som da rocha sendo destruída ao seu redor demonstra que os túneis estão colapsando. E vocês suspeitam, por terem derrotado o enxame, que é hora de lidar com a progenitora daquelas criaturas."
-    },
-    {
-      type: "text",
-      content: "Furioso, o ankthyr adulto começa a destruir seus próprios túneis, numa tentativa de soterrar os aventureiros. Cabe aos heróis fugirem usando o perigo complexo a seguir."
-    },
-    {
-      type: "text",
-      content: "DESABAMENTO DOS TÚNEIS (ND 8)\nOs personagens precisam escapar antes que sejam soterrados!\nOBJETIVO: Sair das cavernas.\nEFEITO: Os túneis serão completamente destruídos em 7 rodadas. Para escapar, um personagem precisa acumular 5 sucessos nas ações avançar, correr ou carregar outro. No início de cada rodada, role 1d6 e consulte a lista de efeitos abaixo:\n1-2) Destroços. Destroços caem do teto. Cada personagem deve fazer um teste de Reflexos (CD 25). Se falhar, sofre 4d6 pontos de dano de impacto. Se falhar por 10 ou mais, o dano aumenta para 8d6.\n3-4) Fenda no chão. Rachaduras se abrem no chão. Cada personagem deve fazer um teste de Acrobacia ou Atletismo (CD 25). Se falhar, tropeça e sofre –5 em sua próxima ação contra o perigo. Se falhar por 10 ou mais, cai e perde sua ação nesta rodada.\n5) Bloqueio. Um desabamento vai bloquear o caminho! O personagem pode desistir desta rota e procurar outra (perde a ação nesta rodada, mas age normalmente a partir da próxima) ou tentar correr antes que o desabamento termine. Nesse caso, precisa fazer um teste de Atletismo (CD 25). Se passar, pode fazer sua ação nesta rodada. Se falhar, perde a ação e sofre 8d6 pontos de dano de impacto.\n6) Passagem livre. Este túnel é mais resistente, mas as paredes estão perto de ruir. Os personagens não sofrem qualquer efeito neste turno, mas devem continuar correndo ou serão soterrados.\nAo fim da sétima rodada, qualquer personagem que não tenha acumulado 5 sucessos será atingido pelo desabamento, sofrendo 20d6 pontos de dano de impacto (sem teste de resistência)."
-    },
-    {
-      type: "text",
-      content: "AVANÇAR (ACROBACIA OU REFLEXOS CD 25): O personagem avança com cuidado em direção à saída. Um sucesso por 10 ou mais (ou um 20 natural no teste) conta como 2 sucessos.\nCORRER (ATLETISMO CD 20): O personagem corre em direção à saída sem se preocupar com os perigos em seu caminho. Ele sofre 4d6 pontos de dano de impacto. Um sucesso por 10 ou mais (ou um 20 natural no teste) conta como 2 sucessos.\nCARREGAR OUTRO (ATLETISMO CD 30): O personagem carrega um aliado próximo (com no máximo 1 sucesso de diferença). Isto funciona como a ação avançar. Se passar, o personagem acumula 1 sucesso para si e para o aliado. Se falhar, ambos sofrem dano.\nPROCURAR CAMINHO (PERCEPÇÃO CD 20): O personagem analisa o terreno em busca de uma rota de fuga. Se passar, recebe +5 em todos os testes para avançar, correr e carregar outro realizados durante o perigo."
-    },
-    {
-      type: "text",
-      content: "O túnel que dá acesso à superfície é bem perto do centro da vila. Antes que consigam pensar muito, todos sentem o chão tremer."
-    },
-    {
-      type: "break"
-    },
-    {
-      type: "subtitle",
-      content: "CENA 7: A VINGANÇA DO VERME MALDITO"
-    },
-    {
-      type: "text",
-      content: "O tremor se intensifica, estruturas entortam e pessoas começam a gritar. Logo um par de presas insetoides se projeta da terra, tentando ferir os aventureiros, e poucos segundos depois um corpanzil emerge. Maior que um cavalo, com três pares de patas finas e alongadas, o monstro é coberto por uma carapaça quitinosa. Das quelíceras poderosas pinga um ácido que chia ao tocar no solo. Tão rápido quanto saltou para fora, o monstro afunda novamente no chão de terra batida."
-    },
-    {
-      type: "text",
-      content: "CRIATURA. Ankthyr (NPCs e Criaturas).\nO ataque final do monstro é virulento e descontrolado, e ele luta até sua morte. A estratégia principal da criatura é mergulhar e dar um bote subterrâneo contra um dos personagens. Além disso, pela escavação e os buracos deixados, toda a área conta como terreno difícil para os personagens (o ankthyr pode simplesmente escavar)."
-    },
-    {
-      type: "text",
-      content: "A população da vila está assustada, mas alguns pegam em armas para ajudar. A burgomestra serve como uma parceira destruidora veterana, causando dano de fogo com magias. Korimm e Gertha chegam, portando martelos e servindo como parceiros combatente e fortão iniciantes, respectivamente."
-    },
-    {
-      type: "break"
-    },
-    {
-      type: "subtitle",
-      content: "EPÍLOGO: INFESTAÇÃO"
-    },
-    {
-      type: "text",
-      content: "Os restos do monstro logo atraem a atenção dos aventureiros. A resistente carapaça da criatura poderia ser usada para algo. Mas, antes que consigam pensar muito, a população, tendo percebido a calmaria, vem celebrar a mais nova vitória dos heróis."
-    },
-    {
-      type: "text",
-      content: "Com a derrota do ankthyr, o perigo está resolvido por enquanto. Pensando em tudo o que aconteceu, assim como o ataque no ninho, é possível que haja outro monstro como aquele na região. Talvez sejam necessários mais alguns dias para ter certeza da segurança."
-    },
-    {
-      type: "text",
-      content: "O barão Valcanti está bastante grato, mesmo que continue com suas preocupações costumeiras. Se não retornarem ao nobre logo após a derrota do monstro, ele enviará um representante seu, com o pagamento prometido. Ele também enviará uma nova proposta de missão, para quando estiverem descansados e prontos. Todos avançam para o 9º nível!"
-    },
-    {
-      type: "break"
-    },
-    {
-      type: "subtitle",
-      content: "NPCS E CRIATURAS"
-    },
-    {
-      type: "text",
-      content: "SLARK (ND 1)\nHumanoide (slark) Médio\nINICIATIVA +7, PERCEPÇÃO +4 sensibilidade a luz, visão no escuro\nDEFESA 15, FORT +10, REF +1, VON +5, redução de ácido 5\nPONTOS DE VIDA 9\nDESLOCAMENTO 6m (4q), escalada 6m (4q)\nCORPO A CORPO Garras +11 (2d6+9, 19/x3).\nQUEDA LIVRE (COMPLETA) Se estiver em terreno elevado, o slark cai sobre uma criatura e faz um ataque de garras. Ele recebe o bônus por terreno elevado (+2 no teste de ataque) e, se a criatura estiver surpreendida, causa +2d6 pontos de dano do mesmo tipo.\nSALIVA (PADRÃO) O slark cospe em uma criatura em alcance curto. A criatura fica cega por 1 rodada e qualquer fonte de iluminação mundana que esteja empunhando se apaga (Ref CD 14 evita ambos os efeitos).\nFor –1, Des 3, Con 2, Int –1, Sab 1, Car –2\nPERÍCIAS Furtividade +8.\nTESOURO Nenhum."
-    },
-    {
-      type: "text",
-      content: "ENXAME CÁUSTICO (ND 4)\nAnimal Grande\nINICIATIVA +3, PERCEPÇÃO +2, visão no escuro\nDEFESA 23, FORT +16, REF +4, VON +10, imunidade a ácido\nPONTOS DE VIDA 140\nDESLOCAMENTO 9m (6q), escavação 6m (4q)\nENXAME O enxame cáustico age em conjunto. Ele pode entrar no espaço ocupado por um personagem e, no fim de seu turno, causa 3d8 pontos de dano de ácido a qualquer personagem em seu espaço automaticamente. O enxame é imune a manobras de combate e efeitos que afetam apenas uma criatura e não causam dano, mas sofre 50% a mais de dano de efeitos de área, como Bola de Fogo. Além disso, sofre apenas metade do dano de ataques com armas. Estar dentro do enxame conta como condição ruim para lançar magias.\nGOSMA CORROSIVA O dano de ácido do enxame persiste por mais 1 rodada após uma criatura deixar a área do enxame cáustico.\nSENTIDO SÍSMICO O enxame cáustico tem percepção às cegas em alcance médio, mas apenas para criaturas e objetos em contato com a mesma superfície que ele.\nFOR 3, DES 1, CON 2, INT –5, SAB –2, CAR –4\nTESOURO Nenhum."
-    },
-    {
-      type: "text",
-      content: "ANKTHYR (ND 8)\nAnimal Grande\nINICIATIVA +10, PERCEPÇÃO +8, visão no escuro\nDEFESA 33, FORT +21, REF +8, VON +15, redução de ácido 5, redução de dano 5\nPONTOS DE VIDA 308\nDESLOCAMENTO 12m (8q), escavação 6m (4q)\nCORPO A CORPO Mordida +26 (4d12+24 mais 4d8 ácido).\nAGARRAR APRIMORADO Mordida (teste +28).\nCUSPE ÁCIDO (PADRÃO) O ankthyr cospe ácido em uma criatura a até 9m. A vítima sofre 6d8+6 pontos de dano de ácido e fica coberta por um muco corrosivo (Ref CD 26 reduz à metade e evita o muco). Uma criatura coberta pelo muco sofre mais 3d8+3 pontos de dano de ácido no início dos seus dois próximos turnos. Recarga (movimento).\nESPREITADOR SUBTERRÂNEO (PADRÃO) Se estiver completamente soterrado, o ankthyr pode emergir do solo e atacar uma criatura a até 4,5m do seu ponto de saída. Se fizer isso, ele recebe +2 no teste de ataque e causa +1d12 pontos de dano.\nSENTIDO SÍSMICO O ankthyr tem percepção às cegas em alcance médio, mas apenas para criaturas e objetos em contato com a mesma superfície que ele.\nFor 5, Des 2, Con 4, Int –5, Sab 0, Car –3\nTESOURO Metade."
-    }
-  ]
-},
-{ id: "Memórias das Arma",
-  name: "Memórias das Armas",
-  theme: "Fantasia e Exploração de Masmorra",
-  image: "/aventuras/memorias-das-armas.png",
-  summary: "Contratados por um nobre, os heróis viajam ao sul de Zakharov para recuperar uma maça ancestral perdida em um castelo sitiado por mortos-vivos puristas, a tempo do Ritual das Armas Renascidas.",
-  sections: [
-    {
-      type: "text",
-      content: "O reino das armas, Zakharov, recentemente passou por muitos eventos. Nas estepes ao norte, próximos às Montanhas Uivantes, uma área de Tormenta se manifestou. De lá surgiu Aharadak, que hoje figura como um dos vinte deuses do Panteão. Além disso, a Supremacia Purista marchou sobre o território, deixando para trás também as marcas da guerra. Campos de batalha do conflito ainda existem nos ermos, e diversos catadores buscam o que vender entre os escombros."
-    },
-    {
-      type: "text",
-      content: "Não é de se surpreender que um reino devotado às armas seja a morada de uma divindade relacionada a elas. Rhond, o Deus Menor das Armas, vive em uma cidade com seu nome, isolado em sua caverna, forjando os instrumentos de batalha mais incríveis de todo mundo. Seus sacerdotes defendem a tranquilidade do trabalho de seu senhor. Entretanto, de tempos em tempos, surge um motivo para a deidade deixar seus aposentos e presentear os merecedores com suas dádivas."
-    },
-    {
-      type: "break"
-    },
-    {
-      type: "subtitle",
-      content: "RESUMO DA AVENTURA"
-    },
-    {
-      type: "text",
-      content: "Memórias das Armas é uma breve jornada, uma aventura curta pensada para uma sessão única, mas que pode ser inserida em uma campanha maior. É ideal para um grupo de quatro personagens de 5º nível em Tormenta20."
-    },
-    {
-      type: "text",
-      content: "Motivado pelo Ritual das Armas Renascidas, um nobre zakharoviano contrata o grupo para recuperar a arma de seus ancestrais. Ele explica que o artefato se encontra no castelo ancestral de sua família, ao sul. Também conta que houve uma batalha contra puristas lá, sendo possível ainda haver diversas ameaças na região. Após alguns encontros perigosos, o grupo chega ao local."
-    },
-    {
-      type: "text",
-      content: "Do lado de fora, hordas de mortos-vivos marcham no campo de batalha abandonado. Derrotá-las não resolve o problema, mas permite que passem para o interior da construção. Lá dentro encontrarão armas que lutam sem que ninguém as empunhe, assim como uma besta capaz de enferrujar e destruir qualquer objeto metálico. Finalmente, ao alcançarem o item que vieram buscar, os heróis devem enfrentar um último soldado reerguido pela força de seu ódio."
-    },
-    {
-      type: "break"
-    },
-    {
-      type: "subtitle",
-      content: "Cena 1: ARMAS RENASCIDAS"
-    },
-    {
-      type: "text",
-      content: "Arton possui diversas cidades sagradas. A própria existência de deuses menores permite o surgimento de povoados abençoados ou rotas de peregrinação. Mas na Cidade de Rhond, uma deidade brilha nas armas carregadas pela população. Cada uma, de certa forma, um símbolo sagrado do deus que ali habita."
-    },
-    {
-      type: "text",
-      content: "E a cidade está em festa! Pessoas vêm de todos os lados, armas em punho, não em busca de combate, mas sim de benção. O Ritual das Armas Renascidas é uma tradição local, na qual itens podem ser recuperados pelos clérigos de Rhond. Mas, neste ano, aparentemente o próprio deus fará a purificação dos artefatos!"
-    },
-    {
-      type: "text",
-      content: "Os personagens já atraíram a atenção de autoridades com suas aventuras anteriores, sendo reconhecidos como veteranos. Entre elas o Conde Zweihardt. O nobre enviou um de seus servos para convidar os aventureiros à sua morada, onde oferecerá uma missão."
-    },
-    {
-      type: "text",
-      content: "No caminho, os personagens observam diversos tipos de comemoração. Tavernas oferecem bebidas grátis para aqueles com as mais belas obras de ferraria. Forjas diversas abrem para ensinar técnicas para os mais interessados. E, claro, não há uma forma de mostrar ainda mais o amor pelas armas do que o combate! Duelos, liças e outros tipos de competição (normalmente) amistosas ocorrem por todos os lados."
-    },
-    {
-      type: "text",
-      content: "A residência de lorde Zweihardt é um misto de fortificação com forja e, chegando ao local, o grupo encontra o nobre vestindo roupas de ferreiro, trabalhando em alguma arma: “Ah! Bem-vindos, aventureiros, ao meu lar! Peço perdão por não estar mais apresentável, mas não havia como perder a inspiração do momento”. Aqueles treinados em Ofício sabem que o nobre realmente estava trabalhando, em outro lugar isso poderia parecer estranho, mas aqui faz todo sentido."
-    },
-    {
-      type: "text",
-      content: "Terminando o processo em que se encontrava, ele remove as luvas de proteção para cumprimentar os aventureiros, levando-os ao interior de sua propriedade. No caminho, servos vêm remover os trajes de ferreiro, deixando-o mais parecido com o que se espera de alguém em sua posição. Chegando ao seu escritório, Zweihardt senta-se em sua cadeira por poucos segundos e põe-se de pé novamente."
-    },
-    {
-      type: "text",
-      content: "“Bem, como podem ter ouvido, este ano o próprio Rhond será responsável por purificar e restaurar a arma escolhida. E tenho uma em mente que merece isso”. O nobre abre alguns pergaminhos, mostrando uma maça de confecção primorosa."
-    },
-    {
-      type: "text",
-      content: "“Ela foi forjada pelos meus ancestrais, e creio que, se há alguma chance de ser recuperada, seria pelas mãos do próprio Deus das Armas”. Aqueles treinados em Investigação ou Nobreza notam que a maça figura como parte do brasão da família Zweihardt."
-    },
-    {
-      type: "text",
-      content: "“Infelizmente,” ele abre um mapa de Zakharov, “quando os malditos puristas atacaram, fizeram um cerco ao castelo de meus antepassados”, e aponta para o desenho de uma fortificação. “Seu líder era obcecado em tomar a arma para si. O cerco foi longo, mas minha família conseguiu fugir. A maça ficou para trás”."
-    },
-    {
-      type: "text",
-      content: "Ele explica que a fortificação nunca foi tomada pelos puristas, mas que diversos cadáveres ambulantes impediram a recuperação da arma até agora. Conhecendo a reputação dos aventureiros, o conde acredita que serão capazes de lidar com os mortos-vivos e retornar com a relíquia em tempo de que ela seja renascida. Ele também fornece as instruções para abrir um nicho secreto em uma parede onde o artefato está escondido."
-    },
-    {
-      type: "text",
-      content: "Como recompensa, o nobre oferece uma arma com uma melhoria (exceto material especial) para cada personagem, ou uma única arma com duas melhorias. Tanto a arma quanto as melhorias podem ser decididas pelo grupo. Além disso, fornecerá seis essências de mana e quatro frascos com óleo de Arma Mágica."
-    },
-    {
-      type: "text",
-      content: "Caso perguntem sobre uma recompensa em dinheiro, o nobre explica que as armas são muito mais valiosas que simples tibares, mas pode pagar T$ 1.000 quando retornarem."
-    },
-    {
-      type: "break"
-    },
-    {
-      type: "subtitle",
-      content: "Cena 2: JORNADA AO SUL"
-    },
-    {
-      type: "text",
-      content: "Apesar do mapa ser bastante detalhado, o caminho não é dos mais fáceis. Existem poucas estradas úteis e as planícies escondem diversos perigos. Apesar de relativamente frio, o clima é bom para a viagem, tornando-se cada vez mais ameno conforme rumam ao sul."
-    },
-    {
-      type: "text",
-      content: "O caminho para o sul é um teste estendido de Sobrevivência (CD 20, 3 sucessos). Em caso de falha total, os personagens saíram de rota, tendo que reiniciar o teste estendido. Após cada teste, role 1d6 ou escolha um dos encontros abaixo. Cada encontro conta como uma cena individual."
-    },
-    {
-      type: "text",
-      content: "1 e 2) Planícies Calmas: O clima parece ainda mais promissor nestes dias, e a jornada se torna mais fácil. Existem sombras no caminho, mas talvez vocês sejam mais intimidadores do que qualquer coisa espreitando. Não há encontros, e é possível acampar tranquilamente."
-    },
-    {
-      type: "text",
-      content: "3) Por que tão sério? Em algum ponto da viagem, vocês começam a ouvir gargalhadas no ar. Logo vocês descobrem que elas vêm de um bando de gnolls salteadores. Seu líder porta uma pistola, ordenando que entreguem tudo o que têm. Os personagens encontram 1d6+1 gnolls saqueadores liderados por um gnoll filibusteiro. Caso o filibusteiro seja derrotado, os outros gnolls se rendem, entregando todo seu tesouro."
-    },
-    {
-      type: "text",
-      content: "4) Enclave Purista: Repentinamente, vocês veem ao longe um acampamento de soldados, todos vestindo armaduras similares escuras. Aqueles com memórias da Guerra Artoniana ficam em prontidão, pois sentem que há algo reconhecível nestes guerreiros. Estes puristas estão mais perdidos do que planejando algo. Entretanto, ao perceberem o grupo, pegam em armas e partem para o combate. São 2d6 soldados puristas e um sargento-mor. Eles lutam até a morte caso haja um personagem não-humano entre os aventureiros."
-    },
-    {
-      type: "text",
-      content: "5) Centaura e Kobolds: Mais a frente vocês veem um amontoado de kobolds sobre algo. Conforme eles berram e golpeiam, é possível perceber que estão, na verdade, atacando uma centaura, capturada em uma rede. Se nada fizerem, ela terá pouco tempo de vida. Os kobolds não prestam atenção na sua aproximação. Um enxame kobold prendeu uma centaura em uma de suas armadilhas e está atacando-a. Os heróis devem enfrentar as criaturinhas se quiserem salvar a vítima. Caso a libertem lidando com a rede, ela auxilia como um parceiro fortão iniciante. Uma vez salva, a centaura ajudará na jornada, fornecendo +5 no próximo teste de Sobrevivência do teste estendido."
-    },
-    {
-      type: "text",
-      content: "6) Pregador da Praga: No meio do nada, há uma figura parada em pé vestindo robes maltrapilhos. Quando vocês se aproximam, ele abre um sorriso anormal, cheio de dentes, e os olhos bastante esbugalhados. “Vocês já ouviram as boas novas de nosso senhor Aharadak?” É um cultista do Deus da Tormenta, falando de profecias profanas e bençãos sinistras que sua divindade espalhará pelo mundo. Nenhuma forma de intimidação o espanta, e ele seguirá o grupo de longe pelo resto da viagem. Caso o ataquem, use a ficha de um maníaco lefou. Se não, ele acompanhará, atrapalhando qualquer descanso que tentem fazer (a condição de descanso será sempre uma abaixo da original). Além disso, ao acordarem todos devem fazer um teste de Vontade (CD 20), ou ficam frustrados até o dia seguinte."
-    },
-    {
-      type: "text",
-      content: "Assim que conquistarem os três sucessos necessários, o grupo vê ao longe a fortificação onde o artefato espera."
-    },
-    {
-      type: "break"
-    },
-    {
-      type: "subtitle",
-      content: "Cena 3: ARMAS DOS MORTOS"
-    },
-    {
-      type: "text",
-      content: "Ao longe, o castelo dos Zweihardt se ergue, pedras escuras no horizonte. Entretanto, rodeando-o, existem diversos soldados andando de forma morosa. Mesmo uma aproximação indiscreta não chama atenção, e logo vocês percebem o porquê. Nas redondezas da fortificação, os aparentes soldados são, na verdade, esqueletos vestindo armaduras velhas e puídas. Um teste de Conhecimento, Guerra ou Nobreza (CD 25) revela se tratar de uniformes puristas, provavelmente da época da Guerra Artoniana. A única forma de entrarem é abrindo uma brecha entre as linhas dos mortos."
-    },
-    {
-      type: "text",
-      content: "CRIATURAS. Tropa de Mortos (NPCs e Criaturas)."
-    },
-    {
-      type: "text",
-      content: "Os mortos-vivos não são muito perceptivos, é fácil pegá-los de surpresa. Sem mente, o ódio os mantém combatendo, focando seus ataques principalmente em não-humanos, como se alguma memória raivosa ainda habitasse suas almas. Vencê-los dá algum tempo para fazerem sua próxima ação, mas outra tropa de mortos chegará em 1d6+2 rodadas."
-    },
-    {
-      type: "text",
-      content: "O muro pode ser escalado com uma ação completa e um teste de Atletismo (CD 25). Uma vez do outro lado, é necessária mais uma ação completa para abrir o portão e em seguida fechá-lo. Alternativamente, podem tentar um teste em grupo de Força (CD 30) para abrir o portão o suficiente para que todos passem, ou então arrebentá-lo (Def 8, RD 10, 200 PV)."
-    },
-    {
-      type: "text",
-      content: "Assim que a tropa dos mortos é derrotada, os personagens podem fazer um teste de Investigação, Guerra ou Percepção (CD 25). Se passarem, percebem uma presença ao longe, observando-os. Caso tentem se aproximar, o inumano que era o líder deste pequeno exército se esconde, preparando para atacar em momento mais propício."
-    },
-    {
-      type: "text",
-      content: "Os soldados mortos-vivos não tentam entrar no interior da propriedade."
-    },
-    {
-      type: "break"
-    },
-    {
-      type: "subtitle",
-      content: "Cena 4: SALÃO PRINCIPAL"
-    },
-    {
-      type: "text",
-      content: "Este amplo aposento de pé direito alto era provavelmente onde os nobres recebiam seus servos. O salão está bagunçado, armas abandonadas para todos os lados e tapeçarias arruinadas estão caídas próximas às paredes onde estavam penduradas."
-    },
-    {
-      type: "text",
-      content: "CRIATURAS. Enxame de Armas (NPCs e Criaturas)."
-    },
-    {
-      type: "text",
-      content: "Ao entrar no salão principal, todos os personagens devem fazer um teste de Percepção oposto a Furtividade (+8) do enxame de armas, perfeitamente imóveis no chão. Aqueles que falharem ficam surpreendidos na primeira rodada do combate. Movido por uma força invisível, o enxame metálico ataca os aventureiros."
-    },
-    {
-      type: "text",
-      content: "Quando derrotarem o arsenal animado, eles podem explorar outros aposentos do castelo, exceto a sala de armas. Entre as peças do enxame é possível encontrar qualquer arma simples ou marcial. Se decidirem vasculhar os aposentos, podem fazer um teste de Investigação (CD 20), e encontrarão o equivalente ao dobro do tesouro para ND 6."
-    },
-    {
-      type: "text",
-      content: "Assim que o grupo quiser investigar a sala de armas, vá para a próxima cena."
-    },
-    {
-      type: "break"
-    },
-    {
-      type: "subtitle",
-      content: "Cena 5: ARSENAL ENFERRUJADO"
-    },
-    {
-      type: "text",
-      content: "Aqui o cheiro de ferrugem é acachapante. O lugar que guardava as armas e armaduras mais valiosas da família Zweihardt agora está coberto pela poeira avermelhada. Um chiado alto vem de uma das paredes, seguido por outro. Do meio da lataria corroída, duas criaturas que parecem a mistura de um réptil com um gafanhoto, com enormes antenas, se aproximam, os olhos estranhos vidrados no aço que vocês carregam."
-    },
-    {
-      type: "text",
-      content: "CRIATURAS. Oxxdon x2 (NPCs e Criaturas)."
-    },
-    {
-      type: "text",
-      content: "Também conhecidos como “monstros da ferrugem”, estas criaturas corroem metal ao seu redor, e fizeram aqui seu ninho. Para zakharovianos, são pesadelos vivos. A única forma de recuperarem seguramente o artefato de lorde Zweihardt é livrando-se destas bestas."
-    },
-    {
-      type: "text",
-      content: "Seguindo as instruções do conde, os aventureiros pressionam alguns dos tijolos na parede, liberando o nicho que guarda o artefato. Trata-se de uma maça de adamante formidável, que infelizmente está avariada pela passagem do tempo, causando uma penalidade de –5 em testes de ataque."
-    },
-    {
-      type: "text",
-      content: "Logo que a recuperam, ouvem passos pesados vindos do mesmo caminho que traçaram para chegar aqui."
-    },
-    {
-      type: "break"
-    },
-    {
-      type: "subtitle",
-      content: "Cena 6: GANÂNCIA PÓS-MORTE"
-    },
-    {
-      type: "text",
-      content: "A figura que surge é intimidadora, mesmo para heróis veteranos como vocês. Sua armadura está desgastada pela passagem do tempo, a pele está esticada em todos os pontos visíveis, sua boca é um esgar de ódio permanente. A criatura exala um cheiro insuportável de morte. Quando fala, as palavras saem roucas e arranhadas, devido aos anos sem uso:"
-    },
-    {
-      type: "text",
-      content: "“Malditos... Me entreguem esta arma! Ela é minha por direito... E vocês não são merecedores de tocá-la!”"
-    },
-    {
-      type: "text",
-      content: "CRIATURAS. Inumano (NPCs e Criaturas)."
-    },
-    {
-      type: "text",
-      content: "O inimigo que enfrentam agora é um morto-vivo movido pelo próprio ódio. Mesmo que entregassem a arma, este comandante maldito os massacraria impiedosamente. Porém, é possível usá-la para distraí-lo. Se a arremessarem em uma determinada direção, o inumano usará todas suas ações para ir até a arma e empunhá-la... o que também pode ser vantajoso para os personagens, uma vez que causará uma penalidade de –5 nos testes de ataque dele."
-    },
-    {
-      type: "text",
-      content: "Se tiverem destruído parte do portão, ele estará acompanhado de quatro esqueletos. Caso o inumano seja destruído, os esqueletos automaticamente caem, inertes, assim como todas as tropas dos mortos no exterior da propriedade."
-    },
-    {
-      type: "break"
-    },
-    {
-      type: "subtitle",
-      content: "Epílogo: ARMISTÍCIO"
-    },
-    {
-      type: "text",
-      content: "Os mortos finalmente caem. Algumas de suas armas cravam-se no solo, tornando-se marcadores sombrios de tudo que houve aqui. É possível continuar vasculhando o castelo, mas agora ele é apenas uma construção vazia e corroída. Para terminarem sua missão, vocês devem fazer o longo caminho de volta à cidade do Deus das Armas."
-    },
-    {
-      type: "text",
-      content: "Se quiser tornar o retorno tão movimentado quanto a vinda, é possível usar os encontros da cena 2 novamente. Se preferir manter tudo em apenas uma sessão, diga que, conhecendo o caminho, os personagens evitam os perigos. Caso tenham encontrado o cultista de Aharadak, entretanto, ele continuará os seguindo até perto da Cidade de Rhond."
-    },
-    {
-      type: "text",
-      content: "O Conde Zweihardt fica extremamente feliz em ver a relíquia de sua família retornada, e, em gratidão, oferece um banquete aos heróis. Se informado da liberação do castelo de seus ancestrais, ele fica pensativo. Segundo o nobre, seria muito bom retomar a propriedade, e então atrair novos servos. Por outro lado, a possibilidade de restaurar a maça também invocaria o orgulho de seus antepassados."
-    },
-    {
-      type: "text",
-      content: "Expandindo seu reconhecimento, os personagens avançam para o 6º nível!"
-    },
-    {
-      type: "break"
-    },
-    {
-      type: "subtitle",
-      content: "NPCs e Criaturas"
-    },
-    {
-      type: "text",
-      content: "OXXDON (ND 2)\nMonstro Médio\nINICIATIVA +7, PERCEPÇÃO +4, faro, visão no escuro\nDEFESA 20, FORT +7, REF +13, VON +2\nPONTOS DE VIDA 72\nDESLOCAMENTO 12m (8q)\nCORPO A CORPO Antena +12 (ferrugem) e mordida +12 (1d8+10).\nFERRUGEM A antena do oxxdon destrói automaticamente qualquer objeto de metal atingido. Uma arma de metal que cause dano a um oxxdon também é destruída imediatamente (itens mágicos têm direito a um teste de Fortitude contra CD 16 para evitar). Contra criaturas de metal (como golens), a antena deixa o alvo fatigado, então exausto, então paralisado (mesmo que seja imune a estas condições; Fort CD 16 evita). Remover cada uma destas condições da criatura exige uma hora de trabalho, o gasto de T$ 50 em materiais e passar em um teste de Ofício (artesão) contra CD 20.\nFor 0, Des 4, Con 2, Int –4, Sab 1, Car –1\nTESOURO Nenhum."
-    },
-    {
-      type: "text",
-      content: "ENXAME DE ARMAS (ND 6)\nConstruto Grande\nINICIATIVA +6, PERCEPÇÃO +4, percepção às cegas\nDEFESA 22, FORT +15, REF +10, VON +5, redução de dano 5\nPONTOS DE VIDA 140\nDESLOCAMENTO voo 9m (6q)\nENXAME O enxame de armas é um aglomerado de objetos animados que agem em conjunto. Ele pode entrar no espaço ocupado por um personagem e, no fim de seu turno, causa 1d10 pontos de dano de corte, 1d6 pontos de dano de perfuração e 1d8 pontos de dano de impacto a qualquer personagem em seu espaço, automaticamente. O enxame é imune a manobras de combate e efeitos que afetam apenas uma criatura e não causam dano, mas sofrem 50% a mais de dano de efeitos de área, como Bola de Fogo. Além disso, sofre apenas metade do dano de ataques com armas. Estar dentro do enxame conta como condição ruim para lançar magias.\nAPARAR (REAÇÃO) Uma vez por rodada, quando é alvo de um ataque corpo a corpo, o enxame de arma pode fazer um teste de ataque e subtrair seu resultado do dano causado pelo ataque (teste +16).\nFor 4, Des 2, Con 2, Int ––, Sab 0, Car –5\nTESOURO Dobro (apenas armas)."
-    },
-    {
-      type: "text",
-      content: "TROPA DE MORTOS\nMorto-vivo Grande\nINICIATIVA +9, PERCEPÇÃO +5, visão no escuro\nDEFESA 24, FORT +6, REF +11, VON +16, redução de corte, frio e perfuração 5\nPONTOS DE VIDA 40\nDESLOCAMENTO 9m (6q)\nCORPO A CORPO Espada longa x2 +20 (4d8+18, 19).\nBANDO A tropa de mortos é formada por um grupo de esqueletos. Se um ataque da tropa exceder a Defesa do Inimigo por 10 ou mais, ele causa o dobro do dano. Se um ataque da tropa errar, ele ainda causa metade do dano. A falange é imune a manobras de combate e efeitos que afetam apenas uma criatura e não causam dano, mas sofre 50% a mais de dano de efeitos de área, como Bola de Fogo. Um personagem com poder Trespassar que acerte a tropa pode usá-lo para fazer um ataque adicional contra ela (mas apenas uma vez por turno).\nFor 5, Des 3, Con 0, Int —, Sab 0, Car –5.\nEQUIPAMENTO Escudo pesado, espada longa.\nTESOURO Nenhum."
-    },
-    {
-      type: "text",
-      content: "INUMANO (ND 5)\nMorto-vivo Médio\nINICIATIVA +7, PERCEPÇÃO +6, visão no escuro\nDEFESA 26, FORT +17, REF +12, VON +7, imunidade a frio\nPONTOS DE VIDA 48\nDESLOCAMENTO 9m (6q)\nCORPO A CORPO Espada longa x2 +24 (2d8+9, 19, mais 2d12 trevas).\nÀ DISTÂNCIA Azagaia +24 (2d6+9, mais 2d12 trevas).\nDRENAR ENERGIA Uma criatura viva que sofra dano de trevas do inumano combatente sofre uma penalidade cumulativa de −1 em testes de perícia (Fort CD 22 evita). Se acumular uma penalidade igual ou maior que seu próprio nível, a criatura morre e se transforma em um inumano sob controle do mestre. Esta penalidade pode ser removida de uma criatura viva com descanso ou com efeitos mágicos capazes de remover qualquer condição de metabolismo (cada dia de descanso ou efeito mágico diminui a penalidade em 1).\nFor 3, Des 2, Con 1, Int 0, Sab 1, Car −1\nPERÍCIAS Atletismo +8, Furtividade +4, Guerra +5, Intimidação +6.\nEQUIPAMENTO Azagaia x3, escudo pesado, espada longa, meia armadura. Tesouro Padrão."
-    }
-  ]
-},
-{ id: "O Olho do Basilisco",
-  name: "O Olho do Basilisco",
-  theme: "Fantasia e Caçada a Monstros",
-  image: "/aventuras/o-olho-do-basilisco.png",
-  summary: "Para salvar uma aventureira transformada em estátua viva, os heróis são contratados pela Guilda dos Caça-Monstros para rastrear e derrotar um basilisco ancestral nas temíveis Montanhas Sanguinárias.",
-  sections: [
-    {
-      type: "text",
-      content: "Arton é um mundo cheio de perigos e, ainda assim, as Montanhas Sanguinárias revelam-se um dos locais mais desafiadores existentes. Seus picos colossais estendem-se rasgando o céu como garras de monstros imensos. Toda sorte de feras existe aqui e as crias de Megalokk prosperam, atingindo tamanhos nunca vistos."
-    },
-    {
-      type: "text",
-      content: "Mais do que monstros, as Sanguinárias são também o lar daqueles que os caçam. Sob as sombras das costelas de alguma besta colossal, a cidade de Trag’Merah é procurada por diversos aventureiros em busca de fama ou de suprimentos. A Guilda Mon’han auxilia fornecendo todo tipo de apoio para os intrépidos que partem para sua próxima expedição."
-    },
-    {
-      type: "break"
-    },
-    {
-      type: "subtitle",
-      content: "RESUMO DA AVENTURA"
-    },
-    {
-      type: "text",
-      content: "O Olho do Basilisco é uma breve jornada, uma aventura curta pensada para uma sessão única, mas que pode ser inserida em uma campanha maior. É ideal para um grupo de quatro personagens de 8º nível em Tormenta20."
-    },
-    {
-      type: "text",
-      content: "Quando uma estranha estátua de pedra causa confusão, os aventureiros percebem não se tratar apenas de um construto perdido. Investigando o “monstro”, percebem que este já foi uma pessoa, mas foi transformado em pedra por uma medusa monstruosa. Agora, precisa da ajuda dos personagens para encontrar algo que reverta seu corpo para o estado original."
-    },
-    {
-      type: "text",
-      content: "O líder da Guilda dos Caça-Monstros se interessa pelo caso e diz que o olho de um basilisco ancestral seria capaz de reverter a petrificação. Os aventureiros terão de rastrear o monstro pelas Sanguinárias, evitando perigos, encontrando aliados inusitados e enfrentando outras feras e cultistas. Finalmente, terão de usar estratégia para enfrentar a criatura... antes que se tornem sua próxima refeição!"
-    },
-    {
-      type: "break"
-    },
-    {
-      type: "subtitle",
-      content: "CENA 1: ALTAS CONFUSÕES EM TRAG’MERAH"
-    },
-    {
-      type: "text",
-      content: "A imensa ossada sempre à vista no horizonte em Trag’Merah lembra a todos a escala das ameaças que podem ser encontradas nas Montanhas Sanguinárias. Lojas, barracas e ambulantes de todos os tipos oferecem produtos para aqueles prontos a sair em expedição. Passando pelo meio da rua, um grupo coberto de sangue e vísceras comemora, trazendo em sua carroça a cabeçorra de alguma fera abatida."
-    },
-    {
-      type: "text",
-      content: "Tudo em Trag’Merah é relacionado à caça de monstros. Servindo de sede da Guilda Mon’han, a cidade se tornou um dos poucos pontos capazes de permitir descanso e reposição de recursos nas Sanguinárias. Mesmo sendo o lugar de mais fácil acesso à cadeia montanhosa, os personagens estão aqui já como aventureiros experientes."
-    },
-    {
-      type: "text",
-      content: "No meio da relativa normalidade, uma confusão começa. Barracas são derrubadas e pessoas são empurradas por uma estranha figura cinzenta. À primeira vista, parece uma estátua de uma mulher carregando um escudo e espada, mas ela está se movendo apesar de suas feições rochosas permanecerem imutáveis."
-    },
-    {
-      type: "text",
-      content: "Os personagens são os mais próximos do incidente e, se não agirem logo, mais inocentes estarão em perigo."
-    },
-    {
-      type: "text",
-      content: "CRIATURAS. Defensor Rochoso Desperto (NPCs e Criaturas)."
-    },
-    {
-      type: "text",
-      content: "No início do turno de cada personagem, peça um teste de Intuição (CD 20). Aqueles que passarem notam que o defensor rochoso está atacando por medo e confusão. Acalmá-lo requer vencer em dois testes de Diplomacia opostos à Vontade do construto. A magia Tranquilidade, lançada com o aprimoramento que afeta criaturas, também encerra o combate."
-    },
-    {
-      type: "text",
-      content: "Caso não notem as intenções do defensor e tentem resolver através do combate, ele cessa seu ataque quando chega à metade dos PV e foge. Se for acalmado ou encontrado após escapar da luta, fica muito claro que não se trata de um autômato sem mente."
-    },
-    {
-      type: "break"
-    },
-    {
-      type: "subtitle",
-      content: "CENA 2: CORAÇÃO EMPEDRADO"
-    },
-    {
-      type: "text",
-      content: "Menos confuso, o defensor rochoso não ataca, mostrando-se capaz de pensamentos complexos. Apesar de não conseguir se comunicar verbalmente, ele faz o possível, apontando para coisas e meneando a cabeça. Se questionado, responde assentindo ou negando."
-    },
-    {
-      type: "text",
-      content: "Compreendê-lo requer um teste de Intuição (CD 20). De forma rudimentar, ele consegue expressar que algo o transformou em pedra. Um teste de Investigação (CD 20) revela que a pessoa que era o defensor rochoso passou por Trag’Merah com seu grupo há alguns meses. Os aventureiros que estavam com ele nunca retornaram. Nenhum método é capaz de desfazer a petrificação ou metamorfose."
-    },
-    {
-      type: "text",
-      content: "Para descobrir mais sobre a expedição, será necessário um teste estendido de Diplomacia, Intuição ou outra perícia apropriada (CD 25, três sucessos). Falha total representa apenas que as informações coletadas não eram relevantes, e é necessário recomeçar o teste estendido. Entretanto, passando nos testes, os aventureiros descobrem que o grupo que o acompanhava estava buscando um monstro misterioso: uma euríade."
-    },
-    {
-      type: "text",
-      content: "Informações sobre o que são euríades são raras. Um teste de Conhecimento, Misticismo, Religião ou Sobrevivência (CD 26) revela histórias sobre um grupo de medusas devotadas a Megalokk que se transformaram em versões mais monstruosas e violentas. Um resultado 29 ou maior também revela que as mais antigas entre elas são capazes não apenas de petrificar os inimigos, mas de transformá-los em defensores rochosos sob seu controle."
-    },
-    {
-      type: "text",
-      content: "Essa informação pode fazer com que o grupo se pergunte se o defensor à sua frente está agindo por vontade própria. Qualquer teste mostra que o construto está sim livre de qualquer controle."
-    },
-    {
-      type: "break"
-    },
-    {
-      type: "subtitle",
-      content: "CENA 3: CONTRATO DE CAÇA"
-    },
-    {
-      type: "text",
-      content: "Após conseguirem as informações, uma pessoa se aproxima dos personagens. É um kliren de idade avançada e olhar carregado de muita experiência."
-    },
-    {
-      type: "text",
-      content: "“Soube que estão procurando informações para ajudar sua amiga de pedra aí. Triste ver uma pessoa em um estado desses, mas é impressionante que uma criatura tenha o poder de não só transformar carne em pedra, mas animá-la.” Ele solta uma risada alta e confiante. “Os monstros nunca deixam de nos surpreender.”"
-    },
-    {
-      type: "text",
-      content: "O kliren falando com os personagens é ninguém menos que o fundador da Guilda dos Caça-Monstros, Mon’han Galldo’han. Interessado nos acontecimentos, convida os aventureiros para uma conversa na sede de sua organização."
-    },
-    {
-      type: "text",
-      content: "“Vocês precisam de algo potente para desfazer o olhar da euríade matriarca. E eu tenho justamente a presa certa para isso!”"
-    },
-    {
-      type: "text",
-      content: "Mon’han mostra o esboço de um lagarto com vários pares de patas. Olhando mais atentamente para a escala das pinturas, percebe-se que é uma criatura enorme. As notas ao redor falam sobre olhar petrificante e veneno."
-    },
-    {
-      type: "text",
-      content: "“Um basilisco ancestral, maior e mais violento que os que existem nos ermos de Arton. Se o derrotarem e trouxerem o olho dele, será possível reverter a transformação de sua amiga empedrada.”"
-    },
-    {
-      type: "text",
-      content: "Nas anotações há também um mapa, marcando a posição da criatura em um ponto distante da cordilheira."
-    },
-    {
-      type: "text",
-      content: "“Esse maldito tem devorado vários outros seres, incluindo membros da Guilda! Se derem um jeito no bicho e trouxerem sua cabeça, ou outra prova de que o derrotaram, terão nossa admiração... e uma bela recompensa, claro.”"
-    },
-    {
-      type: "text",
-      content: "Além de salvar o defensor rochoso, a caçada vale o prêmio de T$ 5000, uma verdadeira fortuna. Pelo que Mon’han disse, também há uma oportunidade de juntar-se à Guilda dos Caça-Monstros, ou, para aqueles que já fazem parte da organização, de ter mais reconhecimento entre seus pares."
-    },
-    {
-      type: "text",
-      content: "Ao pegarem o contrato de caça deste basilisco ancestral, todos devem preparar-se para uma longa jornada pelas Sanguinárias. E o próprio terreno pode se mostrar a maior ameaça."
-    },
-    {
-      type: "break"
-    },
-    {
-      type: "subtitle",
-      content: "CENA 4: RASTROS"
-    },
-    {
-      type: "text",
-      content: "Apesar de haver diversas trilhas por entre as montanhas, não há forma de seguir apenas por elas. Ao longe, o horizonte se move, revelando a passagem de uma criatura tão colossal que se confunde com a própria cordilheira. Por sorte, a fera está tão distante que não há chance nem mesmo de ela percebê-los. Após algum tempo, ela some, camuflando-se novamente na paisagem."
-    },
-    {
-      type: "text",
-      content: "As Montanhas Sanguinárias são impiedosas e rastrear a localização do basilisco ancestral requer vários dias de investigação cuidadosa. Isso é um teste estendido de Sobrevivência (CD 25, cinco sucessos)."
-    },
-    {
-      type: "text",
-      content: "Cada rolagem representa um dia de viagem, e apenas um dos personagens faz o teste, enquanto o resto do grupo só pode ajudá-lo, fazendo-o com perícias adequadas. Uma falha causa perda de 2d6 pontos de vida para todos, devido às agruras do caminho. Em caso de falha total, ficam completamente perdidos, tendo que recomeçar o teste estendido, mas longe da cidade de Trag’Merah."
-    },
-    {
-      type: "text",
-      content: "A cada teste, role 1d6 para definir um dos encontros abaixo, ou escolha um que seja apropriado."
-    },
-    {
-      type: "text",
-      content: "1) Escalada Perigosa: Não há outra forma de avançar que não seja para cima. O trecho exige que escalem o paredão rochoso ou encontrem formas criativas de ascender pela encosta. Os personagens devem passar em três testes de Atletismo (CD 25). Falhar representa uma queda que causa 3d6 pontos de dano de impacto, +3d6 por sucesso obtido anteriormente. Personagens com deslocamento de voo podem ignorar os testes, mas, se quiserem levar outras pessoas consigo, devem se atentar aos limites de carga (Tormenta20, p. 141). Se for necessário fazer várias viagens, devem gastar os PM apropriados (considere que subir ou descer requer deslocar-se por 10 metros para cima)."
-    },
-    {
-      type: "text",
-      content: "2) Ninho Vazio: Mais à frente no caminho, vocês avistam um ninho enorme de algum monstro local. Talvez haja algo de valor em seu interior. Dentro do ninho, vocês encontram 1d4 ovos de grifo. Se cuidados adequadamente, eles eclodem, fornecendo um grifo parceiro montaria iniciante. Caso este encontro seja rolado novamente, o grupo é atacado por dois grifos adultos (Tormenta20, p. 292). Devolver os ovos faz os grifos partirem sem combate."
-    },
-    {
-      type: "text",
-      content: "3) Revoada de Serpes: O som de dezenas de asas batendo agressivamente se faz audível mesmo a muitos metros de distância. Uma nuvem de répteis alados se aproxima, cheia de fúria e fome. Uma revoada de serpes (NPCs e Criaturas) chegará na área em que os personagens estão em 1d4 rodadas, havendo tempo para que eles se preparem, seja para lutarem ou se esconderem."
-    },
-    {
-      type: "text",
-      content: "4) Peregrinação Druida: Vocês avistam ao longe duas figuras humanoides e um grande felino. Ambas as mulheres, uma elfa e a outra humana, vestem peles e exibem no corpo pintas semelhantes às do jaguar que as acompanha. Uma delas acena para que se aproximem. Estas druidisas servem a Mãe Jaguar (um aspecto de Allihanna) e prestam ajuda a viajantes. Quando o grupo acampar, o descanso contará como uma condição de descanso superior. Se tiverem enfrentado algum monstro antes desse encontro, elas curam 4d8+4 pontos de vida de cada personagem."
-    },
-    {
-      type: "text",
-      content: "5) Kemooz Pensativo: Em algum ponto do dia, vocês notam o que parece uma grande estátua sentada com o queixo apoiado sobre um punho. Ao se aproximarem, percebem que parece uma pessoa coberta de tatuagens arcanas. Se qareens fizerem parte do grupo, sentem uma estranha familiaridade com ela. Este kemooz, um gênio da terra, está sentado aqui há séculos admirando a paisagem que ajudou a construir. Entretanto, ele não se move, pois não possui um amo há muito tempo. Passar em três testes de Diplomacia opostos à Vontade dele (+15) convence o gênio a servir a um dos aventureiros. O kemooz é um parceiro iniciante que fornece o seguinte benefício: uma vez por rodada, você pode criar um cubo de terra de 1,5m de lado em um espaço desocupado a até 9m. O cubo tem RD 5 e 30 PV, e dura até o fim da cena ou até você acumular 4 cubos. Para mais informações, veja Deuses de Arton, p. 304."
-    },
-    {
-      type: "text",
-      content: "6) Rastejante Voraz: O chão começa a tremer e, por um momento, a preocupação sobre um possível deslizamento ou terremoto surge em suas mentes. Entretanto, o que vem de baixo é ainda pior: uma criatura dotada de uma infinidade de patas emerge, pronta a devorar vocês. Uma centopeia-dragão (Tormenta20, p. 287) escava abaixo dos pés dos personagens, tentando engoli-los."
-    },
-    {
-      type: "text",
-      content: "Assim que conseguirem os cinco sucessos, encontram uma trilha deixada pelo monstro. Entretanto, uma outra coisa parece ter se interessado pela jornada dos personagens."
-    },
-    {
-      type: "break"
-    },
-    {
-      type: "subtitle",
-      content: "CENA 5: PRESAS PEÇONHENTAS"
-    },
-    {
-      type: "text",
-      content: "Na última noite antes de chegarem ao local em que o basilisco ancestral se encontra, sombras sinistras movem-se ao redor do acampamento. Uma emboscada começa!"
-    },
-    {
-      type: "text",
-      content: "As figuras ao redor do acampamento são cultistas que sincretizam Megalokk e Sszzaas. Apesar de serem deuses tão distintos – um, selvageria monstruosa; o outro, traição ardilosa –, estes devotos fazem botes com armas envenenadas, inspirados nas presas de bestas peçonhentas."
-    },
-    {
-      type: "text",
-      content: "CRIATURAS. Presas do Grande Basilisco x4 (NPCs e Criaturas)."
-    },
-    {
-      type: "text",
-      content: "Os presas do Grande Basilisco aproximam-se discretamente durante à noite, realizando testes de Furtividade opostos a Percepção dos personagens. O ataque é rápido e virulento, tentando envenenar os aventureiros com seus golpes. Eles também se posicionam de forma a flanquear sempre que possível."
-    },
-    {
-      type: "text",
-      content: "A qualquer momento, os cultistas podem virar-se uns contra os outros, mas, na verdade, os cortes envenenados de suas lâminas os fazem recuperar vida em vez de perdê-la. Além disso, se três deles forem derrotados, o quarto fugirá, ressurgindo no combate contra o basilisco ancestral."
-    },
-    {
-      type: "break"
-    },
-    {
-      type: "subtitle",
-      content: "CENA 6: PREDADOR PREDADO"
-    },
-    {
-      type: "text",
-      content: "Um dos rastros mais exóticos deixado pela passagem do basilisco ancestral são os monstros menores transformados em pedra. Serpes, mantícoras e até mesmo gigantes, eternamente petrificados e destruídos. O aumento na ocorrência dessas estátuas indica claramente a proximidade do refúgio da criatura."
-    },
-    {
-      type: "text",
-      content: "A região em que chegam mais parece um pântano no interior de uma ravina. Por todos os lados, estátuas se espalham, e claramente não foram criadas por artistas mortais. O defensor rochoso toca uma dessas criaturas com seus membros, talvez ponderando a similaridade entre ele e essas vítimas."
-    },
-    {
-      type: "text",
-      content: "É possível simplesmente seguir o rastro do basilisco, pois seu corpanzil não deixa dúvidas de por onde passou. Além disso, um ataque frontal parece a forma mais direta de enfrentá-lo. Caso optem por essa abordagem, devem fazer um teste de Percepção ou Sobrevivência oposto à Furtividade do basilisco ancestral, ou estarão surpreendidos na primeira rodada do combate."
-    },
-    {
-      type: "text",
-      content: "Entretanto, é possível também surpreender o monstro. Primeiro, um personagem deve fazer um teste de Sobrevivência (CD 25) para encontrar o ponto ideal para a emboscada. Segundo, é necessário fazer um teste de Furtividade oposto à Percepção do basilisco ancestral, em que um aventureiro faz o teste e o resto do grupo ajuda. Finalmente, se alguém tiver uma habilidade de classe de armadilha, é possível colocá-las em um determinado ponto antes do confronto."
-    },
-    {
-      type: "text",
-      content: "CRIATURA. Basilisco Ancestral (NPCs e Criaturas)."
-    },
-    {
-      type: "text",
-      content: "O monstro deseja sobreviver a qualquer custo, e, se perder metade de seus PV, tentará fugir para se recuperar. Caso ele escape, é possível fazer uma nova emboscada ou rastreá-lo na região com apenas um teste de Sobrevivência (CD 20)."
-    },
-    {
-      type: "text",
-      content: "Ao derrotarem o basilisco, deverão fazer um teste de Sobrevivência (CD 24) ou Cura (CD 30) para extrair o olho. Se o dado no teste for um 1 natural, o olho é destruído, e o grupo tem apenas mais uma chance com o segundo. Caso passem no teste, também conseguem cortar a cabeça da criatura, que ocupa 20 espaços de carga."
-    },
-    {
-      type: "break"
-    },
-    {
-      type: "subtitle",
-      content: "EPÍLOGO: PEDRA EM CARNE"
-    },
-    {
-      type: "text",
-      content: "O percurso de volta é mais tranquilo, porém vocês têm a incômoda sensação de estarem sendo observados. Voltando a Trag’Merah, as pessoas ficam animadas ao vê-los, especialmente Mon’han. Os aventureiros são recompensados pela caçada e celebrados pelos membros da Guilda dos Caça-Monstros. O olho do basilisco é levado para ser preparado para o ritual que devolverá o defensor rochoso à sua forma original."
-    },
-    {
-      type: "text",
-      content: "No caminho para a cidade, uma figura observa, à distância. Assemelha-se a um centauro, mas a porção inferior de seu corpo é similar a um grande lagarto quadrúpede. Sua metade superior, entretanto, é de uma mulher belíssima, porém com mãos que terminam em garras e cabelos de serpentes venenosas. Apesar da vitória dos heróis, ela sorri com uma boca cheia de presas afiadas."
-    },
-    {
-      type: "text",
-      content: "Assim que o ritual termina, os personagens e o defensor rochoso são levados para um ambiente público. O olho é esmagado sobre a cabeça da estátua viva, despejando um líquido verde. O que era rocha torna-se pele de novo e a aventureira está feliz de poder novamente sentir a brisa e expressar-se plenamente."
-    },
-    {
-      type: "text",
-      content: "Os aventureiros avançam para o 9º nível!"
-    },
-    {
-      type: "break"
-    },
-    {
-      type: "subtitle",
-      content: "NPCS E CRIATURAS"
-    },
-    {
-      type: "text",
-      content: "DEFENSOR ROCHOSO DESPERTO ND 8\nConstruto Médio\nINICIATIVA +8, PERCEPÇÃO +8, visão no escuro\nDEFESA 33, FORT +20, REF +9, VON +15, imunidade a atordoado e petrificado, redução de dano 10\nPONTOS DE VIDA 320\nDESLOCAMENTO 6m (4q)\nCORPO A CORPO Duas pancadas +26 (4d8+19, x3).\nIMOBILIDADE Um defensor rochoso pode permanecer completamente imóvel. Se ele estiver assim, um personagem deve passar num teste de Percepção (CD 35) para perceber que ele é uma criatura e não uma estátua.\nNATUREZA ABASCANTA O defensor tem 50% de chance de ignorar um efeito mágico (como se fosse imune a ele), com exceção da magia Despedaçar.\nPANCADA ATORDOANTE Uma criatura que sofra dano da pancada do defensor rochoso desperto fica atordoada (Fort CD 26 evita). Uma criatura só pode ser atordoada por esta habilidade uma vez por cena.\nFor 6, Des 0, Con 3, Int —, Sab 0, Car –5\nTESOURO Nenhum.\nPARCEIRO O defensor rochoso desperto é um parceiro guardião veterano."
-    },
-    {
-      type: "text",
-      content: "REVOADA DE SERPES ND 8\nMonstro Enorme\nINICIATIVA +9, PERCEPÇÃO +9, faro, visão no escuro\nDEFESA 33, FORT +15, REF +21, VON +8, imunidade a paralisia\nPONTOS DE VIDA 320\nDESLOCAMENTO 9m (6q), voo 18m (12q)\nCORPO A CORPO Mordida +26 (2d6+12) e ferrão +26 (1d8+12 mais veneno).\nAGARRAR APRIMORADO (LIVRE) Mordida +31.\nVENENO Peçonha concentrada (perde 1d12 pontos de vida por rodada durante 3 rodadas, Fortitude CD 26 reduz a duração para uma rodada).\nFor 7, Des 1, Con 6, Int –2, Sab 1, Car –1\nTESOURO 8d4 doses de peçonha concentrada (CD 23 para extrair)."
-    },
-    {
-      type: "text",
-      content: "PRESA DO GRANDE BASILISCO ND 3\nHumanoide (humano) Médio\nINICIATIVA +5, PERCEPÇÃO +5\nDEFESA 20, FORT +9, REF +4, VON +14\nPONTOS DE VIDA 21\nDESLOCAMENTO 9m (6q)\nCORPO A CORPO Machado de batalha +10 (1d8+5 mais veneno).\nÓDIO SÓRDIDO O presa do Grande Basilisco recebe +2 em testes de ataque e +1d6 em rolagens de dano contra criaturas flanqueadas ou sob efeito de alguma condição.\nVITALIDADE PEÇONHENTA Quando sofre perda de pontos de vida por causa de um efeito de veneno, em vez disso o presa recupera 1d12 PV.\nVENENO Peçonha concentrada (perde 1d12 pontos de vida durante 3 rodadas, Fort CD 19 reduz a duração para 1 rodada).\nFor 3, Des 2, Con 3, Int 1, Sab 2, Car –1\nPERÍCIAS Furtividade +3, Intimidação +2.\nTESOURO Padrão."
-    },
-    {
-      type: "text",
-      content: "BASILISCO ANCESTRAL ND 9\nMonstro Enorme\nINICIATIVA +10, PERCEPÇÃO +9, visão no escuro\nDEFESA 33, FORT +21, REF +14, VON +10, imunidade a metamorfose, redução de dano 10, resistência a veneno +10\nPONTOS DE VIDA 370\nDESLOCAMENTO 9m (6q), natação 9m (6q)\nCORPO A CORPO Mordida +27 (4d8+25 mais veneno).\nOLHAR PETRIFICANTE No início de seu turno, cada personagem em alcance curto do basilisco deve fazer um teste de Reflexos (CD 28). Se passar, desvia o olhar. Se falhar, fica lento. Se já estiver lento, fica petrificado permanentemente. Um personagem pode fechar os olhos como uma reação para ficar imune a esta habilidade, mas sofrerá os efeitos de estar cego por uma rodada. Efeitos que removem paralisia revertem a petrificação. Metamorfose.\nSOPRO Todas as criaturas em um cone de 9m perdem 3d12 pontos de vida e ficam envenenadas, perdendo 3d12 PV, por 3 rodadas (Fort CD 28 reduz a perda de vida à metade e evita a condição). Recarga (movimento).\nVENENO Peçonha potente (perde 2d12 pontos de vida por rodada durante 3 rodadas, Fort CD 28 reduz a duração para uma rodada).\nFor 6, Des 2, Con 5, Int –4, Sab 3, Car 0\nPERÍCIAS Furtividade +10.\nTESOURO 2d4 doses de peçonha potente (CD 24 para extrair), couro de basilisco (CD 24 para extrair, conta como T$ 2.000 como matéria-prima para fabricar uma armadura superior)."
-    }
-  ]
-},
+  },
+  { id: "Emergir Monstruoso",
+    name: "Emergir Monstruoso",
+    theme: "Fantasia e Caçada a Monstros",
+    image: "/aventuras/emergir-monstruoso.png",
+    summary: "Contratados para investigar desaparecimentos em uma próspera vila de Trebuck, os heróis devem explorar cavernas subterrâneas infestadas de larvas ácidas antes de enfrentar a colossal criatura responsável pela tragédia.",
+    sections: [
+      {
+        type: "text",
+        content: "Arton é um mundo repleto de feras apavorantes. Dragões rondam o mundo, colecionando tesouros e alterando as terras ao seu redor. A Tormenta chove aberrações asquerosas, capazes de destruir a mente e retorcer a matéria. O Deus dos Monstros, Megalokk, espalhou sua prole por todos os lados. Presas, garras e espinhos estraçalham aventureiros despreparados. Heróis que enfrentam monstros são lembrados por sua bravura. Mas este não é um trabalho fácil ou rápido. Cabe a estes aventureiros prepararem-se, coletando o máximo de informações antes mesmo de terem um vislumbre da fera. Afinal, se não souberem exatamente o que enfrentarão, podem tornar-se a próxima refeição de uma besta até então desconhecida."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "RESUMO DA AVENTURA"
+      },
+      {
+        type: "text",
+        content: "Emergir Monstruoso é uma breve jornada, uma aventura curta pensada para uma sessão única, mas que pode ser inserida em uma campanha maior. É ideal para um grupo de quatro personagens de 8º nível, em Tormenta20."
+      },
+      {
+        type: "text",
+        content: "Contratados por um nobre, os aventureiros vão até uma vila onde animais vêm sendo atacados e pessoas estão desaparecendo. A população local fica muito feliz em vê-los. Um fazendeiro anão diz que pode apontar pistas se os personagens lidarem antes com os estranhos monstros que insistem em ocupar seu celeiro."
+      },
+      {
+        type: "text",
+        content: "Os heróis então devem investigar túneis que passam por baixo da região, escondendo inimigos subterrâneos. Ao analisar as cavernas, eles encontram um ninho de larvas ácidas famintas. Assim que são derrotadas, tudo começa a desmoronar, e eles terão de enfrentar na superfície o monstro responsável pelos desaparecimentos."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "CENA 1: NÃO HÁ PAZ EM TREBUCK"
+      },
+      {
+        type: "text",
+        content: "Conhecidos pela sua beleza bucólica, os campos de Barucandor são um dos lugares mais prósperos de Trebuck. Infelizmente, isso não significa tranquilidade. O ajuntamento de feudos faz fronteira com a Tormenta, as Montanhas Sanguinárias e o reino de Sckharshantallas. O barão Marius Valcanti tenta cuidar da população da melhor forma, mas sua idade avançada o força a depender da ajuda constante de aventureiros."
+      },
+      {
+        type: "text",
+        content: "Os personagens, reconhecidos por aventuras anteriores, são convidados à presença do nobre. Todas as pessoas que o grupo encontra no caminho, sejam servos ou guardas, vestem-se de forma elegante, um testemunho da prosperidade da região. O barão senta-se em uma cadeira de espaldar alto, que faz sua figura parecer menor. Administradores aproximam-se, mostram algo e logo partem, num fluxo constante."
+      },
+      {
+        type: "text",
+        content: "O barão Valcanti saúda os personagens em tom formal, parabenizando-os por alguma de suas recentes vitórias, mas tem pouco tempo para conversas paralelas e vai direto ao ponto. A burgomestra de uma vila em seu território vem relatando o desaparecimento e mutilação de animais, e agora pessoas começaram a sumir também. Ele deseja que o grupo vá à comunidade e lide com o que está causando os problemas."
+      },
+      {
+        type: "text",
+        content: "Experiente em negociar com aventureiros, o barão está disposto a oferecer uma recompensa razoável pela missão. Em tibares, pretende entregar T$ 3.000 para cada personagem. Como opção, pode fornecer um item com até três melhorias ao grupo (mas sem a recompensa em dinheiro), ou informação sobre a localização de um acessório menor mágico ou um item com até um encanto (mas não necessariamente os recursos para recuperá-lo)."
+      },
+      {
+        type: "text",
+        content: "Alternativamente, o nobre possui também algum tipo de informação de interesse dos heróis. Talvez saiba onde algum vilão que procuram se esconde, ou então possa oferecer o apoio de que precisam para a continuidade da campanha. De uma forma ou de outra, o barão estará preparado, conhecendo bem o que os personagens desejam e pronto para negociar isso."
+      },
+      {
+        type: "text",
+        content: "Uma vez terminada a conversa, um dos servos se aproxima com os recursos para a aventura: rações de viagem suficientes para todos, um mapa detalhado da região e da vila, 10 essências de mana e 5 poções de Curar Ferimentos (4d8+4 PV). Equipados para o trabalho, os personagens partem em direção à vila."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "CENA 2: PROSPERIDADE E PROBLEMAS"
+      },
+      {
+        type: "text",
+        content: "As estradas são bem cuidadas e as pessoas que passam em viagem parecem felizes. Talvez seja uma impressão enganosa, afinal, vocês sabem que o perigo pode surgir a qualquer momento."
+      },
+      {
+        type: "text",
+        content: "Caso queira tornar a viagem um pouco mais agitada, considere que ela leva cinco dias, e a cada dia há 20% de chance de um encontro aleatório. É possível rolar na tabela “Estradas do Reinado” (Ameaças de Arton, p. 429) ou escolher algum evento que faça sentido. Evite usar criaturas da Tormenta aqui, exceto se for um elemento recorrente em aventuras anteriores."
+      },
+      {
+        type: "text",
+        content: "Se não houver interesse em encontros no caminho, considere que os personagens simplesmente chegam à vila."
+      },
+      {
+        type: "text",
+        content: "Os moradores abrem as janelas, acenam com panos e indicam que devem ir até o salão comunal. Todos estão trajando roupas de camponeses bem cuidadas, e estão sorridentes. Um teste de Intuição ou Investigação (CD 10) mostra que a alegria é genuína, não fruto de desespero. Esta população parece viver bem, e a presença de heróis os convence de que seus problemas, quaisquer que sejam, serão solucionados."
+      },
+      {
+        type: "text",
+        content: "O salão comunal está enfeitado e a burgomestra acena. Há um banquete preparado para os aventureiros. Se questionada sobre o risco de uma aglomeração atrair o que quer que esteja sumindo com as pessoas, ela explica que os desaparecimentos são noturnos e só ocorreram com indivíduos desacompanhados."
+      },
+      {
+        type: "text",
+        content: "Apesar da agitação da maior parte da população, alguns mantêm-se afastados. Conseguir informações é um teste estendido de Diplomacia (CD 20, três sucessos). Uma falha total representa incômodo das pessoas relacionadas ao desaparecimento, ou então excesso de bajuladores impedindo conversas sinceras. A partir do dia seguinte é possível iniciar um novo teste estendido, agora exigindo cinco sucessos. A cada noite há 10% (1 a 10 em 1d100) de chance de haver uma nova vítima."
+      },
+      {
+        type: "text",
+        content: "Ao serem bem-sucedidos, os aventureiros conseguem o relato de um dos fazendeiros locais, o primeiro a sofrer com os ataques de animais. O homem, um anão mal-humorado chamado Korimm, começa a reclamar."
+      },
+      {
+        type: "text",
+        content: "“Primeiro, minhas vacas são atacadas! Ai, apareceram os malditos buracos no meu terreno, fazendo meus animais se machucarem. E agora, pelas ceroulas de mitril de Heredrimm, tem alguma coisa no meu celeiro! Vou mostrar para vocês!”"
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "CENA 3: O CELEIRO"
+      },
+      {
+        type: "text",
+        content: "A fazenda está a uma curta caminhada do centro da comunidade. Os campos ao redor da vila são verdejantes, e poucos momentos passam sem que, ao longe, alguém acene e sorria. Entretanto, Korimm passa o caminho inteiro resmungando."
+      },
+      {
+        type: "text",
+        content: "Quando chegam, são recebidos pela esposa do anão, Gertha. Korimm pergunta sobre os animais e ela diz que estão numa parte mais afastada da fazenda. Apesar de não ser ranzinza como seu marido, a anã parece mais preocupada do que o resto do povo na vila. Ela então convida os aventureiros a entrarem para tomar algo enquanto conversam."
+      },
+      {
+        type: "text",
+        content: "Os dois contam que ouviram sobre os ataques há cerca de um mês. Preocupados que pudessem ser monstros ou saqueadores das Sanguinárias, o casal contratou mais ajudantes e reforçou as cercas. Quando a primeira vaca deles foi atacada, eles mesmos passaram a patrulhar a fazenda."
+      },
+      {
+        type: "text",
+        content: "Exceto por estranhos buracos pela propriedade, não viram nada que fosse fora do ordinário. Mas então os animais começaram a evitar o celeiro. Um dos trabalhadores foi gravemente ferido por algo com garras, e, como havia aventureiros a caminho, resolveram selar o lugar e esperar."
+      },
+      {
+        type: "text",
+        content: "Se questionados sobre os buracos, os anões dizem que não parecem formações naturais. De acordo com Gertha, seu marido queria investigá-los, mas ela meteu juízo (e uma panelada) na cabeça dele. Korimm os levará a um dos túneis assim que lidarem com o que quer que esteja no celeiro."
+      },
+      {
+        type: "text",
+        content: "Já se pedirem para ver os corpos mutilados dos animais, o casal os leva até um dos cadáveres. É possível encontrar a metade da frente de uma vaca em avançado estado de decomposição. Um teste de necropsia, da perícia Cura, ou então de Investigação ou Sobrevivência (CD 25), revela que o ataque foi preciso, vindo de baixo, estraçalhando o pobre animal em um golpe só."
+      },
+      {
+        type: "text",
+        content: "Para entrar no celeiro terão apenas de remover a pesada tábua que trava as portas. O ambiente está em escuridão leve, já que todas as possíveis entradas de luz foram lacradas para evitar que o que estivesse ali dentro conseguisse sair. De repente, os personagens ouvem um chiado vindo de cima. Presas no teto, existem seis criaturas humanoides, com aspecto de lagarto, prontas para atacar."
+      },
+      {
+        type: "text",
+        content: "CRIATURAS. Slark x6 (NPCs e Criaturas). Um teste para identificar criatura (CD 16) revela que esses monstros, conhecidos como slarks, vivem no subterrâneo, e costumam fazer emboscadas contra suas presas. Um sucesso também revela que não é comum que venham à superfície, e que isto provavelmente está ligado aos tais buracos misteriosos."
+      },
+      {
+        type: "text",
+        content: "Assim que o grupo lidar com os slarks, Korimm e Gertha ficam muito felizes. Se os personagens quiserem recuperar-se, os dois oferecem quartos na fazenda (descanso confortável, diferente do luxuoso oferecido no centro da vila). Porém, se a ideia for não perder tempo, podem levá-los imediatamente aos misteriosos túneis."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "CENA 4: EM UM BURACO NO CHÃO"
+      },
+      {
+        type: "text",
+        content: "Os tais buracos no chão formam quase uma caverna. Os túneis são largos o suficiente para que duas pessoas andem lado a lado. Não há qualquer forma de iluminação nos corredores, e um cheiro acre muito forte queima suas narinas."
+      },
+      {
+        type: "text",
+        content: "Se não trouxerem qualquer forma de iluminação, os túneis estarão em escuridão total. Alguém com um Ofício apropriado, ou um anão treinado em Conhecimento, pode fazer um teste (CD 20) para perceber que, apesar de não serem corredores “naturais”, isso foi obra de alguma criatura movendo o solo em sua passagem."
+      },
+      {
+        type: "text",
+        content: "Para conseguirem orientar-se nas cavernas, devem ser bem-sucedidos em um teste estendido de Sobrevivência (CD 25, três sucessos). Em caso de falha total, os personagens se perdem, retornando à entrada do túnel, e deverão recomeçar o teste estendido."
+      },
+      {
+        type: "text",
+        content: "Após cada teste, tenham passado ou não, os aventureiros encontram 1d6+2 slarks. As criaturas tentam atacar de surpresa, então os personagens devem superá-las em um teste de Percepção oposto à Furtividade (+8) delas. Aqueles que não superarem o resultado dos monstros ficam surpreendidos na primeira rodada do combate."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "CENA 5: NINHO TÓXICO"
+      },
+      {
+        type: "text",
+        content: "O cheiro nos túneis beira o insuportável. Então vocês chegam a uma câmara mais ampla escavada na terra. Aqueles que conseguem enxergar veem centenas e mais centenas de ovos de inseto cobrindo as paredes da caverna. Restos de cadáveres também são encontrados aqui, parcialmente desintegrados em poças de ácido."
+      },
+      {
+        type: "text",
+        content: "Permita aos personagens um teste de Sobrevivência (CD 19) para identificar os ovos como sendo de uma criatura chamada ankthyr. Nesse estado, são pouco mais que larvas, mas quando crescerem podem se transformar em um monstro perigosíssimo, provavelmente o causador dos desaparecimentos e mutilação de animais."
+      },
+      {
+        type: "text",
+        content: "Após o teste, bem-sucedido ou não, uma enorme quantidade das criaturas famintas eclode de seus ovos. CRIATURAS. Enxame Cáustico x2 (NPCs e Criaturas)."
+      },
+      {
+        type: "text",
+        content: "O chão desta caverna está coberto de ácido, e personagens que caiam sofrem 2d6 pontos de dano de ácido. As criaturas tentam envolver o grupo por inteiro, mas é possível fugir, atraindo-as. Caso fujam, as criaturas vêm à superfície, atacando de modo indiscriminado as pessoas da vila. Se as derrotarem, algo começa a acontecer."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "CENA 6: CORRE!"
+      },
+      {
+        type: "text",
+        content: "Algo faz as paredes das cavernas tremerem. O som da rocha sendo destruída ao seu redor demonstra que os túneis estão colapsando. E vocês suspeitam, por terem derrotado o enxame, que é hora de lidar com a progenitora daquelas criaturas."
+      },
+      {
+        type: "text",
+        content: "Furioso, o ankthyr adulto começa a destruir seus próprios túneis, numa tentativa de soterrar os aventureiros. Cabe aos heróis fugirem usando o perigo complexo a seguir."
+      },
+      {
+        type: "text",
+        content: "DESABAMENTO DOS TÚNEIS (ND 8)\nOs personagens precisam escapar antes que sejam soterrados!\nOBJETIVO: Sair das cavernas.\nEFEITO: Os túneis serão completamente destruídos em 7 rodadas. Para escapar, um personagem precisa acumular 5 sucessos nas ações avançar, correr ou carregar outro. No início de cada rodada, role 1d6 e consulte a lista de efeitos abaixo:\n1-2) Destroços. Destroços caem do teto. Cada personagem deve fazer um teste de Reflexos (CD 25). Se falhar, sofre 4d6 pontos de dano de impacto. Se falhar por 10 ou mais, o dano aumenta para 8d6.\n3-4) Fenda no chão. Rachaduras se abrem no chão. Cada personagem deve fazer um teste de Acrobacia ou Atletismo (CD 25). Se falhar, tropeça e sofre –5 em sua próxima ação contra o perigo. Se falhar por 10 ou mais, cai e perde sua ação nesta rodada.\n5) Bloqueio. Um desabamento vai bloquear o caminho! O personagem pode desistir desta rota e procurar outra (perde a ação nesta rodada, mas age normalmente a partir da próxima) ou tentar correr antes que o desabamento termine. Nesse caso, precisa fazer um teste de Atletismo (CD 25). Se passar, pode fazer sua ação nesta rodada. Se falhar, perde a ação e sofre 8d6 pontos de dano de impacto.\n6) Passagem livre. Este túnel é mais resistente, mas as paredes estão perto de ruir. Os personagens não sofrem qualquer efeito neste turno, mas devem continuar correndo ou serão soterrados.\nAo fim da sétima rodada, qualquer personagem que não tenha acumulado 5 sucessos será atingido pelo desabamento, sofrendo 20d6 pontos de dano de impacto (sem teste de resistência)."
+      },
+      {
+        type: "text",
+        content: "AVANÇAR (ACROBACIA OU REFLEXOS CD 25): O personagem avança com cuidado em direção à saída. Um sucesso por 10 ou mais (ou um 20 natural no teste) conta como 2 sucessos.\nCORRER (ATLETISMO CD 20): O personagem corre em direção à saída sem se preocupar com os perigos em seu caminho. Ele sofre 4d6 pontos de dano de impacto. Um sucesso por 10 ou mais (ou um 20 natural no teste) conta como 2 sucessos.\nCARREGAR OUTRO (ATLETISMO CD 30): O personagem carrega um aliado próximo (com no máximo 1 sucesso de diferença). Isto funciona como a ação avançar. Se passar, o personagem acumula 1 sucesso para si e para o aliado. Se falhar, ambos sofrem dano.\nPROCURAR CAMINHO (PERCEPÇÃO CD 20): O personagem analisa o terreno em busca de uma rota de fuga. Se passar, recebe +5 em todos os testes para avançar, correr e carregar outro realizados durante o perigo."
+      },
+      {
+        type: "text",
+        content: "O túnel que dá acesso à superfície é bem perto do centro da vila. Antes que consigam pensar muito, todos sentem o chão tremer."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "CENA 7: A VINGANÇA DO VERME MALDITO"
+      },
+      {
+        type: "text",
+        content: "O tremor se intensifica, estruturas entortam e pessoas começam a gritar. Logo um par de presas insetoides se projeta da terra, tentando ferir os aventureiros, e poucos segundos depois um corpanzil emerge. Maior que um cavalo, com três pares de patas finas e alongadas, o monstro é coberto por uma carapaça quitinosa. Das quelíceras poderosas pinga um ácido que chia ao tocar no solo. Tão rápido quanto saltou para fora, o monstro afunda novamente no chão de terra batida."
+      },
+      {
+        type: "text",
+        content: "CRIATURA. Ankthyr (NPCs e Criaturas).\nO ataque final do monstro é virulento e descontrolado, e ele luta até sua morte. A estratégia principal da criatura é mergulhar e dar um bote subterrâneo contra um dos personagens. Além disso, pela escavação e os buracos deixados, toda a área conta como terreno difícil para os personagens (o ankthyr pode simplesmente escavar)."
+      },
+      {
+        type: "text",
+        content: "A população da vila está assustada, mas alguns pegam em armas para ajudar. A burgomestra serve como uma parceira destruidora veterana, causando dano de fogo com magias. Korimm e Gertha chegam, portando martelos e servindo como parceiros combatente e fortão iniciantes, respectivamente."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "EPÍLOGO: INFESTAÇÃO"
+      },
+      {
+        type: "text",
+        content: "Os restos do monstro logo atraem a atenção dos aventureiros. A resistente carapaça da criatura poderia ser usada para algo. Mas, antes que consigam pensar muito, a população, tendo percebido a calmaria, vem celebrar a mais nova vitória dos heróis."
+      },
+      {
+        type: "text",
+        content: "Com a derrota do ankthyr, o perigo está resolvido por enquanto. Pensando em tudo o que aconteceu, assim como o ataque no ninho, é possível que haja outro monstro como aquele na região. Talvez sejam necessários mais alguns dias para ter certeza da segurança."
+      },
+      {
+        type: "text",
+        content: "O barão Valcanti está bastante grato, mesmo que continue com suas preocupações costumeiras. Se não retornarem ao nobre logo após a derrota do monstro, ele enviará um representante seu, com o pagamento prometido. Ele também enviará uma nova proposta de missão, para quando estiverem descansados e prontos. Todos avançam para o 9º nível!"
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "NPCS E CRIATURAS"
+      },
+      {
+        type: "text",
+        content: "SLARK (ND 1)\nHumanoide (slark) Médio\nINICIATIVA +7, PERCEPÇÃO +4 sensibilidade a luz, visão no escuro\nDEFESA 15, FORT +10, REF +1, VON +5, redução de ácido 5\nPONTOS DE VIDA 9\nDESLOCAMENTO 6m (4q), escalada 6m (4q)\nCORPO A CORPO Garras +11 (2d6+9, 19/x3).\nQUEDA LIVRE (COMPLETA) Se estiver em terreno elevado, o slark cai sobre uma criatura e faz um ataque de garras. Ele recebe o bônus por terreno elevado (+2 no teste de ataque) e, se a criatura estiver surpreendida, causa +2d6 pontos de dano do mesmo tipo.\nSALIVA (PADRÃO) O slark cospe em uma criatura em alcance curto. A criatura fica cega por 1 rodada e qualquer fonte de iluminação mundana que esteja empunhando se apaga (Ref CD 14 evita ambos os efeitos).\nFor –1, Des 3, Con 2, Int –1, Sab 1, Car –2\nPERÍCIAS Furtividade +8.\nTESOURO Nenhum."
+      },
+      {
+        type: "text",
+        content: "ENXAME CÁUSTICO (ND 4)\nAnimal Grande\nINICIATIVA +3, PERCEPÇÃO +2, visão no escuro\nDEFESA 23, FORT +16, REF +4, VON +10, imunidade a ácido\nPONTOS DE VIDA 140\nDESLOCAMENTO 9m (6q), escavação 6m (4q)\nENXAME O enxame cáustico age em conjunto. Ele pode entrar no espaço ocupado por um personagem e, no fim de seu turno, causa 3d8 pontos de dano de ácido a qualquer personagem em seu espaço automaticamente. O enxame é imune a manobras de combate e efeitos que afetam apenas uma criatura e não causam dano, mas sofre 50% a mais de dano de efeitos de área, como Bola de Fogo. Além disso, sofre apenas metade do dano de ataques com armas. Estar dentro do enxame conta como condição ruim para lançar magias.\nGOSMA CORROSIVA O dano de ácido do enxame persiste por mais 1 rodada após uma criatura deixar a área do enxame cáustico.\nSENTIDO SÍSMICO O enxame cáustico tem percepção às cegas em alcance médio, mas apenas para criaturas e objetos em contato com a mesma superfície que ele.\nFOR 3, DES 1, CON 2, INT –5, SAB –2, CAR –4\nTESOURO Nenhum."
+      },
+      {
+        type: "text",
+        content: "ANKTHYR (ND 8)\nAnimal Grande\nINICIATIVA +10, PERCEPÇÃO +8, visão no escuro\nDEFESA 33, FORT +21, REF +8, VON +15, redução de ácido 5, redução de dano 5\nPONTOS DE VIDA 308\nDESLOCAMENTO 12m (8q), escavação 6m (4q)\nCORPO A CORPO Mordida +26 (4d12+24 mais 4d8 ácido).\nAGARRAR APRIMORADO Mordida (teste +28).\nCUSPE ÁCIDO (PADRÃO) O ankthyr cospe ácido em uma criatura a até 9m. A vítima sofre 6d8+6 pontos de dano de ácido e fica coberta por um muco corrosivo (Ref CD 26 reduz à metade e evita o muco). Uma criatura coberta pelo muco sofre mais 3d8+3 pontos de dano de ácido no início dos seus dois próximos turnos. Recarga (movimento).\nESPREITADOR SUBTERRÂNEO (PADRÃO) Se estiver completamente soterrado, o ankthyr pode emergir do solo e atacar uma criatura a até 4,5m do seu ponto de saída. Se fizer isso, ele recebe +2 no teste de ataque e causa +1d12 pontos de dano.\nSENTIDO SÍSMICO O ankthyr tem percepção às cegas em alcance médio, mas apenas para criaturas e objetos em contato com a mesma superfície que ele.\nFor 5, Des 2, Con 4, Int –5, Sab 0, Car –3\nTESOURO Metade."
+      }
+    ]
+  },
+  { id: "Memórias das Arma",
+    name: "Memórias das Armas",
+    theme: "Fantasia e Exploração de Masmorra",
+    image: "/aventuras/memorias-das-armas.png",
+    summary: "Contratados por um nobre, os heróis viajam ao sul de Zakharov para recuperar uma maça ancestral perdida em um castelo sitiado por mortos-vivos puristas, a tempo do Ritual das Armas Renascidas.",
+    sections: [
+      {
+        type: "text",
+        content: "O reino das armas, Zakharov, recentemente passou por muitos eventos. Nas estepes ao norte, próximos às Montanhas Uivantes, uma área de Tormenta se manifestou. De lá surgiu Aharadak, que hoje figura como um dos vinte deuses do Panteão. Além disso, a Supremacia Purista marchou sobre o território, deixando para trás também as marcas da guerra. Campos de batalha do conflito ainda existem nos ermos, e diversos catadores buscam o que vender entre os escombros."
+      },
+      {
+        type: "text",
+        content: "Não é de se surpreender que um reino devotado às armas seja a morada de uma divindade relacionada a elas. Rhond, o Deus Menor das Armas, vive em uma cidade com seu nome, isolado em sua caverna, forjando os instrumentos de batalha mais incríveis de todo mundo. Seus sacerdotes defendem a tranquilidade do trabalho de seu senhor. Entretanto, de tempos em tempos, surge um motivo para a deidade deixar seus aposentos e presentear os merecedores com suas dádivas."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "RESUMO DA AVENTURA"
+      },
+      {
+        type: "text",
+        content: "Memórias das Armas é uma breve jornada, uma aventura curta pensada para uma sessão única, mas que pode ser inserida em uma campanha maior. É ideal para um grupo de quatro personagens de 5º nível em Tormenta20."
+      },
+      {
+        type: "text",
+        content: "Motivado pelo Ritual das Armas Renascidas, um nobre zakharoviano contrata o grupo para recuperar a arma de seus ancestrais. Ele explica que o artefato se encontra no castelo ancestral de sua família, ao sul. Também conta que houve uma batalha contra puristas lá, sendo possível ainda haver diversas ameaças na região. Após alguns encontros perigosos, o grupo chega ao local."
+      },
+      {
+        type: "text",
+        content: "Do lado de fora, hordas de mortos-vivos marcham no campo de batalha abandonado. Derrotá-las não resolve o problema, mas permite que passem para o interior da construção. Lá dentro encontrarão armas que lutam sem que ninguém as empunhe, assim como uma besta capaz de enferrujar e destruir qualquer objeto metálico. Finalmente, ao alcançarem o item que vieram buscar, os heróis devem enfrentar um último soldado reerguido pela força de seu ódio."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "Cena 1: ARMAS RENASCIDAS"
+      },
+      {
+        type: "text",
+        content: "Arton possui diversas cidades sagradas. A própria existência de deuses menores permite o surgimento de povoados abençoados ou rotas de peregrinação. Mas na Cidade de Rhond, uma deidade brilha nas armas carregadas pela população. Cada uma, de certa forma, um símbolo sagrado do deus que ali habita."
+      },
+      {
+        type: "text",
+        content: "E a cidade está em festa! Pessoas vêm de todos os lados, armas em punho, não em busca de combate, mas sim de benção. O Ritual das Armas Renascidas é uma tradição local, na qual itens podem ser recuperados pelos clérigos de Rhond. Mas, neste ano, aparentemente o próprio deus fará a purificação dos artefatos!"
+      },
+      {
+        type: "text",
+        content: "Os personagens já atraíram a atenção de autoridades com suas aventuras anteriores, sendo reconhecidos como veteranos. Entre elas o Conde Zweihardt. O nobre enviou um de seus servos para convidar os aventureiros à sua morada, onde oferecerá uma missão."
+      },
+      {
+        type: "text",
+        content: "No caminho, os personagens observam diversos tipos de comemoração. Tavernas oferecem bebidas grátis para aqueles com as mais belas obras de ferraria. Forjas diversas abrem para ensinar técnicas para os mais interessados. E, claro, não há uma forma de mostrar ainda mais o amor pelas armas do que o combate! Duelos, liças e outros tipos de competição (normalmente) amistosas ocorrem por todos os lados."
+      },
+      {
+        type: "text",
+        content: "A residência de lorde Zweihardt é um misto de fortificação com forja e, chegando ao local, o grupo encontra o nobre vestindo roupas de ferreiro, trabalhando em alguma arma: “Ah! Bem-vindos, aventureiros, ao meu lar! Peço perdão por não estar mais apresentável, mas não havia como perder a inspiração do momento”. Aqueles treinados em Ofício sabem que o nobre realmente estava trabalhando, em outro lugar isso poderia parecer estranho, mas aqui faz todo sentido."
+      },
+      {
+        type: "text",
+        content: "Terminando o processo em que se encontrava, ele remove as luvas de proteção para cumprimentar os aventureiros, levando-os ao interior de sua propriedade. No caminho, servos vêm remover os trajes de ferreiro, deixando-o mais parecido com o que se espera de alguém em sua posição. Chegando ao seu escritório, Zweihardt senta-se em sua cadeira por poucos segundos e põe-se de pé novamente."
+      },
+      {
+        type: "text",
+        content: "“Bem, como podem ter ouvido, este ano o próprio Rhond será responsável por purificar e restaurar a arma escolhida. E tenho uma em mente que merece isso”. O nobre abre alguns pergaminhos, mostrando uma maça de confecção primorosa."
+      },
+      {
+        type: "text",
+        content: "“Ela foi forjada pelos meus ancestrais, e creio que, se há alguma chance de ser recuperada, seria pelas mãos do próprio Deus das Armas”. Aqueles treinados em Investigação ou Nobreza notam que a maça figura como parte do brasão da família Zweihardt."
+      },
+      {
+        type: "text",
+        content: "“Infelizmente,” ele abre um mapa de Zakharov, “quando os malditos puristas atacaram, fizeram um cerco ao castelo de meus antepassados”, e aponta para o desenho de uma fortificação. “Seu líder era obcecado em tomar a arma para si. O cerco foi longo, mas minha família conseguiu fugir. A maça ficou para trás”."
+      },
+      {
+        type: "text",
+        content: "Ele explica que a fortificação nunca foi tomada pelos puristas, mas que diversos cadáveres ambulantes impediram a recuperação da arma até agora. Conhecendo a reputação dos aventureiros, o conde acredita que serão capazes de lidar com os mortos-vivos e retornar com a relíquia em tempo de que ela seja renascida. Ele também fornece as instruções para abrir um nicho secreto em uma parede onde o artefato está escondido."
+      },
+      {
+        type: "text",
+        content: "Como recompensa, o nobre oferece uma arma com uma melhoria (exceto material especial) para cada personagem, ou uma única arma com duas melhorias. Tanto a arma quanto as melhorias podem ser decididas pelo grupo. Além disso, fornecerá seis essências de mana e quatro frascos com óleo de Arma Mágica."
+      },
+      {
+        type: "text",
+        content: "Caso perguntem sobre uma recompensa em dinheiro, o nobre explica que as armas são muito mais valiosas que simples tibares, mas pode pagar T$ 1.000 quando retornarem."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "Cena 2: JORNADA AO SUL"
+      },
+      {
+        type: "text",
+        content: "Apesar do mapa ser bastante detalhado, o caminho não é dos mais fáceis. Existem poucas estradas úteis e as planícies escondem diversos perigos. Apesar de relativamente frio, o clima é bom para a viagem, tornando-se cada vez mais ameno conforme rumam ao sul."
+      },
+      {
+        type: "text",
+        content: "O caminho para o sul é um teste estendido de Sobrevivência (CD 20, 3 sucessos). Em caso de falha total, os personagens saíram de rota, tendo que reiniciar o teste estendido. Após cada teste, role 1d6 ou escolha um dos encontros abaixo. Cada encontro conta como uma cena individual."
+      },
+      {
+        type: "text",
+        content: "1 e 2) Planícies Calmas: O clima parece ainda mais promissor nestes dias, e a jornada se torna mais fácil. Existem sombras no caminho, mas talvez vocês sejam mais intimidadores do que qualquer coisa espreitando. Não há encontros, e é possível acampar tranquilamente."
+      },
+      {
+        type: "text",
+        content: "3) Por que tão sério? Em algum ponto da viagem, vocês começam a ouvir gargalhadas no ar. Logo vocês descobrem que elas vêm de um bando de gnolls salteadores. Seu líder porta uma pistola, ordenando que entreguem tudo o que têm. Os personagens encontram 1d6+1 gnolls saqueadores liderados por um gnoll filibusteiro. Caso o filibusteiro seja derrotado, os outros gnolls se rendem, entregando todo seu tesouro."
+      },
+      {
+        type: "text",
+        content: "4) Enclave Purista: Repentinamente, vocês veem ao longe um acampamento de soldados, todos vestindo armaduras similares escuras. Aqueles com memórias da Guerra Artoniana ficam em prontidão, pois sentem que há algo reconhecível nestes guerreiros. Estes puristas estão mais perdidos do que planejando algo. Entretanto, ao perceberem o grupo, pegam em armas e partem para o combate. São 2d6 soldados puristas e um sargento-mor. Eles lutam até a morte caso haja um personagem não-humano entre os aventureiros."
+      },
+      {
+        type: "text",
+        content: "5) Centaura e Kobolds: Mais a frente vocês veem um amontoado de kobolds sobre algo. Conforme eles berram e golpeiam, é possível perceber que estão, na verdade, atacando uma centaura, capturada em uma rede. Se nada fizerem, ela terá pouco tempo de vida. Os kobolds não prestam atenção na sua aproximação. Um enxame kobold prendeu uma centaura em uma de suas armadilhas e está atacando-a. Os heróis devem enfrentar as criaturinhas se quiserem salvar a vítima. Caso a libertem lidando com a rede, ela auxilia como um parceiro fortão iniciante. Uma vez salva, a centaura ajudará na jornada, fornecendo +5 no próximo teste de Sobrevivência do teste estendido."
+      },
+      {
+        type: "text",
+        content: "6) Pregador da Praga: No meio do nada, há uma figura parada em pé vestindo robes maltrapilhos. Quando vocês se aproximam, ele abre um sorriso anormal, cheio de dentes, e os olhos bastante esbugalhados. “Vocês já ouviram as boas novas de nosso senhor Aharadak?” É um cultista do Deus da Tormenta, falando de profecias profanas e bençãos sinistras que sua divindade espalhará pelo mundo. Nenhuma forma de intimidação o espanta, e ele seguirá o grupo de longe pelo resto da viagem. Caso o ataquem, use a ficha de um maníaco lefou. Se não, ele acompanhará, atrapalhando qualquer descanso que tentem fazer (a condição de descanso será sempre uma abaixo da original). Além disso, ao acordarem todos devem fazer um teste de Vontade (CD 20), ou ficam frustrados até o dia seguinte."
+      },
+      {
+        type: "text",
+        content: "Assim que conquistarem os três sucessos necessários, o grupo vê ao longe a fortificação onde o artefato espera."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "Cena 3: ARMAS DOS MORTOS"
+      },
+      {
+        type: "text",
+        content: "Ao longe, o castelo dos Zweihardt se ergue, pedras escuras no horizonte. Entretanto, rodeando-o, existem diversos soldados andando de forma morosa. Mesmo uma aproximação indiscreta não chama atenção, e logo vocês percebem o porquê. Nas redondezas da fortificação, os aparentes soldados são, na verdade, esqueletos vestindo armaduras velhas e puídas. Um teste de Conhecimento, Guerra ou Nobreza (CD 25) revela se tratar de uniformes puristas, provavelmente da época da Guerra Artoniana. A única forma de entrarem é abrindo uma brecha entre as linhas dos mortos."
+      },
+      {
+        type: "text",
+        content: "CRIATURAS. Tropa de Mortos (NPCs e Criaturas)."
+      },
+      {
+        type: "text",
+        content: "Os mortos-vivos não são muito perceptivos, é fácil pegá-los de surpresa. Sem mente, o ódio os mantém combatendo, focando seus ataques principalmente em não-humanos, como se alguma memória raivosa ainda habitasse suas almas. Vencê-los dá algum tempo para fazerem sua próxima ação, mas outra tropa de mortos chegará em 1d6+2 rodadas."
+      },
+      {
+        type: "text",
+        content: "O muro pode ser escalado com uma ação completa e um teste de Atletismo (CD 25). Uma vez do outro lado, é necessária mais uma ação completa para abrir o portão e em seguida fechá-lo. Alternativamente, podem tentar um teste em grupo de Força (CD 30) para abrir o portão o suficiente para que todos passem, ou então arrebentá-lo (Def 8, RD 10, 200 PV)."
+      },
+      {
+        type: "text",
+        content: "Assim que a tropa dos mortos é derrotada, os personagens podem fazer um teste de Investigação, Guerra ou Percepção (CD 25). Se passarem, percebem uma presença ao longe, observando-os. Caso tentem se aproximar, o inumano que era o líder deste pequeno exército se esconde, preparando para atacar em momento mais propício."
+      },
+      {
+        type: "text",
+        content: "Os soldados mortos-vivos não tentam entrar no interior da propriedade."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "Cena 4: SALÃO PRINCIPAL"
+      },
+      {
+        type: "text",
+        content: "Este amplo aposento de pé direito alto era provavelmente onde os nobres recebiam seus servos. O salão está bagunçado, armas abandonadas para todos os lados e tapeçarias arruinadas estão caídas próximas às paredes onde estavam penduradas."
+      },
+      {
+        type: "text",
+        content: "CRIATURAS. Enxame de Armas (NPCs e Criaturas)."
+      },
+      {
+        type: "text",
+        content: "Ao entrar no salão principal, todos os personagens devem fazer um teste de Percepção oposto a Furtividade (+8) do enxame de armas, perfeitamente imóveis no chão. Aqueles que falharem ficam surpreendidos na primeira rodada do combate. Movido por uma força invisível, o enxame metálico ataca os aventureiros."
+      },
+      {
+        type: "text",
+        content: "Quando derrotarem o arsenal animado, eles podem explorar outros aposentos do castelo, exceto a sala de armas. Entre as peças do enxame é possível encontrar qualquer arma simples ou marcial. Se decidirem vasculhar os aposentos, podem fazer um teste de Investigação (CD 20), e encontrarão o equivalente ao dobro do tesouro para ND 6."
+      },
+      {
+        type: "text",
+        content: "Assim que o grupo quiser investigar a sala de armas, vá para a próxima cena."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "Cena 5: ARSENAL ENFERRUJADO"
+      },
+      {
+        type: "text",
+        content: "Aqui o cheiro de ferrugem é acachapante. O lugar que guardava as armas e armaduras mais valiosas da família Zweihardt agora está coberto pela poeira avermelhada. Um chiado alto vem de uma das paredes, seguido por outro. Do meio da lataria corroída, duas criaturas que parecem a mistura de um réptil com um gafanhoto, com enormes antenas, se aproximam, os olhos estranhos vidrados no aço que vocês carregam."
+      },
+      {
+        type: "text",
+        content: "CRIATURAS. Oxxdon x2 (NPCs e Criaturas)."
+      },
+      {
+        type: "text",
+        content: "Também conhecidos como “monstros da ferrugem”, estas criaturas corroem metal ao seu redor, e fizeram aqui seu ninho. Para zakharovianos, são pesadelos vivos. A única forma de recuperarem seguramente o artefato de lorde Zweihardt é livrando-se destas bestas."
+      },
+      {
+        type: "text",
+        content: "Seguindo as instruções do conde, os aventureiros pressionam alguns dos tijolos na parede, liberando o nicho que guarda o artefato. Trata-se de uma maça de adamante formidável, que infelizmente está avariada pela passagem do tempo, causando uma penalidade de –5 em testes de ataque."
+      },
+      {
+        type: "text",
+        content: "Logo que a recuperam, ouvem passos pesados vindos do mesmo caminho que traçaram para chegar aqui."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "Cena 6: GANÂNCIA PÓS-MORTE"
+      },
+      {
+        type: "text",
+        content: "A figura que surge é intimidadora, mesmo para heróis veteranos como vocês. Sua armadura está desgastada pela passagem do tempo, a pele está esticada em todos os pontos visíveis, sua boca é um esgar de ódio permanente. A criatura exala um cheiro insuportável de morte. Quando fala, as palavras saem roucas e arranhadas, devido aos anos sem uso:"
+      },
+      {
+        type: "text",
+        content: "“Malditos... Me entreguem esta arma! Ela é minha por direito... E vocês não são merecedores de tocá-la!”"
+      },
+      {
+        type: "text",
+        content: "CRIATURAS. Inumano (NPCs e Criaturas)."
+      },
+      {
+        type: "text",
+        content: "O inimigo que enfrentam agora é um morto-vivo movido pelo próprio ódio. Mesmo que entregassem a arma, este comandante maldito os massacraria impiedosamente. Porém, é possível usá-la para distraí-lo. Se a arremessarem em uma determinada direção, o inumano usará todas suas ações para ir até a arma e empunhá-la... o que também pode ser vantajoso para os personagens, uma vez que causará uma penalidade de –5 nos testes de ataque dele."
+      },
+      {
+        type: "text",
+        content: "Se tiverem destruído parte do portão, ele estará acompanhado de quatro esqueletos. Caso o inumano seja destruído, os esqueletos automaticamente caem, inertes, assim como todas as tropas dos mortos no exterior da propriedade."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "Epílogo: ARMISTÍCIO"
+      },
+      {
+        type: "text",
+        content: "Os mortos finalmente caem. Algumas de suas armas cravam-se no solo, tornando-se marcadores sombrios de tudo que houve aqui. É possível continuar vasculhando o castelo, mas agora ele é apenas uma construção vazia e corroída. Para terminarem sua missão, vocês devem fazer o longo caminho de volta à cidade do Deus das Armas."
+      },
+      {
+        type: "text",
+        content: "Se quiser tornar o retorno tão movimentado quanto a vinda, é possível usar os encontros da cena 2 novamente. Se preferir manter tudo em apenas uma sessão, diga que, conhecendo o caminho, os personagens evitam os perigos. Caso tenham encontrado o cultista de Aharadak, entretanto, ele continuará os seguindo até perto da Cidade de Rhond."
+      },
+      {
+        type: "text",
+        content: "O Conde Zweihardt fica extremamente feliz em ver a relíquia de sua família retornada, e, em gratidão, oferece um banquete aos heróis. Se informado da liberação do castelo de seus ancestrais, ele fica pensativo. Segundo o nobre, seria muito bom retomar a propriedade, e então atrair novos servos. Por outro lado, a possibilidade de restaurar a maça também invocaria o orgulho de seus antepassados."
+      },
+      {
+        type: "text",
+        content: "Expandindo seu reconhecimento, os personagens avançam para o 6º nível!"
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "NPCs e Criaturas"
+      },
+      {
+        type: "text",
+        content: "OXXDON (ND 2)\nMonstro Médio\nINICIATIVA +7, PERCEPÇÃO +4, faro, visão no escuro\nDEFESA 20, FORT +7, REF +13, VON +2\nPONTOS DE VIDA 72\nDESLOCAMENTO 12m (8q)\nCORPO A CORPO Antena +12 (ferrugem) e mordida +12 (1d8+10).\nFERRUGEM A antena do oxxdon destrói automaticamente qualquer objeto de metal atingido. Uma arma de metal que cause dano a um oxxdon também é destruída imediatamente (itens mágicos têm direito a um teste de Fortitude contra CD 16 para evitar). Contra criaturas de metal (como golens), a antena deixa o alvo fatigado, então exausto, então paralisado (mesmo que seja imune a estas condições; Fort CD 16 evita). Remover cada uma destas condições da criatura exige uma hora de trabalho, o gasto de T$ 50 em materiais e passar em um teste de Ofício (artesão) contra CD 20.\nFor 0, Des 4, Con 2, Int –4, Sab 1, Car –1\nTESOURO Nenhum."
+      },
+      {
+        type: "text",
+        content: "ENXAME DE ARMAS (ND 6)\nConstruto Grande\nINICIATIVA +6, PERCEPÇÃO +4, percepção às cegas\nDEFESA 22, FORT +15, REF +10, VON +5, redução de dano 5\nPONTOS DE VIDA 140\nDESLOCAMENTO voo 9m (6q)\nENXAME O enxame de armas é um aglomerado de objetos animados que agem em conjunto. Ele pode entrar no espaço ocupado por um personagem e, no fim de seu turno, causa 1d10 pontos de dano de corte, 1d6 pontos de dano de perfuração e 1d8 pontos de dano de impacto a qualquer personagem em seu espaço, automaticamente. O enxame é imune a manobras de combate e efeitos que afetam apenas uma criatura e não causam dano, mas sofrem 50% a mais de dano de efeitos de área, como Bola de Fogo. Além disso, sofre apenas metade do dano de ataques com armas. Estar dentro do enxame conta como condição ruim para lançar magias.\nAPARAR (REAÇÃO) Uma vez por rodada, quando é alvo de um ataque corpo a corpo, o enxame de arma pode fazer um teste de ataque e subtrair seu resultado do dano causado pelo ataque (teste +16).\nFor 4, Des 2, Con 2, Int ––, Sab 0, Car –5\nTESOURO Dobro (apenas armas)."
+      },
+      {
+        type: "text",
+        content: "TROPA DE MORTOS\nMorto-vivo Grande\nINICIATIVA +9, PERCEPÇÃO +5, visão no escuro\nDEFESA 24, FORT +6, REF +11, VON +16, redução de corte, frio e perfuração 5\nPONTOS DE VIDA 40\nDESLOCAMENTO 9m (6q)\nCORPO A CORPO Espada longa x2 +20 (4d8+18, 19).\nBANDO A tropa de mortos é formada por um grupo de esqueletos. Se um ataque da tropa exceder a Defesa do Inimigo por 10 ou mais, ele causa o dobro do dano. Se um ataque da tropa errar, ele ainda causa metade do dano. A falange é imune a manobras de combate e efeitos que afetam apenas uma criatura e não causam dano, mas sofre 50% a mais de dano de efeitos de área, como Bola de Fogo. Um personagem com poder Trespassar que acerte a tropa pode usá-lo para fazer um ataque adicional contra ela (mas apenas uma vez por turno).\nFor 5, Des 3, Con 0, Int —, Sab 0, Car –5.\nEQUIPAMENTO Escudo pesado, espada longa.\nTESOURO Nenhum."
+      },
+      {
+        type: "text",
+        content: "INUMANO (ND 5)\nMorto-vivo Médio\nINICIATIVA +7, PERCEPÇÃO +6, visão no escuro\nDEFESA 26, FORT +17, REF +12, VON +7, imunidade a frio\nPONTOS DE VIDA 48\nDESLOCAMENTO 9m (6q)\nCORPO A CORPO Espada longa x2 +24 (2d8+9, 19, mais 2d12 trevas).\nÀ DISTÂNCIA Azagaia +24 (2d6+9, mais 2d12 trevas).\nDRENAR ENERGIA Uma criatura viva que sofra dano de trevas do inumano combatente sofre uma penalidade cumulativa de −1 em testes de perícia (Fort CD 22 evita). Se acumular uma penalidade igual ou maior que seu próprio nível, a criatura morre e se transforma em um inumano sob controle do mestre. Esta penalidade pode ser removida de uma criatura viva com descanso ou com efeitos mágicos capazes de remover qualquer condição de metabolismo (cada dia de descanso ou efeito mágico diminui a penalidade em 1).\nFor 3, Des 2, Con 1, Int 0, Sab 1, Car −1\nPERÍCIAS Atletismo +8, Furtividade +4, Guerra +5, Intimidação +6.\nEQUIPAMENTO Azagaia x3, escudo pesado, espada longa, meia armadura. Tesouro Padrão."
+      }
+    ]
+  },
+  { id: "O Olho do Basilisco",
+    name: "O Olho do Basilisco",
+    theme: "Fantasia e Caçada a Monstros",
+    image: "/aventuras/o-olho-do-basilisco.png",
+    summary: "Para salvar uma aventureira transformada em estátua viva, os heróis são contratados pela Guilda dos Caça-Monstros para rastrear e derrotar um basilisco ancestral nas temíveis Montanhas Sanguinárias.",
+    sections: [
+      {
+        type: "text",
+        content: "Arton é um mundo cheio de perigos e, ainda assim, as Montanhas Sanguinárias revelam-se um dos locais mais desafiadores existentes. Seus picos colossais estendem-se rasgando o céu como garras de monstros imensos. Toda sorte de feras existe aqui e as crias de Megalokk prosperam, atingindo tamanhos nunca vistos."
+      },
+      {
+        type: "text",
+        content: "Mais do que monstros, as Sanguinárias são também o lar daqueles que os caçam. Sob as sombras das costelas de alguma besta colossal, a cidade de Trag’Merah é procurada por diversos aventureiros em busca de fama ou de suprimentos. A Guilda Mon’han auxilia fornecendo todo tipo de apoio para os intrépidos que partem para sua próxima expedição."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "RESUMO DA AVENTURA"
+      },
+      {
+        type: "text",
+        content: "O Olho do Basilisco é uma breve jornada, uma aventura curta pensada para uma sessão única, mas que pode ser inserida em uma campanha maior. É ideal para um grupo de quatro personagens de 8º nível em Tormenta20."
+      },
+      {
+        type: "text",
+        content: "Quando uma estranha estátua de pedra causa confusão, os aventureiros percebem não se tratar apenas de um construto perdido. Investigando o “monstro”, percebem que este já foi uma pessoa, mas foi transformado em pedra por uma medusa monstruosa. Agora, precisa da ajuda dos personagens para encontrar algo que reverta seu corpo para o estado original."
+      },
+      {
+        type: "text",
+        content: "O líder da Guilda dos Caça-Monstros se interessa pelo caso e diz que o olho de um basilisco ancestral seria capaz de reverter a petrificação. Os aventureiros terão de rastrear o monstro pelas Sanguinárias, evitando perigos, encontrando aliados inusitados e enfrentando outras feras e cultistas. Finalmente, terão de usar estratégia para enfrentar a criatura... antes que se tornem sua próxima refeição!"
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "CENA 1: ALTAS CONFUSÕES EM TRAG’MERAH"
+      },
+      {
+        type: "text",
+        content: "A imensa ossada sempre à vista no horizonte em Trag’Merah lembra a todos a escala das ameaças que podem ser encontradas nas Montanhas Sanguinárias. Lojas, barracas e ambulantes de todos os tipos oferecem produtos para aqueles prontos a sair em expedição. Passando pelo meio da rua, um grupo coberto de sangue e vísceras comemora, trazendo em sua carroça a cabeçorra de alguma fera abatida."
+      },
+      {
+        type: "text",
+        content: "Tudo em Trag’Merah é relacionado à caça de monstros. Servindo de sede da Guilda Mon’han, a cidade se tornou um dos poucos pontos capazes de permitir descanso e reposição de recursos nas Sanguinárias. Mesmo sendo o lugar de mais fácil acesso à cadeia montanhosa, os personagens estão aqui já como aventureiros experientes."
+      },
+      {
+        type: "text",
+        content: "No meio da relativa normalidade, uma confusão começa. Barracas são derrubadas e pessoas são empurradas por uma estranha figura cinzenta. À primeira vista, parece uma estátua de uma mulher carregando um escudo e espada, mas ela está se movendo apesar de suas feições rochosas permanecerem imutáveis."
+      },
+      {
+        type: "text",
+        content: "Os personagens são os mais próximos do incidente e, se não agirem logo, mais inocentes estarão em perigo."
+      },
+      {
+        type: "text",
+        content: "CRIATURAS. Defensor Rochoso Desperto (NPCs e Criaturas)."
+      },
+      {
+        type: "text",
+        content: "No início do turno de cada personagem, peça um teste de Intuição (CD 20). Aqueles que passarem notam que o defensor rochoso está atacando por medo e confusão. Acalmá-lo requer vencer em dois testes de Diplomacia opostos à Vontade do construto. A magia Tranquilidade, lançada com o aprimoramento que afeta criaturas, também encerra o combate."
+      },
+      {
+        type: "text",
+        content: "Caso não notem as intenções do defensor e tentem resolver através do combate, ele cessa seu ataque quando chega à metade dos PV e foge. Se for acalmado ou encontrado após escapar da luta, fica muito claro que não se trata de um autômato sem mente."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "CENA 2: CORAÇÃO EMPEDRADO"
+      },
+      {
+        type: "text",
+        content: "Menos confuso, o defensor rochoso não ataca, mostrando-se capaz de pensamentos complexos. Apesar de não conseguir se comunicar verbalmente, ele faz o possível, apontando para coisas e meneando a cabeça. Se questionado, responde assentindo ou negando."
+      },
+      {
+        type: "text",
+        content: "Compreendê-lo requer um teste de Intuição (CD 20). De forma rudimentar, ele consegue expressar que algo o transformou em pedra. Um teste de Investigação (CD 20) revela que a pessoa que era o defensor rochoso passou por Trag’Merah com seu grupo há alguns meses. Os aventureiros que estavam com ele nunca retornaram. Nenhum método é capaz de desfazer a petrificação ou metamorfose."
+      },
+      {
+        type: "text",
+        content: "Para descobrir mais sobre a expedição, será necessário um teste estendido de Diplomacia, Intuição ou outra perícia apropriada (CD 25, três sucessos). Falha total representa apenas que as informações coletadas não eram relevantes, e é necessário recomeçar o teste estendido. Entretanto, passando nos testes, os aventureiros descobrem que o grupo que o acompanhava estava buscando um monstro misterioso: uma euríade."
+      },
+      {
+        type: "text",
+        content: "Informações sobre o que são euríades são raras. Um teste de Conhecimento, Misticismo, Religião ou Sobrevivência (CD 26) revela histórias sobre um grupo de medusas devotadas a Megalokk que se transformaram em versões mais monstruosas e violentas. Um resultado 29 ou maior também revela que as mais antigas entre elas são capazes não apenas de petrificar os inimigos, mas de transformá-los em defensores rochosos sob seu controle."
+      },
+      {
+        type: "text",
+        content: "Essa informação pode fazer com que o grupo se pergunte se o defensor à sua frente está agindo por vontade própria. Qualquer teste mostra que o construto está sim livre de qualquer controle."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "CENA 3: CONTRATO DE CAÇA"
+      },
+      {
+        type: "text",
+        content: "Após conseguirem as informações, uma pessoa se aproxima dos personagens. É um kliren de idade avançada e olhar carregado de muita experiência."
+      },
+      {
+        type: "text",
+        content: "“Soube que estão procurando informações para ajudar sua amiga de pedra aí. Triste ver uma pessoa em um estado desses, mas é impressionante que uma criatura tenha o poder de não só transformar carne em pedra, mas animá-la.” Ele solta uma risada alta e confiante. “Os monstros nunca deixam de nos surpreender.”"
+      },
+      {
+        type: "text",
+        content: "O kliren falando com os personagens é ninguém menos que o fundador da Guilda dos Caça-Monstros, Mon’han Galldo’han. Interessado nos acontecimentos, convida os aventureiros para uma conversa na sede de sua organização."
+      },
+      {
+        type: "text",
+        content: "“Vocês precisam de algo potente para desfazer o olhar da euríade matriarca. E eu tenho justamente a presa certa para isso!”"
+      },
+      {
+        type: "text",
+        content: "Mon’han mostra o esboço de um lagarto com vários pares de patas. Olhando mais atentamente para a escala das pinturas, percebe-se que é uma criatura enorme. As notas ao redor falam sobre olhar petrificante e veneno."
+      },
+      {
+        type: "text",
+        content: "“Um basilisco ancestral, maior e mais violento que os que existem nos ermos de Arton. Se o derrotarem e trouxerem o olho dele, será possível reverter a transformação de sua amiga empedrada.”"
+      },
+      {
+        type: "text",
+        content: "Nas anotações há também um mapa, marcando a posição da criatura em um ponto distante da cordilheira."
+      },
+      {
+        type: "text",
+        content: "“Esse maldito tem devorado vários outros seres, incluindo membros da Guilda! Se derem um jeito no bicho e trouxerem sua cabeça, ou outra prova de que o derrotaram, terão nossa admiração... e uma bela recompensa, claro.”"
+      },
+      {
+        type: "text",
+        content: "Além de salvar o defensor rochoso, a caçada vale o prêmio de T$ 5000, uma verdadeira fortuna. Pelo que Mon’han disse, também há uma oportunidade de juntar-se à Guilda dos Caça-Monstros, ou, para aqueles que já fazem parte da organização, de ter mais reconhecimento entre seus pares."
+      },
+      {
+        type: "text",
+        content: "Ao pegarem o contrato de caça deste basilisco ancestral, todos devem preparar-se para uma longa jornada pelas Sanguinárias. E o próprio terreno pode se mostrar a maior ameaça."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "CENA 4: RASTROS"
+      },
+      {
+        type: "text",
+        content: "Apesar de haver diversas trilhas por entre as montanhas, não há forma de seguir apenas por elas. Ao longe, o horizonte se move, revelando a passagem de uma criatura tão colossal que se confunde com a própria cordilheira. Por sorte, a fera está tão distante que não há chance nem mesmo de ela percebê-los. Após algum tempo, ela some, camuflando-se novamente na paisagem."
+      },
+      {
+        type: "text",
+        content: "As Montanhas Sanguinárias são impiedosas e rastrear a localização do basilisco ancestral requer vários dias de investigação cuidadosa. Isso é um teste estendido de Sobrevivência (CD 25, cinco sucessos)."
+      },
+      {
+        type: "text",
+        content: "Cada rolagem representa um dia de viagem, e apenas um dos personagens faz o teste, enquanto o resto do grupo só pode ajudá-lo, fazendo-o com perícias adequadas. Uma falha causa perda de 2d6 pontos de vida para todos, devido às agruras do caminho. Em caso de falha total, ficam completamente perdidos, tendo que recomeçar o teste estendido, mas longe da cidade de Trag’Merah."
+      },
+      {
+        type: "text",
+        content: "A cada teste, role 1d6 para definir um dos encontros abaixo, ou escolha um que seja apropriado."
+      },
+      {
+        type: "text",
+        content: "1) Escalada Perigosa: Não há outra forma de avançar que não seja para cima. O trecho exige que escalem o paredão rochoso ou encontrem formas criativas de ascender pela encosta. Os personagens devem passar em três testes de Atletismo (CD 25). Falhar representa uma queda que causa 3d6 pontos de dano de impacto, +3d6 por sucesso obtido anteriormente. Personagens com deslocamento de voo podem ignorar os testes, mas, se quiserem levar outras pessoas consigo, devem se atentar aos limites de carga (Tormenta20, p. 141). Se for necessário fazer várias viagens, devem gastar os PM apropriados (considere que subir ou descer requer deslocar-se por 10 metros para cima)."
+      },
+      {
+        type: "text",
+        content: "2) Ninho Vazio: Mais à frente no caminho, vocês avistam um ninho enorme de algum monstro local. Talvez haja algo de valor em seu interior. Dentro do ninho, vocês encontram 1d4 ovos de grifo. Se cuidados adequadamente, eles eclodem, fornecendo um grifo parceiro montaria iniciante. Caso este encontro seja rolado novamente, o grupo é atacado por dois grifos adultos (Tormenta20, p. 292). Devolver os ovos faz os grifos partirem sem combate."
+      },
+      {
+        type: "text",
+        content: "3) Revoada de Serpes: O som de dezenas de asas batendo agressivamente se faz audível mesmo a muitos metros de distância. Uma nuvem de répteis alados se aproxima, cheia de fúria e fome. Uma revoada de serpes (NPCs e Criaturas) chegará na área em que os personagens estão em 1d4 rodadas, havendo tempo para que eles se preparem, seja para lutarem ou se esconderem."
+      },
+      {
+        type: "text",
+        content: "4) Peregrinação Druida: Vocês avistam ao longe duas figuras humanoides e um grande felino. Ambas as mulheres, uma elfa e a outra humana, vestem peles e exibem no corpo pintas semelhantes às do jaguar que as acompanha. Uma delas acena para que se aproximem. Estas druidisas servem a Mãe Jaguar (um aspecto de Allihanna) e prestam ajuda a viajantes. Quando o grupo acampar, o descanso contará como uma condição de descanso superior. Se tiverem enfrentado algum monstro antes desse encontro, elas curam 4d8+4 pontos de vida de cada personagem."
+      },
+      {
+        type: "text",
+        content: "5) Kemooz Pensativo: Em algum ponto do dia, vocês notam o que parece uma grande estátua sentada com o queixo apoiado sobre um punho. Ao se aproximarem, percebem que parece uma pessoa coberta de tatuagens arcanas. Se qareens fizerem parte do grupo, sentem uma estranha familiaridade com ela. Este kemooz, um gênio da terra, está sentado aqui há séculos admirando a paisagem que ajudou a construir. Entretanto, ele não se move, pois não possui um amo há muito tempo. Passar em três testes de Diplomacia opostos à Vontade dele (+15) convence o gênio a servir a um dos aventureiros. O kemooz é um parceiro iniciante que fornece o seguinte benefício: uma vez por rodada, você pode criar um cubo de terra de 1,5m de lado em um espaço desocupado a até 9m. O cubo tem RD 5 e 30 PV, e dura até o fim da cena ou até você acumular 4 cubos. Para mais informações, veja Deuses de Arton, p. 304."
+      },
+      {
+        type: "text",
+        content: "6) Rastejante Voraz: O chão começa a tremer e, por um momento, a preocupação sobre um possível deslizamento ou terremoto surge em suas mentes. Entretanto, o que vem de baixo é ainda pior: uma criatura dotada de uma infinidade de patas emerge, pronta a devorar vocês. Uma centopeia-dragão (Tormenta20, p. 287) escava abaixo dos pés dos personagens, tentando engoli-los."
+      },
+      {
+        type: "text",
+        content: "Assim que conseguirem os cinco sucessos, encontram uma trilha deixada pelo monstro. Entretanto, uma outra coisa parece ter se interessado pela jornada dos personagens."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "CENA 5: PRESAS PEÇONHENTAS"
+      },
+      {
+        type: "text",
+        content: "Na última noite antes de chegarem ao local em que o basilisco ancestral se encontra, sombras sinistras movem-se ao redor do acampamento. Uma emboscada começa!"
+      },
+      {
+        type: "text",
+        content: "As figuras ao redor do acampamento são cultistas que sincretizam Megalokk e Sszzaas. Apesar de serem deuses tão distintos – um, selvageria monstruosa; o outro, traição ardilosa –, estes devotos fazem botes com armas envenenadas, inspirados nas presas de bestas peçonhentas."
+      },
+      {
+        type: "text",
+        content: "CRIATURAS. Presas do Grande Basilisco x4 (NPCs e Criaturas)."
+      },
+      {
+        type: "text",
+        content: "Os presas do Grande Basilisco aproximam-se discretamente durante à noite, realizando testes de Furtividade opostos a Percepção dos personagens. O ataque é rápido e virulento, tentando envenenar os aventureiros com seus golpes. Eles também se posicionam de forma a flanquear sempre que possível."
+      },
+      {
+        type: "text",
+        content: "A qualquer momento, os cultistas podem virar-se uns contra os outros, mas, na verdade, os cortes envenenados de suas lâminas os fazem recuperar vida em vez de perdê-la. Além disso, se três deles forem derrotados, o quarto fugirá, ressurgindo no combate contra o basilisco ancestral."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "CENA 6: PREDADOR PREDADO"
+      },
+      {
+        type: "text",
+        content: "Um dos rastros mais exóticos deixado pela passagem do basilisco ancestral são os monstros menores transformados em pedra. Serpes, mantícoras e até mesmo gigantes, eternamente petrificados e destruídos. O aumento na ocorrência dessas estátuas indica claramente a proximidade do refúgio da criatura."
+      },
+      {
+        type: "text",
+        content: "A região em que chegam mais parece um pântano no interior de uma ravina. Por todos os lados, estátuas se espalham, e claramente não foram criadas por artistas mortais. O defensor rochoso toca uma dessas criaturas com seus membros, talvez ponderando a similaridade entre ele e essas vítimas."
+      },
+      {
+        type: "text",
+        content: "É possível simplesmente seguir o rastro do basilisco, pois seu corpanzil não deixa dúvidas de por onde passou. Além disso, um ataque frontal parece a forma mais direta de enfrentá-lo. Caso optem por essa abordagem, devem fazer um teste de Percepção ou Sobrevivência oposto à Furtividade do basilisco ancestral, ou estarão surpreendidos na primeira rodada do combate."
+      },
+      {
+        type: "text",
+        content: "Entretanto, é possível também surpreender o monstro. Primeiro, um personagem deve fazer um teste de Sobrevivência (CD 25) para encontrar o ponto ideal para a emboscada. Segundo, é necessário fazer um teste de Furtividade oposto à Percepção do basilisco ancestral, em que um aventureiro faz o teste e o resto do grupo ajuda. Finalmente, se alguém tiver uma habilidade de classe de armadilha, é possível colocá-las em um determinado ponto antes do confronto."
+      },
+      {
+        type: "text",
+        content: "CRIATURA. Basilisco Ancestral (NPCs e Criaturas)."
+      },
+      {
+        type: "text",
+        content: "O monstro deseja sobreviver a qualquer custo, e, se perder metade de seus PV, tentará fugir para se recuperar. Caso ele escape, é possível fazer uma nova emboscada ou rastreá-lo na região com apenas um teste de Sobrevivência (CD 20)."
+      },
+      {
+        type: "text",
+        content: "Ao derrotarem o basilisco, deverão fazer um teste de Sobrevivência (CD 24) ou Cura (CD 30) para extrair o olho. Se o dado no teste for um 1 natural, o olho é destruído, e o grupo tem apenas mais uma chance com o segundo. Caso passem no teste, também conseguem cortar a cabeça da criatura, que ocupa 20 espaços de carga."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "EPÍLOGO: PEDRA EM CARNE"
+      },
+      {
+        type: "text",
+        content: "O percurso de volta é mais tranquilo, porém vocês têm a incômoda sensação de estarem sendo observados. Voltando a Trag’Merah, as pessoas ficam animadas ao vê-los, especialmente Mon’han. Os aventureiros são recompensados pela caçada e celebrados pelos membros da Guilda dos Caça-Monstros. O olho do basilisco é levado para ser preparado para o ritual que devolverá o defensor rochoso à sua forma original."
+      },
+      {
+        type: "text",
+        content: "No caminho para a cidade, uma figura observa, à distância. Assemelha-se a um centauro, mas a porção inferior de seu corpo é similar a um grande lagarto quadrúpede. Sua metade superior, entretanto, é de uma mulher belíssima, porém com mãos que terminam em garras e cabelos de serpentes venenosas. Apesar da vitória dos heróis, ela sorri com uma boca cheia de presas afiadas."
+      },
+      {
+        type: "text",
+        content: "Assim que o ritual termina, os personagens e o defensor rochoso são levados para um ambiente público. O olho é esmagado sobre a cabeça da estátua viva, despejando um líquido verde. O que era rocha torna-se pele de novo e a aventureira está feliz de poder novamente sentir a brisa e expressar-se plenamente."
+      },
+      {
+        type: "text",
+        content: "Os aventureiros avançam para o 9º nível!"
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "NPCS E CRIATURAS"
+      },
+      {
+        type: "text",
+        content: "DEFENSOR ROCHOSO DESPERTO ND 8\nConstruto Médio\nINICIATIVA +8, PERCEPÇÃO +8, visão no escuro\nDEFESA 33, FORT +20, REF +9, VON +15, imunidade a atordoado e petrificado, redução de dano 10\nPONTOS DE VIDA 320\nDESLOCAMENTO 6m (4q)\nCORPO A CORPO Duas pancadas +26 (4d8+19, x3).\nIMOBILIDADE Um defensor rochoso pode permanecer completamente imóvel. Se ele estiver assim, um personagem deve passar num teste de Percepção (CD 35) para perceber que ele é uma criatura e não uma estátua.\nNATUREZA ABASCANTA O defensor tem 50% de chance de ignorar um efeito mágico (como se fosse imune a ele), com exceção da magia Despedaçar.\nPANCADA ATORDOANTE Uma criatura que sofra dano da pancada do defensor rochoso desperto fica atordoada (Fort CD 26 evita). Uma criatura só pode ser atordoada por esta habilidade uma vez por cena.\nFor 6, Des 0, Con 3, Int —, Sab 0, Car –5\nTESOURO Nenhum.\nPARCEIRO O defensor rochoso desperto é um parceiro guardião veterano."
+      },
+      {
+        type: "text",
+        content: "REVOADA DE SERPES ND 8\nMonstro Enorme\nINICIATIVA +9, PERCEPÇÃO +9, faro, visão no escuro\nDEFESA 33, FORT +15, REF +21, VON +8, imunidade a paralisia\nPONTOS DE VIDA 320\nDESLOCAMENTO 9m (6q), voo 18m (12q)\nCORPO A CORPO Mordida +26 (2d6+12) e ferrão +26 (1d8+12 mais veneno).\nAGARRAR APRIMORADO (LIVRE) Mordida +31.\nVENENO Peçonha concentrada (perde 1d12 pontos de vida por rodada durante 3 rodadas, Fortitude CD 26 reduz a duração para uma rodada).\nFor 7, Des 1, Con 6, Int –2, Sab 1, Car –1\nTESOURO 8d4 doses de peçonha concentrada (CD 23 para extrair)."
+      },
+      {
+        type: "text",
+        content: "PRESA DO GRANDE BASILISCO ND 3\nHumanoide (humano) Médio\nINICIATIVA +5, PERCEPÇÃO +5\nDEFESA 20, FORT +9, REF +4, VON +14\nPONTOS DE VIDA 21\nDESLOCAMENTO 9m (6q)\nCORPO A CORPO Machado de batalha +10 (1d8+5 mais veneno).\nÓDIO SÓRDIDO O presa do Grande Basilisco recebe +2 em testes de ataque e +1d6 em rolagens de dano contra criaturas flanqueadas ou sob efeito de alguma condição.\nVITALIDADE PEÇONHENTA Quando sofre perda de pontos de vida por causa de um efeito de veneno, em vez disso o presa recupera 1d12 PV.\nVENENO Peçonha concentrada (perde 1d12 pontos de vida durante 3 rodadas, Fort CD 19 reduz a duração para 1 rodada).\nFor 3, Des 2, Con 3, Int 1, Sab 2, Car –1\nPERÍCIAS Furtividade +3, Intimidação +2.\nTESOURO Padrão."
+      },
+      {
+        type: "text",
+        content: "BASILISCO ANCESTRAL ND 9\nMonstro Enorme\nINICIATIVA +10, PERCEPÇÃO +9, visão no escuro\nDEFESA 33, FORT +21, REF +14, VON +10, imunidade a metamorfose, redução de dano 10, resistência a veneno +10\nPONTOS DE VIDA 370\nDESLOCAMENTO 9m (6q), natação 9m (6q)\nCORPO A CORPO Mordida +27 (4d8+25 mais veneno).\nOLHAR PETRIFICANTE No início de seu turno, cada personagem em alcance curto do basilisco deve fazer um teste de Reflexos (CD 28). Se passar, desvia o olhar. Se falhar, fica lento. Se já estiver lento, fica petrificado permanentemente. Um personagem pode fechar os olhos como uma reação para ficar imune a esta habilidade, mas sofrerá os efeitos de estar cego por uma rodada. Efeitos que removem paralisia revertem a petrificação. Metamorfose.\nSOPRO Todas as criaturas em um cone de 9m perdem 3d12 pontos de vida e ficam envenenadas, perdendo 3d12 PV, por 3 rodadas (Fort CD 28 reduz a perda de vida à metade e evita a condição). Recarga (movimento).\nVENENO Peçonha potente (perde 2d12 pontos de vida por rodada durante 3 rodadas, Fort CD 28 reduz a duração para uma rodada).\nFor 6, Des 2, Con 5, Int –4, Sab 3, Car 0\nPERÍCIAS Furtividade +10.\nTESOURO 2d4 doses de peçonha potente (CD 24 para extrair), couro de basilisco (CD 24 para extrair, conta como T$ 2.000 como matéria-prima para fabricar uma armadura superior)."
+      }
+    ]
+  },
+  { id: "Corrida Brutal",
+    name: "Corrida Brutal",
+    theme: "Ação, Corrida e Combate Veicular",
+    image: "/aventuras/corrida-brutal.png",
+    summary: "Uma corrida mortal ao redor de uma colossal formação rochosa atrai todo tipo de competidor nas ruínas de Tyrondir. Entre trapaças, veículos bizarros e alta velocidade, os heróis descobrem que um culto macabro pretende transformar a linha de chegada em um banho de sangue.",
+    sections: [
+      {
+        type: "text",
+        content: "Preparem suas montarias, máquinas e pernas! Vai começar a corrida mais perigosa das ruínas de Tyrondir! Vale tudo para conquistar a glória no Círculo do Eclipse, inclusive atacar ou matar seus adversários!"
+      },
+      {
+        type: "text",
+        content: "Thwor, o Deus dos Duyshidakk, venceu Ragnar, antiga deidade da morte, como parte de seu objetivo de alcançar o almejado “Mundo Como Deve Ser”. Entretanto, os servos do derrotado ainda desejam vingança. Realizando sacrifícios macabros, esses devotos tentam ressuscitar seu deus mesmo que tenham que realizar atos abjetos para isso."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "RESUMO DA AVENTURA"
+      },
+      {
+        type: "text",
+        content: "Corrida Brutal é uma breve jornada, uma aventura curta pensada para uma sessão única, mas que pode ser inserida em uma campanha maior. É ideal para um grupo de quatro personagens de 9º nível, em Tormenta20."
+      },
+      {
+        type: "text",
+        content: "Os aventureiros chegam a um grande acampamento, onde terá início o Círculo do Eclipse, uma corrida violenta pelo terreno das Ruínas de Tyrondir. Seja pelo prêmio revelado, ou motivações pessoais, os personagens devem encontrar uma maneira de participar."
+      },
+      {
+        type: "text",
+        content: "Se eles próprios não tiverem como, apoiar uma das concorrentes pode ser a grande oportunidade."
+      },
+      {
+        type: "text",
+        content: "Dentre os competidores, alguns estão muito dispostos a usar trapaça e violência para eliminar a concorrência. Porém, assim que estiverem de volta ao acampamento, perceberão que algo terrível aconteceu: devotos do deus morto, Ragnar, atacaram espalhando seu lodo negro."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "CENA 1: AQUECENDO OS MOTORES"
+      },
+      {
+        type: "text",
+        content: "Antes da Flecha de Fogo havia um reino chamado Tyrondir. Este lugar seria lentamente conquistado por Thwor enquanto ainda era mortal. Após a queda do cometa, a organização social ruiu. Hoje, comunidades tentam manter-se apesar dos ataques constantes de saqueadores."
+      },
+      {
+        type: "text",
+        content: "Mas não aqui. Ao lado de uma enorme colina de topo achatado, diversas barracas se erguem. Hobgoblins, humanos e bugbears convivem de forma tão pacífica quanto possível. Tudo isso com o objetivo de competir no Círculo do Eclipse, uma corrida mortal."
+      },
+      {
+        type: "text",
+        content: "Ainda que a maior parte do ajuntamento surja apenas quando os corredores se encontram para competir, muitas pessoas estão ali há anos, melhorando suas engenhocas, treinando suas montarias, e se preparando para a próxima corrida."
+      },
+      {
+        type: "text",
+        content: "Ainda que sejam majoritariamente recebidos por goblinoides, a aproximação dos personagens não causa estranhamento ou conflito. Caretas surgem caso elfos façam parte do grupo, mas qualquer corredor que se garanta é aceito. A falta de hostilidade não significa hospitalidade. Chegar perto de algum dos núcleos é motivo para grosserias, grunhidos e empurrões em resposta. Ninguém deseja que os seus segredos sejam roubados por outros competidores."
+      },
+      {
+        type: "text",
+        content: "Um teste de DIPLOMACIA ou INVESTIGAÇÃO (CD 20) revela o básico sobre o evento: o Círculo do Eclipse é uma corrida ao redor da enorme formação rochosa. Qualquer um pode participar, seja a pé, montado ou conduzindo algum tipo de engenhoca. Voar é permitido, mas apenas a uma altura menor que a do morro, e muitas vezes aliados de competidores usam armas a distância para abater este tipo de participante. Fora isso, não existem muitas regras. É permitido atacar oponentes, e mortes durante a corrida são consideradas oferendas a Thwor e não têm maiores consequências para os responsáveis."
+      },
+      {
+        type: "text",
+        content: "Se o resultado do teste for 25 ou mais, os aventureiros também descobrem informações sobre os principais competidores: Gaardak, um bugbear gladiador que participa correndo a pé; Krigg, Progg e Nregg, três goblins montandos em um gorlogg especialmente grande; Arzak, caçador hobgoblin montado em um warg, chamado Sangrento; Foley, um kliren inventor, que usa sua aranha-golem como veículo; Pottak, goblin aeronauta, voando em um ornitóptero. Além destes cinco, há também uma hobgoblin chamada Rotsheel. Sua equipe foi morta na última corrida."
+      },
+      {
+        type: "text",
+        content: "Em algum momento do dia, goblins montam um pequeno palanque no meio da confusão, e um deles berra em um cone feito de osso:"
+      },
+      {
+        type: "text",
+        content: "“Malucos por velocidade, estamos aqui de novo para mais um Círculo do Eclipse! Quem não estiver na linha de partida na hora vai se lamentar para o resto da vida! O ganhador irá levar um item, que dizem, ter sido tirado da própria Cratera de Thwor!”"
+      },
+      {
+        type: "text",
+        content: "Se alguém pedir para ver o item, é vaiado na hora. Todos aqui se importam apenas com a corrida, não com o prêmio."
+      },
+      {
+        type: "text",
+        content: "Caso um dos aventureiros possua uma montaria, ou outra forma de transporte, pode mover-se para o ponto de partida. Entretanto, peça aos personagens um teste de SABEDORIA (CD 10), e revele que, se for correr sozinho, não terá ajuda para enfrentar os outros participantes."
+      },
+      {
+        type: "text",
+        content: "Se possuir uma carroça ou outro veículo capaz de carregar o resto do grupo, pode apelar para isto. Também é aceitável que cada um tenha sua montaria, mas manterem-se perto uns dos outros terá consequências na corrida (veja na Cena 3). Se tiverem passado no teste de DIPLOMACIA ou INVESTIGAÇÃO com um resultado 25 ou mais, também descobrem que há uma participante sem time."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "CENA 2: CORREDORA MISTERIOSA"
+      },
+      {
+        type: "text",
+        content: "Em uma tenda afastada, deitada sobre seu veículo coberto com uma lona está a hobgoblin. Caso se aproximem, Rotsheel grita:"
+      },
+      {
+        type: "text",
+        content: "“Ei, vocês! Saiam daqui! Se chegarem mais perto vou arrancar suas cabeças e colocar na minha carroça!”. Ela está cambaleando, e tem na mão uma garrafa de aguardente."
+      },
+      {
+        type: "text",
+        content: "Acalmá-la requer um teste de DIPLOMACIA ou INTIMIDAÇÃO oposto à VONTADE dela (+10). Ao ser questionada sobre seu veículo, a hobgoblin explica que foi criação de um de seus companheiros, um goblin chamado Goppo. O transporte é um tipo de carroça metálica, mas sem cavalos. Com um gesto amplo, ela remove o pano, revelando a Carruagem Duyshidakk."
+      },
+      {
+        type: "text",
+        content: "A carruagem é um veículo de tamanho Enorme, deslocamento 15m, Defesa 25 (ou 20 + Des do piloto), 200 PV, RD 10, e pode carregar até 6 criaturas Médias ou 100 espaços. Para mais informações sobre veículos, veja Heróis de Arton, p. 241."
+      },
+      {
+        type: "text",
+        content: "Uma vez calma, é possível convencê-la a formar uma única equipe para concorrer usando a Carruagem. Ela explica que até pode pilotar sozinha, mas a ajuda dos aventureiros pode vir bem a calhar para enfrentar os outros competidores, em especial Gardakk, o responsável pela morte de seus antigos colegas."
+      },
+      {
+        type: "text",
+        content: "Entretanto, Rotsheel deixa bem claro: se encontrarem o bugbear no percurso, o foco dela será acabar com ele."
+      },
+      {
+        type: "text",
+        content: "Assim que concordarem em ajudá-la, a hobgoblin coloca ganchos e correntes na roupa dos personagens, para evitar que caiam (veja a cena a seguir)."
+      },
+      {
+        type: "text",
+        content: "Com tudo pronto, os aventureiros se dirigem ao ponto de partida."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "CENA 3: BANDEIRADA INICIAL"
+      },
+      {
+        type: "text",
+        content: "Todos os competidores e suas equipes se posicionam no ponto de partida. Vivas e xingamentos são gritados com a mesma intensidade enquanto os corredores formam uma linha. O mesmo grupo de goblins responsável por fazer os anúncios monta um novo palanque precário. Eles se equilibram uns sobre os outros, berrando no cone de osso."
+      },
+      {
+        type: "text",
+        content: "“Chegou a hora, seus animais ignorantes, filhos de uma kobold sem pai! A gente sabe que tudo isso é só uma desculpa para vocês arrancarem os membros uns dos outros no meio do percurso! Bem, não deixem os urubus esperando! Vai, vai, vai!”"
+      },
+      {
+        type: "text",
+        content: "A corrida funciona da seguinte forma: são cinco rodadas de teste de ATLETISMO, CAVALGAR ou PILOTAGEM. Cada competidor faz um teste e soma seu valor ao teste anterior. Por exemplo: se ele rolar 25 na primeira rodada e 10 na segunda, acumulou 35. Aquele que ainda estiver na corrida e tiver acumulado o maior valor na quinta rodada chega primeiro ao acampamento e é considerado o vencedor."
+      },
+      {
+        type: "text",
+        content: "Poções e magias lançadas sobre o piloto principal, montaria ou veículo oferecem um bônus de +1 por círculo da magia. Os corredores (e seus valores para o teste) são: Gaardak (+18); Krigg, Progg e Nregg (+13); Arzak (+16); Foley (+15); Pottak (+20). Se deixarem a corrida nas mãos de Rotsheel, o bônus dela é +18."
+      },
+      {
+        type: "text",
+        content: "Os personagens podem ajudá-la com testes de PILOTAGEM ou SOBREVIVÊNCIA. Um personagem que se garanta muito nos testes pode tentar convencê-la a deixar que ele pilote, mas será necessário um teste de DIPLOMACIA oposto à VONTADE dela (+10) para isso. Se passar no teste, a carruagem duyshidakk oferece um bônus de +5 nos testes de PILOTAGEM para a corrida e Rotsheel é uma parceira combatente veterana."
+      },
+      {
+        type: "text",
+        content: "Se entrarem em combate com outro corredor, uma criatura pode ser derrubada com uma manobra de combate. As correntes e ganchos colocados por Rotsheel fornecem um bônus de +10 contra qualquer tentativa de ser derrubado."
+      },
+      {
+        type: "text",
+        content: "A cada teste da corrida, pode haver um encontro com um dos competidores. Se a soma dos testes for igual à soma de outro corredor, uma das cenas a seguir ocorre. Certos competidores estão dispostos a reduzir o valor de seu teste para atrapalhar os personagens (Gaardak, o trio Krigg, Progg e Nregg, e Arzak)."
+      },
+      {
+        type: "text",
+        content: "Os personagens podem evitar um encontro acumulando apenas metade do resultado do teste de PILOTAGEM (exemplo: se tiver rolado 25, acumula apenas 12)."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "CENA 3A: GAARDAK"
+      },
+      {
+        type: "text",
+        content: "Vocês veem o bugbear conhecido como Gaardak se aproximando. Os músculos dele brilham sob o sol e suas presas estão à mostra em um sorriso cruel. Ele saca uma azagaia e arremessa em vocês!"
+      },
+      {
+        type: "text",
+        content: "CRIATURAS. Gaardak (NPCs e Criaturas)."
+      },
+      {
+        type: "text",
+        content: "Gaardak deseja mostrar sua capacidade física, vencendo a prova com as próprias pernas, mas não resiste a uma briga. Além disso, por ter sido responsável pela morte da equipe de Rotsheel, ela não aceitará fugir. Se a hobgoblin estiver pilotando, fará duas ações de movimento para se deslocar toda rodada."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "CENA 3B: KRIGG, PROGG E NREGG"
+      },
+      {
+        type: "text",
+        content: "Um amontoado de caos em cima de um gorlogg está chegando perto. As patas da fera pré-histórica batem violentamente contra o chão, enquanto ela estica a bocarra mordendo o ar à frente de si. Três goblins parecem “cavalgar” o monstro, mas sem muito controle para onde ele vai. Pior ainda: um deles saca o que parece uma bomba e joga em vocês!"
+      },
+      {
+        type: "text",
+        content: "CRIATURAS. Três goblins em um gorlogg (NPCs e Criaturas)."
+      },
+      {
+        type: "text",
+        content: "Krigg, Progg e Nregg acreditam em um velho ditado goblin: se não for para ajudar, pelo menos se deve atrapalhar. Se forem reduzidos à metade de seus PV, eles fogem, saindo da corrida."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "CENA 3C: ARZAK"
+      },
+      {
+        type: "text",
+        content: "A aproximação deste hobgoblin e seu warg é quase imperceptível. Os dois cavalgam como uma sombra em movimento. Sem que haja tempo para reagir, avançam contra o flanco da Carruagem Duyshidakk."
+      },
+      {
+        type: "text",
+        content: "CRIATURAS. Arzak (NPCs e Criaturas)."
+      },
+      {
+        type: "text",
+        content: "Antes de ler a descrição acima, peça aos personagens um teste de PERCEPÇÃO oposta à FURTIVIDADE do hobgoblin (+15). Aqueles que falharem estarão surpreendidos na primeira rodada do combate."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "CENA 3D: FOLEY"
+      },
+      {
+        type: "text",
+        content: "O som de vapor em alta pressão e pistões torna impossível que esta engenhoca de oito patas passe despercebida. Em seu interior, o kliren Foley, saca o que parece um pequeno canhão, faz mira e dispara um composto branco pegajoso!"
+      },
+      {
+        type: "text",
+        content: "O kliren não combate. Sua aranha-golem se move 24m por rodada, e ele pode criar teia em um quadrado de 3m de lado em alcance curto. Criaturas na área ficam enredadas. Para evitar é necessário um teste de PILOTAGEM (CD 28), onde todos os personagens podem ajudar. Uma vez enredado, o time não soma qualquer valor no próximo teste da corrida."
+      },
+      {
+        type: "text",
+        content: "Se a primeira teia for evitada, Foley continuará tentando enredar o grupo por cinco rodadas. A única maneira de pará-lo é destruir o veículo (Defesa 25, 200 PV) ou derrubar o kliren (teste +25)."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "CENA 3E: POTTAK"
+      },
+      {
+        type: "text",
+        content: "Pottak possui um olhar obstinado, de quem tem muito a provar. Seu ornitóptero não voa muito alto, e, de repente, despenca em direção ao solo, como se fosse chocar-se, apenas para subir mais uma vez. É algo incrível de se ver, mas que pode custar a vitória."
+      },
+      {
+        type: "text",
+        content: "Pottak não apela para artimanhas ou violência, seu único desejo é a vitória. Por isso, se os personagens nada fizerem, a competição continua sem alterações. Entretanto, se quiserem ganhar dele, será necessário derrubá-lo. O deslocamento de voo do ornitóptero é 15m, possui 252 PV, Defesa 32, RD 10, qualquer teste usa a PILOTAGEM do goblin (+20), e ele voa a 7,5m de distância do chão. Em seu turno, o goblin vai usar suas duas ações apenas para se deslocar."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "CENA 4: VITÓRIA INGLÓRIA"
+      },
+      {
+        type: "text",
+        content: "Vocês continuam ladeando a enorme mesa rochosa, e começam a reconhecer a proximidade da linha de chegada! Em poucos momentos deveriam ver as tendas das equipes, comemorando e brigando alegremente. Mas logo notam algo de errado."
+      },
+      {
+        type: "text",
+        content: "Primeiro a fumaça negra subindo no horizonte, então fogo nas tendas e pessoas correndo para todos os lados!"
+      },
+      {
+        type: "text",
+        content: "Peça a todos um teste de PERCEPÇÃO (CD 20). Aqueles que passarem notam bugbears trajando mantos sombrios atacando as pessoas no acampamento."
+      },
+      {
+        type: "text",
+        content: "Além disso, aqueles que rolarem 25 ou mais também percebem algo extremamente preocupante: diversas poças de lodo negro, líquido viscoso amaldiçoado ligado ao derrotado Deus da Morte, Ragnar."
+      },
+      {
+        type: "text",
+        content: "Mesmo assim, a hobgoblin precisa fazer uma manobra de emergência com o veículo, chocando-se contra uma rocha. Ela fica inconsciente, mas os personagens estão em uma área relativamente livre do líquido maldito."
+      },
+      {
+        type: "text",
+        content: "CRIATURAS. Sacerdote Caído x4 (NPCs e Criaturas)."
+      },
+      {
+        type: "text",
+        content: "Apesar de terem perdido seus poderes, os servos sombrios de Ragnar tentam restaurar seu deus através de cerimônias profanas e sacrifícios sanguinários. Os sacerdotes caídos lutam até a morte, refestelando-se no prazer da carnificina."
+      },
+      {
+        type: "text",
+        content: "Ao redor da área em que os aventureiros estão existem quatro enormes poças de lodo negro, cada uma ocupando um quadrado de 3m de lado. Uma criatura viva que entre em contato com o líquido deve fazer um teste de FORTITUDE (CD 35) a cada rodada. Se passar, perde 10d12 PV. Se falhar, sofre a perda de PV ou seus PV são reduzidos a –10 (o que for pior)."
+      },
+      {
+        type: "text",
+        content: "Se Rotsheed estiver no combate, pode usar uma rodada inteira para pegar impulso e causar 10d6 pontos de dano de impacto em um dos sacerdotes caídos, atropelando-o."
+      },
+      {
+        type: "text",
+        content: "Não há nem sinal dos outros competidores, mais preocupados em salvar suas próprias vidas."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "EPÍLOGO: APÓS A MORTE"
+      },
+      {
+        type: "text",
+        content: "A fumaça finalmente cessa. As poças do lodo negro continuam existindo, e os sobreviventes fazem de tudo para evitá-las. Todos lamentam seus mortos. Logo um novo acampamento improvisado é criado."
+      },
+      {
+        type: "text",
+        content: "O ataque foi repentino. Todos os sobreviventes perderam amigos e familiares. Tudo que possuem é dividido e ódios antigos são ignorados em face da tragédia no percurso. Ao menos por enquanto."
+      },
+      {
+        type: "text",
+        content: "Independentemente do resultado da corrida, os personagens, por terem agido contra os sacerdotes caídos, são considerados os campeões. Eles recebem um machado de guerra aumentado atroz formidável (caso possua o livro Ameaças de Arton, você pode usar o uyzrrak da’ukthra, p. 403)."
+      },
+      {
+        type: "text",
+        content: "Com um novo nascer do sol, os personagens avançam para o 10º nível."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "NPCS E CRIATURAS"
+      },
+      {
+        type: "text",
+        content: "SACERDOTE CAÍDO (ND 5)\nHumanoide (bugbear) Médio\nINICIATIVA +6, PERCEPÇÃO +6, faro, visão no escuro\nDEFESA 23, FORT + 11, REF +6, VON +16, resistência a medo +2\nPONTOS DE VIDA 45\nDESLOCAMENTO 6m (4q)\nPONTOS DE MANA 22\nCORPO A CORPO Foice negra x2 +20 (2d8+13, x3, mais 1d12 trevas).\nÊXTASE NO MEDO O sacerdote caído sofre metade do dano de criaturas sob algum efeito de medo.\nREFESTELAR-SE EM SANGUE (REAÇÃO) Quando faz um acerto crítico ou reduz uma criatura a 0 PV ou menos, o sacerdote recupera 5 PM.\nFOICE NEGRA Enquanto estiver empunhando esta arma, o sacerdote caído pode lançar as magias abaixo como um clérigo de 6º nível (CD 20). Nas mãos de qualquer outra criatura, ela é uma foice comum.\n• Toque Vampírico (Padrão, 5 PM) O sacerdote caído faz um ataque corpo a corpo. Se acertar, além do seu dano normal, causa 6d6 pontos de dano de trevas (Fort reduz à metade) e recupera pontos de vida iguais a metade do dano de trevas causado.\n• Vitalidade Fantasma (Padrão, 6 PM) Criaturas vivas em uma esfera com 6m de raio centrada no sacerdote sofrem 1d10 pontos de dano de trevas (Fort reduz à metade). O sacerdote recebe PV temporários iguais ao dano total causado.\nFor 3, Des 2, Con 2, Int –1, Sab 2, Car –2\nPERÍCIAS Furtividade +6, Intimidação +7, Religião +4.\nEQUIPAMENTO Brunea, foice.\nTESOURO Padrão."
+      },
+      {
+        type: "text",
+        content: "TRÊS GOBLINS EM UM GORLOGG (ND 7)\nAnimal Grande\nINICIATIVA +4, PERCEPÇÃO +4, visão no escuro\nDEFESA 30, FORT +20, REF +14, VON +7\nPONTOS DE VIDA 300\nDESLOCAMENTO 12m (8q)\nCORPO A CORPO Mordida x2 +24 (3d8+16, x4).\nA DISTÂNCIA Funda x3 +20 (2d4+10).\nAGARRAR APRIMORADO (LIVRE) Mordida (Teste +26).\nLANÇAMENTO DE BOMBAS (COMPLETA) Os goblins lançam bombas em um ponto em alcance curto. Criaturas a até 3m desse ponto sofrem 12d6 pontos de dano de impacto (Ref CD 22 reduz à metade). Recarga (padrão).\nVAI, VAI, VAI! Os três goblins em um gorlogg podem fazer uma ação de movimento adicional por turno, apenas para se deslocar, se não tiverem usado o ataque de mordida.\nOS TRÊS GOBLINS Os goblins sabem evitar serem acertados na garupa do gorlogg, sendo imunes a dano até que o gorlogg seja derrotado, mas ainda podem ser afetados por efeitos mentais. Eles possuem Vontade +5 e, se forem afetados por qualquer condição mental, a criatura inteira (gorlogg mais goblins) fica confusa e imóvel por 1d4 rodadas.\nFor 6, Des 5, Con 6, Int –4, Sab 2, Car –2\nPERÍCIAS Atletismo +13, Cavalgar +13.\nTESOURO Metade."
+      },
+      {
+        type: "text",
+        content: "ARZAK (ND 8)\nHumanoide (hobgoblin) Médio\nINICIATIVA +13, PERCEPÇÃO +10, visão no escuro\nDEFESA 31, FORT +15, REF +21, VON +8, evasão aprimorada\nPONTOS DE VIDA 250\nDESLOCAMENTO 9m (6q)\nCORPO A CORPO Kum’shrak* x3 +24 (1d8+10 corte, x3, mais sangrando).\nÀ DISTÂNCIA Adaga x2 +22 (1d4+8).\nASSASSINAR (MOVIMENTO) Arzak analisa uma criatura em alcance curto. Em seu primeiro Ataque Furtivo que causar dano a ela até o fim do seu próximo turno, ele dobra os dados de dano do Ataque Furtivo.\nATAQUE FURTIVO +6d6.\nMANOBRAS EVASIVAS (REAÇÃO) Uma vez por rodada, quando faz um teste de resistência, Arzak substitui este teste por um teste de Cavalgar.\nSANGRENTO Enquanto estiver montado, o deslocamento de Arzak se torna 12m, ele recebe uma ação de movimento extra por turno (apenas para se deslocar) e +2d6 em seu ataque furtivo (já contabilizado).\nUM COM AS SOMBRAS Arzak nunca fica surpreendido ou flanqueado e não sofre penalidades por se mover com seu deslocamento normal enquanto usa Furtividade.\nFor 5, Des 5, Con 5, Int 2, Sab 2, Car 0\nPERÍCIAS Acrobacia +13, Atletismo +13, Cavalgar +13, Furtividade +15, Intimidação +10, Ladinagem +13.\nEQUIPAMENTO Adaga x6, couro batido ajustado, kum’shrak* eviscerador.\nTESOURO Padrão."
+      },
+      {
+        type: "text",
+        content: "GAARDAK (ND 8)\nHumanoide (bugbear) Médio\nINICIATIVA +12, PERCEPÇÃO +9, faro, visão no escuro\nDEFESA 33, FORT +15, REF +20, VON +10, resistência a medo +2\nPONTOS DE VIDA 320\nDESLOCAMENTO 12m (8q), escavação 6m (4q), natação 6m (4q)\nCORPO A CORPO Ataque desarmado x3 +24 (2d8+8).\nA DISTÂNCIA Duas azagaias +26 (3d6+10).\nARREMESSO DEVASTADOR (LIVRE) Se acertar uma criatura com o ataque de azagaia, Gaardak pode fazer uma manobra derrubar ou empurrar (teste +28) contra a criatura atingida.\nÊXTASE NO MEDO Gaardak sofre metade do dano de criaturas sob algum efeito de medo.\nFLUXO DE MOVIMENTO Gaardak pode intercalar sua ação de movimento com uma ação padrão, podendo mover-se parte de seu deslocamento antes da ação, e o restante após.\nLENTO DEMAIS! (REAÇÃO) Uma vez por rodada, quando é alvo de um ataque corpo a corpo, Gaardak pode fazer um teste de ataque oposto ao resultado deste ataque. Se vencer, ele evita o dano e pode fazer um ataque corpo a corpo contra o atacante.\nPODERIO MUSCULAR (PADRÃO) Gaardak pode modificar seus limites físicos, recebendo deslocamento +9m e +10 em testes de Atletismo. Após o fim da cena, o bugbear fica fraco até o dia seguinte.\nFor 5, Des 4, Con 3, Int –1, Sab 1, Car 1\nPERÍCIAS Acrobacia +12, Atletismo +13, Intimidação +13.\nEQUIPAMENTO Azagaia x10, gibão de peles.\nTESOURO Padrão."
+      }
+    ]
+  },
 ];

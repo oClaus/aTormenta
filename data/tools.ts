@@ -1,6 +1,5 @@
 import { Gear } from "@/types/gear";
-//#region Tormenta20 - Jogo do Ano
-//#endregion
+
 export const tool: Gear[] = [
 
   //#region Tormenta20 - Jogo do Ano
@@ -61,6 +60,24 @@ export const tool: Gear[] = [
     spaces: "1",
   },
   //#endregion
+
+
+
+
+
+  //#region A Lenda de Ghanor
+  { id: "balanca-de-mercador",
+    name: "Balança de Mercador",
+    description: "Este instrumento de precisão é formado por um suporte que sustenta dois pratos e um conjunto de pesos diversos. Usada por mercadores para avaliar objetos e medir quantidades, fornece +2 em testes de Diplomacia para barganhar",
+    origin: "A Lenda de Ghanor",
+    price: "T$ 30",
+    spaces: "1"
+  },
+  //#endregion
+
+
+
+
 
   //#region Dragão Brasil
   // Dragão Brasil - 183

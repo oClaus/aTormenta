@@ -29,6 +29,7 @@ export type MaterialType =
   | "Prata"
   | "Chifre de Monstro"
   | "Hajalbar"
+  | "Arcanium"
   | "Quitina Razza";
 
 export type MaterialItemCategory = 

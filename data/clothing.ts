@@ -6,6 +6,19 @@ import { Gear } from "@/types/gear";
 
 
 export const clothing: Gear[] = [
+  //#region A Lenda de Ghanor
+  { id: "colar-de-cristal",
+    name: "Colar de Cristal",
+    description: "Esta pedra é capaz de sintonizar seu usuário com as energias do mundo natural. Ele fornece +1 ponto de mana, mas seu efeito só se ativa após um dia de uso.",
+    origin: "A Lenda de Ghanor",
+    price: "T$ 150",
+    spaces: "1"
+  },
+  //#endregion
+
+
+
+
 
   //#region Uma visita a Vectora
   { id: "Pijama Hynne",

@@ -2,6 +2,23 @@ import { Gear } from "@/types/gear";
 //#region Tormenta20 - Jogo do Ano
 //#endregion
 export const music: Gear[] = [
+  //#region A Lenda de Ghanor
+  { id: "lira-graciosa",
+    name: "Lira Graciosa",
+    description: "Este instrumento gera notas doces e poéticas. Enquanto empunha este item, você recebe +2 em testes de Atuação quando usa as habilidades Música de Bardo: Balada Fascinante e Manipular.",
+    origin: "A Lenda de Ghanor",
+    price: "T$ 90",
+    spaces: "1"
+  },
+  { id: "pandeiro-das-planicies",
+    name: "Pandeiro das Planícies",
+    description: "A música deste instrumento empolga os ouvintes. Se usar a habilidade Música de Bardo: Melodia Curativa enquanto empunha este item, ela cura +1 ponto de vida por dado.",
+    origin: "A Lenda de Ghanor",
+    price: "T$ 60",
+    spaces: "1"
+  },
+
+  //#endregion
 
   //#region Dragão Brasil
   // Dragão Brasil - 209

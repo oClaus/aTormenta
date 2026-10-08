@@ -264,6 +264,24 @@ export const gear: Gear[] = [
   },
   //#endregion
 
+
+
+
+
+  //#region A Lenda de Ghanor
+    { id: "pederneira",
+      name: "Pederneira",
+      description: "Uma pedra de faísca e uma placa rugosa de metal, para acender fogo. Produz faíscas quando a pedra bate no metal. Acender uma tocha ou lanterna com uma pederneira é uma ação padrão.",
+      origin: "A Lenda de Ghanor",
+      price: "T$ 1",
+      spaces: "—"
+  },
+  //#endregion
+
+
+
+  
+
   //#region Dragão Brasil
   // Dragão Brasil - 183
   { id: "Semente-Espada",
