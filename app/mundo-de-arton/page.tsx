@@ -62,6 +62,12 @@ export default function MundoDeArtonPage() {
       color: "from-slate-700 to-zinc-900",
       href: "/mundo-de-arton/tribunal-regreiro",
     },
+    { id: "dominio",
+      title: "Domínios",
+      icon: "/temas/dominio.png",
+      color: "from-slate-700 to-zinc-900",
+      href: "/mundo-de-arton/dominio",
+    },
   ];
 
   return (

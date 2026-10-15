@@ -70,6 +70,224 @@ export const accessories: SpecificAccessory[] = [
 
 
   
+  //#region A Lenda de Ghanor
+  {
+    id: "alaude-mistico",
+    name: "Alaúde Místico",
+    description: "Quando usa este alaúde élfico azulado, você soma o círculo máximo de magias que pode conjurar nos testes de Atuação e na CD de suas habilidades de bardo.",
+    price: "-",
+    size: "Maior",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "aljava-venenosa",
+    name: "Aljava Venenosa",
+    description: "Ao disparar uma flecha sacada dessa aljava, você pode gastar 1 PM para envenená-la com peçonha concentrada.",
+    price: "-",
+    size: "Médio",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "amuleto-da-segunda-chance",
+    name: "Amuleto da Segunda Chance",
+    description: "Este amuleto prateado tem a forma de um disco com a imagem de um raio gravada. Você recebe +2 em testes de resistência. Se você sofrer dano suficiente para morrer, é ressuscitado com 1 PV. Caso tenha morrido por dano recorrente (como por estar imerso em lava ou soterrado por pedras), a magia do amuleto o transporta para o ponto seguro mais próximo. Após ressuscitá-lo, o item perde sua magia.",
+    price: "-",
+    size: "Maior",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "anel-de-muitos",
+    name: "Anel de Muitos",
+    description: "Este anel prateado possui três pequenas gemas incolores. Você pode gastar uma ação de movimento e 3 PM para criar duas cópias ilusórias suas em quaisquer espaços desocupados em alcance curto. Quando faz isso, e no início de cada um de seus turnos, você pode trocar de lugar com uma das cópias. As cópias são idênticas a você e repetem os seus movimentos, mas não são capazes de afetar outras criaturas e objetos. Caso você se mova, cada cópia percorre a mesma distância em uma direção a sua escolha, mas não pode se afastar mais do que 9m de você. Cada cópia possui Defesa e resistências iguais a sua e dura até o fim da cena ou até sofrer 1 ponto de dano.",
+    price: "-",
+    size: "Maior",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "baralho-marcado",
+    name: "Baralho Marcado",
+    description: "Esse conjunto de cartas fede a álcool e inclui várias marcas de uso. Você recebe +5 em Enganação.",
+    price: "-",
+    size: "Menor",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "barco-de-brinquedo",
+    name: "Barco de Brinquedo",
+    description: "Este barco de madeira em miniatura se transforma em uma canoa se colocado na água e soprado como uma ação padrão. Se não houver ninguém dentro dele, basta outro sopro para que ele volte a ser um barco de brinquedo.",
+    price: "-",
+    size: "Médio",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "berrante-da-coragem",
+    name: "Berrante da Coragem",
+    description: "Esse berrante é feito do chifre de um animal feroz e decorado com gravuras de guerreiros. Você pode gastar uma ação padrão para soprar o berrante e fornecer +2 em testes de Luta para você e seus aliados em alcance médio. Caso tenha a habilidade Inspiração, o alcance dela aumenta para médio.",
+    price: "-",
+    size: "Médio",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "braceletes-da-vibora",
+    name: "Braceletes da Víbora",
+    description: "Estes braceletes dourados são ornamentados com serpentes que se enroscam por toda sua superfície. Você recebe +2 em Iniciativa e +4 em rolagens de dano contra alvos desprevenidos.",
+    price: "-",
+    size: "Menor",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "cabana-viva",
+    name: "Cabana Viva",
+    description: "Quando você assobia, quatro pernas monstruosas crescem desta cabana Enorme de madeira e lona. A cabana pode carregar até oito criaturas Médias (ou 160 espaços) e criaturas dentro dela recebem cobertura leve. A cabana viva possui Defesa 20, 200 PV e RD 10. Uma vez por rodada, ela se move 18m ou causar 4d6+10 pontos de dano de impacto em um alvo adjacente, a seu critério.",
+    price: "-",
+    size: "Maior",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "caldeirao-da-fartura",
+    name: "Caldeirão da Fartura",
+    description: "Este caldeirão de ferro possui entalhes representando diversos alimentos. Uma vez por dia, ele gera um banquete para até cinco pessoas. Ocupa 5 espaços.",
+    price: "-",
+    size: "Menor",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "caneca-da-partilha",
+    name: "Caneca da Partilha",
+    description: "Esta caneca de madeira permite duplicar bebidas — incluindo preparados e poções. Se você encher a caneca até a metade e gastar 2 PM, ela termina de se encher sozinha.",
+    price: "-",
+    size: "Médio",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "cetro-ardente",
+    name: "Cetro Ardente",
+    description: "Quando você empunha este cetro elemental de fogo energético, qualquer criatura que falhe em um teste de resistência contra uma de suas magias que cause dano de fogo fica em chamas. As chamas causam 2d6 pontos de dano por rodada, em vez do normal.",
+    price: "-",
+    size: "Médio",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "estandarte-vitorioso",
+    name: "Estandarte Vitorioso",
+    description: "Este estandarte branco assume as cores do seu portador após um dia. Você pode empunhá-lo ou gastar uma ação de movimento para fixá-lo no chão. Qualquer aliado em alcance médio recebe +2 em testes de Luta. Se você for treinado em Guerra e Nobreza, os aliados recebem também +2 em rolagens de dano. Se você perder um combate, o estandarte vitorioso desaparece misteriosamente.",
+    price: "-",
+    size: "Menor",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "luneta-da-inversao",
+    name: "Luneta da Inversão",
+    description: "Esta luneta dourada funciona ao contrário, aproximando as pessoas das imagens. Uma vez por rodada, você pode gastar uma ação de movimento e 2 PM para observar um ponto qualquer em alcance longo. Se fizer isso, você é teletransportado para o ponto escolhido instantaneamente.",
+    price: "-",
+    size: "Maior",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "luvas-da-libertacao",
+    name: "Luvas da Libertação",
+    description: "Estas luvas grossas de couro, próprias para trabalho braçal, são extremamente confortáveis. Quando você aperta a mão de uma criatura, ela tem direito a um novo teste de resistência contra efeitos mentais que a estejam afligindo. Em combate, você precisa de uma manobra agarrar para apertar a mão de uma criatura não voluntária.",
+    price: "-",
+    size: "Menor",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "luvas-do-definhamento",
+    name: "Luvas do Definhamento",
+    description: "Quando vestido, este par de luvas de seda negra muda o contorno de suas mãos, fazendo com que elas pareçam ser apenas ossos sob o tecido. A CD para resistir às suas magias de necromancia aumenta em +5. Além disso, você pode lançar Infligir Ferimentos (CD Sab). Caso já conheça a magia, o custo para lançá-la diminui em –1 PM.",
+    price: "-",
+    size: "Maior",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "manto-das-estrelas",
+    name: "Manto das Estrelas",
+    description: "Este manto negro fornece +2 em testes de resistência e amanhece cada dia com 2d4 estrelas bordadas. Quando faz um ataque com uma arma de arremesso, você pode fazer uma das estrelas se dissolver em energia prateada que envolve a arma e fornece +3d8 pontos de dano de trevas neste ataque. O manto recupera todas as estrelas gastas após passar oito horas sob o céu noturno.",
+    price: "-",
+    size: "Maior",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "mascara-abissal",
+    name: "Máscara Abissal",
+    description: "Dizem que esta máscara decorada com gemas negras, dentes e chifres foi costurada a partir do couro da face de um demônio. Enquanto estiver vestindo a máscara, você recebe +5 em Intimidação e uma arma natural de chifres (dano 1d6, crítico x2, perfuração). Uma vez por rodada, quando usa a ação agredir para atacar com outra arma, pode gastar 1 PM para fazer um ataque corpo a corpo extra com a mordida. Se você já possui uma arma natural de mordida, o dano dela aumenta em dois passos. Entretanto, enquanto usa a máscara abissal, você é considerado um demônio para efeitos que afetem demônios (como o poder Canalizar Energia).",
+    price: "-",
+    size: "Médio",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "pintura-de-guerra-elfica",
+    name: "Pintura de Guerra Élfica",
+    description: "Este frasco rústico contém tinta esverdeada. Você pode gastar uma ação completa para aplicar a tinta em você ou em uma criatura adjacente. Até o final da cena, o alvo recebe +2 na Defesa e, se você for um elfo, deslocamento +1,5m. Sempre que usar o frasco, role 1d20. Em um resultado 1, a tinta acaba.",
+    price: "-",
+    size: "Menor",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "sela-encantada",
+    name: "Sela Encantada",
+    description: "Esta sela firme parece nova em folha. Se estiver montado com ela, você recebe +2 em testes de resistência e +5 em testes de Cavalgar.",
+    price: "-",
+    size: "Menor",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "sorte-ensacada",
+    name: "Sorte Ensacada",
+    description: "Este saco de couro pode ser usado para transformar qualquer objeto mundano em ouro. Se você colocar um objeto dentro do saco, atar suas cordas e pronunciar a palavra “aubrum”, o objeto será transformado em moedas de ouro, conforme seu volume: 0,5 espaço, 1d10 PO; 1 espaço, 2d10 PO; e 2 espaços, 5d10 PO. Sempre que usar a sorte ensacada, jogue 1d%. Se o resultado for igual ou menor que o total cumulativo de PO já criados na aventura, o item perde sua magia e se transforma em um saco normal.",
+    price: "-",
+    size: "Médio",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "tabardo-abencoado",
+    name: "Tabardo Abençoado",
+    description: "Este tabardo de linho branco possui a efígie de um leão bordada. Você recebe +2 na Defesa e, no início de cada combate, recebe uma quantidade de PM temporários igual ao seu Carisma (duram até o fim da cena).",
+    price: "-",
+    size: "Médio",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "tiara-da-destruicao",
+    name: "Tiara da Destruição",
+    description: "Esta tiara dourada é ornamentada com uma variedade de pedras preciosas. Você pode gastar uma ação padrão para disparar um feixe de energia contra um alvo em alcance médio. O feixe causa 6d10 pontos de dano de eletricidade, fogo ou frio, à sua escolha, e empurra o alvo 3m para trás (Reflexos CD Int diminui o dano à metade e evita o empurrão).",
+    price: "-",
+    size: "Maior",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "tomo-dos-antigos",
+    name: "Tomo dos Antigos",
+    description: "Uma vez por dia, você pode gastar uma ação completa para consultar este livro pesado, de páginas amareladas e encadernação caindo aos pedaços. Se fizer isso, recebe +5 em Conhecimento e Misticismo até o fim da cena e, se for um conjurador arcano, recebe 1d6 PM temporários.",
+    price: "-",
+    size: "Menor",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "tunica-do-diplomata",
+    name: "Túnica do Diplomata",
+    description: "Esta túnica branca e de bom aspecto pode ficar completamente limpa com uma ação completa e o gasto de 1 PM. Ela fornece +5 em testes de Diplomacia.",
+    price: "-",
+    size: "Menor",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "varinha-eterna",
+    name: "Varinha Eterna",
+    description: "Esta varinha arcana poderosa fornece +20 PM (após um dia de uso).",
+    price: "-",
+    size: "Maior",
+    origin: "A Lenda de Ghanor"
+  },
+  {
+    id: "virtude-inquebravel",
+    name: "Virtude Inquebrável",
+    description: "Esta faixa verde de seda, amarrada à cintura, é encantada para proteger seu usuário. Você recebe redução de dano 5. Se possuir um código de honra (veja a classe cavaleiro) a RD aumenta para 10.",
+    price: "-",
+    size: "Médio",
+    origin: "A Lenda de Ghanor"
+  },
+  //#endregion
   // Dragão Brasil - 200
   { id: "Amuleto do Servo",
     name: "Amuleto do Servo",
