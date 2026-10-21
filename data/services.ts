@@ -2,6 +2,20 @@ import { Gear } from "@/types/gear";
 
 export const services: Gear[] = [
 
+  //#region Atlas de Arton
+  { id: "Tatuagem Mística",
+    name: "Tatuagem Mística",
+    description: "Os tatuadores tamalus de Khubar podem criar tatuagens especiais com Ofício (tatuador). Essas tatuagens podem ter um entre três benefícios: +1 na Defesa, resistência a magia +2 ou a habilidade de lançar uma magia de 1º círculo (atributo-chave Sabedoria). Tatuagens precisam estar visíveis para funcionarem e, quando expostas, ocupam o espaço de um item vestido. Cada tatuagem custa T$ 1.000 x sua quantidade de tatuagens místicas (a primeira custa T$ 1.000, a segunda custa T$ 2.000 e assim progressivamente).",
+    origin: "Atlas de Arton",
+    price: "T$ 1.000 x Qntd",
+    spaces: "—",
+  },
+  //#endregion
+
+
+
+
+
   //#region Uma visita a Vectora
   { id: "Hospedagem Divina",
     name: "Hospedagem Divina",

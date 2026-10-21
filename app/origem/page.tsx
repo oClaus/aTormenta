@@ -186,6 +186,35 @@ export default function OrigemPage() {
                 </div>
               </section>
 
+              <section className="border-t-2 border-amber-900/20 pt-8">
+                <h3 className="font-display text-2xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/10 pb-2">
+                  Origens Regionais (Atlas de Arton)
+                </h3>
+                <p className="font-medium mb-6">
+                  Origens regionais são relacionadas a um reino ou região de Arton. Você pode escolher uma delas (no lugar de sua origem comum) se for nativo desse local ou tiver passado os seus anos formativos lá.
+                </p>
+                <p className="font-medium mb-6">
+                  Diferente das origens do livro básico, que representam conceitos amplos, origens regionais fornecem um benefício único, característico do local ao qual pertencem. Se o benefício incluir treinamento em uma perícia na qual você já seja treinado, você pode ser treinado em outra perícia de classe. Para os demais efeitos, use as mesmas regras de origens. Efeitos de origens contam como efeitos de habilidades para fins de acúmulo.
+                </p>
+
+                <h3 className="font-display text-1xl font-bold text-red-800 mb-4 tracking-wide  border-amber-900/10 pb-2">
+                  Personagens Puristas
+                </h3>
+                <p className="font-medium"> É possível jogar com um purista? A resposta para essa pergunta é simples:</p>
+                <p className="italic text-amber-950/85"> Não!</p>
+                <p className="font-medium mb-6"> Puristas não são uma opção para personagens, pois representam uma cultura de ódio, sendo vilões absolutos. Seu propósito no jogo é servir como alerta das consequências de regimes totalitários — além, é claro, de fornecer ao grupo inimigos nos quais bater sem remorso. A única maneira de jogar com um nativo da Supremacia Purista é escolher a origem Desertor da Supremacia.</p>
+
+                <h3 className="font-display text-1xl font-bold text-red-800 mb-4 tracking-wide  border-amber-900/10 pb-2">
+                  Duplo Feérico - Encontrando-se Consigo Mesmo
+                </h3>
+                <p className="font-medium"> Quando um duplo encontra sua versão original, tem extrema dificuldade em lidar com o fato de ser uma cópia. Quando isso ocorre, deve passar em um teste de Vontade (CD seu próprio Car). Se falhar, o duplo entra em um frenesi homicida até o fim da cena, tendo como único propósito matar sua versão original.</p>
+                <p className="font-medium mb-6"> Caso uma das duas criaturas morra nesse encontro, a versão sobrevivente herda todas as lembranças do morto, incluindo uma de suas perícias treinadas, mas perde permanentemente 1 ponto de Carisma — já que, para o bem ou para o mal, perdeu uma parte de si para sempre.</p>
+
+                <h3 className="font-display text-1xl font-bold text-red-800 mb-4 tracking-wide  border-amber-900/10 pb-2">
+                  Por um Punhado de Tibares</h3>
+                  <p className="font-medium"> Personagens com a origem Procurado: Vivo ou Morto são caçados por pistoleiros e todo tipo de mercenários. Uma vez por aventura, a critério do mestre, você e seu grupo são atacados por caçadores de recompensa (um encontro de ND igual ou inferior ao do grupo). Cruéis e dispostos a qualquer coisa por uma recompensa, esses caçadores tendem a atacar nos momentos mais inconvenientes…</p>
+              </section>
+
             </div>
           </div>
         </div>
