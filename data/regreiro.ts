@@ -552,4 +552,102 @@ export const regreiroQAs: RegreiroQA[] = [
     magazineNumber: 230,
   },
   //#endregion
+  //#region DB - 231
+  {
+    id: "DB231-01",
+    question: "> Saudações, excelentíssimos juízes, digníssimos detentores da palavra e da justiça de Khalmyr.\n\nVenho, por meio desta, solicitar o devido julgamento de uma disputa que se encontra atualmente em vigor. O mago de um determinado grupelho de aventureiros sustenta que a magia *Bola de Fogo*, quando utilizada com o aprimoramento que permite transformar suas chamas em um construto móvel, poderia ser empregada de maneira sucessiva, permitindo que o referido construto fosse movimentado para permanecer sobre criaturas de tamanho Grande ou Enorme. O referido mago fundamenta sua interpretação na descrição do próprio aprimoramento, alegando que a limitação estabelecida por ele restringiria o dano a uma única ocorrência por turno para cada esfera de chamas conjurada. Assim, segundo sua interpretação, caso sejam gastos novamente os Pontos de Magia necessários, seria possível conjurar novas esferas de chamas, cada qual sujeita à sua própria limitação de dano por turno. Dessa forma, sustenta que múltiplas esferas poderiam permanecer simultaneamente sobre um mesmo alvo, ocasionando novas instâncias de dano de fogo. De minha parte, não encontrei, na bibliografia de Wynna qualquer passagem que contradiga a apelação do referido mago. Contudo, confesso que me parece um tanto questionável (para não dizer preocupante) a quantidade de dano que tal interpretação permitiria infligir às pobres criaturas sob a tutela de Megalokk.\n\nDiante disso, submeto a questão à elevada apreciação deste Tribunal.\n\nQue a justiça de Khalmyr ilumine vossos julgamentos.",
+    answer: "> Saudações esféricas, conselheiro! Sob a mais justa luz de Khalmyr, somos obrigados a informar que o infame mago supracitado está de fato correto. Nada impede o uso de múltiplas *Bolas de Fogo* com seu aprimoramento de cena pelo mesmo conjurador. Porém, administrar estas ferramentas arcanas de destruição flamejante pode ser um grande desafio logístico. Mover uma delas requer uma ação de movimento e, para obter real benefício deste truque, será difícil obter ações de movimento o suficiente. O alvo, porém, pode usar qualquer modo de locomoção (usando ou não ações de movimento) para sair da área de efeito e evitar completamente o dano.",
+    magazineNumber: 231,
+  },
+  {
+    id: "DB231-02",
+    question: "> Olá, caros juízes! Trago dúvidas titânicas.\n\nSe o bárbaro usar o *Totem Gigante* (complicações, *Heróis de Arton*) como arma, qual seria o dano?",
+    answer: "> Saudações atribuladas, conselheiro!\n\nComo citado no livro básico, armas improvisadas sofrem penalidade de –2 no teste de ataque e causam 1d6 pontos de dano com crítico x2. Porém, o mestre é livre para aumentar o dano caso ache necessário, especialmente diante de um totem tão grande!",
+    magazineNumber: 231,
+  },
+  {
+    id: "DB231-03",
+    question: "> Saudações, egrégio Supremo Tribunal Regreiro! Venho por meio desta trazer dúvidas reais sobre magias simuladas\n\n1) A descrição de magias simuladas em *Heróis de Arton* diz que magias simuladas não exigem teste de concentração. Isso quer dizer que uma magia simulada pode ser conjurada enquanto em *Fúria*?",
+    answer: "> Saudações postiças, conselheiro! Vamos às suas respostas:\n\n1) Não. Uma magia simulada ainda exige concentração, ela apenas não exige testes para manter esta concentração. Isso pode ser irrelevante na maioria dos casos, mas não para *Fúria*.",
+    magazineNumber: 231,
+  },
+  {
+    id: "DB231-04",
+    question: "2) Na mesma linha, um personagem pode usar a ação adicional concedida pela magia *Velocidade* para lançar uma magia simulada?",
+    answer: "2) Não. Como descrito em *Heróis de Arton*, magias simuladas seguem as regras de magias normais, exceto onde apontado especificamente.",
+    magazineNumber: 231,
+  },
+  {
+    id: "DB231-05",
+    question: "> Saudações, magiquíssimos ministros! Trago três perguntas a esta casa onde imperam a lei e as regras.\n\n1) No STR da DB 224 de fevereiro, houve uma pergunta referente ao gasto de PM quando o personagem possui \"+1 PM temporário para aprimoramento de magias\" e um redutor de custo de –1 PM. A resposta não ficou muito clara para mim. A frase “termina a ação com a mesma quantidade de PM com que começou” pareceu confusa, pois dá a entender que o personagem estaria conjurando suas magias “de graça”. Desta forma, o que impediria um personagem de usar um *báculo da retribuição* (*Deuses de Arton*) para conjurar *Curar Ferimentos* indefinidamente e recuperar completamente os PV e PM de todo o grupo? Ou então, acumular diversos efeitos de redução de custo e PM temporário para aprimoramento e conjurar \"gratuitamente\" magias ainda mais poderosas?",
+    answer: "> Saudações efêmeras, conselheiro! Vamos às suas respostas:\n\n1) As respostas do STR são casos gerais, sempre abertos à interpretação do próprio mestre e sua aplicação das regras. No geral, a interação entre redutores de custo e PM temporários deve ser satisfatória para o jogador que utilizou seus recursos para obtê-los. Em situações como as citadas, na qual um jogador está abusando das regras para tumultuar o jogo, cabe intromissão do mestre. Nenhuma regra é imune à malícia dos jogadores e nenhum mestre deve permitir magias gratuitas em sua mesa se não as desejar! Nesta situação é perfeitamente válido determinar que a magia só funciona se o conjurador gastar pelo menos 1 PM.",
+    magazineNumber: 231,
+  },
+  {
+    id: "DB231-06",
+    question: "2) Poderes que emulam e/ou permitem escolher outros poderes, poderiam ser usados para acessar poderes de distinção que não possuem pré-requisito? Por exemplo, usar *Meditação Autoafirmativa* para obter um dos poderes de exegeta do akzath.",
+    answer: "2) Depende. Se o personagem já passou na admissão da distinção, ele poderia usar efeitos que fornecem poderes para escolher um poder de exegeta. Caso contrário, não ter sido admitido é um entrave especial para sua obtenção, independente de como ela ocorra (como por passar de nível ou usar um efeito como *Meditação Afirmativa*).",
+    magazineNumber: 231,
+  },
+  {
+    id: "DB231-07",
+    question: "3) Se três personagens estiverem usando dois pares de *braceletes da amizade intensa* (*Heróis de Arton*); personagens A e B com um par, personagens B e C com outro. Se A recebe uma *Cura*, B recebe também. Esta cura seria replicada em C? Indo além, acontece um ciclo de cura com a cura em C sendo devolvida a B e A?",
+    answer: "3) Não. O efeito duplicado pelos *braceletes* não causa a ativação dos mesmos, somente receber o efeito de cura diretamente da fonte externa o faz. Caso contrário, mesmo com apenas um par ocorreria um ciclo de cura infinita!",
+    magazineNumber: 231,
+  },
+  {
+    id: "DB231-08",
+    question: "> Tenho dúvidas sobre acúmulos de bônus gerais e específicos. Digamos que um \"item hipotético\" conceda: +2 em testes de perícias, +2 na perícia Luta, +2 em testes de ataque, +2 em testes de ataque corpo a corpo, +2 em testes de manobras, +2 em testes de agarrar. Qual seria o resultado final?",
+    answer: "> Saudações acrescidíssimas, conselheiro!\n\nAntes de mais nada, é importante pensar nas utilidades dos elementos de regras em geral. Um item feito desta forma seria extremamente confuso, além de não ocupar nenhum lugar dentro da ficção. De qualquer forma, no fim, este item forneceria +2 em testes de perícia, +4 em testes de ataque e +6 em testes de manobra (cada valor já é o total naquela característica, não é necessário somar mais nada).",
+    magazineNumber: 231,
+  },
+  {
+    id: "DB231-09",
+    question: "> Bom dia, caros membros do STR! Tenho uma dúvida sobre o poder racial *Dupla Conjuração* (*Heróis de Arton*). Quando lanço uma magia dupla com o poder, ainda posso lançar uma magia como ação livre, por exemplo, com *Magia Acelerada*? Pelo que vejo, a magia adicional de *Dupla Conjuração* é uma reação, não uma ação livre.\n\nDesde já agradeço.",
+    answer: "> Saudações geminadas, conselheiro! Sim, você ainda pode lançar uma magia como ação livre. A magia lançada com *Dupla Conjuração* pode ser considerada parte da mesma ação padrão da magia original. Isso pode parecer confuso, já que a ativação de uma habilidade engatilhada acontece como uma reação, mas isso se trata apenas da ativação. Perceba que o próprio exemplo dado no livro básico, com a habilidade *Frenesi*, adiciona um ataque à ação agredir (ou seja, a uma ação padrão).",
+    magazineNumber: 231,
+  },
+  {
+    id: "DB231-22",
+    question: "> Olá, meus amigos desse maravilhoso tribunal!!\n\nTenho uma dúvida sobre *Alma Livre* (*Heróis de Arton*; 0 dias). Digamos que eu seja um guerreiro nível 8, pegue *Alma Livre* para a classe lutador e um poder lutador no nível 9. Caso eu continue como guerreiro e, em algum momento, resolva fazer multiclasse com lutador (digamos, no nível 14) isso anularia meu poder *Alma Livre* escolhido anteriormente? Desde já agradeço pela resposta e desejo um bom ano a todos vocês!!!",
+    answer: "> Saudações libertinas, conselheiro! Este tribunal estava há quatro sessões sem responder perguntas sobre *Alma Livre*. Nosso recorde é de quatro sessões. Ter níveis na classe escolhida para *Alma Livre* não anula seu poder nem influencia no poder obtido pela classe.",
+    magazineNumber: 231,
+  },
+  {
+    id: "DB231-23",
+    question: "> Ao Excelentíssimo Corpo Julgador do Supremo Tribunal Regreiro: Consulta sobre a natureza da luz de Escolhido de Azgher (*Jornada Heroica: A Libertação de Valkaria*)\n\nSubmete-se à apreciação deste tribunal dúvida quanto ao efeito mecânico da expressão “ilumina como a luz do sol” e sua eventual equivalência à exposição direta à luz solar. Tem efeito equivalente ao aprimoramento que torna a magia *Luz* cálida como a do sol? Aumenta o bônus concedido por *Herança de Solaris*? Ou, diante da ausência de previsão expressa equivalente à do aprimoramento de *Luz*, a aura apenas ilumina de forma semelhante ao sol, sem produzir os demais efeitos mecânicos da exposição à luz solar real?",
+    answer: "> Saudações resplandecentes, conselheiro! Este tribunal felicita sua missiva pelo decoro diante das questões regrísticas. Sua dúvida é compreensível. A magia *Luz*, com o aprimoramento adequado, duplica os efeitos da luz solar, além de oferecer seus próprios efeitos: deixar aliados estabilizados e imunes a sangramento, enquanto inimigos ficam ofuscados. Tais efeitos adicionais não são replicados pela luz emitida por um *Escolhido de Azgher*, mas quaisquer outros efeitos relacionados à luz do sol, como a *Herança de Solaris* e algumas vulnerabilidades de mortos-vivos, se aplicam.",
+    magazineNumber: 231,
+  },
+  {
+    id: "DB231-24",
+    question: "> Olá, excelentíssimos ministros desse tribunal!\n\nSou jogador e membro de uma guilda onde priorizamos ao máximo as regras como escritas. Requisitamos, portanto, algumas clarificações mecânicas....\n\n1) O alquimista (*Heróis de Arton*) recebe no nível 10° o poder de inventor *Mestre Alquimista*. Preciso cumprir os requisitos deste poder?",
+    answer: "> Saudações sindicalizadas, conselheiro! Vamos às suas respostas:\n\n1) Sim, precisa. Os pré-requisitos de um poder só podem ser ignorados quando isso é dito expressamente.",
+    magazineNumber: 231,
+  },
+  {
+    id: "DB231-25",
+    question: "2) Pelas regras de pergaminhos, ao conjurar uma magia por um eu não pago o custo básico em PM. Mas o que é o custo básico? Se eu utilizo um pergaminho de *Desejo* para o efeito de aumentar um atributo, ou seja, com um sacrifício de PM, este sacrifício de PM faz parte do custo básico da magia? Esses PM serão sacrificados, ou o pergaminho cobre? Afinal não estou usando nenhum aprimoramento...",
+    answer: "2) O custo básico de uma magia é aquele listado na tabela Custo de Magias, na página 170 do livro básico. Sacrifício de PM é um “custo especial”, conforme visto na página 224.",
+    magazineNumber: 231,
+  },
+  {
+    id: "DB231-26",
+    question: "3) Segundo o livro básico, poderes advindos por uma classe usam o nível do personagem naquela classe. Minha dúvida vem com a habilidade *Disfarce Elaborado* do ventanista. Se eu utilizo este poder para me disfarçar de inventor e utilizar o poder *Engenhoqueiro*, meu nível de ventanista conta para a progressão de círculo das engenhocas que eu sou capaz de fabricar? Ou não tenho a capacidade de fabricar nenhuma engenhoca, por ter \"zero níveis\" de inventor?",
+    answer: "3) Quando usa um efeito de classe para adquirir habilidades de outras classes e que não menciona nada em contrário, a habilidade adquirida usa seus níveis na classe que obteve o poder para qualquer fim que os mencione (pois, para o personagem, ela pertence a esta classe).",
+    magazineNumber: 231,
+  },
+  {
+    id: "DB231-27",
+    question: "> Olá, ilustres membros do tribunal, guardiões das leis que regem esse mundo! Tenho dúvidas sobre o funcionamento mecânico do melhor amigo, da classe treinador (*Heróis de Arton*).\n\n1) O melhor amigo é um parceiro. Ele pode ser alvo de habilidades que afetam aliados, como *Inspiração* e *Ushultt*?",
+    answer: "> Saudações fraternas, conselheiro! Vamos às suas respostas.\n\n1) Sim.",
+    magazineNumber: 231,
+  },
+  {
+    id: "DB231-28",
+    question: "2) Há alguma regra de progressão para que o parceiro iniciante suba de patamar com o personagem, para que assim o melhor amigo possa futuramente ser um parceiro veterano ou mestre?",
+    answer: "2) O melhor amigo é um parceiro especial. Não segue a mesma progressão de outros parceiros, em vez disso dependendo do nível de classe do treinador e de suas escolhas. Mas se combinar seus benefícios com os de um parceiro comum, estes outros benefícios seguem suas regras normais (ou seja, só evoluem para veterano e mestre se a fonte que os fornece disser que sim).",
+    magazineNumber: 231,
+  },
+  //#endregion
 ];

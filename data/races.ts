@@ -963,6 +963,32 @@ export const races: Race[] = [
     longevidade: "Normal",
     devotos: "Allihanna, Megalokk, Nimb, Sszzaas, Tenebra."
   },
+  // Dragão Brasil - 231
+  { id: "Sahiri - Dahllan",
+    name: "Sahiri - Dahllan",
+    origin: "Dragão Brasil - 231",
+    image: "/racas/sahiri.png",
+    description: "NÃO TEM TEXTO OFICIAL AINDA!!!!!!!!!!!!!!!!!!!!!!!!! \n\n\n Houve época em que meias-dríades eram muito, muito raras. Nascidas da união improvável entre uma dríade — uma fada das florestas — e um humano, eram consideradas meras lendas. Mesmo assim, bastou uma delas para tornar a raça conhecida em todos os reinos: Lisandra de Galrasia. Após uma campanha dramática para tentar ressuscitar o Paladino de Arton, não apenas se tornaria a maior druida guerreira no mundo, mas também a sumo-sacerdotisa de Allihanna, e uma das mortais mais poderosas a existir. \n Por algum motivo, algo mudou. \n Recentemente, jovens meias-dríades começaram a surgir no Reinado. A maior parte emergiu de matas profundas, tendo sido criadas por animais ou fadas. Outras, misteriosamente, nasceram de famílias humanas. Todas femininas; há rumores sobre meios-dríades masculinos, nunca confirmados. De qualquer forma, por não serem necessariamente filhas de dríades, receberam outro nome. Dahllan. \n Até hoje ninguém tem resposta para o mistério de sua origem. A própria Allihanna deve ser responsável, mas com que propósito? Uma tentativa de ajudar meu povo a proteger as florestas, dizem alguns. Uma resposta da Mãe Natureza contra a Tormenta, teorizam outros — um contra-ataque das forças primordiais de Arton contra a tempestade rubra. Embora tenham forte ligação com a Deusa da Natureza, nem todas as dahllan se tornam druidas. Têm sido vistas abraçando as mais variadas carreiras, desde arcanistas e bucaneiras até inventoras e cavaleiras. \n Dahllan são ágeis e sábias, mas também um tanto rústicas. Assim como as árvores antigas onde as almas das dríades habitam, as dahllan têm tipos físicos variados. Algumas são musculosas, outras esguias, outras ainda têm curvas acentuadas. O cabelo, como as folhas, pode ser verde, vermelho ou dourado — em algumas, a cor muda conforme as estações — mas os olhos são invariavelmente verdes e brilhantes. Não raro, trazem a cabeça ornamentada com caules ou filamentos delicados, como antenas feéricas. Também é normal ver flores brotando em seu cabelo, além de uma ocasional borboleta ou joaninha vinda sabe-se lá de onde. \n Por serem recém-chegadas a Arton, o tempo de vida dahllan é desconhecido. Talvez sejam tão longevas quanto os mais antigos carvalhos, ou mais. Talvez nunca envelheçam de fato, enquanto houver vida natural no mundo. \n — Arasthoriel, elfo mago. \n\n Parte humanas, parte fadas, as dahllan são uma raça de mulheres com a seiva de árvores correndo nas veias. Falam com os animais, controlam as plantas — mas também são ferozes em batalha, retorcendo madeira para formar armaduras.",
+    abilities: [
+      {
+      name: "Animar Rochas",
+      description: "Você pode usar magia para transformar rochas em criaturas sob seu controle. Isso funciona como a magia Conjurar Monstro, exceto que você precisa ter acesso a uma porção de terra ou rocha equivalente a uma criatura Pequena. Caso aprenda essa magia, seu custo diminui em –1 PM.",
+      },
+      {
+      name: "Proteção da Terra",
+      description: "Quando sofre dano enquanto está em contato com terra ou pedra, você pode gastar 1 PM para reduzir esse dano em 5.",
+      },
+      {
+      name: "Empatia Selvagem",
+      description: "Você pode se comunicar com animais por meio de linguagem corporal e vocalizações. Você pode usar Adestramento para mudar atitude e persuasão com animais (veja Diplomacia). Caso receba esta habilidade novamente, recebe +2 em Adestramento.",
+      },
+    ],
+    attributeModifiers: [
+      { attribute: "sab", modifier: 2 },
+      { attribute: "des", modifier: 1 },
+      { attribute: "int", modifier: -1 }
+    ]
+  },
 
   // Duelo de Dragões
   { id: "Naidora",

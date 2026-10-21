@@ -7265,4 +7265,329 @@ export const adventures: Adventure[] = [
       }
     ]
   },
+  { id: "circo-sombrio",
+  name: "Circo Sombrio",
+  theme: "Fantasia, Mistério e Mortos-Vivos",
+  image: "/aventuras/circo-sombrio.png",
+  summary: "Aventureiros investigam misteriosos desaparecimentos em uma vila rural e descobrem um macabro circo itinerante dedicado a Tenebra, onde as atrações escondem cultistas e mortos-vivos disfarçados.",
+  sections: [
+    {
+      type: "text",
+      content: "Para a grande maioria dos artonianos, a vida é de trabalho constante. Levantando-se antes do sol nascer para capinar, manufaturando produtos ou patrulhando para manter sua comunidade segura. Todos fazendo sua parte para uma vida melhor. Entretanto, diversão e descanso também são importantes e circos itinerantes fazem a sua parte para que isso aconteça, quebrando a monotonia com espetáculos que fascinam e assombram."
+    },
+    {
+      type: "text",
+      content: "Apesar da associação com as trevas e mortos-vivos, muitos devotos de Tenebra bondosos dirão que sua padroeira não é maligna. Entretanto, nada impede que seus servos o sejam. A Deusa da Noite abençoa igualmente o justo e o ímpio, e aceita igualmente oferendas... e sacrifícios. A benção da Mãe-Noite não julga intenção, apenas recompensa a adoração."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "RESUMO DA AVENTURA"
+    },
+    {
+      type: "text",
+      content: "Circo Sombrio é uma breve jornada, uma aventura curta pensada para uma sessão única, mas que pode ser inserida em uma campanha maior. É ideal para um grupo de quatro personagens de 4º nível, em Tormenta20."
+    },
+    {
+      type: "text",
+      content: "Os aventureiros são contratados para investigar estranhos desaparecimentos em uma vila próxima. Interrogando os moradores, ouvem falar que o último lugar onde aquelas pessoas foram vistas foi um circo itinerante. Porém, a noite é cheia de perigos e zumbis rondam a região."
+    },
+    {
+      type: "text",
+      content: "Ao encontrar o circo, o grupo pode participar do entretenimento externo, como barracas de jogos, profecia e comida. Infelizmente, todas essas distrações existem como forma de enfraquecer os visitantes. Se investigarem demais, serão atacados por dois palhaços mortos-vivos. Quando o espetáculo se inicia, os camponeses ficam fascinados, e são sacrificados pelo líder cultista."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "CENA 1: SEM DEIXAR VESTÍGIO"
+    },
+    {
+      type: "text",
+      content: "Seja através de uma missão escrita em um quadro de avisos ou boatos de taverna, vocês ficam sabendo de uma mercadora local em busca de ajuda. Ela se chama Matilda e possui uma pequena mercearia onde vende diversos tipos de produtos, majoritariamente alimentos e especiarias. Sua fama os precede e, assim que a comerciante os vê, abre um enorme sorriso."
+    },
+    {
+      type: "text",
+      content: "Matilda é uma humana muito alta e forte, acostumada a viajar para conhecer seus fornecedores. Segundo ela, numa vila bem próxima havia um fazendeiro que fazia remessas de legumes excelentes. Entretanto, há três semanas os envios cessaram repentinamente. A mercadora já mandou correspondências e mensageiros, sem obter qualquer resposta. Agora é a hora de aventureiros investigarem o que está acontecendo."
+    },
+    {
+      type: "text",
+      content: "A mercadora oferece ao grupo uma recompensa de T$ 300 e a promessa de desconto permanente de 25% em sua loja (equipamentos de aventura, itens de alimentação e bebidas). Se tentarem barganhar o valor pago, ela tem +10 de VONTADE. Caso sejam bem-sucedidos no teste, Matilda ficará impressionada."
+    },
+    {
+      type: "text",
+      content: "“Não é todo dia que alguém consegue arrancar tibares assim de mim. Se forem tão bons investigando quanto são negociando, esta missão é sucesso garantido!”"
+    },
+    {
+      type: "text",
+      content: "Se partir logo após a conversa, o grupo terá que viajar à noite ou acampar no caminho. Neste caso, em algum momento os personagens serão atacados por duas multidões de zumbis."
+    },
+    {
+      type: "text",
+      content: "CRIATURAS. Turba de zumbis x2 (Tormenta20, p. 297)."
+    },
+    {
+      type: "text",
+      content: "Usando INVESTIGAÇÃO (CD 20) é possível descobrir que os zumbis da turba eram camponeses em vida, mas estavam vestindo suas melhores roupas. Esta descoberta fornece um bônus de +2 em todos os testes de perícia na Cena 2. Já se o grupo partir ao amanhecer, chega à vila pouco antes de escurecer, evitando assim o encontro com as turbas de mortos-vivos."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "CENA 2: MEDO DAS TREVAS"
+    },
+    {
+      type: "text",
+      content: "Há uma tensão no ar ao chegar à vila. Os moradores não cumprimentam ninguém quando o grupo passa. As janelas estão trancadas ou barradas com tábuas. As lojas estão vazias ou fechadas. Até mesmo a estalagem local não parece nada convidativa."
+    },
+    {
+      type: "text",
+      content: "O lugarejo é uma diminuta comunidade rural. Há uma praça, um templo devotado ao Panteão, algumas lojas, casas e uma estalagem. Entretanto, mesmo que vocês cheguem durante o dia, notam pouca movimentação nas ruas de terra batida. A população não parece assustada, mas sim triste. Só perguntar o que está acontecendo não rende resultados."
+    },
+    {
+      type: "text",
+      content: "Para que os personagens obtenham informações sobre os desaparecimentos devem acumular 5 sucessos em um teste estendido. A perícia e dificuldade dependem do método usado. Se quiserem conversar com as pessoas da vila, ou mentir para elas, é possível usar DIPLOMACIA ou ENGANAÇÃO (CD 15). Por outro lado, se quiserem observar a movimentação das pessoas, ou seguir rastros, o teste é de INVESTIGAÇÃO ou SOBREVIVÊNCIA (CD 20). Outras abordagens que façam sentido permitem testes diferentes, com CD 25."
+    },
+    {
+      type: "text",
+      content: "Se tiverem uma falha total, as pessoas param de falar, os poucos rastros somem, e eles terão que recomeçar o teste estendido no dia seguinte. Caso durmam na vila, ou resolvam investigar durante a noite, serão atacados novamente por duas turbas de zumbis (Tormenta20, p. 297). Ninguém na vila irá intervir pois todos estão com medo dos mortos-vivos. No caso de duas falhas totais, a causa dos desaparecimentos terá se movido para outra região, e o grupo terá que encontrar uma nova forma de rastreá-la."
+    },
+    {
+      type: "text",
+      content: "Assim que vocês conseguem os sucessos necessários, um dos moradores fala com vocês:"
+    },
+    {
+      type: "text",
+      content: "“Não sei se as duas coisas têm relação, mas há algumas semanas o circo chegou à cidade. Mas não era como os outros. Havia algo sombrio. Eu tive medo, mas uns conhecidos meus foram. Desde então, as pessoas desaparecem... e esses zumbis surgem!”"
+    },
+    {
+      type: "text",
+      content: "Além da informação, a pessoa presenteia o grupo com um símbolo sagrado de Azgher: um pequeno sol esculpido com esmero em madeira."
+    },
+    {
+      type: "text",
+      content: "Se os personagens simplesmente resolveram procurar na noite, é possível ignorar o teste estendido e passar para a próxima cena com apenas um teste de INVESTIGAÇÃO (CD 20)."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "CENA 3: O CIRCO SOMBRIA"
+    },
+    {
+      type: "text",
+      content: "Não importa o quanto procurem durante o dia, personagens não serão capazes de encontrar o circo nas redondezas. Efeitos de adivinhação também não revelam nenhuma informação enquanto o sol não se por. Ao anoitecer, entretanto, caminhar pela vila seguindo os sons de música leva até as tendas negras. No arco de madeira na entrada, estilizado como uma bocarra com caninos alongados, está escrito “Circo Sombria”."
+    },
+    {
+      type: "text",
+      content: "Devotos de Tenebra, Azgher, ou aqueles que passarem em um teste de RELIGIÃO (CD 20) conseguem perceber a ligação deste circo com a Deusa da Noite. As pessoas no interior do local parecem muito felizes, sorrindo e brincando nas diversas atrações menores na parte externa da tenda principal."
+    },
+    {
+      type: "text",
+      content: "Infelizmente, parte disso é uma ilusão. Algumas dessas pessoas são mortos-vivos, surgidos de sacrifícios de noites anteriores, mas, no interior deste circo dedicado à Tenebra, agem e parecem vivos novamente."
+    },
+    {
+      type: "text",
+      content: "Só é possível perceber que há algo de errado com um teste de INVESTIGAÇÃO, INTUIÇÃO, MISTICISMO ou RELIGIÃO (CD 30). Ainda assim, mesmo quando informadas de sua “condição”, elas se recusarão a acreditar que estão mortas."
+    },
+    {
+      type: "text",
+      content: "No pátio principal há algumas opções de entretenimento que os personagens podem querer participar. Todos os funcionários do circo são mortos-vivos e sabem de sua verdadeira natureza, mas são excelentes em fingir seu desconhecimento (ENGANAÇÃO +15). As opções são brincadeiras, comidas, previsões e a tenda de espelhos."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "BRINCADEIRAS"
+    },
+    {
+      type: "text",
+      content: "Existem diversos jogos e desafios no circo. É necessário pagar para participar, mas alguns dos prêmios são bastante interessantes, valendo pequenas fortunas."
+    },
+    {
+      type: "text",
+      content: "Para participar dos jogos, um personagem deve pagar T$ 5. Um teste estendido de PONTARIA (CD 20, 3 SUCESSOS) representa os jogos de precisão (como dardos ou acertar argolas em garrafas), enquanto um único teste de ATLETISMO (CD 20) representa proeza física (levantar pesos, bater martelo em uma geringonça que toca um sino). Se ganhar (passando no teste), o aventureiro recebe uma riqueza menor (Tormenta20, p. 330), mas deve passar em um teste de VONTADE (CD 20) ou ficará fraco até o próximo amanhecer."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "COMIDAS"
+    },
+    {
+      type: "text",
+      content: "Diversas barraquinhas servem todo o tipo de guloseima possível. Os estômagos de vocês roncam ao ver uma porção de batatas valkarianas caprichada saindo do óleo."
+    },
+    {
+      type: "text",
+      content: "Aqui é possível comprar qualquer item de alimentação pela metade do preço. Entretanto, todos estão amaldiçoados. As comidas deixam quem as coma enjoado até o nascer do sol (FORTITUDE CD 20 EVITA). Apesar disso, elas ainda fornecem os mesmos benefícios que o item ofereceria."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "PREVISÕES"
+    },
+    {
+      type: "text",
+      content: "Em uma única tenda há uma mulher coberta com um capuz negro. Suas mãos são muito pálidas e sua voz é melódica. “Sentem-se, por favor.” Assim que se acomodam, ela espalha estranhas cartas à sua frente."
+    },
+    {
+      type: "text",
+      content: "Selina é uma das poucas funcionárias do circo descontentes com sua condição. Está aqui só porque foi enganada, e deseja que o líder do circo seja derrotado. Entretanto, não vai se arriscar se não houver uma chance grande de vitória."
+    },
+    {
+      type: "text",
+      content: "Sempre que ela ler o futuro de um dos personagens, o mestre rola 1d6.\n- 1 - Nada: “As forças místicas não me permitem ver seu destino.”\n- 2 a 4 - Miséria: “Sombras em sua alma, sinto dizer que o mal te procura.”\n- 5 e 6 - Felicidade: “Os deuses gostam de você... e eu também.”"
+    },
+    {
+      type: "text",
+      content: "Se o resultado tiver sido miséria, o aventureiro fica frustrado até o dia seguinte (Vontade CD 20 evita). Por outro lado, felicidade faz um efeito similar ao símbolo sagrado de Azgher, vide a próxima cena."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "TENDA DE ESPELHOS"
+    },
+    {
+      type: "text",
+      content: "Na entrada, um anunciante chama: “Se desejam provar sua coragem, não há lugar melhor! Enfrentem seus medos aqui!”. A entrada é simples, e existem velas iluminando o caminho por entre os espelhos. Os reflexos são distorcidos, os corredores parecem infinitos, e algo parece espreitar ao longe."
+    },
+    {
+      type: "text",
+      content: "Esta tenda está sob efeito da magia Assassino Fantasmagórico. Um personagem que use MISTICISMO ou Visão Mística percebe que o lugar tem uma aura moderada."
+    },
+    {
+      type: "text",
+      content: "Quem entra na tenda e anda por algum tempo encontra-se repentinamente frente a frente com uma imagem monstruosa daquilo que mais teme. Se mais de um personagem resolver entrar, apenas um deles é afetado. Esta vítima deve fazer um teste de VONTADE (CD 20). Passando, percebe a natureza ilusória do reflexo."
+    },
+    {
+      type: "text",
+      content: "Se falhar, a vítima é atacada pela imagem apavorante, e precisa fazer um teste de FORTITUDE (CD 20). Um sucesso causa 6d6 pontos de dano de trevas (que não reduz a vítima a menos de 0 PV e não a deixa sangrando). Uma falha deixa o personagem com –1 PV e sangrando, devido a um colapso."
+    },
+    {
+      type: "text",
+      content: "Caso os personagens desejem investigar a tenda principal, ou as carroças que alojam os trabalhadores do circo, são interceptados por duas figuras muito estranhas. Um deles é bem alto e musculoso, suas roupas pretas e roxas são bufantes, e em seu rosto há um sorriso pintado de vermelho. O outro é mais baixo, franzino, suas roupas são completamente brancas, assim como sua face, exceto por seus olhos negros e uma boca triste feita com tinta preta."
+    },
+    {
+      type: "text",
+      content: "CRIATURAS. Bianco e Rojo (NPCs e Criaturas)."
+    },
+    {
+      type: "text",
+      content: "Estes dois monstros mortos-vivos servem de segurança contra aventureiros intrometidos. Eles atacam afastados da multidão que se diverte, e lutam até a sua destruição."
+    },
+    {
+      type: "text",
+      content: "Após terem feito as ações que os interessavam, ou enfrentarem os dois palhaços mortos-vivos, uma corneta sinistra toca, anunciando o começo do grande show."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "CENA 4: O PICADEIRO"
+    },
+    {
+      type: "text",
+      content: "Quando a corneta toca, todos na área do circo param e se dirigem para o interior da tenda principal. Seus movimentos são como de marionetes. Se sacudidos, fazem o possível para se desvencilhar e seguir seu caminho. Lá dentro há arquibancadas de madeira ao redor de um picadeiro, e no centro dele há um enorme cubo coberto com um pano. Lamparinas iluminam um pouco o ambiente."
+    },
+    {
+      type: "text",
+      content: "Uma voz grave, vinda das próprias paredes feitas de lona diz: “Senhoras e senhores, estão prontos para o show desta noite?”."
+    },
+    {
+      type: "text",
+      content: "Todos os personagens devem fazer um teste de VONTADE (CD 20), ou ficarão fascinados. Devotos de Tenebra, quem estiver com o símbolo sagrado de Azgher (conquistado na Cena 2) e aqueles que tiverem obtido uma previsão de felicidade não são afetados por este efeito, podendo remover a condição dos outros aventureiros com uma ação padrão."
+    },
+    {
+      type: "text",
+      content: "Se não enfrentaram Bianco e Rojo (NPCs e Criaturas) ainda, eles atacam os personagens agora, antes de entrarem na tenda principal."
+    },
+    {
+      type: "text",
+      content: "No interior, o grupo vê as pessoas sentadas, e fogos-fátuos projetados sobre suas cabeças. No centro do picadeiro, um homem vestindo trajes sombrios e elegantes, começa a falar."
+    },
+    {
+      type: "text",
+      content: "“Ora, ora, ora. Temos um espetáculo diferente nesta bela noite! Além de um banquete de oferendas para minha Senhora, a deusa Tenebra, recebemos novos membros para nossa estimada companhia circense!”"
+    },
+    {
+      type: "text",
+      content: "O homem, chamado Morrise, puxa o pano, revelando a fera em seu interior. O corpo lembra um leão apodrecido, suas asas de couro estão esburacadas, e o rosto parece uma versão grande do rosto de um zumbi."
+    },
+    {
+      type: "text",
+      content: "O cultista então abre a jaula e atiça o monstro contra os aventureiros."
+    },
+    {
+      type: "text",
+      content: "CRIATURAS. Morrise e Mantícora Zumbi (NPCs e Criaturas)."
+    },
+    {
+      type: "text",
+      content: "Este combate é bastante difícil. Morrise usa suas magias para reforçar a mantícora e seu chicote para atacar caso um aventureiro se aproxime demais. A mantícora zumbi ataca como a besta morta-viva que é, mas caso seu mestre esteja em perigo, focará no causador do problema."
+    },
+    {
+      type: "text",
+      content: "Se a mantícora zumbi for derrotada primeiro, Morrise tentará fugir. Já se o mestre de cerimônias for derrotado antes da fera, ela irá focar em devorar os visitantes vivos, que despertam de seu fascínio para o horror do momento."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "EPÍLOGO: SEM GRAÇA"
+    },
+    {
+      type: "text",
+      content: "Todo o ambiente começa a tremeluzir. As lonas que formam as barracas tornam-se translúcidas, para depois desaparecerem. Os vivos, após recuperarem sua consciência, veem os mortos ao seu redor. Aqueles que foram transformados em zumbis nas apresentações anteriores recuperam a consciência por um momento, antes de caírem como um cadáver comum. Alguns até mesmo continuam de pé, agora como osteon."
+    },
+    {
+      type: "text",
+      content: "A vidente Selina espera os personagens, ainda coberta com seu capuz negro, para agradecê-los por sua liberdade. As pessoas da vila também estão extremamente gratas, mesmo que tristes com a perda de conhecidos e familiares. Apesar disso, desejam demonstrar sua gratidão oferecendo aos personagens o equivalente a um tesouro de ND 5."
+    },
+    {
+      type: "text",
+      content: "Quando voltarem à cidade em que começaram a aventura, Matilda dirá que soube do ocorrido. Ela recompensa os personagens com tudo que foi prometido e mais T$ 1.000 por terem ajudado a vila. Se Morrise tiver fugido, ele planejará sua vingança contra os aventureiros, assim como seu próximo grande sacrifício."
+    },
+    {
+      type: "text",
+      content: "E os personagens avançam para o 5º nível!"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "NPCS E CRIATURAS"
+    },
+    {
+      type: "text",
+      content: "BIANCO (ND 2)\nMorto-Vivo Médio\nINICIATIVA +7, PERCEPÇÃO +6, visão no escuro\nDEFESA 15, FORT +2, REF +12, VON +8\nPONTOS DE VIDA 45\nDESLOCAMENTO 12m (8q)\nPONTOS DE MANA 8\nCORPO A CORPO Pancada +8 (1d6+4).\nATAQUE FURTIVO +2d6.\nSOMBRA BRANCA Bianco não sofre penalidade em testes de Furtividade por se mover com seu deslocamento normal e reduz a penalidade por atacar e fazer outras ações chamativas para –10.\nTRUQUE CIRCENSE Bianco pode lançar as seguintes magias simuladas como um conjurador arcano de 2º nível (CD 18).\n- Área Escorregadia (Padrão, 2 PM) Criaturas numa área de 4,5m de lado em alcance curto ficam caídas (Ref evita). Nas rodadas seguintes, criaturas que tentem se movimentar pela área devem fazer um teste de Acrobacia para equilíbrio (CD 15).\n- Hipnotismo (Padrão, 1 PM) Um humanoide em alcance curto fica fascinado por 1d4 rodadas (Von evita e deixa imune por 1 dia).\n- Imagem Espelhada (Padrão, 1 PM) Três cópias ilusórias de Bianco surgem ao seu redor, concedendo +6 na Defesa. Cada vez que um ataque erra Bianco, uma das cópias desaparece e o bônus na Defesa diminui em 2.\n- Primor Atlético (Padrão, 2 PM) Até o fim da cena, Bianco recebe deslocamento +9m, +10 em Atletismo e pode escalar paredes sem teste e sem ficar desprevenido.\nFor –1, Des 4, Con 1, Int –1, Sab 3, Car 2\nPERÍCIAS Acrobacia +10, Atuação +6, Enganação +8, Furtividade +10.\nEQUIPAMENTO Camisa bufante, estojo de disfarces.\nTESOURO Metade."
+    },
+    {
+      type: "text",
+      content: "ROJO (ND 2)\nMorto-Vivo Médio\nINICIATIVA +2, PERCEPÇÃO +1, visão no escuro\nDEFESA 18, FORT +12, REF +8, VON +2\nPONTOS DE VIDA 80\nDESLOCAMENTO 9m (6q)\nCORPO A CORPO Duas Pancadas +10 (1d8+5).\nCASCUDO Rojo reduz todo dano de corte, impacto e perfuração que sofre à metade.\nVIOLÊNCIA CÔMICA Sempre que sofre dano, Rojo recebe um bônus de +1 em testes de ataque e rolagens de dano até o fim da cena (até um máximo de +5). Se esse bônus chegar a +5, o tamanho de Rojo muda para Grande (–2 em Furtividade, +2 em manobras, dano aumenta em +1 passo) e seus ataques de pancada causam +1d6 pontos de dano de trevas. Se Rojo passar 1 rodada sem sofrer dano, perde o bônus e seu tamanho volta ao normal.\nFor 5, Des 1, Con 4, Int –3, Sab 0, Car 1\nPERÍCIAS Acrobacia +4, Atletismo +8, Atuação +4.\nTESOURO Metade."
+    },
+    {
+      type: "text",
+      content: "MANTÍCORA ZUMBI (ND 3)\nMorto-Vivo Grande\nINICIATIVA +4, PERCEPÇÃO +3, visão no escuro\nDEFESA 20, FORT +14, REF +4, VON +9\nPONTOS DE VIDA 27\nDESLOCAMENTO 6m (4q), voo 9m (6q)\nCORPO A CORPO Duas garras +16 (1d8+8).\nESPINHOS PUTREFATOS (PADRÃO) Uma vez por cena, a mantícora zumbi dispara 1d4 espinhos de sua cauda. Cada espinho atinge uma criatura em alcance médio, causando 1d6+3 pontos de dano de perfuração e 1d6 pontos de dano de trevas (Ref CD 17 reduz todo o dano à metade).\nFRAQUEZA ZUMBI A mantícora sofre o dobro de dano de acertos críticos ou de ataques feitos contra seu cérebro (Defesa 30).\nFor 6, Des 0, Con 4, Int —, Sab –1, Car 0\nTESOURO Nenhum."
+    },
+    {
+      type: "text",
+      content: "MORRISE (ND 3)\nHumanoide (humano) Médio\nINICIATIVA +5, PERCEPÇÃO +5, visão no escuro\nDEFESA 20, FORT +2, REF +10, VON +15\nPONTOS DE VIDA 70\nDESLOCAMENTO 9m (6q)\nPONTOS DE MANA 23\nCORPO A CORPO Chicote +12 (1d4+8, mais 2d6 trevas).\nESTALO DO CHICOTE (PADRÃO, 2 PM) Morrise e todos os seus aliados em alcance curto recebem +2 em testes de perícia até o fim da cena.\nPASSO SOMBRIO (LIVRE, 2 PM) Morrise se teletransporta para um espaço desocupado em alcance curto.\nTRANSFERIR SOFRIMENTO (REAÇÃO) Uma vez por rodada, quando Morrise sofre uma condição ou dano, ele transfere para a mantícora zumbi.\nMAGIAS Como um feiticeiro de 3º nível (CD 20).\n- Amedrontar (Padrão, 3 PM) Um animal ou humanoide em alcance curto fica apavorado por 1d4+1 rodadas e depois abalado (Von reduz para abalado por 1d4 rodadas).\n- Escuridão (Padrão, 3 PM) Até o fim da cena, um objeto em alcance curto emana escuridão total em um raio de 6m, bloqueando a visão na área e através dela.\n- Infligir Ferimentos (Padrão, 3 PM) Uma criatura adjacente sofre 3d8+3 pontos de dano de trevas (Fort reduz à metade).\n- Raio do Enfraquecimento (Padrão, 3 PM) Uma criatura em alcance curto fica exausta (Fort reduz para fatigada).\n- Vitalidade Fantasma (Padrão, 3 PM) Morrise recebe 3d10 PV temporários.\nFor 1, Des 2, Con 0, Int 3, Sab 2, Car 5\nPERÍCIAS Acrobacia +3, Adestramento +3, Atuação +3, Misticismo +3, Religião +3.\nEQUIPAMENTO Chicote cruel equilibrado, traje da corte macabro.\nTESOURO Dobro."
+    }
+  ]
+},
 ];

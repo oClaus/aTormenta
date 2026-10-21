@@ -1393,6 +1393,7 @@ export const origins: Origin[] = [
 
 
   //#region Dragão Brasil
+  // Dragão Brasil - 214
   { id: "Iniciado Verdugo (Ubani)",
     name: "Iniciado Verdugo (Ubani)",
     description: "Em Ubani, os ofícios da morte eram ensinados na cidade perdida de Ojumajele. Depois de sua queda diante da Tormenta, estes assuntos se tornaram cada vez mais tabu. Ainda existem aqueles, porém, devotados a cuidar dos ritos fúnebres e eliminar mortos-vivos.",
@@ -1410,6 +1411,57 @@ export const origins: Origin[] = [
       description: ""
     },
     source: "Dragão Brasil - 214"
+  },
+  // Dragão Brasil - 231
+  { id: "Criança do Crepúsculo",
+    name: "Criança do Crepúsculo",
+    description: "Você nasceu no Vale do Crepúsculo e, por algum motivo, abandonou a segurança de sua terra natal em busca dos perigos e da aventura que o restante de Arton tem a oferecer.",
+    items: [
+      "Uma poção mágica contendo uma magia de 1º círculo (1 PM)."
+    ],
+    benefits: [
+      "Escolha duas de suas habilidades com um custo em PM, uma para dia, outra para noite. Quando usa a habilidade escolhida para dia enquanto sob luz solar ou equivalente, o custo dela diminui em –1 PM e o custo da outra habilidade aumenta em +1 PM. Quando usa a habilidade escolhida para noite sob efeito de escuridão, esses modificadores nos custos se invertem. Por fim, durante o crepúsculo, o custo de ambas as habilidades diminui em –1 PM. Uma vez por patamar acima de iniciante, você pode trocar as habilidades escolhidas. Este poder não pode ser escolhido por construtos ou mortos-vivos."
+    ],
+    uniquePower: {
+      name: "",
+      description: ""
+    },
+    source: "Dragão Brasil - 231"
+  },
+  { id: "Nascido nas Estepes",
+    name: "Nascido nas Estepes",
+    description: "Você cresceu entre os dai-kerat e foi criado na tênue linha entre os rigores do deserto e a sofisticação da herança tamuraniana.",
+    items: [
+      "Arco curto",
+      "cavalo de guerra",
+      "flecha x20",
+      "veste de seda."
+    ],
+    benefits: [
+      "Você recebe +2 em Cavalgar e Vontade e nas rolagens de dano com arcos curtos e katanas."
+    ],
+    uniquePower: {
+      name: "",
+      description: ""
+    },
+    source: "Dragão Brasil - 231"
+  },
+  { id: "Nômade Ferani",
+    name: "Nômade Ferani",
+    description: "Trog ou não, você passou sua infância entre os ferani, aprendendo como percorrer os ermos de forma rápida e discreta.",
+    items: [
+      "Lança",
+      "manto camuflado (deserto)",
+      "ração de viagem x10."
+    ],
+    benefits: [
+      "Você recebe +2 em Fortitude e Furtividade e nas rolagens de dano contra criaturas desprevenidas. Além disso, pode atravessar terrenos difíceis sem sofrer redução em seu deslocamento — se já puder fazer isso por outra habilidade, em vez disso seu deslocamento aumenta em +3m."
+    ],
+    uniquePower: {
+      name: "",
+      description: ""
+    },
+    source: "Dragão Brasil - 231"
   },
   //#endregion
 

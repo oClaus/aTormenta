@@ -108,7 +108,17 @@ export const powersGeraisConcedido: Power[] = [
     description: "Uma vez por cena, você tem sucesso automático em testes de Investigação para encontrar armadilhas realizados no subterrâneo ou dentro de uma masmorra.",
     origin: "Dragão Brasil - 228"
   },
+  // Dragão Brasil - 231
+  { id: "Canção da Pedra (Allihanna, Megalokk)",
+    name: "Canção da Pedra (Allihanna, Megalokk)",
+    description: "Você pode usar Religião em vez de Ofício para testes relacionados a grandes estruturas de pedra, como veículos e construções, e no lugar de Pilotagem para conduzir veículos de pedra. Além disso, aprende e pode lançar Transmutar Objetos (apenas em objetos de pedra) e, se puder lançar magias divinas de 3º círculo, aprende e pode lançar Controlar Terra. Caso aprenda novamente essas magias, seu custo diminui em –1 PM. Apenas druidas podem escolher este poder.",
+    origin: "Dragão Brasil - 231"
+  },
   //#endregion
+
+
+
+
 
   //#region Tormenta20 - Jogo do Ano
    { id: "Afinidade com a Tormenta (Aharadak)",
@@ -545,6 +555,10 @@ export const powersGeraisConcedido: Power[] = [
   },
   //#endregion
 
+
+
+
+  
   //#region Guia dos Deuses Menores
   { id: "Espadachim Divino (A Espada-Deus)",
     name: "Espadachim Divino (A Espada-Deus)",

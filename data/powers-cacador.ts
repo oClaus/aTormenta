@@ -144,32 +144,6 @@ export const powersCacador: Power[] = [
   //#endregion
 
   //#region Dragão Brasil
-  // Dragão Brasil - 211
-  { id: "Arsenal do Deserto",
-    name: "Arsenal do Deserto",
-    description: "Você recebe +2 nas rolagens de dano com azagaias, cimitarras e lanças. Para você, essas armas são armas leves.",
-    origin: "Dragão Brasil - 211"
-  },
-  { id: "Escaramuça Distante",
-    name: "Escaramuça Distante",
-    description: "Você pode usar Escaramuça e Dança da Areia contra alvos em alcance médio.",
-    origin: "Dragão Brasil - 211"
-  },
-  { id: "Passo Duplo",
-    name: "Passo Duplo",
-    description: "Se estiver usando Escaramuça ou Dança da Areia e usar a ação agredir para fazer um ataque corpo a corpo com uma arma leve, você pode gastar 2PM para fazer um ataque adicional.",
-    origin: "Dragão Brasil - 211"
-  },
-  { id: "Passos Precisos",
-    name: "Passos Precisos",
-    description: "Enquanto estiver usando Escaramuça ou Dança da Areia, você recebe +2 na margem de ameaça de seus ataques.",
-    origin: "Dragão Brasil - 211"
-  },
-  { id: "Tesouros da Natureza",
-    name: "Tesouros da Natureza",
-    description: "Sempre que for bem-sucedido em montar um acampamento em terreno natural, você encontra frutos, insetos ou outros recursos naturais que recuperam 1 PM por  patamar de cada personagem acampado.",
-    origin: "Dragão Brasil - 211"
-  },
   // Dragão Brasil - 212
   { id: "Emboscada Oportuna",
     name: "Emboscada Oportuna",
@@ -182,6 +156,33 @@ export const powersCacador: Power[] = [
     description: "Seu olfato é ainda mais aguçado, treinado para caça. Você recebe +5 em testes de Sobrevivência para rastrear e identificar criatura usando seu Faro. Se usar Marca da Presa contra o alvo dessas ações, seu custo diminui em –1 PM.",
     prerequisite: "qualquer raça (ou herança moreau) que conceda a habilidade Faro.",
     origin: "Dragão Brasil - 212"
+  },
+  // Dragão Brasil - 231
+  { id: "Arsenal do Deserto",
+    name: "Arsenal do Deserto",
+    description: "Você recebe +2 nas rolagens de dano com azagaias, cimitarras e lanças e considera essas armas como leves.",
+    origin: "Dragão Brasil - 231"
+  },
+  { id: "Escaramuça Distante",
+    name: "Escaramuça Distante",
+    description: "Você pode usar Escaramuça e Dança da Areia contra alvos em alcance médio.",
+    origin: "Dragão Brasil - 231"
+  },
+  { id: "Passo Duplo",
+    name: "Passo Duplo",
+    description: "Uma vez por rodada, se estiver usando Escaramuça ou Dança da Areia e usar a ação agredir para fazer um ataque corpo a corpo com uma arma leve, você pode gastar 2 PM para fazer um ataque adicional.",
+    prerequisite: "Dança da Areia ou Escaramuça, 5º nível de caçador.",
+    origin: "Dragão Brasil - 231"
+  },
+  { id: "Passos Precisos",
+    name: "Passos Precisos",
+    description: "Enquanto estiver usando Escaramuça ou Dança da Areia, você recebe +2 na margem de ameaça de seus ataques.",
+    origin: "Dragão Brasil - 231"
+  },
+  { id: "Tesouros da Natureza",
+    name: "Tesouros da Natureza",
+    description: "Sempre que for bem-sucedido em montar um acampamento em terreno natural, você encontra frutos, insetos ou outros recursos naturais que ajudam a recuperar as energias. Cada personagem acampado recupera 1 PM por patamar em que você está.",
+    origin: "Dragão Brasil - 231"
   },
   //#endregion
 
