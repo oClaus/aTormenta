@@ -234,6 +234,19 @@ export const materialPrices: MaterialPriceRow[] = [
     description_arma: "Apenas espadas que causem dano de corte podem ser fabricadas com este material. Uma espada de hajalbar é considerada mágica para propósitos de redução de dano e imunidades, e causa +2 pontos de dano de essência.",
     origin: "Dragão Brasil - 183"
   },
+  // Dragão Brasil - 198
+  {
+  material: "Necrotaurite",
+  Arma: "—",
+  "Armadura Leve": "",
+  "Armadura Pesada": "",
+  Escudo: "",
+  Esotéricos: "—",
+  description: "O material desenvolvido por Kamen Roth a partir de estilhaços do chifre de Tauron é tão perigoso quanto raro. Se parece com carvão esculpido, com aspecto poroso apesar da grande resistência. Com os esforços da Academia Arcana, muito foi desvendado sobre a composição e os efeitos da necrotaurite. O material absorve energia divina, podendo inclusive bloquear o contato entre deuses menores e seus servos, se utilizado em quantidades suficientes e em lugares estratégicos. Além disso, pode gerar armas e esotéricos mortais, alinhados à necromancia.\nO maior perigo da necrotaurite, porém, vem quando uma criatura morre com o material dentro do corpo. Isso pode ser feito quando um atacante deixa uma adaga de necrotaurite no corpo de uma vítima ou de forma mais controlada, com implantes deliberados da substância em criaturas vivas em um processo longo e doloroso. Uma criatura morta dessa forma retorna como um morto-vivo; o ND da criatura é igual ao da vítima mais 1d4 (ou 1d8 no caso do implante deliberado). Todos os mortos-vivos conhecidos surgidos dessa forma estavam sob controle de Karmen, talvez por conta de detalhes na criação da própria necrotaurite.\nSua capacidade de absorver energia divina também permite que seja usada como fonte de energia. Todas as peças roubadas dos devotos de Benthos pelo plano de Karmen em Khubar foram convertidas na fonte de energia do colosso purista usado durante sua campanha militar em Svalas.\nDevido à raridade da necrotaurite, quaisquer itens feitos com o material são considerados artefatos.",
+  description_arma: "Causa um dado extra de dano de trevas do mesmo tipo da arma.",
+  description_esoterico: "+2 na CD de magias de necromancia.",
+  origin: "Dragão Brasil - 198"
+  },
   //#endregion
 
 

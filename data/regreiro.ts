@@ -9,6 +9,56 @@ import { RegreiroQA } from "@/types/regreiro";
 
 export const regreiroQAs: RegreiroQA[] = [
 
+  //#region DB - 198
+  {
+    id: "DB198-01",
+    question: "> Saudações, excelentíssimos juízes. Trago duas dúvidas:\n\n1) Um lutador pode usar consumíveis enquanto estiver agarrando ou imobilizando um alvo? Por exemplo, sacando uma poção com a ação de movimento e ingerindo-a com a ação padrão.",
+    answer: "> Saudações greco-romanas, conselheiro! Vamos às suas respostas:\n\n1) Sim, desde que o lutador tenha uma mão livre e ações disponíveis.",
+    magazineNumber: 198,
+  },
+  {
+    id: "DB198-02",
+    question: "2) Quando um lutador usa a manobra derrubar em um alvo agarrado, ele precisa ir para o chão também caso pretenda manter o agarrão ou pode permanecer em pé?",
+    answer: "2) Não precisa. O lutador pode manter o alvo agarrado mesmo permanecendo de pé.",
+    magazineNumber: 198,
+  },
+  {
+    id: "DB198-03",
+    question: "> Excelentíssimos juízes do STR, venho por meio desta pedir uma humilde clarificação sobre minúcias regreiras. No caso, exceções sobre acúmulos:\n\n1) No texto da versão básica da *Armadura Arcana* é descrito que esta acumula com outras magias (como *Imagem Espelhada*, *Salto Dimensional* e derivados). Contudo, no aprimoramento que muda a ação para reação (e oferece +5 contra o próximo ataque) não existe essa clarificação, mas diz que acumula com o bônus do efeito básico. Deveríamos encarar como uma magia completamente diferente e supor que este bônus não acumula com outras magias? Ou por se tratar da mesma magia o efeito se mantém?",
+    answer: "> Saudações acumuladas, conselheiro! Vamos às suas respostas:\n\n1) É a mesma magia, com as mesmas vantagens. O texto adicional do aprimoramento permite que acumule com o efeito base de *Armadura Arcana*, enquanto o texto da magia permite que acumule com outras magias. O aprimoramento acumula com ambas as opções.",
+    magazineNumber: 198,
+  },
+  {
+    id: "DB198-04",
+    question: "2) Bônus oriundos das mesmas fontes não se acumulam, mas armaduras e escudos são exceção. Porém, é especificado que seria com relação à Defesa. Isso também valeria para RD? Parece razoável presumir que a RD fornecida por uma armadura de adamante e um escudo de adamante acumulassem entre si (pois a personagem estaria mais protegida, com mais camadas do aço meteórico), mas não é especificado que a RD entraria na exceção.\n\nAgradeço desde já e que Thyatis lhes revele os melhores caminhos!",
+    answer: "2) Este é um dos assuntos mais frequentemente discutidos na nossa tribuna, conselheiro. Pela regra, RD de armadura e escudo não se acumula, por questões de equilíbrio de jogo. Porém, sabemos que uma das regras da casa mais comuns é permitir esse acumulo.",
+    magazineNumber: 198,
+  },
+  {
+    id: "DB198-05",
+    question: "> Inenarráveis Juízes do STR, gostaria de que permitissem alcançar a dádiva da gnose sobre os meandros das tramas que compõem a realidade, talvez não para este que vos indaga, mas ao público desta publicação.\n\nMuito se discute sobre a equivalência e o que \"vale\" quando há contradição entre o STR, FAQ e manual básico. Normalmente, me guio de maneira que FAQ + manual se sobressaem às respostas dadas aqui. Este é o comportamento correto, ou devo supor que o STR se sobressai por ser a última publicação?",
+    answer: "> Saudações contextualizadoras, conselheiro! Seu entendimento está correto. O FAQ e o manual básico são documentos oficiais de regra, enquanto o STR é um espaço para discussão sobre as mesmas. No máximo uma atualização do FAQ pode ser citada no STR antes de ser oficializada, mas os documentos oficiais têm prioridade.",
+    magazineNumber: 198,
+  },
+  {
+    id: "DB198-06",
+    question: "> Caros ministros, existe uma dúvida que sempre permeia minhas discussões. Ela foi respondida no FAQ, mas como este foi publicado antes da versão *Jogo do Ano*, gostaria de uma atualização da resposta de vossas excelências:\n\n1) O poder *Magia Discreta* elimina a condição terrível de conjuração por estar agarrado?",
+    answer: "> Saudações discretas, conselheiro! Vamos às suas respostas:\n\n1) Não. O poder apenas elimina a necessidade de gestos e palavras.",
+    magazineNumber: 198,
+  },
+  {
+    id: "DB198-07",
+    question: "2) Alguém algemado, pelo item algemas mesmo, consegue conjurar se tiver o poder *Magia Discreta*?",
+    answer: "2) Sim, pois não precisa de gestos.",
+    magazineNumber: 198,
+  },
+  {
+    id: "DB198-08",
+    question: "3) O poder *Magia Discreta* permite conjurar magias em uma área afetada pela magia *Silêncio*?\n\nDesde já grato,",
+    answer: "3) Sim, pois não precisa de palavras.",
+    magazineNumber: 198,
+  },
+  //#endregion
   //#region DB - 227
   {
     id: "DB227-01",
@@ -651,3 +701,4 @@ export const regreiroQAs: RegreiroQA[] = [
   },
   //#endregion
 ];
+

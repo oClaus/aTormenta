@@ -124,7 +124,47 @@ export const powersBarbaro: Power[] = [
   },
   //#endregion
 
+
+
+
+  
   //#region Dragão Brasil
+  // Dragão Brasil - 198
+  { id: "Fúria Rodopiante",
+    name: "Fúria Rodopiante",
+    description: "Quando está em Fúria, você soma o multiplicador de crítico de uma arma corpo a corpo empunhada à sua Defesa.",
+    origin: "Dragão Brasil - 198"
+  },
+  { id: "Instinto Feral",
+    name: "Instinto Feral",
+    description: "Você aplica seu bônus de Instinto Selvagem em testes de Adestramento e Cavalgar",
+    prerequisite: "Instinto Selvagem",
+    origin: "Dragão Brasil - 198"
+  },
+  { id: "Instinto Furioso",
+    name: "Instinto Furioso",
+    description: "Enquanto está em fúria, você soma seu bônus de fúria ao bônus de Instinto Selvagem.",
+    prerequisite: "Instinto Selvagem, 15º nível de bárbaro",
+    origin: "Dragão Brasil - 198"
+  },
+  { id: "Instinto Indomável",
+    name: "Instinto Indomável",
+    description: "Você pode usar Força Indomável com qualquer perícia contemplada por Instinto Selvagem",
+    prerequisite: "Força Indomável, 10º nível de bárbaro",
+    origin: "Dragão Brasil - 198"
+  },
+  { id: "Instinto Sábio",
+    name: "Instinto Sábio",
+    description: "Você aplica seu bônus de Instinto Selvagem em testes de Cura e Misticismo.",
+    prerequisite: "Instinto Selvagem",
+    origin: "Dragão Brasil - 198"
+  },
+  { id: "Instinto Robusto",
+    name: "Instinto Robusto",
+    description: "Você aplica seu bônus de Instinto Selvagem em testes de Atletismo e Intimidação.",
+    prerequisite: "Instinto Selvagem",
+    origin: "Dragão Brasil - 198"
+  },
   // Dragão Brasil - 212
   { id: "Fúria do Gigante",
     name: "Fúria do Gigante",

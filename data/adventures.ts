@@ -7589,5 +7589,269 @@ export const adventures: Adventure[] = [
       content: "MORRISE (ND 3)\nHumanoide (humano) Médio\nINICIATIVA +5, PERCEPÇÃO +5, visão no escuro\nDEFESA 20, FORT +2, REF +10, VON +15\nPONTOS DE VIDA 70\nDESLOCAMENTO 9m (6q)\nPONTOS DE MANA 23\nCORPO A CORPO Chicote +12 (1d4+8, mais 2d6 trevas).\nESTALO DO CHICOTE (PADRÃO, 2 PM) Morrise e todos os seus aliados em alcance curto recebem +2 em testes de perícia até o fim da cena.\nPASSO SOMBRIO (LIVRE, 2 PM) Morrise se teletransporta para um espaço desocupado em alcance curto.\nTRANSFERIR SOFRIMENTO (REAÇÃO) Uma vez por rodada, quando Morrise sofre uma condição ou dano, ele transfere para a mantícora zumbi.\nMAGIAS Como um feiticeiro de 3º nível (CD 20).\n- Amedrontar (Padrão, 3 PM) Um animal ou humanoide em alcance curto fica apavorado por 1d4+1 rodadas e depois abalado (Von reduz para abalado por 1d4 rodadas).\n- Escuridão (Padrão, 3 PM) Até o fim da cena, um objeto em alcance curto emana escuridão total em um raio de 6m, bloqueando a visão na área e através dela.\n- Infligir Ferimentos (Padrão, 3 PM) Uma criatura adjacente sofre 3d8+3 pontos de dano de trevas (Fort reduz à metade).\n- Raio do Enfraquecimento (Padrão, 3 PM) Uma criatura em alcance curto fica exausta (Fort reduz para fatigada).\n- Vitalidade Fantasma (Padrão, 3 PM) Morrise recebe 3d10 PV temporários.\nFor 1, Des 2, Con 0, Int 3, Sab 2, Car 5\nPERÍCIAS Acrobacia +3, Adestramento +3, Atuação +3, Misticismo +3, Religião +3.\nEQUIPAMENTO Chicote cruel equilibrado, traje da corte macabro.\nTESOURO Dobro."
     }
   ]
-},
+  },
+  { id: "Um Novo Dia para Morrer",
+  name: "Um Novo Dia para Morrer",
+  theme: "Fantasia e Mistério Divino",
+  image: "/aventuras/um-novo-dia-para-morrer.png",
+  summary: "Despertados após a morte em Triunphus, a cidade da ressurreição, os heróis recebem uma visão divina de Thyatis. A missão os leva a investigar desaparecimentos, enfrentar feras em uma arena clandestina e deter um culto da Tormenta.",
+  sections: [
+    {
+      type: "text",
+      content: "A coluna Breves Jornadas oferece aventuras simples, rápidas e completas para Tormenta20, com tudo que será necessário para jogar. Fichas especiais serão fornecidas aqui, enquanto àquelas presentes no livro básico terão indicadas as páginas em que se encontram. O objetivo é fornecer ao mestre um ponto de partida eficiente para que todos se divirtam por uma tarde, ou comecem uma nova campanha. Se precisar de fichas de personagens prontas, é possível encontrá-las na coluna Heróis de Bolso, no Blog da Jambô."
+    },
+    {
+      type: "text",
+      content: "Esta aventura chama-se Um novo dia para morrer."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Introdução"
+    },
+    {
+      type: "text",
+      content: "Triunphus. Cidade da benção-maldição, onde os mortos renascem, porém sem poder deixar o local. Um dos lugares mais exóticos do mundo, e isso é bastante significativo quando este mundo é Arton. De tempos em tempos a horda Móock, liderada pela própria ave flamejante de duas cabeças, varre tudo em seu caminho, apenas para a população erguer-se novamente nos dias seguintes."
+    },
+    {
+      type: "text",
+      content: "O patrono da cidade, Thyatis, é o Deus da Ressurreição e Profecia, então, por vezes aqueles que retornam são agraciados com uma visão. Muitas são missões divinas, como uma indicação de algo a ser feito, enviado pela própria deidade. Poucos se arriscam a não cumprir uma dessas, temendo o fim da nova chance recebida. E em uma cidade onde a morte é apenas um inconveniente, não faltam chances para tentar novamente."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Resumo da Aventura"
+    },
+    {
+      type: "text",
+      content: "Um novo dia para morrer é uma breve jornada, uma aventura curta pensada para uma sessão única, mas que pode ser inserida em uma campanha maior. É ideal para um grupo de quatro personagens de 1º nível em Tormenta20."
+    },
+    {
+      type: "text",
+      content: "Despertados após terem morrido durante um ataque do Moóck, os personagens recebem uma missão divina: devem investigar estranhos desaparecimentos na parte velha de Triunphus. Lá precisarão indagar as pessoas à procura por pistas, até chegar à dona de uma taverna local. Entretanto, para impressioná-la, terão que derrotar uma fera terrível (mas, por sorte, morrer não é um problema aqui)."
+    },
+    {
+      type: "text",
+      content: "Direcionados pela proprietária, encontrarão uma casa com um perigo bem maior: o começo de um culto à Tormenta, que tenta se infiltrar. Lidar com essas ameaças, de forma que não as confine à cidade, vai exigir consideração meticulosa dos personagens."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 1 – O despertar dos mortos"
+    },
+    {
+      type: "text",
+      content: "Uma escuridão profunda é tudo que vocês veem. Subitamente, chamas irrompem à frente, em uma explosão de luz, mas sem queimar. Logo é possível ver uma cidade, vista de cima, com muralhas imponentes. Há um pio alto, e então algumas pessoas começam a ser sugadas pelo chão. Uma voz, no fundo de sua mente diz “Encontre”."
+    },
+    {
+      type: "text",
+      content: "Então seus olhos abrem. Há um lençol sobre cada um de vocês, aumentando ainda mais a confusão desse despertar. Um jovem humano, vestindo mantos vermelhos com uma fênix bordada se aproxima."
+    },
+    {
+      type: "text",
+      content: "“Calma, calma”, ele diz, “Voltar à vida não é uma das experiências mais tranquilas, ao menos da primeira vez”."
+    },
+    {
+      type: "text",
+      content: "Ele se apresenta como Melvin, noviço de Thyatis. Conforme a confusão mental diminui, vocês notam outras pessoas ao redor. Algumas ainda estão inertes, enquanto outras se levantam, com a maior normalidade do mundo. Melvin vai até uma mesa e traz para uma bandeja com cumbucas de uma sopa grossa, mas muito cheirosa."
+    },
+    {
+      type: "text",
+      content: "“Comam, vocês devem estar famintos. Conseguem se lembrar do que aconteceu?”"
+    },
+    {
+      type: "text",
+      content: "Os personagens lembram de uma devastação de chamas, assim como uma imensa ave de duas cabeças, formada completamente de fogo."
+    },
+    {
+      type: "text",
+      content: "“O Móock, sim. É uma pena terem sido pegos no meio do ataque da horda. Triunphus é linda nessa época do ano.”"
+    },
+    {
+      type: "text",
+      content: "As peças começam a se encaixar. Por motivos diversos, cada um de vocês chegou à cidade. Porém, ninguém contava com o repentino avanço dos monstros, e vocês foram abatidos, estando agora sob efeito da “benção” local."
+    },
+    {
+      type: "text",
+      content: "“Caso vocês não tenham onde ficar, podem passar uns dias aqui no templo de Thyatis. Não é o lugar mais confortável do mundo, mas é um local de recomeços. Se eu puder ajudar em qualquer coisa, é só avisar!”"
+    },
+    {
+      type: "text",
+      content: "Se ninguém parecer curioso sobre o estranho sonho descrito, Melvin pode perguntar se tiveram algum viram algo enquanto estavam mortos. É uma oportunidade para descobrirem que todos tiveram a mesma visão."
+    },
+    {
+      type: "text",
+      content: "“Interessante. Isso significa que seus destinos estão ligados, de alguma forma. Ouvi falar de alguns desaparecimentos na parte velha da cidade, talvez seja um bom lugar para começar.”"
+    },
+    {
+      type: "text",
+      content: "Um personagem que ativamente se recuse a investigar a visão passa a sofrer, no final de cada dia, uma penalidade cumulativa de –2 em todos os testes e rolagens, como sob efeito da magia Missão Divina. Essa penalidade desaparece imediatamente se parar de evitar o chamado à aventura."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 2 – Buscando conhecimento"
+    },
+    {
+      type: "text",
+      content: "A parte velha é um lugar de contrastes. A população local é simples, vivendo em construções de madeira, reminiscentes da primeira formação da cidade. Porém, também existem cassinos, casas de aposta e tavernas de má reputação, mas todos coloridos e chamativos. Um nobre passeia pela rua em direção a um dos estabelecimentos, quando é cercado pelo povo, pedindo sua ajuda. Ele arremessa uma bolsa pesada, e as pessoas se engalfinham, tentando pegar qualquer tibar que se espalhe pelo chão. Os poucos guardas que passam evitam olhar muito ao redor, um ou outro parando na porta de estabelecimentos para receber um embrulho suspeito."
+    },
+    {
+      type: "text",
+      content: "Perguntar na parte velha é um teste estendido de Diplomacia ou Investigação (CD 20) que requer passar em três testes. O mestre pode fornecer um bônus de +2 nos testes de acordo com o tipo de abordagem, como oferecer algum dinheiro aos moradores da região, por exemplo."
+    },
+    {
+      type: "text",
+      content: "Passando nos testes necessários os personagens descobrem que a proprietária de uma das tavernas locais, chamada Masmorra da Morte, também vem coletando informações sobre os desaparecimentos. Talvez haja uma forma de convencê-la a dividir aquilo que sabe com o grupo. Porém, se tiverem uma falha total (três falhas), os heróis são abordados por dez pessoas mal-encaradas (use a ficha de chefe bandido). Eles “pedem” que os acompanhem, porém, se os aventureiros tentarem resistir, usarão ataques não-letais para levá-los até sua líder."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 3 – Prepare-se para morrer"
+    },
+    {
+      type: "text",
+      content: "A taverna não é um lugar particularmente aconchegante ou arrumado. Em seu interior as cadeiras e mesas são simples e o balcão é rústico. A seleção de bebidas dispostas na parte de trás do bar é muito limitada, basicamente um ou dois barris velhos. Quando o grupo entra, duas pessoas que estavam repousando a cabeça nas mesas se levantam subitamente, em prontidão, porém o taverneiro, um homem de quase dois metros de altura, para de limpar uma caneca e levanta a mão, fazendo os vigilantes retornarem a falsa posição de descanso."
+    },
+    {
+      type: "text",
+      content: "O taverneiro levanta uma portinhola do balcão e acena com a cabeça para uma passagem atrás de si. Caso estejam “acompanhados” dos criminosos, eles entram direto, apenas trocando olhares com as pessoas no interior. Cruzando a passagem, há uma escada para baixo. Após descer os lances, chegam a um ambiente diferenciado, com poltronas macias e luxuosas, mesas lustrosas, e quadros escritos com giz nas paredes. No meio deste ambiente opulento há o que parece um poço circular, com cinco metros de profundidade, e interior de terra batida. Alguém que deseje pode fazer um teste de Percepção (CD 15), para notar uma passagem gradeada no fundo do poço, mas seu interior está em um ângulo que atrapalha a visão."
+    },
+    {
+      type: "text",
+      content: "De uma das passagens cobertas por tapeçarias vem uma voz feminina: “Ora, ora, ora. Se não são os aventureiros intrometidos que estão perguntando sobre os desaparecimentos.”"
+    },
+    {
+      type: "text",
+      content: "É uma elfa de cabelos negros presos em um coque e um tapa-olho cobrindo a órbita direita. As roupas dela são elegantes, mas permitem liberdade de movimento. Além disso, é possível ver parte de uma pistola e a empunhadura de uma adaga."
+    },
+    {
+      type: "text",
+      content: "“Não se preocupem, eu e meus superiores também queremos saber o que está acontecendo com os desaparecidos. Porém, não é uma tarefa para qualquer um. Será que vocês são capazes? Veremos. Me chamem de Sarelyn, sou a proprietária da maravilhosa taverna acima, assim como deste pequeno local de entretenimento privado.”"
+    },
+    {
+      type: "text",
+      content: "Sarelyn propõe um teste: se os personagens vencerem em sua arena, ela irá ajudá-los. Se tentar qualquer ameaça ou agressão, ela e seus homens atacam sem qualquer pena, sabendo que voltarão à vida (veja a ficha de Sarelyn em NPCs & Criaturas). Porém, se aceitar a proposta, ela diz para retornar à noite, quando a casa estiver cheia."
+    },
+    {
+      type: "text",
+      content: "No horário marcado, o lugar está abarrotado. Aristocratas endinheirados sentam-se nas poltronas, enquanto garçons passam oferecendo bebidas e pegando apostas. Os nomes dos personagens estão escritos nos quadros, com números ao lado, representando valores em Tibares. O grupo é descido ao poço e finalmente eles conseguem ver as grades com mais clareza. Sarelyn começa a anunciar o combate:"
+    },
+    {
+      type: "text",
+      content: "“Meus caros amigos triunphianos, essa noite teremos um verdadeiro espetáculo para seus olhos! Em nossa arena, um legítimo grupo de aventureiros! Abençoados pelo próprio Thyatis, aqui para testar sua coragem! Mas serão páreo para o seu oponente?”"
+    },
+    {
+      type: "text",
+      content: "As barras começam a subir, produzindo um barulho metálico alto. Dois olhos incandescentes perfuram a escuridão da alcova."
+    },
+    {
+      type: "text",
+      content: "“É o momento de fazer suas apostas, ilustres convidados! Conseguirão eles derrotar uma besta fera capturada da própria horda Móock, para vosso entretenimento? Das chamas mais profundas, apresento a vocês: o cão do inferno!”"
+    },
+    {
+      type: "text",
+      content: "Nesse momento a plateia irrompe em berros, logo silenciados pelo rugido flamejante do monstro, que avança contra os personagens."
+    },
+    {
+      type: "text",
+      content: "Criaturas. Cão do Inferno (Tormenta20, p. 292)."
+    },
+    {
+      type: "text",
+      content: "Este combate deve ser extremamente difícil, possivelmente derrotando alguns, ou talvez todos os personagens. Se este for o caso, os personagens despertam no templo de Thyatis novamente, sob a supervisão de Melvin. “Ei, são vocês de novo. Como vai a missão?” Ouvindo o que houve, ele oferece duas poções de curar ferimentos (2d8+2 PV) e três essências de mana. Se ao menos um dos personagens sobreviver ao combate, é possível que ele peça para os sacerdotes de Thyatis trazerem seus companheiros de volta, ainda que seja desnecessário uma vez que voltarão naturalmente em alguns dias."
+    },
+    {
+      type: "text",
+      content: "De volta à taverna Masmorra da Morte, Sarelyn está surpresa pela coragem do grupo, mas ainda não confia em suas capacidades, e permitirá que tentem novamente, quantas vezes quiserem, até por ser bom para os negócios. Se derrotados duas vezes, avançam para o 2º nível, aumentando a chance de vitória."
+    },
+    {
+      type: "text",
+      content: "Caso queiram, os personagens podem apostar em si mesmos. Sarelyn explica não permitir lutas armadas (exceto quando ela tem algo a ganhar com isso). Ao vencer o combate, recebem vinte vezes a soma apostada. Além das apostas, Sarelyn “presenteia” generosamente o grupo com T$ 200."
+    },
+    {
+      type: "text",
+      content: "Finalmente impressionada, a elfa conta a eles sobre uma casa que vem sendo ignorada pela guarda por algum motivo, segundo seus informantes. Mas antes de partirem, olha-os intensamente e diz: “Lembrem-se: o que morre em Triunphus... fica em Triunphus.”"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 4 – A casa vermelha"
+    },
+    {
+      type: "text",
+      content: "No limite da cidade, onde as casas mais simples estão, uma parece especialmente afastada. Do lado de fora é mais suja e abandonada que as outras da região, suas janelas são cobertas com tábuas e pregos. Se eles observarem por alguns dias, verão um guarda de alto posto entrar e sair do local."
+    },
+    {
+      type: "text",
+      content: "Se os personagens aproveitarem esses dias para investigar, poderão esperar que o guarda saia, para então entrarem no ambiente. Infelizmente, o que veem no interior os choca. O chão é coberto de escritos profanos, e em uma das paredes há uma pintura em sangue de Aharadak, o Deus da Tormenta. Porém, ao entrarem, um lefou ensandecido está pronto a atacá-los!"
+    },
+    {
+      type: "text",
+      content: "Criaturas. Maníaco Lefou (Tormenta20, p. 314)."
+    },
+    {
+      type: "text",
+      content: "O lefou irá lutar até sua morte, pois sabe que se morrer aqui, renascerá, ficando permanentemente preso a cidade. Cabe aos personagens acharem uma maneira de lidarem com ele sem matá-lo."
+    },
+    {
+      type: "text",
+      content: "Caso entrem no local diretamente, encontrarão lá também um sargento da guarda. Ao ver os aventureiros, ele começa um discurso: “Vocês não entendem! Esse lugar é um inferno! De tempos em tempos aquela besta-fera invade e todos somos mortos, e a culpa é de quem? De Thyatis, claro! As pessoas que estou capturando são meu sacrifício, e me permitirão chamar Aharadak, e quebrar este ciclo! Por isso os sequestrei e por isso os enterrei no quintal! Agora, vocês podem se juntar a mim, ou a eles!”"
+    },
+    {
+      type: "text",
+      content: "Criaturas. Capitão Corrompido (NPCs & Criaturas)."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Epílogo – Viver para morrer outro dia"
+    },
+    {
+      type: "text",
+      content: "Ao derrotarem o capitão, poderão finalmente desenterrar as pessoas. A terra do lado de fora da casa foi revolvida, e com tempo, o grupo poderá encontrar todos os que foram capturados. Apesar do trauma, as vítimas estarão extremamente agradecidas."
+    },
+    {
+      type: "text",
+      content: "Assim que a guarda descobrir o ocorrido, entrará em contato com os aventureiros. Primeiramente se desculpa por não ter notado a ameaça em seu meio, e pede ajuda em outros casos. Talvez os personagens possam até eventualmente se tornar membros da guarda da fênix, e sejam treinados no combate contra a horda. Ou talvez prefiram se manter afastados. Nesse caso, Sarelyn talvez tenha alguns serviços para os obstinados ou teimosos o suficiente."
+    },
+    {
+      type: "text",
+      content: "Todos avançam para o próximo nível!"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "NPCs & Criaturas"
+    },
+    {
+      type: "text",
+      content: "Sarelyn\nApós passar a vida sobrevivendo no crime, a elfa Sarelyn não esperava que sua morte em Triunphus fosse uma das melhores coisas a lhe acontecer. Aqui, trabalhando sob o comando de Gnaeus, conquistou seu estabelecimento e uma vida melhor do que tinha no mundo lá fora. Aprecia pessoas de garra, que não desistem na primeira morte."
+    },
+    {
+      type: "text",
+      content: "Sarelyn (ND 5)\nHumanoide (elfa) Média\nIniciativa +11, Percepção +10, visão na penumbra\nDefesa 22, Fort +5, Ref +17, Von +11, evasão\nPontos de Vida 135\nDeslocamento 12m (8q)\nCorpo a Corpo Espada curta x2 +12 (1d6+10, 19)\nÀ Distância Duas pistolas +15 (2d6+15, 18/x3)\nAtaque Furtivo +3d6.\nInabalável Sarelyn nunca fica surpreendida. Quando faz um teste de resistência, rola dois dados e usa o melhor resultado.\nMatar ou Morrer (Movimento) Sarelyn assume uma postura de tudo ou nada, e seu próximo ataque contra um alvo em alcance curto feito nessa rodada é considerado um ataque furtivo. Entretanto, ela fica desprevenida por uma rodada.\nPistoleira Veloz Sarelyn não sofre a penalidade padrão de –5 em ataques por disparar contra oponentes envolvidos em combate corpo a corpo, e pode recarregar sua arma de fogo com uma ação de movimento.\nFor –1, Des 5, Con 1, Int 3, Sab 2, Car 2\nPerícias Acrobacia +9, Enganação +8, Furtividade +11.\nEquipamento Balas x20, couro batido, espada curta, pistola x2. Tesouro Dobro."
+    },
+    {
+      type: "text",
+      content: "Capitão Corrompido (ND -)\nHumanoide (humano) Médio\nIniciativa +4, Percepção +3, visão no escuro\nDefesa 18, Fort +13, Ref +7, Von +2, resistência a magia divina +5\nPontos de Vida 80\nDeslocamento 6m (4q)\nCorpo a Corpo Alabarda grotesca +10 (1d10+5, x3, mais 1d6 de matéria vermelha).\nAlabarda Grotesca Criada a partir do corpo do capitão, esta arma orgânica é feita de matéria vermelha. Além disso, é capaz de se estender, permitindo ataques corpo a corpo contra criaturas em alcance curto.\nAtaque Reflexo (Reação) Uma vez por rodada, o capitão pode fazer um ataque corpo a corpo contra um alvo adjacente que esteja desprevenido ou que se mova para fora do seu alcance.\nFor 5, Des 1, Con 3, Int 0, Sab –2, Car –2\nPerícias Atletismo +8, Intimidação +3\nEquipamento Apito, cota de malha, maça, símbolo sagrado de Aharadak. Tesouro Nenhum."
+    }
+  ]
+  },
 ];

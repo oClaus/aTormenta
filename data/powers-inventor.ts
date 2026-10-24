@@ -185,6 +185,25 @@ export const powersInventor: Power[] = [
   //#endregion
 
   //#region Dragão Brasil
+  // Dragão Brasil - 198
+  { id: "Compartimento de Carga",
+    name: "Compartimento de Carga",
+    description: "Seu autômato pode armazenar itens, com uma capacidade de espaços igual à sua Inteligência. Você pode sacar esses itens como uma ação livre.",
+    prerequisite: "Autômato",
+    origin: "Dragão Brasil - 198"
+  },
+  { id: "Luthier",
+    name: "Luthier",
+    description: "Quando usa um instrumento musical feito por você mesmo, você faz testes de Atuação com Inteligência.",
+    prerequisite: "treinado em Ofício (artesão)",
+    origin: "Dragão Brasil - 198"
+  },
+  { id: "Traje de Batalha",
+    name: "Traje de Batalha",
+    description: "Você combina seu autômato com uma armadura pesada que tenha fabricado. Quando veste essa armadura, você recebe 5 pontos de vida temporários para cada ponto de Inteligência. Enquanto estes pontos de vida temporários durarem, os bônus de parceiro do autômato são dobrados. Quando os pontos de vida temporários acabarem, o autômato enguiça como uma engenhoca.",
+    prerequisite: "Autômato, Couraceiro, 12º nível de inventor",
+    origin: "Dragão Brasil - 198"
+  },
   // Dragão Brasil - 212
   { id: "Armadura de Suporte",
     name: "Armadura de Suporte",
