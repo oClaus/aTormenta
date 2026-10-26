@@ -1,7 +1,20 @@
 import { Power } from "@/types/power";
 
 export const powersGeraisMagia: Power[] = [
-  // Tormenta20 - Jogo do Ano
+  //#region Atlas de Arton
+  { id: "Presente de Wynlla",
+    name: "Presente de Wynlla",
+    description: "Escolha uma magia arcana de 1º círculo que você saiba lançar. Quando lança esta magia, o custo total de seus aprimoramentos é reduzido em –1 PM. Quando está em Wynlla, em vez disso o custo em PM total dos aprimoramentos de suas magias arcanas é reduzido em um valor igual ao seu atributo-chave para magias arcanas. Estes efeitos são cumulativos com reduções no custo básico da magia.\n Para nativos de Wynlla, este poder é parte da lista de poderes das seguintes origens: Acólito, Aristocrata, Artesão, Artista, Assistente de Laboratório, Curandeiro, Estudioso, Guarda, Marujo, Membro de Guilda, Mercador, Minerador, Soldado, Trabalhador ",
+    prerequisite: "lançar magia arcana.",
+    origin: "Atlas de Arton"
+  },
+  //#endregion
+  
+
+
+
+  
+  //#region Tormenta20 - Jogo do Ano
   { id: "Celebrar Ritual",
     name: "Celebrar Ritual",
     description: "Você pode lançar magias como rituais. Isso dobra seu limite de PM, mas muda a execução para 1 hora (ou o dobro, o que for maior) e exige um gasto de T$ 10 por PM gasto (em incensos, oferendas...). Assim, um arcanista de 8º nível pode lançar uma magia de 16 PM gastando T$ 160. Magias lançadas como rituais não podem ser armazenadas em itens. ",
@@ -45,6 +58,7 @@ export const powersGeraisMagia: Power[] = [
     description: "Você pode usar a perícia Ofício (alquimista) para fabricar poções com magias que conheça de 1º e 2º círculos. Veja a página 121 para a regra de fabricar itens e as páginas 333 e 341 para as regras de poções. Pré-requisitos: habilidade de classe Magias, treinado em Ofício (alquimista).",
     origin: "Tormenta20 - Jogo do Ano"
   },
+  //#endregion
 
   
   { id: "Barreira Mística",

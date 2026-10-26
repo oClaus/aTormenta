@@ -2,6 +2,77 @@ import { Power } from "@/types/power";
 //#region Tormenta20 - Jogo do Ano
 //#endregion
 export const powersGeraisConcedido: Power[] = [
+  //#region Jornada Heroica - A Libertação de Valkaria
+  { id: "Arquearia de Outrora (Glórienn)",
+    name: "Arquearia de Outrora (Glórienn)",
+    description: "Você recebe proficiência em arco longo. Além disso, você considera todos os arcos como armas preferidas de Glórienn e, se tiver a habilidade Golpe Divino, pode usá-la em ataques à distância com arcos.",
+    origin: "A Libertação de Valkaria"
+  },
+  { id: "Beleza Protetora (Glórienn)",
+    name: "Beleza Protetora (Glórienn)",
+    description: "Quando faz um teste de resistência ou de perícia para resistir a uma manobra de combate, você pode gastar 1 PM para somar o seu Carisma nesse teste.",
+    origin: "A Libertação de Valkaria"
+  },
+  { id: "Esgrima do Povo Ancestral (Glórienn)",
+    name: "Esgrima do Povo Ancestral (Glórienn)",
+    description: "Você pode usar sua Destreza em vez de Força nos testes de ataque e rolagens de dano com espadas curtas, espadas longas e floretes. Se tiver Acuidade com Arma, em vez disso você recebe +1 em testes de ataque e rolagens de dano com estas armas.",
+    origin: "A Libertação de Valkaria"
+  },
+  { id: "Vingança Élfica (Glórienn)",
+    name: "Vingança Élfica (Glórienn)",
+    description: "Você recebe +1d6 em rolagens de dano contra goblinoides (goblins, hobgoblins e bugbears) e duyshidakk.",
+    origin: "A Libertação de Valkaria"
+  },
+  { id: "Aura Bélica (Keenn)",
+    name: "Aura Bélica (Keenn)",
+    description: "Você pode gastar 2 PM para gerar uma aura belicosa com 9m de raio e que dura até o fim da cena. Cada criatura que entrar na aura ou começar seu próprio turno dentro dela deve fazer um teste de Vontade (CD Car). Se falhar, ataca a criatura mais próxima com quem tiver a categoria de atitude mais baixa — priorizando ataques e magias com efeito de alvo, ao invés de área. Uma criatura que passe no teste de Vontade fica imune a esta habilidade por um dia.",
+    origin: "A Libertação de Valkaria"
+  },
+  { id: "Cura Desafiadora (Keenn)",
+    name: "Cura Desafiadora (Keenn)",
+    description: "Em seu apreço pela violência, Keenn despreza poderes de cura. Seus devotos que usam tais magias o fazem desafiando abertamente a vontade de seu deus. Quando lança uma magia de cura, você pode gastar +2 PM para que isso não viole suas Obrigações & Restrições.",
+    origin: "A Libertação de Valkaria"
+  },
+  { id: "Desprezar Cura (Keenn)",
+    name: "Desprezar Cura (Keenn)",
+    description: "Você recebe +1 em testes de ataque e rolagens de dano com armas para cada círculo de magias que puder conjurar. Entretanto, você não recupera pontos de vida por nenhum efeito, exceto descanso.",
+    origin: "A Libertação de Valkaria"
+  },
+  { id: "Sede de Batalha (Keenn)",
+    name: "Sede de Batalha (Keenn)",
+    description: "Se estiver em um combate, você ganha 1 PM temporário no início de cada turno seu. A cada cena, você pode ganhar um número máximo de pontos de mana com este poder igual ao seu nível. Para este poder, um “combate” é qualquer situação de violência real. Atacar um amigo em uma luta controlada não é um “combate”. Massacrar plebeus indefesos, sim.",
+    origin: "A Libertação de Valkaria"
+  },
+  { id: "Arma de Morte (Ragnar)",
+    name: "Arma de Morte (Ragnar)",
+    description: "Você pode gastar 1 PM para imbuir uma arma que estiver empunhando com energia sombria até o fim da cena. A arma causa +2 pontos de dano de trevas. Sempre que você reduzir um inimigo a 0 PV ou menos com a arma, esse bônus aumenta em +1 (aumento máximo limitado por sua Força).",
+    origin: "A Libertação de Valkaria"
+  },
+  { id: "Toque da Ruína (Ragnar)",
+    name: "Toque da Ruína (Ragnar)",
+    description: "Você pode gastar 1 PM e uma ação padrão para causar 2d12 pontos de dano de trevas em uma criatura ou objeto em alcance de toque (Fort CD Sab reduz à metade). Se o alvo for reduzido a 0 PV ou menos por esse poder, ele vira pó e você recebe PV temporários em valor igual ao dano causado. Você pode aprender Desintegrar como uma magia divina. Se fizer isso, o custo dela diminui em –1 PM.",
+    origin: "A Libertação de Valkaria"
+  },
+  { id: "Legião Tapistana (Tauron)",
+    name: "Legião Tapistana (Tauron)",
+    description: "Você pode gastar uma ação completa e 2 PM para invocar 1d4+1 legionários defensores em espaços desocupados em alcance curto. Você pode gastar uma ação de movimento para fazer os legionários andarem (com deslocamento 6m). Cada legionário fornece um bônus cumulativo de +2 na Defesa de um aliado do qual esteja adjacente. Cada vez que um ataque contra uma criatura defendida por um legionário erra, um dos legionários defendendo essa criatura desaparece. Os legionários têm For 2, Des 0, Defesa 19, 1 PV e falham automaticamente em qualquer teste de resistência ou oposto. Eles desaparecem quando morrem ou no fim da cena. Os legionários não agem sem receber uma ordem. Usos criativos para capangas fora de combate ficam a critério do mestre.",
+    origin: "A Libertação de Valkaria"
+  },
+  { id: "Músculos Divinos (Tauron)",
+    name: "Músculos Divinos (Tauron)",
+    description: "Você pode gastar 1 PM para receber +2 em Força por uma rodada.",
+    origin: "A Libertação de Valkaria"
+  },
+  { id: "Proteger os Fracos (Tauron)",
+    name: "Proteger os Fracos (Tauron)",
+    description: "Você pode gastar 2 PM para fornecer +2 na Defesa e em testes de resistência de um aliado em alcance curto até o fim da cena, ou até você usar esta habilidade novamente em outro aliado, o que acontecer primeiro.",
+    origin: "A Libertação de Valkaria"
+  },
+  //#endregion
+
+
+
+
 
   //#region Dragão Brasil
   // Dragão Brasil - 183
@@ -55,52 +126,7 @@ export const powersGeraisConcedido: Power[] = [
     description: "Você costuma estar no controle da situação, e truques para manipulá-lo não surtem efeito. Você passa automaticamente no primeiro teste de Vontade que fizer a cada cena.",
     origin: "Dragão Brasil - 183"
   },
-  // Dragão Brasil - 203
-  { id: "Aura Bélica (Keenn)",
-    name: "Aura Bélica (Keenn)",
-    description: "Você pode gastar 2 PM para gerar uma aura belicosa com 9m de raio e que dura até o fim da cena. Cada criatura que entrar na aura ou começar seu próprio turno dentro dela deve fazer um teste de Vontade (CD Car). Se falhar, ataca a criatura mais próxima com quem tiver a categoria de atitude mais baixa — priorizando ataques e magias com efeito de alvo, ao invés de área. Uma criatura que passe no teste de Vontade fica imune a esta habilidade por um dia.",
-    origin: "Dragão Brasil - 203"
-  },
-  { id: "Cura Desafiadora (Keenn)",
-    name: "Cura Desafiadora (Keenn)",
-    description: "Em seu apreço pela violência, Keenn despreza poderes de cura. Seus devotos que usam tais magias o fazem desafiando abertamente a vontade de seu deus. Quando lança uma magia de cura, você pode gastar +2 PM para que isso não viole suas Obrigações & Restrições.",
-    origin: "Dragão Brasil - 203"
-  },
-  { id: "Desprezar Cura (Keenn)",
-    name: "Desprezar Cura (Keenn)",
-    description: "Você recebe +1 em testes de ataque e rolagens de dano com armas para cada círculo de magias que puder conjurar. Entretanto, você não recupera pontos de vida por nenhum efeito, exceto descanso.",
-    origin: "Dragão Brasil - 203"
-  },
-  { id: "Sede de Batalha (Keenn)",
-    name: "Sede de Batalha (Keenn)",
-    description: "Se estiver em um combate, você ganha 1 PM temporário no início de cada turno seu. A cada cena, você pode ganhar um número máximo de pontos de mana com este poder igual ao seu nível. Para este poder, um “combate” é qualquer situação de violência real. Atacar um amigo em uma luta controlada não é um “combate”. Massacrar plebeus indefesos, sim.",
-    origin: "Dragão Brasil - 203"
-  },
-  { id: "Arma de Morte (Ragnar)",
-    name: "Arma de Morte (Ragnar)",
-    description: "Você pode gastar 1 PM para imbuir uma arma que estiver empunhando com energia sombria até o fim da cena. A arma causa +2 pontos de dano de trevas. Sempre que você reduzir um inimigo a 0 PV ou menos com a arma, esse bônus aumenta em +1 (aumento máximo limitado por sua Força).",
-    origin: "Dragão Brasil - 203"
-  },
-  { id: "Toque da Ruína (Ragnar)",
-    name: "Toque da Ruína (Ragnar)",
-    description: "Você pode gastar 1 PM e uma ação padrão para causar 2d12 pontos de dano de trevas em uma criatura ou objeto em alcance de toque (Fort CD Sab reduz à metade). Se o alvo for reduzido a 0 PV ou menos por esse poder, ele vira pó e você recebe PV temporários em valor igual ao dano causado. Você pode aprender Desintegrar como uma magia divina. Se fizer isso, o custo dela diminui em –1 PM.",
-    origin: "Dragão Brasil - 203"
-  },
-  { id: "Legião Tapistana (Tauron)",
-    name: "Legião Tapistana (Tauron)",
-    description: "Você pode gastar uma ação completa e 2 PM para invocar 1d4+1 legionários defensores em espaços desocupados em alcance curto. Você pode gastar uma ação de movimento para fazer os legionários andarem (com deslocamento 6m). Cada legionário fornece um bônus cumulativo de +2 na Defesa de um aliado do qual esteja adjacente. Cada vez que um ataque contra uma criatura defendida por um legionário erra, um dos legionários defendendo essa criatura desaparece. Os legionários têm For 2, Des 0, Defesa 19, 1 PV e falham automaticamente em qualquer teste de resistência ou oposto. Eles desaparecem quando morrem ou no fim da cena. Os legionários não agem sem receber uma ordem. Usos criativos para capangas fora de combate ficam a critério do mestre.",
-    origin: "Dragão Brasil - 203"
-  },
-  { id: "Músculos Divinos (Tauron)",
-    name: "Músculos Divinos (Tauron)",
-    description: "Você pode gastar 1 PM para receber +2 em Força por uma rodada.",
-    origin: "Dragão Brasil - 203"
-  },
-  { id: "Proteger os Fracos (Tauron)",
-    name: "Proteger os Fracos (Tauron)",
-    description: "Você pode gastar 2 PM para fornecer +2 na Defesa e em testes de resistência de um aliado em alcance curto até o fim da cena, ou até você usar esta habilidade novamente em outro aliado, o que acontecer primeiro.",
-    origin: "Dragão Brasil - 203"
-  },
+  
 
   // Dragão Brasil - 228
   { id: "Percepção de Masmorra (Hynnin)",
