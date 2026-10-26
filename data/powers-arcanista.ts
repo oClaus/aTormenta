@@ -1,6 +1,18 @@
 import { Power } from "@/types/power";
 
 export const powersArcanista: Power[] = [
+  //#region Guia de NPCs
+  { id: "Serpentes Dracônicas",
+    name: "Serpentes Dracônicas",
+    description: "Quando lança uma magia que causa dano do tipo de sua linhagem dracônica, você pode gastar +1 PM para aumentar o dano dessa magia em +1d12.",
+    prerequisite: "medusa, feiticeiro (linhagem dracônica).",
+    origin: "Guia de NPCs"
+  },
+  //#endregion 
+
+
+
+
 
   //#region A Lenda de Ghanor
     { id: "Conhecimento Proibido",

@@ -1,6 +1,4 @@
 import { Weapon, DamageProgression } from "@/types/weapon";
-//#region Tormenta20 - Jogo do Ano
-//#endregion
 export const damageProgressionTable: DamageProgression[][] = [
   // Linha 1
   [
@@ -77,6 +75,54 @@ export const damageProgressionTable: DamageProgression[][] = [
 ];
 
 export const weapons: Weapon[] = [
+  //#region Guia de NPCs
+  { id: "Cajado-de-Batalha",
+    name: "Cajado de Batalha",
+    description: "Um cajado reforçado com chapas de metal nas pontas. Uma arma discreta, usada por andarilhos que não querem levantar suspeitas. O cajado de batalha é uma arma dupla.",
+    origin: "Guia de NPCs",
+    purpose: "Corpo a Corpo",
+    proficiency: "Marcial",
+    grip: "Duas Mãos",
+    price: "T$ 10",
+    damage: "1d8/1d8",
+    critical: "x2",
+    range: "—",
+    type: "Impacto",
+    spaces: 2,
+  },
+  { id: "Pistola-Tambor",
+    name: "Pistola-Tambor",
+    description: "Esta arma de fogo possui um tambor giratório que armazena 4 munições. Esse tambor é parte de um mecanismo complexo e por isso conta como uma melhoria para a arma. Recarregar uma pistola-tambor é uma ação completa.",
+    origin: "Guia de NPCs",
+    purpose: "Distância",
+    proficiency: "Fogo",
+    grip: "Uma Mão",
+    price: "T$ 2.100",
+    damage: "2d6",
+    critical: "19/x3",
+    range: "Curto",
+    type: "Perfuração",
+    spaces: 1,
+  },
+  { id: "Kumshrak",
+    name: "Kum’shrak",
+    description: "Arma ritualística empunhada apenas pelos melhores guerreiros duyshidakk, um kum’shrak é uma arma especial que extrai poder de suas vítimas. Seguindo as leis de Lamnor e do Akzath, por ser empregado como uma ferramenta de “morte” cujo único propósito é pôr “fim” à vida, o kum’shrak está próximo das “trevas”. Assim, conforme é empunhada em combate, a arma se torna cada vez mais escura, afiada e avessa à vida, até alcançar um ponto em que se torna capaz de ferir qualquer ser vivo que a toque. Mesmo seu proprietário pode ser ferido pelo kum’shrak; se a arma não sentir que será usada em combate, pode manifestar seu poder sombrio. Se for usado como ferramenta, o kum’shrak pode impor uma penalidade de –5 em testes, se for usado para cortar alimentos, pode envenená-los, se o portador estiver com medo ou fugir, pode perder 1d4 pontos de vida e assim por diante.\nUm kum’shrak recém-criado é um osso grande, que funciona como uma arma improvisada (–2 em ataques, 1d6 de dano, crítico x2). Quando mata pela primeira vez, torna-se uma clava. Quando mata cinco vítimas, torna-se um machado de batalha. Ao fazer sua décima vítima, o kum’shrak recebe uma melhoria escolhida por seu portador. Depois disso, sempre que dobra seu número de mortes (20, 40 etc.), adquire uma nova melhoria, até um máximo de quatro melhorias. Além das melhorias normais, um kum’shrak tem acesso a três melhorias exclusivas.\n- Eviscerador. Uma criatura atingida fica sangrando (Fort CD For evita).\n- Necrótico. Uma criatura atingida fica fraca (Fort CD For evita).\n- Peçonhento. Uma criatura atingida perde 1d6 pontos de vida por veneno.",
+    origin: "Ameaças de Arton",
+    purpose: "Corpo a Corpo",
+    proficiency: "Exótica",
+    grip: "Uma Mão",
+    price: "—",
+    damage: "1d6",
+    critical: "x2",
+    range: "—",
+    type: "Impacto",
+    spaces: 1,
+  },
+  //#endregion 
+
+
+
+
 
   //#region Duelo de Dragões
   { id: "espada enigma",
@@ -830,6 +876,7 @@ export const weapons: Weapon[] = [
 
 
 
+
   //#region Ameaças de Arton
   { id: "Porrete",
     name: "Porrete",
@@ -1073,6 +1120,7 @@ export const weapons: Weapon[] = [
   },
   //#endregion
 
+  
 
 
 

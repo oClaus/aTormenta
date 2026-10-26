@@ -253,6 +253,19 @@ export const enchantments: Enchantment[] = [
 ];
 
 export const specificWeapons: SpecificWeapon[] = [
+  //#region Guia de NPCs
+  { id: "Armadura de Khalmyr",
+    name: "Armadura de Khalmyr",
+    description: "Esta armadura completa sob medida defensora fica armazenada magicamente em uma gargantilha com o símbolo do Deus da Justiça. Enquanto está armazenada dessa forma, a armadura não ocupa nenhum espaço (embora ainda conte como um item vestido) e não impõe nenhuma penalidade ao usuário (como se ele não estivesse de armadura). Ao pronunciar o nome de Khalmyr, o usuário evoca a armadura, que é vestida automaticamente. Devolver a armadura à gargantilha também é uma ação livre.",
+    price: "42.000",
+    origin: "Guia de NPCs",
+  },
+  //#endregion
+
+
+
+
+
   //#region A Lenda de Ghanor
   {
     id: "Armadura do Herói",
@@ -388,6 +401,11 @@ export const specificWeapons: SpecificWeapon[] = [
     origin: "A Lenda de Ghanor",
   },
   //#endregion
+  
+  
+  
+  
+  
   // Tormenta20 - Jogo do Ano
   { id: "Armadura da Luz",
     name: "Armadura da Luz",

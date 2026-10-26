@@ -3,6 +3,18 @@
 import { Power } from "@/types/power";
 
 export const powersGerais: Power[] = [
+  //#region Guia de NPCs
+  { id: "Caminho da Mão Vazia",
+    name: "Caminho da Mão Vazia",
+    description: "Você pode gastar uma ação de movimento e 1 PM para fazer uma coreografia que parece uma dança, mas esconde técnicas que o preparam para a luta. Até o fim da cena, sempre que faz um teste de ataque desarmado, você rola dois dados e usa o melhor resultado.",
+    prerequisite: "habilidade Briga ou Estilo Desarmado, Sab 1, ser treinado por Kasumi.",
+    origin: "Guia de NPCs"
+  },
+  //#endregion 
+
+
+
+
 
   //#region A Lenda de Ghanor
   { id: "Agarrar Aprimorado",

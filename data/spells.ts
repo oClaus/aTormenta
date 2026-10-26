@@ -2,7 +2,32 @@ import { Spell } from "@/types/speel";
 //#region Tormenta20 - Jogo do Ano
 //#endregion
 export const spells: Spell[] = [
+  //#region Guia de NPCs
+  { id: "Preparação de Batalha",
+    name: "Preparação de Batalha",
+    type: "Universal",
+    school: "Convocação",
+    circle: 2,
+    execution: "Padrão",
+    range: "Toque",
+    target: "Até dois itens que você possua, entre armas, armaduras e escudos",
+    duration: "Permanente até ser descarregada",
+    resistance: "Nenhuma",
+    description: "Custo Adicional: penalidade de 1 PM. Esta magia é utilizada por clérigos e bardos que não precisam (ou não podem) estar sempre com suas armas ou armaduras. A magia é lançada sobre até dois itens que você possua. A partir daí, em qualquer momento, você pode usar uma ação completa para convocar os itens, que aparecem sobre seu corpo e em suas mãos (conforme apropriado ao item). O efeito é espalhafatoso, sendo praticamente impossível utilizá-lo sem chamar atenção. A magia funciona independentemente da distância dos itens, desde que estejam no mesmo Plano, mas termina se você perder a posse deles.",
+    origin: "Guia de NPCs",
+    enhancements: [
+      {
+        cost: "+1 PM",
+        effect: "Aumenta o número de alvos em dois e o custo adicional em +1 PM.",
+      },
+    ],
+  },
+  //#endregion
+  
 
+
+
+  
   //#region Tormenta20 - Jogo do Ano
   { id: "abencoar-alimentos",
     name: "Abençoar Alimentos",

@@ -27,18 +27,6 @@ export const esoteric: Gear[] = [
   //#endregion
 
 
-
-
-
-  // Duelo de Dragões
-  { id: "Tomo de Guerra",
-    name: "Tomo de Guerra",
-    description: "Quando lança uma magia de evocação, você recebe +1 PM para gastar em aprimoramentos.",
-    origin: "Duelo de Dragões",
-    price: "T$ 300",
-    spaces: "1",
-  },
-
   // Dragão Brasil - 228
   { id: "Alma de Dragão",
     name: "Alma de Dragão",

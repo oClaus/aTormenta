@@ -55,7 +55,27 @@ export const enchantments: Enchantment[] = [
 ];
 
 export const accessories: SpecificAccessory[] = [
+  //#region Guia de NPCs
+  { id: "braceletes-das-escamas",
+    name: "Braceletes das Escamas",
+    description: "Como presente de Kallyadranoch por sua devoção, cada uma das irmãs recebeu o poder para criar um item mágico específico. Esses itens são algumas das diversas ferramentas que utilizam para atrair devotos à fé em seu pai. Os poderes mágicos desses itens só funcionam com devotos de Kallyanadroch. Criados por Acteia, estes braceletes de aço escurecido são entalhados de forma a parecer escamas de dragão. Fornecem redução de dano 5 e contam como uma luva de ferro.",
+    price: "T$ 21.000",
+    size: "Médio",
+    origin: "Guia de NPCs"
+  },
+  { id: "face-draconica",
+    name: "Face Dracônica",
+    description: "Como presente de Kallyadranoch por sua devoção, cada uma das irmãs recebeu o poder para criar um item mágico específico. Esses itens são algumas das diversas ferramentas que utilizam para atrair devotos à fé em seu pai. Os poderes mágicos desses itens só funcionam com devotos de Kallyanadroch. Esta máscara dourada, semelhante ao rosto estilizado de um dragão, fortalece o poder arcano do usuário. Fruto do poder de Ilítia, fornece +2 na CD para resistir a suas habilidades mágicas (incluindo magias) e conta como um medalhão de prata.",
+    price: "T$ 25.000",
+    size: "Médio",
+    origin: "Guia de NPCs"
+  },
+  //#endregion 
 
+
+
+
+  
   //#region Uma visita a Vectora
   { id: "Figurino Teatral",
     name: "Figurino Teatral",
@@ -288,6 +308,9 @@ export const accessories: SpecificAccessory[] = [
     origin: "A Lenda de Ghanor"
   },
   //#endregion
+  
+  
+  
   // Dragão Brasil - 200
   { id: "Amuleto do Servo",
     name: "Amuleto do Servo",

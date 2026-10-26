@@ -282,6 +282,25 @@ export const enchantments: Enchantment[] = [
 ];
 
 export const specificWeapons: SpecificWeapon[] = [
+  //#region Guia de NPCs
+  { id: "Punhal Escarlate",
+    name: "Punhal Escarlate",
+    description: "Como presente de Kallyadranoch por sua devoção, cada uma das irmãs recebeu o poder para criar um item mágico específico. Esses itens são algumas das diversas ferramentas que utilizam para atrair devotos à fé em seu pai. Os poderes mágicos desses itens só funcionam com devotos de Kallyanadroch. Criada por Hemera, esta adaga formidável causa +1d6 pontos de dano de essência. Além disso, conta como um orbe cristalino.",
+    price: "41.000",
+    origin: "Guia de NPCs",
+  },
+  { id: "Presuntador",
+    name: "Presuntador",
+    description: "Feito de mana solidificado e dado a Klunc como recompensa por um ato especialmente heroico, o Presuntador é um machado de guerra aumentado energético magnífico. Se Klunc ficar inconsciente, o Presuntador continua lutando sozinho, com as mesmas estatísticas que teria se estivesse sendo empunhado. Quando ataca dessa forma, o Presuntador tem Defesa 35, RD 50 e 50 PV.",
+    price: "120.000",
+    origin: "Guia de NPCs",
+  },
+  //#endregion
+
+
+
+
+
   //#region A Lenda de Ghanor
   { id: "Adaga da Cooperação",
     name: "Adaga da Cooperação",
@@ -472,6 +491,10 @@ export const specificWeapons: SpecificWeapon[] = [
     origin: "A Lenda de Ghanor",
   },
   //#endregion
+
+
+
+
 
   //#region Dragão Brasil
   // Dragão Brasil - 183

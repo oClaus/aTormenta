@@ -1,7 +1,22 @@
 import { Artifact } from "@/types/artifact";
-//#region Tormenta20 - Jogo do Ano
-//#endregion
+
 export const artifacts: Artifact[] = [
+  //#region Guia de NPCs
+  { id: "anel-da-felicidade-de-vallen",
+  name: "Anel da Felicidade de Vallen",
+  description: "Este anel foi criado pelos diabretes negociantes a partir da felicidade de Vallen Allond. Foi concedido a Crânio Negro por motivos que apenas os diabretes conhecem — mas que, de forma geral, podem ser resumidos a sadismo e desejo de destruição. O anel da felicidade de Vallen fornece cura acelerada 10 (somente após um dia de uso) que recupera até perda de vida. Além disso, se o usuário for morto enquanto estiver usando o anel e continuar com ele, irá recuperar 1 ponto de vida por dia e, quando chegar a PV positivos, será ressuscitado. Sendo feito a partir da felicidade de Vallen Allond, o anel tem um efeito colateral: o usuário é assaltado por visões desse aventureiro e sente compulsão de protegê-lo, estar perto dele ou garantir sua felicidade. É claro que, para um usuário insano, os conceitos de “proteger” e “garantir a felicidade” tornam-se bem distorcidos… O anel também influencia o comportamento do usuário (tornando-o um pouco mais semelhante a Vallen).",
+  origin: "Guia de NPCs"
+  },
+  { id: "Coroa de Allihanna",
+  name: "Coroa de Allihanna",
+  description: "Este artefato, criado pela própria Deusa da Natureza, tem a aparência de uma coroa de madeira e vinhas. Concede For +3, Con +3 e redução de dano 20.",
+  origin: "Guia de NPCs"
+  },
+  //#endregion
+
+
+
+
 
   //#region Duelo de Dragões
   { id: "Pentalépide de Kryzzaorin",
@@ -11,6 +26,10 @@ export const artifacts: Artifact[] = [
     image: "/artefatos/Kryzzaorin.png",
   },
   //#endregion
+
+
+
+
 
   //#region Dragão Brasil
   // Dragão Brasil - 204
