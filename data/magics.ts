@@ -295,6 +295,18 @@ export const specificWeapons: SpecificWeapon[] = [
     price: "120.000",
     origin: "Guia de NPCs",
   },
+  { id: "Avir",
+    name: "Avir",
+    description: "Este montante aumentado macabro maciço formidável tumular foi fabricado a partir do fêmur da irmã de Narsogg. Uma arma única, conta como um cajado arcano. Além dos benefícios desse esotérico, as magias do usuário que causam dano de trevas causam +1 ponto de dano por dado.",
+    price: "96.000",
+    origin: "Guia de NPCs",
+  },
+  { id: "Báculo da Fé",
+    name: "Báculo da Fé",
+    description: "Este bordão banhado a ouro formidável é dedicado a uma divindade específica, que pode ser identificada pelos símbolos em sua empunhadura e extremidades. Quando empunhado por um devoto dessa divindade, causa +1d6 pontos de dano de fogo (para divindades que canalizam energia positiva) ou +1d6 pontos de dano de frio (para divindades que canalizam energia negativa).",
+    price: "45.000",
+    origin: "Guia de NPCs",
+  },
   //#endregion
 
 

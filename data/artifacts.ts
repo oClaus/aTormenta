@@ -12,6 +12,26 @@ export const artifacts: Artifact[] = [
   description: "Este artefato, criado pela própria Deusa da Natureza, tem a aparência de uma coroa de madeira e vinhas. Concede For +3, Con +3 e redução de dano 20.",
   origin: "Guia de NPCs"
   },
+  { id: "Carthalkan, a Espada Cristalina",
+  name: "Carthalkan, a Espada Cristalina",
+  description: "Esta espada longa atroz e pungente é feita de um cristal translúcido. Empunhá-la traz uma sensação estranha, pois ela não tem o peso de materiais comuns, como metal ou madeira. Quando brandida por um herdeiro da família Sharpblade, a arma emite uma luz límpida e revela todos os seus poderes: torna-se uma espada longa atroz pungente ameaçadora magnífica, que tem dano base 4d8.",
+  origin: "Guia de NPCs"
+  },
+  { id: "Coroa Imperial",
+  name: "Coroa Imperial",
+  description: "Símbolo do trono do Reinado, esta coroa é usada pelos Reis-Imperadores há séculos. Ao longo das gerações, foi imbuída pela força de cada um dos monarcas que a usou, até se tornar um artefato capaz de auxiliar o regente na tarefa de guiar a humanidade. O usuário da Coroa Imperial recebe +2 em Sabedoria e Carisma (cumulativo com outros itens), aplica seu Carisma na Defesa e em testes de resistência e recebe imunidade a encantamento. Como um artefato, a Coroa Imperial não pode ser danificada por meios mundanos. A única maneira de destruí-la é roubá-la e escondê-la em uma masmorra. Se nenhum herói resgatar a Coroa dentro de um ano e um dia, ela será reduzida a pó.",
+  origin: "Guia de NPCs"
+  },
+  { id: "O Artefato de Cross",
+  name: "O Artefato de Cross",
+  description: "Esta arma única é um item puramente mundano e tecnológico, inventado e forjado pelas mentes geniais e doentias de demônios. Ela é composta por diversos canos de mosquete, que giram por meio de engrenagens quando o usuário puxa uma alavanca. O artefato é pesado e desajeitado, mas quando acionado, dispara todos os seus canos, banhando os alvos com uma chuva de chumbo.\nO Artefato de Cross é uma arma de fogo de duas mãos (dano 2d12, crítico 19/x3, alcance médio, perfuração) que fornece +10 nos testes de ataque e, em caso de acerto, causa +1d12 pontos de dano para cada 2 pontos pelos quais o resultado do ataque passar a Defesa do alvo. Recarregá-lo é uma ação padrão. \nAtualmente, o Artefato de Cross está em posse do Senhor Porrada. O meio-orc vaga pelos ermos para manter a arma longe da civilização. Mas, claro, pode acabar sendo encontrado por um grupo de aventureiros. Nesse caso, será melhor para eles que o encontro seja amistoso…",
+  origin: "Guia de NPCs"
+  },
+  { id: "Gemas Eternas",
+  name: "Gemas Eternas",
+  description: "Esta joia é formada por uma correntinha de mitral, adornada por safiras, esmeraldas, rubis e diamantes que emitem luz própria, brilhando com todas as cores do arco-íris. A beleza das Gemas Eternas só é rivalizada por seu poder. O usuário recebe +2 em Carisma, +5 na Defesa e 1 ponto de mana extra por nível (após um dia de uso). Se possuir a capacidade de lançar magias arcanas, a CD de suas magias aumenta em +2.",
+  origin: "Guia de NPCs"
+  },
   //#endregion
 
 

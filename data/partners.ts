@@ -1,6 +1,36 @@
 import { Partner } from "@/types/partner";
 
 export const partners: Partner[] = [
+  //#region Guia de NPCs
+  { id: "Molosso deheoni",
+    name: "Molosso deheoni",
+    archetype: "Vigilante",
+    category: "especifico",
+    description: "Resultado de cruzamentos entre várias raças domésticas trazidas de Lamnor na Caravana dos Exilados, o molosso deheoni é um cão enorme, destinado a proteger as habitações dos colonos e auxiliar em caçadas. Acabaria se tornando exímio no combate a serpentes, sendo resistente a seu veneno e hábil em rastreá-las. Essa perícia se tornaria valiosa mais tarde durante a inquisição contra os sszzaazitas, uma vez que o molosso podia farejá-los através de seus disfarces. Nos dias de hoje, o cão é popular como animal de guarda não apenas em aldeias e fazendas, mas também templos, palácios e quaisquer lugares onde devotos do Deus da Traição poderiam se infiltrar.",
+    origin: "Guia de NPCs",
+    benefits: {
+      iniciante: "Você recebe +1 na Defesa e +2 em testes de Intuição e Percepção (contra seres ofídicos e sszzaazitas, o bônus nos testes de perícia muda para +5).",
+      veterano: "Uma vez por rodada, você recebe +2d6 em uma rolagem de dano corpo a corpo.",
+      mestre: "Muda o bônus na Defesa para +2 e, uma vez por rodada, quando faz uma investida, você pode fazer a manobra derrubar como uma ação livre."
+    }
+  },
+  { id: "Falcão",
+    name: "Falcão",
+    archetype: "Perseguidor",
+    category: "especifico",
+    description: "No Reinado, nos Feudos de Trebuck e em algumas outras regiões de Arton, falcões são criados e treinados para auxiliar nobres a perseguir e abater pequenas presas — embora também possam ser encontrados servindo como familiares de conjuradores ou companheiros de caçadores. Um falcão treinado pode ser comprado por T$ 150 e pode ser usado como parceiro por personagens treinados em Adestramento.",
+    origin: "Guia de NPCs",
+    benefits: {
+      iniciante: "Uma vez por cena, você pode gastar uma ação de movimento e fazer um teste de Adestramento (CD 10). Se passar, o falcão concede a você +1 em testes de ataque, Percepção e Sobrevivência até o fim da cena. Para cada 10 pontos pelos quais o resultado de seu teste passar a CD, esse bônus aumenta em +1.",
+      veterano: "Você pode usar Sentidos Aguçados.",
+      mestre: "Uma vez por rodada, você pode gastar 1 PM para fazer uma criatura em alcance médio ficar cega por 1d4 rodadas (Ref CD Car evita)."
+    }
+  },
+  //#endregion
+
+
+
+
 
   //#region Uma visita a Vectora
   { id: "Coruja Conselheira",
@@ -35,7 +65,9 @@ export const partners: Partner[] = [
 
   //#region Monster Chefe
   { id: "Dranniko",
-  name: "D’ranniko (Fortão)",
+  name: "D’ranniko",
+  archetype: "Fortão",
+  category: "especifico",
   description: "Um inseto gigante semelhante a um louva-a-deus branco de olhos vermelhos. Valente e implacável, é temido nas cavernas próximas a Doherimm e valorizado como feroz parceiro de combate.",
   origin: "Dragão Brasil - 220",
   benefits: {
@@ -45,7 +77,9 @@ export const partners: Partner[] = [
   },
   },
   { id: "Jaata",
-  name: "Jäätä (Fortão)",
+  name: "Jäätä",
+  archetype: "Fortão",
+  category: "especifico",
   description: "Uma criatura elemental de gelo semelhante a um pangolim gigante, coberta por escamas brancas afiadas e envolta em névoa congelante. Forte e agressiva, espalha frio intenso ao seu redor.",
   origin: "Dragão Brasil - 216",
   benefits: {
@@ -77,6 +111,8 @@ export const partners: Partner[] = [
   { id: "combatente",
     name: "Combatente",
     description: "Um bucaneiro, guerreiro, paladino ou animal de caça.",
+    category: "arquetipo",
+    archetype: "Combatente",
     origin: "Tormenta20 - Jogo do Ano",
     benefits: {
       iniciante: "+2 em testes de ataque.",
@@ -87,6 +123,8 @@ export const partners: Partner[] = [
   { id: "destruidor",
     name: "Destruidor",
     description: "Um arcanista ou inventor.",
+    category: "arquetipo",
+    archetype: "Destruidor",
     origin: "Tormenta20 - Jogo do Ano",
     benefits: {
       iniciante: "Uma vez por rodada, como uma ação livre, você pode gastar 1 PM para causar 2d6 pontos de dano de ácido, eletricidade, fogo ou frio (de acordo com o parceiro) em um alvo em alcance curto.",
@@ -98,6 +136,8 @@ export const partners: Partner[] = [
     name: "Fortão",
     description: "Um bárbaro, lutador ou outro tipo que bate primeiro e pensa depois.",
     origin: "Tormenta20 - Jogo do Ano",
+    category: "arquetipo",
+    archetype: "Fortão",
     benefits: {
       iniciante: "Uma vez por rodada, você recebe +1d8 em uma rolagem de dano corpo a corpo.",
       veterano: "Muda para +1d12.",
@@ -108,6 +148,8 @@ export const partners: Partner[] = [
     name: "Guardião",
     description: "Um cavaleiro, cão de guarda ou outro NPC cuja função primária é proteger.",
     origin: "Tormenta20 - Jogo do Ano",
+    category: "arquetipo",
+    archetype: "Guardião",
     benefits: {
       iniciante: "Você recebe +2 na Defesa.",
       veterano: "Muda para +3.",
@@ -118,6 +160,8 @@ export const partners: Partner[] = [
     name: "Magivocador",
     description: "Um conjurador especializado em magias ofensivas.",
     origin: "Tormenta20 - Jogo do Ano",
+    category: "arquetipo",
+    archetype: "Magivocador",
     benefits: {
       iniciante: "O dano de suas magias aumenta em +1 dado do mesmo tipo.",
       veterano: "Como acima, e a CD para resistir a suas magias aumenta em +1.",
@@ -126,6 +170,8 @@ export const partners: Partner[] = [
   },
   { id: "medico",
     name: "Médico",
+    category: "arquetipo",
+    archetype: "Médico",
     description: "Um clérigo, druida, herbalista ou outro NPC com capacidades curativas.",
     origin: "Tormenta20 - Jogo do Ano",
     benefits: {
@@ -136,6 +182,8 @@ export const partners: Partner[] = [
   },
   { id: "Adepto",
     name: "Adepto",
+    category: "arquetipo",
+    archetype: "Adepto",
     description: "Um conjurador capaz de ajudá-lo a lançar suas magias.",
     origin: "Tormenta20 - Jogo do Ano",
     benefits: {
@@ -146,6 +194,8 @@ export const partners: Partner[] = [
   },
   { id: "Ajudante",
     name: "Ajudante",
+    category: "arquetipo",
+    archetype: "Ajudante",
     description: "Um bardo, nobre ou sábio que ajuda com palavras firmes ou encorajadoras. Um ajudante não pode fornecer bônus em Luta ou Pontaria.",
     origin: "Tormenta20 - Jogo do Ano",
     benefits: {
@@ -156,6 +206,8 @@ export const partners: Partner[] = [
   },
   { id: "Assassino",
     name: "Assassino",
+    category: "arquetipo",
+    archetype: "Assassino",
     description: "Um ladino ou outro tipo furtivo e letal. Note que, além de fornecer +2 em testes de ataque corpo a corpo, o bônus por flanquear facilita que o personagem use seu Ataque Furtivo.",
     origin: "Tormenta20 - Jogo do Ano",
     benefits: {
@@ -166,6 +218,8 @@ export const partners: Partner[] = [
   },
   { id: "Perseguidor",
     name: "Perseguidor",
+    category: "arquetipo",
+    archetype: "Perseguidor",
     description: "Um caçador, animal farejador ou outro especialista em localizar alvos.",
     origin: "Tormenta20 - Jogo do Ano",
     benefits: {
@@ -176,6 +230,8 @@ export const partners: Partner[] = [
   },
   { id: "Vigilante",
     name: "Vigilante",
+    category: "arquetipo",
+    archetype: "Vigilante",
     description: "Um vigia ou animal de guarda, sempre atento aos arredores.",
     origin: "Tormenta20 - Jogo do Ano",
     benefits: {

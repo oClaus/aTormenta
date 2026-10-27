@@ -260,6 +260,12 @@ export const specificWeapons: SpecificWeapon[] = [
     price: "42.000",
     origin: "Guia de NPCs",
   },
+  { id: "Batina Consagrada",
+    name: "Batina Consagrada",
+    description: "Esta armadura acolchoada guardiã refletora é dedicada a uma divindade específica, que pode ser identificada pelos símbolos bordados em seu peito e mangas. Conta como um manto eclesiástico aprimorado e, se vestida por um devoto da divindade à qual é dedicada, fornece redução de dano 5.",
+    price: "80.000",
+    origin: "Guia de NPCs",
+  },
   //#endregion
 
 
