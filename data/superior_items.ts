@@ -623,7 +623,7 @@ export const improvements: Improvement[] = [
     name: "Poderoso", 
     effect: "+1 na CD de suas magias", 
     category: ["Esotérico"], 
-    description: "O item é construído de forma cuidadosa e com os melhores materiais. Esta melhoria só pode ser aplicada a uma ferramenta ou vestuário que modifique uma perícia (reduza uma penalidade ou forneça um bônus) e fornece um bônus de +1 nessa perícia (ou aumenta o bônus fornecido em +1). Por exemplo, uma maleta de medicamentos aprimorada fornece +1 em Cura e uma luva de pelica aprimorada fornece +2 em Ladinagem.", 
+    description: "A CD para resistir a suas magias aumenta em +1.", 
     origin: "Tormenta20 - Jogo do Ano" 
   },
   { id: "vigilante", 
