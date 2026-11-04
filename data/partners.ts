@@ -2,6 +2,73 @@ import { Partner } from "@/types/partner";
 
 export const partners: Partner[] = [
   //#region Guia de NPCs
+  {  id: "Aspecto de Azgher",
+    name: "Aspecto de Azgher",
+    description: "Apresenta-se geralmente como um guerreiro sar-allan trajando vestes típicas do deserto e empunhando uma cimitarra de lâmina dourada. Assim como o Deus-Sol, demonstra sabedoria e bondade, mas é também exigente, rigoroso e orgulhoso. Trabalha de bom grado ao lado de mortais respeitosos, mas jamais flexibiliza seus dogmas.",
+    origin: "Bestiário de Arton",
+    category: "especifico",
+    archetype: "Especial",
+    benefits: {
+      iniciante: "-",
+      veterano: "Fornece redução de dano de luz, fogo, frio e trevas 5 e permite usar o poder Espada Solar. Caso você já tenha esse poder, em vez disso o dano de fogo fornecido por ele aumenta em mais um dado do mesmo tipo. O aspecto apoia apenas personagens devotos de Azgher de nível maior que o dele. Caso você viole as Obrigações & Restrições de Azgher, o aspecto deixa de apoiá-lo.",
+      mestre: "-"
+    }
+  },
+  { id: "Aspecto de Hyninn",
+    name: "Aspecto de Hyninn",
+    description: "Manifesta-se frequentemente como armadilhas animadas, disfarçadas sob a forma de objetos aparentemente mundanos, como armários, cofres ou arcas. Seu interior esconde uma engenhosa profusão de lâminas, laços e venenos, criados para surpreender, punir e trapacear exploradores e incautos curiosos.",
+    origin: "Bestiário de Arton",
+    category: "especifico",
+    archetype: "Especial",
+    benefits: {
+      iniciante: "-",
+      veterano: "Fornece +2 em Jogatina e Ladinagem e permite que você use um poder de Armadilha do caçador, definido pelo aspecto. Por ser criada a partir de energia divina, essa armadilha é mágica, pode ser preparada em locais sem os materiais propícios e não é percebida automaticamente por criaturas que a vejam ser preparada. Se você já possuir um poder de Armadilha, a CD para resistir a todas as suas armadilhas aumenta em +2. Caso você viole as Obrigações & Restrições de Hyninn, o aspecto deixa de apoiá-lo.",
+      mestre: "-"
+    }
+  },
+  { id: "Aspecto de Megalokk",
+    name: "Aspecto de Megalokk",
+    description: "Um monstro quimérico enfurecido e enlouquecido de ódio, formado por inumeráveis partes de outras criaturas, como patas, asas e cabeças. É uma manifestação caótica enviada por Megalokk que não pode ser controlada, atacando tudo o que encontra pela frente, não raras vezes voltando-se contra seu próprio invocador.",
+    origin: "Bestiário de Arton",
+    category: "especifico",
+    archetype: "Especial",
+    benefits: {
+      iniciante: "-",
+      veterano: "Fornece os benefícios de quatro parceiros iniciantes diferentes (exceto montaria) entre os descritos em Tormenta20 ou, a critério do mestre, entre outros parceiros monstros iniciantes. Você só pode receber os benefícios de dois dos tipos escolhidos a qualquer momento, mas pode trocar um ou ambos os tipos no início de cada um dos seus turnos como uma ação livre. Além disso, quando faz um teste de Percepção, você pode jogar um dado adicional e usar o melhor resultado. Caso você viole as Obrigações & Restrições de Megalokk, o aspecto deixa de apoiá-lo.",
+      mestre: "-"
+    }
+  },
+  { id: "Aspecto de Tenebra",
+    name: "Aspecto de Tenebra",
+    description: "Uma manifestação sutil e discreta sob a forma de uma pequena e sorrateira gata negra com olhos prateados e fala aveludada. Espirituosa, furtiva e incrivelmente vaidosa, atua para promover os objetivos da Deusa das Trevas, exigindo de seus aliados ser tratada como a princesa felina exigente e complexa que é.",
+    origin: "Bestiário de Arton",
+    category: "especifico",
+    archetype: "Especial",
+    benefits: {
+      iniciante: "-",
+      veterano: "Atua como um familiar gato e permite lançar as magias Escuridão e Toque Vampírico. Caso você já conheça essas magias, o custo delas diminui em –1 PM (cumulativo com reduções fornecidas por poderes concedidos de Tenebra). Se você violar as Obrigações & Restrições de Tenebra, o aspecto deixará de apoiá-lo.",
+      mestre: "-"
+    }
+  },
+  { id: "Aspecto de Thwor",
+    name: "Aspecto de Thwor",
+    description: "Uma imensa e silenciosa manifestação divina na forma do próprio símbolo sagrado de Thwor: um punho fechado feito inteiramente de ferro negro. Grande como um boi e dotado de uma brutalidade titânica, ele flutua e voa para golpear com força suficiente para derrubar muralhas e subjugar dragões.",
+    origin: "Bestiário de Arton",
+    category: "especifico",
+    archetype: "Especial",
+    benefits: {
+      iniciante: "-",
+      veterano: "Fornece +2 na Defesa e em testes para empurrar. Além disso, sempre que faz um ataque corpo a corpo, você pode gastar 1 PM. Se fizer isso e acertar o ataque, você causa +1d12 pontos de dano de impacto e pode fazer uma manobra empurrar contra o alvo como uma ação livre. Caso você viole as Obrigações & Restrições de Thwor, o aspecto deixa de apoiá-lo.",
+      mestre: "-"
+    }
+  },
+  //#endregion
+
+
+
+
+
+  //#region Guia de NPCs
   { id: "Molosso deheoni",
     name: "Molosso deheoni",
     archetype: "Vigilante",

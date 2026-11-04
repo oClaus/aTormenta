@@ -1,7 +1,21 @@
 import { Gear } from "@/types/comidas";
-//#region Tormenta20 - Jogo do Ano
-//#endregion
+
 export const food: Gear[] = [
+  //#region Bestiário de Arton
+  { id: "Mel de Abelha-Grifo",
+    name: "Mel de Abelha-Grifo",
+    description: "Capaz de durar indefinidamente, este mel é muito valorizado por seu sabor e suas propriedades energéticas. Uma porção funciona como um prato especial que aumenta seu limite de PM em +2.",
+    origin: "Bestiário de Arton",
+    price: "T$ 43",
+    spaces: "0,5",
+    category: "Alimentação"
+  },
+  //#endregion
+
+
+
+
+
   //#region Tormenta20 - Jogo do Ano
   { id: "Batata Valkariana",
     name: "Batata Valkariana",
@@ -75,6 +89,10 @@ export const food: Gear[] = [
     cookingDC: "15"
   },
   //#endregion
+
+
+
+
 
   //#region Ameaças de Arton
   { id: "Algravia",

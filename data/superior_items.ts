@@ -7,10 +7,35 @@ export const priceImprovements: PriceImprovement[] = [
   { level: 4, priceIncrease: "+ T$ 18.000", cdIncrease: "+20" },
 ];
 
-//#region Tormenta20 - Jogo do Ano
-//#endregion
-
 export const materialPrices: MaterialPriceRow[] = [
+  //#region Bestiário de Arton
+  { material: "Cera de Abelha-Grifo",
+    Arma: "",
+    "Armadura Leve": "+T$ 1.500",
+    "Armadura Pesada": "",
+    Escudo: "+T$ 1.500",
+    Esotéricos: "",
+    description: "Usada para construir paredes e corredores no interior das colmeias, esta cera pode ser trabalhada em um material leve, resistente e silencioso.",
+    description_armadura: "Pode ser empregada apenas em armaduras leves. Itens feitos desta cera não aplicam sua penalidade de armadura em Furtividade.",
+    description_escudo: "Itens feitos desta cera não aplicam sua penalidade de armadura em Furtividade.",
+    origin: "Bestiário de Arton"
+  },
+  { material: "Carapaça de Ankthyr",
+    Arma: "",
+    "Armadura Leve": "+T$ 2.000",
+    "Armadura Pesada": "+T$ 6.000",
+    Escudo: "+T$ 2.000",
+    Esotéricos: "",
+    description: "Carapaças de ankhtyr podem ser usadas para fabricar armaduras resistentes e com pouco peso. Apenas armaduras de placas (como couraça, meia armadura, armadura de placas ou armadura de quitina) e escudos podem ser fabricados com esse material. Uma peça vale T$ 2.000.",
+    description_armadura: "Armadura leve exige uma peça e concede RD 1. Armadura pesada exige três peças e concede RD 2. (Restrito a armaduras de placas).",
+    description_escudo: "Exige uma peça e concede RD 1.",
+    origin: "Bestiário de Arton"
+  },
+  //#endregion
+
+
+
+
 
   //#region Tormenta20 - Jogo do Ano
   { material: "Aço-Rubi",

@@ -1,7 +1,35 @@
 import { Mount } from "@/types/mount";
-//#region Tormenta20 - Jogo do Ano
-//#endregion
+
 export const mounts: Mount[] = [
+  //#region Bestiário de Arton
+  { id: "Abelha-Grifo",
+    name: "Abelha-Grifo",
+    size: "Grande",
+    description: "Um inseto gigante do tamanho de um cavalo, combinando características de abelhas e felinos. Seu corpo amarelo e preto é protegido por uma carapaça quitinosa e pelos espessos. As guerreiras defendem a colmeia e possuem um poderoso ferrão venenoso, usado apenas como último recurso, pois o ataque resulta na morte da criatura. Vivem em grandes colmeias montanhosas estruturadas em cera, onde produzem um mel valioso e altamente nutritivo.",
+    origin: "Bestiário de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 15m e você recebe deslocamento de escalada 15m.",
+      veterano: "Você também recebe deslocamento de voo 15m e +2 em testes de agarrar.",
+      mestre: "Seus deslocamentos mudam para 18m, você recebe +2 em testes de agarrar e uma ação de movimento extra por turno (apenas para se deslocar)."
+    },
+    extra: "Larva de Abelha Guerreira: É muito difícil domesticar uma abelha-grifo guerreira adulta. A melhor forma é criá-la desde o estágio larval, o que leva cerca de 30 dias até a maturidade. Durante esse tempo, deve ser alimentada com mel de abelha-grifo (uma porção por dia). Mesmo domesticada, ela obedecerá apenas ao seu tratador."
+  },
+  { id: "Alce",
+    name: "Alce",
+    size: "Grande",
+    description: "Maior que um cavalo, este pacato herbívoro possui uma imponente galhada larga e achatada. Habitante de florestas e proximidades de rios, é tímido e prefere a fuga à luta, mas pode desferir golpes avassaladores com seus chifres para se defender. Embora não sejam amplamente domesticados, podem ser treinados como montarias e são reverenciados por povos feéricos como animais honrados, dignos de seus maiores cavaleiros.",
+    origin: "Bestiário de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 12m e você recebe +2 em testes de ataque quando faz investidas.",
+      veterano: "Uma vez por rodada, você recebe +1d6 em uma rolagem de dano corpo a corpo. Se esta rolagem for de uma investida, em vez disso você recebe +2d6.",
+      mestre: "Quando faz uma investida, você pode usar Ataque Pesado. Caso possua esse poder, você recebe +2 no teste de manobra."
+    }
+  },
+  //#endregion
+
+
+
+
 
   //#region Duelo de Dragões
   { id: "Corcel de Comando ",
@@ -16,6 +44,10 @@ export const mounts: Mount[] = [
     },
   },
   //#endregion
+
+
+
+
 
   //#region Dragão Brasil
   // Dragão Brasil - 205
@@ -55,6 +87,10 @@ export const mounts: Mount[] = [
     },
   },
   //#endregion
+
+
+
+
 
   //#region Tormenta20 - Jogo do Ano
   { id: "Cavalo ",
@@ -104,6 +140,10 @@ export const mounts: Mount[] = [
     },
   },
   //#endregion
+
+
+
+
 
   //#region Ameaças de Arton
   { id: "Sapo Atroz ",

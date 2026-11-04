@@ -31,6 +31,8 @@ export type MaterialType =
   | "Hajalbar"
   | "Arcanium"
   | "Necrotaurite"
+  | "Cera de Abelha-Grifo"
+  | "Carapaça de Ankthyr"
   | "Quitina Razza";
 
 export type MaterialItemCategory = 
