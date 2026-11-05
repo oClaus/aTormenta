@@ -1,7 +1,7 @@
 import { Partner } from "@/types/partner";
 
 export const partners: Partner[] = [
-  //#region Guia de NPCs
+  //#region Bestiário de Arton
   {  id: "Aspecto de Azgher",
     name: "Aspecto de Azgher",
     description: "Apresenta-se geralmente como um guerreiro sar-allan trajando vestes típicas do deserto e empunhando uma cimitarra de lâmina dourada. Assim como o Deus-Sol, demonstra sabedoria e bondade, mas é também exigente, rigoroso e orgulhoso. Trabalha de bom grado ao lado de mortais respeitosos, mas jamais flexibiliza seus dogmas.",
@@ -60,6 +60,18 @@ export const partners: Partner[] = [
       iniciante: "-",
       veterano: "Fornece +2 na Defesa e em testes para empurrar. Além disso, sempre que faz um ataque corpo a corpo, você pode gastar 1 PM. Se fizer isso e acertar o ataque, você causa +1d12 pontos de dano de impacto e pode fazer uma manobra empurrar contra o alvo como uma ação livre. Caso você viole as Obrigações & Restrições de Thwor, o aspecto deixa de apoiá-lo.",
       mestre: "-"
+    }
+  },
+  { id: "Canifado",
+    name: "Canifado",
+    description: "Uma simpática criaturinha mágica e feérica que se assemelha a um cãozinho colorido com patas de coelho, asas de borboleta e antenas cintilantes. Criados originalmente por um nobre escriba e uma feiticeira para proteger seu filho, hoje formam uma linhagem de guardiões alegres, brincalhões e extremamente dedicados a defender seu bando.",
+    origin: "Bestiário de Arton",
+    category: "especifico",
+    archetype: "Vigilante",
+    benefits: {
+      iniciante: "Você recebe +2 em Percepção e Sobrevivência.",
+      veterano: "Você pode lançar a magia Leque Cromático (atributo-chave Carisma).",
+      mestre: "Uma vez por rodada, você pode aumentar para curto o alcance de uma de suas habilidades com alcance de toque que tenha como alvo um aliado."
     }
   },
   //#endregion

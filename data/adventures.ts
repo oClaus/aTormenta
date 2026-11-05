@@ -7854,4 +7854,306 @@ export const adventures: Adventure[] = [
     }
   ]
   },
+  { id: "Terceiras Intenções",
+  name: "Terceiras Intenções",
+  theme: "Intriga Mercantil e Cultos Secretos",
+  image: "/aventuras/terceiras-intencoes.png",
+  summary: "Contratados como escolta por um mercador hynne em Sambúrdia, os heróis se veem enredados em uma conspiração armada por guardas corruptos e comerciantes rivais, orquestrada por um sacerdote de Arsenal infiltrado.",
+  sections: [
+    {
+      type: "text",
+      content: "O reino de Sambúrdia já foi conhecido como o celeiro de Arton. Esse apelido vinha da combinação de suas terras férteis com seus grandes mercadores. Devido às diversas mudanças recentes ocorridas em Arton, desde guerras até a queda e ascensão de deuses maiores, hoje as Repúblicas Livres possuem grande poder e um território invejável. Em vez de uma tradicional nobreza, aqui o poder está na mão dos mercadores."
+    },
+    {
+      type: "text",
+      content: "O duelo de influência dessas figuras atrai aqueles interessados no conflito. E ninguém mais deseja ver a guerra elevar os capazes do que os devotos do deus Arsenal. Eles se infiltram em exércitos, cidades, e onde quer que seja, usando seu treinamento e pensamento estratégico para se tornarem insubstituíveis. Porém, muitos acabam se revelando como mestres manipuladores, especialistas em iniciar rusgas fatais para agradar seu patrono."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "RESUMO DA AVENTURA"
+    },
+    {
+      type: "text",
+      content: "Terceiras Intenções é uma breve jornada, uma aventura curta pensada para uma sessão única, mas que pode ser inserida em uma campanha maior. É ideal para um grupo de personagens de 1º nível em Tormenta20."
+    },
+    {
+      type: "text",
+      content: "Os aventureiros são contratados por Dingo Dedosligeiros, um mercador hynne. O contrato é simples: eles devem acompanhar as entregas de uma remessa de seus produtos. Após acompanharem algumas das entregas, em uma ruela, alguns guardas surgem para inspecionar a carroça que os transporta. Após checar alguns dos itens, um deles alega ter encontrado contrabando de achbuld, uma droga poderosa, e pretende confiscar a remessa e prendê-los. Essa evidência, entretanto, foi plantada pelos guardas corruptos. Se forem perceptivos, poderão questioná-los, mas isso inicia um combate."
+    },
+    {
+      type: "text",
+      content: "No dia seguinte, um funcionário de uma mercadora elfa se oferece para liberá-los. O problema é que Shindantalas, a tal elfa, deseja que os heróis se infiltrem na organização de Dedosligeiros em troca. Caso recusem, Dingo os libertará logo que ela partir. Ele está possesso pela perda de seus bens, mas os aventureiros serão compensados se encontrarem um grupo de infiltrados. Tudo isso, entretanto, é manipulado por um sacerdote da guerra, Kirth. Antes de partir para seu próximo plano, ele deixa um último desafio: um dos temíveis tiranos das águas!"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 1: TRANSPORTE"
+    },
+    {
+      type: "text",
+      content: "As pessoas andam rapidamente, sem tempo para nada. Negócios são fechados a todo momento na cidade de Sambúrdia. Enormes carroças e carregamentos de artigos agrícolas passam o tempo todo. Dos prédios impressionantes da Cidade Nova, às construções simples da Cidade Velha, as pessoas trabalham desde antes do sol nascer, até depois dele se por. Apesar de bem patrulhada, ainda existe crime na capital, assim como existe sempre serviço para aventureiros motivados desejando fazer fortuna."
+    },
+    {
+      type: "text",
+      content: "Os personagens ficam sabendo de uma oportunidade de trabalho — preso em um folheto num quadro público, vindo de alguma fofoca em uma taverna — ou são procurados por sua ligação com as famílias mercantes. O local onde serão informados da missão é um dos prédios dos Dedosligeiros. Chegando lá, encontram principalmente humanos e hynnes, organizando cargas e caixas. O cheiro de charutos e tabaco preenche o ambiente. Uma hynne robusta avista os aventureiros e acena para eles."
+    },
+    {
+      type: "text",
+      content: "“Com essa cara de perdidos vocês só podem ser aventureiros!”, diz ela gargalhando. “Aposto que não saberiam como fazer um trabalho braçal mesmo que ele os atingisse bem na fuça”."
+    },
+    {
+      type: "text",
+      content: "Apesar da implicância, Maya, é amigável, rindo de si mesma se provada errada. Ela os leva até o escritório principal, onde há diversas pessoas entrando e saindo. Atrás de uma escrivaninha está um outro hynne, de cabelos encaracolados e com várias marcas de expressão. Há um charuto meio apagado na mesa."
+    },
+    {
+      type: "text",
+      content: "“O que foi, Maya? Mais algum problema? Por Tibar, eu juro que se tiver acontecido qualquer coisa com essa remessa...”, ele diz."
+    },
+    {
+      type: "text",
+      content: "Ele é Dingo, o mercador. Os dois conversam, e o homem parece aliviado. Sem sair de sua mesa, e sem parar de assinar documentos, aperta a mão de cada um dos aventureiros."
+    },
+    {
+      type: "text",
+      content: "“Bom, menos mal. Vou ser direto, tempo é dinheiro. Uma determinada rota de entregas na cidade tem sido atacada, e a guarda convenientemente não encontra pistas. O trabalho é simples: vocês acompanham Maya por alguns dias, e evitam esses ataques”."
+    },
+    {
+      type: "text",
+      content: "A oferta que ele faz é de T$ 25 por dia para cada um. Porém, se simplesmente aceitarem, Dingo, diz “Vocês não estão acostumados com isso, né? Deixa eu ensinar: é agora que você negocia”. Permita um teste de Diplomacia para barganha, mas independente do resultado do teste (o bônus de Vontade do mercador é +10), o hynne aumenta a proposta para T$ 50, mais qualquer porcentagem adicional conseguida."
+    },
+    {
+      type: "text",
+      content: "Antes de saírem, um homem vestindo um hábito elegante púrpura sobre uma armadura entra na sala, há uma espada e martelo em um grande broche representando sua devoção a Arsenal."
+    },
+    {
+      type: "text",
+      content: "“Ah, então finalmente o teimoso do Dingo resolveu me ouvir!”. O sacerdote se apresenta como Kirth, e diz ser um conselheiro estratégico. “Tudo na vida é um campo de batalha, os negócios não são exceção”."
+    },
+    {
+      type: "text",
+      content: "Apresentações feitas, Maya os acompanha até uma carroça, onde há várias caixas para entregas acomodadas na parte de trás. Se desejarem conferir os itens, verão que tudo está de acordo com o manifesto. Assim, o grupo parte para o primeiro dia de missão."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 2: ALTO LÁ"
+    },
+    {
+      type: "text",
+      content: "As entregas seguem tranquilamente, e passam por toda a cidade de Sambúrdia durante o processo. Os personagens veem lugares como a Praça do Venha-Ver, o Fortim Sambur e o Salão dos Mistérios. Mesmo quando a entrega não parece tranquila, Maya explica que esse é o natural desses clientes. Começa a entardecer quando faltam as últimas caixas."
+    },
+    {
+      type: "text",
+      content: "Um dia pacífico parece estar chegando ao fim. Entretanto, quando precisam passar por uma rua estreita para chegar em um dos últimos clientes, os heróis encontram um grupo de três guardas como se estivessem aguardando-os. “Parados aí!”, eles dizem, “Saltem da carroça e mostrem o manifesto da carga”."
+    },
+    {
+      type: "text",
+      content: "Personagens treinados em Intuição, ou com a origem guarda, notam que há algo de errado. Os guardas revistam avidamente a carroça, tentando distrair o grupo com perguntas aleatórias. Um teste de Intuição oposto pela Enganação deles (+0 de bônus) revela que estão tensos e que há uma intenção oculta."
+    },
+    {
+      type: "text",
+      content: "Antes que possam fazer algo sobre isso, um deles grita, “Ora, ora, ora! O que temos aqui!”. Ele segura uma das caixas, e de dentro dela retira um pacote contendo o que aparenta ser achbuld, uma droga ilegal. “É isso, vamos ter de levar esse carregamento inteiro com a gente, e vocês vão para a cadeia!”"
+    },
+    {
+      type: "text",
+      content: "Maya parece chocada. Ela começa a falar muito rápido, justificando que checou a mercadoria várias vezes. “Sim, sim, todo mundo diz que é inocente nessas horas”, responde um dos guardas, em tom sarcástico. Peça um teste de Intuição ou Investigação oposto à Enganação deles, com um bônus de +5 se tiverem percebido as intenções ocultas. Se forem vencidos, os guardas gaguejam, pegos em sua mentira, e então sacam suas armas."
+    },
+    {
+      type: "text",
+      content: "Criaturas. Guardas de cidade x3 (Tormenta20, p. 289)."
+    },
+    {
+      type: "text",
+      content: "Se o combate começar, ou mesmo se o grupo aceitar a prisão pacificamente, Maya foge. Esses guardas corruptos sabem que se forem pegos em suas mentiras perderão o trabalho, e desagradarão seu contratante, então combatem até caírem inconscientes. Na primeira rodada, um deles assoprará seu apito como uma ação padrão, e mais quatro guardas, acompanhados de um sargento da guarda (Tormenta20, p. 289) chegarão no final de 1d4+1 rodadas. Aqueles que chegam depois não fazem parte do esquema, mas se virem os personagens usando dano letal para lidar com seus colegas, combaterão normalmente."
+    },
+    {
+      type: "text",
+      content: "Caso se entreguem voluntariamente, ou sejam derrotados pelos guardas, os personagens são levados para a cadeia, e presos para serem interrogados mais tarde. Se derrotarem os guardas antes do reforço chegar, vá para a cena 4."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 3: A PROPOSTA"
+    },
+    {
+      type: "text",
+      content: "Vocês se encontram presos em uma cela, as horas passam e ninguém surge até a manhã seguinte. Em vez do seu contratante, quem aparece é uma mulher elfa, alta e vestida em trajes elegantes, destoando muito do lugar onde estão."
+    },
+    {
+      type: "text",
+      content: "Ela se apresenta como Shindantalas, uma comerciante. Personagens com a origem mercador a reconhecem, sabem que possui uma reputação impecável e é muito influente."
+    },
+    {
+      type: "text",
+      content: "“Bem, vejo que foram enganados por um tratante. O tal Dedosligeiros usa pessoas e as descarta como os restos de seus charutos. Talvez eu possa fazer-lhes uma proposta que será benéfica tanto para vocês quanto para mim”, ela diz."
+    },
+    {
+      type: "text",
+      content: "Shindantalas explica que os homens de Dingo vêm atacando seus carregamentos de vinhos finos, para diminuir seus lucros. Infelizmente não pode provar a participação deles, mas alguém infiltrado poderia perguntar para os funcionários sem levantar muitas suspeitas. A elfa oferece, como recompensa se a auxiliarem, T$ 400 e uma espada curta precisa, de manufatura élfica."
+    },
+    {
+      type: "text",
+      content: "Entretanto, há algo de estranho. Um teste de Intuição oposto à Enganação de Shindantalas (+10) mostra que ela não acredita realmente no que está dizendo. Isso levanta suspeitas sobre essa proposta “generosa”."
+    },
+    {
+      type: "text",
+      content: "Se não aceitarem, ela diz: “Tudo bem, mas se mudarem de ideia, me procurem em meu escritório”. Mesmo se concordarem em ajudá-la, a elfa explica que não pode livrá-los da prisão ainda, para manter seu disfarce. Porém, entrega ao grupo T$ 100 como adiantamento. Assim que terminam a conversa, Shindantalas se retira, agradecendo ao menos a atenção."
+    },
+    {
+      type: "text",
+      content: "Logo depois chega um representante de Dedosligeiros, e os leva de volta para a casa comercial de Dingo. O hynne os aguarda em seu escritório."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 4: CONTRAPROPOSTA"
+    },
+    {
+      type: "text",
+      content: "No momento que entram na sala, o grupo vê Maya, de cabeça baixa, e Dingo, obviamente irritado. Ele não está debruçado sobre seus papéis, e quando entra pede que fechem a porta."
+    },
+    {
+      type: "text",
+      content: "“Maldição, essa situação é inaceitável!”, ele acende a ponta de seu charuto. “Não acho que essa confusão toda foi culpa de vocês, mas raios, que desgraça! A Maya aqui me contou tudo que aconteceu, e peço perdão por ter demorado a soltar vocês. Acho que descobri a responsável por todos esses problemas: uma golpista negociante de vinhos baratos chamada Shindantalas!”"
+    },
+    {
+      type: "text",
+      content: "Caso tenham ouvido a proposta da elfa, eles obviamente sabem de quem se trata. O hynne explica que descobriu uma possível ligação dela com os guardas corruptos que o grupo encarou. E o pior: sabe que alguns de seus homens podem estar passando informações para ela. Dingo agradece o trabalho feito até o momento, e os recompensa com o pagamento por um dia de trabalho."
+    },
+    {
+      type: "text",
+      content: "O mercador então diz precisar de mais um serviço, que renderá aos heróis T$ 200 e um escudo de família (escudo pesado reforçado). Tudo que precisam fazer é questionar seus funcionários que estão trabalhando num galpão anexo. Eles devem descobrir as provas do envolvimento de Shindantalas, para que o hynne possa acusá-la formalmente."
+    },
+    {
+      type: "text",
+      content: "Se informado da visita da elfa, Dingo vai bater na mesa. “Claro que ela tentaria isso, jogar vocês contra mim! Ainda assim, só posso fazer a acusação se provar o envolvimento com os guardas. Conto com vocês para isso, e muito obrigado pela honestidade”. E após dizer isso, aumenta a recompensa para T$ 300."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 5: OS INFILTRADOS"
+    },
+    {
+      type: "text",
+      content: "No galpão, o trabalho é constante e veloz. Os funcionários lacram caixas de charuto e as preparam para entregas, enquanto contadores revisam os números e separam remessas encomendadas para ainda mais longe."
+    },
+    {
+      type: "text",
+      content: "Será necessário decidir que linha de investigação seguirão nesse momento: os ataques aos carregamentos de vinhos Shindantalas ou a infiltração de agentes externos nas operações Dedosligeiros."
+    },
+    {
+      type: "text",
+      content: "Se forem pelo caminho dos ataques aos carregamentos, terão de fazer um teste estendido (CD 15, +2 para cada falha, 5 sucessos). Entre as perícias que podem ser usadas estão Diplomacia, Enganação e Investigação. Para outras perícias apropriadas a CD é 20. Em caso de falha total, ninguém mais fala com os personagens pelo dia, fazendo com que tenham que começar novamente sem nenhum sucesso acumulado no dia seguinte."
+    },
+    {
+      type: "text",
+      content: "Caso a linha de investigação seja a de encontrar os trabalhadores infiltrados, será também um teste estendido (CD 15, +2 a cada teste, independente de 5 sucessos ou falha). Para este, eles podem usar Intimidação, Intuição ou Investigação. Outras perícias causarão uma penalidade de –2. Uma falha total aqui representa um funcionário irritado que resolve puxar briga com os aventureiros (use a ficha de bandido, Tormenta20, p. 289). Ao passarem em um dos testes estendidos, encontram um dos funcionários que parece saber sobre os crimes, mas ele empurra algumas caixas e sai correndo."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 6: REVELAÇÕES"
+    },
+    {
+      type: "text",
+      content: "O trabalhador está movido pelo desespero, porém não consegue correr muito. Os aventureiros logo o alcançam. Entretanto, duas figuras mal-encaradas, armadas de tacapes o cercam, prontos para atacá-lo."
+    },
+    {
+      type: "text",
+      content: "Criaturas. Capangas x2 (NPCs e Criaturas)."
+    },
+    {
+      type: "text",
+      content: "Os capangas estão à serviço do verdadeiro culpado pela situação, manipulando os dois comerciantes para se enfrentarem. Entretanto, eles não querem conversa, e sim eliminar pontas soltas. Eles combatem até a morte, com um desapego assustador, e não atacam o trabalhador, preferindo lidar com ele depois."
+    },
+    {
+      type: "text",
+      content: "Quando for salvo, o funcionário desaba em lágrimas e, agradecido, fala tudo que sabe. Ele não tem informações que conectam os crimes nem ao hynne, nem a elfa, mas o sacerdote Kirth tem acesso às rotas de distribuição. Além disso, ele também viu Kirth conversando com outros trabalhadores, os convencendo a atacar remessas de Shindantalas. Ele também confessa que é possível encontrar o clérigo em um templo dedicado ao panteão."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 7: CONFRONTO"
+    },
+    {
+      type: "text",
+      content: "Apesar de ecumênico, o templo parece deserto. Entrando no local, vocês veem seu interior silencioso, exceto por um ranger metálico. Olhando para cima, há uma corrente pendurada no teto, com o que parece uma jaula em sua extremidade, coberta por um pano. Do seu interior ouve-se rugidos. Conforme entram, os aventureiros também escutam a voz de Kirth ecoando pelo ambiente."
+    },
+    {
+      type: "text",
+      content: "“Muito bem, aventureiros. Devo realmente aplaudir seu trabalho. Tenho que admitir que estou impressionado”."
+    },
+    {
+      type: "text",
+      content: "O homem começa a bater palmas, mas o som é abafado quando a porta do templo é trancada atrás dos personagens. “Eu adoraria ficar mais e derrotá-los. Porém, tenho outros lugares para estar, conflitos para começar. E, estranhamente, vejo um grande potencial em vocês. Quem sabe, se sobreviverem”."
+    },
+    {
+      type: "text",
+      content: "A gaiola se choca contra o chão no meio do salão. Do seu interior sai uma criatura que lembra um peixe, mas tem garras e presas terríveis. E há algo ainda mais aterrador: mesmo de forma indireta, a fera tem em si a corrupção da Tormenta. Aqueles originários do território de Callistia reconhecem o monstro: trata-se de um lursh-lyin, uma fera que aterroriza o Rio dos Deuses. Confuso, faminto e irado, ele ataca!"
+    },
+    {
+      type: "text",
+      content: "Criatura. Lursh-lyin predador (NPCs e Criaturas)."
+    },
+    {
+      type: "text",
+      content: "O lursh-lyin impede qualquer chance de perseguirem o clérigo, e luta ferozmente para se alimentar dos aventureiros. Após o combate, a igreja volta ao silêncio até que a guarda derruba a porta, chegando tarde demais para ajudar, enviadas por Shindantal e Dingo."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Epílogo: FOI BOM FAZER NEGÓCIOS COM VOCÊ"
+    },
+    {
+      type: "text",
+      content: "Os sacerdotes do templo estão amarrados no porão do lugar. Quando a guarda chega, eles são desamarrados e curam ferimentos dos aventureiros. Em seguida, o grupo é procurado por Dingo e Shindantal, juntos."
+    },
+    {
+      type: "text",
+      content: "Apesar de surpreendidos por descobrirem que o conselheiro trabalhava para ambos, ocultando seus próprios interesses, os rivais estão contentes de terem descoberto a verdade antes que algo pior fosse feito. Sabendo disso, elfa e hynne conversam e fazem as pazes, inclusive combinando alguma colaboração entre seus produtos."
+    },
+    {
+      type: "text",
+      content: "Kirth, por outro lado, desaparece. Suas verdadeiras intenções, e o objetivo de seu plano, são mistérios para outro momento. Há uma certeza apenas: um dia ele retornará para atormentar os aventureiros."
+    },
+    {
+      type: "text",
+      content: "Confusos, mas vitoriosos, os personagens avançam para o 2º nível!"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "NPCs & Criaturas"
+    },
+    {
+      type: "text",
+      content: "CAPANGA (ND ½)\nHumanoide (humano) Médio\nIniciativa +3, Percepção +2\nDefesa 13, Fort +5, Ref +3, Von +0\nPontos de Vida 7\nDeslocamento 9m (6q)\nCorpo a Corpo Tacape +10 (1d10+5).\nÍmpeto Agressor O capanga recebe +1d10 na rolagem de dano de seu primeiro ataque na cena.\nFor 3, Des 1, Con 1, Int –1, Sab 0, Car –1\nEquipamento Tacape. Tesouro Metade."
+    },
+    {
+      type: "text",
+      content: "LURSH-LYIN PREDADOR (ND 1)\nMonstro Médio\nIniciativa +5, Percepção +3, percepção às cegas (apenas dentro d’água), visão no escuro\nDefesa 15, Fort +6, Ref +6, Von +4\nPontos de Vida 16\nDeslocamento 9m (6q), natação 12m (8q)\nCorpo a Corpo Mordida +11 (1d6+3) e duas garras +11 (1d4+3).\nFrenesi Sangrento Sempre que causa dano com sua mordida, o lursh-lyin recebe um bônus cumulativo de +2 em testes de ataque e rolagens de dano até o fim da cena.\nFor 3, Des 2, Con 1, Int –1, Sab 1, Car –1\nPerícias Atletismo +7, Furtividade +4 (+9 dentro d’água).\nTesouro Padrão."
+    }
+  ]
+  },
 ];

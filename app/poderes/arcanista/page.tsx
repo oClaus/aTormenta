@@ -192,6 +192,9 @@ export default function ArcanistaPodersPage() {
                   <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Morcego: </span><span className="font-medium">Você adquire percepção às cegas em alcance curto.</span></p>
                   <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Rato: </span><span className="font-medium">Você pode usar seu atributo-chave em Fortitude, no lugar de Constituição.</span></p>
                   <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Sapo: </span><span className="font-medium">Você soma seu atributo-chave ao seu total de pontos de vida (cumulativo).</span></p>
+
+                  <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Canifado: </span><span className="font-medium">Um canifado familiar permite que você lance Leque Cromático. Caso aprenda novamente essa magia, seu custo diminui em –1 PM.</span></p>
+
                   <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">(A Lenda de Ghanor) Fuinha: </span><span className="font-medium">Você recebe +2 em Iniciativa e Investigação.</span></p>
                   <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">(A Lenda de Ghanor) Macaco: </span><span className="font-medium">Uma vez por rodada, você pode usar seu familiar para sacar ou guardar um item, ou para pegar um item solto Pequeno ou menor (1 espaço ou menos) em alcance curto e que ele consiga alcançar.</span></p>
                   <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">(A Lenda de Ghanor) Tartaruga: </span><span className="font-medium">Você recebe +1 na Defesa e deslocamento de natação igual ao seu deslocamento básico.</span></p>

@@ -59,6 +59,68 @@ export const regreiroQAs: RegreiroQA[] = [
     magazineNumber: 198,
   },
   //#endregion
+  //#region DB - 210
+  {
+    id: "DB210-01",
+    question: "Ao usar *Controlar Gravidade* para Inverter, objetos causam dano de queda ao “cair pra cima” embaixo de quem caiu pra cima junto?",
+    answer: "Sim, se houver objetos embaixo das criaturas quando a gravidade é invertida, isso pode ocorrer. Siga as regras para quedas em *Tormenta20*, p. 319.",
+    magazineNumber: 210,
+  },
+  {
+    id: "DB210-02",
+    question: "Ao lançar *Criar Ilusão* com o aprimoramento que cria sensações táteis, é possível subir na ilusão (optando por não resistir a ela)?",
+    answer: "Não. Para isso, é preciso não saber que se trata de uma ilusão. Um personagem que não quer resistir à ilusão o faz porque já sabe o que ela é.",
+    magazineNumber: 210,
+  },
+  {
+    id: "DB210-03",
+    question: "O que acontece se um personagem que já possui ataque de mordida obtiver o poder *Dentes Afiados*?",
+    answer: "O personagem ganha um segundo ataque de mordida. Lembre-se, a Tormenta é aberrante! Como isso se manifesta, seja como uma boca surgindo em um lugar diferente do corpo (como a barriga ou o ombro) ou até mesmo como uma segunda mandíbula dentro da primeira, dependendo das vontades do jogador e do meste.",
+    magazineNumber: 210,
+  },
+  {
+    id: "DB210-04",
+    question: "Imunidade a medo protege contra a magia *Assassino Fantasmagórico*?",
+    answer: "Sim, conforme evidenciado pelo texto descritivo, esta magia é um efeito de medo.",
+    magazineNumber: 210,
+  },
+  {
+    id: "DB210-05",
+    question: "Um devoto de Arsenal é obrigado a entrar em combates e disputas?",
+    answer: "Não. Quem obrigava seus devotos a agir assim era Keenn; devotos do antigo Deus da Guerra não podem se negar a participar de uma luta ou impedir que ela aconteça. Arsenal tem um entendimento diferente; seus devotos escolhem suas batalhas, tendo a obrigação de vencer. Se não há chances de vitória, eles as criam.",
+    magazineNumber: 210,
+  },
+  {
+    id: "DB210-06",
+    question: "Lefeu inteligentes, como o reishid, com sua Inteligência 4, entendem o idioma comum? É possível se comunicar com eles?",
+    answer: "O primeiro lefeu presente na criação, o Albino, aprendeu a falar e se comunicar com um artoniano, então não seria absurdo considerar que outros poderiam fazer a mesma coisa. Ainda assim, é muito difícil dar respostas definitivas para criaturas tão enigmáticas quanto os lefeu. Os mais inteligentes certamente entendem o idioma comum, mas não se comunicam através da voz. Já foi demonstrado como mesmo simbiontes conseguem projetar palavras nas mentes dos seus hospedeiros — ou pelo menos alguma coisa que a mente dos hospedeiros classifica como palavras.",
+    magazineNumber: 210,
+  },
+  {
+    id: "DB210-07",
+    question: "Qual é a vantagem dos aprimoramentos que permitem fazer um ataque corpo a corpo como parte do uso de uma magia? Não é um uso pouco eficiente de PM?",
+    answer: "Depende. As magias *Toque Chocante* e *Infligir Ferimentos* possuem um aprimoramento que, por +2 PM, permite-se remover o teste de resistência da magia e condicionar seu efeito a um ataque corpo a corpo. Se o ataque for bem sucedido, o alvo sofre o efeito do ataque e da magia. Ambas as magias contam com aprimoramentos para aumentar seu dano em 1d8+1. Dessa forma, se o dano do ataque corpo a corpo for maior que 2d8+2 (uma média de 11 pontos de dano), já superou o outro aprimoramento em termos de dano. Talvez não um conjurador puro, mas um personagem que tenha investido recursos em combate pode se aproveitar mais desses efeitos.\n\nPerceba que, ao combinar a magia e o ataque na mesma ação, você pode se beneficiar ao mesmo tempo de um esotérico e de uma arma, além de eventuais encantos e melhorias nos mesmos. Com *Magia Acelerada* é possível usar *Toque Chocante* e *Infligir Ferimentos* como ação livre — incluindo usar o aprimoramento para fazer um ataque. É como um *Ataque Extra* com custo dobrado, mas pode ser combinado com o próprio *Ataque Extra*. Não vai ser vantajoso sempre, mas pode ser a diferença entre eliminar de vez um inimigo antes que consiga seu próximo turno! Um ataque adicional permite aproveitar melhor, principalmente, bônus passivos. Claro, além de todas as outras questões, há a possibilidade de contornar o teste de resistência. Caso esteja enfrentando um alvo com valores muito altos de Fortitude e/ou resistência a magia, mirar na sua Defesa é uma alternativa válida. Ou seja, existem muitas vantagens, mas não é uma escolha adequada para todos os tipos de personagem.",
+    magazineNumber: 210,
+  },
+  {
+    id: "DB210-08",
+    question: "Melhorias de itens são somadas com encantos para determinar o bônus do item. Mas alguns deles (ou ambos) acumulam com outros bônus de itens (como os bônus base de itens como o tomo hermético, o tabardo e etc.)?",
+    answer: "Não. Efeitos de itens não acumulam. Melhorias e encantos acumularem entre si é exceção. Dessa forma, qualquer combinação de melhorias ou encantos com outros bônus de itens não acumulará (salvo se houver outra exceção para um caso específico, como entre o aprimoramento equilibrada e armas versáteis, descrito na habilidade de armas versátil). Por exemplo, um tomo hermético de mitral fornece apenas +2 na CD, não +4 (da mesma forma que um tomo hermético não se acumularia com uma flauta mística ou um saco de sal), enquanto um tabardo com a melhoria banhado a ouro fornece apenas +2 em Diplomacia, não +3 (da mesma forma que uma coleção de livros não acumula com um robe místico).\n\nNote, no entanto, que você pode usar a melhoria aprimorado para “aumentar” o bônus em uma perícia que um item fornece. Dessa forma, um tabardo aprimorado fornece +2 em Diplomacia (pois a melhoria aumenta seu bônus de +1 para +2 — o bônus vem todo do tabardo, a melhoria está apenas aumentando o valor que ele fornece).\n\nItens são muito numerosos e variados, mas é divertido usar muitos deles, por isso apesar da regra geral ser bem simples e restritiva (quaisquer efeitos de itens simplesmente nunca acumulam entre si, de acordo com ela), *Tormenta20* contém diversas exceções. Para saber se algum efeito de item acumula com outro, sempre leia as regras do seu “tipo de item” (como as regras de catalisadores que dizem que suas reduções de custos, mas não seus outros efeitos, são cumulativas com outras reduções fornecidas por itens), além da descrição do próprio efeito (como a descrição do encanto *Sanguinária*, que acumula consigo mesmo) ou do próprio item (como das *Braçadeiras do Arqueiro*, que acumula com outros itens — independente se os bônus desses outros itens vêm deles próprios ou de melhorias ou encantos que possuem).",
+    magazineNumber: 210,
+  },
+  {
+    id: "DB210-09",
+    question: "Afinal, quem pode ser devoto de quem? Clérigos precisam ser de raças permitidas pelo deus? Paladinos e druidas podem ser clérigos de quem? Como posso ser devoto se minha raça/classe não é listada na descrição do deus?",
+    answer: "Humanos e clérigos podem ser devotos de qualquer divindade. Para as demais raças e classes, consulte a lista de devotos permitidos para cada divindade (*Tormenta20*, p. 96 em diante). Druidas podem ser devotos de Oceano, Allihanna e Megalokk; com *Deuses de Arton*, a lista passa a incluir Aharadak e Tenebra. Paladinos podem ser devotos de Azgher, Khalmyr, Lena, Lin-Wu, Marah, Tanna-Toh, Thyatis e Valkaria. Para ser devoto sem figurar na lista, você pode conversar com seu mestre procurando uma exceção — talvez depois de cumprir uma missão os olhos da divindade se voltem para o personagem. Claro, sempre há a alternativa mais garantida — multiclasse com clérigo.",
+    magazineNumber: 210,
+  },
+  {
+    id: "DB210-10",
+    question: "Como as obrigações e restrições de Valkaria funcionam quanto a voltar para o mesmo local? O tempo permanecido no local se soma?",
+    answer: "Não. Se a permanência do devoto não foi superior ao tempo permitido, ele cumpriu suas obrigações. Se voltar mais tarde, fará nova jogada para determinar o tempo permitido, referente somente à estadia atual. Fica a critério do mestre quanto tempo deve se passar antes do retorno, porém, para não determinar moradia. Em termos gerais, o tempo real de jogo é mais valorizado do que o tempo fora de jogo — lembre-se que é de Valkaria que estamos falando! Uma aventura fora do território pode ser o suficiente para voltar sem quebrar as obrigações e restrições. Fora de jogo, porém, alguns meses podem ser adequados.",
+    magazineNumber: 210,
+  },
+  //#endregion
   //#region DB - 227
   {
     id: "DB227-01",

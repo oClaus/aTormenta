@@ -25,6 +25,40 @@ export const mounts: Mount[] = [
       mestre: "Quando faz uma investida, você pode usar Ataque Pesado. Caso possua esse poder, você recebe +2 no teste de manobra."
     }
   },
+  { id: "Chacal",
+    name: "Chacal",
+    size: "Pequeno",
+    description: "Parentes menores dos lobos, os chacais partilham de sua astúcia, coragem e instinto de caça em equipe, o que lhes permite abater presas maiores. Habitam savanas, matas e descampados, sendo predadores noturnos e ousados. Embora sejam tímidos e arredios com criaturas que não consideram presas, podem ser treinados como mascotes ou montarias para raças muito pequenas, como duendes e sílfides.",
+    origin: "Bestiário de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 12m e você recebe uma ação de movimento extra por turno (apenas para se deslocar).",
+      veterano: "Como acima, mas você recebe +2 em Furtividade e, uma vez por rodada, +1d6 em uma rolagem de dano corpo a corpo.",
+      mestre: "Como acima, além disso, uma vez por rodada, quando acerta um ataque corpo a corpo, você pode fazer a manobra derrubar como uma ação livre."
+    }
+  },
+  { id: "Corcel das Trevas",
+    name: "Corcel das Trevas",
+    size: "Grande",
+    description: "Um poderoso espírito na forma de um cavalo negro nativo de Sombria, com crina de ar congelado e narinas que emanam sombras frias e profanas. Criados por Tenebra para servir de montaria aos seus servos mais prestigiosos, exalam frio, poder e maldade. Caso seu mestre morra de forma trágica, o corcel pode vagar pelo mundo espalhando tormentos. É possível, embora raro e difícil, que outro seguidor de Tenebra conquiste um corcel sem mestre.",
+    origin: "Bestiário de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 12m e você recebe uma ação de movimento extra por turno (apenas para se deslocar).",
+      veterano: "Como acima, mas seu deslocamento muda para voo 15m e, uma vez por rodada, quando causa dano, você causa +1d6 pontos de dano de frio.",
+      mestre: "Como acima, mas você recebe redução de frio 10 e o dano de frio adicional aumenta para +1d8."
+    },
+    extra: "O corcel das trevas só segue devotos de Tenebra."
+  },
+  { id: "Coruja-Gigante",
+    name: "Coruja-Gigante",
+    size: "Grande",
+    description: "Grandes aves mágicas com a aparência de uma coruja branca e o porte de um grifo. Seus grandes olhos amarelos transmitem sabedoria e revelam sua natureza mística. Vivem no topo de árvores ou montanhas e costumam agir como protetoras dos ermos, frequentemente se associando a devotos de Allihanna. Apesar do espírito independente, podem acompanhar aventureiros heroicos como valiosas aliadas, possuindo um apreço especial por elfos e seres de sangue feérico.",
+    origin: "Bestiário de Arton",
+    benefits: {
+      iniciante: "Você recebe resistência a magia +2 e +2 em Intuição (uma coruja-gigante iniciante é muito jovem para ser usada como montaria).",
+      veterano: "Pode ser usada como montaria, mudando seu deslocamento para 9m (voo 12m).",
+      mestre: "Seu deslocamento de voo muda para 15m, a resistência a magia muda para +5 e o bônus em Intuição muda para +5."
+    }
+  },
   //#endregion
 
 
