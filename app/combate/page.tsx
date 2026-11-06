@@ -13,6 +13,8 @@ import EncounterGeneratorModal from "./encounter-generator-modal";
 import { GeneratedEncounterEntry } from "./encounter-generator";
 import TreasureModal from "./treasure-modal";
 import ThemeToggle from "@/components/ThemeToggle";
+import { complications as allComplications } from "@/data/complicacoes";
+import { ageComplications } from "@/data/rules";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -26,6 +28,8 @@ interface PlayerParticipant {
   pvCurrent?: number;
   pmMax?: number;
   pmCurrent?: number;
+  complicacao?: string;          // id da complicação geral (máx. 1)
+  complicacoesIdade?: string[];  // nomes das complicações de idade
 }
 
 interface MonsterParticipant {
@@ -84,6 +88,269 @@ const ND_ORDER_MAP: Record<string, number> = {
   "16": 16, "17": 17, "18": 18, "19": 19, "20": 20, "S": 21, "S+": 22,
 };
 const ndOrderValue = (nd: string): number => ND_ORDER_MAP[nd] ?? (parseFloat(nd) || 1);
+
+// ─── Log estruturado, estatísticas e exportação ──────────────────────────────
+
+type LogKind = "damage" | "heal" | "condition" | "turn" | "info";
+
+interface LogMeta {
+  kind: LogKind;
+  sourceId?: string;
+  sourceName?: string;
+  targetId?: string;
+  targetName?: string;
+  amount?: number;
+  ko?: boolean;
+  conditionName?: string;
+}
+
+interface LogEntry {
+  id: string;
+  text: string;
+  round: number;
+  turnOwner: string;
+  meta?: LogMeta;
+}
+
+interface SourceOption { id: string; name: string; }
+type LogFn = (msg: string, meta?: LogMeta) => void;
+
+interface ActorStats {
+  key: string;
+  name: string;
+  damage: number;
+  healing: number;
+  kos: string[];
+  conditions: { condition: string; target: string }[];
+}
+
+const AMBIENT_KEY = "__ambiente__";
+
+// Quando há várias criaturas com o mesmo nome (ex.: 3 goblins), numera para diferenciar
+const numberDuplicateNames = (list: Participant[]): Participant[] => {
+  const total = new Map<string, number>();
+  list.forEach((x) => total.set(x.name, (total.get(x.name) ?? 0) + 1));
+  const seen = new Map<string, number>();
+  return list.map((x) => {
+    if (x.type !== "monster" || (total.get(x.name) ?? 0) <= 1) return x;
+    const n = (seen.get(x.name) ?? 0) + 1;
+    seen.set(x.name, n);
+    return { ...x, name: `${x.name} ${n}` };
+  });
+};
+
+const computeCombatStats = (entries: LogEntry[]): ActorStats[] => {
+  const map = new Map<string, ActorStats>();
+  const get = (key: string, name: string) => {
+    let s = map.get(key);
+    if (!s) {
+      s = { key, name, damage: 0, healing: 0, kos: [], conditions: [] };
+      map.set(key, s);
+    }
+    return s;
+  };
+  entries.forEach((e) => {
+    const meta = e.meta;
+    if (!meta) return;
+    const key = meta.sourceId ?? AMBIENT_KEY;
+    const name = meta.sourceName ?? "Ambiente / outro";
+    if (meta.kind === "damage") {
+      const s = get(key, name);
+      s.damage += meta.amount ?? 0;
+      if (meta.ko && meta.targetName) s.kos.push(meta.targetName);
+    } else if (meta.kind === "heal") {
+      get(key, name).healing += meta.amount ?? 0;
+    } else if (meta.kind === "condition" && meta.conditionName) {
+      get(key, name).conditions.push({ condition: meta.conditionName, target: meta.targetName ?? "?" });
+    }
+  });
+  return Array.from(map.values());
+};
+
+interface TurnGroup { round: number; owner: string; entries: LogEntry[]; }
+
+// O log é guardado do mais novo para o mais antigo; aqui recebemos já em ordem cronológica
+const groupByTurn = (chrono: LogEntry[]): TurnGroup[] => {
+  const groups: TurnGroup[] = [];
+  chrono.forEach((e) => {
+    const last = groups[groups.length - 1];
+    if (e.meta?.kind === "turn") {
+      if (!last || last.round !== e.round || last.owner !== e.turnOwner || last.entries.length > 0) {
+        groups.push({ round: e.round, owner: e.turnOwner, entries: [] });
+      }
+      return;
+    }
+    if (last && last.round === e.round && last.owner === e.turnOwner) last.entries.push(e);
+    else groups.push({ round: e.round, owner: e.turnOwner, entries: [e] });
+  });
+  return groups;
+};
+
+interface SummarySection { title: string; lines: string[]; }
+
+const buildSummarySections = (entries: LogEntry[]): SummarySection[] => {
+  // o log guarda o mais novo primeiro; as listas do resumo devem sair em ordem cronológica
+  const stats = computeCombatStats([...entries].reverse());
+  const sections: SummarySection[] = [];
+
+  const byDamage = stats.filter((s) => s.damage > 0).sort((a, b) => b.damage - a.damage);
+  sections.push({
+    title: "Dano causado",
+    lines: byDamage.length
+      ? byDamage.map((s, i) => `${i + 1}. ${s.name} — ${s.damage} de dano`)
+      : ["Nenhum dano registrado."],
+  });
+
+  const byHeal = stats.filter((s) => s.healing > 0).sort((a, b) => b.healing - a.healing);
+  sections.push({
+    title: "Cura realizada",
+    lines: byHeal.length
+      ? byHeal.map((s, i) => `${i + 1}. ${s.name} — ${s.healing} PV curados`)
+      : ["Nenhuma cura registrada."],
+  });
+
+  const byKo = stats.filter((s) => s.kos.length > 0).sort((a, b) => b.kos.length - a.kos.length);
+  sections.push({
+    title: "Derrubados (PV chegou a 0)",
+    lines: byKo.length
+      ? byKo.map((s, i) => `${i + 1}. ${s.name} — ${s.kos.length} (${s.kos.join(", ")})`)
+      : ["Ninguém foi derrubado."],
+  });
+
+  const byCond = stats.filter((s) => s.conditions.length > 0).sort((a, b) => b.conditions.length - a.conditions.length);
+  sections.push({
+    title: "Condições aplicadas",
+    lines: byCond.length
+      ? byCond.map((s, i) => {
+          const counts = new Map<string, number>();
+          s.conditions.forEach((c) => counts.set(c.condition, (counts.get(c.condition) ?? 0) + 1));
+          const detail = Array.from(counts.entries()).map(([c, n]) => (n > 1 ? `${c} ×${n}` : c)).join(", ");
+          return `${i + 1}. ${s.name} — ${s.conditions.length}: ${detail}`;
+        })
+      : ["Nenhuma condição aplicada."],
+  });
+
+  return sections;
+};
+
+const buildLogTxt = (entries: LogEntry[]): string => {
+  const groups = groupByTurn([...entries].reverse());
+  const out: string[] = [
+    "LOG DE COMBATE — a-Tormenta",
+    `Gerado em ${new Date().toLocaleString("pt-BR")}`,
+  ];
+  let currentRound = 0;
+  groups.forEach((g) => {
+    if (g.round !== currentRound) {
+      currentRound = g.round;
+      out.push("", `===== RODADA ${g.round} =====`);
+    }
+    out.push("", `-- Turno de ${g.owner || "—"} --`);
+    if (!g.entries.length) out.push("  (sem eventos registrados)");
+    g.entries.forEach((e) => out.push(`  ${e.text}`));
+  });
+  out.push("", "===== RESUMO FINAL =====");
+  buildSummarySections(entries).forEach((sec) => {
+    out.push("", sec.title.toUpperCase());
+    sec.lines.forEach((l) => out.push(`  ${l}`));
+  });
+  return out.join("\n");
+};
+
+// jsPDF (fonte Helvetica) não desenha emojis/setas, então limpamos o texto para o PDF
+const sanitizeForPdf = (s: string) =>
+  s
+    .replace(/→/g, "->")
+    .replace(/−/g, "-")
+    .replace(/[^\u0020-\u007E\u00A0-\u00FF\u2013\u2014\u2018\u2019\u201C\u201D\u2022]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+const downloadBlob = (blob: Blob, filename: string) => {
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+};
+
+const logFileDate = () => new Date().toISOString().slice(0, 10);
+
+const downloadLogTxt = (entries: LogEntry[]) => {
+  downloadBlob(new Blob([buildLogTxt(entries)], { type: "text/plain;charset=utf-8" }), `log_combate_${logFileDate()}.txt`);
+};
+
+const downloadLogPdf = (entries: LogEntry[]) => {
+  type RGB = [number, number, number];
+  const doc = new jsPDF({ unit: "mm", format: "a4" });
+  const pageWidth = doc.internal.pageSize.getWidth();
+  const pageHeight = doc.internal.pageSize.getHeight();
+  const margin = 15;
+  const contentWidth = pageWidth - margin * 2;
+  const RED: RGB = [153, 27, 27];
+  const DARK: RGB = [35, 25, 15];
+  const GRAY: RGB = [95, 85, 75];
+  let y = margin;
+
+  const ensureSpace = (needed: number) => {
+    if (y + needed > pageHeight - margin) {
+      doc.addPage();
+      y = margin;
+    }
+  };
+
+  const write = (text: string, opts: { size?: number; bold?: boolean; color?: RGB; indent?: number; gap?: number } = {}) => {
+    const size = opts.size ?? 10;
+    const color = opts.color ?? DARK;
+    const indent = opts.indent ?? 0;
+    doc.setFont("helvetica", opts.bold ? "bold" : "normal");
+    doc.setFontSize(size);
+    doc.setTextColor(color[0], color[1], color[2]);
+    const wrapped: string[] = doc.splitTextToSize(sanitizeForPdf(text), contentWidth - indent);
+    const lineH = size * 0.45;
+    wrapped.forEach((line) => {
+      ensureSpace(lineH + 1);
+      doc.text(line, margin + indent, y);
+      y += lineH;
+    });
+    y += opts.gap ?? 1;
+  };
+
+  const rounds = entries.reduce((max, e) => Math.max(max, e.round), 1);
+  write("Log de Combate", { size: 22, bold: true, color: RED, gap: 2 });
+  write(`Tormenta 20  ·  ${rounds} rodada${rounds > 1 ? "s" : ""}  ·  Gerado em ${new Date().toLocaleString("pt-BR")}`, { size: 9.5, color: GRAY, gap: 5 });
+
+  const groups = groupByTurn([...entries].reverse());
+  let currentRound = 0;
+  groups.forEach((g) => {
+    if (g.round !== currentRound) {
+      currentRound = g.round;
+      ensureSpace(14);
+      y += 3;
+      write(`Rodada ${g.round}`, { size: 14, bold: true, color: RED, gap: 2 });
+    }
+    ensureSpace(10);
+    write(`Turno de ${g.owner || "—"}`, { size: 11, bold: true, gap: 1.5 });
+    if (!g.entries.length) write("(sem eventos registrados)", { size: 9, color: GRAY, indent: 4, gap: 0.8 });
+    g.entries.forEach((e) => write(`• ${e.text}`, { size: 9.5, indent: 4, gap: 0.8 }));
+    y += 2;
+  });
+
+  ensureSpace(20);
+  y += 4;
+  write("Resumo Final", { size: 16, bold: true, color: RED, gap: 3 });
+  buildSummarySections(entries).forEach((sec) => {
+    ensureSpace(14);
+    write(sec.title, { size: 11.5, bold: true, gap: 1.5 });
+    sec.lines.forEach((l) => write(l, { size: 10, indent: 4, gap: 0.8 }));
+    y += 3;
+  });
+
+  doc.save(`log_combate_${logFileDate()}.pdf`);
+};
 
 const blankThreat = (): Threat => ({
   id: uid(), name: "", tipo: "Monstro", tamanho: "Médio", papel: "", nd: "1",
@@ -297,16 +564,218 @@ function EditMonsterModal({ monster, onSave, onClose }: {
   );
 }
 
+// ─── Tag de Complicação (jogadores) ──────────────────────────────────────────
+
+function ComplicationTag({ name, description, category }: { name: string; description: string; category?: string }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div
+      className="relative inline-block"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <span className="px-2.5 py-1 rounded-md text-[11px] font-bold border bg-amber-700/15 border-amber-700/30 text-amber-700 select-none shadow-sm inline-flex items-center gap-1 cursor-help">
+        {name}
+      </span>
+      {open && (
+        <div className="absolute bottom-full left-0 mb-2 z-[60] w-72 bg-[rgb(var(--void-rgb))] text-white text-xs rounded-xl p-4 shadow-2xl border-2 border-amber-900/40 pointer-events-none font-serif">
+          <p className="font-bold text-amber-400 mb-1.5 text-sm">{name}</p>
+          {category && <p className="text-amber-400/70 text-[10px] mb-2 uppercase tracking-widest font-bold">{category}</p>}
+          <p className="leading-relaxed text-white/80 whitespace-pre-line">{description}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── Seletor de Complicações do Jogador (1 geral + complicações de idade) ────
+
+function ComplicationPicker({ general, ages, older, onGeneral, onAges, onOlder }: {
+  general: string;
+  ages: string[];
+  older: boolean;
+  onGeneral: (id: string) => void;
+  onAges: (names: string[]) => void;
+  onOlder: (v: boolean) => void;
+}) {
+  const [search, setSearch] = useState("");
+  const maxAges = older ? 2 : 1;
+
+  const term = search.trim().toLowerCase();
+  const filtered = [...allComplications]
+    .filter((c) => !term || c.name.toLowerCase().includes(term) || (c.efeito ?? "").toLowerCase().includes(term))
+    .sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
+  const selectedGeneral = allComplications.find((c) => c.id === general);
+
+  const toggleAge = (name: string) => {
+    if (ages.includes(name)) onAges(ages.filter((a) => a !== name));
+    else if (ages.length < maxAges) onAges([...ages, name]);
+  };
+
+  const changeOlder = (v: boolean) => {
+    onOlder(v);
+    if (!v && ages.length > 1) onAges(ages.slice(0, 1));
+  };
+
+  return (
+    <div className="mt-4 space-y-5 bg-[rgb(var(--bg-card-rgb))]/70 border-2 border-amber-900/20 rounded-xl p-4">
+      {/* Complicação geral */}
+      <div>
+        <div className="flex items-center justify-between mb-2">
+          <p className="text-[10px] uppercase tracking-widest text-red-800/80 font-bold">Complicação (no máximo 1)</p>
+          {general && (
+            <button onClick={() => onGeneral("")} className="text-[10px] font-bold uppercase tracking-widest text-amber-950/50 hover:text-red-800 transition-colors">Limpar</button>
+          )}
+        </div>
+        <input
+          type="text"
+          placeholder="Buscar complicação ou classe..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className="w-full px-3 py-2 mb-2 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-lg text-amber-950 placeholder-amber-900/40 font-serif text-xs focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
+        />
+        <div className="max-h-44 overflow-y-auto custom-scrollbar space-y-1.5 pr-1">
+          {filtered.map((c) => {
+            const sel = c.id === general;
+            return (
+              <button
+                key={c.id}
+                onClick={() => onGeneral(sel ? "" : c.id)}
+                className={`w-full flex items-center justify-between gap-2 px-3 py-2 rounded-lg border-2 text-left text-xs font-bold transition-all ${
+                  sel
+                    ? "bg-red-800/10 border-red-800/40 text-red-800"
+                    : "bg-[rgb(var(--bg-inset-rgb))] border-amber-900/10 text-amber-950/80 hover:border-amber-900/30"
+                }`}
+              >
+                <span className="truncate">{sel ? "✓ " : ""}{c.name}</span>
+                {c.efeito && (
+                  <span className="shrink-0 text-[9px] uppercase tracking-widest text-amber-950/50 bg-[rgb(var(--bg-card-rgb))] px-1.5 py-0.5 rounded">{c.efeito}</span>
+                )}
+              </button>
+            );
+          })}
+          {!filtered.length && <p className="text-xs text-amber-950/50 italic text-center py-3">Nenhuma encontrada.</p>}
+        </div>
+        {selectedGeneral && (
+          <p className="mt-3 text-xs leading-relaxed text-amber-950/75 bg-[rgb(var(--bg-inset-rgb))] border border-amber-900/10 rounded-lg px-3 py-2">
+            <span className="font-bold text-red-800">{selectedGeneral.name}:</span> {selectedGeneral.description}
+          </p>
+        )}
+      </div>
+
+      {/* Complicações de idade */}
+      <div className="border-t-2 border-amber-900/10 pt-4">
+        <div className="flex items-center justify-between mb-2">
+          <p className="text-[10px] uppercase tracking-widest text-red-800/80 font-bold">Complicação de Idade ({ages.length}/{maxAges})</p>
+          {ages.length > 0 && (
+            <button onClick={() => onAges([])} className="text-[10px] font-bold uppercase tracking-widest text-amber-950/50 hover:text-red-800 transition-colors">Limpar</button>
+          )}
+        </div>
+        <button
+          onClick={() => changeOlder(!older)}
+          className={`w-full flex items-center gap-2 px-3 py-2 mb-3 rounded-lg border-2 text-left text-xs font-bold transition-all ${
+            older ? "bg-red-800/10 border-red-800/40 text-red-800" : "bg-[rgb(var(--bg-inset-rgb))] border-amber-900/15 text-amber-950/70 hover:border-amber-900/30"
+          }`}
+        >
+          <span className={`w-4 h-4 rounded border-2 flex items-center justify-center text-[10px] shrink-0 ${older ? "bg-red-800 border-red-900 text-white" : "border-amber-900/30"}`}>{older ? "✓" : ""}</span>
+          Personagem Maduro (40 a 59 anos) — libera uma segunda complicação de idade
+        </button>
+        <div className="grid sm:grid-cols-2 gap-1.5">
+          {ageComplications.map((a) => {
+            const sel = ages.includes(a.name);
+            const blocked = !sel && ages.length >= maxAges;
+            return (
+              <button
+                key={a.name}
+                onClick={() => toggleAge(a.name)}
+                disabled={blocked}
+                title={a.effect}
+                className={`px-3 py-2 rounded-lg border-2 text-left text-xs font-bold transition-all ${
+                  sel
+                    ? "bg-red-800/10 border-red-800/40 text-red-800"
+                    : blocked
+                    ? "bg-[rgb(var(--bg-card-rgb))] border-amber-900/10 text-amber-950/30 cursor-not-allowed"
+                    : "bg-[rgb(var(--bg-inset-rgb))] border-amber-900/10 text-amber-950/80 hover:border-amber-900/30"
+                }`}
+              >
+                {sel ? "✓ " : ""}{a.name}
+              </button>
+            );
+          })}
+        </div>
+        {ages.map((n) => {
+          const a = ageComplications.find((x) => x.name === n);
+          return a ? (
+            <p key={n} className="mt-3 text-xs leading-relaxed text-amber-950/75 bg-[rgb(var(--bg-inset-rgb))] border border-amber-900/10 rounded-lg px-3 py-2">
+              <span className="font-bold text-red-800">{a.name}:</span> {a.effect}
+            </p>
+          ) : null;
+        })}
+      </div>
+    </div>
+  );
+}
+
+// ─── Resumo do Combate (estatísticas + download do log) ──────────────────────
+
+function CombatSummaryModal({ entries, final, onClose }: { entries: LogEntry[]; final: boolean; onClose: () => void }) {
+  const sections = buildSummarySections(entries);
+  const rounds = entries.reduce((max, e) => Math.max(max, e.round), 1);
+  const turns = groupByTurn([...entries].reverse()).length;
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[rgb(var(--void-rgb))]/70 backdrop-blur-sm">
+      <div className="bg-[rgb(var(--bg-rgb))] border-2 border-amber-900/40 rounded-2xl shadow-2xl w-full max-w-2xl max-h-[92vh] flex flex-col font-serif">
+        <div className="p-6 border-b-2 border-amber-900/20 bg-[rgb(var(--bg-card-rgb))] rounded-t-2xl flex items-center justify-between">
+          <div>
+            <h2 className="text-2xl font-bold text-red-800 tracking-wide">{final ? "Resumo do Combate" : "Resumo até agora"}</h2>
+            <p className="text-xs text-amber-950/60 font-bold uppercase tracking-widest mt-1">
+              {rounds} rodada{rounds > 1 ? "s" : ""} · {turns} turno{turns !== 1 ? "s" : ""} registrado{turns !== 1 ? "s" : ""}
+            </p>
+          </div>
+          <button onClick={onClose} className="text-amber-950/40 hover:text-red-800 text-2xl leading-none transition-colors">✕</button>
+        </div>
+
+        <div className="overflow-y-auto p-6 flex-1 custom-scrollbar space-y-4">
+          {sections.map((sec) => (
+            <div key={sec.title} className="bg-[rgb(var(--bg-card-rgb))]/60 border-2 border-amber-900/15 rounded-xl p-4">
+              <p className="text-[10px] uppercase tracking-widest text-red-800/80 font-bold mb-2">{sec.title}</p>
+              <div className="space-y-1">
+                {sec.lines.map((l, i) => (
+                  <p key={i} className="text-sm text-amber-950/85 font-medium leading-relaxed">{l}</p>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="p-5 border-t-2 border-amber-900/20 bg-[rgb(var(--bg-card-rgb))] rounded-b-2xl flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+          <div className="flex gap-2">
+            <button onClick={() => downloadLogPdf(entries)} className="px-4 py-2.5 border-2 border-amber-700/40 text-amber-700 bg-amber-700/10 rounded-xl text-xs font-black uppercase tracking-widest hover:bg-amber-700/20 transition-all">Baixar PDF</button>
+            <button onClick={() => downloadLogTxt(entries)} className="px-4 py-2.5 border-2 border-amber-900/25 text-amber-950/70 bg-[rgb(var(--bg-inset-rgb))] rounded-xl text-xs font-black uppercase tracking-widest hover:border-amber-700/50 transition-all">Baixar TXT</button>
+          </div>
+          <button onClick={onClose} className="px-6 py-2.5 bg-red-800 text-white rounded-xl font-bold text-sm uppercase tracking-widest hover:bg-red-900 transition-all shadow-md">
+            {final ? "Continuar" : "Fechar"}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ─── Card de Participante ─────────────────────────────────────────────────────
 
-function ParticipantCard({ participant, isActive, onUpdate, onEdit, onRemove, onLog }: {
+function ParticipantCard({ participant, isActive, onUpdate, onEdit, onRemove, onLog, sourceOptions, currentTurnId }: {
   participant: Participant;
   isActive: boolean;
   onUpdate: (p: Participant) => void;
   onEdit?: () => void;
   onRemove: () => void;
-  onLog: (msg: string) => void;
+  onLog: LogFn;
+  sourceOptions: SourceOption[];
+  currentTurnId?: string;
 }) {
+  const [sourceId, setSourceId] = useState<string>("auto");
   const [dmgInput, setDmgInput] = useState("");
   const [healInput, setHealInput] = useState("");
   const [pmInput, setPmInput] = useState("");
@@ -324,16 +793,48 @@ function ParticipantCard({ participant, isActive, onUpdate, onEdit, onRemove, on
     ? Math.round((m.pmCurrent / m.pmMax) * 100)
     : (playerHasMp ? Math.round(((p!.pmCurrent ?? 0) / p!.pmMax!) * 100) : 0);
 
+  // Quem causou o dano / cura / condição (padrão: quem está com o turno)
+  const resolveSource = (): SourceOption | undefined => {
+    if (sourceId === "none") return undefined;
+    const id = sourceId === "auto" ? currentTurnId : sourceId;
+    return sourceOptions.find((o) => o.id === id);
+  };
+  const currentTurnName = sourceOptions.find((o) => o.id === currentTurnId)?.name;
+
+  const sourceSelect = (
+    <div className="flex items-center gap-2">
+      <span className="text-[10px] uppercase tracking-widest text-amber-950/50 font-bold whitespace-nowrap">Causado por</span>
+      <select
+        value={sourceId}
+        onChange={(e) => setSourceId(e.target.value)}
+        className="max-w-[200px] px-2 py-2 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-lg text-amber-950 font-serif text-xs font-bold focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 shadow-sm transition-all"
+      >
+        <option value="auto">{currentTurnName ? `Turno atual (${currentTurnName})` : "Turno atual"}</option>
+        <option value="none">Ambiente / outro</option>
+        {sourceOptions.map((o) => (
+          <option key={o.id} value={o.id}>{o.name}</option>
+        ))}
+      </select>
+    </div>
+  );
+
   const applyDamage = () => {
     const v = parseInt(dmgInput);
     if (!v || v <= 0) return;
+    const src = resolveSource();
+    const from = src ? ` de ${src.name}` : "";
     if (m) {
       const newPv = Math.max(0, m.pvCurrent - v);
-      onLog(`💥 ${m.name} sofreu ${v} de dano → ${newPv}/${m.pvMax} PV${newPv === 0 ? " — INCAPACITADO!" : ""}`);
+      const ko = newPv === 0 && m.pvCurrent > 0;
+      onLog(`💥 ${m.name} sofreu ${v} de dano${from} → ${newPv}/${m.pvMax} PV${newPv === 0 ? " — INCAPACITADO!" : ""}`,
+        { kind: "damage", sourceId: src?.id, sourceName: src?.name, targetId: m.id, targetName: m.name, amount: v, ko });
       onUpdate({ ...m, pvCurrent: newPv });
     } else if (playerHasHp && p) {
-      const newPv = Math.max(0, (p.pvCurrent ?? 0) - v);
-      onLog(`💥 ${p.name} sofreu ${v} de dano → ${newPv}/${p.pvMax} PV${newPv === 0 ? " — INCAPACITADO!" : ""}`);
+      const prevPv = p.pvCurrent ?? 0;
+      const newPv = Math.max(0, prevPv - v);
+      const ko = newPv === 0 && prevPv > 0;
+      onLog(`💥 ${p.name} sofreu ${v} de dano${from} → ${newPv}/${p.pvMax} PV${newPv === 0 ? " — INCAPACITADO!" : ""}`,
+        { kind: "damage", sourceId: src?.id, sourceName: src?.name, targetId: p.id, targetName: p.name, amount: v, ko });
       onUpdate({ ...p, pvCurrent: newPv });
     }
     setDmgInput("");
@@ -342,13 +843,20 @@ function ParticipantCard({ participant, isActive, onUpdate, onEdit, onRemove, on
   const applyHeal = () => {
     const v = parseInt(healInput);
     if (!v || v <= 0) return;
+    const src = resolveSource();
+    const by = src ? ` por ${src.name}` : "";
     if (m) {
       const newPv = Math.min(m.pvMax, m.pvCurrent + v);
-      onLog(`💚 ${m.name} curou ${newPv - m.pvCurrent} PV → ${newPv}/${m.pvMax} PV`);
+      const healed = newPv - m.pvCurrent;
+      onLog(`💚 ${m.name} curou ${healed} PV${by} → ${newPv}/${m.pvMax} PV`,
+        { kind: "heal", sourceId: src?.id, sourceName: src?.name, targetId: m.id, targetName: m.name, amount: healed });
       onUpdate({ ...m, pvCurrent: newPv });
     } else if (playerHasHp && p) {
-      const newPv = Math.min(p.pvMax!, (p.pvCurrent ?? 0) + v);
-      onLog(`💚 ${p.name} curou ${newPv - (p.pvCurrent ?? 0)} PV → ${newPv}/${p.pvMax} PV`);
+      const prevPv = p.pvCurrent ?? 0;
+      const newPv = Math.min(p.pvMax!, prevPv + v);
+      const healed = newPv - prevPv;
+      onLog(`💚 ${p.name} curou ${healed} PV${by} → ${newPv}/${p.pvMax} PV`,
+        { kind: "heal", sourceId: src?.id, sourceName: src?.name, targetId: p.id, targetName: p.name, amount: healed });
       onUpdate({ ...p, pvCurrent: newPv });
     }
     setHealInput("");
@@ -402,7 +910,13 @@ function ParticipantCard({ participant, isActive, onUpdate, onEdit, onRemove, on
     const has = participant.conditions.includes(condId);
     const cond = conditionById(condId);
     if (!cond) return;
-    onLog(has ? `🔓 ${participant.name}: "${cond.name}" removida` : `🔒 ${participant.name}: "${cond.name}" aplicada`);
+    if (has) {
+      onLog(`🔓 ${participant.name}: "${cond.name}" removida`);
+    } else {
+      const src = resolveSource();
+      onLog(`🔒 ${participant.name}: "${cond.name}" aplicada${src ? ` por ${src.name}` : ""}`,
+        { kind: "condition", sourceId: src?.id, sourceName: src?.name, targetId: participant.id, targetName: participant.name, conditionName: cond.name });
+    }
     onUpdate({ ...participant, conditions: has ? participant.conditions.filter((c) => c !== condId) : [...participant.conditions, condId] });
   };
 
@@ -490,6 +1004,23 @@ function ParticipantCard({ participant, isActive, onUpdate, onEdit, onRemove, on
           </div>
         )}
 
+        {/* Complicações do jogador */}
+        {p && (p.complicacao || (p.complicacoesIdade && p.complicacoesIdade.length > 0)) && (
+          <div className="mb-4">
+            <p className="text-[10px] uppercase tracking-widest text-amber-950/40 font-bold mb-2 flex items-center gap-1"><span className="text-[8px] text-red-800/40">◆</span> Complicações</p>
+            <div className="flex flex-wrap gap-2">
+              {p.complicacao && (() => {
+                const c = allComplications.find((x) => x.id === p.complicacao);
+                return c ? <ComplicationTag name={c.name} description={c.description} category={c.efeito} /> : null;
+              })()}
+              {(p.complicacoesIdade ?? []).map((n) => {
+                const a = ageComplications.find((x) => x.name === n);
+                return a ? <ComplicationTag key={n} name={a.name} description={a.effect} category="Idade" /> : null;
+              })}
+            </div>
+          </div>
+        )}
+
         {/* Dano / Cura / Condição */}
         {(m || playerHasHp) && (
           <div className="flex flex-wrap items-center gap-3 mb-4">
@@ -513,6 +1044,7 @@ function ParticipantCard({ participant, isActive, onUpdate, onEdit, onRemove, on
                 showCondSelector ? "border-red-800/40 bg-red-800/10 text-red-900" : "bg-[rgb(var(--bg-inset-rgb))] border-amber-900/20 text-amber-950/60 hover:border-amber-700/50 hover:text-amber-950"
               }`}
             >{showCondSelector ? "▲ Ocultar" : "+ Condição"}</button>
+            {sourceSelect}
           </div>
         )}
 
@@ -542,7 +1074,23 @@ function ParticipantCard({ participant, isActive, onUpdate, onEdit, onRemove, on
           </div>
         )}
 
-        {showCondSelector && <ConditionSelector active={participant.conditions} onToggle={toggleCondition} />}
+        {showCondSelector && (
+          <>
+            {!(m || playerHasHp) && <div className="mt-3">{sourceSelect}</div>}
+            <ConditionSelector active={participant.conditions} onToggle={toggleCondition} />
+          </>
+        )}
+
+        {/* Ataques */}
+        {m && (m.threat.ataqueCorpoACorpo || m.threat.ataqueDistancia) && (
+          <div className="border-t-2 border-amber-900/10 pt-4 mt-4">
+            <p className="text-[10px] uppercase tracking-widest text-amber-950/40 font-bold mb-2 flex items-center gap-1"><span className="text-[8px] text-red-800/40">◆</span> Ataques</p>
+            <div className="space-y-1.5">
+              {m.threat.ataqueCorpoACorpo && <p className="text-sm text-amber-950/80 font-medium"><span className="text-red-800 font-bold text-xs uppercase tracking-widest">Corpo-a-corpo: </span>{m.threat.ataqueCorpoACorpo}</p>}
+              {m.threat.ataqueDistancia && <p className="text-sm text-amber-950/80 font-medium"><span className="text-red-800 font-bold text-xs uppercase tracking-widest">Distância: </span>{m.threat.ataqueDistancia}</p>}
+            </div>
+          </div>
+        )}
 
         {/* Habilidades */}
         {m && m.threat.habilidades.length > 0 && (
@@ -574,17 +1122,6 @@ function ParticipantCard({ participant, isActive, onUpdate, onEdit, onRemove, on
                   </div>
                 );
               })}
-            </div>
-          </div>
-        )}
-
-        {/* Ataques */}
-        {m && (m.threat.ataqueCorpoACorpo || m.threat.ataqueDistancia) && (
-          <div className="border-t-2 border-amber-900/10 pt-4 mt-4">
-            <p className="text-[10px] uppercase tracking-widest text-amber-950/40 font-bold mb-2 flex items-center gap-1"><span className="text-[8px] text-red-800/40">◆</span> Ataques</p>
-            <div className="space-y-1.5">
-              {m.threat.ataqueCorpoACorpo && <p className="text-sm text-amber-950/80 font-medium"><span className="text-red-800 font-bold text-xs uppercase tracking-widest">Corpo-a-corpo: </span>{m.threat.ataqueCorpoACorpo}</p>}
-              {m.threat.ataqueDistancia && <p className="text-sm text-amber-950/80 font-medium"><span className="text-red-800 font-bold text-xs uppercase tracking-widest">Distância: </span>{m.threat.ataqueDistancia}</p>}
             </div>
           </div>
         )}
@@ -751,12 +1288,16 @@ export default function CombatePage() {
   const [editingMonster, setEditingMonster] = useState<MonsterParticipant | null>(null);
   const [round, setRound] = useState(1);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [log, setLog] = useState<string[]>([]);
+  const [log, setLog] = useState<LogEntry[]>([]);
   const [rollValues, setRollValues] = useState<Record<string, number>>({});
   const [newPlayerName, setNewPlayerName] = useState("");
   const [newPlayerIni, setNewPlayerIni] = useState("");
   const [newPlayerPv, setNewPlayerPv] = useState("");
   const [newPlayerPm, setNewPlayerPm] = useState("");
+  const [newPlayerComp, setNewPlayerComp] = useState("");
+  const [newPlayerAges, setNewPlayerAges] = useState<string[]>([]);
+  const [newPlayerOlder, setNewPlayerOlder] = useState(false);
+  const [showCompPicker, setShowCompPicker] = useState(false);
   const [importError, setImportError] = useState("");
 
   const [wizardOpen, setWizardOpen] = useState(false);
@@ -765,9 +1306,19 @@ export default function CombatePage() {
   const [encounterGenOpen, setEncounterGenOpen] = useState(false);
   const [treasureModalOpen, setTreasureModalOpen] = useState(false);
   const [treasureSuggestedNd, setTreasureSuggestedNd] = useState<string | undefined>(undefined);
+  const [summary, setSummary] = useState<{ entries: LogEntry[]; final: boolean; treasureNd?: string } | null>(null);
+
+  // Reordenação da iniciativa (arrastar)
+  const [dragId, setDragId] = useState<string | null>(null);
+  const [dragReadyId, setDragReadyId] = useState<string | null>(null);
+  const [overId, setOverId] = useState<string | null>(null);
 
   const activeCardRef = useRef<HTMLDivElement>(null);
   const xlsxInputRef = useRef<HTMLInputElement>(null);
+
+  // Rodada/turno atuais, usados para carimbar cada evento do log
+  const stampRef = useRef<{ round: number; owner: string }>({ round: 1, owner: "" });
+  stampRef.current = { round, owner: participants[activeIndex]?.name ?? "" };
 
   useEffect(() => {
     if (phase === "combat" && activeCardRef.current) {
@@ -795,8 +1346,11 @@ export default function CombatePage() {
       initiativeRoll: parseInt(newPlayerIni) || 0, conditions: [],
       pvMax: pv, pvCurrent: pv,
       pmMax: pm, pmCurrent: pm,
+      complicacao: newPlayerComp || undefined,
+      complicacoesIdade: newPlayerAges.length ? newPlayerAges : undefined,
     }]);
     setNewPlayerName(""); setNewPlayerIni(""); setNewPlayerPv(""); setNewPlayerPm("");
+    setNewPlayerComp(""); setNewPlayerAges([]); setNewPlayerOlder(false); setShowCompPicker(false);
   };
 
   const openCreateWizard = () => {
@@ -1170,7 +1724,7 @@ export default function CombatePage() {
         });
       }
     });
-    const all: Participant[] = [...participants, ...libraryMonsters, ...customMonsters];
+    const all: Participant[] = numberDuplicateNames([...participants, ...libraryMonsters, ...customMonsters]);
     setParticipants(all);
     const rolls: Record<string, number> = {};
     all.forEach((p) => { rolls[p.id] = p.type === "monster" ? (p as MonsterParticipant).threat.iniciativa : (p as PlayerParticipant).initiativeRoll; });
@@ -1182,19 +1736,58 @@ export default function CombatePage() {
     const updated = participants.map((p) => ({ ...p, initiativeRoll: rollValues[p.id] ?? 0 }));
     const sorted = [...updated].sort((a, b) => b.initiativeRoll - a.initiativeRoll);
     setParticipants(sorted); setRound(1); setActiveIndex(0);
-    setLog([`⚔ Combate iniciado — Rodada 1. Turno de ${sorted[0].name}.`]);
+    setLog([{ id: uid(), text: `⚔ Combate iniciado — Rodada 1. Turno de ${sorted[0].name}.`, round: 1, turnOwner: sorted[0].name, meta: { kind: "info" } }]);
     setPhase("combat");
   };
 
   const nextTurn = () => {
     const next = (activeIndex + 1) % participants.length;
     const newRound = next === 0 ? round + 1 : round;
-    if (next === 0) addLog(`━━━ Rodada ${newRound} ━━━`);
-    addLog(`▶ Turno de ${participants[next].name}`);
+    const stamp = { round: newRound, owner: participants[next].name };
+    if (next === 0) addLog(`━━━ Rodada ${newRound} ━━━`, { kind: "turn" }, stamp);
+    addLog(`▶ Turno de ${participants[next].name}`, { kind: "turn" }, stamp);
     setActiveIndex(next); setRound(newRound);
   };
 
-  const addLog = (msg: string) => setLog((prev) => [msg, ...prev].slice(0, 80));
+  const addLog = (msg: string, meta?: LogMeta, stamp?: { round: number; owner: string }) =>
+    setLog((prev) => [
+      { id: uid(), text: msg, round: stamp?.round ?? stampRef.current.round, turnOwner: stamp?.owner ?? stampRef.current.owner, meta },
+      ...prev,
+    ]);
+
+  // Move um participante na ordem de iniciativa (arrastar ou setas)
+  const reorderParticipant = (from: number, to: number) => {
+    if (from === to || from < 0 || to < 0 || from >= participants.length || to >= participants.length) return;
+    const moved = participants[from];
+    const activeId = participants[activeIndex]?.id;
+    const next = [...participants];
+    next.splice(from, 1);
+    next.splice(to, 0, moved);
+
+    let newActive = activeIndex;
+    if (moved.id !== activeId) {
+      // outro participante mudou de lugar: o turno continua com quem estava agindo
+      newActive = Math.max(0, next.findIndex((x) => x.id === activeId));
+    } else if (to < from) {
+      // quem está agindo foi adiantado: continua sendo o turno dele
+      newActive = to;
+    }
+    // se quem está agindo foi atrasado, o turno passa para quem ocupa agora a posição atual
+
+    const neighbor = to > from ? next[to - 1] : next[to + 1];
+    addLog(`↕ ${moved.name} ${to > from ? "passou para depois de" : "passou para antes de"} ${neighbor?.name ?? "—"}`, { kind: "info" });
+    setParticipants(next);
+    setActiveIndex(newActive);
+    if (moved.id === activeId && to > from) {
+      addLog(`▶ Turno de ${next[newActive].name}`, { kind: "turn" }, { round, owner: next[newActive].name });
+    }
+  };
+
+  const moveParticipantTo = (draggedId: string, targetId: string) => {
+    const from = participants.findIndex((x) => x.id === draggedId);
+    const to = participants.findIndex((x) => x.id === targetId);
+    reorderParticipant(from, to);
+  };
   const updateParticipant = (updated: Participant) => setParticipants((prev) => prev.map((p) => (p.id === updated.id ? updated : p)));
 
   const removeParticipant = (id: string) => {
@@ -1204,7 +1797,10 @@ export default function CombatePage() {
   };
 
   const saveEditedMonster = (updated: MonsterParticipant) => {
-    const synced: MonsterParticipant = { ...updated, name: updated.threat.name };
+    // Só renomeia se o nome-base mudou; assim "Goblin 2" não volta a ser "Goblin" ao editar outros campos
+    const prev = participants.find((x) => x.id === updated.id);
+    const baseNameChanged = !prev || prev.type !== "monster" || prev.threat.name !== updated.threat.name;
+    const synced: MonsterParticipant = { ...updated, name: baseNameChanged ? updated.threat.name : (prev as MonsterParticipant).name };
     setParticipants((prev) => prev.map((p) => (p.id === synced.id ? synced : p)));
     addLog(`✎ ${synced.name} editado`);
   };
@@ -1220,12 +1816,26 @@ export default function CombatePage() {
       ? monsterThreats.reduce((max, nd) => (ndOrderValue(nd) > ndOrderValue(max) ? nd : max), monsterThreats[0])
       : undefined;
 
+    const finalEntries = log;
+
     setParticipants([]); setCustomMonsters([]); setImportedThreats([]);
     setThreatQuantities(new Map()); setRound(1); setActiveIndex(0); setLog([]);
     setPhase("setup");
 
-    if (highestNd) {
+    if (finalEntries.length > 1) {
+      // Mostra o resumo (e permite baixar o log); o tesouro abre ao fechar
+      setSummary({ entries: finalEntries, final: true, treasureNd: highestNd });
+    } else if (highestNd) {
       setTreasureSuggestedNd(highestNd);
+      setTreasureModalOpen(true);
+    }
+  };
+
+  const closeSummary = () => {
+    const s = summary;
+    setSummary(null);
+    if (s?.final && s.treasureNd) {
+      setTreasureSuggestedNd(s.treasureNd);
       setTreasureModalOpen(true);
     }
   };
@@ -1312,6 +1922,29 @@ export default function CombatePage() {
                         className="w-full px-4 py-2.5 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-xl text-amber-950 placeholder-amber-900/40 font-serif text-sm focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
                       />
                     </div>
+                  </div>
+                  <div className="mt-4">
+                    <button
+                      onClick={() => setShowCompPicker((v) => !v)}
+                      className={`px-4 py-2 rounded-lg border-2 text-xs uppercase tracking-widest font-bold transition-all shadow-sm ${
+                        showCompPicker ? "border-red-800/40 bg-red-800/10 text-red-900" : "bg-[rgb(var(--bg-inset-rgb))] border-amber-900/20 text-amber-950/60 hover:border-amber-700/50 hover:text-amber-950"
+                      }`}
+                    >{showCompPicker ? "▲ Ocultar complicações" : "+ Complicações (opcional)"}</button>
+                    {!showCompPicker && (newPlayerComp || newPlayerAges.length > 0) && (
+                      <p className="mt-2 text-xs text-amber-950/70 font-medium">
+                        {[allComplications.find((c) => c.id === newPlayerComp)?.name, ...newPlayerAges].filter(Boolean).join(" · ")}
+                      </p>
+                    )}
+                    {showCompPicker && (
+                      <ComplicationPicker
+                        general={newPlayerComp}
+                        ages={newPlayerAges}
+                        older={newPlayerOlder}
+                        onGeneral={setNewPlayerComp}
+                        onAges={setNewPlayerAges}
+                        onOlder={setNewPlayerOlder}
+                      />
+                    )}
                   </div>
                   <button onClick={addPlayer} className="w-full py-3 mt-4 bg-[rgb(var(--bg-inset-rgb))] text-amber-950/70 border-2 border-amber-900/20 rounded-xl font-bold text-xs uppercase tracking-widest hover:border-red-800/40 hover:text-red-800 hover:bg-[rgb(var(--bg-card-rgb))] transition-all shadow-sm">
                     + Adicionar Jogador
@@ -1412,6 +2045,11 @@ export default function CombatePage() {
                           <div className="min-w-0">
                             <p className="text-sm font-bold text-white truncate">{pl.name}</p>
                             <p className="text-[10px] text-white/40">INI {pl.initiativeRoll}{pl.pvMax ? ` · ${pl.pvMax} PV` : ""}{pl.pmMax ? ` · ${pl.pmMax} PM` : ""}</p>
+                            {(pl.complicacao || (pl.complicacoesIdade && pl.complicacoesIdade.length > 0)) && (
+                              <p className="text-[10px] text-amber-400/70 truncate">
+                                {[allComplications.find((c) => c.id === pl.complicacao)?.name, ...(pl.complicacoesIdade ?? [])].filter(Boolean).join(" · ")}
+                              </p>
+                            )}
                           </div>
                         </div>
                         <button onClick={() => setParticipants((prev) => prev.filter((x) => x.id !== pl.id))} className="text-white/30 hover:text-red-400 text-sm w-6 h-6 flex items-center justify-center shrink-0">✕</button>
@@ -1554,25 +2192,81 @@ export default function CombatePage() {
             <div className="grid xl:grid-cols-3 gap-8 items-start">
               <div className="xl:col-span-2 space-y-5 pb-24">
                 {participants.map((p, i) => (
-                  <div key={p.id} ref={i === activeIndex ? activeCardRef : null}>
-                    <ParticipantCard
-                      participant={p} isActive={i === activeIndex}
-                      onUpdate={updateParticipant}
-                      onEdit={p.type === "monster" ? () => setEditingMonster(p as MonsterParticipant) : undefined}
-                      onRemove={() => removeParticipant(p.id)}
-                      onLog={addLog}
-                    />
+                  <div
+                    key={p.id}
+                    ref={i === activeIndex ? activeCardRef : null}
+                    draggable={dragReadyId === p.id}
+                    onDragStart={(e) => {
+                      setDragId(p.id);
+                      e.dataTransfer.effectAllowed = "move";
+                      e.dataTransfer.setData("text/plain", p.id);
+                    }}
+                    onDragOver={(e) => {
+                      if (!dragId) return;
+                      e.preventDefault();
+                      if (overId !== p.id) setOverId(p.id);
+                    }}
+                    onDrop={(e) => {
+                      e.preventDefault();
+                      if (dragId && dragId !== p.id) moveParticipantTo(dragId, p.id);
+                      setDragId(null); setOverId(null); setDragReadyId(null);
+                    }}
+                    onDragEnd={() => { setDragId(null); setOverId(null); setDragReadyId(null); }}
+                    className={`flex items-stretch gap-2 rounded-2xl transition-all ${
+                      dragId === p.id ? "opacity-40" : ""
+                    } ${overId === p.id && dragId && dragId !== p.id ? "ring-2 ring-red-800/70 ring-offset-2 ring-offset-transparent" : ""}`}
+                  >
+                    {/* Alça lateral: arraste ou use as setas para mudar a ordem */}
+                    <div className="flex flex-col items-center justify-center gap-1 shrink-0 w-7">
+                      <button
+                        onClick={() => reorderParticipant(i, i - 1)}
+                        disabled={i === 0}
+                        title="Subir na iniciativa"
+                        className="w-7 h-7 flex items-center justify-center rounded-md border border-amber-900/20 bg-[rgb(var(--bg-inset-rgb))] text-amber-950/50 hover:text-red-800 hover:border-red-800/40 disabled:opacity-25 disabled:cursor-not-allowed transition-all text-[10px]"
+                      >▲</button>
+                      <div
+                        onMouseDown={() => setDragReadyId(p.id)}
+                        onMouseUp={() => setDragReadyId(null)}
+                        title="Arraste para reordenar"
+                        className="w-7 h-9 flex items-center justify-center rounded-md border border-amber-900/20 bg-[rgb(var(--bg-inset-rgb))] text-amber-950/40 hover:text-red-800 hover:border-red-800/40 cursor-grab active:cursor-grabbing select-none transition-all text-base leading-none"
+                      >⠿</div>
+                      <button
+                        onClick={() => reorderParticipant(i, i + 1)}
+                        disabled={i === participants.length - 1}
+                        title="Descer na iniciativa"
+                        className="w-7 h-7 flex items-center justify-center rounded-md border border-amber-900/20 bg-[rgb(var(--bg-inset-rgb))] text-amber-950/50 hover:text-red-800 hover:border-red-800/40 disabled:opacity-25 disabled:cursor-not-allowed transition-all text-[10px]"
+                      >▼</button>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <ParticipantCard
+                        participant={p} isActive={i === activeIndex}
+                        onUpdate={updateParticipant}
+                        onEdit={p.type === "monster" ? () => setEditingMonster(p as MonsterParticipant) : undefined}
+                        onRemove={() => removeParticipant(p.id)}
+                        onLog={addLog}
+                        sourceOptions={participants.map((x) => ({ id: x.id, name: x.name }))}
+                        currentTurnId={participants[activeIndex]?.id}
+                      />
+                    </div>
                   </div>
                 ))}
               </div>
               <div className="bg-[rgb(var(--void-rgb))] rounded-2xl p-6 shadow-xl sticky top-64 border border-amber-900/40">
-                <h3 className="text-xs uppercase tracking-widest text-red-400 font-bold mb-4 border-b-2 border-red-900/30 pb-3 flex items-center gap-2">
-                  Log de Combate
-                </h3>
+                <div className="flex items-center justify-between gap-2 mb-4 border-b-2 border-red-900/30 pb-3">
+                  <h3 className="text-xs uppercase tracking-widest text-red-400 font-bold">Log de Combate</h3>
+                  <div className="flex items-center gap-1.5">
+                    <button onClick={() => setSummary({ entries: log, final: false })} disabled={!log.length}
+                      className="px-2.5 py-1 rounded-md border border-red-900/40 text-[10px] font-bold uppercase tracking-widest text-red-300 hover:bg-red-900/20 disabled:opacity-30 disabled:cursor-not-allowed transition-all">Resumo</button>
+                    <button onClick={() => downloadLogPdf(log)} disabled={!log.length} title="Baixar log em PDF"
+                      className="px-2.5 py-1 rounded-md border border-red-900/40 text-[10px] font-bold uppercase tracking-widest text-red-300 hover:bg-red-900/20 disabled:opacity-30 disabled:cursor-not-allowed transition-all">PDF</button>
+                    <button onClick={() => downloadLogTxt(log)} disabled={!log.length} title="Baixar log em TXT"
+                      className="px-2.5 py-1 rounded-md border border-red-900/40 text-[10px] font-bold uppercase tracking-widest text-red-300 hover:bg-red-900/20 disabled:opacity-30 disabled:cursor-not-allowed transition-all">TXT</button>
+                  </div>
+                </div>
                 <div className="space-y-3 max-h-[55vh] overflow-y-auto custom-scrollbar pr-2">
                   {log.map((entry, i) => (
-                    <div key={i} className={`text-xs md:text-sm font-medium leading-relaxed font-serif p-2.5 rounded-lg ${i === 0 ? "bg-[rgb(var(--void-rgb))] text-white border border-red-900/30 shadow-sm" : "text-white/50 border border-transparent"}`}>
-                      {entry}
+                    <div key={entry.id} className={`text-xs md:text-sm font-medium leading-relaxed font-serif p-2.5 rounded-lg ${i === 0 ? "bg-[rgb(var(--void-rgb))] text-white border border-red-900/30 shadow-sm" : "text-white/50 border border-transparent"}`}>
+                      {entry.text}
                     </div>
                   ))}
                   {!log.length && <p className="text-sm text-white/30 italic font-serif p-4 text-center">Nenhum evento registrado ainda.</p>}
@@ -1625,6 +2319,10 @@ export default function CombatePage() {
           onComplete={handleWizardComplete}
           onCancel={() => setWizardOpen(false)}
         />
+      )}
+
+      {summary && (
+        <CombatSummaryModal entries={summary.entries} final={summary.final} onClose={closeSummary} />
       )}
 
       {treasureModalOpen && (
