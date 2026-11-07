@@ -8156,4 +8156,555 @@ export const adventures: Adventure[] = [
     }
   ]
   },
+  { id: "Marcas da Besta",
+  name: "Marcas da Besta",
+  theme: "Fantasia e Sobrevivência na Selva",
+  image: "/aventuras/marcas-da-besta.png",
+  summary: "Contratados para eliminar gnolls saqueadores, os heróis descobrem que os humanoides estão fugindo de um perigo maior. A trilha pela densa floresta os leva a enfrentar perigos naturais e um druida monstruoso devotado a Megalokk.",
+  sections: [
+    {
+      type: "text",
+      content: "Às vezes aventureiros iniciantes são contratados para lidarem com ameaças do dia a dia. Seja um animal desaparecido ou um objeto perdido, pequenas missões são o começo de carreira de alguns heróis lendários."
+    },
+    {
+      type: "text",
+      content: "Quando se fala de monstros, entretanto, há sempre o risco de se ver envolvido nos planos de Megalokk. Em eras ancestrais, o Deus dos Monstros espalhou suas crias impiedosas por Arton. Após ser derrotado em uma ação conjunta do Panteão, suas feras foram relegadas aos ermos, lugares onde mortais não ousam caminhar."
+    },
+    {
+      type: "text",
+      content: "Mas seus servos devotados estão prontos para lembrar seu lugar na cadeia alimentar."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "RESUMO DA AVENTURA"
+    },
+    {
+      type: "text",
+      content: "Marcas da Besta é uma breve jornada, uma aventura curta pensada para uma sessão única, mas que pode ser inserida em uma campanha maior. É ideal para um grupo de personagens de 1º nível em Tormenta20."
+    },
+    {
+      type: "text",
+      content: "Contratados para eliminar gnolls aterrorizando as estradas, os aventureiros logo percebem que esses humanoides estão também apavorados. Ao conversar com os homens-hiena descobrem o motivo dos ataques: foram intimidados por um servo monstruoso de Megalokk. Os gnolls prometem parar uma vez que esse inimigo seja eliminado."
+    },
+    {
+      type: "text",
+      content: "Para encontrar o covil do vilão, os heróis devem vasculhar a floresta, enfrentando perigos naturais e monstruosos. Após alguns dias e diversos desafios, os heróis descobrem o rastro do verdadeiro “monstro”: um druida devotado à Megalokk. A criatura então usa suas magias e transforma-se, pronto para devorar os aventureiros."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 1: RINDO DE NERVOSO"
+    },
+    {
+      type: "text",
+      content: "Tudo começa com um contrato simples. Talvez preso em um quadro de avisos ou sob a forma do pedido de um morador angustiado. Gnolls, humanoides com traços de hiena, vêm saqueando viajantes e pilhando propriedades. Os ataques se intensificaram, e já houve ao menos uma morte na estrada. Após receberem a missão, vocês partem, buscando glória ou tibares."
+    },
+    {
+      type: "text",
+      content: "Esta parte é intencionalmente vaga, tanto para que grupos diferentes encontrem seus ganchos, como para introduzi-la durante outra aventura. O importante é que os aventureiros já estejam trabalhando como uma equipe e partam pela estrada em busca dos bandidos gnolls. Caso tenham aceitado como missão, são oferecidos T$ 50, para cada um. Alternativamente, se forem atacados pelos gnolls enquanto viajam, podem receber essa recompensa quando passarem pela vila mais próxima."
+    },
+    {
+      type: "text",
+      content: "Caso desejem estudar o inimigo antes, podem fazer um teste de Conhecimento ou Sobrevivência (CD 15). Um sucesso revela uma famosa característica: gnolls consideram rendição uma solução honrosa para conflitos. Para cada 5 pontos pelos quais o resultado do teste superar a CD, outra característica é lembrada."
+    },
+    {
+      type: "text",
+      content: "Os gnolls aproveitam que a região é cercada por florestas densas para se esconderem. Seus assaltos são rápidos, mais barulhentos e assustadores do que agressivos. Após algumas horas caminhando na estrada, os personagens começam a ouvir gargalhadas vindo da mata."
+    },
+    {
+      type: "text",
+      content: "Criaturas. Gnolls capangas x6 (NPCs & Criaturas)."
+    },
+    {
+      type: "text",
+      content: "Apesar de não serem muito fortes, os gnolls avançam em uma investida. Eles usam a habilidade Bote contra o inimigo que parecer melhor protegido (quem estiver de armadura pesada e escudo, por exemplo), pois estão acostumados a derrotar guarda-costas primeiro. Depois disso, sua tática principal é flanquear os aventureiros. Eles não desejam matar ninguém, então evitam agredir aqueles aparentemente frágeis."
+    },
+    {
+      type: "text",
+      content: "Quando três gnolls forem derrotados, um deles levanta as mãos e sacode uma bandeira branca. Alternativamente, se dois personagens forem derrotados, ou se renderem, os gnolls também tentam conversar."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 2: CONTRATANTES INUSITADOS"
+    },
+    {
+      type: "text",
+      content: "Quando os aventureiros abaixam suas armas, os gnolls respiram aliviados. Mesmo se estiverem amarrados ou paralisados! Um deles levanta a mão. “Então... será que podemos pedir sua ajuda?”"
+    },
+    {
+      type: "text",
+      content: "Os gnolls derrotados parecem inusitadamente tranquilos. Eles explicam que vêm atacando transeuntes pela via porque foram expulsos da área onde viviam. Admitem seus erros, mas justificam essas ações com seu modo de vida e explicam que tentam não atacar para matar. “A gente oferece rendição, eu juro!”"
+    },
+    {
+      type: "text",
+      content: "Se perguntados sobre a ajuda, os gnolls contam que têm os espólios de alguns dos viajantes (role duas vezes na Tabela de Tesouros por Nível de Desafio 1, ignorando resultados nulos). Eles têm dificuldade de descrever o atacante. “Num momento ele tinha chifres, no outro ele tinha garras enormes! Era um verdadeiro monstro!”"
+    },
+    {
+      type: "text",
+      content: "Os homens-hiena também explicam que a floresta está mais perigosa, como se a presença desse ser tivesse atraído outras bestas monstruosas. O único meio de encontrar o vilão é se embrenhando na mata e investigando os rastros da fera."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 3: PERIGOS FLORESTAIS"
+    },
+    {
+      type: "text",
+      content: "A floresta é especialmente densa e sombria. As copas das árvores se confundem umas com as outras, e os raios do sol penetram pouco ou nada. A mata que cobre a região é densa, porém não oferece durante o dia qualquer dificuldade para visão. Talvez essa atmosfera lúgubre seja o normal aqui. A cada passo, a sensação de serem observados é ainda mais presente."
+    },
+    {
+      type: "text",
+      content: "Sem saberem exatamente o que estão procurando, e em uma área tão extensa, será necessário um teste estendido de Sobrevivência (CD 25, 5 sucessos). Cada teste representa um dia inteiro de investigação na floresta, e apenas um personagem pode fazer o teste. Os outros membros do grupo podem ajudar, seja com Sobrevivência ou com qualquer outra perícia que consigam justificar. Caso passem no teste estendido, os personagens encontram um rastro. Já uma falha total faz perderem todos os sucessos acumulados até o momento, tendo que recomeçar o teste estendido do zero."
+    },
+    {
+      type: "text",
+      content: "Para cada dia investigando a floresta, role 1d8 para um dos eventos abaixo. Cada evento conta como uma cena para efeitos que dependem dessa medida."
+    },
+    {
+      type: "text",
+      content: "1) Gorlogg Raivoso: O barulho de patas rapidamente batendo contra a relva anuncia a chegada de algo grande. Correndo de dentro da mata, um gorlogg ensandecido surge numa investida violenta contra os aventureiros! Um gorlogg (Tormenta20, p. 291) ataca o grupo, fazendo uma ação investida. A criatura não tenta ser sutil, logo nenhum personagem fica surpreendido. Infelizmente, por estar faminto, dificilmente poderá ser acalmado, e luta até a morte."
+    },
+    {
+      type: "text",
+      content: "2) Armadilha Natural: As folhas e raízes escondem ameaças além dos animais selvagens. Buracos deixados por bichos escavadores, espinheiros disfarçados de arbustos ou uma árvore pronta para cair sobre desavisados. Os perigos nunca acabam em lugares como esses. Escolha entre as armadilhas arame farpado, fosso camuflado ou bloco de pedra (Tormenta20, p 317), ou outra que faça sentido. Antes de serem afetados por ela, todos os personagens têm direito a um teste de Investigação ou Sobrevivência para encontrá-la. Elas são feitas de materiais naturais, e uma vez encontradas podem ser simplesmente evitadas, mas não podem ser desarmadas."
+    },
+    {
+      type: "text",
+      content: "3) Círculo de Pedras: No meio das árvores, pilares de pedra se erguem. Na face das rochas há símbolos estranhos, e no centro da área uma clareira se abre. Uma estranha sensação de paz inunda suas almas, e os animais parecem passar aqui com tranquilidade. Druidas percebem naturalmente a conexão desse lugar com Allihanna, a Deusa da Natureza, mas outros só notam isso com um teste de Religião (CD 20). Dormir aqui é seguro, sem chance de encontros aleatórios ou de ataques durante a noite na cena 5. Além disso, recupera-se o dobro de PV e PM descansando aqui."
+    },
+    {
+      type: "text",
+      content: "4) Foi você?: Enquanto caminham, vocês sentem um fedor terrível. Olhando ao redor vêem um gambá muito nervoso. O gambá (NPCs & Criaturas) usa sua habilidade almíscar fedorento contra os personagens, e depois tenta fugir."
+    },
+    {
+      type: "text",
+      content: "5) Teia Cáustica: Há algo de errado aqui. O cheiro nessa área é acre, queimando as narinas, e um chiado estranho é ouvido de tempos em tempos. A área é coberta por uma teia ácida. Todos os personagens devem fazer um teste de Investigação ou Percepção (CD 16) ou ficam enredados e sofrem 1d6 pontos de dano de ácido, mais 1d6 a cada rodada que começarem enredados. Para se soltar é necessário usar uma ação completa e fazer um teste de Força ou Acrobacia (CD 20), ou cortar a teia (que tem 15 PV e RD 5). Em 1d3 rodadas, uma dracnídea cáustica (NPCs & Criaturas) aparece, pronta para devorar os personagens."
+    },
+    {
+      type: "text",
+      content: "6) Agora tem que ser você!: Vocês sentem novamente um cheiro ruim, talvez imaginem que o gambá está de volta. Porém, agora é algo maior e mais perigoso: um trog caçando sua próxima refeição! Um trog malcheiroso e mal-humorado ataca os aventureiros (Tormenta20, p. 291)."
+    },
+    {
+      type: "text",
+      content: "7-8) Calmaria: Apesar da sensação de haver algo errado, nada digno de nota acontece nesse dia. Nenhum evento ou combate."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 4: MONSTROS"
+    },
+    {
+      type: "text",
+      content: "Seguir os rastros leva para o fundo da mata, a parte ainda mais fechada e assustadora. É possível ver carcaças de animais e monstros diversos, de vários tamanhos."
+    },
+    {
+      type: "text",
+      content: "É possível analisar as carcaças com um teste de Cura ou Sobrevivência (CD 17). Esse teste funciona como o uso de identificar criatura de Misticismo (Tormenta20, p. 121). A destruição causada denota um contexto ritualístico, como se as criaturas fossem algum tipo de oferenda. Um teste de Religião (CD 20) revela uma ligação com o Deus dos Monstros, Megalokk. Um druida é capaz de reconhecer um semelhante, e as ações, apesar de animalescas, têm o objetivo de atrair mais monstros, tal qual a dracnídea. Essa investigação é interrompida por um urro."
+    },
+    {
+      type: "text",
+      content: "Do meio da mata surge uma figura com cabeça bovina, dois enormes chifres retorcidos se projetam da cabeça da criatura. Seu corpo é coberto de pelos grossos e escuros, os dentes são presas afiadas e as mãos garras atrozes. Sua pelagem parece se mesclar com as árvores. O que era um urro se torna uma gargalhada e um sorriso maligno. Ele se agacha, colocando as mãos no chão e andando em quatro apoios, cercando o grupo."
+    },
+    {
+      type: "text",
+      content: "Criaturas. A Besta da Floresta (NPCs & Criaturas)."
+    },
+    {
+      type: "text",
+      content: "Apesar de ser inteligente e capaz de falar, a besta não o faz, revertida a um estado de ferocidade selvagem. Ela ainda é capaz de lançar magias, mas assim que possível se transforma em uma criatura monstruosa, com patas terríveis e mantendo ainda seus chifres."
+    },
+    {
+      type: "text",
+      content: "O chão cheio de vinhas e raízes conta como um terreno difícil natural. Além disso, existem arbustos na área que podem ser usados para receber camuflagem leve. As árvores também podem oferecer cobertura leve."
+    },
+    {
+      type: "text",
+      content: "O minotauro deseja destruir os inimigos que acabaram de aparecer em sua frente, e até agora não encontrou um desafio que não fosse capaz de derrotar com brutalidade. Porém, se perceber que um personagem é devoto de Allihanna ou Tanna-Toh, foca seus ataques contra aquele aventureiro."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Epílogo: UMA NOVA AMIZADE"
+    },
+    {
+      type: "text",
+      content: "Ao derrotarem o druida, a floresta volta a ter sons normais e os animais parecem menos assustados. Eles têm tempo de voltar tranquilamente à cidade, podendo descansar à vontade. Entretanto, assim que recuperados ouvem gritos de espanto."
+    },
+    {
+      type: "text",
+      content: "Ao investigar, os personagens vêem dois gnolls do bando que enfrentaram. Apesar do medo dos aldeões, os homens-hiena estão calmos, de mãos à mostra. Eles trouxeram parte dos espólios roubados, e pedem perdão por ter atacado os viajantes."
+    },
+    {
+      type: "text",
+      content: "Talvez esse seja o começo de uma relação diferente entre eles e o povo local. Será que a população local conseguirá perdoá-los? E os gnoll estarão sendo honestos ou isso seria alguma tática?"
+    },
+    {
+      type: "text",
+      content: "O futuro incerto dessa possível aliança é tema para outra aventura. Por hora, os personagens avançam para o 2º nível!"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "NPCs & Criaturas"
+    },
+    {
+      type: "text",
+      content: "GNOLL CAPANGA (ND ¼)\nHumanoide (gnoll) Médio\nIniciativa +3, Percepção +3, faro\nDefesa 14, Fort +5, Ref +3, Von +0\nPontos de Vida 8\nDeslocamento 9m (6q)\nCorpo a Corpo Espada curta +9 (1d6+3, 19) e mordida +9 (1d6+3).\nBote (Completa) O gnoll faz uma investida e ataca com sua espada curta e sua mordida. Os dois ataques recebem o bônus de +2 da investida, mas devem ser feitos contra a mesma criatura.\nFor 3, Des 1, Con 3, Int –1, Sab 1, Car –1\nPerícias Sobrevivência +5.\nEquipamento Armadura de couro, escudo leve, espada curta. Tesouro Metade."
+    },
+    {
+      type: "text",
+      content: "GAMBÁ (ND ¼)\nAnimal Minúsculo\nIniciativa +2, Percepção +7, faro, visão na penumbra\nDefesa 10, Fort +3, Ref +5, Von +0\nPontos de Vida 8\nDeslocamento 9m (6q), escalada 9m (6q)\nCorpo a Corpo Mordida +8 (1d4+6).\nAlmíscar Fedorento (Padrão) O gambá expele um jato de almíscar contra uma criatura em alcance curto, que fica enjoada por 1d4 rodadas (Fort CD 13 evita; criaturas com Faro ou Sentidos Aguçados sofrem –5 nesse teste).\nFor 0, Des 2, Con 2, Int –4, Sab 3, Car –2\nTesouro Nenhum."
+    },
+    {
+      type: "text",
+      content: "DRACNÍDEA CÁUSTICA (ND 1)\nMonstro Grande\nIniciativa +6, Percepção +2, visão no escuro\nDefesa 16, Fort +5, Ref +11, Von +0, imunidade a ácido, flanquear, paralisia, surpreendido e à magia Teia\nPontos de Vida 35\nDeslocamento 12m (8q), escalar 12m (8q)\nCorpo a Corpo Mordida +9 (2d6+6).\nTece-Ácido (Padrão) A dracnídea dispara uma teia de ácido em uma área de 3m de lado em alcance curto. Criaturas na área sofrem 1d6 pontos de dano de ácido e ficam enredadas (Ref CD 14 reduz o dano à metade e evita a condição). Enquanto estiverem enredadas, sofrem mais 1d6 de dano de ácido no início do turno da dracnídea. Uma criatura pode se soltar com uma ação completa e um teste de Força ou Acrobacia (CD 20) ou cortando a teia (cada espaço de 1,5m de teia tem 15 PV e RD 5). A dracnídea também pode usar a teia para cobrir uma área quadrada de 6m de lado. Uma criatura que entre na área fica enredada e uma criatura que comece seu turno na área sofre 1d6 pontos de dano de ácido. A dracnídea pode andar na própria teia sem se enredar. Ela percebe automaticamente qualquer criatura em sua teia, como se tivesse percepção às cegas.\nFor 5, Des 4, Con 2, Int –5, Sab 0, Car –4\nPerícias Furtividade +9.\nTesouro Nenhum."
+    },
+    {
+      type: "text",
+      content: "A BESTA DA FLORESTA (ND 3)\nNascido em uma família abastada do Império de Tauron, esse minotauro se perdeu de sua família quando o Deus da Força foi derrotado por Aharadak. Isolado em uma floresta, acabou sendo acolhido por um xamã de Megalokk, que o criou em meio às feras. Com o tempo o jovem minotauro foi abençoado pelo Deus dos Monstros, usando milagres para se tornar um superpredador.\nHumanoide (minotauro) Médio\nIniciativa +5, Percepção +6, faro\nDefesa 17, Fort +7, Ref +2, Von +13\nPontos de Vida 65\nDeslocamento 9m (6q), sem redução por terreno difícil\nPontos de Mana 11\nCorpo a Corpo Ataque desarmado +12 (1d4+3) e chifre +12 (1d6+3).\nForma Monstruosa (Completa, 3 PM) A Besta da Floresta assume a forma de uma fera. Ela recebe Força +3, +2 na Defesa e um ataque corpo a corpo adicional de garra +12 (1d8+3). Nessa forma, ele não pode falar, empunhar itens ou lançar magias.\nVoz dos Monstros A Besta está sempre sob efeito da magia Voz Divina, apenas para falar com monstros.\nMagias Como um druida de Megalokk de 2º nível (CD 18).\n- Amedrontar (Padrão, 1 PM) Um animal ou humanoide em alcance curto fica apavorado por 1 rodadas e depois abalado (Von reduz para abalado por 1d4 rodadas).\n- Armamento da Natureza (Movimento, 1 PM) O ataque de chifre da Besta se torna mágico e seu dano muda para 1d8+3.\nFor 3, Des 2, Con 2, Int –2, Sab 3, Car –1\nPerícias Adestramento + 4, Atletismo +6, Furtividade +7, Sobrevivência +8.\nTesouro Nenhum."
+    }
+  ]
+  },
+  { id: "Mistério na Mansão da Maga",
+  name: "Mistério na Mansão da Maga",
+  theme: "Fantasia e Investigação",
+  image: "/aventuras/misterio-na-mansao-da-maga.png",
+  summary: "Convidados à Academia Arcana, os aventureiros recebem a missão de investigar o sumiço de uma ex-aluna em uma pacata vila. O que parecia ser apenas um desaparecimento revela-se um plano nefasto de necromancia nos porões de sua mansão.",
+  sections: [
+    {
+      type: "text",
+      content: "A Breves Jornadas oferece aventuras completas de Tormenta20, de forma rápida e descomplicada, com tudo o que você precisa ao alcance das mãos. Fichas específicas são fornecidas, enquanto estatísticas presentes no livro básico terão indicadas a página em que se encontram."
+    },
+    {
+      type: "text",
+      content: "O objetivo é fazer com que mestres tenham um ponto de partida eficiente para se divertir por uma tarde ou até começar uma campanha. A aventura de hoje se chama Mistério na Mansão da Maga!"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Introdução"
+    },
+    {
+      type: "text",
+      content: "Magia é uma benção que existe em abundância em Arton. Seja pela presença ativa de Wynna, seja por sua filosofia de nunca negar acesso a essa dádiva, é algo que se espalha mesmo longe de grandes centros urbanos como Valkaria."
+    },
+    {
+      type: "text",
+      content: "No interior dos reinos, em vilas esquecidas pelos deuses, magos menos ortodoxos passam suas tradições adiante para estudantes atentos. Bruxos servem como conselheiros e boticários em comunidades distantes. Feiticeiros nascem em famílias sem ancestrais mágicos."
+    },
+    {
+      type: "text",
+      content: "Entretanto, nem todos são benevolentes. Existem aqueles que usam a distância das autoridades para realizar planos pérfidos e pesquisas profanas. E quando se tornam uma ameaça, é a hora de aventureiros entrarem em ação."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Resumo da aventura"
+    },
+    {
+      type: "text",
+      content: "Mistério na Mansão da Maga é uma Breve Jornada pensada para uma única sessão, mas também serve como ponto de partida para uma campanha. É ideal para um grupo de quatro personagens de 1º nível em Tormenta20."
+    },
+    {
+      type: "text",
+      content: "Convidados à Grande Academia Arcana, os personagens serão contratados para investigar o desaparecimento da amiga de uma professora. Serão, então, transportados para uma vila, que os receberá calorosamente. Ao se dirigirem à residência de Lucrécia, a maga desaparecida, deverão investigar os cômodos em busca de pistas. Quando armadilhas e portas secretas aparecem, a busca leva todos a um andar inferior secreto, onde descobrirão as verdadeiras intenções da conjuradora."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 1 – À professora, com carinho"
+    },
+    {
+      type: "text",
+      content: "Existem diversas formas de introduzir os personagens: conjuradores podem ser alunos da Academia Arcana, convidados por sua professora para uma primeira missão; outra opção é que sejam aprendizes de antigos colegas de aventura da professora; ou apenas mercenários. De um jeito ou de outro, todos são convidados ao campus."
+    },
+    {
+      type: "text",
+      content: "Passando por um casebre acima de qualquer suspeita, com uma placa simples de “Escola de Magia”, chega-se ao semiplano em que a instituição se localiza. Os céus são multicoloridos, e seis sóis, cada um representando um elemento, dançam no firmamento."
+    },
+    {
+      type: "text",
+      content: "Raschid, o gênio da terra e zelador da Academia, surge para levá-los até o escritório da professora Ysailie. Ela é uma elfa, veste robes formais verdes, um capelo, e sua expression é séria. O escritório não é grande, mas tem espaço para cadeiras confortáveis nas quais pede que todos se sentem. Xícaras flutuam até cada um, acompanhadas por um bule florido que as preenche com chá."
+    },
+    {
+      type: "text",
+      content: "O motivo do convite é que uma amiga de longa data, chamada Lucrécia, deixou de responder suas cartas há algumas semanas. Incomodada pelo silêncio repentino, a professora os contatou. Também informa que Lucrécia estudou na Academia Arcana, mas suas ambições não eram acadêmicas."
+    },
+    {
+      type: "text",
+      content: "Como pagamento oferece T$ 2000, e uma das suas posses mais valiosas: um Anel da Proteção (Tormenta20, p. 328). Assim que estiverem prontos, a professora traçará símbolos arcanos, abrindo um portal para a vila."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 2 – Vila Feliz"
+    },
+    {
+      type: "text",
+      content: "Quando cruzam o portal, surpreendem a população local, que para seus afazeres assim que os percebem. Trata-se de um povo amigável e curioso, que logo cerca o grupo, perguntando sobre suas aventuras. Oferecem comida, estadia, descontos, tudo para estes grandes heróis. Assim que comentarem o motivo que os trouxe até ali, todos parecem aliviados em saber que os desaparecimentos vão ser investigados."
+    },
+    {
+      type: "text",
+      content: "O estranho é que o povo se refere a diversos casos. Com um teste de Diplomacia ou Investigação, CD 15, o grupo descobre que ao menos cinco jovens sumiram sem deixar rastros, além da maga e seu aprendiz, chamado Andrew."
+    },
+    {
+      type: "text",
+      content: "Após toda essa comoção, são levados ao portão da mansão da maga. A propriedade tem um grande quintal com claros sinais de abandono, que rodeia o prédio largo de fachada magnífica, com dois andares."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 3 – Salão principal"
+    },
+    {
+      type: "text",
+      content: "As portas duplas da entrada principal estão destrancadas e levam a um salão amplo, com um pé direito muito alto. Do lado direito e esquerdo existem portas que levam para fora deste aposento."
+    },
+    {
+      type: "text",
+      content: "No centro, sobre um pedestal redondo, há uma estátua de uma mulher com mãos suplicantes para o alto, quase tocando o teto. Qualquer um treinado em Religião notará que se trata de uma representação de Valkaria."
+    },
+    {
+      type: "text",
+      content: "Com um sucesso em Investigação ou Percepção CD 25, notam que a estátua no centro é um tipo de construto mágico, usado para tomar conta de um lugar importante. Através de um teste de Misticismo CD 17 sabem que essa estátua não agirá até ser provocada com alguma ação agressiva, como ataques diretos, magias que exijam um teste de resistência, e afins."
+    },
+    {
+      type: "text",
+      content: "Criaturas. Efígie Animada (NPCs & Criaturas)."
+    },
+    {
+      type: "text",
+      content: "Não sendo provocada, a efígie permanecerá imóvel. Abrir a porta secreta (Cena 10) ativa a estátua, que atacará assim que voltarem ao salão principal."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 4 – Corredor perigoso"
+    },
+    {
+      type: "text",
+      content: "Saindo do salão, terão acesso ao corredor que dá a volta ao redor do aposento. À esquerda está a porta da biblioteca (Cena 5) e à direita a da cozinha (Cena 6). Porém, caso sigam pelo corredor, serão surpreendidos."
+    },
+    {
+      type: "text",
+      content: "Do lado esquerdo existe um Fosso Camuflado (Tormenta20, p. 302), uma armadilha escondida sob o carpete. Na direita, escondida na parede, há uma armadilha de Virote (Tormenta20, p. 302). Essas armadilhas afetam apenas o personagem que estiver andando a frente."
+    },
+    {
+      type: "text",
+      content: "Caso tenham encontrado ou sofrido os efeitos de uma das armadilhas, todos recebem +2 em Investigação para encontrar e desarmar a segunda."
+    },
+    {
+      type: "text",
+      content: "Os corredores se encontram atrás do salão principal, diametralmente oposto à porta de entrada, onde há uma escada que leva aos andares superiores. Entretanto, com um teste de Investigação ou Misticismo CD 15 é possível encontrar um mecanismo mágico, na base da escadaria, onde há uma fechadura."
+    },
+    {
+      type: "text",
+      content: "A fechadura é complexa e está sob efeito da magia Tranca Arcana (Misticismo CD 16 para Identificar Magia). Para abrir é necessário um teste de Ladinagem CD 40, dissipar o feitiço, usar a mesma magia de forma aprimorada, ou, é claro, utilizar a chave adequada (na Cena 8)."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 5 – A Biblioteca Inocente"
+    },
+    {
+      type: "text",
+      content: "Do lado esquerdo da residência existe uma biblioteca formidável, com paredes cobertas de livros. Os temas, porém, são um tanto… curiosos, como o Plantio de Gerânios 4ª Edição. Estranhamente, não há nenhum livro sobre magia."
+    },
+    {
+      type: "text",
+      content: "Se passarem algum tempo procurando, é possível encontrar 4 livros Aprimorados (+2 em uma perícia). As perícias, entretanto, são escolhidas aleatoriamente (Tabela 6-5, Tormenta20, p. 265), mas não há nenhum livro Aprimorado para as perícias Luta, Misticismo ou Pontaria. Procurar o livro de uma perícia específica requer um teste de Investigação CD 20."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 6 – Panela Barulhenta"
+    },
+    {
+      type: "text",
+      content: "Na extremidade oposta da biblioteca está a cozinha. O ambiente é bastante limpo, como se ninguém nunca tivesse usado o local, mas quando entram no cômodo, ouvem um barulho vindo de uma panela enorme, com tampa. Ao se aproximarem, um Glop salta lá de dentro."
+    },
+    {
+      type: "text",
+      content: "Criatura. Glop (Tormenta20, p. 272)."
+    },
+    {
+      type: "text",
+      content: "Assustada, a criaturinha pode ser tranquilizada com um teste de Adestramento, CD 25, ou oferecendo algum tipo de comida para ela. Se fizerem ambos, o Glop se torna um aliado, fornecendo +1d4 de dano de ácido nos ataques corpo a corpo de um personagem."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 7 – Laboratório"
+    },
+    {
+      type: "text",
+      content: "Subindo a escadaria, o andar possui três salas, uma grande à direita e duas menores à esquerda."
+    },
+    {
+      type: "text",
+      content: "À direita, através de portas duplas, encontra-se um laboratório de estudo arcano. O local é organizado e esterilizado, com substâncias em diversos recipientes, assim como anotações arcanas em quadros negros e papéis. Analisando os escritos com Misticismo CD 10, é perceptível que são fórmulas básicas, provavelmente escritas pelo aprendiz da maga."
+    },
+    {
+      type: "text",
+      content: "Os textos podem ser usados como 4 pergaminhos: 1 de Armadura Arcana, 2 de Setas Infalíveis de Talude e 1 de Dissipar Magia. Além disso, entre os frascos existem 6 Essências de Mana, rotulados."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 8 – Quarto de Lucrécia"
+    },
+    {
+      type: "text",
+      content: "Uma das duas salas menores é um quarto luxuoso, com uma enorme cama com dossel. Aqui há um armário repleto de vestidos elegantes (que equivalem a Trajes de Corte), uma penteadeira e um quadro meio torto. O quadro retrata uma mulher de sorriso misterioso, longos cabelos negros e robes brancos."
+    },
+    {
+      type: "text",
+      content: "Na penteadeira estão as cartas de Ysailie, 3 Bálsamos Restauradores e uma planta baixa da propriedade, com um círculo na escada (o que fornece um bônus de +5 em Investigação para achar a passagem secreta). Se ajeitarem o quadro, uma chave pesada de cobre cai no chão, fazendo muito barulho. Caso ninguém mexa na pintura, peça um teste de Investigação ou Percepção CD 15 para revelar a chave. Esta chave mágica abre a passagem secreta."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 9 – Aposentos do Aluno"
+    },
+    {
+      type: "text",
+      content: "Menor que as outras salas, com espaço apenas para uma cama e uma escrivaninha, esse quarto é simples e confortável. Em cima da escrivaninha é possível ver um livro com capa de couro."
+    },
+    {
+      type: "text",
+      content: "Investigando o volume, descobrirão que trata-se do diário do aprendiz de Lucrécia, Andrew, que se intitulou “o azul”. Aqui ele fala principalmente o quão agradecido é à sua mentora e sobre sua rotina. Nas páginas finais, entretanto, descreve que sua tutora está cada vez mais estranha, se recolhendo em uma sala secreta. Também diz que aproveitará uma viagem dela para ver o que está escondendo. O último parágrafo, rabiscado com pressa, diz:"
+    },
+    {
+      type: "text",
+      content: "“Não acredito no que vi. Como minha mestra pode ter feito aquilo? Vou esconder a cópia da chave atrás da pintura dela e fugir. Que Wynna tenha misericórdia de mim.”"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 10 – O Verdadeiro Laboratório"
+    },
+    {
+      type: "text",
+      content: "Ao abrir a fechadura, seja através da chave mágica ou com muita sorte, o grupo encontra uma passagem para baixo. Descendo, chegam a uma saleta com portas duplas, iluminada por velas mágicas. Através das portas, há um outro laboratório."
+    },
+    {
+      type: "text",
+      content: "No centro da sala existem cinco macas com corpos preservados, porém com cheiro de decomposição. As paredes e o piso estão cobertos de escritas arcanas, que, com um teste de Misticismo ou Religião CD 15, revelam-se de cunho necromântico. Do outro lado da sala existe mais um par de portas que levam à Cena 11."
+    },
+    {
+      type: "text",
+      content: "Quando todos estiverem dentro da sala, os cadáveres levantam-se."
+    },
+    {
+      type: "text",
+      content: "Criaturas. Zumbi x5 (Tormenta20, p. 284)."
+    },
+    {
+      type: "text",
+      content: "Quando o combate acaba, é possível investigar as inscrições mais atentamente. Decifrar os códigos requer um Teste Estendido de Misticismo (CD 20, 3 sucessos exigidos antes de 3 falhas). Tendo sucesso, o plano de Lucrécia fica claro: realizar um ritual que transformaria todos na vila em mortos-vivos sob seu comando, e utilizá-los para se vingar dos professores que crê terem causado sua expulsão da Academia Arcana."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 11 – O Aprendiz"
+    },
+    {
+      type: "text",
+      content: "A última sala no subsolo é também uma biblioteca, bem menor, porém totalmente dedicada à magia. Há uma mesa no centro da sala, com diversos livros abertos, mas, subitamente, um esqueleto, vestindo robes azuis e uma tiara que brilha intensamente, começa a conjurar um feitiço."
+    },
+    {
+      type: "text",
+      content: "Criatura. Andrew, o azul."
+    },
+    {
+      type: "text",
+      content: "Assim que o mago morto começa a gesticular para conjurar qualquer magia, a tiara em sua testa brilha. Um teste de Intuição ou Misticismo CD 20 revelará que ela exerce algum tipo de controle sobre o mago. Para destruí-la, devem usar a manobra Quebrar (Tormenta20, p. 220) contra o mago. A tiara possui RD 5 e 15 PVs."
+    },
+    {
+      type: "text",
+      content: "Se a quebrarem ou conjurarem Dissipar Magia, Andrew recupera sua consciência. Chocado em descobrir-se um morto-vivo, agradece por o libertarem e conta que, quando descobriu os planos da sua mestra, tentou fugir, mas ela deve tê-lo pegado e o transformado. Andrew também desativa a efígie no salão de entrada."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Epílogo – A queda da casa de Lucrécia"
+    },
+    {
+      type: "text",
+      content: "Vencendo o aprendiz, ou o libertando do controle mental, o grupo agora sabe que a maga tinha, na verdade, interesses nefastos. Mas será que devem revelar à população? Uma informação como essa os tornará menos receptivos, talvez até hesitantes quanto à magia."
+    },
+    {
+      type: "text",
+      content: "Se disserem que encontraram os desaparecidos (ou os restos mortais de alguns deles), toda a vila ficará eternamente grata. Antes de voltarem a Valkaria, serão tratados como campeões, dormindo nas mais confortáveis tavernas."
+    },
+    {
+      type: "text",
+      content: "Ysailie mal acredita no relato. Por que sua amiga estaria levantando os mortos? Por que nunca falou sobre seu ressentimento? Apesar de decepcionada, ela paga o prometido aos personagens, perguntando àqueles que não são alunos se desejam ingressar na Academia Arcana."
+    },
+    {
+      type: "text",
+      content: "Vocês avançam ao 2º nível, com uma professora oferecendo a chance de juntarem-se a maior instituição de ensino em Arton. Mas quais serão os planos de Lucrécia? Só o futuro pode revelar esses segredos."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "NPC & Criaturas"
+    },
+    {
+      type: "text",
+      content: "EFÍGIE ANIMADA (ND 2)\nConstruto 5, Grande\nIniciativa +4, Percepção +4, visão no escuro\nDefesa 17, Fort +8, Ref +4, Von +2, resistência a dano 5\nPontos de Vida 45\nDeslocamento 9m (6q)\nCorpo a Corpo 2 pancadas +12 (1d8+6)\nImobilidade. Uma efígie animada pode permanecer completamente imóvel. Se ela estiver assim, um personagem deve passar num teste de Percepção (CD 35) para perceber que ela é uma criatura e não uma estátua.\nFor 22, Des 10, Con 18, Int -, Sab 10, Car 1\nTesouro. Nenhum"
+    },
+    {
+      type: "text",
+      content: "ANDREW, O AZUL (ND 2)\nAndrew nasceu na vila antes de Lucrécia instalar-se na mansão. Era um jovem faminto por conhecimento, e quando a maga chegou, logo percebeu seu talento nato. Infelizmente foi transformado em morto-vivo quando descobriu os planos dela.\nOsteon 6, Médio\nIniciativa +7, Percepção +3, visão no escuro\nDefesa 18, Fort +5, Ref +5, Von +5, resistência a corte, frio e perfuração 5\nPontos de Vida 30\nDeslocamento 9m (6q)\nPontos de Mana 22\nRaio Arcano (Padrão). Andrew dispara um raio num alvo em alcance curto que causa 2d6+4 pontos de dano de essência. O alvo pode fazer um teste de Reflexos (CD 17) para reduzir o dano à metade.\nMagias. 1º — Armadura Arcana (já contabilizado nas estatísticas acima), Seta Infalível de Talude; 2º — Conjurar Mortos-Vivos, Dissipar Magia. CD 17.\nFor 10, Des 14, Con 12, Int 18, Sab 10, Car 12\nPerícias. Misticismo +9\nTesouro. Dobro"
+    }
+  ]
+  },
+  
 ];

@@ -8,7 +8,26 @@ import { RegreiroQA } from "@/types/regreiro";
 //   > texto     -> bloco de citação (bom pra saudação de abertura)
 
 export const regreiroQAs: RegreiroQA[] = [
-
+  //#region DB - 173
+  {
+    id: "DB173-01",
+    question: "> Boa Jornada\n\nOlá, Paladino, Paladina, Paladine e todas suas outras versões do multiverso. Tenho duas dúvidas. se puderem me responder serei muito grato.\n\n1) A lista de devotos aceitos por Thwor, Deus dos Goblinoides, diz que qualquer humanoide pode ser seu devoto. Mas existem raças que pertencem ao outras classificações, como sílfide e suraggel (espíritos); e lefou, medusa e trog (monstros). Estes não podem ser tornar Duyshidakk e ser devotos de Thwor?",
+    answer: "> Nossos sentimentos quanto a seu colega aventureiro, Uelerson. Que Matheus seja bem recebido nos Reinos dos Deuses e siga novas jornadas.\n\n1) Bem observado. Embora o culto de Thwor seja bastante aberto àqueles que abraçam o modo de vida Duyshidakk, isso não significa aceitar todas as criaturas existentes. Assim, sendo tão distantes dos goblinoides, as raças que você menciona de fato não recebem poderes por se devotar a Thwor.",
+    magazineNumber: 173,
+  },
+  {
+    id: "DB173-02",
+    question: "2) Por que, entre as raças consideradas monstros, apenas o lefou não recebe visão no escuro?\n\nObrigado servos dos deuses benignos, e queria fazer aqui na nossa querida revista uma homenagem ao querido amigo Matheus Maia, que em Arton respondia por Florence Nigthgale, Sir Goli Stormhoove, Namyriel, Alphose Van Halen e Shina de Cobra e nos deixou esse mês. Como devoto de Allihanna que era, espero que agora possa estar nos campos verdejantes, florestas tropicais ou nadando com os mamíferos aquáticos de Arbórea. Sentiremos muitas saudades.",
+    answer: "2) Porque ele pode adquirir visão no escuro com o poder *Olhos Vermelhos*.\n\n— Veja lá o que vai dizer!",
+    magazineNumber: 173,
+  },
+  {
+    id: "DB173-03",
+    question: "> Uma dúvida sincera sobre lefeu. A magia divina de 3° círculo *Banimento* funciona com eles? Sua descrição, pelo que entendi, diz que funciona em qualquer criatura nativa de outros planos de existência.",
+    answer: "> Bom raciocínio, Railson. A magia em geral funciona com esse propósito, e os lefeu realmente se originam de outro plano. No entanto, partes de Arton já foram tomadas pela Tormenta; este mundo não é mais considerado “não nativo” para eles, muitos até mesmo nascem aqui. Assim, não é possível bani-los dessa forma. A vitória contra os invasores será ainda mais complicada que isso.",
+    magazineNumber: 173,
+  },
+  //#endregion 
   //#region DB - 198
   {
     id: "DB198-01",
@@ -57,6 +76,116 @@ export const regreiroQAs: RegreiroQA[] = [
     question: "3) O poder *Magia Discreta* permite conjurar magias em uma área afetada pela magia *Silêncio*?\n\nDesde já grato,",
     answer: "3) Sim, pois não precisa de palavras.",
     magazineNumber: 198,
+  },
+  //#endregion
+  //#region DB - 207
+  {
+    id: "DB207-01",
+    question: "> Excelentíssimos ministros do STR, por favor esclareçam uma dúvida que limita meu conhecimento.\n\nCom o grande sucesso da campanha *Tormenta 25 Anos*, iremos receber uma enxurrada de distinções. Considerando que a admissão em uma distinção não exige gasto de recursos limitados (como poderes ou PM), existe algum limite de quantas distinções uma única personagem pode ter?",
+    answer: "> Saudações distintas, conselheiro! Não existe uma regra limitando distinções por personagem. Porém, lembre-se de que cumprir várias admissões pode ser extremamente custoso! Como alternativa, não seria absurdo que o mestre limitasse os jogadores a uma distinção ou uma distinção por patamar acima de iniciante. Lembre também que as distinções devem, por definição, ter ingredientes dentro da narrativa e da campanha. Isso, por si só, deve naturalmente tornar incompatível o acúmulo de muitas distinções.",
+    magazineNumber: 207,
+  },
+  {
+    id: "DB207-02",
+    question: "> Excelentíssimos mestres do conhecimento, peço esclarecimentos para um pobre alquimista apaixonado por substâncias letais.\n\nQuantos espaços são ocupados por matéria-prima de alquimia e itens similares, como os materiais de missas? Ainda não conseguimos comprar mochilas de carga para todos! Por favor, tenham misericórdia deste humilde grupo.",
+    answer: "> Saudações alquímicas, conselheira! Esses itens são muito leves ou pequenos, logo ocupam meio espaço. Para não ocupar toda a mochila de um alquimista ou sacerdote, o mestre pode considerar o conjunto de itens como “um item”, de acordo com o quadro Bastidores, na página 141 de *Tormenta20*. É claro, isso só vale caso os jogadores não abusem! Material para cinco missas pode ocupar meio espaço, mas não para cinquenta!",
+    magazineNumber: 207,
+  },
+  {
+    id: "DB207-03",
+    question: "> Caros conhecedores da lei, peço ajuda com uma questão. Qual seria o alcance de um ogro com uma arma alongada? Na plataforma *Roll20*, o alcance de uma criatura é melhor representado com uma área quadrada ou circular?",
+    answer: "> Saudações gigantescas, conselheiro!\n\nUm ogro tem alcance de seis metros com uma arma alongada, mas não pode atacar um adversário adjacente. Esse alcance é melhor representado como uma área circular no *Roll20*.",
+    magazineNumber: 207,
+  },
+  {
+    id: "DB207-04",
+    question: "> Cura acelerada funciona quando uma criatura está com PV negativos, inconsciente ou não? Em caso positivo, quando essa cura pararia de funcionar e a criatura realmente morreria?",
+    answer: "> Saudações regenerativas, conselheiro!\n\nSim, cura acelerada continua funcionando se uma criatura estiver com PV negativos. Quando os pontos de vida de uma criatura com cura acelerada chegam a –10 ou a um número negativo igual à metade de seus PV totais (o que for mais baixo), a criatura morre, como qualquer outra. Além disso, muitas criaturas possuem um dano específico que não podem curar e perda de vida nunca é curada por essa habilidade. Uma criatura inconsciente pode ser alvo de um *golpe de misericórdia* (*Tormenta20*, p. 235) para matá-la de vez. *Ameaças de Arton* inclui regras alternativas para lidar com morte de ameaças que facilitam o uso de habilidades como cura acelerada; no fim de um combate, lacaios com 0 PV ou menos morrem, enquanto solos e especiais têm 50% de chance de estar vivos.",
+    magazineNumber: 207,
+  },
+  {
+    id: "DB207-05",
+    question: "> Multiclássicos desembargadores!\n\n1) Bardos podem lançar magias usando armaduras leves, sem precisar de testes de Misticismo. Isso vale para magias de arcanista obtidas por multiclasse?",
+    answer: "> Saudações versáteis, conselheiro! Vamos às suas respostas:\n\n1) Não. Essa capacidade é parte da habilidade *Magias* do bardo. Da mesma forma que as magias de um bardo/arcanista não são limitadas pelas escolas de magia escolhidas como bardo, não podem ser lançadas enquanto usa armaduras leves (pelo menos não sem testes de Misticismo).",
+    magazineNumber: 207,
+  },
+  {
+    id: "DB207-06",
+    question: "2) Habilidades mágicas raciais (como a dos qareen e suraggel) podem usar aprimoramentos que requerem segundo círculo (ou superior) com a evolução do personagem?",
+    answer: "2) Não.",
+    magazineNumber: 207,
+  },
+  {
+    id: "DB207-07",
+    question: "3) Caso eu tenha apenas um nível de conjurador e evolua como multiclasse, é aplicada metade do meu nível total na CD das minhas magias, ou apenas metade do nível na classe conjuradora?",
+    answer: "3) A CD é calculada pelo nível do personagem, não da classe (*Tormenta20*, p. 173). Ou seja, usa o nível total.",
+    magazineNumber: 207,
+  },
+  {
+    id: "DB207-08",
+    question: "> Os naidora (elfos do céu) podem ser devotos de Hydora?",
+    answer: "Voar é viver, conselheiro! Aguarde regras de devoção para deuses menores em *Deuses de Arton*.",
+    magazineNumber: 207,
+  },
+  {
+    id: "DB207-09",
+    question: "> De acordo com o FAQ, a melhoria equilibrado se acumula com pungente, porque bônus em testes de manobra é diferente de bônus em testes de ataque. Como identificar quando ocorrem casos semelhantes?",
+    answer: "> Saudações cumulativas, conselheiro!\n\nBônus não se acumulam quando modificam uma mesma característica. Por exemplo, um bônus em testes de ataque se aplica a qualquer perícia usada para atacar, então não é um bônus em perícias. É diferente de um item que conceda um bônus em Reflexos e outro que conceda um bônus em testes de resistência — essa categoria é apenas uma forma de delimitar as perícias Fortitude, Reflexos e Vontade —, então esses dois itens não se acumulam.",
+    magazineNumber: 207,
+  },
+  {
+    id: "DB207-10",
+    question: "> Boa tarde, excelentíssimos! Em *Ameaças de Arton*, o rhandomm pode cair em um encontro aleatório (apêndice D). O que me gerou preocupação é, por ironia de Nimb, na primeira rolagem de dados, esse titã acabar aparecendo para um grupo de aventureiros de nível 1. Como o monstro é pura fúria e destruição, sem formas alternativas de confrontá-lo, como esse grupo teria chance?",
+    answer: "> Saudações randômicas, conselheiro! Um grupo de aventureiros de nível 1 (na verdade, a maior parte dos grupos de aventureiro, independente do nível) não tem a menor chance contra um rhandomm. Se um deles surgir em seu caminho, resta a eles fugir ou aceitar a morte!",
+    magazineNumber: 207,
+  },
+  {
+    id: "DB207-11",
+    question: "> Salve caros conselheiros da combaria e da interpretação de texto, trago aqui três dúvidas.\n\n1) O poder *Estilo de Duas Armas* pode ser utilizado com ataques desarmados e/ou armas naturais?",
+    answer: "> Saudações silvestres, conselheiro! Vamos às suas respostas:\n\n1) Não, apenas com armas empunhadas.",
+    magazineNumber: 207,
+  },
+  {
+    id: "DB207-12",
+    question: "2) A complicação para druidas Tosco (DB 206) afirma que não podem empunhar armas metálicas e nem itens superiores. Isso não impossibilita que druidas de Arton (foice), Oceano (tridente) , Tenebra (adaga) e Aharadak (corrente de espinhos) empunhem as armas favoritas de seus deuses?",
+    answer: "2) Sim, impossibilita. É uma complicação por um motivo!",
+    magazineNumber: 207,
+  },
+  {
+    id: "DB207-13",
+    question: "3) O caçador pode escolher o poder *Companheiro Animal* mais de uma vez, como o druida, ou não?",
+    answer: "3) Não.",
+    magazineNumber: 207,
+  },
+  {
+    id: "DB207-14",
+    question: "> Caros colegas marcados pelo paranormal, venho aqui humildemente tirar algumas dúvidas. O poder de classe *Golpe Pesado* funciona com armas arremessadas?",
+    answer: "> Saudações combatentes, conselheiro!\n\nNão. Mesmo que a arma seja corpo a corpo, quando é arremessada ela é considerada uma arma de ataque à distância.",
+    magazineNumber: 207,
+  },
+  {
+    id: "DB207-15",
+    question: "> Boa noite, excelentíssimos devotos de Khalmyr! Se eu estiver adjacente a um inimigo, flanqueando-o e fizer um ataque com uma arma de disparo eu recebo os bônus de flanquear?",
+    answer: "> Saudações distantes, conselheiro! Não, flanquear vale apenas para ataques corpo a corpo.",
+    magazineNumber: 207,
+  },
+  {
+    id: "DB207-16",
+    question: "> Olá, digníssimos! Um mago com *Escriba Arcano* consegue copiar pergaminhos de magia divina no seu grimório? E se o pergaminho tiver sido feito por um bardo, que lança magias divinas como arcanas?",
+    answer: "> Saudações caligráficas, conselheiro!\n\nUm mago não pode copiar pergaminhos de magia divina. Um pergaminho de magia divina, mesmo escrito por um bardo, continua sendo um pergaminho de magia divina. A única alternativa é o poder *Teurgista Místico*, respeitando suas limitações.",
+    magazineNumber: 207,
+  },
+  {
+    id: "DB207-17",
+    question: "> Prezados devotos de Khalmyr deste excelentíssimo tribunal, boa tarde!\n\nUma dúvida simples que assola minha mente há alguns dias: considerando que eu tenha uma armadura macabra (ou seja, que dá –2 em Diplomacia) e um escudo banhado a ouro (+2 em Diplomacia), e considerando também a regra de acúmulo de efeitos da página 226, o bônus de Diplomacia resultante deveria ser –2, 0 ou +2?",
+    answer: "> Saudações combeiras, conselheiro! O bônus é +0.",
+    magazineNumber: 207,
+  },
+  {
+    id: "DB207-18",
+    question: "> Prezados conselheiros, rogo o auxílio da Igreja da *Bola de Fogo*. A esfera flamejante criada pela magia *Bola de Fogo* causa dano apenas quando está parada ou aos que estiverem em seu caminho quando seu conjurador a move? E os personagens que cruzam seu quadrado, também recebem dano? Quando personagens que permanecem no mesmo quadrado da esfera recebem dano?",
+    answer: "Qualquer criatura no mesmo espaço da esfera sofre dano, esteja ela parada ou em movimento. Isso acontece no momento em que a criatura entra no espaço, uma vez por rodada. Se um personagem ficar parado no mesmo espaço da esfera, sofrerá esse dano quando completar uma rodada da última vez que a esfera o queimou.",
+    magazineNumber: 207,
   },
   //#endregion
   //#region DB - 210

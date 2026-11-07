@@ -76,6 +76,13 @@ export const damageProgressionTable: DamageProgression[][] = [
 
 export const weapons: Weapon[] = [
   //#region Guia de NPCs
+  //#endregion 
+
+
+
+
+
+  //#region Guia de NPCs
   { id: "Cajado-de-Batalha",
     name: "Cajado de Batalha",
     description: "Um cajado reforçado com chapas de metal nas pontas. Uma arma discreta, usada por andarilhos que não querem levantar suspeitas. O cajado de batalha é uma arma dupla.",

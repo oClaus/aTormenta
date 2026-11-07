@@ -296,6 +296,15 @@ export default function ParceirosPage() {
                 <p className="font-medium">A seguir estão algumas das criaturas à venda no Empório das Garras. Qualquer personagem pode comprar criaturas de nível iniciante, mas apenas personagens treinados em Adestramento podem comprar criaturas de nível veterano ou mestre — são “bichinhos” que precisam de cuidados avançados e Tibbo os venderá apenas para quem puder cuidar deles. Todas as criaturas contam como parceiros e seguem todas as regras descritas em Tormenta20, p. 260 (incluindo o limite de parceiros). T$ 600 (parceiro iniciante), T$ 3.000 (veterano) e T$ 15.000 (mestre).</p>
               </section>
 
+              <section className="border-t-2 border-amber-900/20 pt-8">
+                <h1 className="font-display text-2xl md:text-3xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/10 pb-2">
+                  Engenhômatos como Parceiros (Bestiário de Arton)
+                </h1>
+                <p className="font-medium mb-4">Engenhômatos são máquinas avançadas, que combinam características de engenhocas e de autômatos. Sua criação e manutenção exigem conhecimento e técnicas especializadas; apenas personagens com o poder Autômato podem fabricar e manter engenhômatos.</p>
+                <p className="font-medium mb-4">Ao adquirir o poder Autômato, no lugar do autômato padrão, você pode escolher um engenhômato que você seja capaz de fabricar. Esse engenhômato não recebe um tipo de parceiro como definido no poder. Entretanto, no 7° nível, ele se torna um parceiro iniciante de um tipo à sua escolha entre os listados no poder e, no 15°, se torna veterano.</p>
+                <p className="font-medium mb-4">Porém, fabricar um engenhômato segue as mesmas regras para engenhocas, exceto que a magia que ele simula é definida por seu tipo e seu custo de fabricação aumenta em 50% (ou seja, T$ 150 x o custo em PM da magia). Um engenhômato funciona como um parceiro e uma engenhoca e conta no limite de ambos. Entretanto, ele não precisa ser empunhado ou vestido, pode ser ativado com um comando verbal a até 9m e seu efeito se origina dele, e não do personagem. Bônus de parceiro fornecidos por engenhômatos não contam como bônus de itens (apenas de parceiros mesmo).</p>
+              </section>
+
             </div>
           </div>
         </div>

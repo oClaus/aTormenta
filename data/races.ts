@@ -2,6 +2,37 @@ import { Race } from "@/types/race";
 
 export const races: Race[] = [
 
+  //#region Bestiário de Arton
+  { id: "Elfo-do-Gelo",
+    name: "Elfo-do-Gelo",
+    origin: "Bestiário de Arton",
+    image: "/racas/elfo_do_gelo.png",
+    description: "Meu povo descende daqueles que deixaram as asas de Glórienn e encontraram refúgio onde quase ninguém ousava ir: as gélidas Montanhas Uivantes. Lá, aprendemos a sobreviver num mundo de neve eterna, ventos cortantes e caça difícil. Com o tempo, o frio deixou de ser um obstáculo e passou a moldar as pessoas: pele pálida como a geada, cabelos em tons claros ou frios, olhos adaptados à escuridão e corpos marcados por cicatrizes de um ambiente que não perdoa erros. Passamos a viver em pequenos grupos, geralmente em cavernas, sem reis ou chefes: cada aldeia decide seu caminho em conjunto, guiada pela necessidade e pela experiência.\nElfos-do-gelo são descendentes de elfos que migraram para as Montanhas Uivantes após a queda de Glórienn, em busca de uma terra, e de uma divindade, que pudesse lhes oferecer proteção. Nas Uivantes, estes elfos encontraram a proteção de Beluhga; mesmo morta, a Dragoa-Rainha do Gelo zelava pelas montanhas e por seus habitantes. Com o tempo, esses elfos passaram por transformações que os adaptaram à vida em um dos ambientes mais inóspitos de Arton. Teriam sido essas mudanças influência das forças mágicas das Uivantes ou uma bênção secreta da própria Beluhga?\nAinda existem poucos elfos-do-gelo em Arton e a maioria vive em pequenas aldeias independentes nas Uivantes. Possuem uma relação cultural muito forte com a neve e com a própria Beluhga, embora por vezes cultuem outros deuses. Elfos-do-gelo encontrados fora das Uivantes geralmente são exploradores com uma missão específica ou, mais comumente, aventureiros em busca de explorar o restante de Arton.",
+    abilities: [
+      {
+      name: "Graça de Beluhga",
+      description: "Seu deslocamento é 12m (em vez de 9m) e não é reduzido por terreno difícil natural.",
+    },
+    {
+      name: "Herança Gélida",
+      description: "Você recebe redução de frio 10 e, quando causa dano, causa +1d4 pontos de dano de frio.",
+    },
+    {
+      name: "Sentidos Glaciais",
+      description: "Você recebe visão na penumbra e +2 em Percepção e Sobrevivência.",
+    },
+    ],
+    attributeModifiers: [
+      { attribute: "sab", modifier: 2 },
+      { attribute: "des", modifier: 1 },
+      { attribute: "con", modifier: -1 }
+    ],
+    longevidade: "x5.",
+    devotos: "Allihanna, Beluhga, Kallyadranoch, Marah, Megalokk.",
+  },
+  //#endregion
+
+
   //#region A Lenda de Ghanor
   { id: "Aberrante",
     name: "Aberrante (A Lenda de Ghanor) Ω",
@@ -802,31 +833,6 @@ export const races: Race[] = [
       { attribute: "con", modifier: 2 },
       { attribute: "int", modifier: 1 },
       { attribute: "des", modifier: -1 }
-    ]
-  },
-  { id: "Elfo-do-Gelo",
-    name: "Elfo-do-Gelo Ω",
-    origin: "Dragão Brasil - 224",
-    image: "/racas/elfo_do_gelo.png",
-    description: "Meu povo descende daqueles que deixaram as asas de Glórienn e encontraram refúgio onde quase ninguém ousava ir: as gélidas Montanhas Uivantes. Lá, aprendemos a sobreviver num mundo de neve eterna, ventos cortantes e caça difícil. Com o tempo, o frio deixou de ser um obstáculo e passou a moldar as pessoas: pele pálida como a geada, cabelos em tons claros ou frios, olhos adaptados à escuridão e corpos marcados por cicatrizes de um ambiente que não perdoa erros. Passamos a viver em pequenos grupos, geralmente em cavernas, sem reis ou chefes: cada aldeia decide seu caminho em conjunto, guiada pela necessidade e pela experiência.\nMuitos elfos-do-gelo são como eu, devotos da Dragoa-Rainha do Gelo, pedindo proteção e força, enquanto outros ainda fazem preces a Allihanna por boas caçadas. Poucos de nós deixam as montanhas, mas quando o fazem é por necessidade, curiosidade ou chamado da aventura — e onde passam, levam consigo o silêncio do inverno e a certeza de que até no frio mais implacável a liberdade pode florescer.",
-    abilities: [
-      {
-      name: "Graça de Glórienn",
-      description: "Seu deslocamento é 12m (em vez de 9m).",
-    },
-    {
-      name: "Herança Gélida",
-      description: "Você recebe redução de frio 10 e resistência a frio +5.",
-    },
-    {
-      name: "Sentidos Élficos",
-      description: "Você recebe visão na penumbra e +2 em Misticismo e Percepção.",
-    },
-    ],
-    attributeModifiers: [
-      { attribute: "des", modifier: 1 },
-      { attribute: "sab", modifier: 2 },
-      { attribute: "con", modifier: -1 }
     ]
   },
   { id: "Elfo-Sombrio",

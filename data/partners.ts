@@ -74,6 +74,54 @@ export const partners: Partner[] = [
       mestre: "Uma vez por rodada, você pode aumentar para curto o alcance de uma de suas habilidades com alcance de toque que tenha como alvo um aliado."
     }
   },
+  { id: "Aranha Engenhoca",
+    name: "Aranha Engenhoca",
+    description: "Um pequeno construto aracnídeo feito de engrenagens, molas e cristais energéticos. Uma engenhosa obra-prima de miniaturização e automação que auxilia seu criador como um útil parceiro mecânico.",
+    origin: "Bestiário de Arton",
+    category: "especifico",
+    archetype: "Engenhômato",
+    benefits: {
+      iniciante: "Conta como uma engenhoca de Teia e aumenta a CD dos testes de Reflexos para resistir a suas engenhocas em +1.",
+      veterano: "-",
+      mestre: "-"
+    }
+  },
+  { id: "Coruja Engenhoca",
+    name: "Coruja Engenhoca",
+    description: "Um elaborado pássaro metálico animado, com movimentos coordenados e olhos luminosos. Fabricado por inventores para atuar como um assistente observador e prático, zumbindo com a energia de suas engrenagens internas.",
+    origin: "Bestiário de Arton",
+    category: "especifico",
+    archetype: "Engenhômato",
+    benefits: {
+      iniciante: "Conta como uma engenhoca de Orientação e fornece +2 em testes de uma perícia originalmente baseada em Sabedoria (definida na fabricação da coruja).",
+      veterano: "-",
+      mestre: "-"
+    }
+  },
+  { id: "Cão Engenhoca",
+    name: "Cão Engenhoca",
+    description: "O que à primeira vista parece um cachorrinho de brinquedo revela-se um engenhoso construto metálico animado. Exibe uma personalidade singular e auxilia valorosamente seu criador em combates e aventuras.",
+    origin: "Bestiário de Arton",
+    category: "especifico",
+    archetype: "Engenhômato",
+    benefits: {
+      iniciante: "Conta como uma engenhoca de Arma Espiritual e fornece +1 em testes de ataque corpo a corpo.",
+      veterano: "-",
+      mestre: "-"
+    }
+  },
+  { id: "Urso Engenhoca",
+    name: "Urso Engenhoca",
+    description: "Um imponente e robusto construto em formato de urso, movido a cristais energéticos e intrincados sistemas de molas. Grande e forte o bastante para carregar seu mestre como uma formidável montaria mecânica.",
+    origin: "Bestiário de Arton",
+    category: "especifico",
+    archetype: "Engenhômato",
+    benefits: {
+      iniciante: "Conta como uma engenhoca de Salto Dimensional e como uma montaria (Grande) que muda seu deslocamento para 12m.",
+      veterano: "-",
+      mestre: "-"
+    }
+  },
   //#endregion
 
 

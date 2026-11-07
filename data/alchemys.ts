@@ -1,10 +1,20 @@
 import { Alchemy, AlchemyType } from "@/types/alchemy";
-//#region Tormenta20 - Jogo do Ano
-//#endregion
-
-
-
 export const alchemy: Alchemy[] = [
+  //#region Bestiário de Arton
+  { id: "Veneno Ósseo",
+    name: "Veneno Ósseo",
+    type: "Venenos",
+    description: "Este veneno de pó ósseo é fabricado a partir de uma combinação de técnicas e habilidades inatas dos driggs, por isso não pode ser produzido por outros alquimistas. A poeira fina de ossos tratados corrói as fossas nasais e causa sangramentos terríveis. Inalação, perde 4d4 PV e fica sangrando (perde 2d4 PV).",
+    origin: "Bestiário de Arton",
+    price: "T$ 20",
+    spaces: "0,5"
+  },
+  //#endregion
+
+
+
+
+
   //#region A Lenda de Ghanor
   // PREPARADOS
   { id: "Antídoto",
