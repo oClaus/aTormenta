@@ -59,6 +59,40 @@ export const mounts: Mount[] = [
       mestre: "Seu deslocamento de voo muda para 15m, a resistência a magia muda para +5 e o bônus em Intuição muda para +5."
     }
   },
+  { id: "Grifo Celestial",
+    name: "Grifo Celestial",
+    size: "Enorme",
+    description: "Uma versão extraplanar do grifo comum, nativa de Arbória, o Reino de Allihanna. Maior, mais inteligente e majestosa, possui pelagem dourada reluzente e dois pares de asas luminosas como as de anjos. Embora seja um predador, possui um olhar sereno e não caça cavalos como seus primos mundanos. Costuma ser um presente da Deusa da Natureza a devotos heroicos ou ser conjurado por altos clérigos. Ficam inquietos na presença de seres malignos, da Tormenta ou devotos de Megalokk.",
+    origin: "Bestiário de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 12m (normal e de voo).",
+      veterano: "Você recebe uma ação de movimento extra por turno (apenas para se deslocar) e, uma vez por rodada, recebe +1d6 em uma rolagem de dano corpo a corpo.",
+      mestre: "Seu deslocamento (normal e de voo) muda para 18m e, o bônus na rolagem de dano aumenta para +2d6."
+    },
+    extra: "Um grifo celestial só irá seguir um devoto de Allihanna."
+  },
+  { id: "Hipogrifo",
+    name: "Hipogrifo",
+    size: "Grande",
+    description: "Semelhante a um garanhão selvagem, mas com cabeça, asas e garras dianteiras de águia, além de pelagem escura. Antes restritos apenas ao Hipogrifo original, a montaria divina de Nimb, esses animais surgiram recentemente em Arton. São levemente mais fracos e mais rápidos que os grifos, mas partilham de seu apetite voraz. Atualmente buscam seu lugar no mundo, habitando montanhas ou liderando manadas de cavalos, enquanto povos e ordens de cavalaria começam a aprender a domesticá-los.",
+    origin: "Bestiário de Arton",
+    benefits: {
+      iniciante: "Você recebe +1 em Iniciativa, Reflexos e na Defesa (um hipogrifo iniciante é um filhote e não pode ser usado como montaria).",
+      veterano: "Como acima, e pode ser usado como montaria, mudando seu deslocamento para voo 18m.",
+      mestre: "Como acima, mas você também recebe uma ação de movimento extra por turno (apenas para se deslocar)."
+    }
+  },
+  { id: "Hipogrifo de Nimb",
+    name: "Hipogrifo de Nimb",
+    size: "Grande",
+    description: "A montaria sagrada original de Nimb, o Deus do Caos. De tempos em tempos, surge em Arton para cumprir algum desígnio de seu mestre. Como um parceiro divino e imprevisível, ele aceita ser montado apenas por quem ele quiser.",
+    origin: "Bestiário de Arton",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 18m (voo 36m) e você recebe uma ação de movimento extra por turno (apenas para se deslocar). Além disso, você pode lançar Sussurros Insanos. Caso aprenda essa magia, seu custo diminui em –1 PM.",
+      veterano: "-",
+      mestre: "-"
+    }
+  },
   //#endregion
 
 

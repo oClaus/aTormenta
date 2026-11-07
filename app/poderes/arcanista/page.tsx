@@ -194,6 +194,8 @@ export default function ArcanistaPodersPage() {
                   <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Sapo: </span><span className="font-medium">Você soma seu atributo-chave ao seu total de pontos de vida (cumulativo).</span></p>
 
                   <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Canifado: </span><span className="font-medium">Um canifado familiar permite que você lance Leque Cromático. Caso aprenda novamente essa magia, seu custo diminui em –1 PM.</span></p>
+                  <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Grifilho: </span><span className="font-medium">O grifilho permite gastar 1 PM, quando você lança uma magia com alcance de toque, para receber +2 na CD dessa magia.</span></p>
+                  <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Lagarto-Elétrico: </span><span className="font-medium">Um lagarto-elétrico familiar fornece +1 PM para gastar em aprimoramentos sempre que você lança uma magia de eletricidade.</span></p>
 
                   <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">(A Lenda de Ghanor) Fuinha: </span><span className="font-medium">Você recebe +2 em Iniciativa e Investigação.</span></p>
                   <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">(A Lenda de Ghanor) Macaco: </span><span className="font-medium">Uma vez por rodada, você pode usar seu familiar para sacar ou guardar um item, ou para pegar um item solto Pequeno ou menor (1 espaço ou menos) em alcance curto e que ele consiga alcançar.</span></p>

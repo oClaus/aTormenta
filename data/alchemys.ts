@@ -9,6 +9,14 @@ export const alchemy: Alchemy[] = [
     price: "T$ 20",
     spaces: "0,5"
   },
+  { id: "Línguas Amaldiçoadas",
+    name: "Línguas Amaldiçoadas",
+    type: "Catalisadores",
+    description: "Estas línguas esbranquiçadas só podem ser obtidas do cadáver de uma fera-da-desgraça e não podem ser fabricadas normalmente. Uma língua amaldiçoada fornece +2 na CD de magias de necromancia e, se usada para lançar Rogar Maldição, também diminui seu custo em –2 PM.",
+    origin: "Bestiário de Arton",
+    price: "T$ 150",
+    spaces: "0,5"
+  },
   //#endregion
 
 

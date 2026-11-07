@@ -30,6 +30,127 @@ export const races: Race[] = [
     longevidade: "x5.",
     devotos: "Allihanna, Beluhga, Kallyadranoch, Marah, Megalokk.",
   },
+  { id: "Lamia",
+    name: "Lâmia",
+    origin: "Bestiário de Arton",
+    image: "/racas/lamia.png",
+    description: "Quando aceitam o convite e adentram a tenda, vocês são confrontados com a verdade. A bela mulher, semioculta em véus, revela-se como um monstro — um torso humano no corpo poderoso de um leão, as garras afiadas armadas em bote. \n Seres táuricos de corpo leonino, lâmias são mais comuns em áreas desérticas como Ubani e Halak-Tûr, mas podem ser encontradas em outras regiões — especialmente lugares áridos, onde usam ilusões para atrair viajantes com promessas de comida, abrigo, romance ou informação. Seus covis são grandes tendas coloridas e luxuosas, quase pequenos palácios; contém tesouros e objetos de arte como tapetes, vasos, jarras, cálices, narguilés, pinturas e candelabros. \n Estas criaturas costumam vagar nas proximidades do seu covil em busca de presas. Quando encontram viajantes, usam suas ilusões para se disfarçar como odaliscas humanas ou qareen, convidando forasteiros para suas tendas. Também podem tentar abordagens mais elaboradas, como encenar uma situação de ameaça, fingindo ser uma “donzela em perigo”. \n Lâmias agem sozinhas ou em pequenos bandos que compartilham o mesmo covil. Uma lâmia também pode liderar um bando de leões, que permanecem de tocaia por perto ou atuam em encenações, fingindo atacá-la. \n Entre os povos do deserto, lâmias são consideradas demônios que devoram a carne e bebem o sangue de suas vítimas. De fato, as criaturas acasalam com humanoides antes de devorá-los, também recolhendo os pertences da vítima. Acredita-se que existam apenas lâmias fêmeas — na verdade, o nascimento de machos é extremamente raro, e muitos são devorados pelas próprias mães, pois seus corações carregam um grande poder mágico. \n Lâmias que abandonam seus modos predatórios para integrar grupos de aventureiros são raras, mas não impossíveis. As que o fazem muitas vezes abandonam sua terra natal, em busca de um lugar onde a fama de sua espécie não seja conhecida.",
+    abilities: [
+      {
+        name: "Corpo Felino",
+        description: "Seu tamanho é Grande e seu deslocamento é 12m. Entretanto, devido ao porte de sua metade humanoide, você conta como Média para fins das armas que usa."
+      },
+      {
+        name: "Magia das Lâmias",
+        description: "Você pode lançar duas das magias a seguir (atributo-chave Carisma): Criar Ilusão, Comprensão, Disfarce Ilusório ou Visão Mística. Caso aprenda novamente essa magia, seu custo diminui em –1 PM."
+      },
+      {
+        name: "Natureza Predadora",
+        description: "Você é uma criatura do tipo monstro e recebe visão no escuro e +2 em Enganação e Furtividade."
+      },
+      {
+        name: "Toque Psíquico",
+        description: "Você possui uma arma natural de toque psíquico (dano 1d6, crítico x2, psíquico). Uma vez por rodada, quando usa a ação agredir para atacar com outra arma, pode gastar 1 PM para fazer um ataque corpo a corpo extra com o toque psíquico, desde que tenha uma mão livre e ela não tenha sido usada para atacar neste turno."
+      }
+    ],
+    attributeModifiers: [
+      { attribute: "car", modifier: 2 },
+      { attribute: "sab", modifier: 1 },
+      { attribute: "con", modifier: -1 }
+    ],
+    longevidade: "x2",
+    devotos: "Canastra, Hyninn, Irione, Kallyadranoch, Sszzaas"
+  },
+  { id: "Licantropo",
+      name: "Licantropo",
+      origin: "Bestiário de Arton",
+      image: "/racas/lobisomem2.jpg",
+      description: "Atenção!!! Essa não é bem uma raça, será necessário escolher outra raça humanóide, e converse com seu mestre a possibilidade de iniciar como Licantropo.\n \n \n Diante da grave acusação, o conde sorri calmamente enquanto desata o laço que mantém presa sua elegante capa de seda. Então, antes que vocês consigam fazer qualquer coisa, seu corpo torna-se enorme e coberto de uma grossa pelagem cinzenta. Agora, com a face de um lobo enraivecido, ele arreganha a boca cheia de presas enquanto exibe as garras afiadas que brilham ameaçadoras ao luar. \n Lobisomens são humanoides capazes de se transformar em feras animalescas. O que à primeira vista poderia ser considerado uma dádiva, entretanto, é na verdade um castigo de natureza divina. Décadas atrás, Megalokk decidiu criar uma maldição capaz de despertar a selvageria dos monstros nos seres civilizados. Para isso, ele pediu ajuda a Tenebra, acreditando que ela tinha o conhecimento necessário para auxiliá-lo nessa tarefa. A Deusa das Trevas, entretanto, alterou a maldição em segredo, fazendo com que ela se manifestasse apenas sob o manto da noite. Assim, Tenebra poderia vigiar, e até mesmo controlar, os monstros criados dessa maneira. \n A primeira vítima da maldição criada por Megalokk e Tenebra se transformava em um monstruoso híbrido de lobo e humano — o primeiro lobisomem de Arton. Depois dele, entretanto, vieram muitos outros, amaldiçoados a se transformar em híbridos de diversas outras feras. Com o tempo, essa maldição viria a ser chamada de licantropia, e seus portadores, de licantropos. \n A licantropia afeta apenas humanoides e é transmitida por outros licantropos, geralmente pela mordida. Uma vez contraída, ela se manifesta sempre que a vítima presencia situações de grande violência; isso desperta lentamente a fera em seu interior até que, ao cair da noite, ela se transforma em um híbrido animalesco e parte em uma caçada selvagem, matando tantas vítimas quanto puder, com preferência por seres inteligentes. Ela então volta à forma normal ao amanhecer, sem lembranças do que fez. De todos os licantropos, os mais comuns são os lobisomens — híbridos de humanoide e lobo. \n Cada licantropo encara sua própria maldição de uma maneira diferente. Há aqueles que não se importam com seus surtos assassinos, enquanto alguns, mais nobres, tomam medidas para impedir que os efeitos mais trágicos da maldição aconteçam, chegando a trancar ou acorrentar a si mesmos durante a noite. Os mais experientes em geral buscam formas de controlar essa maldição, aprendendo a dominar sua fera interior para seu próprio benefício, ou de outros. Licantropos que decidem se isolar da civilização não são tão raros quanto se imagina, mas o perigo maior está naqueles que decidem procurar outros seres acometidos pela maldição, formando bandos de homens-fera.",
+      abilities: [
+        {
+        name: "Aversão a Mitral",
+        description: "Você sofre 1 ponto de dano adicional por dado de dano de ataques com armas de mitral e perde 1d6 pontos de vida por rodada se estiver empunhando ou vestindo um item de mitral."
+        },
+        {
+          name: "Empatia com [Feras]",
+          description: "O licantropo recebe +5 em testes de Adestramento com certas criaturas, conforme seu tipo de licantropia, e pode usar esta perícia para mudar atitude e persuasão com essas criaturas. Esta habilidade se aplica a criaturas da mesma espécie de animal em que o licantropo se transforma, incluindo versões primitivas, reais ou gigantes. Um lobisomem, por exemplo, aplica sua Empatia com lobos e lobos-das-cavernas."
+        },
+        {
+          name: "Maldição da Licantropia",
+          description: "Um humanoide que sofra dano da sua mordida contrai licantropia (Fort CD Con evita)."
+        },
+        {
+          name: "Sentidos Aguçados",
+          description: "Você recebe faro e visão na penumbra."
+        },
+        {
+          name: "Transformação Incontrolável",
+          description: "Você sofre os efeitos de licantropia (veja Licantropia no Conteúdo Extra). Durante uma transformação involuntária, você se torna um personagem sob controle do mestre."
+        },
+        {
+          name: "Formas de Licantropo",
+          description: "Um licantropo transformado involuntariamente por sua maldição assume sempre a forma híbrida. Se puder controlar a transformação (como pelo poder Controlar Licantropia), ele pode escolher entre a forma híbrida ou da fera a cada transformação. Em todos os casos, um licantropo morto ou inconsciente reverte à forma humanoide."
+        },
+        {
+        name: "Forma Híbrida",
+        description: "O licantropo se transforma em uma fera humanoide com a cabeça e características físicas (como pelos e/ou cauda do animal) relacionados à sua licantropia. Nessa forma, seu equipamento vestido desaparece, mas ele mantém seus efeitos. Além disso, ele recebe uma arma natural de mordida (dano 1d6, crítico x2, perfuração) e duas armas naturais de garra (dano 1d6 cada, crítico x2, corte). Uma vez por rodada, quando usa a ação agredir para atacar com outra arma, ele pode gastar 1 PM para fazer um ataque corpo a corpo extra com a mordida e, além disso, também pode gastar 1 PM para fazer um ataque corpo a corpo extra com uma das garras, desde que esta garra esteja livre e não tenha sido usada para atacar neste turno. Como alternativa, se tiver habilidades que exijam uma arma secundária (como Estilo de Duas Armas), pode usá-las com suas garras. Por fim, recebe benefícios adicionais conforme seu tipo de animal.",
+        subAbilities: [
+          {
+            name: "Lobo",
+            description: "Recebe +2 em Força."
+          },
+          {
+            name: "Onça",
+            description: "Pode usar o poder Emboscar, se já tiver esse poder, em vez disso seu custo diminui em −1 PM)."
+          },
+          {
+            name: "Rato",
+            description: "Recebe deslocamento de escalada igual à metade de seu deslocamento. Quando faz um acerto crítico com sua mordida, deixa a armadura da vítima avariada ou, se ela estiver sem armadura, aumenta em +1 o multiplicador desse crítico."
+          },
+          {
+            name: "Selako",
+            description: "Recebe deslocamento de natação igual ao seu deslocamento. Quando faz um acerto crítico contra uma criatura com sua mordida, a vítima fica sangrando."
+          },
+          {
+            name: "Texugo",
+            description: "Pode usar a habilidade Durão (se já tiver essa habilidade, em vez disso seu custo diminui em −1 PM)."
+          },
+        ]
+        },
+        {
+        name: "Forma de Fera",
+        description: "O licantropo assume a forma da fera comum, conforme seu tipo de licantropia. Nessa forma, ele não pode falar, empunhar itens ou lançar magias. Seu equipamento desaparece, mas ele mantém os efeitos de quaisquer itens vestidos. Outras criaturas podem fazer um teste de Percepção oposto pelo seu teste de Enganação para perceber que ele não é um animal comum (ele recebe +10 nesse teste). Por fim, recebe benefícios adicionais conforme seu tipo de animal.",
+        subAbilities: [
+          {
+            name: "Lobo",
+            description: "Seu tamanho se torna Médio, seu deslocamento se torna 15m, ele recebe +2 na Força e uma arma natural de mordida (dano 1d6). Uma vez por rodada, quando usa a ação agredir para atacar com outra arma, ele pode gastar 1 PM para fazer um ataque corpo a corpo extra com a mordida. Além disso, quando acerta um ataque com sua mordida, ele pode gastar 1 PM para fazer a manobra derrubar contra o alvo desse ataque. "
+          },
+          {
+            name: "Onça",
+            description: "Seu tamanho se torna Médio, seu deslocamento se torna 15m (natação 6m), ele recebe uma arma natural de mordida e duas armas naturais de garra (veja Forma Híbrida, anteriormente) e pode usar o poder Emboscar, se já tiver esse poder, em vez disso seu custo diminui em −1 PM)."
+          },
+          {
+            name: "Rato",
+            description: "Seu tamanho se torna Minúsculo, seu deslocamento se torna 12m e ele recebe deslocamento de escalada igual à metade do deslocamento e uma arma natural de mordida (veja Forma Híbrida, anteriormente). Por fim, quando faz um acerto crítico com sua mordida, deixa a armadura da vítima avariada ou, se ela estiver sem armadura, aumenta em +1 o multiplicador desse crítico."
+          },
+          {
+            name: "Selako",
+            description: "Recebe deslocamento de natação igual ao seu deslocamento e uma arma natural de mordida (veja Forma Híbrida, anteriormente). Quando faz um acerto crítico contra uma criatura com sua mordida, a vítima fica sangrando."
+          },
+          {
+            name: "Texugo",
+            description: "Seu tamanho se torna Pequeno, seu deslocamento se torna 12m (escavar 3m), ele pode usar a habilidade Durão (se já tiver essa habilidade, em vez disso seu custo diminui em −1 PM) e recebe uma arma natural de mordida (dano 1d6, crítico x2, perfuração). Uma vez por rodada, quando usa a ação agredir para atacar com uma arma, ele pode gastar 1 PM para fazer um ataque corpo a corpo extra com a mordida."
+          },
+        ]
+        },
+      ],
+      attributeModifiers: [
+        { description: "Mantém os atributos da raça base" }
+      ],
+      longevidade: "Como a raça base.",
+      devotos: "Como a raça base (Megalokk e Tenebra são tematicamente ligados à maldição)",
+      extra: "A licantropia é uma maldição mágica que afeta apenas humanoides. Uma criatura que a contrai não apresenta nenhum sintoma inicial. Entretanto, sempre que presencia alguma forma de violência física (qualquer situação em que uma criatura cause dano letal em outra), ela é acometida pelos efeitos de sua condição. Na próxima noite, ela se transformará em sua forma híbrida, partindo em um surto de violência que vai durar até o amanhecer. Ao amanhecer, ela voltará à sua forma normal, sem nenhuma lembrança da selvageria que promoveu.\n\nUma vítima de licantropia que esteja ciente de sua condição pode fazer um teste de Vontade (CD 25, +5 por teste anterior). Se passar, evitará a transformação naquela noite. Caso falhe, se transforma e a CD dos testes de Vontade volta para 25. Se ela participou ativamente do ato de violência (por exemplo, ao atacar ou ser atacada por alguém), sofre −5 no teste de Vontade daquela noite.\n\nLicantropia pode ser curada com a magia Purificação, com o aprimoramento que também dissipa magias e efeitos prejudiciais de encantamento, necromancia e transmutação, ou por qualquer outro efeito capaz de remover uma maldição."
+    },
   //#endregion
 
 

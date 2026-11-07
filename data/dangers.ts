@@ -2,6 +2,13 @@ import { DangerItem } from "@/types/danger";
 //#region Tormenta20 - Jogo do Ano
 //#endregion
 export const dangers: DangerItem[] = [
+  //#region Bestiário de Arton
+  { id: "licantropia",
+    name: "Licantropia",
+    content: "A licantropia é uma maldição mágica que afeta apenas humanoides. Uma criatura que a contrai não apresenta nenhum sintoma inicial. Entretanto, sempre que presencia alguma forma de violência física (qualquer situação em que uma criatura cause dano letal em outra), ela é acometida pelos efeitos de sua condição. Na próxima noite, ela se transformará em sua forma híbrida, partindo em um surto de violência que vai durar até o amanhecer. Ao amanhecer, ela voltará à sua forma normal, sem nenhuma lembrança da selvageria que promoveu.\n\nUma vítima de licantropia que esteja ciente de sua condição pode fazer um teste de Vontade (CD 25, +5 por teste anterior). Se passar, evitará a transformação naquela noite. Caso falhe, se transforma e a CD dos testes de Vontade volta para 25. Se ela participou ativamente do ato de violência (por exemplo, ao atacar ou ser atacada por alguém), sofre −5 no teste de Vontade daquela noite.\n\nLicantropia pode ser curada com a magia Purificação, com o aprimoramento que também dissipa magias e efeitos prejudiciais de encantamento, necromancia e transmutação, ou por qualquer outro efeito capaz de remover uma maldição.",
+    category: "Bestiário de Arton"
+  },
+  //#endregion
 
   //#region Tormenta20 - Jogo do Ano
   { id: "acido",

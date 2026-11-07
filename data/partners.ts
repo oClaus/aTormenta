@@ -122,6 +122,42 @@ export const partners: Partner[] = [
       mestre: "-"
     }
   },
+  { id: "Golfinho",
+    name: "Golfinho",
+    description: "Mamíferos marinhos mansos, sociáveis e muito inteligentes encontrados em todos os mares e oceanos de Arton. Apesar de seu temperamento amigável, são caçadores astutos e corajosos, capazes de desferir poderosas pancadas com o focinho e usar o sonar para emitir rajadas sônicas atordoantes.",
+    origin: "Bestiário de Arton",
+    category: "especifico",
+    archetype: "Combatente",
+    benefits: {
+      iniciante: "Uma vez por rodada, você recebe +1d8 em uma rolagem de dano corpo a corpo.",
+      veterano: "Você pode usar o poder Ímpeto. Se já tiver esse poder, o bônus em deslocamento fornecido por ele aumenta para 9m.",
+      mestre: "Uma vez por rodada, você pode gastar 1 PM para emitir um raio sônico em uma criatura em alcance curto. Ela fica atordoada por 1 rodada (apenas uma vez por cena) e sofre 4d6 pontos de dano mental (Fort CD Car reduz o dano à metade e evita a condição). Você só pode usar esta habilidade se você e o alvo estiverem no mesmo corpo d’água."
+    }
+  },
+  { id: "Grifilho",
+    name: "Grifilho",
+    description: "Uma simpática criaturinha que combina o corpo e as patas traseiras de um gato doméstico com as asas, patas dianteiras e cabeça de uma corujinha. Menos agressivos, brincalhões e extremamente curiosos, costumam 'adotar' residências assim como os felinos, sendo muito valorizados como caçadores de pragas, vigias e fiéis animais de estimação.",
+    origin: "Bestiário de Arton",
+    category: "especifico",
+    archetype: "Perseguidor",
+    benefits: {
+      iniciante: "Você recebe +2 em Furtividade e Percepção.",
+      veterano: "Você pode usar Esquiva (se já possuir esse poder, em vez disso o bônus fornecido por ele aumenta em +1).",
+      mestre: "Quando faz uma investida, você causa +3d4 pontos de dano."
+    }
+  },
+  { id: "Lagarto-Elétrico",
+    name: "Lagarto-Elétrico",
+    description: "Diminutos répteis de coloração azul viva, cabeças triangulares e chifres voltados para trás. Predadores furtivos, são capazes de gerar poderosas descargas elétricas para atordoar ou debilitar presas. Costumam habitar locais úmidos e quentes e, embora não sejam naturalmente agressivos contra criaturas maiores, lutarão ferozmente para proteger suas crias ou quando reunidos em perigosos bandos.",
+    origin: "Bestiário de Arton",
+    category: "especifico",
+    archetype: "Destruidor",
+    benefits: {
+      iniciante: "Uma vez por rodada, você pode gastar 1 PM para causar 2d6 pontos de dano de eletricidade em uma criatura em alcance curto.",
+      veterano: "Você pode lançar Toque Chocante. Se você já conhece essa magia, seu custo diminui em –1 PM.",
+      mestre: "Você recebe redução de eletricidade 20."
+    }
+  },
   //#endregion
 
 

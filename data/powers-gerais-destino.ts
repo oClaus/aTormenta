@@ -1,7 +1,18 @@
 import { Power } from "@/types/power";
-//#region Tormenta20 - Jogo do Ano
-//#endregion
+
 export const powersGeraisDestino: Power[] = [
+  //#region Bestiário de Arton
+  { id: "Controlar Licantropia",
+    name: "Controlar Licantropia",
+    description: "Você aprendeu uma forma de controlar sua licantropia. Você ainda é afetado quando presencia algum tipo de violência, mas, quando faz um teste de Vontade para impedir a transformação, rola dois dados e usa o melhor resultado. Se não estiver transformado pela maldição, você pode gastar uma ação completa e 3 PM para assumir sua forma híbrida ou de animal, mantendo o controle sobre suas ações. Cada transformação dura pelo tempo que você quiser, mas você reverte à forma normal se ficar inconsciente ou morrer. Por fim, habilidades e efeitos que afetam a Forma Selvagem de um druida se aplicam às suas formas de licantropo.",
+    prerequisite: "Saber que contraiu licantropia.",
+    origin: "Bestiário de Arton"
+  },
+  //#endregion
+
+
+
+
 
   //#region Tormenta20 - Jogo do Ano
   { id: "Acrobático",
