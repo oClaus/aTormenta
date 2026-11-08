@@ -1,7 +1,67 @@
 import { Spell } from "@/types/speel";
-//#region Tormenta20 - Jogo do Ano
-//#endregion
+
 export const spells: Spell[] = [
+  //#region Bestiário de Arton
+  { id: "Megalon",
+    name: "Megalon",
+    type: "Universal",
+    school: "Encantamento",
+    circle: 3,
+    execution: "Padrão",
+    range: "Toque",
+    target: "1 animal ou monstro",
+    duration: "Cena",
+    resistance: "Vontade evita",
+    description: "Esta magia afeta apenas criaturas irracionais (Int –5 ou –4). Ela aumenta o tamanho do alvo em uma categoria e fornece Força +4 e redução de dano 5. Se o alvo for um parceiro, ele passa a fornecer +2 na Defesa e, uma vez por rodada, +1d12 em uma rolagem de dano corpo a corpo. Estes benefícios se acumulam com quaisquer outros fornecidos pelo parceiro.",
+    origin: "Bestiário de Arton",
+    enhancements: [
+      {
+        cost: "+2 PM",
+        effect: "Muda o bônus de dano fornecido pelo parceiro para +2d8.",
+      },
+      {
+        cost: "+2 PM",
+        effect: "Muda o bônus na Defesa fornecido pelo parceiro para +5.",
+      },
+      {
+        cost: "+4 PM",
+        effect: "Além do normal, o parceiro fornece redução de dano 5.",
+      },
+      {
+        cost: "+4 PM",
+        effect: "Muda o aumento de tamanho para duas categorias e o bônus em Força para +6. Requer 4º círculo.",
+      },
+    ],
+  },
+  { id: "Conjurar Noggs",
+    name: "Conjurar Noggs",
+    type: "Arcana",
+    school: "Convocação",
+    circle: 2,
+    execution: "Completa",
+    range: "Curto",
+    target: "Efeito: 4 noggs conjurados",
+    duration: "Sustentada",
+    resistance: "Nenhuma",
+    description: "Você conjura quatro noggs capangas de tamanho Médio em espaços desocupados dentro do alcance. Você pode gastar uma ação de movimento para fazer os noggs andarem (eles têm deslocamento 9m) ou uma ação padrão para fazê-los causar dano a criaturas adjacentes (2d6 pontos de dano de corte cada). Os noggs são construtos com For 3, Des 1, Def 15 e todos os outros atributos nulos; eles têm 11 PV e falham automaticamente em qualquer teste de resistência ou oposto, mas são imunes a ácido e têm redução de corte e perfuração 5. Eles desaparecem quando são reduzidos a 0 PV ou no fim da cena. Os noggs não agem sem receber uma ordem. Usos criativos para capangas fora de combate ficam a critério do mestre.",
+    origin: "Bestiário de Arton",
+    enhancements: [
+      {
+        cost: "+2 PM",
+        effect: "Aumenta o número de noggs conjurados em +1.",
+      },
+      {
+        cost: "+2 PM",
+        effect: "Os noggs ganham a capacidade de atacar em equipe. Quando mais de um nogg ataca a mesma criatura no mesmo turno, seu dano total é somado e aplicado ao alvo como se fosse uma única fonte de dano. Requer 3º círculo.",
+      },
+    ],
+  },
+  //#endregion
+
+
+
+
+  
   //#region Guia de NPCs
   { id: "Preparação de Batalha",
     name: "Preparação de Batalha",

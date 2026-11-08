@@ -7,6 +7,58 @@ import { Race, isFixedModifier, isFlexibleModifier } from "@/types/race";
 import { races } from "@/data/races";
 import ThemeToggle from "@/components/ThemeToggle";
 
+/* ------------------------------------------------------------------ */
+/*  Estilos escopados da página (somente visual) — mesmo sistema da     */
+/*  página de Ameaças.                                                  */
+/* ------------------------------------------------------------------ */
+const PAGE_CSS = `
+.codex :is(a,button,input,select):focus-visible{
+  outline:2px solid rgb(var(--accent-rgb));
+  outline-offset:2px;
+}
+@media (prefers-reduced-motion: reduce){
+  .codex *{transition:none !important;animation:none !important;scroll-behavior:auto !important}
+}
+
+/* No tema escuro, vermelho e verde ganham brilho para ter contraste sobre o roxo */
+[data-theme="dark"] .codex{
+  --color-red-700:#f07f78;
+  --color-red-800:#e5655f;
+  --color-red-900:#f08a84;
+  --color-red-950:#b83a3a;
+  --color-emerald-700:#34d399;
+}
+
+/* As artes vêm com fundo branco opaco: moldura clara + multiply faz o branco sumir */
+.codex-portrait{background:rgb(var(--portrait-rgb))}
+
+.codex-rules p,
+.codex-rules li{max-width:68ch;text-align:left !important}
+.codex-rules ul{max-width:72ch}
+
+.codex-rules section > :is(h2,h3):first-child{margin-bottom:1.25rem}
+.codex-rules section > h2:first-child{font-size:1.9rem;line-height:1.1}
+.codex-rules section > h3:first-child{font-size:1.4rem;line-height:1.15}
+
+@media (min-width:768px){
+  .codex-rules section{
+    display:grid;
+    grid-template-columns:12.5rem minmax(0,1fr);
+    column-gap:3rem;
+    align-items:start;
+  }
+  .codex-rules section > :is(h2,h3):first-child{
+    grid-column:1;
+    grid-row:1 / span 30;
+    position:sticky;
+    top:6rem;
+    align-self:start;
+    margin:0 !important;
+  }
+  .codex-rules section > :not(:first-child){grid-column:2}
+}
+`;
+
 function CornerOrnament({ className = "" }: { className?: string }) {
   return (
     <svg
@@ -55,6 +107,25 @@ function SearchGlyph({ className = "" }: { className?: string }) {
   );
 }
 
+function Chevron({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width="18"
+      height="18"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className={className}
+    >
+      <path d="M6 9l6 6 6-6" />
+    </svg>
+  );
+}
+
 function PageGlyph({ className = "" }: { className?: string }) {
   return (
     <svg
@@ -94,6 +165,16 @@ function RaceGlyph({ className = "" }: { className?: string }) {
       <path d="M9 10.5c1 .8 2 1.2 3 1.2s2-.4 3-1.2" />
       <circle cx="12" cy="8" r="1" fill="currentColor" stroke="none" />
     </svg>
+  );
+}
+
+/* Título de seção do modal: texto + filete que se estende até a borda */
+function SectionTitle({ children }: { children: React.ReactNode }) {
+  return (
+    <h3 className="font-display flex items-center gap-4 text-xl md:text-2xl font-bold text-red-800 tracking-wide mb-4">
+      <span>{children}</span>
+      <span aria-hidden="true" className="h-px flex-1 bg-gradient-to-r from-amber-900/30 to-transparent" />
+    </h3>
   );
 }
 
@@ -161,28 +242,31 @@ export default function RacasPage() {
   <div className="mb-12 w-full">
     <button 
       onClick={() => setIsOpen(!isOpen)}
-      className="w-full flex items-center justify-between p-6 bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/30 rounded-t-xl hover:border-amber-700/80 transition-all group shadow-sm"
+      aria-expanded={isOpen}
+      className={`w-full flex items-center justify-between gap-4 p-5 md:p-6 bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/30 hover:border-amber-700/80 transition-all group shadow-sm ${isOpen ? 'rounded-t-xl' : 'rounded-xl'}`}
     >
-      <div className="flex items-center gap-3">
-        <PageGlyph className="text-red-800/70 shrink-0 mt-1" />
+      <div className="flex items-center gap-4">
+        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border-2 border-red-800/40 bg-[rgb(var(--bg-inset-rgb))] text-red-800/80" aria-hidden="true">
+          <PageGlyph />
+        </span>
         <div className="text-left">
-          <h2 className="font-display text-xl font-bold text-amber-950 group-hover:text-red-800 transition-colors tracking-wide">
+          <h2 className="font-display text-xl md:text-2xl font-bold text-amber-950 group-hover:text-red-800 transition-colors tracking-wide">
             Regras das Raças
           </h2>
-          <p className="text-sm text-amber-900/70 italic font-bold">
+          <p className="text-sm md:text-base text-amber-900/70 italic font-bold">
             Clique para regras e recomendações sobre Raças.
           </p>
         </div>
       </div>
-      <span className={`text-amber-900/40 text-2xl transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
-        ▼
+      <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 border-amber-900/30 text-amber-900/60 group-hover:text-red-800 group-hover:border-red-800/50 transition-all duration-300 ${isOpen ? 'rotate-180' : ''}`}>
+        <Chevron />
       </span>
     </button>
 
     <div className={`overflow-hidden transition-all duration-500 ease-in-out border-x-2 border-b-2 border-amber-900/30 rounded-b-xl bg-[rgb(var(--bg-inset-rgb))] ${isOpen ? 'max-h-[500000px] opacity-100' : 'max-h-0 opacity-0 border-transparent'}`}>
       
       {/* Contêiner Principal: Padroniza fonte, cor, responsividade e alinhamento */}
-      <div className="p-5 md:p-10 font-serif text-amber-950/85 text-base md:text-lg text-left md:text-justify leading-relaxed flex flex-col gap-8">
+      <div className="codex-rules p-5 md:p-12 font-serif text-amber-950/85 text-base md:text-lg text-left leading-relaxed flex flex-col gap-14">
         
         {/* Introdução do Texto */}
         <section className="border-t-2 border-amber-900/20 pt-8 first:border-0 first:pt-0">
@@ -232,41 +316,42 @@ export default function RacasPage() {
 };
 
   return (
-    <div className="min-h-screen bg-[rgb(var(--bg-rgb))] text-amber-950 font-serif selection:bg-amber-800 selection:text-amber-50 relative overflow-x-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[rgb(var(--bg-rgb))] to-[rgb(var(--bg-edge-rgb))]">
+    <div className="codex min-h-screen bg-[rgb(var(--bg-rgb))] text-amber-950 font-serif selection:bg-amber-800 selection:text-amber-50 relative overflow-x-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[rgb(var(--bg-rgb))] to-[rgb(var(--bg-edge-rgb))]">
+      <style>{PAGE_CSS}</style>
       
       {/* Background Effect */}
       <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(var(--bg-rgb),0.15)_100%)]" />
 
       {/* Header */}
-      <header className="relative z-10 w-full p-6 border-b-4 border-double border-amber-900/40 bg-[rgb(var(--bg-card-rgb))]/90 backdrop-blur-md shadow-sm font-serif">
-        <div className="w-full px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+      <header className="sticky top-0 z-40 w-full py-4 px-6 border-b-[3px] border-double border-amber-900/40 bg-[rgb(var(--bg-card-rgb))]/90 backdrop-blur-md shadow-sm font-serif">
+        <div className="w-full px-2 sm:px-6 md:px-12 lg:px-20 xl:px-28 flex flex-row justify-between items-center gap-4">
             <Link href="/" className="inline-block group">
-                <h1 className="font-display text-4xl font-bold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-700 via-red-800 to-red-950 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 1px 2px rgba(var(--bg-rgb),0.1)' }}>
+                <h1 className="font-display text-3xl md:text-4xl font-bold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-700 via-red-800 to-red-950 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 1px 2px rgba(var(--bg-rgb),0.1)' }}>
                     a-Tormenta
                 </h1>
             </Link>
-            <div className="flex items-center gap-3">
-              <div className="font-display flex items-center gap-3 text-sm font-bold tracking-widest uppercase">
-                  <Link href="/" className="text-amber-950/70 hover:text-red-800 transition-colors">
+            <div className="flex items-center gap-4">
+              <nav aria-label="Navegação" className="font-display flex items-center gap-2.5 text-sm md:text-base font-bold tracking-wide">
+                  <Link href="/" className="text-amber-950/70 hover:text-red-800 transition-colors underline-offset-4 hover:underline">
                       Início
                   </Link>
-                  <span className="text-amber-900/40">/</span>
-                  <span className="text-red-800">Raças</span>
-              </div>
+                  <span className="text-amber-900/40" aria-hidden="true">/</span>
+                  <span className="text-red-800" aria-current="page">Raças</span>
+              </nav>
               <ThemeToggle />
             </div>
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="relative z-10 w-full px-6 py-12">
+      <main className="relative z-10 w-full max-w-[1760px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24 xl:px-32 pt-10 md:pt-14 pb-12">
 
         {/* Título Principal Solto */}
-        <div className="mb-10 w-full flex flex-col items-start">
-          <h1 className="font-display text-4xl sm:text-5xl font-bold text-red-800 mb-3 drop-shadow-sm tracking-wider">
+        <div className="mb-10 md:mb-12 w-full flex flex-col items-start">
+          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-red-800 mb-5 drop-shadow-sm tracking-wider leading-none">
             Raças
           </h1>
-          <div className="w-32 h-1 bg-gradient-to-r from-red-800 to-transparent rounded-full"></div>
+          <div className="w-40 md:w-56 h-1 bg-gradient-to-r from-red-800 to-transparent rounded-full"></div>
         </div>
 
         {/* Título e Introdução */}
@@ -274,82 +359,80 @@ export default function RacasPage() {
           <RulesSection />        
         </div>
 
-        {/* Search */}
-        <div className="mb-12 p-6 rounded-xl bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] w-full font-serif">
-        <label className="font-display block text-sm font-bold text-amber-950/70 mb-3 uppercase tracking-widest">
-          Buscar Raça
-        </label>
-        <div className="relative">
-          <input
-            type="text"
-            placeholder="Digite o nome ou origem..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full px-5 py-3 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-lg text-amber-950/85 placeholder-amber-900/40 focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
-          />
-          <SearchGlyph className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/40" />
-        </div>
-      </div>
+        {/* Busca e Filtro */}
+        <div className="mb-12 p-5 md:p-6 rounded-xl bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] w-full font-serif">
+          <label htmlFor="busca-racas" className="font-display block text-lg font-bold text-amber-950/80 mb-4 tracking-wide">
+            Buscar Raça
+          </label>
+          <div className="grid grid-cols-1 md:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] gap-3 md:gap-4">
+            <div className="relative">
+              <input
+                id="busca-racas"
+                type="text"
+                placeholder="Digite o nome ou origem..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full h-12 pl-5 pr-12 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-lg text-amber-950/85 placeholder-amber-900/40 focus:outline-none focus:border-red-800/50 transition-colors shadow-sm"
+              />
+              <SearchGlyph className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/40" />
+            </div>
 
-      {/* Filtro de Origem */}
-      <div className="mb-8 flex flex-wrap items-center gap-3">
-        <select
-          value={originFilter}
-          onChange={(e) => setOriginFilter(e.target.value)}
-          className="font-display text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full border-2 bg-[rgb(var(--bg-card-rgb))] border-amber-900/20 text-amber-950/70 hover:border-red-800/40 focus:outline-none focus:border-red-800/50 transition-all cursor-pointer"
-        >
-          <option value="todos">Todas as Origens</option>
-          {availableOrigins.map((origin) => (
-            <option key={origin} value={origin}>{origin}</option>
-          ))}
-        </select>
-      </div>
+            <div className="relative">
+              <select
+                value={originFilter}
+                onChange={(e) => setOriginFilter(e.target.value)}
+                aria-label="Origem"
+                className="w-full h-12 pl-5 pr-11 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-lg text-amber-950/85 focus:outline-none focus:border-red-800/50 transition-colors shadow-sm appearance-none cursor-pointer"
+              >
+                <option value="todos">Todas as Origens</option>
+                {availableOrigins.map((origin) => (
+                  <option key={origin} value={origin}>{origin}</option>
+                ))}
+              </select>
+              <Chevron className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/50 pointer-events-none" />
+            </div>
+          </div>
+        </div>
 
         {/* Grid de Raças */}
-        <h2 className="font-display text-2xl font-bold text-red-800 mb-6 border-b-2 border-amber-900/20 pb-2 tracking-wide">
-          {filteredRaces.length} Raças Encontradas
+        <h2 className="font-display flex items-baseline gap-3 text-2xl md:text-3xl font-bold text-red-800 mb-6 border-b-2 border-amber-900/20 pb-3 tracking-wide">
+          <span>{filteredRaces.length} Raças Encontradas</span>
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-x-6 gap-y-10 w-full mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-x-6 gap-y-10 w-full mb-16">
         {filteredRaces.map((race) => (
           <div
             key={race.id}
             onClick={() => setSelectedRace(race)}
-            className="card-grain group relative mt-6 rounded-md bg-[rgb(var(--bg-card-rgb))] border border-amber-900/20 hover:border-[rgb(var(--accent-rgb))]/55 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgba(var(--accent-rgb),0.18)] cursor-pointer flex flex-col"
+            className="card-grain group relative mt-6 rounded-xl bg-[rgb(var(--bg-card-rgb))] border border-amber-900/20 hover:border-[rgb(var(--accent-rgb))]/55 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_10px_32px_rgba(var(--accent-rgb),0.2)] cursor-pointer flex flex-col"
           >
-            <CornerOrnament className="absolute -top-px -left-px z-10 opacity-50 group-hover:opacity-100 transition-opacity" />
-            <CornerOrnament className="absolute -top-px -right-px z-10 rotate-90 opacity-50 group-hover:opacity-100 transition-opacity" />
-            <CornerOrnament className="absolute -bottom-px -right-px z-10 rotate-180 opacity-50 group-hover:opacity-100 transition-opacity" />
-            <CornerOrnament className="absolute -bottom-px -left-px z-10 -rotate-90 opacity-50 group-hover:opacity-100 transition-opacity" />
+            <CornerOrnament className="absolute -bottom-px -right-px z-10 rotate-180 opacity-40 group-hover:opacity-100 transition-opacity" />
+            <CornerOrnament className="absolute -bottom-px -left-px z-10 -rotate-90 opacity-40 group-hover:opacity-100 transition-opacity" />
 
             <div className="crest z-20">
               <span>{race.name.charAt(0)}</span>
             </div>
 
-            {/* Fundo da imagem usando a cor mais clara do pergaminho para dar contraste */}
-            <div className="relative w-full h-72 rounded-t-md bg-[rgb(var(--portrait-rgb))] border-b border-amber-900/15 overflow-hidden flex items-center justify-center">
+            {/* Moldura clara para a arte (fundo branco some com o multiply) */}
+            <div className="codex-portrait relative w-full h-72 rounded-t-xl border-b border-amber-900/15 overflow-hidden flex items-center justify-center">
               {race.image ? (
                 <img
                   src={race.image}
                   alt={race.name}
-                  className="w-full h-full object-contain p-3 group-hover:scale-105 transition-transform duration-500 mix-blend-multiply opacity-95 group-hover:opacity-100"
+                  className="w-full h-full object-contain p-4 pt-8 group-hover:scale-105 transition-transform duration-500 mix-blend-multiply opacity-95 group-hover:opacity-100"
                 />
               ) : (
                 <RaceGlyph className="text-[rgb(60,55,50)]/35" />
               )}
             </div>
 
-            <div className="relative p-5 text-center flex-1 flex flex-col justify-between bg-[rgb(var(--bg-card-rgb))]">
-              <div className="w-full flex flex-col items-center">
-                <h3 className="font-display text-lg font-bold text-amber-950 group-hover:text-red-800 transition-colors mt-1 mb-3 tracking-wide">
-                  {race.name}
-                </h3>
-              </div>
+            <div className="relative px-5 pt-5 pb-6 text-center flex-1 flex flex-col items-center justify-between gap-4 bg-[rgb(var(--bg-card-rgb))] rounded-b-xl">
+              <h3 className="font-display text-xl md:text-2xl font-bold text-amber-950 group-hover:text-red-800 transition-colors tracking-wide leading-tight">
+                {race.name}
+              </h3>
 
-              <div>
-                <span className="hex-badge font-display inline-block px-4 py-1.5 bg-[rgb(var(--bg-inset-rgb))] text-xs font-bold uppercase tracking-widest text-amber-950/75 border border-[rgb(var(--accent-rgb))]/30 group-hover:border-[rgb(var(--accent-rgb))]/60 group-hover:text-red-800/90 transition-colors">
-                  {race.origin}
-                </span>
-              </div>
+              <span className="hex-badge font-display inline-block px-5 py-1.5 bg-[rgb(var(--bg-inset-rgb))] text-sm font-bold tracking-wide text-amber-950/75 border border-[rgb(var(--accent-rgb))]/30 group-hover:border-[rgb(var(--accent-rgb))]/60 group-hover:text-red-800/90 transition-colors">
+                {race.origin}
+              </span>
             </div>
           </div>
         ))}
@@ -372,192 +455,189 @@ export default function RacasPage() {
     className="fixed inset-0 bg-[rgb(var(--void-rgb))]/80 backdrop-blur-sm flex items-center justify-center z-50 p-2 md:p-4"
   >
     {/* Container do Modal com textura padronizada */}
-    <div className="bg-[rgb(var(--bg-inset-rgb))] border-4 border-double border-amber-900/40 rounded-xl shadow-[0_0_60px_rgba(var(--bg-rgb),0.3)] max-w-4xl w-full max-h-[95vh] overflow-y-auto relative custom-scrollbar bg-[url('/noise.png')]">
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-label={selectedRace.name}
+      className="bg-[rgb(var(--bg-inset-rgb))] border-4 border-double border-amber-900/40 rounded-xl shadow-[0_0_60px_rgba(var(--bg-rgb),0.3)] max-w-5xl w-full max-h-[95vh] overflow-y-auto relative custom-scrollbar bg-[url('/noise.png')]"
+    >
       
       {/* Botão de Fechar */}
       <button
         onClick={() => setSelectedRace(null)}
-        className="absolute top-4 right-4 md:top-6 md:right-6 text-amber-900/60 hover:text-red-800 transition-colors z-10 bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/30 rounded-full w-10 h-10 flex items-center justify-center text-2xl pb-1 shadow-sm"
+        aria-label="Fechar"
+        title="Fechar"
+        className="absolute top-4 right-4 md:top-6 md:right-6 text-amber-900/60 hover:text-red-800 transition-colors z-10 bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/30 hover:border-red-800/50 rounded-full w-10 h-10 flex items-center justify-center text-2xl pb-1 shadow-sm"
       >
         ×
       </button>
 
       {/* Conteúdo do Modal - Herdando fontes e cores */}
-      <div className="p-5 md:p-12 font-serif text-amber-950/85">
+      <div className="p-5 md:p-10 font-serif text-amber-950/85">
         
-        {/* Cabeçalho da Raça */}
-        <div className="mb-8 md:mb-10 text-center border-b-2 border-amber-900/20 pb-6 md:pb-8 mt-4 md:mt-0">
-            <h2 className="font-display text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-amber-700 via-red-800 to-amber-950 mb-4 tracking-wider uppercase">
+        {/* Cabeçalho da Raça: arte à esquerda, identidade à direita */}
+        <div className="mb-10 pb-8 border-b-2 border-amber-900/20 mt-8 md:mt-0 flex flex-col md:flex-row items-center md:items-stretch gap-6 md:gap-10">
+          {selectedRace.image && (
+            <figure className="codex-portrait shrink-0 w-48 md:w-64 aspect-[3/4] rounded-xl overflow-hidden border-2 border-amber-900/30 shadow-md flex items-center justify-center">
+              <img
+                src={selectedRace.image}
+                alt={selectedRace.name}
+                className="w-full h-full object-contain p-2 mix-blend-multiply"
+              />
+            </figure>
+          )}
+
+          <div className="flex-1 min-w-0 flex flex-col justify-center text-center md:text-left md:pr-14">
+            <h2 className="font-display text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-amber-700 via-red-800 to-amber-950 mb-4 tracking-wider uppercase leading-tight">
               {selectedRace.name}
             </h2>
-            <div className="flex items-center justify-center gap-4">
+            <div className="flex items-center justify-center md:justify-start gap-4">
               <div className="h-[2px] w-8 md:w-12 bg-amber-900/30"></div>
-              <span className="font-display inline-block text-base md:text-lg font-bold uppercase tracking-[0.2em] text-red-800">
+              <span className="font-display inline-block text-lg md:text-xl font-bold tracking-wide text-red-800">
                   {selectedRace.origin}
               </span>
-              <div className="h-[2px] w-8 md:w-12 bg-amber-900/30"></div>
             </div>
+
+            {(selectedRace.longevidade || selectedRace.devotos) && (
+              <div className="mt-6 flex flex-wrap justify-center md:justify-start gap-3">
+                {selectedRace.longevidade && (
+                  <div className="px-4 py-2.5 bg-[rgb(var(--bg-card-rgb))] rounded-xl border-2 border-amber-900/20 shadow-sm text-left">
+                    <div className="font-display text-xs md:text-sm text-amber-950/60 font-bold tracking-wide">Longevidade</div>
+                    <div className="text-amber-950 text-lg md:text-xl font-bold leading-tight">{selectedRace.longevidade}</div>
+                  </div>
+                )}
+                {selectedRace.devotos && (
+                  <div className="px-4 py-2.5 bg-[rgb(var(--bg-card-rgb))] rounded-xl border-2 border-amber-900/20 shadow-sm text-left">
+                    <div className="font-display text-xs md:text-sm text-amber-950/60 font-bold tracking-wide">Devoção a</div>
+                    <div className="text-amber-950 text-lg md:text-xl font-bold leading-tight">{selectedRace.devotos}</div>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
         </div>
 
+        <div className="flex flex-col gap-10">
+
         {/* Descrição */}
-        <div className="mb-10 p-5 md:p-8 bg-[rgb(var(--bg-card-rgb))]/50 border-2 border-amber-900/20 rounded-xl shadow-inner relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-1 md:w-2 h-full bg-amber-900/20"></div>
+        <div className="p-5 md:p-8 bg-[rgb(var(--bg-card-rgb))]/50 border-2 border-amber-900/20 rounded-xl shadow-inner relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-1 md:w-2 h-full bg-red-800/40"></div>
           <h3 className="font-display text-xl md:text-2xl font-bold text-red-800 mb-4 border-b-2 border-amber-900/10 pb-2 tracking-wide flex items-center gap-2">
             Descrição
           </h3>
-          <p className="text-amber-950/90 leading-relaxed whitespace-pre-line text-base md:text-lg font-medium first-letter:text-5xl md:first-letter:text-6xl first-letter:font-bold first-letter:text-red-800 first-letter:mr-2 first-letter:float-left text-left md:text-justify">
+          <p className="max-w-[72ch] text-amber-950/90 leading-relaxed whitespace-pre-line text-base md:text-lg font-medium first-letter:text-5xl md:first-letter:text-6xl first-letter:font-bold first-letter:text-red-800 first-letter:mr-2 first-letter:float-left text-left">
             {selectedRace.description}
           </p>
         </div>
               
-              {/* Modificadores de Atributos */}
-            <div className="mb-8">
-              <h3 className="font-display text-xl md:text-2xl font-bold text-red-800 mb-4 border-b-2 border-amber-900/20 pb-2 flex items-center gap-2 tracking-wide">
-                Modificadores de Atributos
-              </h3>
-              <div className="space-y-3 md:space-y-4">
-                {selectedRace.attributeModifiers.map((mod, index) => {
-                  // Se é modificador FIXO
-                  if (isFixedModifier(mod)) {
-                    return (
-                      <div
-                        key={index}
-                        className="flex items-center justify-between p-4 md:p-5 rounded-xl bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 hover:border-red-800/40 transition-colors shadow-sm"
-                      >
-                        <p className="text-amber-950/70 font-bold uppercase tracking-widest text-xs md:text-sm">
-                          {getAttributeName(mod.attribute)}
-                        </p>
-                        <p className={`text-2xl md:text-3xl font-bold ${getModifierColor(mod.modifier)}`}>
-                          {formatModifier(mod.modifier)}
-                        </p>
-                      </div>
-                    );
-                  }
-
-                  // Se é modificador FLEXÍVEL
-                  if (isFlexibleModifier(mod)) {
-                    return (
-                      <div
-                        key={index}
-                        className="p-4 md:p-5 rounded-xl bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 shadow-sm"
-                      >
-                        <p className="text-amber-950/85 leading-relaxed text-base md:text-lg font-medium text-left md:text-justify">
-                          <span className="font-bold uppercase tracking-wide text-amber-700 mr-2"></span>
-                          {mod.description}
-                        </p>
-                      </div>
-                    );
-                  }
-                  return null;
-                })}
-              </div>
-            </div>
-
-            
-              {/* Habilidades */}
-              <div className="mb-10">
-              <h3 className="font-display text-xl md:text-2xl font-bold text-red-800 mb-4 border-b-2 border-amber-900/20 pb-2 flex items-center gap-2 tracking-wide">
-                Habilidades Raciais
-              </h3>
-              
-              <div className="space-y-4 md:space-y-6">
-                {selectedRace.abilities.map((ability, index) => (
+        {/* Modificadores de Atributos */}
+        <div>
+          <SectionTitle>Modificadores de Atributos</SectionTitle>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {selectedRace.attributeModifiers.map((mod, index) => {
+              // Se é modificador FIXO
+              if (isFixedModifier(mod)) {
+                return (
                   <div
                     key={index}
-                    className="p-4 md:p-5 bg-[rgb(var(--bg-card-rgb))] rounded-xl border-2 border-amber-900/20 hover:border-red-800/40 transition-colors shadow-sm"
+                    className="flex items-center justify-between gap-4 px-4 py-3 md:px-5 md:py-4 rounded-xl bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/20 hover:border-red-800/40 transition-colors shadow-sm"
                   >
-                    {/* Nome da Habilidade Principal */}
-                    <h4 className="font-display text-xl md:text-2xl font-bold text-red-800 mb-2 tracking-wide">
-                      {ability.name}
-                    </h4>
-
-                    {/* Descrição Principal */}
-                    {ability.description && (
-                      <p className="text-amber-950/85 text-base md:text-lg leading-relaxed whitespace-pre-line mb-3 font-medium text-left md:text-justify">
-                        {ability.description}
-                      </p>
-                    )}
-
-                    {/* Sub-Habilidades (Opcionais/Escolhas) */}
-                    {ability.subAbilities && ability.subAbilities.length > 0 && (
-                      <div className="mt-4 pl-4 md:pl-6 border-l-4 border-amber-900/30 space-y-3">
-                        {ability.subAbilities.map((sub, subIndex) => (
-                          <div key={subIndex} className="bg-[rgb(var(--bg-inset-rgb))] p-4 md:p-5 rounded-lg border border-amber-900/10 shadow-sm">
-                            <span className="font-bold text-red-800 mb-2 text-base md:text-lg flex items-center gap-2">
-                              <span className="text-[10px] text-red-800/60">◆</span> {sub.name}
-                            </span>
-                            <span className="block text-amber-950/80 text-base leading-relaxed whitespace-pre-line font-medium text-left md:text-justify">
-                              {sub.description}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-                    )}
+                    <p className="font-display text-amber-950/75 font-bold tracking-wide text-base md:text-lg">
+                      {getAttributeName(mod.attribute)}
+                    </p>
+                    <p className={`text-2xl md:text-3xl font-bold leading-none ${getModifierColor(mod.modifier)}`}>
+                      {formatModifier(mod.modifier)}
+                    </p>
                   </div>
-                ))}
-              </div>
-            </div>
+                );
+              }
 
-            {/* Longevidade e Devoção */}
-            <div className="mb-8 grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
-              {selectedRace.longevidade && (
-                <div className="p-4 md:p-5 bg-[rgb(var(--bg-card-rgb))] rounded-xl border-2 border-amber-900/20 shadow-sm flex flex-col items-center justify-center text-center">
-                  <div className="text-[10px] md:text-xs text-amber-950/60 font-bold uppercase tracking-widest mb-1">Longevidade</div>
-                  <div className="text-amber-950 text-lg md:text-xl font-bold">{selectedRace.longevidade}</div>
-                </div>
-              )}
-              {selectedRace.devotos && (
-                <div className="p-4 md:p-5 bg-[rgb(var(--bg-card-rgb))] rounded-xl border-2 border-amber-900/20 shadow-sm flex flex-col items-center justify-center text-center">
-                  <div className="text-[10px] md:text-xs text-amber-950/60 font-bold uppercase tracking-widest mb-1">Devoção a</div>
-                  <div className="text-amber-950 text-lg md:text-xl font-bold">{selectedRace.devotos}</div>
-                </div>
-              )}
-            </div>
-
-            
-
-            {/* Extra */}
-            <div className="mb-8 grid grid-cols-1 gap-4">
-              {selectedRace.extra && (
-                <div className="p-5 md:p-6 bg-[rgb(var(--bg-card-rgb))] rounded-xl border-2 border-amber-900/20 shadow-inner">
-                  <div className="font-display text-xl md:text-2xl font-bold text-red-800 mb-3 flex items-center gap-3 tracking-wide border-b-2 border-amber-900/10 pb-2">
-                    📜 Conteúdo Extra
+              // Se é modificador FLEXÍVEL
+              if (isFlexibleModifier(mod)) {
+                return (
+                  <div
+                    key={index}
+                    className="sm:col-span-2 lg:col-span-3 p-4 md:p-5 rounded-xl bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 shadow-sm"
+                  >
+                    <p className="max-w-[72ch] text-amber-950/85 leading-relaxed text-base md:text-lg font-medium text-left">
+                      <span className="font-bold uppercase tracking-wide text-amber-700 mr-2"></span>
+                      {mod.description}
+                    </p>
                   </div>
-                  <div className="text-amber-950/85 text-base md:text-lg leading-relaxed whitespace-pre-line font-medium text-left md:text-justify mt-4">
-                    {selectedRace.extra}
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* IMAGEM (NO FINAL) */}
-              {selectedRace.image && (
-                <section className="mt-8 pt-8 border-t-2 border-amber-900/20">
-                  <h3 className="font-display text-amber-950/50 text-xs md:text-sm uppercase tracking-widest mb-6 text-center font-bold">
-                    Registro Visual
-                  </h3>
-                  <div className="relative w-full rounded-xl overflow-hidden border-2 border-amber-900/30 shadow-md bg-[rgb(var(--bg-card-rgb))] max-w-2xl mx-auto">
-                    <img
-                      src={selectedRace.image}
-                      alt={selectedRace.name}
-                      className="w-full h-auto object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[rgb(var(--bg-card-rgb))]/50 via-transparent to-transparent pointer-events-none"></div>
-                  </div>
-                </section>
-              )}
-
-            {/* Fim do Modal - Decoração */}
-            <div className="mt-12 flex items-center justify-center gap-4 opacity-50">
-              <div className="h-[2px] w-12 md:w-20 bg-amber-900/60"></div>
-              <span className="text-red-800/60 text-xl md:text-2xl">❖</span>
-              <div className="h-[2px] w-12 md:w-20 bg-amber-900/60"></div>
-            </div>
-
-            </div>
+                );
+              }
+              return null;
+            })}
           </div>
         </div>
-      )}
+
+        {/* Habilidades */}
+        <div>
+          <SectionTitle>Habilidades Raciais</SectionTitle>
+          
+          <div className="space-y-4 md:space-y-5">
+            {selectedRace.abilities.map((ability, index) => (
+              <div
+                key={index}
+                className="p-4 md:p-6 bg-[rgb(var(--bg-card-rgb))] rounded-xl border-2 border-amber-900/20 hover:border-red-800/40 transition-colors shadow-sm"
+              >
+                {/* Nome da Habilidade Principal */}
+                <h4 className="font-display text-xl md:text-2xl font-bold text-red-800 mb-2 tracking-wide">
+                  {ability.name}
+                </h4>
+
+                {/* Descrição Principal */}
+                {ability.description && (
+                  <p className="max-w-[72ch] text-amber-950/85 text-base md:text-lg leading-relaxed whitespace-pre-line mb-3 font-medium text-left">
+                    {ability.description}
+                  </p>
+                )}
+
+                {/* Sub-Habilidades (Opcionais/Escolhas) */}
+                {ability.subAbilities && ability.subAbilities.length > 0 && (
+                  <div className="mt-4 pl-4 md:pl-6 border-l-4 border-red-800/30 space-y-3">
+                    {ability.subAbilities.map((sub, subIndex) => (
+                      <div key={subIndex} className="bg-[rgb(var(--bg-inset-rgb))] p-4 md:p-5 rounded-lg border border-amber-900/15 shadow-sm">
+                        <span className="font-bold text-red-800 mb-2 text-base md:text-lg flex items-center gap-2">
+                          <span className="text-[10px] text-red-800/60">◆</span> {sub.name}
+                        </span>
+                        <span className="block max-w-[72ch] text-amber-950/80 text-base leading-relaxed whitespace-pre-line font-medium text-left">
+                          {sub.description}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Extra */}
+        {selectedRace.extra && (
+          <div className="p-5 md:p-6 bg-[rgb(var(--bg-card-rgb))] rounded-xl border-2 border-amber-900/20 shadow-inner">
+            <div className="font-display text-xl md:text-2xl font-bold text-red-800 mb-3 flex items-center gap-3 tracking-wide border-b-2 border-amber-900/10 pb-2">
+              📜 Conteúdo Extra
+            </div>
+            <div className="max-w-[72ch] text-amber-950/85 text-base md:text-lg leading-relaxed whitespace-pre-line font-medium text-left mt-4">
+              {selectedRace.extra}
+            </div>
+          </div>
+        )}
+
+        </div>
+
+        {/* Fim do Modal - Decoração */}
+        <div className="mt-12 flex items-center justify-center gap-4 opacity-50">
+          <div className="h-[2px] w-12 md:w-20 bg-amber-900/60"></div>
+          <span className="text-red-800/60 text-xl md:text-2xl">❖</span>
+          <div className="h-[2px] w-12 md:w-20 bg-amber-900/60"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+)}
 
       {/* Footer */}
       <footer className="relative z-10 mt-20 p-8 border-t-4 border-double border-amber-900/40 bg-[rgb(var(--void-rgb))] text-center font-serif shadow-[0_-4px_20px_rgba(0,0,0,0.15)] flex flex-col items-center justify-center">

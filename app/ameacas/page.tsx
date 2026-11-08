@@ -6,6 +6,80 @@ import { Threat } from "@/types/threat";
 import { threats } from "@/data/threats";
 import ThemeToggle from "@/components/ThemeToggle";
 
+/* ------------------------------------------------------------------ */
+/*  Estilos escopados da página (somente visual)                        */
+/*  - .codex-rules: transforma o bloco de regras em um "livro de        */
+/*    regras" com título à esquerda (sticky) e texto à direita.        */
+/*  - foco visível, movimento reduzido e rolagem suave nos filtros.    */
+/* ------------------------------------------------------------------ */
+const PAGE_CSS = `
+.codex :is(a,button,input,select):focus-visible{
+  outline:2px solid rgb(var(--accent-rgb));
+  outline-offset:2px;
+}
+@media (prefers-reduced-motion: reduce){
+  .codex *{transition:none !important;animation:none !important;scroll-behavior:auto !important}
+}
+
+/* No tema escuro o vermelho do título/acento ganha brilho para ter contraste sobre o roxo */
+[data-theme="dark"] .codex{
+  --color-red-700:#f07f78;
+  --color-red-800:#e5655f;
+  --color-red-900:#f08a84;
+  --color-red-950:#b83a3a;
+}
+
+/* As artes vêm com fundo branco opaco: moldura clara + multiply faz o branco sumir */
+.codex-portrait{background:rgb(var(--portrait-rgb))}
+.codex-portrait img{mix-blend-mode:multiply}
+
+.codex-art{
+  -webkit-mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.55) 30%,#000 62%);
+          mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.55) 30%,#000 62%);
+}
+
+.codex-rules p,
+.codex-rules li{max-width:68ch;text-align:left !important}
+.codex-rules ul{max-width:72ch}
+
+.codex-rules section > :is(h2,h3):first-child{margin-bottom:1.25rem}
+.codex-rules section > h2:first-child{font-size:1.9rem;line-height:1.1}
+
+.codex-rules section .space-y-6 > div:not(.overflow-x-auto),
+.codex-rules section .space-y-8 > div{
+  padding-top:1.25rem;
+  border-top:1px solid rgba(var(--ink-rgb),.18);
+}
+.codex-rules section .space-y-6 > div:not(.overflow-x-auto):first-child,
+.codex-rules section .space-y-8 > div:first-child{
+  padding-top:0;
+  border-top:0;
+}
+.codex-rules section .space-y-6 > div:not(.overflow-x-auto) > h3,
+.codex-rules section .space-y-8 > div > h3{
+  font-size:1.2rem;
+  margin-bottom:.4rem;
+}
+
+@media (min-width:768px){
+  .codex-rules section{
+    display:grid;
+    grid-template-columns:12.5rem minmax(0,1fr);
+    column-gap:3rem;
+    align-items:start;
+  }
+  .codex-rules section > :is(h2,h3):first-child{
+    grid-column:1;
+    grid-row:1 / span 30;
+    position:sticky;
+    top:6rem;
+    align-self:start;
+    margin:0 !important;
+  }
+  .codex-rules section > :not(:first-child){grid-column:2}
+}
+`;
+
 function CornerOrnament({ className = "" }: { className?: string }) {
   return (
     <svg
@@ -51,6 +125,67 @@ function SearchGlyph({ className = "" }: { className?: string }) {
       <circle cx="10" cy="10" r="6.5" />
       <path d="M19 19l-4.5-4.5" />
     </svg>
+  );
+}
+
+function Chevron({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width="18"
+      height="18"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className={className}
+    >
+      <path d="M6 9l6 6 6-6" />
+    </svg>
+  );
+}
+
+/* Título de seção do modal: texto + filete que se estende até a borda */
+function SectionTitle({ children }: { children: React.ReactNode }) {
+  return (
+    <h3 className="font-display flex items-center gap-4 text-xl md:text-2xl font-bold text-red-800 tracking-wide mb-4">
+      <span>{children}</span>
+      <span aria-hidden="true" className="h-px flex-1 bg-gradient-to-r from-amber-900/30 to-transparent" />
+    </h3>
+  );
+}
+
+/* Célula de estatística (usada com o truque gap-px para criar divisórias) */
+function Stat({
+  label,
+  children,
+  tone = "default",
+  size = "md",
+}: {
+  label: string;
+  children: React.ReactNode;
+  tone?: "default" | "red" | "blue";
+  size?: "md" | "lg";
+}) {
+  const valueTone =
+    tone === "red" ? "text-red-800" : tone === "blue" ? "text-blue-500" : "text-amber-950";
+  const labelTone =
+    tone === "red" ? "text-red-800/75" : tone === "blue" ? "text-blue-500/80" : "text-amber-950/60";
+  return (
+    <div className="bg-[rgb(var(--bg-card-rgb))] px-3 py-3 md:py-4 flex flex-col items-center justify-center text-center">
+      <div className={`font-display text-xs md:text-sm font-bold tracking-wide mb-0.5 ${labelTone}`}>
+        {label}
+      </div>
+      <div
+        className={`font-bold leading-tight ${valueTone} ${
+          size === "lg" ? "text-3xl md:text-4xl" : "text-xl md:text-2xl"
+        }`}
+      >
+        {children}
+      </div>
+    </div>
   );
 }
 
@@ -179,42 +314,46 @@ export default function AmeacasPage() {
     });
   };
 
+  const selectClasses =
+    "w-full h-12 pl-5 pr-11 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-lg text-amber-950/85 focus:outline-none focus:border-red-800/50 transition-colors shadow-sm appearance-none cursor-pointer";
+
   return (
-    <div className="min-h-screen bg-[rgb(var(--bg-rgb))] text-amber-950 font-serif selection:bg-amber-800 selection:text-amber-50 relative overflow-x-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[rgb(var(--bg-rgb))] to-[rgb(var(--bg-edge-rgb))]">
-      
+    <div className="codex min-h-screen bg-[rgb(var(--bg-rgb))] text-amber-950 font-serif selection:bg-amber-800 selection:text-amber-50 relative overflow-x-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[rgb(var(--bg-rgb))] to-[rgb(var(--bg-edge-rgb))]">
+      <style>{PAGE_CSS}</style>
+
       {/* Background Effect */}
       <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(var(--bg-rgb),0.15)_100%)]" />
 
       {/* Header - 100% Width */}
-      <header className="relative z-10 w-full p-6 border-b-4 border-double border-amber-900/40 bg-[rgb(var(--bg-card-rgb))]/90 backdrop-blur-md shadow-sm font-serif">
-        <div className="w-full px-2 sm:px-6 md:px-12 lg:px-20 xl:px-28 flex flex-col md:flex-row justify-between items-center gap-4">
+      <header className="sticky top-0 z-40 w-full py-4 px-6 border-b-[3px] border-double border-amber-900/40 bg-[rgb(var(--bg-card-rgb))]/90 backdrop-blur-md shadow-sm font-serif">
+        <div className="w-full px-2 sm:px-6 md:px-12 lg:px-20 xl:px-28 flex flex-row justify-between items-center gap-4">
             <Link href="/" className="inline-block group">
-                <h1 className="font-display text-4xl font-bold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-700 via-red-800 to-red-950 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 0 28px rgba(127,29,29,0.3)' }}>
+                <h1 className="font-display text-3xl md:text-4xl font-bold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-red-700 via-red-800 to-red-950 drop-shadow-sm transition-all group-hover:brightness-125" style={{ textShadow: '0 0 28px rgba(127,29,29,0.3)' }}>
                     a-Tormenta
                 </h1>
             </Link>
-            <div className="flex items-center gap-3">
-              <div className="font-display flex items-center gap-3 text-sm font-bold tracking-widest uppercase">
-                  <Link href="/" className="text-amber-950/70 hover:text-red-800 transition-colors">
+            <div className="flex items-center gap-4">
+              <nav aria-label="Navegação" className="font-display flex items-center gap-2.5 text-sm md:text-base font-bold tracking-wide">
+                  <Link href="/" className="text-amber-950/70 hover:text-red-800 transition-colors underline-offset-4 hover:underline">
                       Início
                   </Link>
-                  <span className="text-amber-900/40">/</span>
-                  <span className="text-red-800">Ameaças</span>
-              </div>
+                  <span className="text-amber-900/40" aria-hidden="true">/</span>
+                  <span className="text-red-800" aria-current="page">Ameaças</span>
+              </nav>
               <ThemeToggle />
             </div>
         </div>
       </header>
 
       {/* Main Content - 100% Width */}
-      <main className="relative z-10 w-full px-6 sm:px-10 md:px-16 lg:px-24 xl:px-32 py-8">
+      <main className="relative z-10 w-full max-w-[1760px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24 xl:px-32 pt-10 md:pt-14 pb-8">
         
         {/* Título e Descrição */}
-        <div className="mb-10 md:mb-12 w-full font-serif flex flex-col items-start">
-          <h2 className="font-display text-4xl sm:text-5xl font-bold text-red-800 mb-4 md:mb-6 border-b-2 border-amber-900/20 pb-4 tracking-wider w-full drop-shadow-sm">
+        <div className="mb-10 md:mb-14 w-full font-serif grid gap-6 md:gap-12 md:grid-cols-[auto_minmax(0,1fr)] md:items-end border-b-2 border-amber-900/20 pb-8 md:pb-10">
+          <h2 className="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-red-800 tracking-wider leading-none drop-shadow-sm">
             Ameaças
           </h2>
-          <p className="text-amber-950/85 text-base md:text-lg italic border-l-4 border-red-800/60 pl-4 md:pl-5 font-medium text-left md:text-justify leading-relaxed">
+          <p className="max-w-2xl text-amber-950/85 text-base md:text-lg italic border-l-4 border-red-800/60 pl-4 md:pl-5 font-medium text-left leading-relaxed">
             As seções a seguir trazem criaturas para o mestre usar como inimigos. As seções são divididas por temas, para ajudar o mestre na seleção dos adversários. Porém, o mestre é livre para misturar os grupos!
           </p>
         </div>
@@ -222,28 +361,29 @@ export default function AmeacasPage() {
         <div className="mb-12 w-full">
           <button 
             onClick={() => setIsIntroOpen(!isIntroOpen)}
-            className="w-full flex items-center justify-between p-6 bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/30 rounded-t-xl hover:border-amber-700/80 transition-all group shadow-sm"
+            aria-expanded={isIntroOpen}
+            className={`w-full flex items-center justify-between gap-4 p-5 md:p-6 bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/30 hover:border-amber-700/80 transition-all group shadow-sm ${isIntroOpen ? 'rounded-t-xl' : 'rounded-xl'}`}
           >
-            <div className="flex items-center gap-3">
-              <span className="text-2xl opacity-70">❖</span>
+            <div className="flex items-center gap-4">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border-2 border-red-800/40 bg-[rgb(var(--bg-inset-rgb))] text-xl text-red-800/80" aria-hidden="true">❖</span>
               <div className="text-left">
-                <h2 className="font-display text-xl font-bold text-amber-950 group-hover:text-red-800 transition-colors tracking-wide">
+                <h2 className="font-display text-xl md:text-2xl font-bold text-amber-950 group-hover:text-red-800 transition-colors tracking-wide">
                   Regras de Ameaças
                 </h2>
-                <p className="text-sm text-amber-900/70 italic font-bold">
+                <p className="text-sm md:text-base text-amber-900/70 italic font-bold">
                   Clique para expandir ou recolher as regras básicas sobre Ameaças.
                 </p>
               </div>
             </div>
-            <span className={`text-amber-900/40 text-2xl transition-transform duration-300 ${isIntroOpen ? 'rotate-180' : ''}`}>
-              ▼
+            <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 border-amber-900/30 text-amber-900/60 group-hover:text-red-800 group-hover:border-red-800/50 transition-all duration-300 ${isIntroOpen ? 'rotate-180' : ''}`}>
+              <Chevron />
             </span>
           </button>
 
           <div className={`overflow-hidden transition-all duration-500 ease-in-out border-x-2 border-b-2 border-amber-900/30 rounded-b-xl bg-[rgb(var(--bg-inset-rgb))] ${isIntroOpen ? 'max-h-[5000000px] opacity-100' : 'max-h-0 opacity-0 border-transparent'}`}>
   
   {/* Contêiner Principal: Padroniza fonte, cor, responsividade e alinhamento */}
-  <div className="p-5 md:p-10 font-serif text-amber-950/85 text-base md:text-lg text-left md:text-justify leading-relaxed flex flex-col gap-8">
+  <div className="codex-rules p-5 md:p-12 font-serif text-amber-950/85 text-base md:text-lg text-left leading-relaxed flex flex-col gap-14">
 
   <section>
                 <h2 className="font-display text-3xl md:text-4xl font-bold text-red-800 mb-8 tracking-wide">Fichas de Criaturas</h2>
@@ -267,16 +407,16 @@ export default function AmeacasPage() {
                     <table className="w-full min-w-max divide-y-2 divide-amber-900/20">
                       <thead className="bg-[rgb(var(--bg-card-rgb))] text-amber-950/80">
                         <tr>
-                          <th scope="col" className="font-display px-4 py-3 text-left text-xs sm:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">
+                          <th scope="col" className="font-display px-4 py-3 text-left text-xs sm:text-sm font-bold tracking-wide border-r-2 border-amber-900/20">
                             Categoria de Tamanho
                           </th>
-                          <th scope="col" className="font-display px-4 py-3 text-left text-xs sm:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">
+                          <th scope="col" className="font-display px-4 py-3 text-left text-xs sm:text-sm font-bold tracking-wide border-r-2 border-amber-900/20">
                             Exemplos
                           </th>
-                          <th scope="col" className="font-display px-4 py-3 text-center text-xs sm:text-sm font-bold uppercase tracking-widest border-r-2 border-amber-900/20">
+                          <th scope="col" className="font-display px-4 py-3 text-center text-xs sm:text-sm font-bold tracking-wide border-r-2 border-amber-900/20">
                             Espaço Ocupado¹/<br/>Alcance Natural
                           </th>
-                          <th scope="col" className="font-display px-4 py-3 text-center text-xs sm:text-sm font-bold uppercase tracking-widest">
+                          <th scope="col" className="font-display px-4 py-3 text-center text-xs sm:text-sm font-bold tracking-wide">
                             Modificador de<br/>Furtividade/Manobras
                           </th>
                         </tr>
@@ -624,29 +764,28 @@ export default function AmeacasPage() {
       </div>
     </section>
 
-    
-
   </div>
 </div>
         </div>
 
-        {/* Filtros e Busca (Atualizado para grid) */}
+        {/* Filtros e Busca */}
         <div 
           id="ameacas-grid" 
-          className="mb-12 p-6 rounded-xl bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] w-full scroll-mt-24 font-serif"
+          className="mb-12 p-5 md:p-6 rounded-xl bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/30 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] w-full scroll-mt-24 font-serif"
         >
-          <label className="font-display block text-sm font-bold text-amber-950/70 mb-4 uppercase tracking-widest">
+          <label htmlFor="busca-ameacas" className="font-display block text-lg font-bold text-amber-950/80 mb-4 tracking-wide">
             Filtros e Busca
           </label>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-[minmax(0,2fr)_minmax(0,1fr)_minmax(0,1fr)] gap-3 md:gap-4">
             {/* Input de Texto */}
             <div className="relative">
                 <input
+                  id="busca-ameacas"
                   type="text"
                   placeholder="Nome, tipo, tamanho ou descrição..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full px-5 py-3 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-lg text-amber-950/85 placeholder-amber-900/40 focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm"
+                  className="w-full h-12 pl-5 pr-12 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-lg text-amber-950/85 placeholder-amber-900/40 focus:outline-none focus:border-red-800/50 transition-colors shadow-sm"
               />
               <SearchGlyph className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/40" />
             </div>
@@ -656,7 +795,8 @@ export default function AmeacasPage() {
               <select
                 value={selectedND}
                 onChange={(e) => setSelectedND(e.target.value)}
-                className="w-full px-5 py-3 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-lg text-amber-950/85 focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm appearance-none cursor-pointer"
+                aria-label="Nível de Desafio"
+                className={selectClasses}
               >
                 <option value="">Todos os Níveis de Desafio</option>
                 {uniqueNDs.map((nd) => (
@@ -665,52 +805,48 @@ export default function AmeacasPage() {
                   </option>
                 ))}
               </select>
-              {/* Setinha customizada para o Select */}
-              <div className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/40 pointer-events-none text-sm">
-                  ▼
-              </div>
+              <Chevron className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/50 pointer-events-none" />
             </div>
 
             {/* Select de Tema */}
-              <div className="relative">
-                <select
-                  value={selectedRegiao}
-                  onChange={(e) => setSelectedRegiao(e.target.value)}
-                  className="w-full px-5 py-3 bg-[rgb(var(--bg-inset-rgb))] border-2 border-amber-900/20 rounded-lg text-amber-950/85 focus:outline-none focus:border-red-800/50 focus:ring-1 focus:ring-red-800/50 transition-all shadow-sm appearance-none cursor-pointer"
-                >
-                  <option value="">Todos os Temas</option>
-                  {uniqueRegioes.map((regiao) => (
-                    <option key={regiao} value={regiao}>
-                      {regiao}
-                    </option>
-                  ))}
-                </select>
-                {/* Setinha customizada para o Select */}
-                <div className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/40 pointer-events-none text-sm">
-                    ▼
-                </div>
-              </div>
+            <div className="relative">
+              <select
+                value={selectedRegiao}
+                onChange={(e) => setSelectedRegiao(e.target.value)}
+                aria-label="Tema"
+                className={selectClasses}
+              >
+                <option value="">Todos os Temas</option>
+                {uniqueRegioes.map((regiao) => (
+                  <option key={regiao} value={regiao}>
+                    {regiao}
+                  </option>
+                ))}
+              </select>
+              <Chevron className="absolute right-4 top-1/2 -translate-y-1/2 text-amber-900/50 pointer-events-none" />
             </div>
           </div>
+        </div>
 
         {/* Grid de Ameaças */}
-        <h2 className="font-display text-2xl font-bold text-red-800 mb-6 border-b-2 border-amber-900/20 pb-2 tracking-wide">
-          {filteredThreats.length} Ameaças Encontradas
+        <h2 className="font-display flex items-baseline gap-3 text-2xl md:text-3xl font-bold text-red-800 mb-8 border-b-2 border-amber-900/20 pb-3 tracking-wide">
+          <span>{filteredThreats.length} Ameaças Encontradas</span>
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-5 md:gap-6 w-full">
           {visibleThreats.map((threat) => (
             <div
               key={threat.id}
               id={createUrlSafeId(threat.id)}
               onClick={() => openModal(threat)}
-              className="card-grain group relative overflow-hidden rounded-xl bg-[rgb(var(--bg-card-rgb))] border border-amber-900/20 hover:border-[rgb(var(--accent-rgb))]/55 transition-all duration-300 hover:shadow-[0_8px_30px_rgba(var(--accent-rgb),0.18)] cursor-pointer p-5 flex flex-col justify-between min-h-[190px] scroll-mt-24"
+              className="card-grain group relative overflow-hidden rounded-2xl bg-[rgb(var(--bg-card-rgb))] border border-amber-900/20 hover:border-[rgb(var(--accent-rgb))]/55 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_32px_rgba(var(--accent-rgb),0.2)] cursor-pointer flex min-h-[220px] scroll-mt-28"
             >
               
-              {/* --- 1. BOTÃO DE COPIAR NO TOPO DIREITO --- */}
+              {/* Botão de copiar link */}
               <button 
                 onClick={(e) => copyLink(threat, e)}
-                className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity p-2 bg-amber-900/10 hover:bg-amber-900/20 rounded-full text-amber-950/70 hover:text-red-800 z-30"
+                className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 focus-visible:opacity-100 transition-opacity p-2 bg-[rgb(var(--bg-inset-rgb))]/90 border border-amber-900/20 hover:border-red-800/50 rounded-full text-amber-950/70 hover:text-red-800 z-30"
                 title="Copiar link direto para esta ameaça"
+                aria-label="Copiar link direto para esta ameaça"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
@@ -718,26 +854,16 @@ export default function AmeacasPage() {
                 </svg>
               </button>
 
-              {/* --- 2. BADGE DE ND NO CANTO INFERIOR DIREITO --- */}
-              <div className="absolute bottom-3 right-3 z-20 shrink-0 flex flex-col items-center justify-center w-12 h-12 rounded-lg bg-[rgb(var(--bg-inset-rgb))]/90 backdrop-blur-sm border-2 border-amber-900/20 shadow-sm group-hover:border-red-800/50 transition-colors">
-                <span className="text-[0.6rem] uppercase text-amber-950/60 font-bold tracking-wider">ND</span>
-                <span className="text-xl font-black text-red-800 leading-none font-sans">{threat.nd}</span>
-              </div>
-
-              {/* --- 3. IMAGEM E MARCA D'ÁGUA --- */}
-              <div className="absolute right-0 top-0 h-full w-full opacity-80 pointer-events-none select-none flex justify-end overflow-hidden z-0">
+              {/* Arte da criatura (esmaece para dentro do card) ou inicial como marca d'água */}
+              <div className={`absolute inset-y-0 right-0 w-[62%] pointer-events-none select-none overflow-hidden z-0 ${threat.image ? "codex-art codex-portrait" : ""}`}>
                 {threat.image ? (
-                  <>
-                    {/* Gradiente atualizado para a cor exata do card (rgb(var(--bg-card-rgb))) */}
-                    <div className="absolute inset-0 z-10 bg-gradient-to-r from-[rgb(var(--bg-card-rgb))] via-[rgb(var(--bg-card-rgb))]/60 to-transparent" />
-                    <img
-                      src={threat.image}
-                      alt=""
-                      className="h-full w-[60%] object-cover object-top drop-shadow-sm"
-                    />
-                  </>
+                  <img
+                    src={threat.image}
+                    alt=""
+                    loading="lazy"
+                    className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  />
                 ) : (
-                  /* Alternativa para cards sem imagem */
                   <div className="absolute inset-0 flex items-center justify-end pr-6 opacity-10">
                     <span className="text-[12rem] font-black italic text-amber-950 leading-none translate-y-4">
                       {threat.name.charAt(0)}
@@ -746,55 +872,43 @@ export default function AmeacasPage() {
                 )}
               </div>
 
-              {/* --- 4. CONTEÚDO DE TEXTO --- */}
-              <div className="relative z-10 flex flex-col justify-between h-full w-full pointer-events-none">
-                
-                {/* TOPO: Adicionado pr-10 para o texto não ficar embaixo do botão de copiar */}
-                <div className="pr-10"> 
-                  <h3 className="text-xl font-bold text-amber-950 group-hover:text-red-800 transition-colors leading-tight drop-shadow-sm line-clamp-2 tracking-wide">
+              {/* Conteúdo */}
+              <div className="relative z-10 flex flex-col justify-between w-full p-5 pointer-events-none">
+                <div className="pr-10">
+                  <h3 className="text-xl md:text-2xl font-bold text-amber-950 group-hover:text-red-800 transition-colors leading-tight line-clamp-2 tracking-wide drop-shadow-sm">
                     {threat.name}
                   </h3>
-                </div>
-
-                {/* RODAPÉ: Adicionado pr-14 para o texto não ficar embaixo do escudo de ND */}
-                <div className="mt-6 pr-14">
-                  <div className="w-12 h-[2px] bg-red-800/60 mb-3 group-hover:w-1/3 transition-all duration-500"></div>
-
-                  <div className="flex flex-wrap items-center gap-y-2 gap-x-2 mb-2">
-                    <span className="px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-widest bg-[rgb(var(--bg-inset-rgb))] border border-amber-900/20 text-amber-950/70 shadow-sm">
-                      {threat.tipo}
-                    </span>
-                    
-                    {threat.tamanho && (
-                      <div className="flex items-center gap-1 text-xs text-amber-950/70 font-bold">
-                        <span className="w-1 h-1 rounded-full bg-amber-900/40"></span>
-                        <span>{threat.tamanho}</span>
-                      </div>
-                    )}
-
-                    {threat.papel && (
-                      <div className="flex items-center gap-1 text-xs font-bold">
-                        <span className="w-1 h-1 rounded-full bg-amber-900/40"></span>
-                        <span className="text-red-800/90 uppercase tracking-widest text-[10px]">
-                          {threat.papel}
-                        </span>
-                      </div>
-                    )}
-                  </div>
-
-                  <div className="flex flex-col gap-1 text-[10px] text-amber-950/60 group-hover:text-red-800 transition-colors font-bold">
-                    <span className="uppercase tracking-widest truncate">
+                  <p className="mt-1 text-sm italic font-medium text-amber-950/60 group-hover:text-red-800/80 transition-colors truncate">
                     {threat.origin || "Desconhecida"}
-                    </span>
-                  </div>
+                  </p>
                 </div>
 
+                <div className="mt-8 pr-16 flex flex-col gap-2">
+                  <span className="self-start px-2.5 py-0.5 rounded-full text-xs font-bold tracking-wide bg-[rgb(var(--bg-inset-rgb))]/90 border border-amber-900/25 text-amber-950/75 shadow-sm">
+                    {threat.tipo}
+                  </span>
+                  <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-bold">
+                    {threat.tamanho && (
+                      <span className="text-amber-950/70">{threat.tamanho}</span>
+                    )}
+                    {threat.tamanho && threat.papel && (
+                      <span className="w-1 h-1 rounded-full bg-amber-900/40" aria-hidden="true"></span>
+                    )}
+                    {threat.papel && (
+                      <span className="text-red-800/90">{threat.papel}</span>
+                    )}
+                  </div>
+                </div>
               </div>
-              
+
+              {/* Selo de ND */}
+              <div className="absolute bottom-4 right-4 z-20 flex flex-col items-center justify-center w-14 h-14 rounded-full bg-[rgb(var(--bg-inset-rgb))]/95 border-2 border-red-800/55 shadow-[inset_0_0_0_3px_rgb(var(--bg-inset-rgb)),inset_0_0_0_4px_rgba(153,27,27,0.35)] group-hover:border-red-800 transition-colors">
+                <span className="text-[0.65rem] leading-none text-amber-950/60 font-bold tracking-wide">ND</span>
+                <span className="text-xl font-black text-red-800 leading-none font-sans mt-0.5">{threat.nd}</span>
+              </div>
+
               {/* Cantos ornamentados */}
               <CornerOrnament className="absolute -top-px -left-px z-30 opacity-0 group-hover:opacity-100 transition-opacity" />
-              <CornerOrnament className="absolute -top-px -right-px z-30 rotate-90 opacity-0 group-hover:opacity-100 transition-opacity" />
-              <CornerOrnament className="absolute -bottom-px -right-px z-30 rotate-180 opacity-0 group-hover:opacity-100 transition-opacity" />
               <CornerOrnament className="absolute -bottom-px -left-px z-30 -rotate-90 opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
           ))}
@@ -802,13 +916,19 @@ export default function AmeacasPage() {
 
         {/* Carregar mais (batch loading) */}
         {hasMoreThreats && (
-          <div className="flex flex-col items-center gap-3 mt-10">
-            <p className="text-sm text-amber-950/60 font-bold tracking-wide">
+          <div className="flex flex-col items-center gap-3 mt-12">
+            <p className="text-sm md:text-base text-amber-950/60 font-bold tracking-wide">
               Mostrando {visibleThreats.length} de {filteredThreats.length}
             </p>
+            <div className="h-1 w-48 rounded-full bg-amber-900/15 overflow-hidden" aria-hidden="true">
+              <div
+                className="h-full rounded-full bg-red-800/70"
+                style={{ width: `${(visibleThreats.length / filteredThreats.length) * 100}%` }}
+              />
+            </div>
             <button
               onClick={() => setVisibleCount((prev) => prev + PAGE_SIZE)}
-              className="font-display px-8 py-3 bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/30 hover:border-red-800/50 rounded-lg text-amber-950/80 hover:text-red-800 font-bold uppercase tracking-widest text-sm transition-all shadow-sm"
+              className="font-display mt-2 px-8 py-3 bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/30 hover:border-red-800/50 rounded-lg text-amber-950/80 hover:text-red-800 font-bold tracking-wide text-base transition-all shadow-sm"
             >
               Carregar mais Ameaças
             </button>
@@ -831,18 +951,21 @@ export default function AmeacasPage() {
           className="fixed inset-0 bg-[rgb(var(--void-rgb))]/80 backdrop-blur-sm z-50 flex items-center justify-center p-2 md:p-4 overflow-y-auto"
           onClick={closeModal}
         >
-          {/* Fundo do modal padronizado com a cor mais clara do pergaminho, borda dupla e font-serif herdada */}
           <div
-            className="bg-[rgb(var(--bg-inset-rgb))] border-4 border-double border-amber-900/40 rounded-xl shadow-[0_0_60px_rgba(var(--bg-rgb),0.3)] max-w-5xl w-full my-4 md:my-8 relative custom-scrollbar bg-[url('/noise.png')] font-serif text-amber-950/85"
+            role="dialog"
+            aria-modal="true"
+            aria-label={selectedThreat.name}
+            className="bg-[rgb(var(--bg-inset-rgb))] border-4 border-double border-amber-900/40 rounded-xl shadow-[0_0_60px_rgba(var(--bg-rgb),0.3)] max-w-6xl w-full my-4 md:my-8 relative custom-scrollbar bg-[url('/noise.png')] font-serif text-amber-950/85"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header Modal */}
-            <div className="relative p-5 md:p-8 border-b-2 border-amber-900/20 bg-[rgb(var(--bg-card-rgb))]/50 rounded-t-xl">
+            <div className="relative p-5 md:p-8 border-b-2 border-amber-900/20 bg-[rgb(var(--bg-card-rgb))]/60 rounded-t-xl">
               <div className="absolute top-4 right-4 md:top-6 md:right-6 flex gap-2 z-10">
                 <button 
                   onClick={(e) => copyLink(selectedThreat, e)}
                   className="p-2 bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/30 hover:border-red-800/50 hover:text-red-800 rounded-full text-amber-950/70 transition-colors flex items-center shadow-sm"
                   title="Copiar link direto para esta ameaça"
+                  aria-label="Copiar link direto para esta ameaça"
                 >
                   {copiedId === selectedThreat.id ? (
                     <span className="text-xs font-bold px-2 py-0.5">✓ Copiado</span>
@@ -857,6 +980,7 @@ export default function AmeacasPage() {
                   onClick={closeModal}
                   className="p-2 bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/30 hover:border-red-800/50 hover:text-red-800 rounded-full text-amber-950/70 transition-colors flex items-center justify-center shadow-sm"
                   title="Fechar"
+                  aria-label="Fechar"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -865,215 +989,194 @@ export default function AmeacasPage() {
                 </button>
               </div>
 
-              <h2 className="font-display text-3xl md:text-5xl font-bold text-red-800 mb-2 md:mb-3 tracking-wider pr-20 md:pr-24 drop-shadow-sm">
-                {selectedThreat.name}
-              </h2>
-              <div className="font-display flex flex-wrap items-center gap-x-3 gap-y-2 mt-2 text-xs md:text-sm font-bold uppercase tracking-widest">
-                <span className="text-amber-950/70 bg-[rgb(var(--bg-inset-rgb))] px-2 py-1 rounded border border-amber-900/20 shadow-sm">{selectedThreat.tipo}</span>
-                <span className="text-amber-950/80">{selectedThreat.tamanho}</span>
-                <span className="text-amber-900/40">•</span>
-                <span className="text-red-800">{selectedThreat.papel}</span>
-                <span className="text-amber-900/40">•</span>
-                <span className="text-amber-950 font-black">ND {selectedThreat.nd}</span>
-                
-                <span className="text-amber-900/40 hidden sm:inline">•</span>
-                <span className="text-amber-950/60 w-full sm:w-auto mt-1 sm:mt-0">Origem: {selectedThreat.origin || "Desconhecida"}</span>
-                
-                <span className="text-amber-900/40 hidden sm:inline">•</span>
-                <span className="text-amber-950/60">Tema: {selectedThreat.tema || "Desconhecido"}</span>
+              <div className="flex items-start gap-4 md:gap-6 pr-24 md:pr-32">
+                {/* Selo de ND */}
+                <div className="shrink-0 flex flex-col items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full bg-[rgb(var(--bg-inset-rgb))] border-2 border-red-800/60 shadow-[inset_0_0_0_3px_rgb(var(--bg-inset-rgb)),inset_0_0_0_4px_rgba(153,27,27,0.35)]">
+                  <span className="text-[0.7rem] md:text-xs leading-none text-amber-950/60 font-bold tracking-wide">ND</span>
+                  <span className="text-2xl md:text-3xl font-black text-red-800 leading-none font-sans mt-0.5">{selectedThreat.nd}</span>
+                </div>
+
+                <div className="min-w-0">
+                  <h2 className="font-display text-3xl md:text-5xl font-bold text-red-800 tracking-wider drop-shadow-sm leading-tight">
+                    {selectedThreat.name}
+                  </h2>
+                  <div className="font-display flex flex-wrap items-center gap-x-3 gap-y-2 mt-3 text-sm md:text-base font-bold">
+                    <span className="text-amber-950/75 bg-[rgb(var(--bg-inset-rgb))] px-2.5 py-0.5 rounded-full border border-amber-900/25 shadow-sm">{selectedThreat.tipo}</span>
+                    <span className="text-amber-950/80">{selectedThreat.tamanho}</span>
+                    <span className="text-amber-900/40" aria-hidden="true">•</span>
+                    <span className="text-red-800">{selectedThreat.papel}</span>
+                  </div>
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-2 text-sm md:text-base italic font-medium text-amber-950/60">
+                    <span>Origem: {selectedThreat.origin || "Desconhecida"}</span>
+                    <span>Tema: {selectedThreat.tema || "Desconhecido"}</span>
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* Conteúdo Scrollável */}
             <div className="p-5 md:p-8 max-h-[75vh] overflow-y-auto custom-scrollbar">
-              
-              {/* Descrição */}
-              <section className="mb-8">
-                <p className="text-amber-950/85 leading-relaxed whitespace-pre-wrap font-medium text-base md:text-lg text-left md:text-justify italic border-l-4 border-amber-900/30 pl-4">
-                  {selectedThreat.description}
-                </p>
-              </section>
+              <div className="grid gap-8 lg:gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
 
-              {/* Estatísticas (Iniciativa, Defesa, PV, PM) */}
-              <section className="mb-8">
-                <h3 className="font-display text-xl md:text-2xl font-bold text-red-800 mb-4 border-b-2 border-amber-900/20 pb-2 tracking-wide">Estatísticas</h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-                  <div className="p-3 md:p-4 bg-[rgb(var(--bg-card-rgb))] rounded-xl border-2 border-amber-900/20 shadow-sm text-center">
-                    <div className="font-display text-[10px] md:text-xs text-amber-950/60 font-bold uppercase tracking-widest mb-1">INICIATIVA</div>
-                    <div className="text-2xl md:text-3xl font-bold text-amber-950">
-                      {selectedThreat.iniciativa >= 0 ? "+" : ""}{selectedThreat.iniciativa}
-                    </div>
-                  </div>
-                  <div className="p-3 md:p-4 bg-[rgb(var(--bg-card-rgb))] rounded-xl border-2 border-amber-900/20 shadow-sm text-center">
-                    <div className="font-display text-[10px] md:text-xs text-amber-950/60 font-bold uppercase tracking-widest mb-1">PERCEPÇÃO</div>
-                    <div className="text-2xl md:text-3xl font-bold text-amber-950">
-                      {selectedThreat.percepcao >= 0 ? "+" : ""}{selectedThreat.percepcao}
-                    </div>
-                  </div>
-                  <div className="p-3 md:p-4 bg-[rgb(var(--bg-card-rgb))] rounded-xl border-2 border-amber-900/20 shadow-sm text-center">
-                    <div className="font-display text-[10px] md:text-xs text-amber-950/60 font-bold uppercase tracking-widest mb-1">DEFESA</div>
-                    <div className="text-2xl md:text-3xl font-bold text-amber-950">{selectedThreat.defesa}</div>
-                  </div>
-                  {/* PV destacado sem perder a textura de pergaminho */}
-                  <div className="p-3 md:p-4 bg-[rgb(var(--bg-inset-rgb))] rounded-xl border-2 border-red-800/30 text-center shadow-sm relative overflow-hidden">
-                    <div className="absolute inset-0 bg-red-800/5 pointer-events-none"></div>
-                    <div className="font-display text-[10px] md:text-xs text-red-800/70 font-bold uppercase tracking-widest mb-1 relative z-10">PV</div>
-                    <div className="text-2xl md:text-3xl font-bold text-red-800 relative z-10">{selectedThreat.pv}</div>
-                  </div>
-                </div>
-              </section>
+                {/* Coluna esquerda: arte + números do combate */}
+                <aside className="flex flex-col gap-8 min-w-0">
 
-              {/* Resistências (Fort, Ref, Von) */}
-              <section className="mb-8">
-                <h3 className="font-display text-xl md:text-2xl font-bold text-red-800 mb-4 border-b-2 border-amber-900/20 pb-2 tracking-wide">Resistências</h3>
-                <div className="grid grid-cols-3 gap-3 md:gap-4 mb-4">
-                  <div className="p-3 md:p-4 bg-[rgb(var(--bg-inset-rgb))] rounded-xl border-2 border-amber-900/20 text-center shadow-sm">
-                    <div className="font-display text-[10px] md:text-xs text-amber-950/60 font-bold uppercase tracking-widest mb-1">FORT</div>
-                    <div className="text-xl md:text-2xl font-bold text-amber-950">
-                      {selectedThreat.fort >= 0 ? "+" : ""}{selectedThreat.fort}
-                    </div>
-                  </div>
-                  <div className="p-3 md:p-4 bg-[rgb(var(--bg-inset-rgb))] rounded-xl border-2 border-amber-900/20 text-center shadow-sm">
-                    <div className="font-display text-[10px] md:text-xs text-amber-950/60 font-bold uppercase tracking-widest mb-1">REF</div>
-                    <div className="text-xl md:text-2xl font-bold text-amber-950">
-                      {selectedThreat.ref >= 0 ? "+" : ""}{selectedThreat.ref}
-                    </div>
-                  </div>
-                  <div className="p-3 md:p-4 bg-[rgb(var(--bg-inset-rgb))] rounded-xl border-2 border-amber-900/20 text-center shadow-sm">
-                    <div className="font-display text-[10px] md:text-xs text-amber-950/60 font-bold uppercase tracking-widest mb-1">VON</div>
-                    <div className="text-xl md:text-2xl font-bold text-amber-950">
-                      {selectedThreat.von >= 0 ? "+" : ""}{selectedThreat.von}
-                    </div>
-                  </div>
-                </div>
-                {selectedThreat.resistenciaDano && (
-                  <div className="p-4 bg-[rgb(var(--bg-card-rgb))]/50 rounded-xl border-2 border-amber-900/20 shadow-sm">
-                    <span className="text-red-800 font-bold text-sm md:text-base mr-2 uppercase tracking-wide">Vantagens/RD: </span>
-                    <span className="text-amber-950/85 text-sm md:text-base font-medium">{selectedThreat.resistenciaDano}</span>
-                  </div>
-                )}
-              </section>
-
-              {/* Movimento e Mana */}
-              <section className="mb-8">
-                <div className={`grid gap-3 md:gap-4 ${selectedThreat.pm != null ? 'grid-cols-2' : 'grid-cols-1'}`}>
-                  <div className="p-3 md:p-4 bg-[rgb(var(--bg-inset-rgb))] rounded-xl border-2 border-amber-900/20 shadow-sm flex flex-col items-center justify-center">
-                    <div className="font-display text-[10px] md:text-xs text-amber-950/60 font-bold uppercase tracking-widest mb-1">DESLOCAMENTO</div>
-                    <div className="text-amber-950 font-bold text-lg">{selectedThreat.deslocamento}</div>
-                  </div>
-                  {selectedThreat.pm != null && (
-                    <div className="p-3 md:p-4 bg-[rgb(var(--bg-inset-rgb))] rounded-xl border-2 border-blue-800/30 shadow-sm flex flex-col items-center justify-center relative overflow-hidden">
-                      <div className="absolute inset-0 bg-blue-800/5 pointer-events-none"></div>
-                      <div className="font-display text-[10px] md:text-xs text-blue-500/80 font-bold uppercase tracking-widest mb-1 relative z-10">PM</div>
-                      <div className="text-blue-500 font-bold text-xl relative z-10">{selectedThreat.pm}</div>
-                    </div>
+                  {/* Imagem */}
+                  {selectedThreat.image && (
+                    <figure className="codex-portrait relative w-full rounded-xl overflow-hidden border-2 border-amber-900/30 shadow-md">
+                      <img
+                        src={selectedThreat.image}
+                        alt={selectedThreat.name}
+                        className="w-full h-auto object-cover"
+                      />
+                    </figure>
                   )}
-                </div>
-              </section>
 
-              {/* Ataques */}
-              <section className="mb-8">
-                <h3 className="font-display text-xl md:text-2xl font-bold text-red-800 mb-4 border-b-2 border-amber-900/20 pb-2 tracking-wide">Ataques</h3>
-                {selectedThreat.ataqueCorpoACorpo && (
-                  <div className="p-4 md:p-5 bg-[rgb(var(--bg-card-rgb))] rounded-xl border-2 border-amber-900/20 mb-3 shadow-sm">
-                    <div className="font-display text-[10px] md:text-xs text-red-800/80 font-bold uppercase tracking-widest mb-2 flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-red-800 rotate-45"></span> CORPO A CORPO
-                    </div>
-                    <div className="text-amber-950/85 font-medium text-base md:text-lg">{selectedThreat.ataqueCorpoACorpo}</div>
-                  </div>
-                )}
-                {selectedThreat.ataqueDistancia && (
-                  <div className="p-4 md:p-5 bg-[rgb(var(--bg-card-rgb))] rounded-xl border-2 border-amber-900/20 shadow-sm">
-                    <div className="font-display text-[10px] md:text-xs text-red-800/80 font-bold uppercase tracking-widest mb-2 flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-red-800 rotate-45"></span> À DISTÂNCIA
-                    </div>
-                    <div className="text-amber-950/85 font-medium text-base md:text-lg">{selectedThreat.ataqueDistancia}</div>
-                  </div>
-                )}
-              </section>
-
-              {/* Habilidades Especiais */}
-              {selectedThreat.habilidades.length > 0 && (
-                <section className="mb-8">
-                  <h3 className="font-display text-xl md:text-2xl font-bold text-red-800 mb-4 border-b-2 border-amber-900/20 pb-2 tracking-wide">Habilidades</h3>
-                  <div className="space-y-3">
-                    {selectedThreat.habilidades.map((hab, index) => (
-                      <div key={index} className="p-4 md:p-5 bg-[rgb(var(--bg-inset-rgb))] rounded-xl border-2 border-amber-900/20 shadow-sm">
-                        <p className="text-amber-950/85 text-base md:text-lg font-medium whitespace-pre-line leading-relaxed text-left md:text-justify">{hab}</p>
+                  {/* Estatísticas (Iniciativa, Defesa, PV, PM) */}
+                  <section>
+                    <SectionTitle>Estatísticas</SectionTitle>
+                    <div className="rounded-xl border-2 border-amber-900/25 overflow-hidden bg-amber-900/20 shadow-sm flex flex-col gap-px">
+                      <div className={`grid gap-px ${selectedThreat.pm != null ? 'grid-cols-3' : 'grid-cols-2'}`}>
+                        <Stat label="Defesa" size="lg">{selectedThreat.defesa}</Stat>
+                        <Stat label="PV" tone="red" size="lg">{selectedThreat.pv}</Stat>
+                        {selectedThreat.pm != null && (
+                          <Stat label="PM" tone="blue" size="lg">{selectedThreat.pm}</Stat>
+                        )}
                       </div>
-                    ))}
-                  </div>
-                </section>
-              )}
-
-              {/* Atributos Básicos (GRID DE 6) */}
-              <section className="mb-8">
-                <h3 className="font-display text-xl md:text-2xl font-bold text-red-800 mb-4 border-b-2 border-amber-900/20 pb-2 tracking-wide">Atributos</h3>
-                <div className="grid grid-cols-3 md:grid-cols-6 gap-3 md:gap-4">
-                  {[
-                    { label: "FOR", val: selectedThreat.for },
-                    { label: "DES", val: selectedThreat.des },
-                    { label: "CON", val: selectedThreat.con },
-                    { label: "INT", val: selectedThreat.int },
-                    { label: "SAB", val: selectedThreat.sab },
-                    { label: "CAR", val: selectedThreat.car },
-                  ].map((attr) => (
-                    <div key={attr.label} className="p-3 bg-[rgb(var(--bg-card-rgb))] rounded-xl border-2 border-amber-900/20 text-center shadow-sm">
-                      <div className="font-display text-[10px] md:text-xs text-amber-950/60 font-bold uppercase tracking-widest mb-1">{attr.label}</div>
-                      <div className="text-xl md:text-2xl font-bold text-amber-950">{attr.val}</div>
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              {/* Perícias e Equipamentos */}
-              <section className="mb-8">
-                <h3 className="font-display text-lg md:text-xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/20 pb-2">Perícias & Equipamento</h3>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {selectedThreat.pericias.map((pericia, index) => (
-                    <span key={index} className="px-3 py-1.5 bg-[rgb(var(--bg-inset-rgb))] rounded-lg border border-amber-900/20 text-amber-950/80 text-sm md:text-base font-bold shadow-sm">
-                      {pericia}
-                    </span>
-                  ))}
-                </div>
-                {selectedThreat.equipamentos.length > 0 && (
-                  <div className="space-y-2 mt-2 bg-[rgb(var(--bg-card-rgb))]/50 p-4 rounded-xl border-2 border-amber-900/20">
-                    {selectedThreat.equipamentos.map((equip, idx) => (
-                      <div key={idx} className="text-base text-amber-950/70 italic font-medium flex items-start gap-2">
-                        <span className="text-amber-900/40 mt-1">•</span> {equip}
+                      <div className="grid grid-cols-2 gap-px">
+                        <Stat label="Iniciativa">
+                          {selectedThreat.iniciativa >= 0 ? "+" : ""}{selectedThreat.iniciativa}
+                        </Stat>
+                        <Stat label="Percepção">
+                          {selectedThreat.percepcao >= 0 ? "+" : ""}{selectedThreat.percepcao}
+                        </Stat>
                       </div>
-                    ))}
-                  </div>
-                )}
-              </section>
+                      <div className="grid grid-cols-1 gap-px">
+                        <Stat label="Deslocamento">
+                          <span className="text-lg md:text-xl">{selectedThreat.deslocamento}</span>
+                        </Stat>
+                      </div>
+                    </div>
+                  </section>
 
-              {/* Tesouro */}
-              <section className="p-5 md:p-6 mb-8 bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/20 rounded-xl shadow-inner">
-                <h3 className="font-display text-xl md:text-2xl font-bold text-red-800 mb-3 flex items-center gap-2 tracking-wide border-b-2 border-amber-900/10 pb-2">
-                  Tesouro
-                </h3>
-                <p className="text-amber-950/85 text-base md:text-lg leading-relaxed whitespace-pre-wrap font-medium">
-                  {renderFormattedText(selectedThreat.tesouro)}
-                </p>
-              </section>
+                  {/* Resistências (Fort, Ref, Von) */}
+                  <section>
+                    <SectionTitle>Resistências</SectionTitle>
+                    <div className="rounded-xl border-2 border-amber-900/25 overflow-hidden bg-amber-900/20 shadow-sm grid grid-cols-3 gap-px">
+                      <Stat label="Fort">
+                        {selectedThreat.fort >= 0 ? "+" : ""}{selectedThreat.fort}
+                      </Stat>
+                      <Stat label="Ref">
+                        {selectedThreat.ref >= 0 ? "+" : ""}{selectedThreat.ref}
+                      </Stat>
+                      <Stat label="Von">
+                        {selectedThreat.von >= 0 ? "+" : ""}{selectedThreat.von}
+                      </Stat>
+                    </div>
+                    {selectedThreat.resistenciaDano && (
+                      <div className="mt-3 p-4 bg-[rgb(var(--bg-card-rgb))]/60 rounded-xl border-l-4 border-red-800/60 border-y border-r border-y-amber-900/20 border-r-amber-900/20 shadow-sm">
+                        <span className="text-red-800 font-bold text-sm md:text-base mr-2 tracking-wide">Vantagens/RD: </span>
+                        <span className="text-amber-950/85 text-sm md:text-base font-medium">{selectedThreat.resistenciaDano}</span>
+                      </div>
+                    )}
+                  </section>
 
-              {/* IMAGEM (NO FINAL) */}
-              {selectedThreat.image && (
-                <section className="mt-8 pt-8 border-t-2 border-amber-900/20">
-                  <h3 className="font-display text-amber-950/50 text-xs md:text-sm uppercase tracking-widest mb-6 text-center font-bold">
-                    Registro Visual
-                  </h3>
-                  <div className="relative w-full rounded-xl overflow-hidden border-2 border-amber-900/30 shadow-md bg-[rgb(var(--bg-card-rgb))] max-w-2xl mx-auto">
-                    <img
-                      src={selectedThreat.image}
-                      alt={selectedThreat.name}
-                      className="w-full h-auto object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[rgb(var(--bg-card-rgb))]/50 via-transparent to-transparent pointer-events-none"></div>
-                  </div>
-                </section>
-              )}
+                  {/* Atributos Básicos */}
+                  <section>
+                    <SectionTitle>Atributos</SectionTitle>
+                    <div className="rounded-xl border-2 border-amber-900/25 overflow-hidden bg-amber-900/20 shadow-sm grid grid-cols-3 gap-px">
+                      {[
+                        { label: "For", val: selectedThreat.for },
+                        { label: "Des", val: selectedThreat.des },
+                        { label: "Con", val: selectedThreat.con },
+                        { label: "Int", val: selectedThreat.int },
+                        { label: "Sab", val: selectedThreat.sab },
+                        { label: "Car", val: selectedThreat.car },
+                      ].map((attr) => (
+                        <Stat key={attr.label} label={attr.label}>{attr.val}</Stat>
+                      ))}
+                    </div>
+                  </section>
+                </aside>
 
+                {/* Coluna direita: texto e ações */}
+                <div className="flex flex-col gap-8 min-w-0">
+
+                  {/* Descrição */}
+                  <section>
+                    <p className="text-amber-950/85 leading-relaxed whitespace-pre-wrap font-medium text-base md:text-lg text-left italic border-l-4 border-amber-900/30 pl-4 max-w-[70ch]">
+                      {selectedThreat.description}
+                    </p>
+                  </section>
+
+                  {/* Ataques */}
+                  <section>
+                    <SectionTitle>Ataques</SectionTitle>
+                    {selectedThreat.ataqueCorpoACorpo && (
+                      <div className="p-4 md:p-5 bg-[rgb(var(--bg-card-rgb))] rounded-xl border-2 border-amber-900/20 mb-3 shadow-sm">
+                        <div className="font-display text-sm md:text-base text-red-800/90 font-bold tracking-wide mb-1.5 flex items-center gap-2">
+                          <span className="w-1.5 h-1.5 bg-red-800 rotate-45" aria-hidden="true"></span> Corpo a corpo
+                        </div>
+                        <div className="text-amber-950/85 font-medium text-base md:text-lg leading-relaxed">{selectedThreat.ataqueCorpoACorpo}</div>
+                      </div>
+                    )}
+                    {selectedThreat.ataqueDistancia && (
+                      <div className="p-4 md:p-5 bg-[rgb(var(--bg-card-rgb))] rounded-xl border-2 border-amber-900/20 shadow-sm">
+                        <div className="font-display text-sm md:text-base text-red-800/90 font-bold tracking-wide mb-1.5 flex items-center gap-2">
+                          <span className="w-1.5 h-1.5 bg-red-800 rotate-45" aria-hidden="true"></span> À distância
+                        </div>
+                        <div className="text-amber-950/85 font-medium text-base md:text-lg leading-relaxed">{selectedThreat.ataqueDistancia}</div>
+                      </div>
+                    )}
+                  </section>
+
+                  {/* Habilidades Especiais */}
+                  {selectedThreat.habilidades.length > 0 && (
+                    <section>
+                      <SectionTitle>Habilidades</SectionTitle>
+                      <div className="space-y-3">
+                        {selectedThreat.habilidades.map((hab, index) => (
+                          <div key={index} className="p-4 md:p-5 bg-[rgb(var(--bg-inset-rgb))] rounded-xl border-2 border-amber-900/20 shadow-sm">
+                            <p className="text-amber-950/85 text-base md:text-lg font-medium whitespace-pre-line leading-relaxed text-left max-w-[70ch]">{hab}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </section>
+                  )}
+
+                  {/* Perícias e Equipamentos */}
+                  <section>
+                    <SectionTitle>Perícias & Equipamento</SectionTitle>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {selectedThreat.pericias.map((pericia, index) => (
+                        <span key={index} className="px-3 py-1.5 bg-[rgb(var(--bg-inset-rgb))] rounded-full border border-amber-900/25 text-amber-950/80 text-sm md:text-base font-bold shadow-sm">
+                          {pericia}
+                        </span>
+                      ))}
+                    </div>
+                    {selectedThreat.equipamentos.length > 0 && (
+                      <div className="space-y-2 mt-2 bg-[rgb(var(--bg-card-rgb))]/50 p-4 rounded-xl border-2 border-amber-900/20">
+                        {selectedThreat.equipamentos.map((equip, idx) => (
+                          <div key={idx} className="text-base text-amber-950/70 italic font-medium flex items-start gap-2">
+                            <span className="text-amber-900/40 mt-1">•</span> {equip}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </section>
+
+                  {/* Tesouro */}
+                  <section className="p-5 md:p-6 bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/20 rounded-xl shadow-inner">
+                    <h3 className="font-display text-xl md:text-2xl font-bold text-red-800 mb-3 flex items-center gap-2 tracking-wide border-b-2 border-amber-900/10 pb-2">
+                      Tesouro
+                    </h3>
+                    <p className="text-amber-950/85 text-base md:text-lg leading-relaxed whitespace-pre-wrap font-medium max-w-[70ch]">
+                      {renderFormattedText(selectedThreat.tesouro)}
+                    </p>
+                  </section>
+
+                </div>
+              </div>
             </div>
           </div>
         </div>

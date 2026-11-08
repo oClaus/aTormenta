@@ -150,7 +150,40 @@ export const races: Race[] = [
       longevidade: "Como a raça base.",
       devotos: "Como a raça base (Megalokk e Tenebra são tematicamente ligados à maldição)",
       extra: "A licantropia é uma maldição mágica que afeta apenas humanoides. Uma criatura que a contrai não apresenta nenhum sintoma inicial. Entretanto, sempre que presencia alguma forma de violência física (qualquer situação em que uma criatura cause dano letal em outra), ela é acometida pelos efeitos de sua condição. Na próxima noite, ela se transformará em sua forma híbrida, partindo em um surto de violência que vai durar até o amanhecer. Ao amanhecer, ela voltará à sua forma normal, sem nenhuma lembrança da selvageria que promoveu.\n\nUma vítima de licantropia que esteja ciente de sua condição pode fazer um teste de Vontade (CD 25, +5 por teste anterior). Se passar, evitará a transformação naquela noite. Caso falhe, se transforma e a CD dos testes de Vontade volta para 25. Se ela participou ativamente do ato de violência (por exemplo, ao atacar ou ser atacada por alguém), sofre −5 no teste de Vontade daquela noite.\n\nLicantropia pode ser curada com a magia Purificação, com o aprimoramento que também dissipa magias e efeitos prejudiciais de encantamento, necromancia e transmutação, ou por qualquer outro efeito capaz de remover uma maldição."
-    },
+  },
+  { id: "Manotauro",
+    name: "Manotauro",
+    origin: "Bestiário de Arton",
+    image: "/racas/manotauro.png",
+    description: "A criatura, que poderia lembrar um centauro comum à distância, revela-se como algo diferente e bizarro. Tem torso humanoide e corpo quadrúpede, mas a cabeça pertence a um touro. Os olhos vermelhos parecem cheios de ódio por todos os seres. \n O manotauro é um monstro que combina as características de um centauro clássico e um minotauro; tem cabeça de touro, torso humano e corpo de cavalo. São maiores, mais fortes e musculosos que centauros comuns — e também muito mais agressivos. \n A lenda de sua origem fala de um conflito entre uma tribo de centauros violentos e um bando de minotauros fugitivos dos gigantes das Lannestull. Ambos os grupos teriam rogado a Megalokk por poder para esmagar seus oponentes. Irritado com as lamúrias daqueles fracos, o Deus dos Monstros amaldiçoou todos a viver para sempre com seus inimigos, fundindo centauros e minotauros em criaturas únicas, cheias de rancor. \n Assim, manotauros formam bandos errantes que atacam e destroem povoados de outras raças. São truculentos, fanfarrões e pouco espertos. Apesar de sua grande força e hostilidade, alguém que conheça sua história ou psicologia pode usar o ódio antigo para enganá-los; com as palavras certas, levar um manotauro a voltar-se contra seus semelhantes não é muito difícil. Pelos mesmos motivos, algumas vezes um xamã de Megalokk será capaz de comandar o grupo, provendo curas mágicas enquanto os utiliza como soldados. \n Dizem existir manotauros que desafiam a maldição de Megalokk, escolhendo lutar com honra ou mesmo viver pacificamente entre aqueles que os aceitam. Uns poucos teriam até mesmo conquistado posições de valor no Império de Tauron, antes de sua queda. Contudo, são exceções raríssimas.",
+    abilities: [
+      {
+        name: "Cascos",
+        description: "Você possui uma arma natural de cascos (dano 1d8, crítico x2, impacto). Uma vez por rodada, quando usa a ação agredir para atacar com outra arma, pode gastar 1 PM para fazer um ataque corpo a corpo extra com os cascos."
+      },
+      {
+        name: "Chifres",
+        description: "Você possui uma arma natural de chifres (dano 1d8, crítico x2, perfuração). Uma vez por rodada, quando usa a ação agredir para atacar com outra arma, pode gastar 1 PM para fazer um ataque corpo a corpo extra com os chifres."
+      },
+      {
+        name: "Corpulento",
+        description: "Seu tamanho é Grande e seu deslocamento é 12m. Entretanto, você não pode se beneficiar de uma montaria e, se estiver carregando um cavaleiro, sofre −2 em testes (além das penalidades de sobrecarga, se houver) e é considerado em condição ruim para lançar magias."
+      },
+      {
+        name: "Medo de Altura",
+        description: "Se estiver adjacente a uma queda de 3m ou mais (como um buraco ou penhasco), você fica abalado."
+      }
+    ],
+    attributeModifiers: [
+      { attribute: "for", modifier: 2 },
+      { attribute: "con", modifier: 1 },
+      { attribute: "int", modifier: -1 },
+      { attribute: "sab", modifier: -2 }
+    ],
+    longevidade: "Normal",
+    devotos: "Allihanna, Deus do Medo, Hippion, Keenn, Lamashtu, Megalokk, Sszzaas, Tauron",
+  },
+
   //#endregion
 
 
