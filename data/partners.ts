@@ -158,6 +158,18 @@ export const partners: Partner[] = [
       mestre: "Você recebe redução de eletricidade 20."
     }
   },
+  { id: "Texugo",
+    name: "Texugo",
+    description: "Pequenos animais de pernas atarracadas e pelagem em tons de preto, cinza e branco. Vivem em tocas e cavernas, sendo exímios caçadores conhecidos por sua impressionante coragem, fúria e notável capacidade de enfrentar e desvencilhar-se de oponentes muito maiores. Um texugo treinado é um aliado inestimável em batalha.",
+    origin: "Bestiário de Arton",
+    category: "especifico",
+    archetype: "Combatente",
+    benefits: {
+      iniciante: "Uma vez por rodada você recebe +1d4 em um teste de ataque corpo a corpo.",
+      veterano: "Sua margem de ameaça com armas corpo a corpo aumenta em +1.",
+      mestre: "Quando sofre dano, você recebe +2 em testes de ataque e rolagens de dano até o fim de seu próximo turno."
+    }
+  },
   //#endregion
 
 

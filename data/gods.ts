@@ -1608,8 +1608,8 @@ obligationsRestrictions: "Devotos de Dunsark não podem recusar aventuras que en
   subtitle: "a Deusa do Sono",
   rank: "Mortal ascendido, status divino 2",
   image: [
-  ""
-  ],
+      "/deuses/Neruíte.png", 
+    ],
   status: "menor",
   history: "Neruíte é uma deusa maternal, de voz suave e melodiosa, que convida todos a relaxar em um sono tranquilo e reparador. Sua presença de aparência inconstante traz uma paz inexplicável, envolvendo os corações aflitos com serenidade e aconchego. Suas canções de ninar são mágicas e possuem o poder de adormecer qualquer criatura, independente de seu tamanho ou natureza. Uma vez adormecida pela melodia de Neruíte, a criatura não acordará até ter um descanso adequado, segundo os ensinamentos da deusa.\nDevotos de Neruíte acreditam que o sono, quando adequado e tranquilo, é um ritual sagrado. São ensinados a respeitar o ciclo natural do descanso, evitando excessos e buscando sempre a harmonia entre o dia e a noite. Os sacerdotes de Neruíte, conhecidos como “Sonhadoresˮ, passam seus dias compartilhando as lições de equilíbrio e de cuidados com o corpo e a mente, realizando cerimônias que celebram a importância do descanso.\nNão se sabe a origem exata de Neruíte, apenas que a deusa é muito antiga. Certas histórias falam de uma princesa de um reino ancestral, que teria adormecido num sono de décadas, sem envelhecer ou sofrer qualquer efeito do tempo. Seus súditos teriam começado a peregrinar para velar seu sono, aos poucos transformando-se em seus devotos… Infelizmente, ninguém conhece o final da história, pois todos adormecem ao ouvi-la, então não se sabe se tem algum fundo de verdade.\nOs templos de Neruíte são conhecidos por sua atmosfera serena e acolhedora. Decorados com tecidos suaves, almofadas e velas perfumadas, esses santuários são considerados locais ideais para descansar e se reconectar com o divino.",
   beliefs: "Ensinar a importância de um bom sono. Auxiliar as pessoas a obterem o descanso adequado. Velar pelo sono alheio. Desvendar pesadelos. Interpretar sonhos. Sonhar.",

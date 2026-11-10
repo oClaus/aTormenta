@@ -163,7 +163,7 @@ export default function VampiroPodersPage() {
                   Regras
                 </h2>
                 <p className="text-sm text-amber-950/70 italic font-bold">
-                  Clique para expandir as regras de Sede de Sangue.
+                  Clique para expandir as regras de Dieta de Sangue.
                 </p>
               </div>
             </div>
@@ -176,47 +176,46 @@ export default function VampiroPodersPage() {
             <div className="p-5 md:p-10 font-serif text-amber-950/85 text-base md:text-lg text-left md:text-justify leading-relaxed flex flex-col gap-8">
 
               <section>
-                <p className="font-medium text-red-800 italic font-bold mb-8 text-center">
-                  Poderes exclusivos da classe Vampiro (Somente Dragão Brasil):
-                </p>
-
-                <h3 className="font-display text-2xl md:text-3xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/20 pb-2">Sede de Sangue</h3>
+                <h3 className="font-display text-2xl md:text-3xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/20 pb-2">Dieta de Sangue</h3>
                 <p className="font-medium mb-4">
-                  Para sobreviver, um vampiro precisa consumir sangue de uma criatura viva, preferencialmente um ser inteligente. Isso torna a vida de vampiros heróicos particularmente desafiadora, ainda que muitos encontrem formas de saciar sua fome de formas mais “humanas”.
+                  Para sobreviver, um vampiro precisa consumir sangue de uma criatura viva, preferencialmente um ser inteligente. Isso torna a vida de vampiros heroicos particularmente desafiadora, ainda que muitos encontrem formas de saciar sua fome de formas mais “humanas”.
                 </p>
                 <p className="font-medium mb-8">
-                  Um vampiro precisa consumir no mínimo uma “dose” de sangue por semana para se manter saudável (vampiros mais poderosos podem precisar de mais sangue para saciar sua fome e manter seu vigor). Uma “dose” é o equivalente a 1 litro de sangue, ou drenar 2d6 pontos de vida de um ser vivo. A origem do sangue determina seus efeitos sob o vampiro.
+                  Um vampiro precisa de “doses” de sangue para se manter saudável. Uma “dose” é o equivalente a 1 litro de sangue, ou drenar 2d6 pontos de vida de um ser vivo. Fazer isso demora alguns minutos (o equivalente a ingerir uma refeição). A origem do sangue determina seus efeitos sobre o vampiro.
                 </p>
 
                 <ul className="space-y-6 mb-8 pl-2 md:pl-4 border-l-4 border-amber-900/20">
                   <li className="flex items-start gap-3">
                     <span className="text-[10px] text-red-800/60 mt-2">◆</span>
                     <span className="font-medium">
-                      <strong className="text-red-800 uppercase tracking-widest text-sm">Animal:</strong> Uma fonte relativamente abundante de alimento, o sangue de animais é consumido por vampiros que, por qualquer razão, não podem ou não querem se alimentar de criaturas inteligentes. Entretanto, ele é menos nutritivo; um vampiro que se alimenta dessa forma fica fraco até ingerir sangue de outros tipos de criaturas.
+                      <strong className="text-red-800 uppercase tracking-widest text-sm">Animal:</strong> Relativamente abundante, o sangue de animais é consumido por vampiros que não podem ou não querem se alimentar de seres inteligentes. Entretanto, ele é menos nutritivo; um vampiro que se alimenta dessa forma fica fraco e só pode remover essa condição ingerindo sangue de outros tipos de criaturas.
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-[10px] text-red-800/60 mt-2">◆</span>
                     <span className="font-medium">
-                      <strong className="text-red-800 uppercase tracking-widest text-sm">Espírito:</strong> O mais valioso dos alimentos, o sangue de espíritos transmite consigo parte do poder místico da criatura. Quando se alimenta de sangue de um espírito, o vampiro é infundido de energia mágica por um dia. Nessa condição, seu total de PM aumenta em +2 por patamar da criatura e ele recebe +2 na CD de suas habilidades mágicas.
+                      <strong className="text-red-800 uppercase tracking-widest text-sm">Espírito:</strong> mais valioso dos alimentos, esse sangue carrega parte do poder místico da criatura. Quando o vampiro se alimenta de um espírito, pelas próximas 24h seu total de PM aumenta em +2 por patamar do espírito e ele recebe +2 na CD de suas habilidades mágicas.
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-[10px] text-red-800/60 mt-2">◆</span>
                     <span className="font-medium">
-                      <strong className="text-red-800 uppercase tracking-widest text-sm">Humanoide:</strong> Este é o alimento tradicional de vampiros, e a base de sua dieta. Alimenta sem penalidades, mas não fornece benefícios adicionais.
+                      <strong className="text-red-800 uppercase tracking-widest text-sm">Humanoide:</strong> O alimento tradicional de vampiros. Não fornece benefícios nem penalidades adicionais.
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-[10px] text-red-800/60 mt-2">◆</span>
                     <span className="font-medium">
-                      <strong className="text-red-800 uppercase tracking-widest text-sm">Monstro:</strong> Mais vigoroso que o sangue de humanoides, o sangue de monstros carrega uma fração de sua força e selvageria. Quando se alimenta dessa forma, o vampiro entra em um estado de excitação feral por um dia. Nesse estado, ele recebe +1 em Força mas sofre –2 em testes de perícias baseadas em Carisma (exceto Intimidação).
+                      <strong className="text-red-800 uppercase tracking-widest text-sm">Monstro:</strong> O sangue de monstros carrega uma fração de sua selvageria. Quando se alimenta dessa forma, o vampiro entra em um estado de excitação feral por um dia. Ele recebe +1 em Força mas sofre –2 em testes de perícias baseadas em Carisma (exceto Intimidação).
                     </span>
                   </li>
                 </ul>
 
-                <p className="font-medium mt-8 border-t-2 border-amber-900/10 pt-6">
-                  Vampiros também drenam sangue como forma de criar outros vampiros. Se um vampiro drenar sangue suficiente de um humanoide ou monstro para matá-lo, a vítima se erguerá como um vampiro na próxima noite e deverá vencer um teste de Vontade oposto contra o vampiro ou ficará sob o controle dele até que ele a liberte ou seja destruído.
+                <p className="font-medium mb-8">
+                  Uma criatura pode perder uma quantidade de doses por semana conforme seu tamanho, sem consequências negativas: 1 dose para seres Pequenos, 2 para Médio ou Grande e 5 para Enorme ou Colossal. Cada vez que esse limite é ultrapassado na mesma semana, ela sofre um efeito: fica fatigada, exausta, inconsciente e então morre, mesmo se for imune a efeitos de cansaço. Cada condição só pode ser curada com sete dias de descanso extremos (ela fica acamada o dia todo) e cuidados prolongados diários.
+                </p>
+                <p className="font-medium mb-8">
+                  Alguns vampiros também drenam sangue como forma de criar outros vampiros. Se tal vampiro drenar sangue suficiente de um humanoide ou monstro para matá-lo, a vítima se erguerá como um vampiro na próxima noite e deverá vencer um teste de Vontade oposto contra o vampiro ou ficará sob o controle dele até que ele a liberte ou seja destruído. Essa habilidade representa alguns dos aspectos mais vilanescos dos vampiros, sendo mais apropriada para NPCs.
                 </p>
               </section>
 

@@ -183,6 +183,78 @@ export const races: Race[] = [
     longevidade: "Normal",
     devotos: "Allihanna, Deus do Medo, Hippion, Keenn, Lamashtu, Megalokk, Sszzaas, Tauron",
   },
+  { id: "Salamandra",
+    name: "Salamandra",
+    origin: "Bestiário de Arton",
+    image: "/racas/salamandra.png",
+    description: "Os guardas à beira do poço de magma são seres reptilianos, semelhantes às nagahs, com tronco, braço e cabeça humanoides, mas com corpo de serpente no lugar do quadril e das pernas. Sua metade serpente é coberta por escamas em um belo padrão amarelo, dourado, negro e vermelho. Seus rostos são angulosos e pontiagudos, mais reptilianos e menos “humanos”. No lugar de cabelos, possuem escamas sobressaltadas que lembram as placas dorsais de certos dinossauros. Escamas semelhantes se projetam de seus ombros e cotovelos. \n Nativas de Solaris e Pyra, respectivamente os mundos divinos de Azgher e Thyatis, salamandras são espíritos ligados ao fogo e às chamas — seus corpos exalam um calor intenso que se transforma em perigosas labaredas quando necessário. Mesmo quando suas chamas não estão ativas, salamandras emanam um suave brilho flamejante. \n Por sua ligação e afinidade com o fogo, salamandras desenvolveram diversas formas de trabalhar com metais. Capazes de adentrar as mais intensas das fornalhas, salamandras ferreiras conseguem moldar metais em brasa com as próprias mãos, criando assim armas e armaduras de qualidade poucas vezes vista em Arton. Dizem que sua habilidade é capaz de rivalizar até mesmo com a dos anões, ainda que seu artesanato não tenha a mesma sofisticação artística. \n As cidadelas das salamandras são grandes zigurates de metal, forjados e moldados usando as mesmas técnicas que empregam em suas armas. Em seu interior, corredores e galerias conectam aposentos, depósitos, áreas funcionais e espaços de lazer, complementados por terraços decorados com esculturas metálicas representando a nobreza local. Por todos os lugares, é possível encontrar grandes fornalhas e caldeirões de lava incandescente, que mantêm o interior da cidadela em um calor insuportável para outros seres. Em Arton, essas cidadelas são localizadas em regiões particularmente quentes, como Ubani e Halak-Tûr, ou próximas a fontes de calor intenso, como vulcões ativos. \n A sociedade das salamandras é profundamente estratificada, dividida em uma casta de plebeus trabalhadores, uma segunda casta acima, de soldados, e, acima de ambas, uma nobreza movida por uma insaciável fome por poder e riqueza. Oficialmente, estas castas são imutáveis, mas na prática golpes e traições são comuns, com plebeus se tornando guerreiros através da força e guerreiros depondo nobres e assumindo seus tronos. Por mais traiçoeiras que sejam essas manobras, são consideradas naturais e esperadas entre as salamandras, devido ao caráter sádico e mesquinho de sua natureza. \n Independentemente de sua casta, todas as salamandras são movidas por um sadismo natural, que se sacia apenas com o sofrimento de outros seres. Elas não escravizam, mas mantêm cativos de outras raças para uso em seus jogos e experimentos doentios. \n Salamandras de fogo se reproduzem de forma assexuada, gerando uma única larva em intervalos de mais ou menos dez anos. Os filhotes são incubados em poços de chamas até atingirem a maturidade.",
+    abilities: [
+      {
+        name: "Calor Natural",
+        description: "Você recebe +2 em Ofício (ferreiro) e pode gastar 2 PM para causar +1d6 pontos de dano de fogo com seus ataques até o fim da cena."
+      },
+      {
+        name: "Cauda",
+        description: "Você possui uma arma natural de cauda (dano 1d6, crítico x2, perfuração). Uma vez por rodada, quando usa a ação agredir para atacar com outra arma, pode gastar 1 PM para fazer um ataque corpo a corpo extra com a cauda."
+      },
+      {
+        name: "Cria das Chamas",
+        description: "Você é uma criatura do tipo espírito e recebe redução de fogo 10 e visão no escuro."
+      },
+      {
+        name: "Fraqueza Glacial",
+        description: "Você sofre -5 em testes contra efeitos de frio e sofre 1 ponto de dano adicional por dado de dano de frio."
+      }
+    ],
+    attributeModifiers: [
+      { attribute: "con", modifier: 2 },
+      { attribute: "des", modifier: 1 },
+      { attribute: "car", modifier: -1 }
+    ],
+    longevidade: "x2",
+    devotos: "Azgher, Kallyadranoch, Klangor, Kurur Lianth, Rhond, Sckhar, Thyatis",
+  },
+  { id: "Vampiro",
+    name: "Vampiro",
+    origin: "Bestiário de Arton",
+    image: "/racas/vampiro.png",
+    description: "Vampiros são considerados monstros terríveis, predadores que espreitam à noite em busca do sangue de outras pessoas. E, embora essa descrição possa se aplicar à maioria dessas criaturas, a verdade é que nem todos que sofrem a maldição do vampirismo sucumbem a seus instintos ferais. Alguns, de fato, lutam contra sua nova natureza, apegando-se à sua humanidade e buscando uma existência o mais próximo possível de sua vida anterior. \n Personagens vampiros são indivíduos que foram transformados no início de suas carreiras ou que, por alguma razão, perderam suas memórias como parte da transformação. Alguns buscam uma vida de aventuras como forma de compensar os pecados causados por sua fome, ou como um caminho para dominar sua fera interior ou mesmo encontrar uma cura para sua condição. \n\n Tornando-se um Vampiro \n As regras para personagens vampiros presumem a criação de um vampiro jovem, em início de carreira. Mas mesmo aventureiros veteranos podem ser transformados — geralmente como resultado de um embate malsucedido contra um vampiro mais poderoso.\nPara transformar um personagem já existente em um vampiro, substitua todas as características raciais do personagem (incluindo modificadores de atributos) pelas características de vampiro. Se o personagem não for humano, escolha uma das habilidades da raça original (aprovada pelo mestre) para sua habilidade Resquícios da Outra Vida. Por fim, para cada patamar do personagem, você pode substituir um de seus poderes de classe por um poder de Bênção Vampírica. Ao substituir esses poderes, tenha em mente poderes que são pré-requisitos de outros poderes do personagem. Você deve continuar cumprindo quaisquer pré-requisitos dos poderes restantes.",
+    abilities: [
+      {
+      name: "Bênçãos Vampíricas",
+      description: "Escolha um dos poderes na página da Classe. Você pode escolher outros desses poderes no lugar de poderes de classe.",
+    },
+    {
+      name: "Resquícios da Outra Vida",
+      description: "Você se torna treinado em uma perícia (não precisa ser da sua classe) ou recebe um poder geral a sua escolha. Como alternativa, você pode ser um vampiro de outra raça humanoide ou monstro que não humano. Neste caso, você ganha uma habilidade dessa raça a sua escolha (e aprovada pelo mestre). Se a raça era de tamanho diferente de Médio, você também possui sua categoria de tamanho.",
+    },
+    {
+      name: "Natureza Não Viva",
+      description: "Você é uma criatura do tipo morto-vivo. Recebe visão no escuro e imunidade a efeitos de cansaço, metabólicos, de trevas e de veneno. Além disso, não precisa respirar, alimenta-se apenas de sangue (veja Sede de Sangue, a seguir) e prefere dormir de dia — você não sofre penalidades por dormir à noite, mas fazer isso não recupera PV e PM. Por fim, efeitos mágicos de cura de luz causam dano a você e você não se beneficia de itens da categoria alimentação, mas dano de trevas recupera seus PV.",
+    },
+    {
+      name: "Perda da Humanidade",
+      description: "Conforme seus poderes vampíricos crescem, sua humanidade vai sucumbindo à monstruosidade em seu interior. Você possui as fraquezas vampíricas descritas a seguir, que se tornam mais severas conforme você recebe novas bênçãos vampíricas.",
+    },
+    {
+      name: "Chamado das Trevas",
+      description: "Você precisa repousar por oito horas dentro da terra (no subterrâneo, em uma cova ou totalmente coberto de terra). Se fizer isso, fica inconsciente e recupera PV e PM por descanso em condições normais (vampiros não são afetados por condições boas ou ruins de descanso). Caso contrário, sofre uma penalidade em perícias de –1 por bênção vampírica que possuir. Essa penalidade desaparece após repousar na terra.",
+    },
+    {
+      name: "Sede de Sangue",
+      description: "Você precisa consumir pelo menos uma dose de sangue por semana (veja Dieta de Sangue na página de Poderes). Se não fizer isso, sofre os efeitos de fome mesmo sendo imune a efeitos metabólicos. Para cada bênção vampírica que possuir além da primeira, o intervalo entre suas refeições de sangue diminui em um dia (até um mínimo de uma dose por dia).",
+    },
+    {
+      name: "Sensibilidade ao Sol",
+      description: "Quando exposto à luz solar direta, você fica ofuscado e, a cada rodada, perde 1d6 PV por bênção vampírica que possuir.",
+    }
+    ],
+    attributeModifiers: [
+      { attribute: "car", modifier: 1 },
+      { attribute: "con", modifier: -1 },
+      { description: "Escolha +1 em dois atributos diferentes (exceto Constituição)" },
+    ],
+  },
 
   //#endregion
 
@@ -917,47 +989,7 @@ export const races: Race[] = [
   //#endregion
 
   // Dragão Brasil - 220
-  { id: "Vampiro",
-    name: "Vampiro",
-    origin: "Dragão Brasil - 220",
-    image: "/racas/vampiro.png",
-    description: "Vampiros são considerados monstros terríveis, predadores que espreitam à noite em busca do sangue de outras pessoas. E, embora essa descrição possa se aplicar à maioria dos vampiros, a verdade é que nem todos aqueles que sofrem a maldição do vampirismo sucumbem aos seus instintos ferais. Alguns, de fato, lutam contra sua nova natureza, apegando-se à sua humanidade e buscando uma existência o mais próximo possível de sua vida anterior. \n Personagens vampiros são indivíduos que foram transformados no início de suas carreiras ou que, por alguma razão, perderam suas memórias como parte de sua transformação. Alguns buscam uma vida de aventuras como forma de compensar os pecados causados por sua fome, ou como um caminho para dominar sua fera interior ou mesmo encontrar uma cura para sua condição. \n\n Tornando-se um Vampiro \n As regras para personagens vampiros assumem a criação de um vampiro jovem, em início de carreira. Entretanto, mesmo aventureiros veteranos podem ser transformados em vampiros — geralmente como resultado de um embate mal-sucedido contra uma dessas criaturas mais poderosas. \n Para transformar um personagem já existente em um vampiro, troque todas as características raciais do personagem (incluindo modificadores de atributos) pelas características de vampiro. Se o personagem não for humano, escolha uma das habilidades de sua raça original (aprovada pelo mestre) para sua habilidade Resquícios da Outra Vida. Por fim, para cada patamar do personagem, você pode substituir um de seus poderes de classe por um poder de Bênção Vampírica. Ao substituir esses poderes, tenha em mente poderes que são pré-requisitos de outros poderes do personagem. Você deve continuar cumprindo quaisquer pré-requisitos dos poderes restantes.",
-    abilities: [
-      {
-      name: "Bênçãos Vampíricas",
-      description: "Escolha um dos poderes na página da Classe. Você pode escolher outros desses poderes no lugar de poderes de classe quando subir de nível(Somente 1 vez por patamar).",
-    },
-    {
-      name: "Resquícios da Outra Vida",
-      description: "Você se torna treinado em uma perícia (não precisa ser da sua classe) ou recebe um poder geral a sua escolha. Como alternativa, você pode ser um vampiro de outra raça humanoide ou monstro que não humano. Neste caso, você ganha uma habilidade dessa raça a sua escolha (e aprovada pelo mestre). Se a raça era de tamanho diferente de Médio, você também possui sua categoria de tamanho.",
-    },
-    {
-      name: "Natureza Não Viva",
-      description: "Você é uma criatura do tipo morto-vivo. Recebe visão no escuro e imunidade a efeitos de cansaço, metabólicos, de trevas e de veneno. Além disso, não precisa respirar, alimentar-se ou dormir. Por fim, efeitos mágicos de cura de luz causam dano a você e você não se beneficia de itens da categoria alimentação, mas dano de trevas recupera seus PV.",
-    },
-    {
-      name: "Perda da Humanidade",
-      description: "Conforme seus poderes vampíricos crescem, sua humanidade vai sucumbindo à monstruosidade em seu interior. Você possui as fraquezas vampíricas descritas a seguir, que se tornam mais severas conforme você recebe novas bênçãos vampíricas.",
-    },
-    {
-      name: "Chamado das Trevas",
-      description: "Você precisa repousar por oito horas dentro da terra (no subterrâneo, em uma cova ou totalmente coberto de terra). Se fizer isso, recupera PV e PM por descanso em condições normais (vampiros não são afetados por condições boas ou ruins de descanso). Caso contrário, sofre uma penalidade em perícias de –1 por bênção vampírica que possuir. Essa penalidade desaparece após repousar na terra.",
-    },
-    {
-      name: "Sede de Sangue",
-      description: "Você precisa consumir pelo menos uma dose de sangue por semana (veja Dieta de Sangue na página de poderes). Se não fizer isso, sofre os efeitos de fome. Para cada bênção vampírica que possuir além da primeira, o intervalo entre suas refeições de sangue diminui em um dia (até um mínimo de uma dose por dia).",
-    },
-    {
-      name: "Sensibilidade ao Sol",
-      description: "Quando exposto à luz solar direta, você fica ofuscado e, a cada rodada, perde 1d6 PV por bênção vampírica que possuir.",
-    }
-    ],
-    attributeModifiers: [
-      { attribute: "car", modifier: 1 },
-      { attribute: "con", modifier: -1 },
-      { description: "Escolha +1 em dois atributos diferentes (exceto Constituição)" },
-    ],
-  },
+  
   // Dragão Brasil - 224
   { id: "Anão da Superfície",
     name: "Anão da Superfície",

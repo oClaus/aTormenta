@@ -1,6 +1,14 @@
 import { Power } from "@/types/power";
 
 export const powersGeraisRaca: Power[] = [
+  //#region Bestiário de Arton
+  { id: "Alma da Fornalha",
+    name: "Alma da Fornalha",
+    description: "Sua redução de fogo se torna imunidade a fogo e, quando usa Calor Natural, você pode pagar +2 PM para aumentar o dano de fogo dos ataques para +2d6. ",
+    prerequisite: "Salamandra, 7º nível de personagem.",
+    origin: "Bestiário de Arton"
+  },
+  //#endregion
   { id: "Ajudante Nato",
     name: "Ajudante Nato",
     description: "Quando você passa em um teste para ajudar, o bônus fornecido aumenta em +1. Além disso, se você estiver flanqueando um inimigo, o bônus que seus aliados recebem em testes de ataque contra esse inimigo por flanquear aumenta em +1 (para um total de +3). ",

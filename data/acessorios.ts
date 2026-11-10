@@ -1,6 +1,5 @@
 import { SpecificAccessory, Enchantment } from "@/types/acessorio";
-//#region Tormenta20 - Jogo do Ano
-//#endregion
+
 export const enchantments: Enchantment[] = [
   // Tormenta20 - Jogo do Ano
 
@@ -55,6 +54,20 @@ export const enchantments: Enchantment[] = [
 ];
 
 export const accessories: SpecificAccessory[] = [
+  //#region Bestiário de Arton
+  { id: "Amuleto de Neruíte",
+    name: "Amuleto de Neruíte",
+    description: "Enquanto estiver vestindo este amuleto, seu sono e seus sonhos são protegidos magicamente. Quando você descansa em condições normais ou melhores, sua recuperação de PM aumenta em um passo. Além disso, você recebe redução de dano psíquico 20 e, quando sofre um efeito que permite um teste de Vontade para reduzir perda de PM à metade, você não perde PM se passar e perde apenas metade do que perderia se falhar. Os Amuletos de Neruíte foram criados durante a ascensão da Deusa do Sono e não podem ser fabricados.",
+    price: "",
+    size: "Maior",
+    origin: "Bestiário de Arton"
+  },
+  //#endregion
+
+
+
+
+
   //#region Guia de NPCs
   { id: "braceletes-das-escamas",
     name: "Braceletes das Escamas",
