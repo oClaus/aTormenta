@@ -5688,8 +5688,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "63",
+  { id: "Oráculo",
   name: "Oráculo",
   theme: "Fantasia e Mistério Tecnológico",
   image: "/aventuras/oraculo.png",
@@ -5785,187 +5784,187 @@ export const adventures: Adventure[] = [
       content: "Se questionada quanto a isso, admite sem rodeios que a restauração pode levar anos ou jamais se completar. Ela sempre soube que o oráculo era uma máquina. Para sua crença, a promessa do “eterno retorno” do oráculo é acima de tudo, um excelente teste de fé para os novos iniciados."
     }
   ]
-},
-{ id: "Cem",
-  name: "Cem",
-  theme: "Drama, Mistério e Meta-RPG",
-  image: "/aventuras/cem.png",
-  summary: "Amigos de infância se reúnem no funeral de seu Mestre de RPG exatamente 100 meses após a última sessão, quando um monstro de sua imaginação invade a realidade.",
-  sections: [
-    {
-      type: "text",
-      content: "Esta miniaventura foi criada para RPGs como Kids on Bikes, Ordem Paranormal e Tales from the Loop. É uma trama flexível, sem regras, adaptável às necessidades do seu grupo. Pode ser jogada como aventura avulsa ou início de uma campanha"
-    },
-    {
-      type: "break"
-    },
-    {
-      type: "subtitle",
-      content: "PASSADO"
-    },
-    {
-      type: "text",
-      content: "Os personagens começam como crianças em uma cidadezinha onde nada perigoso acontece, exceto em suas imaginações. O que os une é seu ritual semanal: se juntar em volta de uma mesa e jogar o RPG Tormenta. Escola e família ficam em segundo plano quando é dia de rolar os dados! Na sua campanha, eles são heróis que vagam pelas terras de um antigo reino, combatendo demônios aberrantes trazidos pela tempestade sobrenatural que dá nome ao jogo."
-    },
-    {
-      type: "text",
-      content: "Quem faz o papel de mestre e narra as histórias é outra criança da vizinhança, uma brilhante contadora de histórias de mente hiperativa, mas com uma vida tumultuada. O grupo cria tal NPC de maneira conjunta: nome, aparência, histórico, personalidade e os problemas que vem passando."
-    },
-    {
-      type: "text",
-      content: "A aventura começa com os jovens personagens jogando uma sessão memorável, em que seus heróis entram em uma ruína tomada pelos horrores da tempestade rubra. Em uma caverna, eles encontram um ovo de simbionte, a relíquia viva conhecida como o Tesouro de Trebuck. O ovo emana um calor antinatural e se mexe como uma larva viscosa. A descrição do ovo acaba sendo excessivamente vívida, como se o mestre já tivesse visto isso antes e personagens mais sensíveis podem reagir diante disso. O mestre se desculpa pelo excesso narrativo e quando segue a história o grupo precisa decidir o que fazer com o ovo. As decisões mais prováveis são:"
-    },
-    {
-      type: "text",
-      content: "Destrui-lo."
-    },
-    {
-      type: "text",
-      content: "Escondê-lo."
-    },
-    {
-      type: "text",
-      content: "Vendê-lo."
-    },
-    {
-      type: "text",
-      content: "Ficar com ele e estudá-lo."
-    },
-    {
-      type: "text",
-      content: "Logo em seguida, alguém liga para o mestre e a sessão precisa terminar. Ela se encerra com o NPC narrando um dramático teaser do futuro da campanha."
-    },
-    {
-      type: "text",
-      content: "— Em 100 meses o ovo se abrirá! — comunica, antes de se despedir."
-    },
-    {
-      type: "text",
-      content: "Há um breve silêncio. Então o momento passa, e chega a hora de arrumar mochilas e correr para casa antes dos postes de luz acenderem. Fica a promessa do que acontecerá na próxima aventura, e mesmo o personagem mais cínico sente uma ponta de curiosidade, mas tudo muda depois daquela noite. O mestre para de aparecer regularmente na escola ou vizinhança. Espalham-se boatos de que está com problemas em casa. Um dia, ele some. Transcorre uma semana. Depois, um mês. Por fim, a campanha morre. Nenhum personagem tinha como saber, mas aquela era a última vez que jogariam juntos."
-    },
-    {
-      type: "break"
-    },
-    {
-      type: "subtitle",
-      content: "PRESENTE"
-    },
-    {
-      type: "text",
-      content: "Quase uma década se passa. Os personagens agora são adultos, afastados pela rotina, pelas responsabilidades e pela marcha inexorável do tempo. Eles só se veem novamente porque estão no mesmo funeral. Cada jogador precisa descrever quem seu personagem se tornou durante o interlúdio: como está, como age e como sua vida anda e quem se tornou."
-    },
-    {
-      type: "text",
-      content: "Só então é revelado que quem está sendo velado é mestre! Após uma cena em que todos os personagens podem interagir e têm a chance de se despedir do NPC, algum deles nota uma coincidência perturbadora: cem meses se passaram desde que jogaram a última sessão…"
-    },
-    {
-      type: "text",
-      content: "Logo após, nuvens vermelhas e relâmpagos roxos tomam o céu. Chove sangue. Algo estranho é avistado no centro da cidade: aquele ovo, agora se manifestando na realidade. A criatura não será vencida no plano da imaginação, mas sim no mundo em que os personagens existem (use a ficha de ameaça que preferir para representá-la!)."
-    },
-    {
-      type: "text",
-      content: "Dependendo da decisão que o grupo tomou na infância, algo diferente acontece:"
-    },
-    {
-      type: "text",
-      content: "Se destruíu o ovo: a entidade surge mais fraca, porém, persegue os personagens não importa para onde fujam."
-    },
-    {
-      type: "text",
-      content: "Se escondeu: a entidade surge mesclada a características do local onde foi escondida, acompanhada por uma horda dos habitantes transformados em aberrantes. No final, a cidadezinha onde os personagens cresceram está destruída. O grupo perde seu lar assim como essas pessoas."
-    },
-    {
-      type: "text",
-      content: "Se vendeu: a criatura surge junto do verdadeiro comprador, um antigo vilão da campanha, que deve também ser criado coletivamente. O NPC tentou usar a criatura para seus planos, resistiu à sua tentativa de dominação mental, mas perdeu o controle dela. O grupo pode barganhar com ele por uma aliança contra a entidade, mas agora uma ameaça adicional existe em seu mundo."
-    },
-    {
-      type: "text",
-      content: "Se ficou com ele: a tempestade cessa, mas a criatura começa a caçar os personagens dentro de seus sonhos à noite, tentando corrompê-los aos poucos."
-    },
-    {
-      type: "text",
-      content: "Outras soluções podem ter desfechos similares. Contudo, não importa a escolha, algo é revelado: a entidade contém a essência do falecido mestre! De alguma forma, ele voltou à vida, mas foi aprisionado dentro do ser e corrompido pela tempestade profana."
-    }
-  ]
-},
-{ id: "Epiphânia",
-  name: "Epiphânia",
-  theme: "Fantasia e Folclore",
-  image: "/aventuras/epiphania.png",
-  summary: "Arautos anunciam a chegada de Epiphânia, a Bruxa Celeste. Os heróis participam de um festival de fim de ciclo, encenando rituais e sendo julgados por sua generosidade para receber bênçãos ou carvão.",
-  sections: [
-    {
-      type: "text",
-      content: "Esta mini-aventura foi criada para jogos de fantasia como Fabula Ultima, A Lenda de Ghanor RPG e Tormenta20. É uma trama flexível, sem regras, adaptável às necessidades do seu grupo. Pode ser jogada como aventura avulsa ou início de uma campanha."
-    },
-    {
-      type: "break"
-    },
-    {
-      type: "subtitle",
-      content: "Anunciação"
-    },
-    {
-      type: "text",
-      content: "Os personagens dos jogadores percorrem estradas tranquilas quando avistam um cortejo vindo na direção oposta. São cantores itinerantes, todos vestidos como animais — raposas, cabras, lebres e um corvo de aparência imponente. Suas roupas são simples, costuradas com lã rústica e fitas coloridas. Eles andam devagar, repetindo cantigas e orações. Assim que avistam os aventureiros, param e se apresentam como arautos de Epiphânia, a Bruxa Celeste."
-    },
-    {
-      type: "text",
-      content: "Eles explicam que ela é uma deusa muito antiga, protetora dos novos começos e caçadora dos maus espíritos que vagueiam pelo mundo. Outros deuses tentaram apagar seu culto, mas ela sempre ressurge “ao fim de um ciclo”. Cabe ao mestre, junto dos próprios jogadores, definir o que significa fim de um ciclo dentro do mundo de jogo: o término das colheitas? O último dia do calendário, que virá em breve? A conclusão da aventura da qual estão voltando?"
-    },
-    {
-      type: "text",
-      content: "Quando esse ciclo se completa, os arautos viajam pelos vilarejos anunciando a aproximação da “Noite da Bruxa Celeste”. Eles recolhem oferendas dos camponeses — frutas secas, pedaços de tecido, bonecos de palha e moedas — que simbolizam gratidão e respeito. Os aventureiros logo percebem que, apesar da vida simples dos aldeões, todos fazem o possível para contribuir. Alguns queimam efígies da bruxa como parte do ritual. Outros deixam tigelas de leite à porta. Outros simplesmente juntam as mãos e murmuram preces."
-    },
-    {
-      type: "text",
-      content: "O grupo é convidado a fazer o mesmo. Eles podem entregar um tributo simples, ou, se tiverem condições, pagar a oferenda de camponeses que não conseguem participar. Esse gesto é significativo e será lembrado mais adiante."
-    },
-    {
-      type: "text",
-      content: "Após recolherem tudo, os cantores agradecem e seguem para o próximo vilarejo. Antes de partir, porém, recitam juntos um último aviso: “Ela virá quando o ciclo se completar.” Então desaparecem pela estrada, deixando para trás um clima de expectativa. Nos dias seguintes, os aventureiros ouvem cada vez mais preparativos, conversas ansiosas e relatos de presságios."
-    },
-    {
-      type: "text",
-      content: "Quando o ciclo enfim se encerrar, a bruxa virá."
-    },
-    {
-      type: "break"
-    },
-    {
-      type: "subtitle",
-      content: "Revelação"
-    },
-    {
-      type: "text",
-      content: "Quando o ciclo chega ao fim, os aventureiros alcançam um vilarejo durante sua próxima viagem. No centro da praça, uma enorme fogueira queima com chamas altas, iluminando máscaras, bandeirolas e esculturas de espíritos malignos feitas de barro e madeira. Líderes locais se aproximam e anunciam que hoje é a Noite da Bruxa Celeste, e que a celebração depende da participação do grupo. Cada personagem recebe uma fantasia de animal semelhante às usadas pelos arautos: o grupo é convidado a representar, diante de todos, os mensageiros da deusa. Os demais habitantes vestem máscaras grotescas que simbolizam os espíritos que ela caça."
-    },
-    {
-      type: "text",
-      content: "O ritual exige que os heróis participem de um “combate encenado”. Eles devem perseguir e enfrentar essas figuras mascaradas sem ferir ninguém de verdade, mas também sem tornar a encenação maçante. O Mestre decide (interpretando a persona de um NPC juíz que avalia tudo!), o desempenho do grupo, se a apresentação foi memorável, adequada ou desastrosa."
-    },
-    {
-      type: "text",
-      content: "Após a encenação, entre uma dança e outra, os personagens têm liberdade para circular pelo vilarejo. Cada jogador realiza uma cena curta entre seu personagem e cada outro integrante do grupo, garantindo que todas as duplas se encontrem durante esse interlúdio."
-    },
-    {
-      type: "text",
-      content: "Ao final da celebração, cada personagem recebe um par de meias rústicas. Se o grupo se saiu bem na encenação e demonstrou respeito pelos costumes locais, as meias são enormes. Caso tenham sido desatentos, deselegantes ou agressivos, recebem meias pequenas e esburacadas."
-    },
-    {
-      type: "text",
-      content: "Durante a noite, Epiphânia passa pelo vilarejo. Todos dormem sob um feitiço suave que impede que testemunhem sua presença. Apenas personagens que conseguirem resistir a três testes difíceis envolvendo força de vontade permanecem acordados por algum tempo. Esses poucos escolhidos enxergam uma figura envolta em luz azulada, com olhos brilhando como estrelas. A Bruxa Celeste pode revelar fragmentos do futuro da campanha ou segredos sobre o passado dos heróis."
-    },
-    {
-      type: "text",
-      content: "Na manhã seguinte, cada personagem encontra algo dentro de sua meia. Quem demonstrou ser altruísta durante a aventura, ou ao longo da campanha, recebe pequenos itens mágicos sugeridos pelos próprios jogadores. Contudo, estes devem caber dentro do tamanho da meia recebida. Os egoístas encontram apenas um pedaço de carvão, mas não é de todo inútil. É mágico, e ao ser deixado perto de uma fogueira entrará imediatamente em combustão e irá acendê-la."
-    },
-    {
-      type: "text",
-      content: "Talvez isso ajude a aquecer seus corações gelados!"
-    }
-  ]
-},
+  },
+  { id: "Cem",
+    name: "Cem",
+    theme: "Drama, Mistério e Meta-RPG",
+    image: "/aventuras/cem.png",
+    summary: "Amigos de infância se reúnem no funeral de seu Mestre de RPG exatamente 100 meses após a última sessão, quando um monstro de sua imaginação invade a realidade.",
+    sections: [
+      {
+        type: "text",
+        content: "Esta miniaventura foi criada para RPGs como Kids on Bikes, Ordem Paranormal e Tales from the Loop. É uma trama flexível, sem regras, adaptável às necessidades do seu grupo. Pode ser jogada como aventura avulsa ou início de uma campanha"
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "PASSADO"
+      },
+      {
+        type: "text",
+        content: "Os personagens começam como crianças em uma cidadezinha onde nada perigoso acontece, exceto em suas imaginações. O que os une é seu ritual semanal: se juntar em volta de uma mesa e jogar o RPG Tormenta. Escola e família ficam em segundo plano quando é dia de rolar os dados! Na sua campanha, eles são heróis que vagam pelas terras de um antigo reino, combatendo demônios aberrantes trazidos pela tempestade sobrenatural que dá nome ao jogo."
+      },
+      {
+        type: "text",
+        content: "Quem faz o papel de mestre e narra as histórias é outra criança da vizinhança, uma brilhante contadora de histórias de mente hiperativa, mas com uma vida tumultuada. O grupo cria tal NPC de maneira conjunta: nome, aparência, histórico, personalidade e os problemas que vem passando."
+      },
+      {
+        type: "text",
+        content: "A aventura começa com os jovens personagens jogando uma sessão memorável, em que seus heróis entram em uma ruína tomada pelos horrores da tempestade rubra. Em uma caverna, eles encontram um ovo de simbionte, a relíquia viva conhecida como o Tesouro de Trebuck. O ovo emana um calor antinatural e se mexe como uma larva viscosa. A descrição do ovo acaba sendo excessivamente vívida, como se o mestre já tivesse visto isso antes e personagens mais sensíveis podem reagir diante disso. O mestre se desculpa pelo excesso narrativo e quando segue a história o grupo precisa decidir o que fazer com o ovo. As decisões mais prováveis são:"
+      },
+      {
+        type: "text",
+        content: "Destrui-lo."
+      },
+      {
+        type: "text",
+        content: "Escondê-lo."
+      },
+      {
+        type: "text",
+        content: "Vendê-lo."
+      },
+      {
+        type: "text",
+        content: "Ficar com ele e estudá-lo."
+      },
+      {
+        type: "text",
+        content: "Logo em seguida, alguém liga para o mestre e a sessão precisa terminar. Ela se encerra com o NPC narrando um dramático teaser do futuro da campanha."
+      },
+      {
+        type: "text",
+        content: "— Em 100 meses o ovo se abrirá! — comunica, antes de se despedir."
+      },
+      {
+        type: "text",
+        content: "Há um breve silêncio. Então o momento passa, e chega a hora de arrumar mochilas e correr para casa antes dos postes de luz acenderem. Fica a promessa do que acontecerá na próxima aventura, e mesmo o personagem mais cínico sente uma ponta de curiosidade, mas tudo muda depois daquela noite. O mestre para de aparecer regularmente na escola ou vizinhança. Espalham-se boatos de que está com problemas em casa. Um dia, ele some. Transcorre uma semana. Depois, um mês. Por fim, a campanha morre. Nenhum personagem tinha como saber, mas aquela era a última vez que jogariam juntos."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "PRESENTE"
+      },
+      {
+        type: "text",
+        content: "Quase uma década se passa. Os personagens agora são adultos, afastados pela rotina, pelas responsabilidades e pela marcha inexorável do tempo. Eles só se veem novamente porque estão no mesmo funeral. Cada jogador precisa descrever quem seu personagem se tornou durante o interlúdio: como está, como age e como sua vida anda e quem se tornou."
+      },
+      {
+        type: "text",
+        content: "Só então é revelado que quem está sendo velado é mestre! Após uma cena em que todos os personagens podem interagir e têm a chance de se despedir do NPC, algum deles nota uma coincidência perturbadora: cem meses se passaram desde que jogaram a última sessão…"
+      },
+      {
+        type: "text",
+        content: "Logo após, nuvens vermelhas e relâmpagos roxos tomam o céu. Chove sangue. Algo estranho é avistado no centro da cidade: aquele ovo, agora se manifestando na realidade. A criatura não será vencida no plano da imaginação, mas sim no mundo em que os personagens existem (use a ficha de ameaça que preferir para representá-la!)."
+      },
+      {
+        type: "text",
+        content: "Dependendo da decisão que o grupo tomou na infância, algo diferente acontece:"
+      },
+      {
+        type: "text",
+        content: "Se destruíu o ovo: a entidade surge mais fraca, porém, persegue os personagens não importa para onde fujam."
+      },
+      {
+        type: "text",
+        content: "Se escondeu: a entidade surge mesclada a características do local onde foi escondida, acompanhada por uma horda dos habitantes transformados em aberrantes. No final, a cidadezinha onde os personagens cresceram está destruída. O grupo perde seu lar assim como essas pessoas."
+      },
+      {
+        type: "text",
+        content: "Se vendeu: a criatura surge junto do verdadeiro comprador, um antigo vilão da campanha, que deve também ser criado coletivamente. O NPC tentou usar a criatura para seus planos, resistiu à sua tentativa de dominação mental, mas perdeu o controle dela. O grupo pode barganhar com ele por uma aliança contra a entidade, mas agora uma ameaça adicional existe em seu mundo."
+      },
+      {
+        type: "text",
+        content: "Se ficou com ele: a tempestade cessa, mas a criatura começa a caçar os personagens dentro de seus sonhos à noite, tentando corrompê-los aos poucos."
+      },
+      {
+        type: "text",
+        content: "Outras soluções podem ter desfechos similares. Contudo, não importa a escolha, algo é revelado: a entidade contém a essência do falecido mestre! De alguma forma, ele voltou à vida, mas foi aprisionado dentro do ser e corrompido pela tempestade profana."
+      }
+    ]
+  },
+  { id: "Epiphânia",
+    name: "Epiphânia",
+    theme: "Fantasia e Folclore",
+    image: "/aventuras/epiphania.png",
+    summary: "Arautos anunciam a chegada de Epiphânia, a Bruxa Celeste. Os heróis participam de um festival de fim de ciclo, encenando rituais e sendo julgados por sua generosidade para receber bênçãos ou carvão.",
+    sections: [
+      {
+        type: "text",
+        content: "Esta mini-aventura foi criada para jogos de fantasia como Fabula Ultima, A Lenda de Ghanor RPG e Tormenta20. É uma trama flexível, sem regras, adaptável às necessidades do seu grupo. Pode ser jogada como aventura avulsa ou início de uma campanha."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "Anunciação"
+      },
+      {
+        type: "text",
+        content: "Os personagens dos jogadores percorrem estradas tranquilas quando avistam um cortejo vindo na direção oposta. São cantores itinerantes, todos vestidos como animais — raposas, cabras, lebres e um corvo de aparência imponente. Suas roupas são simples, costuradas com lã rústica e fitas coloridas. Eles andam devagar, repetindo cantigas e orações. Assim que avistam os aventureiros, param e se apresentam como arautos de Epiphânia, a Bruxa Celeste."
+      },
+      {
+        type: "text",
+        content: "Eles explicam que ela é uma deusa muito antiga, protetora dos novos começos e caçadora dos maus espíritos que vagueiam pelo mundo. Outros deuses tentaram apagar seu culto, mas ela sempre ressurge “ao fim de um ciclo”. Cabe ao mestre, junto dos próprios jogadores, definir o que significa fim de um ciclo dentro do mundo de jogo: o término das colheitas? O último dia do calendário, que virá em breve? A conclusão da aventura da qual estão voltando?"
+      },
+      {
+        type: "text",
+        content: "Quando esse ciclo se completa, os arautos viajam pelos vilarejos anunciando a aproximação da “Noite da Bruxa Celeste”. Eles recolhem oferendas dos camponeses — frutas secas, pedaços de tecido, bonecos de palha e moedas — que simbolizam gratidão e respeito. Os aventureiros logo percebem que, apesar da vida simples dos aldeões, todos fazem o possível para contribuir. Alguns queimam efígies da bruxa como parte do ritual. Outros deixam tigelas de leite à porta. Outros simplesmente juntam as mãos e murmuram preces."
+      },
+      {
+        type: "text",
+        content: "O grupo é convidado a fazer o mesmo. Eles podem entregar um tributo simples, ou, se tiverem condições, pagar a oferenda de camponeses que não conseguem participar. Esse gesto é significativo e será lembrado mais adiante."
+      },
+      {
+        type: "text",
+        content: "Após recolherem tudo, os cantores agradecem e seguem para o próximo vilarejo. Antes de partir, porém, recitam juntos um último aviso: “Ela virá quando o ciclo se completar.” Então desaparecem pela estrada, deixando para trás um clima de expectativa. Nos dias seguintes, os aventureiros ouvem cada vez mais preparativos, conversas ansiosas e relatos de presságios."
+      },
+      {
+        type: "text",
+        content: "Quando o ciclo enfim se encerrar, a bruxa virá."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "Revelação"
+      },
+      {
+        type: "text",
+        content: "Quando o ciclo chega ao fim, os aventureiros alcançam um vilarejo durante sua próxima viagem. No centro da praça, uma enorme fogueira queima com chamas altas, iluminando máscaras, bandeirolas e esculturas de espíritos malignos feitas de barro e madeira. Líderes locais se aproximam e anunciam que hoje é a Noite da Bruxa Celeste, e que a celebração depende da participação do grupo. Cada personagem recebe uma fantasia de animal semelhante às usadas pelos arautos: o grupo é convidado a representar, diante de todos, os mensageiros da deusa. Os demais habitantes vestem máscaras grotescas que simbolizam os espíritos que ela caça."
+      },
+      {
+        type: "text",
+        content: "O ritual exige que os heróis participem de um “combate encenado”. Eles devem perseguir e enfrentar essas figuras mascaradas sem ferir ninguém de verdade, mas também sem tornar a encenação maçante. O Mestre decide (interpretando a persona de um NPC juíz que avalia tudo!), o desempenho do grupo, se a apresentação foi memorável, adequada ou desastrosa."
+      },
+      {
+        type: "text",
+        content: "Após a encenação, entre uma dança e outra, os personagens têm liberdade para circular pelo vilarejo. Cada jogador realiza uma cena curta entre seu personagem e cada outro integrante do grupo, garantindo que todas as duplas se encontrem durante esse interlúdio."
+      },
+      {
+        type: "text",
+        content: "Ao final da celebração, cada personagem recebe um par de meias rústicas. Se o grupo se saiu bem na encenação e demonstrou respeito pelos costumes locais, as meias são enormes. Caso tenham sido desatentos, deselegantes ou agressivos, recebem meias pequenas e esburacadas."
+      },
+      {
+        type: "text",
+        content: "Durante a noite, Epiphânia passa pelo vilarejo. Todos dormem sob um feitiço suave que impede que testemunhem sua presença. Apenas personagens que conseguirem resistir a três testes difíceis envolvendo força de vontade permanecem acordados por algum tempo. Esses poucos escolhidos enxergam uma figura envolta em luz azulada, com olhos brilhando como estrelas. A Bruxa Celeste pode revelar fragmentos do futuro da campanha ou segredos sobre o passado dos heróis."
+      },
+      {
+        type: "text",
+        content: "Na manhã seguinte, cada personagem encontra algo dentro de sua meia. Quem demonstrou ser altruísta durante a aventura, ou ao longo da campanha, recebe pequenos itens mágicos sugeridos pelos próprios jogadores. Contudo, estes devem caber dentro do tamanho da meia recebida. Os egoístas encontram apenas um pedaço de carvão, mas não é de todo inútil. É mágico, e ao ser deixado perto de uma fogueira entrará imediatamente em combustão e irá acendê-la."
+      },
+      {
+        type: "text",
+        content: "Talvez isso ajude a aquecer seus corações gelados!"
+      }
+    ]
+  },
   { id: "O Fim",
   name: "O Fim",
   theme: "Fantasia e Ilusão Divina",
@@ -8703,6 +8702,316 @@ export const adventures: Adventure[] = [
     {
       type: "text",
       content: "ANDREW, O AZUL (ND 2)\nAndrew nasceu na vila antes de Lucrécia instalar-se na mansão. Era um jovem faminto por conhecimento, e quando a maga chegou, logo percebeu seu talento nato. Infelizmente foi transformado em morto-vivo quando descobriu os planos dela.\nOsteon 6, Médio\nIniciativa +7, Percepção +3, visão no escuro\nDefesa 18, Fort +5, Ref +5, Von +5, resistência a corte, frio e perfuração 5\nPontos de Vida 30\nDeslocamento 9m (6q)\nPontos de Mana 22\nRaio Arcano (Padrão). Andrew dispara um raio num alvo em alcance curto que causa 2d6+4 pontos de dano de essência. O alvo pode fazer um teste de Reflexos (CD 17) para reduzir o dano à metade.\nMagias. 1º — Armadura Arcana (já contabilizado nas estatísticas acima), Seta Infalível de Talude; 2º — Conjurar Mortos-Vivos, Dissipar Magia. CD 17.\nFor 10, Des 14, Con 12, Int 18, Sab 10, Car 12\nPerícias. Misticismo +9\nTesouro. Dobro"
+    }
+  ]
+  },
+  { id: "Kobolds Me Mordam!",
+  name: "Kobolds Me Mordam!",
+  theme: "Aventura Épica e Monstrinhos Engraçados",
+  image: "/aventuras/kobolds-me-mordam.png",
+  summary: "A ascensão de Kallyadranoch empodera as criaturas mais inusitadas de Arton: kobolds! Heróis são guiados por uma druida em apuros para proteger uma vila de centauros, apenas para descobrir que uma nova e perigosa liderança kobold tomou o poder.",
+  sections: [
+    {
+      type: "text",
+      content: "Dentre as muitas coisas acarretadas pela queda de Glórienn, a ascensão do Deus dos Dragões, Kallyadranoch, é uma das mais marcantes. Antes conhecido como “O Terceiro”, aquele também conhecido como o Deus do Poder influencia de forma insidiosa todos que buscam sobrepujar outros seres. Seja através de sua capacidade pessoal, ou através do controle, ele abençoa aqueles capazes de mostrarem-se superiores aos outros."
+    },
+    {
+      type: "text",
+      content: "É curioso que sua ascensão tenha influenciado também algumas das criaturas mais ordinárias de Arton: os kobolds, pequenos monstrinhos draconianos, considerados pouco mais que pragas. Aventureiros iniciantes muitas vezes os enfrentam sem pensar duas vezes, e vilões os usam de capangas dispensáveis. Entretanto, de tempos em tempos, indivíduos únicos tomam o poder da narrativa para si mesmos."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "RESUMO DA AVENTURA"
+    },
+    {
+      type: "text",
+      content: "Kobolds me mordam! é uma breve jornada, uma aventura curta pensada para uma sessão única, mas que pode ser inserida em uma campanha maior. É ideal para um grupo de quatro personagens de 3º nível em Tormenta20."
+    },
+    {
+      type: "text",
+      content: "Uma druida meia-elfa está buscando aventureiros. Apesar de bem intencionada, os moradores do vilarejo já tiveram desentendimento com caçadores de uma comunidade de centauros onde ela vive. Ela informa aos personagens que um grupo de kobolds até recentemente irritantes, mas não perigosos, vem atacando os centauros. Neste momento, kobolds atacam o lugar, mostrando-se especialmente violentos."
+    },
+    {
+      type: "text",
+      content: "Quando chegam à tribo de centauros, muitos estão feridos. Entretanto, o líder dos caçadores reclama por ela ter se intrometido, mas é possível convencê-lo a ajudar. Então o grupo parte para o esconderijo dos kobolds, enfrentando uma versão agigantada dos monstrinhos, lidando com armadilhas feitas pelas pestinhas e, finalmente, encarandor o novo líder kobold, abençoado por Kallyadranoch!"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 1: PENÉLOPE DE ALLIHANNA"
+    },
+    {
+      type: "text",
+      content: "A vila de Cascarvalho é simples. Seus habitantes, majoritariamente fazendeiros e alguns artesãos, costumam ter pouco com o que se preocupar, exceto eventuais cobradores de impostos. Animais selvagens e um eventual monstro errante servem de assunto por meses, e aqueles com disposição para aventurarem-se logo partem do lugarejo. O dia parece mais um de tantos, com pessoas caminhando para trabalhar e saudando os conhecidos... exceto pela mulher vestindo trajes feitos de planta e peles, discutindo em voz alta."
+    },
+    {
+      type: "text",
+      content: "A jovem mulher é uma meia-elfa druida, e está falando com o que parecem guardas e o burgomestre, um homem mais velho vestido em roupas um pouco melhores. “Eu compreendo que os centauros e o senhor tenham se desentendido no passado, mas...” O burgomestre irritado a interrompe: “Minha jovem, os caçadores deles já intimidaram nossos homens várias vezes. Como confiar que isso não é uma forma de truque?” Ela retruca: “Senhor, seus homens estavam caçando em local sagrado! E eles não teriam nada a ganhar com isso. Os kobolds andam perigosos. Não sei o que houve com eles, mas estão atacando, não apenas de forma mais organizada, mas também mais violenta.”"
+    },
+    {
+      type: "text",
+      content: "A conversa não parece progredir a partir daí, e se os personagens não intervirem, os guardas começam a escoltar a jovem druida para fora da vila. Caso se intrometam, ela logo se apresenta como Penélope, uma sacerdotisa de Allihanna. Após se apresentar, ou enquanto estiver sendo levada para fora, o som de confusão começa: coisas quebrando e pessoas gritando. Como se surgidos do próprio chão, vários kobolds atacam a vila!"
+    },
+    {
+      type: "text",
+      content: "CRIATURAS. Enxame kobolds x2 (Tormenta20, p. 310)."
+    },
+    {
+      type: "text",
+      content: "Caso tenham conversado com Penélope, ela serve como uma parceira médica iniciante. Diversos kobolds atacam em bando, e cabe aos aventureiros enfrentarem essa maré de monstrinhos. Se um dos personagens for kallyanach ou kobold, os inimigos evitarão atacá-los, porém, se for centauro, será o principal alvo. É um combate difícil, mas se um dos enxames for derrotado, o outro foge se for reduzido à metade dos pontos de vida originais."
+    },
+    {
+      type: "text",
+      content: "Penélope está impressionada com a habilidade dos heróis, e o burgomestre se vê obrigado a concordar que os kobolds são um perigo para ambas as comunidades. Ele oferece aos aventureiros uma recompensa de T$ 200, assim como duas essências de mana para cada um. Penélope cura todos os PV perdidos no combate."
+    },
+    {
+      type: "text",
+      content: "Assim que estiverem prontos, a sacerdotisa guia-os até sua vila."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 2: TURRÃO"
+    },
+    {
+      type: "text",
+      content: "O caminho é tranquilo, especialmente porque todos os animais selvagens parecem respeitar a presença de Penélope. A meia-elfa faz pausas para que todos descansem e oferece água, sabendo que nem todos conseguem manter seu ritmo de viagem. Quando o entardecer se aproxima, vocês veem ao longe as construções simples da aldeia, casas feitas com madeira cortada rusticamente e tetos de palha."
+    },
+    {
+      type: "text",
+      content: "É uma comunidade bem simples. A maioria dos membros ou caça ou colhe, permitindo algum nível de mobilidade da comunidade. Existe, entretanto, uma pequena plantação de legumes, indicando algum tempo de permanência. Os moradores, todos centauros, estão apreensivos com a chegada de estranhos, mesmo acompanhados da druida. Não há uma pessoa aqui sem ferimentos ou curativos, e muitos estão repousando dentro das casas."
+    },
+    {
+      type: "text",
+      content: "Quando a notícia da chegada se espalha, um centauro muito alto, portando uma lança imensa feita dos ossos de uma criatura, para na frente de vocês. “Penélope! Por que você trouxe esses forasteiros aqui? Não basta os ataques das pestes dos kobolds? Respeitamos você pela devoção a Allihanna, mas ainda assim você não é uma de nós!”"
+    },
+    {
+      type: "text",
+      content: "Penélope respira fundo e responde alto também: “Pátroclo, seu teimoso! Esses aventureiros combateram os kobolds em Cascarvalho, e se ofereceram para ajudar! Deixa de ser tão cabeça dura!”"
+    },
+    {
+      type: "text",
+      content: "Pátroclo parece irredutível. Ele não confia nos heróis e não irá agredi-los, mas não vai permitir que descansem na aldeia. Como é o chefe, ninguém o desafiará. Convencê-lo das boas (ou, ao menos, vantajosas) intenções dos aventureiros é um teste estendido de Diplomacia ou Enganação, oposto à Vontade do centauro (+8). Outras perícias, de acordo com o mestre, podem ser usadas, mas causam uma penalidade de –2 no teste. Centauros e devotos de Allihanna recebem +2 no teste, enquanto kobolds sofrem –2. Os personagens precisam de apenas um sucesso para que ele não se oponha ao descanso do grupo na aldeia."
+    },
+    {
+      type: "text",
+      content: "Entretanto, se conseguirem três sucessos antes de uma falha total, convencem o centauro teimoso a ajudá-los, como um parceiro fortão veterano."
+    },
+    {
+      type: "text",
+      content: "Se conseguirem dormir na aldeia, são bem alimentados e descansam de forma luxuosa, apesar da simplicidade do local. Se tiverem de repousar ao relento, devem preparar acampamento normalmente. Penélope os acompanhará até o final desta jornada."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 3: PAPO CABEÇA"
+    },
+    {
+      type: "text",
+      content: "Descansados, Penélope os guia através da floresta, até uma enorme caverna. Porém, na entrada dela, há uma criatura grande como um ogro, mas com as características reptilianas dos kobolds. Além disso, sua cabeça é muito menor do que seu corpo avantajado. A criatura está dormindo profundamente, a ponto de roncar alto, deixando quase nenhum espaço para passar."
+    },
+    {
+      type: "text",
+      content: "A criatura é um kobold bruto, uma versão infundida de poder, usado como guardião para outros mais frágeis da sua espécie. Passar sem despertá-lo é uma tarefa complicada."
+    },
+    {
+      type: "text",
+      content: "Para isso, cada personagem deve fazer um teste de Furtividade oposto à Percepção dele (veja NPCs e Criaturas). Por estar dormindo, ele sofreria –10 de penalidade no teste de Percepção, mas como terão de se esgueirar encostando nele, contra criaturas médias, ele sofre uma penalidade de apenas –5, enquanto contra criaturas pequenas ele sofre a penalidade total. Criaturas grandes não conseguem passar com ele dormindo, e se tentarem o despertam imediatamente."
+    },
+    {
+      type: "text",
+      content: "CRIATURAS. Kobold bruto (NPCs & Criaturas)."
+    },
+    {
+      type: "text",
+      content: "Se qualquer um dos personagens falhar no teste, o kobold bruto desperta. O monstro não é muito inteligente, porém combate com o dever de proteger os seus. O bruto vai perseguir os aventureiros para fora da caverna, sofrendo a desvantagem da sensibilidade à luz. Tendo lidado com ele, direta ou indiretamente, o grupo pode avançar pelos corredores."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 4: ISSO É OBVIAMENTE UMA ARMADILHA"
+    },
+    {
+      type: "text",
+      content: "O corredor é completamente escuro e o cheiro no seu interior é nauseante. A sujeira por todos os cantos atrapalha a caminhada. Esse túnel tem vários metros, largo o suficiente para uma criatura enorme passar por ele. Os kobolds se aproveitaram dele para fazer seu esconderijo, atraídos pela energia dracônica do local. Porém, aqui usaram de toda sua engenhosidade rústica: este corredor possui duas armadilhas."
+    },
+    {
+      type: "text",
+      content: "O primeiro é um barril cheio de insetos venenosos, chamados por eles de “bugulentos”. As duas pessoas na dianteira do grupo de aventureiros serão afetados pela armadilha (podendo fazer o teste de Reflexos)."
+    },
+    {
+      type: "text",
+      content: "BARRIL DE BUGULENTOS A vítima perde 1d12 pontos de vida por veneno quando a armadilha é acionada e no início de cada um de seus turnos, até se livrar dos bugulentos, o que exige uma ação completa e um teste de Acrobacia (CD 10). Os bugulentos também são eliminados se a vítima ficar em chamas. Reflexos CD 20 evita; Investigação/Ladinagem CD 20; ND ½."
+    },
+    {
+      type: "text",
+      content: "Essa armadilha é a mais perigosa das duas, enquanto a segunda é mais útil. Penduradas em barbantes quase invisíveis estão diversas latas cheias de pedras, prontas para fazer um barulhão caso os personagens não sejam cuidadosos."
+    },
+    {
+      type: "text",
+      content: "SINOS ALARMANTES Todas as criaturas em alcance longo são alertadas pelo dispositivo e, até o fim da cena, nenhum kobold nesta área pode ser surpreendido; Reflexos CD 15 evita; Investigação/Ladinagem CD 15; ND 1/4."
+    },
+    {
+      type: "text",
+      content: "Todos os personagens devem fazer o teste de Reflexos, e se algum falhar, ativa a armadilha. Caso o kobold bruto não tenha sido derrotado, ele ressurge agora, partindo para combater os aventureiros. Além dele, um enxame kobold (Tormenta20, p. 310) também ataca o grupo."
+    },
+    {
+      type: "text",
+      content: "Se o bruto tiver sido derrotado, apenas o enxame ataca. Além disso, se falharem no teste de Reflexos dos sinos, os inimigos na cena 5 saberão da chegada dos aventureiros."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 5: QUEM MANDA AQUI"
+    },
+    {
+      type: "text",
+      content: "O corredor continua, agora sem mais armadilhas. Logo as paredes se alargam para uma imensa câmara circular, com uma pedra mais alta projetando-se tal qual uma sacada. Vocês veem dezenas de kobolds empurrando uns aos outros, e um vulto muito grande no chão perto da parede oposta à entrada. No alto da pedra há um kobold diferenciado. As roupas que veste são trapos melhores, como se rasgados de roupas finas e multicoloridos. Quando ele fala, todos os outros se calam para ouvir."
+    },
+    {
+      type: "text",
+      content: "Aqueles treinados em Religião sabem que este kobold notável é um sacerdote de algum tipo, e devotos de Kallyadranoch reconhecem a devoção de seu deus. Se tiver sido alertado pela armadilha de sinos alarmantes, Groko, o clérigo kobold, atiçará seus lacaios em direção aos personagens."
+    },
+    {
+      type: "text",
+      content: "CRIATURAS. Groko de Kallyadranoch (NPCs e Criaturas) e enxame kobold (Tormenta20, p. 310)."
+    },
+    {
+      type: "text",
+      content: "Essa cena é uma confusão, e mesmo estando numa plataforma elevada, as habilidades de Groko com alcance curto afetam criaturas no chão, e vice-versa. O teste para escalar até onde ele está é CD 15, e é necessário percorrer 5 metros. Se subirem para a pedra, os kobolds focarão seus ataques em quem estiver mais próximo de Groko. Porém, se Groko for derrotado, os kobolds restantes se rendem."
+    },
+    {
+      type: "text",
+      content: "Além disso, quando adentram o ambiente, é possível ver que o vulto se trata de uma serpe (Tormenta20, p. 293), acorrentada ao chão. A fera está machucada, tendo apenas metade dos seus PV (100), enredada e caída. Se alguma criatura entrar em seu alcance, ela faz um ataque corpo a corpo de mordida, mas não com o ferrão. É possível soltá-la das correntes com um teste de Ladinagem (CD 20), ou destruindo a corrente (Def 15, RD 10, 5 PV). Se liberta, ataca o enxame kobold, devorando-o e em seguida fugindo."
+    },
+    {
+      type: "text",
+      content: "Assim que o combate termina, o grupo pode vasculhar a sala, encontrando o equivalente a dois encontros de ND 4 (veja Tormenta20, tabela 8-1: tesouro por nível de desafio, na página 328)."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Epílogo: DRAGÃO"
+    },
+    {
+      type: "text",
+      content: "Ao derrotarem Groko, Penélope respira aliviada. Apesar de saber que as criaturas são seres vivos como ela, era necessário vencê-los para garantir a segurança tanto dos centauros quanto de Cascarvalho. Quando retornam, todos os recebem como heróis."
+    },
+    {
+      type: "text",
+      content: "Entretanto, dias depois, uma figura entra novamente na caverna. Um homem alto, trajando mantos roxos. Ele observa os rastros deixados pela batalha, e pisa no cadáver de Groko. “É isso que acontece quando você manda uma pulga fazer o trabalho de um dragão...”"
+    },
+    {
+      type: "text",
+      content: "E os personagens avançam para o 4º nível!"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "NPCs e Criaturas"
+    },
+    {
+      type: "text",
+      content: "KOBOLD BRUTO (ND 4)\nMonstro (kobold) Grande\nINICIATIVA +5, PERCEPÇÃO +2, visão no escuro\nDEFESA 23, FORT +16, REF +10, VON +2\nPONTOS DE VIDA 120\nDESLOCAMENTO 9m (6q)\nCORPO A CORPO Tacape +16 (1d12+18).\nESCAMAS DE KALLY Todo dano que o kobold bruto sofre é reduzido à metade.\nPESTE OPORTUNISTA Os ataques do kobold causam +1d4 pontos de dano contra inimigos que já sofreram dano na rodada.\nCABECINHA A habilidade Escamas de Kally não se aplica a acertos críticos e ataques contra a cabeça diminuta do kobold (Defesa 33).\nSENSIBILIDADE A LUZ Quando exposto à luz do sol ou similar, o kobold bruto fica ofuscado.\nFor 6, Des 1, Con 4, Int –3, Sab –2, Car –2\nPERÍCIAS Atletismo +10.\nEQUIPAMENTO Tacape aumentado. TESOURO Metade."
+    },
+    {
+      type: "text",
+      content: "GROKO DE KALLYADRANOCH (ND 3)\nMonstro (kobold) Pequeno\nINICIATIVA +5, PERCEPÇÃO +6, visão no escuro\nDEFESA 20, FORT +3, REF +9, VON +15, resistência a magia +1\nPONTOS DE VIDA 69\nDESLOCAMENTO 9m (6q)\nPONTOS DE MANA 15\nCORPO A CORPO Lança +12 (1d8+3) e mordida +12 (1d4+3).\nÀ DISTÂNCIA Funda +12 (1d6+3).\nAURA DE MEDO (LIVRE, 2 PM) Groko gera uma aura de medo de 9m de raio e duração cena. Todos os inimigos que entram na aura ficam abalados até o fim da cena (Von CD 19 evita) e a criatura não pode mais ser abalada por esta habilidade por um dia.\nPESTE OPORTUNISTA Os ataques de Groko causam +1d4 pontos de dano contra inimigos que já sofreram dano na rodada.\nSÍMBOLO SAGRADO ENERGIZADO (MOVIMENTO, 1 PM) Groko energiza seu símbolo sagrado. Até o fim da cena, ele emite uma luz avermelhada que ilumina como uma tocha e, enquanto estiver sendo empunhado pelo Groko, reduz o custo de magias divinas em –1 PM.\nMAGIAS Como um clérigo de Kallyadranoch de 3º nível (CD 19).\n- Curar Ferimentos (Padrão, 3 PM) Uma criatura adjacente cura 4d8+4 PV.\n- Escudo da Fé (Reação, 1 PM) Quando uma criatura em alcance curto sofre um ataque, ela recebe +2 na Defesa até seu próximo turno.\n- Perdição (Padrão, 1 PM) Criaturas escolhidas em alcance curto sofrem –1 em testes de ataque e rolagens de dano até o fim da cena.\nSENSIBILIDADE A LUZ Quando exposto à luz do sol ou similar, Groko fica ofuscado.\nFor 0, Des 2, Con 1, Int –1, Sab 3, Car –1\nPERÍCIAS Cura +6, Furtividade +9, Misticismo +2, Religião +6.\nEQUIPAMENTO Andrajos, bálsamo restaurador, funda, gadanho, pedras x20, símbolo sagrado de Kallyadranoch. TESOURO Metade."
+    }
+  ]
+  },
+  { id: "O 7º Filho",
+  name: "O 7º Filho",
+  theme: "Melodrama, Segredos e Lobisomens",
+  image: "/aventuras/o-7-filho.png",
+  summary: "Uma telenovela fictícia ambientada na serra, onde os filhos do velho patriarca Sebastião retornam a Nova Harz. Entre dramas familiares, conflitos urbanos contra rurais e amores fracassados, a maldição do lobisomem espreita as noites de lua cheia.",
+  sections: [
+    {
+      type: "text",
+      content: "Este “roteiro” foi pensado para RPGs de melodrama como Pasión de Las Pasiones. Ele contém sugestões de trama, personagens e locais que podem ser usados para criar um episódio avulso ou a temporada inteira de uma telenovela fictícia."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "VEM AÍ..."
+    },
+    {
+      type: "text",
+      content: "A música Eu era um lobisomem juvenil começa a tocar. Entra a abertura da telenovela em desenho-animado com traços grossos, cores suaves e animações repetitivas. Vemos as rodas de um ônibus girando. Então, o veículo subindo estradas em zigue-zague em meio à neblina típica de serra. Dentro do ônibus, um homem dorme encostado na janela, enquanto um menino observa a paisagem com olhos arregalados. A neblina se abre e revela a placa de uma cidadezinha: Nova Harz."
+    },
+    {
+      type: "text",
+      content: "Surgem chalés com fumaça nas chaminés, um restaurante de comida alemã, a catedral neogótica no alto da colina. Pessoas caminham sob a garoa, agasalhadas. Algumas olham com desconfiança. O ônibus para em frente a um chalé torto, isolado, com grama alta no entorno e uma portinhola batendo ao vento. Na varanda, um velho barbudo cospe no chão e afina um violão."
+    },
+    {
+      type: "text",
+      content: "Em seguida, uma montagem de cenas do cotidiano. Um homem se cortando ao rachar lenha. Duas comadres fofocando. Vizinhos dividindo uma cuia de chimarrão ao som do rádio. De repente, o tempo muda. O céu escurece. Pinheiros ganham vida, se agitam como se estivessem assustados. Atrás de um galpão, uma figura espreita. Então, aparece transformada: olhos dourados, dentes pontiagudos, a sombra de um lobo. O menino vê tudo de longe. Apavorado, corre para o chalé. O mesmo velho que vimos antes protege o garoto da fera, desembainhando um facão de prata."
+    },
+    {
+      type: "text",
+      content: "A música cessa. A imagem congela. Um uivo é ouvido ao longe."
+    },
+    {
+      type: "text",
+      content: "Surge o título com letras irregulares, riscadas por garras. E assim começa a nova novela das sete, que fala sobre paternidade, legado, conflitos entre campo e cidade — e homens que não aprenderam como amar!"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "ESSE É FERA"
+    },
+    {
+      type: "text",
+      content: "O 7º Filho é uma adaptação televisiva de um romance regionalista do sul do Brasil. A trama acompanha a Família Münchhausen, espalhada pelo país e reunida pelo destino em Nova Harz — ex-colônia alemã escondida entre o mato e a névoa."
+    },
+    {
+      type: "text",
+      content: "Érico, o caçula do clã, é um professor universitário recém-divorciado que perdeu o emprego e retorna à cidade com a filha adolescente, Nanda. Eles se instalam no chalé do velho patriarca Sebastião, um músico decadente recluso, pai de sete filhos com mães diferentes. Apesar de desprezar o lugar, Érico percebe que Nova Harz vive dentro dele mais do que gostaria: nas noites de lua cheia, transforma-se em lobisomem. Ele faz de tudo para esconder isso — especialmente de Nanda, a filha sensível e introspectiva, que começa a investigar os mistérios da serra."
+    },
+    {
+      type: "text",
+      content: "Os personagens dos jogadores são irmãos e irmãs de Érico, — filhos de Sebastião com mães diferentes — tios e tias de Nanda. Cada um tem seu núcleo, profissão e passado, mas todos compartilham um nome. Embora alguns tenham vivido fora, agora estão de volta à cidadezinha, por vontade ou necessidade."
+    },
+    {
+      type: "text",
+      content: "Neste roteiro, a grande pergunta é sempre: “Qual segredo você esconde?”. Cabe ao mestre de cerimônias instigar essa busca, lembrando que todo personagem tem um esqueleto no armário — e que isso deve ser revelado através das escolhas que faz."
+    },
+    {
+      type: "text",
+      content: "A cidade se divide em três núcleos: O Chalé do Tião, onde moram Érico, Nanda e o velho músico recluso. É frequentado por personagens mais velhos, conservadores e presos às tradições rurais. A Escola Municipal reúne os adolescentes — jovens rebeldes contra tudo, contra todos e entediados com o lugar que vivem. Já o Faustina Pub é um bar \"instagramável\", com cardápio bilíngue e bandas dark rockabilly, comandado pela excêntrica dona que lhe empresta o nome. Lá, adultos classe média alta expõem seus amores fracassados, traumas de infância e dilemas existenciais \"profundos\", disputando quem é o mais insuportável da novela."
+    },
+    {
+      type: "text",
+      content: "Tal chatice tem afundado a audiência de O 7º Filho, forçando a trama a apelar para mistérios e elementos sobrenaturais. Em toda recapitulação, algo estranho acontece: um corpo surge no mato; pegadas cruzam o quintal; um irmão desaparece e volta diferente; um caçador do oculto chega à cidade. Logo surge a suspeita: talvez Érico não seja o único e dentro de Nova Harz haja dois lobisomens…"
+    },
+    {
+      type: "text",
+      content: "Eis algumas perguntas que podem guiar a criação de personagens:"
+    },
+    {
+      type: "text",
+      content: "• Qual foi a última vez que você viu seu irmão Érico — e por que a conversa terminou em briga?\n• Embora você não seja o sétimo filho, alguém transmitiu a você o “fardo” de ser um lobisomem… Quem?\n• O que aconteceu depois que você lutou com faca com o lobisomem?\n• Que dívida antiga seu pai, o velho Sebastião, finge ter esquecido, mas você não?\n• Como a mudança do seu personagem para Nova Harz — e seu sofrimento com o frio e a névoa constantes — serve de pretexto para tratar com solenidade a depressão climática, um transtorno elevado aqui ao status de grande drama contemporâneo e digno de uma campanha de conscientização acerca de seus perigos?\n• O que você viu no mato e preferiu fingir que foi um sonho?\n• De quem você sente ciúmes, mesmo sem motivo?"
     }
   ]
   },

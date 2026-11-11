@@ -82,6 +82,8 @@ interface WizardState {
   tipoAtaquePrincipal: "corpoacorpo" | "distancia" | "ambos";
   nomeArma: string;
   dadoDano: string; // ex "1d8"
+  margemCritico: number; // 20, 19 ou 18
+  multCritico: number; // 2, 3 ou 4
   // Passo 5
   habilidadesTexto: string; // uma por linha
   // Passo 6
@@ -115,6 +117,8 @@ const initialState: WizardState = {
   tipoAtaquePrincipal: "corpoacorpo",
   nomeArma: "Garras",
   dadoDano: "1d6",
+  margemCritico: 20,
+  multCritico: 2,
   habilidadesTexto: "",
   atributos: { for: "10", des: "10", con: "10", int: "10", sab: "10", car: "10" },
   periciasTexto: "",
@@ -135,6 +139,20 @@ const shiftNd = (nd: string, steps: number): string => {
 };
 
 /** Divide o dano médio total em N ataques, retornando dado + bônus por ataque */
+// Crítico no formato de Tormenta 20: "19" (margem 19, x2), "x3" (margem 20, x3), "19/x3"
+const formatCritical = (margem: number, mult: number): string => {
+  if (margem < 20 && mult === 2) return String(margem);
+  if (margem < 20) return `${margem}/x${mult}`;
+  return `x${mult}`;
+};
+
+// Ex.: "Garras 2x +20 (2d6+10, 19)" — a quantidade fica junto do nome; o crítico dentro do parênteses
+const formatAttackText = (nome: string, qtd: number, valorAtaque: number, dado: string, bonus: number, margem: number, mult: number): string => {
+  const dano = `${dado}${bonus > 0 ? `+${bonus}` : ""}`;
+  const nomeFmt = `${nome.trim() || "Ataque"}${qtd > 1 ? ` ${qtd}x` : ""}`;
+  return `${nomeFmt} +${valorAtaque} (${dano}, ${formatCritical(margem, mult)})`;
+};
+
 const splitDamage = (danoMedioTotal: number, numAtaques: number, dado: string): { bonus: number; danoMedioPorAtaque: number } => {
   const danoMedioPorAtaque = Math.round(danoMedioTotal / numAtaques);
   const dieAvg = diceAverage(dado);
@@ -211,7 +229,7 @@ export default function CreatureWizard({
       : params.resistenciaFraca) + state.ajusteVon;
 
     const { bonus } = splitDamage(params.danoMedio, state.numAtaques, state.dadoDano);
-    const ataqueTexto = `+${params.valorAtaque} (${state.dadoDano}${bonus > 0 ? `+${bonus}` : ""}${state.numAtaques > 1 ? `, ${state.numAtaques}x` : ""})`;
+    const ataqueTexto = formatAttackText(state.nomeArma, state.numAtaques, params.valorAtaque, state.dadoDano, bonus, state.margemCritico, state.multCritico);
 
     const speedRow = SPEED_TABLE.find(
       (r) => r.forma === state.locomotionForm &&
@@ -579,6 +597,22 @@ export default function CreatureWizard({
                     {["1d4", "1d6", "1d8", "1d10", "1d12", "2d6", "2d8", "2d10"].map((d) => <option key={d} value={d}>{d}</option>)}
                   </select>
                 </div>
+                <div>
+                  <label className={lc}>Margem de Ameaça</label>
+                  <select className={fc} value={state.margemCritico} onChange={(e) => update({ margemCritico: Number(e.target.value) })}>
+                    <option value={20}>20</option>
+                    <option value={19}>19</option>
+                    <option value={18}>18</option>
+                  </select>
+                </div>
+                <div>
+                  <label className={lc}>Multiplicador de Crítico</label>
+                  <select className={fc} value={state.multCritico} onChange={(e) => update({ multCritico: Number(e.target.value) })}>
+                    <option value={2}>x2</option>
+                    <option value={3}>x3</option>
+                    <option value={4}>x4</option>
+                  </select>
+                </div>
               </div>
 
               {(() => {
@@ -587,8 +621,7 @@ export default function CreatureWizard({
                   <div className="bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/20 rounded-xl p-4">
                     <p className="text-xs font-bold uppercase tracking-widest text-red-800 mb-2">Resultado calculado</p>
                     <p className="text-sm text-amber-950/85">
-                      <strong>{state.nomeArma || "Ataque"}</strong> +{params.valorAtaque} ({state.dadoDano}{bonus > 0 ? `+${bonus}` : ""}
-                      {state.numAtaques > 1 ? `, ${state.numAtaques}x` : ""})
+                      <strong>{formatAttackText(state.nomeArma, state.numAtaques, params.valorAtaque, state.dadoDano, bonus, state.margemCritico, state.multCritico)}</strong>
                     </p>
                     <p className="text-[11px] text-amber-950/55 mt-1">
                       Dano médio por ataque: {danoMedioPorAtaque} · Dano médio total: {params.danoMedio}

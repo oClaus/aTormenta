@@ -68,6 +68,12 @@ export default function MundoDeArtonPage() {
       color: "from-slate-700 to-zinc-900",
       href: "/mundo-de-arton/dominio",
     },
+    { id: "regioes",
+      title: "Regiões",
+      icon: "/temas/regioes.png",
+      color: "from-slate-700 to-zinc-900",
+      href: "/mundo-de-arton/regioes",
+    },
   ];
 
   return (

@@ -225,6 +225,19 @@ export default function ArcanistaPodersPage() {
                 </div>
               </section>
 
+              <section>
+                <h3 className="font-display text-2xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/20 pb-2">Vestígios como Familiares</h3>
+                <p className="font-medium mb-6">Vestígios são familiares cobiçados por conjuradores interessados em uma fração do poder mágico feérico. Entretanto, convocar uma destas criaturas não é tarefa simples, mesmo para alguém experiente nos caminhos da magia.</p>
+                <p className="font-medium mb-6">Para estabelecer o laço necessário para transformar um vestígio em familiar, primeiramente o personagem deve localizar um vestígio. A critério do mestre, isso pode envolver desde uma ou mais cenas de investigação ou interpretação em busca de informações sobre a localização dessas criaturas até uma busca completa (veja Tormenta20, p. 278). Uma vez que tenha localizado um vestígio, o personagem deverá fazer amizade com ele. Novamente, pode ser uma cena de interpretação ou pode envolver outras ações, como cumprir uma missão para as fadas da região. Por fim, o personagem deve realizar um ritual de ligação com o vestígio, que exige um dia e T$ 100 em ingredientes. Isso cria o vínculo mágico necessário para que o vestígio se torne um familiar.</p>
+                <p className="font-medium mb-6">Obviamente, vilões e outros personagens malignos interessados em um familiar vestígio irão recorrer a outros subterfúgios, que podem até envolver transformar o vestígio em familiar contra sua vontade. Salvar um vestígio nessa situação pode inclusive ser uma forma de incluir uma dessas criaturinhas em sua campanha.</p>
+
+                <div className="space-y-4 pl-4 md:pl-5 border-l-4 border-amber-900/30 text-base md:text-lg text-left">
+                  <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Vestígio da Encruzilhada: </span><span className="font-medium">Um vestígio da encruzilhada familiar reduz em –1 PM o custo de habilidades que permitem rolar dois dados ao fazer um teste e usar o melhor resultado (como a magia Orientação).</span></p>
+                  <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Vestígio da Transformação: </span><span className="font-medium">Um vestígio da transformação familiar reduz em –1 PM o custo de habilidades com efeitos de metamorfose (como Forma Selvagem ou a magia Metamorfose).</span></p>
+                  <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Vestígio do Limiar: </span><span className="font-medium">Se uma de suas habilidades causar ao menos dois tipos de dano (como uma Bola de Fogo lançada com um catalisador líquen lilás), o vestígio do limiar familiar aumenta o dano de dois de seus tipos em +2 pontos cada.</span></p>
+                </div>
+              </section>
+
             </div>
           </div>
         </div>

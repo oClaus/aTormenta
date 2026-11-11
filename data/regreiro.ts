@@ -250,6 +250,92 @@ export const regreiroQAs: RegreiroQA[] = [
     magazineNumber: 210,
   },
   //#endregion
+  //#region DB - 216
+  {
+    id: "DB216-01",
+    question: "> Excelentíssimos ministros, respondam minhas súplicas, por favor. Como o poder *Alma Livre* funciona com poderes que presumem habilidades recebidas no 1° nível? Um paladino poderia pegar *Armadura Brilhante* via *Alma Livre*, mesmo sem ter *Autoconfiança* primeiro? Como a habilidade funcionaria? É possível usar *Alma Livre* para “acelerar” pré-requisitos? Um Nobre/Paladino poderia usar *Alma Livre* para pegar *Armadura Brilhante* neste 12° nível de personagem?",
+    answer: "> Saudações cintilantes, conselheiro! *Alma Livre* depende do texto dos poderes em questão. Por exemplo, o poder em teoria permite escolher *Assassinar* — mas, sem uma fonte de *Ataque Furtivo*, *Assassinar* não faz nada! No caso específico, *Armadura Brilhante* expressamente concede a habilidade de somar Carisma na Defesa enquanto se veste armadura pesada. O paladino não receberia esse bônus sem armadura ou com armadura leve, diferente de um Nobre com *Autoconfiança*. Quanto ao Nobre/Paladino, o texto de *Alma Livre* diz “como se pertencesse” a uma classe; se você já pertence a uma classe, ele não se aplicaria, pela leitura mais rígida das regras. Porém, considerando que você está gastando dois poderes para conseguir a habilidade com alguns níveis de antecedência, talvez seu mestre permita, se você pedir com jeitinho.",
+    magazineNumber: 216,
+  },
+  {
+    id: "DB216-02",
+    question: "> Magnânimos ministros regreiros! De acordo com *Deuses de Arton*, humanos, meios-elfos, meios-orcs, minauros, moreau e finntroll podem ser devotos de qualquer divindade. Mas estas raças são listadas como possíveis devotos para certas divindades no *Guia de Deuses Menores*. As regras para devoção apresentadas em *Deuses* são só para deuses maiores?",
+    answer: "> Saudações atribuladas, conselheiro! Essas raças foram listadas por engano. Realmente, raças que são aceitas por quaisquer divindades não são listadas. A inclusão delas nessas divindades não altera as regras normais.",
+    magazineNumber: 216,
+  },
+  {
+    id: "DB216-03",
+    question: "> Prezados combeiros artonianos, o poder *Clone Sombrio*, da distinção Sombra de Tenebra, permite criar clones de sombra. Quando uma ação de movimento é usada para fazer os clones causarem dano, o jogador precisa escolher qual clone causa dano ou todos causam dano?",
+    answer: "> Saudações sombrias, conselheiro! Todos os clones causam dano juntos. Tô certo!",
+    magazineNumber: 216,
+  },
+  {
+    id: "DB216-04",
+    question: "> Deuses menores do Supremo Tribunal Regreiro, venho humildemente perguntar sobre os status divinos de algumas divindades listadas no *Guia de Deuses Menores*. Na descrição inicial Hurlaagh é citado como status 4 e Beluhga como status 5. Porém, em suas descrições individuais, Hurlaagh tem status 3 e Beluhga tem status 4. Qual é o correto?",
+    answer: "> Saudações minúsculas, conselheiro!\n\nHurlaagh tem status divino 4 e Beluhga tem status divino 5.",
+    magazineNumber: 216,
+  },
+  {
+    id: "DB216-05",
+    question: "> Enclausurados ministros regreiros, trago aqui minha humilde súplica! Quando um frade usa o poder *Memorizar Liturgia*, os pergaminhos decorados são consumidos? Além disso, caso a regra opcional de devoção aberta esteja sendo usada, seria possível um druida de Lena, ou um paladino de Tenebra?",
+    answer: "> Saudações escancaradas, conselheiro! Sim, os pergaminhos são consumidos. Perceba que o poder permite “gastar 1 hora de estudo e um número de pergaminhos”; se eles não fossem consumidos, não seriam gastos!\n\nQuanto à sua segunda pergunta, a resposta é não. A regra Devoções Abertas permite que você ignore o trecho \"Para ser devoto de um deus, sua raça ou sua classe devem estar listadas na seção 'Devotos' do deus em questão.\" de Escolhendo Seu Deus (*Tormenta20*, p. 96), efetivamente dando a todo personagem a mesma liberdade que humanos têm. Contudo, da mesma forma que um humano paladino deve escolher um deus listado na classe, qualquer outro devoto também precisa respeitar essa limitação, mesmo podendo ser “devoto de qualquer divindade”.",
+    magazineNumber: 216,
+  },
+  {
+    id: "DB216-06",
+    question: "> Caros juízes, boa tarde! Os itens *vassoura voadora* e *tapete voador*, apresentados em *Tormenta20 Jogo do Ano*, seriam considerados veículos, como os apresentados recentemente em *Heróis de Arton*? Caso não sejam, precisam ser empunhados ou vestidos?",
+    answer: "> Saudações aéreas, conselheiro! Publicados anteriormente às regras de veículos, esses itens não se encaixam imediatamente nelas, precisando de estatísticas como tamanho, Defesa e tripulação para fazê-lo. É uma adaptação fácil de fazer (vassoura tamanho Médio, deslocamento de voo 12m, 50 PV, RD 25; tapete tamanho Grande, deslocamento de voo 12m, 70 PV, RD 45), mas pela leitura mais rígida das regras não seriam veículos. Como não são vestidos, precisam ser empunhados; você usa uma mão para controlá-los, seja segurando a vassoura ou a borda do tapete.",
+    magazineNumber: 216,
+  },
+  {
+    id: "DB216-07",
+    question: "> Bom dia, pessoal! Estou lendo *Heróis de Arton*. Parabéns pelo material! Ficou incrível! Quero tirar uma dúvida sobre um poder de druida que chamou a atenção de minha mesa\n\nDigamos que, ao fim de uma batalha, o druida use *Ciclo da Vida* no cadáver de um monstro ND 5 e receba 10 PMs temporários. Gaste estes PMs curando o grupo. Depois, o grupo enfrente e derrote um morto-vivo ND 5. Usando *Ciclo da Vida*, o druida recebe outros 10 PMs temporários? Se o personagem for multiclasse, a quantidade de PM recebidos é alterada?",
+    answer: "> Saudações heroicas, conselheiro! Sim, é isso mesmo! Os PMs não mudam, independente do druida ser multiclasse ou não. Basta haver um cadáver disponível. É o ciclo sem fim!",
+    magazineNumber: 216,
+  },
+  {
+    id: "DB216-08",
+    question: "> Meus cumprimentos a vossas excelências, venho com uma dúvida de meus companheiros de aventuras. A classe variante vassalo concede poderes de cavaleiros. Esses poderes podem ser trocados por poderes gerais ou poderes de distinção? O vassalo pode ter poderes de distinção?",
+    answer: "> Saudações subordinadas, conselheiro!\n\nPoderes gerais e poderes de distinção podem ser escolhidos no lugar de poderes de classe, então o vassalo pode trocar os poderes abertos de nobre (ou guerreiro) que recebe por poderes gerais ou poderes de distinção.",
+    magazineNumber: 216,
+  },
+  {
+    id: "DB216-09",
+    question: "> Valkaria, Dallia 31 sob Pomo, mil quatrocentos e seis anos da chegada dos elfos.\n\nVossas excelências do magnífico tribunal, venho por meio destas palavras, em demasiada convicção e esmero, pedir auxílio para elucidar dúvidas que foram questionadas por algumas almas afortunadas na cidade, as quais tentei transcrever de forma direta e breve.\n\n1) V.Em.ª Paul O'Rock IX, um golem de pedra druida que possui uma *Tradição Perdida* para usar sua Força para proteger sua floresta, perguntou se poderia usar sua Força ao invés de Sabedoria ao ativar *Força dos Penhascos*, que é limitado por Sabedoria. Porém, admito que fiquei pensando se o golem de pedra transformado em uma *Forma Selvagem* conseguiria correr. Seria possível ou seu chassi impediria? Tá aí uma coisa que adoraria descobrir...",
+    answer: "> Saudações profusas, conselheiro! Vamos às suas respostas.\n\n1) *Tradição Perdida* lida apenas com a forma de lançar magias. Habilidades de classe não são afetadas. O golem não pode correr, seja em sua forma de golem ou em forma animal; a restrição do chassi se mantém.",
+    magazineNumber: 216,
+  },
+  {
+    id: "DB216-10",
+    question: "2) Um caçador ouviu de um arcanista em uma taverna que o mesmo conseguia dissipar *Relâmpagos* e *Bolas de Fogo*. Veio até mim e pôs-se a indagar: poderia um arcanista com *Contramágica Aprimorada* dissipar magias de duração instantânea ou ele foi enganado?,",
+    answer: "2) O caçador ficou pelo menos um pouco confuso. *Dissipar Magia* pode ser usada como contramágica, mas neste caso ela não dissipa nada: apenas tem a função de contramágica.",
+    magazineNumber: 216,
+  },
+  {
+    id: "DB216-11",
+    question: "3) Um sacerdote escriba muito similar a este que vos escreve, questionou-se: \"Sou devoto de Wynna, já frequentei a Academia Arcana e minha alma é uma *Alma Livre*. Será que consigo aprender *Escriba Arcano* para melhorar meus pergaminhos ou deveria aprender os caminhos do mago?\"\n\nQue Wynna os abençoe e que Tauron os proteja das garras de Keen.\nDo futuro Sumo-Sacerdote de Wynna, Weiss Grimm.\n\nP.S: Espero que Lady Ayleth tenha conseguido cumprir meu pedido de enviá-los essa carta antes da guerra eclodir.",
+    answer: "3) *Escriba Arcano* tem como requisito ser um mago, um requisito que não pode ser ignorado através de *Alma Livre* (pois mago não é uma classe, é parte da habilidade *Caminho do Arcanista*). Porém, neste caso específico, converse com seu mestre — talvez ele permita, dada a sincronia temática!",
+    magazineNumber: 216,
+  },
+  {
+    id: "DB216-12",
+    question: "> Senhores Juízes e tatuadores de Khubar, poderiam esclarecer duas dúvidas? Um personagem com tatuagem mística de Khubar precisa seguir todas as regras para executar magia arcana? Quando uma habilidade ou magia requer teste de uma perícia para obter seu efeito, o personagem precisa ser treinado naquela perícia?",
+    answer: "> Saudações pelágicas, conselheiro! Sim, se a magia da tatuagem for arcana, o personagem precisa seguir todas as regras pertinentes. Quanto aos testes de perícia, treinamento só é necessário se a perícia não puder ser usada sem treinamento.",
+    magazineNumber: 216,
+  },
+  {
+    id: "DB216-13",
+    question: "> Vossas excelências, desse magnífico tribunal! Venho por meio destas palavras, com demasiada convicção e esmero, pedir auxílio para elucidar minha dúvida. Como funciona a sinergia de itens com rerrolagens? Por exemplo, meu forjador litúrgico fez um teste de Ofício (armeiro) para fabricar uma arma com aprimoramentos, usando um avental de forja, máscara de soldador e instrumento de ofício aprimorado. Porém, usou o poder *Teologia Aplicada* para rerrolar este teste usando Religião. Os bônus dos itens se somariam à rerrolagem? E quanto a outros bônus de itens que dão bônus a teste de religião?",
+    answer: "> Saudações direto da frágua, conselheiro!\n\nRolar novamente, na maior parte dos casos, não afeta o teste. O caso, porém, troca a perícia em questão. Isso significa que os bônus dos itens não se aplicam, por serem todos voltados para Ofício. Quaisquer outros itens que concedam bônus em Religião, porém, se aplicarão ao segundo teste.",
+    magazineNumber: 216,
+  },
+  {
+    id: "DB216-14",
+    question: "> Saudações, meritíssimos juízes! O poder concedido de Laan, *Pé na Estrada*, concede imunidade às condições lento e imóvel. Como este poder interage com a condição agarrado? Você ainda consegue se deslocar? Se consegue se deslocar, você sai do agarramento ou você consegue arrastar quem te agarrou?",
+    answer: "> Saudações gazofiladas, conselheiro! Um devoto de Laan, se agarrado, fica desprevenido normalmente. Em seu turno, pode se mover normalmente — caso saia do alcance natural da criatura que o agarrou, deixa de estar agarrado.",
+    magazineNumber: 216,
+  },
+  //#endregion
   //#region DB - 227
   {
     id: "DB227-01",

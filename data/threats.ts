@@ -7056,8 +7056,7 @@ export const threats: Threat[] = [
     equipamentos: [],
     tesouro: "Nenhum."
   },
-  {
-    id: "Vestígio da Encruzilhada",
+  { id: "Vestígio da Encruzilhada",
     name: "Vestígio da Encruzilhada",
     description: "Conforme adentram a clareira, vocês percebem pequenos indícios da presença recente de fadas e se perguntam se elas estiveram por aqui. Qualquer dúvida a esse respeito desaparece quando uma pequena criatura, formada por folhas e terra, surge de trás de uma árvore. O pequeno ser caminha pela clareira, transformando magicamente as plantas por onde passa.\nUm vestígio feérico é um pequeno espírito que se forma a partir de restos de magia deixada em locais de celebração feérica. Sua criação quase sempre é acidental e se baseia em algum fragmento de poder mágico, como uma música cantada por um menestrel duende, mas que não foi ouvida por mais ninguém, ou um frasco de vinho encantado aberto e não consumido. Esquecidos nesses lugares, tais fragmentos de magia ganham vida, moldados pela natureza do local onde foram deixados. Existem três tipos de vestígios, conforme o tipo de local onde foram criados: limiares, encruzilhadas e transformações.\nEncruzilhadas são espaços onde dois caminhos da mesma natureza se unem ou se separam, seja de forma concreta, como uma bifurcação em uma estrada, ou metafórica, como uma árvore onde dois jovens apaixonados confessaram seu amor. Encruzilhadas possuem um significado especial para as fadas, pois elas também trilham dois caminhos em Arton: o mundano e o mágico. À primeira vista, vestígios criados em uma encruzilhada parecem sempre indecisos, mas isso porque são capazes de observar as ramificações de suas decisões, muitas vezes ponderando com uma calma incomum (para uma fada) sobre o melhor caminho a seguir.",
     nd: "1/2",
@@ -7080,7 +7079,6 @@ export const threats: Threat[] = [
     habilidades: [
       "Enxurrada de Possibilidades (Padrão): O vestígio da encruzilhada inunda de possibilidades a mente de uma criatura em alcance curto. A vítima sofre 2d6+3 pontos de dano psíquico e fica confusa por 1 rodada (Von CD 15 reduz à metade e evita a condição). Uma criatura só pode ficar confusa por esta habilidade uma vez por cena.",
       "Vislumbrar as Ramificações (Movimento): O vestígio obtém um vislumbre de seu futuro próximo. Até o início de seu próximo turno, quando faz um teste de perícia, ele pode gastar este vislumbre para rolar dois dados e usar o melhor resultado.",
-      "Familiar: Um vestígio da encruzilhada familiar reduz em –1 PM o custo de habilidades que permitem rolar dois dados ao fazer um teste e usar o melhor resultado (como a magia Orientação)."
     ],
     for: "–2",
     des: "3",
@@ -7096,8 +7094,7 @@ export const threats: Threat[] = [
     equipamentos: [],
     tesouro: "Nenhum."
   },
-  {
-    id: "Vestígio da Transformação",
+  { id: "Vestígio da Transformação",
     name: "Vestígio da Transformação",
     description: "Conforme adentram a clareira, vocês percebem pequenos indícios da presença recente de fadas e se perguntam se elas estiveram por aqui. Qualquer dúvida a esse respeito desaparece quando uma pequena criatura, formada por folhas e terra, surge de trás de uma árvore. O pequeno ser caminha pela clareira, transformando magicamente as plantas por onde passa.\nUm vestígio feérico é um pequeno espírito que se forma a partir de restos de magia deixada em locais de celebração feérica. Sua criação quase sempre é acidental e se baseia em algum fragmento de poder mágico, como uma música cantada por um menestrel duende, mas que não foi ouvida por mais ninguém, ou um frasco de vinho encantado aberto e não consumido. Esquecidos nesses lugares, tais fragmentos de magia ganham vida, moldados pela natureza do local onde foram deixados. Existem três tipos de vestígios, conforme o tipo de local onde foram criados: limiares, encruzilhadas e transformações.\nTransformações são locais onde elementos do mundo sofrem uma mudança significativa, como um pomar, onde a terra se transforma em fruto, um vulcão, no qual a rocha vira fogo, ou mesmo uma escola, onde a curiosidade se transforma em conhecimento. Vestígios de tais lugares expressam ao máximo a natureza multifacetada das fadas por meio de seus poderes de metamorfose.",
     nd: "1/2",
@@ -7119,7 +7116,6 @@ export const threats: Threat[] = [
     ataqueCorpoACorpo: "Chuva de petelecos x4 +5 (1d4, impacto)",
     habilidades: [
       "Transformação Feérica (Completa): O vestígio da transformação muda de forma e aparência até o fim da cena, como no efeito básico da magia Metamorfose. Ele pode usar esta habilidade uma vez por cena.",
-      "Familiar: Um vestígio da transformação familiar reduz em –1 PM o custo de habilidades com efeitos de metamorfose (como Forma Selvagem ou a magia Metamorfose)."
     ],
     for: "–1",
     des: "1",
@@ -7135,8 +7131,7 @@ export const threats: Threat[] = [
     equipamentos: [],
     tesouro: "Nenhum."
   },
-  {
-    id: "Vestígio do Limiar",
+  { id: "Vestígio do Limiar",
     name: "Vestígio do Limiar",
     description: "Conforme adentram a clareira, vocês percebem pequenos indícios da presença recente de fadas e se perguntam se elas estiveram por aqui. Qualquer dúvida a esse respeito desaparece quando uma pequena criatura, formada por folhas e terra, surge de trás de uma árvore. O pequeno ser caminha pela clareira, transformando magicamente as plantas por onde passa.\nUm vestígio feérico é um pequeno espírito que se forma a partir de restos de magia deixada em locais de celebração feérica. Sua criação quase sempre é acidental e se baseia em algum fragmento de poder mágico, como uma música cantada por um menestrel duende, mas que não foi ouvida por mais ninguém, ou um frasco de vinho encantado aberto e não consumido. Esquecidos nesses lugares, tais fragmentos de magia ganham vida, moldados pela natureza do local onde foram deixados. Existem três tipos de vestígios, conforme o tipo de local onde foram criados: limiares, encruzilhadas e transformações.\nLimiares são lugares onde dois ou mais elementos do mundo se encontram, como a margem de um rio, a tênue linha entre a escuridão de uma sombra e a luz dos raios de sol ou o breve instante entre o sonho e o despertar. Fadas são atraídas por esses lugares porque elas próprias também representam o encontro de dois elementos — o poder da magia de Wynna e a força do caos de Nimb. Vestígios criados nesses lugares são seres divididos, que mesclam características dos dois elementos que formam o limiar onde nasceram.",
     nd: "1/2",
@@ -7160,7 +7155,6 @@ export const threats: Threat[] = [
       "Natureza Dual: Cada vestígio do limiar é formado por duas características do mundo natural. Escolha dois tipos de dano para representar essas características. O vestígio recebe redução 10 contra dano desses tipos e cada metade do dano de seu Raio Combinado é de um desses tipos.",
       "Raio Combinado (Padrão): O vestígio do limiar dispara um raio mágico em uma criatura em alcance curto. A vítima sofre 4d4 pontos de dano (Ref CD 15 reduz à metade).",
       "Trilhar o Limiar (Movimento): O vestígio tem 50% de chance de ignorar qualquer ataque ou efeito hostil usado contra ele. Este efeito acaba ao fim da cena ou após dois ataques e/ou efeitos hostis afetarem o vestígio. Recarga (movimento).",
-      "Familiar: Se uma de suas habilidades causar ao menos dois tipos de dano (como uma Bola de Fogo lançada com um catalisador líquen lilás), o vestígio do limiar familiar aumenta o dano de dois de seus tipos em +2 pontos cada."
     ],
     for: "–1",
     des: "2",
@@ -7176,8 +7170,7 @@ export const threats: Threat[] = [
     equipamentos: [],
     tesouro: "Nenhum."
   },
-  {
-    id: "Vórtice de Mana",
+  { id: "Vórtice de Mana",
     name: "Vórtice de Mana",
     description: "O ar à sua frente começa a se agitar rapidamente, conforme raios de energia azulada surgem de súbito. Em instantes, esses feixes luminosos assumem a forma de um grande vórtice de energia que rodopia acima do solo. Não um mero fenômeno arcano, ele se mostra como uma criatura formada de energia mágica pura, bruta e crepitante.\nMuitas vezes confundido com um elemental do ar, um vórtice de mana assemelha-se a um grande redemoinho de energia azulada com pequenos lampejos mágicos visíveis em seu interior. Nativos de Magika, vórtices de mana raramente visitam Arton por sua própria escolha. Entretanto, acidentes mágicos, como rituais de evocação malsucedidos ou distúrbios místicos, como um desequilíbrio da magia em uma região, podem “sugar” uma dessas criaturas para Arton. Um vórtice trazido contra sua vontade geralmente será agressivo e buscará desfazer ou reparar o que quer que tenha sido responsável por trazê-lo. Em alguns casos raros, o acidente ou distúrbio que trouxe o vórtice pode afetá-lo negativamente; dependendo da natureza desse efeito, o vórtice pode entrar em fúria, buscando consumir toda a magia ao seu alcance.\nAté recentemente, vórtices de mana eram pouco conhecidos ou estudados, muito devido à sua raridade em Arton. Foi apenas após o incidente na Academia Arcana, em que um desses espíritos esteve ligado ao desaparecimento temporário de Talude, que essas criaturas ganharam notoriedade.",
     nd: "16",
@@ -7213,10 +7206,9 @@ export const threats: Threat[] = [
     equipamentos: [],
     tesouro: "1d3 orbes de essência (CD 31 para extrair; cada orbe reduz em 1 PM o custo para fabricar um item mágico)."
   },
-  {
-    id: "Vulto Voador",
+  { id: "Vulto Voador",
     name: "Vulto Voador",
-    description: "As criaturas surgem das sombras do mausoléu, como se arrancadas à força da escuridão. Vultos completamente negros, feitos de sombras interrompidas apenas pelos olhos, pequenos e sinistros. Embora suas formas sejam variadas, cada um possui a face de um goblinoide, um traço que talvez seja uma pista de sua origem divina.\nVultos noturnos são mortos-vivos poderosos, criados a partir da união divina de escuridão e malícia. Por sua natureza sombria, muitos sábios e estudiosos atribuem a criação destes seres a Tenebra. A verdade, entretanto, é que eles são obra de Ragnar — uma criação profana que perdurou mesmo após a morte do antigo Deus da Morte.\nVoadores são os mais fracos, ainda que poderosos o suficiente para arrasar um castelo; assemelham-se a enormes goblinoides com asas no lugar dos braços, como morcegos.",
+    description: "As criaturas surgem das sombras do mausoléu, como se arrancadas à força da escuridão. Vultos completamente negros, feitos de sombras interrompidas apenas pelos olhos, pequenos e sinistros. Embora suas formas sejam variadas, cada um possui a face de um goblinoide, um traço que talvez seja uma pista de sua origem divina.\nVultos noturnos são mortos-vivos poderosos, criados a partir da união divina de escuridão e malícia. Por sua natureza sombria, muitos sábios e estudiosos atribuem a criação destes seres a Tenebra. A verdade, entretanto, é que eles são obra de Ragnar — uma criação profana que perdurou mesmo após a morte do antigo Deus da Morte.\nExistem três tipos de vultos noturnos: andarilhos, voadores e rastejantes. Voadores são os mais fracos, ainda que poderosos o suficiente para arrasar um castelo; assemelham-se a enormes goblinoides com asas no lugar dos braços, como morcegos. Andarilhos são os mais comuns; assemelham-se à sombra de um enorme bugbear com quatro chifres ao redor da cabeça. Rastejantes são os mais perigosos; assemelham-se a grandes vermes gigantes, possuem uma armadura quitinosa sobre o corpo e uma cabeça vagamente humanoide, com o rosto de um enorme hobgoblin.\nIndependentemente do tipo, todos os vultos noturnos são feitos da essência das trevas. Sua pele é completamente negra, lisa e sem pelos, como se estivessem permanentemente banhados em um visco sombrio. Tamanha é sua escuridão, que parecem absorver toda a luz ao redor. Vivem em lugares abandonados e protegidos da luz, preferencialmente aqueles com alguma ligação com a morte e as energias negativas de Arton. Necrópoles, templos abandonados de Ragnar e cemitérios subterrâneos estão entre seus locais preferidos. De lá, tramam igualmente contra os vivos e os não vivos, pois, apesar de suas aparências sombrias, são inteligentes e capazes de preparar e executar planos complexos para espalhar o máximo possível de maldade e dor. Os objetivos exatos dos vultos noturnos são desconhecidos. Teme-se que existam apenas para propagar algum comando de morte proferido por Ragnar — uma sentença contra Arton que, graças à destruição do Deus da Morte, jamais poderá ser revogada.",
     nd: "14",
     tipo: "Morto-vivo",
     tema: "Bestiário de Arton",
@@ -7265,10 +7257,9 @@ export const threats: Threat[] = [
     equipamentos: [],
     tesouro: "Padrão."
   },
-  {
-    id: "Vulto Andarilho",
+  { id: "Vulto Andarilho",
     name: "Vulto Andarilho",
-    description: "As criaturas surgem das sombras do mausoléu, como se arrancadas à força da escuridão. Vultos completamente negros, feitos de sombras interrompidas apenas pelos olhos, pequenos e sinistros. Embora suas formas sejam variadas, cada um possui a face de um goblinoide, um traço que talvez seja uma pista de sua origem divina.\nVultos noturnos são mortos-vivos poderosos, criados a partir da união divina de escuridão e malícia. Por sua natureza sombria, muitos sábios e estudiosos atribuem a criação destes seres a Tenebra. A verdade, entretanto, é que eles são obra de Ragnar — uma criação profana que perdurou mesmo após a morte do antigo Deus da Morte.\nAndarilhos são os mais comuns; assemelham-se à sombra de um enorme bugbear com quatro chifres ao redor da cabeça.",
+    description: "As criaturas surgem das sombras do mausoléu, como se arrancadas à força da escuridão. Vultos completamente negros, feitos de sombras interrompidas apenas pelos olhos, pequenos e sinistros. Embora suas formas sejam variadas, cada um possui a face de um goblinoide, um traço que talvez seja uma pista de sua origem divina.\nVultos noturnos são mortos-vivos poderosos, criados a partir da união divina de escuridão e malícia. Por sua natureza sombria, muitos sábios e estudiosos atribuem a criação destes seres a Tenebra. A verdade, entretanto, é que eles são obra de Ragnar — uma criação profana que perdurou mesmo após a morte do antigo Deus da Morte.\nExistem três tipos de vultos noturnos: andarilhos, voadores e rastejantes. Voadores são os mais fracos, ainda que poderosos o suficiente para arrasar um castelo; assemelham-se a enormes goblinoides com asas no lugar dos braços, como morcegos. Andarilhos são os mais comuns; assemelham-se à sombra de um enorme bugbear com quatro chifres ao redor da cabeça. Rastejantes são os mais perigosos; assemelham-se a grandes vermes gigantes, possuem uma armadura quitinosa sobre o corpo e uma cabeça vagamente humanoide, com o rosto de um enorme hobgoblin.\nIndependentemente do tipo, todos os vultos noturnos são feitos da essência das trevas. Sua pele é completamente negra, lisa e sem pelos, como se estivessem permanentemente banhados em um visco sombrio. Tamanha é sua escuridão, que parecem absorver toda a luz ao redor. Vivem em lugares abandonados e protegidos da luz, preferencialmente aqueles com alguma ligação com a morte e as energias negativas de Arton. Necrópoles, templos abandonados de Ragnar e cemitérios subterrâneos estão entre seus locais preferidos. De lá, tramam igualmente contra os vivos e os não vivos, pois, apesar de suas aparências sombrias, são inteligentes e capazes de preparar e executar planos complexos para espalhar o máximo possível de maldade e dor. Os objetivos exatos dos vultos noturnos são desconhecidos. Teme-se que existam apenas para propagar algum comando de morte proferido por Ragnar — uma sentença contra Arton que, graças à destruição do Deus da Morte, jamais poderá ser revogada.",
     nd: "16",
     tipo: "Morto-vivo",
     tema: "Bestiário de Arton",
@@ -7320,10 +7311,9 @@ export const threats: Threat[] = [
     equipamentos: [],
     tesouro: "Padrão."
   },
-  {
-    id: "Vulto Rastejante",
+  { id: "Vulto Rastejante",
     name: "Vulto Rastejante",
-    description: "As criaturas surgem das sombras do mausoléu, como se arrancadas à força da escuridão. Vultos completamente negros, feitos de sombras interrompidas apenas pelos olhos, pequenos e sinistros. Embora suas formas sejam variadas, cada um possui a face de um goblinoide, um traço que talvez seja uma pista de sua origem divina.\nVultos noturnos são mortos-vivos poderosos, criados a partir da união divina de escuridão e malícia. Por sua natureza sombria, muitos sábios e estudiosos atribuem a criação destes seres a Tenebra. A verdade, entretanto, é que eles são obra de Ragnar — uma criação profana que perdurou mesmo após a morte do antigo Deus da Morte.\nRastejantes são os mais perigosos; assemelham-se a grandes vermes gigantes, possuem uma armadura quitinosa sobre o corpo e uma cabeça vagamente humanoide, com o rosto de um enorme hobgoblin.",
+    description: "As criaturas surgem das sombras do mausoléu, como se arrancadas à força da escuridão. Vultos completamente negros, feitos de sombras interrompidas apenas pelos olhos, pequenos e sinistros. Embora suas formas sejam variadas, cada um possui a face de um goblinoide, um traço que talvez seja uma pista de sua origem divina.\nVultos noturnos são mortos-vivos poderosos, criados a partir da união divina de escuridão e malícia. Por sua natureza sombria, muitos sábios e estudiosos atribuem a criação destes seres a Tenebra. A verdade, entretanto, é que eles são obra de Ragnar — uma criação profana que perdurou mesmo após a morte do antigo Deus da Morte.\nExistem três tipos de vultos noturnos: andarilhos, voadores e rastejantes. Voadores são os mais fracos, ainda que poderosos o suficiente para arrasar um castelo; assemelham-se a enormes goblinoides com asas no lugar dos braços, como morcegos. Andarilhos são os mais comuns; assemelham-se à sombra de um enorme bugbear com quatro chifres ao redor da cabeça. Rastejantes são os mais perigosos; assemelham-se a grandes vermes gigantes, possuem uma armadura quitinosa sobre o corpo e uma cabeça vagamente humanoide, com o rosto de um enorme hobgoblin.\nIndependentemente do tipo, todos os vultos noturnos são feitos da essência das trevas. Sua pele é completamente negra, lisa e sem pelos, como se estivessem permanentemente banhados em um visco sombrio. Tamanha é sua escuridão, que parecem absorver toda a luz ao redor. Vivem em lugares abandonados e protegidos da luz, preferencialmente aqueles com alguma ligação com a morte e as energias negativas de Arton. Necrópoles, templos abandonados de Ragnar e cemitérios subterrâneos estão entre seus locais preferidos. De lá, tramam igualmente contra os vivos e os não vivos, pois, apesar de suas aparências sombrias, são inteligentes e capazes de preparar e executar planos complexos para espalhar o máximo possível de maldade e dor. Os objetivos exatos dos vultos noturnos são desconhecidos. Teme-se que existam apenas para propagar algum comando de morte proferido por Ragnar — uma sentença contra Arton que, graças à destruição do Deus da Morte, jamais poderá ser revogada.",
     nd: "18",
     tipo: "Morto-vivo",
     tema: "Bestiário de Arton",
@@ -7378,8 +7368,7 @@ export const threats: Threat[] = [
     equipamentos: [],
     tesouro: "Padrão."
   },
-  {
-    id: "Zumbi fantasmagórico",
+  { id: "Zumbi fantasmagórico",
     name: "Zumbi fantasmagórico",
     description: "A criatura diante de vocês assemelha-se a um zumbi comum recém-saído da cova. Entretanto, ela é cercada por uma aura fantasmagórica, como se estivesse “vestindo” um fantasma sobre sua pele putrefata. As diferenças se tornam ainda mais evidentes quando o estranho ser se move — seus movimentos são coordenados e rápidos como eram em vida, e não lentos e trôpegos como os de um zumbi normal.\nZumbis fantasmagóricos são mortos-vivos peculiares, formados por cadáveres animados pela energia espectral de seu próprio fantasma. Essa combinação gera uma criatura singular, que possui uma fração das capacidades mentais que tinha em vida, é parcialmente incorpóreo e possui força e resistência físicas consideráveis.\nOs primeiros relatos da existência de zumbis fantasmagóricos vieram de Sckharshantallas, mais especificamente dos vilarejos de Hazonnd e Wondaronn. Destruídos durante a guerra de formação dessa nação, estes vilarejos foram afetados por uma força misteriosa e seus moradores se transformaram em seres fantasmagóricos. Durante o dia, viviam suas rotinas normalmente, como se estivessem vivos, embora fossem claramente fantasmas. Chegavam até a receber forasteiros, como um vilarejo normal — e muitos até se hospedavam nas estalagens locais. \nÀ noite, entretanto, estes fantasmas animavam seus próprios cadáveres, que se erguiam do solo, famintos pela carne dos vivos. Estes zumbis fantasmagóricos atacavam os visitantes da cidade e, na falta destes, vagavam pelas regiões ao redor em busca de “vítimas”. Ao amanhecer, retornavam para suas covas e um novo dia “normal” se iniciava nos vilarejos.\nEmbora as circunstâncias que criaram os zumbis fantasmagóricos de Hazonnd e Wondaronn sejam bastante específicas, elas podem se repetir em outros lugares de Arton. Energias semelhantes às geradas em Sckharshantallas podem se abater sobre outras comunidades, ou mesmo sobre grupos menores, como uma família de camponeses ou um ermitão que vive isolado nos ermos. O fantasma de um druida que acolhe um grupo de aventureiros em sua choupana pode muito bem se revelar um zumbi fantasmagórico durante a noite, determinado a se alimentar da carne de seus hóspedes.",
     nd: "4",
@@ -7419,8 +7408,7 @@ export const threats: Threat[] = [
     equipamentos: [],
     tesouro: "Nenhum."
   },
-  {
-    id: "Mantícora Zumbi",
+  { id: "Mantícora Zumbi",
     name: "Mantícora Zumbi",
     description: "Mesmo sob a escuridão, é possível perceber que a monstruosidade se move de forma trôpega. Um gemido ressoa de seus pulmões, entrecortado por murmúrios quase humanos. Seus olhos opacos são os primeiros a encontrar a luz, transparecendo a completa ausência de vida em sua existência profana.\nZumbis estão entre os mortos-vivos mais comuns. Cadáveres reanimados por necromancia que podem surgir tanto como resultado de acidentes quanto por maldições, essas criaturas estão também entre os primeiros tipos de mortos-vivos criados por necromantes iniciantes.\nEmbora humanoides sejam as criaturas mais comumente transformadas em zumbis, esses mortos-vivos podem ser criados a partir de vários tipos de criaturas, incluindo monstros. Monstros zumbis podem surgir da prática de necromantes mais experientes ou a partir de cadáveres de monstros derrotados e deixados para trás, tais como aqueles enfrentados por muitos grupos de aventureiros.",
     nd: "3",
@@ -7454,8 +7442,7 @@ export const threats: Threat[] = [
     equipamentos: [],
     tesouro: "Espinhos putrefatos (CD 18 para extrair). Os espinhos contam como T$ 45 em matéria-prima para fabricar ossos de monstro."
   },
-  {
-    id: "Quimera Zumbi",
+  { id: "Quimera Zumbi",
     name: "Quimera Zumbi",
     description: "Mesmo sob a escuridão, é possível perceber que a monstruosidade se move de forma trôpega. Um gemido ressoa de seus pulmões, entrecortado por murmúrios quase humanos. Seus olhos opacos são os primeiros a encontrar a luz, transparecendo a completa ausência de vida em sua existência profana.\nZumbis estão entre os mortos-vivos mais comuns. Cadáveres reanimados por necromancia que podem surgir tanto como resultado de acidentes quanto por maldições, essas criaturas estão também entre os primeiros tipos de mortos-vivos criados por necromantes iniciantes.\nEmbora humanoides sejam as criaturas mais comumente transformadas em zumbis, esses mortos-vivos podem ser criados a partir de vários tipos de criaturas, incluindo monstros. Monstros zumbis podem surgir da prática de necromantes mais experientes ou a partir de cadáveres de monstros derrotados e deixados para trás, tais como aqueles enfrentados por muitos grupos de aventureiros.",
     nd: "5",
@@ -7499,8 +7486,6 @@ export const threats: Threat[] = [
     equipamentos: [],
     tesouro: "Coração ressecado de quimera (CD 20 para extrair, vale T$ 100 para fabricar uma dose de elixir quimérico)."
   },
-  
-  
   //#endregion
 
   //#region Guia de NPCs
@@ -11179,55 +11164,6 @@ export const threats: Threat[] = [
       "pedras x20",
       "poção de curar ferimentos (2d8+2)",
       "poção falsa"
-    ],
-    tesouro: "Padrão."
-  },
-  { id: "Mercador Desonesto",
-    name: "Mercador Desonesto",
-    description: "Um negociante bem-sucedido, talvez até mesmo dono de um bazar ou mestre de caravanas, e completamente salafrário. Grupos recém-chegados de suas aventuras, carregados de ouro para gastar e tesouros para vender, estão entre seus alvos preferidos.",
-    nd: "5",
-    tipo: "Humanoide (tritão)",
-    tema: "Guia de NPCs",
-    tamanho: "Médio",
-    papel: "Especial",
-    origin: "Guia de NPCs",
-    iniciativa: 8,
-    percepcao: 5,
-    defesa: 23,
-    fort: 6,
-    ref: 12,
-    von: 15,
-    resistenciaDano: "evasão",
-    pv: 95,
-    deslocamento: "9m (6q), natação 12m",
-    ataqueCorpoACorpo: "Tridente +15 (1d8+12)",
-    ataqueDistancia: "Azagaia +17 (1d6+12)",
-    habilidades: [
-      "Canção dos Mares (Padrão): Uma vez por cena, o mercador pode lançar Enfeitiçar ou Sono (CD 20).",
-      "Chamar Empregados (Movimento): O mercador invoca 1d4+1 capangas em espaços desocupados em alcance médio. Eles agem a partir da próxima rodada do mercador, têm deslocamento 9m e podem gastar uma ação padrão para causar 1d10+5 pontos de dano de impacto em uma criatura adjacente. Os capangas têm For 2, Des 1, Defesa 13, 1 PV falham automaticamente em qualquer teste oposto ou de resistência. Recarga (1d4 rodadas).",
-      "Língua dos Tolos: O mercador usa Enganação no lugar de Diplomacia para barganha e recebe +5 nesses testes. Se um personagem barganhar com o mercador e perder, o mercador muda o preço a seu favor, como se ele estivesse barganhando (veja Tormenta20, p. 118). O personagem irá acreditar que está fazendo um ótimo negócio, a menos que passe em um teste de Vontade (CD 25).",
-      "Tudo que Você Precisa: O mercador tem qualquer item mundano superior de até T$ 1.000 em seu estoque. Entretanto, para cada item, role 1d6 para determinar sua condição. 1-2: o item é falso e não funciona. 3-4: o item está defeituoso e precisa ser consertado. 5-6: o item funciona normalmente. O comprador precisa passar em um teste de Percepção ou de um Ofício apropriado (CD 25) para notar qualquer problema no item."
-    ],
-    for: "–1",
-    des: "4",
-    con: "0",
-    int: "2",
-    sab: "1",
-    car: "4",
-    pericias: [
-      "Atletismo +8",
-      "Diplomacia +8",
-      "Enganação +13 (+18 para barganha)",
-      "Ladinagem +10",
-      "Intuição +5",
-      "Misticismo +6"
-    ],
-    equipamentos: [
-      "Azagaia x2",
-      "capa esvoaçante",
-      "gazua",
-      "luva de pelica",
-      "tridente"
     ],
     tesouro: "Padrão."
   },
@@ -28590,49 +28526,6 @@ export const threats: Threat[] = [
     equipamentos: [
       "Adaga formidável",
       "Anel de Invisibilidade",
-      "traje da corte"
-    ],
-    tesouro: "Dobro."
-  },
-  { id: "Stridnix",
-    name: "Stridnix",
-    description: "Uma das incontáveis filhas de Sckhar, Stridnix, a Princesa das Chamas, é a favorita do pai. Vive no palácio Shindarallur, cercada de luxos e sob o olhar zeloso do Dragão-Rei. O motivo de tal atenção é que teria sido Stridnix a escolhida para conceber um filho com o cavaleiro Lothar Algherulff, durante as negociações que levaram Sckharshantallas a se unir ao esforço derradeiro contras os puristas na Guerra Artoniana — algo decisivo na resolução do conflito.\nAlém de ser um dos maiores heróis artonianos vivos, Lothar é cercado de rumores. Dizem que é filho bastardo da Rainha-Imperatriz Shivara. Sendo assim, seu sangue misturado à linhagem do Dragão-Rei tornaria Stridnix a mãe não apenas do herdeiro de Sckharshantallas, mas de alguém capaz de clamar o trono do próprio Reinado. Sua importante cria concedeu-lhe o epíteto de “Mãe do Trono”.\nStridnix veste tecidos dignos de uma princesa, com decotes e fendas que revelam seu corpo voluptuoso, e caminha com postura altiva. Sua ascendência é evidente nos chifres dracônicos que brotam de seus cabelos cor de fogo. Mais do que isso, Stridnix é capaz de assumir a forma de um dragão — embora, por ser jovem, ainda não seja muito grande ou poderosa.\nAmbiciosa, intimidadora e quase tão impiedosa quanto o próprio pai na busca de seus objetivos, Stridnix não possui um papel formal na burocracia dracônica, mas ainda assim carrega poder e prestígio na corte, e é respeitada (ou temida) por todos na capital. Contudo, isso não ocorre em todo o reino. A atenção que Stridnix tem recebido de Sckhar lhe valeu a rivalidade de Khirollandra, governante da cidade de Khershandallas. Uma de suas irmãs mais velhas, a Princesa das Cinzas está disposta a tudo para que a caçula não tome o que lhe é de direito.",
-    nd: "7",
-    tipo: "Monstro (kallyanach)",
-    tema: "Duelo de Dragões",
-    tamanho: "Média",
-    papel: "Solo",
-    origin: "Duelo de Dragões",
-    iniciativa: 7,
-    percepcao: 9,
-    defesa: 27,
-    fort: 18,
-    ref: 7,
-    von: 16,
-    resistenciaDano: "faro, visão no escuro, imunidade a atordoamento, cansaço, fogo, metamorfose e paralisia, redução de dano 5, resistência a magia +2",
-    pv: 330,
-    deslocamento: "9m (6q)",
-    ataqueCorpoACorpo: "Adaga x2 +24 (2d4+10, 19)",
-    habilidades: [
-      "Forma Dracônica (Movimento): Stridnix se transforma em um dragão do fogo. Nessa forma, suas estatísticas mudam para Defesa 35; deslocamento 12m (8q), voo 18m (12q); corpo a corpo: mordida +27 (2d6+16, 19) e duas garras +27 (1d8+16, 19); For 7. Além disso, ela recebe a habilidade a seguir.",
-      "Sopro (Padrão): Todas as criaturas em um cone de 9m sofrem 6d12+6 pontos de dano de fogo e ficam em chamas (Ref CD 26 reduz à metade e evita a condição). Recarga (movimento).",
-      "Controle de Forma: Stridnix pode voltar à forma kallyanach com uma ação de movimento. Contudo, ela ainda não controla totalmente sua transformação. Se rolar 1 natural em qualquer teste enquanto estiver na forma dracônica, ela reverte à forma kallyanach no final do turno e não pode se transformar novamente na mesma cena."
-    ],
-    for: "2",
-    des: "1",
-    con: "4",
-    int: "5",
-    sab: "2",
-    car: "6",
-    pericias: [
-      "Atuação +12",
-      "Diplomacia +12",
-      "Guerra +10",
-      "Intimidação +12",
-      "Nobreza +10"
-    ],
-    equipamentos: [
-      "Adaga formidável",
       "traje da corte"
     ],
     tesouro: "Dobro."
