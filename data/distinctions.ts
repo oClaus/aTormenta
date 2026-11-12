@@ -1,6 +1,5 @@
 import { Distinction } from "@/types/distinction";
-//#region Tormenta20 - Jogo do Ano
-//#endregion
+
 export const distinctions: Distinction[] = [
 
   //#region Duelo de Dragões
@@ -256,10 +255,37 @@ export const distinctions: Distinction[] = [
     },
   ],
   },
-
-
-  
-  
+  // Dragão Brasil - 232
+  { id: "Andarilho do Ocaso",
+    name: "Andarilho do Ocaso",
+    origin: "Dragão Brasil - 232",
+    image: "/distincoes/AndarilhodoOcaso.png",
+    introduction: `Nem todos os licantropos são iguais. Alguns são pouco mais que vítimas da maldição, sucumbindo ao chamado da violência sempre que ela se manifesta. Outros lutam contra seu destino selvagem, buscando alguma forma de conseguir uma fração de controle sobre sua fera interior. E há aqueles que abraçam a licantropia como uma dádiva sagrada, entregando sua alma e seu corpo à fé em Tenebra. Entre estes, estão os membros da ordem secreta dos Andarilhos do Ocaso, licantropos devotos que empregam seus poderes para proteger todos os aspectos dos domínios da Mãe Noite.\nSeguidores fervorosos de Tenebra, os andarilhos do ocaso adquirem poderes acima e além daqueles possuídos por outros licantropos, embora precisem se dedicar para provar sua devoção à Tenebra. São poucos, e muitas vezes precisam manter sua identidade em segredo, seja pela natureza de uma missão em especial, seja pelo temor que sua condição como licantropos pode despertar nas outras pessoas. Mesmo assim, encontram na força de sua fé a convicção necessária para dominar a fera que habita seu interior.`,
+    admission: `Um andarilho do ocaso deve ser um licantropo e provar sua devoção à Deusa das Trevas acima de qualquer suspeita, dentro de seus rigorosos ditames. Isso significa se submeter a um ritual, criado pela clériga Agnes Lemain, que só é realizado no Templo de Tenebra em Kriegger, uma cidade no extremo sul de Ahlen.\nO candidato deve se entregar à selvageria de sua transformação por uma noite, permitindo que a escuridão de Tenebra o consuma. Depois disso, precisa se manter em um lugar intocado por qualquer forma de luz, incluindo a da lua, do fogo ou das estrelas, por cinco noites — uma para cada ponta da estrela da Mãe Noite. Ao completar esse ritual e emergir de seu esconderijo para o luar, o candidato será abordado por um licantropo enviado pela Deusa das Trevas para testar sua convicção. Na maior parte dos casos, o licantropo ataca o candidato. Qualquer que seja a resolução, caso sobreviva ao encontro, o candidato será visitado por Tenebra em sonho e se tornará um andarilho do ocaso.`,
+    mark: `**Transformação Indolor**\nPara um andarilho do ocaso, é mais fácil acessar a bênção de Tenebra.\nO custo para assumir sua forma híbrida ou de fera diminui em –1 PM.`,
+    powers: [
+      {
+        name: "Licantropo Verdadeiro",
+        description: `Andarilhos do ocaso dominam com maestria a bênção de Tenebra em todas as suas formas.\nEm sua forma híbrida ou de fera, você recebe +1 em testes de ataque, Percepção e Sobrevivência e na Defesa. Estes bônus aumentam em +1 para cada outros dois poderes da distinção que você possui.\nPré-requisitos: Controlar Licantropia, treinado em Percepção e Sobrevivência.`,
+      },
+      {
+        name: "Caçador Noturno",
+        description: `Quando um andarilho do ocaso começa sua caçada, nada pode detê-lo.\nVocê recebe o poder Marca da Presa (Tormenta20, p. 50) como um caçador de nível igual ao seu total de poderes da distinção x4. Se já tiver esse poder, seu custo diminui em –1 PM (essa diminuição não afeta suas habilidades baseadas no total de PM gastos em Marca da Presa).\nPré-requisito: Licantropo Verdadeiro.`,
+      },
+      {
+        name: "Noite Imortal",
+        description: `Não importa quantas vezes o sol surja extinguindo a noite, ela sempre retornará. O mesmo vale para os maiores entre os andarilhos do ocaso.\nQuando assume sua forma híbrida ou de fera, você pode gastar 2 PM para receber uma quantidade de pontos de vida temporários igual ao seu total de poderes da distinção x10.\nPré-requisitos: Licantropo Verdadeiro, outro poder da distinção.`,
+      },
+      {
+        name: "Presas de Sombras",
+        description: `As garras de um andarilho do ocaso deixam uma trilha de escuridão por onde passam, sugando a luz do luar.\nQuando assume sua forma híbrida ou de fera, você pode escolher cobrir qualquer quantidade de suas armas naturais com sombras mágicas. Isso custa 1 PM por arma e faz com que ela cause +1d6 pontos de dano de trevas até o fim da cena. Esse dado de dano de trevas aumenta em um passo para cada dois outros poderes da distinção que você possui.\nPré-requisito: Caçador Noturno.`,
+      },
+      {
+        name: "Sentidos do Predador",
+        description: `Nem o mais suave ruído ou o mais fugaz vislumbre escapa dos sentidos aguçados de um andarilho do ocaso.\nQuando assume sua forma híbrida ou de fera, você pode gastar 2 PM para receber Percepção às Cegas (alcance médio) até o final da cena.\nPré-requisitos: dois outros poderes da distinção.`,
+      }
+    ]
+  },
   //#endregion
 
 
@@ -2236,44 +2262,5 @@ Os materiais especiais que podem ser empregados em ornitópteros, bem como seu c
   ],
   },
   
-  { id: "Lobo Lunar",
-  name: "Lobo Lunar",
-  origin: "Dragão Brasil",
-  image: "/distincoes/LoboLunar.png",
-  introduction: `Entre as divindades maiores, há as que se relacionam mais com o mundo dos mortais e aquelas que, por um motivo ou outro, se mantêm mais distantes.\nA influência divina de Azgher e Tenebra figura entre as mais flagrantes. Todo artoniano pode ver o sol ardente nos céus e sentir a escuridão quando ele se vai. Azgher, severo, concede dádivas maiores apenas a fiéis fervorosos e leais, exigindo um tributo de acordo. Os fiéis enxergam isso como generosidade — afinal, luz e calor já estão disponíveis a todos, mesmo aqueles que não prestam as devidas homenagens à sua divindade. Tenebra escolhe uma abordagem diferente.\nA escuridão de Tenebra por si só acolhe contra o calor e permite esconder segredos, mas a Mãe Noite não cessa em distribuir presentes para seus fiéis. Sedutores, esses presentes podem fazer com que até um devoto do inimigo se converta à fé de Tenebra. Enquanto os demônios da pólvora de Sombria oferecem o poder da destruição, existe outra dádiva de Tenebra mais antiga e até mais temida em Arton. Trata-se da teriantropia, a maldição que faz humanoides se transformarem em animais sob o olhar da deusa — a lua cheia.\nDurante esse estado, o teriantropo é acometido por fúria e fome incontroláveis, avançando sobre aqueles que encontra em seu caminho. Alguns sofrem ataques e crueldade indizíveis, enquanto outros acabam sendo devorados. Os sobreviventes sequer podem se considerar afortunados, já que a mordida de um desses seres amaldiçoados dissemina sua condição. Muitas vezes, ataques de monstros em locais improváveis e assassinatos inexplicáveis são resultado da ação dessas criaturas. Como nem o próprio teriantropo tem noção completa de seus atos durante a transformação, muitas vezes é difícil encontrar o verdadeiro culpado.\nTodos os teriantropos são humanoides, se transformando sob certas condições. Em geral, Tenebra os abençoa (ou amaldiçoa) com três formas: humanoide, animal e híbrida. A forma híbrida é a mais poderosa, combinando as melhores características físicas das outras duas e amplificando-as. Nessa forma, o teriantropo é capaz de falar e manipular objetos, mas torna-se coberto de pelos ou escamas, com um focinho animalesco e garras afiadas.\nEm Khubar, há histórias assustadoras de homens-selako sanguinários, muitas resultantes de conflitos com elfos do mar. Na Grande Savana, contos arrepiantes surgem à beira dos eijotós sobre homens-guepardo atacando viajantes incautos. Até mesmo em grandes cidades como Valkaria podem ser encontrados bandos de homens-rato ardilosos. Porém, os teriantropos mais comuns, os mais queridos por Tenebra, são os que se transformam em lobos: os licantropos.\n\n### Lobo Lunar\nLicantropos são vítimas de uma maldição, perdendo completamente seu controle e se entregando à sede de sangue. São muito amados por Tenebra, mas poucos entre eles conseguem exercer a própria vontade. Alguns devotos conseguiram desenvolver uma forma de controlar essa transformação, transformando a maldição em bênção. São os lobos lunares; enquanto Tenebra ama os licantropos acima dos teriantropos, ama os lobos lunares acima dos demais licantropos.\nDevotos fervorosos de Tenebra, os lobos lunares adquirem poderes acima e além daqueles possuídos por outros licantropos, embora precisem se dedicar para provar sua devoção à Mãe Noite. São poucos, solitários e competitivos entre si, por vezes clamando florestas ou cavernas escuras como seu território, sendo especialmente avessos a invasões por outros lobos lunares. Quanto aos lobos e lobisomens, porém, são encarados pelos lobos lunares como servos em potencial, com alcateias inteiras sendo sobrepujadas e tomadas como parte do séquito de lunares mais ambiciosos.`,
-  admission: `Um lobo lunar deve ser um licantropo e provar sua devoção à Deusa das Trevas acima de qualquer suspeita, dentro de seus rigorosos ditames. Embora existam várias formas a partir do qual isso pode acontecer, um ritual em específico foi imortalizado em canção pelo bardo Hars Yammet.\nO candidato deve se entregar à selvageria de sua transformação por uma noite, permitindo que a escuridão de Tenebra o consuma. Depois disso, precisa se manter em um lugar intocado por qualquer forma de luz, incluindo a da lua, do fogo ou das estrelas, por cinco noites — uma para cada ponta da estrela da Mãe Noite. Ao completar esse ritual e emergir de seu esconderijo para o luar, o candidato será abordado por um lobisomem enviado pela Deusa das Trevas para testar sua convicção. Na maior parte dos casos, o lobisomem ataca o candidato. Qualquer que seja a resolução, caso sobreviva ao encontro, o candidato será visitado por Tenebra em sonho e se tornará um lobo lunar.`,
-  mark: `Os lobos lunares dominam com maestria a bênção de Tenebra. Podem se transformar a qualquer momento, libertando os horrores da noite contra seus inimigos. Ambas as formas são ferozes e sua arma natural é uma mordida. Você pode se transformar em lobo ou em lobisomem. Isso é equivalente ao poder Forma Selvagem do druida. Ambas as formas são ferozes e concedem uma arma natural de mordida. Na forma de lobisomem você pode falar, usar magias e empunhar itens, diferente do normal para Forma Selvagem. Além disso, você recebe +2 nos testes de ataque, na Defesa e em Percepção. Esse bônus aumenta em +1 para cada dois outros poderes de lobo lunar que você possuir. \nPré-requisitos: devoto de Tenebra, Sentidos Aguçados, treinado em Percepção e Sobrevivência.`,
-  powers: [
-    {
-      name: "Caçador Noturno",
-      description: `Quando um lobo lunar começa sua caçada, nada pode detê-lo. Quando faz testes de ataque ou testes de Percepção contra alvos de sua Marca da Presa, você pode gastar 1 PM para rolar novamente um teste recém realizado (apenas uma vez por teste). Para cada dois outros poderes de lobo lunar que você possuir, você recebe +1 em rolagens de dano com suas armas naturais contra alvos de sua Marca da Presa. \nPré-requisitos: Marca da Presa, Licantropo Verdadeiro.`,
-    },
-    {
-      name: "Garras Lunares",
-      description: `As garras de um lobo lunar deixam uma trilha de escuridão por onde passam, sugando a luz do luar. Você recebe uma arma natural de garras (1d6) na forma de lobisomem. Além disso, uma vez por rodada, quando usa a ação agredir para atacar com suas garras, pode gastar 1 PM para fazer um ataque corpo a corpo extra com mordida. Finalmente, pode gastar 1 PM para fazer suas garras causarem +1d6 de dano de trevas até o fim da cena. Seu dado de dano de trevas aumenta em um passo para cada dois outros poderes de lobo lunar que você possuir. \nPré-requisitos: Carícia Sombria, Licantropo Verdadeiro.`,
-    },
-    {
-      name: "Licantropo Verdadeiro",
-      description: `Os lobos lunares dominam com maestria a bênção de Tenebra. Podem se transformar a qualquer momento, libertando os horrores da noite contra seus inimigos. Ambas as formas são ferozes e sua arma natural é uma mordida. Você pode se transformar em lobo ou em lobisomem. Isso é equivalente ao poder Forma Selvagem do druida. Ambas as formas são ferozes e concedem uma arma natural de mordida. Na forma de lobisomem você pode falar, usar magias e empunhar itens, diferente do normal para Forma Selvagem. Além disso, você recebe +2 nos testes de ataque, na Defesa e em Percepção. Esse bônus aumenta em +1 para cada dois outros poderes de lobo lunar que você possuir. \nPré-requisitos: devoto de Tenebra, Sentidos Aguçados, treinado em Percepção e Sobrevivência.`,
-    },
-    {
-      name: "Noite Imortal",
-      description: `Não importa quantas vezes o sol surja extinguindo a noite, ela sempre retornará. O mesmo vale para os maiores entre os lobos lunares. Uma vez por rodada, você pode gastar 1 PM para curar 10 PV. Para cada dois outros poderes de lobo lunar, você pode gastar +1 PM para aumentar essa cura em 5 PV. \nPré-requisito: outro poder de lobo lunar.`,
-    },
-    {
-      name: "Sentidos do Predador",
-      description: `Nem o mais suave ruído ou o mais fugaz vislumbre escapa dos sentidos aguçados de um lobo lunar. Você pode gastar 2 PM para receber percepção às cegas (alcance curto) até o fim da cena. Para cada dois outros poderes de lobo lunar, você pode gastar +1 PM para aumentar o alcance em uma categoria (de curto para médio, e de médio para longo). \nPré-requisito: outro poder de lobo lunar.`,
-    },
-    {
-      name: "Toque Lunar",
-      description: `A noite é traiçoeira. Quando uma presa acha que já sentiu o pior que um lobo lunar tem a oferecer, um golpe cruel abre espaço para o poder mágico sombrio. Você aprende e pode lançar Toque Vampírico. Quando obtém um acerto crítico com suas garras, você pode lançar Toque Vampírico como uma ação livre, sem nenhum aprimoramento. As vítimas sofrem um redutor de –1 nos testes de resistência contra essa magia para cada dois outros poderes de lobo lunar que você possuir. \nPré-requisitos: Garras Lunares.`,
-    },
-    {
-      name: "UIVO ASSUSTADOR",
-      description: `Quando um lobo lunar joga a cabeça para trás e uiva para a lua, mesmo o mais corajoso dos mortais sente um arrepio de medo percorrer sua espinha. Você aprende e pode lançar Amedrontar (atributo-chave Sabedoria). Você pode aplicar aprimoramentos a essa magia como se fosse um druida do seu nível de personagem. As vítimas sofrem um redutor de –1 nos testes de resistência contra essa magia para cada dois outros poderes de lobo lunar que você possuir. \nPré-requisitos: Licantropo Verdadeiro.`,
-    },
-  ],
-  extras: `### Lobos e a lua\nHá uma crença geral em Arton de que os lobos possuem uma relação íntima com Tenebra, comprovada na visão frequente de lobos uivando para a lua.\nOs devotos da Deusa da Natureza, Allihanna, rejeitam essa hipótese veementemente. Embora concordem sobre o impacto fascinante do uivo de um lobo durante uma noite enluarada: afirmam se tratar apenas de uma forma de comunicação, comum a muitos outros animais. A imagem clássica do lobo com o pescoço erguido para o alto e um uivo explodindo da garganta representaria uma forma de expandir o alcance dessa vocalização, transmitindo informação para membros distantes da alcateia. Animais inteligentes e sociais, os lobos reproduzem os sons uns dos outros, aumentando o alcance dessa comunicação ou apenas demonstrando solidariedade. Os lobos solitários uivam mais alto e com mais frequência, visando reencontrar os seus.\nO culto de Tenebra, por sua vez, tem uma história para explicar essa conexão. Quando o mundo era jovem, a deusa foi acometida por um capricho. Desceu do céu estrelado em um corpo mortal, rodopiando lentamente pelos céus enquanto seus véus escuros se misturavam com o firmamento noturno. Viu a maravilha da vida acostumada à escuridão na forma de morcegos se orientando por sons, aranhas tecendo teias para aprisionar suas presas e predadores caminhando suavemente entre as sombras para espreitar sua caça.\nPerdida em sua própria admiração, Tenebra deixou seus véus se enroscarem nos ramos de uma árvore e ficou presa. Antes da Deusa das Trevas perder a paciência e invocar seu poder divino para se libertar, um lobo se aproximou, mastigou os ramos e libertou a Mãe Noite. Surpresa com esse ato vindo de um predador, Tenebra se aproximou do lobo e o tomou como guia, perguntando sobre o mundo dos mortais. O animal era incapaz de falar, mas isso configurava um obstáculo pequeno para a deusa — e a dedicação do lobo garantiu à divindade um entendimento maior da criação e dos mortais. Desde então, a Deusa da Noite se afeiçoou aos lobos, criando a licantropia para compartilhar essa forma com os humanos.\n\n### Licantropia\nAinda que seja considerada uma dádiva entre certos devotos de Tenebra, a licantropia é uma doença e também uma maldição.\nUm personagem que contrai licantropia por mordida de lobisomem (ou porque Tenebra simplesmente desejou assim) não apresenta nenhum sintoma até a primeira noite de lua cheia. Nessa ocasião, ele então se transforma e parte em uma caçada selvagem, matando tantas vítimas quanto puder, dando preferência a seres inteligentes. Ao amanhecer, retorna à forma normal, sem lembrança do que fez.\nUma vítima de licantropia que esteja ciente de sua condição pode realizar um teste de Vontade (CD 30). Isso não evita a transformação, nem concede qualquer forma de controle, mas permite se lembrar de suas ações no dia seguinte. Um devoto de Tenebra recebe +5 nesse teste.\nA licantropia pode ser curada com a magia Purificação (+7 PM, requer 3º círculo).`,
-},
 
 ];

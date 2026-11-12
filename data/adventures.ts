@@ -9291,5 +9291,307 @@ export const adventures: Adventure[] = [
     }
   ]
   },
+  { id: "Monstros e Homens",
+    name: "Monstros e Homens",
+    theme: "Combate contra Monstros e Puristas",
+    image: "/aventuras/monstros-e-homens.png",
+    summary: "Uma pacata vila é atacada por feras assustadas vindas da floresta. Investigando o incidente, os aventureiros descobrem uma insólita aliança entre soldados puristas e um xamã finntroll dedicada a Megalokk, que utilizam monstros para aterrorizar a região.",
+    sections: [
+      {
+        type: "text",
+        content: "Os puristas, além de preconceituosos, também são hipócritas. Mesmo odiando não humanos, estão dispostos a aceitar o apoio dos finntroll e de artefatos roubados de outros povos. São capazes das piores atrocidades, matando sem piedade qualquer um disposto a atrapalhar seus planos."
+      },
+      {
+        type: "text",
+        content: "A sombria cultura dos finntroll assume sua forma mais bestial no culto de Megalokk. Muitas vezes, seus xamãs invocam feras para espalhar sofrimento pelo mundo subterrâneo. Sem qualquer remorso, deleitam-se ao ver pessoas sendo devoradas, afinal a selvageria é o estado natural das bestas."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "RESUMO DA AVENTURA"
+      },
+      {
+        type: "text",
+        content: "Monstros e Homens é uma breve jornada, uma aventura curta pensada para uma sessão única, mas que pode ser inserida em uma campanha maior. É ideal para um grupo composto por quatro personagens de 3º nível em Tormenta20."
+      },
+      {
+        type: "text",
+        content: "Monstros surgem repentinamente, aterrorizando uma pequena vila. Os aventureiros enfrentam algumas das ameaças e as outras feras fogem para a mata. As pessoas comentam sobre outros ataques e pedem que os heróis descubram o que está perturbando as criaturas."
+      },
+      {
+        type: "text",
+        content: "Na floresta, eles devem procurar sinais do que está acontecendo. O grupo encontra monstros, perigos naturais e, estranhamente, recrutas puristas. A investigação leva a uma clareira divina, onde um finntroll xamã e um ginete purista discutem. Ao perceberem os personagens, um combate se inicia."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "CENA 1: MONSTROS À SOLTA"
+      },
+      {
+        type: "text",
+        content: "A pequena cidade está mais movimentada do que de costume. As pessoas procuram estalagens, famílias dormem em carroças e mesmo o templo do Panteão está ocupado por gente. O motivo, entretanto, não envolve nenhum festival ou algo do tipo."
+      },
+      {
+        type: "text",
+        content: "Os moradores parecem bastante assustados. Se algum dos personagens os questionar, um elfo camponês de olhos arregalados responde “Monstros! A gente estava plantando e, de repente, apareceu uma nuvem de bichos mordendo as vacas. Tipo uns insetão desse tamanho.” E gesticula com as mãos para formar quase um palmo."
+      },
+      {
+        type: "text",
+        content: "Cada uma das famílias de fazendeiros abrigada na cidadezinha descreve um tipo de monstro diferente. Uma jura que seus cavalos foram roubados por grifos. Outra diz que um bicho estranho, parte ave, parte urso, os atacou. Um teste de INTUIÇÃO ou INVESTIGAÇÃO (CD 15) faz perceber que os refugiados são, na maioria, não humanos."
+      },
+      {
+        type: "text",
+        content: "Em algum momento da tarde, começa uma confusão. Criaturas que parecem insetos enormes, com pelos, perseguem pessoas. Um glop imenso engole uma carroça e seus ocupantes escapam por pouco. Vocês começam a se mover para tentar ajudar, mas outra criatura se interpõe. A cabeça lembra uma coruja imensa, mas o corpanzil é similar ao de um urso. A besta solta um urro e avança em sua direção."
+      },
+      {
+        type: "text",
+        content: "CRIATURAS. Urso-coruja (Tormenta20, p. 293)."
+      },
+      {
+        type: "text",
+        content: "O urso-coruja é um monstro mais forte que o grupo, mas, se for reduzido para metade de seus PV, balança a cabeça, confuso, e foge na direção da mata próxima. As outras feras também são espantadas, mas muitos dos cidadãos estão seriamente feridos. A sensação de pavor com a perspectiva de mais um ataque a qualquer momento é geral."
+      },
+      {
+        type: "text",
+        content: "A sacerdotisa local de Tanna-Toh, uma anã de cabelos negros densos chamada Drusa, tenta cuidar dos feridos como pode. Ela cura todos os pontos de vida dos personagens e oferece 4 essências de mana. Quando todos forem estabilizados, Drusa explica que a população sabia da existência dos monstros na mata, mas nunca haviam sido atacados desta forma. Um teste de MISTICISMO ou SOBREVIVÊNCIA (CD 19) revela que o próprio urso-coruja não costuma se aproximar de comunidades."
+      },
+      {
+        type: "text",
+        content: "“Precisamos descobrir o que está causando isso. O quê? Acham que estou motivada apenas por curiosidade? Não é verdade. Este é o dever imposto pela Mãe da Palavra! É uma missão sagrada... elucidar o que está havendo. E evitar que continue, claro.”"
+      },
+      {
+        type: "text",
+        content: "Drusa é um parceiro médico e ajudante (Conhecimento e Religião), ambos de nível iniciante. Caso achem que ela deve ficar para trás e cuidar dos feridos, será necessário um teste de DIPLOMACIA (CD 20) e a promessa de um relato extremamente detalhado dos acontecimentos."
+      },
+      {
+        type: "text",
+        content: "Se procurarem as autoridades, os personagens descobrirão que o burgomestre está lidando com outros problemas, e, até por isso, oferece T$ 50 para cada um se o problema for resolvido."
+      },
+      {
+        type: "text",
+        content: "Assim que terminarem suas preparações, é hora de partir para a floresta."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "CENA 2: ONDE AS FERAS VIVEM"
+      },
+      {
+        type: "text",
+        content: "A floresta está quieta demais. Nenhum animal atravessa o caminho de vocês, e as próprias árvores parecem abrir passagem. Ainda assim, rastrear nesse ambiente é complicado. Diversos vestígios confundem as direções e buscar por algo que esteja atiçando os monstros não é algo simples e claro."
+      },
+      {
+        type: "text",
+        content: "Rastrear as perturbações na floresta é um teste estendido de SOBREVIVÊNCIA (CD 20, 3 SUCESSOS). Após o primeiro teste, acontece a Cena 3, e as Cenas 4, 5 e 6 se intercalam entre os testes seguintes. Se conseguirem os três sucessos sem qualquer falha, pule as Cenas 5 e 6."
+      },
+      {
+        type: "text",
+        content: "Em caso de falha total, os personagens perdem o dia e podem ser atacados por um dos monstros da floresta. Role 1d6, ou escolha entre os seguintes:\n- 1 ou 2 – Nada acontece.\n- 3 – Mamãe glop (NPCs e Criaturas).\n- 4 – 1d4 estirges (NPCs e Criaturas).\n- 5 – Aranha gigante (Tormenta20, p. 287).\n- 6 – O mesmo urso-coruja de antes, ainda ferido pela batalha anterior."
+      },
+      {
+        type: "text",
+        content: "Depois de lidar com a ameaça, deverão recomeçar o teste estendido na manhã seguinte. Evite repetir encontros, substituindo ameaças derrotadas por “Nada acontece”."
+      },
+      {
+        type: "text",
+        content: "Assim que conseguirem os três sucessos (ou quando não houver mais ameaças a serem enfrentadas), vá para a Cena 7."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "CENA 3: PERSEGUIDORES"
+      },
+      {
+        type: "text",
+        content: "Algo corre na mata ao redor de vocês. É quase impossível perceber, como se a própria vegetação estivesse se movendo. Entretanto, não demora muito para que os grunhidos e rosnados dessas feras deixem clara sua aproximação."
+      },
+      {
+        type: "text",
+        content: "CRIATURAS. Perdigueiro troll x2 (NPCs e Criaturas)."
+      },
+      {
+        type: "text",
+        content: "Criados pelos finntroll como parte de seus experimentos, esses cães de caça vegetais às vezes são encontrados soltos na natureza, provavelmente depois de fugirem de seus mestres. Peça um teste de PERCEPÇÃO dos personagens oposto à FURTIVIDADE dos perdigueiros troll (+6). Aqueles que falharem no teste estarão surpreendidos na primeira rodada do combate."
+      },
+      {
+        type: "text",
+        content: "Os perdigueiros troll estão caçando para se alimentar e não vão desistir de suas presas. Apesar de estarem hostis, é possível interromper seus ataques por uma rodada com um teste de ADESTRAMENTO (CD 25). Se os personagens não fizerem nenhuma ação violenta contra os animais e passarem em um segundo teste de Adestramento, as criaturas vão embora."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "CENA 4: CUIDADO ONDE PISA"
+      },
+      {
+        type: "text",
+        content: "Este trecho da floresta tem menos sinais de monstros. Ainda assim, há uma trilha aqui. Os rastros são diferentes dos que foram encontrados antes, pertencentes a criaturas medianas e bípedes, como se pudessem ser meras pessoas fazendo o trajeto. Talvez caçadores da vila? Há algo de estranho aqui."
+      },
+      {
+        type: "text",
+        content: "Após o segundo teste, os personagens chegam nesta área da floresta."
+      },
+      {
+        type: "text",
+        content: "O perigo aqui está escondido: diversas armadilhas foram espalhadas nesta seção da mata. Há um fosso com estacas camuflado (Tormenta20, p. 317) no meio do caminho. Todos os personagens devem fazer um teste de PERCEPÇÃO (CD 20). Aqueles que falharem deverão fazer o teste de Reflexos da armadilha, ou sofrerão os efeitos dela."
+      },
+      {
+        type: "text",
+        content: "Se um dos personagens rolar um 20 natural no teste de Percepção, poderá evitar que um de seus colegas caia na armadilha. Um teste de INVESTIGAÇÃO ou LADINAGEM (CD 20) revela algo preocupante: esta arapuca claramente não é natural. Provavelmente foi colocada aqui para evitar justamente aventureiros enxeridos. Isso é sinal de que estão na direção certa... mesmo que ainda não saibam do quê."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "CENA 5: SINAL DE ALLIHANNA"
+      },
+      {
+        type: "text",
+        content: "Por um instante, as coisas parecem estranhamente... “normais”. Canto de pássaros, pequenos animais silvestres caminhando, a temperatura é mais amena. Ao longe vocês veem um imenso cervo, muito maior que qualquer outro. É possível notar que se trata de uma fêmea, pela ausência de chifres. Não importa o quanto tentem se aproximar, ela sempre estará longe demais."
+      },
+      {
+        type: "text",
+        content: "Um teste de RELIGIÃO (CD 20) revela ser uma manifestação do poder da Deusa da Natureza, Allihanna. Há algo nessa mata que está perturbando o mundo ao seu redor, e ela parece querer ajudar os aventureiros. Devotos da deusa percebem tudo isso sem necessidade de testes."
+      },
+      {
+        type: "text",
+        content: "Se seguirem os sinais, recebem +5 na próxima rolagem do teste estendido de Sobrevivência. Além disso, os personagens encontram uma árvore cheia de frutos extremamente apetitosos. Os aventureiros sentem, de alguma forma, que é seguro comê-las. Um teste de RELIGIÃO ou SOBREVIVÊNCIA (CD 10) confirma o fato e revela que é como se elas estivessem sob efeito de Abençoar Alimentos, fornecendo 5 PV e 1 PM temporários. É possível coletá-las para comer em outro momento."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "CENA 6: ACAMPAMENTO MALIGNO"
+      },
+      {
+        type: "text",
+        content: "Depois de tanto caminhar, vocês avistam algo que não esperavam. Muitos metros à frente, estão quatro barracas. Na lateral delas, costurado de forma rústica, o emblema de um leopardo negro. Os homens ali vestem armaduras negras e portam armas cruéis."
+      },
+      {
+        type: "text",
+        content: "Aqueles treinados em CONHECIMENTO ou GUERRA reconhecem sem necessidade de testes que os homens acampados são recrutas puristas. É possível se aproximar sorrateiramente dos inimigos, com um teste de FURTIVIDADE oposto à sua PERCEPÇÃO (+0). Por um misto de arrogância e ignorância, eles não estão de prontidão e não têm o cuidado de falar baixo."
+      },
+      {
+        type: "text",
+        content: "“O capitão está maluco, só pode!”\n“Ei! Olha só! Isso já é insubordinação!”\n“Ih, puxa-saco, ele nem está aqui. Está de novo lá naquela clareira com aquele esquisitão.”\n“São as ordens, e o finntroll está ajudando no plano.”\n“Ajudando nada! Aquele troço é um lixo não-humano.”"
+      },
+      {
+        type: "text",
+        content: "A conversa continua. Se os personagens quiserem passar pelo acampamento, terão que passar no teste de Furtividade oposto à Percepção dos vilões. Entretanto, os personagens também podem atacá-los, sabendo que, se os puristas não forem derrotados aqui e agora, continuarão espalhando o mal e sofrimento por onde quer que passem."
+      },
+      {
+        type: "text",
+        content: "CRIATURAS. Recruta purista x6 (Tormenta20, p. 294)."
+      },
+      {
+        type: "text",
+        content: "Apesar de serem a ralé do exército purista, esses recrutas combatem com a coragem dos tolos. Lutam até que sejam derrotados, sem recuar. Em seu acampamento, é possível encontrar tesouro de ND 3 (rolado na tabela 8-1: Tesouro por Nível de Desafio, em Tormenta20, p. 328). Parte dele foi roubado nas fazendas da região após as pessoas serem atacadas pelos monstros."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "CENA 7: CLAREIRA PROFANADA"
+      },
+      {
+        type: "text",
+        content: "Finalmente, o rastro chega ao seu ponto de origem. Uma enorme clareira aberta na mata, assim como pedras empilhadas. Claramente, o lugar emana energia divina natural. Mas há algo inquietante. Antes de conseguirem investigar o que é, os personagens veem três figuras."
+      },
+      {
+        type: "text",
+        content: "A primeira é um homem de postura arrogante, vestindo uma armadura negra e portando uma lança. A segunda é alguém recurvado e trajado em farrapos e couro, com a pele assustadoramente pálida, olhos profundos, e a cabeça raspada. A terceira, finalmente, é um troll. Contudo, a criatura está fitando o chão, um fio de baba escorrendo pela bocarra cheia de presas."
+      },
+      {
+        type: "text",
+        content: "Se a sacerdotisa anã estiver com o grupo, ela explica que o pálido é um finntroll. Drusa conta que eles são um povo cruel e opressor do subterrâneo, e constantemente sequestram pessoas para escravizá-las ou usar em experimentos sinistros. Analisando a aparência dele, sugere que é um devoto de Megalokk, o Deus dos Monstros."
+      },
+      {
+        type: "text",
+        content: "O homem de armadura fala, cheio de raiva: “Você me deu certeza de que esses monstros iam desestabilizar a cidade! Minhas ordens estão em atraso por culpa sua!” O finntroll responde com uma voz esganiçada: “Olha como fala comigo, ou te devoro! Precisamos de mais sacrifícios para o Monstro-Pai... Quem sabe não consigo um outro desses?” E aponta para o troll inerte."
+      },
+      {
+        type: "text",
+        content: "CRIATURAS. Ginete de troll purista e xamã finntroll (NPCs e Criaturas)."
+      },
+      {
+        type: "text",
+        content: "Uma aproximação com FURTIVIDADE oposta à PERCEPÇÃO dos dois inimigos é possível; além disso, por eles estarem discutindo os personagens, recebem um bônus de +2 no teste. O troll montaria não parece estar consciente até que o ginete se posicione na sela. Se os personagens conseguirem ser sorrateiros, ambos os inimigos ficarão surpreendidos na primeira rodada do combate."
+      },
+      {
+        type: "text",
+        content: "O ginete, em seu primeiro turno, irá montar o troll, fazendo com que ele reaja, movendo-se em posição para fazer uma investida em seu próximo turno. Já o xamã vai conjurar Perdição contra os personagens, e se posicionará de forma a dar suporte ao purista. Apesar de estarem se apoiando, assim que um deles for derrotado, o outro tentará fugir."
+      },
+      {
+        type: "text",
+        content: "As rochas empilhadas são de diversos tamanhos, e esconder-se atrás delas fornece cobertura leve. Devotos de Allihanna e Megalokk têm o custo de suas habilidades mágicas reduzido em –1 PM."
+      },
+      {
+        type: "text",
+        content: "O troll montaria parece estar catatônico: caso seu ginete seja derrotado, a criatura foge para o meio do mato."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "EPÍLOGO: PLANOS MONSTRUOSOS"
+      },
+      {
+        type: "text",
+        content: "Depois que os vilões forem derrotados, é possível revistar seus corpos. Além de possíveis tesouros, o grupo encontra em um dos bolsos do purista uma carta com ordens para enfraquecer a pequena cidade. O passo seguinte então seria tomá-la e iniciar uma escavação. O porquê disso não é citado na missiva."
+      },
+      {
+        type: "text",
+        content: "Ao chegarem à cidade, as pessoas recebem o grupo com muita alegria. A informação sobre puristas na floresta os deixa preocupados, mas neste momento eles acreditam que os aventureiros serão capazes de ajudar caso outro ataque aconteça."
+      },
+      {
+        type: "text",
+        content: "Se tiver acompanhado o grupo, Drusa insiste em registrar os acontecimentos assim que chega à comunidade. Ela parece perturbada pela colaboração do finntroll, mas está curiosa com a menção a algo enterrado. A anã diz que precisa consultar documentos antigos em busca de pistas."
+      },
+      {
+        type: "text",
+        content: "Sem ainda ter certeza dos próximos passos, os personagens avançam para o 4º nível!"
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "NPCS E CRIATURAS"
+      },
+      {
+        type: "text",
+        content: "MAMÃE GLOP (ND 2)\nMonstro Grande\nINICIATIVA +3, PERCEPÇÃO –3, percepção às cegas\nDEFESA 13, FORT +6, REF +3, VON –3, imunidade a ácido\nPONTOS DE VIDA 48\nDESLOCAMENTO 9m (6q)\nCORPO A CORPO Pancada +6 (1d6+2 mais 1d6 ácido).\nGLOPS FILHINHOS A mamãe glop está sempre acompanhada por 1d4 glops (Tormenta20, p. 286), que a protegem instintivamente. Esses glops (assim como aqueles gerados pela Meiose Glópica) não rendem pontos de experiência ao grupo.\nMEIOSE GLÓPICA (LIVRE) Quando ameaçada, a mamãe pode gerar outros glops para protegê-la. No início de cada turno da mamãe, role um dado. Em um resultado par, um glop surge num espaço adjacente a ela. Ele age normalmente, no turno da mamãe, a partir da próxima rodada.\nFor 2, Des –1, Con 2, Int —, Sab –5, Car –5\nTESOURO Padrão."
+      },
+      {
+        type: "text",
+        content: "ESTIRGE (ND 1)\nMonstro Minúsculo\nINICIATIVA +7, PERCEPÇÃO +2, faro, visão no escuro\nDEFESA 16, FORT +1, REF +10, VON +5\nPONTOS DE VIDA 9\nDESLOCAMENTO voo 12m (8q)\nCORPO A CORPO Probóscide +11 (1 perfuração).\nAGARRAR APRIMORADO (LIVRE) Probóscide (teste +21).\nCHUPAR SANGUE (LIVRE) Quando agarra uma criatura, e no início de cada um de seus turnos enquanto permanecer agarrando, o estirge drena sangue como um efeito metabólico; a vítima perde 3d6 pontos de vida e ele ganha a mesma quantidade de PV temporários. Após drenar 10 pontos de vida ou mais, o estirge se solta e tenta fugir.\nSANGRAR Quando o estirge solta uma criatura de quem estava drenando sangue (por vontade própria ou não), a vítima fica sangrando.\nFor –4, Des 5, Con –1, Int –5, Sab 0, Car –2\nTESOURO Nenhum."
+      },
+      {
+        type: "text",
+        content: "PERDIGUEIRO TROLL (ND 1)\nAnimal Médio\nINICIATIVA +5, PERCEPÇÃO +8, faro, visão na penumbra\nDEFESA 17, FORT +5, REF +9, VON +1\nPONTOS DE VIDA 10\nDESLOCAMENTO 15m (10q)\nCORPO A CORPO Mordida +10 (1d6+5) e tentáculos +10 (1d4+5).\nAGARRAR APRIMORADO (LIVRE) Tentáculos (teste +10).\nDERRUBAR (LIVRE) Mordida (teste +10).\nNATUREZA VEGETAL O perdigueiro é imune a atordoamento e metamorfose, mas é afetado especificamente por efeitos que afetem plantas monstruosas. No caso de magias sem teste de resistência, ele tem direito a um teste de Fortitude (CD da magia) para evitar o efeito.\nFor 5, Des 3, Con 2, Int –4, Sab 1, Car –2\nPERÍCIAS Sobrevivência +8, Furtividade +6.\nTESOURO Nenhum."
+      },
+      {
+        type: "text",
+        content: "XAMÃ FINNTROLL (ND 2)\nMonstro (finntroll) Médio\nINICIATIVA +5, PERCEPÇÃO +6, visão no escuro\nDEFESA 17, FORT +7, REF +2, VON +13, cura acelerada 5/ácido ou fogo\nPONTOS DE VIDA 50\nDESLOCAMENTO 9m (6q)\nCORPO A CORPO Garras x2 +10 (1d6+3).\nPONTOS DE MANA 13\nNATUREZA VEGETAL O xamã finntroll é imune a atordoamento e metamorfose, mas é afetado especificamente por efeitos que afetem plantas monstruosas. No caso de magias sem teste de resistência, ele tem direito a um teste de Fortitude (CD da magia) para evitar o efeito.\nUrro Divino (Livre, 1 PM) Quando faz um ataque ou lança uma magia, o xamã finntroll soma sua Constituição às rolagens de dano desse ataque ou magia.\nMAGIAS Como um clérigo de Megalokk de 2º nível (CD 18).\n- Amedrontar (Padrão, 1 PM) Um animal ou humanoide em alcance curto fica apavorado por 1 rodada e depois abalado pelo resto da cena.\n- Curar Ferimentos (Padrão, 2 PM) Uma criatura adjacente cura 3d8+3 PV.\n- Escudo da Fé (Reação, 1 PM) Quando uma criatura em alcance curto sofre um ataque, ela recebe +2 na Defesa até seu próximo turno.\n- Perdição (Padrão, 1 PM) Criaturas escolhidas em alcance curto sofrem –1 em testes de ataque e rolagens de dano até o fim da cena.\nINTOLERÂNCIA A LUZ Quando exposto à luz do sol ou similar, o finntroll fica ofuscado e não consegue usar sua cura acelerada.\nFor –1, Des 2, Con 4, Int 1, Sab 3, Car 0\nPERÍCIAS Adestramento +3, Atletismo +2, Intimidação +3, Religião +6."
+      },
+      {
+        type: "text",
+        content: "GINETE DE TROLL PURISTA (ND 2)\nHumanoide (humano) Médio\nINICIATIVA +4, PERCEPÇÃO +2\nDEFESA 20, FORT +13, REF +7, VON +2\nPONTOS DE VIDA 70\nDESLOCAMENTO 6m (4q)\nCORPO A CORPO Lança montada +12 (2d8+8).\nCORCEL TROLL O ginete de troll purista cavalga um troll treinado, um parceiro montaria Grande. Enquanto estiver montado, seu deslocamento se torna 12m, ele recebe uma ação de movimento extra (apenas para se deslocar) e os seguintes ataques (em adição à sua lança).\n- Corpo a Corpo. Duas garras +12 (1d6+3).\nINVESTIDA ATROZ (COMPLETA) O ginete faz uma investida e ataca com sua lança montada e todos os ataques da sua montaria. Todos os ataques recebem o bônus de +2 da investida, mas devem ser feitos contra a mesma criatura.\nÓDIO PURO O ginete recebe +5 em testes de Vontade quando está seguindo ordens de um superior e +2 em rolagens de dano contra humanoides não humanos.\nFor 3, Des 1, Con 3, Int 0, Sab –1, Car 0\nPERÍCIAS Cavalgar +4, Guerra +3, Intimidação +3.\nEQUIPAMENTO Escudo pesado, lança, meia armadura. TESOURO Padrão."
+      }
+    ]
+  },
   
 ];

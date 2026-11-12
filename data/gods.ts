@@ -1822,6 +1822,26 @@ obligationsRestrictions: "Devotos de Dunsark não podem recusar aventuras que en
     ],
     obligationsRestrictions: "Por causa de sua personalidade fatalista e mau humor constante, os devotos de Desespero estão sempre sob efeito da condição lento. Essa condição não pode ser removida por meios mundanos ou mágicos, a menos que o devoto abandone sua fé. Além disso, uma vez por sessão, precisam causar algum tipo de condição negativa a outra criatura ou também ficam alquebrados durante a sessão seguinte."
   },
+  {
+    id: "Eucharion",
+    name: "Eucharion",
+    subtitle: "Deus Menor da Gratidão",
+    rank: "Conceito vivo, status divino 4 (1 se for ressuscitado)",
+    image: [
+      "/deuses/eucharion.png"
+    ],
+    status: "menor",
+    history: "Neste mundo de populações salvas por heróis abnegados, a ascensão de um Deus da Gratidão seria inevitável. Eucharion surgiu porque muitos recebem mais do que podem pagar — doenças afastadas, vidas preservadas, ruínas evitadas, perdões concedidos. Como todo conceito vivo, sua “existência” é uma presença sentida, não um corpo: calor no peito, luz na visão, a certeza de que algo foi dado.\nAinda assim, em Santa Graça, Eucharion sempre preferiu sinais dramáticos: um coração de luz, pulsante e flutuante, que paira sobre o altar quando votos são feitos. Seu culto é amplo e popular: peregrinos, famílias, mercadores, curandeiros, sobreviventes de tragédias. Eucharion não pede simples “fé”; pede fechamento. Paga-se uma graça, encerra-se um ciclo.\nMas a gratidão pode adoecer: quando não encontra encerramento, apodrece em culpa — matéria-prima perfeita para a deturpação dourada.\nQuando o Fullgor o alcançou, a gratidão deixou de ser virtude e tornou-se dívida inclemente. Eucharion passou a exigir retribuição absoluta, confundindo amor com posse, devoção com submissão. Seus milagres cresceram em poder, mas também em preço, e seus devotos passaram a punir qualquer sinal de “ingratidão”.\nComo luxo raríssimo entre deuses menores, Eucharion teve uma única campeã: Lysenne. A ligação entre ambos era absoluta — e, como tantas vezes acontece, amorosa. Esse amor também acabaria distorcido e arruinado pelo Fullgor.",
+    beliefs: "Retribuir graças recebidas. Honrar promessas. Pagar dívidas morais. Transformar culpa em gesto concreto. Encerrar ciclos.",
+    sacredSymbol: "Um coração dourado irradiando luz.",
+    channelEnergy: "Positiva.",
+    preferredWeapon: "Mangual.",
+    devotees: "Quaisquer.",
+    grantedPowers: [
+      "Dívida Sagrada"
+    ],
+    obligationsRestrictions: "Nunca recusar auxílio a quem o ajudou no passado. Sempre oferecer retribuição por um favor recebido. Não tomar para si um presente “sem resposta” (mesmo que simbólica). Manter e cumprir promessas registradas diante do símbolo sagrado."
+  },
 
   //#endregion
   

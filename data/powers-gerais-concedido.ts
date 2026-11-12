@@ -1,7 +1,18 @@
 import { Power } from "@/types/power";
-//#region Tormenta20 - Jogo do Ano
-//#endregion
+
 export const powersGeraisConcedido: Power[] = [
+  //#region Fulgor dos Deuses
+  { id: "Dívida Sagrada (Eucharion)",
+    name: "Dívida Sagrada (Eucharion)",
+    description: "Uma vez por rodada, quando recebe um efeito benéfico, você pode pagar 2 PM para conceder o mesmo efeito a um aliado em alcance curto.",
+    origin: "Fulgor dos Deuses"
+  },
+  //#endregion
+
+
+
+
+
   //#region Jornada Heroica - A Libertação de Valkaria
   { id: "Arquearia de Outrora (Glórienn)",
     name: "Arquearia de Outrora (Glórienn)",

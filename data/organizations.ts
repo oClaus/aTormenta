@@ -526,5 +526,46 @@ Zoyrak estão espalhados em pequenas células por oficinas, cortiços e comunida
       description:
         "Favorito entre os Zoyrak, este item segue as mesmas regras da bomba (Tormenta20, p. 180), mas, em vez de causar dano, afeta uma esfera com 6m de raio que fica sob efeito simulado da magia Área Escorregadia até o fim da cena. Criaturas dentro dessa área durante a explosão da bomba também ficam lentas (Reflexos CD Des evita); elas podem gastar uma ação de movimento para fazer um teste de Força (CD Des) para se recuperar da condição. Preparado alquímico, preço T$ 35.",
     },
-  }
+  },
+  { id: "andarilhos-do-ocaso",
+    name: "ANDARILHOS DO OCASO",
+    summary: "Uma pequena organização secreta de licantropos devotos formada dentro da Igreja de Tenebra.",
+    lore: `Ainda que a licantropia seja resultado de uma maldição de Tenebra imposta sobre uma criação de Megalokk, licantropos possuem uma conexão especial com a noite. É sob o manto das trevas que sua fúria desperta e sua transformação ocorre, o que os torna, de certa forma, filhos de Tenebra.
+Assim, foi apenas natural que em um determinado momento alguns licantropos buscassem a proteção da Deusa da Noite, tornando-se devotos. Muitas vezes caçados e odiados por sua condição monstruosa, esses indivíduos encontraram na religião uma forma de controlar sua maldição e se manter distantes daqueles que os consideravam meros monstros irracionais.
+Assim surgiu a ordem dos Andarilhos do Ocaso, criada por Agnes Lemain, uma clériga licantropa raposa natural de Ahlen. Uma estudiosa da maldição da licantropia e da relação de Tenebra com esses seres, ela desenvolveu formas de empregar o poder divino da Deusa da Noite para fortalecer as habilidades de licantropos devotos. Valendo-se de sua posição no clero, recrutou outros licantropos e compartilhou com eles suas descobertas e técnicas.
+A ordem dos Andarilhos do Ocaso é uma pequena organização secreta, formada dentro da Igreja de Tenebra. Sua sede fica no templo da Deusa da Noite em Kriegerr, de onde Agnes coordena os esforços e as missões de seus membros. A atuação e a própria existência da ordem são segredos bem guardados, pois mesmo entre o clero de Tenebra existem aqueles que se opõem aos licantropos. Acredita-se que a própria Agnes responda diretamente aos altos sacerdotes da Igreja, o que dá a ela uma invejável posição de poder político.`,
+    membros: `Os membros dos Andarilhos do Ocaso são todos licantropos devotos de Tenebra. Eles combinam fé e as técnicas desenvolvidas por Agnes para defender os ideais de sua religião. Alguns são clérigos, como a própria fundadora, e atuam de dentro da igreja, enquanto outros são aventureiros independentes que obedecem à própria ordem sem laços com o clero.`,
+    comoUsar: `Suas missões geralmente envolvem proteger outras criaturas da noite, promover o equilíbrio entre o mundo dos vivos e dos mortos e auxiliar outros licantropos que buscam controlar sua fúria de alguma forma.`,
+    mecanica: {
+      kind: "",
+      name: "",
+      description: ""
+    }
+  },
+  { id: "filhos-da-furia",
+    name: "FILHOS DA FÚRIA",
+    summary: "Uma crença compartilhada por licantropos devotos de Megalokk que buscam libertar toda a fúria e selvageria de sua maldição.",
+    lore: `Se os Andarilhos do Ocaso surgiram como uma forma de controlar a licantropia, os Filhos da Fúria buscam o oposto: libertar toda a fúria e selvageria que a licantropia oferece. Fiéis aos dogmas de Megalokk, eles acreditam que poder da licantropia é uma dádiva primal ofertada pelo Deus dos Monstros e que foi corrompida por Tenebra. Para expurgar essa corrupção nefasta, é necessário empregar violência, selvageria e fúria incontroláveis.
+Os Filhos da Fúria não são uma organização formal, mas uma crença compartilhada por licantropos devotos de Megalokk. Eles empregam rituais xamânicos, muitas vezes conduzidos por clérigos do Deus dos Monstros, para se conectar com sua fera interior e despertar uma fúria primal em seus espíritos. Esses rituais frequentemente reúnem bandos de filhos da fúria que se unem para conduzir caçadas selvagens ou ataques a pequenas comunidades ou outros símbolos do mundo civilizado.`,
+    membros: `Como muitas crias de Megalokk, filhos da fúria podem ser bondosos, malignos ou mesmo indiferentes a noções de moralidade, mas todos serão, sempre, portadores de uma fúria selvagem.`,
+    comoUsar: `Não existe um objetivo unificado entre os Filhos da Fúria, nem um grande plano a ser executado coletivamente. Ainda que muitos rituais reúnam bandos destes licantropos, o caminho trilhado por eles é individual: cada filho da fúria busca sua própria maneira de se conectar com sua fúria interior para fortalecer suas habilidades como licantropo. Para alguns, isso significa se opor à civilização, caçando implacavelmente aqueles que vivem nas cidades, enquanto para outros pode representar viver em meio aos ermos, o mais próximo possível do mundo natural, ou mesmo assumir o papel de guardiões de outras monstruosidades.`,
+    mecanica: {
+      kind: "",
+      name: "",
+      description: ""
+    }
+  },
+  { id: "punho-de-mitral",
+    name: "PUNHO DE MITRAL",
+    summary: "Uma organização formal de experientes caçadores de licantropos com sede ao norte de Gorendill.",
+    lore: `O Punho de Mitral é uma organização de caçadores de licantropos surgida na fronteira oeste de Deheon, próximo às Uivantes. Seus membros fundadores eram habitantes da região que, por muito tempo, foram forçados a lidar com os metamorfos que desciam as montanhas ao norte em busca de vítimas e rebanho. Dos confrontos frequentes, surgiram técnicas de caça e enfrentamento elaboradas. Os bons resultados se tornaram conhecidos, e outras comunidades ameaçadas por licantropos passaram a pedir ajuda aos experientes caçadores. Não demorou para que a fama se espalhasse por outras partes do Reinado.
+Com o tempo, o Punho surgiu como uma organização formal, com sede em um forte ao norte de Gorendill, e seus membros passaram a oferecer seus serviços a qualquer vila ou indivíduo sob a ameaça de licantropos.`,
+    membros: `Hoje, o líder do Punho de Mitral é Tarkan Delantur, um humano deheoni cujos pais estavam entre os primeiros membros da ordem. Caçador habilidoso, ele acredita que a licantropia é uma maldição severa e que os métodos atuais de cura individual são lentos e pouco eficientes. Sob sua liderança, a organização tem promovido um combate rigoroso, e muitas vezes violento, contra todos os tipos de licantropos.`,
+    comoUsar: `Os calabouços da sede da ordem estão repletos de licantropos prisioneiros, empregados como cobaias na busca por aquilo que Tarkan chama de solução final para a maldição.`,
+    mecanica: {
+      kind: "",
+      name: "",
+      description: ""
+    }
+  },
 ];

@@ -1129,5 +1129,163 @@ export const regreiroQAs: RegreiroQA[] = [
     magazineNumber: 231,
   },
   //#endregion
+  //#region DB - 232
+  {
+    id: "DB232-09",
+    question: "> A magia *Escudo da Fé* tem um aprimoramento que muda seu efeito para receber metade do dano causado a um alvo tocado. Como o alvo não é o conjurador, posso usar essa magia em dois alvos diferentes, recebendo metade do dano causado em cada um deles?",
+    answer: "> Saudações parceladas, conselheiro! Sim, o conjurador até pode fazer isso. Só não vai durar muito se fizer…",
+    magazineNumber: 232,
+  },
+  {
+    id: "DB232-10",
+    question: "> Olá, amigos artonianos! Um goblin que adora jogar pedra nos outros me pediu pra fazer algumas perguntas sobre a interação de alguns poderes com armas de arremesso.\n\n1) Armas corpo a corpo que não possuem a categoria natural de arremesso, mas que sejam arremessadas como armas improvisadas seriam consideradas de \"arremesso\" no momento do ataque? Poderes como *Estilo de Arremesso* e *Arremesso Potente* funcionam com essas armas?",
+    answer: "> Saudações no alcance curto, conselheiro! Vamos às suas respostas cinéticas:\n\n1) Não. Armas que não são de arremesso podem ser arremessadas com uma penalidade de –5 no teste de ataque à distância (*Tormenta20*, p. 143), mas não se beneficiam de efeitos para armas de arremesso, como o poder *Estilo de Disparo* (ou seja, ao arremessar uma espada longa você não se beneficia dele).",
+    magazineNumber: 232,
+  },
+  {
+    id: "DB232-11",
+    question: "2) O bardo tem poderes como *Golpe Elemental*, limitados a ataques corpo a corpo. Esses poderes podem ser usados com armas de arremesso caso o bardo tenha o poder *Balada do Atirador* (*Heróis de Arton*)?",
+    answer: "2) Sim. *Golpe Elemental* não tem *Esgrima Mágica* como pré-requisito direto, mas você precisa de *Golpe Mágico*, que por consequência tem *Esgrima Mágica* como pré-requisito. De modo geral, se você precisa ter *Esgrima Mágica* para poder escolher um poder, ele é afetado por *Balada do Pistoleiro*, aplicando-se a todas as armas à distância leves ou de uma mão, sejam de arremesso ou de disparo.",
+    magazineNumber: 232,
+  },
+  {
+    id: "DB232-12",
+    question: "> Ministros, ajudem este grupo que está prestes a entrar em desavenças!\n\n1) Digamos que um aventureiro use *Viagem Planar* para fugir e um vilão tenha preparado *Dissipar Magia* como contramágica para impedi-lo. É possível refletir de volta essa conjuração de *Dissipar Magia*?",
+    answer: "> Saudações conciliadoras, conselheiro! Vamos às suas respostas:\n\n1) Considerando que se trata do encanto refletor, não, pois ao fazer uma contramágica o conjurador não tem o oponente como alvo (sua magia é apenas lançada em reação ao oponente lançar a sua), ao passo que refletor requer que a magia tenha seu usuário como alvo de fato.",
+    magazineNumber: 232,
+  },
+  {
+    id: "DB232-13",
+    question: "2) O usurpador pode usar a magia *Intervenção Divina*? Afinal, a magia é um pedido para sua divindade… coisa que o usurpador não tem! Isso também se aplica a outras magias que deixam isso evidente?",
+    answer: "2) Sim. A habilidade *Poder Capturado* permite que o usurpador conte como um devoto de um deus para efeito de habilidades e itens. Magias são habilidades. Isso quer dizer que o usurpador pode realizar esse efeito que chama a atenção direta de um deus sobre ele. Se o usurpador deve fazer isso é uma resposta que apenas o seu mestre pode responder…",
+    magazineNumber: 232,
+  },
+  {
+    id: "DB232-14",
+    question: "> Caros Supremos Mestres do conhecimento, venho aqui hoje para que vocês possam sanar minha dúvida duelística. O que ocorre quando um cavaleiro que possui o poder *Cavaleiro Bandido* se torna um duelista (variante de bucaneiro, *Heróis de Arton*)? Ele recebe a habilidade *Duelo* ou o poder *Cavaleiro Bandido* o impede?",
+    answer: "> Saudações esgrimísticas, conselheiro! Estude bem seu agrippa: quando o cavaleiro escolhe o poder *Cavaleiro Bandido*, perde a habilidade *Duelo*. Se o recebe depois por outra fonte, porém, a habilidade permanece. Exatamente o tipo de malandragem que se espera de um cavaleiro sem honra metido com pirataria!",
+    magazineNumber: 232,
+  },
+  {
+    id: "DB232-15",
+    question: "> 1) Digamos que eu seja um arcanista e escolha, através de uma complicação, o poder *Alma Livre* (bucaneiro) no primeiro nível. No meu segundo nível eu já posso escolher um poder de bucaneiro (como *Bom de Trago*) ou fico limitado à lista de arcanista?",
+    answer: "> Saudações digestivas, conselheiro! Vamos às suas respostas:\n\n1) Sim, nessas condições você pode escolher *Bom de Trago* no segundo nível. Este tribunal estava há zero súmulas sem responder perguntas sobre *Alma Livre*. Nosso recorde é de quatro súmulas.",
+    magazineNumber: 232,
+  },
+  {
+    id: "DB232-16",
+    question: "2) O poder *Congelar o Inferno* (*Heróis de Arton*) tem como requisito *Coração Duro* e dois poderes da distinção. Eu preciso de quantos poderes da distinção? *Coração Duro* entra na conta?",
+    answer: "2) *Congelar o Inferno* tem como pré-requisito *Coração Duro* e dois outros poderes da distinção. Ou seja, não entra na conta.",
+    magazineNumber: 232,
+  },
+  {
+    id: "DB232-17",
+    question: "3) O campeão do dojo (*Heróis de Arton*) poderia usar seu *Caminho da Mão Armada* em conjunto com *Estilo de Uma Arma*?",
+    answer: "3) O campeão do dojo pode usar *Estilo de Uma Arma* para as armas corpo a corpo escolhidas com o poder *Caminho da Mão Armada*.",
+    magazineNumber: 232,
+  },
+  {
+    id: "DB232-18",
+    question: "4) Como funciona a interação da manopla com o *Caminho da Mão Armada*? Ela aplica seus efeitos à arma de campeão do dojo, permitindo acumular um total de 8 melhorias e 6 encantos? Aplica apenas um dos efeitos?",
+    answer: "4) Encantos da manopla acumulam com os da arma para o campeão do dojo; ela interage com efeitos como ataque desarmado de qualquer forma. A critério do mestre, porém, o limite de 4 melhorias e 3 encantos pode ser mantido.",
+    magazineNumber: 232,
+  },
+  {
+    id: "DB232-19",
+    question: "5) Bônus de itens não acumulam. Então qual é o benefício de aplicar a melhoria poderosa a uma varinha arcana?",
+    answer: "5) Não há benefício.",
+    magazineNumber: 232,
+  },
+  {
+    id: "DB232-20",
+    question: "6) Um dado substituído por *Redirecionar Destino* (*Deuses de Arton*) mantém seus efeitos, como sucesso automático, falha automática ou acerto crítico?",
+    answer: "6) Se você se refere ao resultado que vai ser efetivamente usado, sim. Para todos os critérios, o resultado original é abandonado e o novo valor substituído é usado no lugar. Portanto, se um personagem obtém um 20 natural, mas um devoto de Nimb usa *Redirecionar Destino* para trocar pelo resultado 1 que ele tinha anotado anteriormente, a jogada é resolvida como uma falha crítica.",
+    magazineNumber: 232,
+  },
+  {
+    id: "DB232-21",
+    question: "7) O ingrediente monstruoso de um mestre cozinheiro (*Heróis de Arton*) acumula com o benefício do prato? Por exemplo, macarrão de Yuvalin com carne monstruosa resulta em 10 PV temporários?",
+    answer: "7) Sim. E deve ficar uma delícia!",
+    magazineNumber: 232,
+  },
+  {
+    id: "DB232-22",
+    question: "8) Poderes como *Mestre Cuca* podem ser usados em bebidas?",
+    answer: "8) A maioria dos poderes de *Mestre Cuca* se refere a pratos especiais (o que não inclui bebidas). Dessa forma, há pouco nessa distinção que sirva de fato a quem quer fabricar bebidas (por exemplo, a marca da distinção ainda é útil para isso). *Mise En Place*, no entanto, é útil para qualquer personagem.",
+    magazineNumber: 232,
+  },
+  {
+    id: "DB232-23",
+    question: "9) É possível criar uma granada de *Refúgio* e magias similares, com um efeito que cobre uma área, mas sem ter uma área listada em suas estatísticas?",
+    answer: "9) Sim, a magia só precisa ter um “efeito em área” (*Tormenta20*, p. 333). Repare que *Névoa* está na mesma situação e é uma granada possível listada na página 341.",
+    magazineNumber: 232,
+  },
+  {
+    id: "DB232-24",
+    question: "10) Digamos que um personagem usa *Alma Inabalável* (*Heróis de Arton*) e deixa uma criatura abalada por 3 rodadas. Essa criatura é então alvo de *Amedrontar*, que a deixaria abalada até o final da cena. Como condições de medo se acumulam, a criatura fica apavorada por 3 rodadas ou até o final da cena?",
+    answer: "10) Três rodadas. Quando o efeito de *Alma Inabalável* acaba, a criatura deixa de estar apavorada e fica apenas abalada",
+    magazineNumber: 232,
+  },
+  {
+    id: "DB232-25",
+    question: "> Oi, ó grande tribunal! Um pequeno lutador de pés inflados tem duas dúvidas:\n\n1) Magias que fornecem bônus de encanto, como *Arma Mágica* e *Vestimenta da Fé*, contam para o limite do item?",
+    answer: "> Saudações vultuosas, conselheiro! Vamos às suas encantadoras respostas:\n\n1) Não. Essas magias apenas fazem o item fornecer um bônus mágico ele próprio, o que por esse motivo conta como um bônus de encanto e não de magia (importante para determinar com que esses bônus acumulam: sim com outros efeitos de magia, mas não com outros efeitos de itens).",
+    magazineNumber: 232,
+  },
+  {
+    id: "DB232-26",
+    question: "2) Manobras de combate podem ser usadas em investidas?",
+    answer: "2) Sim. Uma investida inclui um ataque corpo a corpo, e um ataque corpo a corpo pode ser usado para realizar uma manobra.",
+    magazineNumber: 232,
+  },
+  {
+    id: "DB232-27",
+    question: "> Olá, onipresente STR!\n\nGostaria de saber se existem mecânicas para usar alguma perícia para procurar alimentos básicos para um acampamento. Além disso, como é possível obter veneno sem comprá-lo, extraindo-o de uma flor venenosa, por exemplo?",
+    answer: "> Saudações onidirecionais, conselheiro!\n\nSim, existem mecânicas para acampamento como parte da perícia Sobrevivência. Um sucesso no teste permite obter abrigo e alimento para você e seu grupo por um dia. Quanto ao veneno, criaturas venenosas costumam listar em Tesouro a CD para extrair seu veneno, o que exige uma hora de trabalho e um teste de Sobrevivência.",
+    magazineNumber: 232,
+  },
+  {
+    id: "DB232-28",
+    question: "> Olá, meus caros conselheiros da lei e da ordem! Tenho algumas dúvidas a respeito de forma selvagem e metamorfoses (tanto efeitos quanto magia).\n\n1) Na DB 209 é dito que, para o item garra feroz (*Ameaças de Arton*), habilidades como *Forma Selvagem* significam habilidades que transformam o corpo e criam armas naturais temporárias, dando como exemplo a magia *Metamorfose*. As magias *Toque de Megalokk* e *Transformação em Dragão* também se aplicariam?",
+    answer: "> Saudações metamorfísicas, conselheiro! Vamos às suas respostas:\n\n1) Sim.",
+    magazineNumber: 232,
+  },
+  {
+    id: "DB232-29",
+    question: "2) A magia *Metamorfose* tem um aprimoramento que muda seu efeito para transformar o alvo em um animal inofensivo. Se o personagem transformado usar *Forma Selvagem*, pode reverter esse efeito? E se outra criatura usar o efeito básico de *Metamorfose* nele?",
+    answer: "2) Sim.",
+    magazineNumber: 232,
+  },
+  {
+    id: "DB232-30",
+    question: "3) Efeitos de metamorfose incluem *Forma Selvagem*?",
+    answer: "3) Sim.",
+    magazineNumber: 232,
+  },
+  {
+    id: "DB232-31",
+    question: "4) Digamos que uma criatura use *Forma Selvagem* e depois lance a magia *Ossos de Adamante* (*Heróis de Arton*). Sempre que uma criatura sob efeito dessa magia é alvo de um efeito de metamorfose, em vez disso perde PV e fica lenta. Se a criatura chegar a 0 PV, sua forma selvagem permanece? A criatura ficaria imune a petrificação?",
+    answer: "4) Sim e sim. Mas a criatura ainda perde PV, o que pode resultar em morte dependendo de quantos PM foram gastos na *Forma Selvagem*!",
+    magazineNumber: 232,
+  },
+  {
+    id: "DB232-32",
+    question: "> Bom dia, mestres do tribunal! Trago aqui uma dúvida referente a armadilhas. Uma armadilha ocupa um quadrado de 3 metros de lado adjacente a você. É possível criar uma armadilha em uma área ocupada por uma criatura, preparando-a normalmente ou com o poder *Tripla Ameaça* (*Heróis de Arton*)?",
+    answer: "> Saudações astutas, conselheiro! Não é possível criar armadilhas em espaços ocupados sem que o efeito usado especifique isso.",
+    magazineNumber: 232,
+  },
+  {
+    id: "DB232-33",
+    question: "> Com a devida reverência e o compromisso irrestrito com a verdade que minha deusa exige, venho, Pectus Magnus Semper Veridicus — atleta e fundamentalista de Tanna-Toh —, submeter duas indagações de natureza prática e interpretativa, surgidas no decorrer de minha jornada.\n\n1) Durante recente empreitada, surgiu controvérsia acerca da natureza de certos objetos. Pergunto, com a precisão que a verdade demanda: objeto segurado e objeto empunhado são, para todos os efeitos das regras, a mesma coisa? A distinção, embora possa parecer sutil ou até trivial à primeira vista, mostrou-se de suma importância em combate e na aplicação de poderes e manobras. Desejo compreender se a simples ação de segurar um item o equipara, em todos os aspectos, a empunhá-lo, ou se existe diferença formal e mecânica entre os dois estados.",
+    answer: "> Saudações eruditas, conselheiro! Este tribunal aplaude seu comprometimento com as vênias regrísticas. Vamos, então, às suas respostas:\n\n1) Na maior parte das vezes, segurar um item é a mesma coisa que empunhar um item. Porém, existem exceções. Um escudo leve, por exemplo, é um item empunhado que permite segurar um objeto na mesma mão, mas não empunhar uma arma com a mesma.",
+    magazineNumber: 232,
+  },
+  {
+    id: "DB232-34",
+    question: "2) Ainda no campo das manobras de combate, indago: a manobra quebrar aplica-se a qualquer item, inclusive vestimentas e outros objetos não classificáveis como armas, armaduras ou escudos? Em outras palavras: é possível utilizar a manobra quebrar contra uma capa, uma túnica, um manto ou qualquer outra peça de vestuário com os mesmos efeitos e limitações previstos para a destruição de armaduras e elementos de cenário? Ou a manobra possui restrições quanto à natureza do alvo?\n\nAguardo, com a devida atenção e respeito, as esclarecedoras deliberações deste Tribunal, a fim de que a verdade das regras possa ser registrada e difundida com a exatidão que Tanna-Toh exige.\n\nCom estima e honestidade,\nPectus Magnus Semper Veridicus",
+    answer: "2) Pela leitura mais rígida da regra, a manobra quebrar não afeta itens vestidos. No entanto, como sugerido na página 53 do FAQ, a critério do mestre pode ser possível quebrar outros itens que estejam ao menos visíveis para o atacante (e o mestre sempre tem a palavra final sobre qualquer coisa relacionada).",
+    magazineNumber: 232,
+  },
+  //#endregion
 ];
 
