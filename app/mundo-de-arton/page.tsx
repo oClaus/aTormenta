@@ -74,6 +74,12 @@ export default function MundoDeArtonPage() {
       color: "from-slate-700 to-zinc-900",
       href: "/mundo-de-arton/regioes",
     },
+    { id: "chefes-finais",
+      title: "Chefes Finais",
+      icon: "/temas/finais.png",
+      color: "from-slate-700 to-zinc-900",
+      href: "/mundo-de-arton/chefes-finais",
+    },
   ];
 
   return (

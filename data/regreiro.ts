@@ -336,6 +336,158 @@ export const regreiroQAs: RegreiroQA[] = [
     magazineNumber: 216,
   },
   //#endregion
+  //#region DB - 226
+  {
+    id: "DB226-01",
+    question: "> Boa tarde, caros juízes!\n\n1) É possível usar o poder *Companheiro Animal Aprimorado* para receber habilidades de parceiros especiais?",
+    answer: "> Saudações especialmente pessoais, conselheiro! Vamos às suas respostas:\n\n1) Não.",
+    magazineNumber: 226,
+  },
+  {
+    id: "DB226-02",
+    question: "2) Se eu usar *Alma Livre* para escolher *Golpe Pessoal*, um poder que pode ser escolhido mais de uma vez, então posso escolher esse poder mais de uma vez?",
+    answer: "2) Não. *Alma Livre* permite escolher um (e somente um) poder de outra classe.",
+    magazineNumber: 226,
+  },
+  {
+    id: "DB226-03",
+    question: "> Saudações, excelentíssimos juízes do Supremo Tribunal Regreiro! Venho, por meio deste, sanar uma dúvida que assola meu pobre engenhoqueiro. O texto do do livro básico afirma sobre engenhocas que \"se falhar, ela enguiça e não pode ser utilizada até ser consertada\". Nesta situação, ela enguiça antes ou depois da ativação da engenhoca? Em outras palavras, a magia é conjurada mesmo se o inventor falhar no teste?",
+    answer: "> Saudações engenhosas, conselheiro!\n\nEm caso de falha, a magia não é lançada. Além disso, a engenhoca enguiça e precisa ser consertada.",
+    magazineNumber: 226,
+  },
+  {
+    id: "DB226-04",
+    question: "> Como dito anteriormente no STR, a *Vantagem Secreta* do Escapista Magnífico poderia tornar um Usurpador devoto. Ela também poderia anular a restrição de usar itens mágicos do poder *Ao Sabor do Destino*?",
+    answer: "> Saudações secretas, conselheiro! Sim, *Vantagem Secreta* poderia ser usada para permitir que um personagem com *Ao Sabor do Destino* utilizasse itens mágicos.",
+    magazineNumber: 226,
+  },
+  {
+    id: "DB226-05",
+    question: "> Um belo dia para vocês, aclamados juízes! Tenho algumas dúvidas.\n\n1) O que acontece quando uma criatura está ocupando o espaço de outra?",
+    answer: "> Saudações quádruplas, conselheiro! Vamos às suas respostas.\n\n1) Normalmente uma criatura não pode ocupar o espaço de outra. Em raros casos de mudança do espaço ocupado em lugares fechados (como por exemplo uma criatura aumentando de tamanho em uma sala pequena), o mestre deve arbitrar de acordo com a situação. Um bom ponto de partida é a materialização de *Forma Etérea*, que também lida com espaços ocupados.",
+    magazineNumber: 226,
+  },
+  {
+    id: "DB226-06",
+    question: "2) A condição confuso impede a criatura de agir ou apenas a força a tomar uma ação específica todo turno?",
+    answer: "2) Uma criatura sob a condição confuso deve realizar a ação designada por sua rolagem. Se ainda tiver ações depois disso, pode usá-las normalmente.",
+    magazineNumber: 226,
+  },
+  {
+    id: "DB226-07",
+    question: "3) Quais habilidades aumentam a CD de magias simuladas, já que efeitos de magia não funcionam?",
+    answer: "3) Quaisquer habilidades que aumentem a CD de poderes ou habilidades, como *Arte Mágica* do bardo.",
+    magazineNumber: 226,
+  },
+  {
+    id: "DB226-08",
+    question: "4) É citado em alguns textos que devotos já evocaram o avatar de suas divindades no passado. A magia *Intervenção Divina* poderia ser utilizada para isso com o sacrifício de PM?\n\nUm pequeno e ansioso lutador de Gratissa espera ansioso por suas respostas.",
+    answer: "4) Talvez. Depende da sua divindade… e do seu mestre.",
+    magazineNumber: 226,
+  },
+  {
+    id: "DB226-09",
+    question: "> Saudações, meritíssimos juízes.\n\n1) Gostaria de fazer uma pergunta autorreflexiva. Qual seria a extensão de efeitos que afetem \"a si mesmo\", como *Prece de Combate* e *Punição Divina*, ambos poderes de clérigo? Meus equipamentos contam? Apenas magias com alcance pessoal? Usa-se as mesmas restrições do medalhão de prata?",
+    answer: "> Saudações refratárias, conselheiro! Vamos às suas respostas:\n\n1) Não são as mesmas restrições do medalhão de prata. O medalhão especificamente se aplica a magias com alcance pessoal. Os poderes citados se aplicam a magias que tenham o clérigo ou seus equipamentos como alvo (ambos os casos contam como lançar a magia “em si mesmo”, conforme informado na página 14 do FAQ). Você não pode usar o medalhão de prata com *Curar Ferimentos*, mas pode usar essa magia com ambos os poderes se o clérigo for seu único alvo.",
+    magazineNumber: 226,
+  },
+  {
+    id: "DB226-10",
+    question: "2) Por que um redutor de custo em PM é considerado um bônus numérico? É um valor negativo!",
+    answer: "2) Na verdade, um redutor de custo não é um “bônus”, é apenas um “efeito numérico” benéfico ao personagem.",
+    magazineNumber: 226,
+  },
+  {
+    id: "DB226-11",
+    question: "3) Um bônus variável, como um dado adicional, é um bônus numérico?",
+    answer: "3) Não, é um “bônus numérico variável” (como nos efeitos numéricos variáveis aos quais *Espírito dos Solstícios* se refere).",
+    magazineNumber: 226,
+  },
+  {
+    id: "DB226-12",
+    question: "4) Qual é a energia canalizada por druidas de Arton e paladinos do bem?",
+    answer: "4) Positiva.",
+    magazineNumber: 226,
+  },
+  {
+    id: "DB226-13",
+    question: "> Excelentíssimos senhores, encaminho a este respeitável tribunal novas dúvidas a serem apreciadas por este humilde conselheiro.\n\nInfelizmente, o poder *Artista Versátil*, do bardo de *A Lenda de Ghanor RPG*, não foi incluído na lista de poderes do suplemento *Heróis de Arton*. Embora sejam sistemas irmãos, nem todos os mestres permitem a utilização combinada de materiais de diferentes livros, o que inviabiliza sua aplicação automática em mesas que utilizem exclusivamente conteúdo oficial de *Tormenta20*.\n\n1) Diante disso, a primeira dúvida recai sobre o poder *Alma Livre* (*Heróis de Arton*). Tal poder pode ser adquirido mais de uma vez pela mesma classe ou por classes distintas — por exemplo, selecionando-o duas vezes para obter acesso a poderes de Arcanista, ou uma vez para Arcanista e outra para Guerreiro.",
+    answer: "> Saudações juridissíssimas, conselheiro! Vamos às suas (muitas) respostas:\n\n1) O poder *Alma Livre* pode ser escolhido apenas uma vez, como qualquer outro que não especifique o contrário (*Tormenta20*, p. 33).",
+    magazineNumber: 226,
+  },
+  {
+    id: "DB226-14",
+    question: "2) No suplemento *Ameaças de Arton* consta o material especial casco de monstro, que permite a utilização da magia *Armamento da Natureza* em armas confeccionadas com esse material. Contudo, surge controvérsia quanto ao trecho da magia que determina que ela só pode ser lançada sobre armas mundanas primitivas. Caso uma arma feita com casco de monstro possua outras melhorias ou até mesmo um encantamento, ainda seria possível lançar *Armamento da Natureza* sobre ela?",
+    answer: "2) Sim.",
+    magazineNumber: 226,
+  },
+  {
+    id: "DB226-15",
+    question: "3) A cornamusa de Doherimm (*Heróis de Arton*) é descrita como instrumento vestido que exige apenas uma mão para utilização. Colocar ou retirar a mão do instrumento configura ação de movimento ou trata-se de ação livre? Além disso, por ser um instrumento musical, pode receber aprimoramentos destinados a esotéricos e ferramentas? Em caso positivo, seria possível aplicar a melhoria vigilante para anular a penalidade de –2 na Defesa imposta pela cornamusa?",
+    answer: "3) A cornamusa não exige que a mão seja usada nela. Isso seria empunhar um item. Ela exige que uma mão seja mantida livre. Se estiver com as mãos ocupadas, o instrumentista precisa desocupar uma das mãos para usar a cornamusa normalmente (por exemplo, se estiver usando uma arma de duas mãos, livrar a mão é uma ação livre e reempunhar a arma uma ação de movimento, conforme visto em *Tormenta20*, p. 142). Sim, ela pode receber a melhoria vigilante.",
+    magazineNumber: 226,
+  },
+  {
+    id: "DB226-16",
+    question: "4) O aprimoramento Guarda apresenta dois textos distintos: um em *Heróis de Arton* e outro na *Revista Tormenta20*. Enquanto o texto da revista menciona expressamente a acumulação dos bônus quando utilizadas múltiplas armas com essa melhoria, tal informação não consta na versão publicada em *Heróis de Arton*. Diante disso, os bônus se acumulam no caso de uso de duas ou mais armas com esse aprimoramento?",
+    answer: "4) Para este caso, considere que a versão mais recente, de *Heróis de Arton*, é uma atualização do efeito. Não há acúmulo.",
+    magazineNumber: 226,
+  },
+  {
+    id: "DB226-17",
+    question: "5) No que diz respeito aos poderes *Glamour* e *Glamour Maior* (*Heróis de Arton*), qual é o atributo-chave das magias aprendidas por meio desses poderes para definir a CD dos testes de resistência? A escolha fica a critério do jogador ou deve seguir critério racial — sendo Carisma para duendes e sílfides e Sabedoria para eiradaan?",
+    answer: "5) Use os atributos-chave das demais magias da raça em questão.",
+    magazineNumber: 226,
+  },
+  {
+    id: "DB226-18",
+    question: "6) Por fim, na DB nº 223 tivemos a notícia do encerramento da coluna *Monster Chefe*. Haveria a possibilidade de a Jambô Editora reunir as criaturas ali publicadas em uma obra compilatória, como um eventual Bestiário – Monster Chefe, adaptado ao *Tormenta20 – Jogo do Ano*? Trata-se de conteúdo desenvolvido ao longo de diversos anos, incluindo criações concebidas antes da atual fase do T20 e da chamada Reforma Monstrográfica, o que lhe confere relevante valor criativo e histórico. Nesse sentido, uma eventual compilação desse material poderia representar acréscimo significativo ao catálogo da editora e ao acervo disponível à comunidade de jogadores.\n\nDiante do exposto, submeto as presentes dúvidas e sugestão à apreciação deste respeitável Tribunal.",
+    answer: "6) Vamos levar a sugestão aos canais competentes e avaliar com carinho!",
+    magazineNumber: 226,
+  },
+  {
+    id: "DB226-19",
+    question: "> Gostaria de saber se é possível que um arquivo seja subido no site da Jambô com todas as respostas já dadas aqui no STR. Faz sentido que esse recurso esteja disponível para os jogadores! Obrigado pela atenção e desejo-lhes ótimos trabalhos neste tribunal.",
+    answer: "> Saudações virtuais, conselheiro! Vamos levar essa sugestão aos canais competentes",
+    magazineNumber: 226,
+  },
+  {
+    id: "DB226-20",
+    question: "> Caros ministros, seguem minhas perguntas.\n\n1) O tipo de dano essência é energia pura. Então todo dano de essência é necessariamente mágico?",
+    answer: "> Saudações essenciais, conselheiro! Vamos às suas respostas:\n\n1) Não. Uma engenhoca de *Seta Infalível*, por exemplo, causa apenas dano de “energia pura.”",
+    magazineNumber: 226,
+  },
+  {
+    id: "DB226-21",
+    question: "2) Um candidato à distinção Sortudo de Nimb não pode ter uma ficha de personagem combada e otimizada de forma alguma. Depois da admissão, porém, o Sortudo tem liberdade para planejar e combar?",
+    answer: "2) Normalmente, uma admissão é um evento pontual. O sortudo, porém, requer um estado de espírito relacionado diretamente ao Deus do Caos. Para outras divindades, a resposta seria um categórico não. Mas nada é certo com Nimb. Por que você não tenta na sua mesa e nos conta o que aconteceu? Talvez ele role bons dados…",
+    magazineNumber: 226,
+  },
+  {
+    id: "DB226-22",
+    question: "> É possível escolher 0 na habilidade *Usurpar* do Usurpador? O texto da habilidade menciona apenas escolher 10.",
+    answer: "> Saudações anatêmicas, conselheiro!\n\nA resposta vai depender do mestre. Em um ponto de vista estritamente de regras, sim. Mas o Usurpador está tirando poder diretamente dos deuses. Não importa o quão boa seja a sua lábia, ainda existe uma chance de falha nessa escala…",
+    magazineNumber: 226,
+  },
+  {
+    id: "DB226-23",
+    question: "> Excelentíssimos juízes, venho aqui tirar algumas dúvidas que ocupam minha mente faz tempo.\n\n1) Como funciona a progressão de passos de dano do poder *Executor* e do efeito *Sequencial* do *Golpe Pessoal* do guerreiro?",
+    answer: "> Saudações emulatórias, conselheiro! Vamos às suas respostas:\n\n1) Eles começam em 1d6, aumentam para 1d8, depois para 1d10 e chegam ao máximo em 1d12.",
+    magazineNumber: 226,
+  },
+  {
+    id: "DB226-24",
+    question: "2) Tanto o poder *Paródia* do bardo quanto a magia *Emular Magia* me permitem lançar uma magia que eu tenha visto ser lançada. Essa magia passa a contar como uma magia da minha classe? Posso usar aprimoramentos com requisito de círculo nela? Posso lançar uma magia de um círculo ao qual não tenho acesso?\n\nAgradeço a atenção!",
+    answer: "2) A magia não passa a contar como uma magia da sua classe, é apenas uma magia que você “pode lançar” como efeito do poder *Paródia* ou da magia *Emular Magia*. Dessa forma, conforme *Tormenta20*, p. 171, você não pode usar aprimoramentos com requisitos de círculo ao lançá-la. Mas, enquanto *Emular Magia* descreve ela mesma que a magia emulada deve ser de um círculo ao qual você tem acesso, através de *Paródia* você pode lançar qualquer magia que parodiar (conforme explicado no FAQ, p. 11).",
+    magazineNumber: 226,
+  },
+  {
+    id: "DB226-25",
+    question: "> Com todas as vênias, indago ao tribunal: como funciona exatamente a habilidade *Bênção das Fadas* (humano variante, DB 224)? O personagem começa com quatro bênçãos e ainda pode, posteriormente, trocar poderes de classes por novas bênçãos? Ou começa sem bênção alguma, apenas com o direito de trocar poderes de classe por bênçãos conforme sobem de nível? A mesma dúvida vale para o kallyanach de *Ameaças de Arton*.",
+    answer: "O humano feérico começa com quatro bênçãos. Quando ganha um poder de classe, em vez disso pode escolher uma nova bênção. É a mesma coisa com os kallyanach, com a diferença que eles começam com duas bênçãos.",
+    magazineNumber: 226,
+  },
+  //#endregion
   //#region DB - 227
   {
     id: "DB227-01",

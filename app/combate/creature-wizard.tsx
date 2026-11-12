@@ -54,6 +54,28 @@ const blankThreat = (): Threat => ({
   habilidades: [], pericias: [], equipamentos: [], tesouro: "Nenhum",
 });
 
+type AttackType = "corpoacorpo" | "distancia";
+
+interface AttackEntry {
+  id: string;
+  tipo: AttackType;
+  nome: string;
+  qtd: number;          // quantos golpes desse ataque (ex.: "Garras 2x")
+  dado: string;         // dado de dano base
+  margem: number;       // margem de ameaça: 20 (padrão), 19, 18...
+  mult: number;         // multiplicador de crítico: 2, 3, 4
+  bonusManual: string;  // vazio = calculado automaticamente pelo ND
+  extra: string;        // dano adicional, ex.: "8d6 trevas"
+}
+
+const DICE_OPTIONS = ["1d3", "1d4", "1d6", "1d8", "1d10", "1d12", "2d4", "2d6", "2d8", "2d10", "2d12"];
+const THREAT_MARGINS = [20, 19, 18, 17, 16, 15];
+
+const newAttack = (tipo: AttackType, nome: string): AttackEntry => ({
+  id: Math.random().toString(36).slice(2, 8),
+  tipo, nome, qtd: 1, dado: "1d6", margem: 20, mult: 2, bonusManual: "", extra: "",
+});
+
 interface WizardState {
   // Passo 0
   nome: string;
@@ -78,12 +100,7 @@ interface WizardState {
   resistenciaMediana: "fort" | "ref" | "von";
   resistenciaFraca: "fort" | "ref" | "von";
   // Passo 4
-  numAtaques: number;
-  tipoAtaquePrincipal: "corpoacorpo" | "distancia" | "ambos";
-  nomeArma: string;
-  dadoDano: string; // ex "1d8"
-  margemCritico: number; // 20, 19 ou 18
-  multCritico: number; // 2, 3 ou 4
+  ataques: AttackEntry[];
   // Passo 5
   habilidadesTexto: string; // uma por linha
   // Passo 6
@@ -113,12 +130,7 @@ const initialState: WizardState = {
   resistenciaPrincipal: "fort",
   resistenciaMediana: "ref",
   resistenciaFraca: "von",
-  numAtaques: 1,
-  tipoAtaquePrincipal: "corpoacorpo",
-  nomeArma: "Garras",
-  dadoDano: "1d6",
-  margemCritico: 20,
-  multCritico: 2,
+  ataques: [newAttack("corpoacorpo", "Garras")],
   habilidadesTexto: "",
   atributos: { for: "10", des: "10", con: "10", int: "10", sab: "10", car: "10" },
   periciasTexto: "",
@@ -138,7 +150,6 @@ const shiftNd = (nd: string, steps: number): string => {
   return ND_LEVELS_NUMERIC[newIdx];
 };
 
-/** Divide o dano médio total em N ataques, retornando dado + bônus por ataque */
 // Crítico no formato de Tormenta 20: "19" (margem 19, x2), "x3" (margem 20, x3), "19/x3"
 const formatCritical = (margem: number, mult: number): string => {
   if (margem < 20 && mult === 2) return String(margem);
@@ -146,18 +157,40 @@ const formatCritical = (margem: number, mult: number): string => {
   return `x${mult}`;
 };
 
-// Ex.: "Garras 2x +20 (2d6+10, 19)" — a quantidade fica junto do nome; o crítico dentro do parênteses
-const formatAttackText = (nome: string, qtd: number, valorAtaque: number, dado: string, bonus: number, margem: number, mult: number): string => {
-  const dano = `${dado}${bonus > 0 ? `+${bonus}` : ""}`;
-  const nomeFmt = `${nome.trim() || "Ataque"}${qtd > 1 ? ` ${qtd}x` : ""}`;
-  return `${nomeFmt} +${valorAtaque} (${dano}, ${formatCritical(margem, mult)})`;
+// Ex.: "Garras 2x +20 (2d6+10, 19)" ou "Mosquete +24 (2d8+16, 18/x3, mais 8d6 trevas)"
+const formatAttackText = (a: AttackEntry, valorAtaque: number, bonus: number): string => {
+  const dano = `${a.dado}${bonus > 0 ? `+${bonus}` : ""}`;
+  const nomeFmt = `${a.nome.trim() || "Ataque"}${a.qtd > 1 ? ` ${a.qtd}x` : ""}`;
+  const partes = [dano, formatCritical(a.margem, a.mult)];
+  const extra = a.extra.trim().replace(/^mais\s+/i, "");
+  if (extra) partes.push(`mais ${extra}`);
+  return `${nomeFmt} +${valorAtaque} (${partes.join(", ")})`;
 };
 
-const splitDamage = (danoMedioTotal: number, numAtaques: number, dado: string): { bonus: number; danoMedioPorAtaque: number } => {
-  const danoMedioPorAtaque = Math.round(danoMedioTotal / numAtaques);
-  const dieAvg = diceAverage(dado);
-  const bonus = Math.max(0, danoMedioPorAtaque - dieAvg);
-  return { bonus, danoMedioPorAtaque };
+// O dano médio da tabela vale para UM ataque completo. Os golpes do mesmo tipo
+// (ex.: mordida + 2 garras) dividem esse dano; corpo a corpo e à distância são opções
+// separadas, então cada tipo recebe o dano médio inteiro.
+const computeAttackBonuses = (entries: AttackEntry[], danoMedio: number): number[] => {
+  const hits = entries.reduce((sum, e) => sum + e.qtd, 0);
+  const perHit = hits > 0 ? Math.round(danoMedio / hits) : danoMedio;
+  return entries.map((e) => {
+    const manual = e.bonusManual.trim();
+    if (manual !== "" && !Number.isNaN(Number(manual))) return Math.max(0, Math.round(Number(manual)));
+    return Math.max(0, perHit - diceAverage(e.dado));
+  });
+};
+
+const buildAttackTexts = (
+  entries: AttackEntry[], valorAtaque: number, danoMedio: number
+): Record<AttackType, string | undefined> => {
+  const result: Record<AttackType, string | undefined> = { corpoacorpo: undefined, distancia: undefined };
+  (["corpoacorpo", "distancia"] as const).forEach((tipo) => {
+    const group = entries.filter((e) => e.tipo === tipo);
+    if (!group.length) return;
+    const bonuses = computeAttackBonuses(group, danoMedio);
+    result[tipo] = group.map((e, k) => formatAttackText(e, valorAtaque, bonuses[k])).join(" e ");
+  });
+  return result;
 };
 
 const diceAverage = (dado: string): number => {
@@ -167,6 +200,107 @@ const diceAverage = (dado: string): number => {
   const sides = parseInt(m[2]);
   return Math.round(qty * (sides + 1) / 2);
 };
+
+function AttackGroup({ tipo, titulo, ataques, params, onChange, fc, lc }: {
+  tipo: AttackType;
+  titulo: string;
+  ataques: AttackEntry[];
+  params: CreatureParams;
+  onChange: (next: AttackEntry[]) => void;
+  fc: string;
+  lc: string;
+}) {
+  const group = ataques.filter((a) => a.tipo === tipo);
+  const hits = group.reduce((sum, a) => sum + a.qtd, 0);
+  const bonuses = computeAttackBonuses(group, params.danoMedio);
+  const autoBonuses = computeAttackBonuses(group.map((a) => ({ ...a, bonusManual: "" })), params.danoMedio);
+
+  const patch = (id: string, p: Partial<AttackEntry>) =>
+    onChange(ataques.map((a) => (a.id === id ? { ...a, ...p } : a)));
+  const remove = (id: string) => onChange(ataques.filter((a) => a.id !== id));
+  const add = () => onChange([...ataques, newAttack(tipo, "")]);
+
+  return (
+    <div className="bg-[rgb(var(--bg-card-rgb))]/60 border-2 border-amber-900/20 rounded-xl p-4 space-y-3">
+      <div className="flex items-center justify-between gap-2">
+        <div>
+          <p className="text-xs font-bold uppercase tracking-widest text-red-800">{titulo}</p>
+          {hits > 0 && (
+            <p className="text-[11px] text-amber-950/55 mt-0.5">
+              {hits} golpe{hits > 1 ? "s" : ""} · dano médio por golpe ≈ {Math.round(params.danoMedio / hits)} (total {params.danoMedio})
+            </p>
+          )}
+        </div>
+        <button onClick={add}
+          className="px-3 py-1.5 rounded-lg border-2 border-dashed border-amber-900/30 text-[11px] font-bold uppercase tracking-widest text-amber-950/60 hover:border-red-800/40 hover:text-red-800 transition-all">
+          + Ataque
+        </button>
+      </div>
+
+      {!group.length && (
+        <p className="text-xs text-amber-950/45 italic">Nenhum ataque {tipo === "corpoacorpo" ? "corpo a corpo" : "à distância"}.</p>
+      )}
+
+      {group.map((a, k) => (
+        <div key={a.id} className="bg-[rgb(var(--bg-rgb))] border border-amber-900/15 rounded-lg p-3 space-y-3">
+          <div className="grid grid-cols-[1fr_auto_auto] gap-2 items-end">
+            <div>
+              <label className={lc}>Nome</label>
+              <input className={fc} placeholder="Ex: Mordida, Garras, Espada longa" value={a.nome}
+                onChange={(e) => patch(a.id, { nome: e.target.value })} />
+            </div>
+            <div>
+              <label className={lc}>Qtd.</label>
+              <select className={fc} value={a.qtd} onChange={(e) => patch(a.id, { qtd: Number(e.target.value) })}>
+                {[1, 2, 3, 4].map((n) => <option key={n} value={n}>{n}x</option>)}
+              </select>
+            </div>
+            <button onClick={() => remove(a.id)} title="Remover ataque"
+              className="h-[38px] w-9 flex items-center justify-center rounded-lg border-2 border-amber-900/20 text-amber-950/50 hover:text-red-800 hover:border-red-800/40 transition-all text-sm">✕</button>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+            <div>
+              <label className={lc}>Dado</label>
+              <select className={fc} value={a.dado} onChange={(e) => patch(a.id, { dado: e.target.value })}>
+                {DICE_OPTIONS.map((d) => <option key={d} value={d}>{d}</option>)}
+              </select>
+            </div>
+            <div>
+              <label className={lc}>Bônus de dano</label>
+              <input type="number" min={0} className={fc} placeholder={`auto (${autoBonuses[k]})`} value={a.bonusManual}
+                onChange={(e) => patch(a.id, { bonusManual: e.target.value })} />
+            </div>
+            <div>
+              <label className={lc}>Margem</label>
+              <select className={fc} value={a.margem} onChange={(e) => patch(a.id, { margem: Number(e.target.value) })}>
+                {THREAT_MARGINS.map((m) => <option key={m} value={m}>{m === 20 ? "20 (padrão)" : m}</option>)}
+              </select>
+            </div>
+            <div>
+              <label className={lc}>Multiplicador</label>
+              <select className={fc} value={a.mult} onChange={(e) => patch(a.id, { mult: Number(e.target.value) })}>
+                {[2, 3, 4].map((m) => <option key={m} value={m}>x{m}</option>)}
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label className={lc}>Dano adicional (opcional)</label>
+            <input className={fc} placeholder="Ex: 8d6 trevas" value={a.extra}
+              onChange={(e) => patch(a.id, { extra: e.target.value })} />
+          </div>
+
+          <p className="text-sm font-bold text-amber-950/85">{formatAttackText(a, params.valorAtaque, bonuses[k])}</p>
+        </div>
+      ))}
+
+      {hits > 3 && (
+        <p className="text-[11px] font-bold text-amber-700">Mais de 3 golpes no mesmo ataque costuma passar do recomendado pelo manual.</p>
+      )}
+    </div>
+  );
+}
 
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -228,8 +362,7 @@ export default function CreatureWizard({
       : state.resistenciaMediana === "von" ? params.resistenciaMedia
       : params.resistenciaFraca) + state.ajusteVon;
 
-    const { bonus } = splitDamage(params.danoMedio, state.numAtaques, state.dadoDano);
-    const ataqueTexto = formatAttackText(state.nomeArma, state.numAtaques, params.valorAtaque, state.dadoDano, bonus, state.margemCritico, state.multCritico);
+    const ataquesTexto = buildAttackTexts(state.ataques, params.valorAtaque, params.danoMedio);
 
     const speedRow = SPEED_TABLE.find(
       (r) => r.forma === state.locomotionForm &&
@@ -267,8 +400,8 @@ export default function CreatureWizard({
       int: state.atributos.int,
       sab: state.atributos.sab,
       car: state.atributos.car,
-      ataqueCorpoACorpo: state.tipoAtaquePrincipal !== "distancia" ? ataqueTexto : undefined,
-      ataqueDistancia: state.tipoAtaquePrincipal !== "corpoacorpo" ? ataqueTexto : undefined,
+      ataqueCorpoACorpo: ataquesTexto.corpoacorpo,
+      ataqueDistancia: ataquesTexto.distancia,
       habilidades: state.habilidadesTexto.split("\n").map((s) => s.trim()).filter(Boolean),
       pericias: state.periciasTexto.split("\n").map((s) => s.trim()).filter(Boolean),
       equipamentos: state.equipamentosTexto.split("\n").map((s) => s.trim()).filter(Boolean),
@@ -560,72 +693,29 @@ export default function CreatureWizard({
           {step === 4 && params && (
             <div className="space-y-5">
               <p className="text-sm text-amber-950/75 leading-relaxed">
-                Valor de ataque (+{params.valorAtaque}) e dano médio total ({params.danoMedio}) já vêm do ND.
-                Distribua o dano entre 1 a 3 ataques.
+                Valor de ataque (+{params.valorAtaque}) e dano médio ({params.danoMedio}) vêm do ND. Corpo a corpo e à distância são
+                opções diferentes: cada uma usa o dano médio inteiro. Os golpes do mesmo tipo (ex.: mordida + duas garras) dividem esse dano.
               </p>
 
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <label className={lc}>Tipo de Ataque Principal</label>
-                  <div className="flex gap-2">
-                    {(["corpoacorpo", "distancia", "ambos"] as const).map((t) => (
-                      <button key={t} onClick={() => update({ tipoAtaquePrincipal: t })}
-                        className={`flex-1 px-2 py-2 rounded-lg text-xs font-bold border-2 transition-all ${
-                          state.tipoAtaquePrincipal === t ? "bg-red-800/15 border-red-800/40 text-red-900" : "bg-[rgb(var(--bg-inset-rgb))] border-amber-900/20 text-amber-950/70"
-                        }`}>{t === "corpoacorpo" ? "Corpo a corpo" : t === "distancia" ? "Distância" : "Ambos"}</button>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <label className={lc}>Número de Ataques (máx. recomendado: 3)</label>
-                  <div className="flex gap-2">
-                    {[1, 2, 3].map((n) => (
-                      <button key={n} onClick={() => update({ numAtaques: n })}
-                        className={`flex-1 px-2 py-2 rounded-lg text-xs font-bold border-2 transition-all ${
-                          state.numAtaques === n ? "bg-red-800/15 border-red-800/40 text-red-900" : "bg-[rgb(var(--bg-inset-rgb))] border-amber-900/20 text-amber-950/70"
-                        }`}>{n}x</button>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <label className={lc}>Nome da Arma/Ataque</label>
-                  <input className={fc} placeholder="Ex: Garras, Mordida, Espada Longa" value={state.nomeArma} onChange={(e) => update({ nomeArma: e.target.value })} />
-                </div>
-                <div>
-                  <label className={lc}>Dado de Dano Base</label>
-                  <select className={fc} value={state.dadoDano} onChange={(e) => update({ dadoDano: e.target.value })}>
-                    {["1d4", "1d6", "1d8", "1d10", "1d12", "2d6", "2d8", "2d10"].map((d) => <option key={d} value={d}>{d}</option>)}
-                  </select>
-                </div>
-                <div>
-                  <label className={lc}>Margem de Ameaça</label>
-                  <select className={fc} value={state.margemCritico} onChange={(e) => update({ margemCritico: Number(e.target.value) })}>
-                    <option value={20}>20</option>
-                    <option value={19}>19</option>
-                    <option value={18}>18</option>
-                  </select>
-                </div>
-                <div>
-                  <label className={lc}>Multiplicador de Crítico</label>
-                  <select className={fc} value={state.multCritico} onChange={(e) => update({ multCritico: Number(e.target.value) })}>
-                    <option value={2}>x2</option>
-                    <option value={3}>x3</option>
-                    <option value={4}>x4</option>
-                  </select>
-                </div>
-              </div>
+              <AttackGroup tipo="corpoacorpo" titulo="Corpo a corpo" ataques={state.ataques} params={params}
+                onChange={(next) => update({ ataques: next })} fc={fc} lc={lc} />
+              <AttackGroup tipo="distancia" titulo="À distância" ataques={state.ataques} params={params}
+                onChange={(next) => update({ ataques: next })} fc={fc} lc={lc} />
 
               {(() => {
-                const { bonus, danoMedioPorAtaque } = splitDamage(params.danoMedio, state.numAtaques, state.dadoDano);
+                const textos = buildAttackTexts(state.ataques, params.valorAtaque, params.danoMedio);
                 return (
-                  <div className="bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/20 rounded-xl p-4">
-                    <p className="text-xs font-bold uppercase tracking-widest text-red-800 mb-2">Resultado calculado</p>
-                    <p className="text-sm text-amber-950/85">
-                      <strong>{formatAttackText(state.nomeArma, state.numAtaques, params.valorAtaque, state.dadoDano, bonus, state.margemCritico, state.multCritico)}</strong>
-                    </p>
-                    <p className="text-[11px] text-amber-950/55 mt-1">
-                      Dano médio por ataque: {danoMedioPorAtaque} · Dano médio total: {params.danoMedio}
-                    </p>
+                  <div className="bg-[rgb(var(--bg-card-rgb))] border-2 border-amber-900/20 rounded-xl p-4 space-y-2">
+                    <p className="text-xs font-bold uppercase tracking-widest text-red-800">Resultado na ficha</p>
+                    {!textos.corpoacorpo && !textos.distancia && (
+                      <p className="text-sm text-amber-950/55 italic">Nenhum ataque definido.</p>
+                    )}
+                    {textos.corpoacorpo && (
+                      <p className="text-sm text-amber-950/85"><span className="font-bold text-red-800">Corpo a corpo: </span>{textos.corpoacorpo}</p>
+                    )}
+                    {textos.distancia && (
+                      <p className="text-sm text-amber-950/85"><span className="font-bold text-red-800">À distância: </span>{textos.distancia}</p>
+                    )}
                   </div>
                 );
               })()}

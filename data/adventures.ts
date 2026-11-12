@@ -9015,5 +9015,281 @@ export const adventures: Adventure[] = [
     }
   ]
   },
+  { id: "Devoradores de Sonhos",
+  name: "Devoradores de Sonhos",
+  theme: "Fantasia e Investigação Sobrenatural",
+  image: "/aventuras/devoradores-de-sonhos.png",
+  summary: "Uma pacata vila sofre com uma estranha maldição: crianças adormecem e não conseguem acordar. Os heróis devem proteger a comunidade contra pequenas criaturas feéricas sugadoras de mana e ajudar a sacerdotisa local em um perigoso ritual de purificação.",
+  sections: [
+    {
+      type: "text",
+      content: "Dentre os mistérios de Arton, os sonhos estão entre os mais secretos. Apesar de servirem e se conectarem ao divino, através de visões e profecias, não há uma deidade responsável diretamente por eles."
+    },
+    {
+      type: "text",
+      content: "Diversos espíritos muitas vezes se manifestam como formas reais de conceitos oníricos. Ainda assim, o lugar por onde vagam os artonianos durante seu descanso continua sendo um enigma."
+    },
+    {
+      type: "text",
+      content: "A lógica dos mortais raramente se aplica aos seres feéricos. Mesmo a origem destas criaturas está em constante debate. Os expoentes mais famosos entre eles são aqueles que imitam mais convincentemente o jeito de agir de humanoides. Mas é importante não se enganar. Para cada sílfide trapaceira, há diversos espíritos incompreensíveis, muitas vezes aterrorizantes, prontos para atacar."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "RESUMO DA AVENTURA"
+    },
+    {
+      type: "text",
+      content: "Devoradores de Sonhos é uma breve jornada, uma aventura curta pensada para uma sessão única, mas que pode ser inserida em uma campanha maior. É ideal para um grupo de quatro personagens de 4º nível em Tormenta20."
+    },
+    {
+      type: "text",
+      content: "Em uma estrada do Reinado, os aventureiros encontram um viajante e seu trobo sendo atacados por bandidos. Após a derrota dos criminosos, o homem que estava sendo roubado fica impressionado pelas habilidades dos heróis e diz estar procurando ajuda. Segundo ele, crianças de sua vila estão sendo afetadas por uma estranha maldição, caindo em um sono do qual não despertam."
+    },
+    {
+      type: "text",
+      content: "Chegando à vila, os heróis podem fazer algumas perguntas e até mesmo investigar algumas das crianças afetadas. Durante a noite, terão o primeiro encontro com os come-sonhos, pequenas criaturas que estão atacando os infantes. Destruí-los, infelizmente, não resolve o caso. A sacerdotisa local sugere então fazer um ritual para espantá-los, com a ajuda dos aventureiros. Entretanto, se não forem bem-sucedidos, terão de enfrentar um pesadelo encarnado."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 1: ALGO NO CAMINHO"
+    },
+    {
+      type: "text",
+      content: "Apesar de haver estradas bem-vigiadas no Reinado, a maioria delas é pouco mais que uma trilha de terra batida. Isso, somado à leniência das autoridades, torna o território entre comunidades menores o local ideal para criminosos aproveitadores. Caravanas mercantes contratam seguranças para defender-se, mas um viajante solitário precisa confiar na sua própria habilidade. Ou na sorte."
+    },
+    {
+      type: "text",
+      content: "Os personagens podem ter sido contratados por alguém viajando pelos ermos, ou então só estar deslocando-se de um ponto a outro no mapa. No meio do caminho, peça a todos um teste de Percepção (CD 15). Se nenhum dos aventureiros passar no teste, eles ficam de frente com um bando de criminosos ao redor de um homem e seu trobo. Caso sejam bem-sucedidos, têm tempo de perceber os criminosos ameaçando o viajante e sua montaria."
+    },
+    {
+      type: "text",
+      content: "CRIATURAS. Chefe bandido e bandidos x8 (Tormenta20, p. 289)."
+    },
+    {
+      type: "text",
+      content: "Quando os pilantras notam a aproximação dos personagens, seu líder se pronuncia."
+    },
+    {
+      type: "text",
+      content: "“Parados aí, pessoal bacana! Sei que devem estar pensando em intervir aqui, mas somos os cobradores de imposto dessa via. E esse senhor aqui, infelizmente não tem tibares suficientes. Vocês podem ajudar pagando também, ou dar meia-volta enquanto temos uma conversinha com ele.”"
+    },
+    {
+      type: "text",
+      content: "Um teste de Intuição oposto a Enganação do chefe bandido (+3) revela o óbvio: eles estão assaltando o homem. Se quiserem apenas passar, deverão oferecer T$ 10 por cada membro do grupo, e mais T$ 10 pelo viajante. A vítima está claramente desesperada, mas sempre que tenta se comunicar é cutucada pelos outros bandidos. Qualquer resposta que não seja entregar o dinheiro é respondida com violência, iniciando o combate."
+    },
+    {
+      type: "text",
+      content: "O viajante não é capaz de fazer muito, após ter sido agredido. O trobo, porém, precisa ser acalmado com uma ação completa e um teste de Adestramento (CD 20), e pode servir então como um parceiro montaria iniciante (Tormenta20, p. 262). Os bandidos cercam os personagens, permitindo que seu chefe use seu ataque furtivo. Apesar de empenhados em garantir os tibares, os criminosos fogem assim que seu líder é derrotado."
+    },
+    {
+      type: "text",
+      content: "Quando se aproximam do homem após o combate, ele começa a chorar. “Heróis, obrigado! Obrigado! Os deuses com certeza colocaram vocês no meu caminho! Por favor, ouçam meu apelo.”"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 2: PEDIDO DE AJUDA"
+    },
+    {
+      type: "text",
+      content: "O viajante apresenta-se como Beren, e o trobo chama-se Koko. Eles vêm de uma vila há um dia de caminhada, em que um estranho fenômeno está acontecendo. Aproximadamente duas semanas atrás, todas as crianças da comunidade começaram a queixar-se de dores de cabeça e pesadelos. Dois dias depois, a primeira delas dormiu e não acordou."
+    },
+    {
+      type: "text",
+      content: "“Os pais estão fazendo tudo em seu poder para mantê-las vivas. A professora Sylvana está rezando por eles quase todos os dias. Como eu não tenho filhos, peguei Koko e vim procurar ajuda… mas meu senso de direção não é muito bom.”"
+    },
+    {
+      type: "text",
+      content: "Beren explica que sua comunidade não tem muito, mas diz que a professora Sylvana possui uma belíssima cimitarra élfica, que está disposta a entregar como recompensa. A vila, por outro lado, juntou apenas T$ 500, o que pode parecer pouco para aventureiros, mas é uma fortuna para aldeões. Qualquer teste de Intuição confirma a veracidade das palavras do viajante."
+    },
+    {
+      type: "text",
+      content: "Se quiserem procurar pelos pertences dos bandidos, devem passar em um teste de Investigação (CD 20). No acampamento eles encontram o dobro de tesouro equivalente a ND 2 (Tormenta20, tabela 8-1: tesouro por nível de desafio, p. 328)."
+    },
+    {
+      type: "text",
+      content: "Assim que estiverem prontos, podem partir em direção ao vilarejo de Beren. O resto do caminho, infelizmente, ainda possui seus próprios perigos. Role 1d8, se o resultado for 1, ocorre um encontro aleatório. Se tiver acesso ao livro Ameaças de Arton, use a coluna de encontros aleatórios em estradas do Reinado (p. 429)."
+    },
+    {
+      type: "text",
+      content: "Caso não tenha acesso, role 1d6. Os personagens encontram:"
+    },
+    {
+      type: "text",
+      content: "1) um mercador viajante, vendendo itens com um desconto de 10%;\n2) dois gorloggs (Tormenta20, p. 291);\n3) outro grupo de 6 bandidos (Tormenta20, p. 289);\n4) três gnolls (Tormenta20, p. 290), armando uma emboscada;\n5) 1d6+2 goblins salteadores (Tormenta20, p. 300);\n6) uma estalagem simples no meio da estrada, porém bastante aconchegante (descanso confortável)."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 3: VILA INSONE"
+    },
+    {
+      type: "text",
+      content: "Após um dia de viagem, os aventureiros chegam à vila. De longe já dá para ver que suas casas são singelas, uma pequena praça serve como núcleo da comunidade e há um templo modesto. No meio do espaço há uma estátua de uma figura montada em um cavalo. Aproximando-se, é possível notar que todos os camponeses aqui têm olheiras profundas, e estão perceptivelmente exaustos."
+    },
+    {
+      type: "text",
+      content: "Apesar da condição de cansaço de todos, as pessoas olham para os aventureiros de maneira extremamente grata. Os aldeões se aproximam, vários deles chorando e agradecendo a presença dos heróis. Alguns minutos depois, uma mulher elfa um pouco mais velha vem para perto. Seus cabelos são prateados, presos em um coque, e há um pequeno óculos apoiado na ponta do nariz. Ela veste batinas rústicas cor de pergaminho. Pendurado em seu pescoço está um medalhão com o símbolo sagrado de Tanna-Toh, a Deusa do Conhecimento."
+    },
+    {
+      type: "text",
+      content: "“Bem-vindos, senhores! Podem me chamar de Sylvana, sacerdotisa da Mãe da Palavra.”"
+    },
+    {
+      type: "text",
+      content: "A frade conversa com os aventureiros na frente de todos, afinal, por seus votos, não faria sentido esconder qualquer forma de conhecimento. Nas casas, crianças estão adormecidas em camas de feno simples, enquanto seus pais se esforçam para tornar seu sono perpétuo mais confortável."
+    },
+    {
+      type: "text",
+      content: "Sylvana conta que os pequenos acordaram de pesadelos terríveis durante um ou dois dias, até que não despertaram mais. Apesar de rezar por elas, a sacerdotisa não teve nenhuma iluminação sobre a causa do malefício, e não há qualquer sinal de ferimentos nas vítimas."
+    },
+    {
+      type: "text",
+      content: "Se desejarem, os personagens podem fazer sua própria investigação. Um teste de Cura (CD 20) revela que, apesar de estarem fracas pelo longo período desacordados, não há qualquer sinal de que seja uma doença. Investigação (CD 25) revela que algo de tamanho similar a um gato esteve nos quartos. Finalmente, um teste de Misticismo (CD 20) revela que os efeitos sofridos estão relacionados justamente à mana destas crianças sendo roubada de alguma forma."
+    },
+    {
+      type: "text",
+      content: "Caso sejam bem-sucedidos nos três testes, permita um teste de Misticismo ou Religião (CD 17). Passar no teste revela a lenda de pequenos seres feéricos chamados “come-sonho”. Essas pragas atacam durante a noite, se alimentando enquanto suas vítimas dormem, levando-as, após algum tempo, à morte."
+    },
+    {
+      type: "text",
+      content: "Se dividirem suas descobertas com Sylvana, ela se mostra chocada, mas curiosa. A elfa nunca ouviu falar deste tipo de criatura, e seu lado pesquisadora deseja saber tudo o que for possível sobre elas. Para cada 5 que os personagens conseguirem acima da CD do teste final, recebem mais uma informação da ficha da criatura (veja em NPCs e Criaturas). A sacerdotisa também mostra, se pedirem, o prêmio prometido por Beren: uma cimitarra precisa de mitral, uma das poucas coisas que conseguiu manter de seu passado em Lenórienn."
+    },
+    {
+      type: "text",
+      content: "Deixe então que os aventureiros divisem seus planos. Qualquer esforço que não inclua vigiar uma das crianças em seu quarto, falha automaticamente, encontrando mais uma vítima enfraquecida na manhã seguinte. Se pedirem para vigiar dentro da casa de um dos camponeses, estes aceitam sem questionar."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 4: MEDO DO ESCURO"
+    },
+    {
+      type: "text",
+      content: "A noite desce sobre o vilarejo. Um a um os aldeões vão se recolhendo, barricando suas casas como é possível. O clima bucólico do local seria aconchegante, não fosse a tensão do caso. No meio da madrugada, coisas começam a rastejar na escuridão."
+    },
+    {
+      type: "text",
+      content: "Caso o grupo peça, Sylvana oferece seu apoio como uma parceira médica iniciante. Seja pelo cansaço da viagem, ou por algum tipo de pressão sobrenatural, manter-se despertos mostra-se um desafio. Se escolherem ficar acordados, peça a todos um teste de Fortitude (CD 15). Os que falharem adormecem, mas podem ser acordados sendo sacudidos com uma ação padrão. Se apenas um dos aventureiros mantiver a vigília, ele fará o teste sozinho."
+    },
+    {
+      type: "text",
+      content: "No meio da madrugada, então, surgem as criaturas. Minúsculas, esses espíritos lembram vagamente goblins, de orelhas e bocas desproporcionalmente compridas e diversas fileiras de dentes serrilhados. Eles se aproximam em silêncio, fazendo um teste de Furtividade (+13) oposto à Percepção dos personagens. Se vencerem, os come-sonhos só são notados quando já estiverem no leito da criança adormecida."
+    },
+    {
+      type: "text",
+      content: "CRIATURAS. Come-sonhos x2 (NPCs e Criaturas)."
+    },
+    {
+      type: "text",
+      content: "Se algum personagem estiver dormindo, as criaturas verão nele um banquete ainda maior. Elas, entretanto, estão fatigadas devido a fome. Caso se alimentem de algum aventureiro adormecido, perdem essa condição. Apesar de inteligentes, algo os está movendo para fazerem esses ataques, e lutam até a morte, desaparecendo em poeira brilhante."
+    },
+    {
+      type: "text",
+      content: "Os rastros dos come-sonhos são difíceis de seguir, especialmente durante a noite (Investigação ou Sobrevivência CD 25). Entretanto, há uma opção cruel: deixar essas fadas se alimentarem de uma outra criança e então segui-la ao ponto de origem. De uma forma ou de outra, as pistas levam de volta à praça central. Os monstros somem ao se aproximar da estátua no centro da vila."
+    },
+    {
+      type: "text",
+      content: "Se questionada sobre o monumento, Sylvana explica que, muito tempo atrás, na época da formação da vila, um herói era o líder do local. Quando ele faleceu, a estátua foi erguida em sua honra, mas o passar dos anos ruiu a figura humana, deixando apenas parte de seu torço, e sua montaria abaixo."
+    },
+    {
+      type: "text",
+      content: "Um teste de Misticismo (CD 25) revela que a estátua, no momento, serve como algum tipo de passagem para os come-sonhos. Já Religião (CD 25) revela que algo amaldiçoou o monumento, cercando-o de uma aura sombria. Sylvana sugere um ritual de purificação."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 5: SOMBRA DO PESADELO"
+    },
+    {
+      type: "text",
+      content: "Ainda cansados dos eventos da noite, Sylvana os chama para explicar seu plano. De forma didática, para que todos compreendam, ela conta que fará uma mistura entre um exorcismo e um apanhador de sonhos, que então colocará na estátua, possivelmente afastando os come-sonho de uma vez por todas da vila. Entretanto, a elfa crê que os monstros tentarão atacá-la, e se isso acontecer, haverá pouco que possa fazer."
+    },
+    {
+      type: "text",
+      content: "Para representar o ritual, use o perigo complexo abaixo."
+    },
+    {
+      type: "text",
+      content: "EXPURGO ONÍRICO\nO grupo protege e auxilia Sylvana, enquanto a frade se concentra em seu ritual.\nOBJETIVO: Expulsar a presença sombria habitando a estátua e defender a sacerdotisa.\nEFEITO: Sylvana possui 40 pontos de vida. Ela estará completamente concentrada no ritual, e não pode auxiliar os personagens de qualquer forma. Ela precisa ficar cinco rodadas realizando o rito."
+    },
+    {
+      type: "text",
+      content: "Assim que o ritual inicia, um verdadeiro enxame de come-sonhos se espalha pela praça, tentando impedi-la. No final de cada rodada, todos os personagens e Sylvana sofrem 4d4+4 pontos de dano de perfuração da mordida das criaturas, 2d6 de dano psíquico, e perdem 1d4+1 PM."
+    },
+    {
+      type: "text",
+      content: "Caso os PV de Sylvana sejam reduzidos a 0, a elfa fica inconsciente. Se Sylvana sofrer qualquer dano após este, ela morre. Um personagem pode fazer a ação continuar o ritual para mantê-lo pelas rodadas restantes. Caso falhe no teste, o ritual falha, manifestando o espectro do pesadelo."
+    },
+    {
+      type: "text",
+      content: "ATACAR COME-SONHOS (Luta ou Pontaria CD 18) O personagem golpeia uma quantidade das criaturas. Escolha um dos outros participantes do ritual, incluindo Sylvana, para não sofrer o dano no final da rodada.\nCONTINUAR RITUAL (Religião CD 20) Caso Sylvana tenha sido derrotada, um único personagem pode fazer esse teste em uma rodada.\nDISTRAIR (Acrobacia ou Enganação CD 17) O personagem age de maneira inesperada, deixando os come-sonhos confusos. Reduza todo o dano causado pelas criaturas pela metade no final desta rodada.\nINTERPOR-SE (Nenhum teste) O personagem coloca-se na frente de outro, sofrendo, no fim da rodada, o dobro do dano, mas evitando que outro o sofra.\nLANÇAR MAGIA (Vontade CD 20 + custo em PM da magia) O personagem pode lançar uma magia que cause dano em área (com os mesmos resultados da ação atacar come-sonhos), de cura para recuperar os próprios PV ou de Sylvana, ou que auxilie no perigo complexo. Se falhar no teste a magia é perdida, mas os PM são gastos mesmo assim."
+    },
+    {
+      type: "text",
+      content: "Caso consigam manter o ritual durante cinco rodadas, ouvem um relincho espectral ao longe e os come-sonhos desaparecem. Entretanto, se falharem, ou se tentarem simplesmente destruir a estátua, causando qualquer dano a ela, uma criatura sombria se manifesta."
+    },
+    {
+      type: "text",
+      content: "CRIATURA. Espectro do Pesadelo (NPCs e Criaturas)."
+    },
+    {
+      type: "text",
+      content: "A aparência adotada pelo coletivo de come-sonhos para causar pavor lembra o cavalo do monumento. Ele é apenas um eco, uma sombra faminta, desejando devorar tudo ao seu redor. Enfurecido, o monstro ataca o grupo violentamente, lutando até a morte."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Epílogo: DESCANSO ENFIM"
+    },
+    {
+      type: "text",
+      content: "As crianças afligidas pela maldição começam, uma a uma, a despertar lentamente em suas casas. Os pais choram de emoção ao ver seus filhos salvos."
+    },
+    {
+      type: "text",
+      content: "Se tiverem completado o ritual, ou então derrotado o espectro, significa que os personagens conseguiram afastar a ameaça. Sylvana, se tiver sobrevivido, diz que nunca viu uma criatura assim, e que precisará de um tempo para registrar os eventos. Talvez até mesmo peça a eles que a levem até um templo maior de Tanna-Toh para apresentar seus achados."
+    },
+    {
+      type: "text",
+      content: "Entretanto, caso a sacerdotisa tenha morrido, todos os moradores choram sobre o corpo dela. Sem saber muito o que fazer, preparam um funeral simples para a elfa que ensinou tanto a todos. No templo, em seus aposentos, o grupo encontra alguns tesouros (role na tabela 8-1: tesouro por nível de desafio, na parte de ND 5, p. 328), e cartas para seus antigos companheiros de aventuras."
+    },
+    {
+      type: "text",
+      content: "No anoitecer seguinte, sem qualquer sinal de ameaças, os personagens avançam para o 5º nível."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "NPCs e Criaturas"
+    },
+    {
+      type: "text",
+      content: "COME-SONHOS (ND 2)\nEspírito Minúsculo\nINICIATIVA +6, PERCEPÇÃO +5, visão no escuro\nDEFESA 18, FORT +3, REF +12, VON +7, imunidade a efeitos mentais, dano psíquico e medo, redução de dano 5/mitral\nPONTOS DE VIDA 14\nDESLOCAMENTO 9m (6q)\nCORPO A CORPO Mordida +14 (4d4+4 mais 2d6 psíquico).\nDEVORAR SONHOS (PADRÃO) O come-sonhos devora os sonhos de uma criatura em alcance curto. A vítima perde 1d4+1 PM (Von CD 16 reduz a perda à metade); para cada PM que a vítima perder dessa forma, o come-sonhos recebe 5 PV temporários cumulativos. Se o come-sonhos usar esta habilidade em uma criatura que esteja dormindo, a perda de PM é dobrada. Recarga (causar dano psíquico com sua mordida).\nÊXTASE ONÍRICO Se fosse sofrer dano psíquico, em vez disso o come-sonhos cura PV em quantidade igual ao dano que sofreria.\nFor −3, Des 3, Con 2, Int 0, Sab 2, Car −1\nPERÍCIAS Furtividade +13, Intuição +7.\nTESOURO 1d4 doses de essência de mana (CD 17 para extrair)."
+    },
+    {
+      type: "text",
+      content: "ESPECTRO DO PESADELO (ND 5)\nEspírito Grande\nINICIATIVA +7, PERCEPÇÃO +8, faro, visão no escuro\nDEFESA 24, FORT +17, REF +11, VON +5, imunidade a efeitos de medo, mentais e trevas, redução de dano 5/luz, vulnerabilidade a luz\nPONTOS DE VIDA 200\nDESLOCAMENTO 15m (10q)\nCORPO A CORPO Cascos x2 +17 (2d6+5, mais 2d8 trevas).\nDEVORAR SONHOS (COMPLETA) O espectro do pesadelo devora os sonhos de todas as criaturas em alcance curto. As vítimas perdem 1d4+1 PM (Von CD 20 reduz a perda à metade); para cada PM que as vítimas perderem dessa forma, o espectro recebe 5 PV temporários cumulativos. Se uma das criaturas afetadas estiver dormindo, a perda de PM é dobrada. Recarga (completa).\nRELINCHO ATERRADOR (PADRÃO) Todas as criaturas em alcance curto ficam apavoradas por 1d4+1 rodadas e então abaladas (Von CD 20 muda para abalados por 1d4+1 rodadas a criatura fica imune a essa habilidade até o fim da cena).\nSEMI-INCORPÓREO O espectro do pesadelo tem 25% de chance de ignorar ataques e efeitos (incluindo de área) contra ele. Efeitos de luz ou mágicos ignoram essa habilidade.\nTERROR ENCARNADO O espectro recebe +2 em testes de ataque e +1d8 de dano de trevas contra criaturas abaladas.\nVULNERABILIDADE A LUZ DE DIA Um espectro exposto a luz solar natural fica debilitado.\nFor 6, Des 3, Con 4, Int –2, Sab 2, Car 0\nTESOURO Nenhum."
+    }
+  ]
+  },
   
 ];
