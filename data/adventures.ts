@@ -9593,5 +9593,593 @@ export const adventures: Adventure[] = [
       }
     ]
   },
+  { id: "Caminho para Liberdade",
+  name: "Caminho para Liberdade",
+  theme: "Fantasia e Luta contra a Opressão",
+  image: "/aventuras/caminho-para-liberdade.png",
+  summary: "No outrora imponente Império de Tauron, os heróis chegam à vila de Colina Verde apenas para serem oprimidos por minotauros gananciosos. Após uma derrota esmagadora para um centurião corrompido, eles são salvos por uma minaura paladina de Valkaria e devem fugir por túneis cheios de perigos.",
+  sections: [
+    {
+      type: "text",
+      content: "O outrora imponente Império de Tauron hoje está despedaçado. O que já foi um símbolo de unidade agora são centenas de vilas e cidades isoladas, muitas vezes sob controle de pequenos déspotas. O governo em Tiberus pouco pode fazer, pois enfrenta o maior inimigo da própria realidade dentro de seu território."
+    },
+    {
+      type: "text",
+      content: "Entretanto, dentro do próprio Império existem heróis com outra visão de mundo. Aqueles que lutam contra os que insistem no papel de opressores estão sempre atentos, prontos a recrutar mãos hábeis à sua causa. Ainda assim, muitos monstros sem escrúpulos colocam a liberdade das pessoas abaixo de seus desejos, e continuam cometendo crimes terríveis."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "RESUMO DA AVENTURA"
+    },
+    {
+      type: "text",
+      content: "Caminho para a Liberdade é uma breve jornada, uma aventura curta pensada para uma sessão única, mas que pode ser inserida em uma campanha maior. É ideal para um grupo de quatro personagens de 1º nível em Tormenta20."
+    },
+    {
+      type: "text",
+      content: "Através de algum chamado, os aventureiros chegam na vila de Colina Verde. Uma vila tão comum, com um nome tão banal que provavelmente há centenas de outras com o mesmo nome espalhadas por Arton."
+    },
+    {
+      type: "text",
+      content: "Mas ali, logo em sua entrada, um grupo particular de minotauros inescrupulosos, arraigados a valores que muitos membros de sua raça hoje consideram sem propósito, abordam o grupo de forma truculenta, ameaçando sua passagem caso não entreguem suas armas e outros equipamentos. Caso passem pacificamente, verão outros acontecimentos que os estimulam a agir contra os soldados. De uma forma ou de outra, um combate começa, e o líder militar dos adversários aparece, tornando a vitória improvável."
+    },
+    {
+      type: "text",
+      content: "Acordando em uma cela, os personagens são contatados por uma figura misteriosa, dizendo que pode ajudar com a fuga se prometerem apoiar a libertação da vila. A figura, uma paladina de Valkaria, solta os aventureiros e os guia por uma série de túneis. Perto da saída, o grupo é atacado por uma aranha gigante, determinada a transformá-los em sua refeição."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 1: QUEM VEM LÁ?"
+    },
+    {
+      type: "text",
+      content: "A vila de Colina Verde não difere muito de outras no que um dia foi conhecido como o reino das histórias: casas simples, um muro externo para defender de ataques, e fazendas nos arredores. Desde as Guerras Táuricas, entretanto, tudo passou a ser parte do Império. A vida poderia ter continuado igual, se o lugar não tivesse chamado a atenção de um governador especificamente ganancioso. Hoje, enquanto Tiberus jaz sob a sombra de Tauron, o controle de Colina Verde está sob pesado domínio de um grupo cruel de minotauros."
+    },
+    {
+      type: "text",
+      content: "Os personagens são chamados por um amigo, parente ou alguém em quem confiem. Segundo essa fonte, os impostos da vila são abusivos, estrangulando qualquer prosperidade que havia nas fazendas locais. E, segundo ordens do governador local, aqueles que não pagam, ou o desafiam, são punidos tendo que servir compulsoriamente, o que é apenas um eufemismo para escravidão."
+    },
+    {
+      type: "text",
+      content: "Todos os portões da cidade são guardados por ao menos quatro legionários em treinamento, vestindo armaduras de couro em estilo tapistano. Instruídos por seus superiores, eles interrogam as pessoas, de forma rude. Aquelas que têm a entrada na cidade recusada são enxotadas com empurrões. Quando os personagens se aproximam, um dos minotauros bufa pesadamente e caçoa. “Um mau cheiro desse? Só podem ser aventureiros.”"
+    },
+    {
+      type: "text",
+      content: "As perguntas que fazem são simples: “O que estão fazendo na cidade? De onde estão vindo? O que trazem para ajudar a comunidade?”. Porém, os minotauros claramente não têm qualquer interesse nessas respostas. Pedem a todos que entreguem suas armas e paguem uma taxa de T$ 10, pela confecção de um documento que permite a estadia temporária. Qualquer resposta que os ofenda, e eles se ofendem facilmente, inicia-se um combate."
+    },
+    {
+      type: "text",
+      content: "Criaturas. Recrutas Legionários x4 (NPCs & Criaturas)."
+    },
+    {
+      type: "text",
+      content: "Um dos minotauros vai usar seu primeiro turno para tocar um sino, avisando à vila que há invasores. A cada 1d4+1 turnos chega um novo recruta legionário."
+    },
+    {
+      type: "text",
+      content: "Se aceitarem pagar o valor e deixar suas armas, a entrada é aceita. De cara fica a impressão de que se trata de um lugar triste, as pessoas na rua parecem exaustas, arrastando os pés e com um semblante melancólico. Mesmo entrando pacificamente, os minotauros param os personagens constantemente, sempre tentando causar alguma confusão. Caso tenham vindo para ajudar alguém, essa pessoa pode estar sendo arrastada à força de sua casa, motivando os aventureiros a finalmente comprarem uma briga."
+    },
+    {
+      type: "text",
+      content: "De uma forma ou de outra, uma confusão com os recrutas se inicia. Repentinamente, eles ouvem passos pesados."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 2: MAGNUS DE TAURON"
+    },
+    {
+      type: "text",
+      content: "O minotauro que se aproxima é bem diferente dos jovens que vocês vêm enfrentando. Mais alto, chifres completamente negros e com diversas cicatrizes cruzando o rosto bovino. Apoiado em seu ombro, carrega um imenso machado de guerra. Veste uma loriga segmentada já sem brilho. Quando chega, todos os recrutas na área formam um círculo ao redor, isolando vocês e ele."
+    },
+    {
+      type: "text",
+      content: "O minotauro se aproxima, aponta o machado na direção dos personagens e diz “Eu, Magnus de Tauron, centurião imperial, ordeno que se entreguem! Ou que o Deus da Força tenha pena de vocês.” Mesmo que haja algum movimento para se entregar, Magnus dispara para os aventureiros em uma investida."
+    },
+    {
+      type: "text",
+      content: "Criaturas. Magnus de Tauron (NPCs & Criaturas)."
+    },
+    {
+      type: "text",
+      content: "Todos os ataques de Magnus serão não-letais (sofrendo uma penalidade de –5); ele tenta usar principalmente a lateral de seu machado para golpear seus inimigos. Este é um combate propositalmente desequilibrado. Magnus é muito mais poderoso que o grupo, e representa um desafio praticamente intransponível no nível atual. O objetivo de Magnus é desacordar os personagens para jogá-los em uma masmorra e depois forçá-los a trabalhar. Ao redor dos aventureiros e do minotauro, o círculo dos recrutas torce por seu líder e evita tentativas de fuga."
+    },
+    {
+      type: "text",
+      content: "É quase impossível, mas se, por uma sequência de coincidências incríveis, os personagens derrotarem Magnus, eles são atacados por uma decúria de recrutas (veja em NPCs & Criaturas). A decúria também causa apenas dano não-letal (e sofre a penalidade de –5 para isso)."
+    },
+    {
+      type: "text",
+      content: "Também é possível apenas se render. Neste caso, são todos algemados e levados para a masmorra."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 3: NAS ENTRANHAS DA FERA"
+    },
+    {
+      type: "text",
+      content: "O tempo passa de forma um tanto caótica para aqueles que ficaram inconscientes. Quando seus olhos finalmente abrem, percebem que estão ainda doloridos, agora presos em uma masmorra, com suas mãos algemas. Além do grupo há uma quinta pessoa. Ela também parece desacordada, mas assim que todos despertam, reage com uma animação atípica para a situação."
+    },
+    {
+      type: "text",
+      content: "Todos que estavam inconscientes estão novamente com 1 PV e ao menos 1 PM. Os equipamentos dos personagens estão empilhados do lado de fora da cela, em um canto de pedras. Caso alguém tenha se entregado, a estranha personagem que divide a sala com eles pede para que se acalmem, pois ela vai ajudar todos."
+    },
+    {
+      type: "text",
+      content: "“Vocês finalmente acordaram! Eu estava aguardando vocês voltarem a si para fazer uma proposta. Além disso, posso curar vocês. Vamos começar pela cura.”"
+    },
+    {
+      type: "text",
+      content: "A pessoa misteriosa, agora revelada, é uma mulher de traços vestigiais bovinos. Minotauros e pessoas treinadas em Conhecimento a reconhecem como uma minaura, uma rara “meio-minotauro”."
+    },
+    {
+      type: "text",
+      content: "“Bem, vamos vamos, não temos o dia todo. Vocês querem sair daqui, certo?” quando olham novamente para ela, a minaura está de pé, suas mãos libertas dos grilhões. “Podem me chamar de Tabitha. Sou uma paladina de Valkaria.”"
+    },
+    {
+      type: "text",
+      content: "Tabitha então prossegue, libertando cada aventureiro curando todos os pontos de vida perdidos. Ela então saca uma chave escondida nas roupas e abre a porta da cela. “Peguem as suas coisas ali, mas nossa saída não é por cima.”"
+    },
+    {
+      type: "text",
+      content: "Além dos equipamentos removidos dos personagens, o grupo encontra também dez essências de mana e quatro bálsamos restauradores, parte dos recursos dos legionários. Quando olham ao redor, veem Tabitha abrindo a última cela do corredor. Ela acena para que entrem, porém, se não entrarem, empurra uma parede que parece feita de tijolos de pedra, mas é apenas uma passagem secreta."
+    },
+    {
+      type: "text",
+      content: "Se perguntada como sabe desse caminho, sorri e diz: “Quando você passa tanto tempo presa quanto eu, acaba aprendendo um ou outro truque de como escapar desse lugar. Por sorte esses minotauros que se instalaram aqui ainda não os descobriram.”"
+    },
+    {
+      type: "text",
+      content: "Assim que todos passam pela fenda, Tabitha também entra, e empurra a parede falsa de volta à posição original, fazendo força para travá-la."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 4: ESTALACTITE OU ESTALAGMITE?"
+    },
+    {
+      type: "text",
+      content: "Assim que a passagem é fechada, o ambiente se torna completamente escuro, impossível de enxergar. Tabitha acende uma tocha e pergunta: “Por acaso vocês não têm tochas, têm?”. Caso tenham, ela pede que acendam, para facilitar a travessia."
+    },
+    {
+      type: "text",
+      content: "O lugar tem um cheiro mineral característico de cavernas, e ao longe é possível ouvir o som de gotas pingando do teto. Quando o caminho a frente se torna visível, é possível enxergar longas estalagmites se projetando do chão como presas de uma fera. Olhando para o teto, também existem diversas estalactites penduradas, prontas a cair a qualquer momento."
+    },
+    {
+      type: "text",
+      content: "Tabitha faz um gesto para fazerem silêncio: “Essa é a parte complicada. Passar aqui nesse trecho requer silêncio. Vamos devagar”. Infelizmente, nem todos são ágeis como a paladina, e para representar essa travessia, use o perigo complexo abaixo."
+    },
+    {
+      type: "text",
+      content: "Quando o último personagem deixar a área perigosa, Tabitha solta um suspiro aliviado. “Nossa, eu achei que dessa vez eu ia dessa para uma pior!” Sem conter mais sua voz, a minaura acaba causando a queda de diversas estalactites agora, sem qualquer efeito."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 5: QUASE LIVRES"
+    },
+    {
+      type: "text",
+      content: "A caverna continua, agora aparentemente mais tranquila. Tabitha explica que esse era um caminho usado para facilitar a fuga da população, caso a vila fosse cercada. Mas que infelizmente hoje serve apenas como rota de fuga de presos. “Aproveitando, eu obviamente não resgatei vocês só pela bondade do meu coração. Quer dizer, fiz, mas depois de ver como vocês enfrentaram o biltre Magnus, mesmo sem chance, eu queria saber se...”"
+    },
+    {
+      type: "text",
+      content: "A fala da paladina é interrompida. Todos vocês ouvem um guincho, um barulho nojento de cliques vindos da escuridão. Aqueles que estiverem com uma tocha ou forem capazes de enxergar no escuro podem fazer um teste de Percepção ou Sobrevivência (CD 17). Passando, percebem algo terrível: o lugar onde estão agora é o covil de um monstro, mais especificamente uma aranha gigante, pronta para atacá-los!"
+    },
+    {
+      type: "text",
+      content: "Criatura. Aranha gigante (Tormenta20, p. 287)."
+    },
+    {
+      type: "text",
+      content: "Enfrentar a criatura, ainda mais se estiverem cansados e feridos, é temerário, mas eles possuem uma vantagem contra a teia: Tabitha. A paladina, além de ser uma combatente prodigiosa, pode usar sua habilidade como parceira (veja NPCs & Criaturas) para tornar um personagem imune a efeitos de movimento por uma rodada, livrando-se da condição enredado causada pela teia."
+    },
+    {
+      type: "text",
+      content: "Além disso, o combate direto não é a única opção. Tabitha diz que a saída está a 100m em uma determinada direção e, se chegarem ao lado de fora, talvez a criatura não continue a perseguição. Se decidirem fugir, caso um personagem role 1 natural no dado no teste de Atletismo para correr, fica caído e sofre 1d6 pontos de dano de impacto."
+    },
+    {
+      type: "text",
+      content: "Saindo da caverna, a luz do dia intimida a criatura, e ela volta para a escuridão."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Epílogo: UMA PROPOSTA"
+    },
+    {
+      type: "text",
+      content: "Todos ainda estão tentando recuperar o fôlego. Cansados, feridos, mas finalmente livres. Tabitha está tão surpresa quanto todos, e diz que aquele monstro não estava ali da última vez. Ela pede desculpas e fala que, assim que descansar, curará todos."
+    },
+    {
+      type: "text",
+      content: "Mas antes, ela lembra do que estava falando antes do ataque da aranha gigante. “Sim, antes de continuarmos... eu preciso pedir a ajuda de vocês. Vejam, Colina Verde foi onde eu nasci, mas vê-la assim tomada não é certo! Este tempo de dominação já passou. Eu tenho planos, mas preciso da ajuda de heróis que queiram combater essa tirania. Posso contar com vocês?”"
+    },
+    {
+      type: "text",
+      content: "Enquanto pensam sobre a proposta, os personagens avançam para o 2º nível!"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Travessia das Estalactites"
+    },
+    {
+      type: "text",
+      content: "Objetivo: Atravessar a área sofrendo o mínimo de dano possível.\nEfeito: Os personagens agem na ordem de sua Iniciativa, e cada um deve acumular três sucessos na ação travessia silenciosa para sair da área perigosa. Entretanto, assim que acontecer a primeira falha na ação travessia silenciosa, as estalactites do teto começam a cair, causando 1d6 pontos de dano de perfuração por falhas subsequentes à primeira.\nTravessia Silenciosa (Furtividade CD 15): O personagem dá passos lentos e calmos em direção a saída.\nCorrer à Toda (Atletismo CD 15): Um personagem percorre todo o caminho (efetivamente conseguindo os três sucessos), mas sofre 2d6 pontos de dano de perfuração. Caso ninguém tenha falhado ainda, usar essa ação conta como uma falha.\nInterpor-se (Nenhum): Um personagem usa sua rodada para sofrer o dano que um outro de menor iniciativa sofreria."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "NPCs & Criaturas"
+    },
+    {
+      type: "text",
+      content: "RECRUTA LEGIONÁRIO (ND 1/4)\nHumanoide (minotauro) Médio\nIniciativa +2, Percepção +1, faro\nDefesa 15, Fort +5, Ref +0, Von +3\nPontos de Vida 9\nDeslocamento 9m (6q)\nCorpo a Corpo Lança +7 (1d6+3) e chifres +7 (1d6+3).\nMedo de Altura Se estiver adjacente a uma queda de 3m ou mais de altura (como um buraco ou penhasco), o recruta fica abalado.\nFor 3, Des 0, Con 2, Int 0, Sab –1, Car –1\nEquipamento Couro batido, escudo leve, lança. Tesouro Metade."
+    },
+    {
+      type: "text",
+      content: "DECÚRIA DE RECRUTAS (ND 2)\nHumanoide (minotauro) Grande\nIniciativa +2, Percepção +1, faro\nDefesa 22, Fort +5, Ref +0, Von +3\nPontos de Vida 25\nDeslocamento 9m (6q)\nCorpo a Corpo [Bando] Lanças +14 (1d6+3) e chifres +14 (1d6+3).\nMedo de Altura Se estiver adjacente a uma queda de 3m ou mais de altura (como um buraco ou penhasco), a decúria fica abalada.\nFor 3, Des 0, Con 2, Int 0, Sab –1, Car –1\nEquipamento Couro batido, escudo leve, lança. Tesouro Metade."
+    },
+    {
+      type: "text",
+      content: "MAGNUS DE TAURON (ND 5)\nAntes da queda do Deus da Força, Magnus era um de seus guerreiros sagrados, jurando proteger os fracos, inclusive opondo a política opressora do Império. Infelizmente, com a queda de seu deus, Magnus se viu amargo, cheio de mágoas e parou de se importar com os valores que um dia defendeu. Se ainda há algo do valoroso campeão dentro dele, se esconde nos rincões mais profundos de seu ser.\nHumanoide (minotauro) Médio\nIniciativa +4, Percepção +4, faro\nDefesa 26, Fort +16, Ref +4, Von +10\nPontos de Vida 130\nDeslocamento 6m (4q)\nCorpo a corpo Machado de guerra +16 (3d6+6, x3) e chifres +16 (1d6+6).\nOrdens (Movimento) Magnus grita ordens para seus aliados em alcance médio. Eles recebem +2 em testes de perícia até o fim da cena.\nTremer a Terra (Movimento) Todas as criaturas em alcance curto de Magnus ficam caídas (Fort CD 18 evita).\nVarrer (Livre) Uma vez por rodada, quando Magnus faz um ataque corpo a corpo e reduz os pontos de vida do alvo para 0 ou menos, pode realizar um ataque adicional contra outra criatura dentro do seu alcance.\nFor 4, Des 0, Con 3, Int 0, Sab 0, Car 2\nPerícias Atletismo +12, Guerra +7, Religião +6.\nEquipamento Loriga segmentada reforçada, machado de guerra aumentado cruel, símbolo sagrado de Tauron. Tesouro Padrão."
+    },
+    {
+      type: "text",
+      content: "TABITHA\nO começo da vida de Tabitha já foi diferente de muitos minauros como ela. Quando nasceu, seus pais ficaram extremamente felizes por ela não ser nem apenas como o pai, ou apenas como a mãe, mas sim um encontro entre ambos.\nCrescendo em Colina Verde, a menina sempre sentiu um estranho chamado, e assim que pôde, viajou pela primeira vez com uma companhia de mercadores para conhecer o mundo. Mas o que encontrou foi algo muito diferente, onde minotauros oprimiam outros povos.\nFinalmente compreendendo e abraçando sua vocação, foi ordenada paladina de Valkaria, e decidiu lutar contra toda forma de opressão. Quando soube o que estava acontecendo em sua vila, sabia por onde começar.\nParceira Veterana. Tabitha auxilia os aventureiros em combate, mas também divide uma parte da suas dádivas de Valkaria com quem estiver acompanhando. O personagem que Tabitha estiver ajudando recebe +2 em testes de ataque e fica imune a condições de movimento."
+    }
+  ]
+  },
+  { id: "Túneis e Trolls",
+  name: "Túneis e Trolls",
+  theme: "Exploração Subterrânea e Terror Finntroll",
+  image: "/aventuras/tuneis-e-trolls.png",
+  summary: "Dois irmãos anões contratam os heróis para encontrar a oficina secreta de um ancestral nas profundezas. A jornada revela que finntrolls também buscam os segredos do lugar, espalhando uma infecção vegetal que transformará um dos aliados em um monstro letal.",
+  sections: [
+    {
+      type: "text",
+      content: "A coluna Breves Jornadas oferece aventuras simples, rápidas e completas para Tormenta20, com tudo que será necessário para jogar. Fichas especiais serão fornecidas aqui, enquanto àquelas presentes no livro básico terão indicadas as páginas em que se encontram."
+    },
+    {
+      type: "text",
+      content: "O objetivo é fornecer ao mestre um ponto de partida eficiente para que todos se divirtam por uma tarde, ou comecem uma nova campanha. Se precisar de fichas de personagens prontas, é possível encontrá-las na coluna Heróis de Bolso, no Blog da Jambô."
+    },
+    {
+      type: "text",
+      content: "Esta aventura chama-se Túneis e Trolls."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Introdução"
+    },
+    {
+      type: "text",
+      content: "Anões são exímios ferreiros e suas armas e armaduras são cobiçadas por todo o Reinado e além. Porém, não é incomum que um mestre anão decida ocultar suas técnicas, para que não sejam copiadas por outras famílias. Lendas de oficinas incríveis escondidas se espalham nos tortuosos túneis subterrâneos que supostamente levariam a Doherimm se espalham pelas tavernas."
+    },
+    {
+      type: "text",
+      content: "Entretanto, um perigo terrível se esconde ainda mais abaixo, nas sombras do submundo. Por muito tempo se acreditou que trolls, monstros vegetais de grandes poderes regenerativos, surgiam naturalmente. Porém, alguns anões e aventureiros sabem a verdade: Trollkyrka, o império dos finntrolls, um povo cruel e escravagista, é constante ameaça a todos."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Resumo da Aventura"
+    },
+    {
+      type: "text",
+      content: "Túneis e Trolls é uma breve jornada, uma aventura curta pensada para uma sessão única, mas que pode ser inserida em uma campanha maior. É ideal para um grupo de quatro personagens de 4º nível em Tormenta20."
+    },
+    {
+      type: "text",
+      content: "O grupo é contratado por dois irmãos anões para investigar uma antiga série de cavernas em busca de uma oficina ancestral seguindo as pistas deixadas por um antigo parente. No caminho, ele é atacado por dois gorloggs, um deles com uma estranha mutação vegetal."
+    },
+    {
+      type: "text",
+      content: "Caminhando por diversos corredores de pedra, enfrentam os cadáveres de anões deixados para trás e armadilhas perigosas. Na oficina encontram três finntrolls, também em busca do segredo do anão.. A líder foge, porém os caçadores enfrentam os aventureiros. Infelizmente, um dos anões foi infectado pela mutação de um dos gorloggs, tornando-se parcialmente troll e atacando o grupo violentamente."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 1 – Não é uma mina"
+    },
+    {
+      type: "text",
+      content: "Os aventureiros são convidados a uma taverna por uma missiva enviada por dois membros de uma guilda de ferreiros. A carta é identificada pelo selo desta organização. Ao chegarem encontram, sentado ao balcão da taverna, um anão largo, de barba e cabelos negros trançados, bebendo silenciosamente. Ele segue na direção do grupo."
+    },
+    {
+      type: "text",
+      content: "“Meu nome é Brokk”, ele diz. Mas antes que possa continuar é interrompido pelo som de uma disputa de braço-de-ferro. Brokk massageia as têmporas. “E aquela, torcendo o braço do minotauro é minha irmã, Eitri”."
+    },
+    {
+      type: "text",
+      content: "O anão estende a mão, assovia para que ela se junte a eles, e todos se dirigem a uma das mesas do estabelecimento. Eles são muito parecidos, mas ela tem volumosas suíças ao invés de barbas."
+    },
+    {
+      type: "text",
+      content: "“Bah! Esses são os aventureiros? Nossa, que impressionantes! Adoraria fazer umas armas ou armaduras bem bacanas para vocês! Quem sabe um dia desses, ein?”"
+    },
+    {
+      type: "text",
+      content: "Ambos vestem macacões de couro reforçado, com um pingente em formato de martelo e bigorna. Brokk se prontifica a pagar uma rodada de canecos de cerveja, mas Eitri pede algo mais forte, ela diz que ele pagará a conta da noite, fazendo seu irmão novamente massagear as têmporas. Ele então conta:"
+    },
+    {
+      type: "text",
+      content: "“Encontramos o diário de um ancestral nosso, Trokk Ferropesado, indicando o caminho para sua antiga oficina. Ferreiros anões gostam de esconder essas coisas com medo que alguém copie suas técnicas, mas pelo jeito ele queria que a coisa ficasse na família. O texto fala de registros em um tomo deixado para trás, e nós desejamos recuperá-lo.”"
+    },
+    {
+      type: "text",
+      content: "O pagamento oferecido pela missão é T$ 400, para cada um, e um acordo perpétuo com a guilda a qual pertencem, disposta a oferecer serviços e itens pela metade do preço. Quaisquer itens encontrados no lugar serão cedidos aos aventureiros, depois de terem sido estudados e analisados pelos ferreiros anões."
+    },
+    {
+      type: "text",
+      content: "Se a proposta for aceita, Brokk irá sugerir partir imediatamente, mas Eitri o convence a ficar na estalagem essa noite, com a desculpa de descansar — embora o plano verdadeiro seja farrear com os aventureiros. Na manhã seguinte, todos partem em direção a caverna."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 2 – Passagem para as trevas"
+    },
+    {
+      type: "text",
+      content: "As coordenadas presentes no diário levam a uma região remota, onde pequenas colinas e montanhas se elevam. Após uma curta viagem, todos chegam à entrada de uma caverna natural. Ela é estrita e quase imperceptível, seu interior sombrio esconde o que possa haver à frente."
+    },
+    {
+      type: "text",
+      content: "Os anões, e aqueles treinados em Percepção, notam, entalhada na lateral de uma rocha e coberta por musgo, uma marca que lembra muito a da guilda a que os anões pertencem, feita talvez para identificar a entrada do caminho. Ainda assim, uma vez lá dentro, a trilha é tortuosa."
+    },
+    {
+      type: "text",
+      content: "Brokk e Eitri seguem pela escuridão total sem parecerem afetados. Se algum membro do grupo não for capaz de enxergar no escuro, os anões oferecem tochas. Personagens treinados em Percepção notam que os irmãos constantemente tocam as paredes, provavelmente em busca de novas marcas."
+    },
+    {
+      type: "text",
+      content: "É tudo tenebrosamente silencioso, principalmente para os acostumados ao burburinho constante da cidade. Conversas são carregadas pelo eco e rebatidas nas paredes lisas criando um clima incômodo. Os únicos sons ambientes perceptíveis são dos pés arrastando nas rochas e uma eventual goteira de condensação (processo de criar estalagmites)."
+    },
+    {
+      type: "text",
+      content: "Vários metros no interior da caverna, chega-se a um abismo. Analisando as bordas da depressão pode-se ver sinais de que havia uma escadaria aqui no passado, destruída de alguma forma há muito tempo. Apesar disso, a face muito acidentada da rocha permite escalar com um teste de Atletismo (CD 10), para descer os 20 metros até um novo patamar. Os irmãos anões possuem cordas para auxiliar no processo, fornecendo +5 no teste. Se ainda assim alguém cair, lá embaixo há um lago subterrâneo, que reduz a severidade da queda (reduzindo a distância percorrida em 6m, veja Tormenta20, capítulo 7: Ameaças, em Queda)."
+    },
+    {
+      type: "text",
+      content: "Assim que todos chegam ao fundo do abismo, veem a caverna se transformar em estruturas escavadas na rocha, com sinais óbvios de manufatura anã. Brokk e Eitri ficam muito animados, discutindo como isso prova a veracidade do diário. Infelizmente, isso os deixa distraídos e eles não notam quando uma criatura surgindo de repente, mordendo um dos dois (role 1d4, 1 e 2 será Brokk, 3 e 4 Eitri) e levando-o para longe."
+    },
+    {
+      type: "text",
+      content: "O monstro é uma fera selvagem que nos anos recentes se espalhou pelo Reinado, um gorlogg. Entretanto, este apresenta uma característica diferente: uma cobertura do que parece musgo se espalhando pelo couro. Um segundo animal similar, mas sem a cobertura de musgo, sai da escuridão e ataca!"
+    },
+    {
+      type: "text",
+      content: "Criaturas. Gorlogg (Tormenta 20, capítulo 7: Ameaças)."
+    },
+    {
+      type: "text",
+      content: "As bestas são violentas, movidas por fome. Os anões estão longe, enfrentando a outra criatura. Quando o gorlogg normal for derrotado, os irmãos se aproximam novamente, tendo lidado com a outra fera, um deles ainda cambaleando."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 3 – Infecção"
+    },
+    {
+      type: "text",
+      content: "Desesperados, os anões mostram o resultado do ataque: o braço daquele que foi ferido primeiro está coberto de uma matéria vegetal similar à presente no couro do gorlogg que enfrentaram. A pele ao redor está esverdeada, assim como suas veias, agora saltadas."
+    },
+    {
+      type: "text",
+      content: "Um personagem treinado em Cura pode realizar um teste (CD 20) para analisar a ferida: tudo indica haver algo como uma infecção profunda, que só poderia ser curada com poderosos milagres divinos, ou uma intervenção profunda. O anão infectado dirá não adiantar voltar à cidade, então pede para seguirem em frente, pois talvez encontrem algo para impedir o avanço da condição."
+    },
+    {
+      type: "text",
+      content: "\"Isso é coisa dos finntrolls!\" diz o anão que não foi ferido \"Os malditos experimentam em várias criaturas, transformando nesses monstros vegetais. Eu juro pelas barbas de Heredrimm que vou acabar com os desgraçados por isso!\""
+    },
+    {
+      type: "text",
+      content: "Lentamente, eles todos seguem pelos corredores artificiais, se dirigindo a um novo trecho do complexo subterrâneo."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 4 – Os que ficam para trás"
+    },
+    {
+      type: "text",
+      content: "Avançando pelas câmaras, a condição do anão ferido só parece piorar, mas escorado em seu irmão/irmã segue bravamente. Os salões de pedra possuem caixas e objetos deixados para trás, escondendo possíveis tesouros e relíquias de outro tempo."
+    },
+    {
+      type: "text",
+      content: "Cada personagem pode fazer um teste de Investigação (CD 20), encontrando assim algo da Tabela de Tesouro por Nível de Desafio para o ND 5 (apenas itens)."
+    },
+    {
+      type: "text",
+      content: "Logo a calmaria e silêncio são substituídos por gemidos agoniados e passos lentos. Algo aconteceu aqui: um grupo de anões ficou para trás, possivelmente para defender aqueles que passavam. Mas essas almas não sobreviveram e ao falecerem foram “abençoados” pela deusa materna de seu povo, retornando como mortos-vivos."
+    },
+    {
+      type: "text",
+      content: "Criaturas. Turbas de Zumbi x2 (Tormenta20, capítulo 7: Ameaças)."
+    },
+    {
+      type: "text",
+      content: "Estes infelizes reerguidos atacam qualquer ser vivo, mas parecem odiar de forma primitiva outros anões e portadores de símbolos sagrados de deuses como Azgher ou Khalmyr."
+    },
+    {
+      type: "text",
+      content: "Quando são derrotados, o som de um suspiro aliviado espectral preenche todo o ambiente, deixando a passagem aberta para o interior de Arton."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 5 – Masmorras profundas"
+    },
+    {
+      type: "text",
+      content: "Há uma sinistra tensão no ar conforme o caminho prossegue. A condição de Brokk ou Eitri vai se agravando a olhos vistos. Não há tempo para lidar com isso, pois à frente há membros de criaturas presas em antigas armadilhas anãs."
+    },
+    {
+      type: "text",
+      content: "Um teste de Sobrevivência (CD 20) revela que essas partes do corpo de seres do subterrâneo, como trolls e outros monstros. Os personagens ganham +5 em Investigação para encontrar armadilhas nesta cena."
+    },
+    {
+      type: "text",
+      content: "Seguindo em frente, passam por um corredor aparentemente ordinário. Peça a todos um teste de Investigação (CD 20). Aqueles que passarem no teste percebem a armadilha antes de ativá-la, porém, os que falharem devem fazer um teste de Reflexos (CD 20) para evitar o mecanismo de blocos que desce do teto e esmaga tudo em seu caminho, causando 6d6 pontos de dano de impacto, numa versão da armadilha bloco de pedra (Tormenta20, capítulo 7: Ameaças)."
+    },
+    {
+      type: "text",
+      content: "Mas, devido à condição do anão ferido, será necessário desarmar a armadilha, através de um teste de Ladinagem (CD 20), ou então passar correndo com um teste de Atletismo (CD 20), para os irmãos conseguirem atravessar a área. Caso um personagem tente um teste de Atletismo para carregar o anão ferido e falhe, sofrerá o dano da armadilha acima (ainda com direito a um teste de Reflexos para evitá-lo)."
+    },
+    {
+      type: "text",
+      content: "Deixando a armadilha para trás, os salões vão se alargando ainda mais."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 6 – Oficina Subterrânea"
+    },
+    {
+      type: "text",
+      content: "O estado de Eitri ou Brokk está crítico, braço e ombro tomados pelo verde do limo, todas as veias do corpo no mesmo tom. Um dos olhos perdeu a cor, porém ele (ou ela) continua acompanhando o grupo, no ritmo possível. Logo chegam à uma câmara larga, a antiga oficina anã abandonada, local onde provavelmente está o livro de técnicas de forja."
+    },
+    {
+      type: "text",
+      content: "Entretanto, aqui também há três figuras humanoides, esguias e extremamente pálidas. Duas investigam a área, seus olhos penetrando as trevas. A terceira, vestida em mantos ornados e intrincados, ostentando um penteado delicadamente complexo que pouco combina com o ambiente rústico da oficina, observa aqueles à frente com perceptível tédio em seu rosto cruel."
+    },
+    {
+      type: "text",
+      content: "Se tiverem acendido tochas, ou qualquer outra fonte de luz, a chegada do grupo logo é percebida. Anões, e todos que passem em um teste de Conhecimento (CD 20), reconhecem esses humanoides como finntrolls, um cruel e sádico povo do subterrâneo, em constante guerra contra os anões, e responsáveis pela criação dos trolls comuns."
+    },
+    {
+      type: "text",
+      content: "“Finntrolls!”, diz o anão saudável em fúria contida, “Malditos finntrolls!”"
+    },
+    {
+      type: "text",
+      content: "Ao notar a chegada, a finntroll bem vestida dá um comando para os outros dois perto do portão, em uma língua áspera e gutural. Um teste de Conhecimento para idiomas revela a ordem dada:"
+    },
+    {
+      type: "text",
+      content: "“Orloff, Kasmir, livrem-se dessas pestes da superfície e destes anões imundos!”"
+    },
+    {
+      type: "text",
+      content: "Ela então lança um feitiço de teletransporte, sumindo do local."
+    },
+    {
+      type: "text",
+      content: "Criaturas. Finntroll Caçadores x2 (Tormenta20, capítulo 7: Ameaças)."
+    },
+    {
+      type: "text",
+      content: "Os finntrolls combatem em conjunto, um tentando prender com sua rede enquanto o outro ataca o alvo, focando principalmente em anões."
+    },
+    {
+      type: "text",
+      content: "Após a luta, é possível vasculhar a área. Aparentemente o grupo de finntrolls estava buscando algo na oficina. Provavelmente as mesmas anotações que o grupo tinha a missão de encontar."
+    },
+    {
+      type: "text",
+      content: "Infelizmente, antes que o grupo possa investigar também, algo terrível acontece."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 7 – Tragédia"
+    },
+    {
+      type: "text",
+      content: "O corpo do anão infectado convulsiona agachado, e então um berro animalesco escapa de sua garganta agora transformada. Quando se ergue, os olhos não têm mais o brilho anterior, e suas mãos têm o formato de garras terríveis. O anão infectado avança sobre os aventureiros com uma velocidade feral."
+    },
+    {
+      type: "text",
+      content: "Criaturas. Anão infectado (NPCs & Criaturas)."
+    },
+    {
+      type: "text",
+      content: "O irmão saudável está chocado, sem conseguir reagir de qualquer forma. Não há qualquer forma de se comunicar com a criatura, que parece não ter mantido qualquer consciência. Quando atingido, seus ferimentos fecham-se com a mesma agilidade que os gorloggs na encontrados antes. É possível tentar amarrar a criatura, mas não há nenhuma chance de trazê-la de volta ao normal."
+    },
+    {
+      type: "text",
+      content: "Resta apenas o combate amargo e, ao fim, silêncio."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Epílogo – Como seguir?"
+    },
+    {
+      type: "text",
+      content: "Enquanto recuperam o ar após a luta final, o anão sobrevivente se levanta e reage de forma particular."
+    },
+    {
+      type: "text",
+      content: "Se Brokk tiver sobrevivido, fica atônito. O anão passa longos instantes observando a oficina ao seu redor. Desnorteado, começa a procurar o tomo de técnicas de forja, mas quando o encontra, começa a chorar, e entrega ao grupo, sem desejar guardar qualquer memória dessa jornada trágica. O tomo não tem todos segredos do antigo mestre anão, mas fornece um bônus de +5 em testes de Ofício (Armeiro), mas apenas para armas metálicas e armaduras pesadas."
+    },
+    {
+      type: "text",
+      content: "Se fa sobrevivente for Eitri, ela se enfurece e começa a quebrar tudo o que encontra. Se tentar, o grupo encontra o tomo do antigo mestre anão sem dificuldade. Depois disso, todos retornam à superfície. Eitri entende a necessidade de recuar e se preparar ante um inimigo poderoso, mas intima os aventureiros a caçarem os finntroll, em busca de vingança. A anã paga o valor prometido, e oferece algo mais: uma arma feita de adamante, caso decidam auxiliá-la novamente."
+    },
+    {
+      type: "text",
+      content: "Se passarem mais tempo procurando na oficina, o grupo pode encontrar uma armadura completa de mitral, além de diversos documentos dos anões. Os túneis continuam, em direção ao desconhecido, porém é o momento de curar as feridas, no corpo e na alma."
+    },
+    {
+      type: "text",
+      content: "Ao se recuperarem dessa terrível jornada subterrânea, os personagens avançam para o 5º nível."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "NPCs & Criaturas"
+    },
+    {
+      type: "text",
+      content: "ANÃO INFECTADO (ND 3)\nMonstro Médio\nIniciativa +3, Percepção +5, visão no escuro\nDefesa 20, Fort +15, Ref +4, Von +6, cura acelerada 10/ácido ou fogo\nPontos de Vida 70\nDeslocamento 6m (4q)\nCorpo a Corpo Duas garras +12 (1d6+4)\nDilacerar Se o anão infectado acerta dois ataques de garra em uma mesma criatura na mesma rodada, causa mais 2d6+4 pontos de dano.\nFor 3, Des 0, Con 5, Int –3, Sab 0, Car –2\nTesouro Padrão."
+    }
+  ]
+  },
   
 ];

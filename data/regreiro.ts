@@ -28,6 +28,116 @@ export const regreiroQAs: RegreiroQA[] = [
     magazineNumber: 173,
   },
   //#endregion 
+  //#region DB - 191
+  {
+    id: "DB191-01",
+    question: "> Bom Azgher, meritíssimos! Com o lançamento de *Ameaças de Arton*, trago dúvidas a respeito do combate contra criaturas do tipo \"Bando\" (como a Turba Zumbi):\n\n1) Eles permanecem adjacentes aos seus alvos em vez de entrar/ocupar o espaço de outros personagens como aqueles com o poder \"Enxame\" (como Enxame Kobold)?",
+    answer: "> Saudações diurnas, conselheiríssimo! Vamos às suas respostas:\n\n1) Exceto quando mencionado o contrário, bandos seguem as mesmas regras de personagens. Eles podem atacar sem entrar no espaço de outros personagens.",
+    magazineNumber: 191,
+  },
+  {
+    id: "DB191-02",
+    question: "2) Eles realizam ataques contra apenas um alvo por turno, ainda que sejam compostos por diversos elementos e mais de um alvo esteja no seu alcance?",
+    answer: "2) Sim, apenas um alvo por ataque.",
+    magazineNumber: 191,
+  },
+  {
+    id: "DB191-03",
+    question: "3) Eles podem realizar manobras?",
+    answer: "3) Sim, podem realizar manobras normalmente.",
+    magazineNumber: 191,
+  },
+  {
+    id: "DB191-04",
+    question: "4) Seus modificadores de alcance e manobra (p. 107) são referentes ao Tamanho do bando ou à criatura que compõe o bando?",
+    answer: "4) Use os modificadores de alcance e manobra considerando o tamanho do bando. Porém, o mestre pode usar livremente o tamanho das criaturas que o compõem, caso prefira.",
+    magazineNumber: 191,
+  },
+  {
+    id: "DB191-05",
+    question: "5) É possível usar a manobra Derrubar contra um Cavaleiro usando Postura de Combate: *Torre Inabalável* (p. 55)?",
+    answer: "5) Sim. *Torre Inabalável* não deixa o cavaleiro imune à condição caído.",
+    magazineNumber: 191,
+  },
+  {
+    id: "DB191-06",
+    question: "> Preciso tirar uma dúvida sobre a magia *Caminhos da Natureza*! O bônus de deslocamento dela é aplicado somente em terrenos naturais? Ou essa limitação se aplica apenas à parte sobre ignorar terrenos difíceis?",
+    answer: "> Saudações silvestres, conselheiríssimo! A limitação se aplica a ambos os efeitos da magia.",
+    magazineNumber: 191,
+  },
+  {
+    id: "DB191-07",
+    question: "> Caros tribunos do tribunal de Khalmyr, em *A Lenda de Ghanor RPG*, considerando que estou usando junto as regras de T20, um item de mortífice é equivalente a um item com material especial, sendo assim, não considerando como outro aprimoramento de material especial, ou seja, não podendo ser feito?",
+    answer: "> Saudações tumulares, conselheiríssimo! Itens de mortífice são feitos a partir de criaturas. Dessa forma, não podem receber aprimoramentos de material especial. Porém, caso o mestre deseje um item especial – talvez uma espada feita com uma liga de adamante e um dente do devorador de mundos – uma exceção especial pode ser feita.",
+    magazineNumber: 191,
+  },
+  {
+    id: "DB191-08",
+    question: "> Queridíssimos juízes, venho hoje, por meio desta, como uma suplicante e futura Clériga de Lena, lhes perguntar:\n\n1) O poder de origem *Médico de Campo* diz \"você soma sua Sabedoria aos PVs restaurados por suas habilidades e itens mundanos de cura\", nesse caso, as habilidades incluem magias e habilidades mágicas ou seriam apenas habilidades mundanas também?",
+    answer: "> Saudações medicinais, conselheiríssima! Vamos às suas respostas:\n\n1) Apenas habilidades mundanas.",
+    magazineNumber: 191,
+  },
+  {
+    id: "DB191-09",
+    question: "2) O poder concedido de Lena *Cura Gentil* se aplica à magia *Guardião Divino*? Se sim, como?\n\nObrigada desde já.",
+    answer: "2) Não se aplica. O efeito da magia é invocar o elemental, não curar.",
+    magazineNumber: 191,
+  },
+  {
+    id: "DB191-10",
+    question: "> Caso um druida use o poder *Espírito dos Solstícios* para maximizar os efeitos variáveis de uma magia sustentada, o efeito seria maximizado em cada rodada sustentada?",
+    answer: "> Saudações druídicas, conselheiríssimo! A resposta é afirmativa. Não mexa com os druidas!",
+    magazineNumber: 191,
+  },
+  {
+    id: "DB191-11",
+    question: "> Excelentíssimos juízes de Arton, tenho dúvidas referentes a uma personagem minha.\n\n1) Criei uma sílfide ladina com -3 de força. Como a adaga é de tamanho reduzido, ou seja, -1 passo de dano, o dano fica 1d3. Caso não tenha as condições para ataque furtivo, o cálculo do dano daria 1d3-3, ou seja, de -2 a 0. Tendo isso em conta, minha primeira dúvida é: qual seria o dano? E caso haja ataque furtivo, o resultado da fórmula abateria do dano extra do ataque furtivo, dando 1d3-3+1d6?",
+    answer: "> Saudações moreau, conselheiríssimo! Vamos às suas respostas.\n\n1) Sim, o dano é contado como um todo. Portanto, o dano base muito baixo de uma arma pode diminuir o dano de um ataque furtivo.",
+    magazineNumber: 191,
+  },
+  {
+    id: "DB191-12",
+    question: "2) Equipamentos reduzidos, para tamanho pequeno ou minúsculo, continuam ocupando um espaço de carga? Gostaria de saber se a armadura e armas da minha silfide continuam ocupando 1 e 2 espaços respectivamente.",
+    answer: "2) Continuam ocupando os espaços normais.",
+    magazineNumber: 191,
+  },
+  {
+    id: "DB191-13",
+    question: "3) Na descrição da *Coleção Arton* os senhores antecipam que uma das novas montarias possíveis será a capivara. Gostaria de saber: há a possibilidade de ter também um moreau capivara como personagem jogável?\n\nObrigado.",
+    answer: "3) A origem dos moreau está ligada aos doze animais que foram agraciados por Allihanna. Dessa forma, não existem outras espécies de moreau além das doze já conhecidas.",
+    magazineNumber: 191,
+  },
+  {
+    id: "DB191-14",
+    question: "> Excelentíssimos juízes abençoados por Khalmyr, boa Tenebra!\n\nVenho por meio desta pedir um esclarecimento sobre o encontro de dois mundos: A raça meio-elfo, de Ghanor, permite pegar duas origens ao invés de uma só. Caso a raça seja usada em Tormenta, é possível pegar duas origens do T20? Ou uma de cada? Ou seria melhor se ater apenas às origens de Ghanor?",
+    answer: "> Saudações élficas, conselheiríssimo! Essa é uma decisão que cabe exclusivamente ao mestre. Porém, parece adequado que sejam escolhidas as origens do cenário sendo utilizado.",
+    magazineNumber: 191,
+  },
+  {
+    id: "DB191-15",
+    question: "> Saudações excelentíssimos juízes, minha pergunta é a seguinte: considerando que eu tenha os poderes: *Estilo de duas Armas*, *Arma Secundária Grande*, *Saque Rápido*, *Estilo de Disparo* e *Disparo Rápido*. Usando duas bestas leves, quantos ataques eu conseguiria realizar por ação agredir? A dúvida surgiu especialmente devido ao texto de disparo rápido. Desde já agradeço pela atenção",
+    answer: "> Saudações duplas, conselheiríssimo! Apesar de usar uma ação completa, o poder *Disparo Rápido* continua sendo uma ação agredir. Dessa forma, você pode fazer três ataques: um normal, um adicional por *Estilo de Duas Armas* e um adicional por *Disparo Rápido*.",
+    magazineNumber: 191,
+  },
+  {
+    id: "DB191-16",
+    question: "> Tenho algumas dúvidas sobre o efeito congelar o tempo da magia *Controlar o Tempo*.\n\n1) Durante as rodadas de tempo congelado e conjuração extra de magias, um arcanista com *Surto Heroico*, acesso a *Velocidade* (aprimoramento para conjurar magias) e *Acelerar Magia* poderia conjurar 4 magias por rodada de tempo congelado (acelerando uma e com as duas ações padrões extra)?",
+    answer: "> Saudações cronomânticas, conselheiríssimo! Vamos às suas respostas:\n\n1) Sim.",
+    magazineNumber: 191,
+  },
+  {
+    id: "DB191-17",
+    question: "2) A bolha é do tamanho exato do personagem, isto é, seria um quadrado para personagens médios, quatro para grandes, etc... porém é citado que efeitos gerados não podem fugir dessa área. O que ocorre caso um efeito saia da área?",
+    answer: "2) Não existe a possibilidade do efeito sair da área. Caso o arcanista tente, o efeito falha.",
+    magazineNumber: 191,
+  },
+  {
+    id: "DB191-18",
+    question: "3) Ainda seguindo a linha da pergunta acima; dada essa limitação, eu não poderia conjurar magias de apoio para meus aliados? *Arma Mágica* para um aliado, ou o aprimoramento de *Velocidade* em área? Não poderia, então, usar *Conjurar Monstro* ou qualquer outra magia que se manifeste para fora dessa área?",
+    answer: "3) Exceto caso os alvos estejam dentro da bolha, não.",
+    magazineNumber: 191,
+  },
+  //#endregion
   //#region DB - 198
   {
     id: "DB198-01",
@@ -76,6 +186,80 @@ export const regreiroQAs: RegreiroQA[] = [
     question: "3) O poder *Magia Discreta* permite conjurar magias em uma área afetada pela magia *Silêncio*?\n\nDesde já grato,",
     answer: "3) Sim, pois não precisa de palavras.",
     magazineNumber: 198,
+  },
+  //#endregion
+  //#region DB - 201
+  {
+    id: "DB201-01",
+    question: "> A Jornada Heróica *Coração de Rubi* tem um desafio que envolve peso. Como fica esse desafio na versão *Jogo do Ano*?",
+    answer: "> Saudações rubras, conselheiro! Basta trocar quilos por espaços. Lembre-se que um personagem de tamanho Médio ocupa dez espaços.",
+    magazineNumber: 201,
+  },
+  {
+    id: "DB201-02",
+    question: "> Minha dúvida é sobre as obrigações e restrições dos devotos da deusa Valkaria. Sei que são subjetivas e depende da interpretação de cada um, mas ainda assim, quando a contagem da permanência de um devoto em uma cidade se reinicia? É imediato? Demora um ano, uma aventura?",
+    answer: "> Saudações ambiciosas, conselheiro! Como você mesmo apontou, essa é uma questão deixada ao critério do mestre. Como sugestão, talvez uma aventura fora da cidade já possa ser o bastante para deixar Valkaria satisfeita.",
+    magazineNumber: 201,
+  },
+  {
+    id: "DB201-03",
+    question: "> No STR da DB 200 foi especificado que os bônus concedidos por esotéricos não acumulam com o bônus de melhorias, entretanto, eu tenho algumas dúvidas em relação ao acúmulo de bônus de itens com bônus de melhorias e de encantamentos:\n\n1) Sabemos que o bônus de materiais especiais acumulam com os bônus de outras melhorias, mas e com os bônus naturais de certos itens? Um conjurador usando uma varinha arcana de mitral poderia, ao pagar 2 PM, ter a CD de uma magia aumentada em +3 (sendo +1 do bônus natural da varinha e +2 do efeito do material especial)?",
+    answer: "> Saudações esotéricas, conselheiro! Vamos às suas respostas:\n\n1) Os bônus de materiais especiais não acumulam com os bônus naturais dos itens (apenas com os bônus de outras melhorias).",
+    magazineNumber: 201,
+  },
+  {
+    id: "DB201-04",
+    question: "2) O bônus natural de certos itens acumula com encantos? Por exemplo, uma veste de teia de aranha sombria daria +10 em furtividade (+5 do bônus natural da armadura e +5 do bônus de encanto)?",
+    answer: "2) Não, apenas o maior bônus se aplica.",
+    magazineNumber: 201,
+  },
+  {
+    id: "DB201-05",
+    question: "> Olá, excelentíssimos! O poder concedido *Almejar o Impossível* transforma um resultado 19 em qualquer teste de perícia em um sucesso automático. Como Luta é uma perícia, se eu faço um teste de ataque com uma arma com margem de ameaça 20 e obtenho um 19, esse é um acerto normal ou um acerto crítico?",
+    answer: "> Saudações ousadas, conselheiro! Pela fria letra da regra, o poder oferece apenas um acerto automático, não um acerto crítico.",
+    magazineNumber: 201,
+  },
+  {
+    id: "DB201-06",
+    question: "> Armas naturais podem receber melhorias, como por exemplo, o chifre do minotauro ser banhado em adamante ou mitral?",
+    answer: "> Saudações aprimoradas, conselheiro! Normalmente, armas naturais não podem receber melhorias. Para lidar com essa limitação, existem os itens manopla e garra feroz (*Ameaças de Arton*, p. 396). Porém, em situações especiais dentro da trama, o mestre sempre pode abrir exceções.",
+    magazineNumber: 201,
+  },
+  {
+    id: "DB201-07",
+    question: "> Olá, nobres esclarecedores de regras! Tenho duas dúvidas:\n\n1) Se um bardo copia uma magia com o *Paródia*, essa magia recebe os benefícios de *Arte Mágica*?",
+    answer: "> Saudações selvagens, conselheiro! Vamos às suas respostas.\n\n1) Sim. O bardo lançou a magia por si só, recebendo quaisquer benefícios normalmente recebidos quando lança uma magia.",
+    magazineNumber: 201,
+  },
+  {
+    id: "DB201-08",
+    question: "2) Um druida devoto de Megalokk não pode realizar ações que demandem calma, incluindo conjurar magias com duração sustentada. Esse mesmo druida poderia lançar uma magia cuja execução dura mais que uma rodada, como é o caso de *Banimento*?",
+    answer: "2) Sim, o druida pode lançar a magia normalmente. Lançar magias não precisa ser uma tarefa abordada com calma nem paciência — o druida estará rosnando e esbravejando até mais enquanto lança essa magia demorada!",
+    magazineNumber: 201,
+  },
+  {
+    id: "DB201-09",
+    question: "> Caros membros do tribunal, venho por meio deste indagar sobre uma questão que permeou a mesa de um amigo.\n\nQual o entendimento da ação completa? Ela conta como todo o seu turno, independente de ações extras advindas de magias, parceiros ou poderes? Ou trata-se apenas da combinação de uma ação de movimento e uma ação padrão? Seria possível, talvez com uma combinação de *Surto Heroico* e *Velocidade Ladina*, ter duas ações completas no mesmo turno?\n\nMe ajudem a ter respostas para um cavaleiro e um arcanista com muitas ações!",
+    answer: "> Saudações ativas, conselheiro! Uma ação completa é a combinação de uma ação de movimento e uma ação padrão. Você poderia, sim, fazer duas ações completas no mesmo turno com essa combinação de poderes.",
+    magazineNumber: 201,
+  },
+  {
+    id: "DB201-10",
+    question: "> Meus cumprimentos aos excelentíssimos membros do tribunal! Tenho dúvidas sobre custo e limite de mana, principalmente em magias.\n\n1) Reduções de custo de mana são contabilizadas antes do limite de PM?",
+    answer: "> Saudações reduzidas, conselheiro! Vamos às suas respostas:\n\n1) Sim. O custo reduzido funciona como uma espécie de aumento “oculto” do limite de PM.",
+    magazineNumber: 201,
+  },
+  {
+    id: "DB201-11",
+    question: "2) O poder de nivel 20 do arcanista, *Alta Arcana*, diminui o custo das magias do conjurador pela metade. Isso afeta o limite de PM?",
+    answer: "2) Não, a redução de custo de *Alta Arcana* é aplicada após aprimoramentos e outras reduções de custo, o que impede que seja considerada na hora de escolhê-los (e de escolher mais deles depois que ela é aplicada). Esta é uma limitação do próprio poder e não tem relação com a regra de Limite de Gasto.",
+    magazineNumber: 201,
+  },
+  {
+    id: "DB201-12",
+    question: "> Olá, nobres esclarecedores de regras! Tenho uma dúvida: é possível fazer uma investida saltando?",
+    answer: "Saltar é parte do movimento do personagem e não exige uma ação. Assim, desde que o salto seja compatível com uma investida (ou seja, desde que o movimento horizontal permaneça em linha reta), é perfeitamente possível fazer combiná-los.",
+    magazineNumber: 201,
   },
   //#endregion
   //#region DB - 207

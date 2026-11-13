@@ -1,6 +1,24 @@
 import { Mount } from "@/types/mount";
 
 export const mounts: Mount[] = [
+  //#region Duelo de Dragões
+  { id: "Serpe de Fogo",
+    name: "Serpe de Fogo",
+    size: "Grande",
+    description: "Uma dracofera criada por Sckhar que se aproveita de poder elemental. Semelhante a uma serpe normal, mas maior, mais esguia e menos animalesca, possuindo duas patas, asas membranosas e cabeça de réptil. Suas escamas são avermelhadas e seu sangue é extremamente quente, capaz de queimar quem a ataca corpo a corpo. São criaturas muito rápidas, de crânio aerodinâmico, com uma cauda que expele um veneno tão quente que a faz acender em chamas.",
+    origin: "Duelo de Dragões",
+    benefits: {
+      iniciante: "Seu deslocamento muda para 12m e você recebe deslocamento de voo 12m.",
+      veterano: "Seu deslocamento de voo muda para 18m e você também pode fazer uma ação de movimento extra por turno (apenas para se deslocar).",
+      mestre: "Seu deslocamento de voo muda para 24m e você pode gastar 1 PM e uma reação para usar a habilidade Sangue Ardente."
+    }
+  },
+  //#endregion
+
+
+
+
+
   //#region Bestiário de Arton
   { id: "Abelha-Grifo",
     name: "Abelha-Grifo",

@@ -12,7 +12,7 @@ import { Region, RegionTagInfo } from "@/types/regiao";
 //   \n\n          -> parágrafo em branco
 //   **texto**     -> negrito        *texto* -> itálico
 //   > texto       -> citação        - texto -> item de lista
-//   ### texto     -> subtítulo
+//  ### texto     -> subtítulo
 
 // --- Cards de categoria ---
 
@@ -970,6 +970,522 @@ Menos de uma hora distante da cidade reconstruída, Velha Malpetrim se tornaria 
       }
     ]
   },
+  { id: "bielefeld",
+    name: "Bielefeld",
+    subtitle: "O Reino dos Cavaleiros",
+    tag: "Reinado",
+    image: "/regioes/bielefeld.png",
+    coatOfArms: "/regioes/bielefeld-brasao.png",
+    map: "/regioes/bielefeld-mapa.png",
+    intro: `Muitos lugares em Arton possuem grande população de aventureiros ou já foram palco de sagas épicas. Contudo, nenhuma nação é mais voltada ao ideal heroico que Bielefeld. Chamado de “Lar da Ordem da Luz” e “Reino da Cavalaria”, Bielefeld é uma terra de tradições arraigadas e história rica.
+
+  Com grandes e orgulhosos castelos dominando terras povoadas por plebeus e fazendeiros, o reino depende da relação de confiança e lealdade entre vassalos e suseranos. Em Bielefeld, honra vale mais que dinheiro. E neste reino nada simboliza mais a honra do que as ordens de cavalaria — em especial a Ordem da Luz. O jovem rei de Bielefeld, Khilliar Janz, toma poucas decisões importantes sem consultar o líder da ordem, Alenn Toren Greenfeld. A ordem é ligada ao reino, o reino tem a ordem como seu maior símbolo. As tramoias, intrigas e jogos de poder dos aristocratas não apagam o espírito de Bielefeld: a crença de que a cavalaria sempre defenderá Arton.`,
+    facts: [
+      { label: "Nome Oficial", value: "Reino de Bielefeld." },
+      { label: "Lema", value: "“Afiada É a Lâmina da Justiça”." },
+      { label: "Brasão", value: "talhado de prata e azul, uma balança de ouro brocante." },
+      { label: "Gentílico", value: "bielefeldense." },
+      { label: "Capital", value: "Roschfallen." },
+      { label: "Forma de Governo", value: "monarquia hereditária." },
+      { label: "Regente", value: "Rei Khilliar Janz." },
+      { label: "População", value: "1.600.000." },
+      { label: "Raças Principais", value: "humanos, anões, goblins, hynne." },
+      { label: "Divindades Principais", value: "Khalmyr, Lena, Aharadak." }
+    ],
+    sections: [
+      {
+        title: "História",
+        content: `Apesar de sua tradição heroica, as raízes de Bielefeld são encharcadas de sangue.
+
+  Thomas Lendilkar, o fundador do reino, era um cavaleiro e líder de um grupo de aventureiros na jovem cidade de Valkaria. Thomas acreditava que o destino dos refugiados de Lamnor não era permanecer sob a proteção da deusa para sempre. Assim como muitos outros, empreendeu uma jornada para desbravar novas terras. Alguns historiadores garantem que ele não queria nada além de um lar para seu povo. Outros dizem que não aceitava ser apenas mais um entre iguais. Queria governar. Queria conquistar.
+
+  Thomas partiu rumo a leste com seu grupo de aventureiros e logo se envolveu em conflitos. Houve interações pacíficas, mas em geral a passagem dos aventureiros foi marcada por fogo e aço. Apesar disso, Thomas considerou aquele terreno ideal para a formação de uma nação independente. Havia relativamente poucos monstros e muitas riquezas naturais.
+
+  Quando chegou à costa, deixando um rastro de destruição e estandartes fincados, Thomas Lendilkar ordenou a construção de um templo ao Deus da Justiça e fundou sua “capital”, que batizou de Lendilkar. O ano era 1021 da chegada dos elfos. Ele se declarou rei do novo reino de Bielefeld. Não há consenso sobre a origem do nome. Alguns afirmam que “Bielefeld” era o nome da casa nobre à qual a família Lendilkar servia no velho continente. O que Thomas queria ao batizar seu reino assim? Afirmar que era o verdadeiro representante da Casa Bielefeld? Conseguir o favor desses nobres? Provavelmente nunca se saberá a verdade, mas uma identidade nacional se formou rapidamente e, em poucos anos, os colonos já se consideravam pertencentes a Bielefeld, não a suas antigas nações.
+
+  Talvez tenha sido esse entusiasmo pelo novo lar que tenha impulsionado o sucesso e a prosperidade de Bielefeld logo em seu início. Thomas Lendilkar concedeu títulos de nobreza a todos que se dispusessem a pacificar e proteger uma região. Dizse que, independente de seu caráter, o fundador era extremamente carismático, decidido e inteligente. Os nobres que concordavam com suas políticas sangrentas ficaram concentrados na capital litorânea, enquanto aqueles que procuravam distância do fundador se espalharam pelo território. Entre esses destacou-se a família Janz, opositores de Lendilkar, que ergueu um forte mais tarde conhecido como o Castelo Roschfallen. Outros fortes foram erguidos por todo o reino, demarcando feudos. Sem muita relação com o rei, as novas famílias nobres precisavam defender suas próprias terras. Independentes, criaram entre si laços de suserania e vassalagem que continuariam para sempre. O novo reino cresceu em velocidade espantosa e sua glória inicial foi impressionante. Lendilkar despontava como um dos mais ambiciosos conquistadores, enquanto os outros senhores feudais exemplificavam o dever protetor dos nobres para com o povo. Talvez até mesmo Deheon empalidecesse frente à vastidão que na época englobava o que hoje são os Ermos Púrpuras e Aslothia. Por um tempo, pareceu que Bielefeld seria o poder dominante em Arton e Thomas Lendilkar seria o maior dos reis.
+
+### A Primeira Derrota
+  Os olhos de Thomas Lendilkar se voltaram para mais longe. Se a capital era litorânea, fazia sentido que Bielefeld fosse uma potência naval. Em 1037, ele decidiu que o próximo alvo de expansão estava nos mares. Na ilha de Khubar.
+
+  O que o rei queria com uma ilha, quando havia tanta terra para ser conquistada no continente? Talvez a riqueza de Khubar tenha atraído Thomas. Talvez isso fosse só o primeiro passo na formação de uma marinha capaz de invadir Lamnor. Fosse qual fosse sua intenção nos mares, Thomas Lendilkar só conheceu a ruína.
+
+  Khubar é protegido por Benthos, o Dragão-Rei dos Mares. Quando as tropas de Bielefeld desembarcaram na ilha, os sábios e xamãs se reuniram e convocaram seu guardião.
+
+  A fúria de Benthos foi terrível. Os exércitos de Bielefeld fugiram aterrorizados, suas naus foram destruídas como brinquedos. As ondas rugiram num maremoto incontrolável que engoliu a costa de Bielefeld e devastou a capital. Thomas Lendilkar, a família real, quase todos os aventureiros de seu grupo original e vários nobres morreram. Subitamente, Bielefeld era um reino com forte identidade nacional e relações sólidas de lealdade… Mas sem liderança.
+
+  Talvez Benthos tenha feito um bem imensurável ao povo do Reinado.
+
+  Deheon interveio, assumindo o papel de liderança que teria para sempre. Um corpo diplomático intermediou a paz entre os nobres restantes de Bielefeld e os regentes de Khubar. A duquesa Raissa Janz se destacou nesse acordo, colocando fim aos ímpetos guerreiros de alguns que desejavam reparações ou retaliação. Entre os grandes apoiadores de Raissa estava a família Donovan. A maior voz de dissidência estava na poderosa família Asloth.
+
+### Uma Nova Dinastia
+  Com a paz estabelecida, restava achar um rei. Arautos e aventureiros procuraram herdeiros de Thomas Lendilkar; sábios vasculharam tomos genealógicos em busca de ligações com outras famílias. Nada foi encontrado — os Lendilkar tinham sido extintos no novo continente. Existe o boato de que já nesta época um grupo de devotos de Hyninn ajudava o reino nas sombras, fazendo o trabalho sujo que os nobres e cavaleiros não podiam aceitar, mas os historiadores garantem que não passa de teoria de conspiração…
+
+  Sem um herdeiro, uma assembleia de nobres elegeu Raissa Janz como nova rainha de Bielefeld. Tamanha era sua aclamação que a lei hereditária se manteve, frustrando manobras dos Asloth para que houvesse uma eleição periódica. A nova família real Janz foi coroada pelo sumo-sacerdote de Khalmyr, permanecendo no poder desde então.
+
+  O reino nunca se recuperou da destruição de sua marinha. Até mesmo a defesa da costa do reino ficou a cargo da Patrulha Costeira, cujo dever nunca se estenderia até o alto-mar. A família Janz tem uma desconfiança quase supersticiosa da exploração naval — acreditam que, sobre um cavalo, vai-se longe. A bordo de um navio, vai-se longe demais. Este dogma não oficial recebe o apelido de “Doutrina da Ferradura”: um nobre de Bielefeld deve interferir apenas até onde seu cavalo puder levá-lo.
+
+  A capital passou a ser o ducado de Roschfallen, lar dos Janz, que se expandiu para uma cidade completa. Mas Roschfallen nunca chegou a ser a cidade mais importante do reino — Norm seria seu símbolo mais verdadeiro. Era um arcebispado de Khalmyr, capaz de unir nobres e plebeus, tendo uma relevância que Roschfallen jamais conquistou. Até hoje Roschfallen é considerada “terra dos Janz”.
+
+  A história de Bielefeld seguiu sem grandes reviravoltas durante séculos — a cavalaria e a tradição feudal mantiveram a lei e controlaram a sede de conquista. A fundação da Ordem da Luz por Arthur Donovan II em 1290 solidificou o reino como terra de heróis. A relação de amizade próxima da família Janz com os Donovan afastou qualquer medo de que a sanha expansionista voltasse.
+
+  Mas, em 1300, as tensões aumentaram de novo.
+
+### Irmão Contra Irmão
+  A família Asloth, invejosa e sedenta de poder, nunca adotara os valores e tradições da cavalaria. O Condado de Portsmouth, governado pelos Asloth, se dizia uma “terra de liberdade”, onde os “pomposos cavaleiros” não dominavam a plebe. Os Asloth empregavam companhias mercenárias em vez de um exército estabelecido, afirmando que era a maneira mais justa de defender suas terras. Na realidade, estavam formando as bases do que seriam tropas sem lealdade nenhuma ao povo de Bielefeld.
+
+  Os Asloth também recrutaram outro tipo de “tropas”. Ao longo de anos, cooptaram bardos, espiões e planejadores em todo o Reinado. Usaram-nos de forma insidiosa, como agentes infiltrados em castelos, tavernas, fazendas, cidades… Inúmeros pontos do continente, sempre se fazendo passar por gente comum. Esse verdadeiro exército da intriga foi mais tarde apelidado em Bielefeld de Ordem dos Covardes.
+
+  Usando seus agentes, os Asloth começaram uma bem-sucedida campanha difamatória contra a coroa de Bielefeld e a cavalaria. Até hoje vários artonianos ouvem a palavra “cavaleiro” e pensam em um aristocrata brutal e autoritário. As próprias ordens foram prejudicadas por isso, com vários jovens honrados rejeitando a cavalaria e muitos ambiciosos mesquinhos se voltando a ela.
+
+  Os mercenários de Portsmouth atacaram as nações dos Ermos Púrpuras, usando armaduras de cavaleiros e estandartes de famílias nobres de Bielefeld. A região dos Ermos era autônoma, apesar de nos mapas ser parte do reino. Com as famílias nobres e ordens de cavalaria incriminadas pela violência dos mercenários, não demorou para que as vítimas revidassem, iniciando uma série de ataques a cidades de Bielefeld. A intriga chegou a Deheon: segundo as mentiras de Portsmouth, mais uma vez Bielefeld se mostrava um conquistador sanguinário. Deheon decretou que os Ermos Púrpuras seriam independentes e, para todo o Reinado, pareceu que Bielefeld era expansionista e tinha sido derrotado mais uma vez. O trono estava desacreditado.
+
+  Foi este poder abalado que enfrentou a sangrenta guerra civil de 1389.
+
+  O Conde Ferren Asloth, conhecido como “o Velho Abutre”, era infame em Bielefeld. Portsmouth era uma terra vasta, mas Ferren se dizia um governante humilde e oprimido. Proibia a magia, afirmando que era uma forma de “defender os mais fracos”. Implorava para que os impostos fossem diminuídos — segundo Asloth, um condado que nem mesmo possuía fortes da Ordem da Luz estava sendo obrigado a pagar pela cavalaria que só existia para pisoteá-lo.
+
+  A Revolta a Pé, apelido de uma série de ataques de plebeus e pequenos nobres contra cavaleiros em Portsmouth, pareceu um movimento espontâneo, mas não passou de uma maquinação de Ferren Asloth — o estopim da guerra civil. Na realidade, as companhias mercenárias já estavam de prontidão e, assim que houve a primeira retaliação por parte dos cavaleiros, atacaram em massa. A justificativa: independência. A realidade: mais um passo no plano sinistro do Velho Abutre.
+
+  A Guerra Civil de Bielefeld foi triste e brutal. O reino não podia ceder, sabendo que uma rendição significaria o abandono de parte de seu povo à crueldade do Velho Abutre. Aldeias separadas por um mero riacho massacraram-se mutuamente. Familiares lutaram entre si, famílias foram dilaceradas. Os mercenários decaíram para hordas de carniceiros — quando não havia saque suficiente nas terras inimigas, saqueavam as próprias aldeias de Portsmouth. Muitos morreram, muitos perderam tudo. Apesar disso, Bielefeld lutou com honra. As mentiras dos Asloth não foram capazes de mascarar a realidade de que, mesmo nesse conflito horrendo, a Ordem da Luz tomou a frente e nunca recorreu às táticas baixas e assassinas do inimigo. Vários cavaleiros da Luz construíram suas reputações na guerra civil, fazendo defesas heroicas contra as traiçoeiras tropas de Portsmouth.
+
+  Deheon interveio uma última vez, com uma neutralidade que afrontava Bielefeld. A indignação ameaçou fazer o reino inteiro se voltar contra o Reinado — o que talvez fizesse parte do plano de Ferren. Mas, no final, a paz no continente era mais valiosa. Seguindo orientação (ou comando) da Coroa do Reinado, Bielefeld reconheceu a independência de Portsmouth.
+
+  E foi assim, reduzido a uma fração do que já tinha sido, que Bielefeld embarcou numa nova era de provações.
+
+### O Século Heroico
+  Talvez seja cedo para dizer, mas os bardos já chamam o período a partir de 1400 de “Século Heroico”. A presença do cavaleiro da Luz Orion Drake num forte isolado durante um ataque do caçador de recompensas e algoz da Tormenta Crânio Negro em 1405 deu início a uma série de eventos que colocou Bielefeld na linha de frente da luta contra a Tempestade Rubra. Impulsionado pelo herói, o reino mandou tropas para enfrentar um exército corrompido que marchava rumo a Trebuck. Com seu avanço detido na fronteira do reino que hoje é a Supremacia Purista, Bielefeld precisou pagar Wynlla por um imenso ritual de transporte de tropas. Os cofres de Roschfallen nunca se recuperaram, mas os soldados e cavaleiros chegaram a tempo para se unir ao Exército do Reinado e derrotar as hordas aberrantes na beira de uma área de Tormenta. Durante esta guerra, o jovem cavaleiro Vincent Gherald se revelou corrompido e espalhou a corrupção por toda uma geração de cavaleiros em Norm, resultando numa noite de massacres — veteranos contra novatos, pais contra filhos.
+
+  As ações de Orion Drake, que incluíram a destruição da primeira área de Tormenta e a libertação da ilha de Tamu-ra, levaram a cavalaria mais uma vez ao ápice do ideal heroico. Bielefeld viu um enorme influxo de jovens desejando ser escudeiros, inclusive vindos de outros reinos. Mais tarde, a relação de Orion e do Alto Comandante da Ordem da Luz Alenn Toren Greenfeld com a Rainha-Imperatriz Shivara contribuiu para que o reino fosse o principal aliado de Deheon na Guerra Artoniana. Como terra de cavaleiros guiada por Khalmyr, Bielefeld não guarda rancor contra as intervenções históricas e, hoje em dia, está intimamente ligado ao Reino Capital. Diz-se que, se Deheon usa a coroa, Bielefeld empunha espada e escudo.
+
+  Bielefeld foi fundamental para a derrota dos puristas — e sofreu por isso. Após a morte do então Rei Igor Janz, seu filho Khilliar Janz assumiu o trono. Inexperiente, no meio de uma guerra de proporções inéditas, o jovem rei triunfou com o apoio de heróis aventureiros. A Ordem da Luz assumiu a liderança em diversas batalhas. O ódio dos puristas contra Bielefeld foi tamanho que o reino chegou perto de se desfazer. A capital foi sitiada e recoberta de névoa escura e mágica. A cidade de Norm foi invadida, tropas inimigas chegaram aos portões do Castelo da Luz. Nobres ficaram ilhados, a cadeia de lealdade foi ameaçada. Por um tempo, parecia que Bielefeld iria desmoronar em uma série de pequenos feudos.
+
+  Felizmente, isso foi evitado. A vitória do Reinado numa batalha crucial foi a força que impulsionou Bielefeld a resistir, mais unido do que nunca. A Espada e o Escudo do Reinado permanecem erguidos. Não importa que Bielefeld seja menor em extensão. Sua honra é maior do que nunca.
+
+> “Neste dia de luto, juramos que a espada de Bielefeld jamais voltará a se erguer contra as ilhas. Não por temer a força do Dragão-Rei… Não para evitar um castigo… Mas por sabermos que esta é a verdadeira justiça. Não a justiça de um rei. A justiça de Khalmyr!
+> A vitória de Khubar é a vitória de Khalmyr. A derrota de uma invasão injusta é o triunfo do Deus da Justiça e, assim, também o triunfo de Bielefeld.
+> Sob o julgamento de Khalmyr e sobre a tumba de nosso rei morto, temos orgulho de oferecer ao povo de Khubar nossa rendição incondicional.”
+> — Trecho do discurso de rendição de Raissa Janz a Khubar.`
+      },
+      {
+        title: "Geografia",
+        content: `Bielefeld é uma terra cercada de inimigos. A oeste, a Supremacia Purista se espalha, vasta e poderosa. Uma área que costumava pertencer ao Reino da Cavalaria agora é território disputado entre as duas nações — a Conflagração do Aço. A leste, Aslothia, terra de mortos-vivos e mercenários cruéis. A norte, os Ermos Púrpuras poderiam ser neutros ou até aliados, mas o histórico de Bielefeld cobra seu preço. O mar é a única saída do reino, mas a marinha de Bielefeld ainda não se recuperou de séculos de negligência.
+
+  Assim, simplesmente chegar a Bielefeld é uma aventura. O reino não passa fome devido a seu terreno naturalmente favorável, mas qualquer transporte é caro e demorado. Nobres contratam grupos de aventureiros para escoltá-los através de Aslothia, enquanto cavaleiros buscam heróis para acompanhá-los nessa jornada. A coroa do reino também busca aventureiros para ir até Doherimm e negociar a construção de passagens subterrâneas com os anões.
+
+  A fronteira com Aslothia é especialmente perigosa — uma divisão tanto política quanto mística. A Floresta de Jeyfar marca o limite entre os dois reinos. Enquanto a maior parte de Jeyfar é de um verde escuro e profundo, a orla leste apresenta árvores ressequidas, sem folhas, o sol surgindo esmaecido por entre os galhos.
+
+  Exceto por Jeyfar, Bielefeld não tem grandes áreas florestais. Planícies férteis dominam a maior parte do reino. Não sendo especialmente urbanizado, Bielefeld possui horizonte amplo, onde se pode viajar por dias sem encontrar cidades, castelos ou outros marcos.
+
+  O clima é ameno, com estações bem marcadas. No verão, a região se torna muito viva e vibrante, explodindo com colheitas fartas e árvores carregadas de frutos. No inverno há nevoeiro e chuva, além de uma neve fina que no chão se transforma em lama ou gelo. As estradas se tornam escorregadias e traiçoeiras, o gelo quebradiço esconde verdadeiros fossos de lodo.
+
+  A impressão que quase todo viajante tem de Bielefeld é a de uma terra bela, cheia de cores. Muitos custam a acreditar que tenha sido palco de tantas tragédias.`
+      },
+      {
+        title: "Povo & Costumes",
+        content: `Humanos compõem quase toda a população de Bielefeld. A maior comunidade de não humanos é formada por anões, seguidos de goblins, hynne e um punhado de representantes de outras raças.
+
+  A moda em Bielefeld é bastante tradicional. Barbas bem aparadas, como é usual na Ordem da Luz, vestidos longos e um pouco antiquados. É comum ver pessoas trajando armaduras ou portando armas embainhadas, principalmente entre a nobreza. Nobres em Bielefeld não vestem casacas refinadas e camisas bufantes — cobrem-se de aço, preparados para defender a plebe. Pelo menos em teoria.
+
+  Alguém certa vez disse que “por causa de sir Orion Drake, está na moda ser chato em Bielefeld”. Certamente um estrangeiro poderia pensar isso: o povo parece sério, sisudo, formal. Contudo, aqui seriedade e formalidade não são sinal de frieza ou antipatia. Levar a sério o que alguém diz e ser sério em troca, tratar todos com deferência e esperar deferência em troca são sinais de respeito e estima. Apenas alguém que desprezasse outra pessoa poderia tratá-la com intimidade sem primeiro desenvolver uma relação próxima. Isso deixa os forasteiros enlouquecidos. Um aventureiro pode ser tratado com formalidade pelo cavaleiro cuja vida acabou de salvar… E ver o mesmo cavaleiro sendo natural e descontraído com o inimigo que tentou matá-los! Para o cavaleiro, faz todo sentido: por que se esforçar para tratar bem um crápula? Contudo, na guerra toda formalidade desmorona e relações íntimas se formam em questão de dias. Os habitantes de Bielefeld se abraçam, riem, tratam-se por apelidos e se apegam com extrema rapidez.
+
+  “Honra” é uma palavra ouvida constantemente no reino. Mas o que é honra? Cada habitante tem uma definição própria. Para muitos, é honestidade e cumprimento das leis. Outros consideram que só é honrado aquele que não tolera nenhum desrespeito ou insulto — o que pode levar à violência. Heróis como Alenn Toren Greenfeld dizem que honra é ativamente fazer o bem e combater a maldade, enquanto Orion Drake considera que honra é ausência de soberba e cumprimento do dever a qualquer custo. O conceito é parte integral da vida de nobres e plebeus. Em Bielefeld, o mais reles fazendeiro prefere ficar sem comida a ficar sem honra.
+
+  Khalmyr é o deus mais popular no reino, mesmo depois de ter perdido o posto de líder do Panteão. Na verdade, isso causou um aumento de fervor. Como um reino agrícola, Bielefeld cultua Lena, a Deusa da Vida, principalmente longe dos grandes castelos.
+
+  Quase todos os deuses aliados de Khalmyr são bem vistos. Deuses menos ligados às tradições, como Tenebra, Allihanna e Wynna, são considerados “esquisitice de estrangeiros” — um jovem devoto de Tenebra ouvirá de seus pais que “é só uma fase”. Deuses ambíguos como Arsenal e Thwor são vistos como malignos. Nem sempre seu culto é proibido, mas será motivo de desconfiança. Infelizmente, o culto a Aharadak é presente, devido à influência dos cavaleiros corrompidos de anos atrás. Hyninn e Nimb são cultuados de forma sutil, nem sempre agindo contra os cavaleiros.`,
+        sidebars: [
+          {
+            title: "Cavaleiros sem Ordem",
+            content: `Bielefeld é um reino tão ligado à Ordem da Luz que é comum imaginar que todo o contingente de cavaleiros se resume a suas fileiras. Isso, porém, está muito longe da verdade.
+
+  Além de contar com inúmeras ordens menores com suas próprias regras e condutas, algumas dissidentes de suas irmãs mais famosas, Bielefeld também ostenta a figura do cavaleiro sem ordem. Um herói independente, que viaja pelo reino realizando feitos de bravura sem precisar prestar contas a uma instituição. Acompanhados ou não de escudeiros, estes cavaleiros errantes costumam tomar um tema específico como inspiração para suas armaduras e armas. Sua variedade é imensa: alguns tentam replicar os feitos de um herói lendário, carregando assim seu legado, enquanto outros se baseiam em elementos, ou adotam as características de uma criatura que admiram.
+
+  Assim, por exemplo, sir Deadalus Hanspear, o Cavaleiro Morto, veste armadura totalmente negra; traz em seu elmo as asas de um corvo; em suas ombreiras, mãos esqueléticas; em sua lança, trapos amarrados de sua própria mortalha, e em seu escudo, a imagem de um caixão. Nem mesmo seu rosto macabro de osteon é tão reconhecido quanto sua indumentária! Sem o estandarte de uma ordem e às vezes sem nem mesmo um brasão familiar reconhecível, esses cavaleiros se tornam famosos pela temática de sua armadura e equipamentos.`
+          }
+        ]
+      },
+      {
+        title: "A Cavalaria",
+        content: `Existem muitas ordens de cavalaria em Arton — algumas pouco mais que clubes de nobres, outras verdadeiros exércitos de guerreiros jurados a fazer o bem. O início das ordens de cavalaria remonta ao antigo continente, antes da Grande Batalha. Elas cumpriam um papel semelhante ao dos grupos de aventureiros hoje em dia: eram bandos de pessoas extraordinárias que ganhavam a vida corrigindo problemas grandes demais para o povo comum. Enquanto grupos de aventureiros sempre foram variados e seguiram suas próprias regras, ordens de cavalaria adotaram o método de luta mais tradicional e longos e detalhados códigos de conduta. Os cavaleiros do velho continente vieram parar aqui, dando início ao modo de pensar de Bielefeld.
+
+  Essas várias ordens sempre compuseram a alma do reino. Nenhuma família nobre estava completa sem pelo menos um cavaleiro; os plebeus podiam ser sagrados cavaleiros e assim ascender à nobreza por bravura.
+
+  Um tipo de relação fundamental em Bielefeld é entre cavaleiro e escudeiro. Escudeiros servem a cavaleiros para aprender a parte prática e moral da cavalaria. Mais que um mestre, o cavaleiro se torna quase um pai ou mãe. Para o escudeiro, trocar de senhor não é uma opção — ele pode ser obrigado a servir a um cavaleiro cruel por boa parte de sua infância e adolescência. O inverso também é verdadeiro: mesmo frente a um escudeiro preguiçoso ou incompetente, nenhum cavaleiro pode largá-lo sem enfrentar vergonha e desaprovação. Já houve casos de cavaleiros expulsos da Ordem da Luz por terem abandonado escudeiros em lugares perigosos ou sem outras opções de sustento. O caráter e a habilidade do escudeiro são responsabilidade do cavaleiro.
+
+  Essa importância fundamental e o prestígio associado levaram a uma certa banalização do papel dos cavaleiros. Em Bielefeld, muitas vezes “cavaleiro” não é sinônimo de “herói” ou mesmo “combatente”… Alguns cavaleiros se surpreendem com a mera sugestão disso! Para eles, “sir” é só mais uma honraria na longa lista de títulos que esfregam na cara dos plebeus. Bielefeld enfrenta a praga da intriga e a cavalaria é onde ela se espalha com maior facilidade. Há uma luta constante entre cavaleiros honrados e conspiradores ambiciosos.`
+      },
+      {
+        title: "Governo",
+        content: `Bielefeld é governado pelo Rei Khilliar Janz, descendente direto de Raissa Janz. Khilliar se mostrou um guerreiro competente desde muito jovem e treinava para ser um cavaleiro da Luz — o primeiro rei pertencente à Ordem. Um torneio mudou tudo isso. Em meio aos eventos da guerra contra a Tormenta, o então Príncipe Khilliar enfrentou numa justa um combatente misterioso conhecido apenas como o Cavaleiro Risonho. Em um horrível acidente, a quebra de uma das lanças enviou estilhaços através da viseira do elmo de Khilliar, perfurando seus olhos e cegando-o para sempre. É consenso que esse foi mais um dos atos do Cavaleiro Risonho para desestabilizar a nobreza e a cavalaria em Bielefeld.
+
+  Khilliar recusou-se a usar de magia para restaurar sua visão, na crença de que isso seria abusar de um privilégio que os cidadãos comuns não possuem. O jovem príncipe foi obrigado a se tornar rei quando seu pai foi assassinado pelo espião purista conhecido como Espinha.
+
+  Embora a figura do rei tenha bastante poder em Bielefeld, esse poder só existe com o apoio dos duques, que efetivamente aprovam e executam as ordens reais, repassando as decisões da coroa aos demais nobres. A política no reino é intrincada — duques dependem da lealdade e apoio de condes, barões e outros, e muitas vezes a vontade da aristocracia menor acaba bloqueando as intenções do rei.
+
+  A outra grande força política em Bielefeld é a Ordem da Luz. Embora o Alto Comandante teoricamente não tenha voz nas decisões do reino, na prática a influência da Ordem garante que haveria revolta entre os nobres se algum dia rei e Alto Comandante fossem adversários.`
+      },
+      {
+        title: "Locais Importantes",
+        places: [
+          {
+            name: "Roschfallen (capital)",
+            content: `Roschfallen começou como um castelo, o centro de poder da família Janz. Quando os Janz assumiram o trono de Bielefeld, o Castelo Roschfallen foi expandido e as terras a seu redor foram muradas para que se convertesse em cidade.
+
+  Mesmo assim, Roschfallen sempre permaneceu como “o lar dos Janz”. Dizem que não tem cidadãos, apenas hóspedes. O Castelo Roschfallen foi rebatizado — hoje em dia, oficialmente é o Palácio Real, mas ninguém na cidade o chama assim. Por incentivo da família real, muitos burgueses ricos vieram para cá estabelecer seus negócios. Isso criou a impressão de que Roschfallen é um lugar transitório, onde se compra e se vende, mas não se vive. A capital é grande e rica, mas artificial.
+
+  Talvez por isso o número de estalagens e tavernas é enorme. A população tem o curioso hábito de se enfurnar em tavernas no primeiro dia frio do outono. Isso torna esses estabelecimentos superlotados e provoca inúmeras brigas. A mais cara e luxuosa estalagem de Roschfallen é a Espada de Khalmyr, de posse de uma família de anões. Alguns dizem que é lugar para turistas e ricaços sem bom gosto — a “cerveja anã especial” da taverna seria uma receita rejeitada em Doherimm, aguada para se adaptar ao gosto dos humanos.
+
+  A milícia de Roschfallen está sempre em volta das brigas de taverna, pois não há muito mais a fazer. A ferramenta mais importante de um miliciano é seu apito, usado para chamar reforços — o que já levou jovens milicianos a imaginar se em algum momento a milícia efetivamente fará algo, ou se apenas ficarão chamando uns aos outros para sempre. Contudo, o crime sempre se esconde nas sombras. Um notório esquema que vitimiza recém-chegados é o “golpe do escudeiro”: criminosos localizam um visitante rico que esteja acompanhado de sua família. Então simulam uma “injustiça” na frente de um filho ou filha adolescentes. Se o jovem intervier, “salvando o dia”, surge um cavaleiro da Luz impressionado com seu heroísmo e o convida para se apresentar como escudeiro no Palácio Real. Tomado pela emoção do combate e impressionado pela armadura brilhante, o rapaz ou a moça insiste com seus pais. O “cavaleiro” então o leva… E no dia seguinte os pais recebem uma mensagem com a quantia que devem pagar como resgate.
+
+  Roschfallen abriga estabelecimentos que quase não existem no Reinado, como bancos, casas de chá, empórios de vinhos e lojas de poções. Esses lugares só se sustentam por seus altíssimos preços, tendo visitantes como seus principais clientes. Isso separa ainda mais a capital do resto do reino.
+
+  Também na capital há o Templo da Justiça, um dos mais impressionantes tribunais do mundo conhecido. Um lugar onde clérigos de Khalmyr resolvem disputas comerciais, condenam criminosos, conciliam famílias rivais, protegem misticamente documentos, intermediam acordos, celebram casamentos e determinam a veracidade de alegações. O enorme e simétrico prédio é uma cacofonia de orações, discursos e debates. O Templo não emprega clérigos-juízes, apenas abriga as sessões com clérigos escolhidos pelas partes. Assim, o prédio sempre está cercado de jovens clérigos de Khalmyr tentando convencer cidadãos a contratá-los como juízes e alavancar suas carreiras.`
+          },
+          {
+            name: "Norm",
+            content: `Se Roschfallen é a capital de Bielefeld, Norm é seu coração. Quando a Ordem da Luz foi estabelecida aqui, a cidade se tornou um símbolo das tradições, o lar do orgulho feudal e heroico.
+
+  Norm era um arcebispado de Khalmyr, uma espécie de pequena teocracia leal à família nobre Donovan, que vivia num castelo a dias de distância. A cidade parecia destinada a ser uma nota de rodapé. Quando Arthur Donovan II voltou de uma peregrinação mística com o dever de fundar a Ordem da Luz, tudo mudou. O duque não quis que a sede da Ordem fosse seu próprio castelo, pois não desejava que ela pertencesse à família. Também relutou em erguer um castelo numa região erma — Donovan enxergava a Ordem da Luz como uma força presente no dia a dia do povo. Assim, a nova ordem de cavalaria fez sua sede numa cidade. Donovan usou boa parte das riquezas da família na contratação de engenheiros e trabalhadores anões, para que construíssem a fortaleza que abrigaria os novos cavaleiros. O Castelo da Luz se ergueu com velocidade estonteante. Em poucos anos, Norm se transformou.
+
+  O Castelo da Luz é uma das construções mais impressionantes do continente. Suas torres de prata e mármore imitam a forma da espada de Khalmyr, visíveis de quase qualquer ponto da cidade. No pátio central, o próprio Deus da Justiça surge acima das muralhas, na forma de uma estátua com mais de 60 metros de altura. A mão divina de Khalmyr se ergue, como se estendesse sua justiça para todos. O castelo brilha à noite, espalhando uma luz prateada e suave que não deixa os cidadãos esquecerem que estão sob a proteção e vigilância de seu padroeiro.
+
+  Como qualquer construção anã, o Castelo da Luz combina beleza e poder. Catapultas e balestras se espalham por muralhas e torres, misturando-se com a arquitetura. A entrada principal é uma ponte levadiça que conduz a uma antecâmara cheia de armadilhas e seteiras. Os corredores são amplos e os salões são vastos — o Castelo da Luz é uma das poucas fortalezas cujo interior foi pensado para cargas de cavalaria.
+
+  A população inchou quando filhos de famílias nobres se mudaram para cá, na esperança de integrar a Ordem da Luz. Não demorou muito para que Norm se tornasse mais populosa que Roschfallen.
+
+  Hoje em dia, quase tudo em Norm existe para apoiar a Ordem da Luz. Guildas de ferreiros e artesãos trabalham unicamente em armas, armaduras e ferramentas para os cavaleiros. Fazendas ao redor das muralhas alimentam a Ordem. A presença dos cavaleiros estimula a devoção religiosa, multiplicando os templos.
+
+  Os habitantes de Norm vivem uma existência tradicional e guerreira, voltada à manutenção dos campeões e nobres locais. Não existe muita noção de enriquecimento, mobilidade social ou mudança de vida — exceto através da cavalaria. Há grandes áreas onde se organizam justas e torneios. Não se vê ruelas cheias de gente, mas espaços amplos onde transitam cavalos. As casas são baixas e espalhadas, dando destaque a prédios imponentes como os templos — e sempre deferentes ao Castelo da Luz.
+
+  Quase 20 anos atrás, Norm sofreu um duro golpe. A Queda de Norm, quando jovens cavaleiros corrompidos pela Tormenta queimaram a cidade e enfrentaram as gerações mais velhas, é um trauma que a cidade talvez nunca supere. A Guerra Artoniana também chegou à cidade. Os cavaleiros foram paralisados por uma maldição, salvos apenas pela intervenção de um grupo de heróis. Ferida, Norm se tornou ainda mais aguerrida e tradicional — mais do que nunca, o lar da Ordem da Luz.`
+          },
+          {
+            name: "Muncy",
+            content: `A estrutura feudal de Bielefeld é exemplificada perfeitamente no condado de Muncy. Thomas Lendilkar deu a um guerreiro a missão de pacificar uma região assolada por monstros. Este guerreiro era Torant Branalon, um nobre de uma família deposta no velho continente. Como recompensa, Torant recuperaria o título de conde. Os registros da época sugerem que Lendilkar tenha ficado muito surpreso quando, um ano depois, o guerreiro apareceu na capital dizendo que a missão estava cumprida. Também disse que gostaria de ter seu título oficializado o mais rápido possível, pois estava prestes a ter um filho.
+
+  Assim começou a tradição dos Branalon, leais e resilientes condes de Muncy. Ao longo dos séculos, o Castelo da Gruta Negra, lar da família, sempre foi o principal ponto de vigilância de onde os nobres e cavaleiros partiam quando as trombetas soavam. O castelo tem esse nome por causa das façanhas de Torant Branalon: o guerreiro descobriu que a profusão de monstros na região se originava de um único lugar, uma caverna que se abria para um labirinto de corredores subterrâneos. Torant venceu a masmorra e construiu seu castelo sobre a gruta. Ele desejava que, se os monstros um dia ressurgissem, os condes de Muncy fossem a primeira linha de defesa.
+
+  Como todo castelo tradicional, Gruta Negra é um lugar público. Boa parte do povo do condado vive aqui, trabalhando para a família nobre. Outros vêm ao castelo para vender produtos nos dias de feira ou para ter com o conde, responsável por impor a lei e arbitrar disputas. O forte do castelo é a única parte privativa, o verdadeiro lar da família.
+
+  O atual conde de Muncy é sir Bernard Branalon, “o Paquiderme Galante”. Com mais de 60 anos, Bernard tem uma longa história de batalhas e glórias, mas é lembrado por ser um dos melhores amigos de sir Orion Drake. Bernard é um homem imensamente alto, gordo e forte. Já foi casado inúmeras vezes e tem filhos suficientes para preencher um batalhão. Alguns desses filhos lutaram contra a Ordem da Luz durante a Queda de Norm, a noite mais trágica da vida de Bernard.
+
+  Bernard é membro da Ordem da Luz, como é tradição na família. Os Branalon estiveram entre os primeiros iniciados por Arthur Donovan II, antes que existisse o Castelo da Luz. Desde então, espera-se que filhos e filhas dos Branalon pertençam à Ordem.`
+          },
+          {
+            name: "Highter",
+            content: `Num reino de tradições, Highter se destaca como algo extraordinário e inusitado: uma cidade flutuante ligada à terra por uma imensa corrente.
+
+  Highter foi originalmente construída por um mago maligno que desejava uma fortaleza inacessível. Um grupo de aventureiros o derrotou e tomou o lugar para si. Com o tempo, os aventureiros e seus descendentes desenvolveram uma cidade completa a partir da fortaleza. O transporte até a cidade é extraordinário: a corrente está presa numa imensa estrutura de pedra, em volta da qual há inúmeros círculos entalhados. Esses círculos são encantados com magias de teletransporte, levando aos principais pontos da cidade.
+
+  O prefeito de Highter há mais de um século é o anão Kevarimm, único sobrevivente do grupo de aventureiros original e o último que conhece um segredo: os círculos de teletransporte são parte de um ritual inacabado e, se forem usados da forma errada, podem levar o usuário a dimensões infernais… Ou trazer coisas de lá. Nem mesmo Kevarimm sabe o que seria essa “forma errada”, mas teme que qualquer outro prefeito se deixe levar pela curiosidade ou ganância. Também há túneis e passagens no interior da rocha que nunca foram explorados.
+
+  Já houve uma comunidade sob Highter, mas ataques cada vez mais constantes de monstros fizeram com que ela fosse abandonada. Hoje em dia, Highter conta com pouquíssimos habitantes e parece em vias de se transformar num imenso covil de criaturas perigosas. Kevarimm se recusa a abandonar seu posto, mas cada vez mais precisa de heróis para manter os monstros sob controle, ou pelo menos atrasar seu avanço…`
+          },
+          {
+            name: "Floresta de Jeyfar",
+            content: `A maior área florestal de Bielefeld marca a fronteira com Aslothia e é um reduto de mistérios. Mesmo que não seja muito extensa para padrões de outros reinos, Jeyfar é fechada, escura e labiríntica. Vários aventureiros já se perderam em seu interior. Aqueles que conseguiram voltar juram que a floresta é muito maior do que os mapas mostram, estendendo-se para oeste sempre à frente do viajante.
+
+  Talvez isso seja só conversa de guias incompetentes. Talvez seja efeito de algum dos monstros ou criaturas mágicas que vivem entre as árvores. Existe a lenda (considerada pouco confiável) de que, em algum lugar de Jeyfar, há uma imensa árvore que esconde um túnel para um local subterrâneo. Este covil teria sido habitado por orcs em tempos antigos, mas eles foram expulsos por “uma ameaça ainda pior”. Ninguém dá muita credibilidade a isso, porque orcs nunca foram comuns em Bielefeld e porque a tal árvore nunca foi localizada. Mas os mais supersticiosos sussurram que a floresta é habitada por um povo antigo — talvez de antes do que se pensa serem os habitantes originais de Arton. Talvez a árvore só se revele para aqueles que o “povo misterioso” deseja atrair, ou talvez em certas épocas do ano… De qualquer forma, Jeyfar parece ter vontade própria, torturando certos visitantes.
+
+  Dizem os boatos que a floresta é habitada por um dragão. O Dragão de Jeyfar é assunto controverso. Desde a colonização de Bielefeld, cavaleiros entram na floresta jurando que iriam encontrar e matar o dragão para provar seu próprio valor. Não há nenhum relato de combates com a fera, mas muitos juram tê-la visto. Diz-se que o Dragão de Jeyfar é uma besta mística, que só se revela para cavaleiros dignos, e que enfrentá-la e derrotá-la não é uma simples batalha, mas uma provação espiritual e moral. Segundo boatos, os cavaleiros que nunca voltaram da floresta na verdade se juntaram à Corte do Dragão, sofrendo punição eterna por tê-lo desafiado sem a retidão moral adequada.`
+          },
+          {
+            name: "A Cidade Perdida de Lendilkar",
+            content: `Quando Thomas Lendilkar voltou sua sanha conquistadora para Khubar, a capital de Bielefeld pagou o preço. Contudo, a cidade não foi totalmente destruída… Parte dela ainda repousa sob as ondas.
+
+  Lendilkar tinha tudo para ser uma metrópole capaz de rivalizar com Valkaria: ainda hoje um explorador submarino consegue encontrar imensas e complexas construções cheias de riquezas. Lendilkar era o centro econômico e estratégico de Bielefeld. Entre suas ruínas há itens mágicos, baús cheios de pedras preciosas, até mesmo restos de pergaminhos protegidos magicamente contendo segredos. Saque suficiente para ocupar um grupo de aventureiros durante anos.
+
+  As ruínas submersas também escondem perigos: sereias e tritões selvagens, tubarões gigantes, monstros-caranguejo conhecidos como cancerontes… As histórias mais fantásticas afirmam que um dragão marinho habita as passagens aquáticas. Segundo certos relatos, o próprio Thomas Lendilkar ainda assombra o local. A fúria de Benthos teria permeado o espírito do rei, deixando-o preso para sempre numa morte em vida repleta de amargor e raiva. Lendilkar seria capaz de comandar as águas e hordas de espectros submarinos, mas estaria preso a sua cidade arruinada.
+
+  Agora que Bielefeld tenta retomar sua marinha com a ascensão da Patrulha Costeira, é mais importante do que nunca garantir a segurança da Costa do Dragão-Rei. As ameaças que surgem da Cidade Perdida devem ser contidas… Ou o reino pagará de novo.`
+          },
+          {
+            name: "Bosque de Fiz-grin",
+            content: `Quando um viajante adentra um bosque em Bielefeld, normalmente encontra um lugar de sombras amenas e córregos frescos, ideal para um descanso da estrada. Porém, em raros casos, pode estar entrando nos domínios do dragão Fiz-grin, o Trapaceiro. E nesse caso, um descanso tranquilo é tudo que esse viajante infeliz não terá.
+
+  Fiz-grin não é um dragão normal, mas um dragão-fada. Dizem que essas criaturas existem na Pondsmânia, mas ninguém sabe se são uma espécie ou apenas indivíduos agrupados arbitrariamente, cada um com características únicas. Fiz-grin é muito pequeno, menor que um humano. Tem asas multicoloridas de borboleta e escamas iridescentes. Seu focinho reptiliano sempre apresenta um sorriso matreiro e seus olhos reluzem de inteligência. O desenho de suas asas sempre forma um número de três dígitos que diminui com o tempo.
+
+  Segundo uma cantiga infantil folclórica, há séculos o dragonete pediu para Hyninn que o transformasse num dragão gigantesco e poderoso. O Deus dos Ladrões propôs um jogo: se Fiz-grin enganasse mil aventureiros, o pedido seria concedido. Os números em suas asas seriam a contagem de quantos truques ainda faltam. Os últimos relatos dizem que ele já está bastante próximo de completar a tarefa…
+
+  Antigamente, Fiz-grin habitava um único bosque, no sul de Bielefeld — região hoje tomada pela Conflagração do Aço. Desde a Guerra Artoniana, porém, ele saiu de lá. Alguns dizem que o dragão-fada não tem mais moradia fixa, e que qualquer mata, por menor ou mais singela que seja, pode estar servindo de morada para ele. Outros dizem que o Trapaceiro mora num único bosque, mas que o bosque em si muda de lugar graças aos seus poderes, para sempre surpreender viajantes incautos.
+
+  Fiz-grin não é maligno, mas é imprevisível. Assim como todas as fadas, vê o mundo dos mortais como arbitrário, cinzento e fascinante. Algo a ser imitado, mas também ridicularizado e transformado. A mentalidade feérica de Fiz-grin faz com que ele seja brincalhão e trapaceiro, mas também perigoso. Nunca se sabe se uma peça será inocente ou perigosa; se ele se ofenderá com algo ou ajudará um mortal apenas porque é divertido. O bosque não é habitado por monstros, mas Fiz-grin povoa seu domínio com ilusões de feras e criaturas bestiais. Alguns dizem que essas ilusões são perigosas por si só.
+
+  Durante a Guerra Artoniana, o cavaleiro Lothar Algherulff teria convencido Fiz-grin a atormentar apenas soldados puristas. No entanto, ninguém sabe se essa história é totalmente verdadeira ou, caso seja, se o dragão-fada não mudou de ideia desde então.`
+          },
+          {
+            name: "Gruta da Morte Gotejante",
+            content: `Cavernas são elementos comuns de histórias de heroísmo, mas algumas são apenas abatedouros de exploradores tolos. Uma dessas é a Gruta da Morte Gotejante.
+
+  Este complexo de túneis até hoje não é mapeado, a despeito de inúmeras tentativas. Suas paredes e teto gotejam um tipo de ácido que derrete carne, ossos, couro, metais, cerâmica… Até mesmo objetos mágicos! Ninguém até hoje conseguiu coletar uma amostra do ácido, pelo simples fato de que ele corrói qualquer vasilhame. Já se tentou inúmeras vezes extrair pedaços da rocha, para entender como ela não é dissolvida. O problema é que o ácido parece estar impregnado na pedra, como se fosse uma esponja.
+
+  A morte que aguarda os exploradores da Gruta é cruel: são dissolvidos vagarosamente e é difícil notar quando estão fracos demais para voltar à superfície. Então é apenas questão de tempo até que não sobre nada. Desnecessário dizer, não há formas de vida na Gruta, nem mesmo limo ou fungos. Alguns necromantes querem estudar a Gruta por ser o que chamam de “ponto de morte absoluta”: a ausência de vida teria significado místico e propriedades mágicas.
+
+  Ninguém sabe se as profundezas escondem algum tesouro, mas a existência da Gruta é motivo suficiente para desafiá-la. Um estudioso da Academia Arcana certa vez especulou que a Gruta da Morte Gotejante na verdade é o tubo digestivo de uma bizarra forma de vida. Essa hipótese não encontra muito respaldo… Mas, caso se confirmasse, geraria outras perguntas. Que criatura é essa? Ela ainda está viva?`
+          },
+          {
+            name: "O Abismo",
+            content: `O Abismo é uma estranha formação subterrânea, um túnel praticamente vertical e parcialmente oculto pela vegetação em volta. A boca semicircular se abre para uma queda vertiginosa, então para um labirinto enterrado. Um viajante incauto pode cair no túnel por acidente e, se sobreviver, ficar perdido num complexo de passagens secretas, corredores traiçoeiros, câmaras… Segundo boatos, existe até mesmo um caminho oculto para Doherimm.
+
+  O Abismo também é um viveiro de monstros: lagartos gigantes, insetos monstruosos, trolls, orcs, kobolds, ogros, mortos-vivos e coisas ainda mais exóticas. Ninguém sabe como ou por que criaturas tão diferentes vivem aqui. Ninguém sabe por que não fazem incursões à superfície.
+
+  Curiosamente, existe outro labirinto subterrâneo repleto de monstros em Wynlla, também chamado de “o Abismo”. Claro, pode ser coincidência. Mas será que não há nenhuma relação entre os dois? Existem outros “Abismos” em outros lugares de Arton? Quem os projetou? Com qual propósito? Dizem que um aventureiro já entrou no Abismo em Bielefeld para, poucas horas depois, se ver no Abismo em Wynlla… Se isso for verdade, pode ser uma alternativa para contornar o difícil acesso a Bielefeld. Cada vez mais grupos de aventureiros estão desbravando o Abismo em busca dessa solução.`
+          }
+        ]
+      },
+      {
+        title: "Guildas & Organizações",
+        places: [
+          {
+            name: "A Ordem da Luz",
+            content: `O espírito de Bielefeld encontrou forma e nome há pouco mais de um século, com a fundação da Ordem da Luz. Em pouco tempo, ela se tornou a maior ordem de cavalaria do mundo conhecido e passou a ser parte fundamental do reino. A Ordem da Luz é totalmente descrita no Capítulo 4: Organizações.`
+          },
+          {
+            name: "Patrulha Costeira",
+            content: `Nos primeiros anos após o ataque de Benthos, a nova rainha de Bielefeld decidiu que deveria haver uma tropa responsável por proteger a costa. Essa decisão não foi simples nem livre de controvérsias — segundo a assim chamada Doutrina da Ferradura, um nobre não deveria interferir além de onde pudesse chegar a cavalo. Por isso, Raissa Janz determinou que essa não seria uma força de simples soldados e que eles nunca deveriam expandir sua área de proteção para o alto-mar. Clérigos e paladinos de Khalmyr e Tanna-Toh foram convocados, juraram não repetir os erros de Thomas Lendilkar e se tornaram os primeiros membros da Patrulha Costeira.
+
+  Apesar de contar com pouca glória em comparação aos cavaleiros tradicionais do reino, os patrulheiros são alguns dos combatentes mais extraordinários de Bielefeld. Na verdade, a Patrulha é bem mais antiga que a própria Ordem da Luz! Treinados em navegação e sobrevivência no mar, quase todos também são usuários de magia e muitos possuem itens mágicos que os tornam capazes de combater debaixo d’água. Suas armas e armaduras são tratadas para nunca enferrujar e eles possuem conchas encantadas, que podem soprar para chamar uns aos outros ou mesmo trazer reforços magicamente.
+
+  Tudo isso leva à pergunta: como essa força tão estupenda é tão pouco conhecida? Alguns dizem que, na verdade, a Patrulha Costeira é eficiente demais para seu próprio bem. Bielefeld não se vê ameaçado por nada vindo do mar justamente porque os patrulheiros são bons no que fazem. Outros, contudo, afirmam que tantos recursos e tanto talento são desperdiçados em postos onde nunca há perigo. Contudo, a Patrulha Costeira mostrou seu valor durante a Guerra Artoniana, quando ajudou a rechaçar uma terrível armada pirata financiada pelos puristas.
+
+  Essa batalha colocou a Patrulha Costeira pela primeira vez em evidência no imaginário dos jovens de Bielefeld. Os patrulheiros também tiveram contato com o herói e nobre dos povos submarinos chamado Fintan, pela primeira vez sendo parte importante da diplomacia bielefeldense e talvez possibilitando uma aliança com esses seres. A marinha de Bielefeld está começando a se desenvolver pela primeira vez a partir da Patrulha, apesar das desconfianças do Rei Khilliar Janz. Talvez esse seja o início de uma nova lenda no reino — ou, alguns especulam, de uma nova e exótica ordem de cavalaria.`
+          },
+          {
+            name: "Os Cavaleiros Solitários",
+            content: `Os cavaleiros da Luz prezam a honra, a honestidade e as tradições. Mas existe uma organização secreta que os ajuda sem se preocupar com nada disso: os Cavaleiros Solitários. Eles admiram a Ordem, mas sabem que, em certas missões, honra e honestidade devem ser ignoradas. Atuam nos bastidores, manipulando eventos, gerando ou roubando recursos, fornecendo ou escondendo informações… Fazendo todo o serviço de espionagem, trapaça e enganação de que a Ordem da Luz precisa. Ninguém na Ordem da Luz desconfia da existência deles e é vital que isso continue assim — se a Ordem os conhecesse, rejeitaria sua ajuda. E, se não rejeitasse, estaria abandonando a honra.
+
+  Às vezes, eventos conspiram para que as galantes missões dos cavaleiros da Luz deem certo: uma masmorra “coincidentemente” contém um item mágico vital para derrotar um monstro. Um lorde corrupto fica doente logo antes de executar seu estratagema. O veneno que deveria matar uma cavaleira misteriosamente não surte efeito. Certas operações dos Cavaleiros Solitários parecem tramoias contra a Ordem da Luz: se a honra de um cavaleiro dita que ele deve embarcar numa missão suicida, ele pode sofrer incontáveis atrasos e emboscadas, impedindo que entregue sua vida.
+
+  Os Cavaleiros Solitários muitas vezes reúnem, manipulam ou auxiliam aventureiros — até mesmo contra sua vontade. Vários grupos já narraram terem sido pagos para atrapalhar a vida de um cavaleiro e, meses depois, descobrir que o salvaram de um perigo mortal. Da mesma forma, grupos com pelo menos um cavaleiro às vezes passam por terríveis marés de azar, apenas para obter um triunfo gigantesco logo em seguida. Em Bielefeld, qualquer anão tagarela tentando contratar um grupo para uma missão pode ter propósitos ocultos.
+
+  O quartel-general dos Cavaleiros Solitários é uma casa de vinhos em Roschfallen. É preciso falar um complexo conjunto de senhas para ser admitido no porão secreto onde ocorre o planejamento das operações. O dono da casa é Felix Jannon, um aristocrático e paranoico viajante, explorador planar e caçador de curiosidades. O líder é Thulbok Farandrimm, um anão que jura ser clérigo de Khalmyr, mas se comporta como sacerdote de Hyninn. Ou, às vezes, de Nimb. O terceiro Cavaleiro Solitário é Crawford, um “especialista em sobrevivência” que vive em uma verdadeira fortaleza. O último membro é Ambrose, um lunático e teórico de conspiração. Ambrose possui uma vasta rede de contatos e informantes que lhe fornecem dados de todos os tipos. Poderia ser somente um maluco — se não chegasse a previsões corretas.
+
+  Ninguém (talvez nem mesmo os próprios Cavaleiros) sabe se eles são devotos de Hyninn, se servem a Nimb ou se trocam de aliança conforme as necessidades da Ordem da Luz. De qualquer forma, estão a postos para ajudar nas sombras.`
+          },
+          {
+            name: "A Escola do Lorde Mago",
+            content: `Quando Aslothia foi tomada por mortos-vivos, Bielefeld aceitou todos os refugiados do antigo reino que pediram asilo, inclusive muitos arcanos. A maioria desses foi acolhida pelo Conde Nathaniel, mais conhecido pelo apelido de “Lorde Mago”.
+
+  O excêntrico Lorde Mago vive em um castelo conhecido como Torre de Prata e governa um condado tradicional — exceto pelo fato de que sua família não protege o povo com armas, e sim com magia. Toda a honra, tradição e dever dos cavaleiros de Bielefeld estão presentes entre a família, mas em versões arcanas. Eles cavalgam construtos conjurados, usam robes em vez de armaduras, têm varinhas em vez de espadas. Parece loucura para os cavaleiros, mas dá certo.
+
+  Para arranjar o que fazer com os arcanistas refugiados, o conde decidiu uni-los em uma escola. Grandes áreas da Torre de Prata foram destinadas à prática e ensino de magia arcana. Os refugiados recuperam aos poucos seu orgulho e aprendem a viver num reino onde suas habilidades não são ilegais. Suas famílias conseguem levar adiante o conhecimento acumulado. E vários filhos de outros nobres já vieram ao castelo para aprender com os recém-chegados.
+
+  Alguns cavaleiros, principalmente veteranos da guerra civil, desconfiam disso. E se houver um agente de Ferren infiltrado entre esses exilados? Alguns afirmam que, ao pisar em Bielefeld, os refugiados deveriam adotar os costumes de Bielefeld, abandonando a magia para se dedicar às armas. Não percebem o quanto isso chega perto do antigo discurso antimagia de Ferren Asloth. Outros acham que os refugiados poderiam continuar sua prática arcana, mas tantos deles reunidos num lugar só podem ser perigosos.
+
+  Frente a tudo isso, o Lorde Mago se mantém firme. Ele usa sua fortuna para amealhar heróis que estejam dispostos a combater os cavaleiros desonrados que ameaçam seus protegidos, o que já colocou alguns grupos de aventureiros em conflito com nobres importantes e até mesmo com a Ordem da Luz. Mas os refugiados fazem parte de seu povo. E é dever de um nobre defender seu povo.`
+          }
+        ]
+      },
+      {
+        title: "Aventuras",
+        content: `Sem grandes pragas de monstros e com fortes relações de lealdade, Bielefeld pode parecer um reino seguro. Em geral é — mas a segurança existe principalmente dentro dos castelos.
+
+  Como nação rural, Bielefeld apresenta vastas áreas sem sinais de civilização. Cada nobre cuida de suas terras, sem que um exército real forme perímetros ou estabeleça postos de vigilância. Nesses lugares desprotegidos, um único monstro pode ser um grande perigo. Há muitos casos de ogros e trolls que tomam o controle de uma ponte ou trecho de estrada, exigindo algum tipo de tributo. Cabe à família nobre local lutar contra essas ameaças — ou contratar aventureiros.
+
+  Outro risco em Bielefeld são cavaleiros tentando amealhar ouro e glória. Alguns são honrados membros da Ordem da Luz, que desafiam para duelos e justas guerreiros capazes de se defender. Outros são aproveitadores que distorcem essa tradição para roubar os mais fracos sob uma fachada de legitimidade. O vencedor tem direito às armas, à armadura e talvez até ao cavalo do perdedor. Ignorar esses desafios traz vergonha e fama de covarde a um cavaleiro… E pode render um ataque unilateral a um não cavaleiro. Afinal, como um “mero guerreiro” ousa recusar o desafio de um nobre?
+
+  Também há o que se chama de “cavaleiros bandidos”. Não são membros da Ordem da Luz, mas baixos nobres que portam o título de sir. Atacam grupos de aventureiros ou plebeus, roubando tudo que têm e sequestrando alguns. Eles se aproveitam de seu título para escapar das punições que recairiam sobre um bandoleiro comum. Mas, por trás das armaduras e brasões, é isso que são. Muitas vezes, quando um aristocrata é raptado por um cavaleiro bandido, a lei de Bielefeld não pode fazer nada, pois costumes antigos ditam que nobres rivais podem ser feitos prisioneiros, desde que sejam “tratados adequadamente”. Resta à família pagar o resgate ou recorrer a heróis.
+
+  Muitas aventuras em Bielefeld envolvem intriga palaciana ou o modo de vida da Ordem da Luz. Aventureiros podem encontrar torneios abertos com grandes somas em dinheiro ou até itens mágicos como prêmio principal. Esses torneios são centrados ao redor da justa (competição com lanças entre cavaleiros), mas também há a liça (uma batalha a pé entre múltiplos oponentes), campeonatos de arquearia e até duelos mágicos. Embora a justa seja teoricamente reservada a portadores do título sir, qualquer um pode se inscrever como um “cavaleiro misterioso”, escondendo o rosto e o brasão, desde que tenha cavalo, lança e armadura. A vitória de um cavaleiro misterioso muitas vezes é causa de interesse quase frenético nas cortes. Um dos mais notórios cavaleiros misteriosos dos últimos anos é sir Hielroy Générique Forget, cujo próprio nome parece uma troça com os costumes da cavalaria. Contudo, o cavaleiro já venceu diversos torneios, sempre se portando de forma galante e honrada — amealhando uma grande quantidade de admiradores e de rivais.
+
+  Outro fenômeno comum em Bielefeld são cavaleiros errantes que ativamente procuram injustiças para corrigir e maldades para punir. Mesmo que um monstro ou vilão não esteja ameaçando seu feudo, talvez um nobre queira partir para caçá-lo, apenas porque é a coisa certa a fazer. E para isso precisa de valorosos companheiros. Aventureiros podem cumprir uma dessas missões como teste de suas capacidades e espírito galante. Dentre esses curiosos benfeitores, destaca-se atualmente sir Karl-Eisen Poundmax, que tomou para si a inglória tarefa de defender o povo élfico e uni-lo sob uma nova divindade.
+
+  Quase todos os aventureiros saídos de Bielefeld são combatentes. A cavalaria é uma inspiração perene: guerreiros trajam armadura pesada e armas tradicionais, caçadores escolhem montarias como companheiros. Clérigos de Khalmyr e Lena também são comuns e o reino é um dos únicos que possui grande número de paladinos. Outros tipos de aventureiros muitas vezes começam como “auxiliares” de cavaleiros experientes, formando uma comitiva. Na verdade, um dos mais tradicionais tipos de grupos de aventureiros em Bielefeld é um jovem nobre acompanhado por servos e vassalos de sua casa: o aprendiz do mago da corte, a cavaleira jurada, a filha da mestra de caça, o espião em treinamento, a noviça da capela…`
+      }
+    ]
+  },
+  { id: "namalkah",
+  name: "Namalkah",
+  subtitle: "O Reino Indomado",
+  tag: "Reinado",
+  image: "/regioes/namalkah.png", // Substitua pelo caminho da imagem de Namalkah
+  coatOfArms: "/regioes/namalkah-brasao.png",
+  map: "/regioes/namalkah-mapa.png",
+  intro: `Nem tudo é vazio, vento e chão neste domínio de planícies infindáveis, mas a pátria dos namalkahnianos não perdoa. Mais que um lugar, Namalkah é uma ideia na mente de seus habitantes. Uma lembrança da qual não conseguem se livrar, mesmo que cavalguem até o fim do mundo.
+Em um passado ancestral, foi o ponto de peregrinação de povos nômades. A cancha sagrada onde galopa Hippion, o Deus Menor dos Cavalos. O nascedouro de todos os furacões e tempestades, segundo lendas de uma cultura nativa tão sofisticada quanto rústica, incapaz de se curvar aos outros. Aqui os colonos vindos de Lamnor jamais conseguiram impor seu modo de vida: eles é que foram assimilados pelo norte indômito. E mesmo a aristocracia não controla a vastidão dos ermos, povoados em sua maioria por gente livre.
+Em Namalkah cavalos não são meros animais dominados pelos humanos, e sim seus irmãos. Ginetes recebem a custódia de um potro ainda na infância e formam com ele um laço de lealdade que carregam até as portas da morte. Falam com suas montarias em uma língua de sussurros e gestos, incompreensível a forasteiros.
+Ainda assim, é uma terra capaz de acolher qualquer pessoa. Desde que não use esporas.`,
+   // Substitua pelo caminho do brasão de Namalkah
+  facts: [
+    { label: "Nome Oficial", value: "Veneráveis Hostes de Namalkah." },
+    { label: "Lema", value: "“Livre como o Vento, Forte como o Chão”." },
+    { label: "Brasão", value: "de verde um cavalo passante de prata coroado de ouro." },
+    { label: "Gentílico", value: "namalkahniano." },
+    { label: "Capital", value: "A Corte Errante." },
+    { label: "Forma de Governo", value: "monarquia eletiva." },
+    { label: "Regente", value: "Rainha Zallia Silloherom." },
+    { label: "População", value: "1.450.000." },
+    { label: "Raças Principais", value: "humanos, centauros." },
+    { label: "Divindades Principais", value: "Hippion, Allihanna, Khalmyr, Nimb." }
+  ],
+  sections: [
+    {
+      title: "História",
+      content: `Muito, muito antes de qualquer um vindo de Lamnor pisar nestas pradarias, elas já eram habitadas. Antes mesmo da humanidade. Aqui viveu, e ainda vive, um dos primeiros povos a venerar Hippion, o Divino Corcel: os centauros, seres quadrúpedes de corpo equino e torso humanoide. Detentores de grandes rebanhos de bois, búfalos e cabras, não travavam guerra por pastos ou recursos naturais, mas batalhas ritualísticas para provar sua bravura.
+Outros povos, como migrantes humanos da Grande Savana, foram sempre aceitos como iguais, desde que adotassem a religião hippionte. Com o tempo, a população humana superou a de centauros. Mas, emulando seus conterrâneos e em eterna adoração ao Deus Menor dos Cavalos, esses humanos formaram uma cultura centrada na equitação, na exploração e na união de cavalo e ginete. Os centauros seriam para sempre um exemplo. E, se humano e cavalo estavam separados em corpo, o mais alto ideal a ser atingido é que estivessem unidos em alma. Antes de ver a si mesmos como pertencendo a um reino, a cidades ou mesmo a aldeias e povoados, ginetes e montarias se consideravam parte de grupos viajantes, como os centauros: os assim chamados tropéis.
+Até onde se sabe, Hippion foi o maior fator de povoamento da área. Um cavalo cultuado como um deus por animais e seres inteligentes, um dos deuses menores mais presentes e atuantes até hoje, ele ocasionalmente podia ser visto pela população que percebia nisso uma inerente proteção divina. Já nessa época ancestral Namalkah não dependia da fé em seres longínquos ou arrogantes. Tinha, afinal, sua própria deidade de carne e osso, o trotar de cujos cascos ecoava no mundo material e no espírito de seus fiéis.
+Não que esses primórdios tenham sido uma época tranquila. Alguns tropéis de centauros renegados seguiam Megalokk, o Deus dos Monstros, não vendo problema em capturar bípedes e usá-los em sacrifícios. Havia também grupos de humanos cavaleiros de grifos, proscritos de clãs bárbaros das Sanguinárias, que se assentaram no topo dos Montes Nublados, passando a viver como saqueadores e ladrões de gado.
+Esses conflitos internos levaram muitos clãs a se deslocar para outros pontos de Arton Norte. Aqueles que ficaram para trás continuaram a desenvolver uma cultura própria, centrada na pecuária e na equitação. Aprenderam a se defender de seus inimigos e muitos adotaram um modo de vida seminômade, migrando dentro das planícies conforme necessário.
+
+### Sempre em Movimento
+Após a fundação de Valkaria em 1020, refugiados sulistas descontentes partiram em caravanas para explorar o norte. Muitos se sentiram abandonados pelos deuses em Lamnor, e as agruras da nova jornada reforçaram o pessimismo geral. Esses exploradores obstinados, orgulhosos e amargurados ignoraram os avisos dos nativos, usaram atalhos perigosos e por fim estabeleceram-se onde hoje é Salistick, o Reino sem Deuses.
+Um braço dessa caravana, após divergências internas, separou-se e escolheu continuar ao norte, seguindo uma antiga rota nômade. Enquanto os lamnorianos que se assentaram em Salistick renegavam totalmente os deuses, essa dissidência estava apenas decepcionada com a distância e o aparente descaso de suas divindades tradicionais. Relatos afirmam que a expedição só parou frente ao intransponível Rio dos Deuses. Muitos lamnorianos teriam se convertido a Hippion naquelas margens, após testemunhar o deus majestoso galopando pelas planícies. Como ocorrera séculos atrás, a presença física do deus foi vista como um sinal pelos recém-chegados. Considerando o sítio abençoado, escolheram ali permanecer.
+Esse núcleo original de povoamento se espalhou e deu origem à vila de Palthar em 1022 — logo se tornando um entreposto movimentado. Seria a capital do reino por anos a fio, com seu estilo arquitetônico horizontal e construções em estilo nativo. Os lamnorianos acabaram adotando os valores dos tropéis das planícies vizinhas. Em poucas gerações, mesclaram-se ao povo local por meio de casamentos, integrando-se à sua cultura.
+Com a adição desta última e mais recente leva migratória, consolidava-se a comunhão dos vários tropéis da crença hippionte. Em 1065 esses bandos seminômades que compunham a nação seriam imortalizados nos célebres versos do infame bardo Tantinbor como as Veneráveis Hostes de Namalkah. O nome, segundo alguns, vem das palavras nativas namminuyhnhnm, vento frio que sopra das Uivantes em direção ao norte, e amalkhan, um termo intraduzível que descreve ao mesmo tempo saudade de casa e ânsia por explorar. O neologismo descrevia perfeitamente a sensação de viver na região abençoada por Hippion. Quando as hostes foram finalmente convidadas a se juntar ao Reinado, esta denominação poética foi adotada para o que formalmente passou a ser um reino, com uma monarquia eletiva, mas ainda alicerçada nos antigos ritos de chefia das planícies.
+
+### Ventos da Guerra
+Em 1412, a Guerra Artoniana chegou a Namalkah e a cidade de Hippiontar marcou o ponto de resistência do reino, permanecendo milagrosamente intocada. O então Rei Borandir Silloherom estava na cidade para uma transação comercial — ou, dizem alguns, porque recebera um presságio de que sua presença ali seria importante.
+Dizem que a conquista de Hippiontar pelo inimigo foi evitada graças a um grupo de bravos heróis, que cavalgou através de todo o reino para avisar o rei de uma invasão simultânea. A Supremacia Purista ocupou todo o interior de Namalkah ao mesmo tempo, usando mobilização rápida de tropas transportadas por aeronaves e túneis subterrâneos dos trolls.
+Os mesmos heróis teriam sido responsáveis por improvisar uma cavalaria alada com grifos, serpes e gárgulas para atacar os transportes aéreos — um feito totalmente aberrante aos costumes namalkahnianos. A tática de batalha assimétrica surpreendeu o inimigo. Infelizmente, a tropa formidável foi quase aniquilada nesta missão suicida e o Rei Borandir perdeu sua vida.
+A batalha decisiva aconteceu no chão. O grosso das tropas da Supremacia foi vencido em terra, em grande parte graças aos esforços do centauro Rark Cascos Sangrentos. O antigo vilão se aliou aos humanos em uma carga vitoriosa contra os arsenais puristas, empunhando seus dois machados imbuídos de magia.
+Com o fim do conflito, Namalkah tenta se reerguer das consequências da ocupação, agora liderada pela Rainha Zallia Silloherom, filha do antigo rei, eleita por aclamação entre os chefes de tropéis do reino.`
+    },
+    {
+      title: "Geografia",
+      content: `Namalkah apresenta clima muito quente e úmido próximo ao Rio dos Deuses, mas seu interior é atravessado por uma corrente de ar gélido das Uivantes, trazendo ventos cortantes e erosivos. Tornados são comuns, representando ameaça frequente.
+O reino é, em primeira impressão, uma planície infindável, pontilhada por terrenos irregulares como ravinas e coxilhas. Além do Rio Amarante que nasce nos Montes Nublados, outros pequenos afluentes correm por suas terras, mas poucos são caudalosos ou amplos o bastante para formar vales ou depressões — com exceção notável de alguns acidentes geográficos, como os Desfiladeiros de Dópsia.
+Há ao menos uma fronteira clara: o Rio dos Deuses ao norte, além do qual se localiza a Grande Savana. Bem menos exata a nordeste é sua fronteira com um antigo desafeto, o reino de Callistia — hoje incorporado às Repúblicas Livres de Sambúrdia. Essa divisão é mais uma convenção histórica do que geográfica; apenas nativos sabem dizer onde acaba uma região e começa a outra.
+Ao sul, marcada pela reconquistada cidade de Suth Eleghar, temos a fronteira com a odiada Supremacia Purista, vigiada por patrulhas de ginetes. A sudeste, além do Rio Vermelho, situa-se Salistick, o Reino sem Deuses.
+A oeste, atravessando diferentes pontos do Rio Lengarim, é possível chegar às Estepes Selvagens, região fronteiriça com as Montanhas Uivantes; ou a Zakharov, o Reino das Armas.`
+    },
+    {
+      title: "Povo & Costumes",
+      content: `Hoje a população namalkhaniana é formada em sua maioria por humanos seminômades, de identidade muito ligada à vida na planície, o que os diferencia de reinos vizinhos. Embora existam muitas cidades, aldeias e paradas de caravanas pelo reino, a unidade social mais importante ainda é o tropel: grandes grupos de ginetes que conduzem gado, cavalos ou outros animais de um ponto a outro, para comércio ou outros fins.
+Centauros são presença comum no reino, ainda que tenham sofrido baixas severas durante a Guerra Artoniana. Muitos hynne locais abandonaram o reino em êxodo para as Repúblicas Livres de Sambúrdia.
+Humanos nativos costumam usar calças acolchoadas de lã e túnicas largas do mesmo material. Por cima vestem a pênula, espécie de manto que protege contra o frio. Botas, chapéus de abas largas e acessórios de couro — inclusive armaduras — são frequentes.
+A aristocracia local não se veste de maneira tão diferente da população comum, apenas usando materiais de melhor qualidade. Com efeito, a nobreza, embora próspera, controla parcas propriedades, considerando o território do reino como um todo. Em vez de terras ou lavouras, o poder local é medido pela posse de rebanhos e ginetes lutando em seu nome.
+A maior parte das forças militares namalkhanianas não é composta por servos que juram lealdade a senhores em troca de proteção — e sim gente livre que habita os ermos, vivendo em tropéis errantes lutando uns pelos outros. Azul, dourado, marrom e verde são cores muito valorizadas no país, utilizadas em brasões e uniformes nos tempos de guerra.
+Um dos costumes mais importantes para um habitante de Namalkah é receber seu primeiro cavalo. Crianças aprendem a cavalgar desde cedo, recebendo a primeira montaria aos seis anos. É esperado que cuidem do animal como um pai cuida do filho. Essa responsabilidade, tênue no início, se torna mais rigorosa na adolescência. Negligenciar a própria montaria é malvisto; maus tratos são considerados crimes tão graves quanto agredir ou torturar pessoas.
+Deixar o primeiro cavalo morrer, mesmo que por acidente ou doença, é sinal de mau agouro, trazendo estigma social. Uma das piores ofensas a um nativo é dizer que este “usa esporas” em suas botas; tal acusação invariavelmente resulta em desafio para um duelo, que pode ser uma corrida ou briga de faca. Segundo os costumes namalkahnianos, a comunicação entre ginete e montaria deve ser intuitiva e não violenta. Assim, esporas são consideradas uma ferramenta de covardes e incompetentes.
+Em geral, a sociedade namalkhaniana é aberta a outros povos e culturas — mas isso não significa ser livre de preconceitos. Ser esguio e atlético é considerado padrão de beleza, enquanto os sedentários ou incapazes de cavalgar são estigmatizados. Também existe forte hostilidade contra nativos do antigo reino de Callistia, considerados empolados, preguiçosos e decadentes. Salistick costumava ser considerado um “reino irmão”, com fazendeiros enviando seus filhos para o Colégio Real de Médicos. Porém, há ressentimento quanto à neutralidade dos salistienses durante a última guerra.`
+    },
+    {
+      title: "Hippion e Outros Deuses",
+      content: `A principal divindade do reino é Hippion, o Deus Menor dos Cavalos, sendo uma das poucas nações conhecidas que tem como principal padroeiro um deus menor. Dizem as lendas que Hippion seria um semideus filho de Allihanna, a Mãe Natureza. Ao longo da história de Arton ele teria servido como montaria para rainhas amazonas, paladinos e grandes heróis — algo provado verdadeiro quando Hippion foi cavalgado por Orion Drake em 1405, durante sua batalha final contra as forças aberrantes da Tormenta.
+Alguns afirmam que Hippion gosta de assumir a forma de cavalos comuns e seus ginetes nem desconfiam terem sido escolhidos por ele. Encontrá-lo cavalgando nas planícies de Namalkah é visão rara, mas recorrente, sendo considerado um bom augúrio.
+Nimb é uma presença bizarra, mas marcante, no reino. Existem locais tocados pela loucura do Deus do Caos, onde a própria realidade se comporta de maneira diferente. A maioria dos habitantes considera que esses lugares são “amaldiçoados”, “malignos” ou simplesmente palco de histórias infelizes. Apenas alguns sábios e aventureiros e exploradores conhecem a verdade e notam que muitas anedotas históricas de Namalkah são efeitos perigosos e alarmantes do Caos.`
+    },
+    {
+      title: "Governo",
+      content: `A atual rainha de Namalkah é Zallia Silloherom, filha de uma guerreira amazona e do rei anterior. É a única herdeira de um rico clã criador de cavalos, famoso por organizar torneios. Embora não aparente por suas vestes simples, é uma das mulheres mais ricas e poderosas do Reinado.
+O primeiro ato do governo de Zallia foi restabelecer a tradição ancestral da Corte Errante, retomando alguns mitos fundadores do reino para unir a população nestes tempos difíceis. Hoje em dia, onde quer que a hoste guerreira da monarca decida acampar torna-se automaticamente a capital namalkhaniana. Zallia está sempre viajando e recrutando aventureiros para ajudar a resolver os infinitos problemas afligindo sua regência.
+Alguns boatos afirmam que o restante da dinastia Silloherom foi vitimado por uma estranha maldição. Seja verdade ou não, a nova rainha parece determinar seu próprio destino e desafiar com pura força de vontade o sortilégio lançado sobre sua família.
+A política local é derivada das tradições do norte de Arton. Os habitantes de uma cidade ou acampamento costumam se reunir periodicamente, escolhendo seus chefes com base em bom senso e consenso, após um debate aberto. Geralmente os escolhidos estão entre as pessoas mais velhas e experientes na comunidade, mas combatentes jovens costumam ter preferência em tempos de guerra, desde que sigam a religião hippionte. Quando surge dúvida, o impasse é resolvido em rápida votação, ou algum tipo de jogo ou disputa. É comum que corridas em cancha reta ou outras provas de equitação sejam usadas para solucionar esses casos, em vez de duelos ou outros confrontos violentos.
+Chefes eleitos participam de reuniões periódicas na Corte Errante para discutir o rumo da nação. Esse enclave também aponta possíveis sucessores e sucessoras ao trono de Namalkah. Os candidatos devem então vagar pelas planícies até encontrar Hippion: quem domá-lo e retornar cavalgando-o prova ter seu consentimento para governar. Catástrofes naturais ou outros fenômenos podem ser interpretados como mau presságio pelos altos sacerdotes. Nesses casos, os chefes podem mais uma vez ser convocados para a Corte Errante para discutir a deposição do rei amaldiçoado.`
+    },
+    {
+      title: "Locais importantes",
+      places: [
+        {
+          name: "A Corte Errante (capital)",
+          content: `Quando se chega às cercanias de uma cidade namalkhaniana, ou mesmo enquanto se cavalga em meio ao mais completo nada da pradaria, às vezes é possível avistar ao longe um acampamento de tendas com os estandartes do reino presos a longas lanças. Fumaça emana de fogueiras onde ginetes veteranos, provenientes de diversos tropéis, discutem em debates acalorados ou contam histórias enquanto assam cordeiro e degustam bebidas quentes. Aos olhos estrangeiros pode não parecer, mas esta é a capital de Namalkah.
+A Corte Errante é uma tradição antiquíssima, remontando ao tempo em que manadas de centauros dominavam as planícies. Os capitães de hoste da época não podiam demonstrar preferência por nenhum assentamento, então tinham seu próprio tropel, composto pelos guerreiros e sábios mais proeminentes. Vagavam pelo reino, cuidando pessoalmente dos problemas de seus súditos. De tempos em tempos, uma assembleia decidia a próxima parada da corte itinerante, com o fim de debater e resolver problemas.
+Essa instituição foi retomada pela atual Rainha Zallia, sentindo que o reino precisava recuperar um poderoso símbolo nacional, capaz de reerguer o moral ainda combalido pela guerra recente. Mais que isso: uma sede de governo móvel permite à monarca ver com os próprios olhos lugares distantes e negligenciados da infinita pradaria.
+Qualquer um pode adentrar a Corte Errante portando armas ou usando habilidades especiais de qualquer tipo. Isso acontece porque, apesar de ser um grupo relativamente pequeno, todos os líderes ou ginetes do acampamento são heróis com suas próprias salvaguardas contra aço e magia, mais que capazes de se defender sozinhos — incluindo a própria rainha.
+A prática da Corte Errante tornou Zallia muito aclamada entre seus súditos, mas também representa um risco. Embora os membros da corte estejam relativamente a salvo de ataques diretos, alguns afirmam que é muito fácil para sszzaazitas ou outros conspiradores infiltrar-se nas decisões políticas do reino. A diplomacia com outros reinos também pode ser prejudicada, já que poucos regentes estão acostumados a essa prática.
+Não é incomum que a Corte Errante se depare com problemas ou ameaças em suas viagens infindáveis. E, ainda que conte com muitos heróis, eles não podem abandonar seus postos para resolver tudo. Assim, é frequente que grupos de aventureiros sejam chamados para cavalgar com a Corte Errante durante algum tempo, servindo como batedores ou “resolvedores de problemas”. Essa é uma honraria muito disputada por aventureiros namalkahnianos e um prêmio inigualável para estrangeiros. Ao contrário do que costuma acontecer em outros reinos, em Namalkah não são aventureiros errantes que são chamados à corte real: muitas vezes a corte vai até eles!`
+        },
+        {
+          name: "Hippiontar",
+          content: `Uma das cidades mais importantes de Namalkah começou como um mero rancho no meio do nada, até que recebeu a visita de Hippion, que escolheu o estábulo para passar a noite. A família Verimm, proprietária do rancho, trouxe tudo que tinha de riquezas em oferenda à divindade. Quando Hippion partiu pela manhã, os rancheiros começaram a experimentar uma época de boa fortuna que não acabou até hoje, séculos depois. A fama do lugar se espalhou e o pequeno rancho se transformou na cidade de Hippiontar, também chamada de “Baia de Hippion”.
+Hippiontar não passa de uma vastidão de estalagens, canchas de corrida, pequenas fazendas e oficinas espalhadas numa planície ao redor do rancho. Contudo, os tropeiros de Namalkah consideram que em cada viagem devem parar pelo menos uma noite em Hippiontar, assim como Hippion fez tanto tempo atrás. A “cidade” está sempre recebendo visitantes que trazem oferendas, gastam dinheiro nas tavernas, hospedam-se nas estalagens e, é claro, visitam a lendária baia onde Hippion dormiu. É comum que mais de uma tropa ou caravana se encontre em Hippiontar, resultando em superlotação, algumas brigas e muita bagunça. Mesmo assim, é raro que exista violência real ou mesmo grandes problemas.
+Todos que visitam a baia onde o Deus Menor dos Cavalos esteve relatam boa sorte — bebedeiras épicas resultam em nenhuma consequência ruim, rivalidades são resolvidas amigavelmente, acordos comerciais dão certo… Isso faz com que Hippiontar também seja um ponto muito procurado por comerciantes, nobres e diplomatas. Desde que se preste homenagem ao deus, tudo que tem início aqui costuma dar bons frutos.
+Alguns estudiosos já especularam sobre algo mais sinistro neste lugar. Hippion não tem nada a ver com sorte e azar, não deveria fazer sentido que probabilidades fossem distorcidas por sua passagem. Existem lugares em Namalkah tocados por Nimb e sabe-se que, assim como os outros deuses do Panteão, ele pode assumir qualquer forma. Alguns sussurram que o cavalo que visitou Hippiontar não era Hippion, mas o Deus do Caos disfarçado. Segundo esses estudiosos, toda boa sorte gerada em Hippiontar precisaria ser compensada ou “paga” de alguma forma. Talvez com azar extremo para algum amigo ou familiar da pessoa abençoada. Talvez com uma torrente devastadora de má sorte no futuro.
+Alarmado por essas sugestões, o clã Verimm está convocando aventureiros para desvendar o mistério ou até mesmo localizar o próprio Hippion e tentar arrancar dele uma resposta. Contudo, como garantir que esses heróis estariam falando com o Deus Menor dos Cavalos e não com o Deus do Caos disfarçado mais uma vez?`
+        },
+        {
+          name: "Palthar",
+          content: `Cidades namalkhanianas são modestas, sem exibir luxo exagerado. Torres e estruturas elevadas são raridades. Pode fazer parecer que se trata de um reino pobre, sem recursos. Na verdade, o próprio povo prefere esse estilo de vida, valorizando outras formas de conforto. A arquitetura local privilegia espaços abertos e áreas verdes, mesmo nas cidades mais povoadas. Quase não se vê casas de alvenaria com mais de um andar — poucos em Namalkah gostam de estar longe do solo. Esse tipo de estruturação horizontal resulta em percorrer grandes distâncias para chegar a qualquer lugar — o que não costuma ser problema para gente nascida no dorso de um cavalo!
+Palthar, o maior assentamento e antiga capital de Namalkah, é talvez o melhor exemplo do que esse estilo de vida pode oferecer. Tem amplas ruas de paralelepípedos, imensos (mas baixos!) prédios públicos e uma elaborada infraestrutura que conta com galeria de esgotos e aquedutos, além de pequenos palácios. Aqui fica o Mausoléu de Hippion, onde estão enterrados alguns dos cavalos mais famosos da história do reino; o Instituto de Estudos Equinos, instituição influenciada pelo reino vizinho de Salistick, onde se pesquisa e se ensina medicina e teologia centrada em cavalos, e também os Parques Tranquilos, onde animais velhos e doentes são cuidados por druidas, sendo tratados como aventureiros ou soldados veteranos.
+Palthar sempre teve ótima qualidade de vida — a família Silloherom considera que proteger a cidade é seu dever e há séculos dedica muitos recursos a manter a prosperidade local. Isso não mudou, mas hoje em dia a antiga capital é algo como uma cidade fantasma: a maioria dos habitantes se juntou aos tropéis do exército contra os puristas e permanece de prontidão no caso de uma nova guerra, enquanto muitos guerreiros e nobres foram integrar a Corte Errante da Rainha Zallia. Restaram apenas os muito jovens ou muito velhos. Os palácios locais, antes domínio de ricaços e nobres, hoje são habitados por famílias modestas, mas não parecem trazer alegria para seus moradores. Os cidadãos parecem sempre imersos em nostalgia e melancolia, sonhando com tempos distantes, quando a guerra total ou ameaças como a Tormenta eram desconhecidas. Talvez por isso, ou algum outro fenômeno arcano, fantasmas (de humanos e cavalos) perambulam pelas ruas à luz do dia, ou assombram casarões decadentes e vazios, sem perceber que morreram. Também devido a esse marasmo, não é incomum que aventureiros sejam contratados por cidadãos de Palthar com alguma desculpa, mas com a única finalidade verdadeira de ouvir suas histórias e trazer alguma vida à cidade. Dizem os boatos que alguns desses grupos envelhecem rapidamente em Palthar, inexplicavelmente “decidindo” se assentar aqui e abandonar a vida errante, unindo-se à população de saudosistas e almas penadas…`
+        },
+        {
+          name: "Yron",
+          content: `Esta cidade fica situada às margens do Rio Amarante, segundo maior do reino (o primeiro, naturalmente, é o Rio dos Deuses). Por sua posição privilegiada, atua como ponto de entrada para grande parte das importações do país — sendo um dos entrepostos comerciais mais notáveis da região norte.
+Embora não tão vasta quanto Hippiontar ou Palthar, Yron é igualmente rica. Faz parte da tradição local adornar cavalos com joias e gemas preciosas e usar adornos melhores que seu cavalo é visto como mau gosto. Os mais endinheirados equipam sua montaria com ferraduras de ouro, prata ou até platina.
+Yron é especializada em serviços: sua pecuária é fraca, mas compensada pela qualidade de seus treinadores e cavalariços. No ramo de aventuras, alguns dos mais hábeis cavaleiros mercenários podem ser contratados aqui. O Templo de Hippion local tem clérigos especializados em doenças e maldições ligadas a equinos.
+Igualmente digna de nota é a Guilda dos Tratadores, que organiza escolas e tutelas específicas ligadas aos animais. A maioria dos namalkahnianos sabe criar e cuidar de cavalos, mas apenas os professores yronenses formam mestres nessa arte — e em combate montado. Não raro, jovens nobres de outros reinos chegam em transportes fluviais para estudar aqui.
+Alguns namalkahnianos acusam o povo de Yron de ser tudo que tradicionalmente se abomina no reino: sedentários cheios de luxos vivendo às margens de um rio (como os odiados callistienses). De fato, Yron tem sua parcela de empolados e arrogantes. Muitos ricaços contratam aventureiros para escoltar seus filhos e filhas em “missões”, fazendo todo o trabalho para que os herdeiros fiquem com a glória. Muitos também tentam pagar heróis para perder em duelos ou corridas, elevando o próprio nome sem precisar de habilidade.`
+        },
+        {
+          name: "Suth Eleghar",
+          content: `Como cidade mais próxima da Supremacia Purista, esta costumava ser uma grande exportadora de cavalos, o ponto comercial mais importante do sul do reino. Tudo mudou quando os puristas a invadiram, tomando seus estábulos. Cavalos destinados a corridas e torneios passaram a ser usados como montarias de combate. Fazendas nos arrabaldes da cidade permaneceram intactas, são ainda um pólo de produção. Mas o mesmo não pode ser dito da cidade em si. As terras em suas cercanias mais imediatas foram quase completamente incendiadas, antes de sua reconquista pelos exércitos de Namalkah. Grande parte dos cavalos foi roubada ou envenenada. O fechamento da fronteira também privou a cidade de seu maior mercado — a cidade de Drekellar, hoje parte do atual território da Supremacia.
+Felizmente, a Rainha Zallia veio em socorro. Ordenou a construção de uma imensa fortaleza — obra que tem empregado quase toda a plebe local. A nobreza também foi atendida: sua produção agora é comprada diretamente pelos tropéis que formam o exército de Namalkah. Dizem que o reino não gastou um só tibar de seus cofres públicos na reconstrução: todo o ouro veio das reservas pessoais da monarca.
+Em homenagem à rainha ginete, o imenso anfiteatro local, uma das poucas ruínas restantes dos dias pré-conflito, foi restaurado e renomeado Hipódromo Real. Abriga hoje algumas das mais impressionantes corridas de Arton. Muitos nobres, e suas tropas estacionadas na cidade, passam o tempo livre fazendo apostas — o principal lazer da população, obcecada em saber tudo sobre seus corredores favoritos. As corridas no Hipódromo são verdadeiros festivais, mas às vezes são infiltradas por competidores da Supremacia que atuam como espiões em busca de informações sobre as defesas do reino ou mesmo assassinos, tendo como alvo nobres ou campeões locais.`
+        },
+        {
+          name: "Izzileria",
+          content: `Namalkah é um reino simples e rústico — muitos acusam-no de ser simples demais. Mas Namalkah tem suas estranhezas, e algumas delas são mantidas em segredo. Talvez o maior exemplo seja Izzileria.
+Situada próxima à Pista do Unicórnio Funesto, Izzileria era uma aldeia como qualquer outra em Namalkah. Governada por homens e cavalos, recebendo periodicamente tropeiros e competidores das carreiras, a única coisa que a diferenciava do resto eram ocasionais fenômenos estranhos, raros demais para provocar grande alarde. Vez por outra, um bezerro nascia com duas cabeças ou uma criança nascia com a capacidade de ler mentes. Uma árvore apresentava folhas azuis ou um córrego congelava em pleno verão. Esquisitices descartadas pelos ginetes, com sua mente objetiva e tranquila.
+Quando houve a tragédia na Pista do Unicórnio Funesto, Izzileria perdeu uma de suas principais fontes de renda e ganhou um perigo. Mas o povo não debandou por completo — em vez disso, os jovens desafiavam uns aos outros para ver quem tinha coragem de chegar mais perto do local maldito, os mais velhos repetiam de novo e de novo a história de Andhes e Sooliah. E as esquisitices pioraram. Alguns dizem que a região toda ficou marcada pelo caos, a sorte e o azar: assim como certas doenças ou venenos podem deixar sequelas permanentes em uma pessoa, os eventos deixaram um resíduo caótico que o tempo não apagou. Já era possível notar que Izzileria não era como as outras aldeias. Não nasciam apenas bezerros de duas cabeças: agora eram bezerros com asas de mosca. Os humanos nasciam com pele transparente, os cavalos eram capazes de voar, as plantas falavam. Mesmo assim, tudo esporádico. Os tropeiros de passagem cada vez mais convenciam-se de que não valia a pena chamar atenção para aquilo: o povo da aldeia devia tomar conta de seus próprios assuntos, e Izzileria tornou-se um lugar a ser omitido de histórias, ignorado em mapas.
+Houve uma nova piora depois da passagem de um cavalo tocado por Nimb, um animal do Caos chamado Bandido.
+Agora eram raras as pessoas, cavalos, plantas e construções normais. As mutações ocorriam espontaneamente, em indivíduos já adultos. A água do poço não congelava: transformava-se em fogo, que crepitava com música de alaúde. As árvores nasciam de cabeça para baixo, as casas transformavam-se em cristal. Os habitantes acordavam para notar que seus pés haviam virado cabeças de cães, e seus filhos agora eram feitos de carvão. Já empobrecida, Izzileria caiu na miséria total, mal subsistindo com a raríssima passagem de tropeiros e as plantações de vegetais que podem ou não se transformarem antes de serem consumidos.
+O líder do povoado é Santhell, um cavalo inteligente e capaz de falar, coberto por finas minhocas no lugar do pelo. É bem-intencionado, mas já está muito velho e pouco pode fazer contra a loucura que existe no local. Os habitantes de Izzileria são amedrontados e inquietos, e desconfiam de forasteiros. Apenas Santhell faz qualquer esforço para acolher visitantes.`
+        },
+        {
+          name: "Desfiladeiros de Dópsia",
+          content: `Uma das raríssimas áreas montanhosas do reino, e consequentemente uma das mais famosas (juntamente com os Montes Nublados), os Desfiladeiros de Dópsia são resultado da erosão do Rio Ammnes, outrora vasto e caudaloso. Hoje não passa de um córrego nas profundezas dos estreitos. O que teria causado sua diminuição ninguém sabe.
+Os Desfiladeiros estão entre os lugares mais perigosos de Namalkah. Foram tomados pelos finntroll e ainda hoje permanecem sob seu controle, protegidos por monstros nativos sob encantamento: ciclopes, gigantes, ogros e trolls comuns. Não é incomum encontrar esses seres emboscando caravanas, grupos de aventureiros ou tropéis de ginetes. Alguns dizem que os finntroll têm uma magia que transforma a água de cantis em óleo escuro, obrigando viajantes a mudar sua rota original para passar por aqui e reabastecer. A região seca e pedregosa é também propícia como esconderijo de felinos selvagens, quimeras e grifos. Aparentemente não há lobos: caçadores dizem que eles foram embora “viver em algum lugar mais calmo, como uma área de Tormenta, por exemplo!”.`
+        },
+        {
+          name: "Montes Nublados",
+          content: `Ponto mais alto de Namalkah, os Montes Nublados são modestos se comparados às Uivantes ou Sanguinárias. Para os habitantes do reino mais plano de Arton, contudo, são vistos com espanto e admiração. Assim chamados devido aos cumes sempre encobertos, são formados por quatro elevações principais — a maior abriga a nascente do Rio Amarante. Sua escalada não é difícil com treino e experiência, e cavernas nas partes baixas servem de abrigo para viajantes. Isto é, quando não estão ocupadas por animais selvagens.
+Namalkahnianos preferem evitar os montes, por serem habitados por cavaleiros de grifos, descendentes de povos vindos das Sanguinárias. Estes bárbaros teriam sido liderados na guerra contra os puristas por uma mulher conhecida hoje apenas como “Princesa” — notória bandoleira e ladra de gado. Ela talvez possa ser convencida a encerrar suas atividades e trabalhar para a coroa, se receber ajuda para derrotar um dragão bicéfalo que aterroriza a região. Mas as autoridades do reino não parecem interessadas em lidar com tal ameaça…`
+        },
+        {
+          name: "Refúgio de Alliah",
+          content: `Com planícies verdejantes cobrindo praticamente todo o reino, qualquer tipo de vegetação mais cerrada ou acidente geográfico acaba por se tornar conhecido, por menor que seja. Assim aconteceu com esta floresta.
+O refúgio é na verdade a parte mais interna de um bosque no extremo leste do reino, com árvores medianas e espaçadas. Um druida poderia definir o lugar como não mais que um matagal.
+Nada haveria de curioso no bosque, não fossem os centauros que o habitam. De fato, este lugar é proibido para não centauros e costumava até mesmo ser protegido por um acordo com a coroa do reino, garantindo que as outras raças nunca o perturbariam. A única exceção eram os elfos.
+Durante a guerra, o Refúgio foi impiedosamente atacado pelos puristas, que encontraram uma resistência liderada por Brahm Crina Negra. Relatos diziam que os centauros haviam sido dizimados. Mas, quando tropeiros humanos tentaram entrar no bosque recentemente, foram repelidos por Brahm e seus súditos, como se nada tivesse mudado! Ninguém sabe qual a verdade por trás da “ressurreição” desses seres. Alguns dizem que é uma bênção de Thyatis e o cumprimento da antiga profecia que falava do “Rei dos Centauros”. Outros afirmam que os habitantes do bosque são mortos-vivos. E há quem diga que os atuais “centauros” não passam de hynne ilusionistas, assustando forasteiros com seus truques!`
+        },
+        {
+          name: "Pista do Unicórnio Funesto",
+          content: `Outrora usada para sediar torneios entre ginetes, esta arena de jogos foi abandonada devido a um incidente trágico, ocorrido há mais de 50 anos. Durante uma corrida, a amazona Sooliah e seu fabuloso unicórnio Andhes estavam à frente, sem desconfiar que um competidor trapaceiro contratara capangas para colocar armadilhas na pista. Caindo em uma delas, o unicórnio tropeçou e derrubou sua dona, matando-a acidentalmente com o chifre.
+Enlouquecido, Andhes massacrou todos os outros competidores, incluindo o assassino, e seus cavalos. Naquele instante o unicórnio — animal mágico de bondade e pureza — adquiriu aspecto sombrio, seus olhos se tornaram vermelhos. Transformou-se em uma fera abissal, corrompida pelo ódio, que ainda hoje ronda o sítio, galopando em sua pista forrada de cadáveres. Alguns afirmam que incidente tão trágico deve ter o dedo de Nimb, o Deus do Caos — teoria reforçada por visitas ocasionais de Dee, seu sinistro sumo-sacerdote, com suas maças cobertas de melado, sangue e moscas.
+Embora a maioria dos tropéis evite a todo custo esta área, alguns afirmam que o Unicórnio Funesto continua aceitando desafios e correndo na cancha reta contra aqueles que sobrevivem a suas investidas. Qual o prêmio? Alguns dizem que é o favor eterno de Nimb. Outros, que é a libertação do espírito de Sooliah ou a redenção do próprio Unicórnio Funesto. Por fim, há quem diga que o vencedor poderia domar o unicórnio, transformando-o em sua montaria para sempre.`
+        },
+        {
+          name: "Ruínas de Alkav",
+          content: `Nem os centauros sabem dizer quem — ou o que — vivia nestas ruínas. Uma civilização antiga e desconhecida habitava o lugar antes mesmo de sua chegada. As evidências de sua presença são restos de uma cidade com construções de pedra e alvenaria, e muralhas repletas de entalhes, pinturas e hieróglifos.
+Há tesouros antigos, por isso o lugar costuma ser visitado por saqueadores de tumbas e expedições de aventureiros. Estes costumam ser financiados pela coroa do reino, buscando artefatos. Mas as ruínas são perigosas, habitadas por tipos únicos de mortos-vivos.
+Curiosamente, estudiosos descobriram que os antigos habitantes de Alkav nunca domesticaram cavalos, considerando-os bestas selvagens. Alguns sábios suspeitam até mesmo que esse povo os temia ou os caçava. Alguns murais retratam cavalos monstruosos destruindo torres e monumentos, o que leva a crer que esses animais tenham trazido a ruína da tal civilização. Certos teólogos chegam a sussurrar a sugestão herética de que isso teria sido obra do próprio Hippion, mas ninguém sabe o porquê.`
+        }
+      ]
+    },
+    {
+      title: "Guildas & Organizações",
+      places: [
+        {
+          name: "As Amazonas",
+          content: `O Reino Indomado até hoje hospeda tropéis matriarcais, governados por algumas das melhores guerreiras do continente. Vários desses clãs já serviram como guarda-costas a famílias de governantes em todo o Reinado. Alguns grupos são formados exclusivamente por mulheres, que perpetuam seu clã adotando e treinando novas aprendizes.
+Existem inúmeros bandos de amazonas, com seus próprios valores e leis. Embora sempre voltem a Namalkah de tempos em tempos, estão dispersos pelo continente. Um dos maiores e mais poderosos bandos é o das Amazonas de Hippion — algumas de suas lideranças já se tornaram monarcas deheoni através do casamento. Outro tropel notório é o da Planície sem Fim: descendentes da famigerada heroína Duria, não cultuam o Deus Menor dos Cavalos, mas Allihanna. Veem com desconfiança os demais namalkahnianos, jamais adentrando suas cidades.`
+        },
+        {
+          name: "Cavaleiros da Tempestade",
+          content: `Estes misteriosos cavaleiros representam um dos maiores mistérios de Namalkah. Quando há inocentes em perigo — sejam vítimas de monstros, bandidos ou mesmo desastres naturais — eles surgem com suas montarias furiosas, combatem a ameaça e partem, sem dizer palavra. Receberam esse nome porque uma grande nuvem de pó e areia, levantada pelos cascos de seus cavalos, ergue-se no horizonte quando estão prestes a chegar. O povo acredita que essa nuvem é de onde eles vêm e para onde vão.
+Não se sabe quantos são, pois seu número muda a cada aparição: podem ser cinco ou seis, ou então dezenas. Suas faces também são desconhecidas, pois usam máscaras. No entanto, como notou um forasteiro certa vez, todos carregam espadas e escudos similares àqueles usados por guerreiros do Deserto da Perdição — que fica milhares de quilômetros ao norte, muito além do Rio dos Deuses.
+Alguns dizem que os Cavaleiros da Tempestade são espíritos cumprindo uma missão, ou estariam aguardando uma ordem de seu comandante. Outros dizem que são manifestações do poder de Hippion, encarregados de ajudar seus devotos.`
+        },
+        {
+          name: "Tropel dos Cascos Sangrentos",
+          content: `Os Cascos Sangrentos eram um bando de centauros, dissidentes e proscritos dos tropéis que habitavam o Refúgio de Alliah. Com o tempo, abandonaram Hippion e voltaram a adorar uma divindade mais primordial: Megalokk, o Deus dos Monstros.
+São conhecidos desde sempre como tiranos e canibais — mas sua sociedade é mais complexa do que parece. Liderados pelo poderoso clérigo Rark Cascos Sangrentos, eles têm seu próprio código de honra: tomam como prisioneiros apenas humanos ou finntroll capturados em batalha e se alimentam somente de oponentes fortes, em uma espécie de ritual destinado a absorver seus poderes.
+Por estranho que pareça, sua intolerância contra os “filhos de Valkaria” os manteve alertas e vivos durante a invasão da Supremacia Purista — enquanto outros bandos foram expulsos, capturados ou massacrados. Os Cascos acabaram relutantemente convencidos por aventureiros a lutar do lado dos namalkahnianos, em uma aliança de conveniência. Esse fato causou, talvez, uma das maiores ironias de Arton: Rark foi alçado ao posto de herói!
+Hoje, baladas descrevem o clérigo com sua armadura de ferro e seus dois machados mágicos abatendo, sozinho, milhares de invasores — o que parece exagero, mas não é. Tais histórias têm levado jovens namalkahnianos impressionáveis a cultuar sua figura em segredo, assim como seu deus bestial. Alguns se desgarram de seus tropéis civilizados para regredir a um estado selvagem, em adoração ao Deus dos Monstros.`
+        }
+      ]
+    },
+    {
+      title: "Aventuras",
+      content: `O maior flagelo das pradarias de Namalkah são os grifos: criaturas parte águia, parte leão, com apetite total por cavalos! Embora individualmente não sejam desafio a tropéis de lanceiros atentos, as feras costumam atacar em revoadas selvagens e famintas. Como lobos, os grifos tentam isolar e depois atacar em conjunto as presas mais fracas. Quase todo namalkahniano conhece alguém que perdeu um parente em uma batalha contra um grifo. Quimeras, mantícoras, serpes, dragões ferais e outros predadores alados já foram avistados a céu aberto, mas seus ataques são mais raros.
+A outra grande praga das planícies são os saqueadores. Esses bandidos atacam em grupos bem organizados, sempre liderados por um ginete experiente. Existem inúmeros, alguns com seus próprios estandartes e gritos de batalha.
+Os mais temíveis são a Gangue dos Pistoleiros, liderada por goblins alquimistas cavalgando mulas robustas; os Lacaios de Glórienn Flechicerteira, elfos fanáticos ainda seguidores de sua antiga deusa, e a odiosa Hoste das Seis Faixas, fundada por proscritos que colaboraram com os puristas durante a invasão do reino e composta inteiramente por humanos. Há também o Bando do Reino Celeste, integrado por ginetes de grifo dos Monte Nublados, chefiados pela famigerada criminosa “Princesa”.
+Entre animais selvagens comuns há grandes felinos como panteras e leões de pradaria que caçam manadas de bestas herbívoras (também bastante ferozes). As matas são ricas em variedade de pássaros e insetos, incluindo versões gigantes e atrozes. Já os desfiladeiros costumam abrigar todo tipo de criatura.
+Por fim, aventureiros de outros reinos podem ser enredados na teia surpreendentemente complexa de diplomacia e alianças entre tropéis. Na superfície, não passam de bandos viajantes, mas além de amizades e inimizades entre humanos, também existem as relações entre os cavalos. Não é raro que um grupo de heróis seja expulso de uma região porque ousou cavalgar o desafeto de um cavalo importante perto de seu tropel, ou porque não deu um funeral honrado o suficiente a uma montaria caída em batalha.`
+    }
+  ]
+},
 
   // Exemplo MÍNIMO (região pequena, só texto)
   { id: "reino-dos-pesadelos",

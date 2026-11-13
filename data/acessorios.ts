@@ -54,6 +54,20 @@ export const enchantments: Enchantment[] = [
 ];
 
 export const accessories: SpecificAccessory[] = [
+  //#region Duelo de Dragões
+  { id: "Coroa das Serpes",
+    name: "Coroa das Serpes",
+    description: "Este item foi criado por artesãos sckharjagar para garantir que os filhos de Sckhar conseguiriam controlar as dracoferas do fogo. Enquanto veste uma dessas coroas, você se torna treinado em Adestramento e Cavalgar e recebe +5 em testes dessas perícias com serpes do fogo. Além disso, pode se comunicar com serpes do fogo por meio de linguagem corporal e vocalizações, usando Adestramento para mudar atitude e persuasão, de forma similar a Empatia Selvagem.",
+    price: "T$ 9.000",
+    size: "Menor",
+    origin: "Duelo de Dragões"
+  },
+  //#endregion
+
+
+
+
+
   //#region Bestiário de Arton
   { id: "Amuleto de Neruíte",
     name: "Amuleto de Neruíte",

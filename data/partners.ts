@@ -1,6 +1,25 @@
 import { Partner } from "@/types/partner";
 
 export const partners: Partner[] = [
+  //#region Duelo de Dragões
+  { id: "Mari Labareda",
+    name: "Mari Labareda",
+    description: "Maríssia Grymnix, mais conhecida como Mari Labareda, é uma qareen alta e de cabelos ruivos curtos, membra de alto escalão da Lança de Sckharshantallas no Reino do Dragão. Veste armadura de escamas de dragão e empunha uma alabarda com a desenvoltura de uma dançarina. Orgulhosa e leal caçadora de dragões, está determinada a concluir a missão e honrar a memória de seu falecido irmão Zaldrin.",
+    origin: "Duelo de Dragões",
+    category: "especifico",
+    archetype: "Especial",
+    benefits: {
+      iniciante: "Seus ataques são considerados mágicos e você tem redução de fogo 10. Você pode lançar Primor Atlético e pode usar Danificar Asas, Destemor Inflamado e Entortar Escamas uma vez por cena cada. No caso de Destemor Inflamado, você pode declarar o uso depois de passar em um teste de resistência contra um efeito de medo.",
+      veterano: "",
+      mestre: ""
+    }
+  },
+  //#endregion
+
+
+
+
+
   //#region Bestiário de Arton
   {  id: "Aspecto de Azgher",
     name: "Aspecto de Azgher",

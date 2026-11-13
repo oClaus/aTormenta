@@ -1,5 +1,20 @@
 import { Alchemy, AlchemyType } from "@/types/alchemy";
 export const alchemy: Alchemy[] = [
+  //#region Duelo de Dragões
+  { id: "Peçonha Flamejante",
+    name: "Peçonha Flamejante",
+    type: "Venenos",
+    description: "Veneno mortal extraído das serpes de fogo criadas por Sckhar. Contato, perde 1d12 pontos de vida e fica em chamas durante 3 rodadas (perde 1d12 pontos de vida).",
+    origin: "Duelo de Dragões",
+    price: "",
+    spaces: "0,5"
+  },
+  //#endregion
+
+
+
+
+
   //#region Bestiário de Arton
   { id: "Veneno Ósseo",
     name: "Veneno Ósseo",
