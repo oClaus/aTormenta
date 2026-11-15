@@ -10181,5 +10181,254 @@ export const adventures: Adventure[] = [
     }
   ]
   },
+  { id: "Olhos Mortos",
+  name: "Olhos Mortos",
+  theme: "Fantasia, Cultos e Mortos-Vivos",
+  image: "/aventuras/olhos-mortos.png",
+  summary: "O corpo mutilado de um trabalhador revela um ritual profano. Os aventureiros devem seguir os rastros de taxidermias malditas floresta adentro até a cabana de um ceifeiro devoto das Trevas.",
+  sections: [
+    {
+      type: "text",
+      content: "O que fazer quando a própria encarnação da morte falece? Na queda de Ragnar, a confusão nos reinos divinos fez com que diversos eventos estranhos se espalhassem por Arton. Mudanças nos céus afetaram até os devotos que por vezes buscaram outras vozes sublimes."
+    },
+    {
+      type: "text",
+      content: "Após a queda de Tauron, o império se esfacelou. Cidades e estradas antes guardadas caíram em desuso. Matas vigiadas se tornaram ainda mais selvagens. A ordem outrora aplicada opressivamente ruiu, trazendo insegurança. Enclaves com organização imperial continuam mantendo alguma coesão, e até hoje ainda há um semblante de unidade. Por outro lado, há aqueles dedicados a reconstruir, corrigindo os erros do passado."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "RESUMO DA AVENTURA"
+    },
+    {
+      type: "text",
+      content: "Olhos Mortos é uma breve jornada, uma aventura curta pensada para uma sessão única, mas que pode ser inserida em uma campanha maior. É ideal para um grupo de quatro personagens de 1º nível em Tormenta20."
+    },
+    {
+      type: "text",
+      content: "O líder local procura os personagens. No limite do bosque vizinho à vila, um corpo muito mutilado foi encontrado. Os aventureiros investigam o corpo, encontrando indícios de um ritual profano de sacrifício. Então, repentinamente, são atacados por corvos mortos-vivos, tentando eliminá-los."
+    },
+    {
+      type: "text",
+      content: "Depois do ataque eles devem procurar na mata a trilha deixada pelo condutor do ritual. Entre outros mortos-vivos, armadilhas e encontros naturais, os aventureiros localizam uma cabana perdida no meio das árvores. No interior, o responsável pelo sacrifício aguarda, mas não estará sozinho."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 1: PREFEITURA"
+    },
+    {
+      type: "text",
+      content: "Em um passado não tão distante, esta pequena vila era um ponto de passagem. Mesmo que não fosse especialmente notável, legionários descansavam aqui, vindo ou retornando ao lugar onde estivessem alocados. Com a queda do Império, cada vez menos gente passou a circular. A rota caiu em desuso, e as estradas em desleixo. Hoje, os moradores locais sabem depender apenas de si mesmos."
+    },
+    {
+      type: "text",
+      content: "Os personagens podem estar na pequena cidade de passagem, ou talvez procurando por alguém. Entretanto, o mais provável é que sejam moradores, nascidos aqui, com suas habilidades “aventureiras” despontando agora. De uma forma ou de outra, o prefeito, um minotauro maduro chamado Octavus, de óculos apoiados em seu focinho, procura vocês. Ele vai até cada um, e pede para encontrá-lo no salão comunal da vila."
+    },
+    {
+      type: "text",
+      content: "O salão é uma antiga mansão de um senhor de terras tapistano. Seu interior foi convertido em um espaço livre para todos da vila utilizarem. Quando chegam, o prefeito Octavus os leva a uma saleta que utiliza de escritório. O ambiente é apertado, cheio de papéis entulhados e algumas escrivaninhas. Apesar de levemente claustrofóbico, há uma janela para o lado de fora, que permite a entrada de luz."
+    },
+    {
+      type: "text",
+      content: "“Bem, primeiramente, obrigado por terem vindo. Imagino que com a vida que levam, esse tempo seja valioso. Logo, vou direto ao ponto: um de nossos fazendeiros disse que seus cães perseguiram algo estranho durante a noite, e hoje um cadáver foi encontrado no limite entre sua propriedade e a floresta. Se for possível, gostaria que dessem uma olhada. Caso seja mais do que um acidente, se puderem lidar com o que quer que seja, a vila os pagará com cinquenta tibares cada. O que me dizem?”"
+    },
+    {
+      type: "text",
+      content: "Caso perguntem se pode oferecer algo a mais, Octavus fica pensativo e olha em suas gavetas. Após vasculhar um pouco, encontra quatro bálsamos restauradores, e pega, em um canto da sala esquecido, um escudo metálico. Se tiver acesso ao livro Heróis de Arton, use o escudo torre (p. 226); caso contrário, use um simples escudo pesado do livro básico."
+    },
+    {
+      type: "text",
+      content: "Assim que estiverem prontos, o prefeito aponta a direção em que devem seguir."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 2: ORLA DA FLORESTA"
+    },
+    {
+      type: "text",
+      content: "Vocês caminham até sair do centro urbano. Apesar de pequena, a comunidade é bastante agitada, com a população apressada seguindo suas rotinas. Logo, vocês estão nas fazendas que cercam o lugarejo, volta e meia recebendo acenos dos trabalhadores. Entretanto, ao adentrar a propriedade descrita pelo prefeito, a primeira coisa que chama atenção são os latidos."
+    },
+    {
+      type: "text",
+      content: "Logo os donos da propriedade se aproximam: uma elfa, vestindo uma túnica e um macacão de algodão, e uma humana, com o mesmo tipo de roupa. Ambas têm a pele bronzeada pelo sol. Elas estão acompanhadas de alguns cães grandes, que parecem inquietos."
+    },
+    {
+      type: "text",
+      content: "“Somos Marnie e Sylvel. Como vocês estão? O prefeito avisou que alguém viria.” As fazendeiras se apresentam e explicam que, na madrugada, ouviram os cães latindo e foram checar o que estava acontecendo. Então viram a luz de velas e uma silhueta correndo para a floresta. Ao se aproximarem mais, encontraram o corpo, e então entraram em contato com as autoridades. Elas não inspecionaram o cadáver, então isso caberá aos aventureiros."
+    },
+    {
+      type: "text",
+      content: "Aqueles treinados em Religião podem fazer um teste (CD 20) para sentir a “energia pesada”, percebendo que houve aqui um rito de sacrifício. Se aproximando mais, vocês veem o corpo de um humanoide, porém o rosto está tão ferido que impede que reconheçam sua espécie exata. É necessário um teste de Cura ou Investigação (CD 20) para descobrir que se tratava de um hobgoblin."
+    },
+    {
+      type: "text",
+      content: "Existem marcas queimadas no chão, assim como velas derretidas em um círculo na grama. Se o resultado do primeiro teste de Religião tiver sido 25 ou mais, ou se alguém passar em um segundo teste de Religião (CD 20), o grupo nota também que a iconografia do ritual remete a Tenebra, a Deusa das Trevas."
+    },
+    {
+      type: "text",
+      content: "Assim que tiverem investigado a área, peça a todos um teste de Percepção (CD 25). Quem passar, nota corvos estranhos, demasiadamente parados nas árvores próximas. Os que falharem estarão surpreendidos na primeira rodada do combate, quando as aves atacam os personagens!"
+    },
+    {
+      type: "text",
+      content: "Criaturas. Empalhado corvo x6 (NPCs e Criaturas)."
+    },
+    {
+      type: "text",
+      content: "Aqueles que fizerem um teste de Misticismo ou Religião para identificar a criatura sabem que se trata de um empalhado, um tipo de morto-vivo, animado após um processo de taxidermia. Devotos de Allihanna também sentem uma aversão antinatural pelas aves. Esses empalhados corvos lutam até serem destruídos."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 3: PELA MATA A FORA"
+    },
+    {
+      type: "text",
+      content: "O bater das asas finalmente para. Dos corpos endurecidos das aves, saem palha e sangue. Há algo suspeito acontecendo aqui e a sensação de que o grupo está sendo observado é inegável."
+    },
+    {
+      type: "text",
+      content: "Após o combate, é possível estudar as criaturas com um teste de Misticismo ou Religião (CD 15). Sucesso revela que esses mortos-vivos não surgiram de modo natural, foram manufaturados por alguém. Isto também indica algo ainda pior: quem quer que os tenha feito, provavelmente estava assistindo o combate através de seus olhos."
+    },
+    {
+      type: "text",
+      content: "Se perguntarem a Marnie e Sylvel sobre hobgoblins, a elfa parece assustada, mas a humana comenta que havia um faz-tudo na cidade da mesma espécie. Voltando à vila, o grupo pode perguntar ao prefeito ou fazer um teste de Diplomacia ou Investigação (CD 20). Passar revela que o hobgoblin, Hartokk, era grosseiro, mas trabalhava honestamente para quem quer que o pagasse. Um resultado 25 ou mais informa também que ele foi visto conversando com uma figura sombria na taverna local."
+    },
+    {
+      type: "text",
+      content: "Quando os aventureiros contam ao prefeito o que descobriram, ele repousa os óculos em sua escrivaninha e massageia as têmporas. “Eu encontrei registros de um estranho culto, muitos anos atrás. Serviam uma entidade chamada Leen, e realizavam sacrifícios profanos. Saber que podem estar em atividade ainda… me perturba profundamente.”"
+    },
+    {
+      type: "text",
+      content: "Octavus oferece então o escudo pesado (caso não tenha feito isso na primeira cena) e quatro essências de mana. A instrução do minotauro é que procurem rastros nas matas, e tentem descobrir o que for possível. Se houver mais de um cultista, devem retornar à vila. Se conseguirem lidar com o inimigo, entretanto, terão sua gratidão eterna."
+    },
+    {
+      type: "text",
+      content: "Se investigarem diretamente a floresta ou forem até a cidade, o passo seguinte é buscar os rastros. Existem pegadas, marcas de passagem e outras pistas apontando a direção correta, mas para chegar até lá é preciso um teste estendido de Sobrevivência (CD 20, três sucessos). Apenas um dos personagens faz o teste, os outros podem ajudar até com outras perícias adequadas. Após cada teste, seja sucesso ou falha, role 1d6 ou escolha um dos encontros a seguir."
+    },
+    {
+      type: "text",
+      content: "1) Silêncio Inquietante: A mata está quieta demais. Vocês constantemente olham por cima de seus ombros, certos de que algo surgirá a qualquer momento para atacá-los. Entretanto, nada acontece. Peça a todos um teste de Percepção (CD 10). Independente do resultado, diga que não notam nada. Aqueles que falharem devem passar em um teste de Vontade (CD 10), ou ficarão abalados até a próxima cena."
+    },
+    {
+      type: "text",
+      content: "2) Vestígios de caçadores: A caminhada está tranquila. Não há nenhum sinal de perigo por perto. Mesmo assim, a desatenção pode causar mais mal do que um ataque repentino. Role 1d4 ou escolha uma armadilha (veja Tormenta20, p. 317) entre: 1 – arame farpado; 2 – fosso camuflado; 3 – rede; 4 – virote. Após definir uma delas, peça a todos um teste de Investigação ou Sobrevivência contra a CD de encontrar da arapuca. Aqueles que falharem devem fazer o teste de Reflexos para evitar seus efeitos."
+    },
+    {
+      type: "text",
+      content: "3) Grasnado infernal: Vocês veem algo estranho à frente. Parece um bando de animais se debatendo no interior de uma rede. Todos devem fazer um teste de Percepção (CD 10) para notar que se trata de mais aves mortas-vivas. Quatro empalhados corvos (NPCs e Criaturas) estão aqui, presos em algum tipo de armadilha. Se falharem, os inimigos começam a berrar, e tentam atacar criaturas adjacentes. Por estarem presos, são considerados imóveis, sendo alvos fáceis."
+    },
+    {
+      type: "text",
+      content: "4) Ervas curativas: Para um olhar bem-treinado, qualquer momento é bom para buscar recursos. Um personagem treinado em Sobrevivência pode fazer um teste (CD 15). Se passar, encontra plantas que servem como um bálsamo restaurador. Para cada 5 pontos pelos quais o resultado do teste exceder a CD, os aventureiros recebem uma dose adicional."
+    },
+    {
+      type: "text",
+      content: "5) Matilha faminta: Lobos surgem repentinamente. Rosnando e mostrando seus caninos, os animais estão obviamente famintos e prontos para transformar vocês em sua próxima refeição. Quatro lobos (Tormenta20, p. 290) rodeiam o grupo. Se os personagens quiserem evitar um combate, terão apenas uma rodada para isso. Acalmá-los é um teste de Adestramento (CD 25), ou uso de uma habilidade adequada. Caso contrário, atacam e lutam até que dois deles sejam derrotados. Se um outro encontro ocorrer após este, os lobos restantes retornam para mais um bote."
+    },
+    {
+      type: "text",
+      content: "6) Centurião de outrora: Vocês ouvem passos pesados no meio do bosque. Repentinamente, uma imagem curiosa surge: um minotauro muito, muito velho, de pelos e barba grisalhos. Ele veste uma armadura do império, extremamente desgastada. Assim que percebe os personagens, pelo faro, exige que parem. “Sou Primus, centurião de Tapista e guardião dessa estrada! Não podem passar sem pagar o tributo.” O minotauro idoso parece confuso, acreditando estar em uma outra época. Convencê-lo a deixar que passem é um teste de Diplomacia ou Enganação (CD 15). O grupo também podem pagar a ele um valor de T$ 50. Se falharem, ou recusarem, terão de enfrentar Primus, centurião de outrora (NPCs e Criaturas), que apesar de envelhecido, continua vigoroso. É possível também pedir que ele os acompanhe na missão, com um teste de Diplomacia ou Enganação (CD 20), ou oferecendo o escudo pesado, caso tenham recebido do prefeito. Primus serve como um parceiro guardião veterano."
+    },
+    {
+      type: "text",
+      content: "Caso tenham uma falha total no teste estendido, são atacados por 6 empalhados corvos (NPCs e Criaturas), e devem recomeçar o teste estendido no dia seguinte. Quando acumularem três sucessos, chegam a uma cabana na floresta."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 4: O SEGREDO NA CABANA"
+    },
+    {
+      type: "text",
+      content: "A construção parece antiga e abandonada. A madeira das toras que formam as paredes é escurecida e coberta de limo. As duas janelas na fachada estão tão sujas que é impossível saber o que há no interior. Além disso, a terra ao redor de toda a propriedade parece remexida, como se algo tivesse sido plantado aqui. Entretanto, o lugar todo fede à morte."
+    },
+    {
+      type: "text",
+      content: "Se os personagens quiserem, permita que realizem um teste de Investigação ou Sobrevivência (CD 20). Passando no teste, encontram, escondidos no chão, diversos braços em estados diversos de decomposição. Alguns são apenas ossos."
+    },
+    {
+      type: "text",
+      content: "Ao entrarem na cabana, o cheiro de morte é insuportável. Há uma mesa no centro do aposento único, com um cadáver putrefato sobre ela. Em estantes, existem dezenas de empalhados corvos como os que enfrentaram antes. Sentada no lado oposto da entrada, há uma figura coberta em mantos negros, a seu lado repousa uma foice ameaçadora."
+    },
+    {
+      type: "text",
+      content: "“Estive observando vocês. Heróis. Aventureiros. Pedras no meu sapato, isso sim. Mas não tem problema. Assim que eliminá-los, poderei continuar com meus planos. Sem dúvida seus cadáveres honrarão meu caminho diante de Leen!”"
+    },
+    {
+      type: "text",
+      content: "Ele levanta-se, pegando o gadanho e partindo para a luta."
+    },
+    {
+      type: "text",
+      content: "Criaturas. Iniciado Ceifeiro e empalhado corvo x4 (NPCs e Criaturas)."
+    },
+    {
+      type: "text",
+      content: "Batalhar no interior da sala é desafiador. Na primeira rodada, no início de seus turnos, os personagens devem fazer um teste de Fortitude (CD 15) ou ficam enjoados enquanto estiverem na cabana. Um personagem que tenha passado no teste fica imune a esse efeito pelo resto da cena. Aqueles que tiverem falhado podem sair, parando de sofrer a condição, mas devem realizar um novo teste se entrarem novamente."
+    },
+    {
+      type: "text",
+      content: "Lutar do lado de fora também não é tão fácil. Se começar seu turno no exterior, um personagem deve fazer um teste de Acrobacia ou Reflexos (CD 10) para evitar ficar imóvel. Soltar-se requer passar no mesmo teste ou causar ao menos 1 ponto de dano nos braços (qualquer ataque os acerta automaticamente). Efeitos de área que causem dano fazem o espaço afetado ficar livre deste efeito. Se notaram os apêndices enterrados antes do combate, todos os personagens recebem +2 no teste contra esse efeito."
+    },
+    {
+      type: "text",
+      content: "Além disso, sempre que um dos empalhados corvos for derrotado, outro se ativa no interior da cabana. O único meio de pararem de retornar é se o iniciado ceifeiro for derrotado."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Epílogo: LEGADO SOMBRIO"
+    },
+    {
+      type: "text",
+      content: "O sacerdote parece sentir prazer na dor que foi infligida a ele. O ceifeiro solta uma última gargalhada perturbadora, que logo esvanece conforme a vida some de seus olhos. As aves malditas que o acompanhavam caem, a energia necromântica que as animava chegou ao fim. O silêncio se apossa do local."
+    },
+    {
+      type: "text",
+      content: "Se decidirem investigar a cabana após o combate, os aventureiros encontram um tesouro equivalente ao ND 2 (veja a Tabela 8-1: Tesouro por Nível de Desafio, Tormenta20, p. 328). Além disso, bastante escondido (perceptível apenas com um teste de Investigação CD 25), há um antigo livro de ritos de sacrifício, porém, o mais interessante está em seu interior. Uma carta."
+    },
+    {
+      type: "text",
+      content: "Nela, alguém que se identifica como Mestre sugere que o iniciado vá para a vila, aprimore suas habilidades, e prepare-se para uma futura visita. Ao que parece, um enclave desses cultistas virá para a comunidade em breve. A notícia deixa o prefeito estarrecido. O minotauro precisa pensar no que fazer, como se preparar, mas não faz ideia de quanto tempo tem."
+    },
+    {
+      type: "text",
+      content: "Com um presságio sombrio à frente, os personagens avançam para o 2º nível."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "NPCs & Criaturas"
+    },
+    {
+      type: "text",
+      content: "EMPALHADO CORVO (ND ¼)\nMorto-vivo Minúsculo\nIniciativa +6, Percepção +3, visão no escuro\nDefesa 11, Fort –2, Ref +3, Von +0, redução de frio, impacto e perfuração 5\nPontos de Vida 7\nDeslocamento 3m (2q), voo 12m (8q)\nCorpo a Corpo Mordida +6 (1d4+2 mais 1d6 trevas).\nObra de Taxidermia Um empalhado corvo pode permanecer completamente imóvel. Se ele estiver assim, um personagem deve passar num teste de Cura ou Percepção (CD 25) para perceber que ele é um morto-vivo e não um animal inanimado.\nSangrar Palha O multiplicador de crítico de ataques com armas de corte contra o empalhado aumenta em +1.\nFor –4, Des 2, Con 1, Int —, Sab 1, Car –5\nPerícias Acrobacia +4, Furtividade +9.\nTesouro Nenhum."
+    },
+    {
+      type: "text",
+      content: "INICIADO CEIFEIRO (ND 1)\nHumanoide (humano) Médio\nIniciativa +4, Percepção +4, visão no escuro\nDefesa 14, Fort +0, Ref +5, Von +11\nPontos de Vida 25\nDeslocamento 9m (6q)\nPontos de Mana 7\nCorpo a Corpo Gadanho +7 (2d4+5, x4, mais 1d6 trevas).\nDividir a Dor (Reação, 1 PM) Uma vez por rodada, quando sofre dano, o iniciado sacrifica um de seus empalhados corvos em alcance curto para reduzir esse dano a 0.\nPrazer Sombrio Quando causa ou sofre dano, o iniciado ceifeiro recebe redução de dano 1 e recupera 1 ponto de mana. A redução de dano é cumulativa, até um máximo de RD 5, mas volta a zero se o iniciado passar 1 rodada sem causar ou sofrer dano.\nMagias Como um clérigo de 1º nível (CD 16).\n- Arma Espiritual (Padrão, 1 PM) Uma vez por rodada, quando sofre um ataque corpo a corpo, o iniciado pode usar uma reação para causar 2d6 pontos de dano de corte no atacante.\n- Infligir Ferimentos (Padrão, 1 PM) Uma criatura adjacente sofre 2d8+2 pontos de dano de trevas (Fortitude reduz à metade).\n- Perdição (Padrão, 1 PM) Criaturas escolhidas em alcance curto sofrem –1 em testes de ataque e rolagens de dano até o fim da cena.\nFor 1, Des 2, Con 1, Int –1, Sab 2, Car –2\nPerícias Cura +4, Misticismo +1, Religião +4.\nEquipamento Armadura de couro, gadanho cruel. Tesouro Padrão."
+    },
+    {
+      type: "text",
+      content: "PRIMUS, CENTURIÃO DE OUTRORA (ND 1)\nHumanoide (minotauro) Médio\nIniciativa +0, Percepção –1, faro\nDefesa 17, Fort +11, Ref +0, Von +5\nPontos de Vida 40\nDeslocamento 6m (4q)\nCorpo a Corpo Lança +9 (1d6+4) e Chifres +9 (1d6+4).\nÀ Distância Azagaia +2 (1d6).\nDerrubar (Livre) Chifres (teste +14).\nDistraído Primus sofre –2 para resistir a testes de fintar.\nMedo de Altura Se estiver adjacente a uma queda de 3m ou mais de altura (como um buraco ou penhasco), Primus fica abalado.\nFor 4, Des –2, Con 3, Int 3, Sab 2, Car 2\nPerícias Atletismo +8, Guerra +5.\nEquipamento Azagaia x2, lança, loriga segmentada. Tesouro Nenhum."
+    }
+  ]
+  },
   
 ];
