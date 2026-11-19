@@ -51,6 +51,7 @@ export default function Home() {
     { id: "tesouros",  title: "Tesouros",  icon: "/temas/tesouro.jpg",  color: "from-rose-600 to-red-800",  href: "/tesouros"},
     { id: "combate",  title: "Combate",  icon: "/temas/combate.png",  color: "from-rose-600 to-red-800",  href: "/combate"},
     { id: "mundo-de-arton",  title: "Mundo de Arton",  icon: "/temas/mundo-de-arton.png",  color: "from-blue-700 to-indigo-950",  href: "/mundo-de-arton"},
+    { id: "ficha-t20", title: "Fichas", icon: "/temas/fichas.png", color: "from-blue-700 to-indigo-950", href: "/fichas-t20.html" },
   ];
 
   return (

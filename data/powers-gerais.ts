@@ -1,8 +1,15 @@
-//#region Tormenta20 - Jogo do Ano
-//#endregion
+
 import { Power } from "@/types/power";
 
 export const powersGerais: Power[] = [
+  //#region Duelo de Dragões
+  { id: "Método Zaratt",
+    name: "Método Zaratt",
+    description: "Você pode usar habilidades exclusivas para ataques desarmados (como Golpe Relâmpago) com um katar. Além disso, se tiver um bônus em ataque ou dano para ataque desarmado ou katar (como Foco em Arma), pode aplicá-lo a ambos. Isso não permite acumular bônus vindos do mesmo poder. Finalmente, se acertar o mesmo alvo com um ataque com katar e um ataque desarmado no mesmo turno, você pode gastar 2 PM para fazer um ataque adicional com katar. Some o dano fixo (dano normal, exceto os dados de dano) do seu ataque desarmado ao dano desse ataque.",
+    prerequisite: "proficiente com katar, Briga ou Estilo Desarmado, Esquiva, Foco em Arma (ataque desarmado ou katar).",
+    origin: "Duelo de Dragões"
+  },
+  //#endregion
   //#region Guia de NPCs
   { id: "Caminho da Mão Vazia",
     name: "Caminho da Mão Vazia",

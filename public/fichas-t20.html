@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fichas | a-Tormenta</title>
+<script>try{var t=localStorage.getItem('a-tormenta-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg-rgb:14,12,26;--edge-rgb:6,5,12;--card-rgb:25,23,43;--inset-rgb:10,8,16;--void-rgb:5,4,9;--ink-rgb:236,233,245;--accent-rgb:185,168,232;--r1:#e8706a;--r2:#d04a43;--r3:#a83a35;--grain-page:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27240%27%20height%3D%27240%27%3E%3Cfilter%20id%3D%27n%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%270.85%27%20numOctaves%3D%272%27%20stitchTiles%3D%27stitch%27%2F%3E%3CfeColorMatrix%20type%3D%27matrix%27%20values%3D%270%200%200%200%201%20%200%200%200%200%201%20%200%200%200%200%201%20%200.09%200%200%200%200%27%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20filter%3D%27url%28%23n%29%27%2F%3E%3C%2Fsvg%3E");--grain-card:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27240%27%20height%3D%27240%27%3E%3Cfilter%20id%3D%27n%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%270.85%27%20numOctaves%3D%272%27%20stitchTiles%3D%27stitch%27%2F%3E%3CfeColorMatrix%20type%3D%27matrix%27%20values%3D%270%200%200%200%201%20%200%200%200%200%201%20%200%200%200%200%201%20%200.2%200%200%200%200%27%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20filter%3D%27url%28%23n%29%27%2F%3E%3C%2Fsvg%3E");color-scheme:dark}
+[data-theme=light]{--bg-rgb:244,241,250;--edge-rgb:214,207,232;--card-rgb:230,224,242;--inset-rgb:251,250,255;--void-rgb:36,30,56;--ink-rgb:33,28,51;--accent-rgb:108,79,163;--r1:#b91c1c;--r2:#991b1b;--r3:#450a0a;--grain-page:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27240%27%20height%3D%27240%27%3E%3Cfilter%20id%3D%27n%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%270.85%27%20numOctaves%3D%272%27%20stitchTiles%3D%27stitch%27%2F%3E%3CfeColorMatrix%20type%3D%27matrix%27%20values%3D%270%200%200%200%200%20%200%200%200%200%200%20%200%200%200%200%200%20%200.06%200%200%200%200%27%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20filter%3D%27url%28%23n%29%27%2F%3E%3C%2Fsvg%3E");--grain-card:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27240%27%20height%3D%27240%27%3E%3Cfilter%20id%3D%27n%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%270.85%27%20numOctaves%3D%272%27%20stitchTiles%3D%27stitch%27%2F%3E%3CfeColorMatrix%20type%3D%27matrix%27%20values%3D%270%200%200%200%200%20%200%200%200%200%200%20%200%200%200%200%200%20%200.16%200%200%200%200%27%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20filter%3D%27url%28%23n%29%27%2F%3E%3C%2Fsvg%3E");color-scheme:light}
+:root,[data-theme=light]{--line:rgba(var(--ink-rgb),.2);--mute:rgba(var(--ink-rgb),.68);--ac:rgb(var(--accent-rgb));--red:var(--r2);--in:rgb(var(--inset-rgb))}
+*{box-sizing:border-box}
+body{margin:0;background-color:rgb(var(--bg-rgb));color:rgb(var(--ink-rgb));background-image:radial-gradient(circle at center,transparent 0%,rgba(var(--edge-rgb),.5) 100%),var(--grain-page);background-repeat:no-repeat,repeat;background-size:cover,240px 240px;background-attachment:fixed,scroll;font:17px/1.5 "Crimson Pro",Georgia,serif;-webkit-font-smoothing:antialiased;transition:background-color .4s,color .4s}
+::selection{background:var(--ac);color:rgb(var(--void-rgb))}
+.amb{position:fixed;inset:0;z-index:1;pointer-events:none;overflow:hidden;color:var(--ac)}
+.amb svg{position:absolute;top:50%;left:50%;width:min(140vw,1100px);height:min(140vw,1100px);transform:translate(-50%,-50%);opacity:.07;stroke:currentColor}
+.ember{position:absolute;border-radius:50%;filter:blur(40px)}
+.e1{width:380px;height:380px;top:-120px;right:-100px;background:radial-gradient(circle,rgba(var(--accent-rgb),.22),transparent 70%)}
+.e2{width:420px;height:420px;bottom:5%;left:-140px;background:radial-gradient(circle,rgba(127,29,29,.16),transparent 70%)}
+.e3{width:300px;height:300px;top:40%;right:10%;background:radial-gradient(circle,rgba(var(--accent-rgb),.12),transparent 70%)}
+.site{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:24px clamp(16px,4vw,48px);margin-bottom:40px;border-bottom:4px double rgba(var(--ink-rgb),.4);background:rgba(var(--card-rgb),.9);backdrop-filter:blur(8px)}
+.brand{text-decoration:none;display:inline-block;font:900 clamp(1.5rem,4vw,2.25rem) Cinzel,Cambria,serif;letter-spacing:.14em;text-transform:uppercase;background:linear-gradient(to bottom,var(--r1),var(--r2),var(--r3));-webkit-background-clip:text;background-clip:text;color:transparent;border:0;padding:0;cursor:pointer;text-align:left}
+.brand:hover{filter:brightness(1.2);border:0}
+.tt{width:34px;height:34px;border-radius:50%;padding:0;display:grid;place-items:center;color:var(--ac)}
+.tt svg{width:17px;height:17px}
+#app{position:relative;z-index:10;max-width:1280px;margin:0 auto;padding:0 clamp(16px,4vw,48px) 60px}
+h1,h2,h3{font-family:Cinzel,Cambria,serif;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin:0}
+h2{font-size:.95rem;color:var(--red);margin-bottom:12px}
+h3{font-size:1rem}
+.pg{font-size:1.05rem;margin:0}
+.nm{font-size:1.6rem;color:var(--red);margin:0}
+#app header{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:6px 0 18px}
+.bar{display:flex;gap:8px;flex-wrap:wrap}
+button{font:700 .74rem Cinzel,Cambria,serif;letter-spacing:.08em;text-transform:uppercase;background:rgba(var(--inset-rgb),.5);color:rgb(var(--ink-rgb));border:1px solid var(--line);border-radius:4px;padding:7px 12px;cursor:pointer;transition:border-color .2s}
+button:hover{border-color:rgba(var(--accent-rgb),.7)}
+button.pri{background:var(--ac);color:rgb(var(--void-rgb));border-color:var(--ac)}
+button.ghost{background:none}
+:is(button,input,select,textarea):focus-visible{outline:2px solid var(--ac);outline-offset:1px}
+input,select,textarea{font:inherit;color:inherit;background:var(--in);border:1px solid var(--line);border-radius:4px;padding:5px 8px;width:100%}
+input[type=checkbox]{width:auto}
+label{display:block;font-size:.85rem;color:var(--mute);margin-top:6px}
+label input,label select{margin-top:2px}
+.card{position:relative;background:radial-gradient(ellipse at 50% 0%,rgba(var(--accent-rgb),.07),transparent 60%),rgb(var(--card-rgb));border:1px solid var(--line);outline:1px solid rgba(var(--ink-rgb),.05);outline-offset:4px;border-radius:6px;padding:16px;margin:0 0 24px;box-shadow:0 1px 2px rgba(0,0,0,.25)}
+.card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background-image:var(--grain-card);background-size:180px 180px;opacity:.7;mix-blend-mode:overlay}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px}
+.grid .card{display:flex;flex-direction:column;gap:10px;margin:0;transition:all .3s}
+.grid .card:hover{border-color:rgba(var(--accent-rgb),.55);box-shadow:0 8px 30px rgba(var(--accent-rgb),.18);transform:translateY(-4px)}
+.grid h3{color:var(--red)}
+.grid p{margin:2px 0 0;color:var(--mute)}
+.empty{color:var(--mute)}
+.ph{width:72px;height:72px;border-radius:50%;background:var(--in);border:1px solid var(--line);display:grid;place-items:center;overflow:hidden;font:700 1.6rem Cinzel,serif;color:var(--ac);flex:none}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph.big{width:110px;height:110px;cursor:pointer}
+.top{display:flex;gap:16px;align-items:center}
+.f2{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:4px 10px;flex:1}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+.row.s{grid-template-columns:repeat(auto-fit,minmax(110px,1fr))}
+.attrs{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;text-align:center}
+.attrs input{text-align:center}
+.out,.v{font:700 1.5rem Cinzel,Cambria,serif;color:var(--ac)}
+.v{font-size:1.05rem}
+.sks{columns:2 340px;column-gap:24px}
+.sk{display:grid;grid-template-columns:24px 1fr 38px 52px 58px;gap:6px;align-items:center;padding:3px 0;border-bottom:1px solid var(--line);break-inside:avoid}
+.sk input[type=number]{padding:2px 4px;text-align:center}
+.sk b{text-align:center;color:var(--ac)}.sk small{color:var(--mute)}
+.sk2{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:3px 0;break-inside:avoid}
+.sk2 b{color:var(--ac)}
+.pw{border:1px solid var(--line);border-radius:6px;padding:10px;margin-bottom:10px;background:var(--in);position:relative;z-index:1}
+.pw.on{border-color:var(--ac)}
+.pwh{display:flex;gap:8px;margin-bottom:6px}
+.chk{display:flex;gap:6px;align-items:center;margin:8px 0}
+.ef{display:grid;grid-template-columns:1fr 80px 34px;gap:6px;margin:6px 0}
+.ef3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:6px}
+.cls{display:grid;grid-template-columns:1.6fr repeat(4,1fr) 34px;gap:8px;align-items:end;margin-bottom:6px}
+.hint{color:var(--mute);font-size:.9rem;margin:0 0 8px}
+.sub{margin:16px 0 8px;font-size:.9rem;color:var(--ac)}
+.out.bad{color:var(--r2)}
+.lay{display:grid;grid-template-columns:150px minmax(0,1fr);gap:18px;align-items:start}
+.tabs{position:sticky;top:84px;display:flex;flex-direction:column;gap:6px}
+.tabs button{text-align:left}
+.adj{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:8px}
+.adj input{width:84px;text-align:center}
+progress{width:100%;height:10px;accent-color:var(--r2)}
+progress[data-pg=pm]{accent-color:#5a9be0}
+.mrow{display:flex;gap:10px;align-items:center;padding:6px 0;border-bottom:1px solid var(--line)}
+.mrow small,.mrow span{color:var(--mute)}
+.mrow span{font-size:.9rem}
+.sp a{color:var(--ac);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.act{display:grid;grid-template-columns:2fr repeat(5,1fr);gap:8px;align-items:end;padding:8px 0;border-bottom:1px solid var(--line)}
+.act small{color:var(--mute)}.act .obs{grid-column:1/-1;margin:0}
+.act label{margin:0}
+#toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--ac);color:rgb(var(--void-rgb));padding:8px 16px;border-radius:6px;display:none;font-weight:600;z-index:30}
+@media(max-width:700px){.lay{grid-template-columns:1fr}.tabs{position:static;flex-direction:row;overflow-x:auto;padding-bottom:4px}.tabs button{white-space:nowrap}.act{grid-template-columns:1fr 1fr}.act>:first-child{grid-column:1/-1}}
+@media(max-width:560px){.attrs{grid-template-columns:repeat(3,1fr)}.top{flex-direction:column;align-items:flex-start}.cls{grid-template-columns:1fr 1fr}}
+
+.idn{display:flex;gap:18px;align-items:center}
+.idn .ph.big{cursor:default}
+.idc{flex:1;min-width:0}
+.idn .nm{font-size:1.9rem;line-height:1.15}
+.idf{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px 18px;margin-top:12px}
+.idf small{display:block;color:var(--mute);font-size:.82rem}
+.idf b{font-weight:600;font-size:1.15rem}
+.at6{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.at6>div{text-align:center;border:1px solid var(--line);border-radius:6px;padding:10px 2px 8px;background:var(--in);position:relative;z-index:1}
+.at6 small{display:block;color:var(--mute);font:700 .78rem Cinzel,serif;letter-spacing:.12em}
+.at6 b{font:700 1.9rem Cinzel,serif;color:var(--ac)}
+.vm{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:6px}
+.res .rv{display:flex;align-items:baseline;gap:10px;margin-bottom:8px}
+.res .rv input{width:6.5rem;font:900 2.3rem Cinzel,serif;text-align:center;padding:2px 4px}
+.res.pv .rv input{color:var(--r1)}
+.res.pm .rv input{color:#6fb0f2}
+.res .rv span{color:var(--mute)}
+.res .rv b{font:700 1.4rem Cinzel,serif;color:rgb(var(--ink-rgb))}
+.res .adj{margin-top:10px}
+.res .adj button{flex:1;min-width:48px;padding:10px 0;font-size:.9rem}
+.mac{display:flex;width:100%;justify-content:space-between;align-items:center;gap:12px;text-align:left;text-transform:none;letter-spacing:0;font:inherit;padding:10px 12px;margin-bottom:8px;border-radius:6px;background:var(--in);position:relative;z-index:1}
+.mac .mn{display:flex;flex-direction:column;gap:1px}
+.mac b{font:700 1rem Cinzel,serif;letter-spacing:.06em}
+.mac small{color:var(--mute);font-size:.82rem}
+.mac .mn span{color:var(--mute);font-size:.95rem}
+.mac .st{flex:none;font:700 .72rem Cinzel,serif;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:5px 12px;color:var(--mute)}
+.mac.on{border-color:var(--ac);background:rgba(var(--accent-rgb),.14)}
+.mac.on .st{background:var(--ac);color:rgb(var(--void-rgb));border-color:var(--ac)}
+@media(max-width:560px){.at6{grid-template-columns:repeat(3,1fr)}.vm{grid-template-columns:1fr}.idn{flex-direction:column;align-items:flex-start}}
+
+.ams{grid-column:1/-1;display:flex;gap:6px;flex-wrap:wrap}
+.ams button small{color:inherit;opacity:.8;text-transform:none;letter-spacing:0;font:400 .9rem "Crimson Pro",Georgia,serif}
+.amr{display:grid;grid-template-columns:1.6fr 70px 70px 1fr 34px;gap:6px;align-items:end;margin:6px 0}
+@media(max-width:560px){.amr{grid-template-columns:1fr 1fr}.amr>:first-child{grid-column:1/-1}}
+
+.urlrow{display:flex;gap:8px}.urlrow input{flex:1;min-width:0}
+.st{color:var(--ac)}
+.paste{margin:10px 0}.paste summary{cursor:pointer;color:var(--mute)}
+.spl{border-bottom:1px solid var(--line);padding:8px 0}
+.spl summary{display:flex;gap:10px;align-items:baseline;cursor:pointer;list-style:none}
+.spl summary::-webkit-details-marker{display:none}
+.spl summary::before{content:'▸';color:var(--mute)}
+.spl[open] summary::before{content:'▾'}
+.spn{font:700 1rem Cinzel,serif;letter-spacing:.04em}
+.spl small{color:var(--mute)}
+.spb{padding:8px 0 4px 18px}
+.spm{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:6px 14px;margin:0 0 8px}
+.spm dt{color:var(--mute);font-size:.82rem}.spm dd{margin:0}
+.spd{white-space:pre-line;margin:6px 0}
+.spb h4{margin:10px 0 2px;color:var(--ac);font:700 .8rem Cinzel,serif;letter-spacing:.1em;text-transform:uppercase}
+.spa{margin:4px 0 0 18px;padding:0}.spa li{margin:4px 0}
+.lw.off{opacity:.5}
+.lbar{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:6px 10px;border:1px dashed var(--line);border-radius:6px;margin:12px 0 -6px;background:var(--in);position:relative;z-index:1}
+.lbar span{display:flex;gap:6px}
+
+.hr{display:flex;align-items:center;gap:12px}
+.crumb{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font:700 .8rem Cinzel,Cambria,serif;letter-spacing:.06em;text-transform:uppercase}
+.crumb a,.crumb button{color:rgba(var(--ink-rgb),.6);text-decoration:none;background:none;border:0;padding:0;font:inherit;letter-spacing:inherit;text-transform:inherit;cursor:pointer}
+.crumb a:hover,.crumb button:hover{color:var(--r2);border:0}
+.crumb .sep{opacity:.4}.crumb .cur{color:var(--red)}
+.ptitle{font:700 clamp(2.25rem,5vw,3rem) Cinzel,Cambria,serif;letter-spacing:normal;text-transform:none;color:var(--red);text-shadow:0 0 28px rgba(127,29,29,.3);margin:0 0 12px}
+.orn{display:flex;align-items:center;gap:12px;margin-bottom:8px}.orn svg{opacity:.6;flex:none}.orn i{height:1px;max-width:144px;flex:1;background:linear-gradient(to right,rgba(var(--accent-rgb),.55),transparent)}
+.sub2{margin:0 0 28px;font-style:italic;color:var(--mute)}
+.co{position:absolute;opacity:0;transition:opacity .3s;z-index:2}.grid .card:hover .co{opacity:1}
+.co1{top:-1px;left:-1px}.co2{top:-1px;right:-1px;transform:rotate(90deg)}.co3{bottom:-1px;right:-1px;transform:rotate(180deg)}.co4{bottom:-1px;left:-1px;transform:rotate(-90deg)}
+.foot{position:relative;z-index:10;margin-top:48px;padding:32px 16px;border-top:4px double rgba(var(--ink-rgb),.4);background:rgb(var(--void-rgb));text-align:center;font-size:.9rem}
+.foot p{margin:0}.foot p:first-child{font-family:Cinzel,Cambria,serif;letter-spacing:.04em;color:rgba(255,255,255,.6)}.foot p+p{margin-top:4px;color:rgba(255,255,255,.4)}
+@media(max-width:768px){.site{flex-direction:column;align-items:flex-start;gap:12px;padding:20px 16px}.hr{align-self:flex-end}}
+body{min-height:100vh;display:flex;flex-direction:column}#app{flex:1 0 auto;width:100%}
+</style>
+</head>
+<body>
+<div class="amb" aria-hidden="true"><svg viewBox="0 0 400 400" fill="none" stroke-width="1"><circle cx="200" cy="200" r="180"/><circle cx="200" cy="200" r="150"/><circle cx="200" cy="200" r="120" stroke-dasharray="2 6"/><rect x="120" y="120" width="160" height="160" transform="rotate(45 200 200)"/><g stroke-width=".7"><line x1="200" y1="20" x2="200" y2="55"/><line x1="200" y1="345" x2="200" y2="380"/><line x1="20" y1="200" x2="55" y2="200"/><line x1="345" y1="200" x2="380" y2="200"/><line x1="69" y1="69" x2="93" y2="93"/><line x1="331" y1="69" x2="307" y2="93"/><line x1="69" y1="331" x2="93" y2="307"/><line x1="331" y1="331" x2="307" y2="307"/></g></svg><div class="ember e1"></div><div class="ember e2"></div><div class="ember e3"></div></div>
+<header class="site"><a href="/" class="brand">a-Tormenta</a><div class="hr"><nav class="crumb" id="crumb" aria-label="Você está em"></nav><button id="tt" class="tt" aria-label="Alternar tema" title="Alternar modo claro/escuro"></button></div></header>
+<div id="app"></div>
+<footer class="foot"><p>Compêndio Tormenta RPG © 2025 • Feito por um fã para fãs</p><p>Tormenta 20 pertence a Jambo Editora. Todos os direitos são reservados a editora.</p></footer>
+<div id="toast" role="status"></div>
+<input type="file" id="fi" hidden>
+<script>
+const KEY='fichas-t20-v1';
+const ATTRS=['FOR','DES','CON','INT','SAB','CAR'];
+// [nome, atributo, flags] T = só treinada, A = penalidade de armadura
+const SK=[['Acrobacia','DES','A'],['Adestramento','CAR','T'],['Atletismo','FOR',''],['Atuação','CAR',''],['Cavalgar','DES',''],['Conhecimento','INT','T'],['Cura','SAB',''],['Diplomacia','CAR',''],['Enganação','CAR',''],['Fortitude','CON',''],['Furtividade','DES','A'],['Guerra','INT','T'],['Iniciativa','DES',''],['Intimidação','CAR',''],['Intuição','SAB',''],['Investigação','INT',''],['Jogatina','CAR','T'],['Ladinagem','DES','AT'],['Luta','FOR',''],['Misticismo','INT','T'],['Nobreza','INT','T'],['Ofício','INT','T'],['Percepção','SAB',''],['Pilotagem','DES','T'],['Pontaria','DES',''],['Reflexos','DES',''],['Religião','SAB','T'],['Sobrevivência','SAB',''],['Vontade','SAB','']];
+const ALVOS=[...ATTRS.map(a=>['a:'+a,'Atributo '+a]),['defesa','Defesa'],['desloc','Deslocamento (m)'],['penal','Penalidade de armadura'],['cd','CD das magias'],['pvmax','PV máximo'],['pmmax','PM máximo'],['pvtemp','PV temporários'],['pmtemp','PM temporários'],['p:*','Todas as perícias'],...SK.map(s=>['p:'+s[0],'Perícia: '+s[0]])];
+
+const $=s=>document.querySelector(s);
+const uid=()=>Math.random().toString(36).slice(2,10);
+const esc=s=>String(s??'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
+const sg=n=>n>0?'+'+n:String(n),sx=n=>n<0?String(n):'+'+n;
+const get=(o,p)=>p.split('.').reduce((a,k)=>a?.[k],o);
+const set=(o,p,v)=>{const ks=p.split('.'),l=ks.pop();ks.reduce((a,k)=>a[k]??(a[k]={}),o)[l]=v};
+
+const CATS=['Habilidades de classe','Poderes de classe','Raça','Origem','Gerais','Complicações','Divindade'];
+const ICATS=['Equipamento e vestuário','Alquímicos','Alimentos','Armas, armaduras e escudos'];
+const PARC=['1º parceiro','2º parceiro (nível 5 a 16)','3º parceiro (nível 17 ou mais)','Familiar (arcanistas com o poder Familiar)'];
+const fixM=p=>({id:uid(),nome:'',efeito:'',macro:false,ativo:false,...p,efs:p.efs||[]});
+const novaAcao=()=>({id:uid(),nome:'',tipo:'Corpo a corpo',teste:'Luta',bAtq:0,dados:'',dAttr:'-',bDano:0,crit:'',tdano:'',alc:'',obs:'',macros:[]});
+const LAY=['atributos','vida','defesa','macros','magias','acoes','pericias'];
+const LAYT={atributos:'Atributos',vida:'Vida e mana',defesa:'Defesa, deslocamento e CD',macros:'Macros',magias:'Magias',acoes:'Ações de combate',pericias:'Perícias'};
+const PRE={padrao:['atributos','vida','defesa','macros','magias','acoes','pericias'],marcial:['vida','defesa','acoes','macros','atributos','pericias','magias'],conjurador:['vida','magias','macros','defesa','atributos','acoes','pericias']};
+const normLay=l=>{const r=(Array.isArray(l)?l:[]).filter((x,i,a)=>x&&LAY.includes(x.id)&&a.findIndex(y=>y.id===x.id)===i).map(x=>({id:x.id,on:x.on!==false}));LAY.forEach(id=>{if(!r.find(x=>x.id===id))r.push({id,on:true})});return r};
+const novaMagia=()=>({id:uid(),nome:'',url:'',circ:1,exec:'Padrão',alc:'Pessoal',alvo:'',dur:'',res:'',desc:'',tipo:'',esc:'',aprim:'',livro:''});
+
+const novo=()=>({layout:normLay(),id:uid(),nome:'Novo personagem',raca:'',divindade:'',foto:'',attr:{FOR:0,DES:0,CON:0,INT:0,SAB:0,CAR:0},pv:{atual:0,temp:0,extra:0},pm:{atual:0,temp:0,extra:0},classes:[{nome:'',niveis:1,pvIni:0,pvNivel:0,pmNivel:0}],defesa:{atrib:'DES',armadura:0,escudo:0,outros:0},penalidade:0,desloc:9,ataque:0,pericias:{},poderes:[],itens:[],magias:[],acoes:[],cd:{atrib:'INT',outros:0},parceiros:PARC.map(()=>({nome:'',texto:''})),notas:''});
+const noAD=q=>({...q,efs:q.efs.filter(e=>e.alvo!=='ataque'&&e.alvo!=='dano')});
+const norm=x=>{const b=novo();return {...b,...x,layout:normLay(x.layout),id:x.id||uid(),attr:{...b.attr,...x.attr},pv:{...b.pv,...x.pv},pm:{...b.pm,...x.pm},defesa:{...b.defesa,...x.defesa},pericias:x.pericias||{},cd:{...b.cd,...x.cd},acoes:(x.acoes||[]).map(a=>({...novaAcao(),...a,macros:(a.macros||[]).map(m=>({id:uid(),nome:'',atq:0,dano:0,dados:'',ativo:false,...m}))})),
+  magias:(x.magias||[]).map(m=>({...novaMagia(),...m})),
+  classes:x.classes?.length?x.classes:[{...b.classes[0],nome:x.classe||'',niveis:+x.nivel||1}],
+  poderes:(x.poderes||[]).map(p=>noAD(fixM({...p,cat:p.cat==='Classe'?'Poderes de classe':(p.cat||'Gerais')}))),itens:(x.itens||[]).map(p=>noAD(fixM({cat:ICATS[0],espaco:1,qnt:1,valor:'',...p}))),
+  parceiros:b.parceiros.map((p,i)=>({...p,...(x.parceiros||[])[i]}))}};
+const lvl=c=>c.classes.reduce((s,k)=>s+(+k.niveis||0),0)||1;
+
+let S;
+try{S=JSON.parse(localStorage.getItem(KEY))||{}}catch(e){S={}}
+S.chars=(S.chars||[]).map(norm);S.cur=null;S.tab='ficha';
+const C=()=>S.chars.find(x=>x.id===S.cur);
+function save(){try{localStorage.setItem(KEY,JSON.stringify({chars:S.chars}))}catch(e){toast('Sem espaço para salvar. Baixe um backup e use fotos menores.')}}
+let tm;function after(){refresh();clearTimeout(tm);tm=setTimeout(save,250)}
+addEventListener('beforeunload',save);
+function toast(t){const e=$('#toast');e.textContent=t;e.style.display='block';clearTimeout(toast.t);toast.t=setTimeout(()=>e.style.display='none',2600)}
+
+// ---- cálculo: base + soma dos macros ativos ----
+function calc(c){
+  const sum={};
+  [...c.poderes,...c.itens].forEach(p=>{if(p.macro&&p.ativo)p.efs.forEach(e=>{sum[e.alvo]=(sum[e.alvo]||0)+(+e.valor||0)})});
+  const at=a=>(+c.attr[a]||0)+(sum['a:'+a]||0);
+  const n=lvl(c),meio=Math.floor(n/2),trein=n<7?2:n<15?4:6,pen=Math.max(0,Math.abs(+c.penalidade||0)+(sum.penal||0));
+  const per=SK.map(([nm,a,f])=>{const s=c.pericias[nm]||{},t=!!s.t;
+    const tot=meio+at(a)+(t?trein:0)+(+s.o||0)+(sum['p:'+nm]||0)+(sum['p:*']||0)-(f.includes('A')?pen:0);
+    return {nm,tot,off:f.includes('T')&&!t}});
+  const acts=c.acoes.map(a=>{
+    const tp=a.tipo,corpo=tp==='Corpo a corpo'||tp==='Arremesso',livre=tp==='Mágico'||tp==='Outro';
+    const sk=tp==='Corpo a corpo'?'Luta':(tp==='À distância'||tp==='Arremesso')?'Pontaria':a.teste;
+    const pk=per.find(p=>p.nm===sk),ms=(a.macros||[]).filter(m=>m.ativo);
+    const bA=(+a.bAtq||0)+ms.reduce((t,m)=>t+(+m.atq||0),0),pv=pk?pk.tot:0,atq=pv+bA;
+    const fo=corpo?at('FOR'):(livre&&a.dAttr&&a.dAttr!=='-'?at(a.dAttr):0);
+    const bD=(+a.bDano||0)+ms.reduce((t,m)=>t+(+m.dano||0),0),db=fo+bD;
+    const ex=ms.map(m=>String(m.dados||'').trim()).filter(Boolean);
+    const base=[String(a.dados||'').trim(),...ex].filter(Boolean).join('+');
+    const dd=[a.dados||'dados',...ex];if(corpo)dd.push('FOR '+sx(fo));else if(fo)dd.push(a.dAttr+' '+sx(fo));if(bD)dd.push('bônus '+sx(bD));
+    return {sk,atq:'1d20'+sx(atq),dano:(base+(db?sx(db):''))||'—',da:'1d20 + '+sk+' '+sx(pv)+(bA?' + bônus '+sx(bA):''),dd:dd.join(' + ')}});
+  // vida e mana automáticas: 1ª classe dá PV inicial + CON no 1º nível; todo nível seguinte dá PV por nível + CON
+  const con=at('CON');let pv=(+c.pv.extra||0)+(sum.pvmax||0),pm=(+c.pm.extra||0)+(sum.pmmax||0);
+  c.classes.forEach((k,i)=>{const q=+k.niveis||0,pl=(+k.pvNivel||0)+con;pv+=i===0&&q>0?(+k.pvIni||0)+con+(q-1)*pl:q*pl;pm+=q*(+k.pmNivel||0)});
+  const fo=at('FOR'),cap=fo>0?10+fo*2:10+fo,esp=c.itens.reduce((t,i)=>t+(+i.espaco||0)*(+i.qnt||0),0);
+  const d=c.defesa;
+  return {at,n,trein,meio,per,acts,pvmax:pv,pmmax:pm,esp,cap,cd:10+meio+at(c.cd.atrib)+(+c.cd.outros||0)+(sum.cd||0),
+    def:10+(d.atrib==='-'?0:at(d.atrib))+(+d.armadura||0)+(+d.escudo||0)+(+d.outros||0)+(sum.defesa||0),
+    atq:(+c.ataque||0)+(sum.ataque||0),dano:sum.dano||0,desloc:(+c.desloc||0)+(sum.desloc||0),
+    pvtemp:(+c.pv.temp||0)+(sum.pvtemp||0),pmtemp:(+c.pm.temp||0)+(sum.pmtemp||0)};
+}
+function refresh(){
+  const c=C();if(!c)return;const o=calc(c);
+  const m={cd:o.cd,nivel:o.n,esp:o.esp+' de '+o.cap,def:o.def,atq:sg(o.atq),dano:sg(o.dano),desloc:o.desloc+' m',pvmax:o.pvmax,pmmax:o.pmmax,pvtemp:o.pvtemp,pmtemp:o.pmtemp,trein:sg(o.trein),meio:o.meio};
+  ATTRS.forEach(a=>{m['a:'+a]=o.at(a);m['f:'+a]=sg(o.at(a))});
+  o.per.forEach(p=>m['s:'+p.nm]=p.off?'—':sg(p.tot));
+  o.acts.forEach((x,i)=>{m['ac:'+i+':atq']=x.atq;m['ac:'+i+':dano']=x.dano;m['ac:'+i+':sk']=x.sk;m['ac:'+i+':da']=x.da;m['ac:'+i+':dd']=x.dd});
+  document.querySelectorAll('[data-o]').forEach(e=>{const v=m[e.dataset.o];if(v!==undefined)e.textContent=v});
+  const eb=document.querySelector('[data-o=esp]');if(eb)eb.classList.toggle('bad',o.esp>o.cap);
+  document.querySelectorAll('progress[data-pg]').forEach(p=>{const k=p.dataset.pg;p.max=Math.max(1,o[k+'max']);p.value=Math.max(0,+c[k].atual||0)});
+}
+
+// ---- telas ----
+const CORN='<svg viewBox="0 0 32 32" width="26" height="26" fill="none" aria-hidden="true" class="co CLS"><path d="M3 29V12C3 6.48 7.48 2 13 2H29" stroke="rgb(var(--accent-rgb))" stroke-width="1.6" stroke-linecap="round"/><path d="M3 21c5 0 8 3 8 8" stroke="rgb(var(--accent-rgb))" stroke-width="1" stroke-linecap="round" opacity=".55"/><circle cx="3" cy="2" r="4" stroke="rgb(var(--accent-rgb))" stroke-width="1" opacity=".5"/><circle cx="3" cy="2" r="2.2" fill="rgb(var(--accent-rgb))"/></svg>';
+const CORNERS=['co1','co2','co3','co4'].map(k=>CORN.replace('CLS',k)).join('');
+const TITULO='<div class="ttl"><h1 class="ptitle">Fichas</h1><div class="orn"><svg width="22" height="14" viewBox="0 0 22 14" fill="none" stroke="rgb(var(--accent-rgb))" stroke-width="1"><path d="M1 7c4-6 8-6 10 0s6 6 10 0"/><circle cx="11" cy="7" r="1.4" fill="rgb(var(--accent-rgb))" stroke="none"/></svg><i></i></div><p class="sub2">Crie, guarde e use suas fichas de Tormenta 20.</p></div>';
+function crumb(c){const h='<a href="/">Início</a><span class="sep">/</span>';$('#crumb').innerHTML=c?h+'<button data-a="home">Fichas</button><span class="sep">/</span><span class="cur">'+esc(c.nome||'Personagem')+'</span>':h+'<span class="cur">Fichas</span>'}
+function home(){
+  S.cur=null;crumb();
+  $('#app').innerHTML=`${TITULO}<header><h2 class="pg">Seus personagens</h2><div class="bar"><button class="pri" data-a="new">Nova ficha</button><button data-a="imp">Importar .json</button><button data-a="expall">Backup de todas</button></div></header>
+  <main class="grid">${S.chars.map(c=>`<article class="card">${CORNERS}<div class="top"><div class="ph">${c.foto?`<img src="${c.foto}" alt="">`:esc((c.nome||'?')[0])}</div><div><h3>${esc(c.nome)}</h3><p>${esc([c.raca,c.classes.map(k=>k.nome).filter(Boolean).join(' / ')].filter(Boolean).join(', ')||'Sem raça ou classe')}, nível ${lvl(c)}</p></div></div><div class="bar"><button class="pri" data-a="open" data-id="${c.id}">Abrir</button><button class="ghost" data-a="del" data-id="${c.id}">Excluir</button></div></article>`).join('')||'<p class="empty">Nenhum personagem ainda. Crie a primeira ficha ou importe um .json.</p>'}</main>`;
+}
+const alvos=s=>ALVOS.map(([v,l])=>`<option value="${v}"${v===s?' selected':''}>${l}</option>`).join('');
+const card=(l,p,i)=>{const d=`data-l="${l}" data-pi="${i}"`,it=l==='itens';return `<article class="pw${p.macro&&p.ativo?' on':''}"><div class="pwh"><input ${d} data-k="nome" placeholder="${it?'Nome do item':'Nome do poder'}" value="${esc(p.nome)}"><button class="ghost" data-a="delp" ${d}>Remover</button></div>
+  ${it?`<div class="ef3"><label>Espaço<input type="number" step="any" ${d} data-k="espaco" value="${p.espaco}"></label><label>Quantidade<input type="number" ${d} data-k="qnt" value="${p.qnt}"></label><label>Valor<input ${d} data-k="valor" value="${esc(p.valor)}"></label></div>`:''}
+  <textarea ${d} data-k="efeito" rows="2" placeholder="Descrição e efeito">${esc(p.efeito)}</textarea>
+  <label class="chk"><input type="checkbox" data-a="tmacro" ${d} ${p.macro?'checked':''}> Tem macro: altera a ficha enquanto estiver ${it?'equipado':'ativo'}</label>
+  ${p.macro?`${p.efs.map((e,j)=>`<div class="ef"><select ${d} data-ei="${j}" data-k="alvo">${alvos(e.alvo)}</select><input type="number" ${d} data-ei="${j}" data-k="valor" value="${e.valor}" aria-label="Valor do efeito"><button class="ghost" data-a="dele" ${d} data-ei="${j}" aria-label="Remover efeito">×</button></div>`).join('')}<div class="bar"><button data-a="adde" ${d}>Adicionar efeito</button><button class="${p.ativo?'pri':''}" data-a="togp" ${d}>${p.ativo?(it?'Equipado':'Ativo'):(it?'Equipar':'Ativar')}</button></div>`:''}</article>`};
+const TABS=[['ficha','Ficha'],['basico','Básico'],['habilidades','Habilidades'],['poderes','Poderes'],['pericias','Perícias'],['combate','Combate'],['magias','Magias'],['itens','Itens'],['parceiros','Parceiros'],['notas','Notas']];
+const EF=Object.fromEntries(ALVOS),PMC=[1,3,6,10,15];
+const TATQ=['Corpo a corpo','À distância','Arremesso','Mágico','Outro'];
+const EXE=['Padrão','Movimento','Completa','Reação','Livre'],ALC=['Pessoal','Toque','Curto','Médio','Longo','Ilimitado'];
+const href=u=>{u=String(u||'').trim();if(u[0]==='/'&&/^https?:/.test(location.protocol))return location.origin+u;return u?(/^https?:\/\//i.test(u)?u:'https://'+u):''};
+const opts=(arr,v)=>arr.map(a=>`<option${a===v?' selected':''}>${a}</option>`).join('');
+const inp=(c,p,l,t)=>`<label>${l}<input data-p="${p}" ${t==='number'?'type="number" data-n="1"':''} value="${esc(get(c,p))}"></label>`;
+const resumo=c=>[c.raca,c.classes.filter(k=>k.nome).map(k=>k.nome+' '+(+k.niveis||0)).join(' / '),c.divindade,'nível '+lvl(c)].filter(Boolean).join(', ');
+const foto=c=>c.foto?`<img src="${c.foto}" alt="Foto do personagem">`:esc((c.nome||'?')[0]);
+const mlist=c=>[['poderes',c.poderes],['itens',c.itens]].flatMap(([l,a])=>a.map((p,i)=>[p,i,l]).filter(([p])=>p.macro));
+// ---- magias: importar do site a-Tormenta ----
+const ESCOLAS=['Abjuração','Adivinhação','Convocação','Encantamento','Evocação','Ilusão','Necromancia','Transmutação'];
+const slugf=t=>String(t||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+const HDR='\\b(Arcana|Divina|Universal)\\s+('+ESCOLAS.join('|')+')\\s+([1-5])\\s*[°º]';
+const BLOCO=/^(P|DIV|LI|UL|OL|H[1-6]|SECTION|ARTICLE|ASIDE|HEADER|FOOTER|TABLE|TR|BR|DL|DT|DD|BLOCKQUOTE)$/;
+function blockLines(el){let out='';(function w(n){if(n.nodeType===3){out+=n.nodeValue;return}if(n.nodeType!==1)return;const t=n.tagName.toUpperCase();if(/^(SCRIPT|STYLE|BUTTON|SVG|NOSCRIPT)$/.test(t))return;const b=BLOCO.test(t);out+=b?'\n':' ';n.childNodes.forEach(w);out+=b?'\n':' '})(el);return out.replace(/[ \t\u00a0]+/g,' ').split('\n').map(x=>x.trim()).filter(Boolean)}
+function cardFromDoc(doc,hash){
+  const want=slugf(hash),nEx=e=>(e.textContent.match(/Execução\s*:/g)||[]).length;
+  for(const e of doc.querySelectorAll('[id]')){
+    if(slugf(e.id)!==want)continue;
+    let x=e;while(x&&nEx(x)<1)x=x.parentElement;
+    if(x&&x!==doc.body&&x!==doc.documentElement&&nEx(x)===1)return {want,lines:blockLines(x)};
+    break;
+  }
+  return {want,lines:blockLines(doc.body)};
+}
+const ITEMLIKE=/^(\+\d|Truque|Requer)/;
+function parseSpell(lines,want){
+  lines=lines.filter(l=>!/^(Abrir em destaque|⤢)/.test(l));
+  const T=lines.join('\n').replace(/\s*Abrir em destaque\s*⤢?/g,''),re=new RegExp(HDR,'g'),hits=[];let m;
+  while((m=re.exec(T)))hits.push(m);
+  if(!hits.length)return null;
+  let hit=null,nameWords=null;
+  const wordsBefore=idx=>{const ls=T.slice(0,idx).split('\n'),w=[];ls.slice(-4).forEach((l,li)=>l.split(/\s+/).filter(Boolean).forEach(x=>w.push({x,li})));return {w,ls}};
+  for(const h of hits){
+    const {w}=wordsBefore(h.index);
+    if(want){for(let k=1;k<=9&&k<=w.length;k++){if(slugf(w.slice(-k).map(o=>o.x).join(' '))===want){hit=h;nameWords=k;break}}}
+    if(hit)break;
+  }
+  if(!hit){if(want&&hits.length>1)return null;hit=hits[0]}
+  const {w,ls}=wordsBefore(hit.index);
+  let nome,livro='';
+  if(nameWords){nome=w.slice(-nameWords).map(o=>o.x).join(' ');
+    const first=w[w.length-nameWords],same=w.filter(o=>o.li===first.li).map(o=>o.x),own=same.slice(0,same.length-w.slice(-nameWords).filter(o=>o.li===first.li).length).join(' ');
+    const prev=(ls.slice(-4)[first.li-1]||'').trim();
+    livro=own||(prev&&prev.length<=45&&!ITEMLIKE.test(prev)&&!/[.:]$/.test(prev)?prev:'');
+  }else{
+    const last=ls.map(s=>s.trim()).filter(Boolean);nome=last.length?last[last.length-1]:'';livro=last.length>1&&last[last.length-2].length<=45&&!ITEMLIKE.test(last[last.length-2])?last[last.length-2]:'';
+  }
+  const next=hits.find(h=>h.index>hit.index);
+  let rest=T.slice(hit.index+hit[0].length,next?next.index:T.length);
+  let rl=rest.split('\n').map(s=>s.trim()).filter(Boolean);
+  if(next){let n=0;while(n<2&&rl.length&&rl[rl.length-1].length<=45&&!ITEMLIKE.test(rl[rl.length-1])&&!/[.:)]$/.test(rl[rl.length-1])){rl.pop();n++}}
+  rl=rl.flatMap(l=>{const k=l.search(/[❖◆]\s*Aprimoramentos\b/);return k>0?[l.slice(0,k).trim(),l.slice(k)]:[l]});
+  const ai=rl.findIndex(l=>/^[❖◆•]?\s*Aprimoramentos\b/i.test(l));
+  const head=ai>=0?rl.slice(0,ai):rl,apl=ai>=0?[rl[ai].replace(/^[❖◆•]?\s*Aprimoramentos\b/i,'').trim(),...rl.slice(ai+1)].filter(Boolean):[];
+  const hj=head.join('\n'),labs=[['exec','Execução'],['alc','Alcance'],['alvo','Alvo\\s*/\\s*Área'],['dur','Duração'],['res','Resistência']];
+  const pos=labs.map(([k,l])=>{const r=new RegExp(l+'\\s*:').exec(hj);return r?{k,i:r.index,e:r.index+r[0].length}:null});
+  const d={nome,livro,tipo:hit[1],esc:hit[2],circ:+hit[3],exec:'',alc:'',alvo:'',dur:'',res:'',desc:'',aprim:''};
+  const ok=pos.filter(Boolean);
+  ok.forEach((p,j)=>{const fim=j+1<ok.length?ok[j+1].i:null;if(fim!==null)d[p.k]=hj.slice(p.e,fim).replace(/\s+/g,' ').trim()});
+  const lr=ok.find(p=>p.k==='res');
+  if(lr){
+    const tail=hj.slice(lr.e).split('\n').map(s=>s.trim()).filter(Boolean);
+    if(tail.length>1){d.res=tail[0];d.desc=tail.slice(1).join('\n')}
+    else if(tail.length===1){
+      const sv=/^((?:Nenhuma|Vontade|Fortitude|Reflexos)(?:\s*\([^)]*\))?(?:\s+(?:anula|aula|parcial|reduz à metade|evita|desacredita|nega))*(?:\s*\([^)]*\))?)\s*(.*)$/.exec(tail[0]);
+      if(sv){d.res=sv[1];d.desc=sv[2]}else d.res=tail[0];
+    }
+  }
+  const ap=apl.join(' ').replace(/\s+/g,' ').trim();
+  d.aprim=ap?ap.split(/\s+(?=(?:\+\d+\s*PM|Truque)\s*(?:\([^)]*\))?\s*:)/).map(s=>s.trim()).filter(Boolean).join('\n'):'';
+  return d;
+}
+function applySpell(m,d){['nome','livro','tipo','esc','exec','alc','alvo','dur','res','desc','aprim'].forEach(k=>{if(d[k])m[k]=d[k]});if(d.circ)m.circ=d.circ}
+const stat=(m,t)=>{S.st=S.st||{};S.st[m.id]=t};
+async function pullSpell(c,m){
+  let U;try{U=new URL(href(m.url))}catch(e){stat(m,'Link inválido.');return sheet()}
+  let hash='';try{hash=decodeURIComponent(U.hash.slice(1))}catch(e){hash=U.hash.slice(1)}
+  if(!hash){stat(m,'O link precisa terminar com #nome-da-magia, como em .../magias#acalmar-animal.');return sheet()}
+  U.hash='';stat(m,'Buscando a magia no site…');sheet();
+  let html;
+  try{const r=await fetch(U.href);if(!r.ok)throw new Error('HTTP '+r.status);html=await r.text()}
+  catch(e){stat(m,'Não consegui ler o site daqui (o navegador bloqueia a leitura de outro endereço). Hospede esta ficha no próprio site ou use “Colar o texto da magia”.');return sheet()}
+  const r=cardFromDoc(new DOMParser().parseFromString(html,'text/html'),hash),d=parseSpell(r.lines,r.want);
+  if(!d){stat(m,'Não encontrei a magia “'+hash+'” nessa página.');return sheet()}
+  applySpell(m,d);stat(m,'Importado do site: '+d.nome+'.');save();sheet();
+}
+
+let ED=false;const OP={};
+const spellRow=x=>{const u=href(x.url),meta=[['Execução',x.exec],['Alcance',x.alc],['Alvo/Área',x.alvo],['Duração',x.dur],['Resistência',x.res]].filter(([,v])=>v),ap=String(x.aprim||'').split('\n').map(t=>t.trim()).filter(Boolean);
+  return `<details class="spl" data-sid="${x.id}"${OP[x.id]?' open':''}><summary><span class="spn">${u?`<a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(x.nome||'Sem nome')}</a>`:esc(x.nome||'Sem nome')}</span><small>${esc([x.tipo,x.esc].filter(Boolean).join(', '))}</small></summary><div class="spb">${meta.length?`<dl class="spm">${meta.map(([k,v])=>`<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>`:''}${x.desc?`<p class="spd">${esc(x.desc)}</p>`:''}${ap.length?`<h4>Aprimoramentos</h4><ul class="spa">${ap.map(t=>`<li>${esc(t)}</li>`).join('')}</ul>`:''}${!meta.length&&!x.desc&&!ap.length?'<p class="hint">Sem detalhes. Cole o link do site na aba Magias para puxar tudo.</p>':''}</div></details>`};
+const IDN=c=>`<section class="card idn"><div class="ph big">${foto(c)}</div><div class="idc"><h2 class="nm">${esc(c.nome)}</h2>
+    <div class="idf"><div><small>Raça</small><b>${esc(c.raca)||'—'}</b></div><div><small>Classe</small><b>${esc(c.classes.filter(k=>k.nome).map(k=>k.nome+(c.classes.length>1?' '+(+k.niveis||0):'')).join(' / '))||'—'}</b></div><div><small>Divindade</small><b>${esc(c.divindade)||'—'}</b></div><div><small>Nível</small><b data-o="nivel"></b></div><div class="bar" style="margin-top:10px"><button class="ghost" data-a="led">${ED?'Concluir a personalização':'Personalizar a ficha'}</button></div></div></div></section>`;
+const FB={
+atributos:c=>`<section class="card"><h2>Atributos</h2><div class="at6">${ATTRS.map(a=>`<div><small>${a}</small><b data-o="f:${a}"></b></div>`).join('')}</div></section>`,
+vida:c=>`<section class="card"><div class="vm">${[['pv','Vida'],['pm','Mana']].map(([k,l])=>`<div class="res ${k}"><h2>${l}</h2>
+    <div class="rv"><input type="number" data-n="1" data-p="${k}.atual" value="${c[k].atual}" aria-label="${l} atual"><span>de <b data-o="${k}max"></b></span></div>
+    <progress data-pg="${k}"></progress>
+    <div class="adj"><button data-a="adj" data-k="${k}" data-d="-5">−5</button><button data-a="adj" data-k="${k}" data-d="-1">−1</button><button data-a="adj" data-k="${k}" data-d="1">+1</button><button data-a="adj" data-k="${k}" data-d="5">+5</button></div>
+    <p class="hint">Temporária: <b data-o="${k}temp"></b></p></div>`).join('')}</div>
+    <div class="bar" style="margin-top:6px"><button class="ghost" data-a="rest">Descansar: vida e mana no máximo</button></div></section>`,
+defesa:c=>`<section class="card"><div class="row s"><div><label>Defesa</label><div class="out" data-o="def"></div></div><div><label>Deslocamento</label><div class="out" data-o="desloc"></div></div><div><label>CD das magias</label><div class="out" data-o="cd"></div></div></div></section>`,
+macros:c=>`<section class="card"><h2>Macros</h2><p class="hint">Toque para ativar ou desativar. Cadastre em Habilidades, Poderes ou Itens.</p>${mlist(c).map(([p,i,l])=>`<button class="mac${p.ativo?' on':''}" data-a="togp" data-l="${l}" data-pi="${i}" aria-pressed="${!!p.ativo}"><span class="mn"><b>${esc(p.nome||'Sem nome')}</b><small>${esc(p.cat)}</small><span>${esc(p.efs.map(e=>(EF[e.alvo]||e.alvo)+' '+sg(+e.valor||0)).join(', ')||'Sem efeitos')}</span></span><span class="st">${p.ativo?'Ativo':'Inativo'}</span></button>`).join('')||'<p class="hint">Nenhum macro ainda.</p>'}</section>`,
+magias:c=>`<section class="card"><h2>Magias</h2>${c.magias.length?[1,2,3,4,5].map(n=>{const m=c.magias.filter(x=>+x.circ===n);return m.length?`<h3 class="sub">${n}º círculo, ${PMC[n-1]} PM</h3>${m.map(spellRow).join('')}`:''}).join(''):'<p class="hint">Nenhuma magia ainda. Adicione na aba Magias.</p>'}</section>`,
+acoes:c=>`<section class="card"><h2>Ações de combate</h2>${c.acoes.map((a,i)=>`<div class="act"><div><b>${esc(a.nome||'Sem nome')}</b><br><small>${esc(a.tipo)}, <span data-o="ac:${i}:sk"></span></small></div><div><label>Ataque</label><b class="v" data-o="ac:${i}:atq"></b></div><div><label>Dano</label><b class="v" data-o="ac:${i}:dano"></b></div><div><label>Crítico</label><span>${esc(a.crit||'—')}</span></div><div><label>Tipo</label><span>${esc(a.tdano||'—')}</span></div><div><label>Alcance</label><span>${esc(a.alc||'—')}</span></div>${(a.macros||[]).length?`<div class="ams">${a.macros.map((m,j)=>`<button class="${m.ativo?'pri':''}" data-a="togam" data-l="acoes" data-pi="${i}" data-mi="${j}" aria-pressed="${!!m.ativo}">${esc(m.nome||'Bônus')} <small>${esc(amr(m))}</small></button>`).join('')}</div>`:''}${a.obs?`<p class="hint obs">${esc(a.obs)}</p>`:''}</div>`).join('')||'<p class="hint">Nenhuma ação ainda. Cadastre na aba Combate.</p>'}</section>`,
+pericias:c=>`<section class="card"><h2>Perícias</h2><div class="sks">${SK.map(([nm])=>`<div class="sk2"><span>${nm}</span><b data-o="s:${nm}"></b></div>`).join('')}</div></section>`
+};
+const amr=m=>[m.atq?'ataque '+sg(+m.atq):'',m.dano?'dano '+sg(+m.dano):'',m.dados?'+'+m.dados:''].filter(Boolean).join(', ');
+const pwPane=(c,cats,t,h)=>`<section class="card"><h2>${t}</h2><p class="hint">${h}</p>${cats.map(k=>`${cats.length>1?`<h3 class="sub">${k}</h3>`:''}${c.poderes.map((p,i)=>[p,i]).filter(([p])=>p.cat===k).map(([p,i])=>card('poderes',p,i)).join('')}<button data-a="add" data-l="poderes" data-cat="${k}">${cats.length>1?'Adicionar em '+k:'Adicionar habilidade'}</button>`).join('')}</section>`;
+const PANES={
+ficha:c=>`${IDN(c)}${ED?`<section class="card"><h2>Montar a ficha</h2><p class="hint">Use ▲ e ▼ para mudar a ordem e “Ocultar” para tirar o que você não usa. Ou comece por um modelo:</p><div class="bar"><button data-a="lpre" data-v="padrao">Padrão</button><button data-a="lpre" data-v="marcial">Marcial: ações primeiro</button><button data-a="lpre" data-v="conjurador">Conjurador: magias primeiro</button><button class="pri" data-a="led">Concluir</button></div></section>`:''}${c.layout.map((l,i)=>{if(!l.on&&!ED)return '';const h=FB[l.id](c);return ED?`<div class="lw${l.on?'':' off'}"><div class="lbar"><b>${LAYT[l.id]}</b><span><button class="ghost" data-a="lup" data-id="${l.id}"${i===0?' disabled':''} aria-label="Subir">▲</button><button class="ghost" data-a="ldn" data-id="${l.id}"${i===c.layout.length-1?' disabled':''} aria-label="Descer">▼</button><button class="${l.on?'ghost':'pri'}" data-a="lvis" data-id="${l.id}">${l.on?'Ocultar':'Mostrar'}</button></span></div>${h}</div>`:h}).join('')}`,
+habilidades:c=>pwPane(c,['Habilidades de classe'],'Habilidades de classe','Habilidades que sua classe dá a cada nível. Marque “Tem macro” nas que alteram a ficha: elas aparecem na aba Ficha com o nome da habilidade.'),
+basico:c=>`
+  <section class="card top"><div class="ph big" data-a="foto" title="Trocar foto" role="button" tabindex="0">${foto(c)}</div>
+    <div class="f2">${inp(c,'nome','Nome')}${inp(c,'raca','Raça')}${inp(c,'divindade','Divindade')}<div><label>Nível total</label><div class="out" data-o="nivel"></div></div>${c.foto?'<div><label>Foto</label><button class="ghost" data-a="rmfoto">Remover foto</button></div>':''}</div></section>
+  <section class="card"><h2>Classes e nível</h2><p class="hint">Vida e mana máximas são calculadas sozinhas. A primeira linha é a classe inicial: dá o PV inicial no 1º nível e, daí em diante, o PV por nível. A CON soma em todo nível; a mana não usa CON.</p>
+  ${c.classes.map((k,i)=>`<div class="cls"><label>Classe<input data-p="classes.${i}.nome" value="${esc(k.nome)}"></label><label>Níveis<input type="number" data-n="1" data-p="classes.${i}.niveis" value="${k.niveis}"></label>${i===0?`<label>PV inicial<input type="number" data-n="1" data-p="classes.0.pvIni" value="${k.pvIni}"></label>`:'<span></span>'}<label>PV por nível<input type="number" data-n="1" data-p="classes.${i}.pvNivel" value="${k.pvNivel}"></label><label>PM por nível<input type="number" data-n="1" data-p="classes.${i}.pmNivel" value="${k.pmNivel}"></label><button class="ghost" data-a="delc" data-ci="${i}" aria-label="Remover classe">×</button></div>`).join('')}
+  <div class="bar"><button data-a="addc">Adicionar classe</button></div></section>
+  <section class="card"><h2>Atributos</h2><div class="attrs">${ATTRS.map(a=>`<div>${inp(c,'attr.'+a,a,'number')}<div class="out" data-o="a:${a}"></div></div>`).join('')}</div></section>
+  <section class="card"><div class="row">
+    <div><h2>Vida</h2>${inp(c,'pv.extra','Vida extra','number')}${inp(c,'pv.temp','Temporária (manual)','number')}<label>Máximo (automático)</label><div class="out" data-o="pvmax"></div></div>
+    <div><h2>Mana</h2>${inp(c,'pm.extra','Mana extra','number')}${inp(c,'pm.temp','Temporária (manual)','number')}<label>Máximo (automático)</label><div class="out" data-o="pmmax"></div></div>
+    <div><h2>Defesa</h2><div class="out" data-o="def"></div><label>Atributo<select data-p="defesa.atrib">${opts([...ATTRS,'-'],c.defesa.atrib)}</select></label>${inp(c,'defesa.armadura','Bônus de armadura','number')}${inp(c,'defesa.escudo','Bônus de escudo','number')}${inp(c,'defesa.outros','Outros','number')}</div>
+    <div><h2>Movimento</h2>${inp(c,'desloc','Deslocamento base (m)','number')}${inp(c,'penalidade','Penalidade de armadura','number')}</div>
+  </div></section>`,
+pericias:c=>`<section class="card"><h2>Perícias</h2><p class="hint">Metade do nível: <b data-o="meio"></b>. Bônus de treino: <b data-o="trein"></b>. Perícias que só treinados usam aparecem com traço até você marcar o treino.</p>
+  <div class="sks">${SK.map(([nm,a,f])=>`<div class="sk"><input type="checkbox" data-p="pericias.${nm}.t" ${get(c,'pericias.'+nm+'.t')?'checked':''} aria-label="Treinada: ${nm}"><span>${nm}${f.includes('T')?' *':''}${f.includes('A')?' -':''}</span><small>${a}</small><b data-o="s:${nm}"></b><input type="number" data-n="1" data-p="pericias.${nm}.o" value="${get(c,'pericias.'+nm+'.o')||0}" aria-label="Outros bônus: ${nm}"></div>`).join('')}</div>
+  <p class="hint">* só treinada. - sofre a penalidade de armadura. A última coluna são outros bônus fixos.</p></section>`,
+poderes:c=>pwPane(c,CATS.filter(k=>k!=='Habilidades de classe'),'Poderes','Poderes de classe, raça, origem, gerais e mais. Marque “Tem macro” para ativar o efeito na aba Ficha.'),
+combate:c=>`<section class="card"><h2>Ações de combate</h2><p class="hint">O teste de ataque é automático: 1d20 + Luta (corpo a corpo) ou Pontaria (à distância e arremesso). No corpo a corpo e no arremesso o dano soma a Força; disparo não soma. Você só informa os dados e os bônus.</p>${c.acoes.map((a,i)=>{const d=`data-l="acoes" data-pi="${i}"`,lv=a.tipo==='Mágico'||a.tipo==='Outro';return `<article class="pw"><div class="pwh"><input ${d} data-k="nome" placeholder="Nome da ação (ex.: Espada longa)" value="${esc(a.nome)}"><button class="ghost" data-a="delp" ${d}>Remover</button></div>
+    <div class="ef3"><label>Tipo de ataque<select ${d} data-k="tipo">${opts(TATQ,a.tipo)}</select></label>${lv?`<label>Perícia do teste<select ${d} data-k="teste">${opts(SK.map(x=>x[0]),a.teste)}</select></label>`:`<label>Perícia do teste (automática)<div class="v" data-o="ac:${i}:sk"></div></label>`}<label>Alcance<input ${d} data-k="alc" value="${esc(a.alc)}"></label></div>
+    <div class="ef3"><label>Dados de dano<input ${d} data-k="dados" placeholder="1d8" value="${esc(a.dados)}"></label><label>Bônus de ataque<input type="number" ${d} data-k="bAtq" value="${a.bAtq}"></label><label>Bônus de dano<input type="number" ${d} data-k="bDano" value="${a.bDano}"></label></div>
+    <div class="ef3">${lv?`<label>Atributo no dano<select ${d} data-k="dAttr"><option value="-"${a.dAttr==='-'?' selected':''}>Nenhum</option>${opts(ATTRS,a.dAttr)}</select></label>`:`<label>Atributo no dano (automático)<div class="v">${a.tipo==='À distância'?'Nenhum (disparo)':'Força'}</div></label>`}<label>Crítico<input ${d} data-k="crit" placeholder="19/x2" value="${esc(a.crit)}"></label><label>Tipo de dano<input ${d} data-k="tdano" placeholder="Corte" value="${esc(a.tdano)}"></label></div>
+    <h3 class="sub">Macros desta ação</h3><p class="hint">Bônus que você liga e desliga na aba Ficha, só para esta ação (ex.: Fúria, Ataque Poderoso, arma flamejante).</p>
+    ${(a.macros||[]).map((m,j)=>{const e=`${d} data-mi="${j}"`;return `<div class="amr"><label>Nome<input ${e} data-k="nome" value="${esc(m.nome)}"></label><label>Ataque<input type="number" ${e} data-k="atq" value="${m.atq}"></label><label>Dano<input type="number" ${e} data-k="dano" value="${m.dano}"></label><label>Dados extras<input ${e} data-k="dados" placeholder="1d6" value="${esc(m.dados)}"></label><button class="ghost" data-a="delam" ${d} data-mi="${j}" aria-label="Remover macro">×</button></div>`}).join('')}
+    <div class="bar"><button data-a="addam" ${d}>Adicionar macro nesta ação</button></div>
+    <label>Observações<textarea ${d} data-k="obs" rows="2">${esc(a.obs)}</textarea></label>
+    <p class="hint">Ataque: <span data-o="ac:${i}:da"></span>. Dano: <span data-o="ac:${i}:dd"></span>.</p>
+    <p class="hint">Resultado: <b class="v" data-o="ac:${i}:atq"></b> para acertar, <b class="v" data-o="ac:${i}:dano"></b> de dano.</p></article>`}).join('')}<button data-a="add" data-l="acoes">Adicionar ação</button></section>`,
+magias:c=>`<section class="card"><h2>CD das magias</h2><div class="row s"><label>Atributo<select data-p="cd.atrib">${opts(ATTRS,c.cd.atrib)}</select></label>${inp(c,'cd.outros','Outras fontes','number')}<div><label>CD</label><div class="out" data-o="cd"></div></div></div><p class="hint">CD = 10 + metade do nível + modificador do atributo + outras fontes.</p></section>
+  <section class="card"><h2>Magias</h2><p class="hint">Cole o link da magia no seu site (por exemplo, https://a-tormenta.vercel.app/magias#acalmar-animal) e os dados são puxados sozinhos, com os aprimoramentos. Você pode corrigir qualquer campo depois.</p>
+  <datalist id="dl-exe">${EXE.map(x=>`<option value="${x}">`).join('')}</datalist><datalist id="dl-alc">${ALC.map(x=>`<option value="${x}">`).join('')}</datalist><datalist id="dl-esc">${ESCOLAS.map(x=>`<option value="${x}">`).join('')}</datalist>
+  ${c.magias.map((m,i)=>{const d=`data-l="magias" data-pi="${i}"`;return `<article class="pw"><div class="pwh"><input ${d} data-k="nome" placeholder="Nome da magia" value="${esc(m.nome)}"><button class="ghost" data-a="delp" ${d}>Remover</button></div>
+    <label>Link da magia no site<span class="urlrow"><input ${d} data-k="url" placeholder="https://a-tormenta.vercel.app/magias#nome-da-magia" value="${esc(m.url)}"><button data-a="pull" ${d}>Puxar do link</button></span></label>
+    ${S.st&&S.st[m.id]?`<p class="hint st">${esc(S.st[m.id])}</p>`:''}
+    <div class="ef3"><label>Círculo<select ${d} data-k="circ" data-n="1">${[1,2,3,4,5].map(n=>`<option value="${n}"${+m.circ===n?' selected':''}>${n}º (${PMC[n-1]} PM)</option>`).join('')}</select></label><label>Tipo<select ${d} data-k="tipo"><option value="">—</option>${opts(['Arcana','Divina','Universal'],m.tipo)}</select></label><label>Escola<input list="dl-esc" ${d} data-k="esc" value="${esc(m.esc)}"></label></div>
+    <div class="ef3"><label>Execução<input list="dl-exe" ${d} data-k="exec" value="${esc(m.exec)}"></label><label>Alcance<input list="dl-alc" ${d} data-k="alc" value="${esc(m.alc)}"></label><label>Alvo ou área<input ${d} data-k="alvo" value="${esc(m.alvo)}"></label></div>
+    <div class="ef3"><label>Duração<input ${d} data-k="dur" value="${esc(m.dur)}"></label><label>Resistência<input ${d} data-k="res" value="${esc(m.res)}"></label><label>Livro<input ${d} data-k="livro" value="${esc(m.livro)}"></label></div>
+    <label>Descrição<textarea ${d} data-k="desc" rows="5">${esc(m.desc)}</textarea></label>
+    <label>Aprimoramentos, um por linha<textarea ${d} data-k="aprim" rows="5">${esc(m.aprim)}</textarea></label>
+    <details class="paste"><summary>Colar o texto da magia</summary><p class="hint">Se o botão não conseguir ler o site, copie o card da magia no site, cole aqui e toque em Preencher.</p><textarea rows="5" placeholder="Cole aqui o texto copiado do site"></textarea><div class="bar"><button data-a="parse" ${d}>Preencher com o texto</button></div></details></article>`}).join('')}<button data-a="add" data-l="magias">Adicionar magia</button></section>`,
+itens:c=>`<section class="card"><h2>Itens</h2><p class="hint">Espaço usado: <b class="out" data-o="esp"></b></p>${ICATS.map(k=>`<h3 class="sub">${k}</h3>${c.itens.map((p,i)=>[p,i]).filter(([p])=>p.cat===k).map(([p,i])=>card('itens',p,i)).join('')}<button data-a="add" data-l="itens" data-cat="${k}">Adicionar item</button>`).join('')}</section>`,
+parceiros:c=>`<section class="card"><h2>Parceiros e familiar</h2>${PARC.map((t,i)=>`<h3 class="sub">${t}</h3>${inp(c,'parceiros.'+i+'.nome','Nome')}<label>Ficha e anotações<textarea data-p="parceiros.${i}.texto" rows="5">${esc(c.parceiros[i].texto)}</textarea></label>`).join('')}</section>`,
+notas:c=>`<section class="card"><h2>Anotações</h2><textarea data-p="notas" rows="12" placeholder="Dinheiro, história, aliados">${esc(c.notas)}</textarea></section>`
+};
+function sheet(){
+  const c=C();if(!c)return home();const y=scrollY;crumb(c);
+  $('#app').innerHTML=`<header><button class="ghost" data-a="home">‹ Personagens</button><div class="bar"><button data-a="exp">Baixar esta ficha</button></div></header>
+  <div class="lay"><nav class="tabs" aria-label="Seções">${TABS.map(([k,l])=>`<button class="${S.tab===k?'pri':''}" data-a="tab" data-t="${k}">${l}</button>`).join('')}</nav><div class="pane">${PANES[S.tab](c)}</div></div>`;
+  refresh();scrollTo(0,y);
+}
+
+// ---- eventos ----
+document.addEventListener('input',e=>{
+  const t=e.target,c=C();if(!c)return;
+  if(t.dataset.p){set(c,t.dataset.p,t.type==='checkbox'?t.checked:t.dataset.n?(t.value===''?0:+t.value):t.value);after()}
+  else if(t.dataset.pi!==undefined&&t.dataset.a!=='tmacro'){
+    const p=c[t.dataset.l][t.dataset.pi],v=t.type==='number'||t.dataset.n?(t.value===''?0:+t.value):t.value;
+    if(t.dataset.mi!==undefined)p.macros[t.dataset.mi][t.dataset.k]=v;else if(t.dataset.ei!==undefined)p.efs[t.dataset.ei][t.dataset.k]=v;else p[t.dataset.k]=v;
+    after();if(t.dataset.l==='acoes'&&t.dataset.k==='tipo'){save();sheet()}
+  }
+});
+document.addEventListener('click',e=>{
+  const t=e.target.closest('[data-a]');if(!t)return;
+  const a=t.dataset.a,c=C(),L=c&&c[t.dataset.l||''],p=L&&L[t.dataset.pi];
+  if(a==='new'){const n=novo();S.chars.push(n);S.cur=n.id;S.tab='basico';save();sheet();scrollTo(0,0)}
+  else if(a==='open'){S.cur=t.dataset.id;S.tab='ficha';ED=false;sheet();scrollTo(0,0)}
+  else if(a==='home'){save();home()}
+  else if(a==='del'){if(confirm('Excluir esta ficha? Isso não pode ser desfeito.')){S.chars=S.chars.filter(x=>x.id!==t.dataset.id);save();home()}}
+  else if(a==='imp'){pick('imp','.json,application/json')}
+  else if(a==='foto'){pick('foto','image/*')}
+  else if(a==='rmfoto'){c.foto='';save();sheet()}
+  else if(a==='exp'){dl(c.nome,c)}
+  else if(a==='expall'){dl('backup-fichas-t20',{chars:S.chars})}
+  else if(a==='add'){const l=t.dataset.l;c[l].push(l==='magias'?novaMagia():l==='acoes'?novaAcao():fixM({cat:t.dataset.cat,...(l==='itens'?{espaco:1,qnt:1,valor:''}:{})}));save();sheet()}
+  else if(a==='tab'){S.tab=t.dataset.t;sheet();scrollTo(0,0)}
+  else if(a==='adj'){const x=c[t.dataset.k];x.atual=(+x.atual||0)+(+t.dataset.d);if(t.dataset.k==='pm')x.atual=Math.max(0,x.atual);const i=document.querySelector('[data-p="'+t.dataset.k+'.atual"]');if(i)i.value=x.atual;after()}
+  else if(a==='addc'){c.classes.push({nome:'',niveis:1,pvIni:0,pvNivel:0,pmNivel:0});save();sheet()}
+  else if(a==='delc'){if(c.classes.length>1){c.classes.splice(+t.dataset.ci,1);save();sheet()}}
+  else if(a==='rest'){const o=calc(c);c.pv.atual=o.pvmax;c.pm.atual=o.pmmax;save();sheet()}
+  else if(a==='delp'){L.splice(+t.dataset.pi,1);save();sheet()}
+  else if(a==='tmacro'){p.macro=t.checked;if(p.macro&&!p.efs.length)p.efs.push({alvo:'defesa',valor:0});if(!p.macro)p.ativo=false;save();sheet()}
+  else if(a==='addam'){p.macros.push({id:uid(),nome:'',atq:0,dano:0,dados:'',ativo:false});save();sheet()}
+  else if(a==='delam'){p.macros.splice(+t.dataset.mi,1);save();sheet()}
+  else if(a==='togam'){const m=p.macros[+t.dataset.mi];m.ativo=!m.ativo;save();sheet()}
+  else if(a==='togp'){p.ativo=!p.ativo;save();sheet()}
+  else if(a==='led'){ED=!ED;sheet()}
+  else if(a==='lup'||a==='ldn'){const i=c.layout.findIndex(l=>l.id===t.dataset.id),j=a==='lup'?i-1:i+1;if(i>=0&&j>=0&&j<c.layout.length){[c.layout[i],c.layout[j]]=[c.layout[j],c.layout[i]];save();sheet()}}
+  else if(a==='lvis'){const l=c.layout.find(x=>x.id===t.dataset.id);l.on=!l.on;save();sheet()}
+  else if(a==='lpre'){c.layout=PRE[t.dataset.v].map(id=>({id,on:true}));save();sheet()}
+  else if(a==='pull'){pullSpell(c,p)}
+  else if(a==='parse'){const tx=t.closest('details').querySelector('textarea').value,ls=tx.split('\n').map(x=>x.trim()).filter(Boolean),h=String(p.url||'').split('#')[1];let w='';try{w=slugf(decodeURIComponent(h||''))}catch(e){}const d=ls.length?parseSpell(ls,w||null):null;if(!d)stat(p,'Não reconheci o texto. Copie o card inteiro da magia, do nome até os aprimoramentos.');else{applySpell(p,d);stat(p,'Preenchido com o texto colado: '+d.nome+'.');save()}sheet()}
+  else if(a==='adde'){p.efs.push({alvo:'defesa',valor:0});save();sheet()}
+  else if(a==='dele'){p.efs.splice(+t.dataset.ei,1);save();sheet()}
+});
+document.addEventListener('change',e=>{const t=e.target,c=C();if(c&&t.dataset&&t.dataset.l==='magias'&&t.dataset.k==='url'&&String(t.value).includes('#')){const m=c.magias[t.dataset.pi];if(m)pullSpell(c,m)}});
+document.addEventListener('toggle',e=>{const d=e.target;if(d&&d.dataset&&d.dataset.sid)OP[d.dataset.sid]=d.open},true);
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.dataset.a==='foto')pick('foto','image/*')});
+
+// ---- arquivos: importar, baixar, foto ----
+function pick(mode,accept){const f=$('#fi');f.dataset.mode=mode;f.accept=accept;f.click()}
+$('#fi').addEventListener('change',e=>{
+  const f=e.target.files[0],mode=e.target.dataset.mode;e.target.value='';if(!f)return;
+  if(mode==='foto')resize(f);else f.text().then(imp).catch(()=>toast('Arquivo inválido. Use um .json baixado desta página.'));
+});
+function imp(txt){
+  const d=JSON.parse(txt),arr=d.chars||(Array.isArray(d)?d:[d]);let n=0;
+  arr.forEach(x=>{if(!x||typeof x!=='object')return;const c=norm(x),i=S.chars.findIndex(y=>y.id===c.id);i>=0?S.chars[i]=c:S.chars.push(c);n++});
+  save();home();toast(n+' ficha(s) importada(s).');
+}
+function dl(name,obj){
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([JSON.stringify(obj,null,1)],{type:'application/json'}));
+  a.download=(name||'ficha').replace(/[^\w-]+/g,'_')+'.json';a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+}
+function resize(f){
+  const r=new FileReader();
+  r.onload=()=>{const im=new Image();im.onload=()=>{
+    const s=Math.min(1,320/Math.max(im.width,im.height)),cv=document.createElement('canvas');
+    cv.width=im.width*s;cv.height=im.height*s;cv.getContext('2d').drawImage(im,0,0,cv.width,cv.height);
+    C().foto=cv.toDataURL('image/jpeg',.82);save();sheet();
+  };im.src=r.result};
+  r.readAsDataURL(f);
+}
+const SUN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>';
+const MOON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>';
+const luz=()=>document.documentElement.getAttribute('data-theme')==='light';
+const icone=()=>{$('#tt').innerHTML=luz()?MOON:SUN};
+$('#tt').addEventListener('click',()=>{const n=luz()?'dark':'light';document.documentElement.setAttribute('data-theme',n);try{localStorage.setItem('a-tormenta-theme',n)}catch(e){}icone()});
+icone();home();
+</script>
+</body>
+</html>
