@@ -173,6 +173,9 @@ textarea{resize:vertical;overflow:hidden;line-height:1.45}
 @media(max-width:560px){.phw{width:100%;border-right:0;border-bottom:1px solid var(--line)}}
 .tbr{display:grid;grid-template-columns:2fr 1fr 1fr 34px;gap:8px;align-items:end;margin-bottom:6px}
 @media(max-width:560px){.tbr{grid-template-columns:1fr 1fr}.tbr>:first-child{grid-column:1/-1}}
+.lnk{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:6px 0;border-bottom:1px solid var(--line)}
+.lnk .hint{margin:0}
+.bar select[data-pull]{flex:1;min-width:200px}
 </style>
 </head>
 <body>
@@ -187,7 +190,7 @@ const KEY='fichas-t20-v1';
 const ATTRS=['FOR','DES','CON','INT','SAB','CAR'];
 // [nome, atributo, flags] T = só treinada, A = penalidade de armadura
 const SK=[['Acrobacia','DES','A'],['Adestramento','CAR','T'],['Atletismo','FOR',''],['Atuação','CAR',''],['Cavalgar','DES',''],['Conhecimento','INT','T'],['Cura','SAB',''],['Diplomacia','CAR',''],['Enganação','CAR',''],['Fortitude','CON',''],['Furtividade','DES','A'],['Guerra','INT','T'],['Iniciativa','DES',''],['Intimidação','CAR',''],['Intuição','SAB',''],['Investigação','INT',''],['Jogatina','CAR','T'],['Ladinagem','DES','AT'],['Luta','FOR',''],['Misticismo','INT','T'],['Nobreza','INT','T'],['Ofício','INT','T'],['Percepção','SAB',''],['Pilotagem','DES','T'],['Pontaria','DES',''],['Reflexos','DES',''],['Religião','SAB','T'],['Sobrevivência','SAB',''],['Vontade','SAB','']];
-const ALVOS=[...ATTRS.map(a=>['a:'+a,'Atributo '+a]),['defesa','Defesa'],['desloc','Deslocamento (m)'],['penal','Penalidade de armadura'],['cd','CD das magias'],['pvmax','PV máximo'],['pmmax','PM máximo'],['pvtemp','PV temporários'],['pmtemp','PM temporários'],['p:*','Todas as perícias'],...SK.map(s=>['p:'+s[0],'Perícia: '+s[0]])];
+const ALVOS=[...ATTRS.map(a=>['a:'+a,'Atributo '+a]),['defesa','Defesa'],['ataque','Ataque (nas ações que puxarem)'],['dano','Dano (nas ações que puxarem)'],['desloc','Deslocamento (m)'],['penal','Penalidade de armadura'],['cd','CD das magias'],['pvmax','PV máximo'],['pmmax','PM máximo'],['pvtemp','PV temporários'],['pmtemp','PM temporários'],['p:*','Todas as perícias'],...SK.map(s=>['p:'+s[0],'Perícia: '+s[0]])];
 
 const $=s=>document.querySelector(s);
 const uid=()=>Math.random().toString(36).slice(2,10);
@@ -200,6 +203,8 @@ const CATS=['Habilidades de classe','Poderes de classe','Raça','Origem','Gerais
 const ICATS=['Equipamento e vestuário','Alquímicos','Alimentos','Armas, armaduras e escudos'];
 const PARC=['1º parceiro','2º parceiro (nível 5 a 16)','3º parceiro (nível 17 ou mais)','Familiar (arcanistas com o poder Familiar)'];
 const fixM=p=>({id:uid(),nome:'',efeito:'',macro:false,ativo:false,fixo:false,...p,efs:p.efs||[]});
+const fe=(p,k)=>p.efs.reduce((t,e)=>t+(e.alvo===k?(+e.valor||0):0),0);
+const rm=(c,m)=>{if(!m.src)return m;const p=[...c.poderes,...c.itens].find(x=>x.id===m.src);if(p){m.nome=p.nome||m.nome;m.atq=fe(p,'ataque');m.dano=fe(p,'dano')}return m};
 const novaAcao=()=>({id:uid(),nome:'',tipo:'Corpo a corpo',teste:'Luta',bAtq:0,dados:'',dAttr:'-',bDano:0,crit:'',tdano:'',alc:'',obs:'',macros:[]});
 const LAY=['atributos','vida','defesa','macros','poderes','magias','acoes','pericias'];
 const LAYT={atributos:'Atributos',vida:'Vida e mana',defesa:'Defesa, deslocamento e CD',macros:'Macros',poderes:'Habilidades e poderes',magias:'Magias',acoes:'Ações de combate',pericias:'Perícias'};
@@ -207,18 +212,17 @@ const PRE={padrao:['atributos','vida','defesa','macros','poderes','magias','acoe
 const normLay=l=>{const r=(Array.isArray(l)?l:[]).filter((x,i,a)=>x&&LAY.includes(x.id)&&a.findIndex(y=>y.id===x.id)===i).map(x=>({id:x.id,on:x.on!==false}));LAY.forEach((id,i)=>{if(!r.find(x=>x.id===id)){const k=r.findIndex(x=>x.id===LAY[i-1]);r.splice(k>=0?k+1:r.length,0,{id,on:true})}});return r};
 const novaMagia=()=>({id:uid(),nome:'',url:'',circ:1,exec:'Padrão',alc:'Pessoal',alvo:'',dur:'',res:'',desc:'',tipo:'',esc:'',aprim:'',livro:''});
 
-const novo=()=>({layout:normLay(),id:uid(),nome:'Novo personagem',raca:'',divindade:'',foto:'',attr:{FOR:0,DES:0,CON:0,INT:0,SAB:0,CAR:0},pv:{atual:0,temp:0,extra:0},pm:{atual:0,temp:0,extra:0},classes:[{nome:'',niveis:1,pvIni:0,pvNivel:0,pmNivel:0}],defesa:{atrib:'DES',armadura:0,escudo:0,outros:0},penalidade:0,desloc:9,ataque:0,pericias:{},poderes:[],itens:[],magias:[],acoes:[],cd:{atrib:'INT',outros:0},parceiros:PARC.map(()=>({nome:'',texto:''})),prof:'',tib:[],notas:''});
-const noAD=q=>({...q,efs:q.efs.filter(e=>e.alvo!=='ataque'&&e.alvo!=='dano')});
+const novo=()=>({layout:normLay(),id:uid(),nome:'Novo personagem',raca:'',divindade:'',foto:'',attr:{FOR:0,DES:0,CON:0,INT:0,SAB:0,CAR:0},pv:{atual:0,temp:0,extra:0},pm:{atual:0,temp:0,extra:0},classes:[{nome:'',niveis:1,pvIni:0,pvNivel:0,pmNivel:0}],defesa:{atrib:'DES',armadura:0,escudo:0,outros:0},penalidade:0,desloc:9,ataque:0,pericias:{},poderes:[],itens:[],magias:[],acoes:[],cd:{atrib:'INT',outros:0},parceiros:PARC.map(()=>({nome:'',texto:''})),prof:'',obrig:'',tib:[],notas:''});
 const norm=x=>{const b=novo();return {...b,...x,layout:normLay(x.layout),id:x.id||uid(),attr:{...b.attr,...x.attr},pv:{...b.pv,...x.pv},pm:{...b.pm,...x.pm},defesa:{...b.defesa,...x.defesa},pericias:x.pericias||{},cd:{...b.cd,...x.cd},tib:(x.tib||[]).map(t=>({id:uid(),desc:'',ganho:0,gasto:0,...t})),acoes:(x.acoes||[]).map(a=>({...novaAcao(),...a,macros:(a.macros||[]).map(m=>({id:uid(),nome:'',atq:0,dano:0,dados:'',ativo:false,...m}))})),
   magias:(x.magias||[]).map(m=>({...novaMagia(),...m})),
   classes:x.classes?.length?x.classes:[{...b.classes[0],nome:x.classe||'',niveis:+x.nivel||1}],
-  poderes:(x.poderes||[]).map(p=>noAD(fixM({...p,cat:p.cat==='Classe'?'Poderes de classe':(p.cat||'Gerais')}))),itens:(x.itens||[]).map(p=>noAD(fixM({cat:ICATS[0],espaco:1,qnt:1,valor:'',...p}))),
+  poderes:(x.poderes||[]).map(p=>fixM({...p,cat:p.cat==='Classe'?'Poderes de classe':(p.cat||'Gerais')})),itens:(x.itens||[]).map(p=>fixM({cat:ICATS[0],espaco:1,qnt:1,valor:'',...p})),
   parceiros:b.parceiros.map((p,i)=>({...p,...(x.parceiros||[])[i]}))}};
 const lvl=c=>c.classes.reduce((s,k)=>s+(+k.niveis||0),0)||1;
 
 let S;
 try{S=JSON.parse(localStorage.getItem(KEY))||{}}catch(e){S={}}
-S.chars=(S.chars||[]).map(norm);S.cur=null;S.tab='ficha';S.dr=CATS.map(k=>fixM({cat:k}));S.ed=null;
+S.chars=(S.chars||[]).map(norm);S.cur=null;S.tab='ficha';S.dr=CATS.map(k=>fixM({cat:k}));S.dro=CATS.map(()=>false);S.ed=null;
 const C=()=>S.chars.find(x=>x.id===S.cur);
 function save(){try{localStorage.setItem(KEY,JSON.stringify({chars:S.chars}))}catch(e){toast('Sem espaço para salvar. Baixe um backup e use fotos menores.')}}
 let tm;function after(){refresh();clearTimeout(tm);tm=setTimeout(save,250)}
@@ -237,7 +241,7 @@ function calc(c){
   const acts=c.acoes.map(a=>{
     const tp=a.tipo,corpo=tp==='Corpo a corpo'||tp==='Arremesso',livre=tp==='Mágico'||tp==='Outro';
     const sk=tp==='Corpo a corpo'?'Luta':(tp==='À distância'||tp==='Arremesso')?'Pontaria':a.teste;
-    const pk=per.find(p=>p.nm===sk),ms=(a.macros||[]).filter(m=>m.ativo);
+    const pk=per.find(p=>p.nm===sk),ms=(a.macros||[]).map(m=>rm(c,m)).filter(m=>m.ativo);
     const bA=(+a.bAtq||0)+ms.reduce((t,m)=>t+(+m.atq||0),0),pv=pk?pk.tot:0,atq=pv+bA;
     const fo=corpo?at('FOR'):(livre&&a.dAttr&&a.dAttr!=='-'?at(a.dAttr):0);
     const bD=(+a.bDano||0)+ms.reduce((t,m)=>t+(+m.dano||0),0),db=fo+bD;
@@ -253,11 +257,11 @@ function calc(c){
   return {at,n,trein,meio,per,acts,pvmax:pv,pmmax:pm,esp,cap,cd:10+meio+at(c.cd.atrib)+(+c.cd.outros||0)+(sum.cd||0),
     def:10+(d.atrib==='-'?0:at(d.atrib))+(+d.armadura||0)+(+d.escudo||0)+(+d.outros||0)+(sum.defesa||0),
     atq:(+c.ataque||0)+(sum.ataque||0),dano:sum.dano||0,desloc:(+c.desloc||0)+(sum.desloc||0),
-    pvtemp:(+c.pv.temp||0)+(sum.pvtemp||0),pmtemp:(+c.pm.temp||0)+(sum.pmtemp||0),pvtm:sum.pvtemp||0,pmtm:sum.pmtemp||0,tib:(c.tib||[]).reduce((t,e)=>t+(+e.ganho||0)-(+e.gasto||0),0)};
+    pvtemp:(+c.pv.temp||0)+(sum.pvtemp||0),pmtemp:(+c.pm.temp||0)+(sum.pmtemp||0),pvtm:sum.pvtemp||0,pmtm:sum.pmtemp||0,pvmm:sum.pvmax||0,pmmm:sum.pmmax||0,tib:(c.tib||[]).reduce((t,e)=>t+(+e.ganho||0)-(+e.gasto||0),0)};
 }
 function refresh(){
   const c=C();if(!c)return;const o=calc(c);
-  const m={cd:o.cd,nivel:o.n,esp:o.esp+' de '+o.cap,def:o.def,atq:sg(o.atq),dano:sg(o.dano),desloc:o.desloc+' m',pvmax:o.pvmax,pmmax:o.pmmax,tib:'T$ '+Math.round(o.tib*100)/100,pvtemp:o.pvtemp,pmtemp:o.pmtemp,pvtm:o.pvtm?sg(o.pvtm)+' de macros ativos':'',pmtm:o.pmtm?sg(o.pmtm)+' de macros ativos':'',trein:sg(o.trein),meio:o.meio};
+  const m={cd:o.cd,nivel:o.n,esp:o.esp+' de '+o.cap,def:o.def,atq:sg(o.atq),dano:sg(o.dano),desloc:o.desloc+' m',pvmax:o.pvmax,pmmax:o.pmmax,pvmm:o.pvmm?'('+sg(o.pvmm)+' de macros)':'',pmmm:o.pmmm?'('+sg(o.pmmm)+' de macros)':'',tib:'T$ '+Math.round(o.tib*100)/100,pvtemp:o.pvtemp,pmtemp:o.pmtemp,pvtm:o.pvtm?sg(o.pvtm)+' de macros ativos':'',pmtm:o.pmtm?sg(o.pmtm)+' de macros ativos':'',trein:sg(o.trein),meio:o.meio};
   ATTRS.forEach(a=>{m['a:'+a]=o.at(a);m['f:'+a]=sg(o.at(a))});
   o.per.forEach(p=>m['s:'+p.nm]=p.off?'—':sg(p.tot));
   o.acts.forEach((x,i)=>{m['ac:'+i+':atq']=x.atq;m['ac:'+i+':dano']=x.dano;m['ac:'+i+':sk']=x.sk;m['ac:'+i+':da']=x.da;m['ac:'+i+':dd']=x.dd});
@@ -283,11 +287,11 @@ const growAll=()=>document.querySelectorAll('textarea[data-l],textarea[data-p]')
 const card=(l,p,i)=>{const d=`data-l="${l}" data-pi="${i}"`,it=l==='itens',dr=l==='dr';return `<article class="pw${p.macro&&p.ativo&&!dr?' on':''}"><div class="pwh"><input ${d} data-k="nome" placeholder="${it?'Nome do item':dr?'Nome da habilidade ou poder':'Nome'}" value="${esc(p.nome)}">${dr?'':`<button class="ghost" data-a="delp" ${d}>Remover</button>`}</div>
   ${it?`<div class="ef3"><label>Espaço<input type="number" step="any" ${d} data-k="espaco" value="${p.espaco}"></label><label>Quantidade<input type="number" ${d} data-k="qnt" value="${p.qnt}"></label><label>Valor<input ${d} data-k="valor" value="${esc(p.valor)}"></label></div>`:''}
   <textarea ${d} data-k="efeito" rows="${it?2:6}" placeholder="Descrição e efeito">${esc(p.efeito)}</textarea>
-  ${it?'':`<label class="chk"><input type="checkbox" data-a="tfix" ${d} ${p.fixo?'checked':''}> Mostrar na ficha inicial</label>`}
+  ${it&&!p.macro?'':`<label class="chk"><input type="checkbox" data-a="tfix" ${d} ${p.fixo?'checked':''}> ${it?'Mostrar o macro na ficha inicial':'Mostrar na ficha inicial'}</label>`}
   <label class="chk"><input type="checkbox" data-a="tmacro" ${d} ${p.macro?'checked':''}> Tem macro: altera a ficha enquanto estiver ${it?'equipado':'ativo'}</label>
-  ${p.macro?`${p.efs.map((e,j)=>`<div class="ef"><select ${d} data-ei="${j}" data-k="alvo">${alvos(e.alvo)}</select><input type="number" ${d} data-ei="${j}" data-k="valor" value="${e.valor}" aria-label="Valor do efeito"><button class="ghost" data-a="dele" ${d} data-ei="${j}" aria-label="Remover efeito">×</button></div>`).join('')}<div class="bar"><button data-a="adde" ${d}>Adicionar efeito</button>${dr?'':`<button class="${p.ativo?'pri':''}" data-a="togp" ${d}>${p.ativo?(it?'Equipado':'Ativo'):(it?'Equipar':'Ativar')}</button>`}</div>`:''}
-  ${dr?`<div class="bar" style="margin-top:8px"><button class="pri" data-a="addd" data-pi="${i}">Adicionar à lista</button></div>`:it?'':`<div class="bar" style="margin-top:8px"><button class="pri" data-a="done">Concluir edição</button></div>`}</article>`};
-const row=(p,ro)=>`<details class="spl" data-sid="${p.id}"${OP[p.id]?' open':''}><summary><span class="spn">${esc(p.nome||'Sem nome')}</span><small>${esc((ro?[p.cat]:[p.macro?'macro':'',p.fixo?'na ficha':'']).filter(Boolean).join(', '))}</small></summary><div class="spb">${p.efeito?`<p class="spd">${esc(p.efeito)}</p>`:'<p class="hint">Sem descrição.</p>'}${p.macro?`<p class="hint">Macro: ${esc(p.efs.map(e=>(EF[e.alvo]||e.alvo)+' '+sg(+e.valor||0)).join(', ')||'sem efeitos')}</p>`:''}${ro?'':`<div class="bar"><button data-a="edp" data-id="${p.id}">Editar</button></div>`}</div></details>`;
+  ${p.macro?`${p.efs.some(e=>e.alvo==='ataque'||e.alvo==='dano')?'<p class="hint">Ataque e Dano valem só nas ações de combate que puxarem este macro (aba Combate).</p>':''}${p.efs.map((e,j)=>`<div class="ef"><select ${d} data-ei="${j}" data-k="alvo">${alvos(e.alvo)}</select><input type="number" ${d} data-ei="${j}" data-k="valor" value="${e.valor}" aria-label="Valor do efeito"><button class="ghost" data-a="dele" ${d} data-ei="${j}" aria-label="Remover efeito">×</button></div>`).join('')}<div class="bar"><button data-a="adde" ${d}>Adicionar efeito</button>${dr?'':`<button class="${p.ativo?'pri':''}" data-a="togp" ${d}>${p.ativo?(it?'Equipado':'Ativo'):(it?'Equipar':'Ativar')}</button>`}</div>`:''}
+  ${dr?`<div class="bar" style="margin-top:8px"><button class="pri" data-a="addd" data-pi="${i}">Adicionar à lista</button><button class="ghost" data-a="dro" data-pi="${i}">Minimizar</button></div>`:it?'':`<div class="bar" style="margin-top:8px"><button class="pri" data-a="done">Concluir edição</button></div>`}</article>`};
+const row=(p,ro,i)=>`<details class="spl" data-sid="${p.id}"${OP[p.id]?' open':''}><summary><span class="spn">${esc(p.nome||'Sem nome')}</span><small>${esc((ro?[p.cat]:[p.macro?(p.ativo?'macro ativo':'macro'):'',p.fixo?'na ficha':'']).filter(Boolean).join(', '))}</small></summary><div class="spb">${p.efeito?`<p class="spd">${esc(p.efeito)}</p>`:'<p class="hint">Sem descrição.</p>'}${p.macro?`<p class="hint">Macro: ${esc(p.efs.map(e=>(EF[e.alvo]||e.alvo)+' '+sg(+e.valor||0)).join(', ')||'sem efeitos')}</p>`:''}${ro?'':`<div class="bar">${p.macro?`<button class="${p.ativo?'pri':''}" data-a="togp" data-l="poderes" data-pi="${i}">${p.ativo?'Ativo':'Ativar'}</button>`:''}<button data-a="edp" data-id="${p.id}">Editar</button></div>`}</div></details>`;
 const TABS=[['ficha','Ficha'],['basico','Básico'],['habilidades','Habilidades'],['poderes','Poderes'],['pericias','Perícias'],['combate','Combate'],['magias','Magias'],['itens','Itens'],['parceiros','Parceiros'],['notas','Notas']];
 const EF=Object.fromEntries(ALVOS),PMC=[1,3,6,10,15];
 const TATQ=['Corpo a corpo','À distância','Arremesso','Mágico','Outro'];
@@ -297,7 +301,7 @@ const opts=(arr,v)=>arr.map(a=>`<option${a===v?' selected':''}>${a}</option>`).j
 const inp=(c,p,l,t)=>`<label>${l}<input data-p="${p}" ${t==='number'?'type="number" data-n="1"':''} value="${esc(get(c,p))}"></label>`;
 const resumo=c=>[c.raca,c.classes.filter(k=>k.nome).map(k=>k.nome+' '+(+k.niveis||0)).join(' / '),c.divindade,'nível '+lvl(c)].filter(Boolean).join(', ');
 const foto=c=>c.foto?`<img src="${c.foto}" alt="Foto do personagem">`:esc((c.nome||'?')[0]);
-const mlist=c=>[['poderes',c.poderes],['itens',c.itens]].flatMap(([l,a])=>a.map((p,i)=>[p,i,l]).filter(([p])=>p.macro));
+const mlist=c=>[['poderes',c.poderes],['itens',c.itens]].flatMap(([l,a])=>a.map((p,i)=>[p,i,l]).filter(([p])=>p.macro&&p.fixo));
 // ---- magias: importar do site a-Tormenta ----
 const ESCOLAS=['Abjuração','Adivinhação','Convocação','Encantamento','Evocação','Ilusão','Necromancia','Transmutação'];
 const slugf=t=>String(t||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
@@ -385,20 +389,21 @@ const IDN=c=>`<section class="card idn"><div class="phw">${foto(c)}</div><div cl
 const FB={
 atributos:c=>`<section class="card"><h2>Atributos</h2><div class="at6">${ATTRS.map(a=>`<div><small>${a}</small><b data-o="f:${a}"></b></div>`).join('')}</div></section>`,
 vida:c=>`<section class="card"><div class="vm">${[['pv','Vida'],['pm','Mana']].map(([k,l])=>`<div class="res ${k}"><h2>${l}</h2>
-    <div class="rv"><input type="number" data-n="1" data-p="${k}.atual" value="${c[k].atual}" aria-label="${l} atual"><span>de <b data-o="${k}max"></b></span></div>
+    <div class="rv"><input type="number" data-n="1" data-p="${k}.atual" value="${c[k].atual}" aria-label="${l} atual"><span>de <b data-o="${k}max"></b> <small data-o="${k}mm"></small></span></div>
     <progress data-pg="${k}"></progress>
     <div class="adj"><button data-a="adj" data-k="${k}" data-d="-5">−5</button><button data-a="adj" data-k="${k}" data-d="-1">−1</button><button data-a="adj" data-k="${k}" data-d="1">+1</button><button data-a="adj" data-k="${k}" data-d="5">+5</button></div>
     <div class="tmp"><h3 class="sub">Temporária</h3><div class="rv"><input type="number" data-n="1" data-p="${k}.temp" value="${c[k].temp}" aria-label="${l} temporária"><span data-o="${k}tm"></span></div>
     <div class="adj">${[-5,-1,1,5].map(d=>`<button data-a="adj" data-k="${k}" data-f="temp" data-d="${d}">${d<0?'−':'+'}${Math.abs(d)}</button>`).join('')}</div></div></div>`).join('')}</div></section>`,
 defesa:c=>`<section class="card"><div class="row s"><div><label>Defesa</label><div class="out" data-o="def"></div></div><div><label>Deslocamento</label><div class="out" data-o="desloc"></div></div><div><label>CD das magias</label><div class="out" data-o="cd"></div></div></div></section>`,
-macros:c=>`<section class="card"><h2>Macros</h2><p class="hint">Toque para ativar ou desativar. Cadastre em Habilidades, Poderes ou Itens.</p>${mlist(c).map(([p,i,l])=>`<button class="mac${p.ativo?' on':''}" data-a="togp" data-l="${l}" data-pi="${i}" aria-pressed="${!!p.ativo}"><span class="mn"><b>${esc(p.nome||'Sem nome')}</b><small>${esc(p.cat)}</small><span>${esc(p.efs.map(e=>(EF[e.alvo]||e.alvo)+' '+sg(+e.valor||0)).join(', ')||'Sem efeitos')}</span></span><span class="st">${p.ativo?'Ativo':'Inativo'}</span></button>`).join('')||'<p class="hint">Nenhum macro ainda.</p>'}</section>`,
+macros:c=>`<section class="card"><h2>Macros</h2><p class="hint">Toque para ativar ou desativar. Aparecem aqui só os macros que você marcou com “Mostrar na ficha inicial”.</p>${mlist(c).map(([p,i,l])=>`<button class="mac${p.ativo?' on':''}" data-a="togp" data-l="${l}" data-pi="${i}" aria-pressed="${!!p.ativo}"><span class="mn"><b>${esc(p.nome||'Sem nome')}</b><small>${esc(p.cat)}</small><span>${esc(p.efs.map(e=>(EF[e.alvo]||e.alvo)+' '+sg(+e.valor||0)).join(', ')||'Sem efeitos')}</span></span><span class="st">${p.ativo?'Ativo':'Inativo'}</span></button>`).join('')||'<p class="hint">Nenhum macro na ficha inicial. Marque “Mostrar na ficha inicial” no poder, habilidade ou item que tem macro.</p>'}</section>`,
 poderes:c=>`<section class="card"><h2>Habilidades e poderes</h2>${c.poderes.filter(p=>p.fixo).sort((a,b)=>CATS.indexOf(a.cat)-CATS.indexOf(b.cat)).map(p=>row(p,1)).join('')||'<p class="hint">Nada marcado para aparecer aqui. Marque “Mostrar na ficha inicial” nas abas Habilidades ou Poderes.</p>'}</section>`,
 magias:c=>`<section class="card"><h2>Magias</h2>${c.magias.length?[1,2,3,4,5].map(n=>{const m=c.magias.filter(x=>+x.circ===n);return m.length?`<h3 class="sub">${n}º círculo, ${PMC[n-1]} PM</h3>${m.map(spellRow).join('')}`:''}).join(''):'<p class="hint">Nenhuma magia ainda. Adicione na aba Magias.</p>'}</section>`,
-acoes:c=>`<section class="card"><h2>Ações de combate</h2>${c.acoes.map((a,i)=>`<div class="act"><div><b>${esc(a.nome||'Sem nome')}</b><br><small>${esc(a.tipo)}, <span data-o="ac:${i}:sk"></span></small></div><div><label>Ataque</label><b class="v" data-o="ac:${i}:atq"></b></div><div><label>Dano</label><b class="v" data-o="ac:${i}:dano"></b></div><div><label>Crítico</label><span>${esc(a.crit||'—')}</span></div><div><label>Tipo</label><span>${esc(a.tdano||'—')}</span></div><div><label>Alcance</label><span>${esc(a.alc||'—')}</span></div>${(a.macros||[]).length?`<div class="ams">${a.macros.map((m,j)=>`<button class="${m.ativo?'pri':''}" data-a="togam" data-l="acoes" data-pi="${i}" data-mi="${j}" aria-pressed="${!!m.ativo}">${esc(m.nome||'Bônus')} <small>${esc(amr(m))}</small></button>`).join('')}</div>`:''}${a.obs?`<p class="hint obs">${esc(a.obs)}</p>`:''}</div>`).join('')||'<p class="hint">Nenhuma ação ainda. Cadastre na aba Combate.</p>'}</section>`,
+acoes:c=>`<section class="card"><h2>Ações de combate</h2>${c.acoes.map((a,i)=>`<div class="act"><div><b>${esc(a.nome||'Sem nome')}</b><br><small>${esc(a.tipo)}, <span data-o="ac:${i}:sk"></span></small></div><div><label>Ataque</label><b class="v" data-o="ac:${i}:atq"></b></div><div><label>Dano</label><b class="v" data-o="ac:${i}:dano"></b></div><div><label>Crítico</label><span>${esc(a.crit||'—')}</span></div><div><label>Tipo</label><span>${esc(a.tdano||'—')}</span></div><div><label>Alcance</label><span>${esc(a.alc||'—')}</span></div>${(a.macros||[]).length?`<div class="ams">${a.macros.map((m0,j)=>{const m=rm(c,m0);return `<button class="${m.ativo?'pri':''}" data-a="togam" data-l="acoes" data-pi="${i}" data-mi="${j}" aria-pressed="${!!m.ativo}">${esc(m.nome||'Bônus')} <small>${esc(amr(m))}</small></button>`}).join('')}</div>`:''}${a.obs?`<p class="hint obs">${esc(a.obs)}</p>`:''}</div>`).join('')||'<p class="hint">Nenhuma ação ainda. Cadastre na aba Combate.</p>'}</section>`,
 pericias:c=>`<section class="card"><h2>Perícias</h2><div class="sks">${SK.map(([nm])=>`<div class="sk2"><span>${nm}</span><b data-o="s:${nm}"></b></div>`).join('')}</div></section>`
 };
 const amr=m=>[m.atq?'ataque '+sg(+m.atq):'',m.dano?'dano '+sg(+m.dano):'',m.dados?'+'+m.dados:''].filter(Boolean).join(', ');
-const pwPane=(c,cats,t,h)=>`<section class="card"><h2>${t}</h2><p class="hint">${h} Escreva no quadro “Adicionar”, marque se quer na ficha inicial e toque em Adicionar à lista. Depois, toque no nome para ler ou em Editar para mudar.</p>${cats.map(k=>{const di=CATS.indexOf(k),list=c.poderes.map((p,i)=>[p,i]).filter(([p])=>p.cat===k);return `${cats.length>1?`<h3 class="sub">${k}</h3>`:''}${card('dr',S.dr[di],di)}<h3 class="sub">Adicionados${list.length?` (${list.length})`:''}</h3>${list.map(([p,i])=>p.id===S.ed?card('poderes',p,i):row(p)).join('')||'<p class="hint">Nada adicionado ainda.</p>'}`}).join('')}</section>`;
+const pickAM=(c,a,i)=>{const op=[...c.poderes,...c.itens].filter(p=>p.macro&&(fe(p,'ataque')||fe(p,'dano'))&&!(a.macros||[]).some(m=>m.src===p.id));return op.length?`<div class="bar" style="margin-top:6px"><select data-pull="${i}" aria-label="Macro de habilidade, poder ou item">${op.map(p=>`<option value="${p.id}">${esc(p.nome||'Sem nome')}: ${esc(amr({atq:fe(p,'ataque'),dano:fe(p,'dano')}))}</option>`).join('')}</select><button data-a="pull" data-l="acoes" data-pi="${i}">Puxar macro</button></div>`:'<p class="hint">Para puxar um macro aqui, crie um poder, habilidade ou item com macro e efeito de Ataque ou Dano.</p>'};
+const pwPane=(c,cats,t,h)=>`<section class="card"><h2>${t}</h2><p class="hint">${h} Escreva no quadro “Adicionar”, marque se quer na ficha inicial e toque em Adicionar à lista. Depois, toque no nome para ler ou em Editar para mudar.</p>${cats.map(k=>{const di=CATS.indexOf(k),list=c.poderes.map((p,i)=>[p,i]).filter(([p])=>p.cat===k);return `${cats.length>1?`<h3 class="sub">${k}</h3>`:''}${k==='Divindade'?`<label>Obrigações &amp; Restrições<textarea data-p="obrig" rows="3" placeholder="Obrigações e restrições da sua divindade">${esc(c.obrig)}</textarea></label>`:''}${S.dro[di]?card('dr',S.dr[di],di):`<div class="bar"><button class="pri" data-a="dro" data-pi="${di}">${cats.length>1?'Adicionar em '+k:'Adicionar habilidade'}</button>${String(S.dr[di].nome).trim()||String(S.dr[di].efeito).trim()?'<span class="hint" style="align-self:center;margin:0">Rascunho guardado</span>':''}</div>`}<h3 class="sub">Adicionados${list.length?` (${list.length})`:''}</h3>${list.map(([p,i])=>p.id===S.ed?card('poderes',p,i):row(p,0,i)).join('')||'<p class="hint">Nada adicionado ainda.</p>'}`}).join('')}</section>`;
 const ITOP=c=>`<section class="card"><div class="bar" style="margin-bottom:12px"><button class="${S.itab==='tib'?'':'pri'}" data-a="itab" data-v="itens">Itens</button><button class="${S.itab==='tib'?'pri':''}" data-a="itab" data-v="tib">Tibares</button></div><div class="row s"><div><label>Espaço usado</label><b class="out" data-o="esp"></b></div><div><label>Tibares</label><b class="out" data-o="tib"></b></div></div></section>`;
 const TIB=c=>`<section class="card"><h2>Tibares (T$)</h2><p class="hint">O saldo é a soma dos ganhos menos a soma dos gastos. Se o valor veio em cobre (TC), coloque em centavos; se veio em ouro (TO), coloque vezes 10.</p>${c.tib.map((e,i)=>`<div class="tbr"><label>Descrição<input data-l="tib" data-pi="${i}" data-k="desc" value="${esc(e.desc)}" placeholder="Item, serviço ou saldo inicial"></label><label>Ganho<input type="number" step="any" data-l="tib" data-pi="${i}" data-k="ganho" value="${e.ganho}"></label><label>Gasto<input type="number" step="any" data-l="tib" data-pi="${i}" data-k="gasto" value="${e.gasto}"></label><button class="ghost" data-a="delp" data-l="tib" data-pi="${i}" aria-label="Remover lançamento">×</button></div>`).join('')||'<p class="hint">Nenhum lançamento ainda.</p>'}<div class="bar" style="margin-top:8px"><button data-a="add" data-l="tib">Adicionar lançamento</button></div></section>`;
 const PANES={
@@ -426,9 +431,10 @@ combate:c=>`<section class="card"><h2>Ações de combate</h2><p class="hint">O t
     <div class="ef3"><label>Tipo de ataque<select ${d} data-k="tipo">${opts(TATQ,a.tipo)}</select></label>${lv?`<label>Perícia do teste<select ${d} data-k="teste">${opts(SK.map(x=>x[0]),a.teste)}</select></label>`:`<label>Perícia do teste (automática)<div class="v" data-o="ac:${i}:sk"></div></label>`}<label>Alcance<input ${d} data-k="alc" value="${esc(a.alc)}"></label></div>
     <div class="ef3"><label>Dados de dano<input ${d} data-k="dados" placeholder="1d8" value="${esc(a.dados)}"></label><label>Bônus de ataque<input type="number" ${d} data-k="bAtq" value="${a.bAtq}"></label><label>Bônus de dano<input type="number" ${d} data-k="bDano" value="${a.bDano}"></label></div>
     <div class="ef3">${lv?`<label>Atributo no dano<select ${d} data-k="dAttr"><option value="-"${a.dAttr==='-'?' selected':''}>Nenhum</option>${opts(ATTRS,a.dAttr)}</select></label>`:`<label>Atributo no dano (automático)<div class="v">${a.tipo==='À distância'?'Nenhum (disparo)':'Força'}</div></label>`}<label>Crítico<input ${d} data-k="crit" placeholder="19/x2" value="${esc(a.crit)}"></label><label>Tipo de dano<input ${d} data-k="tdano" placeholder="Corte" value="${esc(a.tdano)}"></label></div>
-    <h3 class="sub">Macros desta ação</h3><p class="hint">Bônus que você liga e desliga na aba Ficha, só para esta ação (ex.: Fúria, Ataque Poderoso, arma flamejante).</p>
-    ${(a.macros||[]).map((m,j)=>{const e=`${d} data-mi="${j}"`;return `<div class="amr"><label>Nome<input ${e} data-k="nome" value="${esc(m.nome)}"></label><label>Ataque<input type="number" ${e} data-k="atq" value="${m.atq}"></label><label>Dano<input type="number" ${e} data-k="dano" value="${m.dano}"></label><label>Dados extras<input ${e} data-k="dados" placeholder="1d6" value="${esc(m.dados)}"></label><button class="ghost" data-a="delam" ${d} data-mi="${j}" aria-label="Remover macro">×</button></div>`}).join('')}
+    <h3 class="sub">Macros desta ação</h3><p class="hint">Bônus que você liga e desliga na aba Ficha, só para esta ação (ex.: Fúria, Ataque Poderoso, arma flamejante). Você também pode puxar o macro de um poder, habilidade ou item.</p>
+    ${(a.macros||[]).map((m,j)=>{if(m.src){const r=rm(c,m);return `<div class="lnk"><div><b>${esc(r.nome||'Sem nome')}</b> <small>puxado de um poder ou item</small><br><span class="hint">${esc(amr(r)||'sem bônus de ataque ou dano')}</span></div><button class="ghost" data-a="delam" ${d} data-mi="${j}" aria-label="Remover macro">×</button></div>`}const e=`${d} data-mi="${j}"`;return `<div class="amr"><label>Nome<input ${e} data-k="nome" value="${esc(m.nome)}"></label><label>Ataque<input type="number" ${e} data-k="atq" value="${m.atq}"></label><label>Dano<input type="number" ${e} data-k="dano" value="${m.dano}"></label><label>Dados extras<input ${e} data-k="dados" placeholder="1d6" value="${esc(m.dados)}"></label><button class="ghost" data-a="delam" ${d} data-mi="${j}" aria-label="Remover macro">×</button></div>`}).join('')}
     <div class="bar"><button data-a="addam" ${d}>Adicionar macro nesta ação</button></div>
+    ${pickAM(c,a,i)}
     <label>Observações<textarea ${d} data-k="obs" rows="2">${esc(a.obs)}</textarea></label>
     <p class="hint">Ataque: <span data-o="ac:${i}:da"></span>. Dano: <span data-o="ac:${i}:dd"></span>.</p>
     <p class="hint">Resultado: <b class="v" data-o="ac:${i}:atq"></b> para acertar, <b class="v" data-o="ac:${i}:dano"></b> de dano.</p></article>`}).join('')}<button data-a="add" data-l="acoes">Adicionar ação</button></section>`,
@@ -485,12 +491,14 @@ document.addEventListener('click',e=>{
   else if(a==='delc'){if(c.classes.length>1){c.classes.splice(+t.dataset.ci,1);save();sheet()}}
   else if(a==='delp'){L.splice(+t.dataset.pi,1);S.ed=null;save();sheet()}
   else if(a==='tmacro'){p.macro=t.checked;if(p.macro&&!p.efs.length)p.efs.push({alvo:'defesa',valor:0});if(!p.macro)p.ativo=false;save();sheet()}
+  else if(a==='pull'){const sl=document.querySelector('[data-pull="'+t.dataset.pi+'"]'),src=sl&&[...c.poderes,...c.itens].find(x=>x.id===sl.value);if(!src||p.macros.some(m=>m.src===src.id))return;p.macros.push({id:uid(),nome:src.nome,atq:fe(src,'ataque'),dano:fe(src,'dano'),dados:'',ativo:false,src:src.id});save();sheet()}
   else if(a==='addam'){p.macros.push({id:uid(),nome:'',atq:0,dano:0,dados:'',ativo:false});save();sheet()}
   else if(a==='delam'){p.macros.splice(+t.dataset.mi,1);save();sheet()}
   else if(a==='togam'){const m=p.macros[+t.dataset.mi];m.ativo=!m.ativo;save();sheet()}
   else if(a==='itab'){S.itab=t.dataset.v;sheet()}
   else if(a==='tfix'){p.fixo=t.checked;save();sheet()}
-  else if(a==='addd'){const k=+t.dataset.pi,d=S.dr[k];if(!String(d.nome).trim()&&!String(d.efeito).trim()){toast('Escreva o nome ou a descrição antes de adicionar.');return}c.poderes.push({...d,id:uid(),ativo:false,efs:d.efs.map(e=>({...e}))});S.dr[k]=fixM({cat:d.cat});save();sheet();toast('Adicionado à lista.')}
+  else if(a==='addd'){const k=+t.dataset.pi,d=S.dr[k];if(!String(d.nome).trim()&&!String(d.efeito).trim()){toast('Escreva o nome ou a descrição antes de adicionar.');return}c.poderes.push({...d,id:uid(),ativo:false,efs:d.efs.map(e=>({...e}))});S.dr[k]=fixM({cat:d.cat});S.dro[k]=false;save();sheet();toast('Adicionado à lista.')}
+  else if(a==='dro'){const k=+t.dataset.pi;S.dro[k]=!S.dro[k];sheet();if(S.dro[k]){const n=document.querySelector('[data-l=dr][data-pi="'+k+'"][data-k=nome]');if(n)n.focus()}}
   else if(a==='edp'){S.ed=t.dataset.id;sheet()}
   else if(a==='done'){S.ed=null;save();sheet()}
   else if(a==='togp'){p.ativo=!p.ativo;save();sheet()}
