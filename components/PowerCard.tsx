@@ -139,7 +139,7 @@ export default function PowerCard({ power }: { power: Power }) {
 
   return (
     <>
-      {/* Card compacto (na grade) */}
+      {/* Card da grade (conteúdo completo, sempre visível) */}
       <div
         id={anchorId}
         role="button"
@@ -160,16 +160,15 @@ export default function PowerCard({ power }: { power: Power }) {
         <CornerOrnament className="absolute -bottom-px -right-px rotate-180 opacity-50 group-hover:opacity-100 transition-opacity" />
         <CornerOrnament className="absolute -bottom-px -left-px -rotate-90 opacity-50 group-hover:opacity-100 transition-opacity" />
 
-        {/* Ícone de expandir (aviso visual de que o card abre) */}
+        {/* Ícone de expandir */}
         <ExpandGlyph className="absolute top-3 right-9 text-amber-900/50 group-hover:text-red-800 group-hover:scale-110 transition-all duration-300" />
 
-        {/* px-6 dos dois lados mantém o título centralizado e longe do ícone */}
         <h3 className="font-display text-lg font-bold text-red-800 mb-3 tracking-wide border-b-2 border-amber-900/10 pb-2 text-center px-6">
           {power.name}
         </h3>
 
         <div className="flex-1 mb-4">
-          <p className="text-amber-950/85 text-sm leading-relaxed text-center line-clamp-4">
+          <p className="text-amber-950/85 text-sm leading-relaxed text-center">
             {power.description}
           </p>
         </div>
@@ -177,7 +176,7 @@ export default function PowerCard({ power }: { power: Power }) {
         <div className="mt-auto">
           {power.prerequisite && (
             <div className="mb-4 pt-4 border-t border-amber-900/15 group-hover:border-[rgb(var(--accent-rgb))]/30 transition-colors">
-              <p className="text-xs text-amber-950/70 text-center line-clamp-2">
+              <p className="text-xs text-amber-950/70 text-center">
                 <span className="font-display font-bold text-red-800 uppercase tracking-widest">Pré-requisito:</span> {power.prerequisite}
               </p>
             </div>
