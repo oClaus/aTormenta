@@ -14,12 +14,20 @@ export const partners: Partner[] = [
       mestre: ""
     }
   },
+  { id: "Vitrúvio",
+    name: "Vitrúvio",
+    description: "O primeiro golem de vidro do mundo, criado em Selentine por um mestre artesão para ser um vidreiro eterno. Elegante e alto, é formado por tiras de vidro em torno de um núcleo ardente que lhe permite moldar suas extremidades em ferramentas perfeitas. Educado e diligente, ascendeu ao posto de prefeito de Selentine e faz de tudo para proteger sua cidade e manter viva a arte da vidraria.",
+    origin: "Duelo de Dragões",
+    category: "especifico",
+    archetype: "Especial",
+    benefits: {
+      iniciante: "",
+      veterano: "Você recebe +4 em Diplomacia e Ofício (vidreiro). Além disso, recebe +5 em Enganação para fintar e, quando faz um acerto crítico em um ataque corpo a corpo, o alvo fica sangrando.",
+      mestre: ""
+    }
+  },
   //#endregion
-
-
-
-
-
+  
   //#region Bestiário de Arton
   {  id: "Aspecto de Azgher",
     name: "Aspecto de Azgher",
@@ -190,11 +198,7 @@ export const partners: Partner[] = [
     }
   },
   //#endregion
-
-
-
-
-
+  
   //#region Guia de NPCs
   { id: "Molosso deheoni",
     name: "Molosso deheoni",
@@ -221,10 +225,6 @@ export const partners: Partner[] = [
     }
   },
   //#endregion
-
-
-
-
 
   //#region Uma visita a Vectora
   { id: "Coruja Conselheira",
@@ -253,10 +253,6 @@ export const partners: Partner[] = [
   },
   //#endregion
 
-
-
-
-
   //#region Monster Chefe
   { id: "Dranniko",
   name: "D’ranniko",
@@ -283,11 +279,6 @@ export const partners: Partner[] = [
   },
   },
   //#endregion
-
-
-
-
-
 
   //#region Tormenta20 - Jogo do Ano
   { id: "atirador",
@@ -436,10 +427,6 @@ export const partners: Partner[] = [
   },
   //#endregion
 
-
-
-
-  
   //#region Ameaças de Arton
   { id: "Hiena",
     name: "Hiena (Perseguidor)",
@@ -633,14 +620,12 @@ export const partners: Partner[] = [
   },
   //#endregion
   
-
-
-
-
   //#region Dragão Brasil
   // Dragão Brasil - 204
   { id: "Aberrante",
   name: "Aberrante",
+  archetype: "Aberrante",
+  category: "arquetipo",
   description: "Uma criatura corrompida pela Tormenta, de aparência perturbadora e mente alienígena. Apenas devotos de Aharadak podem ter este tipo de parceiro.",
   origin: "Dragão Brasil - 204",
   benefits: {

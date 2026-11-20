@@ -5103,8 +5103,200 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "56", 
+  { id: "Caos Elemental",
+  name: "Caos Elemental",
+  theme: "Fantasia, Elementais e Magia/Tecnologia",
+  image: "/aventuras/caos-elemental.png",
+  summary: "Uma explosão em uma vila pacata de Deheon abre portais que trazem criaturas elementais descontroladas. Após resgatar moradores de um incêndio, os heróis precisam ajudar uma inventora arcana a deter seu próprio motor elemental animado.",
+  sections: [
+    {
+      type: "text",
+      content: "Seis forças elementais compõem o mundo de Arton: água, ar, fogo, luz, terra e trevas. Suas manifestações vão de uma leve brisa a um terremoto. É dito que nos mundos dos deuses existem lugares formados inteiramente por essas energias, e até mesmo criaturas compostas completamente deles. O problema é quando esses seres cruzam de uma dimensão para outra."
+    },
+    {
+      type: "text",
+      content: "Ciência e magia são diferentes abordagens de transformação do mundo. Magos estudam anos, feiticeiros nascem dotados de magia, enquanto outros dependem de fetiches para conjurar encantos. Inventores, por outro lado, criam fórmulas, realizam experimentos e criam obras-primas. Porém, para um simples camponês, a diferença é imperceptível."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "RESUMO DA AVENTURA"
+    },
+    {
+      type: "text",
+      content: "Caos Elemental é uma breve jornada, uma aventura curta pensada para uma sessão única, mas que pode ser inserida em uma campanha maior. É ideal para um grupo de personagens de 1º nível em Tormenta20."
+    },
+    {
+      type: "text",
+      content: "Repentinamente, após uma explosão estrondosa, criaturas elementais começam a surgir. No meio do caos, uma criatura que lembra um cão de pedra tenta brincar com uma clériga assustada, e então ataca os personagens quando se aproximam. Em seguida, eles precisam lidar com minúsculos elementais do fogo causando incêndios."
+    },
+    {
+      type: "text",
+      content: "Uma maga e inventora então surge, explicando ser a culpada pela comoção. Durante um experimento, um motor elemental saiu do controle e começou a conjurar espíritos e manifestar as energias. Agora, os aventureiros devem derrotar o construto animado pelas forças naturais se quiserem impedir a invasão de mais criaturas de outros mundos!"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 1: UM LUGAR TRANQUILO"
+    },
+    {
+      type: "text",
+      content: "No interior do reino de Deheon, as pessoas levam um dia normal. Fazendeiros, quando não estão em suas propriedades, vêm à cidade para comprar materiais. Artesãos fazem e entregam suas peças para aqueles que as encomendaram. A vida toda passa lentamente pela praça principal, onde há também uma capela simples, dedicada ao Panteão como um todo. Vocês estão aqui. É possível que estivessem apenas se deslocando, tenham acabado de chegar e precisem de descanso ou mesmo sejam da guarda local fazendo uma patrulha."
+    },
+    {
+      type: "text",
+      content: "Tudo indica ser mais um dia comum por essas bandas, quando essa expectativa é quebrada por um estrondo ensurdecedor. Primeiro, o barulho de uma explosão. Então batidas metálicas em sequência. Infelizmente, antes de haver tempo para os heróis recuperarem os sentidos e perceberem o que está acontecendo, estranhos portais formados de elementos se manifestam. Do interior das passagens saem criaturas formadas de matéria natural, como cães feitos de pedra, ventos com vontade própria e pequenas mariposas de chamas."
+    },
+    {
+      type: "text",
+      content: "Uma pessoa então grita. Quando vocês olham na direção da voz, uma clériga de Tanna-Toh local tem sua bolsa, cheia de pergaminhos, puxada por uma criatura: a silhueta lembra a de um cão, mas o corpo é formado de rochas amontoadas uma sobre a outra. Caso se aproximem, o pequeno elemental da terra, um terrier, faz um barulho de pedras rolando, e ataca os personagens."
+    },
+    {
+      type: "text",
+      content: "Criaturas. Terrier (NPCs & Criaturas)."
+    },
+    {
+      type: "text",
+      content: "O terrier está brigando, porém em sua mente simplista está brincando. É possível acalmá-lo com uma ação padrão e um teste de Adestramento (CD 25), porém são necessários três sucessos (três ações padrão) para o elemental cessar o ataque. Caso o resultado de um dos dados seja um 20, e consiga os três sucessos, o terrier não apenas parará de atacar, como também seguirá o grupo, a princípio de longe (pode ser usado como familiar por um personagem até o fim da aventura). Se não for acalmado, lutará até a morte."
+    },
+    {
+      type: "text",
+      content: "A clériga ainda está ofegante e caída no chão quando o combate acaba. Ela agradece o resgate, mas a conversa é interrompida quando a pilastra em chamas de um dos prédios cai próxima aos personagens."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 2: ESQUENTANDO"
+    },
+    {
+      type: "text",
+      content: "Uma casa de dois andares está em chamas. Pequenos elementais com a aparência de mariposa estão voando em cima do prédio. Quando pousam, espalham fogo, que verte pelas paredes de madeira até o primeiro andar. Do interior, pessoas gritam por ajuda."
+    },
+    {
+      type: "text",
+      content: "Para resgatar as pessoas no interior, use o perigo complexo abaixo."
+    },
+    {
+      type: "text",
+      content: "RESGATE NAS CHAMAS (ND 2)\nEnquanto as chamas consomem o prédio, os heróis tentam um audacioso resgate.\nObjetivo: Salvar as pessoas no interior do prédio antes que ele desabe.\nEfeito: O prédio queima durante cinco rodadas, ao final das quais desmorona. É possível atrasar o desabamento com a ação apagar (abaixo). Role iniciativa para os personagens para definir em que ordem agem durante o perigo.\nNo início de cada um de seus turnos dentro do salão, cada personagem deve fazer um teste de Fortitude (CD 10 + 1 por teste anterior) para resistir aos efeitos da fumaça (Tormenta20, p. 319). Soluções criativas para se proteger, como um pano úmido no rosto, fornecem +2 nesse teste. Um personagem que fique inconsciente dentro do prédio devido à fumaça pode ser resgatado como um NPC (veja abaixo).\nDentro do prédio existem 6 NPCs. Três ocupam 10 espaços cada e outros três ocupam apenas 5. Um personagem sobrecarregado sofre uma penalidade de –5 no teste de resgatar.\nQuando o prédio desaba, quaisquer personagens dentro dele sofrem 6d6 pontos de dano de fogo e ficam soterrados pelos escombros. Qualquer NPC que não tenha sido resgatado morre.\nPersonagens soterrados ficam imóveis e em chamas. Soltar-se (ou soltar um personagem soterrado) exige um teste de Força (CD 15). Entretanto, cada tentativa causa 1d6 pontos de dano de fogo em quem estiver fazendo o teste. Vários personagens podem ajudar nesse teste.\nApagar (Destreza ou Inteligência CD 10): Você abafa focos do incêndio. Se passar, faz com que o salão resista por mais 1 rodada antes do desmoronamento. Essa ação pode ser realizada apenas de fora do prédio.\nEscapar (Acrobacia ou Atletismo CD 10): Você sai do salão. Essa ação só pode ser usada se não estiver carregando um NPC.\nLocalizar (Investigação ou Percepção CD 15): Você localiza um dos NPCs presos no incêndio e pode retirá-lo do salão com uma ação resgatar.\nResgatar (Atletismo CD 15): Você carrega um NPC para fora do salão, mas se falhar não consegue sair do salão nesta rodada."
+    },
+    {
+      type: "text",
+      content: "Assim que resgatam todos, ou o tempo acaba, o prédio vem a baixo. Porém, um dos elementais em forma de mariposa avança na direção dos aventureiros."
+    },
+    {
+      type: "text",
+      content: "Criaturas. Pakk (NPCs & Criaturas)."
+    },
+    {
+      type: "text",
+      content: "A clériga de Tanna-Toh se aproxima; ela é um parceiro médico iniciante. Quando o pakk é derrotado, uma outra mulher, vestindo um avental de couro com símbolos arcanos e o rosto cheio de fuligem vem correndo, acenando para o grupo."
+    },
+    {
+      type: "text",
+      content: "“Ei! Vocês aí! Preciso da ajuda de vocês para desfazer essa bagunça toda que eu fiz!”"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 3: MAGIA E TECNOLOGIA"
+    },
+    {
+      type: "text",
+      content: "Apesar da situação caótica com outros elementais ao redor, vocês encontram um canto onde podem respirar e conversar. A sacerdotisa de Tanna-Toh, Luciola, está curando as feridas de vocês, enquanto a nova pessoa, com traços élficos e o avental arcano, oferece essências de mana e explica a confusão toda. Seu nome é Tyssalea."
+    },
+    {
+      type: "text",
+      content: "“Então, eu estava experimentando com um motor capaz de intensificar magias elementais... mas ele acabou puxando energia demais de outros planos. A explosão foi ele saindo de controle. Agora parece que o motor está trazendo muito mais do que esperado, como vocês viram em primeira mão. Por favor, preciso da sua ajuda para desativá-lo e acabar com isso.”"
+    },
+    {
+      type: "text",
+      content: "Durante esse descanso, os personagens têm seus pontos de vida e mana recuperados pela intervenção da inventora arcana e da clériga. Se questionada sobre o que ganharão com isso ou se há alguma forma de recompensa, Tyssalea diz que tem uma reserva de tibares (T$ 100), e que além disso pode presentear o grupo com 5 essências de mana e duas poções de Arma Mágica. Caso precisem de mais, Luciola diz que, em nome desta situação ser resolvida o quanto antes, oferece também quatro poções de Curar Ferimentos (2d8+2 PV)."
+    },
+    {
+      type: "text",
+      content: "O caos ao redor ainda está acontecendo. Outros elementais, ainda mais estranhos, continuam surgindo espontaneamente, causando os problemas mais diversos. Tyssalea urge que sigam até sua oficina o quanto antes."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 4: PERDA DE CONTROLE"
+    },
+    {
+      type: "text",
+      content: "Agora recuperado, o grupo é levado em direção à oficina. Ao redor, as pessoas lidam com os visitantes planares indesejados como podem. A área em que fica o lugar de trabalho da inventora é o centro da perturbação."
+    },
+    {
+      type: "text",
+      content: "Mesmo que Tyssalea não estivesse conduzindo os personagens, aqueles treinados em Arcanismo conseguiriam com um teste (CD 15) apontar esse local como a origem do problema. As janelas da frente brilham com cores diferentes de tempos em tempos. A porta da frente está escancarada e no fundo é possível ver a origem da luz: um monte de partes metálicas unidas em um formato circular, e um constante redemoinho de energias elementais girando ao seu redor."
+    },
+    {
+      type: "text",
+      content: "A inventora diz que há algo estranho, que a forma está diferente de sua construção original. Quando o primeiro aventureiro entra no aposento, a máquina começa a se remexer, e agora, parte da sucata ao seu redor ganha dois braços e duas pernas. “Sei que não é momento de ficar impressionada, mas pelo Panteão! As energias elementais animaram o motor!”"
+    },
+    {
+      type: "text",
+      content: "Criaturas. Motor Elemental (NPCs & Criaturas)."
+    },
+    {
+      type: "text",
+      content: "O motor animado agora é uma confusão de partes, e ataca o grupo sem qualquer razão. Todo o interior da oficina é afetado pelo halo elemental do construto, mas o exterior não, exceto se for levado a sair. Assim que os pontos de vida da criatura são levados a 0, ela se desmonta, suas partes inertes novamente."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Epílogo: ELEMENTAR, MINHA CARA TYSSALEA"
+    },
+    {
+      type: "text",
+      content: "Com a destruição do motor, os elementais que já estavam ali começam a desaparecer, retornando a seu plano de existência. As pessoas ainda estão extremamente assustadas, e se descobrirem que a culpada foi a inventora, logo se juntam para tentar expulsá-la."
+    },
+    {
+      type: "text",
+      content: "Luciola, a clériga de Tanna-Toh intercede por Tyssalea, mas se os personagens não se envolverem, ela será exilada. Mesmo não tendo intervindo por sua estadia, a inventora arcana se vira para os aventureiros e pergunta se eles a acompanhariam para Valkaria, onde talvez possa se instruir mais, criar coisas novas sem trazer perigo à população."
+    },
+    {
+      type: "text",
+      content: "Caso continue na pequena cidade, alguns elementais surgem aqui e ali como resquício do experimento, mesmo semanas depois do incidente. Pessoas descobrem das piores maneiras os efeitos desses espíritos, e podem precisar da assistência de aventureiros para despachá-los."
+    },
+    {
+      type: "text",
+      content: "Vocês agora são chamados de heróis pelos moradores locais. Enquanto desfrutam da notoriedade, avançam para o 2º nível!"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "NPCs & Criaturas"
+    },
+    {
+      type: "text",
+      content: "TERRIER (ND 1)\nEspírito (elemental) Pequeno\nIniciativa +0, Percepção +3, visão no escuro\nDefesa 16, Fort +11, Ref +0, Von +5, imunidade a acertos críticos, ácido, atordoado, cansaço, efeitos de metabolismo e paralisia, redução de dano 5/impacto, vulnerabilidade a eletricidade\nPontos de Vida 35\nDeslocamento 6m (4q)\nCorpo a Corpo Pancada +9 (2d6+8).\nPedra-Punho (Padrão) O terrier dispara pedras do tamanho de um punho humano em criaturas à sua escolha em alcance curto. Cada criatura sofre 1d6+4 pontos de dano de impacto e fica atordoada por 1 rodada (Fort CD 16 reduz à metade e evita a condição). Uma criatura que passe no teste de resistência não pode mais ser atordoada por esta habilidade até o fim da cena. Recarga (movimento).\nPedregoso Um terrier pode permanecer completamente imóvel. Se ele estiver assim, um personagem deve passar num teste de Percepção (CD 30) para perceber que ele é uma criatura e não um monte de pedras.\nFor 3, Des 0, Con 3, Int –3, Sab 1, Car 1\nTesouro 1 dose de éter elemental (ácido) (CD 16 para extrair).\nFamiliar Um terrier familiar concede redução de dano 2/impacto."
+    },
+    {
+      type: "text",
+      content: "PAKK (ND 1)\nEspírito (elemental) Minúsculo\nIniciativa +7, Percepção +2, visão no escuro\nDefesa 15, Fort +5, Ref +10, Von +1, imunidade a acertos críticos, atordoado, cansaço, efeitos de metabolismo, fogo e paralisia, vulnerabilidade a frio\nPontos de Vida 9\nDeslocamento voo 12m (8q)\nCorpo a Corpo Queimadura +11 (4d6 fogo).\nArco de Chamas (Padrão) O pakk projeta chamas em um cone de 6m. Criaturas nessa área sofrem 3d6 pontos de dano de fogo (Ref CD 14 reduz à metade). Recarga (movimento).\nLabareda Viva No início de cada turno do pakk, todas as criaturas em alcance curto sofrem 1d4 pontos de dano de fogo.\nFor 0, Des 5, Con 1, Int –1, Sab 2, Car 3\nTesouro 1 dose de éter elemental (fogo) (CD 16 para extrair)."
+    },
+    {
+      type: "text",
+      content: "MOTOR ELEMENTAL (ND 2)\nConstruto Grande\nIniciativa +1, Percepção +1, percepção às cegas\nDefesa 17, Fort +13, Ref +7, Von +2\nPontos de Vida 49\nDeslocamento 9m (6q)\nCorpo a Corpo Duas pancadas +10 (1d6+10).\nForma Elemental (Livre) No início de seu turno, o motor elemental muda de uma das formas elementais abaixo para outra. O construto não pode mudar para uma forma já assumida, até ter mudado para todas as outras.\n- Forma da Água O motor recebe imunidade a frio e vulnerabilidade a fogo, seus ataques corpo a corpo causam +1d6 de frio e o halo elemental causa dano de frio.\n- Forma do Ar O motor recebe imunidade a eletricidade e vulnerabilidade a ácido, seus ataques corpo a corpo causam +1d6 de eletricidade e o halo elemental causa dano de eletricidade.\n- Forma do Fogo O motor recebe imunidade a fogo e vulnerabilidade a frio, seus ataques corpo a corpo causam +1d6 de fogo e o halo elemental causa dano de fogo.\n- Forma da Luz O motor recebe imunidade a luz e vulnerabilidade a trevas, seus ataques corpo a corpo causam +1d6 de luz e o halo elemental causa dano de luz.\n- Forma da Terra O motor recebe imunidade a ácido e vulnerabilidade a eletricidade, seus ataques corpo a corpo causam +1d6 de ácido e o halo elemental causa dano de ácido.\n- Forma das Trevas O motor recebe imunidade a trevas e vulnerabilidade a luz, seus ataques corpo a corpo causam +1d6 de trevas e o halo elemental causa dano de trevas.\nHalo Elemental Criaturas que comecem o turno em alcance curto do motor elemental sofrem 1d6 pontos de dano de acordo com a forma elemental (veja acima). Além disso, uma criatura que sofra dano sofre um efeito adicional conforme o tipo de dano. Ácido, vulnerável por 1 rodada; eletricidade, ofuscado por 1 rodada; fogo, fica em chamas; frio, lento por 1 rodada; luz, cego por 1 rodada; trevas, enjoado por 1 rodada (Ref CD 18 reduz o dano à metade e evita a condição).\nFor 4, Des –1, Con 3, Int —, Sab 0, Car –3\nTesouro Padrão, mais ferro elemental (CD 17 para extrair, reduz em 1 PM o custo para fabricar um item com o encanto congelante, corrosiva, elétrica, flamejante ou tumular)."
+    }
+  ]
+  },
+  { id: "Sonho de Consumo", 
   name: "Sonho de Consumo",
   theme: "Cyberpunk",
   image: "/aventuras/sonho-de-consumo.png",
@@ -5163,8 +5355,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "57", 
+  { id: "Senhor do Outono", 
   name: "Senhor do Outono",
   theme: "Fantasia",
   image: "/aventuras/senhor-do-outono.png",
@@ -5262,8 +5453,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "58",
+  { id: "Como Segurar a Areia",
   name: "Como Segurar a Areia",
   theme: "Aventura Espacial",
   image: "/aventuras/como-segurar-a-areia.png",
@@ -5341,8 +5531,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "59", // ID ajustado
+  { id: "Aqui há Dragões", 
   name: "Aqui há Dragões",
   theme: "Fantasia",
   image: "/aventuras/aqui-ha-dragoes.png",
@@ -5432,8 +5621,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "60",
+  { id: "Fim do Túnel",
   name: "Fim do Túnel",
   theme: "Cyberpunk",
   image: "/aventuras/fim-do-tunel.png",
@@ -5511,8 +5699,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "61",
+  { id: "Fora do Inferno",
   name: "Fora do Inferno",
   theme: "Ação",
   image: "/aventuras/fora-do_inferno.png",
@@ -5598,8 +5785,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "62",
+  { id: "Caubói na Lua",
   name: "Caubói na Lua",
   theme: "Aventura Espacial",
   image: "/aventuras/cauboi-na-lua.png",
@@ -10427,6 +10613,354 @@ export const adventures: Adventure[] = [
     {
       type: "text",
       content: "PRIMUS, CENTURIÃO DE OUTRORA (ND 1)\nHumanoide (minotauro) Médio\nIniciativa +0, Percepção –1, faro\nDefesa 17, Fort +11, Ref +0, Von +5\nPontos de Vida 40\nDeslocamento 6m (4q)\nCorpo a Corpo Lança +9 (1d6+4) e Chifres +9 (1d6+4).\nÀ Distância Azagaia +2 (1d6).\nDerrubar (Livre) Chifres (teste +14).\nDistraído Primus sofre –2 para resistir a testes de fintar.\nMedo de Altura Se estiver adjacente a uma queda de 3m ou mais de altura (como um buraco ou penhasco), Primus fica abalado.\nFor 4, Des –2, Con 3, Int 3, Sab 2, Car 2\nPerícias Atletismo +8, Guerra +5.\nEquipamento Azagaia x2, lança, loriga segmentada. Tesouro Nenhum."
+    }
+  ]
+  },
+  { id: "Metamorfose Feérica",
+  name: "Metamorfose Feérica",
+  theme: "Fantasia Feérica e Conto de Fadas",
+  image: "/aventuras/metamorfose-feerica.png",
+  summary: "Um nobre de Trebuck amaldiçoado na forma de uma fera e seu namorado médico contratam os aventureiros para invadir a torre invertida flutuante de uma fada temperamental e convencê-la a desfazer o feitiço.",
+  sections: [
+    {
+      type: "text",
+      content: "A coluna Breves Jornadas oferece aventuras simples, rápidas e completas para Tormenta20, com tudo que será necessário para jogar. Fichas especiais serão fornecidas aqui, enquanto aquelas presentes no livro básico terão indicadas as páginas em que se encontram."
+    },
+    {
+      type: "text",
+      content: "O objetivo é oferecer ao mestre um ponto de partida eficiente para que todos se divirtam por uma tarde, ou que comecem uma nova campanha. Se precisarem de fichas de personagens prontas, é possível encontrá-las na coluna Heróis de Bolso, no Blog da Jambô."
+    },
+    {
+      type: "text",
+      content: "Esta aventura chama-se Metamorfose Feérica."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Introdução"
+    },
+    {
+      type: "text",
+      content: "Lendas de fadas e bruxas habitam o imaginário artoniano. Travessuras com resultados terríveis e acordos perigosos são lugar comum nessas narrativas. Mas aqueles que vivem próximos de onde a Pondsmânia (supostamente) fica sabem o que essas histórias realmente são: avisos."
+    },
+    {
+      type: "text",
+      content: "Em um dos diversos feudos de Trebuck, um jovem fidalgo não prestou atenção a esses ensinamentos. Quando visitado por uma dessas entidades fantásticas, expulsou-a grosseiramente. Como consequência, foi transformado em um monstro assustador."
+    },
+    {
+      type: "text",
+      content: "Agora, na companhia de seu namorado, um médico de Salistick, busca a responsável pela maldição com o objetivo de quebrar o feitiço. As pistas levam à misteriosa morada da fada, mas serão capazes de convencê-la?"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Resumo da aventura"
+    },
+    {
+      type: "text",
+      content: "Metamorfose Feérica é uma breve jornada, uma aventura pensada para uma sessão única, mas que também pode ser inserida em uma campanha maior. É ideal para um grupo de quatro personagens de 3º nível em Tormenta20."
+    },
+    {
+      type: "text",
+      content: "Uma noite animada é interrompida por gritos quando uma fera descontrolada ataca. Após um combate curto, o acompanhante da criatura explica que, na verdade, trata-se de um nobre metamorfoseado. Com a promessa de fortuna, os aventureiros aceitam apoiar o casal."
+    },
+    {
+      type: "text",
+      content: "Após lidarem com um estranho guardião, chegam ao refúgio da feiticeira: uma torre invertida flutuante. Devem bolar uma forma de alcançá-la, enfrentar uma porção de kobolds encrenqueiros e serem desafiados por um cavaleiro para, só então, chegarem à fada que buscam."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 1 – Noite agitada"
+    },
+    {
+      type: "text",
+      content: "Celebrando algum festival, ou a vitória de um grupo de aventureiros, uma pequena cidade em Trebuck está em festa. Mesmo a área de Tormenta ao norte parece ter sido esquecida, ao menos por uma noite, enquanto todos se esbaldam como se não houvesse amanhã."
+    },
+    {
+      type: "text",
+      content: "Entretanto, a paz é repentinamente perturbada por um rugido seguido de gritos. O motivo é um monstro, com mais de três metros, coberto de pelos, presas e garras poderosas. Logo atrás dele há uma carroça, enquanto aos seus pés existem três homens desacordados. Caso se aproximem, a criatura enfurecida parte para o combate."
+    },
+    {
+      type: "text",
+      content: "Criaturas. Cendrick, a besta (NPCs & Criaturas)."
+    },
+    {
+      type: "text",
+      content: "Apesar da agressividade, este não se afasta da carroça. A luta dura apenas duas rodadas, pois, antes do começo da terceira, ou caso a criatura seja reduzida a 0 ponto de vida ou menos, um homem negro, vestido um jaleco surge esbaforido, se posicionando em frente à fera."
+    },
+    {
+      type: "text",
+      content: "“Por favor, parem! Ele não deseja fazer mal! Está apenas assustado, mas não é um monstro!”"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 2 – Era uma vez"
+    },
+    {
+      type: "text",
+      content: "Quando a situação se acalma, a população não está mais no clima para festa. O jovem se apresenta como Aiden, um médico de Salistick, e seu companheiro assustador chama-se Cendrick. A confusão aconteceu enquanto o médico comprava provisões e alguém resolveu bisbilhotar o que havia dentro da carroça. Porém, Aiden pede que os aventureiros ouçam sua história."
+    },
+    {
+      type: "text",
+      content: "Cendric era um senhor de terras até que uma noite expulsou uma velha viajante, que era, na verdade, uma fada poderosa disfarçada. Indignada, ela lançou uma maldição sobre o fidalgo, que a partir daquele momento ficaria preso naquela forma. O médico explica que quando as cartas de Cendric deixaram de chegar, se preocupou e viajou até o feudo, encontrando-o daquele jeito."
+    },
+    {
+      type: "text",
+      content: "Agora, estão buscando ajuda para chegar ao covil da fada, que, segundo as lendas, chama-se Feo-Wila. O local não é muito distante, mas, apesar da força monstruosa de Cendric, precisam de auxílio, e ao vê-los em combate soube que eram a escolha certa. Aiden oferta, além da lealdade perpétua de seu parceiro, T$ 500 para cada um, mesmo que Cendric proteste com um grunhido baixo. Se aceitarem, partem pela manhã numa viajem que deve durar dois dias."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 3 – Conversas à fogueira"
+    },
+    {
+      type: "text",
+      content: "Ao amanhecer, Aiden está fazendo os últimos concertos em sua carroça, enquanto o outro já está dentro, coberto por panos, mas eventualmente espiando curioso. O trajeto é tranquilo e, quando acampam no final do primeiro dia, podem finalmente ver Cendric de uma forma menos agressiva, pois está alegre por não precisar esconder-se."
+    },
+    {
+      type: "text",
+      content: "Durante a noite é possível perguntar ao médico sobre sua relação com o nobre. Aiden explica que eram jovens quando sua mãe foi chamada para tratar do pai de Cendric, e, com o tempo, os rapazes acabaram se apaixonando. Infelizmente, com o falecimento do senhor feudal, seus caminhos divergiram, um estudando para tornar-se médico, o outro sendo instruído como lorde. Apesar disso, sempre trocaram cartas afetuosas."
+    },
+    {
+      type: "text",
+      content: "Se perguntado sobre a responsável pela maldição, explica que, segundo os mesmos relatos que analisou para sua pesquisa, esta não é uma figura maligna, mas temperamental e volátil. Diz que existem muitas histórias como essa, e que não é inédito que a dama feérica demonstre piedade."
+    },
+    {
+      type: "text",
+      content: "Aiden e Cendric passam a funcionar como aliados (Tormenta20, p. 246), suas estatísticas estão em NPCs & Criaturas."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 4 – Guarda da passagem"
+    },
+    {
+      type: "text",
+      content: "Conforme avançam no segundo dia, a floresta torna-se mais densa e seus marcos menos decifráveis. Em algum momento encontram uma estranha mureta, com aproximadamente um metro e meio de altura. Não é difícil pular por cima dela, mas, se alguém o faz, é enviado de volta da mesma maneira que pulou."
+    },
+    {
+      type: "text",
+      content: "Seguindo o muro, é possível encontrar um portal circular e ao seu lado, uma criatura estranha que parece um ovo multicolorido com pernas e uma boina azul sentada ao lado do portal, emitindo um som similar a um ronco. Tentar atravessar a passagem tem o mesmo efeito que pular a mureta, mas a tentativa desperta a criatura."
+    },
+    {
+      type: "text",
+      content: "“Ah! Que susto! Não se respeita mais uma pessoa que dorme? Estava tendo um sonho tão bom. Mas então, o que desejam? Atravessar? Sem chance. Sou o guardião da passagem..., mas, só por curiosidade... o que eu ganho se ajudá-los?”"
+    },
+    {
+      type: "text",
+      content: "A criatura quimérica chama-se Plitsky, e qualquer forma de violência, sejam ataques ou magias, são inúteis. Normalmente sua reação é sumir e ressurgir em outro lugar."
+    },
+    {
+      type: "text",
+      content: "Ela explica que gosta de duas coisas: objetos com boas histórias e charadas. É possível oferecer um item dizendo que há um histórico interessante por trás dele (\"esta é a espada de minha mãe, que pereceu na guerra\" ou \"este livro fazia parte de uma biblioteca perdida\"), com a aprovação do mestre. Também pode-se inventar uma história sobre o item usando Atuação ou Enganação CD 15. Sendo verdade ou não, assim que um objeto apropriado for entregue, tanto este quanto Plitsky somem, e o portal fica livre de seu efeito, permitindo a passagem."
+    },
+    {
+      type: "text",
+      content: "Se preferirem responder às charadas, as três abaixo são propostas:"
+    },
+    {
+      type: "text",
+      content: "Passam, mas não caminham. Renascem logo que morrem. Enfileiram atrás dos que definham. Quem somos?\nResposta: os anos."
+    },
+    {
+      type: "text",
+      content: "Espio de dentro da água. Te sigo a cada virada. Apesar da celeridade, te ver de costas é raridade. Quem sou?\nResposta: o reflexo."
+    },
+    {
+      type: "text",
+      content: "Do coração, firmo a espada. Quem tem demais, se embriaga. Indispensável ao herói, mas sem mesura, viro algoz. Quem sou?\nResposta: a coragem."
+    },
+    {
+      type: "text",
+      content: "É possível decifrá-las com um teste de Inteligência CD 15 ou de Conhecimento CD 20. Caso respondam todas, Plisky desaparece e permite a travessia."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 5 – Torre invertida"
+    },
+    {
+      type: "text",
+      content: "Ao atravessarem o portal, é possível ver a construção: é uma torre que levita a três metros do solo. Além disso, é visível que está de ponta cabeça, as ameias apontando para baixo, e um alçapão com uma escada invertida. A base da torre apontando para o céu, lisa como uma peça de xadrez."
+    },
+    {
+      type: "text",
+      content: "Cendric é capaz de elevar pessoas até a claraboia, mas o processo é lento e assim que o primeiro entra pela passagem deve lidar com as ameaças da cena 5. Também é possível arremessar algo, como uma corda com gancho, com Pontaria CD 15, e escalar os três metros com um teste de Atletismo CD 15."
+    },
+    {
+      type: "text",
+      content: "Uma outra opção um tanto exótica é derrubar outra pessoa, ou jogar-se no chão. Se fizerem isso, “caem” para cima, sofrendo 2d6 pontos de dano de impacto, tendo então que entrar no alçapão, e aí a gravidade se normaliza. Caso alguém tente realizar esse processo diretamente sob a passagem, sobem por ela, mas caem lá dentro, sofrendo 3d6 pontos de dano de impacto."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 6 – Ataque dos kobolds"
+    },
+    {
+      type: "text",
+      content: "Assim que o primeiro entra, é possível ver uma câmara comum de pé direito alto, que seria normal, não fossem as mesas e utensílios no teto, assim como um baú próximo a escada que leva ao próximo andar. De repente, uma pilha de talheres é arremessada contra quem estiver no aposento, enquanto uma pequena multidão de kobolds faz uma bagunça."
+    },
+    {
+      type: "text",
+      content: "Criaturas. Kobolds (Tormenta20, p. 297)."
+    },
+    {
+      type: "text",
+      content: "As criaturinhas atabalhoadas surgem das próprias paredes e desaparecem em pleno ar se derrotadas, como se nunca tivessem existido."
+    },
+    {
+      type: "text",
+      content: "Escalar a escadaria invertida é um teste de Atletismo CD 15, e o percurso é de 6 metros. Enquanto sobem, é possível investigar o baú, que está aberto, e dentro dele existem duas poções de Curar Ferimentos (2d8+2 PVs), três essências de mana e uma corda aprimorada (+2 em testes de Atletismo)."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 7 – Cavaleiro outonal"
+    },
+    {
+      type: "text",
+      content: "O andar seguinte possui belas tapeçarias nas paredes, todas mostrando cenas de homens e mulheres vestindo armaduras combatendo feras mágicas. A sala é iluminada por tochas cujas chamas dão a impressão pingar em direção ao solo."
+    },
+    {
+      type: "text",
+      content: "À frente há uma figura vestindo uma armadura de placas de metal castanho escuro. De elmo fechado, seria possível enganar-se e crer que se tratava de um objeto em exposição, mas assim que todos chegam ao ambiente, ou se alguém interagir com a couraça, esta irá sacar sua espada de duas mãos."
+    },
+    {
+      type: "text",
+      content: "Criaturas. Cavaleiro Outonal (NPCs & Criaturas)."
+    },
+    {
+      type: "text",
+      content: "O cavaleiro avança em direção ao grupo tentando envolver tantos quanto possível com sua aura de medo. Concentrará seus ataques naqueles que não forem afetados por sua habilidade Testar Bravura, chamando-os de “oponentes valorosos”. Os que ficarem abalados também serão atacados, porém, aqueles que ficarem apavorados não."
+    },
+    {
+      type: "text",
+      content: "Ao ser derrotado, caso alguém tenha passado no teste de Vontade da habilidade Testar Bravura, sua armadura e montante são deixadas como espólio. Se todos tiverem falhado, some por completo, sem deixar nada para trás."
+    },
+    {
+      type: "text",
+      content: "Para chegarem ao próximo aposento é necessário o mesmo teste de Atletismo da cena 6."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 8 – Sala do trono"
+    },
+    {
+      type: "text",
+      content: "A sala final é um ambiente suntuoso, mesmo que olhado de baixo para cima. No teto está um salão de festa, como se para receber convidados, várias cadeiras e mesas de tamanhos diferentes, todos belíssimos. No lado extremo oposto à entrada, que nesse momento mostra o céu do lado de fora, está um imenso trono, mais estranho pela figura recostada neste."
+    },
+    {
+      type: "text",
+      content: "Uma sílfide de cabelos que lembram uma rosa e imensos olhos negros está jogada de forma despojada no assento do trono. Apesar de parecer distraída, refere-se ao grupo."
+    },
+    {
+      type: "text",
+      content: "“Aiai, o que fazem aqui? Sou Feo-Wila, mestra desta torre, e apesar de não conhecê-los, aquele ali me é familiar. Vejam se é possível, pedir por abrigo e ser expulsa a pontapés por esse bruto. Tem sorte de não tê-lo transformado num penico animado. E aposto que estão aqui para ped... um momento.”"
+    },
+    {
+      type: "text",
+      content: "Quando diz isso, gira os braços e a sala, colocando-a no sentido usual, e plantando-a no chão lá fora. Todos devem fazer um teste de Acrobacia CD 15, ou então caem e sofrem 1d6 pontos de dano de impacto enquanto tudo gira sob seus pés. Feo-Wila, entretanto, mantém-se imóvel."
+    },
+    {
+      type: "text",
+      content: "“Mas então, digam-me: por que deveria desfazer a maldição?”"
+    },
+    {
+      type: "text",
+      content: "Convencê-la é um teste estendido (Tormenta20, p. 214), de complexidade média, ou seja, requer cinco sucessos antes de três falhas. Cada personagem só pode realizar o teste uma vez, até que todos os outros tenham feito, podendo então fazer um novo teste. Para perícias apropriadas como Atuação, Diplomacia e Enganação a dificuldade é 20, mas outras que façam sentido, de acordo com o mestre, podem ser usadas, com CD 22, como Misticismo ou Nobreza."
+    },
+    {
+      type: "text",
+      content: "Em caso de falha total (três falhas) Feo-Wila se enraivece com o desrespeito e resolve brigar."
+    },
+    {
+      type: "text",
+      content: "Criaturas. Feo-Wila (NPCs & Criaturas)."
+    },
+    {
+      type: "text",
+      content: "Na primeira rodada, a fada lança a magia Reflexos e usa sua habilidade Animar Decoração. Sua estratégia é manter-se distante em voo e lançar magias. Por mais que se divirta com o combate, rende-se assim que é reduzida em 15 pontos de vida ou menos, desfazendo então a metamorfose."
+    },
+    {
+      type: "text",
+      content: "Com uma ou duas falhas, Feo-Wila concorda com uma troca: uma memória em troca de remover a maldição. Em termos de regra, o personagem abre mão de um de seus benefícios de origem, representado a perda da lembrança. Movida por isso, presenteia aquele que fez o sacrifício com um anel de sustento (Tormenta20, p. 328) e remove o feitiço."
+    },
+    {
+      type: "text",
+      content: "Finalmente, se não tiverem falha alguma, a fada fica emocionada com a defesa de Cendric. O encanto é quebrado, revelando a aparência real de Cendric: humano branco, de cabelos longos e castanhos claros, esguio e de postura altiva. Repentinamente, ele é envolvido por um abraço de Aidan, que está chorando de felicidade."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Epílogo – Felizes até a próxima"
+    },
+    {
+      type: "text",
+      content: "Feo-Wila seca os olhos de lágrimas pequenas, mas, momentos depois, vira a torre, derrubando todos para o lado de fora de maneira não violenta, apenas surpreendente."
+    },
+    {
+      type: "text",
+      content: "“Sou péssima em despedidas, então, até a próxima!”"
+    },
+    {
+      type: "text",
+      content: "Acenando em conjunto estão os outros habitantes da torre, os kobolds, o cavaleiro e até mesmo Plisky, enquanto a construção desaparece nos céus."
+    },
+    {
+      type: "text",
+      content: "Quando olham ao redor, estão de volta à cidade onde a jornada começou, mas semanas se passaram. Cendric, sem soltar da mão de Aiden, agradece e pede mais uma ajuda aos heróis: que auxiliem na recuperação de sua terra."
+    },
+    {
+      type: "text",
+      content: "Enquanto decidem se aceitam a proposta, avançam para o 4º nível!"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "NPCs & Criaturas"
+    },
+    {
+      type: "text",
+      content: "CENDRIC\nFoi forçado a assumir as responsabilidades de um senhor feudal ainda muito jovem, o que o tornou duro e insensível, exceto a Aiden. Quando expulsou uma viajante durante uma noite chuvosa, foi amaldiçoado com a forma de um monstro.\nPara o combate da Cena 1, use as estatísticas de um Troll (Tormenta20, p. 294). Posteriormente, como aliado veterano, oferece +1d10 em rolagens de dano corpo a corpo e +2 em Defesa."
+    },
+    {
+      type: "text",
+      content: "AIDEN\nEm formação no Colégio Real de Médicos em Salistick, este rapaz viveu poucos anos em Trebuck, quando seu relacionamento com Cendric floresceu. Quando as cartas de seu amado cessaram, resolveu investigar o que havia ocorrido.\nComo aliado veterano, Aiden permite aquele que acompanha, uma vez por turno, com uma ação livre, gastar 2 PM para recuperar 2d8+2 PVs, e fornece +2 em testes de perícia baseadas em Inteligência ou Sabedoria."
+    },
+    {
+      type: "text",
+      content: "CAVALEIRO OUTONAL (ND 3)\nEsses raros seres feéricos possuem a aparência de um cavaleiro vestindo uma armadura de placas que lembram casca de árvore. São atraídos por aqueles que se dizem valentes, testando sua bravura.\nEspírito Médio\nIniciativa +4, Percepção +6, visão no escuro\nDefesa 22, Fort +9, Ref +9, Von +14, imunidade a medo e sangramento\nPontos de Vida 85\nDeslocamento 9m (6q)\nAtaque corpo a corpo Montante +14 (2d6+13, 19)\nInimigo da Covardia O cavaleiro outonal recebe RD 5 e +2 em testes de ataque e rolagens de dano contra oponentes sob efeito de alguma condição de medo.\nTestar Bravura (Padrão) O cavaleiro outonal emite um brado assustador que dura até o fim da cena. Qualquer criatura que entre em alcance curto do cavaleiro outonal, ou inicie seu turno neste alcance, fica apavorada por 1d4 rodadas e depois abalada até o fim da cena (Vontade CD 17 reduz o efeito para abalado por 1d4 rodadas e faz com que a criatura não possa mais ser afetada por esta habilidade até o fim da cena).\nVarrer (Livre) Uma vez por rodada, quando o cavaleiro outonal faz um ataque corpo a corpo e reduz os pontos de vida do alvo a 0 ou menos, pode realizar um ataque adicional contra outra criatura dentro do seu alcance.\nFor 22, Des 12, Con 20, Int 10, Sab 13, Car 14\nPerícias. Cavalgar +11.\nEquipamento. Armadura completa reforçada e selada, montante atroz.\nTesouro. Nenhum."
+    },
+    {
+      type: "text",
+      content: "FEO-WILA (ND 3)\nParte da corte da própria rainha Thanthalla-Dhaedelin, esta fada tem um apreço grande por histórias. Inspirada pelo que ouvia sobre visitas à nobres, decidiu viajar com o objetivo de protagonizar essas narrativas.\nSílfide Minúscula\nIniciativa +6, Percepção +11, visão na penumbra\nDefesa 14, Fort +4, Ref +5, Von +15\nPontos de Vida 35\nDeslocamento 9m (6q), voo 12m (8q)\nPontos de Mana 41\nCorpo a corpo Adaga +5 (1d3+2, 19)\nAnimar Decoração (Completa, 3 PM) Feo-Wila anima dois objetos que funcionam como aliados iniciantes, cada um de um tipo diferente a escolha dela, entre fortão, guardião ou montaria (cavalo). A combinação mais comum é um guardião (+2 em Defesa) e um fortão (+1d8 em rolagens de dano corpo a corpo). Os objetos animados permanecem até o fim da cena ou até serem sacrificados.\nSacrificar Servo (Reação) Quando sofre dano, a fada pode sacrificar um de seus objetos animados pela habilidade Animar Decoração para reduzir esse dano a 0.\nMagias Feo-Wila lança magias como um conjurador arcano de 5º nível (CD 17, 19 para encantamento e ilusão*).\nAdaga Mental* (Padrão, 5 PM). Uma criatura em alcance curto sofre 4d6 pontos de dano mental e fica pasma por uma rodada (Von CD 19 reduz o dano à metade e evita a condição pasmo e a criatura não pode mais ficar pasma por esta magia até o fim da cena).\nImagem Espelhada (Livre, 5 PM). Feo-Wila cria três cópias ilusórias e recebe +6 na Defesa, mas cada vez que um ataque contra ela erra, uma das imagens desaparece e o bônus na Defesa diminui em 2.\nSono* (Padrão, 5 PM). Criaturas de 5º nível ou menos em um quadrado com 3m de lado à distância curta ficam inconscientes e caídas (Von CD 19 muda para fatigadas por uma rodada).\nOutras Magias 1º — Conjurar Monstro, Criar Ilusão*, Disfarce Ilusório*, Hipnotismo*; 2º — Marca da Obediência*.\nFor 8, Des 14, Con 12, Int 10, Sab 10, Car 20\nPerícias Conhecimento +3, Enganação +11, Misticismo +11.\nEquipamento Adaga banhada a ouro e cravejada de gemas, essência de mana.\nTesouro Dobro."
     }
   ]
   },

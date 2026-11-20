@@ -9,6 +9,12 @@ export const powersGerais: Power[] = [
     prerequisite: "proficiente com katar, Briga ou Estilo Desarmado, Esquiva, Foco em Arma (ataque desarmado ou katar).",
     origin: "Duelo de Dragões"
   },
+  { id: "Enigma da Espada",
+    name: "Enigma da Espada",
+    description: "Quando faz um teste de Conhecimento para trocar o modo da sua espada enigma, você pode usar o resultado como um teste para ajudar seu próximo teste de ataque com a arma nesse turno. Esse bônus também se aplica à rolagem de dano do ataque. Além disso, uma vez por rodada, se fizer uma ação agredir e acertar pelo menos um ataque com a espada enigma, você pode gastar PM para ferir um dos alvos atingidos, à sua escolha. Cada PM gasto (limitado pela quantidade de modos da espada enigma usados na ação agredir) causa a perda de 1d10 PV.",
+    prerequisite: "Proficiência com Espada Enigma, treinado em Conhecimento e Luta.",
+    origin: "Duelo de Dragões"
+  },
   //#endregion
   //#region Guia de NPCs
   { id: "Caminho da Mão Vazia",

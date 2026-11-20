@@ -1,4 +1,4 @@
-//#region Tormenta20 - Jogo do Ano
+//#region DB -
 //#endregion
 import { RegreiroQA } from "@/types/regreiro";
 // Formatação suportada em "question" e "answer":
@@ -28,6 +28,62 @@ export const regreiroQAs: RegreiroQA[] = [
     magazineNumber: 173,
   },
   //#endregion 
+  //#region DB - 179
+  {
+    id: "DB179-01",
+    question: "> Vira-casaca\n\nPosso usar diplomacia com meus monstros para fazer um dos jogadores mudarem de lado?",
+    answer: "> Vilanesco Sr. Almeida, por mais que esse tribunal aprecie sua nobre intenção de causar pânico nos jogadores de sua mesa, é nosso dever alertá-lo que a perícia Diplomacia, assim como as demais perícias sociais, não são poderes absolutos ou magias de controle mental. Nos vemos mais uma vez em posição de evocar a pristina Lei Caldela:\n\n> Quando um jogador declara uma ação, você deve decidir o resultado dela, usando as mecânicas ou seu bom senso. Também deve julgar as reações dos NPCs com base no comportamento dos heróis. Este equilíbrio entre julgamento de interpretação e arbitragem de regras é a essência do “poder” do mestre.\n\nIsso posto, o uso “mudar atitude” da perícia Diplomacia está subjugado ao bom senso. Considerando que em uma situação de combate os envolvidos claramente têm atitude “hostil” um contra os outros, alterar essa atitude para “prestativo” enquanto se tenta enfiar as garras no bucho de um colega parece bem contrário ao bom senso. Em casos que o uso de perícias como Diplomacia ou Intimidação parecerem muito absurdos, o mestre pode simplesmente decidir que isso não é possível. Lembrando que é responsabilidade do mestre zelar pelo bom senso e arbitrar o uso devido das regras na mesa.",
+    magazineNumber: 179,
+  },
+  {
+    id: "DB179-02",
+    question: "> Santuário! Santuário!\n\nUma vez que um personagem passe no teste de vontade para resistir a magia *Santuário*, ele anula o efeito da magia para o ataque que ele iria fazer ou para toda a cena?",
+    answer: "> Belicosíssimo Sr. Pereira, a magia *Santuário* tem como objetivo reprimir ações hostis entre os colegas de cena. O texto da magia diz:\n\n> Qualquer criatura que tente fazer uma ação hostil contra o alvo deve fazer um teste de Vontade. Se falhar, não consegue, perde a ação e não pode tentar novamente até o fim da cena.\n\nOu seja, caso o personagem falhe no teste, até o final da cena, ele não poderá sequer tentar fazer uma ação hostil contra o alvo da magia. Lembrando que a definição de “ação hostil” é qualquer ação que vise prejudicar o alvo de alguma forma, não apenas despendendo seus valiosos Pontos de Vida.",
+    magazineNumber: 179,
+  },
+  {
+    id: "DB179-03",
+    question: "> Qual o limite do soco?\n\nSobre a *sequência destruidora* de um lutador, se ela é usada por um lutador que com seu combo causa 4d12 de dano naturalmente, o uso do poder é inútil por ele ter já o dano máximo em passos possíveis?",
+    answer: "> Sopapíssimo Sr. Aguiar, é com imenso pesar em nossos corações que informamos ao senhor que sua avaliação está correta. No estado atual das regras, o limite do dano de armas por aumento em passos é de 4d12. Caso uma arma atinja esse limite, qualquer outro efeito que aumenta os passos de dano falha em ser aplicado.",
+    magazineNumber: 179,
+  },
+  {
+    id: "DB179-04",
+    question: "> Corcel domado\n\nConsiderando que:\n- Aliados do tipo montaria costumam dar ações extras que só podem ser usadas para movimento (p. 248).\n- Galopar é similar a corrida, quando montado, e requer uma ação completa (p. 116).\n- Ação completa requer o gasto de uma ação padrão e uma ação de movimento (p. 219).\n\nPergunto: É possível galopar duas vezes numa rodada com um cavalo mestre, usando uma completa (padrão + movimento) e outra completa (movimento extra x2)?",
+    answer: "> Equitíssimo Sr. Lins, esse tribunal vai desmembrar sua dúvida e reorganizar as partes para melhor esclarecimento da sentença.\n\n1) É possível galopar duas vezes numa rodada com um cavalo mestre, usando uma completa (padrão + movimento) e outra completa (movimento extra x2)?\n\nR: Não. Conforme apontado pelo senhor mesmo, uma ação completa requer o uso de uma ação padrão e uma ação de movimento. Duas ações de movimento não podem ser unidas para gerar uma ação completa, uma vez que uma ação de movimento não se equivale a uma ação padrão. O que a regra permite é substituir sua ação padrão por uma segunda ação de movimento no turno, mas não o contrário.",
+    magazineNumber: 179,
+  },
+  {
+    id: "DB179-05",
+    question: "Adendo: pode-se fazer curva ao usar galopar (parece que sim)? Por qual razão não se pode fazer curva em corrida (ou pode ao final de cada teste de corrida)?",
+    answer: "2) Pode-se fazer curva ao usar galopar (parece que sim)? Por qual razão não se pode fazer curva em corrida (ou pode ao final de cada teste de corrida)?\n\nR: Apesar de sua similaridade em termos de regras e físicos, galopar e corrida são usos diferentes de perícias diferentes e não-relacionadas, seguindo cada um suas regras distintas. Isso posto, não existe qualquer restrição de direção para o movimento realizado com galopar, mas ainda é necessário fazer um teste de conduzir para galopar sobre terreno difícil.\n\nSobre a razão para as restrições em testes de corrida, elas são mais uma questão de balanceamento de regras do que simulação da realidade. Efetivamente, para fazer uma mudança brusca de direção, você precisa “frear” e parar de correr, mas simular esse tipo de movimentação em regras deixaria o movimento extremamente complexo e chato. Por isso, a ação correr simula mais um tiro de 100m, em que o personagem coloca toda sua força e foco em se mover do ponto A ao ponto B na maior velocidade e menor distância possível.",
+    magazineNumber: 179,
+  },
+  {
+    id: "DB179-06",
+    question: "Galopar corre o risco de cansar a montaria?",
+    answer: "3) Galopar pode cansar a montaria?\n\nR: Não existe nada nas regras que diga que a montaria tem chance de se cansar ao galopar ao longo da cena. Entretanto, para cenas mais longas, como uma viagem, o mestre pode considerar que galopar conta como marcha forçada (p. 256).",
+    magazineNumber: 179,
+  },
+  {
+    id: "DB179-07",
+    question: "Pode-se alternar entre corrida/galopar e mover-se por deslocamento para evitar se cansar?",
+    answer: "4) Pode-se alternar entre corrida/galopar e mover-se por deslocamento para evitar se cansar?\n\nR: Mais uma vez, corrida e galopar são usos de perícia não-relacionados. Você não pode correr enquanto estiver montado, já que seus pés não estão tocando o chão efetivamente você nem sequer está andando! Em certos aspectos, galopar é a \"versão\" de corrida para montarias, e você não pode usar a ação corrida em uma montaria da mesma forma que não pode galopar sem estar montado.",
+    magazineNumber: 179,
+  },
+  {
+    id: "DB179-08",
+    question: "> Eu, Zumbi\n\nSaudações, membros do STR! Seguem abaixo dúvidas aleatórias do combeiro de plantão do meu grupo.\n\n1) Golens e mortos-vivos com inteligência nula passam automaticamente em teste de ilusão ou ignoram ilusões e conseguem ver personagens invisíveis?",
+    answer: "> Vivíssimo Sr. Costa, esse tribunal tem por obrigação corrigir vossa discordância de nomenclatura em prol do bom convívio entre as raças artonianas. “Golem” se refere à raça disponível para personagens jogadores, que tem suas próprias regras definidas no capítulo 1 do livro básico. Já o tipo de criatura se define pela palavra “construto”, que classifica todos os tipos de criaturas artificiais, e tem suas regras definidas no capítulo 7.\n\nTodos os golens são criaturas do tipo construto, mas certamente nem todos os construtos são golens, da mesma forma que os osteons são criaturas do tipo morto-vivo. Isso posto, vamos às dúvidas.\n\n1) Criaturas com inteligência nula não utilizam de raciocínio lógico para tomar decisões, o que faz com que efeitos mentais, como os causados por alguns encantamentos e ilusões (pag. 162), não funcionem contra elas. Essas criaturas passam automaticamente no teste e desacreditam de ilusões, agindo como se elas não existissem.\n\nNo entanto, isso não afeta suas capacidades de percepção, e não conseguem enxergar criaturas invisíveis a menos que tenham sentidos especiais. Isso porque, em termos de regra, eles simplesmente não podem ver algo invisível, e não existe teste para o efeito de invisibilidade contra o qual sua “imunidade” pode lhes ajudar. O alvo do efeito é a criatura que se tornou invisível, não as criaturas que estão olhando para ela.",
+    magazineNumber: 179,
+  },
+  {
+    id: "DB179-09",
+    question: "2) É possível deixar um morto-vivo ou golem inconsciente usando *raio do enfraquecimento* (com o aprimoramento para isso)?",
+    answer: "2) Pela fria letra da lei, a condição inconsciente não é uma condição de fadiga e, portanto, afeta construtos e mortos-vivos. É como se a energia que move essas criaturas fosse “desligada” de alguma forma. No entanto, se uma delas passar no teste de *Raio do Enfraquecimento*, não ficará exausta, pois continua imune a condições de fadiga.",
+    magazineNumber: 179,
+  },
+  //#endregion
   //#region DB - 191
   {
     id: "DB191-01",
@@ -260,6 +316,176 @@ export const regreiroQAs: RegreiroQA[] = [
     question: "> Olá, nobres esclarecedores de regras! Tenho uma dúvida: é possível fazer uma investida saltando?",
     answer: "Saltar é parte do movimento do personagem e não exige uma ação. Assim, desde que o salto seja compatível com uma investida (ou seja, desde que o movimento horizontal permaneça em linha reta), é perfeitamente possível fazer combiná-los.",
     magazineNumber: 201,
+  },
+  //#endregion
+  //#region DB - 204
+  {
+    id: "DB204-01",
+    question: "> Salve, santo tribunal!\n\nTenho várias perguntas mas hei de ordená-las em uma só missiva para facilitar os trabalhos da corte.\n\n1) Se eu tiver um monstro conjurado por *Conjurar Monstro* e um capanga invocado, posso movimentar ambos com a mesma ação de movimento?",
+    answer: "> Saudações prolíficas, conselheiro! Vamos às suas respostas.\n\n1) Não, é preciso uma ação para cada um.",
+    magazineNumber: 204,
+  },
+  {
+    id: "DB204-02",
+    question: "2) O poder geral disponibilizado pelas habilidades *versátil* (de humano), *plurivalente* (de minauro) e *memória póstuma* (de osteon) pode ser um poder concedido?",
+    answer: "2) Desde que o personagem seja devoto da divindade em questão, sim.",
+    magazineNumber: 204,
+  },
+  {
+    id: "DB204-03",
+    question: "3) O PM adicional dos elfos é cumulativo com *Vontade de Ferro*?",
+    answer: "3) Sim!",
+    magazineNumber: 204,
+  },
+  {
+    id: "DB204-04",
+    question: "4) O PV adicional dos anões é cumulativo com *Vitalidade*?",
+    answer: "4) Sim!",
+    magazineNumber: 204,
+  },
+  {
+    id: "DB204-05",
+    question: "5) Uma goblin clériga de Lena, usando uma maleta de medicamentos aprimorada e o poder *Curandeira Perfeita*, tem +7 no teste de Cura?",
+    answer: "5) Na verdade, o bônus será de +8; +1 pela maleta de medicamentos aprimorada, +2 por *Engenhoso* e +5 por *Curandeira Perfeita*.",
+    magazineNumber: 204,
+  },
+  {
+    id: "DB204-06",
+    question: "6) Um osteon, preso dentro de uma casa trancada, sem a possibilidade de escavar para se enterrar e sem estar debaixo da luz das estrelas, ainda assim recupera seus PV e PM por descanso?",
+    answer: "6) Não recupera. O osteon precisa estar sob a luz das estrelas ou enterrado para recuperar PVs e PMs.",
+    magazineNumber: 204,
+  },
+  {
+    id: "DB204-07",
+    question: "7) O que seriam \"roupas pesadas\" da habilidade *reptiliano*, do trog?",
+    answer: "7) Mantos, agasalhos e vestimentas similares, sejam itens nomeados ou não.",
+    magazineNumber: 204,
+  },
+  {
+    id: "DB204-08",
+    question: "8) Assim como perda de vida é diferente de sofrer dano, podemos dizer que recuperar vida (como o poder *Vigor Primal*) é diferente de receber cura? Um efeito que diminua efeitos de cura, afetaria *Vigor Primal*?",
+    answer: "8) Recuperar PVs e curar PVs são efetivamente a mesma coisa. *Vigor Primal* é afetado por efeitos que diminuam efeitos de cura.",
+    magazineNumber: 204,
+  },
+  {
+    id: "DB204-09",
+    question: "9) Os poderes *Valentão* e *Inclemente* (de *A Lenda de Ghanor RPG*) se acumulam?",
+    answer: "9) Sim, se acumulam.",
+    magazineNumber: 204,
+  },
+  {
+    id: "DB204-10",
+    question: "10) As poções do inventor são habilidades mágicas?",
+    answer: "10) Não, são itens alquímicos mundanos.",
+    magazineNumber: 204,
+  },
+  {
+    id: "DB204-11",
+    question: "11) O poder *Escapista* fornece +5 em testes de manobra contra agarrar?",
+    answer: "11) Sim. Agarrado é uma condição de movimento.",
+    magazineNumber: 204,
+  },
+  {
+    id: "DB204-12",
+    question: "> Salve membros da DB!\n\nVenho trazer perguntas sobre manobras e algumas interações mágicas.\n\n1) Um monstro criado pela magia *Conjurar Monstro* pode usar manobras?",
+    answer: "> Saudações manobrágicas, conselheiro! Vamos às suas respostas.\n\n1) Como regra geral, não. O mestre tem liberdade para recompensar ideias interessantes dos jogadores nesse sentido, mas pela letra fria da regra não é possível.",
+    magazineNumber: 204,
+  },
+  {
+    id: "DB204-13",
+    question: "2) Utilizando a magia *Concentração de Combate*, ao se realizar ou sofrer uma manobra, o alvo da magia rola 2 dados em ambos os casos?",
+    answer: "2) Sim, em ambos os casos o personagem está fazendo um teste de manobra. Testes de manobra são testes de ataque corpo a corpo.",
+    magazineNumber: 204,
+  },
+  {
+    id: "DB204-14",
+    question: "3) Armas, aprimoramentos e/ou poderes que deem bônus em alguma manobra (como *Lâmina da Geleira* da DB 188, ou o aprimoramento equilibrada), permitem que o personagem realize a manobra com a arma informada?\n\nAgradeço desde já pelas respostas claras e detalhadas.",
+    answer: "3) Normalmente manobras podem ser realizadas com qualquer arma, mas agarrar é uma exceção — só pode ser usado com ataque desarmado ou arma natural.",
+    magazineNumber: 204,
+  },
+  {
+    id: "DB204-15",
+    question: "> Saudações, excelentíssimos juízes sagrados!\n\nMinha súplica provém de uma dúvida sobre a interação da magia *Conjurar Monstro* com a habilidade *Arcano de Batalha*.\n\n1) Ao usar a ação padrão do arcanista responsável pela magia para comandar o monstro invocado para realizar um ataque, o bônus de *Arcano de Batalha* é somado ao dano causado pelo monstro?",
+    answer: "> Saudações monstruosas, conselheiro! Vamos às suas respostas.\n\n1) Não. Esse bônus é somado apenas a magias que causem dano direto.",
+    magazineNumber: 204,
+  },
+  {
+    id: "DB204-16",
+    question: "2) Ao lançar uma magia utilizando o monstro como foco da magia, soma-se o bônus de *Arcano de Batalha* nessa magia?",
+    answer: "2) Sim. Neste caso, como é a magia que está causando dano, o bônus de *Arcano de Batalha* se aplica.",
+    magazineNumber: 204,
+  },
+  {
+    id: "DB204-17",
+    question: "> Olá, caro tribunal!\n\n1) A admissão para Gigante Furioso tem que ser literalmente uma criatura que tenha o subtipo gigante ou pode ser qualquer criatura maior que o personagem?",
+    answer: "> Saudações gigantescas, conselheiro! Vamos às suas respostas.\n\n1) Precisa ser um gigante (teremos mais gigantes em Tormenta em breve).",
+    magazineNumber: 204,
+  },
+  {
+    id: "DB204-18",
+    question: "2) Na magia *Bola de Fogo*, o aprimoramento de aumento de dano acumula com o aprimoramento que cria a esfera flamejante? Você só precisa aumentar o dano uma vez e ela vale para todas as rodadas da cena? E se você a move numa linha de 9m e ela passa por mais de um inimigo, ela causa dano em todos eles?",
+    answer: "2) Sim, ambos os aprimoramentos se aplicam ao efeito da magia, sem que seja necessário pagar pelo aumento a cada rodada. Se passar por mais de um inimigo na mesma rodada, ela causa dano a todos eles (mas apenas uma vez por rodada a cada criatura).",
+    magazineNumber: 204,
+  },
+  {
+    id: "DB204-19",
+    question: "3) Diferentes tipos de camuflagem se acumulam? Por exemplo, uma camuflagem por magia e outra por item.",
+    answer: "3) A menos que o efeito que gerou a camuflagem especifique isso, camuflagem não se acumula.",
+    magazineNumber: 204,
+  },
+  {
+    id: "DB204-20",
+    question: "4) Personagens que tenham deslocamento de voo caso paguem 1 PM (por exemplo, um kallyanach), apenas se deslocam e caem no final do turno ou só cairiam caso não pagassem mais 1 PM no turno seguinte?",
+    answer: "4) Criaturas com esta habilidade recebem deslocamento de voo por 1 rodada. Isso significa que esse deslocamento dura do momento em que é usado até o mesmo momento do seu próximo turno. Como pagar o custo é uma ação livre, o personagem pode \"renovar\" seu voo a cada nova rodada sem precisar cair entre cada uso da habilidade.",
+    magazineNumber: 204,
+  },
+  {
+    id: "DB204-21",
+    question: "> Salve, juízes! Uma dúvida de *3DeT Victory*, simplória. Um Artefato pode ter a característica *Amaldiçoado* duas vezes?",
+    answer: "> Saudações rápidas, conselheiro! Não, não pode.",
+    magazineNumber: 204,
+  },
+  {
+    id: "DB204-22",
+    question: "> Saudações, excelentíssimos juízes. Trago-lhes dúvidas arcanas a serem respondidas.\n\n1) Quando um mago aprende e copia magias de um pergaminho com o poder *Escriba Arcano*, o pergaminho se desfaz em cinzas ou ainda pode ser usado posteriormente?",
+    answer: "> Saudações arcanas, conselheiro! Vamos às suas respostas.\n\n1) O pergaminho ainda pode ser usado.",
+    magazineNumber: 204,
+  },
+  {
+    id: "DB204-23",
+    question: "2) Um conjurador vestindo *Botas Velozes* usa a magia *Velocidade* das botas com duração sustentada. Esse conjurador poderia usar e manter a duração de alguma outra magia sustentada, tendo em vista que a primeira magia (*Velocidade*) advém do item mágico e não do próprio conjurador?",
+    answer: "2) As *Botas Velozes* apenas permitem que o personagem lance a magia, mas ele ainda é o conjurador dela, e está limitado a uma magia sustentada por vez.",
+    magazineNumber: 204,
+  },
+  {
+    id: "DB204-24",
+    question: "3) A magia *Salto Dimensional*, possui um aprimoramento que muda a execução para reação e fornece +5 na Defesa e em Reflexos contra um ataque ou efeito. Esse bônus se acumula com o bônus de Defesa de outras magias com duração de cena (ou sustentada), como por exemplo, *Imagem Espelhada*?\n\nMuito obrigado!",
+    answer: "3) Não; bônus fornecidos por magia na mesma característica não se acumulam (a menos que dito o contrário pelo efeito).",
+    magazineNumber: 204,
+  },
+  {
+    id: "DB204-25",
+    question: "> Prezados membros do Supremo Tribunal Regreiro,\n\nGostaria de submeter uma dúvida referente ao sistema de RPG *Tormenta20* para apreciação de vossas senhorias. No que tange ao poder de bardo *Prestidigitação*, este permite que se aproveite os gestos de uma ação padrão para lançar uma magia com ação livre, obrigando qualquer observador a fazer um teste de Misticismo para perceber que uma magia foi lançada.\n\nDiante disso, gostaria de saber se é correto presumir que, ao lançar a magia de forma \"discreta\" através do uso de *Prestidigitação*, não é necessário pronunciar encantamentos para a execução da magia. Agradeço antecipadamente pela atenção e esclarecimento.\n\nAtenciosamente,",
+    answer: "> Saudações prestidigitantes, conselheira!\n\nEmbora esse tribunal aplauda os esforços para obter mais benefícios deste poder, infelizmente a resposta é negativa. Os gestos e palavras necessários para lançar a magia ainda são realizados, mas são feitos de forma disfarçada.",
+    magazineNumber: 204,
+  },
+  {
+    id: "DB204-26",
+    question: "> Bom dia, ministros!\n\nTenho uma dúvida sobre um equipamento: é a armadura específica chamada *cota élfica*. O texto da armadura consta da página 340 do livro básico.\n\nA dúvida seria sobre a parte final da descrição “... aplique sua Destreza como se fosse uma armadura leve”. Isso faz com que ela para efeitos de poderes de classe e requisitos para lançar magias, que são limitadas ao uso de armaduras leves, se comportem como armadura leve ou para esses poderes eles vão considerar a *cota élfica* como armadura pesada também?\n\nEssa dúvida surgiu devido a minha personagem ser uma elfa caçadora e mística com poderes de arqueira arcana e os seus poderes de caçador como *escaramuça* e magias de místico que possuem essa limitação de usar até as armaduras leves.\n\nAtenciosamente,",
+    answer: "> Saudações élficas, Conselheiro! A *cota élfica* não é uma armadura leve, ela apenas conta como uma armadura leve para propósito de Destreza na Defesa. Ou seja, para quaisquer outros efeitos relacionados a armaduras, ela não é considerada uma armadura leve. Embora isso não ajude que sua caçadora/mística use seus poderes de arqueiro arcano enquanto veste essa armadura, permite que outros personagens usem os poderes de *Encouraçado* com a mesma.",
+    magazineNumber: 204,
+  },
+  {
+    id: "DB204-27",
+    question: "> Saudações, meretíssimos.\n\nVenho apresentar diante de vossas senhorias uma dúvida quanto a engenhocas. Quando construo uma engenhoca preciso decidir se para uso ela será empunhada ou vestida. Tendo em conta a simulação de magias com durações prolongadas, como cena ou dia, uma engenhoca precisa se manter empunhada ou vestida para que seu efeito persista ou apenas no momento de seu uso para iniciar o efeito?",
+    answer: "> Saudações inventivas, conselheiro! Uma engenhoca só precisar ser empunhada ou vestida para ser ativada. Uma vez que isso seja feito, ela pode ser solta ou removida. Algumas interações entre certos efeitos e engenhocas vão exigir uma explicação (e criatividade) para justificar isso, mas é parte do universo maluco das engenhocas.",
+    magazineNumber: 204,
+  },
+  {
+    id: "DB204-28",
+    question: "> Minhas mais respeitosas saudações prezados e excelentíssimos Ministros.\n\nMinha dúvida é sobre habilidades que têm como requisito de ativação o uso específico de determinadas ações. Por exemplo, considerando um personagem trog lutador que use a ação agredir, sendo essa o gatilho para *Mordida* e *Golpe Relâmpago*, o jogador pode fazer a *Mordida* e o *Golpe Relâmpago* ou apenas um destes? O requisito de ativação abre margem para que todas as habilidades que o tenham como gatilho sejam usadas ao mesmo tempo ou para apenas uma delas?",
+    answer: "> Saudações agressivas, conselheiro! Sim, a condição de ativação pode ser usada para várias habilidades, mas apenas uma vez por habilidade.",
+    magazineNumber: 204,
   },
   //#endregion
   //#region DB - 207
