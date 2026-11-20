@@ -5,6 +5,7 @@ import Link from "next/link";
 import { powersSamurai } from "@/data/powers-samurai";
 import { formatOrigin, getOriginGroup } from "@/types/power";
 import ThemeToggle from "@/components/ThemeToggle";
+import PowerCard from "@/components/PowerCard";
 
 function CornerOrnament({ className = "" }: { className?: string }) {
   return (
@@ -238,47 +239,8 @@ export default function SamuraiPowersPage() {
         {/* Grid de Poderes */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-x-6 gap-y-10 items-stretch mb-16">
           {filteredPowers.map((power) => (
-            <div
-              key={power.id}
-              className="card-grain group relative rounded-md bg-[radial-gradient(ellipse_at_50%_0%,rgba(var(--accent-rgb),0.07),transparent_60%),rgb(var(--bg-card-rgb))] border border-amber-900/20 outline outline-1 outline-offset-4 outline-amber-900/5 p-5 md:p-6 hover:border-[rgb(var(--accent-rgb))]/55 transition-all duration-300 hover:shadow-[0_8px_30px_rgba(var(--accent-rgb),0.18)] flex flex-col h-full hover:-translate-y-1 shadow-sm"
-            >
-              <CornerOrnament className="absolute -top-px -left-px opacity-50 group-hover:opacity-100 transition-opacity" />
-              <CornerOrnament className="absolute -top-px -right-px rotate-90 opacity-50 group-hover:opacity-100 transition-opacity" />
-              <CornerOrnament className="absolute -bottom-px -right-px rotate-180 opacity-50 group-hover:opacity-100 transition-opacity" />
-              <CornerOrnament className="absolute -bottom-px -left-px -rotate-90 opacity-50 group-hover:opacity-100 transition-opacity" />
-
-              {/* Nome do Poder */}
-              <h3 className="font-display text-lg font-bold text-red-800 mb-3 tracking-wide border-b-2 border-amber-900/10 pb-2 text-center">
-                {power.name}
-              </h3>
-
-              {/* Descrição */}
-              <div className="flex-1 mb-4">
-                <p className="text-amber-950/85 text-sm leading-relaxed text-center">
-                  {power.description}
-                </p>
-              </div>
-
-              {/* Rodapé do Card */}
-              <div className="mt-auto">
-                {/* Pré-requisito */}
-                {power.prerequisite && (
-                  <div className="mb-4 pt-4 border-t border-amber-900/15 group-hover:border-[rgb(var(--accent-rgb))]/30 transition-colors">
-                    <p className="text-xs text-amber-950/70 text-center">
-                      <span className="font-display font-bold text-red-800 uppercase tracking-widest">Pré-requisito:</span> {power.prerequisite}
-                    </p>
-                  </div>
-                )}
-
-                {/* Origem */}
-                <div className="flex items-center justify-center pt-4 border-t border-amber-900/15 group-hover:border-[rgb(var(--accent-rgb))]/30 transition-colors">
-                  <span className="hex-badge font-display text-[10px] px-3 py-1.5 bg-[rgb(var(--bg-inset-rgb))] border border-[rgb(var(--accent-rgb))]/30 text-amber-950/75 uppercase tracking-widest font-bold">
-                    {formatOrigin(power.origin)}
-                  </span>
-                </div>
-              </div>
-            </div>
-          ))}
+  <PowerCard key={power.id} power={power} />
+))}
         </div>
 
         {/* Empty State */}
