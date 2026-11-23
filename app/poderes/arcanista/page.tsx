@@ -209,6 +209,7 @@ export default function ArcanistaPodersPage() {
                   <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Asa-Assassina: </span><span className="font-medium">Uma asa-assassina permite que você gaste 1 PM quando causa dano de corte ou perfuração a uma criatura para deixá-la sangrando.</span></p>
                   <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Stagh: </span><span className="font-medium">Um stagh concede +1 na CD de suas magias de frio.</span></p>
                   <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Escorpião de Madeira: </span><span className="font-medium">Um escorpião de madeira familiar fornece resistência a magia e venenos +2. (Dragão Brasil)</span></p>
+                  <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Anomalocaris: </span><span className="font-medium">Um anomalocaris familiar fornece +1 PM para gastar em aprimoramentos sempre que você lança uma magia de Conjuração. Apenas lefou e devotos de Aharadak podem invocar essas criaturas como familiares.(Dragão Brasil)</span></p>
                 </div>
               </section>
 

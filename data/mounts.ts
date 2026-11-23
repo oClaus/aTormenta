@@ -136,6 +136,18 @@ export const mounts: Mount[] = [
 
 
   //#region Dragão Brasil
+  // Dragão Brasil - 193
+  { id: "nautilon ",
+    name: "Nautilon ",
+    size: "Grande",
+    description: "O nautilon é um parceiro montaria, exclusivo de lefou e devotos de Aharadak",
+    origin: "Dragão Brasil - 193",
+    benefits: {
+      iniciante: "Você recebe +2 em testes para agarrar e, uma vez por rodada, recebe +1d6 em uma rolagem de dano corpo a corpo (um nautilon iniciante é um filhote e não pode ser usado como montaria).",
+      veterano: "Como acima, mas pode ser usado como montaria, mudando seu deslocamento para natação 12m e voo 12m.",
+      mestre: "Como acima, mas você recebe uma ação de movimento extra por turno (apenas para se deslocar).",
+    },
+  },
   // Dragão Brasil - 205
   { id: "Khanoa",
   name: "Khan’Oa",
@@ -688,17 +700,7 @@ export const mounts: Mount[] = [
   
 
 
-  { id: "nautilon ",
-    name: "Nautilon ",
-    size: "Grande",
-    description: "O nautilon é um parceiro montaria, exclusivo de lefou e devotos de Aharadak",
-    origin: "Dragão Brasil",
-    benefits: {
-      iniciante: "Você recebe +2 em testes para agarrar e, uma vez por rodada, recebe +1d6 em uma rolagem de dano corpo a corpo (um nautilon iniciante é um filhote e não pode ser usado como montaria).",
-      veterano: "Como acima, mas pode ser usado como montaria, mudando seu deslocamento para natação 12m e voo 12m.",
-      mestre: "Como acima, mas você recebe uma ação de movimento extra por turno (apenas para se deslocar).",
-    },
-  },
+  
   
   { id: "Pegaso",
   name: "Pégaso",

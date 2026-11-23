@@ -34,10 +34,6 @@ export const artifacts: Artifact[] = [
   },
   //#endregion
 
-
-
-
-
   //#region Duelo de Dragões
   { id: "Pentalépide de Kryzzaorin",
     name: "Pentalépide de Kryzzaorin",
@@ -47,11 +43,13 @@ export const artifacts: Artifact[] = [
   },
   //#endregion
 
-
-
-
-
   //#region Dragão Brasil
+  // Dragão Brasil - 193
+  { id: "lua-de-sangue",
+    name: "Lua de Sangue",
+    description: "A nodachi Lua Minguante é um artefato famoso, empunhada pelo próprio Arsenal em combate. A família Shirosaki sempre assumiu a autoria da lâmina, mas nunca conseguiu provar. O ferreiro Ichiro Shirosaki criou uma lâmina-irmã para essa arma magnífica, alimentado pela saudade que tinha de sua amada Sho.\nLua de Sangue é uma katana de aço-rubi atroz maciça ameaçadora formidável. Sua grande lâmina de aço-rubi tem aspecto bruto e inacabado. Embora não seja tão formidável quanto Lua Minguante em combate corporal regular, Lua de Sangue guarda uma versão reversa de seu poder secreto, revelada apenas após muita prática: quando o usuário executa uma manobra no ângulo e velocidade certos, a lâmina expele uma onda sombria de essência mágica em forma de lua crescente, capaz de atingir alvos distantes. Existe ainda uma técnica de saque rápido para usar essa manobra logo no início do combate, fazendo surgir uma lua de sangue acima do usuário, tornando seu primeiro ataque muito mais perigoso.\nO usuário de Lua de Sangue pode gastar uma ação padrão e 2 PM para emitir uma onda de trevas contra uma criatura em alcance curto; isso conta como um ataque corpo a corpo com a Lua contra o alvo. Caso tenha Foco em Arma (katana), na primeira rodada de combate, e sempre que obtém um acerto crítico, o portador da Lua pode emitir a onda de trevas gastando 2 PM e uma ação livre.\nDa mesma forma que Lua Minguante, Lua de Sangue é um artefato; não tem preço fixo e não pode ser reproduzida.",
+    origin: "Dragão Brasil - 193"
+  },
   // Dragão Brasil - 204
   { id: "Bastão Mágico",
     name: "Bastão Mágico",

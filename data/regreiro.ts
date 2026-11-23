@@ -194,6 +194,110 @@ export const regreiroQAs: RegreiroQA[] = [
     magazineNumber: 191,
   },
   //#endregion
+  //#region DB - 193
+  {
+    id: "DB193-01",
+    question: "> Há alguma regra para usar um personagem de jogador como montaria de outro personagem de jogador? Um exemplo disso seria quando a Ayla usou o Arius de montaria.",
+    answer: "> Saudações equestres, conselheiro pego pelo *Fim dos Tempos*! Não existem regras gerais para um personagem ser usado como montaria por outro, especialmente considerando que montarias usam as regras de parceiro, impedindo-as de agir. Não é nada divertido se o personagem de um jogador apenas fornecer um bônus fixo para outro jogador, sem poder fazer nada! Como sugestão, é possível considerar que o personagem “montaria” está apenas carregando o outro personagem, como se fosse carga, usando seu próprio deslocamento. O outro personagem precisa ajustar sua iniciativa para agir depois do personagem montaria com a ação atrasar. A não ser que exista algum motivo muito bom, como afinidade entre os personagens ou habilidade excepcional de ambos em situações do tipo, nenhum bônus seria acrescido além do deslocamento compartilhado.",
+    magazineNumber: 193,
+  },
+  {
+    id: "DB193-02",
+    question: "> Magnânimos explicadores de regra, trago duas dúvidas.\n\n1) Como funciona a interação entre as magias *Globo de Invulnerabilidade* e *Dissipar Magia*? *Globo de Invulnerabilidade* detém qualquer magia de 2º círculo ou inferior, mas também cita que \"uma magia que que dissipe outras magias só dissipa o globo se for usada diretamente sobre você, não o afetando se usada em área.\" É possível conjurar *Dissipar Magia* diretamente no Conjurador que está sob o efeito do *Globo de Invulnerabilidade*, tentando assim dissipar o mesmo? Ou como a magia detém qualquer outra, ela impede a \"dissipação\" de entrar e atingir o conjurador que está sustentando o globo?",
+    answer: "> Saudações combinatórias, duplicado conselheiro!\n\n1) O *Globo de Invulnerabilidade* bloqueia a magia *Dissipar Magia*. Magias de 3o círculo ou superior que dissipam magias podem dissipar o *Globo de Invulnerabilidade*, mas somente se usadas diretamente contra ele.",
+    magazineNumber: 193,
+  },
+  {
+    id: "DB193-03",
+    question: "2) Gostaria de esclarecer como funciona a relação do encantamento *Flamejante* e armas corpo a corpo. Temos uma Lutadora com Manoplas com o Encantamento *Flamejante*. Essa lutadora gostaria de usar o efeito dos 2PM para atacar um alvo no alcance médio, como diz o poder. Contudo ela não tem nenhum alvo válido para realizar um ataque. Seria possível essa lutadora atacar uma árvore ou aliado, para conseguir usar a *Bola de Fogo* em um inimigo no alcance médio? Ou o uso correto desse encantamento seria usar uma ação padrão e 2 PM para disparar uma bola de fogo contra um alvo em alcance médio? Fica meio dúbio se poderia, mas pra mim não parece que atacar um aliado para jogar um \"Hadouken\" no inimigo seja o objetivo do encantamento.",
+    answer: "2) O encantamento *Flamejante* funciona a partir da ação Agredir. Ao escolher essa ação, o efeito do encantamento substitui a primeira linha do efeito: “Você faz um ataque com uma arma corpo a corpo ou à distância”. Ou seja, a Lutadora pode gastar 2 PM e lançar sua bola de fogo contra um alvo em alcance médio, sem precisar agredir nenhum aliado ou árvore para tanto.",
+    magazineNumber: 193,
+  },
+  {
+    id: "DB193-04",
+    question: "1) Um personagem que tenha o poder *Lutador de Chão*, ao agarrar o oponente e deixá-lo caído como uma ação livre, faz com que as duas condições se acumulem?",
+    answer: "> Saudações mistas, conselheiro marcial! Vamos às suas respostas:\n\n1) Sim. Não deixe esse sujeito chegar perto de você!",
+    magazineNumber: 193,
+  },
+  {
+    id: "DB193-05",
+    question: "2) Um bardo que tenha *Esgrima Mágica* faz os testes de manobra (inclusive a resistida) usando Atuação?",
+    answer: "2) Sim, mas apenas se estiver sob efeito de inspiração.",
+    magazineNumber: 193,
+  },
+  {
+    id: "DB193-06",
+    question: "> Prezados membros desse digníssimo tribunal, a inclusão do termo Agredir foi uma grande evolução para a Edição *Jogo do Ano*. Ainda assim \"atacar\" é usado em diversas partes do texto.\n\n1) Qual a diferença entre um e outro em termos de regras?",
+    answer: "> Saudações belicosas, conselheiro artilheiro! Vamos às suas respostas:\n\n1) Agredir é uma ação. Ao fazer a ação agredir, você faz um ataque. Várias habilidades são ativadas a partir da ação agredir. Já um ataque é o uso das perícias Luta ou Pontaria para superar a Defesa de um alvo e (normalmente) causar dano, como descrito nas próprias perícias.",
+    magazineNumber: 193,
+  },
+  {
+    id: "DB193-07",
+    question: "2) Que tipo de ações (além de Agredir) contariam como ataques para habilidades como *Postura de Combate: Castigo de Ferro*?",
+    answer: "2) Não faz diferença para *Castigo de Ferro* de qual ação vieram os ataques, apenas se o ataque é corpo a corpo e se teve como alvo um aliado adjacente. Cumprindo-se essas condições, o cavaleiro pode gastar 1 PM e retaliar.",
+    magazineNumber: 193,
+  },
+  {
+    id: "DB193-08",
+    question: "1) Tenho uma dúvida. Magias que incluem a opção de escolher quais criaturas atingir dentro da área, como *Deflagração de Mana* com seu aprimoramento de +5 PM, tornam o alvo específico da magia? Isso permite uso do *Anel Refletor* para refletir a magia? Já que com esse aprimoramento o conjurador escolhe alvos que irão ser afetados pela magia?",
+    answer: "> Saudações arcanas, conselheiro místico! Vamos às suas respostas.\n\n1) Um alvo é alguém que sofre o efeito de uma magia. Independente do uso do aprimoramento e da escolha individual de alvos, qualquer vítima de uma *Deflagração de Mana* pode usar um *Anel Refletor* para refletir a magia.",
+    magazineNumber: 193,
+  },
+  {
+    id: "DB193-09",
+    question: "2) Quando usa o poder *Inspirar Confiança*, o nobre precisa estar vendo seu alvo que irá rolar novamente um teste?",
+    answer: "2) Sim. Habilidades só podem ser usadas se o usuário puder perceber seu alvo.",
+    magazineNumber: 193,
+  },
+  {
+    id: "DB193-10",
+    question: "3) As habilidades de arcanista para aprimoramento de CD, como *Magia Pungente* e *Fortalecimento Arcano*, só se aplicam a magias de arcanista? Assim como a *Liturgia Mágica* do clérigo?",
+    answer: "3) *Magia Pungente* e *Fortalecimento Arcano* se aplicam a quaisquer magias, independente da sua fonte. *Liturgia Mágica*, porém, afeta apenas habilidades de clérigo (incluindo magias, mas apenas magias de clérigo).",
+    magazineNumber: 193,
+  },
+  {
+    id: "DB193-11",
+    question: "1) *Proteção Contra Magia* (Abjuração) deixa imune a *Dissipar Magia*?",
+    answer: "> Saudações arcanas, conselheiro honorário! Vamos às suas respostas:\n\n1) Sim. In dubio pro immunitas.",
+    magazineNumber: 193,
+  },
+  {
+    id: "DB193-12",
+    question: "2) A magia *Roubar A Alma* tem um aprimoramento que permite possuir o corpo da vítima mesmo sem conhecer a magia *Possessão*. Esse aprimoramento permite lançar apenas a versão base ou está incluso o aprimoramento de possessão permanente?",
+    answer: "2) Nesse caso, a magia *Possessão* sequer é lançada (não poderia, por exemplo, ser alvo de uma contramágica). A magia apenas recebe um efeito adicional, idêntico ao efeito base da magia *Possessão*. Dessa forma, nenhum de seus aprimoramentos está incluso.",
+    magazineNumber: 193,
+  },
+  {
+    id: "DB193-13",
+    question: "3) Há alguma previsão de atualização do FAQ?",
+    answer: "3) *Tormenta20* possui dois documentos sobre suas regras. Um deles é a Errata de *Tormenta20 - Edição Financiamento Coletivo*. Este documento não será atualizado, pois a versão corrente abrange toda a errata da Edição do Financiamento Coletivo. O outro documento é o Dúvidas Frequentes de *Tormenta20*. Esse documento é um compilado de dúvidas da comunidade, e usa como base as regras da Edição do Financiamento Coletivo. Futuramente lançaremos uma versão do Dúvidas Frequentes atualizada para o texto e as referências de página da Edição *Jogo do Ano*, mas isso não implicará em mudanças de regras.",
+    magazineNumber: 193,
+  },
+  {
+    id: "DB193-14",
+    question: "> Saudações a todos no recinto.\n\nExcelentíssimos juízes, sobre os custos de fabricação de itens com melhorias, a redução para um terço do valor incide também sobre o preço adicional de material especial?\n\nPor exemplo, um elfo inventor com ofício fabricará uma espada longa com quatro melhorias: certeira, pungente, precisa e material especial (mitral). O preço do item será 18.000 (pelas quatro melhorias) + 1.500 (pelo mitral). O custo seria apenas um terço dos 18.000 (custando 6.000) somando 1.500 do mitral ou reduziria o custo total (custando 6.500)?\n\nDesde já, obrigado!",
+    answer: "> Saudações engenhosas, conselheiro honorário! O custo é calculado a partir do preço total. Então, no caso do elfo inventor, ele precisaria de T$ 6.500.",
+    magazineNumber: 193,
+  },
+  {
+    id: "DB193-15",
+    question: "> Saudações, excelentíssimos! Venho trazer para vossa apreciação uma dúvida sobre Poderes Concedidos que surgiu na minha mesa, bem como alguns desdobramentos que surgiram.\n\n1) O atributo-chave de poderes concedidos é Sabedoria. No entanto, os efeitos de alguns poderes, como *Aura de Medo* (Kallyadranoch) e *Aura de Paz* (Marah), determinam CD a partir de Carisma. A regra geral é substituída pela regra específica de cada poder ou nossos sábios devotos podem escolher se o atributo-chave do teste será Sabedoria ou Carisma?",
+    answer: "> Saudações divinas, honorário conselheiro! Vamos às suas respostas.\n\n1) Sim. Esses poderes são exceções.",
+    magazineNumber: 193,
+  },
+  {
+    id: "DB193-16",
+    question: "2) A regra geral supracitada se aplica às magias fornecidas pelos Poderes Concedidos? Por exemplo, Hyninn concedeu *Farsa do Fingidor* a um devoto Qareen. Vamos supor que esse carismático devoto só aprendeu a magia *Criar Ilusão* graças a esse poder concedido. Ele deve lançá-la usando Sabedoria como atributo-chave?",
+    answer: "2) Sim.",
+    magazineNumber: 193,
+  },
+  {
+    id: "DB193-17",
+    question: "3) Afinal, as magias fornecidas por poderes concedidos devem ser lançadas como magias divinas? Voltando ao exemplo do nosso Qareen da pergunta #2, que agora está empunhando um *Cajado Arcano*. A magia *Criar Ilusão*, que ele aprendeu graças ao poder *Farsa do Fingidor*, se beneficiaria dos bônus do esotérico em questão?\n\nAgradeço desde já vossa atenção e disponibilidade!",
+    answer: "3) Não, ela é uma magia divina.",
+    magazineNumber: 193,
+  },
+  //#endregion
   //#region DB - 198
   {
     id: "DB198-01",
@@ -744,6 +848,116 @@ export const regreiroQAs: RegreiroQA[] = [
     question: "> Saudações, meritíssimos juízes! O poder concedido de Laan, *Pé na Estrada*, concede imunidade às condições lento e imóvel. Como este poder interage com a condição agarrado? Você ainda consegue se deslocar? Se consegue se deslocar, você sai do agarramento ou você consegue arrastar quem te agarrou?",
     answer: "> Saudações gazofiladas, conselheiro! Um devoto de Laan, se agarrado, fica desprevenido normalmente. Em seu turno, pode se mover normalmente — caso saia do alcance natural da criatura que o agarrou, deixa de estar agarrado.",
     magazineNumber: 216,
+  },
+  //#endregion
+  //#region DB - 220
+  {
+    id: "DB220-01",
+    question: "> Saudações, excelentíssimos ministros do STR! Estou com uma dúvida acerca do poder *Saque Celestial*. Quando um aventureiro usa esse poder, recebe +2 no teste de ataque e seu dano aumenta em dois passos. Esse aumento vale para o dano da arma ou para todo o dano do ataque? Qual seria o dano de um samurai atacando com uma katana e usando *Saque Celestial* junto de *Grito de Kiai*?",
+    answer: "> Saudações retalhadoras, conselheira! *Saque Celestial* afeta somente o dano da arma. Portanto, um samurai de 4o nível ou inferior causaria 1d12 pontos de dano com uma katana empunhada em uma mão (1d8 aumentado em dois passos) ou 3d6 com as duas mãos, mais 1d4 do *Grito de Kiai*. Porém, em caso de acerto crítico, esse 1d4 adicional também é multiplicado.",
+    magazineNumber: 220,
+  },
+  {
+    id: "DB220-02",
+    question: "> Excelentíssimos ministros, trago aqui minha súplica. A distinção teurgista hermético permite a um mago com o poder *Escriba Arcano* aprender todas as magias do jogo? Ou seria o efeito de *Conjuração Unificada* aplicado apenas para efeitos de itens e habilidades, como *cajado arcano* ou a *vela eclesiástica*? Se eu tiver mais de um familiar, como poderes como *Familiar Aprimorado* funcionam? Devo escolher um familiar ou todos recebem o benefício?",
+    answer: "> Saudações herméticas, conselheiro! A marca de distinção *Princípio Hermético* faz com que as magias do conjurador sejam consideradas tanto arcanas quanto divinas. Isso se aplica para todos os fins, não apenas a itens e habilidades! Porém, não quer dizer que um mago possa aprender todas as magias. Ao ser considerado um conjurador divino, o mago recebe acesso a magias divinas para as magias que recebe normalmente ao avançar de nível e com o poder *Conhecimento Mágico*. O mesmo não vale, porém, para pergaminhos e grimórios de outros magos. Somente um personagem com os poderes *Teurgista Místico* e *Tinta do Mago* (ou outro teurgista hermético) poderia fazer pergaminhos divinos elegíveis para uso com *Escriba Arcano*.\n\nQuanto a *Familiar Aprimorado* e poderes similares, todos se referem ao familiar no singular. Dessa forma, você deve escolher um único familiar para receber os benefícios de cada poder.",
+    magazineNumber: 220,
+  },
+  {
+    id: "DB220-03",
+    question: "> Caríssimos juízes, muito bom dia! Respondam-me: um devoto de Valkaria ou de Hydora pode se beneficiar de bases? Um devoto de Khalmyr poderia usar armas com encantos recebidos através do poder *Forja Devocional*, do Forjador Litúrgico, caso os encantos originais da arma tenham sido feitos por um devoto do Deus da Justiça?",
+    answer: "> Saudações milagreiras, conselheiro! Você precisa ser um morador da base para receber os benefícios dos cômodos. Dessa forma, devotos desses deuses não podem se beneficiar de bases. Caso seja uma base móvel, porém, você pode pedir com jeitinho para o seu mestre e torcer para ele deixar.\n\nQuanto aos devotos de Khalmyr, pare de tentar enganar o Deus da Justiça! É feio! Os encantos transferidos por *Forja Devocional* são permanentes. Dessa forma, assim que o poder é usado, o item passa a ter sido encantado por um devoto de Arsenal. Usá-lo quebrará as Obrigações & Restrições de um devoto de Khamyr.",
+    magazineNumber: 220,
+  },
+  {
+    id: "DB220-04",
+    question: "> Olá, juízes! Tenho várias dúvidas:\n\n1) Magias e efeitos com duração cena podem ser usados como preparação, logo antes de um combate?",
+    answer: "> Saudações hexagonais, conselheiro! Vamos às suas respostas.\n\n1) Como regra geral, sim. Se precisar de mais detalhamento, considere as regras de divisão de cenas em segmentos, apresentadas na seção de exploração de masmorras de *Heróis de Arton* (p. 312).",
+    magazineNumber: 220,
+  },
+  {
+    id: "DB220-05",
+    question: "2) Se eu estiver no escuro e vestindo um *manto do mantor* (*Ameaças de Arton*), um devoto de Tenebra com o poder *Visão nas Trevas* seria afetado pela minha camuflagem?",
+    answer: "2) Sim, seria afetado normalmente.",
+    magazineNumber: 220,
+  },
+  {
+    id: "DB220-06",
+    question: "3) Um devoto do Deus do Medo (*Guia de Deuses Menores*) pode escolher poderes de distinção relacionados ao mesmo, sem ser membro da distinção?",
+    answer: "3) Não. Poderes de distinção seguem as mesmas regras gerais de poderes, mas o poder concedido *Domínio do Medo* permite apenas ignorar requisitos de classe ou devoção. Portanto, não se aplica a poderes de distinção.",
+    magazineNumber: 220,
+  },
+  {
+    id: "DB220-07",
+    question: "4) Os bônus de ataque e dano de *Saque Celestial* podem ser obtidos sem gastar 1 PM para sacar a arma como uma ação livre?",
+    answer: "4) Desde que a arma seja sacada no mesmo turno em que o ataque é realizado, sim.",
+    magazineNumber: 220,
+  },
+  {
+    id: "DB220-08",
+    question: "5) Como o poder *Investida Imprudente*, do bárbaro, se relaciona com o poder *Investida Avalanche*, da distinção Mestre da Fúria Fria?",
+    answer: "5) Os poderes não interagem. *Investida Avalanche* remove apenas o redutor normal na Defesa por investidas.",
+    magazineNumber: 220,
+  },
+  {
+    id: "DB220-09",
+    question: "6) Existe alguma vantagem maior em ser mestre da Fúria fria machado de pedra, já que os redutores de custo da fúria não se acumulam?",
+    answer: "6) Não. Essa é uma combinação ruim, tanto em termos mecânicos quanto de história. O machado de pedra é um combatente ancorado às suas raízes mais primitivas e brutais, enquanto o mestre da fúria fria é membro de uma tradição metódica e sofisticada.",
+    magazineNumber: 220,
+  },
+  {
+    id: "DB220-10",
+    question: "> Oi oi, boa tardeee, sô! Tenho algumas dúvidas:\n\n1) Qual é a regra para converter uma criatura (por exemplo, uma aranha gigante) em montaria?",
+    answer: "> Saudações pentatônicas, conselheiro! Vamos às suas respostas:\n\n1) Não existem regras gerais para tanto. Você pode se basear em criaturas semelhantes caso deseje trazer essa possibilidade para seus jogos.",
+    magazineNumber: 220,
+  },
+  {
+    id: "DB220-11",
+    question: "2) Um treinador de 1º nível pode ter um Melhor Amigo de tamanho, no máximo, Grande. Como um treinador Grande pode usar seu Melhor Amigo como montaria?",
+    answer: "2) Aguardando até o 7º nível, quando pode escolher o poder *Amigão*.",
+    magazineNumber: 220,
+  },
+  {
+    id: "DB220-12",
+    question: "3) Quais são as regras para criar complicações? A lista em *Heróis de Arton* é bem ampla, mas a criatividade dos jogadores não tem limites para ideias bobas!",
+    answer: "3) Novamente, não existem regras gerais para tanto. Criar uma complicação é mais uma arte do que uma ciência. Tente considerar que a penalidade deve ser equivalente à perda de um poder.",
+    magazineNumber: 220,
+  },
+  {
+    id: "DB220-13",
+    question: "4) O poder recebido pela idade adulto é mantido nas idades mais avançadas? Como isso funciona em relação a personagens ainda mais velhos?",
+    answer: "4) Depende. Se você começar uma campanha com um personagem adulto, escolher uma complicação de idade para ele e a campanha durar até ele se tornar maduro, sim. Ele manterá o poder. Se você criar um personagem maduro, velho ou ancião, não. Ele recebe apenas os benefícios listados para sua categoria de idade.",
+    magazineNumber: 220,
+  },
+  {
+    id: "DB220-14",
+    question: "5) O poder concedido de Hippion, *Ginete Altivo*, conta como o poder *Ginete* para centauros?",
+    answer: "5) Não. O poder funciona de forma diferente para centauros, como consta do *Guia de Deuses Menores*.",
+    magazineNumber: 220,
+  },
+  {
+    id: "DB220-15",
+    question: "> Olá, excelentíssimos juízes regreiros! Hoje, este franco-atirador vem com duas dúvidas sobre itens.\n\n1) *Olhos do Corvo* permite que você enxergue normalmente na escuridão, mas te deixa cego em ambientes iluminados. O que seria considerado um \"ambiente iluminado\"? Se eu estiver dentro da área iluminada por uma tocha ou semelhante, eu fico cego? Eu consigo ver uma área iluminada por uma tocha ou semelhante, estando fora dela?",
+    answer: "> Saudações duplas, conselheiro! Vamos às suas respostas:\n\n1) Se existe alguma forma de iluminação, conta como um ambiente iluminado. Sim, você fica cego perto de uma tocha! Se estiver fora da área iluminada, você consegue distinguir que há uma área iluminada, mas não enxergar dentro dela.",
+    magazineNumber: 220,
+  },
+  {
+    id: "DB220-16",
+    question: "2) Se eu estiver vestindo uma armadura e tentar lançar uma magia arcana através da *tatuagem mística de Khubar*, preciso passar em um teste de Misticismo?",
+    answer: "2) Sim. Deve ser por isso que usam tão pouca roupa por lá!",
+    magazineNumber: 220,
+  },
+  {
+    id: "DB220-17",
+    question: "> Saudações, excelentíssimos ministros! Gostaria de uma decisão do tribunal apenas por uma mera formalidade, uma vez que RPG tem regras e não lógica. Quando um poder lista uma magia como pré-requisito (por exemplo, *Contramágica Aprimorada*), o que isso quer dizer? O personagem deve ter aprendido e ser capaz de lançá-la a magia ou apenas ser capaz de lançá-la é o suficiente?",
+    answer: "> Saudações lógicas, conselheiro! Se apenas o nome da magia é listado, o personagem precisa ser capaz de lançar a magia.",
+    magazineNumber: 220,
+  },
+  {
+    id: "DB220-18",
+    question: "> Olá digníssimos membros do STR. Em *3DeT Victory*, a vantagem *Vigoroso* soma +2 para se defender de ataques, mesmo não sendo mencionado na vantagem?",
+    answer: "> Saudações defensivas, conselheiro! A resposta é sim e não. Lembre-se que conflitos em *3DeT* acontecem das formas mais diversas possíveis. Pode se tratar de uma competição de culinária, um debate ou uma troca franca de sopapos. Caso *Vigoroso* se aplique para o conflito em questão (e certamente se aplicaria para um combate tradicional) então sim, o bônus é aplicado.",
+    magazineNumber: 220,
   },
   //#endregion
   //#region DB - 225

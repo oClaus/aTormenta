@@ -1,8 +1,7 @@
 import { Adventure } from "@/types/adventure";
 
 export const adventures: Adventure[] = [
-  {
-    id: "1",
+  { id: "Por Vós Esperamos",
     name: "Por Vós Esperamos",
     theme: "Horror",
     image: "/aventuras/por_vos_esperamos.png",
@@ -115,8 +114,7 @@ export const adventures: Adventure[] = [
     }
     ]
   },
-  {
-    id: "2",
+  { id: "A Peste",
     name: "A Peste",
     theme: "Aventura",
     image: "/aventuras/a_peste.png",
@@ -231,8 +229,7 @@ export const adventures: Adventure[] = [
     }
     ]
   },
-  {
-    id: "3",
+  { id: "Evil Park",
     name: "Evil Park",
     theme: "Horror",
     image: "/aventuras/evil_park.png",
@@ -326,8 +323,7 @@ export const adventures: Adventure[] = [
       },
     ]
   },
-  {
-  id: "4",
+  { id: "Escarlate",
   name: "Escarlate",
   theme: "Fantasia Sombria",
   image: "/aventuras/escarlate.png",
@@ -419,8 +415,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "5",
+  { id: "Serão",
   name: "Serão",
   theme: "Terror Investigativo",
   image: "/aventuras/serao.png",
@@ -507,6 +502,262 @@ export const adventures: Adventure[] = [
     {
       type: "text",
       content: "Existe coisa muito pior e o grupo precisa estar preparado!"
+    }
+  ]
+  },
+  { id: "Resgate Sombrio",
+  name: "Resgate Sombrio",
+  theme: "Fantasia Sombria, Vampiros e Licantropia",
+  image: "/aventuras/resgate-sombrio.png",
+  summary: "Contratados por uma nobre vampira de Aslothia para encontrar uma camponesa desaparecida, os heróis enfrentam mercenários mortos-vivos, uma turba de zumbis e um lobisomem desesperado em um templo abandonado, deparando-se ao final com um dilema sombrio.",
+  sections: [
+    {
+      type: "text",
+      content: "Heróis não trabalham apenas por ouro, mesmo quando afirmam interessar-se apenas por pagamento. Entretanto, enfrentar horrores de outra realidade, hordas de mortos-vivos ou maquinários colossais de guerra requer o tipo de fibra que não pode ser construída apenas com tibares empilhados. Em reinos inclementes, onde a esperança parece uma infantilidade, às vezes é preciso substituir a boa-vontade de aventureiros com os serviços de mercenários."
+    },
+    {
+      type: "text",
+      content: "No reino de Aslothia, a morte cerca a tudo e a todos, sobreviver pode ser a maior transgressão. Outrora um condado que abominava o uso de magia arcana, hoje sabe-se que era tudo parte de um plano do Arquilich Ferren Asloth. Hoje, mortos-vivos de todas as estirpes caminham abertamente, inclusive dentro da corte. Nobres literalmente sorvem o sangue do povo, vendo a população como seu rebanho, para fazer o que desejarem."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "RESUMO DA AVENTURA"
+    },
+    {
+      type: "text",
+      content: "Resgate Sombrio é uma breve jornada, uma aventura curta pensada para uma sessão única, mas que pode ser inserida em uma campanha maior. É ideal para um grupo de quatro personagens de 2º nível em Tormenta20."
+    },
+    {
+      type: "text",
+      content: "Levados ao encontro de uma nobre vampira, os personagens são contratados para encontrar uma pessoa do interesse da morta-viva. Chegando à aldeia onde o alvo está, eles devem tentar obter informações com os camponeses. Na taverna local, um pequeno bando de mercenários, liderado por um osteon minotauro, possui a informação necessária para o grupo continuar sua missão... mas eles desejam um pouco de confusão antes de revelá-la!"
+    },
+    {
+      type: "text",
+      content: "Em seguida, devem rumar para uma igreja abandonada nos arredores da cidade. Antes de poderem investigar o local, terão de enfrentar uma turba dos mortos que vagam pelos ermos de Aslothia. No interior do templo encontrarão a pessoa que foram contratados para buscar, amarrada e ameaçada por um homem. Entretanto, assustado pela aproximação dos aventureiros, ele se transforma em um lobisomem."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 1: REUNIÃO COM A VAMPIRA"
+    },
+    {
+      type: "text",
+      content: "Nas cidades e vilas do reino de Aslothia, a diferença entre os vivos e os mortos é pouca. A população mortal arrasta seus pés, peles sem viço, olhos vazios e cabeças baixas para evitar olhares. Sob o julgo cadavérico dos nobres, há pouca esperança de melhora ou de felicidade. Talvez a maior diferença entre os viventes e os desencarnados seja que o segundo grupo sofre menos."
+    },
+    {
+      type: "text",
+      content: "Os personagens são abordados por soldados vestindo armaduras negras. Um teste de Investigação ou Percepção (CD 15) revela se tratar de soldados vampíricos (veja NPCs e Criaturas), enquanto um teste de Nobreza (CD 20) identifica que o basão nas armaduras pertencente à Condessa Sirissa Tarvela, uma emergente vampira nobre, senhora do castelo Caerilech. Aqueles que acompanharem os soldados de boa vontade serão levados em uma luxuosa carruagem negra."
+    },
+    {
+      type: "text",
+      content: "O castelo Caerilech é antigo, feito de pedras cinzentas e frias. Seu interior é sombrio, todas as janelas estão bloqueadas de alguma forma para evitar que qualquer raio de luz indesejado entre. Tochas se acendem no caminho para facilitar aqueles incapazes de enxergar na escuridão. Volta e meia é possível ver um outro grupo de aventureiros cruzando os corredores, assim como ouvir o som de gritos ao longe. Logo todos chegam ao coração da construção, onde um trono suntuoso se posiciona acima do resto do salão. Nele, uma mulher de olhos vermelho sangue observa os recém-chegados, sorrindo."
+    },
+    {
+      type: "text",
+      content: "A beleza da condessa Sirissa Tarvela é estonteante (saiba mais sobre ela, incluindo sua ficha, na matéria de capa, p. 71). O sorriso dela os desarma, mesmo com os caninos brancos projetando-se. Ela gesticula para que se aproximem."
+    },
+    {
+      type: "text",
+      content: "“Bem-vindos ao meu castelo. Espero que meus guardas não os tenham assustado. Irei direto ao ponto, afinal, não desejo perder meu jantar.”"
+    },
+    {
+      type: "text",
+      content: "A condessa explica que uma de suas camponesas sumiu. “Uma jovem chamada Tarsilla.” Ao gesticular, uma pintura flutua da parede, mostrando uma mulher de cabelos ruivos presos em uma trança, e olhos verdes que lembram esmeraldas. “Infelizmente, não posso agir sobre isso. Assumi o castelo há pouco tempo por assim dizer, e se outros nobres souberem de meu... interesse por ela, logo sua vida estará em perigo ainda maior. Por isso decidi chamá-los, especialmente por acreditar em sua capacidade de discrição. Sou uma entusiasta do trabalho de grupos de aventureiros.”"
+    },
+    {
+      type: "text",
+      content: "Se questionarem sobre seus soldados, a condessa Sirissa fala novamente que não deseja parecer envolvida. Caso alguém ouse perguntar por que deveriam manter o segredo dela, a nobre explica que poderia tornar suas vidas bem piores, fazê-los esquecer porque vieram ali, ou mesmo jogá-los em suas masmorras. Ela oferece a cada um T$ 200, ou então uma arma ou armadura no valor de até T$ 400, além de sua gratidão. Para personagens conjuradores arcanos, a vampira oferece também a oportunidade de partir do reino de forma discreta."
+    },
+    {
+      type: "text",
+      content: "Ao fim da conversa, a condessa irá indicar que saiam pelos fundos, se preciso usando seus dons vampíricos para que a obedeçam. Haverá uma carroça simples os esperando, conduzida por um osteon resmungão chamado Eusébio."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 2: UMA VILA DISTANTE"
+    },
+    {
+      type: "text",
+      content: "A carroça range no caminho, enquanto Eusébio reclama de sua não vida. O terreno por onde passam é lúgubre, e sombras parecem estar sempre observando ao longe. Em algum momento da viagem são parados por guardas esqueletos. O condutor mostra papéis e fala sobre como seu atraso vai incomodar seus patrões. Um espectro flutua acima, mas logo vocês são liberados para seguir."
+    },
+    {
+      type: "text",
+      content: "Os dias são cinzentos, e as estradas vazias. Aqui as fazendas não lembram longos campos brilhando ao sol como em outros reinos, mas sim plantações de um verde profundo e sinistro, com animais esquálidos pastando, encarando o solo por tempo demais. A pequena cidade onde chegam possui algumas casas e uma praça. As pessoas ignoram a chegada dos forasteiros, pois é apenas mais um dia agourento para os “filhos de Asloth”."
+    },
+    {
+      type: "text",
+      content: "Se tentarem perguntar sobre Tarsilla aos moradores, a atitude de todos é inicialmente inamistosa. Esta atitude se tornará hostil e violenta se alguém perceber uso de magia arcana (veja camponês em NPCs e Criaturas). Encontrar algum indício requer três sucessos em testes de persuasão, coagir ou interrogar (respectivamente Diplomacia, Intimidação e Investigação), todos com CD 20. Passando nos três testes, pessoas indicam os mercenários na taverna local como melhor fonte de informação. Entretanto, se os três sucessos forem no teste de Intimidação, um dos plebeus corre até a taverna e os mercenários atacam, mas sem a presença de seu líder."
+    },
+    {
+      type: "text",
+      content: "No interior, vários tipos mal-encarados jogam dardos, bebem ou se desafiam. Em um canto, jogando uma cerveja para dentro de seu crânio bovino, há um osteon minotauro. O taverneiro e seus ajudantes parecem assustados demais para fazer algo contra a baderna."
+    },
+    {
+      type: "text",
+      content: "Se tentarem falar com os mercenários ao redor, eles apontam para seu líder, o esqueleto. Quando chegam perto, o minotauro morto-vivo os observa de cima a baixo. Ele se apresenta: seu nome é Tácitus. Não é especialmente caloroso ou interessado, mas ao mencionarem o nome Tarsilla, as chamas necromânticas no fundo de suas órbitas brilham curiosas."
+    },
+    {
+      type: "text",
+      content: "“Estão procurando por ela? Meus homens estão entediados, não aguentam mais enfrentar zumbis. Que tal fazermos assim: vocês brigam com eles e eu fico aqui assistindo. Todo mundo se diverte e eu conto o que sei.” Se recusarem, ele dá de ombros e volta para sua bebida. Se concordarem, Tácitus bate na mesa: “É disso que eu gosto!” Então os mercenários inexperientes voltam sua atenção contra os aventureiros."
+    },
+    {
+      type: "text",
+      content: "Criaturas. Mercenários inexperientes e Tácitus (NPCs e Criaturas)."
+    },
+    {
+      type: "text",
+      content: "Se estiverem combatendo do lado de fora, ou na taverna, Tácitus apenas participará do combate se perceber alguém usando magia arcana. Caso isso aconteça, vai focar seus ataques contra o conjurador, ignorando seus homens e outros aventureiros. Porém, se derrotarem os mercenários, o minotauro conta sobre um templo antigo nas redondezas. “Dizem que era um lugar sagrado de Marah. Ou Tanna-Toh. Um desses deuses fracotes. Mas depois da Noite da Ascensão, o lugar passou a ser habitado por outra coisa.”"
+    },
+    {
+      type: "text",
+      content: "Se o minotauro osteon tiver entrado no combate, não dirá nada. Os aldeões, revoltados, vêm em bando reclamar. “Eles podiam não ser grandes coisas, mas mantinham os zumbis daquele maldito templo longe! E vocês, vão fazer o que agora?” Se o grupo pedir mais informações, os camponeses explicam que ao norte da cidade há um templo abandonado, e que as criaturas o circundam. Se quiserem alguma ajuda, deverão lidar primeiro com essa ameaça."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 3: ABANDONADO PELOS DEUSES"
+    },
+    {
+      type: "text",
+      content: "Assim que a cidade acaba, apenas ruínas e desolação cercam vocês. A estrada que leva até o antigo templo parece ter sido movimentada no passado. Hoje, está esquecida e sem cuidado. Logo, no horizonte, a silhueta do santuário desponta. Um murmúrio baixo pode ser ouvido ao longe, como se fossem pessoas conversando."
+    },
+    {
+      type: "text",
+      content: "Seguir o barulho leva ao bando de mortos-vivos que vem aterrorizando a região. Após a transformação de Ferren Asloth em arquilich, fenômenos como esse se tornaram muito mais comuns. As criaturas andam pelos ermos, volta e meia atacando viajantes ou o gado. Os mercenários na vila eram contratados para lidar com essa ameaça, fazendo o mínimo trabalho necessário."
+    },
+    {
+      type: "text",
+      content: "Criaturas. Turba Zumbi (Tormenta20, p. 297)."
+    },
+    {
+      type: "text",
+      content: "Sem mente, os zumbis atacam até serem completamente destruídos. Caso não tenham recebido a dica de Tácitus, todos os personagens devem fazer um teste de Percepção (CD 10). Se passarem, notam algo se movendo no interior do templo abandonado."
+    },
+    {
+      type: "text",
+      content: "Se retornarem à vila, após terem lidado com os mortos-vivos a atitude das pessoas torna-se indiferente. O dono da taverna, em especial, está bastante agradecido, e oferece uma estadia confortável por T$ 2, ou comum de graça. Após descansarem, alguém dirá ter visto vultos no antigo templo."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 4: UIVO DOS CONDENADOS"
+    },
+    {
+      type: "text",
+      content: "Observando pelo lado de fora, pode-se dizer que este lugar com certeza já viu dias melhores. Suas paredes foram corroídas pela natureza e a atmosfera de abandono é geral. Devotos de todos os deuses sentem uma tristeza profunda observando esse lugar."
+    },
+    {
+      type: "text",
+      content: "Personagens treinados em Religião sabem que se trata de um templo dedicado ao Panteão, característica muito comum em comunidades isoladas. Algo está travando a porta principal, e abri-la empurrando requer um teste de Atletismo (CD 20), no qual todos os personagens podem ajudar."
+    },
+    {
+      type: "text",
+      content: "Outra possibilidade é quebrar uma das janelas, causando qualquer quantidade de dano a ela, e escalando com um teste de Atletismo (CD 20). Se um personagem falhar nesse teste, além de não conseguir entrar na construção, sofre 1d6+2 pontos de dano de corte pelo vidro estilhaçado. De uma forma ou de outra, alertarão quem estiver no interior."
+    },
+    {
+      type: "text",
+      content: "Lá dentro, na nave principal, existem vinte nichos com pedestais vazios, exceto por um. Se aproximando para ver melhor, vocês notam as formas de uma mulher de cabelos longos e negros, tal qual seu vestido. Novamente, aqueles treinados em Religião sabem se tratar de um altar à Deusa da Noite, Tenebra. Então um grito abafado quebra o silêncio, vindo de uma outra câmara."
+    },
+    {
+      type: "text",
+      content: "Quando chega ao local, o grupo vê Tarsilla, idêntica à tela apresentada pela condessa Tarvela, amarrada e amordaçada, no chão. De pé, sobre ela, há um homem com uma adaga de metal negro. Ele olha para trás, a raiva em seus olhos se transformando em algo mais “NÃO! Vocês não vão me atrapalhar! Eu sei que com mais esse sacrifício Tenebra vai me livrar da maldição! Graaah!” O berro do homem muda para um urro, e, finalmente, um uivo. O corpo dele se arqueia, pelos surgem por todo o corpo, e seu rosto distorce, alongando-se para finalmente assumir a forma de um lobisomem!"
+    },
+    {
+      type: "text",
+      content: "Criaturas. Lobisomem Aldeão (NPCs e Criaturas)."
+    },
+    {
+      type: "text",
+      content: "Seja de dia ou noite, o que ativa a metamorfose do homem é justamente seu pavor e desespero, influenciado pelo templo, agora dedicado à Deusa da Noite. Ao se transformar, o rapaz é incapaz de se controlar, atacando ferozmente os aventureiros. Se desamarrarem Tarsilla, a moça pega no meio das tralhas espalhadas pelo chão uma adaga de prata, e serve como um parceiro especial, fazendo com que o dano do personagem que apoia conte como prata."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Epílogo: FINAL INFELIZ"
+    },
+    {
+      type: "text",
+      content: "Assim que o corpo do lobisomem cai, há um momento de silêncio enquanto todos recuperam o fôlego. Tarsilla agradece aos aventureiros, perguntando o que fazem ali. Se contarem a ela sobre o contrato com a condessa, a expressão da jovem muda."
+    },
+    {
+      type: "text",
+      content: "“Não pode ser! Aquela maldita sanguessuga não me deixa em paz! Por favor, não me levem de volta! Eu imploro pelos deuses!” Tarsilla então mostra diversas marcas de mordida em seu corpo, obra da vampira. “Ela me quer de volta para isso! Para continuar me torturando. Por favor, não façam isso!”"
+    },
+    {
+      type: "text",
+      content: "É possível vasculhar o templo abandonado em busca de itens úteis. Olhando ao redor encontram três frascos de água benta, uma poção de Curar Ferimentos (2d8+2 PV) e um escudo pesado. Porém, se fizerem um teste para procurar, (Investigação CD 20), encontram também dois resultados da tabela 8–1: tesouro por nível de desafio, tanto dinheiro quanto itens, na linha de ND 3."
+    },
+    {
+      type: "text",
+      content: "Se decidirem levá-la de volta à condessa Serissa Tarvela, Tarsilla mantém-se quieta, aceitando seu destino. Após a viagem de carroça, todos são recepcionados pelos mesmos soldados vampíricos, e levados à condessa. A nobre está contente, e pede que sejam preparados os aposentos para sua hóspede. Enquanto o pagamento é trazido, Tarsilla derrama um último olhar decepcionado na direção dos “heróis”. Tarvela, por sua vez, pode procurá-los novamente para oferecer outras missões."
+    },
+    {
+      type: "text",
+      content: "Entretanto, se resolverem atender ao pedido de Tarsilla, adquirirão uma inimiga perigosa e em ascensão em Aslothia. Eles devem pensar cuidadosamente em seus próximos passos, pois assim que souber de sua traição, a condessa com certeza colocará uma vingança terrível em ação. A jovem humana, entretanto, possui um audacioso plano de fuga: seguir para Bielefeld, passando pela perigosíssima cidade fantasma de Cambur."
+    },
+    {
+      type: "text",
+      content: "Os personagens avançam para o 3º nível, com culpa ou medo."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "NPCs & Criaturas"
+    },
+    {
+      type: "text",
+      content: "CAMPONÊS (ND ¼)\nHumanoide (humano) Médio\nIniciativa +0, Percepção +3\nDefesa 10, Fort +2, Ref +0, Von –1\nPontos de Vida 3\nDeslocamento 9m (6q)\nCorpo a Corpo Bordão +7 (1d6+5).\nFor 1, Des 0, Con 1, Int 0, Sab 1, Car 0\nPerícias Adestramento +2, Ofício (fazendeiro) +2.\nEquipamento Bordão. Tesouro Nenhum."
+    },
+    {
+      type: "text",
+      content: "MERCENÁRIOS INEXPERIENTES (ND 2)\nHumanoide (humano) Grande\nIniciativa +1, Percepção +1\nDefesa 18, Fort +12, Ref +7, Von +3\nPontos de Vida 14\nDeslocamento 9m (6q)\nCorpo a Corpo Lança x2 +14 (2d6+5).\nBando Se um dos mercenários inexperientes exceder a Defesa do inimigo por 10 ou mais, ele causa o dobro do dano. Se um ataque do bando errar, ele ainda assim causa metade do dano. Um bando é imune a manobras de combate e efeitos que afetam apenas uma criatura e não causam dano, mas tem vulnerabilidade a dano de área. Um personagem com o poder Trespassar que acerte os mercenários pode usá-lo para fazer um ataque adicional contra eles (mas apenas uma vez por turno).\nFinta Coletiva (Padrão) Os mercenários inexperientes fazem um único teste para fintar (Tormenta20, p. 119) contra todas as criaturas em alcance curto (teste +10). As que falharem ficam desprevenidas contra o próximo ataque dos mercenários até o fim do próximo turno deles.\nFor 2, Des 0, Con 2, Int –1, Sab 0, Car 0\nPerícias Enganação +5.\nEquipamento Armadura acolchoada x10, lanças x10. Tesouro Nenhum."
+    },
+    {
+      type: "text",
+      content: "TÁCITUS, LÍDER MERCENÁRIO (ND 2)\nMorto-vivo (osteon) Médio\nIniciativa +3, Percepção +3, visão no escuro\nDefesa 20, Fort +13, Ref +7, Von +2, redução de corte, frio e perfuração 5, resistência a magia arcana e medo +5\nPontos de Vida 65\nDeslocamento 6m (4q)\nCorpo a corpo Espada curta +12 (1d6+6, 19) e chifres +12 (1d6+6).\n“De Pé, Preguiçoso!” (Movimento) Tácitus reanima um aliado vivo com 0 ou menos PV em alcance curto. O aliado acorda estável e com 2d6 PV. Uma criatura só pode ser reanimada por esta habilidade uma vez por cena.\nInescrupuloso Tácitus recebe +2 em testes de ataque e +1d6 em rolagens de dano contra criaturas flanqueadas, sob efeito de alguma condição ou que sigam algum código de conduta (como o Código de Honra ou Código do Herói).\nMonte de Ossos Quando sofre um acerto crítico, Tácitus se desfaz em uma pilha de ossos. Ele fica caído e vulnerável, falha automaticamente em testes de Reflexos e precisa gastar uma ação de movimento para se remontar e encerrar estes efeitos.\nFor 3, Des 0, Con 2, Int 0, Sab 0, Car 1\nPerícias Atletismo +7, Intimidação +4, Intuição +3 (+5 contra conjuradores arcanos).\nEquipamento Escudo leve, espada curta, loriga segmentada. Tesouro Padrão."
+    },
+    {
+      type: "text",
+      content: "LOBISOMEM ALDEÃO (ND 2)\nHumanoide (humano) Médio\nIniciativa +5, Percepção +5, faro, visão no escuro\nDefesa 19, Fort +13, Ref +7, Von +2, cura acelerada 20/prata\nPontos de Vida 70\nDeslocamento 12m (8q)\nCorpo a corpo Duas garras +12 (2d6+6) e mordida +12 (1d6+6).\nDerrubar (livre) Se o lobisomem acerta um ataque de mordida, pode fazer a manobra derrubar (teste +12).\nLíder da Matilha A categoria de atitude inicial de cães e lobos com o lobisomem bárbaro é melhorada em um passo e ele pode usar Adestramento para mudar atitude e persuasão com essas criaturas (veja Tormenta20, p. 118).\nMaldição da Licantropia Um humanoide atingido pela mordida do lobisomem sofre a maldição licantropia (Fort CD 16 evita).\nFor 3, Des 1, Con 2, Int –1, Sab 1, Car –1\nTesouro Nenhum."
+    },
+    {
+      type: "text",
+      content: "SOLDADO VAMPÍRICO (ND 6)\nMorto-vivo Médio\nIniciativa +9, Percepção +5, visão no escuro\nDefesa 26, Fort +12, Ref +17, Von +7, cura acelerada 10, redução de dano 5/ luz\nPontos de Vida 50\nDeslocamento 15m (10q), escalar 15m (10q)\nCorpo a Corpo Espada longa x2 +22 (1d10+10, 19 mais 1d10 trevas) e garra +22 (1d8+10 mais 1d10 trevas).\nAgarrar Aprimorado (Livre) Garra (teste +24).\nDrenar Sangue (Padrão) O soldado vampírico drena sangue de uma criatura viva que esteja agarrando; ele causa 6d6 pontos de dano de perfuração e recupera a mesma quantidade de PV.\nSensibilidade ao Sol Quando exposto à luz solar direta, o soldado vampírico fica ofuscado e perde 6d6 PV por rodada.\nFor 5, Des 4, Con 2, Int –3, Sab 0, Car 1\nEquipamento Espada longa, meia armadura. Tesouro Nenhum."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "A MALDIÇÃO DA LICANTROPIA"
+    },
+    {
+      type: "text",
+      content: "Um personagem que contrai licantropia por mordida de um lobisomem não apresenta nenhum sintoma até a primeira noite de lua cheia. Então se transforma e parte em uma caçada selvagem, matando tantas vítimas quanto puder, com preferência por seres inteligentes. Depois volta à forma normal ao amanhecer, sem lembrança do que fez."
+    },
+    {
+      type: "text",
+      content: "Uma vítima de licantropia que esteja ciente de sua condição pode realizar um teste de Vontade (CD 30). Isso não evita a transformação, nem concede qualquer forma de controle, mas permite se lembrar de suas ações no dia seguinte. Um devoto de Tenebra recebe +5 nesse teste."
+    },
+    {
+      type: "text",
+      content: "A licantropia pode ser curada com a magia Purificação (+7 PM, requer 3º círculo). Para mais informações, veja a Caverna do Saber, da Dragão Brasil 197."
     }
   ]
   },
@@ -4784,8 +5035,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "53",
+  { id: "Uma Trilha no Céu",
   name: "Uma Trilha no Céu",
   theme: "Fantasia",
   image: "/aventuras/trilha-no-ceu.png",
@@ -4859,8 +5109,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "530",
+  { id: "Sechpuluvumcha!",
   name: "Sechpuluvumcha!",
   theme: "Terror",
   image: "/aventuras/sechpuluvumcha.png",
@@ -4942,8 +5191,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "54",
+  { id: "Fragmentos",
   name: "Fragmentos",
   theme: "Aventura Espacial",
   image: "/aventuras/fragmentos.png",
@@ -5032,8 +5280,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "55",
+  { id: "Volte para Casa!",
   name: "Volte para Casa!",
   theme: "Aventura Espacial",
   image: "/aventuras/volte-para-casa.png",
@@ -5100,6 +5347,276 @@ export const adventures: Adventure[] = [
     {
       type: "text",
       content: "O autor da coluna sabe... mas para a sua aventura, Mestre, você determinará!"
+    }
+  ]
+  },
+  { id: "A Cabeça do Morto",
+  name: "A Cabeça do Morto",
+  theme: "Exploração de Tumba, Mortos-Vivos e Traição",
+  image: "/aventuras/a-cabeca-do-morto.png",
+  summary: "Um suposto sacerdote de Azgher contrata os heróis para investigar uma tumba profanada que guarda a cabeça selada de um lich. Entre zumbis, enigmas solares e fantasmas vingativos, o grupo mal suspeita estar servindo a um plano ardiloso.",
+  sections: [
+    {
+      type: "text",
+      content: "A coluna Breves Jornadas oferece aventuras simples, rápidas e completas para Tormenta20, com tudo que será necessário para jogar. Fichas especiais serão fornecidas aqui, enquanto àquelas presentes no livro básico terão indicadas as páginas em que se encontram."
+    },
+    {
+      type: "text",
+      content: "O objetivo é fornecer ao mestre um ponto de partida eficiente para que todos se divirtam por uma tarde, ou comecem uma nova campanha. Se precisar de fichas de personagens prontas, é possível encontrá-las na coluna Heróis de Bolso, no Blog da Jambô."
+    },
+    {
+      type: "text",
+      content: "Esta aventura chama-se A cabeça do morto."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Introdução"
+    },
+    {
+      type: "text",
+      content: "Lendas sussurradas por menestréis tentando assustar seu público versam sobre poderosos magos abrindo mão de sua mortalidade e tornando-se criaturas terríveis, seres de absurdo potencial mágico, conhecidos como liches. Até recentemente, tais criaturas eram relegadas a antigas torres arcanas, escondidas em seus experimentos sinistros, porém, com a transformação de Aslothia em um reino de morte, as lendas se provaram reais."
+    },
+    {
+      type: "text",
+      content: "Servos do deus-sol Azgher combatem os mortos ambulantes sempre que surgem. Seja no próprio Deserto da Perdição, ou no Reinado, os devotos do Sol brandem suas armas em chamas contra inimigos poderosos, legiões às vezes servindo a deusa das trevas, Tenebra. Entretanto, inimigos rastejantes e ardilosos se escondem dentro das próprias fileiras dos campeões do bem."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Resumo da Aventura"
+    },
+    {
+      type: "text",
+      content: "A cabeça do morto é uma breve jornada, uma aventura curta pensada para uma sessão única, mas que pode ser inserida em uma campanha maior. É ideal para um grupo de quatro personagens de 1º nível em Tormenta20."
+    },
+    {
+      type: "text",
+      content: "Um sacerdote de Azgher reúne um grupo de aventureiros para investigar uma tumba onde estaria selado um artefato perigoso: a cabeça de um conjurador morto-vivo tão perigoso que seu corpo foi espalhado por Arton. No caminho, encontram provas de outras pessoas terem investigado o lugar previamente."
+    },
+    {
+      type: "text",
+      content: "Na entrada, enfrentam os cadáveres revividos daqueles que aqui já estiveram. O interior esconde perigos e testes implementados por servos de Azgher no passado, assim como uma estátua guardiã protegendo o sítio sagrado. Na câmara final, terão de lidar com fantasmas atraídos pela cabeça, e só então retirá-la do templo profanado."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 1 – O sacerdote do sol"
+    },
+    {
+      type: "text",
+      content: "Vocês são reunidos por um homem coberto de tecidos da cor creme, no estilo das tribos Sar-Allan do Deserto da Perdição, apenas seus olhos e uma tatuagem em seu braço esquerdo estão expostos. Seu nome é Selin Armo, um sacerdote de Azgher em uma missão sagrada. O local do encontro é uma praça, ao meio-dia: “Sob os olhos de meu deus”, ele diz."
+    },
+    {
+      type: "text",
+      content: "O humano é extremamente polido, e explica ter vindo de tão longe pois seus superiores hierárquicos lhe confiaram uma tarefa perigosa."
+    },
+    {
+      type: "text",
+      content: "“Há muito tempo houve um poderoso mago, que em busca de poder, dedicou sua alma à terrível deusa da noite.” Ele então cospe no chão “Como ‘presente’, se tornou imortal, porém de forma monstruosa. Seu corpo decaiu e apodreceu, assim como seu coração. Tornou-se um morto ambulante, aterrorizando aqueles que viviam com seus feitiços sombrios. Então, heróis o derrotaram, mas não permanentemente. Para impedir seu retorno, espalharam seu corpo pelo mundo, selado através da benção do deus-sol.” Seus olhos fitam o chão antes de dizer “Até recentemente.”"
+    },
+    {
+      type: "text",
+      content: "Ele continua contando “Meus superiores estão cuidando de outras questões no deserto, e me mandaram para encontrar aventureiros e investigar relatos de uma perturbação em uma das tumbas.” Caso consigam, o ideal seria selar novamente a parte do corpo ali encerrada, mas, se não for possível, devem transportar para um novo lugar."
+    },
+    {
+      type: "text",
+      content: "Perguntado sobre uma possível recompensa, Selin tem uma expressão de choque, preocupado com heróis agindo tal qual mercenários. Entretanto, conta que pode oferecer ao grupo 40 tibares de ouro. Um personagem devoto de Azgher pode fazer nesse momento um teste de Intuição oposto à Enganação de Selin (+10), e percebe algo estranho: devotos do deus do sol dificilmente ofereceriam ouro a alguém, pois todo ouro pertence a seu deus."
+    },
+    {
+      type: "text",
+      content: "Questionado sobre isso, explica ser um caso extremo: ele recebeu esta quantia apenas para oferecer como pagamento. Entretanto, tudo isso esconde um segredo: Selin na verdade é um servo de Sszzaas. Tudo que disse até aqui é “majoritariamente” verdade, exceto ser um sacerdote de Azgher, logo, não é necessário testar contra sua Enganação, pois tudo é real e trata-se de um excelente mentiroso."
+    },
+    {
+      type: "text",
+      content: "Assim que aceitarem ajudá-lo, ele mostrará um mapa ao local, e começarão uma pequena viagem."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 2 – A porta dos mortos"
+    },
+    {
+      type: "text",
+      content: "A jornada é tranquila, poucos dias são necessários para alcançar a marcação no mapa, e a maior parte do caminho segue por antigas estradas, relativamente seguras. Selin não parece estar acostumado a sobreviver nos ermos, mas se prontifica a cozinhar sempre que acampam. Ele conta sua jornada através do deserto e da Grande Savana, e que recentemente se tornou sacerdote, sendo confiada esta missão como seu primeiro teste verdadeiro."
+    },
+    {
+      type: "text",
+      content: "Se aproximando da localização, os aventureiros encontram marcas de cascos de cavalo. Um teste de Sobrevivência (CD 20) revela que cinco cavalos passaram por ali, indo na mesma direção que o grupo ruma. Caso o resultado do dano seja um 20 natural, eles também descobrem pegadas de uma pessoa indo na direção oposta, como se estivesse voltando."
+    },
+    {
+      type: "text",
+      content: "Quanto mais perto chegam, mais denso o ar fica, com um miasma sombrio se intensificando. Personagens treinados em Misticismo podem fazer um teste (CD 15) e, se passarem, notam que toda a região está saturada de poderosa energia necromântica (magias de necromancia custam –1 PM para serem lançadas)."
+    },
+    {
+      type: "text",
+      content: "Chegando na localidade marcada no mapa, o cheiro de morte se intensifica. No meio do nada, um lugar que lembra um templo ou um mausoléu se ergue, simples, mas trabalhado em temas solares. O lado de fora, porém, não parece adequado ao tema luminoso da construção."
+    },
+    {
+      type: "text",
+      content: "Cinco cadáveres de cavalos atraem moscas gordas, zumbindo alto, porém algo se mexe perto de um deles. Agachados, se alimentando daquela podridão, estão o que de longe parecem ser quatro pessoas maltrapilhas. Com a aproximação do grupo, entretanto, as criaturas levantam olhos leitosos e soltam um grunhido faminto e cadavérico."
+    },
+    {
+      type: "text",
+      content: "Criaturas. Zumbis x4 (Tormenta20, capítulo 7: Ameaças)."
+    },
+    {
+      type: "text",
+      content: "Os mortos-vivos avançam, o desejo por carne fresca movendo-os tropegamente. Após lidar com esses inimigos revividos, o grupo pode olhar ao redor. Além dos cinco cavalos, há quatro alforjes no local (apenas um deles está em bom estado e pode ser reaproveitado). Encontrar os alforjes requer passar em um testes de Investigação (CD 15). No interior dos alforjes há cinco bálsamos restauradores e duas essências de mana, uma cota de malha reforçada em boas condições e um arco longo certeiro, além de T$ 15."
+    },
+    {
+      type: "text",
+      content: "A porta da construção está arrombada, restos daquilo que um dia foi uma porta de pedra selada jazem no chão, e o interior sombrio não parece nem um pouco convidativo."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 3 – Nascente e Poente"
+    },
+    {
+      type: "text",
+      content: "A primeira câmara tem suas paredes cobertas de escritos, assim como um mural nas três paredes exceto a da entrada. A escuridão do ambiente não permite ver claramente o que há nele. Porém, na parede da esquerda, há uma tocha, sua luz de um dourado pálido. Acima dela, é visível meio círculo, sua coloração similar à da chama."
+    },
+    {
+      type: "text",
+      content: "As trevas no interior desse aposento são impenetráveis, mesmo para aqueles capazes de ver no escuro. A única iluminação é a tocha, que pode ser facilmente removida de seu encaixe na parede, porém, quando isso é feito, sua coloração muda para branca. Qualquer tentativa de apagá-la é infrutífera, a chama reacende segundos depois."
+    },
+    {
+      type: "text",
+      content: "Entretanto, a luz dessa tocha permite enxergar o mural, com cenas de pessoas cruzando grandes dunas em peregrinação. Na parede oposta à entrada, encontram um círculo completo laranja, e na parede à direita, outro meio círculo agora rosa, todos com um encaixe similar àquele onde a tocha estava. As inscrições nas paredes não podem ser lidas claramente devido à penumbra, e a parede da passagem de entrada não possui qualquer desenho ou escrita. Não há, entretanto, qualquer porta para o interior da construção."
+    },
+    {
+      type: "text",
+      content: "Aqueles mais astutos talvez percebam a solução da charada, porém é possível pedir um teste de Investigação ou Religião (CD 15). Passar no teste de Investigação indica que as figuras retratadas nas paredes se movem da esquerda para a direita (em sentido horário), e o teste de Religião revela que os círculos representam os pontos do sol no céu, nascente, meio-dia e poente. Para satisfazer o desafio é necessário encaixar a tocha em cada uma das paredes, representando este ciclo solar. Se colocarem a tocha em uma posição errada, ou tentarem apagá-la, deverão começar novamente, colocando na parede à esquerda, ao centro e à direita, nessa ordem."
+    },
+    {
+      type: "text",
+      content: "Se perguntarem a Selin, o clérigo parece confuso, diz haver uma relação com o sol, mas não consegue entender qual: “Talvez se colocar uma vez em cada parede?”. O sacerdote na verdade sabe como resolver o problema, pois já esteve no lugar. Entretanto, não pretende arriscar seu disfarce."
+    },
+    {
+      type: "text",
+      content: "Ao colocar a tocha nas posições corretas, as luzes se acendem no interior da construção, e uma porta para seu interior surge na mesma parede do círculo representando o sol do meio-dia. Aqueles curiosos por investigar os escritos nas paredes podem fazer um teste de Conhecimento ou Religião (CD 20), e decifram a escrita como textos visando prender a parte do morto-vivo em seu interior. Os milagres inscritos nas paredes, porém, não estão tão fortes quanto um dia foram. Nesse momento, um gemido sombrio vem das profundezas do mausoléu."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 4 – Guardião Solar"
+    },
+    {
+      type: "text",
+      content: "A sala seguinte é bem ampla e em seu centro uma estátua dourada reflete a luz do sol vinda de um sistema de espelhos. A estátua representa uma pessoa do deserto, o rosto coberto por um véu, uma cimitarra dourada em uma mão, o símbolo de Azgher na outra."
+    },
+    {
+      type: "text",
+      content: "A câmara está vazia exceto pelo monumento, e no lado oposto à entrada há uma porta, aparentemente escavada na pedra, com um entalhe em formato de sol. Caso tentem encaixar outro símbolo sagrado de Azgher, nada acontece. Se tentarem pegar o símbolo na mão da estátua, ou pegar a cimitarra de ouro, a efígie se anima e sua cimitarra se acende em chamas, para combater os saqueadores."
+    },
+    {
+      type: "text",
+      content: "Criaturas. Estátua Solar (NPCs & Criaturas)."
+    },
+    {
+      type: "text",
+      content: "O construto priorizará seus ataques em mortos-vivos ou devotos de Tenebra. Selin começa a balbuciar uma prece, gaguejando muito, mas quando ela não funciona, diz apenas: “A energia negativa no lugar está causando algum distúrbio!”"
+    },
+    {
+      type: "text",
+      content: "Um devoto de Azgher pode gastar uma ação padrão para tentar fazer um teste de Religião oposto à Vontade da estátua e, se vencer, o construto ficará atordoado por uma rodada. Caso vença por 5 ou mais, ou passe em dois testes consecutivos, a criatura voltará para sua base, abrindo a mão com o símbolo sagrado. Entretanto, se nesse estado inerte, for alvo de alguma ação agressiva, o combate recomeça."
+    },
+    {
+      type: "text",
+      content: "O símbolo de Azgher entra no encaixe e a porta então desaparece em um brilho muito forte. Se olharem novamente a estátua, o amuleto voltou à mão dela."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 5 – Teste de Abnegação"
+    },
+    {
+      type: "text",
+      content: "Esta câmara é menor, se todos entrarem terão que se acotovelar. As paredes têm as mesmas inscrições e há, oposta à passagem, uma bacia dourada incrustada na parede. Em seu fundo está entalhado o sol de Azgher. Porém, dentro da sala, o grupo ouve ao longe choros e lamentos em diversas vozes."
+    },
+    {
+      type: "text",
+      content: "Aqueles que passarem em um teste de Religião (CD 15) ou que sejam devotos de Azgher sabem o que isto significa: todo ouro pertence ao deus-sol, eles devem fazer um sacrifício de ouro para passar. Se ninguém for capaz de entender isso, Selin coloca a mão no queixo, analisa a bacia e diz: “Pessoal, tenho más notícias...”"
+    },
+    {
+      type: "text",
+      content: "Para seguir, os personagens terão que colocar os 40 tibares de ouro na travessa. Se tentarem colocar parte deles, a porta continuará lacrada. Ninguém precisa colocar quaisquer outras moedas que possuam (porém, se colocadas, desaparecerão junto dos tibares de ouro). Caso tenham derrotado a estátua solar na sala anterior, podem colocar a cimitarra dela sobre a bacia, ou outra arma banhada a ouro."
+    },
+    {
+      type: "text",
+      content: "Assim que a oferenda é colocada no receptáculo, a última porta desaparece, junto com os objetos ali colocados. De repente as lamúrias se tornam berros ensurdecedores."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 6 – A cabeça"
+    },
+    {
+      type: "text",
+      content: "Os berros são o presságio de algo ainda mais aterrador. A sala está coberta dos mesmos escritos, porém eles estão tremulando em um brilho dourado falho, as vezes apagando completamente. No meio da câmara, coberto de pergaminhos há um pedestal, e sobre ele uma cabeça mumificada. Porém, ao redor dela há um turbilhão do que parecem fantasmas, girando ao redor em alta velocidade, expressões de ódio e pavor surgindo volta e meia na névoa onde se manifestam."
+    },
+    {
+      type: "text",
+      content: "É impossível chegar até o artefato. Qualquer tentativa empurra os personagens em direção à porta. Selin berra: “O único jeito é exorcizarmos esses espíritos!”"
+    },
+    {
+      type: "text",
+      content: "PERIGO COMPLEXO: EXORCISMO (ND 2)\nO grupo deve realizar um ritual de purificação.\nObjetivo: Acalmar os fantasmas e enviá-los para os mundos dos deuses.\nEfeito: No início de cada rodada, cada personagem deve fazer um teste de Vontade (CD 20). Se falhar, fica abalado. Se já está abalado fica apavorado e, se já está apavorado, foge do prédio e só consegue retornar no amanhecer seguinte.\nAo fim de cada rodada, todos na sala sofrem 2d6 pontos de dano de trevas, vindos das emanações negativas dos mortos.\nPara completar o ritual, o grupo precisa acumular cinco sucessos na ação exorcizar. Caso Selin fique encarregado de realizar o ritual, será necessário protegê-lo.\nExorcizar (Religião CD 16): O personagem entoa cânticos religiosos para encomendar as almas penadas aos deuses. Apenas um personagem pode fazer esta ação por rodada.\nInterpor-se (Vontade CD 16): O personagem se posiciona para proteger quem estiver realizando a ação exorcizar. Se passar, o personagem sofre o dano da rodada no lugar de quem ele estiver protegendo.\nMotivar (Varia): Personagens que não estejam realizando a ação exorcizar podem motivar quem a estiver fazendo, usando uma perícia apropriada, de acordo com o mestre, para ajudar no teste (Tormenta20, capítulo 5: Jogando). O bônus fornecido é cumulativo com testes seguintes até o fim do perigo."
+    },
+    {
+      type: "text",
+      content: "Quando o ritual termina, as almas desaparecem, e o barulho é trocado por um silêncio sepulcral. Sobre o pilar, o objeto que vieram buscar."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Epílogo – Partes do todo"
+    },
+    {
+      type: "text",
+      content: "Antes que alguém possa ter uma ideia ruim, Selin, cobre a cabeça mumificada com pergaminhos mágicos e a coloca dentro de uma urna, também inscrita com palavras sagradas. O sacerdote fala que os milagres protetivos nela não devem durar muito tempo, mas o suficiente para contatar seus superiores assim que voltarem para a cidade onde a aventura começou."
+    },
+    {
+      type: "text",
+      content: "Caso, mesmo insistindo, algum personagem toque diretamente na cabeça, sofre 6d6 pontos de dano de trevas e fica permanentemente frustrado, até encontrar alguém capaz de remover esta maldição. Na viagem de volta, todos têm sono intranquilo, cheio de pesadelos terríveis."
+    },
+    {
+      type: "text",
+      content: "Selin não tem como pagar mais do que T$ 25 para cada um pelos serviços prestados, porém, diz que precisará da ajuda de heróis corajosos (e tolos...) para recuperar as outras partes."
+    },
+    {
+      type: "text",
+      content: "Vocês avançam para o 2º nível!"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "NPCs & Criaturas"
+    },
+    {
+      type: "text",
+      content: "ESTÁTUA SOLAR (ND 1)\nConstruto Médio\nIniciativa +3, Percepção +5, visão no escuro\nDefesa 18, Fort +11, Ref +0, Von +5, redução de dano 5\nPontos de Vida 35\nDeslocamento 9m (6q)\nCorpo a Corpo Cimitarra +9 (1d6+5, 18, mais 1d6 fogo e 1d6 contra mortos-vivos).\nFace Solar (Movimento) Todas as criaturas em alcance curto da estátua ficam ofuscadas por uma rodada (Reflexos CD 14 evita). Uma criatura que falhe duas vezes seguidas no teste de resistência fica cega até o fim da cena. Uma criatura pode fechar os olhos como uma reação para ficar imune a esta habilidade, mas sofrerá os efeitos de estar cego por uma rodada.\nFor 3, Des 1, Con 3, Int —, Sab 3, Car –2\nTesouro Cimitarra banhada a ouro."
     }
   ]
   },

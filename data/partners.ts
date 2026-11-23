@@ -26,6 +26,30 @@ export const partners: Partner[] = [
       mestre: ""
     }
   },
+  { id: "Koivus",
+    name: "Koivus",
+    description: "Um minotauro de pelo castanho e chifres curtos, filho de um senador e de uma escrava humana no Império de Tauron. Após ver o pai usar sua mãe como escudo durante o ataque da Tormenta a Tiberus, abandonou sua fé em Tauron e vagou como mercenário até ser levado à presença de Zadbblein. Reconhecendo na Dragoa-Rainha a verdadeira força, tornou-se seu clérigo devoto, vestindo armadura de ossos sobre uma túnica tapistana e empunhando um cetro de osso com uma safira.",
+    origin: "Duelo de Dragões",
+    category: "especifico",
+    archetype: "Especial",
+    benefits: {
+      iniciante: "",
+      veterano: "",
+      mestre: "Você recebe +4 na Defesa e em Intimidação e pode lançar Curar Ferimentos e Escudo da Fé (atributo-chave Sabedoria). Caso já conheça uma dessas magias, seu custo diminui em –1 PM."
+    }
+  },
+  { id: "Saragi Dokuzawa",
+    name: "Saragi Dokuzawa",
+    description: "Um tamuraniano da honrada família Dokuzawa que nasceu com escamas pretas nas mãos e pés, olhos amarelos de serpente e asas vestigiais — cortadas pelo próprio pai. Julgado como amaldiçoado por Liu’Yan e jogado ao mar para morrer, foi salvo por Mzzileyn, o Dragão-Rei das Trevas disfarçado, que o transformou em seu servo mais próximo e lhe entregou a katana sombria Clemência. Soturno, arrogante e sarcástico para mascarar suas inseguranças, veste um traje ninja roxo e preto e busca uma oportunidade para escapar definitivamente do domínio do Dragão-Rei.",
+    origin: "Duelo de Dragões",
+    category: "especifico",
+    archetype: "Especial",
+    benefits: {
+      iniciante: "",
+      veterano: "",
+      mestre: "Você pode lançar Imagem Espelhada e Invisibilidade (atributo-chave Inteligência). Caso já conheça uma dessas magias, seu custo diminui em –1 PM."
+    }
+  },
   //#endregion
   
   //#region Bestiário de Arton
@@ -621,6 +645,19 @@ export const partners: Partner[] = [
   //#endregion
   
   //#region Dragão Brasil
+  // Dragão Brasil - 193
+  { id: "Trilobita",
+    name: "Trilobita",
+    description: "Mais conhecidos como “baratas da Tormenta”, são pequenos monstros do tamanho de uma tigela, com casca escura, muitas patas, longas antenas flexíveis e uma carapaça na cabeça que lembra um elmo. Capazes de levantar voo sem asas, costumam atacar em enxames em masmorras, áreas de Tormenta e locais profanos de Aharadak. Atua como um parceiro aberrante exclusivo de lefou e devotos de Aharadak.",
+    origin: "Dragão Brasil - 193",
+    category: "especifico",
+    archetype: "Aberrante",
+    benefits: {
+      iniciante: "Você recebe +1 em Intimidação e na CD para resistir às suas habilidades de medo.",
+      veterano: "O custo de suas habilidades de medo é reduzido em –1 PM.",
+      mestre: "O bônus em Intimidação e na CD de suas habilidades de medo aumenta para +2."
+    }
+  },
   // Dragão Brasil - 204
   { id: "Aberrante",
   name: "Aberrante",
