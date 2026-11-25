@@ -2289,8 +2289,314 @@ export const adventures: Adventure[] = [
       }
     ]
   },
-  {
-  id: "16",
+  { id: "Banquete em Fuga",
+  name: "Banquete em Fuga",
+  theme: "Intriga Nobre, Caçada e Dilema Moral",
+  image: "/aventuras/banquete-em-fuga.png",
+  summary: "Contratados por um nobre ambicioso de Ahlen para caçar uma iguaria exótica e escoltá-lo em um banquete decadente, os heróis precisam navegar por jogos políticos antes de perseguir um canceronte fugitivo — e decidir o destino da criatura e de seu amigo elfo-do-mar.",
+  sections: [
+    {
+      type: "text",
+      content: "A coluna Breves Jornadas oferece aventuras simples, rápidas e completas para Tormenta20, com tudo que será necessário para jogar. Fichas especiais serão fornecidas aqui, enquanto àquelas presentes no livro básico terão indicadas as páginas em que se encontram."
+    },
+    {
+      type: "text",
+      content: "O objetivo é fornecer ao mestre um ponto de partida eficiente para que todos se divirtam por uma tarde, ou comecem uma nova campanha. Se precisar de fichas de personagens prontas, é possível encontrá-las na coluna Heróis de Bolso, no Blog da Jambô."
+    },
+    {
+      type: "text",
+      content: "Esta aventura chama-se Banquete em Fuga."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Introdução"
+    },
+    {
+      type: "text",
+      content: "A nobreza ahleniense é conhecida por sua decadência. Os grandes banquetes, repletos de comida suficiente para alimentar diversas famílias famintas, são consumidos por meia dúzia de nobres, enquanto fazem seus jogos políticos. Aqui, uma língua ferina é mais perigosa que uma espada. Entretanto, uma adaga envenenada nas costas possui seu valor."
+    },
+    {
+      type: "text",
+      content: "Os animais destes banquetes costumam ser caçados por aventureiros hábeis. Alguns buscam tornar-se protegidos de algum mecenas que os pague por suas futuras missões. Porém, até onde estão dispostos a ir para conquistar o favor de um destes? Arriscariam a vida de um ser inocente para conquistar patrocínio daqueles que festejam enquanto o povo sofre?"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Resumo da Aventura"
+    },
+    {
+      type: "text",
+      content: "Banquete em Fuga é uma breve jornada, uma aventura curta pensada para uma sessão única, mas que pode ser inserida em uma campanha maior. É ideal para um grupo de quatro personagens de 2º nível em Tormenta20."
+    },
+    {
+      type: "text",
+      content: "Um nobre se aproxima do grupo, desejando contratá-los para adquirir uma iguaria para um banquete que fora convidado: um gorlogg. Após caçarem a fera, eles a transportam para o local do evento, também servindo como guarda-costas. Tensões escalam durante um jogo de intrigas para aumentar o prestígio de seu contratante."
+    },
+    {
+      type: "text",
+      content: "Porém, uma confusão começa. O prato principal do banquete, um canceronte, escapou, deixando uma trilha de destruição no caminho. Rastreando o animal, encontram um druida, o verdadeiro responsável pela fuga. O nobre exige que derrotem o servo de Allihanna, e caso não concordem com a tarefa, os guardas do evento atacam."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 1 – Tragam sua comida"
+    },
+    {
+      type: "text",
+      content: "Em Ahlen, influência é o verdadeiro poder. Pessoas se acotovelam para servir os nobres em busca de vantagens sobre outros. Enquanto a aristocracia, recusando-se a sujar as mãos com métodos brutos como armas, deleita-se em observar seus peões fazerem o trabalho sujo."
+    },
+    {
+      type: "text",
+      content: "O grupo é contatado por um dos servos de um lorde Viellmont. Um teste de Nobreza (CD 20) revela que Viellmont é um nobre menor, pouco influente, mas ambicioso. Levados a residência Viellmont, os personagens percebem uma opulência desnecessária, como se a extravagância fosse um instrumento para provar algo. Vestido nas melhores sedas, o lorde se apresenta, descendo um lance de escadas para aumentar a dramaticidade do momento."
+    },
+    {
+      type: "text",
+      content: "“Aventureiros, bem-vindos, bem-vindos.” Ele espera que o grupo faça uma reverência antes de continuar, e se mostra incomodado caso não o façam. “Por favor, não precisamos de tanta formalidade. Possuo um grande interesse em vocês, e desejo que realizem uma pequena missão para mim. Fui muito apropriadamente convidado para um banquete na mansão, e graciosamente decidi levar um quitute interessante, que ouvi ser a última moda em Yuvalin: um gorlogg.”"
+    },
+    {
+      type: "text",
+      content: "Viellmont explica que terão de caçar uma das feras, que vem atacando fazendas na área. Então, na companhia dele, transportarão o “monstro” para ser preparado, enquanto fazem a segurança do nobre. Afinal, nunca se sabe o que pode acontecer em um evento como este."
+    },
+    {
+      type: "text",
+      content: "Se perguntado sobre pagamento, Viellmont resmunga: “É claro que pessoas simples como vocês questionariam isso. Como se a graça de me servir não fosse o suficiente. Muito bem, 100 tibares de ouro, para cada. Não pouparei despesas para ter meu desejo.”"
+    },
+    {
+      type: "text",
+      content: "O valor equivale a T$ 1000, para cada, uma pequena fortuna por um trabalho aparentemente simples. Testes de Intuição revelam não ser malícia do nobre, é apenas realmente falta de noção do valor oferecido. Viellmont ficará ofendidíssimo se tentarem barganhar por mais dinheiro, dizendo ser isso coisa de pessoas de baixo calão. Ao fim da reunião, pede que retornem no dia seguinte pela manhã para partir. Caso alguém sugira que passem a noite na residência, o nobre gargalha, achando tratar-se de algum tipo de piada, porém, caso insistam, dá 5 tibares de ouro (T$ 50) para pagarem uma estalagem."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 2 – Refeição: Impossível"
+    },
+    {
+      type: "text",
+      content: "Na manhã seguinte, os aventureiros chegam à frente do casarão onde houve a reunião no dia anterior. Os servos do nobre surgem, oferecendo café ou chá, assim como pão e bolo. Eles explicam que seu chefe está se “arrumando”, porém qualquer um treinado em Intuição ou Investigação sabe que na verdade Viellmont deve estar acordando."
+    },
+    {
+      type: "text",
+      content: "Passados alguns momentos, Viellmont chega, usando óculos de lentes escuras e um traje de couro tingido de verde, no que parece uma tentativa de imitar o que ele acredita ser um “caçador”."
+    },
+    {
+      type: "text",
+      content: "“Bom dia, senhores aventureiros! Espero que tenham descansado bem, pois será um dia muito divertido.” E então monta, de forma um tanto desajeitada, em um cavalo. Outras montarias são trazidas para os personagens, e uma carroça conduzida por um servo segue o grupo alguns metros atrás."
+    },
+    {
+      type: "text",
+      content: "Vocês passam pela cidade, as pessoas acenam enquanto Viellmont acena de volta comedidamente. Pouco tempo depois estão nos limites da cidade, onde fazendas espaçadas se estendem ao horizonte. Logo vocês chegam a uma dessas propriedades, os trabalhadores tensos na entrada."
+    },
+    {
+      type: "text",
+      content: "Quando perguntados, os fazendeiros explicam que uma fera imensa surgiu há dois dias. O monstro teria atacado dois trobos e uma vaca e estaria escondido na mata. Apesar de assustados, apontam na direção para onde viram a criatura correr. O trecho por onde os aventureiros precisam caminhar é fechado demais para seguir com os cavalos, e Viellmont parece ultrajado por ter que colocar suas botas na lama."
+    },
+    {
+      type: "text",
+      content: "A trilha está enlameada, facilitando o rastreamento do animal. É necessário fazer três testes de Sobrevivência (CD 15), e o número de resultados afeta o encontro contra a criatura. Caso os personagens consigam três sucessos, encontram o gorlogg sem que ele os veja, e ele surpreendido na primeira rodada do combate. Entre um e dois sucessos, acham a fera, porém são percebidos ao se aproximarem, começando o combate com todos cientes de seus oponentes. Finalmente, se tiverem três falhas, os aventureiros são na verdade emboscados pelo gorlogg, e ficam surpreendidos na primeira rodada. Viellmont solta um berro de medo ao ver a criatura."
+    },
+    {
+      type: "text",
+      content: "Criatura. Gorlogg (veja Tormenta20, página 291)."
+    },
+    {
+      type: "text",
+      content: "Caso veja os aventureiros fazendo algo como utilizar veneno, lorde Viellmont grita pedindo que não o façam pois pode estragar a carne. Assim que derrotarem a criatura, o nobre abre um imenso sorriso e pede para os personagens e seus servos a colocarem na carroça. Os fazendeiros parecem muito agradecidos, mas o lorde quer chegar logo à sua casa para se trocar. Enquanto muda para roupas luxuosas, os trabalhadores trazem túnicas e tabardos com o brasão dos Viellmont, e os entregam aos heróis."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 3 – Quem está vindo jantar"
+    },
+    {
+      type: "text",
+      content: "Viellmont está pronto para partir em uma carruagem enfeitada, com detalhes dourados. Paga agora cinquenta tibares de ouro a cada um e fica bastante contente em vê-los com seu brasão nas roupas. Os aventureiros são instruídos a seguir em suas próprias montarias, ou irem sentados juntos ao cocheiro."
+    },
+    {
+      type: "text",
+      content: "Caso haja um nobre (classe) ou aristocrata (origem) no grupo, o lorde permite que este o acompanhe dentro da cabine. Um bardo ou cavaleiro pode convencer Viellmont para ir junto no interior também, com um teste de Diplomacia ou Nobreza (CD 20)."
+    },
+    {
+      type: "text",
+      content: "A mansão onde haverá o banquete é fora da cidade, em uma região de belas colinas. Os jardins na frente do palacete são cuidados à perfeição, e as pessoas que o frequentam estão vestidas do modo mais elegante e opulento já visto pelos aventureiros. Guardas circulam na orla da festa, vigiando o perímetro para que não haja intrusos ou pessoas indesejadas."
+    },
+    {
+      type: "text",
+      content: "Quando a carruagem para, um arauto anuncia a chegada de lorde Viellmont e sua comitiva (apenas se houverem outros na cabine com o nobre). O patrono dos personagens informa aos trabalhadores da festa para levarem o gorlogg caçado ao cozinheiro. Algumas das pessoas parecem surpresas, enquanto outras demonstram despeito."
+    },
+    {
+      type: "text",
+      content: "Viellmont, escoltado pelos aventureiros, se dirige ao centro do banquete para saudar os anfitriões. Enquanto passam, os personagens veem uma chama aberta e o corpanzil do gorglogg que trouxeram sobre o fogo, girando e assando lentamente. Além disso, outros exageros de comida também são visíveis, como uma montanha de risoto, ou imensos cortes de carne de animais exóticos."
+    },
+    {
+      type: "text",
+      content: "Os anfitriões são um casal tomando vinho em taças de ouro branco simples e elegantes. Viellmont se ajoelha, e diz para todos o acompanharem, agradecendo o convite para um evento tão animado. Um deles observa o convidado de cima a baixo, com um olhar que parece confuso."
+    },
+    {
+      type: "text",
+      content: "“Seja bem-vindo... quem é você mesmo? Creio que não tenhamos sido familiarizados. Sabe como são servos, quando dizemos para convidarem todos, às vezes temos oportunidades de conhecer novas pessoas.”"
+    },
+    {
+      type: "text",
+      content: "“S-sou barão Viellmont, vossa senhoria. E-espero que os v-veja mais vezes. Trouxe uma fera exótica para servir em v-vosso banquete.” E gesticula na direção da criatura morta."
+    },
+    {
+      type: "text",
+      content: "“Ah, gorlogg. Uma escolha interessante, embora eu não aprecie muito carne de caça. Por favor, sinta-se à vontade no evento.” Os anfitriões então gesticulam para Viellmont partir."
+    },
+    {
+      type: "text",
+      content: "É nítido que esta interação deixou o nobre aturdido, colocado de volta a sua posição na hierarquia social. Após usar alguns momentos para se recompor, ele sugere que os personagens andem pela festa, o auxiliando a aumentar sua influência através de conversas, uma tarefa representada pelo perigo complexo abaixo."
+    },
+    {
+      type: "text",
+      content: "SOLIDIFICAR REPUTAÇÃO\nObjetivo: Aumentar a influência de Viellmont com os convidados do banquete.\nEfeito: Os personagens terão três rodadas, representando as primeiras horas do evento, para solidificar a posição do lorde Viellmont. Para isso, devem acumular cinco sucessos nas ações Estabelecer Presença, Performance, Politicagem e Preparar Prato. Se falharem em acumular cinco sucessos, os personagens não sofrem nenhuma consequência adicional, exceto perder a oportunidade de ajudar Viellmont. Os personagens agem de acordo com seu Carisma. Aqueles de maior valor agem primeiro, e em caso de empate, devem decidir entre si.\nConduzir a Conversa (Enganação CD 15): O personagem se intromete na conversa de um colega de grupo, fazendo com que o rumo dela o favoreça. Se passar, fornece +5 no próximo teste desse colega.\nEstabelecer Presença (Intimidação CD 25): O personagem atrai os nobres com sua presença altiva e orgulhosa.\nPerformance (Atuação CD 25): O personagem entretém os convidados do jantar.\nPoliticagem (Diplomacia CD 22): O personagem atrai os nobres através de conversa hábil.\nPreparar Prato (Ofício [cozinheiro] CD 25): O personagem utiliza suas habilidades culinárias para impressionar os convidados.\nSeguir Protocolos (Nobreza CD 15): O personagem conhece e segue à risca a etiqueta ahleniense. Se passar, recebe um bônus de +5 em seu próximo teste, ou fornece um bônus de +5 no próximo teste de um colega."
+    },
+    {
+      type: "text",
+      content: "Se conseguirem conquistar os cinco sucessos necessários, lorde Viellmont é chamado para o círculo onde estão os anfitriões da festa. Em sua alegria quase infantil, o nobre entrega o resto do dinheiro aos aventureiros, e diz que os premiará ainda mais quando estiverem de volta a sua residência. Entretanto, caso não consigam os sucessos, o barão começa a ser evitado nas rodas de conversa, sendo considerado patético por ter asseclas tão rudes."
+    },
+    {
+      type: "text",
+      content: "Além disso, cada sucesso além dos cinco necessários rende T$ 200 tibares em presentes dados aos personagens pelos convidados."
+    },
+    {
+      type: "text",
+      content: "Repentinamente, há o barulho de confusão, madeira quebrando e gritos vindo da lateral da mansão."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 4 – Passo do Caranguejo"
+    },
+    {
+      type: "text",
+      content: "A cozinha da mansão teve suas paredes destruídas, como se uma figura imensa tivesse passado pelo buraco agora presente. Se aproximando mais, é possível ver uma panela imensa, quase uma piscina, caída de lado e com sua lateral rasgada pelo que parecem garras. Um cozinheiro alto vestindo um uniforme claro está com um ferimento na cabeça de uma pancada que sofreu."
+    },
+    {
+      type: "text",
+      content: "Se alguém interrogar o cozinheiro, ele diz que estava para cozinhar um canceronte inconsciente. Porém, do nada, a criatura começou a se mover e causar caos. Em seguida, o animal fugiu."
+    },
+    {
+      type: "text",
+      content: "Os nobres parecem consternados, e os anfitriões viram para Viellmont: “Resolva isso, por favor.” O nobre então pede aos personagens que capturem a criatura, ou o derrotem para que o banquete continue. Nesse momento, ele está disposto a barganhar (uso de Diplomacia) para aumentar o pagamento."
+    },
+    {
+      type: "text",
+      content: "Se tiverem falhado no perigo complexo acima, Viellmont levanta a voz: “Traremos o prato principal de volta, ou meu nome não é Bernard Viellmont!”. Então se volta aos aventureiros e diz que só receberão sua recompensa completa se capturarem o animal."
+    },
+    {
+      type: "text",
+      content: "O canceronte deixou um rastro de destruição fácil de ser seguido, com plantas e terra revirada. Correndo no encalço, os personagens logo encontram o animal, que, agitado, os ataca em seguida."
+    },
+    {
+      type: "text",
+      content: "Criaturas. Canceronte (NPCs & Criaturas)."
+    },
+    {
+      type: "text",
+      content: "Quando o canceronte chega à metade da vida, ou caso consigam acalmá-lo através de Adestramento, uma voz vem do meio do mato: “Esperem aí! Ele só está querendo viver!”"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 5 – Momento da Decisão"
+    },
+    {
+      type: "text",
+      content: "Ofegante, uma pessoa sai da mata. Seus cabelos têm a cor de pérolas negras, sua pele é de um azul brilhante e ela possui um olho laranja e o outro verde. À primeira vista, a pessoa lembra um elfo, mas suas orelhas são diferentes, lembrando barbatanas de peixe."
+    },
+    {
+      type: "text",
+      content: "O homem se aproxima, ambas as mãos para o alto, uma delas segurando um tridente aparentemente feito de coral, e uma concha enfeitando as roupas. Aqueles que conhecem mais do mundo sabem que ele é um elfo-do-mar, e a concha é um símbolo de devoção a Oceano, o Deus dos Mares."
+    },
+    {
+      type: "text",
+      content: "“Me chamo Ponthus, e esse aqui...”, ele faz um carinho no canceronte, “É Kankri, meu amigo. Peço perdão pela confusão, mas não podia deixar que o devorassem.”"
+    },
+    {
+      type: "text",
+      content: "Ponthus explica que Kankri foi capturado na costa do reino, e trazido até aqui. O elfo-do-mar disse sentir seu amigo sendo levado, e esperou para reanimá-lo com as bênçãos de seu deus. Pede que os deixem partir, e em troca, presenteará o grupo com seu tridente, o Pinça do Canceronte (um tridente atroz)."
+    },
+    {
+      type: "text",
+      content: "Caso se recusem, Ponthus fica visualmente decepcionado: “Por um momento, achei que fossem heróis.”"
+    },
+    {
+      type: "text",
+      content: "Criaturas. Ponthus, druida do Oceano."
+    },
+    {
+      type: "text",
+      content: "Se atenderem ao apelo de Ponthus, o elfo-do-mar fica muito feliz, abraçando a todos e entregando seu tridente. Mas, antes que possam partir, um grupo de guardas chega, acompanhados de lorde Viellmont."
+    },
+    {
+      type: "text",
+      content: "“O que estão fazendo? Prendam o animal, e esse outro também. Por que ainda não o fizeram?”"
+    },
+    {
+      type: "text",
+      content: "O nobre não compreende o que está acontecendo, mas os guardas avançam contra os personagens. Se quiserem defender o canceronte e o elfo-do-mar, terão de lutar!"
+    },
+    {
+      type: "text",
+      content: "Criaturas. Sargento da Guarda e Guarda de Cidade x2 (Tormenta20, página 289)."
+    },
+    {
+      type: "text",
+      content: "Ponthus serve como um parceiro médico iniciante, enquanto Kankri (o canceronte) é um parceiro guardião iniciante."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Epílogo – Divergentes"
+    },
+    {
+      type: "text",
+      content: "Se tiverem enfrentado o elfo-do-mar assim que ele aparece, logo Viellmont chega com os guardas, a tempo de observar a vitória dos aventureiros. Impressionado, o nobre retorna ao banquete com o grupo, elevando-os a heróis por terem salvado a refeição principal. Todos os convidados ficam impressionados, batendo palmas. O elfo-do-mar é preso. Talvez a refeição não caia tão bem no estômago dos personagens."
+    },
+    {
+      type: "text",
+      content: "Caso se aliem à Ponthus, elfo e canceronte fogem, muito agradecidos pela recuperada liberdade. Viellmont corre para avisar àqueles na festa sobre o ocorrido. Mas o nobre é rechaçado, visto como culpado por ter trazido consigo os aventureiros que estragaram tudo. As cabeças dos personagens dos jogadores são colocadas a prêmio pelos nobres. Talvez o melhor caminho seja manterem-se escondidos até a poeira baixar."
+    },
+    {
+      type: "text",
+      content: "Independente das escolhas que façam, os personagens avançam para o 3º nível."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "NPCs & Criaturas"
+    },
+    {
+      type: "text",
+      content: "CANCERONTE (ND 3)\nPara mais informações sobre o canceronte, veja Ameaças de Arton.\nAnimal Grande\nIniciativa +8, Percepção +4, visão na penumbra\nDefesa 21, Fort +15, Ref +9, Von +3, fortificação 25%\nPontos de Vida 110\nDeslocamento 6m (4q), natação 12m (9q)\nCorpo a Corpo Duas garras +14 (1d8+6).\nAutotomia (Livre) O canceronte pode sacrificar uma de suas garras para se livrar de um perigo maior. Quando faz isso, ele automaticamente passa em um teste para evitar uma condição de movimento (como um teste de ataque para se libertar de um agarramento), mas perde um de seus ataques de garra. Uma garra sacrificada desta forma se regenera em 1 mês.\nQuebrar Tudo! O canceronte recebe +2 em testes de ataque para quebrar (teste total +18) e causa +1d8 pontos de dano contra objetos.\nFor 4, Des 2, Con 5, Int –4, Sab 0, Car –2\nTesouro Nenhum."
+    },
+    {
+      type: "text",
+      content: "PONTHUS, DRUIDA DO OCEANO (ND 2)\nCriado em uma comunidade submarina no Mar Negro, Ponthus sentiu o chamado do Deus dos Mares bastante jovem. Sempre metido em confusões na companhia de seu companheiro animal, o elfo-do-mar está pronto para ajudar aqueles em necessidade.\nHumanoide (elfo-do-mar) Médio\nIniciativa +8, Percepção +7, percepção às cegas embaixo d’água, visão na penumbra\nDefesa 17, Fort +3, Ref +8, Von +11\nPonto de Vida 50\nDeslocamento 9m (6q), natação 9m (6q)\nPontos de Mana 24\nCorpo a Corpo Pinça do canceronte +10 (1d8+13, x3).\nDependência de Água Se ficar um dia sem contato com água, Ponthus não recupera PM até voltar para a água.\nMagias Como um druida de Oceano de 4º nível (CD 18, limite de PM 4).\n- Curar Ferimentos (Padrão, 4 PM) Uma criatura em alcance curto cura 5d8+5 pontos de vida.\n- Despedaçar (Padrão, 3 PM) Um alvo em alcance curto sofre 2d8+4 pontos de dano de impacto, ou o dobro sem aplicar RD se for um construto ou um objeto mundano Pequeno, e fica atordoado (Fort reduz à metade e evita a condição). Uma criatura só pode ser atordoada por esta magia uma vez por cena.\n- Escudo da Fé (Reação, 3 PM) Quando uma criatura em alcance curto sofre um ataque, ela recebe +3 na Defesa por 1 turno.\n- Suporte Ambiental (Padrão, 1 PM) Uma criatura adjacente fica imune por um dia aos efeitos de calor e frio extremos, pode respirar na água e não sufoca em fumaça densa.\nFor 2, Des 3, Con 2, Int –1, Sab 4, Car 2\nPerícias Adestramento +5, Cura +7, Religião +7, Sobrevivência +7 (+9 embaixo d’água).\nEquipamento Essência de mana x2, gibão de peles, Pinça do Canceronte (tridente atroz), símbolo sagrado do Oceano. Tesouro Padrão."
+    }
+  ]
+  },
+  { id: "As Lutadoras",
   name: "As Lutadoras",
   theme: "Faroeste",
   image: "/aventuras/as-lutadoras.png",
@@ -2380,8 +2686,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "17",
+  { id: "Estruturas",
   name: "Estruturas",
   theme: "Enigmas",
   image: "/aventuras/estruturas.png",
@@ -2473,8 +2778,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "18",
+  { id: "Cães de Guerra",
   name: "Cães de Guerra",
   theme: "Fantasia Sombria",
   image: "/aventuras/caes-de-guerra.png",
@@ -2548,8 +2852,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "19",
+  { id: "Arco da Queda",
   name: "Arco da Queda",
   theme: "Fantasia",
   image: "/aventuras/arco-da-queda.png",
@@ -2654,8 +2957,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "20",
+  { id: "AAHHH!!",
   name: "AAHHH!!",
   theme: "Terror",
   image: "/aventuras/ahhh.png",
@@ -2744,8 +3046,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "21",
+  { id: "O Mausoléu",
   name: "O Mausoléu",
   theme: "Exploração",
   image: "/aventuras/o-mausoleu.png",
@@ -2843,8 +3144,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "22",
+  { id: "A Lei do Tear",
   name: "A Lei do Tear",
   theme: "Fantasia",
   image: "/aventuras/lei-do-tear.png",
@@ -2921,8 +3221,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "23",
+  { id: "O Forasteiro",
   name: "O Forasteiro",
   theme: "Faroeste",
   image: "/aventuras/o-forasteiro.png",
@@ -3022,8 +3321,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "24",
+  { id: "Bárbaros e Necromantes",
   name: "Bárbaros e Necromantes",
   theme: "Fantasia",
   image: "/aventuras/barbaros-e-necromantes.png",
@@ -3097,8 +3395,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "25",
+  { id: "Fim da Linha",
   name: "Fim da Linha",
   theme: "Terror Urbano",
   image: "/aventuras/fim-da-linha.png",
@@ -3172,8 +3469,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "26",
+  { id: "Legiões Invisíveis",
   name: "Legiões Invisíveis",
   theme: "Ficção Científica",
   image: "/aventuras/legioes-invisiveis.png",
@@ -3246,8 +3542,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "27",
+  { id: "O Templo do Tempo",
   name: "O Templo do Tempo",
   theme: "Fantasia",
   image: "/aventuras/templo-do-tempo.png",
@@ -3329,8 +3624,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "28",
+  { id: "Coragem!",
   name: "Coragem!",
   theme: "Fantasia Medieval",
   image: "/aventuras/coragem.png",
@@ -3423,8 +3717,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "29",
+  { id: "General Inverno",
   name: "General Inverno",
   theme: "Supers",
   image: "/aventuras/general-inverno.png",
@@ -3502,8 +3795,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "30",
+  { id: "Refúgio",
   name: "Refúgio",
   theme: "Fantasia",
   image: "/aventuras/refugio.png",
@@ -3578,6 +3870,321 @@ export const adventures: Adventure[] = [
     {
       type: "text",
       content: "O troll é grande demais para caber ali."
+    }
+  ]
+  },
+  { id: "Sonhos Profundos",
+  name: "Sonhos Profundos",
+  theme: "Exploração de Mina, Mistério e Abissais",
+  image: "/aventuras/sonhos-profundos.png",
+  summary: "Um pintor excêntrico assombrado por sonhos recorrentes contrata os heróis para explorar uma mina abandonada. Entre elementais agressivos, desmoronamentos, explosivos e esqueletos anões, o grupo descobre um demônio aprisionado desesperado por liberdade.",
+  sections: [
+    {
+      type: "text",
+      content: "Apesar de estar no portifólio divino de Thyatis, existem diversas formas de ver o futuro. Magos estudam a matéria que compõe seu universo, usando fórmulas misteriosas e gestos para lançar feitiços de adivinhação. Sacerdotes de outros deuses também pedem pela capacidade de desvendar o que ainda não aconteceu, através de premonições concedidas por seus patronos. Entretanto, os sonhos também podem ser capazes de revelar mais do que se imagina."
+    },
+    {
+      type: "text",
+      content: "Surgidos dos reinos divinos maléficos, abissais são seres formados a partir do próprio mal. Apesar de haver histórias de redenção destas criaturas, a maioria segue sua existência espalhando o terror e o medo. Os mais poderosos entre os demônios são capazes de viajar por conta própria para Arton. Os menos influentes, soldados da causa infernal, podem ser conjurados por infelizes que não costumam ter tempo de se arrepender."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "RESUMO DA AVENTURA"
+    },
+    {
+      type: "text",
+      content: "Sonhos profundos é uma breve jornada, uma aventura curta pensada para uma sessão única, mas que pode ser inserida em uma campanha maior. É ideal para um grupo de quatro personagens de 4º nível em Tormenta20."
+    },
+    {
+      type: "text",
+      content: "Os personagens são contratados por um artista excêntrico, motivado por estranhos sonhos a examinar uma mina abandonada local. Eles então devem percorrer a pequena cidade em busca de informações, e possivelmente um mapa. Assim que estiverem prontos, partem em direção da antiga escavação. Chegando lá, encontram elementais de pedra estranhamente agressivos guardando a entrada."
+    },
+    {
+      type: "text",
+      content: "No interior da mina, o grupo busca pelo ponto indicado pelo contratante. Nuvens de morcegos, desmoronamentos e caixas de explosivos estão espalhados pelas câmaras da escavação. Ao liberar um ponto de desabamento, terão que enfrentar esqueletos em um túnel feito por anões, para então encontrar finalmente o ser dos sonhos do artista: um demônio desesperado para ser liberado em Arton!"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 1: CELEBRIDADES LOCAIS"
+    },
+    {
+      type: "text",
+      content: "Nesse ponto de suas aventuras, vocês já são reconhecidos por seus feitos. O que quer tenham vivido até aqui, em sua comunidade vocês estão sendo vistos como heróis prontos para resolver problemas. Em um desses dias, talvez no meio de uma missão, ou celebrando em uma taverna local, vocês recebem um convite para comparecer ao ateliê de outra celebridade: um pintor, cujos quadros fazem sucesso entre a parca nobreza da cidade."
+    },
+    {
+      type: "text",
+      content: "O convite, escrito com muita formalidade, pede que venham até o estúdio do artista Zambert Tallasin. Junto com a missiva, para garantir o interesse dos aventureiros, há T$ 50. Chegando ao local, vocês veem um jovem saindo, obviamente perturbado."
+    },
+    {
+      type: "text",
+      content: "“Não dá mais! Desculpe, senhor Tallasin, mas não posso continuar!”"
+    },
+    {
+      type: "text",
+      content: "Logo atrás, segue um homem que aparenta ser um apenas um pouco mais velho, de roupas multicoloridas e cheias de manchas de tintas variadas. Suas orelhas são pontudas, mas qualquer elfo percebe a existência de pequenas irregularidades extremamente humanas, revelando que se trata de um meio-elfo."
+    },
+    {
+      type: "text",
+      content: "“Por favor, não vá! É só um momento... oh! Os aventureiros! Venham, venham.”"
+    },
+    {
+      type: "text",
+      content: "Ele é Zambert, e os leva para a entrada de seu ateliê. Lá, o grupo se vê cercado de diversos quadros incríveis. Qualquer um treinado em Atuação ou um Ofício apropriado reconhece o nível de habilidade requerido para criar essas peças. Existem alguns retratos, mas o principal tema dos quadros são paisagens locais, campos, estradas, colinas."
+    },
+    {
+      type: "text",
+      content: "Quando avançam pelos corredores em direção ao estúdio em si, entretanto, as pinturas começam a mudar. Campos secos, estradas com sombras nas matas e figuras observando das colinas. Nenhuma das pinturas contém algo assustador, mas algo nelas é inquietante."
+    },
+    {
+      type: "text",
+      content: "Finalmente, no cômodo principal, há um quadro no meio do salão, e diversas telas cobertas com tecido ao redor dele. Mais uma vez, não há nada explicitamente monstruoso ou maligno. É apenas um corredor escuro, de pedra, que se estica até as sombras. Anões e personagens treinados em Ofício (minerador) sabem que o local mostrado fica no subterrâneo."
+    },
+    {
+      type: "text",
+      content: "“Começou uns meses atrás. Primeiro, vozes em um sonho. E então comecei a ver esses corredores, que prosseguem eternamente. Quando acordo, meus pés estão sujos de terra.” Zambert passa então a remover os panos. Todos os quadros, sem exceção, retratam o mesmo tipo de túnel ou caverna. “Eu preciso saber o que há nesse lugar.”"
+    },
+    {
+      type: "text",
+      content: "Questionado pelos personagens, ele diz achar que é a antiga mina da cidade, desativada por alguns acidentes que ocorreram. O artista explica que pensou em ir sozinho, simplesmente se embrenhar nos túneis, mas teme por sua segurança."
+    },
+    {
+      type: "text",
+      content: "Zambert diz que está disposto a pagar uma pequena fortuna para o grupo: T$ 1.000, entre joias e outros objetos de arte. Se quiserem negociar, sua Vontade é +2. Antes de partirem, Zambert sugere que recolham informações sobre a mina."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 2: MAPA DA MINA"
+    },
+    {
+      type: "text",
+      content: "A cidade em que estão já foi mais próspera. No momento, não chega a ser decadente ou deserta. É apenas a memória esmaecida de tempos melhores, gravada na mente de todos, sejam os que a viveram ou os que só ouviram falar."
+    },
+    {
+      type: "text",
+      content: "Zambert estará em seu estúdio, esperando para partir assim que os aventureiros estiverem prontos. É possível ir direto para as minas, na cena 3, caso não achem necessário coletar pistas. Entretanto, se os personagens andarem pela cidade, logo são reconhecidos e bem-vindos."
+    },
+    {
+      type: "text",
+      content: "Todo o grupo recebe +2 em testes de Diplomacia ou podem fazer testes de Investigação para interrogar, sem precisar gastar tibares. Outras perícias (Jogatina para perguntar durante partidas de cartas, Atuação para atrair pessoas dispostas a falar etc.) podem ser usadas, mas sem qualquer bônus diferenciado. Cada personagem pode fazer um teste ou ajudar colegas. O valor do teste revela a informação coletada, de acordo com o resultado obtido."
+    },
+    {
+      type: "text",
+      content: "• CD 10 – As minas possuíam metais que eram transportados para cidades maiores.\n• CD 15 – Além de metais comuns, a mina continha veios de minérios especiais.\n• CD 20 – Apesar da prosperidade trazida pela mina, acidentes eram constantes.\n• CD 25 – Um dos antigos mineiros possui um mapa velho (veja sua utilidade na cena 4).\n• CD 30 – Pessoas comentam que, antes do desmoronamento fechar a mina, trabalhadores começaram a ter sonhos estranhos."
+    },
+    {
+      type: "text",
+      content: "Não há motivo para pressa, mas se todos fizerem um teste individual, Zambert estará mal-humorado quando voltarem ao seu estúdio. O pintor separou alguns recursos: um lampião, vinte frascos de óleo, cinco bálsamos restauradores e três essências de mana. Além disso, ele carrega uma tela em branco e seu conjunto de pintura."
+    },
+    {
+      type: "text",
+      content: "Quando todos estiverem prontos, é hora de partir para as minas."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 3: PEGA!"
+    },
+    {
+      type: "text",
+      content: "Quando vocês começam a caminhar pela estrada velha que ligava a cidade às minas, algumas coisas chamam a atenção. Campos no caminho realmente estão parecendo menos viçosos, e animais como cavalos e vacas estão inquietos."
+    },
+    {
+      type: "text",
+      content: "Quando chegam à entrada, a veem bloqueada por montes de pedras e tábuas. De longe, peça um teste de Percepção (CD 25) para identificar que não se trata de rochas comuns, mas sim terriers, elementais da terra, em estado de repouso. Ao se aproximarem, eles erguem-se, rosnando."
+    },
+    {
+      type: "text",
+      content: "Criaturas. Terrier x3 (NPCs e Criaturas)."
+    },
+    {
+      type: "text",
+      content: "Os elementais têm comportamento similar a cães selvagens, mas aqui estão mais agressivos, atacando assim que os personagens chegarem perto. Se tiverem percebido as criaturas antes do começo do combate, é possível fazer um teste para acalmar todos com Adestramento (CD 25). Durante a luta, entretanto, cada um requer um teste individual da mesma perícia para tornar-se não hostil, mas se outro terrier sofrer dano, todos voltam ao combate."
+    },
+    {
+      type: "text",
+      content: "Assim que tiverem conseguido lidar com os terrier, podem remover as madeiras com um teste de Atletismo (CD 20). Com a entrada liberada, chegam ao átrio da mina."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 4: ENTRANHAS DA TERRA"
+    },
+    {
+      type: "text",
+      content: "A mina é totalmente escura, mas o lampião comprado por Zambert faz bem seu papel aqui, iluminando boa parte da área. Ainda existem caixas e instrumentos, abandonados quando o local foi desativado."
+    },
+    {
+      type: "text",
+      content: "O pintor não tem um ponto específico para onde deseja ir, dizendo apenas que precisa andar pelos corredores. É perceptível que o meio-elfo está mais inquieto agora, perdido em pensamentos, rabiscando freneticamente em pedaços de pergaminho sempre que chegam a uma nova sala."
+    },
+    {
+      type: "text",
+      content: "Atravessar os túneis é um teste estendido de Ofício (minerador) ou Sobrevivência (CD 20, três sucessos). Se tiverem conseguido o mapa, recebem +5 nesses testes. Em uma falha total, os personagens se encontram no átrio inicial novamente, tendo perdido o resto do dia andando em círculos. Todos ficam fatigados."
+    },
+    {
+      type: "text",
+      content: "Após cada teste, bem-sucedido ou não, role 1d6 ou escolha um dos encontros abaixo. Se rolar mais de uma vez o mesmo encontro, role mais 1d6, e ambos os encontros ocorrem ao mesmo tempo (como um desabamento e ataque de morcegos). Cada encontro conta como uma cena para propósitos de habilidades e do óleo do lampião."
+    },
+    {
+      type: "text",
+      content: "1. Sai de baixo!: As pedras do teto da caverna estão instáveis, e tanto o som de conversa quanto passos pesados são o suficiente para que desmoronem. Peça aos personagens um teste de Investigação, Ofício (minerador) ou Sobrevivência (CD 20) para notar que a câmara está prestes a desmoronar. Sabendo disso, é possível atravessá-la silenciosamente com um teste de Furtividade (CD 15). Um personagem que passe, está seguro. Se um personagem falhar, ele e os que não tiverem realizado o teste ainda sofrem 6d6 pontos de dano de impacto e ficam soterrados (Reflexos CD 20 reduz à metade e evita o soterramento). Um personagem soterrado fica imóvel e sofre 1d6 pontos de dano de impacto por rodada. Escapar requer um teste de Força (CD 10), que pode ser feito pelo próprio aventureiro ou um de seus aliados."
+    },
+    {
+      type: "text",
+      content: "2. Terrier Perdido: Vocês ouvem um ganido vindo da câmara à frente. Quando se aproximam, veem mais um dos elementais de terra de antes. Este terrier, diferente dos da entrada, não é violento. Na verdade, quando vê os personagens, se aproxima, demonstrando tanta alegria quanto é possível com sua aparência rochosa. Um teste de Adestramento (CD 20) conquista a afeição do elemental. Enquanto estiverem nas cavernas, ele serve como um parceiro especial que fornece RD 2/impacto."
+    },
+    {
+      type: "text",
+      content: "3. Caixas Vermelhas: Em uma das cavernas vocês encontram caixotes de madeira pintados de vermelho. Nesta câmara vocês encontram 1d4 caixas, cada uma contendo 1d6 bombas. Se uma das caixas sofrer 6 pontos de dano de fogo, explode, causando 6d6 pontos de dano em um raio de 9m, +2d6 para cada outra bomba na área, em alcance curto."
+    },
+    {
+      type: "text",
+      content: "4. Primeiros Socorros: As caixas aqui guardam medicamentos deixados pelos mineiros. Essas caixas contêm 1d4+1 bálsamos restauradores e 2 essências de mana."
+    },
+    {
+      type: "text",
+      content: "5. Sede de Sangue: No instante em que vocês entram neste ambiente, uma porção de morcegos se abate sobre vocês. Os personagens são atacados por um enxame de morcegos sombrios (veja NPCs e Criaturas)."
+    },
+    {
+      type: "text",
+      content: "6. Câmara Vazia: Esta caverna está vazia. Ao menos aparentemente. A princípio, não há nada aqui. Entretanto, é possível fazer um teste de Investigação (CD 20) e encontrar três itens diversos (role ou escolha na Tabela 8-3: Itens Diversos, Tormenta20, p. 331)."
+    },
+    {
+      type: "text",
+      content: "É possível voltar ao exterior e acampar em segurança, entretanto, a cada noite, Zambert parece mais perturbado. Além disso, pesadelos terríveis afligem os personagens, fazendo com que seu descanso seja ruim e acordem fatigados (Vontade CD 20 evita). Devotos de deuses que canalizem exclusivamente energia negativa não são afetados por esses pesadelos."
+    },
+    {
+      type: "text",
+      content: "Ao acumularem os sucessos necessários, chegam a uma nova caverna."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 5: SOLUÇÕES EXPLOSIVAS"
+    },
+    {
+      type: "text",
+      content: "Esta câmara é diferente. Apesar de haver desmoronamentos em outros pontos dos túneis de mineração, as pedras aqui parecem de outro lugar. Zambert, entretanto olha fixamente para as rochas e berra: “É por aqui!”"
+    },
+    {
+      type: "text",
+      content: "Um teste de Ofício (minerador) (CD 15) revela que não há outro túnel conectado a essas pedras, e que há uma câmara através dos pedregulhos. Se partirem agora, o pintor meio-elfo não os acompanhará, obcecado por remover o detrito do caminho."
+    },
+    {
+      type: "text",
+      content: "É necessário um dia inteiro de trabalho e um teste estendido de Força (CD 20, cinco sucessos), para liberar a passagem. Um personagem pode fazer um teste de Ofício (minerador) para reduzir o número de sucessos necessários para 3. A primeira falha deixa todos os personagens fatigados, a segunda os deixa exaustos e em caso de falha total, o personagem que falhou no teste cai inconsciente, dormindo."
+    },
+    {
+      type: "text",
+      content: "Caso tenham visto os caixotes explosivos pintados de vermelho, é possível usá-los para abrir o caminho. Um personagem treinado em Ofício (minerador) sabe quanto será o suficiente para desbloquear o caminho. Se alguém fizer um teste desta perícia (CD 25), percebe que a detonação pode causar desmoronamento de outras câmaras, mas não nesta. Se usarem as bombas, a entrada da mina é completamente bloqueada e deverão achar outro jeito de sair daqui."
+    },
+    {
+      type: "text",
+      content: "De uma forma ou de outra, quando o desmoronamento é removido, vocês encontram um curioso corredor. Bem diferente dos anteriores, esse aqui é muito mais ordenado, e personagens anões sabem se tratar de técnica de escavação de seu povo."
+    },
+    {
+      type: "text",
+      content: "Quando seguem pelo corredor novo, os personagens são recebidos de forma terrível: dois esqueletos que atacam imediatamente. Pelas proporções dos ossos e estaturas, devem ter sido anões em vida."
+    },
+    {
+      type: "text",
+      content: "Criaturas. Esqueleto x2 (Tormenta20, p. 297)."
+    },
+    {
+      type: "text",
+      content: "No primeiro turno do combate, Zambert corre túnel adentro, gritando “É aqui! É aqui!”. Os esqueletos não se comunicam, apenas atacam. Suas roupas são trapos velhos, mas, se vasculhados, revelam um bilhete."
+    },
+    {
+      type: "text",
+      content: "“Nós não deveríamos ter feito isso! O rito era para trazer prosperidade, mas algo errado aconteceu. Venham logo até aqui, sinto que estou perdendo meu juízo. Que Ayrelynn tenha misericórdia de mim, estou ouvindo correntes novamente.”"
+    },
+    {
+      type: "text",
+      content: "Assim que lerem a carta, ou quando prosseguirem pelo corredor, os heróis ouvem um grito de sofrimento na voz de Zambert."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 6: SUSSURROS NA ESCURIDÃO"
+    },
+    {
+      type: "text",
+      content: "A voz de Zambert em agonia corta os corredores. Assim como um tilintar metálico. Quando vocês chegam até ele, veem o corpo do pintor suspenso por correntes sinistras e ganchos. Se aproximando dele, a luz do lampião revela algo mais. Um corpo esquálido, cheio de cortes, e coberto por correntes que se movem como se estivessem vivas, se desloca pelo corredor."
+    },
+    {
+      type: "text",
+      content: "Um teste de Misticismo ou Religião (CD 20) revela que este ser é um abissal, uma criatura profana surgida dos reinos dos deuses. Este é um rhayrivel, uma casta de soldados sádicos e torturadores. Um resultado 25 ou mais também revela que o demônio está obviamente enfraquecido, possivelmente por passar muito tempo nesses subterrâneos, sem encontrar presas."
+    },
+    {
+      type: "text",
+      content: "Criaturas. Rhayrivel Enfraquecido (NPCs e Criaturas)."
+    },
+    {
+      type: "text",
+      content: "O demônio está distraído com sua vítima. Apesar de ser um ato de extrema covardia, se não tiverem causado a explosão na mina, os aventureiros podem usar este momento para fugir, abandonando seu contratante. Porém, se causarem qualquer forma de dano ao rhayrivel, ele voltará sua atenção para o grupo. Após ter passado tantos anos naqueles túneis, lutará até a morte pela chance ideal de voltar aos mundos dos deuses."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Epílogo: MISTÉRIOS NA ESCURIDÃO"
+    },
+    {
+      type: "text",
+      content: "Quando o abissal finalmente é derrotado, vocês merecidamente sentem uma sensação de alívio. Seja lá como esta criatura chegou aqui, agora não vai ferir mais ninguém. Devotos dos deuses bondosos sentem a sensação de dever cumprido. Entretanto, que outros mistérios escondidos ainda existem naqueles túneis?"
+    },
+    {
+      type: "text",
+      content: "Caso a explosão tenha sido usada para liberar o caminho, a única forma de seguir é pela construção anã. Os esqueletos encontrados e o próprio demônio são provas de que algo não está bem. Se Zambert tiver sobrevivido, estará perceptivelmente mais calmo, apesar de seus ferimentos. “É como se um peso tivesse saído da minha alma.”"
+    },
+    {
+      type: "text",
+      content: "Se puderem voltar, o pintor acompanha os aventureiros e a fama dos heróis atinge um novo patamar. Mas, se o grupo retornar sem um dos mais famosos artistas locais, um ar de desconfiança surge, ainda mais se forem buscar os valores de recompensa prometidos."
+    },
+    {
+      type: "text",
+      content: "Uma questão que pode ser levantada, caso tenham feito o teste de Misticismo ou Religião para identificar a criatura: essa casta de demônios não é conhecida por manifestar-se assim, através de sonhos. Será que há algo mais escondido nas profundezas?"
+    },
+    {
+      type: "text",
+      content: "Os personagens avançam para o 5º nível"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "NPCs & Criaturas"
+    },
+    {
+      type: "text",
+      content: "TERRIER\nEspírito (elemental) Pequeno\nIniciativa +0, Percepção +3, visão no escuro\nDefesa 16, Fort +11, Ref +0, Von +5, imunidade a acertos críticos, ácido, atordoado, cansaço, efeitos de metabolismo e paralisia, redução de dano 5/impacto, vulnerabilidade a eletricidade\nPontos de Vida 35\nDeslocamento 6m (4q)\nCorpo a Corpo Pancada +9 (2d6+8).\nPedra-Punho (Padrão) O terrier dispara pedras do tamanho de um punho humano em criaturas a sua escolha em alcance curto. Cada criatura sofre 1d6+4 pontos de dano de impacto e fica atordoada por 1 rodada (Fort CD 16 reduz à metade e evita a condição). Uma criatura que passe no teste de resistência não pode mais ser atordoada por esta habilidade até o fim da cena. Recarga (movimento).\nPedregoso Um terrier pode permanecer completamente imóvel. Se ele estiver assim, um personagem deve passar num teste de Percepção (CD 30) para notar que se trata de uma criatura e não um monte de pedras.\nFor 3, Des 0, Con 3, Int –3, Sab 1, Car 1\nTesouro Padrão.\nFamiliar Um terrier familiar concede redução de dano 2/impacto."
+    },
+    {
+      type: "text",
+      content: "ENXAME DE MORCEGOS SOMBRIOS\nAnimal Grande\nIniciativa +8, Percepção +7, faro, percepção às cegas\nDefesa 22, Fort +10, Ref +15, Von +5\nPontos de Vida 28\nDeslocamento 4,5m (3q), voo 12m (8q)\nBeber Sangue Para cada ponto de vida que o enxame causar a uma criatura, ele ganha 1 PV temporário.\nDoença Uma criatura que sofre dano do enxame é exposta à doença moléstia demoníaca (Tormenta20, p. 318). Um personagem que passe no teste de Fortitude não pode mais ser infectado naquele mesmo dia.\nEnxame Os morcegos sombrios são um aglomerado que age em conjunto. Eles podem entrar no espaço ocupado por um personagem e, no fim de seu turno, causa 6d8 pontos de dano de perfuração e doença (veja abaixo) a qualquer personagem em seu espaço, automaticamente. O enxame é imune a manobras de combate e efeitos que afetam apenas uma criatura e não causam dano, mas sofre 50% a mais de dano de efeitos de área. Além disso, sofre apenas metade do dano de ataques com armas. Estar dentro do enxame conta como condição ruim para lançar magias.\nFor –3, Des 4, Con 2, Int –5, Sab 3, Car –2\nTesouro Nenhum."
+    },
+    {
+      type: "text",
+      content: "RHAYRIVEL ENFRAQUECIDO (ND 4)\nEspírito (abissal) Médio\nIniciativa +6, Percepção +5, visão no escuro\nDefesa 24, Fort +16, Ref +12, Von +5, imunidade a ácido e veneno, redução de dano 5, redução de fogo e frio 10\nPontos de Vida 200\nDeslocamento 9m (6q)\nCorpo a Corpo Pancada x2 +17 (2d8+6).\nCorrentes Farpadas (Padrão) O rhayrivel projeta suas correntes contra uma criatura em alcance curto. A vítima sofre 4d8+13 pontos de dano de corte, fica sangrando e é acometida por uma dor profunda, que causa uma penalidade de –5 em testes de perícia até o fim da cena (Fort CD 20 reduz à metade, evita o sangramento e a penalidade). Um efeito capaz de remover uma condição de fadiga remove a dor e a penalidade.\nSadismo O rhayrivel recebe +5 em testes de ataque e rolagens de dano contra criaturas que estejam sangrando.\nFor 4, Des 2, Con 3, Int –1, Sab 1, Car –2\nPerícias Intimidação +12.\nTesouro Padrão."
     }
   ]
   },

@@ -298,6 +298,116 @@ export const regreiroQAs: RegreiroQA[] = [
     magazineNumber: 193,
   },
   //#endregion
+  //#region DB - 197
+  {
+    id: "DB197-01",
+    question: "Posso usar o poder de clérigo *Magia Sagrada/Profana* com magias arcanas aprendidas através de poderes concedidos, como por exemplo *Centelha Mágica*, *Teurgista Místico* ou *Carícia de Tenebra*?",
+    answer: "> Saudações consagradas, conselheiro!\n\nO supracitado poder apresenta o seguinte texto: “Quando lança uma magia divina que causa dano, você pode gastar +1 PM. Se fizer isso, muda o tipo de dano da magia para luz (se sua divindade canaliza energia positiva) ou trevas (se canaliza energia negativa).”\n\nComparemos esse texto com o de outro poder, *Arte Mágica*, de bardo: “Enquanto você estiver sob efeito de sua *Inspiração*, a CD para resistir a suas habilidades de bardo aumenta em +2.”\n\n*Arte Mágica* funciona explicitamente com habilidades de bardo, incluindo suas magias. Magias podem ser aprendidas de formas alheias à classe, como o poder concedido *Centelha Mágica*, cujo texto afirma: “Escolha uma magia arcana ou divina de 1º círculo. Você aprende e pode lançar essa magia.” Uma magia aprendida com esse poder não seria afetada por esse poder. Porém, no caso de *Magia Sagrada/Profana*, não há a mesma limitação de *Arte Mágica*. Dessa forma, caso a magia selecionada com *Centelha Mágica* seja divina, ela pode ser usada com *Magia Sagrada/Profana*.\n\nA situação é diferente para os poderes *Carícia Sombria* (“Você pode aprender *Toque Vampírico* como uma magia divina.”) e *Teurgista Místico* (“Até uma magia de cada círculo que você aprender poderá ser escolhida entre magias divinas (se você for um conjurador arcano) ou entre magias arcanas (se for um conjurador divino).”). Perceba que nenhum desses poderes concede novas magias conhecidas — apenas flexibiliza condições para seu aprendizado. Dessa forma, mesmo que um bardo use *Carícia Sombria* e uma magia conhecida de bardo para aprender *Toque Vampírico* como uma magia divina, continuará podendo usar *Arte Mágica* com essa magia. Independente de ser arcana ou divina, continua sendo uma magia de bardo. Por outro lado, uma magia arcana aprendida por um clérigo através de *Teurgista Místico* não pode receber os benefícios de *Magia Sagrada/Profana* — apesar de ser uma magia de clérigo, não é uma magia divina.",
+    magazineNumber: 197,
+  },
+  {
+    id: "DB197-02",
+    question: "Um mago com o poder *Escriba Arcano* pode aprender magias divinas através de pergaminhos? O poder fala que é possível aprender através de pergaminhos e grimórios de outros magos, mas não especifica qual tipo de magia.",
+    answer: "> Saudações pedagógicas, conselheiro!\n\n*Escriba Arcano* altera a forma como o personagem pode aprender magias, mas não modifica a lista de magias que ele pode aprender. Assim, a menos que outra habilidade permita isso (veja a seguir), ele só continuará podendo aprender apenas magias arcanas.\n\nÉ possível que o mago encontre um grimório de um outro mago com algumas magias divinas (através, por exemplo, do poder *Teurgista Místico*). Porém, para conseguir copiar essas magias, o mago precisa ter a mesma habilidade.",
+    magazineNumber: 197,
+  },
+  {
+    id: "DB197-03",
+    question: "Existe alguma interação entre o *Estilo Desarmado* e a habilidade *Briga* do lutador?",
+    answer: "> Saudações pugilísticas, conselheiro!\n\nNão existe nenhuma interação entre estes dois poderes. De fato, *Briga* é uma versão por assim dizer mais forte de *Estilo Desarmado*, representando a especialização e o foco do lutador nesta forma de combate.",
+    magazineNumber: 197,
+  },
+  {
+    id: "DB197-04",
+    question: "> Tenho duas dúvidas sobre acúmulos de bônus.\n\n1) Em *Tormenta20* está claro que os bônus fornecidos por modificações acumulam com os fornecidos pelos encantamentos. O que não está claro é se esse bônus é cumulativo com o bônus base do item. Por exemplo, um cajado arcano acumularia com a modificação poderoso (gerando +2 na CD de magias arcanas)? Uma adaga discreta teria +10 ou +5 para ser ocultada com ladinagem?",
+    answer: "> Saudações bonificadas, conselheiro! Vamos às suas respostas:\n\n1) Bônus se acumulam com outras fontes, mas não entre si. Os bônus base e as melhorias são da mesma categoria, itens, e por isso não se acumulam. Quando há intenção de haver acúmulo, a melhoria não concede um bônus, em vez disso aumentando o bônus base, como é o caso das melhorias Aprimorado e Reforçada.",
+    magazineNumber: 197,
+  },
+  {
+    id: "DB197-05",
+    question: "2) Sobre duas novas raças apresentadas em *Ameaças de Arton*, moreau e minauro. Ambos recebem +1 em um atributo específico e \"+1 em dois atributos\". Diferente do meio-orc, humanos e lefous o texto aqui não informa \"atributos diferentes\", então quer dizer que posso adicionar este +1 no mesmo atributo? Por exemplo, uma minaura com +2 em Força e +1 em qualquer outro ou +3 de Força?",
+    answer: "2) Sim, o texto diferente significa que você pode aplicar bônus no mesmo atributo. Um moreau da coruja pode ter Sabedoria +2 e uma minaura pode ter Força +2. Porém, perceba que o bônus aberto não pode ser aplicado no mesmo atributo. São dois atributos, afinal. Então não é possível fazer um moreau da coruja com Sabedoria +3 ou uma minaura com Força +3.",
+    magazineNumber: 197,
+  },
+  {
+    id: "DB197-06",
+    question: "> Excelentíssimos juízes, trago uma dúvida relacionada à transmutação de criaturas artificiais e não-vivas em geral. Quando, por exemplo, um golem utiliza a magia *Controlar Madeira* com o primeiro aprimoramento para se transformar em uma árvore, sua condição de descanso continua sujeita à habilidade racial *Criatura Artificial*?",
+    answer: "> Saudações construtivas, conselheiro!\n\nExceto quando um efeito indica o contrário, todas as habilidades de personagem continuam funcionando normalmente quando sua forma é alterada. Portanto, um golem transformado em árvore através de *Controlar Madeira* continua sujeito à habilidade *Criatura Artificial*.",
+    magazineNumber: 197,
+  },
+  {
+    id: "DB197-07",
+    question: "> Hoje trago algumas questões que surgiram recentemente nas minhas leituras e nas minhas mesas:\n\n1) Na versão 1.2 de *Tormenta 20 - Edição Jogo do Ano*, eu não consigo mais encontrar a passagem do livro que diz que os bônus de melhorias não acumulam entre si. Vocês conseguem me dizer se essa passagem não está mais no livro? Se ela não estiver, os bônus de melhorias passam a acumular entre si e, por exemplo, um item cruel e atroz fornece +3 em dano, em vez de apenas +2?",
+    answer: "> Saudações prolíficas, conselheiros! Vamos às suas respostas:\n\n1) Bônus de melhorias são bônus da mesma fonte e, como tal, não acumulam exceto quando afirmado o contrário. Por isso existe uma regra específica para que bônus de melhorias e encantamentos se acumulem entre si.",
+    magazineNumber: 197,
+  },
+  {
+    id: "DB197-08",
+    question: "2) As melhorias Aprimorado, do manual básico, e Multifuncional, de *Ameaças de Arton*, são direcionadas para itens que modificam perícias, como ferramentas e itens de vestuário, mas elas poderiam ser aplicadas em armaduras que afetem testes, tais como a armadura acolchoada e a veste de teia de aranha?",
+    answer: "2) Não. Aprimorado pode ser aplicado apenas a ferramentas e vestuário. Caso considere uma combinação única interessante, o mestre pode permitir a aplicação de aprimorado em armaduras, mas essa seria uma regra da casa.",
+    magazineNumber: 197,
+  },
+  {
+    id: "DB197-09",
+    question: "3) Os encantos *Abascanto*, que fornece resistência a magia +5, e *Protetor*, que fornece +2 em testes de resistência, são cumulativos entre si? Uma armadura contendo ambos os encantos forneceria +7 ou +5 de bônus em um teste para resistir a uma magia?",
+    answer: "3) Não, encantamentos não se acumulam entre si.",
+    magazineNumber: 197,
+  },
+  {
+    id: "DB197-10",
+    question: "4) Atualmente, efeitos que reduzem o custo de PMs de uma magia, tais como a modificação Harmonizada, permitem que um conjurador ultrapasse o teto máximo de PMs que ele pode usar? Por exemplo, um conjurador que pode gastar até 6 PMs em uma magia e que tenha um esotérico harmonizado para a magia *Bola de Fogo* poderia lançar a magia com duas aplicações do aprimoramento que aumenta o dano em +2d6 (totalizando um valor total de 7 PMs)? Se as respostas para as perguntas anteriores forem positivas, o efeito da melhoria Harmonizado seria cumulativo com o efeito da melhoria Canalizador? O mesmo conjurador citado anteriormente poderia lançar uma *Bola de Fogo* com um valor total de 8 PMs se tivesse um esotérico harmonizado e canalizador?",
+    answer: "4) Os efeitos de redutores de custo são aplicados primeiro, antes de verificar o limite de PM. Então, sim, redutores de custo efetivamente aumentam o limite de PM. No caso das melhorias, elas não se acumulam entre si. Além disso, redutores de custo ainda têm uma regra especificamente determinando que não são cumulativos, exceto quando mencionado o contrário.",
+    magazineNumber: 197,
+  },
+  {
+    id: "DB197-11",
+    question: "5) Saindo um pouco das regras mais diretas e indo para uma parte de regra de lore: embora saibamos que, no momento atual do cenário, a associação de uma coloração de um dragão com um tipo específico de sopro já não é mais tão exata, é dito nos mitos da criação que Kallyadranoch possuía 6 tranças coloridas que, após cortadas, se tornaram os primeiros dragões, cada um com um sopro especial (fogo, frio, relâmpago, ácido, veneno e trevas). De posse desses dados, eu gostaria de saber qual desses primeiros dragões tinha o sopro de veneno e qual a cor dele.",
+    answer: "5) Essas são lendas antigas, cobertas de mistério, especialmente com o desaparecimento e subsequente retorno do Deus dos Dragões. Perceba, inclusive, que o símbolo sagrado de Kallyadranoch é composto de cinco (não seis) escamas multicoloridas sobrepostas. Como afirmado em *Ameaças de Arton*, a cor de um dragão não está associada à sua energia dracônica. Quando se trata dos Dragões-Reais e da lenda de Kallyadranoch, precisar qual deles está associado a uma energia pode ser mais difícil do que parece. Embora alguns gerem paralelos óbvios com seus títulos — como Sckhar, Dragão-Rei do Fogo — o mesmo não pode ser dito para todos. Rumores apontam que Mzzileyn possui dois tipos de sopro, veneno e trevas. Seria isso verdade ou apenas mais uma tramóia do mais traiçoeiro entre os Dragões-Reais?",
+    magazineNumber: 197,
+  },
+  {
+    id: "DB197-12",
+    question: "Na minha mesa, um jogador é um arcanista elfo com Inteligência 6, origem Recruta Arcano e poder *Arcano de Batalha*. Quando ele faz um ataque com as *Setas Infalíveis de Talude*, como o dano é aplicado?",
+    answer: "> Saudações arcanas, conselheiro! No caso, esse arcanista elfo tem um bônus de +7 em dano de magias; somando sua Inteligência pelo poder *Arcano de Batalha* e +1 pela origem Recruta Arcano. Como consta da descrição da magia, porém, quaisquer bônus de dano aplicado às *Setas Infalíveis* se aplica a apenas uma seta.",
+    magazineNumber: 197,
+  },
+  {
+    id: "DB197-13",
+    question: "Nas regras de domínio de *A Lenda de Ghanor RPG*, um upgrade de uma construção (por exemplo, de paliçada para muralha) consome um espaço de construção?",
+    answer: "> Saudações construtivas, conselheiro!\n\nSim, uma construção que altere os efeitos de outra construção continua consumindo um espaço.",
+    magazineNumber: 197,
+  },
+  {
+    id: "DB197-14",
+    question: "O item *caveira maldita* deixa uma magia *Profanar* sempre ligada. Se eu entrar em uma área onde há um símbolo visível dedicado a uma divindade que não a minha o efeito do item acaba?",
+    answer: "> Saudações sombrias, conselheiro!\n\nVamos conferir os textos em questão. A *caveira maldita* informa: \"Esta pedra esculpida em formato de crânio gera o efeito da magia *Profanar*, com o crânio como ponto de origem.\" Enquanto o texto relevante de *Profanar* é: “Esta magia não pode ser lançada em uma área contendo um símbolo visível dedicado a uma divindade que não a sua.”\n\nPerceba que a *caveira maldita* não lança efetivamente a magia em momento nenhum; o efeito já está ativo. Portanto, a presença de símbolos divinos não afeta esse item mágico.",
+    magazineNumber: 197,
+  },
+  {
+    id: "DB197-15",
+    question: "A condição ofuscado causa -2 em jogadas de ataque, enquanto outras condições (como abalado) causam -2 em testes de perícia. Ofuscado acumula com outras penalidades fornecidas por condição?",
+    answer: "> Saudações cumulativas, conselheiro!\n\nEfeitos iguais aos de condição não se acumulam, mas esses não são efeitos iguais. Um -2 em testes de perícia acaba, necessariamente, se tornando também -2 em jogadas de ataque, mas são efeitos distintos em termos de regra. Dessa forma, um personagem ofuscado e abalado que tente atacar com uma adaga sofre -2 em testes de perícia (incluindo Luta e Pontaria) e -2 em testes de ataque, para um total de -4 no seu ataque com adaga.",
+    magazineNumber: 197,
+  },
+  {
+    id: "DB197-16",
+    question: "1) Em relação à magia *Despedaçar*, se é utilizada contra um objeto que um personagem esteja empunhando, este personagem faz um teste de Fortitude para reduzir o dano ao objeto à metade?",
+    answer: "> Saudações diretas, conselheiro! Vamos às suas respostas:\n\n1) Sim. Como mencionado na página 227, itens mundanos soltos falham automaticamente em testes de resistência e itens mundanos carregados fazem testes de resistência com o bônus do portador. Itens mágicos sempre podem fazer teste de resistência, usando seu próprio bônus ou de seu portador.",
+    magazineNumber: 197,
+  },
+  {
+    id: "DB197-17",
+    question: "2) É possível curar um monstro conjurado pela magia *Conjurar Monstro*?",
+    answer: "2) Não, ele não é uma criatura.",
+    magazineNumber: 197,
+  },
+  {
+    id: "DB197-18",
+    question: "> Caríssimos juízes,\n\nO uso da perícia Guerra para plano de ação pode ser usado mais de uma vez no mesmo aliado?",
+    answer: "> Saudações, caríssimo conselheiro!\n\nPlano de ação não pode ser usado mais de uma vez no mesmo aliado. Bônus da mesma fonte não se acumulam.",
+    magazineNumber: 197,
+  },
+  //#endregion
   //#region DB - 198
   {
     id: "DB198-01",
@@ -958,6 +1068,56 @@ export const regreiroQAs: RegreiroQA[] = [
     question: "> Olá digníssimos membros do STR. Em *3DeT Victory*, a vantagem *Vigoroso* soma +2 para se defender de ataques, mesmo não sendo mencionado na vantagem?",
     answer: "> Saudações defensivas, conselheiro! A resposta é sim e não. Lembre-se que conflitos em *3DeT* acontecem das formas mais diversas possíveis. Pode se tratar de uma competição de culinária, um debate ou uma troca franca de sopapos. Caso *Vigoroso* se aplique para o conflito em questão (e certamente se aplicaria para um combate tradicional) então sim, o bônus é aplicado.",
     magazineNumber: 220,
+  },
+  //#endregion
+  //#region DB - 223
+  {
+    id: "DB223-01",
+    question: "> Saudações, excelentíssimos ministros deste tribunal! Que a justiça de Khalmyr guie suas decisões para o caminho correto e que a vontade de Nimb garanta que isso coincida com a maior quantidade possível de bônus.\n\nUm usurpador (classe variante de *Heróis de Arton*) não pode ter nenhuma devoção devido à habilidade *Inimigo dos Deuses*. Caso um deles se torne um escapista magnífico (distinção de *Heróis de Arton*), o personagem poderia usar *Vantagem Secreta* para cancelar essa penalidade?",
+    answer: "> Saudações ecumênicas, ministro! Não poder ter devoção é uma penalidade. Como descrito em *Tormenta20*, p. 11, modificadores afetam as características ou testes de uma criatura, sendo os negativos chamados de penalidade. A devoção, inegavelmente, é uma característica. Desta forma, respondendo unicamente sob a luz da regra, um usurpador escapista magnífico seria capaz de ter uma devoção. Porém, dentro do mundo do jogo, a devoção envolve a vontade dos deuses, criaturas completamente opostas à própria ideia de existência do usurpador, um ladrão de seus poderes. Alguns deuses poderiam considerar a situação um ato de devoção por si só, como Arsenal (se não há formas de ter uma devoção, crie uma forma), Hyninn (o maior roubo possível) ou Valkaria (o desafio contra a autoridade suprema). Outros deuses podem considerar a situação um insulto, como Khalmyr (um roubo continua sendo um roubo) ou Wynna (uma perversão egoísta da magia). O que cada divindade faria em cada caso depende exclusivamente do mestre. Mesmo uma divindade com tendência a apreciar o ato poderia fulminar o usurpador com seu poder divino, trazendo-o para seu próprio mundo imediatamente.",
+    magazineNumber: 223,
+  },
+  {
+    id: "DB223-02",
+    question: "> Saudações silvestres, ministros! Trago uma série de perguntas sobre o Melhor Amigo da classe treinador:\n\n1) Melhores amigos podem se beneficiar de outros parceiros?",
+    answer: "> Saudações amigáveis, ministro! O melhor amigo, para todos os efeitos, é um parceiro que possui uma ficha completa, e por isso tem acesso a benefícios que outros parceiros não possuem. Além disso, está sujeito a certas limitações. Vamos às respostas:\n\n1) O melhor amigo pode se beneficiar de outros parceiros (ou mascotes). Seu limite de parceiros será baseado em seu nível (que, por sua vez, é baseado no nível do treinador), assim como outros personagens.",
+    magazineNumber: 223,
+  },
+  {
+    id: "DB223-03",
+    question: "2) E de bônus de estrutura?",
+    answer: "2) Domínios, bases e outras regras de estruturas consideram o melhor amigo como um personagem separado do treinador. Por exemplo, temos um grupo de quatro personagens morando em uma base. Um deles é um treinador com um melhor amigo. A base precisa ser expandida para acomodar esse melhor amigo.",
+    magazineNumber: 223,
+  },
+  {
+    id: "DB223-04",
+    question: "3) Eles podem ser devotos?",
+    answer: "3) Não. Melhores amigos seguem as mesmas regras das obrigações e restrições de seus treinadores. Inclusive, as ações do melhor amigo podem configurar violações de obrigações e restrições para o treinador. Afinal, é ele quem dá as ordens!",
+    magazineNumber: 223,
+  },
+  {
+    id: "DB223-05",
+    question: "Ações livres podem ser utilizadas durante outras ações? Por exemplo, um guerreiro faz uma ação agredir e ativa *Ataque Extra*. Ele pode fazer 2 ataques com um arco, já que é necessário uma ação livre para recarregar, mesmo os dois ataques fazendo parte da mesma ação? Digamos que um personagem esteja usando uma arma de duas mãos e tenha o poder *Saque Rápido*. Ele poderia soltar uma das mãos da arma, lançar a magia *Toque Chocante* com o aprimoramento que permite um ataque e reempunhar a arma antes de fazer o ataque?",
+    answer: "> Saudações desimpedidas, ministro!\n\nSim, ações livres podem ser executadas a qualquer momento, desde que dentro do seu turno. Os dois exemplos são usos válidos. Porém, conforme escrito na descrição de Ações Livres (*Tormenta20*, p. 241), o mestre pode limitar ou proibir ações que considere complexas.",
+    magazineNumber: 223,
+  },
+  {
+    id: "DB223-06",
+    question: "O poder *Primeiro Sangue* (*Heróis de Arton*, p. 62) aumenta os passos dos meus dados de dano em vez do dano da arma. Se o dado de dano era d12, qual seria o novo valor? Devo usar a tabela de dano de armas ou d12 é o máximo?",
+    answer: "> Saudações sanguinárias, ministro! A tabela da página 149 se refere apenas ao dano de armas. Para aumentos de dados individuais, o limite máximo é 12. Se o mestre quiser conceder algum benefício nesses casos, adicione +1 por dado para cada passo acima de d12. Então d12 com um passo se torna d12+1, com dois passos d12+2 e assim sucessivamente.",
+    magazineNumber: 223,
+  },
+  {
+    id: "DB223-07",
+    question: "Como funcionam os turnos em perigos complexos? Eu posso ativar magias e habilidades ou apenas podem ser feitas as ações listadas? Que ação é necessária para realizar as ações do perigo complexo? Se eu tiver ações extras, como pelo efeito de *Velocidade*, posso acelerar a resolução do perigo?",
+    answer: "> Saudações arriscadas, ministro! Diferente de combates, perigos complexos não seguem a estrutura padrão de turnos. Cada ação pode exigir um gasto maior de tempo do que uma simples rodada, que representa 6 segundos. Por exemplo, Avançar em uma Jornada pelos Ermos representa horas ou até dias de viagem, em vez dos poucos metros que um personagem cruza ao se mover durante um combate. O mestre pode permitir o uso de habilidades que não sejam listadas no perigo complexo mas, a menos que sejam ações livres, elas tomam a ação inteira do jogador na rodada. No caso de ações extras, elas podem permitir o uso de habilidades, mas não das ações específicas do perigo. Ao seu critério, podem fornecer bônus de acordo com a situação. Um personagem com ações extras consegue correr mais para escapar de uma avalanche, por exemplo; isso poderia ser convertido em bônus em testes de Atletismo.",
+    magazineNumber: 223,
+  },
+  {
+    id: "DB223-08",
+    question: "Itens que fazem parte do corpo do personagem, como a tatuagem da origem Capanga (*Tormenta20*, p. 94) ou a *tatuagem mística de Khubar* (*Atlas de Arton*, p. 479) ocupam espaços de carga e precisam ser vestidos? É possível removê-los caso eu queira utilizar o benefício de outro item ou eles efetivamente reduzem o meu limite de itens vestidos?",
+    answer: "> Saudações despidas, ministro! Tatuagens não pesam nem são complicadas de carregar, portanto não ocupam espaços. Porém, como fornecem benefícios, elas precisam ser \"vestidas\" para gerarem seus efeitos. Apesar de não ter como removê-las de seu corpo, você pode “desativá-las” ou escondê-las cobrindo-as com peças de roupa ou maquiagem. Para vesti-las de novo, basta tirar a roupa ou a maquiagem.",
+    magazineNumber: 223,
   },
   //#endregion
   //#region DB - 224

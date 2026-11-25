@@ -117,7 +117,11 @@ progress[data-pg=pm]{accent-color:#5a9be0}
 .res .rv b{font:700 1.4rem Cinzel,serif;color:rgb(var(--ink-rgb))}
 .res .adj{margin-top:10px}
 .res .adj button{flex:1;min-width:48px;padding:10px 0;font-size:.9rem}
-.mac{display:flex;width:100%;justify-content:space-between;align-items:center;gap:12px;text-align:left;text-transform:none;letter-spacing:0;font:inherit;padding:10px 12px;margin-bottom:8px;border-radius:6px;background:var(--in);position:relative;z-index:1}
+.mac{display:flex;align-items:stretch;flex-wrap:wrap;margin-bottom:8px;border:1px solid var(--line);border-radius:6px;background:var(--in);position:relative;z-index:1;overflow:hidden}
+.mac .mt{flex:1 1 230px;display:flex;justify-content:space-between;align-items:center;gap:12px;text-align:left;text-transform:none;letter-spacing:0;font:inherit;padding:10px 12px;background:none;border:0;border-radius:0;color:inherit;cursor:pointer}
+.mac .mt:hover{background:rgba(var(--accent-rgb),.07)}
+.mac .gst{flex:none;border:0;border-left:1px solid var(--line);border-radius:0;background:rgba(var(--accent-rgb),.08);padding:0 16px;white-space:nowrap}
+.mac .gst:hover{background:rgba(var(--accent-rgb),.18)}
 .mac .mn{display:flex;flex-direction:column;gap:1px}
 .mac b{font:700 1rem Cinzel,serif;letter-spacing:.06em}
 .mac small{color:var(--mute);font-size:.82rem}
@@ -190,7 +194,7 @@ textarea{resize:vertical;overflow:hidden;line-height:1.45}
 .tbl .pos,.tbl .neg{font-weight:700;min-width:4.5rem}.tbl .pos{color:var(--ac)}.tbl .neg{color:var(--r2)}.tbl .td{flex:1}
 @media(max-width:560px){.tbf{grid-template-columns:1fr 1fr}.tbf>:first-child{grid-column:1/-1}}
 .gst{padding:5px 10px}
-.mac+.gst{display:block;margin:-4px 0 10px auto}
+@media(max-width:560px){.mac .gst{flex:1 1 100%;border-left:0;border-top:1px solid var(--line);padding:9px}}
 </style>
 </head>
 <body>
@@ -455,7 +459,7 @@ const TIB=c=>{const f=S.tf||(S.tf={desc:'',v:''}),L=c.tib.map((e,i)=>[e,i]).reve
 const efsTxt=p=>p.efs.map(e=>(EF[e.alvo]||e.alvo)+' '+sg(+e.valor||0)).join(', ')||'sem efeitos';
 const chips=(d,k,sel)=>`<span class="chips">${ATTRS.map(x=>`<label class="chp"><input type="checkbox" ${d} data-k="${k}" data-v="${x}"${(sel||[]).includes(x)?' checked':''}> ${x}</label>`).join('')}</span>`;
 const macEd=(d,p)=>`<label class="chk"><input type="checkbox" data-a="tmacro" ${d} ${p.macro?'checked':''}> Tem macro: altera a ficha enquanto estiver ativo</label>${p.macro?`<label class="chk"><input type="checkbox" data-a="tfix" ${d} ${p.fixo?'checked':''}> Mostrar o macro na ficha inicial</label>${p.efs.map((e,j)=>`<div class="ef"><select ${d} data-ei="${j}" data-k="alvo">${alvos(e.alvo)}</select><input type="number" ${d} data-ei="${j}" data-k="valor" value="${e.valor}" aria-label="Valor do efeito"><button class="ghost" data-a="dele" ${d} data-ei="${j}" aria-label="Remover efeito">×</button></div>`).join('')}<div class="bar"><button data-a="adde" ${d}>Adicionar efeito</button><button class="${p.ativo?'pri':''}" data-a="togp" ${d}>${p.ativo?'Ativo':'Ativar'}</button></div>`:''}`;
-const MB=(p,i,l)=>`<button class="mac${p.ativo?' on':''}" data-a="togp" data-l="${l}" data-pi="${i}" aria-pressed="${!!p.ativo}"><span class="mn"><b>${esc(p.nome||'Sem nome')}</b><small>${esc(l==='parceiros'?PARC[i]:p.cat)}</small><span>${esc(efsTxt(p))}</span></span><span class="st">${p.ativo?(l==='itens'?'Equipado':'Ativo'):(l==='itens'?'Guardado':'Inativo')}</span></button>`;
+const MB=(p,i,l)=>{const cu=fe(p,'gpm');return `<div class="mac${p.ativo?' on':''}"><button class="mt" data-a="togp" data-l="${l}" data-pi="${i}" aria-pressed="${!!p.ativo}"><span class="mn"><b>${esc(p.nome||'Sem nome')}</b><small>${esc(l==='parceiros'?PARC[i]:p.cat)}</small><span>${esc(p.efs.filter(e=>e.alvo!=='gpm').map(e=>(EF[e.alvo]||e.alvo)+' '+sg(+e.valor||0)).join(', ')||(cu>0?'Só gasta mana':'Sem efeitos'))}</span></span><span class="st">${p.ativo?(l==='itens'?'Equipado':'Ativo'):(l==='itens'?'Guardado':'Inativo')}</span></button>${cu>0?`<button class="gst" data-a="gastar" data-l="${l}" data-pi="${i}" title="Desconta ${cu} PM sem ligar nem desligar o macro">Gastar ${cu} PM</button>`:''}</div>`};
 const rowI=(p,i)=>`<details class="spl" data-sid="${p.id}"${OP[p.id]?' open':''}><summary><span class="spn">${esc(p.nome||'Sem nome')}</span><small>${esc([(+p.qnt||0)+'× '+(+p.espaco||0)+' esp.',p.macro?(p.ativo?'equipado':'macro'):''].filter(Boolean).join(', '))}</small></summary><div class="spb"><dl class="spm"><div><dt>Espaço</dt><dd>${(+p.espaco||0)*(+p.qnt||0)}</dd></div>${p.valor?`<div><dt>Valor</dt><dd>${esc(p.valor)}</dd></div>`:''}</dl>${p.efeito?`<p class="spd">${esc(p.efeito)}</p>`:'<p class="hint">Sem descrição.</p>'}${p.macro?`<p class="hint">Macro: ${esc(efsTxt(p))}</p>`:''}<div class="bar">${p.macro?`<button class="${p.ativo?'pri':''}" data-a="togp" data-l="itens" data-pi="${i}">${p.ativo?'Equipado':'Equipar'}</button>`:''}<button data-a="edp" data-id="${p.id}">Editar</button></div></div></details>`;
 const magEd=(m,l,i)=>{const d=`data-l="${l}" data-pi="${i}"`,dm=l==='dm';return `<article class="pw"><div class="pwh"><input ${d} data-k="nome" placeholder="Nome da magia" value="${esc(m.nome)}">${dm?'':`<button class="ghost" data-a="delp" ${d}>Remover</button>`}</div>
     <label>Link da magia no site<span class="urlrow"><input ${d} data-k="url" placeholder="https://a-tormenta.vercel.app/magias#nome-da-magia" value="${esc(m.url)}"><button data-a="pull" ${d}>Puxar do link</button></span></label>
@@ -521,7 +525,7 @@ macros:c=>{const row=(p,i,l,sub)=>`<div class="mrow"><button class="${p.ativo?'p
  return `<section class="card"><h2>Todos os macros</h2><p class="hint">Veja e ligue ou desligue todos os macros num só lugar. Eles continuam sendo criados e editados nas abas de origem.</p>${P+I+R+A||'<p class="hint">Nenhum macro criado ainda.</p>'}</section>`},
 notas:c=>`<section class="card"><h2>Anotações</h2><textarea data-p="notas" rows="12" placeholder="Dinheiro, história, aliados">${esc(c.notas)}</textarea></section>`
 };
-const injGastar=c=>document.querySelectorAll('[data-a=togp]').forEach(b=>{const p=(LS(c,b.dataset.l)||[])[b.dataset.pi];if(!p||!p.efs)return;const cu=fe(p,'gpm');if(cu>0)b.insertAdjacentHTML('afterend',`<button class="gst" data-a="gastar" data-l="${b.dataset.l}" data-pi="${b.dataset.pi}">Gastar ${cu} PM</button>`)});
+const injGastar=c=>document.querySelectorAll('[data-a=togp]').forEach(b=>{if(b.closest('.mac'))return;const p=(LS(c,b.dataset.l)||[])[b.dataset.pi];if(!p||!p.efs)return;const cu=fe(p,'gpm');if(cu>0)b.insertAdjacentHTML('afterend',`<button class="gst" data-a="gastar" data-l="${b.dataset.l}" data-pi="${b.dataset.pi}">Gastar ${cu} PM</button>`)});
 function sheet(){
   const c=C();if(!c)return home();const y=scrollY;crumb(c);
   $('#app').innerHTML=`<header><button class="ghost" data-a="home">‹ Personagens</button><div class="bar"><button data-a="exp">Baixar esta ficha</button></div></header>

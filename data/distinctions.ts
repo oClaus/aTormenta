@@ -255,6 +255,97 @@ export const distinctions: Distinction[] = [
     },
   ],
   },
+  // Dragão Brasil - 223
+  { id: "Gladiador",
+  name: "Gladiador",
+  origin: "Dragão Brasil - 223",
+  image: "/distincoes/Gladiador.png",
+  introduction: `Uma história bastante notória afirma que todas as escolas de luta mais populares nas arenas dos reinos — e até além — teriam uma origem em comum: ensinamentos implementados por um prior em sua abadia remota durante a sombria Era de Zamir. Mais tarde, esses preceitos teriam sido reunidos pelo lendário General da Companhia do Cão em sua obra máxima, o tratado conhecido como Filosofia de Combate, voltado para soldados. Ainda segundo a lenda, com o passar dos séculos, o manuscrito acabaria sendo reinterpretado por aventureiros, guardas e mestres de armas, até que suas práticas chegariam às arenas, onde a guerra cedia lugar ao espetáculo, mas o combate continuava sendo uma vocação profissional.\nOs gladiadores seriam herdeiros diretos desse legado adaptado. Moldados pelo treino e pelo estudo, eles sabem que cada luta é também uma exibição. A vitória importa, mas a forma de conquistá-la os define. Seja a história verdadeira ou não, eles são bem reais e uma visão comum em cidades. Por mais que pareçam se mover com naturalidade e improviso, aos entendidos fica claro que seus golpes fazem parte de um repertório exaustivamente ensaiado.`,
+  admission: `Para adotar esta distinção, o personagem deve ter participado de pelo menos um combate público — em uma arena, coliseu, festival ou julgamento por combate — sob a observação de juízes, patronos ou plateia. Ele precisa vencer (ou sobreviver) a esse combate estando em franca desvantagem, seja numérica, de equipamento ou lutando em um terreno que lhe é desfavorável.\nSe fizer isso, será notado por um “olheiro” e receberá uma bolsa para estudar em uma escola gladiatorial, mas precisará primeiro passar por um rigoroso treinamento nas mãos de um NPC instrutor, representado por um teste estendido aberto com CD 20 ou maior e que exija acumular pelo menos 7 sucessos.`,
+  mark: `**Memória Muscular**\nTreinos repetidos fazem seu corpo se mover mais veloz que o pensamento.\nQuando você for alvo de um ataque ou habilidade, pode gastar 2 PM para realizar uma ação padrão ou de movimento qualquer como uma reação. Você pode usar esse poder apenas uma vez por rodada.`,
+  powers: [
+    {
+      name: "As 4 Posturas",
+      description: `Posicionando seu corpo corretamente em combate, você é capaz de sobrepujar seus inimigos. Se ao fim da contenda não estiverem se perguntando o que foi que os atingiu, é porque têm muita sorte!\nDurante um combate, você pode assumir uma postura de batalha como uma ação de movimento. Com outra ação de movimento, pode mudar para outra postura — mas as opções de mudança são condicionadas pela postura em que já está. Sempre que mudar de postura, inimigos adjacentes a você ficam surpreendidos até o fim da rodada (Reflexos CD Car evita).\n• Postura de Sentinela. +1 na Defesa e em testes de manobra. A partir dela, você pode mudar para qualquer postura.\n• Carga do Javali. Ao mover-se 3m ou mais em linha reta antes de atacar, você causa +1d6 pontos de dano do mesmo tipo no seu próximo ataque. Dessa postura, você pode transitar para a postura da Grade de Ferro.\n• Diadema: +2 em testes de manobra. A partir dela, você pode mudar para a postura da Grade de Ferro.\n• Grade de Ferro: +2 em Defesa e Vontade. Dela, pode retornar à sua postura anterior.`,
+    },
+    {
+      name: "Técnica - Asas de Abutre",
+      description: `Você voa rápido como um abutre diante do banquete.\nCom uma ação completa você pode se mover saltando em linha reta igual ao dobro do seu deslocamento. Se, ao terminar de se mover, no espaço adjacente à sua frente houver um inimigo uma categoria de tamanho maior, do seu tamanho ou menor, ele fica caído.`,
+    },
+    {
+      name: "Técnica - Bote do Leão",
+      description: `O leão espera imóvel até que o inimigo pisque.\nQuando um inimigo atacá-lo, faça um teste de Vontade contra CD igual ao teste de ataque do inimigo. Se passar, você pode fazer a manobra desarmar como uma reação. Se desarmar a arma que estava sendo usada para atacá-lo, o ataque não acontece. Esse poder pode ser utilizado apenas uma vez por rodada e não funciona se você estiver abalado ou apavorado.`,
+    },
+    {
+      name: "Técnica - Coragem do Cão",
+      description: `Mesmo acuado, um cão mostra os dentes.\nQuando for flanqueado, você pode gastar 2 PM e se mover 1,5m em uma direção qualquer. Se fizer isso, escolha um dos inimigos que antes estavam adjacentes a você. Ele sofre 1d4+1 pontos de dano de esmagamento e fica caído.`,
+    },
+    {
+      name: "Técnica - Cornos da Cabra",
+      description: `A cabra escala onde ninguém ousa e desce como um raio sobre o inimigo.\nO modificador de combate que você recebe por estar em posição elevada muda para +5.`,
+    },
+  ],
+  },
+  { id: "Mortífice",
+  name: "Mortífice",
+  origin: "Dragão Brasil - 223",
+  image: "/distincoes/Mortifice.png",
+  introduction: `Kottar é um reino onde a morte é parte da vida. Seus artesãos aprendem desde cedo a trabalhar com pele, órgãos e ossos. Entre eles, se destacam os famosos e temidos Mortífices, artesãos que conhecem anatomia como um cirurgião e ritos como um clérigo. Seu trabalho é transformar os restos mortais das mais diferentes criaturas nos mais diversos instrumentos — para que estas ferramentas sirvam para perpetuar a vida ou encerrá-la, pois tudo faz parte do mesmo ciclo.\nSuas criações podem ser morbidamente belas ou grotescamente fascinantes, mas nunca obras de um amador. Alguns deles são conhecidos pela dedicação obsessiva ao seu ofício e rotinas sobrenaturais que atravessam os dias e invadem as noites, tornando sua existência integralmente devotada à arte de moldar os restos dos que não mais existem.`,
+  admission: `Para adotar esta distinção, o personagem precisa conhecer os rituais funerários de Kottar e ter aprendido a arte de moldar cadáveres. Isso não exige ser nativo do reino, mas exige respeito ao ofício. Ele deve fabricar uma arma ou armadura com uma melhoria de mortífice e ter seu trabalho aprovado pela Guilda dos Mortífices de Kottar.`,
+  mark: `**Necroaprendiz**\nTodos começam na guilda como aprendizes não importando sua experiência, idade, renome ou riqueza.\nVocê recebe Aprendiz de Artesão como uma origem adicional e todos seus benefícios. (Se esta já era a sua origem, recebe um bônus de +2 permanente em todos seus testes de Ofício).`,
+  powers: [
+    {
+      name: "Tanaturgo",
+      description: `Depois de muito trabalho e estudo, você passou de aprendiz a artesão com um posto permanente na Guilda dos Mortífices de Kottar.\nVocê recebe o poder Armeiro Superior ou Artesão Superior (à sua escolha), mesmo que não cumpra os pré-requisitos. Se possuir ambos, sempre que rolar um teste de Ofício para fabricar algo, você pode rolar o dado uma segunda vez e escolher o melhor resultado.`,
+    },
+    {
+      name: "Noturnista (Esclerófice)",
+      description: `Ao cair do sol, você continua trabalhando, amolando dentes, garras e ossos meticulosamente sob a luz das velas.\nVocê recebe visão na penumbra. Caso já tenha (ou visão no escuro), recebe percepção às cegas. Além disso, o preço adicional das melhorias de mortífice para fabricar armas com a melhoria Ceifadora cai à metade.\nPré-requisito: Tanaturgo.`,
+    },
+    {
+      name: "Noturnista (Organomante)",
+      description: `Quando a noite alcança seu auge, você segue sua vigília. Manipula vísceras e fluidos antes que o calor do mundo os corrompa, extraindo poder místico.\nVocê se torna imune a efeitos de sono e pode ficar sem dormir sem problemas — embora não recupere PV e PM se não descansar. Além disso, o preço adicional das melhorias de mortífice para fabricar esotéricos com a melhoria Necromágico cai à metade.\nPré-requisito: Noturnista (Esclerófice).`,
+    },
+    {
+      name: "Noturnista (Taxisômo)",
+      description: `Durante as últimas horas da madrugada, você completa seu turno estendido de trabalho, dedicando-se ao ritual de costurar peles e esculpir carcaças.\nVocê dobra quaisquer T$ recebidos com testes de sustento da perícia Ofício. Além disso, o preço adicional das melhorias de mortífice para fabricar armaduras com a melhoria Mortalha cai à metade.\nPré-requisito: Noturnista (Organomante).`,
+    },
+    {
+      name: "Arquitanaturgo",
+      description: `Você se tornou um mestre na arte de moldar os mortos.\nNo início de cada aventura, um item à sua escolha recebe uma melhoria de mortífice.\nPré-requisitos: Noturnista (Esclerófice), Noturnista (Organomante), Noturnista (Taxisômo).`,
+    },
+  ],
+  },
+  { id: "Bufão",
+  name: "Bufão",
+  origin: "Dragão Brasil - 223",
+  image: "/distincoes/Bufao.png",
+  introduction: `Estes artistas são presença comum nas cortes de Ghanor e dos Sete Reinos, divertindo a nobreza e seus convidados, mas também circulam entre trupes itinerantes, apresentando-se em acampamentos de soldados, feiras ao ar livre e tavernas. Eles observam comportamentos, recolhem vaidades e devolvem tudo na forma de humor calculado e sátiras mordazes que agem como maldições sobre seus alvos (e que, às vezes, de fato, são maldições!).\nContudo, a natureza dos bufões ghanorianos transcende o trabalho dos bardos. Se é verdade que os reis são almas imortais forjadas pelos Deuses Invisíveis na aurora dos tempos, os bufões são sua contraparte — uma reação cosmológica do mundano diante do divino. Eles surgem na Criação para lembrar heróis da sua própria mortalidade. Quando um aventureiro acredita demais na sua própria grandeza, o bufão o traz de volta à terra com um comentário escatológico. Quando um líder se cerca de pompas e reverência, as traquinagens do bufão impedem que a admiração por ele se transforme em idolatria.\nTudo isso torna bufões muito irritantes e pessoas difíceis de conviver. Nem sempre heróis têm a presença de espírito necessário para empregá-los, mas dizem que, quase sempre, nessas ocasiões, o próprio destino envia um bufão para persegui-los e infernizar suas vidas…`,
+  admission: `Se tornar um bufão não é bem uma escolha, é mais semelhante a uma vocação que te persegue… Se durante a campanha um personagem (ou o próprio jogador que o interpreta) conseguiu em 3 cenas distintas fazer uma piada que levou a mesa inteira a cair na gargalhada espontaneamente, ou provocou outra reação emocional forte, o Mestre deve perguntar se gostaria de adotar essa distinção.\nEntretanto, assumir o papel cosmológico do verdadeiro bufão não permite atalhos e não serve para bater em quem está por baixo. Só contam para este fim piadas que 1) tenham envolvido um NPC com posição social superior a do personagem, 2) não usem de “escada” pessoas vulneráveis 3) não reforcem crenças preconceituosas dentro ou fora de jogo.\nAlém disso, só personagens treinados em Atuação podem adotar esta distinção. Bons artistas se preocupam com sua técnica!`,
+  mark: `**Panos Quentes**\nVocê tem ao seu lado um patrono poderoso, uma legião de fãs, a paciência dos santos ou simplesmente a crença popular que matar um bufão traz azar, e isso permite que se safe de muita coisa…\nSempre que você e seus aliados forem capturados ou rendidos, a pena ou punição que sofreriam será automaticamente mais leve. Uma sentença de morte se transforma em uma prisão longa. Uma prisão longa é reduzido para alguns dias. A multa que seria cobrada em peças de prata é cobrada em peças de cobre, e por aí vai! Além disso, você recebe +2 em testes para persuadir alguém com uma posição social maior que a sua a não cometer atos extremos.`,
+  powers: [
+    {
+      name: "O Rei está nu!",
+      description: `“Eu sei, eu sei, o grande Ruff Ghanor! Uau! Mas tem uma coisa da lenda dele que nunca me entrou na cabeça…”\nVocê recebe +2 em testes opostos feitos contra personagens que tenham uma posição social superior à sua, contra seus próprios aliados; ou em testes sociais cujo sucesso resulte em alguma consequência negativa para você. Esse bônus aumenta em +1 para cada patamar que você tiver alcançado depois de Iniciante.`,
+    },
+    {
+      name: "Saltos e Piruetas",
+      description: `Caso a piada falhe, sempre resta se atirar no chão…\nVocê pode usar Atuação para fazer testes de Acrobacia.`,
+    },
+    {
+      name: "Sátira",
+      description: `Nos palácios ou nas tavernas, seu humor é uma arma.\nVocê é engraçado! Engraçado como? Como um bufão! Pode usar Atuação para tecer uma Intriga (ALdG, p. 79) no lugar de Enganação.`,
+    },
+    {
+      name: "Sátira Ousada",
+      description: `Você não perde a piada, mas pode perder outras coisas!\nQuando você tece uma Intriga, pode escolher receber +10 no teste, mas o alvo da sua fofoca (ou piada, ou peça de arte satírica, etc.) saberá automaticamente que você foi o responsável! Além disso, se você tirar “1” ao rolar o teste, o bônus fornecido por esse poder é anulado, mas não seu ônus.`,
+    },
+    {
+      name: "Sátira Suprema",
+      description: `As suas zombarias não recaem sobre o outro como uma verdadeira maldição… elas SÃO uma maldição!\nVocê pode lançar a magia Rogar Maldição. Se já podia fazê-lo, ela passa a custar 1 PM a menos.\nPré-requisitos: Sátira e Sátira Ousada.`,
+    },
+  ],
+  },
   // Dragão Brasil - 232
   { id: "Andarilho do Ocaso",
     name: "Andarilho do Ocaso",
