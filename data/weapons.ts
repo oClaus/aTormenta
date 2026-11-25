@@ -75,13 +75,7 @@ export const damageProgressionTable: DamageProgression[][] = [
 ];
 
 export const weapons: Weapon[] = [
-  //#region Guia de NPCs
-  //#endregion 
-
-
-
-
-
+ 
   //#region Guia de NPCs
   { id: "Cajado-de-Batalha",
     name: "Cajado de Batalha",
@@ -156,10 +150,6 @@ export const weapons: Weapon[] = [
   },
   //#endregion 
 
-
-
-
-
   //#region Duelo de Dragões
   { id: "espada enigma",
     name: "Espada Enigma",
@@ -191,9 +181,6 @@ export const weapons: Weapon[] = [
     image: "/armas/katar.png",
   },
   //#endregion
-
-
-
 
   //#region Dragão Brasil
   // Dragão Brasil - 199
@@ -240,6 +227,21 @@ export const weapons: Weapon[] = [
     range: "Curto",
     type: "Perfuração",
     spaces: 2,
+  },
+  // Dragão Brasil - 233
+  { id: "Zipana",
+    name: "Zipana",
+    description: "Estas estilhas de cristal são as armas mais prestigiadas em toda Ubani, usadas como adagas cerimoniais e adornos em vestimentas. Zipanas têm cabo em formato de X, feito de osso de dracofera e ornamentado com joias representando os símbolos dos elementos, do pai Kallyadranoch e da mãe Wynna. A lâmina reta é feita de uma mistura de minérios formada a partir de processos alquímicos, resultando em um cristal translúcido e afiado.\nO verdadeiro poder de uma zipana surge nas mãos de conjuradores arcanos com afinidade com os elementos. A natureza elemental desses seres ressoa com a alquimia na lâmina, permitindo sintonizar o bori do usuário com a arma. Quando borida, a zipana emite um feixe de energia contínuo, com cerca de 60cm de comprimento, tornando-se muito mais perigosa. Curiosamente, para um estrangeiro, uma zipana borida se parece com uma espada — arma vista com desconfiança na savana. Comentários nesse sentido são recebidos pelos ubaneri com sorrisos amarelos e meneios de cabeça.\nSe for capaz de lançar magias arcanas e tiver redução de ácido, eletricidade, fogo, frio, luz ou trevas (inclusive por fontes temporárias como magias), você pode gastar 1 PM para borir uma zipana. Até o final da cena, a arma causa 1d8 pontos de dano do elemento ao qual você tem redução, em vez do seu dano normal.\nUm personagem deve ser treinado em Ofício (alquimia) para fabricar uma zipana. Esta arma não pode receber a melhoria material especial.",
+    origin: "Dragão Brasil - 233",
+    purpose: "Corpo a Corpo",
+    proficiency: "Marcial",
+    grip: "Leve",
+    price: "T$ 500",
+    damage: "1d4",
+    critical: "19",
+    range: "—",
+    type: "Corte",
+    spaces: 1,
   },
   //#endregion
 

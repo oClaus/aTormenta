@@ -22195,6 +22195,57 @@ export const threats: Threat[] = [
     equipamentos: [],
     tesouro: "Padrão."
   },
+  { id: "Probo2",
+    name: "Probo",
+    description: "“A cidade não erra. Quando algo não se encaixa, não é a ordem que falha — é o elemento.”\nA Patrulha da Ordem Registrada é a face armada da coerência em Terápolis. Cada agente é um golem inevitável probo elevado à lógica urbana: corpos altos e angulosos, feitos de pedra clara e metal polido, com articulações geométricas que movem sem ruído supérfluo. Runas finas percorrem suas armaduras como linhas de um formulário eterno, reacendendo sempre que algo precisa ser avaliado.\nSeus rostos são máscaras lisas, sem expressão, onde olhos de luz fria analisam probabilidades, intenções e desvios. Não marcham; se posicionam. Não ameaçam; registram. Cada passo é calculado para conter, isolar e corrigir.\nA patrulha identifica e caça inconsistências. Visitantes sem registro completo, ações fora de propósito, narrativas que não se encaixam — tudo é tratado como erro a ser sanado. Capturam antes de ferir, marcam antes de punir.\nDiante deles, não adianta bravata nem heroísmo. A Ordem não se impressiona. Apenas age, pois alguém precisa garantir que a cidade continue fazendo sentido.",
+    nd: "11",
+    tipo: "Construto (inevitável)",
+    tema: "Fulgor dos Deuses",
+    tamanho: "Médio",
+    papel: "Especial",
+    origin: "Fulgor dos Deuses",
+    image: "/ameacas/probo2.png",
+    iniciativa: 7,
+    percepcao: 13,
+    defesa: 40,
+    fort: 16,
+    ref: 9,
+    von: 22,
+    resistenciaDano: "visão no escuro, cura acelerada 5, imunidade a frio, redução de dano 10, resistência a magia +5",
+    pv: 550,
+    pm: 58,
+    deslocamento: "9m (6q)",
+    ataqueCorpoACorpo: "Espada bastarda sagrada x3 +26 (1d10+23, 19, mais 2d6 frio)",
+    habilidades: [
+      "Analisar Suspeito (Completa): O probo analisa uma criatura em alcance médio. Até o fim do dia, ele recebe +3 em testes de perícia contra ela.",
+      "Ler Seus Direitos (Movimento, 3 PM): Uma criatura em alcance curto fica pasma por 1 rodada, ou atordoada por 1 rodada se for a criatura que o probo deve caçar (Fort CD 31 evita).",
+      "Negar Recurso (Movimento, 3 PM): Uma criatura em alcance médio do probo faz um teste de Vontade (CD 31). Se falhar, não pode utilizar uma habilidade à escolha do probo até o fim da cena (para esse efeito, cada magia da criatura conta como uma habilidade). Uma mesma criatura só pode ter uma habilidade negada por vez.",
+      "Magias: Como um clérigo de 11º nível (CD 31).",
+      "- Disfarce Ilusório (Padrão, 3 PM): Até o fim da cena, o probo muda a própria aparência, incluindo seu equipamento e os odores e as sensações que transmite. Isso afeta altura, peso, tom de pele, cor de cabelo, timbre de voz etc. Ele recebe +20 em testes de Enganação para disfarce (Von desacredita).",
+      "- Dissipar Magia (Padrão, 3 PM): O probo escolhe uma criatura, objeto ou esfera de 3m em alcance médio e faz um teste de Misticismo. Todas as magias nesse alvo com CD igual ou menor que o resultado do teste são dissipadas.",
+      "- Imobilizar (Padrão, 7 PM): Uma criatura em alcance curto fica paralisada (Von muda para lenta). A cada rodada, a vítima pode gastar uma ação completa para fazer um novo teste de Vontade. Se passar, liberta-se do efeito.",
+      "- Silêncio (Padrão, 3 PM, sustentada): O probo cria uma esfera de 6m em alcance médio. Criaturas nessa área ficam surdas e não podem lançar magias."
+    ],
+    for: "5",
+    des: "2",
+    con: "3",
+    int: "0",
+    sab: "3",
+    car: "1",
+    pericias: [
+      "Conhecimento +9",
+      "Diplomacia +10",
+      "Intuição +10",
+      "Misticismo +9",
+      "Nobreza +9",
+      "Religião +10"
+    ],
+    equipamentos: [
+      "Espada bastarda sagrada",
+      "loriga segmentada"
+    ],
+    tesouro: "Nenhum."
+  },
   //#endregion
 
   //#region Abissais

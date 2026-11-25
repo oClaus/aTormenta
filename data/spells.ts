@@ -58,10 +58,6 @@ export const spells: Spell[] = [
   },
   //#endregion
 
-
-
-
-  
   //#region Guia de NPCs
   { id: "Preparação de Batalha",
     name: "Preparação de Batalha",
@@ -83,10 +79,6 @@ export const spells: Spell[] = [
     ],
   },
   //#endregion
-  
-
-
-
   
   //#region Tormenta20 - Jogo do Ano
   { id: "abencoar-alimentos",
@@ -4291,7 +4283,7 @@ export const spells: Spell[] = [
 
   //#region Dragão Brasil
 
-  // Dragão Brasil - 199
+  // Dragão Brasil - 233
   { id: "Controlar Ar",
     name: "Controlar Ar",
     type: "Divina",
@@ -4303,7 +4295,7 @@ export const spells: Spell[] = [
     duration: "Cena",
     resistance: "Veja texto",
     description: "Você pode controlar os movimentos e comportamentos de massas de ar. Ao lançar a magia, escolha um dos efeitos abaixo.\nAscender: cria uma corrente de ar ascendente capaz de erguer do chão uma criatura ou objeto médio, fazendo o alvo ﬂutuar para cima e para baixo conforme sua vontade. Você pode gastar uma ação de movimento para subir ou descer o alvo até 6m por rodada, até um máximo de 30m de altura. Você não pode mover o alvo horizontalmente — mas o alvo pode, por exemplo, escalar uma colina ou se apoiar no teto para mover-se lateralmente (com metade de seu deslocamento normal). Uma criatura que esteja flutuando fica vulnerável e sofre –2 nas jogadas de ataque. Alvos involuntários têm direito a um teste de Fortitude no início de seu turno para negar o efeito. Derrubar um alvo flutuando (simplesmente parando a corrente de ar) causa o dano normal de queda, mas um alvo que passe no teste pode “nadar” para o chão contra a corrente. Você pode usar essa opção para fazer uma manobra derrubar contra uma criatura voadora dentro do alcance, usando seu atributo-chave no lugar de Força.\nSopro: cria uma lufada de vento a partir de suas mãos, que empurra qualquer criatura Média ou menor em um cone de 4,5m — faça uma manobra empurrar usando seu atributo-chave ao invés de força, usando o mesmo resultado de sua rolagem para todos os alvos. A lufada de vento também faz qualquer coisa que um vento forte e súbito faria, como levantar pó, dispersar vapores, apagar chamas, espalhar papéis ou mover uma embarcação. Manter o sopro ativo exige uma ação padrão.\nVento: cria uma área de vento forte (veja Tormenta20, p. 267) dentro do alcance da magia. Se lançada numa área que já esteja com algum efeito de vento, aumenta esse efeito em um passo. Manter o vento ativo requer uma ação de movimento. Você também pode usar essa opção para reduzir os efeitos de vento em uma área.",
-    origin: "Dragão Brasil - 199",
+    origin: "Dragão Brasil - 233",
     enhancements: [
       {
         cost: "+2 PM",

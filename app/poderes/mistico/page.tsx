@@ -179,106 +179,105 @@ export default function MisticosPoderesPage() {
               <section>
                 <h3 className="font-display text-2xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/20 pb-2">Ditames</h3>
                 <p className="font-medium mb-4">
-                  O místico expande suas magias conhecidas através de ditames, conjuntos temáticos fechados de conhecimento mágico. Ele não tem acesso a poderes como Conhecimento Mágico, do arcanista, e precisa seguir padrões e tradições estabelecidos há muito tempo e passados de geração a geração.
+                  O místico expande suas magias conhecidas através de ditames, conjuntos temáticos fechados. Ele não tem acesso a habilidades como Conhecimento Mágico, do arcanista, precisando seguir padrões e tradições estabelecidos há muito tempo e passados de geração a geração.
                 </p>
                 <p className="font-medium mb-4">
-                  Quando você adquire um poder de ditame, se já conhece uma das magias fornecidas pelo poder, pode trocá-la por outra magia de mesmo círculo, desde que essa magia seja de uma de suas escolas permitidas.
-                </p>
-                <p className="font-medium">
-                  Quando você lança uma magia aprendida por meio de um poder de ditame, se estiver em contato com uma expressão natural do seu elemento de volume equivalente a uma criatura Média, o custo dessa magia é reduzido em –1 PM.
+                  Quando adquire um poder de ditame, se o místico já conhecer uma das magias indicadas, pode trocá-la por outra magia arcana de mesmo círculo, desde que essa magia seja de uma de suas escolas permitidas.
                 </p>
               </section>
 
               <section>
-                <h3 className="font-display text-2xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/20 pb-2">Expressão Natural dos Elementos</h3>
-                <p className="font-medium mb-6">
-                  Alguns poderes fazem referência a expressões naturais de um elemento. Isso quer dizer uma manifestação do elemento que ocorra sem que seja alimentada de magia. Uma fogueira pode servir como uma expressão natural de fogo mesmo que tenha sido acesa com uma Bola de Fogo, mas um ber'baram ou outro elemental não poderia, bem como as chamas da magia Muralha Elemental.
-                </p>
+              <h3 className="font-display text-2xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/20 pb-2">Guias Elementais</h3>
+              <p className="font-medium mb-4">
+                Guias elementais são um tipo especial de parceiro. Além de atuarem como parceiros iniciantes normais (veja o tipo na tabela “Os Seis Elementos”), eles usam as seguintes regras adicionais:
+              </p>
+              <ul className="list-disc pl-6 md:pl-8 space-y-3 font-medium mb-8 marker:text-red-800">
+                <li>
+                  Um guia elemental deve ser invocado através de uma expressão natural do seu elemento de qualquer tamanho. Isso requer uma ação de movimento e 2 PM. O guia desaparece no final da cena. No 7º nível você pode gastar +1 PM para invocar seu guia como um parceiro veterano e no 15º nível você pode gastar +2 PM para invocar seu guia como um parceiro mestre.
+                </li>
+                <li>
+                  Em seu turno, você pode dar uma ordem para o guia usando uma ação de movimento. As opções de ordem de cada guia são apresentadas em sua descrição. Algumas destas ordens custam PM. Quaisquer bônus das ordens acumulam com os bônus de parceiro do guia, mas não com os bônus de outros parceiros. Todas essas ações são habilidades mágicas.
+                </li>
+                <li>
+                  Para alguns usos do guia, um teste será necessário. O bônus para testes do guia é igual à sua Sabedoria mais seu círculo máximo de magias. Para situações condizentes com a natureza do guia (como as ordens listadas para cada tipo), esse bônus aumenta em +2 por patamar do guia. Ordens além das listadas (como pedir a um elemental da água que apague um incêndio) também podem receber esse bônus, a critério do mestre. Para situações completamente avessas à natureza do guia (como pedir a um elemental da terra para se mover silenciosamente), aplique um redutor de mesmo valor.
+                </li>
+                <li>
+                  Se você tem um alikunhá, não precisa de uma expressão natural do seu elemento para invocar o guia. Em vez disso, você transforma o alikunhá no guia ao realizar o ritual.
+                </li>
+              </ul>
 
+              {/* Subseção: Água */}
+              <div className="mb-8">
+                <h4 className="font-display text-lg font-bold text-amber-950 mb-3 uppercase tracking-widest bg-amber-900/10 inline-block px-3 py-1 rounded">Água</h4>
                 <div className="space-y-4 pl-4 md:pl-5 border-l-4 border-amber-900/30 text-base md:text-lg text-left">
-                  <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Luz e Trevas: </span><span className="font-medium">Para luz, expressões naturais são ambientes banhados diretamente pela luz do sol e para trevas são ambientes completamente escuros.</span></p>
-                  <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Água: </span><span className="font-medium">Corpos de água como poças, lagos e rios são expressões naturais desde que estejam limpos.</span></p>
-                  <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Terra: </span><span className="font-medium">Montanhas e extensões de terra fértil são expressões naturais.</span></p>
-                  <p><span className="text-red-800 font-bold uppercase tracking-wide text-sm">Ar: </span><span className="font-medium">Ambientes com ar puro servem como expressões naturais; normalmente, em grandes cidades, tais ambientes são encontrados apenas em altitudes elevadas.</span></p>
+                  <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Bolha. </span><span className="font-medium">O guia cria uma bolha esférica contendo ar, até o final da cena. A bolha tem um raio em metros igual à sua Sabedoria x3. Todas as criaturas no interior da bolha podem respirar normalmente, mesmo embaixo d’água. Você pode direcionar o elemental como uma ação de movimento, com deslocamento de natação 9m; além disso, pode gastar PM para aumentar esse deslocamento em +3m por PM (limitado pelo seu círculo máximo de magias) até o final da cena. A bolha estoura caso sofra qualquer dano.</span></p>
+                  <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Escudo Hídrico. </span><span className="font-medium">O guia se transforma em um disco de água rodopiante e o protege de ataques. Você recebe +2 na Defesa até o começo do seu próximo turno. Se uma criatura o atingir com um ataque corpo a corpo enquanto este efeito estiver ativo, você pode gastar 1 PM para fazer uma manobra de empurrar como reação.</span></p>
+                  <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Jato Hidráulico (1 PM). </span><span className="font-medium">O guia dispara um jato de água pressurizado em um alvo em alcance curto. O alvo sofre 3d6 pontos de dano de impacto (+1d6 por patamar acima de iniciante) e fica caído (Fortitude CD Sab reduz o dano à metade e evita a condição). Alternativamente, o jato pode empurrar uma criatura voluntária até 6m em uma direção à sua escolha.</span></p>
                 </div>
-              </section>
+              </div>
 
-              <section>
-                <h3 className="font-display text-2xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/20 pb-2">Manifestações Elementais</h3>
-                <p className="font-medium mb-4">
-                  Manifestações elementais são pequenos espíritos ligados a um tipo de energia elemental. Um místico que tenha realizado o ritual apropriado, pode se conectar a uma dessas manifestações e invocá-la em seu auxílio. Em termos de regras, manifestações elementais são parceiros que usam as regras a seguir.
-                </p>
-                <p className="font-medium mb-4">
-                  Para usar uma manifestação elemental você precisa primeiro gastar uma ação de movimento e 2 PM para evocá-la. Para isso, você precisa de acesso a uma expressão natural do elemento correspondente. Uma manifestação evocada desaparece no fim da cena.
-                </p>
-                <p className="font-medium mb-4">
-                  Em seu turno, você pode dar uma ordem para a manifestação usando uma ação de movimento. As ações que cada manifestação pode executar são apresentadas em sua descrição. Se a ação tiver um custo em PM, ele deve ser pago por você.
-                </p>
-                <p className="font-medium mb-8">
-                  Para outros usos criativos do parceiro, caso a manifestação precise realizar um teste, considere um modificador igual ao círculo máximo de magias que você pode lançar. Quando ela faz um teste, você pode gastar uma quantidade de PM limitada por sua Sabedoria. Para cada PM gasto, a manifestação recebe +2 nesse teste. Se a situação for condizente com a natureza do parceiro (como pedir que uma manifestação da água apague um incêndio ou que uma manifestação da terra erga algo pesado), ela recebe +5 nesse teste.
-                </p>
-
-                {/* Subseção: Água */}
-                <div className="mb-8">
-                  <h4 className="font-display text-lg font-bold text-amber-950 mb-3 uppercase tracking-widest bg-amber-900/10 inline-block px-3 py-1 rounded">Água</h4>
-                  <div className="space-y-4 pl-4 md:pl-5 border-l-4 border-amber-900/30 text-base md:text-lg text-left">
-                    <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Bolha: </span><span className="font-medium">O elemental envolve seu corpo como uma bolha de água. Você recebe +4 na Defesa e pode respirar normalmente sob a água por uma rodada.</span></p>
-                    <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Empurrão Hidráulico (2 PM): </span><span className="font-medium">O elemental dispara um jato de água pressurizado em um alvo em alcance curto. O alvo sofre 3d6 pontos de dano de impacto e fica caído (Fortitude CD Sab reduz o dano à metade e evita a condição).</span></p>
-                    <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Surfar: </span><span className="font-medium">Uma criatura em alcance curto recebe deslocamento de natação 12m por uma rodada.</span></p>
-                  </div>
+              {/* Subseção: Ar */}
+              <div className="mb-8">
+                <h4 className="font-display text-lg font-bold text-amber-950 mb-3 uppercase tracking-widest bg-amber-900/10 inline-block px-3 py-1 rounded">Ar</h4>
+                <div className="space-y-4 pl-4 md:pl-5 border-l-4 border-amber-900/30 text-base md:text-lg text-left">
+                  <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Barreira Eólica. </span><span className="font-medium">Você recebe camuflagem contra ataques à distância e +2 em Reflexos por uma rodada.</span></p>
+                  <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Bons Ventos. </span><span className="font-medium">Ao contrário de outras ações do elemental, esta é uma reação; você pode lançar Queda Suave, mas apenas em você mesmo.</span></p>
+                  <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Planar (2 PM). </span><span className="font-medium">Uma criatura em alcance curto recebe deslocamento de voo 12m por uma rodada.</span></p>
                 </div>
+              </div>
 
-                {/* Subseção: Ar */}
-                <div className="mb-8">
-                  <h4 className="font-display text-lg font-bold text-amber-950 mb-3 uppercase tracking-widest bg-amber-900/10 inline-block px-3 py-1 rounded">Ar</h4>
-                  <div className="space-y-4 pl-4 md:pl-5 border-l-4 border-amber-900/30 text-base md:text-lg text-left">
-                    <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Barreira Eólica: </span><span className="font-medium">Você recebe camuflagem leve contra ataques à distância e +2 em Reflexos por uma rodada.</span></p>
-                    <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Conduzir ao Solo: </span><span className="font-medium">Ao contrário de outras ações do elemental, esta é uma reação; você pode lançar Queda Suave, mas apenas em você mesmo.</span></p>
-                    <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Planar (2 PM): </span><span className="font-medium">Uma criatura em alcance curto recebe deslocamento de voo 12m por uma rodada.</span></p>
-                  </div>
+              {/* Subseção: Fogo */}
+              <div className="mb-8">
+                <h4 className="font-display text-lg font-bold text-amber-950 mb-3 uppercase tracking-widest bg-amber-900/10 inline-block px-3 py-1 rounded">Fogo</h4>
+                <div className="space-y-4 pl-4 md:pl-5 border-l-4 border-amber-900/30 text-base md:text-lg text-left">
+                  <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Aura de Calor. </span><span className="font-medium">Até sua próxima rodada, inimigos que terminarem seus turnos adjacentes a você sofrem 2d6+2 pontos de dano de fogo.</span></p>
+                  <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Chicote de Chamas (2 PM). </span><span className="font-medium">O elemental acerta uma criatura em alcance curto com um jato de chamas que causa 4d6 pontos de dano de fogo (Reflexos CD Sab reduz à metade).</span></p>
+                  <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Labareda Propulsora. </span><span className="font-medium">Uma criatura em alcance curto recebe +10 em Atletismo para correr e saltar por uma rodada.</span></p>
                 </div>
+              </div>
 
-                {/* Subseção: Fogo */}
-                <div className="mb-8">
-                  <h4 className="font-display text-lg font-bold text-amber-950 mb-3 uppercase tracking-widest bg-amber-900/10 inline-block px-3 py-1 rounded">Fogo</h4>
-                  <div className="space-y-4 pl-4 md:pl-5 border-l-4 border-amber-900/30 text-base md:text-lg text-left">
-                    <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Aura de Calor: </span><span className="font-medium">Até sua próxima rodada, inimigos que terminarem seus turnos adjacentes a você sofrem 2d6+2 pontos de dano de fogo.</span></p>
-                    <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Chicote de Chamas (2 PM): </span><span className="font-medium">O elemental acerta uma criatura em alcance curto com um jato de chamas que causa 4d6 pontos de dano de fogo (Reflexos CD Sab reduz à metade).</span></p>
-                    <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Labareda Propulsora: </span><span className="font-medium">Uma criatura em alcance curto recebe +10 em testes de Atletismo para correr e saltar por uma rodada.</span></p>
-                  </div>
+              {/* Subseção: Luz */}
+              <div className="mb-8">
+                <h4 className="font-display text-lg font-bold text-amber-950 mb-3 uppercase tracking-widest bg-amber-900/10 inline-block px-3 py-1 rounded">Luz</h4>
+                <div className="space-y-4 pl-4 md:pl-5 border-l-4 border-amber-900/30 text-base md:text-lg text-left">
+                  <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Brilhar. </span><span className="font-medium">Emite luz como uma tocha. Uma criatura dentro do alcance curto fica ofuscada por 1 rodada (Vontade CD Sab evita).</span></p>
+                  <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Curar (2 PM). </span><span className="font-medium">Uma criatura dentro do alcance curto cura 4d8 pontos de vida.</span></p>
+                  <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Cegar. </span><span className="font-medium">Uma criatura dentro do alcance curto fica cega por 1 rodada (apenas uma vez por cena; Vontade CD Sab evita).</span></p>
                 </div>
+              </div>
 
-                {/* Subseção: Luz */}
-                <div className="mb-8">
-                  <h4 className="font-display text-lg font-bold text-amber-950 mb-3 uppercase tracking-widest bg-amber-900/10 inline-block px-3 py-1 rounded">Luz</h4>
-                  <div className="space-y-4 pl-4 md:pl-5 border-l-4 border-amber-900/30 text-base md:text-lg text-left">
-                    <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Brilhar: </span><span className="font-medium">Emite luz como uma tocha. Uma criatura dentro do alcance curto fica ofuscada por 1 rodada (Vontade CD Sab nega).</span></p>
-                    <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Curar (2 PM): </span><span className="font-medium">Uma criatura dentro do alcance curto cura 4d8 pontos de vida.</span></p>
-                    <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Cegar: </span><span className="font-medium">Uma criatura dentro do alcance curto fica cega por 1 rodada (Vontade CD Sab nega).</span></p>
-                  </div>
+              {/* Subseção: Terra */}
+              <div className="mb-8">
+                <h4 className="font-display text-lg font-bold text-amber-950 mb-3 uppercase tracking-widest bg-amber-900/10 inline-block px-3 py-1 rounded">Terra</h4>
+                <div className="space-y-4 pl-4 md:pl-5 border-l-4 border-amber-900/30 text-base md:text-lg text-left">
+                  <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Arremesso de Rocha (2 PM). </span><span className="font-medium">O elemental arremessa um pedregulho contra um alvo em alcance médio, causando 5d6 pontos de dano de impacto (Reflexos CD Sab evita).</span></p>
+                  <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Muralha. </span><span className="font-medium">Você recebe resistência a corte, impacto e perfuração 10 por uma rodada.</span></p>
+                  <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Tunelar. </span><span className="font-medium">Uma criatura dentro do alcance curto recebe deslocamento de escalada 12m ou escavar 9m por uma rodada.</span></p>
                 </div>
+              </div>
 
-                {/* Subseção: Terra */}
-                <div className="mb-8">
-                  <h4 className="font-display text-lg font-bold text-amber-950 mb-3 uppercase tracking-widest bg-amber-900/10 inline-block px-3 py-1 rounded">Terra</h4>
-                  <div className="space-y-4 pl-4 md:pl-5 border-l-4 border-amber-900/30 text-base md:text-lg text-left">
-                    <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Arremesso de Rocha (2 PM): </span><span className="font-medium">O elemental arremessa um pedregulho contra um alvo em alcance médio, causando 5d6 pontos de dano de impacto (Reflexos CD Sab evita).</span></p>
-                    <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Muralha: </span><span className="font-medium">Você recebe resistência a corte, impacto e perfuração 10 por uma rodada.</span></p>
-                    <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Tunelar: </span><span className="font-medium">Uma criatura dentro do alcance curto recebe deslocamento de escalada (12m) ou escavar (9m) por uma rodada.</span></p>
-                  </div>
+              {/* Subseção: Trevas */}
+              <div className="mb-8">
+                <h4 className="font-display text-lg font-bold text-amber-950 mb-3 uppercase tracking-widest bg-amber-900/10 inline-block px-3 py-1 rounded">Trevas</h4>
+                <div className="space-y-4 pl-4 md:pl-5 border-l-4 border-amber-900/30 text-base md:text-lg text-left">
+                  <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Manto Sombrio. </span><span className="font-medium">Uma criatura dentro do alcance curto recebe +10 em Furtividade para se esconder por 1 rodada.</span></p>
+                  <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Tentáculo Obscuro (2 PM). </span><span className="font-medium">O elemental agarra uma criatura dentro do alcance médio com seu tentáculo.</span></p>
+                  <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Apavorar. </span><span className="font-medium">Uma criatura dentro do alcance curto fica abalada (Vontade CD Sab evita).</span></p>
                 </div>
+              </div>
+            </section>
 
-                {/* Subseção: Trevas */}
-                <div className="mb-8">
-                  <h4 className="font-display text-lg font-bold text-amber-950 mb-3 uppercase tracking-widest bg-amber-900/10 inline-block px-3 py-1 rounded">Trevas</h4>
-                  <div className="space-y-4 pl-4 md:pl-5 border-l-4 border-amber-900/30 text-base md:text-lg text-left">
-                    <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Manto Sombrio: </span><span className="font-medium">Uma criatura dentro do alcance curto recebe +10 em testes de Furtividade para se esconder por 1 rodada.</span></p>
-                    <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Tentáculo Obscuro (2 PM): </span><span className="font-medium">O elemental agarra uma criatura dentro do alcance médio com seu tentáculo. Faça um teste de Misticismo para agarrar, com um bônus igual ao círculo máximo de magias que pode lançar.</span></p>
-                    <p><span className="text-red-800 font-bold tracking-wide text-sm uppercase">Apavorar: </span><span className="font-medium">Uma criatura dentro do alcance curto fica abalada (Vontade CD Sab nega).</span></p>
-                  </div>
-                </div>
+            <section>
+              <h3 className="font-display text-2xl font-bold text-red-800 mb-4 tracking-wide border-b-2 border-amber-900/20 pb-2">Expressão Natural dos Elementos</h3>
+              <p className="font-medium mb-4">
+                Alguns poderes fazem referência a expressões naturais de um elemento. Isso quer dizer uma manifestação do elemento que ocorra sem que seja alimentada de magia. Uma fogueira pode servir como uma expressão natural de fogo mesmo que tenha sido acesa com uma Bola de Fogo, mas um ber’baram ou outro elemental não poderia, bem como chamas da magia Muralha Elemental.
+              </p>
+              <p className="font-medium mb-4">
+                Para luz, expressões naturais são ambientes iluminados e para trevas são ambientes desprovidos de iluminação. Para água, corpos de água como poças, lagos e rios são expressões naturais, desde que estejam limpos. Para terra, montanhas e extensões de terra fértil são expressões naturais. Para ar, ambientes com ar puro servem como expressões naturais; normalmente, em grandes cidades, elas são encontrados apenas em altitudes elevadas.
+              </p>
+            </section>
 
-              </section>
+              
 
             </div>
           </div>

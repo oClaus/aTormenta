@@ -761,8 +761,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "6",
+  { id: "A Nascente Encantada",
   name: "A Nascente Encantada",
   theme: "Fantasia",
   image: "/aventuras/nascente-encantada.png",
@@ -855,8 +854,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "7",
+  { id: "Isolamento",
   name: "Isolamento",
   theme: "Terror Cósmico",
   image: "/aventuras/isolamento.png",
@@ -964,8 +962,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "8",
+  { id: "Aeroporco",
   name: "Aeroporco",
   theme: "Terror Bizarro",
   image: "/aventuras/aeroporco.png",
@@ -1055,8 +1052,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "9",
+  { id: "Onigashima: Nascido de um Pêssego",
   name: "Onigashima: Nascido de um Pêssego",
   theme: "Folclore",
   image: "/aventuras/onigashima.png",
@@ -1177,8 +1173,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "10",
+  { id: "Thalftyrnotallas",
   name: "Thalftyrnotallas",
   theme: "Fantasia",
   image: "/aventuras/thalftyrnotallas.png",
@@ -1264,8 +1259,322 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "11",
+  { id: "Coração de Aço",
+  name: "Coração de Aço",
+  theme: "Fantasia, Tecnomagia e Construtos",
+  image: "/aventuras/coracao-de-aco.png",
+  summary: "Contratados por um inventor anão em Wynlla para conter uma revolta de máquinas em sua fábrica de golens, os heróis enfrentam perigos industriais e descobrem que o responsável é um golem desperto lutando para libertar o elemental que alimenta o local.",
+  sections: [
+    {
+      type: "text",
+      content: "Da Academia Arcana à cidade voadora de Vectora, passando por ruínas místicas e centenas de artefatos encantados espalhados pelo mundo, é completamente compreensível o fascínio pela magia em Arton. Entretanto, também há quem defenda as novidades mecânicas. A criatividade dos inventores não existe para substituir a magia, mas para igualá-la ou complementá-la."
+    },
+    {
+      type: "text",
+      content: "No reino de Wynlla, onde magos governam, a população incapaz de lançar magias é chamada, de forma pejorativa, de insciente. Apesar de sofrerem como cidadãos de segunda classe, eles conquistam seu espaço através de esforço e trabalho duro, e mostram que o domínio de magia não deveria ser a única forma de medir o valor de alguém."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "RESUMO DA AVENTURA"
+    },
+    {
+      type: "text",
+      content: "Coração de Aço é uma breve jornada, uma aventura curta pensada para uma sessão única, mas que pode ser inserida em uma campanha maior. É ideal para um grupo de quatro personagens de 4º nível em Tormenta20."
+    },
+    {
+      type: "text",
+      content: "Contratados por um inventor anão chamado Kharad, os personagens devem ir até a fábrica dele para desfazer o que está causando distúrbios no local. Os trabalhadores foram expulsos pelas próprias máquinas e o lugar está dominado pelo caos. O portão principal está emperrado e qualquer tentativa de abrir agressivamente pode resultar em perigo mortal."
+    },
+    {
+      type: "text",
+      content: "No interior da construção, eles terão de lidar com piso escorregadio e monstros oleosos. Em seguida, enfrentarão perigos do maquinário ainda ativo e partes gigantescas de construtos impedindo a passagem. Finalmente, encontrarão o causador de toda essa confusão: um golem chamado Axel, empenhado em sua missão de libertar o elemental que anima toda a fábrica."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "CENA 1: CADÊ A CHAVE?"
+    },
+    {
+      type: "text",
+      content: "A agitação em Coridrian não para! Remessas de metais raros passam de um lado para o outro. Nobres de toda Arton (e além!) andam pela cidade, avaliando sua próxima grande compra. Magos, inventores e construtos discutem projetos de novas maravilhas tecnomágicas. Sentado do lado de fora de um café, um anão muito velho e magricelo os aguarda."
+    },
+    {
+      type: "text",
+      content: "O anão inventor, Kharad, entrou em contato com os aventureiros. Apesar de ser conhecido por seu trabalho com golens, ele é relegado à posição de insciente, incapaz de conjurar magia por conta própria. Ele acena, apontando para quatro assentos, enquanto um bule levitado serve cinco xícaras de café."
+    },
+    {
+      type: "text",
+      content: "“Boa tarde, meus caros aventureiros! Muito bom ver que responderam ao meu chamado tão prontamente. Muito bom mesmo! Vou direto ao assunto: minha fábrica produz construtos de excelente qualidade, não poupo despesas para isso.”"
+    },
+    {
+      type: "text",
+      content: "Caso haja um personagem golem no grupo, Kharad elogiará sua construção, mas apontará o que pode ser melhorado."
+    },
+    {
+      type: "text",
+      content: "“Infelizmente, enquanto estava fora resolvendo negociações de projetos, algo aconteceu. As máquinas, aparentemente, se revoltaram! É deveras estranho, devo admitir. Meus funcionários disseram que foram basicamente expulsos com violência. Não consigo pensar o que pode ter causado tal reação. Meus equipamentos são muito seguros.”"
+    },
+    {
+      type: "text",
+      content: "Com as portas fechadas, diversas entregas estão em atraso. O anão deseja regularizar a situação, mas não tem mais o vigor de quando era jovem, e precisa do apoio dos personagens para chegar à câmara central de sua fábrica. Ele acredita que, desconectando o núcleo elemental que energiza a oficina, poderá reiniciar suas operações em poucos dias."
+    },
+    {
+      type: "text",
+      content: "Como pagamento, oferece a cada personagem T$ 500, uma pequena fortuna. Se houver um golem no grupo, Kharad pode, alternativamente, oferecer serviços diferenciados, como uma reestruturação completa (podendo alterar os valores dos atributos, ou mesmo o tipo de chassi). Finalmente, se houver um inventor entre os aventureiros, a oportunidade de um estágio ou o ensino de uma técnica específica (um poder de inventor adicional após um mês de serviço) também pode parecer bastante atraente."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "CENA 2: PORTÃO PRINCIPAL"
+    },
+    {
+      type: "text",
+      content: "A fábrica é um prédio enorme, com paredes exageradamente grossas. Sua entrada principal é um grande portão metálico, repleto de engrenagens e mecanismos, com tamanho suficiente para três carroças passarem lado a lado. O inventor aproxima-se dele com uma barra metálica, encaixando-a em um nicho, fazendo um clic alto. Porém, o anão tenta empurrá-la... e nada. “Opa... tem algo de errado.”"
+    },
+    {
+      type: "text",
+      content: "Kharad explica que esta barra serve de “chave” para o mecanismo do portão. Entretanto, não está girando, bloqueando a única entrada. Se perguntarem sobre passagens secretas e saídas de segurança, o anão explica que todo o espaço foi feito como uma fortaleza, até para evitar espionagem de outros produtores de golens."
+    },
+    {
+      type: "text",
+      content: "Kharad é um parceiro especial que fornece +5 em testes relacionados a mecanismos e tecnologia (como, por exemplo, Ladinagem para desarmar armadilhas). Além disso, uma vez por rodada, um personagem que ele esteja acompanhando pode, com uma ação livre, causar 2d6 pontos de dano de eletricidade em um alvo em alcance curto. Ele usa a variante Parceiros Vulneráveis (Tormenta20, p. 262), mas, se já estiver ferido, o inventor ficará inconsciente, não morto."
+    },
+    {
+      type: "text",
+      content: "Para analisar o portão, é necessário um teste de um Ofício que pareça apropriado ou de LADINAGEM (CD 15). Algo danificou os mecanismos internos do portão, e será bem difícil abri-lo. É preciso um teste estendido de Ofício, LADINAGEM ou FORÇA (CD 20, 5 SUCESSOS). Outras perícias que façam sentido podem ser usadas para ajudar nos testes. Uma falha total faz um jato de vapor concentrado e superaquecido atingir o personagem responsável pelo teste, causando 3d6 pontos de dano de fogo. A falha total não cancela os sucessos obtidos."
+    },
+    {
+      type: "text",
+      content: "Tentar abrir o portão na base da pancada causa vários protestos por parte de Kharad, afirmando que o conserto da peça sairá do pagamento do grupo. Entretanto, o portão possui DEF 5, RD 10 e 200 PV. Caso consigam destruí-lo, todos sofrem 4d6 pontos de dano de fogo pelo vapor e Kharad fica ferido. Além disso, sua recompensa é reduzida pela metade."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "CENA 3: VAZAMENTO DE ÓLEO"
+    },
+    {
+      type: "text",
+      content: "Dentro da construção, o calor é abrasador. Um chiado rápido, o som de uma gota tocando metal aquecido. Há um cheiro forte no ambiente."
+    },
+    {
+      type: "text",
+      content: "A temperatura no interior do prédio está extremamente alta. Agora, e no início de cada cena subsequente, os personagens devem fazer um teste de FORTITUDE (CD 15 + 1 POR TESTE ANTERIOR) ou sofrem 1d6 pontos de dano de fogo que só podem ser curados ao sair do calor no interior da construção."
+    },
+    {
+      type: "text",
+      content: "Além disso, todo o chão aqui está coberto de um óleo grosso vazando das tubulações superiores. Antes de se deslocar, criaturas devem fazer um teste de ACROBACIA para equilíbrio (CD 10), ou ficam caídas."
+    },
+    {
+      type: "text",
+      content: "Contudo, além das características deste aposento citadas anteriormente em específico, há algo mais. Talvez geradas pelas forças elementais usadas na fábrica ou pelo óleo abundante no ambiente, existem algumas bolhas do material se movendo por vontade própria... e elas atacam os aventureiros!"
+    },
+    {
+      type: "text",
+      content: "CRIATURAS. Glop de óleo x8 (NPCs e Criaturas)."
+    },
+    {
+      type: "text",
+      content: "Esses glops diferenciados gostam do calor e são imunes ao terreno escorregadio da sala. Se não forem destruídos agora, seguirão os personagens para os outros aposentos, ou mesmo para o exterior. Assim que tiverem lidado com a ameaça glópica presente, é possível ir para a próxima área da fábrica com mais segurança."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "CENA 4: ESTEIRAS E ESTILHAÇOS"
+    },
+    {
+      type: "text",
+      content: "A maior câmara da fábrica é formada por diversos corredores de maquinário. Grandes caldeiras de forja, moldes para metal e bacias onde havia água para arrefecimento. O calor aqui é ainda mais intenso. Repentinamente, uma das tubulações estoura, jogando estilhaços metálicos para todo lado. Felizmente, essa explosão foi do outro lado do aposento, mas a qualquer momento outra pode ocorrer sem qualquer aviso."
+    },
+    {
+      type: "text",
+      content: "A missão de cruzar esta sala é representada pelo perigo complexo a seguir."
+    },
+    {
+      type: "text",
+      content: "ATRAVESSAR O GALPÃO (ND 3)\nOBJETIVO Chegar à próxima área da fábrica, atravessando entulho e outros obstáculos.\nEFEITO Para chegar ao próximo ambiente, um personagem precisa acumular três sucessos na ação avançar, correr ou carregar outro. No início de cada rodada, os personagens sofrem 1d6 pontos de dano de fogo por calor (além do que sofreram no começo da cena). Um personagem que ainda não tenha obtido nenhum sucesso pode recuar para o salão de entrada (cena 3). Em caso de falha num teste, role 1d6 e consulte a lista de efeitos abaixo.\n1-2) Pancada. O personagem que falhou no teste se choca contra algum maquinário que não havia visto. Ele sofre 1d6 pontos de dano de impacto (Ref CD 15 reduz a metade).\n3-4) Tropeço. Uma tubulação ou mangueira agarra na perna do personagem que falhou no teste, fazendo-o tropeçar. Ele sofre –5 em sua próxima ação no perigo (Acrobacia ou Atletismo CD 15 evita).\n5) Bloqueio. O aventureiro não percebeu a tempo um biombo ou mecanismo pronunciado. O personagem que falhou no teste pode desistir desta rota e procurar outra (perde a ação na próxima rodada) ou se jogar contra a obstrução (sofrendo 2d6 pontos de dano de impacto).\n6) Explosão. Um cano muito próximo estoura, acertando todos os personagens ao mesmo tempo. Todos os personagens sofrem 3d6 pontos de dano de impacto e –5 em seu próximo teste contra o perigo (Ref CD 20 evita)."
+    },
+    {
+      type: "text",
+      content: "AJUSTAR MECANISMOS (OFÍCIO CD 15) O personagem abre válvulas ou orienta os aliados por caminhos menos obstruídos. Se passar, todos recebem +2 nos testes para avançar, correr e carregar outro realizados durante o perigo, e todo o dano que fossem sofrer é reduzido à metade.\nAVANÇAR (ACROBACIA OU REFLEXOS CD 15) O personagem avança em direção à próxima área. Um sucesso por 10 ou mais (ou um 20 natural no teste) conta como 2 sucessos.\nCORRER (ATLETISMO 10) O personagem corre em direção à saída sem se preocupar com os perigos no caminho. Ele sofre 1d6 pontos de dano de impacto. Um sucesso por 10 ou mais (ou um 20 natural no teste) conta como 2 sucessos.\nCARREGAR OUTRO (ATLETISMO CD 20) O personagem carrega um aliado. Isso funciona como a ação avançar. Se passar, o personagem acumula 1 sucesso para si e para o aliado. Se falhar, ambos sofrem o efeito da falha.\nPROCURAR CAMINHO (PERCEPÇÃO CD 15) O personagem analisa o terreno em busca de uma rota livre. Se passar, recebe +5 em todos os testes para avançar, correr e carregar outro durante o perigo."
+    },
+    {
+      type: "text",
+      content: "Ao conseguirem os sucessos necessários, os personagens saem para ambientes menos extremos, porém ainda assim perigosos."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "CENA 5: MÃOS DA OBRA"
+    },
+    {
+      type: "text",
+      content: "As salas seguintes parecem se repetir. Protótipos, peças, projetos. Apinhados por todos os lados, dificultando a passagem. Os sinais dos operários que deixaram o local também são claros, principalmente nas ferramentas abandonadas pelo chão."
+    },
+    {
+      type: "text",
+      content: "Vocês chegam a uma enorme câmara. Ela é menor que a área central, mas ainda assim impressiona. Aqui estão peças de algum construto colossal; os braços e pernas são mais altos que muitos de vocês! Repentinamente, olhos se acendem na cabeça no canto do aposento e os membros começam a se mover por conta própria!"
+    },
+    {
+      type: "text",
+      content: "CRIATURAS. Braço mecânico x4 (NPCs e Criaturas)."
+    },
+    {
+      type: "text",
+      content: "Além do calor em toda a fábrica, essas partes de um enorme golem estão ativas e prontas para evitar a passagem dos aventureiros. O objetivo principal delas é imobilizar, e, caso consigam, tentar desacordar os intrusos. Se isso acontecer, qualquer agressividade contra o personagem desacordado é cessada — mesmo sendo pouco mais que equipamentos animados, o objetivo final de quem está por trás disso não é causar mortes."
+    },
+    {
+      type: "text",
+      content: "Se todos os personagens ficarem inconscientes, despertam no exterior da fábrica. Seus ferimentos terão sido minimamente tratados, mas seu contratante, o anão Kharad, não estará com os aventureiros. Para descobrir o que aconteceu, será necessário passar novamente pelo interior da construção, com todos os seus desafios."
+    },
+    {
+      type: "text",
+      content: "Ao derrotarem os membros mecânicos, os personagens poderão finalmente ir ao núcleo da fábrica."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "CENA 6: CORAÇÃO DA MÁQUINA"
+    },
+    {
+      type: "text",
+      content: "No centro desta sala, há uma enorme esfera de vidro e metal. Uma forte luz alaranjada sai do interior do estranho objeto. Algo brilha e se move no interior, como fogo líquido. Da base, saem os canos que alimentam as instalações da fábrica. Por um momento, vocês juram ver feições ali."
+    },
+    {
+      type: "text",
+      content: "Repentinamente, de trás do maquinário, sai um golem; seu chassi metálico lembra uma armadura. “Parem! Eu não permitirei que continuem extraindo a energia dele!”"
+    },
+    {
+      type: "text",
+      content: "O construto à frente dos personagens é diferente das partes e projetos vistos anteriormente. Ele é desperto, ou seja, possui consciência e vontade próprias."
+    },
+    {
+      type: "text",
+      content: "“Axel, o que está fazendo?” diz Kharad, confuso “Minha criação, você foi responsável por isso?”"
+    },
+    {
+      type: "text",
+      content: "O golem coloca a mão na estranha esfera e explica “Este elemental está sofrendo e você sabe disso! Não posso deixar que isso continue acontecendo. Por favor, reconsidere!” Nesse momento, é possível ouvir batidas vindas do interior da estrutura metálica."
+    },
+    {
+      type: "text",
+      content: "Kharad e Axel não estão dispostos a desistir de seus objetivos. Caso nada seja feito, o golem atacará a esfera e o anão implorará para que ele seja impedido. O único jeito de resolver a situação sem combate é um teste estendido de DIPLOMACIA ou ENGANAÇÃO (CD 20 + 1 POR TESTE ANTERIOR, 5 SUCESSOS). É possível ajudar com outras perícias adequadas, de acordo com o mestre."
+    },
+    {
+      type: "text",
+      content: "Em caso de falha total, ou se desistirem da solução diplomática, os personagens devem decidir que lado apoiarão. Se escolherem o acordo com Kharad, deverão combater Axel. Isso não é problema para o inventor, uma vez que ele está seguro de sua capacidade de reconstruir o golem."
+    },
+    {
+      type: "text",
+      content: "Por outro lado, tendo visto o sofrimento do elemental em primeira mão, se apoiarem Axel, Kharad sairá da sala praguejando: “Vão para onde Tenebra os parta, bando de ingratos! Não vão receber um tibar por esse serviço mequetrefe!”"
+    },
+    {
+      type: "text",
+      content: "Pouco tempo depois, ele retornará pilotando um construto especial para enfrentar os heróis!"
+    },
+    {
+      type: "text",
+      content: "CRIATURAS. Axel ou Kharad mecanizado (NPCs e Criaturas)."
+    },
+    {
+      type: "text",
+      content: "Caso enfrentem Axel, ele começará golpeando a esfera metálica (DEF 8, RD 10, 150 PV). Após sofrer dano, focará seus ataques contra o personagem que estiver acompanhado de Kharad. O golem, entretanto, não deseja ferir ninguém mortalmente."
+    },
+    {
+      type: "text",
+      content: "Já Kharad Mecanizado também focará seus ataques contra o personagem que estiver sendo apoiado por Axel (o golem fornece o benefício de um parceiro fortão iniciante). Caso desejem atacar a esfera, ela causa 4d6 pontos de dano ao explodir, metade impacto, metade fogo, a todos na cena (REF CD 20 reduz à metade). Independentemente do dano causado, a armadura mecânica de Kharad para de funcionar, prendendo o anão em seu interior."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "EPÍLOGO: FERRAGEM RETORCIDA"
+    },
+    {
+      type: "text",
+      content: "Se tiverem se aliado a Axel e derrotado Kharad (seja em combate ou libertando o elemental), leia o texto abaixo."
+    },
+    {
+      type: "text",
+      content: "“Vocês nunca mais vão trabalhar nessa cidade, me ouviram? Muitos inscientes dependem dessa fábrica e vocês estão atrapalhando. Espero que não se arrependam de sua escolha!”"
+    },
+    {
+      type: "text",
+      content: "O elemental liberto, que possui uma silhueta humanoide, aproxima-se de Axel e os dois se fundem. O golem começa a brilhar com uma luz alaranjada mais forte. Ele agradece, contando que agora os dois são um único ser, prontos para ver o mundo em conjunto, não mais presos no interior da fábrica."
+    },
+    {
+      type: "text",
+      content: "Se ajudaram o golem e o elemental, não receberão a recompensa de seu contratante. Entretanto, podem coletar matéria-prima equivalente a T$ 2.000. Ela pode ser utilizada para fabricar itens metálicos ou engenhocas. O novo Axel agradece como pode, prometendo ajudar os aventureiros no que for necessário. Como um ser mágico, é considerado um cidadão em Wynlla, mesmo não sendo um conjurador."
+    },
+    {
+      type: "text",
+      content: "Caso enfrentem Axel, a cena final é outra."
+    },
+    {
+      type: "text",
+      content: "O golem cai de joelhos na frente de vocês. Kharad diz “Parem, já é suficiente.” Apesar do combate, o anão não deseja a destruição de sua criação. “Obrigado por me ajudarem. Sinto muito que tudo isso tenha acontecido.” Algo parece ter mudado sua atitude ao ver o construto lutando para libertar o elemental. “Talvez haja algo que eu não tenha calculado nisso tudo...”"
+    },
+    {
+      type: "text",
+      content: "O anão paga a recompensa prometida aos personagens. Em poucos dias, a fábrica volta a funcionar, mas boatos relatam estranhos incidentes envolvendo o núcleo que alimenta toda a construção."
+    },
+    {
+      type: "text",
+      content: "Finalmente, se convenceram o anão e o golem a chegar a um meio termo, a conclusão é a seguinte:"
+    },
+    {
+      type: "text",
+      content: "Algo nas palavras de vocês toca o inventor. Ele se aproxima de sua criação. Ele é seu filho, de certa forma, e os dois se abraçam. Kharad concorda em libertar o elemental e Axel se propõe a ajudar o anão a encontrar uma nova maneira de continuar sua produção. Ambos estão extremamente agradecidos pela intervenção dos aventureiros."
+    },
+    {
+      type: "text",
+      content: "Neste cenário, tendo ajudado a ambos, além da recompensa combinada, o inventor decide presentear os aventureiros. Cada personagem pode adicionar a um de seus itens uma melhoria à sua escolha. Se desejarem adicionar material especial, Kharad explica que até pode fazê-lo (apenas mitral ou adamante), mas não poderá fornecer mais nenhuma outra melhoria."
+    },
+    {
+      type: "text",
+      content: "Independente do caminho que tenham escolhido, os personagens avançam para o 5º nível!"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "NPCS E CRIATURAS"
+    },
+    {
+      type: "text",
+      content: "GLOP DE ÓLEO (ND ½)\nMonstro Pequeno\nINICIATIVA +0, PERCEPÇÃO +0, percepção às cegas\nDEFESA 13, FORT +3, REF +5, VON –4, imunidade a fogo\nPONTOS DE VIDA 15\nDESLOCAMENTO 9m (6q)\nCORPO A CORPO Pancada +9 (1d6+3, mais 1d6 fogo).\nCORPO COMBUSTÍVEL (REAÇÃO) Quando for alvo de um efeito que cause dano de fogo, mesmo sem sofrer dano, o glop de óleo fica em chamas e, quando acerta um ataque em uma criatura, ela também fica em chamas.\nFor 0, Des 2, Con 1, Int –4, Sab 1, Car –3\nTESOURO Nenhum."
+    },
+    {
+      type: "text",
+      content: "BRAÇO MECÂNICO (ND 1)\nConstruto Grande\nINICIATIVA +0, PERCEPÇÃO +0, percepção às cegas\nDEFESA 16, FORT +11, REF +0, VON +5, redução de dano 5\nPONTOS DE VIDA 35\nDESLOCAMENTO 3m (2q)\nCORPO A CORPO Pancada +9 (1d6+4).\nAGARRAR APRIMORADO (LIVRE) Pancada (teste +11).\nCONSTRIÇÃO (LIVRE) No início de cada um de seus turnos, o braço mecânico causa 2d6+4 pontos de dano de impacto em cada criatura que esteja agarrando.\nFor 4, Des –2, Con 4, Int —, Sab 0, Car –5\nTESOURO Metade."
+    },
+    {
+      type: "text",
+      content: "AXEL (ND 4)\nConstruto Médio\nINICIATIVA +4, PERCEPÇÃO +5, visão no escuro\nDEFESA 23, FORT +15, REF +5, VON +10, imunidade a fogo\nPONTOS DE VIDA 140\nDESLOCAMENTO 6m (4q)\nCORPO A CORPO Duas pancadas +14 (2d6+5).\nCOMBATENTE MISERICORDIOSO Todo o dano causado por Axel é não letal.\nFONTE ELEMENTAL DO FOGO Quando for alvo de um efeito que cause dano de fogo, mesmo sem sofrer dano, Axel cura PV em quantidade igual à metade do dano que sofreria se não fosse imune.\nPANCADA ATORDOANTE Uma criatura que sofra dano da pancada de Axel fica atordoada (Fort CD 18 evita). Uma criatura só pode ser atordoada por essa habilidade uma vez por cena.\nFor 5, Des 0, Con 4, Int 3, Sab 1, Car 2\nPERÍCIAS Conhecimento +7, Misticismo +7, Intuição +5, Ofício (artesão) +7.\nTESOURO Padrão."
+    },
+    {
+      type: "text",
+      content: "KHARAD MECANIZADO (ND 4)\nConstruto Grande\nINICIATIVA +2, PERCEPÇÃO +6, visão no escuro\nDEFESA 20, FORT +10, REF +4, VON +16, redução de dano 5\nPONTOS DE VIDA 100\nDESLOCAMENTO 9m (6q)\nCORPO A CORPO Pancada +14 (2d8+5, mais 1d6 eletricidade).\nLIBERAR VAPOR (MOVIMENTO) Kharad mecanizado cria uma nuvem de vapor (uma esfera de 6m de raio), onde criaturas a até 1,5m têm camuflagem leve e criaturas a partir de 3m têm camuflagem total. Um vento forte dispersa a nuvem em 4 rodadas e um vendaval a dispersa em 1 rodada.\nMARCHA DO PROGRESSO (COMPLETA) Kharad mecanizado percorre até o dobro do seu deslocamento, golpeando todas as criaturas em seu caminho. Ele faz um único teste de ataque corpo a corpo e compara com a Defesa de cada criatura nos espaços por onde passou.\nPULSO ELÉTRICO (PADRÃO) Todas as criaturas em alcance curto de Kharad Mecanizado sofrem 3d6+3 pontos de dano de eletricidade e ficam ofuscadas por uma rodada (Fort reduz o dano à metade e evita a condição). Criaturas na área que estiverem usando armaduras de metal (ou carregando muito metal, a critério do mestre) sofrem –5 no teste de resistência. Recarga (movimento).\nSENSORES Kharad está permanentemente sob o efeito básico da magia Visão da Verdade.\nTREMOR (PADRÃO) Kharad Mecanizado faz um único teste da manobra derrubar contra todas as criaturas adjacentes a ele. Cada criatura deve fazer um teste oposto de manobra, ou sofrer os efeitos de derrubar.\nFor 4, Des –2, Con 5, Int 6, Sab 2, Car 1\nPERÍCIAS Atletismo +8, Conhecimento +10, Misticismo +10, Ofício (artesão, armeiro, engenhoqueiro) +12, Pilotagem +8.\nTESOURO Dobro."
+    }
+  ]
+  },
+  { id: "O Lorde Fluvial",
   name: "O Lorde Fluvial",
   theme: "Fantasia",
   image: "/aventuras/lorde-fluvial.png",
@@ -1339,8 +1648,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "12",
+  { id: "O Rei que Nós Criamos",
   name: "O Rei que Nós Criamos",
   theme: "Fantasia",
   image: "/aventuras/o-rei-que-nos-criamos.png",
@@ -1414,8 +1722,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "13",
+  { id: "Zero & Zuza",
   name: "Zero & Zuza",
   theme: "Ficção Científica",
   image: "/aventuras/zero-e-zuza.png",
@@ -1504,8 +1811,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "14",
+  { id: "A Montanha Errante",
   name: "A Montanha Errante",
   theme: "Fantasia",
   image: "/aventuras/montanha-errante.png",
@@ -1587,8 +1893,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "15",
+  { id: "Vai Pescar",
   name: "Vai Pescar",
   theme: "Fantasia Medieval",
   image: "/aventuras/vai-pescar.png",
@@ -1684,6 +1989,305 @@ export const adventures: Adventure[] = [
       content: "O primeiro a falhar despenca os nove metros do penhasco. Talvez só sofra arranhões ou precise de resgate de um clérigo. Ou, quem sabe, isso cause a morte trágica de um NPC e uma virada dramática na história? Tudo depende do tom da sua campanha e como o grupo decide lidar com as consequências."
     }
   ]
+  },
+  { id: "Infiltração Deheoni",
+    name: "Infiltração Deheoni",
+    theme: "Infiltração, Furtividade e Intriga Urbana",
+    image: "/aventuras/infiltracao-deheoni.png",
+    summary: "Contratados por um misterioso benfeitor em Valkaria, os heróis devem invadir discretamente a mansão de um nobre sem usar força letal, lidando com guardas, autômatos e uma armadilha gananciosa no porão para recuperar um pequeno baú.",
+    sections: [
+      {
+        type: "text",
+        content: "No campo de batalha, a perícia com as armas e magia é o mais importante. Entretanto, em salões e ruelas das grandes cidades, a astúcia vence os conflitos. Nobres em bailes, gatunos em ruas escuras e espiões de rostos irreconhecíveis travam suas próprias guerras, onde cada interação pode representar uma vitória ou derrota."
+      },
+      {
+        type: "text",
+        content: "Valkaria. Cidade aos pés da homônima Deusa da Humanidade. Lugar onde histórias épicas começam e terminam. Muitos dizem que é possível viver uma vida inteira de aventuras sem sair de suas fronteiras. Ali, todos os dias, incontáveis ameaças são rechaçadas, planos malignos se cumprem e vendetas seculares são concretizadas."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "RESUMO DA AVENTURA"
+      },
+      {
+        type: "text",
+        content: "Infiltração Deheoni é uma breve jornada, uma aventura curta pensada para uma sessão única, mas que pode ser inserida em uma campanha maior. É ideal para um grupo de quatro personagens de 1º nível em Tormenta20."
+      },
+      {
+        type: "text",
+        content: "Os aventureiros são chamados a uma taverna onde um sujeito peculiar faz uma proposta de trabalho escusa. Segundo o contratante, devem se infiltrar em uma opulenta mansão. Entretanto, a discrição é essencial para o sucesso desta missão, e uma invasão frontal seria desastrosa. É necessário divisar uma maneira de adentrar o local furtivamente."
+      },
+      {
+        type: "text",
+        content: "Dentro da mansão, eles terão de lidar não apenas com os guardas, mas também com autômatos vigilantes. Para obter o objetivo da missão, devem encontrar uma forma de chegar ao porão da residência. Lá enfrentarão uma perigosa armadilha que testará sua ganância. Finalmente, ao recuperar um pequeno baú, será necessário decidir devolver ou não o prêmio!"
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "Cena 1: VELHINHO, EU?"
+      },
+      {
+        type: "text",
+        content: "Vocês estão em uma taverna ordinária. A cerveja é cara. O espaço é relativamente limpo. Mas é exatamente o esperado para um estabelecimento sob a sombra de Valkaria. No momento, vocês estão aguardando a chegada de seu contratante."
+      },
+      {
+        type: "text",
+        content: "Após alguns minutos, um homem surge na porta: baixo e recurvado, cabelos desgrenhados. Ele fita vocês com olhos esbugalhados, mas, antes que possa se aproximar, outra pessoa encapuzada o intercepta. A figura diz algo no ouvido dele, que então parte, deixando a taverna. “Ele estava pronto para dar um golpe de velhinho da taverna em vocês. Ainda bem que eu estava por aqui.”"
+      },
+      {
+        type: "text",
+        content: "Removendo o capuz, a figura se revela como um homem de meia idade, de cabelos escuros e sorriso sedutor. “Era eu que estava procurando seus serviços, aventureiros. Podem me chamar de Aldor! Preciso de associados capazes de cumprir ordens diretas. Vocês acham que conseguem?”"
+      },
+      {
+        type: "text",
+        content: "Aldor conta que um nobre local tomou posse de algo que o pertence, e ele quer de volta. Se alguém sugerir uma rota direta, como conversar com o nobre, ou falar com as autoridades, o contratante, sem mudar seu tom jovial, explica:"
+      },
+      {
+        type: "text",
+        content: "“Este é um dos problemas. O nobre em questão, lorde Forthmont, não está disponível para conversar comigo, muito menos com vocês. E eu já tentei todas as vias corretas. Preciso que entrem lá, cheguem até o porão desse almofadinha, e recuperem minha caixa.”"
+      },
+      {
+        type: "text",
+        content: "Nesse momento, apenas se alguém pedir, permita um teste de Intuição (CD 20). Quem passar, nota que há algo que Aldor não está contando. Porém, se confrontado com essa informação, ele diz que não é nada que vá atrapalhar a missão, e oferece metade do pagamento como prova de boa fé. O segredo é que ele mesmo é lorde Forthmont, usando sua residência para um teste."
+      },
+      {
+        type: "text",
+        content: "“Algo importante: não desejo chamar a atenção da guarda. Logo, devem evitar o uso de violência contra pessoas a todo custo. Se ferirem alguém de forma letal, nunca mais me verão, e podem esquecer o pagamento.” Aldor não terá problema caso alguém seja ferido e então estabilizado."
+      },
+      {
+        type: "text",
+        content: "Ele oferece T$ 500 pela missão, uma pequena fortuna. Além disso, por suas conexões, é capaz de conseguir informações de interesse dos personagens, e vai usar isso para convencê-los a participar da missão."
+      },
+      {
+        type: "text",
+        content: "Assim que aceitarem, Aldor informará o local da mansão de onde deverão realizar a extração."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "Cena 2: TOCAIA"
+      },
+      {
+        type: "text",
+        content: "Deixando a taverna para trás, vocês avançam pelos bairros da cidade de Valkaria. Em algum momento, precisam fazer um desvio pois algum tipo de combate parece estar tomando uma das vias principais. Nada anormal para quem vive aqui há muito tempo."
+      },
+      {
+        type: "text",
+        content: "Logo, as construções vão ficando mais e mais elegantes, e finalmente vocês chegam ao lugar indicado. A mansão de lorde Forthmont foi claramente construída seguindo um estilo mais antigo, porém não há qualquer sinal de desleixo ou degradação. Servos caminham por todo lado executando suas tarefas."
+      },
+      {
+        type: "text",
+        content: "Os personagens estão em frente à mansão que deve ser invadida. Logo de cara já é possível perceber a movimentação de guardas na porta. Agora, para que obtenham informações mais detalhadas sobre o local, use o perigo complexo “Examinar a Mansão”."
+      },
+      {
+        type: "text",
+        content: "EXAMINAR A MANSÃO (ND 2)\nObjetivo: Obter informações sobre como invadir a propriedade.\nEfeito: Os personagens devem decidir como evitarão suspeitas: misturando-se às pessoas ou se sentando em um café próximo.\nNo início de cada rodada, os personagens que estiverem misturando-se ao resto das pessoas devem fazer um teste de Furtividade (CD 15 + 5 para cada teste anterior). Se um personagem falhar em três desses testes, sua atitude suspeita atrai 1d6+2 guardas de cidade (Tormenta20, p. 289), que o escoltam para uma conversa em uma de suas guaridas. Se tentar fugir, começa uma perseguição (Tormenta20, p. 274), em que o personagem deve abrir uma vantagem de 100m dos guardas para poder escapar. De uma forma ou de outra, não poderá mais fazer testes nesse dia.\nCaso prefiram sentar-se no café, no fim de cada rodada devem gastar T$ 2d6. Se não forem capazes de pagar o valor, serão expulsos do estabelecimento. Isso atrairá atenção para o personagem, que sofrerá uma penalidade de –5 em Furtividade se tentar misturar-se às pessoas. Um personagem pode deixar voluntariamente o café no início de seu turno para não ter de pagar o valor, mas não pode realizar os testes abaixo.\nA cada sucesso, recebem um bônus cumulativo para a cena 4 e 5. Se um personagem passar no teste, ele decide quem recebe o bônus (ele mesmo ou um de seus aliados).\nAnalisar a Construção (Guerra ou Ofício adequado CD 20): O personagem observa os pontos principais do local, ajudando-o a traçar seus planos (+5 em um teste a escolha do personagem).\nConquistar Confiança (Diplomacia ou Enganação CD 20): O personagem convence um dos funcionários a entregá-lo um uniforme de serviçal (permitindo substituir os testes de Furtividade na cena 4 e 5 por Enganação). Só pode ser realizado por um personagem que tenha passado na ação seduzir servo (veja a seguir).\nObservar Movimentação (Investigação ou Percepção CD 15): O personagem presta atenção nas janelas da residência, notando que os guardas se movem apenas no primeiro andar (+2 em testes de Iniciativa).\nPerguntas sobre a Mansão (Diplomacia ou Investigação CD 15): O personagem questiona alguém que trabalha na área sobre a mansão, e descobre que há um jardim murado na parte de traz da construção (+2 em testes de Atletismo para escalar).\nPerguntas sobre os Funcionários (Diplomacia ou Investigação CD 20): O personagem faz perguntas diretas sobre a rotina dos empregados, permitindo saber sua movimentação e que a maioria parte ao anoitecer (+2 em testes de Furtividade).\nSeduzir Servo (Diplomacia ou Enganação CD 15): O personagem usa seu charme para conquistar um dos serviçais da mansão (fazendo com que a porta dos fundos esteja destrancada na cena 4)."
+      },
+      {
+        type: "text",
+        content: "Assim que terminarem o reconhecimento da mansão (parando quando estiverem satisfeitos), ou se três personagens forem pegos pelos guardas, um alvoroço começa na porta da propriedade."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "Cena 3: FUNCIONÁRIO DESCONTENTE"
+      },
+      {
+        type: "text",
+        content: "Quando olham para a entrada da mansão, vocês veem dois guardas arrastando um goblin para fora. Ele está vestindo roupas idênticas às dos serviçais da residência. Logo um terceiro guarda vem, carregando uma bolsa de couro que arremessa na rua. O goblin, quando é solto, começa a esbravejar."
+      },
+      {
+        type: "text",
+        content: "“Forthmont, seu desgraçado! Eu dei os meus melhores anos trabalhando para você, seu babaca! Tomara que tu te engasgue com uma azeitona! E boa sorte achando alguém para fazer a manutenção nas MINHAS máquinas!”"
+      },
+      {
+        type: "text",
+        content: "O goblin, Folko, pega então sua bagagem, maior do que ele mesmo, e parte. Se os personagens não interagirem com ele, vá para a cena 4. Entretanto, abordá-lo, revoltado como está, requer um teste de Diplomacia ou Enganação (CD 15) ou um convite para beber algo em uma taverna."
+      },
+      {
+        type: "text",
+        content: "Se passarem no teste, ou pagarem por uma bebida, Folko desaba em lágrimas. “Eu estou há cinco anos trabalhando para esse imbecil. Sabe quanto é isso para um goblin? Uma eternidade! E nem um obrigado, nem mesmo um 'Ah, Folko, estou muito grato por você ter construido estes autômatos de segurança para mim'. Olha, sinceramente, às vezes eu acho que os devotos de Thwor têm razão.”"
+      },
+      {
+        type: "text",
+        content: "Apenas essa interação já informa os personagens da existência de construtos de segurança no interior da mansão. Porém, se passarem em um segundo teste, ou pagarem uma segunda bebida, Folko revela mais."
+      },
+      {
+        type: "text",
+        content: "“Agora, imagina outra pessoa fazer o trabalho que eu fiz? Construí esses autômatos basicamente com sucata! E coloquei placas nos pontos mais vulneráveis. É um golpe no lugar errado e o bicho cai. Não por culpa minha, obviamente, foram restrições orçamentárias.” Os personagens recebem +2 em testes de ataque contra os autômatos de segurança, e descobrem sobre a habilidade Engrenagens Soltas da criatura."
+      },
+      {
+        type: "text",
+        content: "Finalmente, se oferecerem uma terceira bebida, ou passarem em mais um teste de Diplomacia ou Enganação, o goblin fala mais uma coisa, agora sussurrando."
+      },
+      {
+        type: "text",
+        content: "“Imagina o que ele faria se eu contasse para as pessoas sobre as armadilhas no porão? Aquele monte de tesouro lá? Só arapucas! Tudo ideia minha. Mas ele agradeceu?” E, com isso, o grupo recebe +2 em testes de Investigação e Ladinagem para encontrar e desarmar a armadilha do porão."
+      },
+      {
+        type: "text",
+        content: "Após lidarem com Folko, ou se apenas o ignorarem, é o momento de botar o plano em prática."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "Cena 4: JARDINS DOS FUNDOS"
+      },
+      {
+        type: "text",
+        content: "A noite cai em Valkaria, e o manto de Tenebra se estende sobre o mundo. É o momento ideal, a maioria dos serviçais já se recolheu. Buscando por pontos de entrada, vocês encontram o muro dos fundos."
+      },
+      {
+        type: "text",
+        content: "O primeiro obstáculo é o muro dos fundos. Escalá-lo requer um teste de Atletismo (CD 20). Personagens com deslocamento de escalada ou voo ignoram o teste. Além disso, se alguém falhar por 5 ou mais, cai de mal jeito, sem sofrer dano, mas torcendo algo e ficando fraco até o dia seguinte."
+      },
+      {
+        type: "text",
+        content: "O próximo desafio é passar despercebido pelos guardas no jardim. Cada um dos vigias tem Percepção +3, e dois deles estão patrulhando a área. Um personagem tem que passar em dois testes de Furtividade opostos a Percepção, um para cada guarda. Personagens que estejam vestindo roupas de serviçais substituem esses testes por apenas um de Enganação oposto a Intuição (+4). Se forem descobertos, começa um combate."
+      },
+      {
+        type: "text",
+        content: "Criaturas. Guarda de Cidade x2 (Tormenta20, p. 289)."
+      },
+      {
+        type: "text",
+        content: "Os guardas usam ataques não-letais, sofrendo a penalidade de –5, e tentam usar manobras de agarrar para imobilizar os personagens. Se apenas um tiver percebido a aproximação furtiva, o outro estará surpreendido durante a primeira rodada. No final da segunda rodada, se o combate ainda estiver acontecendo, mais dois guardas chegam, atraídos pelo barulho."
+      },
+      {
+        type: "text",
+        content: "Após lidarem com os seguranças, os heróis chegam à entrada dos fundos. Se não tiverem seduzido servos durante o perigo complexo, terão de destrancar a porta (Ladinagem CD 20). Qualquer tentativa de arrombamento atrai dois guardas."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "Cena 5: INTERIOR DA MANSÃO"
+      },
+      {
+        type: "text",
+        content: "O interior é ainda mais opulento que sua fachada. Das paredes pendem dezenas de tapeçarias. Também existem diversos quadros, todos mostrando possivelmente membros da família Forthmont. Eles possuem algo estranhamente familiar."
+      },
+      {
+        type: "text",
+        content: "Se um dos personagens tiver passado no teste de Intuição na cena 1, pode fazer um novo teste agora, mesma perícia e dificuldade (CD 25). Passando, notará a similaridade das pessoas nos quadros com seu contratante, Aldor. Entretanto, parar esse tempo atrai dois guardas e um autômato de segurança."
+      },
+      {
+        type: "text",
+        content: "Criaturas. Guarda da cidade x2 (Tormenta20, p. 289) e autômato de segurança (NPCs e Criaturas)."
+      },
+      {
+        type: "text",
+        content: "Os guardas mantêm a estratégia da cena anterior, ataques não-letais e agarrar. O construto, entretanto, foi projetado para eliminar ameaças e combate até ser destruído."
+      },
+      {
+        type: "text",
+        content: "Porém, se preferirem investigar o andar, encontrarão uma porta para o subsolo da mansão. Ela está trancada (Ladinagem CD 20) e sob efeito da magia Alarme. Caso tentem abri-la sem a chave certa, todos os guardas são alertados."
+      },
+      {
+        type: "text",
+        content: "Criaturas. Guarda da cidade x4 (Tormenta20, p. 289) e autômato de segurança x2 (NPCs e Criaturas)."
+      },
+      {
+        type: "text",
+        content: "Na primeira rodada, apenas dois guardas e um autômato estarão prontos para lutar. Já no começo da segunda rodada, e da terceira, um guarda adicional entra no combate. Finalmente, no início da quarta, o segundo autômato de segurança desce as escadas. Se em algum momento terminarem o turno sem nenhum oponente consciente, podem descer pela porta que leva ao porão, travando a porta e encerrando a luta."
+      },
+      {
+        type: "text",
+        content: "Entretanto, se quiserem procurar por uma chave, devem fazer mais um teste de Furtividade oposto à Percepção (+3) dos guardas. Um teste de Investigação (CD 15) mostra que não há nenhuma chave neste andar, restando apenas o de cima."
+      },
+      {
+        type: "text",
+        content: "Se decidirem vasculhar o andar superior em busca da chave, um personagem deve fazer apenas um teste de Furtividade contra a Percepção (+2) do autômato no segundo andar. Depois disso é fácil evitá-lo devido a seus padrões constantes de movimento."
+      },
+      {
+        type: "text",
+        content: "Encontrar a chave é um teste estendido de Investigação (CD 20, três sucessos). Alternativamente, é possível realizar o teste com Misticismo, com CD 15 no teste final para localizar a chave que possui uma aura mágica tênue. Encontrando a chave, eles podem descer sem problemas a escada e seguir para o porão (peça testes de Furtividade apenas para manter a tensão)."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "Cena 6: PORÃO"
+      },
+      {
+        type: "text",
+        content: "A escada para o porão é estreita, permitindo a passagem de apenas uma pessoa por vez. No fim dela está um ambiente completamente escuro. Se acenderem alguma fonte de luz, ou forem capazes de enxergar nas trevas, podem ver montanhas de tibares de ouro, assim como gemas e outros objetos valiosos. No centro da câmara, em um pedestal, há um pequeno baú."
+      },
+      {
+        type: "text",
+        content: "Se não tiverem descoberto por Folko sobre a armadilha, espere os personagens procurarem antes de pedir um teste de Investigação (CD 20) para descobrir que as moedas e itens preciosos estão sob um efeito mágico que os torna extremamente grudentos. Também é possível perceber que o tesouro está afetado por algum feitiço com um teste para detectar magia de Misticismo. Se o fizerem, também percebem que o baú emana uma aura poderosa."
+      },
+      {
+        type: "text",
+        content: "Caso não descubram a armadilha, ou sejam gananciosos demais tentando roubar mais do que o objetivo de sua missão, os tibares agarram-se na pele dos aventureiros, deixando-os sobrecarregados na primeira rodada, imóveis na segunda e paralisados na terceira. Remover as moedas requer um teste de Ladinagem ou Misticismo (CD 20), e um personagem afetado pode tentar chacoalhar-se na primeira rodada, evitando que as moedas o prendam (Reflexos CD 20). Se todos forem pegos na armadilha, são entregues às autoridades e presos."
+      },
+      {
+        type: "text",
+        content: "Contudo, se pegarem apenas o baú, veem uma saída no lado oposto da sala. Seguindo por algum tempo o túnel atrás dela, eles saem por uma outra porta que os leva às ruas de Valkaria."
+      },
+      {
+        type: "text",
+        content: "Se os personagens tentarem abrir a caixa, descobrem que sua tranca é bem mais complexa do que imaginam (Ladinagem CD 30 e sob efeito de tranca arcana). Qualquer tentativa de quebrar a caixa destrói o conteúdo, deixando apenas uma poeira de vidro vermelha."
+      },
+      {
+        type: "text",
+        content: "Entretanto, se conseguirem abrir a caixa, encontram o que parece um rubi esférico com uma aura poderosa de magia. Porém, qualquer avaliação revela se tratar apenas de uma joia de vidro enfeitiçada para parecer mágica."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "Epílogo: MALANDRAGEM"
+      },
+      {
+        type: "text",
+        content: "Após alguns minutos esperando na taverna, seu contratante logo chega. Ele demonstra a mesma personalidade animada de antes, pergunta se tudo foi bem e então pede para conferir o baú."
+      },
+      {
+        type: "text",
+        content: "Se Aldor percebe que os personagens tentaram, ou conseguiram, abrir o baú, sua expressão muda para desapontamento. “Nossa, infelizmente eu preciso de pessoas em quem possa confiar. Como prometido, aqui está seu pagamento.”"
+      },
+      {
+        type: "text",
+        content: "Entretanto, se o baú está intacto ou se Aldor não percebe após analisar a caixa, ele abre um enorme sorriso. “Isso sim é um trabalho bem-feito! É raro encontrar gente de confiança hoje em dia.” Em seguida, ele esmaga a imitação de vidro no chão da taverna, sob protestos do taverneiro."
+      },
+      {
+        type: "text",
+        content: "O contratante explica tudo neste momento. A mansão é propriedade dele, lorde Aldor Forthmont e aquilo foi apenas um teste. Folko não sabia do esquema, mas já foi readmitido e recompensado pelo estresse. “Não o suficiente, só para deixar claro!” o goblin reclama, entrando na taverna."
+      },
+      {
+        type: "text",
+        content: "“Agora, podemos falar de missões de verdade...”"
+      },
+      {
+        type: "text",
+        content: "Os personagens avançam para o 2º nível."
+      },
+      {
+        type: "break"
+      },
+      {
+        type: "subtitle",
+        content: "NPCs & Criaturas"
+      },
+      {
+        type: "text",
+        content: "AUTÔMATO DE SEGURANÇA\nConstruto Médio\nIniciativa +1, Percepção +2, visão no escuro\nDefesa 16, Fort +11, Ref +5, Von +0, redução de dano 2\nPontos de Vida 35\nDeslocamento 6m (4q)\nCorpo a Corpo Duas pancadas +9 (1d8+3).\nEngrenagens Soltas Quando sofre um acerto crítico ou se for atingido em pontos frágeis (Defesa 21), o autômato de segurança tomba como uma pilha de sucata. Ele fica caído e vulnerável, falha automaticamente em testes de Reflexos e precisa gastar uma ação de movimento para se remontar e encerrar estes efeitos.\nGolpe Atordoante Uma criatura que sofra dano da pancada do autômato de segurança fica atordoada (Fort CD 14 evita). Uma criatura só pode ser atordoada por esta habilidade uma vez por cena.\nFor 3, Des –1, Con 3, Int —, Sab 0, Car –5\nTesouro Pilha de sucata (vale T$ 100 para fabricar engenhocas)."
+      }
+    ]
   },
   {
   id: "16",

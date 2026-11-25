@@ -393,9 +393,6 @@ export const classes: GameClass[] = [
   
     //#endregion
 
-  
-
-
   //#region Tormenta20 - Jogo do Ano
   { id: "Arcanista",
   name: "Arcanista",
@@ -1871,142 +1868,8 @@ export const classes: GameClass[] = [
     },
     //#endregion
 
-
-
-
-    
     //#region Dragão Brasil
     // Dragão Brasil - 199
-    { id: "Mistico",
-      name: "Místico",
-      powersUrl: "/poderes/mistico",
-      origin: "Dragão Brasil - 199",
-      image: "/classes/mistico.png",
-      description: "Os elementos primordiais existiam antes mesmo da criação da magia e da espada. Água, ar, fogo, luz, terra e trevas são considerados a essência da arte arcana na cultura artoniana, sendo utilizados pelos deuses como base para moldar o mundo de Arton e todos os demais componentes da criação. No entanto, para os místicos, os elementos vão além disso, sendo o foco e a dedicação de toda a sua prática mágica. Os místicos são conjuradores especializados que dominam as forças primordiais por meio de uma magia extremamente específica, encontrados principalmente entre os ubaneri da Grande Savana, os sar-allan do Deserto da Perdição e os geomantes de Doherimm.\nPara os místicos, os elementos são extremamente importantes e alguns deles podem optar por se dedicar a um único elemento, enquanto outros preferem diversificar sua prática com mais de um. Buscam entender a composição primordial do mundo para aprimorar suas magias e as diferentes forças primordiais que influenciam sua disposição e seu comportamento. Aqueles que têm afinidade com a água costumam ser amigáveis e falantes, enquanto os que possuem afinidade com as trevas tendem a ser extremamente solitários e soturnos. Místicos relacionados ao fogo são mais ativos fisicamente, mas a afinidade com a terra pode torná-los introspectivos. Além disso, algumas culturas consideram os místicos da luz criaturas santificadas devido às suas habilidades de cura, mas muitas histórias associam a esperteza dos místicos do ar com fadas e outros seres trapaceiros.\nAlgumas culturas associam os elementos à personalidade dos místicos. Em Ubani, diz-se que a afinidade com a água gera místicos amigáveis e falantes e admira-se a pretensa pureza de caráter daqueles alinhados com a luz. Em Doherimm, os geomantes são conhecidos como teimosos e irascíveis, tão imóveis quanto as rochas com as quais interagem, enquanto a afinidade com o ar é vista com desconfiança e relacionada com trapaceiros. Em Halak-Tûr, espera-se que os místicos do fogo sejam mais ativos fisicamente, enquanto aqueles que demonstram afinidade com as trevas são vistos com muita desconfiança. Nenhuma dessas afirmações é completamente verdadeira, mas isso não impede a formação de estereótipos entre os próprios místicos.\nA magia do místico pode parecer pouco sofisticada se comparada com a enorme versatilidade dos arcanistas ou com a conexão divina dos clérigos, pois suas habilidades são extremamente focadas em sua área de estudo, os elementos primordiais. Não há muito espaço para inovação dentro das práticas de um místico, e por isso se apegam às tradições de sua comunidade, normalmente passadas adiante através das gerações exclusivamente pela oralidade. A jornada de um místico não costuma afastá-lo de tarefas práticas como defesa pessoal ou trabalho comunitário, tornando-o mais centrado e acessível que outros conjuradores. O místico é um homem do povo — não é raro encontrar um deles ajudando na colheita, trabalhando como guarda ou fazendo trabalho braçal.\nOs místicos entendem que os elementos primordiais são as forças básicas da natureza e se esforçam para compreendê-los em toda extensão de seu mistério e profundidade. Através do estudo e da meditação, aprimoram sua conexão com essas forças, aprendendo a controlá-las e a usá-las para realizar feitos incríveis. Tornam-se capazes de moldar as forças elementais à sua vontade, usando-as para conquistar seus objetivos, seja criando barreiras de terra para proteção ou invocando rajadas elétricas para afastar seus inimigos. Esse desejo por aprendizado e compreensão do mundo ao seu redor leva muitos místicos a viverem aventuras em Arton e além.",
-      famousExamples: [],
-      characteristics: {
-        pvBase: "16 + Constituição",
-        pvPerLevel: "4 + Constituição",
-        pmPerLevel: "4 PM por nível"
-      },
-      skills: {
-        mandatory: ["Misticismo (Int)", "Vontade (Sab)"],
-        optional: {
-          skills: [
-            "Acrobacia (Des)", "Atletismo (For)", "Conhecimento (Int)", "Cura (Sab)", "Diplomacia (Car)", "Fortitude (Con)", "Iniciativa (Des)", "Luta (For)", "Ofício (Int)", "Percepção (Sab)", "Pontaria (Des)", "Reflexos (Des)"
-          ],
-          count: 4
-        }
-      },
-      proficiency: "Armas marciais.",
-      abilities: [
-        {
-          name: "Afinidade",
-          description: "Escolha um elemento entre água, ar, fogo, luz, terra e trevas. Uma vez feita, essa escolha não pode ser mudada. Para cada círculo de magia que pode lançar, você recebe redução 5 contra o tipo de dano associado ao elemento escolhido (veja o quadro abaixo). Além disso, quando lança uma magia que causa dano de um tipo associado a outro elemento, você pode gastar 1 PM para transformar esse dano no tipo associado ao seu elemento. Por fim, cada elemento concede uma perícia treinada."
-        },
-        {
-          name: "Ataque Elemental",
-          description: "Quando faz um ataque corpo a corpo, você pode gastar uma quantidade de PM limitada pelo círculo máximo de magia que pode lançar para infundir a arma com energia elemental. Cada PM gasto concede +1 no teste de ataque e +1d8 pontos de dano do tipo associado à sua Afinidade."
-        },
-        {
-          name: "Magias",
-          description: "Você pode lançar magias arcanas de 1º círculo de Evocação, de uma segunda escola definida por sua Afinidade e de uma terceira escola à sua escolha (uma vez feita, essa escolha não pode ser mudada). À medida que sobe de nível, pode lançar magias de círculos maiores (2º círculo no 6º nível, 3º círculo no 10º nível e 4º círculo no 14º nível). Você começa com Criar Elementos e duas outras magias de 1º círculo à sua escolha. A cada nível par (2º, 4º etc.), aprende uma magia de qualquer círculo e escola que possa lançar. Você pode lançar essas magias vestindo armaduras leves sem precisar de testes de Misticismo. Seu atributo-chave para lançar magias é Sabedoria e você soma sua Sabedoria no seu total de PM."
-        },
-        {
-          name: "Língua Primordial",
-          description: "No 2º nível, você pode se comunicar com espíritos ligados ao elemento de sua Afinidade, como o efeito básico da magia Voz Divina, e recebe +5 em testes de Carisma e de perícias originalmente baseadas em Carisma com essas criaturas. O mestre define exatamente quais criaturas se encaixam nessa descrição mas, como regra geral, qualquer criatura do tipo espírito com imunidade ao tipo de dano associado à sua Afinidade é considerada ligada ao seu elemento."
-        },
-        {
-          name: "Poder de Místico",
-          description: "No 2º nível, e a cada nível seguinte, você escolhe um dos poderes de místico ou Gerais."
-        },
-        {
-          name: "Tradição Oral",
-          description: "No 3º nível, você recebe +2 em Misticismo. Esse bônus aumenta para +4 no 9º nível e para +6 no 13º nível."
-        },
-        {
-          name: "Sexto Sentido",
-          description: "No 4º nível, você soma sua Sabedoria, limitada pelo seu nível, à sua Defesa. Esta habilidade exige liberdade de movimentos; você não pode usá-la se estiver de armadura pesada ou na condição imóvel."
-        },
-        {
-          name: "Afinidade Evoluída",
-          description: "No 6º nível, escolha uma das seguintes opções.",
-          subAbilities: [
-            {
-              name: "Afinidade Concentrada",
-              description: "Você recebe +2 na CD de suas habilidades de místico e em testes de ataque usando Ataque Elemental."
-            },
-            {
-              name: "Afinidade Expandida",
-              description: "Escolha um segundo elemento para sua habilidade Afinidade. Você se torna treinado na perícia relacionada a este segundo elemento e recebe todos os benefícios de Afinidade relativos a ele, incluindo redução de dano e acesso a sua escola associada."
-            }
-          ]
-        },
-        {
-          name: "Comunhão Suprema",
-          description: "No 20º nível, você desenvolve uma comunhão perfeita com seu elemento. Você se torna imune ao tipo de dano da sua Afinidade e o custo em PM de suas magias que causem dano desse tipo ou façam parte da escola associada é reduzido à metade (após aplicar aprimoramentos e quaisquer outros efeitos que reduzam custo)."
-        },
-      ],
-      levelProgression: [
-        { level: 1, abilities: "Afinidade, Ataque elemental +1d8, Magias (1º Círculo)" },
-      { level: 2, abilities: "Língua primordial, Poder de místico" },
-      { level: 3, abilities: "Poder de místico, Tradição Oral +2" },
-      { level: 4, abilities: "Poder de místico, Sexto sentido" },
-      { level: 5, abilities: "Poder de místico" },
-      { level: 6, abilities: "Ataque elemental +2d8, Magias (2º Círculo), Poder de místico" },
-      { level: 7, abilities: "Poder de místico" },
-      { level: 8, abilities: "Poder de místico" },
-      { level: 9, abilities: "Poder de místico, Tradição oral +4" },
-      { level: 10, abilities: "Ataque elemental +3d8, Magias (3º Círculo), Poder de místico" },
-      { level: 11, abilities: "Poder de místico" },
-      { level: 12, abilities: "Poder de místico" },
-      { level: 13, abilities: "Poder de místico, Tradição oral +6" },
-      { level: 14, abilities: "Ataque elemental +4d8, Magias (4º Círculo), Poder de místico" },
-      { level: 15, abilities: "Poder de místico" },
-      { level: 16, abilities: "Poder de místico" },
-      { level: 17, abilities: "Poder de místico" },
-      { level: 18, abilities: "Poder de místico" },
-      { level: 19, abilities: "Poder de místico" },
-      { level: 20, abilities: "Comunhão suprema, Poder de místico" }
-      ],
-      extras: [
-        {
-          title: "Os Seis Elementos",
-          description: "Detalhes sobre o tipo de dano, escola de magia e perícia associados a cada elemento primordial.",
-          sections: [
-            {
-              title: "Elementos",
-              content: [
-                {
-                  name: "Água",
-                  description: "Tipo de Dano: Frio | Escola de Magia: Encantamento | Perícia: Diplomacia (Car)"
-                },
-                {
-                  name: "Ar",
-                  description: "Tipo de Dano: Eletricidade | Escola de Magia: Ilusão | Perícia: Enganação (Car)"
-                },
-                {
-                  name: "Fogo",
-                  description: "Tipo de Dano: Fogo | Escola de Magia: Transmutação | Perícia: Acrobacia (Des)"
-                },
-                {
-                  name: "Luz",
-                  description: "Tipo de Dano: Luz | Escola de Magia: Abjuração | Perícia: Cura (Sab)"
-                },
-                {
-                  name: "Terra",
-                  description: "Tipo de Dano: Ácido | Escola de Magia: Convocação | Perícia: Investigação (Int)"
-                },
-                {
-                  name: "Trevas",
-                  description: "Tipo de Dano: Trevas | Escola de Magia: Necromancia | Perícia: Intimidação (Car)"
-                }
-              ]
-            }
-          ]
-        },
-      ]
-    },
     { id: "Samurai",
     name: "Samurai",
     powersUrl: "/poderes/samurai",
@@ -2519,6 +2382,172 @@ export const classes: GameClass[] = [
       { level: 19, abilities: "Poder de clérigo" },
       { level: 20, abilities: "Guerreiro Santificado, poder de clérigo" }
     ],
+    },
+    // Dragão Brasil - 233
+    { id: "Mistico",
+      name: "Místico",
+      powersUrl: "/poderes/mistico",
+      origin: "Dragão Brasil - 233",
+      image: "/classes/mistico.png",
+      description: "Os elementos primordiais existiam antes mesmo da criação da magia e da espada. Água, ar, fogo, luz, terra e trevas são considerados a essência da arte arcana na cultura artoniana, sendo utilizados pelos deuses como base para moldar o mundo de Arton e todos os demais componentes da criação. No entanto, para os místicos, os elementos vão além disso, sendo o foco e a dedicação de toda a sua prática mágica. Estes conjuradores especializados dominam as forças primordiais por meio de tradições ancestrais, sendo encontrados principalmente entre os ubaneri da Grande Savana, os sar-allan do Deserto da Perdição e os geomantes de Doherimm.\nAlguns místicos aceitam se dedicar a um único elemento, enquanto outros preferem diversificar sua prática, tocando mais de uma dessas forças primordiais. De uma forma ou de outra, buscam entender a composição essencial do mundo para aprimorar suas magias e as diferentes forças que influenciam sua disposição e seu comportamento. Aqueles que têm afinidade com a água costumam ser amigáveis e falantes, enquanto os que possuem afinidade com as trevas tendem a ser extremamente solitários e soturnos. Místicos relacionados ao fogo são mais ativos fisicamente, mas a afinidade com a terra pode torná-los introspectivos. Além disso, algumas culturas consideram os místicos da luz criaturas santificadas devido às suas habilidades de cura, mas muitas histórias associam a esperteza dos místicos do ar com fadas e outros seres trapaceiros.\nA magia do místico pode parecer pouco sofisticada se comparada com a enorme versatilidade dos arcanistas ou com a conexão divina dos clérigos, pois suas habilidades são extremamente focadas em sua área de estudo, os elementos primordiais. Não há muito espaço para inovação dentro dessas práticas, intimamente relacionadas às tradições da comunidade, normalmente passadas adiante através das gerações exclusivamente pela oralidade. A jornada de um místico não costuma afastá-lo de tarefas práticas como defesa pessoal ou trabalho comunitário, tornando-o mais centrado e acessível que outros conjuradores. Mais que um acadêmico ou combatente, é um homem do povo — não é raro encontrar um deles ajudando na colheita, trabalhando como guarda ou fazendo trabalho braçal.\nOs místicos entendem que os elementos primordiais são as forças básicas da natureza e se esforçam para compreendê-los em toda extensão de seu mistério e profundidade. Através do estudo e da meditação, aprimoram sua conexão com essas forças, aprendendo a controlá-las e a usá-las para realizar feitos incríveis. Tornam-se capazes de moldar as forças elementais à sua vontade, usando-as para conquistar seus objetivos, seja criando barreiras de terra para proteção ou invocando rajadas elétricas para afastar seus inimigos. Esse desejo por aprendizado e compreensão do mundo ao seu redor leva muitos místicos a viverem aventuras em Arton e além.",
+      famousExamples: [],
+      characteristics: {
+        pvBase: "16 + Constituição",
+        pvPerLevel: "4 + Constituição",
+        pmPerLevel: "4 PM por nível"
+      },
+      skills: {
+        mandatory: ["Misticismo (Int)", "Vontade (Sab)"],
+        optional: {
+          skills: [
+            "Atletismo (For)", "Conhecimento (Int)", "Fortitude (Con)", "Iniciativa (Des)", "Luta (For)", "Ofício (Int)", "Percepção (Sab)", "Pontaria (Des)", "Reflexos (Des)"
+          ],
+          count: 4
+        }
+      },
+      proficiency: "Armas marciais.",
+      abilities: [
+        {
+          name: "Afinidade Elemental",
+          description: "Escolha um elemento entre água, ar, fogo, luz, terra e trevas. Uma vez feita, essa escolha não pode ser mudada. Você recebe redução 5 contra o tipo de dano associado ao seu elemento (veja o quadro) para cada círculo de magia que pode lançar. Além disso, cada elemento adiciona uma perícia à sua lista de perícias de classe (ver “Os Seis Elementos” no campo extra logo abaixo). Finalmente, cada elemento causa um efeito adicional quando você usa Combate Elemental."
+        },
+        {
+          name: "Combate Elemental",
+          description: "Quando faz um ataque com uma arma corpo a corpo, você pode gastar PM para infundir a arma com seu elemento. Para cada PM gasto (limitado pelo seu círculo máximo de magias), você causa +1d6 pontos de dano extra do seu elemento. Se causar dano, também causa uma condição (ver tabela “Os Seis Elementos”) por 1 rodada. Se você lançou uma magia do seu elemento no turno em que fez o ataque, recebe um bônus nesse teste de ataque igual ao dobro do círculo da magia."
+        },
+        {
+          name: "Magias",
+          description: "Você pode lançar magias arcanas de 1º círculo de evocação, de uma segunda escola definida por seu elemento e de uma terceira escola à sua escolha (uma vez feita, essa escolha não pode ser mudada). À medida que sobe de nível, pode lançar magias de círculos maiores (2º círculo no 6º nível, 3º círculo no 10º nível e 4º círculo no 14º nível). \n Você começa com Criar Elementos e duas magias de 1º círculo a sua escolha. A cada nível par (2º, 4º etc.), aprende uma magia de qualquer círculo e escola que possa lançar. Você pode lançar essas magias vestindo armaduras leves sem precisar de testes de Misticismo. \n Seu atributo-chave para lançar magias é Sabedoria e você soma sua Sabedoria no seu total de PM.\n Alguns poderes fazem referência a magias do seu elemento. Isso quer dizer magias que causem dano do tipo do seu elemento e magias da escola associada ao seu elemento."
+        },
+        {
+          name: "Língua Primordial",
+          description: "No 2º nível, você pode se comunicar com qualquer espírito com quem compartilhe Afinidade Elemental. Você recebe +5 em testes de Carisma e de perícias originalmente baseadas em Carisma com essas criaturas."
+        },
+        {
+          name: "Poder de Místico",
+          description: "No 2º nível, e a cada nível seguinte, você escolhe um dos poderes de místico ou Gerais."
+        },
+        {
+          name: "Moldar Elemento",
+          description: "No 3º nível, você pode usar a energia elemental do ambiente para fortalecer suas magias. Se estiver em contato com uma expressão natural do seu elementos de tamanho Grande, você pode gastar uma ação de movimento para aumentar seu limite de PM para magias do seu elemento em +1. Conforme sobe de nível, você precisa de expressões cada vez menores e obtém bônus cada vez maiores com essa habilidade (veja a tabela de progresso)."
+        },
+        {
+          name: "Tradição Oral",
+          description: "A partir do 3º nível, você pode fazer testes de Conhecimento mesmo sem ser treinado e, quando faz um teste de Conhecimento ou Misticismo, pode gastar 1 PM para rolá-lo novamente."
+        },
+        {
+          name: "Sexto Sentido",
+          description: "No 4º nível, você pode somar sua Sabedoria, limitada pelo seu nível, à sua Defesa."
+        },
+        {
+          name: "Afinidade Evoluída",
+          description: "No 6º nível, escolha uma das seguintes opções.",
+          subAbilities: [
+            {
+              name: "Afinidade Concentrada",
+              description: "a CD para resistir a suas magias aumenta em +2. Além disso, magias de dano causam um dado de dano extra do mesmo tipo."
+            },
+            {
+              name: "Afinidade Expandida",
+              description: "escolha um segundo elemento para sua habilidade Afinidade Elemental. Você se torna treinado na perícia relacionada ao segundo elemento e recebe todos os benefícios de Afinidade Elemental relativos a ele, incluindo redução de dano e acesso a sua escola associada. Para todos os sentidos, o segundo elemento também é considerado seu elemento."
+            }
+          ]
+        },
+        {
+          name: "Comunhão Suprema",
+          description: "No 20º nível, você desenvolve uma comunhão perfeita com seu elemento. Você se torna imune ao tipo de dano da sua Afinidade Elemental e pode usar Moldar Elemento como uma ação livre com uma expressão elemental Minúscula (+4). Além disso, uma vez por cena, você pode gastar uma ação de movimento para receber três poderes de magia que cumpra os pré-requisitos à sua escolha. Se também gastar 1 PM por poder, você não precisa cumprir seus pré-requisitos. Você mantém os poderes até o final da cena. Finalmente, você pode gastar o dobro de PM em Combate Elemental."
+        }
+      ],
+      levelProgression: [
+        { level: 1, abilities: "Afinidade elemental (redução 5), magias (1º círculo), combate elemental (+1d6)" },
+        { level: 2, abilities: "Língua primordial, poder de místico" },
+        { level: 3, abilities: "Moldar elemento (Grande, +1), poder de místico, tradição oral" },
+        { level: 4, abilities: "Poder de místico, sexto sentido" },
+        { level: 5, abilities: "Poder de místico" },
+        { level: 6, abilities: "Afinidade elemental (redução 10), combate elemental (+2d6), magias (2º círculo), poder de místico" },
+        { level: 7, abilities: "Poder de místico" },
+        { level: 8, abilities: "Moldar elemento (Médio, +2), poder de místico" },
+        { level: 9, abilities: "Poder de místico" },
+        { level: 10, abilities: "Afinidade elemental (redução 15), combate elemental (+3d6), magias (3º círculo), poder de místico" },
+        { level: 11, abilities: "Poder de místico" },
+        { level: 12, abilities: "Poder de místico" },
+        { level: 13, abilities: "Poder de místico" },
+        { level: 14, abilities: "Afinidade elemental (redução 20), combate elemental (+4d6), magias (4º círculo), poder de místico" },
+        { level: 15, abilities: "Moldar elemento (Pequeno, +3), poder de místico" },
+        { level: 16, abilities: "Poder de místico" },
+        { level: 17, abilities: "Poder de místico" },
+        { level: 18, abilities: "Poder de místico" },
+        { level: 19, abilities: "Poder de místico" },
+        { level: 20, abilities: "Comunhão suprema, poder de místico" }
+      ],
+      extras: [
+    {
+      title: "Os Seis Elementos",
+      description: "*Não tem duração de uma rodada",
+      sections: [
+        {
+          title: "Água",
+          content: [
+            { name: "Energia", description: "Frio" },
+            { name: "Escola de Magia", description: "Encantamento" },
+            { name: "Combate Elemental", description: "Lento" },
+            { name: "Perícia", description: "Diplomacia (Car)" },
+            { name: "Pacto Elemental", description: "Assassino, perseguidor ou vigilante" }
+          ]
+        },
+        {
+          title: "Ar",
+          content: [
+            { name: "Energia", description: "Eletricidade" },
+            { name: "Escola de Magia", description: "Ilusão" },
+            { name: "Combate Elemental", description: "Ofuscado" },
+            { name: "Perícia", description: "Enganação (Car)" },
+            { name: "Pacto Elemental", description: "Ajudante, guardião ou médico" }
+          ]
+        },
+        {
+          title: "Fogo",
+          content: [
+            { name: "Energia", description: "Fogo" },
+            { name: "Escola de Magia", description: "Transmutação" },
+            { name: "Combate Elemental", description: "Em chamas*" },
+            { name: "Perícia", description: "Acrobacia (Des)" },
+            { name: "Pacto Elemental", description: "Atirador, combatente ou fortão" }
+          ]
+        },
+        {
+          title: "Luz",
+          content: [
+            { name: "Energia", description: "Luz" },
+            { name: "Escola de Magia", description: "Abjuração" },
+            { name: "Combate Elemental", description: "Ofuscado" },
+            { name: "Perícia", description: "Cura (Sab)" },
+            { name: "Pacto Elemental", description: "Guardião, médico ou vigilante" }
+          ]
+        },
+        {
+          title: "Terra",
+          content: [
+            { name: "Energia", description: "Ácido" },
+            { name: "Escola de Magia", description: "Convocação" },
+            { name: "Combate Elemental", description: "Vulnerável" },
+            { name: "Perícia", description: "Investigação (Int)" },
+            { name: "Pacto Elemental", description: "Combatente, guardião ou montaria" }
+          ]
+        },
+        {
+          title: "Trevas",
+          content: [
+            { name: "Energia", description: "Trevas" },
+            { name: "Escola de Magia", description: "Necromancia" },
+            { name: "Combate Elemental", description: "Não pode curar PV" },
+            { name: "Perícia", description: "Intimidação (Car)" },
+            { name: "Pacto Elemental", description: "Assassino, magivocador ou perseguidor" }
+          ]
+        }
+      ]
+    }
+  ]
     },
     //#endregion
     

@@ -1463,6 +1463,76 @@ export const origins: Origin[] = [
     },
     source: "Dragão Brasil - 231"
   },
+  // Dragão Brasil - 233
+  { id: "Ajudante Nato",
+    name: "Ajudante Nato (Ubani)",
+    description: "Você abraçou perfeitamente os ideais comunitários de Ubani. Todos são capazes por conta própria, mas você consegue fazer todos cooperarem ainda mais para ter resultados melhores.",
+    items: [
+      "Essência de mana x2",
+      "pergaminho com magia de 1º círculo",
+      "lança."
+    ],
+    benefits: [
+      "Você recebe +10 em testes de perícia para ajudar, e pode fazer testes para ajudar mesmo quando não é treinado na perícia. Além disso, você se torna treinado em uma perícia à sua escolha e recebe um alikunhá."
+    ],
+    uniquePower: {
+      name: "",
+      description: ""
+    },
+    source: "Dragão Brasil - 233"
+  },
+  { id: "Bori Enredado",
+    name: "Bori Enredado (Ubani)",
+    description: "Você nasceu com grande potencial arcano, mas sob um mau agouro. As coisas costumam dar errado com você.",
+    items: [
+      "Essência de mana",
+      "um esotérico a sua escolha (até T$ 500) ou uma zipana."
+    ],
+    benefits: [
+      "Você recebe +3 pontos de mana e +2 em Misticismo e a CD para resistir a suas magias aumenta em +1. Porém, quando faz um teste e o resultado do d20 é 2 ou 3, você falha automaticamente (como se tivesse tirado 1 natural)."
+    ],
+    uniquePower: {
+      name: "",
+      description: ""
+    },
+    source: "Dragão Brasil - 233"
+  },
+  { id: "Celebrante da Vida",
+    name: "Celebrante da Vida (Ubani)",
+    description: "Alguns habitantes de Ojumajele celebravam a vida. Eram oradores invejáveis, convidados para relembrar os falecidos nos aniversários de suas mortes. A visão de seus trajes pretos elaborados, cobertos de joias, trazia conforto aos corações dos que permaneciam. Ojumajele pode ter sido destruída, mas você ainda segue as tradições, glorifica a memória e convida para o amanhã.",
+    items: [
+      "Pergaminho de Bênção",
+      "poção de Santuário",
+      "símbolo sagrado (Allihanna, Kallyadranoch, Megalokk ou Wynna)",
+      "traje da corte."
+    ],
+    benefits: [
+      "Você se torna treinado em Diplomacia e Religião. Enquanto usa um traje da corte, recebe +5 em testes de Diplomacia para mudar atitude de ubaneris."
+    ],
+    uniquePower: {
+      name: "",
+      description: ""
+    },
+    source: "Dragão Brasil - 233"
+  },
+  { id: "Verdugo da Morte",
+    name: "Verdugo da Morte (Ubani)",
+    description: "Alguns habitantes de Ojumajele tratavam dos recém-mortos e dos desmortos descontrolados. A imagem de homens trajados de branco, usando colares de contas pretas e empunhando armas cortantes se tornou uma das mais agourentas da savana. Ojumajele não existe mais, mas você mantém viva a tradição dos verdugos, eliminando mortos-vivos e realizando ritos fúnebres.",
+    items: [
+      "Água benta x2",
+      "cimitarra ou espada longa",
+      "símbolo sagrado (Allihanna, Kallyadranoch, Megalokk ou Wynna)",
+      "T$50 (pagamento por ritos fúnebres realizados)."
+    ],
+    benefits: [
+      "Você se torna treinado em Religião e recebe proficiência com cimitarra e espada longa. Além disso, uma vez por rodada, quando acerta um alvo sangrando ou um morto-vivo com uma arma de corte, você pode gastar 1 PM para causar um dado de dano extra do mesmo tipo."
+    ],
+    uniquePower: {
+      name: "",
+      description: ""
+    },
+    source: "Dragão Brasil - 233"
+  },
   //#endregion
 
 

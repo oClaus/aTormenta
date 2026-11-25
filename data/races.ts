@@ -258,7 +258,6 @@ export const races: Race[] = [
 
   //#endregion
 
-
   //#region A Lenda de Ghanor
   { id: "Aberrante",
     name: "Aberrante (A Lenda de Ghanor) Ω",
@@ -452,10 +451,6 @@ export const races: Race[] = [
     ]
   },
   //#endregion
-
-
-
-  
 
    //#region Tormenta20 - Jogo do Ano
   { id: "Humano",
@@ -988,8 +983,7 @@ export const races: Race[] = [
   },
   //#endregion
 
-  // Dragão Brasil - 220
-  
+
   // Dragão Brasil - 224
   { id: "Anão da Superfície",
     name: "Anão da Superfície",
@@ -1181,7 +1175,58 @@ export const races: Race[] = [
       { attribute: "int", modifier: -1 }
     ]
   },
-
+  // Dragão Brasil - 233
+  { id: "Qareen-Ubaneri",
+    name: "Qareen Ubaneri",
+    origin: "Dragão Brasil - 233",
+    image: "/racas/qareen-ubaneri.png",
+    description: "Por influência de Kallyadranoch, a linhagem das kipane é uma variante da raça qareen. Para criar um personagem qareen ubaneri, use as habilidades de qareen, mas substitua os modificadores de atributos por estes.",
+    abilities: [
+      {
+      name: "Linhagem Kipane",
+      description: "Você herdou um talento da sua ancestral que derrotou uma dracofera primordial.",
+      subAbilities: [
+        {
+          name: "Água",
+          description: "Como sua ancestral que driblou o kraken Kivulisi, você tem movimentos fluidos e ágeis. Recebe +2 em Acrobacia e, uma vez por rodada, pode gastar 1 PM para se mover 6m como uma ação livre."
+        },
+        {
+          name: "Ar",
+          description: "Como sua ancestral que perseguiu o roca Mirandege, você tem sentidos aguçados e paciência considerável. Recebe +2 em Percepção, +2 em testes em que escolhe 10 e +5 em testes para manter a concentração em magias."
+        },
+        {
+          name: "Fogo",
+          description: "Como sua ancestral que fez a salamandra Ejotó rir, você tem senso de humor afiado. Recebe +2 em Diplomacia e causa 1 ponto de dano adicional para cada dado de dano psíquico."
+        },
+        {
+          name: "Luz",
+          description: "Como sua ancestral que fez companhia ao unicórnio Darandaran, você trabalha bem em equipe. Recebe +2 em Cavalgar e aumenta o bônus de parceiro em 1. Se seu parceiro concede mais de um bônus, escolha um deles para aumentar (se fornece bônus em perícia, aumente em +1; se fornece bônus em rolagens de dano, aumente em +1; se fornece bônus na Defesa, aumente em +1; etc.)."
+        },
+        {
+          name: "Terra",
+          description: "Como sua ancestral que superou o bulette Ardile em força bruta, você tem um físico robusto. Recebe +2 em Atletismo e manobras de combate."
+        },
+        {
+          name: "Trevas",
+          description: "Como sua ancestral que emboscou o basilisco Ojumajele, você é esquivo. Recebe +2 em Furtividade e testes de resistência contra venenos."
+        }
+      ]
+    },
+    {
+      name: "Resistência Elemental",
+      description: "Conforme sua ascendência, você recebe redução 10 a um tipo de dano. Escolha uma: frio (qareen da água), eletricidade (do ar), fogo (do fogo), ácido (da terra), luz (da luz) ou trevas (qareen das trevas).",
+    },
+    {
+      name: "Tatuagem Mística",
+      description: "Você pode lançar uma magia de 1º círculo à sua escolha (atributo-chave Carisma). Caso aprenda novamente essa magia, seu custo diminui em –1 PM.",
+    }
+    ],
+    attributeModifiers: [
+    { attribute: "sab", modifier: 1 },
+    { description: "Escolha +1 em dois atributos" }
+    ]
+  },
+  
   // Duelo de Dragões
   { id: "Naidora",
     name: "Naidora",
