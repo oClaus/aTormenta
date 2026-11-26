@@ -64,10 +64,6 @@ export const accessories: SpecificAccessory[] = [
   },
   //#endregion
 
-
-
-
-
   //#region Bestiário de Arton
   { id: "Amuleto de Neruíte",
     name: "Amuleto de Neruíte",
@@ -77,10 +73,6 @@ export const accessories: SpecificAccessory[] = [
     origin: "Bestiário de Arton"
   },
   //#endregion
-
-
-
-
 
   //#region Guia de NPCs
   { id: "braceletes-das-escamas",
@@ -99,10 +91,6 @@ export const accessories: SpecificAccessory[] = [
   },
   //#endregion 
 
-
-
-
-  
   //#region Uma visita a Vectora
   { id: "Figurino Teatral",
     name: "Figurino Teatral",
@@ -113,10 +101,6 @@ export const accessories: SpecificAccessory[] = [
   },
   //#endregion
 
-
-
-
-  
   //#region A Lenda de Ghanor
   {
     id: "alaude-mistico",
@@ -336,8 +320,38 @@ export const accessories: SpecificAccessory[] = [
   },
   //#endregion
   
-  
-  
+  //#region Dragão Brasil
+  // Dragão Brasil - 196
+  { id: "Cetro da Permuta Funesta",
+    name: "Cetro da Permuta Funesta",
+    description: "Este cetro simples de marfim amarelado possui diversos entalhes representando rostos humanoides em expressões variadas de agonia. Sua extremidade é esculpida na forma de um punho esquelético semi-cerrado, formando um pequeno espaço dentro do qual é possível ver a representação de uma alma. Sua origem é creditada a um poderoso lich de Aslothia, que teria propositalmente criado um objeto amaldiçoado como um “presente” para um rival na corte de Ferren Asloth. Após cumprir seu propósito sinistro, o Cetro da Permuta Funesta desapareceu, reaparecendo de tempos em tempos nas mãos de aventureiros azarados o suficiente para tê-lo encontrado.\nPoderes. Esta maça formidável profana tumular conta como uma costela de lich. Além dos benefícios deste esotérico, você pode lançar a magiaRoubar a Alma (CD Int ou Car, à sua escolha), sem gastar PM, e usando o próprio Cetro como objeto para armazenar a alma. Ao contrário de outros objetos, o Cetro pode armazenar qualquer quantidade de almas.\nMaldi ção. Quando é encontrado, e no início de cada aventura, o Cetro absorve parte de sua energia vital: você perde 1 ponto de Constituição permanente (esta perda é revertida caso a maldição seja removida). Além disso, embora não precise gastar PM para lançar Roubar a Alma, quando usar o Cetro para lançar esta magia, você precisa pagar um preço maior. Quando usar este poder, um de seus aliados em alcance curto (determinado aleatoriamente) é morto. O poder do Cetro ignora criaturas imortais ou devotos de Thyatis (também não funciona dentro das fronteiras de Triunphus), escolhendo criaturas que possam morrer e permanecer desta forma. Para remover a maldição, você precisa usar lançar Roubar a Alma através do Cetro para aprisionar a alma de um lich de Aslothia. Se fizer isso, a maldição é removida, libertando todas as almas aprisionadas no Cetro e trazendo de volta à vida quaisquer criaturas mortas para alimentar seu poder.",
+    price: "T$ 95.000",
+    size: "Maior",
+    origin: "Dragão Brasil - 196"
+  },
+  { id: "Coroa de Milghazan",
+    name: "Coroa de Milghazan",
+    description: "Como muitos itens amaldiçoados, a história desta coroa é envolta em mistério e desinformação. Sua origem mais aceita diz que foi encomendada por um nobre em Ahlen, que queria uma forma mágica de controlar aqueles ao seu redor. Por motivos perdidos na teia de intrigas que recobre esta nação, o inventor ao qual a coroa foi comissionada foi aprisionado pelo nobre após entregar a encomenda. Condenado à morte, em seu último suspiro amaldiçoou sua criação, fazendo com que sua função fosse corrompida.\nA Coroa de Milghazan é elegante e feita de um metal dourado, com cinco pontas, cada uma adornada com um cristal de cor e formato diferente. Os cristais possuem um brilho particular, que se torna mais intenso quando a coroa está energizada.\nPoderes. Enquanto usa a Coroa de Milghazan, você pode lançar as magias Enfeitiçar, Mente Divina (apenas em você mesmo) e Sussurros Insanos (CD Int ou Car, à sua escolha). Caso já conheça essas magias, em vez disso o custo para lançá-las diminui em –1 PM.\nMaldição. O poder da Coroa de Milghazan é alimentado pela sanidade alheia. Para acessar seus poderes, você precisa gastar uma ação de movimento para fazer com que um aliado (especificamente, outro personagem jogador) em alcance curto fique confuso. Caso essa condição seja removida ou se encerre, os poderes da coroa (incluindo quaisquer magias ativas) são desativados, e ela deve ser energizada novamente para que possa ser utilizada. Para remover a maldição, você precisa usar a coroa em si mesmo enquanto enfrenta um grande perigo (uma ameaça de ND maior que seu nível). Você deve permanecer confuso durante todo o encontro, ou a maldição não será desfeita.",
+    price: "T$ 21.000",
+    size: "Médio",
+    origin: "Dragão Brasil - 196"
+  },
+  {
+    id: "medalhao-dos-povos",
+    name: "Medalhão dos Povos",
+    description: "Criado por Ferdinz von Kreuer, um oficial dos Cavaleiros do Leopardo Sangrento, o Medalhão dos Povos participou de inúmeras vitórias puristas, e acompanhou seu criador em diversos crimes de guerra perpetrados contra outros povos. Formado por uma pedra azul translúcida enrolada em uma corrente fina e cinza, este amuleto se tornou quase tão famigerado quanto seu portador. A história do Medalhão, entretanto, tomou outro rumo quando von Kreuer atacou um conclave de druidas centauros; pegos de surpresa e em menor número, os druidas foram derrotados, mas não antes que sua líder amaldiçoasse von Kreuer e seu medalhão, condenando-o a sofrer de uma fraqueza diferente a cada manhã e tornando-o um pária entre os demais puristas, que julgavam-se arautos da perfeição. Incapaz de superar o castigo que lhe foi imposto, von Kreuer se exilou, desaparecendo em um destino incerto. Seu Medalhão dos Povos, entretanto, ressurgiu tempos depois, carregando consigo sua maldição.\n\nPoderes. Você recebe +2 em testes de ataque e rolagens de dano (cumulativo com outros itens) e pode lançar a magia Campo de Força. Caso já conheça a magia, em vez disso o custo para lançá-la diminui em –1 PM.\n\nMaldição. A cada amanhecer, você acorda com uma fraqueza diferente, determinada aleatoriamente. Enquanto estiver sob efeito dessa alteração, você sofre uma penalidade de –2 em um atributo específico (essa penalidade afeta pontos de vida e pontos de mana). O mestre rola 1d6 para determinar o efeito.\n\n1d6 | Efeito\n1 | Força\n2 | Destreza\n3 | Constituição\n4 | Inteligência\n5 | Sabedoria\n6 | Carisma\n\nPara remover a maldição do Medalhão dos Povos, você precisa cumprir uma missão para seis indivíduos não-humanos diferentes (como resgatar alguém, impedir um grande perigo etc.). Cada missão deve ser realizada enquanto você estiver sob efeito de uma fraqueza diferente. O mestre tem a palavra final sobre o que conta como uma missão.",
+    price: "T$ 40.000",
+    size: "Maior",
+    origin: "Dragão Brasil - 196"
+  },
+  {
+    id: "o-incrivel-mapa-de-alastar",
+    name: "O Incrível Mapa de Alastar",
+    description: "Localizada em Bielefeld e marcando a fronteira desse reino com Aslothia, a Floresta de Jeyfar é conhecida por ser uma mata escura e labiríntica que já fez diversos aventureiros e viajantes se perderem. Mesmo rastreadores experientes e caçadores hábeis já passaram por problemas nesse local, o que ajuda a alimentar a lenda de que a floresta é muito maior por dentro do que por fora, e poderes estranhos afetam quem adentra sua densa mata.\n\nHá algumas décadas, um mago de nome Alastar explorou a Floresta de Jeyfar, disposto a mapeá-la em detalhes. Combinando seus conhecimentos de cartografia com suas habilidades místicas, Alastar criou um mapa mágico que, além de descrever Jeyfar em detalhes, é capaz de exibir informações sobre qualquer lugar onde esteja sendo usado. Entretanto, sem que Alastar soubesse, os poderes mágicos que tornam a Floresta de Jeyfar tão traiçoeira impregnaram o próprio mapa, fazendo com que ele tivesse uma predisposição a trair seu usuário.\n\nPoderes. Você pode lançar a magia Mapear, tendo como alvo o próprio Incrível Mapa de Alastar (caso já conheça a magia, o custo para lançá-la diminui em –1 PM). Além disso, enquanto a magia estiver em efeito, você recebe +5 em testes de Percepção e Sobrevivência feitos na área mapeada.\n\nMaldição. Apesar de ser capaz de revelar detalhes de qualquer lugar, o Incrível Mapa possui a inclinação para iludir e enganar seu usuário. Sempre que você usa o mapa, o mestre rola 1d8 em segredo. Se o resultado desta rolagem for 1, o mapa revela informações falsas, que podem levá-lo a cair em armadilhas ou ser surpreendido por outras ameaças. Em vez dos bônus em perícias fornecidos normalmente, o mapa impõe uma penalidade de –10 em testes de Percepção, Reflexos e Sobrevivências feitos na área mapeada, pela duração da magia (o mestre aplica estas penalidades em segredo). Além disso, a critério do mestre, o mapa pode indicar outras informações falsas que atrapalhem a sua navegação. Esta maldição só pode ser removida na própria Floresta de Jeyfar. Você precisa levar o mapa até lá, e usá-lo com sucesso para explorar a região. Isso é um teste estendido de Sobrevivência (CD 20 + metade do seu nível), onde são necessários 7 sucessos antes de três falhas). Cada teste representa um dia de exploração e, em caso de falha total, seu total de PM é reduzido em –1 PM por nível até que a maldição do mapa seja removida.",
+    price: "T$ 15.000",
+    size: "Médio",
+    origin: "Dragão Brasil - 196"
+  },
   // Dragão Brasil - 200
   { id: "Amuleto do Servo",
     name: "Amuleto do Servo",
@@ -426,6 +440,9 @@ export const accessories: SpecificAccessory[] = [
     size: "Menor",
     origin: "Dragão Brasil - 228"
   },
+  //#region
+  
+  
   
 
   // Duelo de Dragões

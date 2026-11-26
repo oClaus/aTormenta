@@ -4188,8 +4188,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "31",
+  { id: "Sombras na rocha",
   name: "Sombras na rocha",
   theme: "Fantasia Sombria",
   image: "/aventuras/sombras-na-rocha.png",
@@ -4275,8 +4274,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "32",
+  { id: "Música e Mortos",
   name: "Música e Mortos",
   theme: "Horror",
   image: "/aventuras/musica-e-mortos.png",
@@ -4362,8 +4360,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "33",
+  { id: "É comum",
   name: "É comum",
   theme: "Mistério Sobrenatural",
   image: "/aventuras/e-comum.jpeg",
@@ -4465,8 +4462,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "34",
+  { id: "A Outra Ilha",
   name: "A Outra Ilha",
   theme: "Fantasia",
   image: "/aventuras/a-outra-ilha.png",
@@ -4554,8 +4550,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "35",
+  { id: "A Segunda Cela",
   name: "A Segunda Cela",
   theme: "Aventura Espacial",
   image: "/aventuras/a-segunda-cela.png",
@@ -4631,8 +4626,310 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "36",
+  { id: "Fuga para Aslothia",
+  name: "Fuga para Aslothia",
+  theme: "Escolta, Vampiros e Fanatismo",
+  image: "/aventuras/fuga-para-aslothia.png",
+  summary: "Contratados para escoltar uma nobre até a fronteira do reino assombrado de Aslothia, os heróis descobrem que ela é uma vampira fugindo com sua amada. Durante a jornada, precisam protegê-las de assaltantes, caçadores de mortos-vivos e de um zelote fundamentalista de Azgher.",
+  sections: [
+    {
+      type: "text",
+      content: "A coluna Breves Jornadas oferece aventuras simples, rápidas e completas para Tormenta20, com tudo que será necessário para jogar. Fichas especiais serão fornecidas aqui, enquanto àquelas presentes no livro básico terão indicadas as páginas em que se encontram."
+    },
+    {
+      type: "text",
+      content: "O objetivo é fornecer ao mestre um ponto de partida eficiente para que todos se divirtam por uma tarde, ou comecem uma nova campanha. Se precisar de fichas de personagens prontas, é possível encontrá-las na coluna Heróis de Bolso, no Blog da Jambô."
+    },
+    {
+      type: "text",
+      content: "Esta aventura chama-se Fuga para Aslothia."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Introdução"
+    },
+    {
+      type: "text",
+      content: "Tenebra pode ser considerada por alguns uma deusa com intuitos sombrios. Pessoas atormentadas pelo surgimento de mortos-vivos costumam vê-la como uma vilã. Entretanto, para os seres da noite, é sua mãe e protetora. E mesmo os desencarnados possuem coração."
+    },
+    {
+      type: "text",
+      content: "Infelizmente, existem aqueles que desejam destruir o que não entendem. Caçadores de recompensa e zelotes em cruzadas pessoais pouco se importam com os motivos, só desejam a captura ou destruição de seus alvos. Mesmo se causarem o sofrimento de inocentes."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Resumo da Aventura"
+    },
+    {
+      type: "text",
+      content: "Fuga para Aslothia é uma breve jornada, uma aventura curta pensada para uma sessão única, mas que pode ser inserida em uma campanha maior. É ideal para um grupo de quatro personagens de 4º nível em Tormenta20."
+    },
+    {
+      type: "text",
+      content: "Os aventureiros são contratados para escoltar uma mulher até a fronteira do assombrado reino de Aslothia. Quando partem, na primeira noite o comboio é atacado por criminosos, e enquanto os personagens lidam com eles, a contratante salta sobre um dragão selvagem, sugando o sangue dele e se revelando uma vampira. Além disso, no interior da carruagem, há uma outra mulher. Elas estão apaixonadas e querem ir para um lugar onde possam viver em paz."
+    },
+    {
+      type: "text",
+      content: "Conforme a viagem segue, o grupo é atacado durante o dia por caçadores de vampiros. Quando se aproximam da fronteira de Aslothia, são atacados por um devoto fundamentalista de Azgher, que deseja destruir a vampira a qualquer custo."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 1 – Contrato da noite"
+    },
+    {
+      type: "text",
+      content: "Após terem se tornado heróis de algum renome, vocês recebem um convite para jantar com uma nobre na mansão de um mercador sambur. Na porta, vocês são recebidos por um mordomo, vestindo trajes formais. Ele explica que seu senhor, e a dama que deseja contratá-los, aguardam no salão de jantar. A casa é ampla, cheia de obras de arte. Porém, ao se aproximar da sala, eles ouvem uma risada trovejante seguida por uma voz feminina."
+    },
+    {
+      type: "text",
+      content: "“E foi só então que percebi que não era um trog!”"
+    },
+    {
+      type: "text",
+      content: "No salão de jantar estão o mercador, um anão de barbas e cabelo trançados, e uma mulher de vestes negras elegantes e porte altivo. Ao verem os aventureiros entrando, ambos se levantam para cumprimentá-los. O anão diz:"
+    },
+    {
+      type: "text",
+      content: "“Boa noite, meus caros! Vocês estão ficando bastante famosos! Sou Hardulf Thodorin, e esta dama ao meu lado é Lady Amandine, uma amiga muito querida. Infelizmente, ela precisa ir a um lugar terrível, e precisa de escolta. Onde? Pois, ela precisa ir até Aslothia, reaver uma propriedade de família!”"
+    },
+    {
+      type: "text",
+      content: "Caso já conheça os personagens, o anão dispensa sua própria apresentação. Hardulf é um engabelador hábil, e na verdade não teria chegado à posição em que está sem o ser. Ainda assim, está falando a verdade, mesmo que esteja escondendo um pequeno detalhe: Amandine na verdade é uma vampira (para mais detalhes, veja a Cena 3), e não será a única pessoa em sua carruagem. Caso apontem que há algo de estranho, os personagens podem fazer um teste de Intuição oposto à Enganação do anão (+10), porém ele desconversa se questionado."
+    },
+    {
+      type: "text",
+      content: "“Prazer em conhecê-los!” ela então faz uma mesura. “Infelizmente, como devota de Tenebra, não posso ser tocada pelo sol. Imaginem, ser punidos pela Deusa da Noite, enquanto vou para Aslothia. É o tipo de perigo que não desejo correr. Além do mais, só preciso que me levem até a fronteira. Farei o pagamento então e poderão retornar, sem preocupações logo em seguida. O que me dizem?”"
+    },
+    {
+      type: "text",
+      content: "A proposta na mesa é de T$ 2.000, para o grupo. Além disso, Hardulf oferece também uma arma com duas melhorias ou uma armadura com uma melhoria, porém sem materiais especiais. Opcionalmente, caso estejam buscando algo, o anão possui pistas para o objetivo."
+    },
+    {
+      type: "text",
+      content: "Caso aceitem a missão, todos jantam e são convidados a passar uma noite na mansão (considere um descanso luxuoso). Durante a refeição, é possível notar, com um teste de Investigação ou Percepção (CD 20) que Lady Amandine não os acompanha, apesar do prato à sua frente."
+    },
+    {
+      type: "text",
+      content: "No entardecer do dia seguinte, partem todos em direção ao reino dos mortos."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 2 – Quebrando a máscara"
+    },
+    {
+      type: "text",
+      content: "No momento da partida, o grupo vê a carruagem onde Lady Amandine estará. Todos os vidros são pintados de preto, para não permitir que a luz entre. No banco do cocheiro está um osteon, chamado Thassul. Ele não gosta de conversa, e apenas resmunga quando tentam interagir com ele."
+    },
+    {
+      type: "text",
+      content: "Quando partem, Lady Amandine está vestindo mantos pesados, se protegendo de qualquer forma de contato com as últimas luzes do dia. No momento em que entra na carruagem, um personagem que deseje observar o interior, pode fazer um teste de Investigação ou Percepção (CD 30). Caso passe, nota que há mais uma pessoa no interior do veículo, mas antes que possam questionar, a porta se fecha e Thassul começa a guiar os cavalos."
+    },
+    {
+      type: "text",
+      content: "O caminho é uma rota comercial que atravessa em um trecho a Floresta das Escamas Verdes. Apesar disso, deveria ser uma via segura o suficiente. Na primeira noite, acampam em um espaço dedicado a viajantes, com uma pequena estátua de Valkaria marcando a localização. Felizmente, os dias seguem tranquilos, mesmo Amandine quase não saindo de sua carruagem, exceto para pegar comida."
+    },
+    {
+      type: "text",
+      content: "Contudo, toda essa paz é logo interrompida. Em uma das noites da viagem, Thassul para repentinamente, e quando todos olham para frente, veem uma série de tochas acesas. Uma turba de criminosos resolveu fazer desse lugar seu ponto de ataque, assaltando caravanas e carruagens elegantes. Um dos homens, se coloca a frente:"
+    },
+    {
+      type: "text",
+      content: "“Muito boa noite! Meus associados e eu estamos aqui fazendo um serviço de segurança particular aos viajantes dessa bela estrada, mantendo tipos perigosos fora dela. Claro, um serviço tão bem feito como o nosso requer um pagamento. Então, que tal se afastarem dessa belezura de carruagem para a gente decidir o preço de nosso trabalho?”"
+    },
+    {
+      type: "text",
+      content: "Os homens portam armas, porém, o que chama mais a atenção é a besta que trazem acorrentada. De escamas verdes, e um rugido terrível, a fera que presa é um dragão! Aqueles treinados em Misticismo sabem ser impossível que aqueles criminosos tenham um dragão verdadeiro, e este parece mais uma fera selvagem do que um dos poderosos filhos de Kallyadranoch (para mais informações, veja o Dragão Feral em Ameaças de Arton)."
+    },
+    {
+      type: "text",
+      content: "Lady Amandine sai para ver o que está acontecendo, e se vê surpreendida pela situação. Ela então respira fundo, se volta aos aventureiros e diz:"
+    },
+    {
+      type: "text",
+      content: "“Protejam a carruagem dos bandidos. Eu cuido do dragão.”"
+    },
+    {
+      type: "text",
+      content: "Nesse momento, ela remove os mantos, e se lança em um salto inacreditável por cima dos criminosos. Suas mãos transformam-se em garras afiadas, e presas ficam claramente visíveis em sua boca. Infelizmente, não há tempo de pensar nisso agora, pois a turba avança sobre vocês!"
+    },
+    {
+      type: "text",
+      content: "Criaturas. Turba de Assaltantes (NPCs & Criaturas)."
+    },
+    {
+      type: "text",
+      content: "Quando o combate acaba, é possível ver Amandine sugando o sangue do dragão bestial, em um momento aterrorizante. Porém, antes que os personagens possam reagir, uma outra mulher abre a porta da carruagem, aparentemente desesperada."
+    },
+    {
+      type: "text",
+      content: "“Por favor, não a machuquem! Ela não fará mal nenhum a vocês! Amandine, meu amor, se acalme!”"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 3 – Amor e monstros"
+    },
+    {
+      type: "text",
+      content: "Thassul faz um muxoxo devido ao incômodo, e começa a armar o acampamento, percebendo que dificilmente seguirão viagem hoje. Lady Amandine se aproxima lentamente. Suas mãos agora estão normais. Seu semblante também voltou a ser como antes, apenas menos pálido. Ela tenta se aproximar da outra mulher."
+    },
+    {
+      type: "text",
+      content: "Se tentarem impedi-la, ou mantiverem postura de combate, Amandine diz compreender a preocupação."
+    },
+    {
+      type: "text",
+      content: "“Peço perdão pelo ardil que usei. Sei que deveria tê-los informado desde o começo, não apenas da minha… condição, como da presença de Charlote. Infelizmente, muitas pessoas não entenderiam, e celeridade era um fator de suma importância no nosso caso.”"
+    },
+    {
+      type: "text",
+      content: "Lady Amandine, agora claramente revelada como uma vampira, e Charlote, a mulher escondida na carruagem, são um casal. Elas se apaixonaram quando a nobre ainda era viva. Infelizmente, por sua saúde extremamente frágil, Amandine a qualquer momento poderia morrer. Desesperados, os pais dela concordaram com o inaceitável: um vampiro a transformou em uma criatura de Tenebra."
+    },
+    {
+      type: "text",
+      content: "Amandine diz que não é a pior forma de viver, exceto por ser constantemente caçada por aqueles que a consideram um monstro."
+    },
+    {
+      type: "text",
+      content: "“Eu compreendo, sou perigosa. Mas vocês precisam entender, meu amor por Charlote me permite controlar esse lado. Nós só desejamos viver juntas, e o único local onde isso será possível, infelizmente, é Aslothia.”"
+    },
+    {
+      type: "text",
+      content: "Se questionada, Charlote confirma."
+    },
+    {
+      type: "text",
+      content: "“Nós já nos amávamos antes, e isso não mudou. Ainda é a mulher por quem me apaixonei. Porém, sou de uma família de mercadores, e eles desejavam me casar, por conveniência, com o herdeiro de uma outra família. Logo, nós fugimos.”"
+    },
+    {
+      type: "text",
+      content: "Elas explicam que a família de Charlote contratou um grupo de caçadores especializados em mortos-vivos, desejam matar Amandine e devolver Charlote para o casamento arranjado. A sinceridade de ambas deve ser o suficiente para convencer os heróis a seguirem a jornada. Entretanto, se o grupo resistir, a nobre aumenta a recompensa para T$ 4.000 e oferece algo raro: uma bainha mágica!"
+    },
+    {
+      type: "text",
+      content: "Com tudo agora esclarecido, Amandine e Charlote agradecem de coração. A partir desse ponto, ambas serão mais ativas, conversando com os personagens e não se escondendo mais. Antes do amanhecer, a viagem segue."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 4 – Cilada"
+    },
+    {
+      type: "text",
+      content: "O resto da viagem segue com uma tranquilidade tensa. As noites têm conversas, e os dias são lentos e tensos. Quando a floresta está chegando ao final, subitamente, uma explosão de chamas irrompe na frente do caminho, e outra atrás, travando a passagem. O sol está em seu ápice, mas Charlote abre a porta perguntando o que aconteceu. Da mata, surgem três pessoas. Um humano, um goblin e uma elfa, todos vestindo roupas escuras. O humano, portando um chicote e uma lâmina curva, se posiciona a frente."
+    },
+    {
+      type: "text",
+      content: "“Afastem-se da carruagem. Viemos buscar a jovem e eliminar a vampira. Caso se oponham, também damos conta de vocês.”"
+    },
+    {
+      type: "text",
+      content: "Criaturas. Carter Timont, Lellian Timont e Grakko Timont (NPCs & Criaturas)."
+    },
+    {
+      type: "text",
+      content: "Os inimigos, contratados pela família de Charlote, são impiedosos, prontos a matar qualquer um em seu caminho. Caso um dos personagens seja levado a 0 PV ou menos, Amandine sai da carruagem, mesmo sofrendo dano da luz solar, e elimina um dos atacantes (o que estiver mais perto da carruagem)."
+    },
+    {
+      type: "text",
+      content: "Se Carter e Grakko forem derrotados, Lellian foge, podendo atacar os aventureiros no futuro. Amandine, se tiver participado do combate, estará muito ferida, desmaiada e tentando se recuperar."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 5 – Intolerância"
+    },
+    {
+      type: "text",
+      content: "A fronteira de Aslothia se apresenta no horizonte. Apenas mais alguns quilômetros e estarão finalmente em segurança. Mas aqueles que não aceitam o que é diferente sempre se levantam para impedir a paz alheia."
+    },
+    {
+      type: "text",
+      content: "Com o sol a pino, no início da manhã, um homem vestindo véus brancos se posiciona à frente no caminho."
+    },
+    {
+      type: "text",
+      content: "“Servos do mal! Sua derrota será o tributo ao Deus-Sol nessa manhã abençoada! Arrependam-se de seus pecados agora!”"
+    },
+    {
+      type: "text",
+      content: "Sem falar mais nada, ele se cobre de uma aura de chamas, e avança primeiro contra Thassul, que será destruído se for atingido por um ataque do recém-chegado."
+    },
+    {
+      type: "text",
+      content: "Criaturas. Subhi de Azgher (NPCs & Criaturas)."
+    },
+    {
+      type: "text",
+      content: "Subhi é um fundamentalista, em uma cruzada pessoal para matar qualquer morto-vivo em seu caminho. O zelote, quando ouviu a história de Amandine e Charlote, passou a se concentrar no objetivo de destruir aquelas que vê como transgressoras, uma viva e a outra morta."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Epílogo – Felizes afinal"
+    },
+    {
+      type: "text",
+      content: "Depois de derrotarem Subhi, falta pouco para chegar a Aslothia. Caso Thassul tenha sido destruído, será necessário que alguém ao menos guie a carruagem no resto do caminho. Atravessar a fronteira deixa todos arrepiados, porém, Amandine finalmente pode sair."
+    },
+    {
+      type: "text",
+      content: "A propriedade onde a nobre vai se estabelecer é próxima à fronteira, e bem simples. O casal, entretanto, diz que não precisa de muito para ser feliz, e estando juntas, darão um jeito. Porém, talvez outros tiranos da região não deixem que as coisas fiquem tranquilas por muito tempo. Aventureiros corajosos podem contar com o apoio de Lady Amandine daqui para frente."
+    },
+    {
+      type: "text",
+      content: "Os personagens avançam para o 5º nível!"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "NPCs & Criaturas"
+    },
+    {
+      type: "text",
+      content: "TURBA DE ASSALTANTES (ND 4)\nHumanoide (humano) Grande\nIniciativa +5, Percepção +4\nDefesa 23, Fort +13, Ref +11, Von +6\nPontos de Vida 35\nDeslocamento 9m (6q)\nCorpo a Corpo [Bando] Lança x2 +17 (1d6+5).\nÀ Distância [Bando] Azagaia +17 (1d6+5).\nArremesso de Emboscada (Livre) A turba de assaltantes saca azagaias e faz um ataque à distância com ela. Essa habilidade só pode ser usada uma vez no primeiro turno do combate.\nFor 3, Des 1, Con 1, Int 0, Sab 0, Car –1\nPerícias Furtividade +7, Sobrevivência +4.\nEquipamento Azagaia x20, escudo leve x8, lança x10. Tesouro Padrão."
+    },
+    {
+      type: "text",
+      content: "CARTER TIMONT (ND 2)\nLíder do bando de caçadores Timont, Carter é um especialista em agarrar e imobilizar os inimigos. Crescido em uma família de caçadores, infelizmente ele não se importa se mata seres bondosos ou malignos, justamente por ter sido doutrinado dessa forma.\nHumanoide (humano) Médio\nIniciativa +7, Percepção +6\nDefesa 19, Fort +4, Ref +11, Von +7, evasão aprimorada\nPontos de Vida 70\nDeslocamento 9m (6q)\nCorpo a Corpo Chicote +12 (1d3+7) e cimitarra +12 (1d6+7, 18).\nChicotada Astuta (Livre) Se Carter acerta um ataque de chicote, pode fazer a manobra desarmar ou derrubar (teste +21).\nMestre de Manobras Carter recebe +5 em testes de manobras (já contabilizado).\nÓdio pelos Mortos Sempre que faz um teste contra ou relacionado a mortos-vivos (incluindo testes de ataque), Carter rola dois dados e usa o melhor resultado.\nFor 1, Des 4, Con 1, Int 1, Sab 3, Car –1\nPerícias Atletismo +4, Acrobacia +7, Investigação +4, Sobrevivência +6.\nEquipamento Água benta x4, chicote equilibrado, cimitarra, couro batido reforçado, tocha x3. Tesouro Padrão."
+    },
+    {
+      type: "text",
+      content: "LEILLIAN TIMONT (ND 2)\nElfa sobrevivente, escapou de seus grilhões no Império quando um misterioso poder se manifestou em seu sangue. Hoje, aceita serviços daqueles que pagarem melhor, usando seus feitiços altamente destrutivos para eliminar os alvos, independente de quem estiver no caminho.\nHumanoide (elfa) Médio\nIniciativa +5, Percepção +6, visão na penumbra\nDefesa 12, Fort +2, Ref +9, Von +11\nPontos de Vida 40\nDeslocamento 12m (8q)\nPontos de Mana 28\nCorpo a Corpo bordão +7 (1d6).\nMagias Leillian lança magias como uma feiticeira de 4º nível (CD 21).\n- Explosão de Chamas (Padrão, 3 PM) Criaturas em um cone de 6m sofrem 3d6 pontos de dano de fogo e ficam em chamas (Reflexos reduz à metade e evita a condição).\n- Imagem Espelhada (Padrão, 1 PM) Três cópias ilusórias de Leillian surgem, concedendo a ela +6 na Defesa até o fim da cena. Cada vez que um ataque errar a elfa, uma das cópias desaparece e o bônus na Defesa diminui em 2.\n- Luz (Padrão, 1 PM) Uma criatura em alcance curto fica ofuscada.\n- Toque Chocante (Padrão, 3 PM) Uma criatura adjacente sofre 4d8+4 pontos de dano de eletricidade (Fortitude reduz à metade).\nFor 0, Des 2, Con –1, Int 2, Sab 1, Car 4\nPerícias Enganação +7, Misticismo +5.\nEquipamento Cajado arcano, essência de mana x3. Tesouro Metade."
+    },
+    {
+      type: "text",
+      content: "GRAKKO TIMONT (ND 2)\nGoblin criado nas ruas de Valkaria, Grakko sempre gostou de explosões e granadas. Quando foi preso, Carter o resgatou, sabendo que suas habilidades seriam úteis em combates futuros. Grakko não se importa com mortos-vivos, mas é extremamente leal a Carter, no nível de arriscar a própria vida.\nHumanoide (goblin) Pequeno\nIniciativa +7, Percepção +4, visão no escuro\nDefesa 18, Fort +13, Ref +7, Von +2, redução de ácido e fogo 5\nPontos de Vida 49\nDeslocamento 9m (6q), escalada 9m (6q)\nGranadas à Granel (Padrão) Grakko arremessa uma granada em alcance médio. Grakko pensa pouco antes de arremessar uma de suas granadas, exceto quando ordenado por Carter. Se não tiver recebido uma ordem, quando acertar uma granada em um alvo, role 1d4 e use um dos efeitos abaixo. A CD para resistir as granadas de Grakko é 18.\n1) Granada de Chamas O alvo e criaturas adjacentes sofrem 3d6+8 pontos de dano de fogo e ficam em chamas (Ref reduz o dano à metade e evita a condição).\n2) Bomba Grudenta Cria um cubo de terreno difícil de 6m de lado em alcance curto. Criaturas na área, ou que comecem seu turno em seu interior, ficam enredadas e imóveis (Ref evita). Uma criatura pode se libertar com uma ação padrão e um teste de Acrobacia ou Atletismo (CD 18)..\n3) Granada Corrosiva O alvo e criaturas adjacentes sofrem 2d4+10 pontos de dano de ácido, mais 2d4 na rodada seguinte (Ref reduz o dano à metade e evita o dano secundário).\n4) Bomba de Cura O alvo cura 4d8+4 pontos de vida.\nFor 0, Des 4, Con 2, Int 3, Sab –1, Car 0\nPerícias Ofício (alquimista) +6.\nEquipamento Bandoleira de poções, couro batido, instrumentos de Ofício (alquimista). Tesouro Metade mais insumos (valem T$ 50 para fabricar itens alquímicos)."
+    },
+    {
+      type: "text",
+      content: "SUBHI DE AZGHER (ND 5)\nEspírito (Aggelus) Médio\nIniciativa +7, Percepção +5\nDefesa 24, Fort +5, Ref +11, Von +17, redução de fogo 10\nPontos de Vida 200\nDeslocamento 9m (6q)\nCorpo a Corpo Alfange +17 (1d10+13, 18, mais 1d6 fogo contra mortos-vivos).\nÀ Distância Azagaia +16 (1d6+8, mais 1d6 fogo contra mortos-vivos).\nAura de Calor (Movimento) Subhi emana uma aura flamejante até o fim da cena. Criaturas que comecem seu turno em alcance curto de Subhi sofrem 4d8 pontos de dano de fogo.\nFulgor Solar (Reação) Quando é alvo de um ataque corpo a corpo, Subhi produz um clarão que deixa o atacante ofuscado por uma rodada.\nFor 4, Des 3, Con 2, Int –1, Sab 1, Car 2\nEquipamento Água benta x6, alfange certeiro, azagaia x5, couraça banhada a ouro. Tesouro Metade."
+    }
+  ]
+  },
+  { id: "Língua Morta",
   name: "Língua Morta",
   theme: "Fantasia",
   image: "/aventuras/lingua-morta.png",
@@ -4714,8 +5011,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "37",
+  { id: "Cadê Nosso Dinheiro?",
   name: "Cadê Nosso Dinheiro?",
   theme: "Fantasia",
   image: "/aventuras/cade-nosso-dinheiro.png",
@@ -4797,8 +5093,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "38",
+  { id: "Sereníssima",
   name: "Sereníssima",
   theme: "Terror Investigativo",
   image: "/aventuras/serenissima.jpeg",
@@ -4922,8 +5217,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "39",
+  { id: "Fumódromo",
   name: "Fumódromo",
   theme: "Terror Urbano",
   image: "/aventuras/fumodromo.png",
@@ -5003,8 +5297,7 @@ export const adventures: Adventure[] = [
     }
   ]
   },
-  {
-  id: "40",
+  { id: "Fugere Urbem",
   name: "Fugere Urbem",
   theme: "Terror Cósmico",
   image: "/aventuras/fugere-urbem.png",
@@ -5079,6 +5372,293 @@ export const adventures: Adventure[] = [
     {
       type: "text",
       content: "“Vocês chegaram onde o raio fatídico caiu e o primeiro deus surgiu... O fogo primordial é a alma da cidade-deus. Toquem a árvore, escapem e vivam o resto de suas longas curtas vidas em liberdade, até a cidade despertar e consumir o mundo. Ou destruam o tronco, condenem a todos aqui dentro, mas salvem a Terra! Qual a escolha de vocês?”"
+    }
+  ]
+  },
+  { id: "Crime e Tormento",
+  name: "Crime e Tormento",
+  theme: "Investigação Urbana e Culto à Tormenta",
+  image: "/aventuras/crime-e-tormento.png",
+  summary: "Um assassinato marcado pelo símbolo de Aharadak choca uma pacata cidade, mas a guarda tenta encobrir o caso. Recrutados por uma guarda desconfiada, os heróis investigam pistas pela cidade e descem aos esgotos para deter um culto antes que invoquem um lefeu.",
+  sections: [
+    {
+      type: "text",
+      content: "A Tormenta. A Anticriação manifestada em forma de pesadelo em Arton. Corrompendo, mutando, retorcendo. Mesmo os heróis mais poderosos do mundo evitam entrar nas áreas tomadas pela tempestade de sangue. A chance de ter a mente deturpada e tornar-se servo dos lefeu nunca está fora de cogitação."
+    },
+    {
+      type: "text",
+      content: "Em cidades pequenas, mistérios são um veneno sutil. É a comunidade, assim como as pessoas ao seu redor, que garante sua segurança. Porém, mentiras e traições corroem este escudo, e permitem a introdução de algo pior. Uma corrupção rastejante, pronta para destruir tudo construído em conjunto."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "RESUMO DA AVENTURA"
+    },
+    {
+      type: "text",
+      content: "Crime e Tormento é uma breve jornada, uma aventura curta pensada para uma sessão única, mas que pode ser inserida em uma campanha maior. É ideal para um grupo de quatro personagens de 1º nível em Tormenta20."
+    },
+    {
+      type: "text",
+      content: "Um estranho assassinato choca uma cidade, mas a guarda local tenta encobri-lo. Um dos membros dessa organização recruta os aventureiros para investigar o que está sendo escondido. Eles devem então fazer perguntas pela cidade, e para duas pessoas ligadas ao caso: a irmã da vítima e um sargento minotauro que se desentendeu com o morto pouco antes do ocorrido."
+    },
+    {
+      type: "text",
+      content: "Quando conseguirem pistas suficientes, devem partir para o esgoto, enfrentando perigos no subterrâneo da cidade. Finalmente, encontrarão o enclave onde os cultistas estão se reunindo. A missão final é combatê-los, enquanto o líder dos vilões dá os toques finais na invocação de algo terrível: um lefeu!"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 1: NADA PARA VER AQUI"
+    },
+    {
+      type: "text",
+      content: "Vocês estão em uma das diversas cidades no interior do Reinado. Pequenas muradas delimitam o perímetro urbano, e o lugar serve como passagem para comunidades mais relevantes. Apesar de maior que muitas vilas perdidas por entre pontos de um mapa, aqui o clima ainda é bastante pacato."
+    },
+    {
+      type: "text",
+      content: "A população vende produtos das fazendas ou de manufatura própria. Mercadores em viagem alimentam lojas com diferentes itens. As ruas relativamente pavimentadas possuem canalização para que a água da chuva e os dejetos sigam para o esgoto."
+    },
+    {
+      type: "text",
+      content: "Sejam moradores ou viajantes, os personagens dormem uma noite na cidade. A taverna mais proeminente tem preços justos e quartos em seu andar superior para os beberrões mais trôpegos dormirem. Uma barda elfa toca músicas alegres, a comida é boa e as conversas são divertidas. Seja nos alojamentos da propriedade, ou em outro local, em algum momento todos caem no sono até a manhã seguinte."
+    },
+    {
+      type: "text",
+      content: "O início do dia, entretanto, é atribulado. Barulho de botas e pessoas gritando pontuam a manhã. Há uma multidão na lateral do prédio da taverna. Guardas fazem um cordão de contenção, enquanto um deles esfrega a parede. Há algo pintado ali, em vermelho vivo. Personagens treinados em Cura ou que passarem em um teste de Cura (CD 15), sabem que se trata de sangue, e aqueles que passarem em um teste de Misticismo ou Religião (CD 20), ou já possuírem experiência no assunto, descobrem que a pintura é uma forma rústica do símbolo sagrado de Aharadak, o Deus da Tormenta."
+    },
+    {
+      type: "text",
+      content: "A maioria das pessoas não sabe disso, e, se informadas, entram em pânico movidas pelo temor. Mesmo se já forem um grupo de aventureiros com alguma experiência, quando tentam se aproximar, os guardas os mantêm distantes, explicando que são ordens superiores."
+    },
+    {
+      type: "text",
+      content: "O corpo da vítima é então movido assim que o símbolo na parede é apagado. Alguém comenta que a vítima era Magnus, ajudante de ferreiro local e “fofoqueiro” nas horas vagas. Os guardas e seu capitão dispersam a multidão. Mas um deles se aproxima discretamente de vocês e diz: “Podemos falar por um momento?”"
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 2: INVESTIGAÇÃO"
+    },
+    {
+      type: "text",
+      content: "O guarda tira o elmo: é uma mulher de idade aparentemente similar à de vocês. Seu nome é Cassidy, e ela diz que sente algo de errado no jeito como a guarda está lidando com o caso. Comenta também que, apesar de terem se deslocado assim que o aviso do crime chegou, o capitão, após ver a situação de perto, colocou-os para limpar o símbolo sinistro na parede."
+    },
+    {
+      type: "text",
+      content: "Personagens com origem guarda, ou que passem em um teste de Investigação (CD 15), entendem que este procedimento não faz sentido. Cassidy pede que questionem os locais em busca de pistas. Ela também sugere uma visita à irmã da vítima, uma apotecária chamada Mallory, e a Honório, um minotauro sargento da guarda, que discutiu com a vítima na noite anterior."
+    },
+    {
+      type: "text",
+      content: "A cada dia, exceto quando forem conversar com Mallory (cena 3) e Honório (cena 4), um personagem pode fazer um teste de Investigação (CD 20), em que todos os membros do grupo podem ajudar com perícias diferentes. Sucesso significa que encontraram alguém disposto a falar. Será necessário então um teste estendido de Diplomacia, Enganação ou Intimidação (CD 15, três sucessos) para adquirir uma pista. Outras perícias menos diretamente relacionadas podem ser usadas, com CD 20."
+    },
+    {
+      type: "text",
+      content: "A cada noite, há uma nova tentativa de assassinato. Role 1d4. Em um resultado par, um novo cadáver é encontrado e pode ser analisado com um teste para necrópsia de Cura (Tormenta20, p. 117), coletado em uma nova pista. Em um resultado ímpar, figuras encapuzadas surgem e vão atrás de uma possível vítima."
+    },
+    {
+      type: "text",
+      content: "Criaturas. 1d4+1 Cultistas do Devorador (NPCs e Criaturas)."
+    },
+    {
+      type: "text",
+      content: "Estes cultistas são pouco mais que peões, camponeses cujas mentes foram ludibriadas pelas bençãos de Aharadak. Eles lutam até a morte, e se metade deles for derrotado, começam a causar dano a si mesmos. Se conseguirem imobilizá-los de forma não-letal, os personagens podem coletar uma pista com um teste de persuasão (Diplomacia) ou teste de coação (Intimidação). Em seguida, guardas chegam, levando os criminosos para a prisão. Na manhã seguinte, cultistas presos são encontrados mortos em sua cela."
+    },
+    {
+      type: "text",
+      content: "Quando conseguirem 6 pistas, os aventureiros avançam para a cena 5."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 3: MALLORY, APOTECÁRIA"
+    },
+    {
+      type: "text",
+      content: "A loja da irmã da vítima é pequena, espremida entre dois estabelecimentos maiores. Seu interior é extremamente aromático. Ervas e misturas bem-cheirosas ocupam as prateleiras. Adentrando o ambiente, um pequeno sino na porta toca, e uma mulher jovem aparece atrás do balcão. Ela olha para o grupo e diz: “Se vieram perguntar algo sobre meu irmão, perderam seu tempo.”"
+    },
+    {
+      type: "text",
+      content: "O mau-humor de Mallory vem das diversas pessoas que já vieram reclamar de seu irmão no passado. Ela ainda não sabe da morte dele. A notícia a abala, mas não parece surpreender."
+    },
+    {
+      type: "text",
+      content: "“Meu irmão tinha essa mania de se meter no que não era da conta dele. Sempre às voltas com suas ‘investigações’. Mais de uma vez a guarda já teve de arrastá-lo para fora de uma casa onde jurava haver um núcleo de sszzaazitas. Ou puristas. Uma vez jurou que havia um demônio da Tormenta dentro da residência do lorde prefeito.”"
+    },
+    {
+      type: "text",
+      content: "Peça que os personagens façam um teste de Intuição para pressentimento (CD 20). Quem passar nota que a irmã não está contando a história inteira. Mesmo percebendo, será difícil convencê-la a se abrir. Será preciso passar em um teste de Diplomacia contra a Vontade da apotecária (+5). Se falharem, ela apenas continua enrolando. Se rolarem um 1 natural ela se irrita e pede que deixem seu estabelecimento."
+    },
+    {
+      type: "text",
+      content: "Ao passar no teste de Diplomacia, ela revela que seu irmão morava nos fundos da loja, e ela no andar de cima. Lá, mostra para os aventureiros as anotações de Magnus, pedaços de pergaminho escritos com carvão. Decifrá-los requer um teste de Conhecimento, Intuição ou Investigação (CD 15), e aponta que ele andava investigando figuras misteriosas andando durante a noite. Entender as anotações fornece duas pistas."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 4: HONÓRIO, SARGENTO"
+    },
+    {
+      type: "text",
+      content: "Para encontrar Honório, os aventureiros devem ir até a caserna da guarda. O sargento está lá, organizando rotas de patrulhas. Mais alto que todos no prédio, a presença dele é imponente."
+    },
+    {
+      type: "text",
+      content: "Honório, um dos sargentos da guarda local, foi visto na noite anterior discutindo com Magnus. Segundo Cassidy, ninguém sabe por que eles se estranharam, mas sabe que a discussão chegou ao nível do humano empurrar o minotauro, e receber um soco como revide. Um teste de Inteligência (CD 10) permite a conexão que o suposto envolvimento do sargento no crime poderia atrapalhar a investigação oficial."
+    },
+    {
+      type: "text",
+      content: "Caso se aproximem diretamente, declarando seu interesse, Honório diz “Infelizmente esse caso não é da minha alçada. Desejo coragem a vocês, e espero que encontrem o que buscam”. Novamente, há algo sendo escondido, perceptível com um teste de Intuição oposto à Enganação dele (+1)."
+    },
+    {
+      type: "text",
+      content: "O grupo deve tentar convencê-lo com três sucessos em testes de Diplomacia opostos à Vontade dele (+3). Enquanto tentam isso, ele anda pela caserna, fala com outros soldados, entre outras tarefas. Simplesmente falhar não atrapalha, mas se falharem por 5 ou mais, Honório se torna mais arredio e hostil. Se rolarem um 1 natural, ele se vira e ataca."
+    },
+    {
+      type: "text",
+      content: "Criaturas. Sargento da Guarda (Tormenta20, p. 289)."
+    },
+    {
+      type: "text",
+      content: "No início de cada rodada, um guarda da cidade (Tormenta20, p. 289) entra no combate, agindo em sua própria iniciativa. Se os personagens estiverem atacando o minotauro, os guardas entram no combate. Entretanto, se notarem que os aventureiros não querem briga, tentam imobilizar o minotauro. Quando houver quatro guardas segurando Honório, a briga acaba. O minotauro também para de lutar se for reduzido a 10 PV ou menos."
+    },
+    {
+      type: "text",
+      content: "Caso consigam os três sucessos, ou após Honório ser imobilizado, a verdade é revelada: ele estava ajudando na investigação de Magnus! O sargento está aterrorizado com a possibilidade de um culto profano em sua cidade, e, se tiver atacado, explica que o fez por medo. Conta também que na noite antes do assassinato, a vítima o chamou de covarde, o que o deixou muito chateado, apesar de ser verdade."
+    },
+    {
+      type: "text",
+      content: "Se conseguirem que Honório se abra, conseguem duas pistas."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 5: NAS ENTRANHAS DA BESTA"
+    },
+    {
+      type: "text",
+      content: "Analisando todas as informações, vocês encontram uma linha condutora para a investigação. Tudo indica que os responsáveis pelo assassinato, e possivelmente por outros crimes, estão usando os túneis de esgoto como esconderijo e forma de deslocar-se furtivamente. Cabe a vocês agora usar uma das passagens para o subterrâneo e desbaratar essa conspiração."
+    },
+    {
+      type: "text",
+      content: "Antes de descerem, eles devem decidir quem os acompanhará. Mallory, se tiver sido convencida a mostrar as anotações de seu irmão, presenteia o grupo com dois bálsamos restauradores e duas essências de mana."
+    },
+    {
+      type: "text",
+      content: "Se pedirem apoio de Cassidy, ela é uma parceira guardiã iniciante. Mallory pode acompanhá-los também, como uma parceira médica ou destruidora iniciante, o que deve ser decidido antes de partirem. Finalmente, se tiverem convencido Honório a admitir sua parceria com Magnus, mas não o combatido, ele poderá ir junto, servindo de parceiro fortão iniciante, mas estará com medo o tempo todo."
+    },
+    {
+      type: "text",
+      content: "Nos túneis, o teto é baixo, atrapalhando a movimentação. Também não há qualquer forma de iluminação, mesmo durante o dia. Aqui, o grupo deve fazer um teste estendido de Investigação (CD 20, cinco sucessos). Uma falha total representa que perderam o dia na busca, role 1d4 para o novo assassinato (veja cena 2) e recomece o teste estendido. Após cada teste, role 1d6 para definir um dos encontros abaixo, ou escolha o mais apropriado."
+    },
+    {
+      type: "text",
+      content: "1) Cultistas Perdidos: Vocês ouvem vozes discutindo à distância: “Não, seu imbecil, é por ali.” “Claro que não, você é que não entende de nada, Nós fomos por ali da última vez!” Focados na briga, as figuras encapuzadas dificilmente notam a sua aproximação. 1d4+1 cultistas do Devorador (NPCs e Criaturas) estão discutindo em um ponto dos túneis. Eles sofrem –5 em testes de Percepção para notar a chegada dos personagens, e se não perceberem a aproximação, ficam surpreendidos na primeira rodada. Estes cultistas lutam até a morte, mas em suas vestes é possível encontrar instruções para chegar ao ponto de encontro, fornecendo +2 no teste de Investigação da cena (não cumulativo se este encontro for rolado mais de uma vez)."
+    },
+    {
+      type: "text",
+      content: "2) Roedores Vorazes: Enquanto caminham pelo túnel, vocês notam algo flutuando na água. Chegando mais perto, veem que é o cadáver de um cultista. De repente, saindo das sombras, quatro ratos imensos atacam vocês! Quatro ratos gigantes (Tormenta20, p. 286) prepararam uma emboscada aqui. Se derrotados, e os personagens vasculharem o cadáver do cultista, recebem o mesmo bônus em teste de Investigação que no encontro 1."
+    },
+    {
+      type: "text",
+      content: "3 – 4) Recursos Escondidos: Vocês veem uma bolsa aparentemente abandonada na parte seca do túnel. A bolsa contém tesouro de ND 1/4 (Tabela 8–1: Tesouro por Nível de Encontro, Tormenta20, p. 328). Provavelmente pertences de um dos cultistas."
+    },
+    {
+      type: "text",
+      content: "5) Glip, glap, glop: Vocês ouvem o chapinhar de algo contra a água, como se alguém estivesse pulando em uma poça. Logo, um cheiro ácido toma o ambiente, quando três bolhas verdes avançam contra vocês. Esses 3 glops (Tormenta20, p. 286) vêm se alimentando de dejetos no esgoto. Ao notar a aproximação de quem quer que seja, atacam."
+    },
+    {
+      type: "text",
+      content: "6) Garganta do Inferno: Este corredor é diferente. Um cheiro ferroso inunda as narinas de vocês. As laterais do túnel dão a impressão de serem feitas de carne. Em um ponto, as paredes tentam se fechar, como num espasmo, e engolir todos vocês. Este é o primeiro sinal de que as ações do culto estão atraindo a corrupção da Tormenta. O corredor inteiro é uma armadilha viva, e pode ser notada com um teste de Investigação (CD 25). Se não perceberem, todos os personagens sofrem 2d6+2 pontos de dano de impacto (Reflexos CD 25 evita). Uma vez acionada, é possível passar pelo túnel, mas ela logo se ativará novamente."
+    },
+    {
+      type: "text",
+      content: "Quando conseguirem os sucessos necessários, o grupo encontra a junção dos túneis."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Cena 6: APETITE PARA DESTRUIÇÃO"
+    },
+    {
+      type: "text",
+      content: "À distância vocês já começam a ouvir os sons da pregação profana. A partir de certo ponto, ele parece vir das próprias paredes. Na junção dos túneis há uma parte seca, onde algumas figuras encapuzadas se reúnem ao redor de um símbolo maldito desenhado no chão."
+    },
+    {
+      type: "text",
+      content: "Para aproximar-se furtivamente, é preciso fazer um teste contra a percepção do celebrante principal (+8). Se não forem notados, os inimigos ficam surpreendidos na primeira rodada."
+    },
+    {
+      type: "text",
+      content: "Criaturas. Cultista do devorador x4 (NPCs e Criaturas)."
+    },
+    {
+      type: "text",
+      content: "O cultista principal foge imediatamente quando o combate se inicia, abandonado seus acólitos. Os símbolos no chão, entretanto, continuam brilhando, sua luz rubra intensificada. Em 1d4 rodadas um lefeu é manifestado."
+    },
+    {
+      type: "text",
+      content: "Criaturas. Uktril (Tormenta20, p. 314)."
+    },
+    {
+      type: "text",
+      content: "Dependendo do número de assassinatos que aconteceram, a criatura estará mais forte. Se 2 ou menos assassinatos tiverem sido cometidos pelo culto, a criatura estará debilitada, desprevenida, enjoada, causa –5 em seu dano e está com metade dos pontos de vida. Caso 3 ou 4 vítimas tenham morrido, o monstro estará debilitado, desprevenido e enjoado. Se 5 ou 6 pessoas tiverem sido sacrificadas, o lefeu estará apenas fraco, enjoado e vulnerável. E, finalmente, se 7 ou mais moradores tiverem sido alvos, o uktril não sofrerá qualquer penalidade."
+    },
+    {
+      type: "text",
+      content: "Neste momento, com a criatura manifestada, os personagens devem fazer uma difícil escolha: enfrentá-la, com grandes chances de perecerem, ou fugir, deixando que a corrupção se alastre, para tentar lidar com isso em outro momento."
+    },
+    {
+      type: "text",
+      content: "Independente da escolha, a vida nesta cidade nunca mais será a mesma."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "Epílogo: NO OLHO DO DEVORADOR"
+    },
+    {
+      type: "text",
+      content: "Com a fuga do líder, é possível que esta congregação de cultistas fique dormente por algum tempo. O terror de presenciar um demônio da Tormenta em primeira mão vai assombrar vocês para o resto de suas vidas. Talvez repensem em sua carreira de aventureiros. Ou notem que a ameaça é muito mais presente do que jamais imaginaram."
+    },
+    {
+      type: "text",
+      content: "Se tiverem derrotado o uktril, especialmente na presença de um dos membros da guarda, todos são alçados imediatamente à posição de heróis locais. As autoridades, entretanto, insistem que é necessário manter o sigilo do ocorrido, para evitar pânico. Além disso, revelar o que aconteceu fará o líder desta célula do culto fugir ou acobertar melhor suas ações."
+    },
+    {
+      type: "text",
+      content: "Caso tenham fugido, o lefeu estará solto nos túneis da cidade. Se os personagens relatarem o acontecimento às autoridades, elas entram em modo de emergência. Mesmo um demônio menos poderoso pode significar um perigo extremo. Convencidos que os aventureiros são os únicos que podem ajudar, os enviam em busca de auxílio ou recursos em uma comunidade maior."
+    },
+    {
+      type: "text",
+      content: "Quando a Tormenta chega, nunca mais vai embora. Porém, os personagens avançam para o 2º nível."
+    },
+    {
+      type: "break"
+    },
+    {
+      type: "subtitle",
+      content: "NPCs & Criaturas"
+    },
+    {
+      type: "text",
+      content: "CULTISTA DO DEVORADOR\nHumanoide (humano) Médio\nIniciativa +2, Percepção +3\nDefesa 13, Fort +5, Ref +3, Von +0\nPontos de Vida 6\nDeslocamento 9m (6q)\nCorpo a Corpo Adaga x2 +9 (1d4+3, 19)\nAnatomia Anômala O cultista tem 25% de chance de ignorar dano adicional de um acerto crítico ou ataque furtivo.\nFor 1, Des 0, Con 1, Int 0, Sab 1, Car –1\nEquipamento Adaga. Tesouro Nenhum."
     }
   ]
   },

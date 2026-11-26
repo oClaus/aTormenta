@@ -298,6 +298,116 @@ export const regreiroQAs: RegreiroQA[] = [
     magazineNumber: 193,
   },
   //#endregion
+  //#region DB - 196
+  {
+    id: "DB196-01",
+    question: "> Venho por meio desta missiva trazer à vista de um caso recente nesse tribunal.\n\nNa DB 195, do mês de setembro, o STR afirmou ser impossível aplicar melhorias em itens mágicos específicos, mas isso contradiz o manual básico atual. Então é possível ou não fazer melhorias?\n\nDesde já agradeço o trabalho dos ilustríssimos senhores.",
+    answer: "> Saudações, nobre conselheiro Fagner! Como meros servos dos deuses, os juízes deste tribunal são tão propensos a falhas quanto qualquer mortal. Foi o que ocorreu, parcialmente, na resposta supracitada. Itens mágicos específicos não podem receber encantos (na prática, é como se seus poderes mágicos já representassem todos os encantos que eles podem possuir). Entretanto, eles podem receber melhorias.",
+    magazineNumber: 196,
+  },
+  {
+    id: "DB196-02",
+    question: "> Bom dia, nobres juízes! Com o advento das raças mais legais do mundo de Arton na prévia bônus de *Ameaças de Arton*, acabaram surgindo algumas dúvidas em relação aos centauros. Vamos à elas:\n\n1) Centauros são de tamanho Grande. Mas considerando o torso humanoide, eles usam armas adequadas a personagens Médios ou Grandes? Imagino que conceitualmente deveria ser médio, mas nada indica isso no texto.",
+    answer: "> Saudações, atualizadíssimo conselheiro Felipe! De fato, a inclusão dos centauros em *Ameaças de Arton* foi muito celebrada por jogadores e pela própria equipe. Vamos, sem mais delongas, às suas equinas respostas. Os vereditos abaixo seguem a mais fria letra da regra; mestres podem fazer alterações para seus jogos caseiros conforme lhes aprouver.\n\n1) Como criaturas Grandes, os centauros usam armas aumentadas. Observe que, embora seu torso seja equivalente ao de um humano, eles são maiores e mais pesados, e possuem condições de usar essas armas.",
+    magazineNumber: 196,
+  },
+  {
+    id: "DB196-03",
+    question: "2) O fato do centauro ser quadrúpede interfere em algo na sua capacidade de carga ou as regras permanecem normais? Nesse caso, se ele carregar um cavaleiro, este sendo Médio, ocupa dez espaços mesmo?",
+    answer: "2) O centauro usa as mesmas regras de carga de outros personagens. Uma criatura Média ocuparia dez espaços para um centauro (além da carga que a própria criatura estaria carregando), da mesma forma que o faz para qualquer outro personagem.",
+    magazineNumber: 196,
+  },
+  {
+    id: "DB196-04",
+    question: "3) Centauros se beneficiam de usar um alforje? Nesse caso, quantos espaços de carga extra eles recebem? Dez?",
+    answer: "3) Alforjes são apropriados para parceiros do tipo montaria, não para personagens jogadores. Um centauro não pode obter benefício deste item. Mais do que uma questão puramente de regras, centauros não são cavalos, e não se consideram como tal.",
+    magazineNumber: 196,
+  },
+  {
+    id: "DB196-05",
+    question: "> MOÇÃO Nº 04 DE TRÊS DE OUTUBRO DE DOIS MIL E VINTE TRÊS\n\nSenhores Ministros,\n\nApresento a V. Exas., nos termos do Regimento Interno do Conselho da *Dragão Brasil*, a presente moção para dar autorização aos queridos centauros de utilizarem o item mágico *Ferraduras da Velocidade* (*Tormenta20*, p. 344). Haja vista que possuem cascos como os equinos tradicionais, nada mais justo que também possam fazer usufruto deste benefício.\n\nEstendo a moção também para que o item alforje (*Tormenta20*, p. 162) possa ser utilizado pelos supracitados centauros como um item vestido.\n\nLegistrim, 03 de outubro de 2023.",
+    answer: "> Saudações, juridiquíssimo conselheiro Bafo Selvagem! É com o coração pesado que precisamos negar sua moção. Tais itens não se aplicam a centauros por não se aplicar a personagens jogadores. Mais do que isso, embora partilhem de elementos anatômicos de cavalos, centauros não se consideram seres dessa raça. Por mais que os benefícios fossem atraentes, um centauro não se sentiria confortável usando itens destinados a estes seres.",
+    magazineNumber: 196,
+  },
+  {
+    id: "DB196-06",
+    question: "> Bom dia, queridos juízes do STR. Tenho uma dúvida sobre apoio a movimento de aliados. Cito o caso de Ignis, personagem de *Fim dos Tempos*; em sua ação de movimento, ele pede para mover a Ayla para trás. Como isso ocorre em termos de regra? Quantos quadrados ele pode movê-la?\n\nExemplos como esse acontecem muito em minha mesa e quero ajuda para lidar da melhor (e mais justa) maneira; no momento usamos a seguinte regra caseira para movimento de aliados adjacentes:\n\nCondição: o aliado a ser movido deve estar adjacente ao PJ.\n1) O aliado resiste?\n1.1) Caso resista, o PJ gasta uma ação padrão, faz um teste oposto e trata como uma manobra agarrar.\n1.2) Caso não resista, o PJ gasta sua ação de movimento e desloca o aliado para qualquer quadrado adjacente do jogador.\n1.3) Como alternativa, o PJ pode gastar uma ação padrão e fazer um teste de Luta para empurrar o aliado voluntário um número de quadrados. Para cada 5 pontos no teste empurra o aliado 1 quadrado.\n\nPeço ajuda para clarificar estas regras.",
+    answer: "> Saudações, nobilíssimo conselheiro Everton! Esses casos específicos cabem muito ao mestre, podendo depender da dinâmica da mesa, dos desejos dos personagens e inclusive da frequência com que esses eventos ocorrem. Isto posto, restringir a opção de mover um aliado com uma ação de movimento a aliados pelo menos uma categoria de tamanho menor que a do PJ responsável pelo movimento, especialmente no caso de personagens com Força baixa.",
+    magazineNumber: 196,
+  },
+  {
+    id: "DB196-07",
+    question: "> Ex.mos juízes, minha dúvida está relacionada aos poderes limitados pelos patamares dos heróis. Um personagem de nível 11 que não tenha escolhido o poder \"*Aumento de Atributo*\" nenhuma vez, poderia pegar esse poder nos três níveis seguintes para um mesmo atributo e compensar não tê-los pego nos patamares anteriores?",
+    answer: "> Saudações, atributadíssimo conselheiro Cesar! O texto de *Aumento de Atributo* informa: “Você recebe +1 em um atributo. Você pode escolher este poder várias vezes, mas apenas uma vez por patamar para um mesmo atributo.” Isso limita a quantidade de vezes que um personagem pode escolher esse poder, não quando ele pode escolher esse poder. Dessa forma, um personagem no 11º nível — no terceiro patamar — poderia, sim, escolher *Aumento de Atributo* para o mesmo atributo três vezes seguidas.",
+    magazineNumber: 196,
+  },
+  {
+    id: "DB196-08",
+    question: "> Grandiosos arautos da sabedoria e das soluções dos conflitos de mesa. Minha dúvida é referente a algumas magias.\n\n1) Em uma edição anterior ficou claro que a magia *Possessão*, quando usada destruindo o próprio corpo, considera o novo corpo como o original. E que dissipar não teria efeito sobre ela. Mas como seria a interação com a magia *Campo Antimagia*? E como fica a regra sobre duração referente a dissipar no manual?",
+    answer: "> Saudações, arcaníssimo conselheiro Nopos! Vamos às suas respostas:\n\n1) Como a duração é permanente nesse caso, a *Possessão* não é afetada nem por *Dissipar Magia* nem por *Campo Antimagia*.",
+    magazineNumber: 196,
+  },
+  {
+    id: "DB196-09",
+    question: "2) A magia *Roubar a Alma* pede um objeto no valor equivalente ao ND ou nível da criatura. Para ameaças com ND S ou S+, qual é o valor do objeto? E esse objeto pode ser um item mágico como um *Manto Élfico*, *Anel do Sustento*, etc?",
+    answer: "2) De forma geral, um item mágico de valor apropriado pode ser usado para a magia *Roubar a Alma*. Criaturas de nível S e S+, entretanto, são consideradas criaturas com ND maior que 20 para efeitos de outras criaturas sendo, portanto, imunes a efeitos que dependem de ND. Em outras palavras, a alma de tais criaturas está protegida por dispositivos legais que nem Nimb ousaria desrespeitar.",
+    magazineNumber: 196,
+  },
+  {
+    id: "DB196-10",
+    question: "3) A magia *Engenho de Mana* afirma no seu texto que \"...faz uma contramágica automática contra qualquer magia lançada...\". Esse \"uma\" significa uma única contramágica? Ou significa que qualquer magia (independente de quantas) lançada dentro da área do engenho sofre uma contramágica?",
+    answer: "3) Qualquer magia lançada dentro da área sofre uma contramágica.",
+    magazineNumber: 196,
+  },
+  {
+    id: "DB196-11",
+    question: "Um personagem que está inconsciente ainda pode fazer testes de Fortitude? E que tipo de ação é um teste de resistência? Reação?",
+    answer: "> Saudações, concisíssimo conselheiro Daniel! Testes de resistência são reações e podem ser realizados por criaturas inconscientes.",
+    magazineNumber: 196,
+  },
+  {
+    id: "DB196-12",
+    question: "> Excelentíssimos juízes do STR, sou um fanático pela classe nobre e há muito, mesmo antes da edição *Jogo do Ano* e da DB 195, já vinha fazendo pequenas adaptações para cobrir alguns pontos que acreditava necessários na classe. Através desta humilde petição, lhes pergunto:\n\n1) Por que o Cavaleiro possui um *Pajem*, mas os majestosos Nobres não possuem acesso a um fiel servo para lhes arrumar a cama e cozinhar? Me parece que deveria ser algo acessível desde cedo para a nobreza a possibilidade de um criado que cuide das roupas, comida e aposentos.",
+    answer: "> Saudações, Lorde Cromwell! Vamos às suas nobilíssimas respostas:\n\n1) O cavaleiro possui poderes para obter parceiros por ter o conceito de ajudantes fiéis mais firmemente relacionado ao seu arquétipo. O nobre, por outro lado, tem alto Carisma e recursos, conseguindo recrutar parceiros da forma mais tradicional, através de ações em jogo. O recém-apresentado poder *Comitiva* reforça esse conceito.",
+    magazineNumber: 196,
+  },
+  {
+    id: "DB196-13",
+    question: "2) Existe alguma previsão para um suplemento oficial ou nova edição do manual básico que insira o material da DB, como poderes novos de classes?\n\nCom todos os cumprimentos de praxe,",
+    answer: "2) Novos poderes apresentados na DB não serão incluídos no manual básico. Depois de testados, porém, poderão se publicados em suplementos vindouros. Esta corte não tem autorização para revelar segredos futuros, mas podemos dizer que um destes suplementos já está sendo planejado...",
+    magazineNumber: 196,
+  },
+  {
+    id: "DB196-14",
+    question: "> Saudações, caros juízes! Hoje trago algumas dúvidas que meu grupo acabou adquirindo ao longo de nossa campanha (e das minhas tentativas mirabolantes de jogar inimigos dentro de *Mochilas de Carga*).\n\n1) É possível colocar *Runas de Proteção* dentro da *Mochila de Carga* (a versão básica)? Tenho esta dúvida, por ser uma outra dimensão, então não vejo nada capaz de impedir isso.",
+    answer: "> Saudações, portabilíssimo conselheiro Portilho! Vamos às suas respostas:\n\n1) Não é possível. A magia *Runa de Proteção* exige uma superfície fixa. Uma *Mochila de Carga* não é uma superfície, nem é fixa!",
+    magazineNumber: 196,
+  },
+  {
+    id: "DB196-15",
+    question: "2) Ao utilizar um esotérico de aço-rubi em *Runa de Proteção* ou *Arma Mágica*, estes danos “indiretos” irão atravessar RD quando utilizados? Acredito que *runa de proteção* seria possível e *Arma Mágica* não.",
+    answer: "2) Exatamente. O dano causado pelo efeito básico de *Runa de Proteção* é afetado pelo aço-rubi. Já o efeito de *Arma Mágica*, ou mesmo do aprimoramento de *Runa* que permite lançar uma segunda magia, não.",
+    magazineNumber: 196,
+  },
+  {
+    id: "DB196-16",
+    question: "3) O que acontece se um personagem utilizar *Campo Antimagia* enquanto está dentro de uma *Mochila de Carga*?",
+    answer: "3) Os efeitos do item são suprimidos e o personagem sai dele, aparecendo em um espaço adjacente.",
+    magazineNumber: 196,
+  },
+  {
+    id: "DB196-17",
+    question: "4) O que acontece se eu colocar uma runa no chão e arrancar o chão, por exemplo, tirando uma placa de azulejo? Ela se dissipa? Se torna portátil?",
+    answer: "4) Caso um pedaço da superfície fixa seja removido, deixa de ser fixo e a magia deixa de fazer efeito.",
+    magazineNumber: 196,
+  },
+  {
+    id: "DB196-18",
+    question: "5) Por fim e não menos importante, vencer uma manobra conta como acertar um ataque? Por exemplo, para poderes como *Ataque Pesado*?",
+    answer: "5) Sim, o sucesso com uma manobra tem o mesmo efeito de um acerto.",
+    magazineNumber: 196,
+  },
+  //#endregion
   //#region DB - 197
   {
     id: "DB197-01",
@@ -1068,6 +1178,92 @@ export const regreiroQAs: RegreiroQA[] = [
     question: "> Olá digníssimos membros do STR. Em *3DeT Victory*, a vantagem *Vigoroso* soma +2 para se defender de ataques, mesmo não sendo mencionado na vantagem?",
     answer: "> Saudações defensivas, conselheiro! A resposta é sim e não. Lembre-se que conflitos em *3DeT* acontecem das formas mais diversas possíveis. Pode se tratar de uma competição de culinária, um debate ou uma troca franca de sopapos. Caso *Vigoroso* se aplique para o conflito em questão (e certamente se aplicaria para um combate tradicional) então sim, o bônus é aplicado.",
     magazineNumber: 220,
+  },
+  //#endregion
+  //#region DB - 222
+  {
+    id: "DB222-01",
+    question: "> Caros e excelentíssimos, venho por meio desta levantar uma questão que surgiu na mesa de um amigo. Um devoto de Marah pode praticar BDSM? Considerando que essas práticas podem infligir dor de forma consensual entre parceiros, como o culto à deusa enxerga esse tipo de conduta?",
+    answer: "> Saudações pacíficas, conselheiro! Antes de mais nada, é importante entender os limites da representação de quaisquer atividades sexuais em mesa de jogo. E esses limites jamais poderiam partir deste tribunal ou mesmo dos livros, cabendo única e exclusivamente à mesa de jogo. Antes de responder essa pergunta, o grupo precisa se perguntar se a resposta é de fato relevante para seus jogos. Os deuses de Arton não são completamente monolíticos. Sempre existirão variações de mesa para mesa, dependendo da visão do mestre. O que podemos contribuir para a resposta, porém, é que Marah não se opõe à dor, se opõe à violência.",
+    magazineNumber: 222,
+  },
+  {
+    id: "DB222-02",
+    question: "> Saudações, ministros! Venho até este tribunal para elucidar dúvidas a respeito do item *apito de caça*, apresentado em *Heróis de Arton*. Como essa ferramenta interage com o melhor amigo do treinador? Seria possível obter um ataque (ou até mesmo uma ação) através do seu uso?",
+    answer: "> Saudações bestiais, conselheira! O melhor amigo, independente de seu tipo, não tem suas próprias ações e não é afetado por manejar animal, da perícia Adestramento. Por isso, um *apito de caça* não tem nenhum efeito para o melhor amigo do treinador. Isso não impede o treinador de usar o apito com outro animal!",
+    magazineNumber: 222,
+  },
+  {
+    id: "DB222-03",
+    question: "> Saudações, excelentíssimos ministros. Bandos são imunes a \"efeitos que afetam apenas uma criatura e não causam dano\". Como isso interage com habilidades que fazem ataques causarem penalidades, como o poder *Estocada Pungente*, de *Heróis de Arton*? Em outras palavras, essa penalidade é considerada parte do efeito do ataque (sendo assim parte de um efeito que causa dano) ou um efeito à parte (que, então, afeta uma única criatura sem causar dano)?",
+    answer: "> Saudações múltiplas, conselheira! Outra excelente pergunta trazida ao tribunal este mês. Os conselheiros estão de parabéns! A penalidade é parte do efeito do ataque e, portanto, afeta o bando.",
+    magazineNumber: 222,
+  },
+  {
+    id: "DB222-04",
+    question: "> Saudações, ilustres mestres da lei! Venho por meio desta expor minhas dúvidas:\n\n1) Se um frade tem o poder *Presente dos Deuses*, da distinção sumo-sacerdote, ele recebe a habilidade *Magias* de um clérigo ou soma sua Sabedoria no limite de PM para magias divinas e no total de PM?",
+    answer: "> Saudações distintas, conselheiro! Vamos às suas respostas.\n\n1) Um frade tem a habilidade *Magias* e, portanto, ao adquirir *Presente dos Deuses*, soma sua Sabedoria no limite de PM para magias divinas e no total de PM.",
+    magazineNumber: 222,
+  },
+  {
+    id: "DB222-05",
+    question: "2) Um herói henshin pode escolher uma manopla para receber uma melhoria com seu poder *Sequência de Transformação*? Seria bom para um lutador!",
+    answer: "2) Um herói henshin não pode escolher uma manopla como a arma, escudo ou esotérico aprimorados por *Sequência de Transformação*. Ele pode, porém, escolher uma manopla como seu traje de combate com o poder *Armadura Especial*. Como *Sequência de Transformação* concede melhorias tanto ao item escolhido como ao traje de combate, a manopla recebe uma melhoria da mesma forma.",
+    magazineNumber: 222,
+  },
+  {
+    id: "DB222-06",
+    question: "> Ave Thyatis, senhores do supremo! Hoje trago uma dúvida acerca do lutador em *forma selvagem*. Vi no FAQ que não é possível usar ataques desarmados enquanto se está usando a *forma selvagem*. Porém, a comunidade me disse que isto não é algo que deva ser seguido, pois não há menções no livro. Devo acreditar nisso?",
+    answer: "> Saudações ferais, conselheiro! O FAQ contém respostas determinadas a partir da compreensão de regras e entendimento de jogo dos ministros deste tribunal. É uma fonte importante para entender as intenções das regras e possíveis interações inesperadas entre elas. Porém, não são essas as interpretações com a maior importância na sua mesa — são as do seu mestre. Caso ele ache aceitável que um lutador em *forma selvagem* faça ataques desarmados, então assim será!",
+    magazineNumber: 222,
+  },
+  {
+    id: "DB222-07",
+    question: "> Meritíssimos senhores, venho submeter à elevada apreciação de vossas senhorias algumas indagações que se apresentam a este humilde consulente, o qual retornou ao convívio deste nobre hobby.\n\n1) Inicialmente, questiona-se acerca da interpretação de dois poderes de paladino – *Arma Juramentada* e *Arma Sacramentada*, conforme disposto no livro *Heróis de Arton*, à página 76. Consta do referido texto que, estando o personagem empunhando a arma favorita de sua divindade, esta recebe determinada melhoria (no caso, “Juramentada”) e encantamento (“Sacramentada”). Diante disso, indaga-se: caso o personagem possua o *Estilo de Duas Armas*, todas as armas empunhadas fariam jus aos benefícios conferidos pelos referidos poderes? Outrossim, considerando-se que a arma em questão já possua a melhoria precisa, entende-se que não seria possível aplicar, concomitantemente, a melhoria maciça através do mesmo poder, correto?",
+    answer: "> Saudações jurídicas, conselheiro! Vamos às suas respostas.\n\n1) Em princípio, os poderes funcionam independente das armas serem usadas, bastando estarem empunhadas. Porém, a maior parte das armas preferidas dos deuses não é leve, dificultando o uso de *Estilo de Duas Armas*. A exceção é o bordão de Tanna-Toh, uma arma dupla. Paladinos de outros deuses precisam do poder *Arma Secundária Grande*, além de *Estilo das Duas Armas*, para fazer essa combinação. Além disso, as melhorias continuam seguindo suas regras normais: logo, “a arma não pode ser maciça e precisa” ao mesmo tempo.",
+    magazineNumber: 222,
+  },
+  {
+    id: "DB222-08",
+    question: "2) A segunda dúvida refere-se à melhoria denominada injeção alquímica. Tal melhoria pode ser aplicada a munições? Se sim, seria necessário custear vinte itens alquímicos — um para cada unidade de munição —, bem como se tais itens deveriam ser computados no limite de carga individual ou se estariam compreendidos no peso total das munições.",
+    answer: "2) Injeção alquímica pode ser aplicada a munições. O preço indicado equivale a um conjunto de vinte munições. Os itens alquímicos usados para carregar as armas ocupam espaços normalmente. Note que o mecanismo pertencerá ao “pacote” de munições como um todo (ou seja, quando dois ataques utilizando essas munições tiverem acertado, terão liberado as duas cargas e o mecanismo precisará ser recarregado normalmente; além disso, quando todas as munições originais no pacote acabarem, o mecanismo não terá mais serventia — não é possível “repôr” munições no pacote).",
+    magazineNumber: 222,
+  },
+  {
+    id: "DB222-09",
+    question: "3) Ademais, indaga-se se há alguma pretensão, por parte da editora Jambô, de atualizar o Arquivo Gratuito das Distinções para *Tormenta20*.",
+    answer: "3) Sim, mas não agora.",
+    magazineNumber: 222,
+  },
+  {
+    id: "DB222-10",
+    question: "4) Por fim, observa-se que o livro *Heróis de Arton*, no capítulo referente a Bases (página 244), faz menção a construções dotadas de função móvel, como navios e rochedos voadores. Entretanto, nota-se que as regras constantes do referido capítulo contemplam apenas movimento terrestre e aquático, não havendo previsão expressa quanto à modalidade alada. Solicita-se, pois, o devido esclarecimento quanto a essa lacuna normativa.\n\nNestes termos, pede deferimento.",
+    answer: "4) Bases voadoras são muito raras e míticas. O mestre pode conceder deslocamento de voo a uma base terrestre ou aquática caso deseje. Provavelmente os aventureiros vão precisar completar uma missão para obtê-lo.",
+    magazineNumber: 222,
+  },
+  {
+    id: "DB222-11",
+    question: "> Olá, digníssimos membros do STR. Os vampiros apresentados na DB 220 têm a habilidade racial *Sensibilidade ao Sol*. Por conta dela, um vampiro totalmente coberto, sem nenhum pedaço de pele visível, seria afetado pela luz do sol?",
+    answer: "> Saudações noturnas, conselheiro! Um vampiro totalmente coberto não está sob luz direta e, portanto, não sofre os efeitos negativos de *Sensibilidade ao Sol*.",
+    magazineNumber: 222,
+  },
+  {
+    id: "DB222-12",
+    question: "> Salve, egrégios ministros. A regra de poderes da página 33 do livro básico diz: “Poderes que aumentam o custo em PM de uma magia são poderes de aprimoramento.” A distinção mago da Ordem do Vazio tem o seguinte efeito no poder *Magia Experimental*: “Escolha um poder de aprimoramento que você não possui. Você aplica os efeitos desse poder à magia, pagando seu custo adicional em PM.” Poderes como *Espírito dos Solstícios*, de druida, ou *Vontade Sobre Matéria*, da distinção teurgista hermético, aumentam o custo em PM de uma magia. Portanto, são poderes de aprimoramento. *Magia Experimental* concede acesso a esses poderes e outros poderes similares?",
+    answer: "> Saudações aprimoradíssimas, conselheiro! Essa é uma excelente pergunta e este tribunal celebra sua dedicação à arte do combo. Sim, conforme visto na página 33 de *Tormenta20*, poderes que aumentam o custo de uma magia (como, por exemplo, em “+” 1 PM) são poderes de aprimoramento (por isso também seguindo todas as regras para aprimoramentos vistas em *Tormenta20*, página 171).",
+    magazineNumber: 222,
+  },
+  {
+    id: "DB222-13",
+    question: "> Salve, digníssimos juízes. Um aventureiro seteiro devoto de Tenebra gerou em minha mesa uma dúvida. Digamos que um seteiro esteja empunhando uma besta de repetição. Ele pode usar seu ataque em conjunto com a habilidade *Rajada de Flechas* para causar dano em área e afetar até 3 alvos adjacentes de cada alvo na área?\n\nAgradeço desde já e que Khalmyr os abençoe com uma justiça combística.",
+    answer: "> Saudações balísticas, conselheiro! Sim, você pode usar *Rajada de Flechas* com uma besta de repetição. , mas o único efeito da saraivada da arma que lhe será útil será “causar um dado de dano extra em um único alvo” quando faz o ataque. Perceba que o outro efeito da saraivada da besta não é fazer “ataques extras”, é apenas afetar mais alvos (três) com o mesmo ataque e isso a *Rajada* já faz (e melhor, pois afeta “todos” os alvos na área). Portanto, esse efeito não lhe será útil. Porém, quem sabe um mestre bonzinho pudesse permitir que você atingisse mais dois inimigos adjacentes à área da *Rajada*?",
+    magazineNumber: 222,
+  },
+  {
+    id: "DB222-14",
+    question: "> Opa, salve juízes, tudo certo? O avatar de Marah tem a habilidade *Música da Calmaria* que lhe concede todas as músicas de bardo, podendo usá-las sem gastar PM. Isso inclui outras habilidades que contam como músicas de bardo, como as cabriolas de bobo?",
+    answer: "> Saudações artísticas, conselheiro! Pela leitura mais cautelosa da regra, o avatar de Marah tem acesso apenas às músicas de bardo normais. Porém, em se tratando dos deuses, é sempre preferível dar uma colher de chá. Se Marah quiser dar cambalhotas engraçadas em nome da paz, quem somos nós para discordar? Enfim, isso variará de campanha para campanha, com a decisão cabendo ao mestre.",
+    magazineNumber: 222,
   },
   //#endregion
   //#region DB - 223

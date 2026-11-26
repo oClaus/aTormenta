@@ -309,10 +309,6 @@ export const specificWeapons: SpecificWeapon[] = [
   },
   //#endregion
 
-
-
-
-
   //#region A Lenda de Ghanor
   { id: "Adaga da Cooperação",
     name: "Adaga da Cooperação",
@@ -504,10 +500,6 @@ export const specificWeapons: SpecificWeapon[] = [
   },
   //#endregion
 
-
-
-
-
   //#region Dragão Brasil
   // Dragão Brasil - 183
   { id: "Valete de Nimb",
@@ -551,6 +543,19 @@ export const specificWeapons: SpecificWeapon[] = [
     description: "Esta arma, feita de material vegetal, é extremamente afiada, com vários espinhos curtos e resistentes que crescem ao longo de sua lâmina. Ela conta como uma espada longa que fornece +5 em suas rolagens de dano. Entretanto, ela requer cuidados diários, que incluem meio litro de água e pelo menos duas horas de luz do sol direta. Sem isso, ela começa a murchar, diminuindo seu bônus em rolagens de dano em –1 para cada dois dias sem cuidados. Se o bônus chegar a zero, a espada morre e apodrece. A lâmina de espinhos não pode receber modificações ou encantos.",
     price: "6.000",
     origin: "Dragão Brasil - 183",
+  },
+  // Dragão Brasil - 196
+  { id: "Lâmina do Sono Eterno",
+    name: "Lâmina do Sono Eterno",
+    description: "Essa adaga possui uma lâmina escura e transparente e um cabo espiralado cravejado de minúsculos cristais, que lembram um céu noturno estrelado. Além da beleza é uma arma muito eficaz na mão de assassinos. Contudo, sua origem está ligada a um crime contra Allihanna; o criador da Lâmina do Sono Eterno, um assassino de grande habilidade, matou um unicórnio e usou seu chifre para fabricar o cabo da arma. Por este ato hediondo, ele foi marcado pela Deusa da Natureza. Um dia, enquanto viajava pelos ermos, o assassino foi atacado e morto por animais selvagens e sua arma foi amaldiçoada por Allihanna, como um lembrete para todos aqueles que ousarem atentar contra seus filhos.\nPoderes. A Lâmina do Sono Eterno é uma adaga precisa assassina formidável sanguinária. Você pode gastar uma ação padrão e 2 PM para conversar com um cadáver em alcance curto, como o efeito da magia Voz Divina com o aprimoramento de conceder um pouco de vida a um cadáver. Caso já conheça a magia, em vez disso o custo para lançá-la diminui em –1 PM.\nMaldição. Sempre você usa a Lâmina para matar um animal, um devoto de Allihanna ou uma criatura que, a critério do mestre, seja relacionada à Deusa da Natureza, seu sono é perturbado por pesadelos pelas próximas 1d6 noites (cumulativo para cada morte). Durante estas noites, você é considerado em condição ruim para recuperação de PV e PM, independente de quaisquer outros efeitos que afetem seu descanso, e passa os dias fatigado. A maldição da Lâmina só poderá ser removida se você realizar três serviços de grande importância para Allihanna. Exemplos destes serviços incluem resgatar um unicórnio aprisionado ou impedir cultistas prestes a destruir um bosque para erguer um templo secreto. O mestre tem a palavra final sobre que constitui cada um desses serviços. A Lâmina conserva seus poderes mesmo após o fim da maldição.",
+    price: "80.000",
+    origin: "Dragão Brasil - 196",
+  },
+  { id: "Maça de Geltor",
+    name: "Maça de Geltor",
+    description: "Esta maça de aparência imponente foi forjada em uma única peça de adamante, com uma empunhadura áspera e uma extremidade esculpida na forma de uma cabeça coberta por um elmo pesado. Seu primeiro dono foi Geltor, um hábil combatente e clérigo de Keen, o antigo Deus da Guerra. Geltor era um guerreiro poderoso, cuja habilidade em combate se mostrava ainda mais evidente em duelos, que venceu às dezenas. A cada inimigo derrotado, Geltor marcava sua vitória com um talho no cabo da maça. Contudo, em uma reviravolta improvável para uma carreira bélica tão impressionante, certa vez Geltor fugiu de uma luta. Os detalhes desse episódio variam muito. Alguns dizem que ele teria sido desafiado por Mestre Arsenal quando esse ainda era o sumo-sacerdote de Keenn e, percebendo que não faria frente a ele, recuou. Outros espalham que este episódio teria ocorrido, na verdade, contra Destrukto. Por fim, outra versão garante que não foi um inimigo de armas que deu fim à invencibilidade de Geltor, mas um perigo maior: a Tormenta. Vendo-se diante da Tempestade Rubra, o clérigo enlouqueceu e abandonou o combate. Qualquer que seja a verdade, a maça empunhada por Geltor se tornou um objeto cobiçado, sobretudo por outros devotos de Keen. O Deus da Guerra, entretanto, não aprovou a busca por uma arma marcada por um ato de covardia e impôs sobre ela uma pesada maldição. Poderes. Esta maça de adamante maciça magnífica é mais pesada do que armas similares. Você pode lançar a magia Soco de Arsenal (CD For ou Sab a sua escolha). Caso já conheça a magia, o custo para lançá-la diminui em –1 PM. Maldição. Enquanto estiver de posse da Maça de Geltor, você deve cumprir as Obrigações e Restrições do Deus da Guerra (atualmente, Arsenal). Se não cumprí-las, sofre os mesmos efeitos que um devoto sofreria. Se já for devoto de Arsenal, sempre que se recusar a participar de um duelo (um combate direto, um contra um), você sofre o efeito debilidade da magia Rogar Maldição. Em ambos os casos, cada vez que você derrota um adversário em combate direto e de forma justa, surge um novo entalhe no cabo da maça, acompanhado de uma cicatriz em um de seus braços ou no rosto. A cada 10 destas cicatrizes, você sofre uma penalidade cumulativa de –1 em testes de perícias baseadas em Carisma. A única forma de remover a maldição é através de um rito (veja a perícia Religião) executado por um clérigo de Arsenal de nível superior ao seu. Quando o rito é concluído, a Maça de Geltor perde todas as suas marcas de vitórias e desaparece, ressurgindo em uma masmorra ou ruína qualquer, à espera de um novo guerreiro.",
+    price: "60.000",
+    origin: "Dragão Brasil - 196",
   },
   // Dragão Brasil - 205
   { id: "CUTELO DE AHARADAK",
